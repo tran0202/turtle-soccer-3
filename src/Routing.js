@@ -5,6 +5,9 @@ import {
   Route
 } from "react-router-dom";
 import App from './App'
+import TennisApp from './TennisApp'
+import FootballApp from './FootballApp'
+import FirestoreApp from './firestore/Sport'
 
 export default function Routing() {
   return (
@@ -13,29 +16,16 @@ export default function Routing() {
           <Route exact path="/">
             <App />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/tennis">
+            <TennisApp />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
+          <Route path="/football">
+            <FootballApp />
+          </Route>
+          <Route path="/admin">
+            <FirestoreApp />
           </Route>
         </Switch>
     </Router>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
   );
 }
