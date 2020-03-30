@@ -1,10 +1,15 @@
 import React from "react";
 import AppData from "./Sport.Data";
-import Page from "../core/Page";
+import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 import { CardText, CardTitle } from "reactstrap";
 
-class FirestoreApp extends React.Component {
+class FSSportApp extends React.Component {
+  constructor(props){
+    super(props);
+    document.title = "Turtle Soccer - Sport";
+  }
+
   render() {
     const param = {
       name: "sport",
@@ -26,11 +31,11 @@ class FirestoreApp extends React.Component {
       }
     };
     return (
-      <Page>
+      <AdminPage>
         <Collection param={param} />
-      </Page>
+      </AdminPage>
     );
   }
 }
 
-export default FirestoreApp;
+export default FSSportApp;

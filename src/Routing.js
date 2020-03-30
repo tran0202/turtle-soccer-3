@@ -7,7 +7,8 @@ import {
 import App from './App'
 import TennisApp from './TennisApp'
 import FootballApp from './FootballApp'
-import FirestoreApp from './firestore/Sport'
+import FSApp from './firestore'
+import FSSportApp from './firestore/Sport'
 
 export default function Routing() {
   return (
@@ -22,8 +23,11 @@ export default function Routing() {
           <Route path="/football">
             <FootballApp />
           </Route>
-          <Route path="/admin">
-            <FirestoreApp />
+          <Route exact path="/admin">
+            <FSApp />
+          </Route>
+          <Route path="/admin/sport">
+            <FSSportApp />
           </Route>
         </Switch>
     </Router>
