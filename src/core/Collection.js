@@ -9,7 +9,7 @@ import {
   Row,
   Col,
   Card,
-  CardGroup,
+  CardColumns,
   CardHeader,
   CardBody,
   CardSubtitle,
@@ -23,7 +23,7 @@ class Collection extends React.Component {
   constructor(props) {
     super(props);
     if (Firebase.apps.length === 0) {
-        Firebase.initializeApp(config);
+      Firebase.initializeApp(config);
     }
 
     this.state = {
@@ -140,6 +140,11 @@ class Collection extends React.Component {
         <Container>
           <Row>
             <Col sm="12">
+              <a href="/admin">Firestore Admin Home</a>
+            </Col>
+          </Row>
+          <Row>
+            <Col sm="12">
               <h1>
                 Collection <span className="font-italic">{name}</span>
               </h1>
@@ -147,7 +152,7 @@ class Collection extends React.Component {
           </Row>
           <Row>
             <Col sm="12">
-              <CardGroup>
+              <CardColumns>
                 {docs.map(doc => (
                   <Card key={doc.id}>
                     <CardHeader>{doc.id}</CardHeader>
@@ -155,7 +160,7 @@ class Collection extends React.Component {
                       {displayCard(doc)}
                       <Button
                         onClick={() => this.removeData(doc.id)}
-                        className="btn btn-link text-white float-right"
+                        className="btn btn-link text-white float-right mb-3"
                         color="danger"
                       >
                         Delete
@@ -163,11 +168,11 @@ class Collection extends React.Component {
                     </CardBody>
                   </Card>
                 ))}
-              </CardGroup>
+              </CardColumns>
             </Col>
           </Row>
         </Container>
-        <Container className="mt-5">
+        <Container className="mt-5 mb-5">
           <Row>
             <Col sm="12">
               <h1>
