@@ -97,6 +97,7 @@ class Collection extends React.Component {
       const newState = docs.filter(doc => {
         return doc.id !== id;
       });
+      this.getData();
       this.setState({ docs: newState });
     }
   };

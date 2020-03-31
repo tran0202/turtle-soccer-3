@@ -1143,7 +1143,7 @@ const AppData = {
           }
         },
         {
-          id: "FBL",
+          id: "FBLT",
           data: {
             name: "Football",
             long_name: "Football",
