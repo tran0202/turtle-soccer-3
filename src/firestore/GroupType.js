@@ -21,7 +21,7 @@ class FSGroupTypeApp extends React.Component {
             <CardText>
               {doc.data.description}
               <br></br>
-              {doc.data.timestamp}
+              {doc.data.time_stamp}
             </CardText>
           </React.Fragment>
         );

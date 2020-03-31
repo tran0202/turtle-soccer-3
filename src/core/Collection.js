@@ -77,7 +77,7 @@ class Collection extends React.Component {
         Firebase.firestore()
           .collection(name)
           .doc(row.id)
-          .set({ ...row.data, timestamp: ts });
+          .set({ ...row.data, time_stamp: ts });
         return true;
       });
       this.getData();

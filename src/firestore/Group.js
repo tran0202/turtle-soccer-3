@@ -1,25 +1,29 @@
 import React from "react";
-import AppData from "./Sport.Data";
+import AppData from "./Group.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 import { CardText, CardTitle } from "reactstrap";
 
-class FSSportApp extends React.Component {
+class FSGroupApp extends React.Component {
   constructor(props){
     super(props);
-    document.title = "Turtle Soccer - Sport";
+    document.title = "Turtle Soccer - Group";
   }
 
   render() {
     const param = {
-      name: "sport",
+      name: "group",
       staticData: AppData,
       displayCard: doc => {
         return (
           <React.Fragment>
             <CardTitle>{doc.data.name}</CardTitle>
             <CardText>
-              {doc.data.route}
+              {doc.data.long_name}
+              <br></br>
+              {doc.data.group_type_id}
+              <br></br>
+              {doc.data.group_logo}
               <br></br>
               {doc.data.time_stamp}
             </CardText>
@@ -27,7 +31,7 @@ class FSSportApp extends React.Component {
         );
       },
       setWindowObjects: store => {
-        window.sportStore = store;
+        window.groupStore = store;
       }
     };
     return (
@@ -38,4 +42,4 @@ class FSSportApp extends React.Component {
   }
 }
 
-export default FSSportApp;
+export default FSGroupApp;
