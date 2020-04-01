@@ -140,6 +140,7 @@ const AppData = {
             data: {
               name: "NFL Football Season",
               team_type_id: "FBLT",
+              confederation_id: "",
               sport_id: "FBL"
             }
           },
@@ -148,6 +149,7 @@ const AppData = {
             data: {
               name: "ATP Men's Singles",
               team_type_id: "TENMS",
+              confederation_id: "",
               sport_id: "TEN"
             }
           },
@@ -156,6 +158,7 @@ const AppData = {
             data: {
               name: "WTA Women's Singles",
               team_type_id: "TENWS",
+              confederation_id: "",
               sport_id: "TEN"
             }
           }

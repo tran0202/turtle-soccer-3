@@ -2,7 +2,6 @@ import React from "react";
 import AppData from "./GroupType.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
-import { CardText, CardTitle } from "reactstrap";
 
 class FSGroupTypeApp extends React.Component {
   constructor(props){
@@ -13,16 +12,28 @@ class FSGroupTypeApp extends React.Component {
   render() {
     const param = {
       name: "group_type",
+      orderBy: ["name"],
       staticData: AppData,
-      displayCard: doc => {
+      displayHeader: () => {
+        return (
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Time</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        );
+      },
+      displayRow: doc => {
         return (
           <React.Fragment>
-            <CardTitle>{doc.data.name}</CardTitle>
-            <CardText>
-              {doc.data.description}
-              <br></br>
-              {doc.data.time_stamp}
-            </CardText>
+            <th scope="row">{doc.id}</th>
+            <td>{doc.data.name}</td>
+            <td>{doc.data.description}</td>
+            <td>{doc.data.time_stamp}</td>
           </React.Fragment>
         );
       },

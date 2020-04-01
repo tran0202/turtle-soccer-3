@@ -2,10 +2,9 @@ import React from "react";
 import AppData from "./Sport.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
-import { CardText, CardTitle } from "reactstrap";
 
 class FSSportApp extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     document.title = "Turtle Soccer - Sport";
   }
@@ -13,16 +12,28 @@ class FSSportApp extends React.Component {
   render() {
     const param = {
       name: "sport",
+      orderBy: ["name"],
       staticData: AppData,
-      displayCard: doc => {
+      displayHeader: () => {
+        return (
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Route</th>
+              <th>Time</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        );
+      },
+      displayRow: doc => {
         return (
           <React.Fragment>
-            <CardTitle>{doc.data.name}</CardTitle>
-            <CardText>
-              {doc.data.route}
-              <br></br>
-              {doc.data.time_stamp}
-            </CardText>
+            <th scope="row">{doc.id}</th>
+            <td>{doc.data.name}</td>
+            <td>{doc.data.route}</td>
+            <td>{doc.data.time_stamp}</td>
           </React.Fragment>
         );
       },

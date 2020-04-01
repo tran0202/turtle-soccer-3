@@ -2,10 +2,9 @@ import React from "react";
 import AppData from "./Group.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
-import { CardText, CardTitle } from "reactstrap";
 
 class FSGroupApp extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     document.title = "Turtle Soccer - Group";
   }
@@ -13,20 +12,32 @@ class FSGroupApp extends React.Component {
   render() {
     const param = {
       name: "group",
+      orderBy: ["group_type_id", "name"],
       staticData: AppData,
-      displayCard: doc => {
+      displayHeader: () => {
+        return (
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Long_name</th>
+              <th>Group_type_id</th>
+              <th>Group_logo</th>
+              <th>Time</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        );
+      },
+      displayRow: doc => {
         return (
           <React.Fragment>
-            <CardTitle>{doc.data.name}</CardTitle>
-            <CardText>
-              {doc.data.long_name}
-              <br></br>
-              {doc.data.group_type_id}
-              <br></br>
-              {doc.data.group_logo}
-              <br></br>
-              {doc.data.time_stamp}
-            </CardText>
+            <th scope="row">{doc.id}</th>
+            <td>{doc.data.name}</td>
+            <td>{doc.data.long_name}</td>
+            <td>{doc.data.group_type_id}</td>
+            <td>{doc.data.group_logo}</td>
+            <td>{doc.data.time_stamp}</td>
           </React.Fragment>
         );
       },

@@ -2,10 +2,9 @@ import React from "react";
 import AppData from "./TournamentType.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
-import { CardText, CardTitle } from "reactstrap";
 
 class FSTournamentTypeApp extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     document.title = "Turtle Soccer - Tournament Type";
   }
@@ -13,20 +12,32 @@ class FSTournamentTypeApp extends React.Component {
   render() {
     const param = {
       name: "tournament_type",
+      orderBy: ["confederation_id", "team_type_id"],
       staticData: AppData,
-      displayCard: doc => {
+      displayHeader: () => {
+        return (
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Team_type_id</th>
+              <th>Sport_id</th>
+              <th>Confederation_id</th>
+              <th>Time</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+        );
+      },
+      displayRow: doc => {
         return (
           <React.Fragment>
-            <CardTitle>{doc.data.name}</CardTitle>
-            <CardText>
-              {doc.data.team_type_id}
-              <br></br>
-              {doc.data.sport_id}
-              <br></br>
-              {doc.data.confederation_id}
-              <br></br>
-              {doc.data.time_stamp}
-            </CardText>
+            <th scope="row">{doc.id}</th>
+            <td>{doc.data.name}</td>
+            <td>{doc.data.team_type_id}</td>
+            <td>{doc.data.sport_id}</td>
+            <td>{doc.data.confederation_id}</td>
+            <td>{doc.data.time_stamp}</td>
           </React.Fragment>
         );
       },

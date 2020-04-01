@@ -9,14 +9,12 @@ import {
   Row,
   Col,
   Card,
-  CardColumns,
-  CardHeader,
-  CardBody,
   CardSubtitle,
   Form,
   FormGroup,
   Label,
-  Button
+  Button,
+  Table
 } from "reactstrap";
 
 class Collection extends React.Component {
@@ -46,10 +44,13 @@ class Collection extends React.Component {
 
   getData = () => {
     const { param } = this.props;
-    const { name, staticData, setWindowObjects } = param;
+    const { name, orderBy, staticData, setWindowObjects } = param;
     if (name) {
-      Firebase.firestore()
-        .collection(name)
+      let ref = Firebase.firestore().collection(name);
+      if (orderBy) {
+        orderBy.forEach(ob => (ref = ref.orderBy(ob)));
+      }
+      ref
         .get()
         .then(snapshot => {
           let tmp = [];
@@ -131,15 +132,43 @@ class Collection extends React.Component {
     }
   }
 
+  displayTable = () => {
+    const { docs } = this.state;
+    const { param } = this.props;
+    const { displayHeader, displayRow } = param;
+    return (
+      <Table striped borderless hover size="sm">
+        {displayHeader()}
+        <tbody>
+          {docs.map(doc => (
+            <tr key={doc.id}>
+              {displayRow(doc)}
+              <td>
+                <Button
+                  onClick={() => this.removeData(doc.id)}
+                  className="btn btn-link text-white"
+                  color="danger"
+                  size="sm"
+                >
+                  Delete
+                </Button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    );
+  };
+
   render() {
-    const { docs, batchData } = this.state;
+    const { batchData } = this.state;
     // console.log('batchData', batchData)
     const { param } = this.props;
-    const { name, displayCard } = param;
+    const { name } = param;
     return (
       <React.Fragment>
         <Container>
-          <Row>
+          <Row className="mb-5">
             <Col sm="12">
               <a href="/admin">Firestore Admin Home</a>
             </Col>
@@ -152,25 +181,7 @@ class Collection extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col sm="12">
-              <CardColumns>
-                {docs.map(doc => (
-                  <Card key={doc.id}>
-                    <CardHeader>{doc.id}</CardHeader>
-                    <CardBody>
-                      {displayCard(doc)}
-                      <Button
-                        onClick={() => this.removeData(doc.id)}
-                        className="btn btn-link text-white float-right mb-3"
-                        color="danger"
-                      >
-                        Delete
-                      </Button>
-                    </CardBody>
-                  </Card>
-                ))}
-              </CardColumns>
-            </Col>
+            <Col sm="12">{this.displayTable()}</Col>
           </Row>
         </Container>
         <Container className="mt-5 mb-5">
@@ -216,6 +227,11 @@ class Collection extends React.Component {
                 <CardSubtitle className="mb-3">To be added...</CardSubtitle>
                 {batchData && <ReactJson src={batchData} />}
               </Card>
+            </Col>
+          </Row>
+          <Row className="mt-5">
+            <Col sm="12">
+              <a href="/admin">Firestore Admin Home</a>
             </Col>
           </Row>
         </Container>
