@@ -28,8 +28,6 @@ code {
 }
 
 .Page-header {
-  background-color: #282c34;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +38,9 @@ code {
 
 .AdminPage-header {
   background-color: rgba(0, 0, 0, .03);
-  /* min-height: 100vh;
+  /* 
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column; */
   align-items: center;
