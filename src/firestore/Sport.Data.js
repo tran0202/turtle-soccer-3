@@ -1,4 +1,4 @@
-const AppData = {
+export const AppData = {
   collection: "sport",
   batches: [
     {
@@ -34,5 +34,3 @@ const AppData = {
       }
   ]
 };
-
-export default AppData;

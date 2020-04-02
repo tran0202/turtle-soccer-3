@@ -1,5 +1,5 @@
 import React from "react";
-import AppData from "./Group.Data";
+import { AppData } from "./Group.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 
@@ -16,17 +16,16 @@ class FSGroupApp extends React.Component {
       staticData: AppData,
       displayHeader: () => {
         return (
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Long_name</th>
-              <th>Group_type_id</th>
-              <th>Group_logo</th>
-              <th>Time</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>#</th>
+            <th>id</th>
+            <th>name</th>
+            <th>long_name</th>
+            <th>group_type_id</th>
+            <th>group_logo</th>
+            <th>time_stamp</th>
+            <th>delete</th>
+          </tr>
         );
       },
       displayRow: doc => {

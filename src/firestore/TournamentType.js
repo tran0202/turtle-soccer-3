@@ -1,5 +1,5 @@
 import React from "react";
-import AppData from "./TournamentType.Data";
+import { AppData } from "./TournamentType.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 
@@ -16,17 +16,17 @@ class FSTournamentTypeApp extends React.Component {
       staticData: AppData,
       displayHeader: () => {
         return (
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Team_type_id</th>
-              <th>Sport_id</th>
-              <th>Confederation_id</th>
-              <th>Time</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>#</th>
+            <th>id</th>
+            <th>name</th>
+            <th>confederation_id</th>
+            <th>team_type_id</th>
+            <th>logo_path</th>
+            <th>sport_id</th>
+            <th>time_stamp</th>
+            <th>delete</th>
+          </tr>
         );
       },
       displayRow: doc => {
@@ -34,9 +34,10 @@ class FSTournamentTypeApp extends React.Component {
           <React.Fragment>
             <th scope="row">{doc.id}</th>
             <td>{doc.data.name}</td>
-            <td>{doc.data.team_type_id}</td>
-            <td>{doc.data.sport_id}</td>
             <td>{doc.data.confederation_id}</td>
+            <td>{doc.data.team_type_id}</td>
+            <td>{doc.data.logo_path}</td>
+            <td>{doc.data.sport_id}</td>
             <td>{doc.data.time_stamp}</td>
           </React.Fragment>
         );

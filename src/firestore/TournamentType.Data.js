@@ -1,4 +1,4 @@
-const AppData = {
+export const AppData = {
   collection: "tournament_type",
   batches: [
     {
@@ -8,8 +8,9 @@ const AppData = {
           id: "WC",
           data: {
             name: "FIFA World Cup",
-            team_type_id: "MNT",
             confederation_id: "FIFA",
+            team_type_id: "MNT",
+            logo_path: "wc_logos",
             sport_id: "SOC"
           }
         },
@@ -17,8 +18,9 @@ const AppData = {
           id: "CONFEDC",
           data: {
             name: "FIFA Confederations Cup",
-            team_type_id: "MNT",
             confederation_id: "FIFA",
+            team_type_id: "MNT",
+            logo_path: "cc_logos",
             sport_id: "SOC"
           }
         },
@@ -28,6 +30,7 @@ const AppData = {
             name: "UEFA European Championship",
             team_type_id: "MNT",
             confederation_id: "UEFA",
+            logo_path: "euro_logos",
             sport_id: "SOC"
           }
         },
@@ -37,6 +40,7 @@ const AppData = {
             name: "UEFA Nations League",
             team_type_id: "MNT",
             confederation_id: "UEFA",
+            logo_path: "unl_logos",
             sport_id: "SOC"
           }
         },
@@ -46,6 +50,7 @@ const AppData = {
             name: "OFC Nations Cup",
             team_type_id: "MNT",
             confederation_id: "OFC",
+            logo_path: "logos",
             sport_id: "SOC"
           }
         },
@@ -55,15 +60,17 @@ const AppData = {
             name: "AFC Asian Cup",
             team_type_id: "MNT",
             confederation_id: "AFC",
+            logo_path: "aac_logos",
             sport_id: "SOC"
           }
         },
         {
-          id: "CAN",
+          id: "AFCON",
           data: {
             name: "CAF Africa Cup of Nations",
             team_type_id: "MNT",
             confederation_id: "CAF",
+            logo_path: "afcon_logos",
             sport_id: "SOC"
           }
         },
@@ -73,6 +80,7 @@ const AppData = {
             name: "CONCACAF Gold Cup",
             team_type_id: "MNT",
             confederation_id: "CONCACAF",
+            logo_path: "gc_logos",
             sport_id: "SOC"
           }
         },
@@ -82,6 +90,7 @@ const AppData = {
             name: "CONMEBOL Copa America",
             team_type_id: "MNT",
             confederation_id: "CONMEBOL",
+            logo_path: "copa_logos",
             sport_id: "SOC"
           }
         },
@@ -91,6 +100,7 @@ const AppData = {
             name: "UEFA Champions League",
             team_type_id: "CLUB",
             confederation_id: "UEFA",
+            logo_path: "club_logos",
             sport_id: "SOC"
           }
         },
@@ -100,6 +110,7 @@ const AppData = {
             name: "UEFA Europa League",
             team_type_id: "CLUB",
             confederation_id: "UEFA",
+            logo_path: "club_logos",
             sport_id: "SOC"
           }
         },
@@ -109,6 +120,7 @@ const AppData = {
             name: "FIFA Women's World Cup",
             team_type_id: "WNT",
             confederation_id: "FIFA",
+            logo_path: "wwc_logos",
             sport_id: "SOC"
           }
         },
@@ -118,6 +130,7 @@ const AppData = {
             name: "Olympic Football Tournament",
             team_type_id: "U23MNT",
             confederation_id: "FIFA",
+            logo_path: "olympic_logos",
             sport_id: "SOC"
           }
         },
@@ -127,6 +140,7 @@ const AppData = {
             name: "Women's Olympic Football Tournament",
             team_type_id: "U23WNT",
             confederation_id: "FIFA",
+            logo_path: "olympic_logos",
             sport_id: "SOC"
           }
         }
@@ -141,6 +155,7 @@ const AppData = {
               name: "NFL Football Season",
               team_type_id: "FBLT",
               confederation_id: "",
+              logo_path: "nfl_logos",
               sport_id: "FBL"
             }
           },
@@ -150,6 +165,7 @@ const AppData = {
               name: "ATP Men's Singles",
               team_type_id: "TENMS",
               confederation_id: "",
+              logo_path: "logos",
               sport_id: "TEN"
             }
           },
@@ -159,6 +175,7 @@ const AppData = {
               name: "WTA Women's Singles",
               team_type_id: "TENWS",
               confederation_id: "",
+              logo_path: "logos",
               sport_id: "TEN"
             }
           }
@@ -166,5 +183,3 @@ const AppData = {
       }
   ]
 };
-
-export default AppData;

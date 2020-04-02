@@ -33,6 +33,9 @@ class FSApp extends React.Component {
                 <ListGroupItem>
                   <a href="/admin/tournament_type">tournament_type</a>
                 </ListGroupItem>
+                <ListGroupItem>
+                  <a href="/admin/tournament">tournament</a>
+                </ListGroupItem>
               </ListGroup>
             </Col>
           </Row>

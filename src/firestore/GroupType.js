@@ -1,10 +1,10 @@
 import React from "react";
-import AppData from "./GroupType.Data";
+import { AppData } from "./GroupType.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 
 class FSGroupTypeApp extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     document.title = "Turtle Soccer - Group Type";
   }
@@ -16,15 +16,14 @@ class FSGroupTypeApp extends React.Component {
       staticData: AppData,
       displayHeader: () => {
         return (
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Time</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>#</th>
+            <th>id</th>
+            <th>name</th>
+            <th>description</th>
+            <th>time_stamp</th>
+            <th>delete</th>
+          </tr>
         );
       },
       displayRow: doc => {

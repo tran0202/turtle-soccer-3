@@ -138,22 +138,26 @@ class Collection extends React.Component {
     const { displayHeader, displayRow } = param;
     return (
       <Table striped borderless hover size="sm">
-        {displayHeader()}
+        <thead>{displayHeader()}</thead>
         <tbody>
-          {docs.map(doc => (
-            <tr key={doc.id}>
-              {displayRow(doc)}
-              <td>
-                <Button
-                  onClick={() => this.removeData(doc.id)}
-                  className="btn btn-link text-white"
-                  color="danger"
-                  size="sm"
-                >
-                  Delete
-                </Button>
-              </td>
-            </tr>
+          {docs.map((doc, index) => (
+            <React.Fragment key={doc.id}>
+              {index !== 0 && index % 10 === 0 && displayHeader()}
+              <tr>
+                <td>{index + 1}</td>
+                {displayRow(doc)}
+                <td>
+                  <Button
+                    onClick={() => this.removeData(doc.id)}
+                    className="btn btn-link text-white"
+                    color="danger"
+                    size="sm"
+                  >
+                    Delete
+                  </Button>
+                </td>
+              </tr>
+            </React.Fragment>
           ))}
         </tbody>
       </Table>

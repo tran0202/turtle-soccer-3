@@ -1,5 +1,5 @@
 import React from "react";
-import AppData from "./Sport.Data";
+import { AppData } from "./Sport.Data";
 import AdminPage from "../core/AdminPage";
 import Collection from "../core/Collection";
 
@@ -16,15 +16,14 @@ class FSSportApp extends React.Component {
       staticData: AppData,
       displayHeader: () => {
         return (
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Route</th>
-              <th>Time</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
+          <tr>
+            <th>#</th>
+            <th>id</th>
+            <th>name</th>
+            <th>route</th>
+            <th>time_stamp</th>
+            <th>delete</th>
+          </tr>
         );
       },
       displayRow: doc => {
