@@ -39,18 +39,18 @@ class FSTournamentApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
-            <td>{doc.data.name}</td>
-            <td>{doc.data.tournament_type_id}</td>
-            <td>{doc.data.start_date}</td>
-            <td>{doc.data.end_date}</td>
-            <td>{doc.data.active ? "Y" : "N"}</td>
-            <td>{doc.data.third_place_ranking ? "Y" : "N"}</td>
-            <td>{doc.data.head_to_head_tiebreaker ? "Y" : "N"}</td>
-            <td>{doc.data.golden_goal_rule ? "Y" : "N"}</td>
-            <td>{doc.data.logo_filename}</td>
-            <td>{doc.data.points_for_win}</td>
-            <td>{doc.data.parent_tournament_id}</td>
-            <td>{doc.data.time_stamp}</td>
+            <td>{doc.name}</td>
+            <td>{doc.tournament_type_id}</td>
+            <td>{doc.start_date}</td>
+            <td>{doc.end_date}</td>
+            <td>{doc.active ? "Y" : "N"}</td>
+            <td>{doc.third_place_ranking ? "Y" : "N"}</td>
+            <td>{doc.head_to_head_tiebreaker ? "Y" : "N"}</td>
+            <td>{doc.golden_goal_rule ? "Y" : "N"}</td>
+            <td>{doc.logo_filename}</td>
+            <td>{doc.points_for_win}</td>
+            <td>{doc.parent_tournament_id}</td>
+            <td>{doc.time_stamp}</td>
           </React.Fragment>
         );
       },

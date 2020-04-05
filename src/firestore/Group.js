@@ -32,11 +32,11 @@ class FSGroupApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
-            <td>{doc.data.name}</td>
-            <td>{doc.data.long_name}</td>
-            <td>{doc.data.group_type_id}</td>
-            <td>{doc.data.group_logo}</td>
-            <td>{doc.data.time_stamp}</td>
+            <td>{doc.name}</td>
+            <td>{doc.long_name}</td>
+            <td>{doc.group_type_id}</td>
+            <td>{doc.group_logo}</td>
+            <td>{doc.time_stamp}</td>
           </React.Fragment>
         );
       },

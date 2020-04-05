@@ -33,12 +33,12 @@ class FSTournamentTypeApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
-            <td>{doc.data.name}</td>
-            <td>{doc.data.confederation_id}</td>
-            <td>{doc.data.team_type_id}</td>
-            <td>{doc.data.logo_path}</td>
-            <td>{doc.data.sport_id}</td>
-            <td>{doc.data.time_stamp}</td>
+            <td>{doc.name}</td>
+            <td>{doc.confederation_id}</td>
+            <td>{doc.team_type_id}</td>
+            <td>{doc.logo_path}</td>
+            <td>{doc.sport_id}</td>
+            <td>{doc.time_stamp}</td>
           </React.Fragment>
         );
       },

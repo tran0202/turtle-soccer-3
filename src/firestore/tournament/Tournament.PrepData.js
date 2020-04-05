@@ -1,4 +1,4 @@
-import ConcatData from "../../core/ConcatData";
+import { ConcatData } from "../../core/Helper";
 import { AppData as AppData1 } from "./Tournament.Data.1";
 import { AppData as AppData2 } from "./Tournament.Data.2";
 import { AppData as AppData3 } from "./Tournament.Data.3";

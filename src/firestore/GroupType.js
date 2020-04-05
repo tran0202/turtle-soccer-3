@@ -30,9 +30,9 @@ class FSGroupTypeApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
-            <td>{doc.data.name}</td>
-            <td>{doc.data.description}</td>
-            <td>{doc.data.time_stamp}</td>
+            <td>{doc.name}</td>
+            <td>{doc.description}</td>
+            <td>{doc.time_stamp}</td>
           </React.Fragment>
         );
       },

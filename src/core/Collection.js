@@ -2,7 +2,7 @@ import React from "react";
 import Firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
-import config from "./config";
+import { InitFirebase, GetCollection } from "./Helper";
 import ReactJson from "react-json-view";
 import {
   Container,
@@ -20,9 +20,7 @@ import {
 class Collection extends React.Component {
   constructor(props) {
     super(props);
-    if (Firebase.apps.length === 0) {
-      Firebase.initializeApp(config);
-    }
+    InitFirebase();
 
     this.state = {
       docs: [],
@@ -42,28 +40,11 @@ class Collection extends React.Component {
     }
   };
 
-  getData = () => {
+  getData = props => {
     const { param } = this.props;
-    const { name, orderBy, staticData, setWindowObjects } = param;
-    if (name) {
-      let ref = Firebase.firestore().collection(name);
-      if (orderBy) {
-        orderBy.forEach(ob => (ref = ref.orderBy(ob)));
-      }
-      ref
-        .get()
-        .then(snapshot => {
-          let tmp = [];
-          snapshot.forEach(doc => {
-            tmp.push({ id: doc.id, data: doc.data() });
-          });
-          this.setState({ docs: tmp, staticStore: staticData });
-          setWindowObjects(this.state);
-        })
-        .catch(err => {
-          console.log(`Error getting ${name} documents`, err);
-        });
-    }
+    const { staticData, setWindowObjects } = param;
+    this.setState({ docs: props, staticStore: staticData });
+    setWindowObjects(this.state);
   };
 
   writeData = () => {
@@ -81,7 +62,7 @@ class Collection extends React.Component {
           .set({ ...row.data, time_stamp: ts });
         return true;
       });
-      this.getData();
+      GetCollection({ name, callback: this.getData });
       this.setState({ batchNumber: 0 });
     }
   };
@@ -98,7 +79,7 @@ class Collection extends React.Component {
       const newState = docs.filter(doc => {
         return doc.id !== id;
       });
-      this.getData();
+      GetCollection({ name, callback: this.getData });
       this.setState({ docs: newState });
     }
   };
@@ -122,7 +103,9 @@ class Collection extends React.Component {
   };
 
   componentDidMount() {
-    this.getData();
+    const { param } = this.props;
+    const { name, orderBy, where } = param;
+    GetCollection({ name, orderBy, where, callback: this.getData });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -174,6 +157,7 @@ class Collection extends React.Component {
         <Container>
           <Row className="mb-5">
             <Col sm="12">
+              <a href="/">Turtle Soccer</a> |{" "}
               <a href="/admin">Firestore Admin Home</a>
             </Col>
           </Row>

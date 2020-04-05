@@ -30,9 +30,9 @@ class FSSportApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
-            <td>{doc.data.name}</td>
-            <td>{doc.data.route}</td>
-            <td>{doc.data.time_stamp}</td>
+            <td>{doc.name}</td>
+            <td>{doc.route}</td>
+            <td>{doc.time_stamp}</td>
           </React.Fragment>
         );
       },
