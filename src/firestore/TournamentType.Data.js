@@ -11,7 +11,8 @@ export const AppData = {
             confederation_id: "FIFA",
             team_type_id: "MNT",
             logo_path: "wc_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -21,7 +22,8 @@ export const AppData = {
             confederation_id: "FIFA",
             team_type_id: "MNT",
             logo_path: "cc_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 5
           }
         },
         {
@@ -31,7 +33,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "UEFA",
             logo_path: "euro_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -41,7 +44,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "UEFA",
             logo_path: "unl_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 4
           }
         },
         {
@@ -51,7 +55,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "OFC",
             logo_path: "logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -61,7 +66,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "AFC",
             logo_path: "aac_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -71,7 +77,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "CAF",
             logo_path: "afcon_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -81,7 +88,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "CONCACAF",
             logo_path: "gc_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -91,7 +99,8 @@ export const AppData = {
             team_type_id: "MNT",
             confederation_id: "CONMEBOL",
             logo_path: "copa_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 1
           }
         },
         {
@@ -101,7 +110,8 @@ export const AppData = {
             team_type_id: "CLUB",
             confederation_id: "UEFA",
             logo_path: "club_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 2
           }
         },
         {
@@ -111,7 +121,8 @@ export const AppData = {
             team_type_id: "CLUB",
             confederation_id: "UEFA",
             logo_path: "club_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 3
           }
         },
         {
@@ -121,7 +132,8 @@ export const AppData = {
             team_type_id: "WNT",
             confederation_id: "FIFA",
             logo_path: "wwc_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 2
           }
         },
         {
@@ -131,7 +143,8 @@ export const AppData = {
             team_type_id: "U23MNT",
             confederation_id: "FIFA",
             logo_path: "olympic_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 3
           }
         },
         {
@@ -141,7 +154,8 @@ export const AppData = {
             team_type_id: "U23WNT",
             confederation_id: "FIFA",
             logo_path: "olympic_logos",
-            sport_id: "SOC"
+            sport_id: "SOC",
+            order: 4
           }
         }
       ]

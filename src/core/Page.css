@@ -14,6 +14,8 @@ code {
 
 .Page {
   text-align: left;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .Page-logo {
@@ -60,4 +62,15 @@ code {
   to {
     transform: rotate(360deg);
   }
+}
+
+.confed-tab {
+  width: 14%;
+  text-align: center;
+}
+
+.card-img-top-height-100 {
+  width: auto;
+  height: 100px;
+  max-width: 180px;
 }

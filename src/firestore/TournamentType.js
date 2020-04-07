@@ -12,7 +12,7 @@ class FSTournamentTypeApp extends React.Component {
   render() {
     const param = {
       name: "tournament_type",
-      orderBy: ["confederation_id", "team_type_id"],
+      orderBy: ["confederation_id", "order"],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -24,6 +24,7 @@ class FSTournamentTypeApp extends React.Component {
             <th>team_type_id</th>
             <th>logo_path</th>
             <th>sport_id</th>
+            <th>order</th>
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
@@ -38,6 +39,7 @@ class FSTournamentTypeApp extends React.Component {
             <td>{doc.team_type_id}</td>
             <td>{doc.logo_path}</td>
             <td>{doc.sport_id}</td>
+            <td>{doc.order}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
         );

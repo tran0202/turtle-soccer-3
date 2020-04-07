@@ -550,7 +550,7 @@ export const AppData = {
             third_place_ranking: false,
             head_to_head_tiebreaker: false,
             golden_goal_rule: true,
-            logo_filename: "Confederations_Cup.jpg",
+            logo_filename: "Confederations_Cup.png",
             points_for_win: 3
           }
         },
@@ -565,7 +565,7 @@ export const AppData = {
             third_place_ranking: false,
             head_to_head_tiebreaker: false,
             golden_goal_rule: false,
-            logo_filename: "Confederations_Cup.jpg",
+            logo_filename: "Confederations_Cup.png",
             points_for_win: 2
           }
         }

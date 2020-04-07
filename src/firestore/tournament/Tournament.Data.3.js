@@ -37,7 +37,7 @@ export const AppData = {
         {
           id: "GC2013",
           data: {
-            name: "2015 Gold Cup United States",
+            name: "2013 Gold Cup United States",
             tournament_type_id: "GC",
             start_date: "2013-07-07",
             end_date: "2013-07-28",
@@ -52,7 +52,7 @@ export const AppData = {
         {
           id: "GC2011",
           data: {
-            name: "2015 Gold Cup United States",
+            name: "2011 Gold Cup United States",
             tournament_type_id: "GC",
             start_date: "2011-06-05",
             end_date: "2011-06-25",
@@ -432,7 +432,7 @@ export const AppData = {
         {
           id: "AFCON2010",
           data: {
-            name: "2015 Africa Cup of Nations Angola",
+            name: "2010 Africa Cup of Nations Angola",
             tournament_type_id: "AFCON",
             start_date: "2010-01-10",
             end_date: "2010-01-31",
@@ -545,7 +545,7 @@ export const AppData = {
             third_place_ranking: false,
             head_to_head_tiebreaker: false,
             golden_goal_rule: false,
-            logo_filename: "afcon_1996.png",
+            logo_filename: "afcon_1996.jpg",
             points_for_win: 3
           }
         },
@@ -635,7 +635,7 @@ export const AppData = {
             third_place_ranking: false,
             head_to_head_tiebreaker: false,
             golden_goal_rule: false,
-            logo_filename: "afcon-1984.png",
+            logo_filename: "afcon_1984.png",
             points_for_win: 2
           }
         },
@@ -822,7 +822,7 @@ export const AppData = {
         {
           id: "AFCON1957",
           data: {
-            name: "1994 Africa Cup of Nations Sudan",
+            name: "1957 Africa Cup of Nations Sudan",
             tournament_type_id: "AFCON",
             start_date: "1957-02-10",
             end_date: "1957-02-15",

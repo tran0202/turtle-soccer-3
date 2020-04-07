@@ -25,7 +25,13 @@ export const GetCollection = props => {
       ref = ref.where(where.left, where.op, where.right);
     }
     if (orderBy) {
-      orderBy.forEach(ob => (ref = ref.orderBy(ob)));
+      orderBy.forEach(ob => {
+        if (ob.desc) {
+          ref = ref.orderBy(ob.field, 'desc')
+        } else {
+          ref = ref.orderBy(ob)
+        }
+      });
     }
     ref
       .get()
@@ -51,18 +57,20 @@ export const Join = (col1, field, col2) => {
   let result = [];
   col1.docs.forEach(doc => {
     // console.log('field', field);
-    let docJson = {
-      ...col2_array[doc[field]],
-      ...doc,
-      name2: col2_array[doc[field]].name,
-      time_stamp2: col2_array[doc[field]].time_stamp
-    };
-    let docStr = JSON.stringify(docJson);
-    const prefix = field.replace("id", "");
-    docStr = docStr
-      .replace("name2", prefix + "name")
-      .replace("time_stamp2", prefix + "time_stamp");
-    result.push(JSON.parse(docStr));
+    if (col2_array[doc[field]]) {
+      let docJson = {
+        ...col2_array[doc[field]],
+        ...doc,
+        name2: col2_array[doc[field]].name,
+        time_stamp2: col2_array[doc[field]].time_stamp
+      };
+      let docStr = JSON.stringify(docJson);
+      const prefix = field.replace("id", "");
+      docStr = docStr
+        .replace("name2", prefix + "name")
+        .replace("time_stamp2", prefix + "time_stamp");
+      result.push(JSON.parse(docStr));
+    }
   });
   return { docs: result };
 };
