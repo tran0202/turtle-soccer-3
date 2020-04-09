@@ -475,7 +475,7 @@ export const AppData = {
             third_place_ranking: true,
             head_to_head_tiebreaker: false,
             golden_goal_rule: false,
-            logo_filename: "copa-1999.png",
+            logo_filename: "copa-1993.jpg",
             points_for_win: 2
           }
         },

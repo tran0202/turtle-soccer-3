@@ -1,213 +1,134 @@
-import React, { useState } from "react";
-import "firebase/auth";
-import "firebase/firestore";
-import { InitFirebase, GetCollection, Join } from "./core/Helper";
+import React from "react";
 import Page from "./core/Page";
-import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-  Col,
-  ListGroup,
-  ListGroupItem,
-  Card,
-  CardImg,
-  CardText,
-  CardDeck,
-  CardBody
-} from "reactstrap";
-import classnames from "classnames";
-import { ConfederationIds } from "./core/Constants";
-
-const GetTabs = props => {
-  const { store } = props;
-  const { tournamentTypeArrayByConfed, tournamentArrayByType } = store;
-  const [activeTab, setActiveTab] = useState("FIFA");
-
-  const toggle = tab => {
-    if (activeTab !== tab) setActiveTab(tab);
-  };
-
-  return (
-    <React.Fragment>
-      <Nav tabs>
-        {ConfederationIds.map(confed => {
-          const logoSrc = `/assets/logos/${confed}.png`;
-          return (
-            <NavItem key={confed} className="confed-tab">
-              <NavLink
-                className={classnames({ active: activeTab === confed })}
-                onClick={() => {
-                  toggle(confed);
-                }}
-              >
-                <img src={logoSrc} alt={confed} height="35" />
-              </NavLink>
-            </NavItem>
-          );
-        })}
-      </Nav>
-      <TabContent className="mt-3" activeTab={activeTab}>
-        {ConfederationIds.map(confed => (
-          <TabPane key={confed} tabId={confed}>
-            <Row>
-              <Col sm="12">
-                <ListGroup flush>
-                  {tournamentTypeArrayByConfed[confed] && (
-                    <React.Fragment>
-                      {tournamentTypeArrayByConfed[confed].map(tt => (
-                        <ListGroupItem key={tt.id}>
-                          <h4>{tt.name} </h4>
-                          {tournamentArrayByType[tt.id] && (
-                            <React.Fragment>
-                              {tournamentArrayByType[tt.id].map(
-                                (row, index) => (
-                                  <CardDeck key={index} className="mt-3">
-                                    {row.map(t => (
-                                      <Card
-                                        key={t.id}
-                                        style={{
-                                          marginLeft: "10px",
-                                          marginRight: "10px",
-                                          paddingTop: "10px"
-                                        }}
-                                      >
-                                        <CardImg
-                                          top
-                                          src={`/assets/${t.logo_path}/${t.logo_filename}`}
-                                          alt={t.name}
-                                          className="card-img-top-height-100 mx-auto"
-                                        />
-                                        <CardBody>
-                                          <CardText>
-                                            <strong>
-                                              <center>{t.name}</center>
-                                            </strong>
-                                          </CardText>
-                                        </CardBody>
-                                      </Card>
-                                    ))}
-                                  </CardDeck>
-                                )
-                              )}
-                            </React.Fragment>
-                          )}
-                        </ListGroupItem>
-                      ))}
-                    </React.Fragment>
-                  )}
-                </ListGroup>
-              </Col>
-            </Row>
-          </TabPane>
-        ))}
-      </TabContent>
-    </React.Fragment>
-  );
-};
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer";
-    InitFirebase();
-
-    this.state = {
-      docs: [],
-      tournamentArrayByType: [],
-      tournamentTypeArray: [],
-      tournamentTypeArrayByConfed: []
-    };
-  }
-
-  getTournamentType = props => {
-    this.setState({ docs: props, tournamentTypeArray: props });
-    this.getTournamentTypeArrayByConfed();
-  };
-
-  getTournament = props => {
-    const tournamentType = this.state;
-    const tournament = { docs: props };
-    const tmp = Join(tournament, "tournament_type_id", tournamentType);
-    const newState = tmp.docs.filter(t => {
-      return t.confederation_id !== "";
-    });
-    this.setState({ docs: newState });
-    const tabt = this.getTournamentArrayByType();
-    this.setState({ tournamentArrayByType: tabt });
-    window.tournamentStore = this.state;
-  };
-
-  getData = () => {
-    GetCollection({
-      name: "tournament_type",
-      orderBy: ["confederation_id", "order"],
-      where: { left: "sport_id", op: "==", right: "SOC" },
-      callback: this.getTournamentType
-    });
-    GetCollection({
-      name: "tournament",
-      orderBy: ["tournament_type_id", { field: "start_date", desc: true }],
-      where: { left: "tournament_type_id", op: ">", right: "" },
-      callback: this.getTournament
-    });
-  };
-
-  getTournamentTypeArrayByConfed = () => {
-    const { tournamentTypeArray, tournamentTypeArrayByConfed } = this.state;
-    ConfederationIds.forEach(confed => {
-      tournamentTypeArrayByConfed[confed] = [];
-    });
-    tournamentTypeArray.forEach(tt => {
-      tournamentTypeArrayByConfed[tt.confederation_id].push(tt);
-    });
-  };
-
-  getTournamentArrayByType = () => {
-    const count = 6;
-    const { docs, tournamentArrayByType, tournamentTypeArray } = this.state;
-    let tmp = [];
-    tournamentTypeArray.forEach(tt => {
-      tmp[tt.id] = [];
-      tournamentArrayByType[tt.id] = [];
-    });
-    docs.forEach(doc => {
-      tmp[doc.tournament_type_id].push(doc);
-    });
-    let tmp2 = [];
-    tournamentTypeArray.forEach(tt => {
-      // console.log("tmp[tt]", tt.id, tmp[tt.id].length);
-      tmp2 = [];
-      let tmp3 = [];
-      tmp[tt.id].forEach((t, index) => {
-        if (index % count === 0) {
-          tmp3 = [];
-          tmp3.push(t);
-        } else {
-          tmp3.push(t);
-        }
-        if (index % count === count - 1 || index === tmp[tt.id].length - 1) {
-          tmp2.push(tmp3);
-        }
-      });
-      tournamentArrayByType[tt.id] = tmp2;
-    });
-    return tournamentArrayByType;
-  };
-
-  componentDidMount() {
-    this.getData();
-  }
-
   render() {
     return (
       <Page>
-        <h1 className="text-center">Welcome to Turtle Soccer!</h1>
-        <h2 className="text-center mb-5">Tournaments around the World</h2>
-        <GetTabs store={this.state} />
+        <section id="hero">
+          <div className="hero-container">
+            <div
+              id="heroCarousel"
+              className="carousel slide carousel-fade"
+              data-ride="carousel"
+            >
+              <ol
+                className="carousel-indicators"
+                id="hero-carousel-indicators"
+              ></ol>
+
+              <div className="carousel-inner" role="listbox">
+                <div
+                  className="carousel-item active"
+                  style={{
+                    backgroundImage:
+                      "url('/assets/images/slide/soccer-ts1475731972.jpg')",
+                  }}
+                >
+                  <div className="carousel-container">
+                    <div className="carousel-content container">
+                      <h2 className="animated fadeInDown h2-ff8">
+                        Welcome to <span>Turtle Soccer</span>
+                      </h2>
+                      <p className="animated fadeInUp">
+                        It's known as football for the rest of the world. In
+                        America, we call it Soccer!
+                      </p>
+                      <a
+                        href="/soccer"
+                        className="btn-get-started animated fadeInUp scrollto"
+                      >
+                        Soccer
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="carousel-item"
+                  style={{
+                    backgroundImage:
+                      "url('/assets/images/slide/football-557206_1920.jpg')",
+                  }}
+                >
+                  <div className="carousel-container">
+                    <div className="carousel-content container">
+                      <h2 className="animated fadeInDown h2-ff8">
+                        Welcome to <span>Turtle Football</span>
+                      </h2>
+                      <p className="animated fadeInUp">
+                        Magnam dolores commodi suscipit. Necessitatibus eius
+                        consequatur ex aliquid fuga eum quidem. Sit sint
+                        consectetur velit. Quisquam quos quisquam cupiditate. Et
+                        nemo qui impedit suscipit alias ea.
+                      </p>
+                      <a
+                        href="/football"
+                        className="btn-get-started animated fadeInUp scrollto"
+                      >
+                        Football
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="carousel-item"
+                  style={{
+                    backgroundImage:
+                      "url('/assets/images/slide/tennis-fun-1-1398467.jpg')",
+                  }}
+                >
+                  <div className="carousel-container">
+                    <div className="carousel-content container">
+                      <h2 className="animated fadeInDown h2-ff8">
+                        Welcome to <span>Turtle Tennis</span>
+                      </h2>
+                      <p className="animated fadeInUp">
+                        Ut velit est quam dolor ad a aliquid qui aliquid. Sequi
+                        ea ut et est quaerat sequi nihil ut aliquam. Occaecati
+                        alias dolorem mollitia ut. Similique ea voluptatem. Esse
+                        doloremque accusamus repellendus deleniti vel. Minus et
+                        tempore modi architecto.
+                      </p>
+                      <a
+                        href="/tennis"
+                        className="btn-get-started animated fadeInUp scrollto"
+                      >
+                        Tennis
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                className="carousel-control-prev"
+                href="#heroCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon icofont-rounded-left"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#heroCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon icofont-rounded-right"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </section>
       </Page>
     );
   }

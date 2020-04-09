@@ -5,6 +5,7 @@ import {
   Route
 } from "react-router-dom";
 import App from './App'
+import SoccerApp from './SoccerApp'
 import TennisApp from './TennisApp'
 import FootballApp from './FootballApp'
 import FSApp from './firestore'
@@ -20,6 +21,9 @@ export default function Routing() {
       <Switch>
           <Route exact path="/">
             <App />
+          </Route>
+          <Route path="/soccer">
+            <SoccerApp />
           </Route>
           <Route path="/tennis">
             <TennisApp />
