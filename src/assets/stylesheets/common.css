@@ -522,6 +522,7 @@ a:hover.hover-pointer {
 .h1-ff7:hover,
 .h1-ff8:hover {
   font-size: 2.5rem;
+  font-weight: 600;
 }
 .h2-ff1,
 .h2-ff2,
@@ -532,6 +533,7 @@ a:hover.hover-pointer {
 .h2-ff7,
 .h2-ff8 {
   font-size: 2rem;
+  font-weight: 500;
 }
 .h3-ff1,
 .h3-ff2,
@@ -542,6 +544,7 @@ a:hover.hover-pointer {
 .h3-ff7,
 .h3-ff8 {
   font-size: 1.75rem;
+  font-weight: 400;
 }
 .h4-ff1,
 .h4-ff2,
@@ -552,6 +555,7 @@ a:hover.hover-pointer {
 .h4-ff7,
 .h4-ff8 {
   font-size: 1.5rem;
+  font-weight: 300;
 }
 .h5-ff1,
 .h5-ff2,
@@ -562,6 +566,7 @@ a:hover.hover-pointer {
 .h5-ff7,
 .h5-ff8 {
   font-size: 1.25rem;
+  font-weight: 200;
 }
 .h6-ff1,
 .h6-ff2,
@@ -572,6 +577,7 @@ a:hover.hover-pointer {
 .h6-ff7,
 .h6-ff8 {
   font-size: 1rem;
+  font-weight: 100;
 }
 .h1-ff1,
 .h2-ff1,

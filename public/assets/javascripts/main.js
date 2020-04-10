@@ -191,4 +191,10 @@
       return false;
     });
   });
+  
+  AOS.init({
+    duration: 1000,
+    offset: 710,
+    easing: "ease-in-out-back"
+  });
 })(jQuery);
