@@ -8,17 +8,17 @@ class FootballApp extends React.Component {
     document.title = "Turtle Football";
   }
 
-  getPortfolio = props => {
+  getFblTeam = props => {
     const { name, confer, div, imageSrc } = props
     return (
-      <Col xl="2" lg="3" md="4" sm="6" className={`portfolio-item filter-${confer} filter-${div}`}>
-        <div className="portfolio-wrap">
+      <Col xl="2" lg="3" md="4" sm="6" className={`fblteam-item filter-${confer} filter-${div}`}>
+        <div className="fblteam-wrap">
           <img src={`/assets/images/nfl_logos/${imageSrc}`} className="img-fluid" alt={name}/>
-          <div className="portfolio-info">
+          <div className="fblteam-info">
             <h4>{name}</h4>
             <p>{confer}</p>
-            <div className="portfolio-links">
-              <a href={`/assets/images/nfl_logos/${imageSrc}`} data-gall="portfolioGallery" className="venobox" title={name}><i className="icofont-eye"></i></a>
+            <div className="fblteam-links">
+              <a href={`/assets/images/nfl_logos/${imageSrc}`} data-gall="fblteamGallery" className="venobox" title={name}><i className="icofont-eye"></i></a>
               <a href="/football" title="More Details"><i className="icofont-external-link"></i></a>
             </div>
           </div>
@@ -39,7 +39,7 @@ class FootballApp extends React.Component {
           />
         </div>
         
-        <section id="portfolio" className="portfolio section-bg">
+        <section id="fblteam" className="fblteam section-bg">
           <div className="container" data-aos="fade-up" data-aos-delay="100">
 
             <div className="section-title">
@@ -56,7 +56,7 @@ class FootballApp extends React.Component {
 
             <Row>
               <Col lg="12">
-                <ul id="portfolio-flters">
+                <ul id="fblteam-flters">
                   <li data-filter="*" className="filter-active col-3">All</li>
                   <li data-filter=".filter-AFC" className="col-3 offset-1">AFC</li>
                   <li data-filter=".filter-NFC" className="col-3 offset-1">NFC</li>
@@ -72,39 +72,39 @@ class FootballApp extends React.Component {
               </Col>
             </Row>
 
-            <Row className="portfolio-container">
-              {this.getPortfolio({name: "Arizona Cardinals", confer: "NFC", div: "NFC-West", imageSrc: "ARI.svg"})}
-              {this.getPortfolio({name: "Atlanta Falcons", confer: "NFC", div: "NFC-South", imageSrc: "ATL.svg"})}
-              {this.getPortfolio({name: "Baltimore Ravens", confer: "AFC", div: "AFC-North", imageSrc: "BAL.svg"})}
-              {this.getPortfolio({name: "Buffalo Bills", confer: "AFC", div: "AFC-East", imageSrc: "BUF.svg"})}
-              {this.getPortfolio({name: "Carolina Panthers", confer: "NFC", div: "NFC-South", imageSrc: "CAR.svg"})}
-              {this.getPortfolio({name: "Chicago Bears", confer: "NFC", div: "NFC-North", imageSrc: "CHI.svg"})}
-              {this.getPortfolio({name: "Cincinnati Bengals", confer: "AFC", div: "AFC-North", imageSrc: "CIN.svg"})}
-              {this.getPortfolio({name: "Cleveland Browns", confer: "AFC", div: "AFC-North", imageSrc: "CLE.svg"})}
-              {this.getPortfolio({name: "Dallas Cowboys", confer: "NFC", div: "NFC-East", imageSrc: "DAL.svg"})}
-              {this.getPortfolio({name: "Denver Broncos", confer: "AFC", div: "AFC-West", imageSrc: "DEN.svg"})}
-              {this.getPortfolio({name: "Detroit Lions", confer: "NFC", div: "NFC-North", imageSrc: "DET.svg"})}
-              {this.getPortfolio({name: "Green Bay Packers", confer: "NFC", div: "NFC-North", imageSrc: "GB.svg"})}
-              {this.getPortfolio({name: "Houston Texans", confer: "AFC", div: "AFC-South", imageSrc: "HOU.svg"})}
-              {this.getPortfolio({name: "Indianapolis Colts", confer: "AFC", div: "AFC-South", imageSrc: "IND.svg"})}
-              {this.getPortfolio({name: "Jacksonville Jaguars", confer: "AFC", div: "AFC-South", imageSrc: "JAX.svg"})} 
-              {this.getPortfolio({name: "Kansas City Chiefs", confer: "AFC", div: "AFC-West", imageSrc: "KC.svg"})}
-              {this.getPortfolio({name: "Los Angeles Rams", confer: "NFC", div: "NFC-West", imageSrc: "LA.svg"})}
-              {this.getPortfolio({name: "Los Angeles Chargers", confer: "AFC", div: "AFC-West", imageSrc: "LAC.svg"})}
-              {this.getPortfolio({name: "Miami Dolphins", confer: "AFC", div: "AFC-East", imageSrc: "MIA.svg"})}
-              {this.getPortfolio({name: "Minnesota Vikings", confer: "NFC", div: "NFC-North", imageSrc: "MIN.svg"})}
-              {this.getPortfolio({name: "New England Patriots", confer: "AFC", div: "AFC-East", imageSrc: "NE.svg"})}
-              {this.getPortfolio({name: "New Orleans Saints", confer: "NFC", div: "NFC-South", imageSrc: "NO.svg"})}
-              {this.getPortfolio({name: "New York Giants", confer: "NFC", div: "NFC-East", imageSrc: "NYG.svg"})}
-              {this.getPortfolio({name: "New York Jets", confer: "AFC", div: "AFC-East", imageSrc: "NYJ.svg"})}
-              {this.getPortfolio({name: "Oakland Raiders", confer: "AFC", div: "AFC-West", imageSrc: "OAK.svg"})}
-              {this.getPortfolio({name: "Philadelphia Eagles", confer: "NFC", div: "NFC-East", imageSrc: "PHI.svg"})}
-              {this.getPortfolio({name: "Pittsburgh Steelers", confer: "AFC", div: "AFC-North", imageSrc: "PIT.svg"})}
-              {this.getPortfolio({name: "Seattle Seahawks", confer: "NFC", div: "NFC-West", imageSrc: "SEA.svg"})}
-              {this.getPortfolio({name: "San Francisco 49ers", confer: "NFC", div: "NFC-West", imageSrc: "SF.svg"})}
-              {this.getPortfolio({name: "Tampa Bay Buccaneers", confer: "NFC", div: "NFC-South", imageSrc: "TB.svg"})}
-              {this.getPortfolio({name: "Tennessee Titans", confer: "AFC", div: "AFC-South", imageSrc: "TEN.svg"})}
-              {this.getPortfolio({name: "Washington Redskins", confer: "NFC", div: "NFC-East", imageSrc: "WAS.svg"})}
+            <Row className="fblteam-container">
+              {this.getFblTeam({name: "Arizona Cardinals", confer: "NFC", div: "NFC-West", imageSrc: "ARI.svg"})}
+              {this.getFblTeam({name: "Atlanta Falcons", confer: "NFC", div: "NFC-South", imageSrc: "ATL.svg"})}
+              {this.getFblTeam({name: "Baltimore Ravens", confer: "AFC", div: "AFC-North", imageSrc: "BAL.svg"})}
+              {this.getFblTeam({name: "Buffalo Bills", confer: "AFC", div: "AFC-East", imageSrc: "BUF.svg"})}
+              {this.getFblTeam({name: "Carolina Panthers", confer: "NFC", div: "NFC-South", imageSrc: "CAR.svg"})}
+              {this.getFblTeam({name: "Chicago Bears", confer: "NFC", div: "NFC-North", imageSrc: "CHI.svg"})}
+              {this.getFblTeam({name: "Cincinnati Bengals", confer: "AFC", div: "AFC-North", imageSrc: "CIN.svg"})}
+              {this.getFblTeam({name: "Cleveland Browns", confer: "AFC", div: "AFC-North", imageSrc: "CLE.svg"})}
+              {this.getFblTeam({name: "Dallas Cowboys", confer: "NFC", div: "NFC-East", imageSrc: "DAL.svg"})}
+              {this.getFblTeam({name: "Denver Broncos", confer: "AFC", div: "AFC-West", imageSrc: "DEN.svg"})}
+              {this.getFblTeam({name: "Detroit Lions", confer: "NFC", div: "NFC-North", imageSrc: "DET.svg"})}
+              {this.getFblTeam({name: "Green Bay Packers", confer: "NFC", div: "NFC-North", imageSrc: "GB.svg"})}
+              {this.getFblTeam({name: "Houston Texans", confer: "AFC", div: "AFC-South", imageSrc: "HOU.svg"})}
+              {this.getFblTeam({name: "Indianapolis Colts", confer: "AFC", div: "AFC-South", imageSrc: "IND.svg"})}
+              {this.getFblTeam({name: "Jacksonville Jaguars", confer: "AFC", div: "AFC-South", imageSrc: "JAX.svg"})} 
+              {this.getFblTeam({name: "Kansas City Chiefs", confer: "AFC", div: "AFC-West", imageSrc: "KC.svg"})}
+              {this.getFblTeam({name: "Los Angeles Rams", confer: "NFC", div: "NFC-West", imageSrc: "LA.svg"})}
+              {this.getFblTeam({name: "Los Angeles Chargers", confer: "AFC", div: "AFC-West", imageSrc: "LAC.svg"})}
+              {this.getFblTeam({name: "Miami Dolphins", confer: "AFC", div: "AFC-East", imageSrc: "MIA.svg"})}
+              {this.getFblTeam({name: "Minnesota Vikings", confer: "NFC", div: "NFC-North", imageSrc: "MIN.svg"})}
+              {this.getFblTeam({name: "New England Patriots", confer: "AFC", div: "AFC-East", imageSrc: "NE.svg"})}
+              {this.getFblTeam({name: "New Orleans Saints", confer: "NFC", div: "NFC-South", imageSrc: "NO.svg"})}
+              {this.getFblTeam({name: "New York Giants", confer: "NFC", div: "NFC-East", imageSrc: "NYG.svg"})}
+              {this.getFblTeam({name: "New York Jets", confer: "AFC", div: "AFC-East", imageSrc: "NYJ.svg"})}
+              {this.getFblTeam({name: "Oakland Raiders", confer: "AFC", div: "AFC-West", imageSrc: "OAK.svg"})}
+              {this.getFblTeam({name: "Philadelphia Eagles", confer: "NFC", div: "NFC-East", imageSrc: "PHI.svg"})}
+              {this.getFblTeam({name: "Pittsburgh Steelers", confer: "AFC", div: "AFC-North", imageSrc: "PIT.svg"})}
+              {this.getFblTeam({name: "Seattle Seahawks", confer: "NFC", div: "NFC-West", imageSrc: "SEA.svg"})}
+              {this.getFblTeam({name: "San Francisco 49ers", confer: "NFC", div: "NFC-West", imageSrc: "SF.svg"})}
+              {this.getFblTeam({name: "Tampa Bay Buccaneers", confer: "NFC", div: "NFC-South", imageSrc: "TB.svg"})}
+              {this.getFblTeam({name: "Tennessee Titans", confer: "AFC", div: "AFC-South", imageSrc: "TEN.svg"})}
+              {this.getFblTeam({name: "Washington Redskins", confer: "NFC", div: "NFC-East", imageSrc: "WAS.svg"})}
             </Row>
 
           </div>

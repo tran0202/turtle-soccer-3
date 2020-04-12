@@ -1,9 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "boxicons/css/boxicons.min.css"
+import "boxicons/css/boxicons.min.css";
+import "animate.css/animate.min.css";
+import "aos/dist/aos.css";
+import "../assets/stylesheets/third-party/icofont/icofont.min.css";
+import "../assets/stylesheets/third-party/venobox.css";
 import "../assets/stylesheets/common.css";
 import "../assets/stylesheets/Page.css";
 import "../assets/stylesheets/Soccer.css";
+import "../assets/stylesheets/Football.css";
+import "../assets/stylesheets/Tennis.css";
 import turtleLogo from "../assets/images/LogoMakr_1aN4h4.png";
 import { Container, Row, Col } from "reactstrap";
 

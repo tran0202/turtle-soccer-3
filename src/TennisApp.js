@@ -36,8 +36,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Novak Djokovic</h4>
-                    <span>Serbia</span>
+                    <h4>Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: "15px" }} alt="Serbia" /></h4>
+                    <span>Australia Open 2020</span>
                   </div>
                 </div>
               </div>
@@ -56,8 +56,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Sofia Kenin</h4>
-                    <span>USA</span>
+                    <h4>Sofia Kenin <img src="/assets/images/flags/USA.png" style={{ height: "15px" }} alt="USA" /></h4>
+                    <span>Australia Open 2020</span>
                   </div>
                 </div>
               </div>
@@ -76,8 +76,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Rafael Nadal</h4>
-                    <span>Spain</span>
+                    <h4>Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: "15px" }} alt="Spain" /></h4>
+                    <span>French Open 2019</span>
                   </div>
                 </div>
               </div>
@@ -96,8 +96,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Ashleigh Barty</h4>
-                    <span>Australia</span>
+                    <h4>Ashleigh Barty <img src="/assets/images/flags/Australia.png" style={{ height: "15px" }} alt="Australia" /></h4>
+                    <span>French Open 2019</span>
                   </div>
                 </div>
               </div>
@@ -112,8 +112,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Novak Djokovic</h4>
-                    <span>Serbia</span>
+                    <h4>Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: "15px" }} alt="Serbia" /></h4>
+                    <span>Wimbledon 2019</span>
                   </div>
                 </div>
               </div>
@@ -132,8 +132,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Simona Halep</h4>
-                    <span>Romania</span>
+                    <h4>Simona Halep <img src="/assets/images/flags/Romania.png" style={{ height: "15px" }} alt="Romania" /></h4>
+                    <span>Wimbledon 2019</span>
                   </div>
                 </div>
               </div>
@@ -152,8 +152,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Rafael Nadal</h4>
-                    <span>Spain</span>
+                    <h4>Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: "15px" }} alt="Spain" /></h4>
+                    <span>US Open 2019</span>
                   </div>
                 </div>
               </div>
@@ -172,8 +172,8 @@ class TennisApp extends React.Component {
                     />
                   </div>
                   <div className="player-info">
-                    <h4>Bianca Andreescu</h4>
-                    <span>Canada</span>
+                    <h4>Bianca Andreescu <img src="/assets/images/flags/Canada.png" style={{ height: "15px" }} alt="Canada" /></h4>
+                    <span>US Open 2019</span>
                   </div>
                 </div>
               </div>

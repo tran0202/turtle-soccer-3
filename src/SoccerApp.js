@@ -12,12 +12,7 @@ import {
   Row,
   Col,
   ListGroup,
-  ListGroupItem,
-  Card,
-  CardImg,
-  CardText,
-  CardDeck,
-  CardBody
+  ListGroupItem
 } from "reactstrap";
 import classnames from "classnames";
 import { ConfederationIds } from "./core/Constants";
@@ -44,7 +39,7 @@ const GetTabs = props => {
                   toggle(confed);
                 }}
               >
-                <img src={logoSrc} alt={confed} height="35" />
+                <img src={logoSrc} alt={confed} style={{height: '35px'}} className="img-fluid" />
               </NavLink>
             </NavItem>
           );
@@ -62,36 +57,20 @@ const GetTabs = props => {
                         <ListGroupItem key={tt.id}>
                           <h2 className="h2-ff1">{tt.name}</h2>
                           {tournamentArrayByType[tt.id] && (
-                            <React.Fragment>
-                              {tournamentArrayByType[tt.id].map(
-                                (row, index) => (
-                                  <CardDeck key={index} className="mt-3">
-                                    {row.map(t => (
-                                      <Card
-                                        key={t.id}
-                                        style={{
-                                          marginLeft: "10px",
-                                          marginRight: "10px",
-                                          paddingTop: "10px"
-                                        }}
-                                      >
-                                        <CardImg
-                                          top
-                                          src={`/assets/images/${t.logo_path}/${t.logo_filename}`}
-                                          alt={t.name}
-                                          className="card-img-top-height-100 mx-auto"
-                                        />
-                                        <CardBody>
-                                          <CardText className="text-center font-bold">
-                                            {t.name}
-                                          </CardText>
-                                        </CardBody>
-                                      </Card>
-                                    ))}
-                                  </CardDeck>
-                                )
-                              )}
-                            </React.Fragment>
+                            <section className="tournaments section-bg">
+                              <div className="container">
+                                <div className="row">
+                                {tournamentArrayByType[tt.id].map(t => (
+                                  <div key={t.id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 text-center" data-aos="fade-up">
+                                    <div className="tournament-box">
+                                      <img src={`/assets/images/${t.logo_path}/${t.logo_filename}`} alt={t.name} className="card-img-top-height-100 mx-auto"/>
+                                      <p className="text-center font-bold mt-3">{t.name}</p>
+                                    </div>
+                                  </div>
+                                ))}
+                                </div>
+                              </div>
+                            </section>
                           )}
                         </ListGroupItem>
                       ))}
@@ -136,6 +115,7 @@ class SoccerApp extends React.Component {
     this.setState({ docs: newState });
     const tabt = this.getTournamentArrayByType();
     this.setState({ tournamentArrayByType: tabt });
+    // console.log("this.state", this.state);
     window.tournamentStore = this.state;
   };
 
@@ -165,7 +145,6 @@ class SoccerApp extends React.Component {
   };
 
   getTournamentArrayByType = () => {
-    const count = 6;
     const { docs, tournamentArrayByType, tournamentTypeArray } = this.state;
     let tmp = [];
     tournamentTypeArray.forEach(tt => {
@@ -175,23 +154,10 @@ class SoccerApp extends React.Component {
     docs.forEach(doc => {
       tmp[doc.tournament_type_id].push(doc);
     });
-    let tmp2 = [];
     tournamentTypeArray.forEach(tt => {
-      // console.log("tmp[tt]", tt.id, tmp[tt.id].length);
-      tmp2 = [];
-      let tmp3 = [];
-      tmp[tt.id].forEach((t, index) => {
-        if (index % count === 0) {
-          tmp3 = [];
-          tmp3.push(t);
-        } else {
-          tmp3.push(t);
-        }
-        if (index % count === count - 1 || index === tmp[tt.id].length - 1) {
-          tmp2.push(tmp3);
-        }
+      tmp[tt.id].forEach((t) => {
+        tournamentArrayByType[tt.id].push(t);
       });
-      tournamentArrayByType[tt.id] = tmp2;
     });
     return tournamentArrayByType;
   };

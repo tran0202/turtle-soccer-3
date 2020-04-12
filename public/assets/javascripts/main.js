@@ -197,18 +197,18 @@
     $('.venobox').venobox();
   });
 
-  // Porfolio isotope and filter
+  // Football team isotope and filter
   $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item',
+    var fblteamIsotope = $('.fblteam-container').isotope({
+      itemSelector: '.fblteam-item',
       layoutMode: 'fitRows'
     });
 
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
+    $('#fblteam-flters li').on('click', function() {
+      $("#fblteam-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');
 
-      portfolioIsotope.isotope({
+      fblteamIsotope.isotope({
         filter: $(this).data('filter')
       });
     });
@@ -221,7 +221,7 @@
   
   AOS.init({
     duration: 1000,
-    offset: 710,
+    // offset: 710,
     easing: "ease-in-out-back"
   });
 })(jQuery);

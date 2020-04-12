@@ -1,0 +1,110 @@
+/* ========== Football team ========== */
+
+.fblteam .fblteam-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.fblteam #fblteam-flters {
+  padding: 0;
+  margin: 0 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.fblteam #fblteam-flters li {
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #444;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.fblteam #fblteam-flters li:hover, .fblteam #fblteam-flters li.filter-active {
+  background: #358C23;
+  color: #fff;
+}
+
+.fblteam #fblteam-flters li:last-child {
+  margin-right: 0;
+}
+
+.fblteam .fblteam-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.fblteam .fblteam-wrap img {
+  transition: 0.3s;
+}
+
+.fblteam .fblteam-wrap .fblteam-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+  text-align: center;
+  background: rgba(31, 53, 72, 0.6);
+  padding-bottom: 30px;
+}
+
+.fblteam .fblteam-wrap .fblteam-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.fblteam .fblteam-wrap .fblteam-info p {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.fblteam .fblteam-wrap .fblteam-info a {
+  color: #428bca;
+  margin: 0 4px;
+  font-size: 18px;
+  line-height: 1;
+  background-color: #fff;
+  padding-top: 7px;
+  border-radius: 50px;
+  text-align: center;
+  width: 36px;
+  height: 35px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.fblteam .fblteam-wrap .fblteam-info a:hover {
+  background: #428bca;
+  color: #fff;
+}
+
+.fblteam .fblteam-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+.fblteam .fblteam-wrap:hover .fblteam-info {
+  opacity: 1;
+  padding-bottom: 0;
+}
+
+.fblteam .fblteam-wrap:hover img {
+  transform: scale(1.1);
+}
