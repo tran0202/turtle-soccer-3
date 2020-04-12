@@ -14,7 +14,7 @@ class Page extends React.Component {
         <header id="header">
           <Container>
             <Row>
-              <Col>
+              <Col sm="7" md="5">
                 <div className="logo float-left">
                   <a href="/">
                     <img
@@ -25,8 +25,8 @@ class Page extends React.Component {
                   </a>
                 </div>
               </Col>
-              <Col>
-                <nav className="nav-menu float-right d-none d-lg-block mt-5">
+              <Col md="7">
+                <nav className="nav-menu float-right d-none d-md-block mt-3">
                   <ul>
                     <li>
                       <a href="/">Home</a>

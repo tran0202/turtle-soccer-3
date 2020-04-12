@@ -14,7 +14,7 @@ class TennisApp extends React.Component {
         <div className="text-center">
           <img
             src="/assets/images/slide/athletes-1866487_1920.jpg"
-            style={{ maxWidth: "900px", height: "auto" }}
+            className="w-100"
             alt="Turtle Tennis"
           />
         </div>
