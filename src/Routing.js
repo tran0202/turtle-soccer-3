@@ -14,6 +14,7 @@ import FSGroupTypeApp from './firestore/GroupType'
 import FSGroupApp from './firestore/Group'
 import FSTournamentTypeApp from './firestore/TournamentType'
 import FSTournamentApp from './firestore/tournament/'
+import FSNationApp from './firestore/nation/'
 
 export default function Routing() {
   return (
@@ -48,6 +49,9 @@ export default function Routing() {
           </Route>
           <Route exact path="/admin/tournament">
             <FSTournamentApp />
+          </Route>
+          <Route exact path="/admin/nation">
+            <FSNationApp />
           </Route>
         </Switch>
     </Router>

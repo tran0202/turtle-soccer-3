@@ -27,8 +27,9 @@
   transition: all 0.3s ease-in-out;
 }
 
-.fblteam #fblteam-flters li:hover, .fblteam #fblteam-flters li.filter-active {
-  background: #358C23;
+.fblteam #fblteam-flters li:hover,
+.fblteam #fblteam-flters li.filter-active {
+  background: #358c23;
   color: #fff;
 }
 

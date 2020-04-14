@@ -12,7 +12,7 @@ class FSTournamentTypeApp extends React.Component {
   render() {
     const param = {
       name: "tournament_type",
-      orderBy: ["confederation_id", "order"],
+      // orderBy: ["confederation_id", "order"],
       staticData: AppData,
       displayHeader: () => {
         return (
