@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrepData as AppData } from './Team.PrepData'
-import AdminPage from '../../core/AdminPage'
-import Collection from '../../core/Collection'
+import AdminPage from '../AdminPage'
+import Collection from '../Collection'
 
 class FSTeamApp extends React.Component {
   constructor(props) {

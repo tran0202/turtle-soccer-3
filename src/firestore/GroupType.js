@@ -1,18 +1,18 @@
-import React from "react";
-import { AppData } from "./GroupType.Data";
-import AdminPage from "../core/AdminPage";
-import Collection from "../core/Collection";
+import React from 'react'
+import { AppData } from './GroupType.Data'
+import AdminPage from './AdminPage'
+import Collection from './Collection'
 
 class FSGroupTypeApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Group Type";
+    super(props)
+    document.title = 'Turtle Soccer - Group Type'
   }
 
   render() {
     const param = {
-      name: "group_type",
-      orderBy: ["name"],
+      name: 'group_type',
+      orderBy: ['name'],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -24,9 +24,9 @@ class FSGroupTypeApp extends React.Component {
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
-        );
+        )
       },
-      displayRow: doc => {
+      displayRow: (doc) => {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
@@ -34,18 +34,18 @@ class FSGroupTypeApp extends React.Component {
             <td>{doc.description}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
-        );
+        )
       },
-      setWindowObjects: store => {
-        window.groupTypeStore = store;
-      }
-    };
+      setWindowObjects: (store) => {
+        window.groupTypeStore = store
+      },
+    }
     return (
       <AdminPage>
         <Collection param={param} />
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSGroupTypeApp;
+export default FSGroupTypeApp

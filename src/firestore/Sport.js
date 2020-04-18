@@ -1,18 +1,18 @@
-import React from "react";
-import { AppData } from "./Sport.Data";
-import AdminPage from "../core/AdminPage";
-import Collection from "../core/Collection";
+import React from 'react'
+import { AppData } from './Sport.Data'
+import AdminPage from './AdminPage'
+import Collection from './Collection'
 
 class FSSportApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Sport";
+    super(props)
+    document.title = 'Turtle Soccer - Sport'
   }
 
   render() {
     const param = {
-      name: "sport",
-      orderBy: ["name"],
+      name: 'sport',
+      orderBy: ['name'],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -24,9 +24,9 @@ class FSSportApp extends React.Component {
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
-        );
+        )
       },
-      displayRow: doc => {
+      displayRow: (doc) => {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
@@ -34,18 +34,18 @@ class FSSportApp extends React.Component {
             <td>{doc.route}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
-        );
+        )
       },
-      setWindowObjects: store => {
-        window.sportStore = store;
-      }
-    };
+      setWindowObjects: (store) => {
+        window.sportStore = store
+      },
+    }
     return (
       <AdminPage>
         <Collection param={param} />
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSSportApp;
+export default FSSportApp

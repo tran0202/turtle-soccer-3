@@ -1,18 +1,18 @@
-import React from "react";
-import { AppData } from "./Group.Data";
-import AdminPage from "../core/AdminPage";
-import Collection from "../core/Collection";
+import React from 'react'
+import { AppData } from './Group.Data'
+import AdminPage from './AdminPage'
+import Collection from './Collection'
 
 class FSGroupApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Group";
+    super(props)
+    document.title = 'Turtle Soccer - Group'
   }
 
   render() {
     const param = {
-      name: "group",
-      orderBy: ["group_type_id", "name"],
+      name: 'group',
+      orderBy: ['group_type_id', 'name'],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -26,9 +26,9 @@ class FSGroupApp extends React.Component {
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
-        );
+        )
       },
-      displayRow: doc => {
+      displayRow: (doc) => {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
@@ -38,18 +38,18 @@ class FSGroupApp extends React.Component {
             <td>{doc.group_logo}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
-        );
+        )
       },
-      setWindowObjects: store => {
-        window.groupStore = store;
-      }
-    };
+      setWindowObjects: (store) => {
+        window.groupStore = store
+      },
+    }
     return (
       <AdminPage>
         <Collection param={param} />
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSGroupApp;
+export default FSGroupApp

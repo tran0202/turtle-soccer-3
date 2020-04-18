@@ -1,17 +1,17 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "boxicons/css/boxicons.min.css";
-import "animate.css/animate.min.css";
-import "aos/dist/aos.css";
-import "../assets/stylesheets/third-party/icofont/icofont.min.css";
-import "../assets/stylesheets/third-party/venobox.css";
-import "../assets/stylesheets/common.css";
-import "../assets/stylesheets/Page.css";
-import "../assets/stylesheets/Soccer.css";
-import "../assets/stylesheets/Football.css";
-import "../assets/stylesheets/Tennis.css";
-import turtleLogo from "../assets/images/LogoMakr_1aN4h4.png";
-import { Container, Row, Col } from "reactstrap";
+import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'boxicons/css/boxicons.min.css'
+import 'animate.css/animate.min.css'
+import 'aos/dist/aos.css'
+import '../assets/stylesheets/third-party/icofont/icofont.min.css'
+import '../assets/stylesheets/third-party/venobox.css'
+import '../assets/stylesheets/common.css'
+import '../assets/stylesheets/Page.css'
+import '../assets/stylesheets/Soccer.css'
+import '../assets/stylesheets/Football.css'
+import '../assets/stylesheets/Tennis.css'
+import turtleLogo from '../assets/images/LogoMakr_1aN4h4.png'
+import { Container, Row, Col } from 'reactstrap'
 
 class Page extends React.Component {
   render() {
@@ -23,11 +23,7 @@ class Page extends React.Component {
               <Col sm="7" md="5">
                 <div className="logo float-left">
                   <a href="/">
-                    <img
-                      src={turtleLogo}
-                      alt="Turtle Soccer"
-                      className="img-fluid"
-                    />
+                    <img src={turtleLogo} alt="Turtle Soccer" className="img-fluid" />
                   </a>
                 </div>
               </Col>
@@ -53,7 +49,7 @@ class Page extends React.Component {
           </Container>
         </header>
 
-        <div className="container">{this.props.children}</div>
+        {this.props.children}
 
         <button className="back-to-top">
           <i className="icofont-simple-up"></i>
@@ -62,14 +58,13 @@ class Page extends React.Component {
         <footer id="footer">
           <div className="container mt-5 mb-3">
             <div className="copyright">
-              &copy; Copyright <span className="font-bold">Turtle Soccer</span>.
-              All Rights Reserved.
+              &copy; Copyright <span className="font-bold">Turtle Soccer</span>. All Rights Reserved.
             </div>
           </div>
         </footer>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Page;
+export default Page

@@ -1,17 +1,17 @@
-import React from "react";
-import { AppData } from "./TournamentType.Data";
-import AdminPage from "../core/AdminPage";
-import Collection from "../core/Collection";
+import React from 'react'
+import { AppData } from './TournamentType.Data'
+import AdminPage from './AdminPage'
+import Collection from './Collection'
 
 class FSTournamentTypeApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Tournament Type";
+    super(props)
+    document.title = 'Turtle Soccer - Tournament Type'
   }
 
   render() {
     const param = {
-      name: "tournament_type",
+      name: 'tournament_type',
       // orderBy: ["confederation_id", "order"],
       staticData: AppData,
       displayHeader: () => {
@@ -28,9 +28,9 @@ class FSTournamentTypeApp extends React.Component {
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
-        );
+        )
       },
-      displayRow: doc => {
+      displayRow: (doc) => {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
@@ -42,18 +42,18 @@ class FSTournamentTypeApp extends React.Component {
             <td>{doc.order}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
-        );
+        )
       },
-      setWindowObjects: store => {
-        window.tournamentTypeStore = store;
-      }
-    };
+      setWindowObjects: (store) => {
+        window.tournamentTypeStore = store
+      },
+    }
     return (
       <AdminPage>
         <Collection param={param} />
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSTournamentTypeApp;
+export default FSTournamentTypeApp

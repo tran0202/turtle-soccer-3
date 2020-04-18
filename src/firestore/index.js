@@ -1,11 +1,11 @@
-import React from "react";
-import AdminPage from "../core/AdminPage";
-import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
+import React from 'react'
+import AdminPage from './AdminPage'
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 
 class FSApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Admin";
+    super(props)
+    document.title = 'Turtle Soccer - Admin'
   }
 
   render() {
@@ -47,8 +47,8 @@ class FSApp extends React.Component {
           </Row>
         </Container>
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSApp;
+export default FSApp

@@ -1,4 +1,4 @@
-import { ConcatData } from '../../core/Helper'
+import { ConcatData } from '../Helper'
 import { AppData as AppData1 } from './Team.Data.1'
 import { AppData as AppData2 } from './Team.Data.2'
 import { AppData as AppData3 } from './Team.Data.3'

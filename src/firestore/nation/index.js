@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrepData as AppData } from './Nation.PrepData'
-import AdminPage from '../../core/AdminPage'
-import Collection from '../../core/Collection'
+import AdminPage from '../AdminPage'
+import Collection from '../Collection'
 
 class FSNationApp extends React.Component {
   constructor(props) {

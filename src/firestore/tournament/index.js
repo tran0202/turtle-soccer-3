@@ -1,18 +1,18 @@
-import React from "react";
-import { PrepData as AppData } from "./Tournament.PrepData";
-import AdminPage from "../../core/AdminPage";
-import Collection from "../../core/Collection";
+import React from 'react'
+import { PrepData as AppData } from './Tournament.PrepData'
+import AdminPage from '../AdminPage'
+import Collection from '../Collection'
 
 class FSTournamentApp extends React.Component {
   constructor(props) {
-    super(props);
-    document.title = "Turtle Soccer - Tournament";
+    super(props)
+    document.title = 'Turtle Soccer - Tournament'
   }
 
   render() {
     const param = {
-      name: "tournament",
-      orderBy: ["tournament_type_id", "start_date"],
+      name: 'tournament',
+      orderBy: ['tournament_type_id', 'start_date'],
       staticData: AppData(),
       displayHeader: () => {
         return (
@@ -30,12 +30,13 @@ class FSTournamentApp extends React.Component {
             <th>logo_filename</th>
             <th>points_for_win</th>
             <th>parent_tournament_id</th>
+            <th>color</th>
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
-        );
+        )
       },
-      displayRow: doc => {
+      displayRow: (doc) => {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
@@ -43,27 +44,28 @@ class FSTournamentApp extends React.Component {
             <td>{doc.tournament_type_id}</td>
             <td>{doc.start_date}</td>
             <td>{doc.end_date}</td>
-            <td>{doc.active ? "Y" : "N"}</td>
-            <td>{doc.third_place_ranking ? "Y" : "N"}</td>
-            <td>{doc.head_to_head_tiebreaker ? "Y" : "N"}</td>
-            <td>{doc.golden_goal_rule ? "Y" : "N"}</td>
+            <td>{doc.active ? 'Y' : 'N'}</td>
+            <td>{doc.third_place_ranking ? 'Y' : 'N'}</td>
+            <td>{doc.head_to_head_tiebreaker ? 'Y' : 'N'}</td>
+            <td>{doc.golden_goal_rule ? 'Y' : 'N'}</td>
             <td>{doc.logo_filename}</td>
             <td>{doc.points_for_win}</td>
             <td>{doc.parent_tournament_id}</td>
+            <td style={{ backgroundColor: doc.color, color: '#fff' }}>{doc.color}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
-        );
+        )
       },
-      setWindowObjects: store => {
-        window.tournamentStore = store;
-      }
-    };
+      setWindowObjects: (store) => {
+        window.tournamentStore = store
+      },
+    }
     return (
       <AdminPage>
         <Collection param={param} />
       </AdminPage>
-    );
+    )
   }
 }
 
-export default FSTournamentApp;
+export default FSTournamentApp
