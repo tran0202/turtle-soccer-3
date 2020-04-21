@@ -72,7 +72,7 @@ const RoundRobin = (props) => {
           {matches[value].map((m, index) => (
             <Col sm="12" className="padding-tb-md border-bottom-gray5" key={index}>
               <Row>
-                <Col sm="2" xs="2" className="font-10 margin-top-time-xs">
+                <Col sm="2" xs="1" className="font-10 margin-top-time-xs">
                   {m.time}
                   <br />
                   {m.group}
