@@ -97,7 +97,7 @@ const RoundRobin = (props) => {
                 <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
                   <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />
                 </Col>
-                <Col sm="3" xs="3" className="team-name text-uppercase team-name-no-padding-left">
+                <Col sm="3" xs="3" className="team-name text-uppercase">
                   {getTeamName(m.away_team)}
                 </Col>
               </Row>
