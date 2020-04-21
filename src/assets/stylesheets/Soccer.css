@@ -54,30 +54,32 @@
   }
 }
 
-.team-name {
+.team-name,
+.score {
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Oswald', sans-serif;
 }
 
-.score {
+/* .score {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   font-family: 'Roboto', sans-serif;
-}
+} */
 
 @media (max-width: 576px) {
-  .team-name {
+  .team-name,
+  .score {
     font-size: 1.25rem;
     font-weight: 400;
     padding-top: 7px;
   }
 
-  .score {
+  /* .score {
     font-size: 1.25rem;
     font-weight: 600;
     padding-top: 7px;
-  }
+  } */
 
   .no-display-xs {
     display: none;
