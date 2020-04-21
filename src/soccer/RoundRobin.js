@@ -91,13 +91,13 @@ const RoundRobin = (props) => {
                 <Col sm="1" xs="1" className="padding-top-sm text-center">
                   <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />
                 </Col>
-                <Col sm="2" xs="2" className="score text-uppercase text-center">
+                <Col sm="2" xs="2" className="score text-uppercase text-center score-no-padding-right">
                   {m.home_score}-{m.away_score}
                 </Col>
-                <Col sm="1" xs="1" className="padding-top-sm text-center">
+                <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
                   <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />
                 </Col>
-                <Col sm="3" xs="3" className="team-name text-uppercase">
+                <Col sm="3" xs="3" className="team-name text-uppercase team-name-no-padding-left">
                   {getTeamName(m.away_team)}
                 </Col>
               </Row>
