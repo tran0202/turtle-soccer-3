@@ -31,118 +31,6 @@
   font-size: 14px;
 }
 
-/* ========== Matches ========== */
-
-.match .match-item {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.match #match-flters {
-  padding: 0;
-  margin: 0 0 35px 0;
-  list-style: none;
-  text-align: center;
-}
-
-.match #match-flters li {
-  cursor: pointer;
-  margin-bottom: 15px;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 12px;
-  line-height: 20px;
-  color: #444;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background: #fff;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.match #match-flters li:hover,
-.match #match-flters li.filter-active {
-  background: #358c23;
-  color: #fff;
-}
-
-.match #match-flters li:last-child {
-  margin-right: 0;
-}
-
-.match .match-wrap {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-  transition: 0.3s;
-  position: relative;
-  overflow: hidden;
-}
-
-.match .match-wrap img {
-  transition: 0.3s;
-}
-
-.match .match-wrap .match-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 0.3s;
-  text-align: center;
-  background: rgba(31, 53, 72, 0.6);
-  padding-bottom: 30px;
-}
-
-.match .match-wrap .match-info h4 {
-  font-size: 20px;
-  color: #fff;
-  font-weight: 600;
-}
-
-.match .match-wrap .match-info p {
-  color: #fff;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.match .match-wrap .match-info a {
-  color: #428bca;
-  margin: 0 4px;
-  font-size: 18px;
-  line-height: 1;
-  background-color: #fff;
-  padding-top: 7px;
-  border-radius: 50px;
-  text-align: center;
-  width: 36px;
-  height: 35px;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-.match .match-wrap .match-info a:hover {
-  background: #428bca;
-  color: #fff;
-}
-
-.match .match-wrap:hover {
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
-}
-
-.match .match-wrap:hover .match-info {
-  opacity: 1;
-  padding-bottom: 0;
-}
-
-.match .match-wrap:hover img {
-  transform: scale(1.1);
-}
-
 /* ========== Miscelaneous ========== */
 
 .tournament-title {
@@ -158,4 +46,62 @@
   width: auto;
   height: 100px;
   max-width: 100%;
+}
+
+@media (max-width: 992px) {
+  .team-name-no-padding-right {
+    padding-right: 0;
+  }
+}
+
+.team-name {
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+}
+
+.score {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 576px) {
+  .team-name {
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding-top: 7px;
+  }
+
+  .score {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-top: 7px;
+  }
+
+  .no-display-xs {
+    display: none;
+  }
+
+  .margin-top-time-xs {
+    margin-top: 3px;
+  }
+}
+
+/* ========== Nav Tabs Override ========== */
+
+.nav-link.disabled {
+  color: #87d977;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #cc1442;
+}
+
+.nav-tabs .nav-link.active {
+  color: #007bff;
+}
+
+.nav-tabs .nav-link {
+  color: #1988ff;
 }

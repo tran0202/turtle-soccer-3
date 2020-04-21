@@ -3,6 +3,11 @@ import Page from './core/Page'
 import { Container } from 'reactstrap'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    document.title = 'Turtle Soccer'
+  }
+  
   render() {
     return (
       <Page>

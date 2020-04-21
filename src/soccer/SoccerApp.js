@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import 'firebase/auth'
-import 'firebase/firestore'
 import ConfederationIds from '../data/ConfederationId.json'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentArray from '../data/Tournament.json'

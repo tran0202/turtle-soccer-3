@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "Dusha";
-  src: url("fonts/Dusha_-_FIFA_World_Cup_2018.ttf");
+  font-family: 'Dusha';
+  src: url('fonts/Dusha_-_FIFA_World_Cup_2018.ttf');
 }
 @font-face {
-  font-family: "Capture it";
-  src: url("fonts/Capture it.ttf");
+  font-family: 'Capture it';
+  src: url('fonts/Capture it.ttf');
 }
 
 @media (min-width: 768px) {
@@ -17,27 +17,189 @@
 
 body {
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Helvetica Neue", "Arial", "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans";
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f8f8;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 a {
-  color: #428bca;
+  color: #358c23;
 }
 
 a:hover {
-  color: #9eccf4;
+  color: #cc1442;
   text-decoration: none;
+}
+
+/* ========== Miscellaneous ========== */
+
+.flag-xxs {
+  height: 12px;
+  border: 1px solid #c7c6c6;
+}
+.flag-xs {
+  height: 24px;
+  border: 1px solid #c7c6c6;
+}
+.flag-sm {
+  width: 32px;
+  height: 24px;
+  border: 1px solid #c7c6c6;
+}
+
+@media (min-width: 768px) {
+  .flag-md {
+    width: 48px;
+    height: 32px;
+    border: 1px solid #c7c6c6;
+  }
+  .flag-md-olympic {
+    height: 25px;
+  }
+}
+.margin-top-flag {
+  margin-top: -6px;
+}
+.logo-md {
+  height: 32px;
+}
+.logo-lg {
+  height: 44px;
+}
+.modal-md {
+  max-width: 800px;
+}
+.modal-X {
+  font-size: 48px;
+}
+.modal-close {
+  font-size: 26px;
+}
+.card-img-top-height-85 {
+  width: auto;
+  height: 85px;
+}
+.card-img-top-height-150 {
+  width: auto;
+  height: 150px;
+}
+.card-img-top-height-200 {
+  width: auto;
+  height: 200px;
+}
+
+a:hover.hover-pointer {
+  cursor: pointer;
+}
+.group-link {
+  color: #007bff;
+  text-decoration: none;
+}
+.group-link:hover {
+  color: #007bc9;
+  text-decoration: underline;
+}
+
+.no-display {
+  display: none;
+}
+
+.padding-top-logo {
+  padding-top: 30px;
+}
+
+.scenario-striped {
+  background-color: #e6e7e9;
+}
+.ranking-striped {
+  background-color: #ebebeb;
+}
+.advanced-second-round-striped {
+  background-color: #e3fae3;
+}
+.advanced-third-place-striped {
+  background-color: #bbf3ff;
+}
+.advanced-third-round-striped {
+  background-color: #ffffbb;
+}
+.advanced-fourth-round-striped {
+  background-color: #bbf3ff;
+}
+.qualification-winner-striped {
+  background-color: #bbf3bb;
+}
+.promotion-striped {
+  background-color: #bbf3bb;
+}
+.relegation-striped {
+  background-color: #ffbbbb;
+}
+
+.gold {
+  background-color: gold;
+}
+.silver {
+  background-color: silver;
+}
+.bronze {
+  background-color: rgb(204, 153, 102);
+}
+
+.bracket-box-height {
+  height: 120px;
+}
+.bracket-gap-height-00 {
+  height: 10px;
+}
+.bracket-gap-height-01 {
+  height: 20px;
+}
+.bracket-gap-height-10 {
+  height: 80px;
+}
+.bracket-gap-height-11 {
+  height: 160px;
+}
+.bracket-gap-height-20 {
+  height: 220px;
+}
+.bracket-gap-height-21 {
+  height: 440px;
+}
+.bracket-gap-height-30 {
+  height: 410px;
+}
+.bracket-gap-height-31 {
+  height: 1000px;
+}
+.bracket-gap-height-32 {
+  height: 510px;
+}
+.bracket-gap-height-40 {
+  height: 610px;
+}
+.bracket-gap-height-41 {
+  height: 2120px;
+}
+.bracket-gap-height-50 {
+  height: 610px;
+}
+.bracket-gap-height-51 {
+  height: 2120px;
+}
+
+.width-200 {
+  width: 200px;
+}
+.width-100 {
+  width: 100px;
 }
 
 /* ========== Colors ========== */
@@ -131,6 +293,10 @@ a:hover {
   font-weight: bold;
 }
 
+.font-10 {
+  font-size: 10px;
+}
+
 .font-custom1 {
   font-size: 40px;
 }
@@ -218,7 +384,7 @@ a:hover {
 .h4-ff1,
 .h5-ff1,
 .h6-ff1 {
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
 }
 .h1-ff2,
 .h2-ff2,
@@ -226,7 +392,7 @@ a:hover {
 .h4-ff2,
 .h5-ff2,
 .h6-ff2 {
-  font-family: "Monoton", cursive;
+  font-family: 'Monoton', cursive;
 }
 .h1-ff3,
 .h2-ff3,
@@ -234,7 +400,7 @@ a:hover {
 .h4-ff3,
 .h5-ff3,
 .h6-ff3 {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 .h1-ff4,
 .h2-ff4,
@@ -242,7 +408,7 @@ a:hover {
 .h4-ff4,
 .h5-ff4,
 .h6-ff4 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .h1-ff5,
 .h2-ff5,
@@ -250,7 +416,7 @@ a:hover {
 .h4-ff5,
 .h5-ff5,
 .h6-ff5 {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
 }
 .h1-ff6,
 .h2-ff6,
@@ -258,7 +424,7 @@ a:hover {
 .h4-ff6,
 .h5-ff6,
 .h6-ff6 {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .h1-ff7,
 .h2-ff7,
@@ -266,7 +432,7 @@ a:hover {
 .h4-ff7,
 .h5-ff7,
 .h6-ff7 {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .h1-ff8,
 .h2-ff8,
@@ -274,7 +440,7 @@ a:hover {
 .h4-ff8,
 .h5-ff8,
 .h6-ff8 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* ========== Utilities ========== */

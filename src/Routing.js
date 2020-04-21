@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom'
 import App from './App'
 import SoccerApp from './soccer/SoccerApp'
 import TournamentApp from './soccer/TournamentApp'
@@ -14,49 +14,32 @@ import FSTournamentApp from './firestore/tournament/'
 import FSNationApp from './firestore/nation/'
 import FSTeamApp from './firestore/team/'
 
+function TournamentRoute(props) {
+  const page = props.page ? props.page : 'home'
+  const { id } = useParams()
+  return <TournamentApp id={id} page={page} />
+}
+
 export default function Routing() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <App />
-        </Route>
-        <Route exact path="/soccer">
-          <SoccerApp />
-        </Route>
-        <Route path="/soccer/tournament">
-          <TournamentApp />
-        </Route>
-        <Route path="/tennis">
-          <TennisApp />
-        </Route>
-        <Route path="/football">
-          <FootballApp />
-        </Route>
-        <Route exact path="/admin">
-          <FSApp />
-        </Route>
-        <Route path="/admin/sport">
-          <FSSportApp />
-        </Route>
-        <Route path="/admin/group_type">
-          <FSGroupTypeApp />
-        </Route>
-        <Route exact path="/admin/group">
-          <FSGroupApp />
-        </Route>
-        <Route path="/admin/tournament_type">
-          <FSTournamentTypeApp />
-        </Route>
-        <Route exact path="/admin/tournament">
-          <FSTournamentApp />
-        </Route>
-        <Route exact path="/admin/nation">
-          <FSNationApp />
-        </Route>
-        <Route exact path="/admin/team">
-          <FSTeamApp />
-        </Route>
+        <Route exact path="/" children={<App />} />
+        <Route exact path="/soccer" children={<SoccerApp />} />
+        <Route exact path="/soccer/tournament/:id" children={<TournamentRoute />} />
+        <Route path="/soccer/tournament/:id/matches" children={<TournamentRoute page="matches" />} />
+        <Route path="/soccer/tournament/:id/groups" children={<TournamentRoute page="groups" />} />
+        <Route path="/soccer/tournament/:id/standings" children={<TournamentRoute page="standings" />} />
+        <Route path="/tennis" children={<TennisApp />} />
+        <Route path="/football" children={<FootballApp />} />
+        <Route exact path="/admin" children={<FSApp />} />
+        <Route path="/admin/sport" children={<FSSportApp />} />
+        <Route path="/admin/group_type" children={<FSGroupTypeApp />} />
+        <Route exact path="/admin/group" children={<FSGroupApp />} />
+        <Route path="/admin/tournament_type" children={<FSTournamentTypeApp />} />
+        <Route exact path="/admin/tournament" children={<FSTournamentApp />} />
+        <Route exact path="/admin/nation" children={<FSNationApp />} />
+        <Route exact path="/admin/team" children={<FSTeamApp />} />
       </Switch>
     </Router>
   )

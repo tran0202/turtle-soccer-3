@@ -1,79 +1,78 @@
 import React from 'react'
-import 'firebase/auth'
-import 'firebase/firestore'
-import { InitFirebase, GetDocument } from '../firestore/Helper'
-import { getRoundRobinStage } from '../core/Utilities'
+import TournamentTypeArray from '../data/TournamentType.json'
+import TournamentArray from '../data/Tournament.json'
+import TournamentFormatArray from '../data/TournamentFormat.json'
 import Page from '../core/Page'
 import Header from './Header'
-import Filter from './Filter'
-import { Container, Row, Col } from 'reactstrap'
+import Matches from './Matches'
+import Groups from './Groups'
+import Standings from './Standings'
+import { Container } from 'reactstrap'
 
 class TournamentApp extends React.Component {
   constructor(props) {
     super(props)
-    document.title = 'Turtle Soccer - Tournament'
-    InitFirebase()
 
     this.state = {
-      doc: null,
+      tournament: null,
       tournamentType: null,
     }
   }
 
-  getLogoSrc = () => {
-    const { doc } = this.state
-    if (doc) {
-      GetDocument({
-        coll: 'tournament_type',
-        id: doc.tournament_type_id,
-        callback: (props) => {
-          this.setState({ tournamentType: props })
-          window.tournamentStore = this.state
-        },
-      })
+  getTournamentType = (tournament_type_id) => {
+    const tt = TournamentTypeArray.filter((tt) => tt.id === tournament_type_id)
+    if (tt.length === 1) {
+      this.setState({ tournamentType: tt[0] })
+    } else {
+      console.log('Tournament type error', tt)
     }
   }
 
-  getTournament = (props) => {
-    this.setState({ doc: { ...props, schedule: JSON.parse(props.format) } })
-    this.getLogoSrc()
+  getTournamentFormat = () => {
+    const tf = TournamentFormatArray.filter((tf) => tf.id === this.props.id)
+    if (tf.length === 1) {
+      return tf[0]
+    } else {
+      console.log('Tournament format error', tf)
+      return null
+    }
+  }
+
+  getTournament = () => {
+    const t = TournamentArray.filter((t) => t.id === this.props.id)
+    if (t.length === 1) {
+      this.setState({ tournament: { ...t[0], stages: this.getTournamentFormat().stages } })
+      this.getTournamentType(t[0].tournament_type_id)
+    } else {
+      console.log('Tournament error', t)
+    }
   }
 
   getData = () => {
-    GetDocument({
-      coll: 'tournament',
-      id: 'WC2018',
-      callback: this.getTournament,
-    })
+    this.getTournament()
   }
 
   componentDidMount() {
     this.getData()
   }
 
-  getAllMatches = () => {
-    return <div>All Matches</div>
+  componentDidUpdate() {
+    document.title = `${this.state.tournament.name} - Turtle Soccer`
+    window.tournamentStore = this.state
   }
 
   render() {
-    const { doc, tournamentType } = this.state
+    const { tournament, tournamentType } = this.state
+    const { page } = this.props
     return (
       <Page>
-        <Container className="match">
-          {doc && tournamentType && (
+        <Container>
+          {tournament && tournamentType && (
             <React.Fragment>
-              <Header param={this.state} />
-              <Filter param={this.state} />
-              {/* {doc.schedule.stages.map((stage) => (
-                <React.Fragment key={stage.name}>
-                  <Row className="mt-5">
-                    <Col>
-                      <h2 className="h2-ff1">{stage.name}</h2>
-                    </Col>
-                  </Row>
-                </React.Fragment>
-              ))} */}
-              <Row className="match-container"></Row>
+              <Header param={this.state} page={this.props.page} />
+              {(page === 'home' || page === 'matches') && <Matches tournament={tournament} />}
+              {page === 'groups' && <Groups />}
+              {page === 'standings' && <Standings />}
             </React.Fragment>
           )}
         </Container>

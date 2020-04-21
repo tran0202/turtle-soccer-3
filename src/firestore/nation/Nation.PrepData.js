@@ -8,5 +8,14 @@ export const PrepData = () => {
   let data = ConcatData({ data1: AppData1, data2: AppData2 })
   data = ConcatData({ data1: data, data2: AppData3 })
   data = ConcatData({ data1: data, data2: AppData4 })
+  let json = []
+  data.batches.forEach((batch, index) => {
+    if (index < 20) {
+      batch.rows.forEach((r) => {
+        json.push({ id: r.id, ...r.data })
+      })
+    }
+  })
+  console.log('json', JSON.stringify(json))
   return data
 }

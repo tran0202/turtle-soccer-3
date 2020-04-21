@@ -1,23 +1,45 @@
 import React from 'react'
-import 'firebase/auth'
-import 'firebase/firestore'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
+
+const HeaderLinks = (props) => {
+  const { page } = props
+  return (
+    <Nav className="justify-content-center">
+      <NavItem>
+        <NavLink disabled={page === 'home' || page === 'matches'} href="/soccer/tournament/WC2018/matches">
+          Matches
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink disabled={page === 'groups'} href="/soccer/tournament/WC2018/groups">
+          Groups
+        </NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink disabled={page === 'standings'} href="/soccer/tournament/WC2018/standings">
+          Final standings
+        </NavLink>
+      </NavItem>
+    </Nav>
+  )
+}
 
 class Header extends React.Component {
   render() {
     const { param } = this.props
-    const { doc, tournamentType } = param
+    const { tournament, tournamentType } = param
     return (
       <Row className="text-center">
-        <Col lg={{ size: 1, offset: 2 }} md={{ size: 2, offset: 1 }} sm="3" className="mt-3 mb-3">
-          <img src={`/assets/images/${tournamentType.logo_path}/${doc.logo_filename}`} alt={doc.name} />
+        <Col lg={{ size: 2, offset: 2 }} md={{ size: 2, offset: 1 }} sm="3" className="mt-3 mb-2">
+          <img src={`/assets/images/${tournamentType.logo_path}/${tournament.logo_filename}`} alt={tournament.name} />
         </Col>
-        <Col lg="7" md="8" sm="9">
-          <h1 className="h1-ff5 text-center mt-3 mb-3 tournament-title" style={{ color: doc.color }}>
-            {doc.name}
+        <Col lg="7" md="9" sm="9">
+          <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: tournament.color }}>
+            {tournament.name}
           </h1>
-          {moment(doc.start_date).format('MMMM D, YYYY')} - {moment(doc.end_date).format('MMMM D, YYYY')}
+          {moment(tournament.start_date).format('MMMM D, YYYY')} - {moment(tournament.end_date).format('MMMM D, YYYY')}
+          <HeaderLinks page={this.props.page} />
         </Col>
       </Row>
     )
