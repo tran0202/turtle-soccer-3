@@ -1,22 +1,13 @@
 import React, { useState } from 'react'
 import RoundRobin from './RoundRobin'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
+import Knockout from './Knockout'
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-
-const Knockout = () => {
-  return (
-    <Row>
-      <Col sm="12">
-        <h4>Knockout Contents</h4>
-      </Col>
-    </Row>
-  )
-}
 
 const Matches = (props) => {
   const { tournament } = props
   const { stages } = tournament
-  const defaultStage = stages.length > 0 ? stages[0].name.replace(' ', '-') : 'Group-Stage'
+  const defaultStage = stages.length > 0 ? stages[1].name.replace(' ', '-') : 'Group-Stage'
   const [activeTab, setActiveTab] = useState(defaultStage)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)

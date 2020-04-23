@@ -60,6 +60,23 @@
   }
 }
 
+.box-time {
+  font-size: 0.75rem;
+  font-weight: 100;
+  font-family: 'Oswald', sans-serif;
+}
+
+.box-team-name,
+.box-score {
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  padding-top: 8px;
+}
+.box-team-name-light,
+.box-score-light {
+  font-weight: 300;
+}
 .team-name,
 .score {
   font-size: 2rem;
@@ -84,6 +101,12 @@
   }
 }
 
+.box-tip-text {
+  font-size: 14px;
+  text-decoration: underline;
+  color: blue;
+}
+
 /* ========== Nav Tabs Override ========== */
 
 .nav-link.disabled {
@@ -92,10 +115,12 @@
 
 .nav-tabs .nav-link:hover {
   color: #cc1442;
+  cursor: pointer;
 }
 
 .nav-tabs .nav-link.active {
   color: #007bff;
+  cursor: default;
 }
 
 .nav-tabs .nav-link {
