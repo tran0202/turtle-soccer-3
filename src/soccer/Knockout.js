@@ -12,7 +12,8 @@ const BracketColInner = (props) => {
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
       <Row className="no-gutters">
         <Col sm="12">
-          <div className="h2-ff1 margin-top-md">{round.name}</div>
+          <div className="h2-ff1 margin-top-md d-none d-lg-block">{round.name}</div>
+          <div className="h2-ff1 margin-top-md d-block d-lg-none">{round.short_name}</div>
         </Col>
       </Row>
       {round.matches.map((m, index) => (
@@ -49,7 +50,7 @@ const BracketHook1 = (props) => {
     <Col className="col-brk-2">
       {Array.from(Array(hookCount), (e, i) => {
         return (
-          <React.Fragment>
+          <React.Fragment key={i}>
             {colIndex === 0 && (
               <React.Fragment>
                 {i === 0 && <Row className="bracket-hook1-gap-height-00"></Row>}
@@ -89,7 +90,7 @@ const BracketHook2 = (props) => {
     <Col className="col-brk-2">
       {Array.from(Array(hookCount), (e, i) => {
         return (
-          <React.Fragment>
+          <React.Fragment key={i}>
             {colIndex === 0 && (
               <React.Fragment>
                 {i === 0 && (
@@ -169,8 +170,8 @@ const Bracket = (props) => {
               return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
             } else {
               return (
-                <React.Fragment>
-                  <BracketCol round={r} key={r.name} colIndex={index} />
+                <React.Fragment key={r.name}>
+                  <BracketCol round={r} colIndex={index} />
                   <BracketHook1 colIndex={index} hookCount={hookCount} />
                   <BracketHook2 colIndex={index} hookCount={hookCount} />
                 </React.Fragment>

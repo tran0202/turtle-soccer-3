@@ -50,8 +50,9 @@ export const BracketBox = (props) => {
       <Row className="no-gutters box-sm bracket-box-height">
         <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
           <Row className="no-gutters">
-            <Col sm={{ size: 11, offset: 1 }}>
-              <span className="box-time">
+            <Col xs={{ size: 11, offset: 1 }}>
+              <span className="box-time d-block d-lg-none">{moment(match.date).format('MMMM D')}</span>
+              <span className="box-time d-none d-lg-block">
                 {moment(match.date).format('MMMM D')} | {match.stadium}
               </span>
             </Col>
@@ -59,24 +60,52 @@ export const BracketBox = (props) => {
         </Col>
         <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
           <Row className="no-gutters h3-ff3">
-            <Col sm={{ size: 2, offset: 1 }}>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
               <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />
             </Col>
-            <Col sm={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'}`}>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+              <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-block d-md-none">
+              <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block`}>
               {getTeamName(match.home_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && <AetTooltip target="aetTooltip1" />}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+                <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
+              )}
               {match.home_extra_score &&
                 match.away_extra_score &&
                 match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" />}
+                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
+              {match.home_team}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+                <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-md-none`}>
+              {match.home_team}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+                <AetTooltip target="aetTooltip1" anchor="(e)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
             {!match.home_extra_score && (
-              <Col sm={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {match.home_score}
               </Col>
             )}
             {match.home_extra_score && (
-              <Col sm={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.home_score) + parseInt(match.home_extra_score)}
                 {match.home_penalty_score && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
               </Col>
@@ -85,24 +114,52 @@ export const BracketBox = (props) => {
         </Col>
         <Col sm="12" className="bracket-half-box-height">
           <Row className="no-gutters h4-ff3">
-            <Col sm={{ size: 2, offset: 1 }}>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
               <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />
             </Col>
-            <Col sm={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'}`}>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+              <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-block d-md-none">
+              <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block`}>
               {getTeamName(match.away_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && <AetTooltip target="aetTooltip2" />}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+                <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
+              )}
               {match.home_extra_score &&
                 match.away_extra_score &&
                 match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" />}
+                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
+              {match.away_team}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+                <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-md-none`}>
+              {match.away_team}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+                <AetTooltip target="aetTooltip2" anchor="(e)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
             {!match.away_extra_score && (
-              <Col sm={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {match.away_score}
               </Col>
             )}
             {match.away_extra_score && (
-              <Col sm={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.away_score) + parseInt(match.away_extra_score)}
                 {match.away_penalty_score && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
               </Col>
@@ -219,26 +276,26 @@ export const getDateMatchArrayPair = (matches_array) => {
 }
 
 const AetTooltip = (props) => {
-  const { target } = props
+  const { target, anchor } = props
   const content = 'after extra time'
   return (
     <TurtleTooltip target={target} placement="top" content={content}>
       &nbsp;
       <span className="box-tip-text" href="#" id={target}>
-        (a.e.t.)
+        {anchor}
       </span>
     </TurtleTooltip>
   )
 }
 
 const PenTooltip = (props) => {
-  const { target } = props
+  const { target, anchor } = props
   const content = 'penalty shoot-out'
   return (
     <TurtleTooltip target={target} placement="top" content={content}>
       &nbsp;
       <span className="box-tip-text" href="#" id={target}>
-        (pen.)
+        {anchor}
       </span>
     </TurtleTooltip>
   )

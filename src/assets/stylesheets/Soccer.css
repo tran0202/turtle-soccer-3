@@ -84,6 +84,20 @@
   font-family: 'Oswald', sans-serif;
 }
 
+@media (max-width: 768px) {
+  .box-team-name,
+  .box-score {
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 14px;
+  }
+  .box-team-name-light,
+  .box-score-light {
+    font-weight: 300;
+  }
+}
+
 @media (max-width: 576px) {
   .team-name,
   .score {

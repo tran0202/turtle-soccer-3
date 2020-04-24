@@ -40,7 +40,13 @@ a:hover {
 /* ========== Miscellaneous ========== */
 
 .flag-xxs {
+  width: 16px;
   height: 12px;
+  border: 1px solid #c7c6c6;
+}
+.flag-xs-2 {
+  width: 20px;
+  height: 15px;
   border: 1px solid #c7c6c6;
 }
 .flag-xs {
