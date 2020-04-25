@@ -10,10 +10,10 @@ const BracketColInner = (props) => {
       {colIndex === 0 && <Row className="bracket-gap-height-00"></Row>}
       {colIndex === 1 && <Row className="bracket-gap-height-10"></Row>}
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
-      <Row className="no-gutters">
-        <Col sm="12">
+      <Row className="no-gutters bracket-col-height">
+        <Col xs={{ size: 11, offset: 1 }}>
           <div className="h2-ff1 margin-top-md d-none d-lg-block">{round.name}</div>
-          <div className="h2-ff1 margin-top-md d-block d-lg-none">{round.short_name}</div>
+          <div className="h4-ff1 margin-top-md d-block d-lg-none">{round.short_name}</div>
         </Col>
       </Row>
       {round.matches.map((m, index) => (
@@ -139,8 +139,8 @@ const Bracket = (props) => {
   const { stage } = props
   const tp = stage.rounds.filter((s) => s.name === 'Third place')
   const thirdPlace = tp.length === 1 ? tp[0] : null
-  const [collapse, setCollapse] = useState(true)
-  const [status, setStatus] = useState('Opened')
+  const [collapse, setCollapse] = useState(false)
+  const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
   const onEntered = () => setStatus('Opened')
   const onExiting = () => setStatus('Closing...')
@@ -151,7 +151,7 @@ const Bracket = (props) => {
     <React.Fragment>
       <Row className="mt-3 text-center">
         <Col sm="12">
-          <Button outline color="primary" onClick={toggle} style={{ marginBottom: '1rem', width: '50%' }} className="h2-ff3">
+          <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse">
             Bracket&nbsp;
             {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
             {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}

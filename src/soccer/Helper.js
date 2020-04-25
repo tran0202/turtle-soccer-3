@@ -165,7 +165,7 @@ export const BracketBox = (props) => {
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
-            <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
+            <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
               &nbsp;
               {match.away_team}

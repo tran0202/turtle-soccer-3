@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -7,7 +8,7 @@ export const getRoundRobinStage = (stages) => {
 }
 
 export const NestedTabs = () => {
-  const [activeTab, setActiveTab] = useState({level1:'1', level2:'1'})
+  const [activeTab, setActiveTab] = useState({ level1: '1', level2: '1' })
 
   const toggle = (tab) => {
     if (activeTab.level1 !== tab.level1 || activeTab.level2 !== tab.level2) setActiveTab(tab)
@@ -19,7 +20,7 @@ export const NestedTabs = () => {
           <NavLink
             className={classnames({ active: activeTab.level1 === '1' })}
             onClick={() => {
-              toggle({level1:'1', level2:'1'})
+              toggle({ level1: '1', level2: '1' })
             }}
           >
             Tab1
@@ -29,7 +30,7 @@ export const NestedTabs = () => {
           <NavLink
             className={classnames({ active: activeTab.level1 === '2' })}
             onClick={() => {
-              toggle({level1:'2'})
+              toggle({ level1: '2' })
             }}
           >
             Moar Tabs
@@ -46,7 +47,7 @@ export const NestedTabs = () => {
                   <NavLink
                     className={classnames({ active: activeTab.level2 === '1' })}
                     onClick={() => {
-                      toggle({level1:'1',level2:'1'})
+                      toggle({ level1: '1', level2: '1' })
                     }}
                   >
                     Tab1-1
@@ -56,7 +57,7 @@ export const NestedTabs = () => {
                   <NavLink
                     className={classnames({ active: activeTab.level2 === '2' })}
                     onClick={() => {
-                      toggle({level1:'1',level2:'2'})
+                      toggle({ level1: '1', level2: '2' })
                     }}
                   >
                     Tab1-2
