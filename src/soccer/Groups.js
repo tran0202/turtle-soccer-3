@@ -1,6 +1,6 @@
 import React from 'react'
 import GroupStage from './GroupStage'
-import { getRoundRobinStage } from '../core/Utilities'
+import { getRoundRobinStage, getTournamentConfig } from './Helper'
 import { Row } from 'reactstrap'
 
 const MultipleGroupStage = () => {
@@ -14,8 +14,8 @@ const Groups = (props) => {
   // console.log('rrStages', rrStages)
   return (
     <React.Fragment>
-      <Row className="mt-5"></Row>
-      {rrStages.length === 1 && <GroupStage stage={rrStages[0]} />}
+      <Row className="mt-3"></Row>
+      {rrStages.length === 1 && <GroupStage config={getTournamentConfig(tournament)} stage={rrStages[0]} />}
       {rrStages.length > 1 && <MultipleGroupStage />}
     </React.Fragment>
   )

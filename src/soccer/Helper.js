@@ -4,6 +4,15 @@ import NationArray from '../data/Nation.json'
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
+export const getTournamentConfig = (tournament) => {
+  return { points_for_win: tournament.points_for_win }
+}
+
+export const getRoundRobinStage = (stages) => {
+  const result = stages.filter((s) => s.type === 'roundrobin')
+  return result
+}
+
 const getFlagSrc = (id) => {
   const team = TeamArray.filter((t) => t.id === id)
   if (team.length === 1) {
@@ -272,6 +281,30 @@ export const DisplaySchedule = (props) => {
           </Row>
         ))}
     </React.Fragment>
+  )
+}
+
+export const RankingRow = (props) => {
+  const { row, index } = props
+  return (
+    <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
+      <Col className="col-box-5 padding-top-xxs">{index + 1}</Col>
+      <Col className="col-box-10">
+        <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
+      </Col>
+      <Col className="col-box-25 text-uppercase text-left padding-top-xxs">&nbsp;{getTeamName(row.id)}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.l}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.gf}</Col>
+      <Col className="col-box-7 padding-top-xxs">{row.ga}</Col>
+      <Col className="col-box-7 padding-top-xxs">
+        {row.gd > 0 ? '+' : ''}
+        {row.gd}
+      </Col>
+      <Col className="col-box-10 padding-top-xxs">{row.pts}</Col>
+    </Row>
   )
 }
 

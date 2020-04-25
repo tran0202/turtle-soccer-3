@@ -84,19 +84,7 @@
   padding: 0;
 }
 .box-xl {
-  padding: 20px 50px;
-}
-.box-col-lg {
-  width: 29%;
-  max-width: 29%;
-}
-.box-col-md {
-  width: 12%;
-  max-width: 12%;
-}
-.box-col-sm {
-  width: 6.5%;
-  max-width: 6.5%;
+  padding: 0;
 }
 
 .box-sm,
@@ -149,6 +137,7 @@
 .box-score-light {
   font-weight: 300;
 }
+.ranking-tbl,
 .team-name,
 .score {
   font-size: 2rem;
@@ -156,7 +145,22 @@
   font-family: 'Oswald', sans-serif;
 }
 
+@media (max-width: 992px) {
+  .ranking-tbl {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 14px;
+  }
+}
+
 @media (max-width: 768px) {
+  .ranking-tbl {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    padding-top: 14px;
+  }
   .box-team-name,
   .box-score {
     font-size: 0.75rem;
@@ -171,9 +175,10 @@
 }
 
 @media (max-width: 576px) {
+  .ranking-tbl,
   .team-name,
   .score {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     font-weight: 400;
     padding-top: 7px;
   }
@@ -191,6 +196,124 @@
   font-size: 14px;
   text-decoration: underline;
   color: blue;
+}
+
+.col-box-5,
+.col-box-7,
+.col-box-10,
+.col-box-25,
+.col-box-sm-5,
+.col-box-sm-7,
+.col-box-sm-10,
+.col-box-sm-25,
+.col-box-md-5,
+.col-box-md-7,
+.col-box-md-10,
+.col-box-md-25,
+.col-box-lg-5,
+.col-box-lg-7,
+.col-box-lg-10,
+.col-box-lg-25,
+.col-box-xl-5,
+.col-box-xl-7,
+.col-box-xl-10,
+.col-box-xl-25 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-box-5 {
+  flex: 0 0 5%;
+  max-width: 5%;
+}
+.col-box-7 {
+  flex: 0 0 7%;
+  max-width: 7%;
+}
+.col-box-10 {
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+.col-box-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+@media (min-width: 576px) {
+  .col-box-sm-5 {
+    flex: 0 0 5%;
+    max-width: 5%;
+  }
+  .col-box-sm-7 {
+    flex: 0 0 7%;
+    max-width: 7%;
+  }
+  .col-box-sm-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .col-box-sm-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-box-md-5 {
+    flex: 0 0 5%;
+    max-width: 5%;
+  }
+  .col-box-md-7 {
+    flex: 0 0 7%;
+    max-width: 7%;
+  }
+  .col-box-md-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .col-box-md-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-box-lg-5 {
+    flex: 0 0 5%;
+    max-width: 5%;
+  }
+  .col-box-lg-7 {
+    flex: 0 0 7%;
+    max-width: 7%;
+  }
+  .col-box-lg-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .col-box-lg-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-box-xl-5 {
+    flex: 0 0 5%;
+    max-width: 5%;
+  }
+  .col-box-xl-7 {
+    flex: 0 0 7%;
+    max-width: 7%;
+  }
+  .col-box-xl-10 {
+    flex: 0 0 10%;
+    max-width: 10%;
+  }
+  .col-box-xl-25 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 
 /* ========== Bracket ========== */
@@ -215,7 +338,6 @@
   padding-right: 15px;
   padding-left: 15px;
 }
-
 .col-brk-2 {
   flex: 0 0 2%;
   max-width: 2%;

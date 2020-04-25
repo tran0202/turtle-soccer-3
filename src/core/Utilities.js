@@ -2,11 +2,6 @@ import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
 import classnames from 'classnames'
 
-export const getRoundRobinStage = (stages) => {
-  const result = stages.filter((s) => s.type === 'roundrobin')
-  return result
-}
-
 export const NestedTabs = () => {
   const [activeTab, setActiveTab] = useState({ level1: '1', level2: '1' })
 
