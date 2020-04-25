@@ -444,6 +444,9 @@ a:hover {
   margin-right: 0;
 }
 
+.padding-top-xxs {
+  padding-top: 3px;
+}
 .padding-top-xs {
   padding-top: 5px;
 }
