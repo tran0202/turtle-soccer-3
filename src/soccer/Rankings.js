@@ -2,32 +2,53 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { RankingRow } from './Helper'
 
-// const sortGroupRanking = (group, config) => {
-//   group.matches.forEach((m, index) => {
-//     const matchDay = Math.floor(index / 2 + 1)
-//     calculateTeamRanking(findTeam(group.teams, m.home_team), matchDay, m, config)
-//     calculateTeamRanking(findTeam(group.teams, m.away_team), matchDay, m, config)
-//     // console.log('calculateTeamRanking', m.home_team, findTeam(group.teams, m.home_team).rankings)
-//     // console.log('calculateTeamRanking', m.away_team, findTeam(group.teams, m.away_team).rankings)
-//   })
-//   matches_array.sort((a, b) => {
-//     if (a.date + a.time < b.date + b.time) {
-//       return -1
-//     } else if (a.date + a.time > b.date + a.time) {
-//       return 1
-//     } else {
-//       return 0
-//     }
-//   })
-// }
+const sortRoundRanking = (round, config) => {
+  round.final_rankings.sort((a, b) => {
+    if (a.pts > b.pts) {
+      return -1
+    } else if (a.pts < b.pts) {
+      return 1
+    } else {
+      if (a.gd > b.gd) {
+        return -1
+      } else if (a.gd < b.gd) {
+        return 1
+      } else {
+        if (a.gf > b.gf) {
+          return -1
+        } else if (a.gf < b.gf) {
+          return 1
+        } else {
+          // More criteria to be applied here
+          if (a.fp > b.fp) {
+            return -1
+          } else if (a.fp < b.fp) {
+            return 1
+          } else {
+            return 0
+          }
+        }
+      }
+    }
+  })
+  round.final_rankings.forEach((t, index) => {
+    t.r = index + 1
+  })
+}
 
-const collectMatchdayRankings = (round, matchDay) => {
-  let result = []
+const collectMatchdayRankings = (config, round, matchDay) => {
   round.teams.forEach((t) => {
     const rankings = t.rankings.filter((r) => r.md === matchDay)
-    result.push({ id: t.id, ...rankings[0] })
+    const saved = { id: t.id, ...rankings[0] }
+    if (!round.final_rankings) {
+      const newRankings = []
+      newRankings.push(saved)
+      round.final_rankings = newRankings
+    } else {
+      round.final_rankings.push(saved)
+    }
   })
-  return result
+  sortRoundRanking(round, config)
 }
 
 const RankingHead = () => {
@@ -49,12 +70,12 @@ const RankingHead = () => {
 }
 
 const RankingRound = (props) => {
-  const { round } = props
-  const rows = collectMatchdayRankings(round, 3)
+  const { round, config } = props
+  collectMatchdayRankings(config, round, 3)
   // console.log('rows', rows)
   return (
     <React.Fragment>
-      {rows.map((r, index) => (
+      {round.final_rankings.map((r, index) => (
         <RankingRow row={r} index={index} key={index} />
       ))}
       <Row className="mb-4"></Row>

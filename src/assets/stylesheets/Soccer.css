@@ -155,7 +155,9 @@
 }
 
 @media (max-width: 768px) {
-  .ranking-tbl {
+  .ranking-tbl,
+  .team-name,
+  .score {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
@@ -194,7 +196,6 @@
 
 .box-tip-text {
   font-size: 14px;
-  text-decoration: underline;
   color: blue;
 }
 

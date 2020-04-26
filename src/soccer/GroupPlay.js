@@ -10,7 +10,7 @@ const findTeam = (teamArray, id) => {
 
 const findLastRanking = (team, matchDay) => {
   if (matchDay === 1) {
-    return { md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 }
+    return { md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, fp: null, pts: 0 }
   } else {
     const rankings = team.rankings.filter((r) => r.md === matchDay - 1)
     return rankings.length === 1 ? rankings[0] : null
@@ -22,7 +22,7 @@ const calculateTeamRanking = (team, matchDay, match, config) => {
   const lr = findLastRanking(team, matchDay)
   // console.log('findLastRanking', lr)
   if (lr) {
-    let newRanking = { md: matchDay, mp: lr.mp, w: lr.w, d: lr.d, l: lr.l, gf: lr.gf, ga: lr.ga, gd: lr.gd, pts: lr.pts }
+    let newRanking = { md: matchDay, mp: lr.mp, w: lr.w, d: lr.d, l: lr.l, gf: lr.gf, ga: lr.ga, gd: lr.gd, fp: lr.fp, pts: lr.pts }
     newRanking.mp++
     if (parseInt(match.home_score) > parseInt(match.away_score)) {
       if (side === 'home') {
@@ -60,6 +60,15 @@ const calculateTeamRanking = (team, matchDay, match, config) => {
       }
     }
     newRanking.gd = newRanking.gf - newRanking.ga
+    if (side === 'home') {
+      if (match.home_fair_pts) {
+        newRanking.fp = (newRanking.fp ? newRanking.fp : 0) + parseInt(match.home_fair_pts)
+      }
+    } else {
+      if (match.away_fair_pts) {
+        newRanking.fp = (newRanking.fp ? newRanking.fp : 0) + parseInt(match.away_fair_pts)
+      }
+    }
 
     if (matchDay === 1) {
       let newRankings = []

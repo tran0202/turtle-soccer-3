@@ -8,7 +8,7 @@
         "groups": [
           {
             "name": "Group A",
-            "teams": [{ "id": "URU" }, { "id": "RUS" }, { "id": "KSA" }, { "id": "EGY" }],
+            "teams": [{ "id": "RUS" }, { "id": "URU" }, { "id": "EGY" }, { "id": "KSA" }],
             "matches": [
               {
                 "home_team": "RUS",
@@ -74,7 +74,7 @@
           },
           {
             "name": "Group B",
-            "teams": [{ "id": "ESP" }, { "id": "POR" }, { "id": "IRN" }, { "id": "MAR" }],
+            "teams": [{ "id": "POR" }, { "id": "ESP" }, { "id": "IRN" }, { "id": "MAR" }],
             "matches": [
               {
                 "home_team": "MAR",
@@ -338,7 +338,7 @@
           },
           {
             "name": "Group F",
-            "teams": [{ "id": "SWE" }, { "id": "MEX" }, { "id": "KOR" }, { "id": "GER" }],
+            "teams": [{ "id": "GER" }, { "id": "MEX" }, { "id": "SWE" }, { "id": "KOR" }],
             "matches": [
               {
                 "home_team": "GER",
@@ -470,13 +470,14 @@
           },
           {
             "name": "Group H",
-            "teams": [{ "id": "COL" }, { "id": "JPN" }, { "id": "SEN" }, { "id": "POL" }],
+            "teams": [{ "id": "POL" }, { "id": "COL" }, { "id": "SEN" }, { "id": "JPN" }],
             "matches": [
               {
                 "home_team": "COL",
                 "away_team": "JPN",
                 "home_score": "1",
                 "away_score": "2",
+                "away_fair_pts": "-1",
                 "date": "2018-06-19",
                 "time": "15:00",
                 "stadium": "Mordovia Arena",
@@ -487,6 +488,7 @@
                 "away_team": "SEN",
                 "home_score": "1",
                 "away_score": "2",
+                "away_fair_pts": "-2",
                 "date": "2018-06-19",
                 "time": "18:00",
                 "stadium": "Spartak Stadium",
@@ -497,6 +499,8 @@
                 "away_team": "SEN",
                 "home_score": "2",
                 "away_score": "2",
+                "home_fair_pts": "-2",
+                "away_fair_pts": "-3",
                 "date": "2018-06-24",
                 "time": "20:00",
                 "stadium": "Ekaterinburg Arena",
@@ -517,6 +521,7 @@
                 "away_team": "POL",
                 "home_score": "0",
                 "away_score": "1",
+                "home_fair_pts": "-1",
                 "date": "2018-06-28",
                 "time": "17:00",
                 "stadium": "Volgograd Arena",
@@ -527,6 +532,7 @@
                 "away_team": "COL",
                 "home_score": "0",
                 "away_score": "1",
+                "home_fair_pts": "-1",
                 "date": "2018-06-28",
                 "time": "18:00",
                 "stadium": "Samara Arena",

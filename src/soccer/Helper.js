@@ -259,11 +259,11 @@ export const DisplaySchedule = (props) => {
                     {m.home_extra_score && m.away_extra_score && (
                       <React.Fragment>
                         {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
-                        <span className="font-20"> (a.e.t.)</span>
+                        <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
                         {m.home_penalty_score && m.away_penalty_score && (
                           <React.Fragment>
                             <br />
-                            {m.home_penalty_score}-{m.away_penalty_score} <span className="font-20">(pen.)</span>
+                            {m.home_penalty_score}-{m.away_penalty_score} <PenTooltip target="penTooltip3" anchor="(pen.)" />
                           </React.Fragment>
                         )}
                       </React.Fragment>
@@ -285,10 +285,11 @@ export const DisplaySchedule = (props) => {
 }
 
 export const RankingRow = (props) => {
-  const { row, index } = props
+  const { row } = props
+  const advanced_second_round_striped = row.r === 1 || row.r === 2 ? 'advanced-second-round-striped' : ''
   return (
-    <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
-      <Col className="col-box-5 padding-top-xxs">{index + 1}</Col>
+    <Row className={`no-gutters ranking-tbl team-row padding-tb-md text-center ${advanced_second_round_striped}`}>
+      <Col className="col-box-5 padding-top-xxs">{row.r}</Col>
       <Col className="col-box-10">
         <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
       </Col>
@@ -303,7 +304,10 @@ export const RankingRow = (props) => {
         {row.gd > 0 ? '+' : ''}
         {row.gd}
       </Col>
-      <Col className="col-box-10 padding-top-xxs">{row.pts}</Col>
+      <Col className="col-box-10 padding-top-xxs">
+        {row.pts}
+        {row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
+      </Col>
     </Row>
   )
 }
@@ -353,6 +357,19 @@ const PenTooltip = (props) => {
       &nbsp;
       <span className="box-tip-text" href="#" id={target}>
         {anchor}
+      </span>
+    </TurtleTooltip>
+  )
+}
+
+const FairPlayTooltip = (props) => {
+  const { target, points } = props
+  const content = `fair play points: ${points}`
+  return (
+    <TurtleTooltip target={target} placement="top" content={content}>
+      &nbsp;
+      <span className="box-tip-text" href="#" id={target}>
+        [*]
       </span>
     </TurtleTooltip>
   )
