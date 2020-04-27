@@ -534,6 +534,12 @@
   border-radius: 0.25rem;
 }
 
+.tournament-mascot {
+  width: 100%;
+  border: 1px solid #c7c6c6;
+  border-radius: 0.25rem;
+}
+
 .confed-tab {
   width: 14%;
   text-align: center;

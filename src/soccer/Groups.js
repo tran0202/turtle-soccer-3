@@ -15,14 +15,16 @@ const getFormat = (rrStage) => {
 }
 
 const TournamentFormat = (props) => {
-  const { format } = props
+  const { format, config, tournamentType } = props
   return (
-    <Row className="mt-5 mb-5 text-left">
-      <Col xs="12" className="tournament-format">
+    <Row className="mt-5 mb-5 text-left tournament-format">
+      <Col xs="12">
         <p>
           <strong>Format:</strong> {format.totalCount} teams were divided into {format.groupCount} groups of {format.teamCount} teams. Each group played a
           round-robin schedule, and the top 2 teams advanced to the knockout stage.
         </p>
+      </Col>
+      <Col xs="9">
         <p className="no-margin-bottom">
           <strong>Tiebreakers:</strong>
         </p>
@@ -37,21 +39,25 @@ const TournamentFormat = (props) => {
           <li>Lot drawing</li>
         </ul>
       </Col>
+      <Col xs="3">
+        <img src={`/assets/images/${tournamentType.logo_path}/${config.mascot_filename}`} alt={`Mascot ${config.name}`} className="tournament-mascot" />
+      </Col>
     </Row>
   )
 }
 
 const Groups = (props) => {
-  const { tournament } = props
+  const { tournament, tournamentType } = props
   const { stages } = tournament
   const rrStages = getRoundRobinStage(stages)
   // console.log('rrStages', rrStages)
   const format = rrStages.length > 0 ? getFormat(rrStages[0]) : null
+  const config = getTournamentConfig(tournament)
   return (
     <React.Fragment>
-      {format && <TournamentFormat format={format} />}
+      {format && <TournamentFormat format={format} config={config} tournamentType={tournamentType} />}
       {!format && <Row className="mt-3"></Row>}
-      {rrStages.length === 1 && <GroupStage config={getTournamentConfig(tournament)} stage={rrStages[0]} />}
+      {rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
       {rrStages.length > 1 && <MultipleGroupStage />}
     </React.Fragment>
   )

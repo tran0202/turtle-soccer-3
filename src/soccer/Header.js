@@ -30,7 +30,7 @@ class Header extends React.Component {
     const { param } = this.props
     const { tournament, tournamentType } = param
     return (
-      <Row className="text-center">
+      <Row className="mt-3 text-center">
         <Col lg={{ size: 2, offset: 2 }} md={{ size: 2, offset: 1 }} sm="3" className="mt-3 mb-2">
           <img src={`/assets/images/${tournamentType.logo_path}/${tournament.logo_filename}`} alt={tournament.name} />
         </Col>
