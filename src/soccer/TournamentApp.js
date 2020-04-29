@@ -20,18 +20,18 @@ class TournamentApp extends React.Component {
   }
 
   getTournamentType = (tournament_type_id) => {
-    const tt = TournamentTypeArray.filter((tt) => tt.id === tournament_type_id)
-    if (tt.length === 1) {
-      this.setState({ tournamentType: tt[0] })
+    const tt = TournamentTypeArray.find((tt) => tt.id === tournament_type_id)
+    if (tt) {
+      this.setState({ tournamentType: tt })
     } else {
       console.log('Tournament type error', tt)
     }
   }
 
   getTournamentFormat = () => {
-    const tf = TournamentFormatArray.filter((tf) => tf.id === this.props.id)
-    if (tf.length === 1) {
-      return tf[0]
+    const tf = TournamentFormatArray.find((tf) => tf.id === this.props.id)
+    if (tf) {
+      return tf
     } else {
       console.log('Tournament format error', tf)
       return null
@@ -39,10 +39,10 @@ class TournamentApp extends React.Component {
   }
 
   getTournament = () => {
-    const t = TournamentArray.filter((t) => t.id === this.props.id)
-    if (t.length === 1) {
-      this.setState({ tournament: { ...t[0], stages: this.getTournamentFormat().stages } })
-      this.getTournamentType(t[0].tournament_type_id)
+    const t = TournamentArray.find((t) => t.id === this.props.id)
+    if (t) {
+      this.setState({ tournament: { ...t, stages: this.getTournamentFormat().stages } })
+      this.getTournamentType(t.tournament_type_id)
     } else {
       console.log('Tournament error', t)
     }

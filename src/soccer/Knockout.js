@@ -137,8 +137,7 @@ const BracketHook2 = (props) => {
 
 const Bracket = (props) => {
   const { stage } = props
-  const tp = stage.rounds.filter((s) => s.name === 'Third place')
-  const thirdPlace = tp.length === 1 ? tp[0] : null
+  const thirdPlace = stage.rounds.find((s) => s.name === 'Third place')
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')

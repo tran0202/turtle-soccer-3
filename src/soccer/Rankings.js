@@ -44,7 +44,9 @@ const createDrawPool = (round) => {
       }
     }
   })
-  round.draw_pools = pools
+  if (pools.length > 0) {
+    round.draw_pools = pools
+  }
 }
 
 const updateDraws = (round) => {
@@ -71,6 +73,7 @@ const updateFinalRankings = (round) => {
     } else {
       if (previousDrawCount > 0) {
         newFinalRankings.push(rankingBundle)
+        rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
         rankingBundle = []
       }
       newFinalRankings.push(r)
@@ -80,6 +83,17 @@ const updateFinalRankings = (round) => {
   round.final_rankings = newFinalRankings
 }
 
+const RankingRowSeparate = (props) => {
+  const { name } = props
+  return (
+    <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
+      <Col xs="12" className="font-italic gray3">
+        {name} finishers
+      </Col>
+    </Row>
+  )
+}
+
 const RankingRound = (props) => {
   const { round } = props
   createDrawPool(round)
@@ -87,6 +101,7 @@ const RankingRound = (props) => {
   updateFinalRankings(round)
   return (
     <React.Fragment>
+      <RankingRowSeparate name={round.name} />
       {round.final_rankings.map((r, index) => (
         <RankingRow row={r} ranking_type={round.ranking_type} key={index} />
       ))}

@@ -6,6 +6,8 @@
         "name": "Group Stage",
         "type": "roundrobin",
         "eliminateRule": "bottom2",
+        "eliminateCount": "16",
+        "next_round": "Round of 16",
         "groups": [
           {
             "name": "Group A",
@@ -546,6 +548,7 @@
       {
         "name": "Knockout Stage",
         "type": "knockout",
+        "eliminateCount": "8",
         "rounds": [
           {
             "name": "Round of 16",

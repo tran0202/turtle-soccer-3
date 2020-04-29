@@ -155,11 +155,11 @@
 }
 
 .rank-col-padding-2 {
-  padding-top: 70px;
+  padding-top: 65px;
 }
 
 .rank-col-padding-3 {
-  padding-top: 120px;
+  padding-top: 115px;
 }
 
 @media (max-width: 992px) {
@@ -172,7 +172,7 @@
     padding-top: 60px;
   }
   .rank-col-padding-3 {
-    padding-top: 110px;
+    padding-top: 105px;
   }
 }
 
@@ -183,12 +183,13 @@
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
+    padding-top: 11px;
   }
   .rank-col-padding-2 {
     padding-top: 55px;
   }
   .rank-col-padding-3 {
-    padding-top: 100px;
+    padding-top: 90px;
   }
   .box-team-name,
   .box-score {
@@ -210,11 +211,12 @@
     font-size: 0.75rem;
     font-weight: 400;
   }
+
   .rank-col-padding-2 {
-    padding-top: 58px;
+    padding-top: 55px;
   }
   .rank-col-padding-3 {
-    padding-top: 95px;
+    padding-top: 90px;
   }
 
   .no-display-xs {

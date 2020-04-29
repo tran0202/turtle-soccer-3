@@ -2,91 +2,102 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getFlagSrc, getTeamName, FairPlayTooltip } from './Helper'
 
-const findTeam = (teamArray, id) => {
-  const teams = teamArray.filter((t) => t.id === id)
-  return teams.length === 1 ? teams[0] : null
+export const findTeam = (teamArray, id) => {
+  return teamArray.find((t) => t.id === id)
 }
 
-const findLastRanking = (team, matchDay) => {
-  if (matchDay === 1) {
-    return { md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, fp: null, h2hm: [] }
+const findLastRanking = (team) => {
+  if (!team.rankings) {
+    return { id: team.id, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, fp: null, h2hm: [] }
   } else {
-    const rankings = team.rankings.filter((r) => r.md === matchDay - 1)
-    return rankings.length === 1 ? rankings[0] : null
+    return team.rankings[team.rankings.length - 1]
   }
 }
 
-const calculateTeamRanking = (team, matchDay, match, config) => {
+const accumulateRanking = (team, match, config) => {
   const side = match.home_team === team.id ? 'home' : 'away'
-  const lr = findLastRanking(team, matchDay)
-  // console.log('findLastRanking', lr)
-  if (lr) {
-    let newRanking = { md: matchDay, mp: lr.mp, w: lr.w, d: lr.d, l: lr.l, gf: lr.gf, ga: lr.ga, gd: lr.gd, pts: lr.pts, fp: lr.fp, h2hm: lr.h2hm }
-    newRanking.mp++
-    if (parseInt(match.home_score) > parseInt(match.away_score)) {
-      if (side === 'home') {
-        newRanking.w++
-        newRanking.gf += parseInt(match.home_score)
-        newRanking.ga += parseInt(match.away_score)
-        newRanking.pts += config.points_for_win
-      } else {
-        newRanking.l++
-        newRanking.gf += parseInt(match.away_score)
-        newRanking.ga += parseInt(match.home_score)
-      }
-    } else if (parseInt(match.home_score) === parseInt(match.away_score)) {
-      if (side === 'home') {
-        newRanking.d++
-        newRanking.gf += parseInt(match.home_score)
-        newRanking.ga += parseInt(match.away_score)
-        newRanking.pts++
-      } else {
-        newRanking.d++
-        newRanking.gf += parseInt(match.away_score)
-        newRanking.ga += parseInt(match.home_score)
-        newRanking.pts++
-      }
-    } else {
-      if (side === 'home') {
-        newRanking.l++
-        newRanking.gf += parseInt(match.home_score)
-        newRanking.ga += parseInt(match.away_score)
-      } else {
-        newRanking.w++
-        newRanking.gf += parseInt(match.away_score)
-        newRanking.ga += parseInt(match.home_score)
-        newRanking.pts += config.points_for_win
-      }
-    }
-    newRanking.gd = newRanking.gf - newRanking.ga
+  team.mp++
+  team.md++
+  if (parseInt(match.home_score) > parseInt(match.away_score)) {
     if (side === 'home') {
-      if (match.home_fair_pts) {
-        newRanking.fp = (newRanking.fp ? newRanking.fp : 0) + parseInt(match.home_fair_pts)
-      }
+      team.w++
+      team.gf += parseInt(match.home_score)
+      team.ga += parseInt(match.away_score)
+      team.pts += config.points_for_win
     } else {
-      if (match.away_fair_pts) {
-        newRanking.fp = (newRanking.fp ? newRanking.fp : 0) + parseInt(match.away_fair_pts)
-      }
+      team.l++
+      team.gf += parseInt(match.away_score)
+      team.ga += parseInt(match.home_score)
     }
-    newRanking.h2hm.push(match)
-
-    if (matchDay === 1) {
-      let newRankings = []
-      newRankings.push(newRanking)
-      team.rankings = newRankings
+  } else if (parseInt(match.home_score) === parseInt(match.away_score)) {
+    if (side === 'home') {
+      team.d++
+      team.gf += parseInt(match.home_score)
+      team.ga += parseInt(match.away_score)
+      team.pts++
     } else {
-      team.rankings.push(newRanking)
+      team.d++
+      team.gf += parseInt(match.away_score)
+      team.ga += parseInt(match.home_score)
+      team.pts++
     }
   } else {
-    console.log('Error calculating team ', team.id)
+    if (side === 'home') {
+      team.l++
+      team.gf += parseInt(match.home_score)
+      team.ga += parseInt(match.away_score)
+    } else {
+      team.w++
+      team.gf += parseInt(match.away_score)
+      team.ga += parseInt(match.home_score)
+      team.pts += config.points_for_win
+    }
+  }
+  team.gd = team.gf - team.ga
+  if (side === 'home') {
+    if (match.home_fair_pts) {
+      team.fp = (team.fp ? team.fp : 0) + parseInt(match.home_fair_pts)
+    }
+  } else {
+    if (match.away_fair_pts) {
+      team.fp = (team.fp ? team.fp : 0) + parseInt(match.away_fair_pts)
+    }
+  }
+  team.h2hm.push(match)
+}
+
+const calculateGroupTeamRanking = (team, match, config) => {
+  const lr = findLastRanking(team)
+  const newRanking = { ...lr }
+  accumulateRanking(newRanking, match, config)
+  if (!team.rankings) {
+    let newRankings = []
+    newRankings.push(newRanking)
+    team.rankings = newRankings
+  } else {
+    team.rankings.push(newRanking)
   }
 }
 
 export const calculateGroupRankings = (group, config) => {
   group.matches.forEach((m, index) => {
-    const matchDay = Math.floor(index / 2 + 1)
-    calculateTeamRanking(findTeam(group.teams, m.home_team), matchDay, m, config)
-    calculateTeamRanking(findTeam(group.teams, m.away_team), matchDay, m, config)
+    calculateGroupTeamRanking(findTeam(group.teams, m.home_team), m, config)
+    calculateGroupTeamRanking(findTeam(group.teams, m.away_team), m, config)
+  })
+}
+
+export const findRoundAdvancedTeams = (advanced_teams, name) => {
+  return advanced_teams.rounds.find((r) => r.name === name)
+}
+
+const calculateKnockoutTeamRanking = (team, match, config) => {
+  accumulateRanking(team, match, config)
+}
+
+export const calculateKnockoutRankings = (advanced_teams, round, config) => {
+  round.matches.forEach((m) => {
+    calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.home_team), m, config)
+    calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.away_team), m, config)
   })
 }
 
@@ -133,7 +144,7 @@ const saveDrawTeams = (a, b) => {
   }
 }
 
-export const sortGroupRankings = (group) => {
+export const sortGroupRankings = (group, startingIndex) => {
   group.final_rankings.sort((a, b) => {
     if (a.pts > b.pts) {
       return -1
@@ -173,24 +184,23 @@ export const sortGroupRankings = (group) => {
     }
   })
   group.final_rankings.forEach((t, index) => {
-    t.r = index + 1
+    t.r = index + startingIndex
   })
 }
 
 const collectMatchdayRankings = (group, matchDay) => {
   group.teams.forEach((t) => {
-    const rankings = t.rankings.filter((r) => r.md === matchDay)
-    const saved = { id: t.id, ...rankings[0] }
+    const rankings = t.rankings.find((r) => r.md === matchDay)
     if (!group.final_rankings) {
       const newRankings = []
-      newRankings.push(saved)
+      newRankings.push(rankings)
       group.final_rankings = newRankings
       group.ranking_type = 'group'
     } else {
-      group.final_rankings.push(saved)
+      group.final_rankings.push(rankings)
     }
   })
-  sortGroupRankings(group)
+  sortGroupRankings(group, 1)
 }
 
 export const collectGroupRankings = (group) => {
@@ -219,32 +229,6 @@ export const RankingHead = () => {
   )
 }
 
-const RankingRow3 = (props) => {
-  const { row, ranking_type } = props
-  return (
-    <Row className="no-gutters">
-      <Col className="col-box-10 padding-top-xxs">
-        <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
-      </Col>
-      <Col className="col-box-34 padding-top-xxs text-uppercase text-left">&nbsp;{getTeamName(row.id)}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.l}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.gf}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.ga}</Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.gd > 0 ? '+' : ''}
-        {row.gd}
-      </Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.pts}
-        {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
-      </Col>
-    </Row>
-  )
-}
-
 const RankingRow2 = (props) => {
   const { row, ranking_type } = props
   return (
@@ -252,7 +236,7 @@ const RankingRow2 = (props) => {
       <Col className="col-box-10">
         <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
       </Col>
-      <Col className="col-box-34 text-uppercase text-left">&nbsp;{getTeamName(row.id)}</Col>
+      <Col className="col-box-34 text-uppercase text-left">&nbsp;&nbsp;{getTeamName(row.id)}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
@@ -280,7 +264,7 @@ export const RankingRow = (props) => {
       <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>{row.r ? row.r : row[0].r}</Col>
       <Col className="ranking-row col-box-95 padding-tb-md">
         {row.r && <RankingRow2 row={row} ranking_type={ranking_type} />}
-        {!row.r && row.map((r) => <RankingRow3 row={r} ranking_type={ranking_type} key={r.id} />)}
+        {!row.r && row.map((r) => <RankingRow2 row={r} ranking_type={ranking_type} key={r.id} />)}
       </Col>
     </Row>
   )

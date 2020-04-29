@@ -26,17 +26,21 @@ export const getRoundRobinStage = (stages) => {
   return result
 }
 
+export const getKnockoutStage = (stages) => {
+  const result = stages.filter((s) => s.type === 'knockout')
+  return result
+}
+
 export const getRoundFinalRanking = (rounds, name) => {
-  const results = rounds.filter((r) => r.name === name)
-  return results.length === 1 ? results[0] : {}
+  return rounds.find((r) => r.name === name)
 }
 
 export const getFlagSrc = (id) => {
-  const team = TeamArray.filter((t) => t.id === id)
-  if (team.length === 1) {
-    const nation = NationArray.filter((n) => n.id === team[0].nation_id)
-    if (nation.length === 1) {
-      return '/assets/images/flags/' + nation[0].flag_filename
+  const team = TeamArray.find((t) => t.id === id)
+  if (team) {
+    const nation = NationArray.find((n) => n.id === team.nation_id)
+    if (nation) {
+      return '/assets/images/flags/' + nation.flag_filename
     } else {
       console.log('Nation error', nation)
     }
@@ -46,15 +50,15 @@ export const getFlagSrc = (id) => {
 }
 
 export const getTeamName = (id) => {
-  const team = TeamArray.filter((t) => t.id === id)
-  if (team.length === 1) {
-    return team[0].name
+  const team = TeamArray.find((t) => t.id === id)
+  if (team) {
+    return team.name
   } else {
     console.log('Team error', team)
   }
 }
 
-const isWinner = (who, match) => {
+export const isWinner = (who, match) => {
   if (who === 'H') {
     return (
       match.home_score > match.away_score ||
