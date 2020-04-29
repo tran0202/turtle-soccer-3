@@ -72,7 +72,7 @@ class TournamentApp extends React.Component {
               <Header param={this.state} page={this.props.page} />
               {(page === 'home' || page === 'matches') && <Matches tournament={tournament} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
-              {page === 'standings' && <Standings />}
+              {page === 'standings' && <Standings tournament={tournament} />}
             </React.Fragment>
           )}
         </Container>

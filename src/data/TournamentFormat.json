@@ -5,6 +5,7 @@
       {
         "name": "Group Stage",
         "type": "roundrobin",
+        "eliminateRule": "bottom2",
         "groups": [
           {
             "name": "Group A",

@@ -26,7 +26,12 @@ export const getRoundRobinStage = (stages) => {
   return result
 }
 
-const getFlagSrc = (id) => {
+export const getRoundFinalRanking = (rounds, name) => {
+  const results = rounds.filter((r) => r.name === name)
+  return results.length === 1 ? results[0] : {}
+}
+
+export const getFlagSrc = (id) => {
   const team = TeamArray.filter((t) => t.id === id)
   if (team.length === 1) {
     const nation = NationArray.filter((n) => n.id === team[0].nation_id)
@@ -40,7 +45,7 @@ const getFlagSrc = (id) => {
   }
 }
 
-const getTeamName = (id) => {
+export const getTeamName = (id) => {
   const team = TeamArray.filter((t) => t.id === id)
   if (team.length === 1) {
     return team[0].name
@@ -297,34 +302,6 @@ export const DisplaySchedule = (props) => {
   )
 }
 
-export const RankingRow = (props) => {
-  const { row } = props
-  const advanced_second_round_striped = row.r === 1 || row.r === 2 ? 'advanced-second-round-striped' : ''
-  return (
-    <Row className={`no-gutters ranking-tbl team-row padding-tb-md text-center ${advanced_second_round_striped}`}>
-      <Col className="col-box-5 padding-top-xxs">{row.r}</Col>
-      <Col className="col-box-10">
-        <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
-      </Col>
-      <Col className="col-box-25 text-uppercase text-left padding-top-xxs">&nbsp;{getTeamName(row.id)}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.l}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.gf}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.ga}</Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.gd > 0 ? '+' : ''}
-        {row.gd}
-      </Col>
-      <Col className="col-box-10 padding-top-xxs">
-        {row.pts}
-        {row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
-      </Col>
-    </Row>
-  )
-}
-
 export const getDateMatchArrayPair = (matches_array) => {
   let matches = [],
     dates = []
@@ -375,7 +352,7 @@ const PenTooltip = (props) => {
   )
 }
 
-const FairPlayTooltip = (props) => {
+export const FairPlayTooltip = (props) => {
   const { target, points } = props
   const content = `fair play points: ${points}`
   return (
