@@ -1,7 +1,3 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
-import { getFlagSrc, getTeamName, FairPlayTooltip } from './Helper'
-
 export const findTeam = (teamArray, id) => {
   return teamArray.find((t) => t.id === id)
 }
@@ -122,10 +118,6 @@ export const calculateGroupRankings = (group, config) => {
   })
 }
 
-export const findRoundAdvancedTeams = (advanced_teams, name) => {
-  return advanced_teams.rounds.find((r) => r.name === name)
-}
-
 const calculateKnockoutTeamRanking = (team, match, config) => {
   accumulateRanking(team, match, config)
 }
@@ -243,65 +235,83 @@ export const collectGroupRankings = (group) => {
   return collectMatchdayRankings(group, 3)
 }
 
-export const RankingHead = () => {
-  return (
-    <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
-      <Col className="col-box-5"></Col>
-      <Col className="col-box-95">
-        <Row className="no-gutters">
-          <Col className="col-box-10"></Col>
-          <Col className="col-box-34"></Col>
-          <Col className="col-box-7">MP</Col>
-          <Col className="col-box-7">W</Col>
-          <Col className="col-box-7">D</Col>
-          <Col className="col-box-7">L</Col>
-          <Col className="col-box-7">GF</Col>
-          <Col className="col-box-7">GA</Col>
-          <Col className="col-box-7">+/-</Col>
-          <Col className="col-box-7">Pts</Col>
-        </Row>
-      </Col>
-    </Row>
-  )
+const mergeArray = (a, b) => {
+  b.forEach((be) => {
+    let merging = true
+    a.forEach((ae) => {
+      if (ae === be) {
+        merging = false
+      }
+    })
+    if (merging) {
+      a.push(be)
+    }
+  })
 }
 
-const RankingRow2 = (props) => {
-  const { row, ranking_type } = props
-  return (
-    <Row className="no-gutters">
-      <Col className="col-box-10">
-        <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
-      </Col>
-      <Col className="col-box-34 text-uppercase text-left">&nbsp;&nbsp;{getTeamName(row.id)}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.l}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.gf}</Col>
-      <Col className="col-box-7 padding-top-xxs">{row.ga}</Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.gd > 0 ? '+' : ''}
-        {row.gd}
-      </Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.pts}
-        {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
-      </Col>
-    </Row>
-  )
+export const createDrawPool = (round) => {
+  let pools = []
+  round.final_rankings.forEach((r) => {
+    if (r.draws) {
+      const tmp = [r.id, ...r.draws]
+      if (pools.length === 0) {
+        pools.push(tmp)
+      } else {
+        let found = false
+        let pool = null
+        pools.forEach((p) => {
+          p.forEach((e) => {
+            tmp.forEach((t) => {
+              if (t === e) {
+                found = true
+              }
+            })
+          })
+          pool = p
+        })
+        if (found) {
+          mergeArray(pool, tmp)
+        } else {
+          pools.push(tmp)
+        }
+      }
+    }
+  })
+  if (pools.length > 0) {
+    round.draw_pools = pools
+  }
 }
 
-export const RankingRow = (props) => {
-  const { row, ranking_type } = props
-  const advanced_second_round_striped = ranking_type === 'group' && (row.r === 1 || row.r === 2) ? ' advanced-second-round-striped' : ''
-  const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
-  return (
-    <Row className={`no-gutters ranking-tbl team-row text-center${advanced_second_round_striped}`}>
-      <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>{row.r ? row.r : row[0].r}</Col>
-      <Col className="ranking-row col-box-95 padding-tb-md">
-        {row.r && <RankingRow2 row={row} ranking_type={ranking_type} />}
-        {!row.r && row.map((r) => <RankingRow2 row={r} ranking_type={ranking_type} key={r.id} />)}
-      </Col>
-    </Row>
-  )
+export const updateDraws = (round) => {
+  round.final_rankings.forEach((r) => {
+    if (r.draws) {
+      round.draw_pools.forEach((p) => {
+        const found = p.includes(r.id)
+        if (found) {
+          mergeArray(r.draws, p)
+        }
+      })
+    }
+  })
+}
+
+export const updateFinalRankings = (round) => {
+  let newFinalRankings = []
+  let previousDrawCount = 0
+  let rankingBundle = []
+  round.final_rankings.forEach((r) => {
+    const drawCount = r.draws ? r.draws.length : 0
+    if (drawCount > 0) {
+      rankingBundle.push(r)
+    } else {
+      if (previousDrawCount > 0) {
+        newFinalRankings.push(rankingBundle)
+        rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
+        rankingBundle = []
+      }
+      newFinalRankings.push(r)
+    }
+    previousDrawCount = drawCount
+  })
+  round.final_rankings = newFinalRankings
 }

@@ -661,6 +661,7 @@
             "name": "Quarterfinals",
             "short_name": "1/4",
             "eliminateCount": "4",
+            "next_round": "Semifinals",
             "matches": [
               {
                 "home_team": "URU",
@@ -715,6 +716,8 @@
           {
             "name": "Semifinals",
             "short_name": "1/2",
+            "eliminateCount": "2",
+            "next_round": "Final",
             "matches": [
               {
                 "home_team": "FRA",
