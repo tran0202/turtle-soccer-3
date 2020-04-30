@@ -101,7 +101,7 @@ const RankingRound = (props) => {
   updateFinalRankings(round)
   return (
     <React.Fragment>
-      <RankingRowSeparate name={round.name} />
+      {round.ranking_type === 'round' && <RankingRowSeparate name={round.name} />}
       {round.final_rankings.map((r, index) => (
         <RankingRow row={r} ranking_type={round.ranking_type} key={index} />
       ))}

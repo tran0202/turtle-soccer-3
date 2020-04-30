@@ -31,15 +31,51 @@ const accumulateRanking = (team, match, config) => {
     }
   } else if (parseInt(match.home_score) === parseInt(match.away_score)) {
     if (side === 'home') {
-      team.d++
-      team.gf += parseInt(match.home_score)
-      team.ga += parseInt(match.away_score)
-      team.pts++
+      if (match.home_extra_score && match.away_extra_score) {
+        if (parseInt(match.home_extra_score) > parseInt(match.away_extra_score)) {
+          team.w++
+          team.gf += parseInt(match.home_score) + parseInt(match.home_extra_score)
+          team.ga += parseInt(match.away_score) + parseInt(match.away_extra_score)
+          team.pts += config.points_for_win
+        } else if (parseInt(match.home_extra_score) === parseInt(match.away_extra_score)) {
+          team.d++
+          team.gf += parseInt(match.home_score) + parseInt(match.home_extra_score)
+          team.ga += parseInt(match.away_score) + parseInt(match.away_extra_score)
+          team.pts++
+        } else {
+          team.l++
+          team.gf += parseInt(match.home_score) + parseInt(match.home_extra_score)
+          team.ga += parseInt(match.away_score) + parseInt(match.away_extra_score)
+        }
+      } else {
+        team.d++
+        team.gf += parseInt(match.home_score)
+        team.ga += parseInt(match.away_score)
+        team.pts++
+      }
     } else {
-      team.d++
-      team.gf += parseInt(match.away_score)
-      team.ga += parseInt(match.home_score)
-      team.pts++
+      if (match.home_extra_score && match.away_extra_score) {
+        if (parseInt(match.home_extra_score) > parseInt(match.away_extra_score)) {
+          team.l++
+          team.gf += parseInt(match.away_score) + parseInt(match.away_extra_score)
+          team.ga += parseInt(match.home_score) + parseInt(match.home_extra_score)
+        } else if (parseInt(match.home_extra_score) === parseInt(match.away_extra_score)) {
+          team.d++
+          team.gf += parseInt(match.away_score) + parseInt(match.away_extra_score)
+          team.ga += parseInt(match.home_score) + parseInt(match.home_extra_score)
+          team.pts++
+        } else {
+          team.w++
+          team.gf += parseInt(match.away_score) + parseInt(match.away_extra_score)
+          team.ga += parseInt(match.home_score) + parseInt(match.home_extra_score)
+          team.pts += config.points_for_win
+        }
+      } else {
+        team.d++
+        team.gf += parseInt(match.away_score)
+        team.ga += parseInt(match.home_score)
+        team.pts++
+      }
     }
   } else {
     if (side === 'home') {
