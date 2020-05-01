@@ -40,7 +40,7 @@ const TournamentFormat = (props) => {
         </ul>
       </Col>
       <Col xs="3">
-        <img src={`/assets/images/${tournamentType.logo_path}/${config.mascot_filename}`} alt={`Mascot ${config.name}`} className="tournament-mascot" />
+        <img src={`/assets/images/${tournamentType.logo_path}/${config.details.mascot_filename}`} alt={`Mascot ${config.name}`} className="tournament-mascot" />
       </Col>
     </Row>
   )

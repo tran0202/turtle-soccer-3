@@ -40,35 +40,36 @@ const GetTabs = (props) => {
             <Row>
               <Col sm="12">
                 <ListGroup flush>
-                  {tournamentTypeArrayByConfed[confed] && (
-                    <React.Fragment>
-                      {tournamentTypeArrayByConfed[confed].map((tt) => (
-                        <ListGroupItem key={tt.id}>
-                          <h2 className="h2-ff1">{tt.name}</h2>
-                          {tournamentArrayByType[tt.id] && (
-                            <section className="tournaments section-bg">
-                              <div className="container">
-                                <div className="row">
-                                  {tournamentArrayByType[tt.id].map((t) => (
-                                    <div key={t.id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 text-center" data-aos="fade-up">
-                                      <div className="tournament-box">
+                  {tournamentTypeArrayByConfed[confed] &&
+                    tournamentTypeArrayByConfed[confed].map((tt) => (
+                      <ListGroupItem key={tt.id}>
+                        <h2 className="h2-ff1">{tt.name}</h2>
+                        {tournamentArrayByType[tt.id] && (
+                          <section className="tournaments section-bg">
+                            <div className="container">
+                              <div className="row">
+                                {tournamentArrayByType[tt.id].map((t) => (
+                                  <div key={t.id} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 text-center" data-aos="fade-up">
+                                    <div className="tournament-box">
+                                      <a href={`/soccer/tournament/${t.id}`}>
                                         <img
-                                          src={`/assets/images/${tt.logo_path}/${t.logo_filename}`}
+                                          src={`/assets/images/${tt.logo_path}/${t.details.logo_filename}`}
                                           alt={t.name}
                                           className="card-img-top-height-100 mx-auto"
                                         />
+                                      </a>
+                                      <a href={`/soccer/tournament/${t.id}`}>
                                         <p className="text-center font-bold mt-3">{t.name}</p>
-                                      </div>
+                                      </a>
                                     </div>
-                                  ))}
-                                </div>
+                                  </div>
+                                ))}
                               </div>
-                            </section>
-                          )}
-                        </ListGroupItem>
-                      ))}
-                    </React.Fragment>
-                  )}
+                            </div>
+                          </section>
+                        )}
+                      </ListGroupItem>
+                    ))}
                 </ListGroup>
               </Col>
             </Row>

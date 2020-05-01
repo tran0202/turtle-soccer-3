@@ -1,4 +1,5 @@
 import React from 'react'
+import { getTournamentConfig } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
@@ -29,16 +30,20 @@ class Header extends React.Component {
   render() {
     const { param } = this.props
     const { tournament, tournamentType } = param
+    const { details } = getTournamentConfig(tournament)
+    // console.log(details)
     return (
       <Row className="mt-3 text-center">
         <Col lg={{ size: 2, offset: 2 }} md={{ size: 2, offset: 1 }} sm="3" className="mt-3 mb-2">
-          <img src={`/assets/images/${tournamentType.logo_path}/${tournament.logo_filename}`} alt={tournament.name} />
+          <a href={`/soccer/tournament/${tournament.id}`}>
+            <img className="card-img-top-height-100" src={`/assets/images/${tournamentType.logo_path}/${details.logo_filename}`} alt={tournament.name} />
+          </a>
         </Col>
         <Col lg="7" md="9" sm="9">
-          <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: tournament.color }}>
+          <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: details.color }}>
             {tournament.name}
           </h1>
-          {moment(tournament.start_date).format('MMMM D, YYYY')} - {moment(tournament.end_date).format('MMMM D, YYYY')}
+          {moment(details.start_date).format('MMMM D, YYYY')} - {moment(details.end_date).format('MMMM D, YYYY')}
           <HeaderLinks page={this.props.page} />
         </Col>
       </Row>

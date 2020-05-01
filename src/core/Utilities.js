@@ -89,3 +89,20 @@ export const NestedTabs = () => {
     </div>
   )
 }
+
+// const newTournamentArray = []
+// TournamentArray.forEach((t) => {
+//   newTournamentArray.push({
+//     id: t.id,
+//     name: t.name,
+//     tournament_type_id: t.tournament_type_id,
+//     active: t.active,
+//     third_place_ranking: t.third_place_ranking,
+//     head_to_head_tiebreaker: t.head_to_head_tiebreaker,
+//     golden_goal_rule: t.golden_goal_rule,
+//     points_for_win: t.points_for_win,
+//     parent_tournament_id: t.parent_tournament_id,
+//     details: { logo_filename: t.logo_filename, start_date: t.start_date, end_date: t.end_date },
+//   })
+// })
+// console.log(JSON.stringify(newTournamentArray))

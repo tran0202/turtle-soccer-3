@@ -4,6 +4,7 @@ import TournamentArray from '../data/Tournament.json'
 import TournamentFormatArray from '../data/TournamentFormat.json'
 import Page from '../core/Page'
 import Header from './Header'
+import Intro from './Intro'
 import Matches from './Matches'
 import Groups from './Groups'
 import Standings from './Standings'
@@ -70,7 +71,8 @@ class TournamentApp extends React.Component {
           {tournament && tournamentType && (
             <React.Fragment>
               <Header param={this.state} page={this.props.page} />
-              {(page === 'home' || page === 'matches') && <Matches tournament={tournament} />}
+              {page === 'intro' && <Intro tournament={tournament} />}
+              {page === 'matches' && <Matches tournament={tournament} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
               {page === 'standings' && <Standings tournament={tournament} />}
             </React.Fragment>

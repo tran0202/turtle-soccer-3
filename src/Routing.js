@@ -15,7 +15,7 @@ import FSNationApp from './firestore/nation/'
 import FSTeamApp from './firestore/team/'
 
 function TournamentRoute(props) {
-  const page = props.page ? props.page : 'home'
+  const page = props.page ? props.page : 'intro'
   const { id } = useParams()
   return <TournamentApp id={id} page={page} />
 }

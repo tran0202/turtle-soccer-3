@@ -8,16 +8,16 @@ export const getTournamentConfig = (tournament) => {
   return {
     id: tournament.id,
     name: tournament.name,
-    color: tournament.color,
-    start_date: tournament.start_date,
-    end_date: tournament.end_date,
     golden_goal_rule: tournament.golden_goal_rule,
     head_to_head_tiebreaker: tournament.head_to_head_tiebreaker,
-    logo_filename: tournament.logo_filename,
     third_place_ranking: tournament.third_place_ranking,
     points_for_win: tournament.points_for_win,
-    mascot_filename: tournament.mascot_filename,
     active: tournament.active,
+    hero_images: tournament.hero_images,
+    details: tournament.details,
+    final_positions: tournament.final_positions,
+    statistics: tournament.statistics,
+    awards: tournament.awards,
   }
 }
 

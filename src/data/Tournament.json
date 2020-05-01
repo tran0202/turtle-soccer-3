@@ -1,2813 +1,2429 @@
 [
-  { "id": "USOPEN2017", "name": "2017 US Open", "tournament_type_id": "", "start_date": "2017-08-28", "end_date": "2017-09-10", "active": false },
-  { "id": "USOPEN2018", "name": "2018 US Open", "tournament_type_id": "", "start_date": "2018-08-27", "end_date": "2018-09-09", "active": false },
+  {
+    "id": "USOPEN2017",
+    "name": "2017 US Open",
+    "tournament_type_id": "",
+    "active": false,
+    "details": { "start_date": "2017-08-28", "end_date": "2017-09-10" }
+  },
+  {
+    "id": "USOPEN2018",
+    "name": "2018 US Open",
+    "tournament_type_id": "",
+    "active": false,
+    "details": { "start_date": "2018-08-27", "end_date": "2018-09-09" }
+  },
   {
     "id": "NFL2018",
     "name": "National Football League 2018",
     "tournament_type_id": "NFL",
-    "start_date": "2018-08-03",
-    "end_date": "2019-02-04",
-    "active": false
+    "active": false,
+    "details": { "start_date": "2018-08-03", "end_date": "2019-02-04" }
   },
   {
     "id": "USOPEN2017MS",
     "name": "2017 US Open Men's Singles",
     "tournament_type_id": "ATP",
-    "start_date": "2017-08-28",
-    "end_date": "2017-09-10",
     "active": false,
-    "logo_filename": "usopen.svg",
-    "parent_tournament_id": "USOPEN2017"
+    "parent_tournament_id": "USOPEN2017",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2017-08-28", "end_date": "2017-09-10" }
   },
   {
     "id": "USOPEN2018MS",
     "name": "2018 US Open Men's Singles",
     "tournament_type_id": "ATP",
-    "start_date": "2018-08-27",
-    "end_date": "2018-09-09",
     "active": false,
-    "logo_filename": "usopen.svg",
-    "parent_tournament_id": "USOPEN2018"
+    "parent_tournament_id": "USOPEN2018",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2018-08-27", "end_date": "2018-09-09" }
   },
   {
     "id": "USOPEN2018WS",
     "name": "2018 US Open Women's Singles",
     "tournament_type_id": "WTA",
-    "start_date": "2018-08-27",
-    "end_date": "2018-09-09",
     "active": false,
-    "logo_filename": "usopen.svg",
-    "parent_tournament_id": "USOPEN2018"
+    "parent_tournament_id": "USOPEN2018",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2018-08-27", "end_date": "2018-09-09" }
   },
   {
     "id": "UNL201819",
     "name": "2018/19 UEFA Nations League",
     "tournament_type_id": "UNL",
-    "start_date": "2018-09-06",
-    "end_date": "2019-06-09",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "UEFA_Nations_League.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "UEFA_Nations_League.png", "start_date": "2018-09-06", "end_date": "2019-06-09" }
   },
   {
     "id": "UCL201819",
     "name": "2018/19 UEFA Champions League",
     "tournament_type_id": "UCL",
-    "start_date": "2018-06-26",
-    "end_date": "2019-06-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "UCL.svg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "UCL.svg", "start_date": "2018-06-26", "end_date": "2019-06-01" }
   },
   {
     "id": "UEL201819",
     "name": "2018/19 UEFA Europa League",
     "tournament_type_id": "UEL",
-    "start_date": "2018-06-28",
-    "end_date": "2019-05-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "UEL.svg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "UEL.svg", "start_date": "2018-06-28", "end_date": "2019-05-29" }
   },
   {
     "id": "WC2018",
     "name": "2018 FIFA World Cup Russia",
     "tournament_type_id": "WC",
-    "start_date": "2018-06-14",
-    "end_date": "2018-07-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2018.png",
-    "mascot_filename": "Zabivaka_(mascot).jpg",
     "points_for_win": 3,
-    "color": "#930c10"
+    "hero_images": [
+      { "name": "Champions", "filename": "France_champion_of_the_Football_World_Cup_Russia_2018.jpg", "text": "The France team holds the World Cup trophy" },
+      { "name": "France", "filename": "France_WC2018_final.jpg", "text": "France's starting line-up for the World Cup Final" },
+      { "name": "Croatia", "filename": "Croatia_WC2018_final.jpg", "text": "Croatia's starting eleven for the 2018 World Cup Final" },
+      { "name": "Belgium - Tunisia", "filename": "Bel-Tun_(6).jpg", "text": "Belgium v Tunisia in group G" },
+      {
+        "name": "England - Colombia",
+        "filename": "FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_132.jpg",
+        "text": "Eric Dier scores the winning goal in England's first World Cup penalty shoot-out victory, having lost thrice before."
+      },
+      {
+        "name": "Harry Kane",
+        "filename": "Harry_Kane_FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_027.jpg",
+        "text": "Golden Boot"
+      },
+      { "name": "Luka Modrić", "filename": "Luka_Modric_ISL-HRV_(7).jpg", "text": "Golden Ball" },
+      { "name": "Kylian Mbappé", "filename": "Kylian_Mbappé_World_Cup_Trophy.jpg", "text": "Best Young Player" },
+      { "name": "Thibaut Courtois", "filename": "Courtois_2018_(cropped).jpg", "text": "Golden Glove" }
+    ],
+    "details": {
+      "host": "RUS",
+      "logo_filename": "2018_FIFA_World_Cup.svg",
+      "mascot_filename": "Zabivaka_(mascot).jpg",
+      "start_date": "2018-06-14",
+      "end_date": "2018-07-15",
+      "color": "#930c10",
+      "team_count": "32",
+      "confed_count": "5",
+      "venue_count": "12",
+      "city_count": "11"
+    },
+    "final_positions": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
+    "statistics": { "total_matches": "64", "total_goals": "169", "attendance": "3031768" },
+    "awards": {
+      "golden_ball": { "player": "Luka Modrić", "team": "CRO" },
+      "golden_boot": { "player": "Harry Kane", "team": "ENG" },
+      "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
+      "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
+      "fair_play_team": "ESP"
+    }
   },
   {
     "id": "WC2014",
     "name": "2014 FIFA World Cup Brazil",
     "tournament_type_id": "WC",
-    "start_date": "2014-06-12",
-    "end_date": "2014-07-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2014.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2014.png", "start_date": "2014-06-12", "end_date": "2014-07-13" }
   },
   {
     "id": "WC2010",
     "name": "2010 FIFA World Cup South Africa",
     "tournament_type_id": "WC",
-    "start_date": "2010-06-11",
-    "end_date": "2010-07-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2010.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2010.png", "start_date": "2010-06-11", "end_date": "2010-07-11" }
   },
   {
     "id": "WC2006",
     "name": "2006 FIFA World Cup Germany",
     "tournament_type_id": "WC",
-    "start_date": "2006-06-09",
-    "end_date": "2006-07-09",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2006.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2006.png", "start_date": "2006-06-09", "end_date": "2006-07-09" }
   },
   {
     "id": "WC2002",
     "name": "2002 FIFA World Cup Korea-Japan",
     "tournament_type_id": "WC",
-    "start_date": "2002-05-31",
-    "end_date": "2002-06-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "2002.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2002.png", "start_date": "2002-05-31", "end_date": "2002-06-10" }
   },
   {
     "id": "WC1998",
     "name": "1998 FIFA World Cup France",
     "tournament_type_id": "WC",
-    "start_date": "1998-06-10",
-    "end_date": "1998-07-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "1998.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1998.png", "start_date": "1998-06-10", "end_date": "1998-07-12" }
   },
   {
     "id": "WC1994",
     "name": "1994 FIFA World Cup USA",
     "tournament_type_id": "WC",
-    "start_date": "1994-06-17",
-    "end_date": "1994-07-17",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1994.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1994.png", "start_date": "1994-06-17", "end_date": "1994-07-17" }
   },
   {
     "id": "WC1990",
     "name": "1990 FIFA World Cup Italy",
     "tournament_type_id": "WC",
-    "start_date": "1990-06-08",
-    "end_date": "1990-07-08",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1990.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1990.png", "start_date": "1990-06-08", "end_date": "1990-07-08" }
   },
   {
     "id": "WC1986",
     "name": "1986 FIFA World Cup Mexico",
     "tournament_type_id": "WC",
-    "start_date": "1986-05-31",
-    "end_date": "1986-06-29",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1986.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1986.png", "start_date": "1986-05-31", "end_date": "1986-06-29" }
   },
   {
     "id": "WC1982",
     "name": "1982 FIFA World Cup Spain",
     "tournament_type_id": "WC",
-    "start_date": "1982-06-13",
-    "end_date": "1982-07-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1982.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1982.png", "start_date": "1982-06-13", "end_date": "1982-07-11" }
   },
   {
     "id": "WC1978",
     "name": "1978 FIFA World Cup Argentina",
     "tournament_type_id": "WC",
-    "start_date": "1978-06-01",
-    "end_date": "1978-06-25",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1978.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1978.png", "start_date": "1978-06-01", "end_date": "1978-06-25" }
   },
   {
     "id": "WC1974",
     "name": "1974 FIFA World Cup Germany",
     "tournament_type_id": "WC",
-    "start_date": "1974-06-13",
-    "end_date": "1974-07-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1974.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1974.png", "start_date": "1974-06-13", "end_date": "1974-07-07" }
   },
   {
     "id": "WC1970",
     "name": "1970 FIFA World Cup Mexico",
     "tournament_type_id": "WC",
-    "start_date": "1970-05-31",
-    "end_date": "1970-06-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1970.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1970.png", "start_date": "1970-05-31", "end_date": "1970-06-21" }
   },
   {
     "id": "WC1966",
     "name": "1966 FIFA World Cup England",
     "tournament_type_id": "WC",
-    "start_date": "1966-07-11",
-    "end_date": "1966-07-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1966.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1966.png", "start_date": "1966-07-11", "end_date": "1966-07-30" }
   },
   {
     "id": "WC1962",
     "name": "1962 FIFA World Cup Chile",
     "tournament_type_id": "WC",
-    "start_date": "1962-05-30",
-    "end_date": "1962-06-17",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1962.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1962.png", "start_date": "1962-05-30", "end_date": "1962-06-17" }
   },
   {
     "id": "WC1958",
     "name": "1958 FIFA World Cup Sweden",
     "tournament_type_id": "WC",
-    "start_date": "1958-06-08",
-    "end_date": "1958-06-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1958.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1958.png", "start_date": "1958-06-08", "end_date": "1958-06-29" }
   },
   {
     "id": "WC1954",
     "name": "1954 FIFA World Cup Switzerland",
     "tournament_type_id": "WC",
-    "start_date": "1954-06-16",
-    "end_date": "1954-07-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1954.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1954.png", "start_date": "1954-06-16", "end_date": "1954-07-04" }
   },
   {
     "id": "WC1950",
     "name": "1950 FIFA World Cup Brazil",
     "tournament_type_id": "WC",
-    "start_date": "1950-06-24",
-    "end_date": "1950-07-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1950.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1950.png", "start_date": "1950-06-24", "end_date": "1950-07-16" }
   },
   {
     "id": "WC1938",
     "name": "1938 FIFA World Cup France",
     "tournament_type_id": "WC",
-    "start_date": "1938-06-04",
-    "end_date": "1938-06-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1938.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1938.png", "start_date": "1938-06-04", "end_date": "1938-06-19" }
   },
   {
     "id": "WC1934",
     "name": "1934 FIFA World Cup Italy",
     "tournament_type_id": "WC",
-    "start_date": "1934-05-27",
-    "end_date": "1934-06-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1934.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1934.png", "start_date": "1934-05-27", "end_date": "1934-06-10" }
   },
   {
     "id": "WC1930",
     "name": "1930 FIFA World Cup Uruguay",
     "tournament_type_id": "WC",
-    "start_date": "1930-07-13",
-    "end_date": "1930-07-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1930.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1930.png", "start_date": "1930-07-13", "end_date": "1930-07-30" }
   },
   {
     "id": "WWC2015",
     "name": "2015 FIFA Women's World Cup Canada",
     "tournament_type_id": "WWC",
-    "start_date": "2015-06-06",
-    "end_date": "2015-07-05",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2015.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2015.png", "start_date": "2015-06-06", "end_date": "2015-07-05" }
   },
   {
     "id": "WWC2011",
     "name": "2011 FIFA Women's World Cup Germany",
     "tournament_type_id": "WWC",
-    "start_date": "2011-06-26",
-    "end_date": "2011-07-17",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2011.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2011.png", "start_date": "2011-06-26", "end_date": "2011-07-17" }
   },
   {
     "id": "WWC2007",
     "name": "2007 FIFA Women's World Cup China",
     "tournament_type_id": "WWC",
-    "start_date": "2007-09-10",
-    "end_date": "2007-09-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2007.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2007.png", "start_date": "2007-09-10", "end_date": "2007-09-30" }
   },
   {
     "id": "WWC2003",
     "name": "2003 FIFA Women's World Cup USA",
     "tournament_type_id": "WWC",
-    "start_date": "2003-09-20",
-    "end_date": "2003-10-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "2003.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2003.png", "start_date": "2003-09-20", "end_date": "2003-10-12" }
   },
   {
     "id": "WWC1999",
     "name": "1999 FIFA Women's World Cup USA",
     "tournament_type_id": "WWC",
-    "start_date": "1999-06-19",
-    "end_date": "1999-07-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "1999.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1999.png", "start_date": "1999-06-19", "end_date": "1999-07-10" }
   },
   {
     "id": "WWC1995",
     "name": "1995 FIFA Women's World Cup Sweden",
     "tournament_type_id": "WWC",
-    "start_date": "1995-06-05",
-    "end_date": "1995-06-18",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1995.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1995.png", "start_date": "1995-06-05", "end_date": "1995-06-18" }
   },
   {
     "id": "WWC1991",
     "name": "1991 FIFA Women's World Cup China PR",
     "tournament_type_id": "WWC",
-    "start_date": "1991-11-16",
-    "end_date": "1991-11-30",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1991.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1991.png", "start_date": "1991-11-16", "end_date": "1991-11-30" }
   },
   {
     "id": "OFT2016",
     "name": "Olympic Football Tournament Rio 2016",
     "tournament_type_id": "OFT",
-    "start_date": "2016-08-03",
-    "end_date": "2016-08-20",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2016.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2016.png", "start_date": "2016-08-03", "end_date": "2016-08-20" }
   },
   {
     "id": "OFT2012",
     "name": "Olympic Football Tournament London 2012",
     "tournament_type_id": "OFT",
-    "start_date": "2012-07-26",
-    "end_date": "2012-08-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2012.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2012.png", "start_date": "2012-07-26", "end_date": "2012-08-11" }
   },
   {
     "id": "OFT2008",
     "name": "Olympic Football Tournament Beijing 2008",
     "tournament_type_id": "OFT",
-    "start_date": "2008-08-07",
-    "end_date": "2008-08-23",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2008.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2008.png", "start_date": "2008-08-07", "end_date": "2008-08-23" }
   },
   {
     "id": "OFT2004",
     "name": "Olympic Football Tournament Athens 2004",
     "tournament_type_id": "OFT",
-    "start_date": "2004-08-11",
-    "end_date": "2004-08-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2004.png", "start_date": "2004-08-11", "end_date": "2004-08-28" }
   },
   {
     "id": "OFT2000",
     "name": "Olympic Football Tournament Sydney 2000",
     "tournament_type_id": "OFT",
-    "start_date": "2000-09-15",
-    "end_date": "2000-09-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2000.png", "start_date": "2000-09-15", "end_date": "2000-09-30" }
   },
   {
     "id": "OFT1996",
     "name": "Olympic Football Tournament Atlanta 1996",
     "tournament_type_id": "OFT",
-    "start_date": "1996-07-20",
-    "end_date": "1996-08-03",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "1996.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1996.png", "start_date": "1996-07-20", "end_date": "1996-08-03" }
   },
   {
     "id": "OFT1992",
     "name": "Olympic Football Tournament Barcelona 1992",
     "tournament_type_id": "OFT",
-    "start_date": "1992-07-24",
-    "end_date": "1992-08-08",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1992.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1992.png", "start_date": "1992-07-24", "end_date": "1992-08-08" }
   },
   {
     "id": "OFT1988",
     "name": "Olympic Football Tournament Seoul 1988",
     "tournament_type_id": "OFT",
-    "start_date": "1988-09-17",
-    "end_date": "1988-10-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1988.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1988.png", "start_date": "1988-09-17", "end_date": "1988-10-01" }
   },
   {
     "id": "OFT1984",
     "name": "Olympic Football Tournament Los Angeles 1984",
     "tournament_type_id": "OFT",
-    "start_date": "1984-07-29",
-    "end_date": "1984-08-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1984.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1984.png", "start_date": "1984-07-29", "end_date": "1984-08-11" }
   },
   {
     "id": "OFT1980",
     "name": "Olympic Football Tournament Moscow 1980",
     "tournament_type_id": "OFT",
-    "start_date": "1980-07-20",
-    "end_date": "1980-08-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1980.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1980.png", "start_date": "1980-07-20", "end_date": "1980-08-02" }
   },
   {
     "id": "OFT1976",
     "name": "Olympic Football Tournament Montreal 1976",
     "tournament_type_id": "OFT",
-    "start_date": "1976-07-18",
-    "end_date": "1976-07-31",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1976.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1976.png", "start_date": "1976-07-18", "end_date": "1976-07-31" }
   },
   {
     "id": "OFT1972",
     "name": "Olympic Football Tournament Munich 1972",
     "tournament_type_id": "OFT",
-    "start_date": "1972-08-27",
-    "end_date": "1972-09-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1972.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1972.png", "start_date": "1972-08-27", "end_date": "1972-09-10" }
   },
   {
     "id": "OFT1968",
     "name": "Olympic Football Tournament Mexico City 1968",
     "tournament_type_id": "OFT",
-    "start_date": "1968-10-13",
-    "end_date": "1968-10-26",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1968.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1968.png", "start_date": "1968-10-13", "end_date": "1968-10-26" }
   },
   {
     "id": "OFT1964",
     "name": "Olympic Football Tournament Tokyo 1964",
     "tournament_type_id": "OFT",
-    "start_date": "1964-10-11",
-    "end_date": "1964-10-23",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1964.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1964.png", "start_date": "1964-10-11", "end_date": "1964-10-23" }
   },
   {
     "id": "OFT1960",
     "name": "Olympic Football Tournament Roma 1960",
     "tournament_type_id": "OFT",
-    "start_date": "1960-08-26",
-    "end_date": "1960-09-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1960.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1960.png", "start_date": "1960-08-26", "end_date": "1960-09-10" }
   },
   {
     "id": "OFT1956",
     "name": "Olympic Football Tournament Melbourne 1956",
     "tournament_type_id": "OFT",
-    "start_date": "1956-11-24",
-    "end_date": "1956-12-08",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1956.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1956.png", "start_date": "1956-11-24", "end_date": "1956-12-08" }
   },
   {
     "id": "OFT1952",
     "name": "Olympic Football Tournament Helsinki 1952",
     "tournament_type_id": "OFT",
-    "start_date": "1952-07-15",
-    "end_date": "1952-08-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1952.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1952.png", "start_date": "1952-07-15", "end_date": "1952-08-02" }
   },
   {
     "id": "OFT1948",
     "name": "Olympic Football Tournament London 1948",
     "tournament_type_id": "OFT",
-    "start_date": "1948-07-26",
-    "end_date": "1948-08-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1948.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1948.png", "start_date": "1948-07-26", "end_date": "1948-08-13" }
   },
   {
     "id": "OFT1936",
     "name": "Olympic Football Tournament Berlin 1936",
     "tournament_type_id": "OFT",
-    "start_date": "1936-08-03",
-    "end_date": "1936-08-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1936.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1936.png", "start_date": "1936-08-03", "end_date": "1936-08-15" }
   },
   {
     "id": "OFT1928",
     "name": "Olympic Football Tournament Amsterdam 1928",
     "tournament_type_id": "OFT",
-    "start_date": "1928-05-27",
-    "end_date": "1928-06-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1928.jpg",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1928.jpg", "start_date": "1928-05-27", "end_date": "1928-06-13" }
   },
   {
     "id": "OFT1924",
     "name": "Olympic Football Tournament Paris 1924",
     "tournament_type_id": "OFT",
-    "start_date": "1924-05-25",
-    "end_date": "1924-06-09",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1924.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1924.png", "start_date": "1924-05-25", "end_date": "1924-06-09" }
   },
   {
     "id": "OFT1920",
     "name": "Olympic Football Tournament Antwerp 1920",
     "tournament_type_id": "OFT",
-    "start_date": "1920-08-28",
-    "end_date": "1920-09-05",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1920.gif",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1920.gif", "start_date": "1920-08-28", "end_date": "1920-09-05" }
   },
   {
     "id": "OFT1912",
     "name": "Olympic Football Tournament Stockholm 1912",
     "tournament_type_id": "OFT",
-    "start_date": "1912-06-29",
-    "end_date": "1912-07-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1912.gif",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1912.gif", "start_date": "1912-06-29", "end_date": "1912-07-04" }
   },
   {
     "id": "OFT1908",
     "name": "Olympic Football Tournament London 1908",
     "tournament_type_id": "OFT",
-    "start_date": "1908-10-19",
-    "end_date": "1908-10-24",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "1908.gif",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "1908.gif", "start_date": "1908-10-19", "end_date": "1908-10-24" }
   },
   {
     "id": "WOFT2016",
     "name": "Women's Olympic Football Tournament Rio 2016",
     "tournament_type_id": "WOFT",
-    "start_date": "2016-08-03",
-    "end_date": "2016-08-20",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2016.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2016.png", "start_date": "2016-08-03", "end_date": "2016-08-20" }
   },
   {
     "id": "WOFT2012",
     "name": "Women's Olympic Football Tournament London 2012",
     "tournament_type_id": "WOFT",
-    "start_date": "2012-07-25",
-    "end_date": "2012-08-09",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2012.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2012.png", "start_date": "2012-07-25", "end_date": "2012-08-09" }
   },
   {
     "id": "WOFT2008",
     "name": "Women's Olympic Football Tournament Beijing 2008",
     "tournament_type_id": "WOFT",
-    "start_date": "2008-08-06",
-    "end_date": "2008-08-21",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2008.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2008.png", "start_date": "2008-08-06", "end_date": "2008-08-21" }
   },
   {
     "id": "WOFT2004",
     "name": "Women's Olympic Football Tournament Athens 2004",
     "tournament_type_id": "WOFT",
-    "start_date": "2004-08-11",
-    "end_date": "2004-08-26",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2004.png", "start_date": "2004-08-11", "end_date": "2004-08-26" }
   },
   {
     "id": "WOFT2000",
     "name": "Women's Olympic Football Tournament Sydney 2000",
     "tournament_type_id": "WOFT",
-    "start_date": "2000-09-13",
-    "end_date": "2000-09-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "2000.png", "start_date": "2000-09-13", "end_date": "2000-09-28" }
   },
   {
     "id": "WOFT1996",
     "name": "Women's Olympic Football Tournament Atlanta 1996",
     "tournament_type_id": "WOFT",
-    "start_date": "1996-07-21",
-    "end_date": "1996-08-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "1996.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "1996.png", "start_date": "1996-07-21", "end_date": "1996-08-01" }
   },
   {
     "id": "EURO2016",
     "name": "UEFA Euro 2016 France",
     "tournament_type_id": "EURO",
-    "start_date": "2016-06-10",
-    "end_date": "2016-07-10",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_2016.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2016.png", "start_date": "2016-06-10", "end_date": "2016-07-10" }
   },
   {
     "id": "EURO2012",
     "name": "UEFA Euro 2012 Poland-Ukraine",
     "tournament_type_id": "EURO",
-    "start_date": "2012-06-08",
-    "end_date": "2012-07-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_2012.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2012.png", "start_date": "2012-06-08", "end_date": "2012-07-01" }
   },
   {
     "id": "EURO2008",
     "name": "UEFA Euro 2008 Austria-Switzerland",
     "tournament_type_id": "EURO",
-    "start_date": "2008-06-07",
-    "end_date": "2008-06-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_2008.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2008.png", "start_date": "2008-06-07", "end_date": "2008-06-29" }
   },
   {
     "id": "EURO2004",
     "name": "UEFA Euro 2004 Portugal",
     "tournament_type_id": "EURO",
-    "start_date": "2004-06-12",
-    "end_date": "2004-07-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": true,
-    "logo_filename": "Euro_2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2004.png", "start_date": "2004-06-12", "end_date": "2004-07-04" }
   },
   {
     "id": "EURO2000",
     "name": "UEFA Euro 2000 Belgium-Netherlands",
     "tournament_type_id": "EURO",
-    "start_date": "2000-06-10",
-    "end_date": "2000-07-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": true,
-    "logo_filename": "Euro_2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2000.png", "start_date": "2000-06-10", "end_date": "2000-07-02" }
   },
   {
     "id": "EURO1996",
     "name": "UEFA Euro 1996 England",
     "tournament_type_id": "EURO",
-    "start_date": "1996-06-08",
-    "end_date": "1996-06-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": true,
-    "logo_filename": "Euro_1996.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_1996.png", "start_date": "1996-06-08", "end_date": "1996-06-30" }
   },
   {
     "id": "EURO1992",
     "name": "UEFA Euro 1992 Sweden",
     "tournament_type_id": "EURO",
-    "start_date": "1992-06-10",
-    "end_date": "1992-06-26",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1992.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1992.png", "start_date": "1992-06-10", "end_date": "1992-06-26" }
   },
   {
     "id": "EURO1988",
     "name": "UEFA Euro 1988 West Germany",
     "tournament_type_id": "EURO",
-    "start_date": "1988-06-10",
-    "end_date": "1988-06-25",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1988.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1988.png", "start_date": "1988-06-10", "end_date": "1988-06-25" }
   },
   {
     "id": "EURO1984",
     "name": "UEFA Euro 1984 France",
     "tournament_type_id": "EURO",
-    "start_date": "1984-06-12",
-    "end_date": "1984-06-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1984.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1984.png", "start_date": "1984-06-12", "end_date": "1984-06-27" }
   },
   {
     "id": "EURO1980",
     "name": "UEFA Euro 1980 Italy",
     "tournament_type_id": "EURO",
-    "start_date": "1980-06-11",
-    "end_date": "1980-06-22",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1980.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1980.png", "start_date": "1980-06-11", "end_date": "1980-06-22" }
   },
   {
     "id": "EURO1976",
     "name": "UEFA Euro 1976 Yugoslavia",
     "tournament_type_id": "EURO",
-    "start_date": "1976-06-16",
-    "end_date": "1976-06-20",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1976.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1976.png", "start_date": "1976-06-16", "end_date": "1976-06-20" }
   },
   {
     "id": "EURO1972",
     "name": "UEFA Euro 1972 Belgium",
     "tournament_type_id": "EURO",
-    "start_date": "1972-06-14",
-    "end_date": "1972-06-18",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1972.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1972.png", "start_date": "1972-06-14", "end_date": "1972-06-18" }
   },
   {
     "id": "EURO1968",
     "name": "UEFA Euro 1968 Italy",
     "tournament_type_id": "EURO",
-    "start_date": "1968-06-05",
-    "end_date": "1968-06-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1968.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1968.png", "start_date": "1968-06-05", "end_date": "1968-06-10" }
   },
   {
     "id": "EURO1964",
     "name": "UEFA Euro 1964 Spain",
     "tournament_type_id": "EURO",
-    "start_date": "1964-06-17",
-    "end_date": "1964-06-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1964.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1964.png", "start_date": "1964-06-17", "end_date": "1964-06-21" }
   },
   {
     "id": "EURO1960",
     "name": "UEFA Euro 1960 France",
     "tournament_type_id": "EURO",
-    "start_date": "1960-07-06",
-    "end_date": "1960-07-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Euro_1960.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1960.png", "start_date": "1960-07-06", "end_date": "1960-07-10" }
   },
   {
     "id": "COPA2016",
     "name": "2016 Copa America Centenario USA",
     "tournament_type_id": "COPA",
-    "start_date": "2016-06-03",
-    "end_date": "2016-06-26",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-centenario.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-centenario.png", "start_date": "2016-06-03", "end_date": "2016-06-26" }
   },
   {
     "id": "COPA2015",
     "name": "2015 Copa America Chile",
     "tournament_type_id": "COPA",
-    "start_date": "2015-06-11",
-    "end_date": "2015-07-04",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-2015.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-2015.png", "start_date": "2015-06-11", "end_date": "2015-07-04" }
   },
   {
     "id": "COPA2011",
     "name": "2011 Copa America Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "2011-07-01",
-    "end_date": "2011-07-24",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-2011.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-2011.png", "start_date": "2011-07-01", "end_date": "2011-07-24" }
   },
   {
     "id": "COPA2007",
     "name": "2007 Copa America Venezuela",
     "tournament_type_id": "COPA",
-    "start_date": "2007-06-26",
-    "end_date": "2007-07-15",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-2007.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-2007.png", "start_date": "2007-06-26", "end_date": "2007-07-15" }
   },
   {
     "id": "COPA2004",
     "name": "2004 Copa America Peru",
     "tournament_type_id": "COPA",
-    "start_date": "2004-07-06",
-    "end_date": "2004-07-25",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-2004.png", "start_date": "2004-07-06", "end_date": "2004-07-25" }
   },
   {
     "id": "COPA2001",
     "name": "2001 Copa America Colombia",
     "tournament_type_id": "COPA",
-    "start_date": "2001-07-11",
-    "end_date": "2001-07-29",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-2001.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-2001.png", "start_date": "2001-07-11", "end_date": "2001-07-29" }
   },
   {
     "id": "COPA1999",
     "name": "1999 Copa America Paraguay",
     "tournament_type_id": "COPA",
-    "start_date": "1999-06-29",
-    "end_date": "1999-07-18",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-1999.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-1999.png", "start_date": "1999-06-29", "end_date": "1999-07-18" }
   },
   {
     "id": "COPA1997",
     "name": "1997 Copa America Bolivia",
     "tournament_type_id": "COPA",
-    "start_date": "1997-06-11",
-    "end_date": "1997-06-29",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-1997.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "copa-1997.png", "start_date": "1997-06-11", "end_date": "1997-06-29" }
   },
   {
     "id": "COPA1995",
     "name": "1995 Copa America Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1995-07-05",
-    "end_date": "1995-07-23",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1995-07-05", "end_date": "1995-07-23" }
   },
   {
     "id": "COPA1993",
     "name": "1993 Copa America Ecuador",
     "tournament_type_id": "COPA",
-    "start_date": "1993-06-15",
-    "end_date": "1993-07-04",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-1993.jpg",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "copa-1993.jpg", "start_date": "1993-06-15", "end_date": "1993-07-04" }
   },
   {
     "id": "COPA1991",
     "name": "1991 Copa America Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1991-07-06",
-    "end_date": "1991-07-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-1991.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "copa-1991.png", "start_date": "1991-07-06", "end_date": "1991-07-21" }
   },
   {
     "id": "COPA1989",
     "name": "1989 Copa America Brazil",
     "tournament_type_id": "COPA",
-    "start_date": "1989-07-01",
-    "end_date": "1989-07-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "copa-1989.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "copa-1989.png", "start_date": "1989-07-01", "end_date": "1989-07-16" }
   },
   {
     "id": "COPA1987",
     "name": "1987 Copa America Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1987-06-27",
-    "end_date": "1987-07-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1987-06-27", "end_date": "1987-07-12" }
   },
   {
     "id": "COPA1983",
     "name": "1983 Copa America",
     "tournament_type_id": "COPA",
-    "start_date": "1983-08-10",
-    "end_date": "1983-11-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1983-08-10", "end_date": "1983-11-04" }
   },
   {
     "id": "COPA1979",
     "name": "1979 Copa America",
     "tournament_type_id": "COPA",
-    "start_date": "1979-07-18",
-    "end_date": "1979-12-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1979-07-18", "end_date": "1979-12-12" }
   },
   {
     "id": "COPA1975",
     "name": "1975 Copa America",
     "tournament_type_id": "COPA",
-    "start_date": "1975-07-17",
-    "end_date": "1975-10-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1975-07-17", "end_date": "1975-10-28" }
   },
   {
     "id": "COPA1967",
     "name": "1967 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1967-01-13",
-    "end_date": "1967-02-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1967-01-13", "end_date": "1967-02-02" }
   },
   {
     "id": "COPA1963",
     "name": "1963 South American Championship Bolivia",
     "tournament_type_id": "COPA",
-    "start_date": "1963-03-10",
-    "end_date": "1963-03-31",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1963-03-10", "end_date": "1963-03-31" }
   },
   {
     "id": "COPA1959ECU",
     "name": "1959 South American Championship Ecuador",
     "tournament_type_id": "COPA",
-    "start_date": "1959-12-05",
-    "end_date": "1959-12-25",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1959-12-05", "end_date": "1959-12-25" }
   },
   {
     "id": "COPA1959ARG",
     "name": "1959 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1959-03-07",
-    "end_date": "1959-04-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1959-03-07", "end_date": "1959-04-04" }
   },
   {
     "id": "COPA1957",
     "name": "1957 South American Championship Peru",
     "tournament_type_id": "COPA",
-    "start_date": "1957-03-07",
-    "end_date": "1957-04-06",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1957-03-07", "end_date": "1957-04-06" }
   },
   {
     "id": "COPA1956",
     "name": "1956 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1956-01-21",
-    "end_date": "1956-02-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1956-01-21", "end_date": "1956-02-15" }
   },
   {
     "id": "COPA1955",
     "name": "1955 South American Championship Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1955-02-27",
-    "end_date": "1955-03-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1955-02-27", "end_date": "1955-03-30" }
   },
   {
     "id": "COPA1953",
     "name": "1953 South American Championship Peru",
     "tournament_type_id": "COPA",
-    "start_date": "1953-02-22",
-    "end_date": "1953-04-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1953-02-22", "end_date": "1953-04-01" }
   },
   {
     "id": "COPA1949",
     "name": "1949 South American Championship Brazil",
     "tournament_type_id": "COPA",
-    "start_date": "1949-04-03",
-    "end_date": "1949-05-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1949-04-03", "end_date": "1949-05-11" }
   },
   {
     "id": "COPA1947",
     "name": "1947 South American Championship Ecuador",
     "tournament_type_id": "COPA",
-    "start_date": "1947-11-30",
-    "end_date": "1947-12-31",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1947-11-30", "end_date": "1947-12-31" }
   },
   {
     "id": "COPA1946",
     "name": "1946 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1946-01-12",
-    "end_date": "1946-02-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1946-01-12", "end_date": "1946-02-10" }
   },
   {
     "id": "COPA1945",
     "name": "1945 South American Championship Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1945-01-14",
-    "end_date": "1945-02-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1945-01-14", "end_date": "1945-02-28" }
   },
   {
     "id": "COPA1942",
     "name": "1942 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1942-01-10",
-    "end_date": "1942-02-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1942-01-10", "end_date": "1942-02-07" }
   },
   {
     "id": "COPA1941",
     "name": "1941 South American Championship Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1941-02-02",
-    "end_date": "1941-03-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1941-02-02", "end_date": "1941-03-04" }
   },
   {
     "id": "COPA1939",
     "name": "1939 South American Championship Peru",
     "tournament_type_id": "COPA",
-    "start_date": "1939-01-15",
-    "end_date": "1939-02-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1939-01-15", "end_date": "1939-02-12" }
   },
   {
     "id": "COPA1937",
     "name": "1937 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1936-12-27",
-    "end_date": "1937-02-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1936-12-27", "end_date": "1937-02-01" }
   },
   {
     "id": "COPA1935",
     "name": "1935 South American Championship Peru",
     "tournament_type_id": "COPA",
-    "start_date": "1935-01-06",
-    "end_date": "1935-01-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1935-01-06", "end_date": "1935-01-27" }
   },
   {
     "id": "COPA1929",
     "name": "1929 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1929-11-01",
-    "end_date": "1929-11-17",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1929-11-01", "end_date": "1929-11-17" }
   },
   {
     "id": "COPA1927",
     "name": "1927 South American Championship Peru",
     "tournament_type_id": "COPA",
-    "start_date": "1927-10-30",
-    "end_date": "1927-11-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1927-10-30", "end_date": "1927-11-27" }
   },
   {
     "id": "COPA1926",
     "name": "1926 South American Championship Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1926-10-12",
-    "end_date": "1926-11-03",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1926-10-12", "end_date": "1926-11-03" }
   },
   {
     "id": "COPA1925",
     "name": "1925 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1925-11-29",
-    "end_date": "1925-12-25",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1925-11-29", "end_date": "1925-12-25" }
   },
   {
     "id": "COPA1924",
     "name": "1924 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1924-10-12",
-    "end_date": "1924-11-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1924-10-12", "end_date": "1924-11-02" }
   },
   {
     "id": "COPA1923",
     "name": "1923 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1923-10-29",
-    "end_date": "1923-12-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1923-10-29", "end_date": "1923-12-02" }
   },
   {
     "id": "COPA1922",
     "name": "1922 South American Championship Brazil",
     "tournament_type_id": "COPA",
-    "start_date": "1922-09-17",
-    "end_date": "1922-10-22",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1922-09-17", "end_date": "1922-10-22" }
   },
   {
     "id": "COPA1921",
     "name": "1921 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1921-10-02",
-    "end_date": "1921-10-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1921-10-02", "end_date": "1921-10-30" }
   },
   {
     "id": "COPA1920",
     "name": "1920 South American Championship Chile",
     "tournament_type_id": "COPA",
-    "start_date": "1920-09-11",
-    "end_date": "1920-10-03",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1920-09-11", "end_date": "1920-10-03" }
   },
   {
     "id": "COPA1919",
     "name": "1919 South American Championship Brazil",
     "tournament_type_id": "COPA",
-    "start_date": "1919-05-11",
-    "end_date": "1919-05-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1919-05-11", "end_date": "1919-05-29" }
   },
   {
     "id": "COPA1917",
     "name": "1917 South American Championship Uruguay",
     "tournament_type_id": "COPA",
-    "start_date": "1917-09-30",
-    "end_date": "1917-10-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1917-09-30", "end_date": "1917-10-14" }
   },
   {
     "id": "COPA1916",
     "name": "1916 South American Championship Argentina",
     "tournament_type_id": "COPA",
-    "start_date": "1916-07-02",
-    "end_date": "1916-07-17",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONMEBOL.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONMEBOL.png", "start_date": "1916-07-02", "end_date": "1916-07-17" }
   },
   {
     "id": "GC2017",
     "name": "2017 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2017-07-07",
-    "end_date": "2017-07-26",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2017.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2017.png", "start_date": "2017-07-07", "end_date": "2017-07-26" }
   },
   {
     "id": "GC2015",
     "name": "2015 Gold Cup United States-Canada",
     "tournament_type_id": "GC",
-    "start_date": "2015-07-07",
-    "end_date": "2015-07-26",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2015.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2015.png", "start_date": "2015-07-07", "end_date": "2015-07-26" }
   },
   {
     "id": "GC2013",
     "name": "2013 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2013-07-07",
-    "end_date": "2013-07-28",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2013.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2013.png", "start_date": "2013-07-07", "end_date": "2013-07-28" }
   },
   {
     "id": "GC2011",
     "name": "2011 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2011-06-05",
-    "end_date": "2011-06-25",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2011.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2011.png", "start_date": "2011-06-05", "end_date": "2011-06-25" }
   },
   {
     "id": "GC2009",
     "name": "2009 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2009-07-03",
-    "end_date": "2009-07-26",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2009.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2009.png", "start_date": "2009-07-03", "end_date": "2009-07-26" }
   },
   {
     "id": "GC2007",
     "name": "2007 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2007-06-06",
-    "end_date": "2007-06-24",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2007.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2007.png", "start_date": "2007-06-06", "end_date": "2007-06-24" }
   },
   {
     "id": "GC2005",
     "name": "2005 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2005-07-06",
-    "end_date": "2005-07-24",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_2005.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2005.png", "start_date": "2005-07-06", "end_date": "2005-07-24" }
   },
   {
     "id": "GC2003",
     "name": "2003 Gold Cup United States-Mexico",
     "tournament_type_id": "GC",
-    "start_date": "2003-07-12",
-    "end_date": "2003-07-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_2003.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2003.png", "start_date": "2003-07-12", "end_date": "2003-07-27" }
   },
   {
     "id": "GC2002",
     "name": "2002 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2002-01-18",
-    "end_date": "2002-02-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_2002.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2002.png", "start_date": "2002-01-18", "end_date": "2002-02-02" }
   },
   {
     "id": "GC2000",
     "name": "2000 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "2000-02-12",
-    "end_date": "2000-02-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_2000.png", "start_date": "2000-02-12", "end_date": "2000-02-27" }
   },
   {
     "id": "GC1998",
     "name": "1998 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "1998-02-01",
-    "end_date": "1998-02-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_1998.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_1998.png", "start_date": "1998-02-01", "end_date": "1998-02-15" }
   },
   {
     "id": "GC1996",
     "name": "1996 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "1996-01-10",
-    "end_date": "1996-01-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_1996.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_1996.png", "start_date": "1996-01-10", "end_date": "1996-01-21" }
   },
   {
     "id": "GC1993",
     "name": "1993 Gold Cup United States-Mexico",
     "tournament_type_id": "GC",
-    "start_date": "1993-07-10",
-    "end_date": "1993-07-25",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "gc_1993.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "gc_1993.jpg", "start_date": "1993-07-10", "end_date": "1993-07-25" }
   },
   {
     "id": "GC1991",
     "name": "1991 Gold Cup United States",
     "tournament_type_id": "GC",
-    "start_date": "1991-06-28",
-    "end_date": "1991-07-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "gc_1991.jpg",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "gc_1991.jpg", "start_date": "1991-06-28", "end_date": "1991-07-07" }
   },
   {
     "id": "GC1989",
     "name": "1989 CONCACAF Championship",
     "tournament_type_id": "GC",
-    "start_date": "1989-03-19",
-    "end_date": "1989-11-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1989-03-19", "end_date": "1989-11-19" }
   },
   {
     "id": "GC1985",
     "name": "1985 CONCACAF Championship",
     "tournament_type_id": "GC",
-    "start_date": "1985-02-24",
-    "end_date": "1985-09-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1985-02-24", "end_date": "1985-09-14" }
   },
   {
     "id": "GC1981",
     "name": "1981 CONCACAF Championship Honduras",
     "tournament_type_id": "GC",
-    "start_date": "1981-11-01",
-    "end_date": "1981-11-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1981-11-01", "end_date": "1981-11-21" }
   },
   {
     "id": "GC1977",
     "name": "1977 CONCACAF Championship Mexico",
     "tournament_type_id": "GC",
-    "start_date": "1977-10-08",
-    "end_date": "1977-10-23",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1977-10-08", "end_date": "1977-10-23" }
   },
   {
     "id": "GC1973",
     "name": "1973 CONCACAF Championship Haiti",
     "tournament_type_id": "GC",
-    "start_date": "1973-11-29",
-    "end_date": "1973-12-18",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1973-11-29", "end_date": "1973-12-18" }
   },
   {
     "id": "GC1971",
     "name": "1971 CONCACAF Championship Trinidad and Tobago",
     "tournament_type_id": "GC",
-    "start_date": "1971-11-20",
-    "end_date": "1971-12-05",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1971-11-20", "end_date": "1971-12-05" }
   },
   {
     "id": "GC1969",
     "name": "1969 CONCACAF Championship Costa Rica",
     "tournament_type_id": "GC",
-    "start_date": "1969-11-23",
-    "end_date": "1969-12-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1969-11-23", "end_date": "1969-12-07" }
   },
   {
     "id": "GC1967",
     "name": "1967 CONCACAF Championship Honduras",
     "tournament_type_id": "GC",
-    "start_date": "1967-03-05",
-    "end_date": "1967-03-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1967-03-05", "end_date": "1967-03-19" }
   },
   {
     "id": "GC1965",
     "name": "1965 CONCACAF Championship Guatemala",
     "tournament_type_id": "GC",
-    "start_date": "1965-03-28",
-    "end_date": "1965-04-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1965-03-28", "end_date": "1965-04-11" }
   },
   {
     "id": "GC1963",
     "name": "1963 CONCACAF Championship El Salvador",
     "tournament_type_id": "GC",
-    "start_date": "1963-03-23",
-    "end_date": "1963-04-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "CONCACAF.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "CONCACAF.png", "start_date": "1963-03-23", "end_date": "1963-04-07" }
   },
   {
     "id": "AFCON2017",
     "name": "2017 Africa Cup of Nations Gabon",
     "tournament_type_id": "AFCON",
-    "start_date": "2017-01-14",
-    "end_date": "2017-02-05",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2017.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2017.png", "start_date": "2017-01-14", "end_date": "2017-02-05" }
   },
   {
     "id": "AFCON2015",
     "name": "2015 Africa Cup of Nations Equatorial Guinea",
     "tournament_type_id": "AFCON",
-    "start_date": "2015-01-17",
-    "end_date": "2015-02-08",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2015.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2015.png", "start_date": "2015-01-17", "end_date": "2015-02-08" }
   },
   {
     "id": "AFCON2013",
     "name": "2013 Africa Cup of Nations South Africa",
     "tournament_type_id": "AFCON",
-    "start_date": "2013-01-19",
-    "end_date": "2013-02-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2013.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2013.png", "start_date": "2013-01-19", "end_date": "2013-02-10" }
   },
   {
     "id": "AFCON2012",
     "name": "2012 Africa Cup of Nations Gabon-Equatorial Guinea",
     "tournament_type_id": "AFCON",
-    "start_date": "2012-01-21",
-    "end_date": "2012-02-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2012.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2012.png", "start_date": "2012-01-21", "end_date": "2012-02-12" }
   },
   {
     "id": "AFCON2010",
     "name": "2010 Africa Cup of Nations Angola",
     "tournament_type_id": "AFCON",
-    "start_date": "2010-01-10",
-    "end_date": "2010-01-31",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2010.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2010.png", "start_date": "2010-01-10", "end_date": "2010-01-31" }
   },
   {
     "id": "AFCON2008",
     "name": "2008 Africa Cup of Nations Ghana",
     "tournament_type_id": "AFCON",
-    "start_date": "2008-01-20",
-    "end_date": "2008-02-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2008.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2008.png", "start_date": "2008-01-20", "end_date": "2008-02-10" }
   },
   {
     "id": "AFCON2006",
     "name": "2006 Africa Cup of Nations Egypt",
     "tournament_type_id": "AFCON",
-    "start_date": "2006-01-20",
-    "end_date": "2006-02-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2006.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2006.png", "start_date": "2006-01-20", "end_date": "2006-02-10" }
   },
   {
     "id": "AFCON2004",
     "name": "2004 Africa Cup of Nations Tunisia",
     "tournament_type_id": "AFCON",
-    "start_date": "2004-01-24",
-    "end_date": "2004-02-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2004.png", "start_date": "2004-01-24", "end_date": "2004-02-14" }
   },
   {
     "id": "AFCON2002",
     "name": "2002 Africa Cup of Nations Mali",
     "tournament_type_id": "AFCON",
-    "start_date": "2002-01-19",
-    "end_date": "2002-02-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2002.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2002.png", "start_date": "2002-01-19", "end_date": "2002-02-10" }
   },
   {
     "id": "AFCON2000",
     "name": "2000 Africa Cup of Nations Ghana-Nigeria",
     "tournament_type_id": "AFCON",
-    "start_date": "2000-01-22",
-    "end_date": "2000-02-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2000.png", "start_date": "2000-01-22", "end_date": "2000-02-13" }
   },
   {
     "id": "AFCON1998",
     "name": "1998 Africa Cup of Nations Burkina Faso",
     "tournament_type_id": "AFCON",
-    "start_date": "1998-02-07",
-    "end_date": "1998-02-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1998.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_1998.png", "start_date": "1998-02-07", "end_date": "1998-02-28" }
   },
   {
     "id": "AFCON1996",
     "name": "1996 Africa Cup of Nations South Africa",
     "tournament_type_id": "AFCON",
-    "start_date": "1996-01-13",
-    "end_date": "1996-02-03",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1996.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_1996.jpg", "start_date": "1996-01-13", "end_date": "1996-02-03" }
   },
   {
     "id": "AFCON1994",
     "name": "1994 Africa Cup of Nations Tunisia",
     "tournament_type_id": "AFCON",
-    "start_date": "1994-03-26",
-    "end_date": "1994-04-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1994-03-26", "end_date": "1994-04-10" }
   },
   {
     "id": "AFCON1992",
     "name": "1992 Africa Cup of Nations Senegal",
     "tournament_type_id": "AFCON",
-    "start_date": "1992-01-12",
-    "end_date": "1992-01-26",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1992-01-12", "end_date": "1992-01-26" }
   },
   {
     "id": "AFCON1990",
     "name": "1990 Africa Cup of Nations Algeria",
     "tournament_type_id": "AFCON",
-    "start_date": "1990-03-02",
-    "end_date": "1990-03-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1990.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1990.png", "start_date": "1990-03-02", "end_date": "1990-03-16" }
   },
   {
     "id": "AFCON1988",
     "name": "1988 Africa Cup of Nations Morocco",
     "tournament_type_id": "AFCON",
-    "start_date": "1988-03-13",
-    "end_date": "1988-03-27",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1988.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1988.png", "start_date": "1988-03-13", "end_date": "1988-03-27" }
   },
   {
     "id": "AFCON1986",
     "name": "1986 Africa Cup of Nations Egypt",
     "tournament_type_id": "AFCON",
-    "start_date": "1986-03-07",
-    "end_date": "1986-03-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1986-03-07", "end_date": "1986-03-21" }
   },
   {
     "id": "AFCON1984",
     "name": "1984 Africa Cup of Nations Ivory Coast",
     "tournament_type_id": "AFCON",
-    "start_date": "1984-03-04",
-    "end_date": "1984-03-18",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1984.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1984.png", "start_date": "1984-03-04", "end_date": "1984-03-18" }
   },
   {
     "id": "AFCON1982",
     "name": "1982 Africa Cup of Nations Libya",
     "tournament_type_id": "AFCON",
-    "start_date": "1982-03-05",
-    "end_date": "1982-03-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "afcon_1982.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1982.png", "start_date": "1982-03-05", "end_date": "1982-03-19" }
   },
   {
     "id": "AFCON1980",
     "name": "1980 Africa Cup of Nations Nigeria",
     "tournament_type_id": "AFCON",
-    "start_date": "1980-03-08",
-    "end_date": "1980-03-22",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1980-03-08", "end_date": "1980-03-22" }
   },
   {
     "id": "AFCON1978",
     "name": "1978 Africa Cup of Nations Ghana",
     "tournament_type_id": "AFCON",
-    "start_date": "1978-03-05",
-    "end_date": "1978-03-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1978-03-05", "end_date": "1978-03-16" }
   },
   {
     "id": "AFCON1976",
     "name": "1976 Africa Cup of Nations Ethiopia",
     "tournament_type_id": "AFCON",
-    "start_date": "1976-02-29",
-    "end_date": "1976-03-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1976-02-29", "end_date": "1976-03-14" }
   },
   {
     "id": "AFCON1974",
     "name": "1974 Africa Cup of Nations Egypt",
     "tournament_type_id": "AFCON",
-    "start_date": "1974-03-01",
-    "end_date": "1974-03-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1974-03-01", "end_date": "1974-03-14" }
   },
   {
     "id": "AFCON1972",
     "name": "1972 Africa Cup of Nations Cameroon",
     "tournament_type_id": "AFCON",
-    "start_date": "1972-02-23",
-    "end_date": "1972-03-05",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1972-02-23", "end_date": "1972-03-05" }
   },
   {
     "id": "AFCON1970",
     "name": "1970 Africa Cup of Nations Sudan",
     "tournament_type_id": "AFCON",
-    "start_date": "1970-02-06",
-    "end_date": "1970-02-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1970-02-06", "end_date": "1970-02-16" }
   },
   {
     "id": "AFCON1968",
     "name": "1968 Africa Cup of Nations Ethiopia",
     "tournament_type_id": "AFCON",
-    "start_date": "1968-01-12",
-    "end_date": "1968-01-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1968-01-12", "end_date": "1968-01-21" }
   },
   {
     "id": "AFCON1965",
     "name": "1965 Africa Cup of Nations Tunisia",
     "tournament_type_id": "AFCON",
-    "start_date": "1965-11-12",
-    "end_date": "1965-11-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1965-11-12", "end_date": "1965-11-21" }
   },
   {
     "id": "AFCON1963",
     "name": "1963 Africa Cup of Nations Ghana",
     "tournament_type_id": "AFCON",
-    "start_date": "1963-11-24",
-    "end_date": "1963-12-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1963-11-24", "end_date": "1963-12-01" }
   },
   {
     "id": "AFCON1962",
     "name": "1962 Africa Cup of Nations Ethiopia",
     "tournament_type_id": "AFCON",
-    "start_date": "1962-01-14",
-    "end_date": "1962-01-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1962-01-14", "end_date": "1962-01-21" }
   },
   {
     "id": "AFCON1959",
     "name": "1959 Africa Cup of Nations United Arab Republic",
     "tournament_type_id": "AFCON",
-    "start_date": "1959-05-22",
-    "end_date": "1959-05-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1959-05-22", "end_date": "1959-05-29" }
   },
   {
     "id": "AFCON1957",
     "name": "1957 Africa Cup of Nations Sudan",
     "tournament_type_id": "AFCON",
-    "start_date": "1957-02-10",
-    "end_date": "1957-02-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Africa_Cup_of_Nations.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1957-02-10", "end_date": "1957-02-15" }
   },
   {
     "id": "AAC2015",
     "name": "2015 AFC Asian Cup Australia",
     "tournament_type_id": "AAC",
-    "start_date": "2015-01-09",
-    "end_date": "2015-01-31",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "aac_2015.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2015.png", "start_date": "2015-01-09", "end_date": "2015-01-31" }
   },
   {
     "id": "AAC2011",
     "name": "2011 AFC Asian Cup Qatar",
     "tournament_type_id": "AAC",
-    "start_date": "2011-01-07",
-    "end_date": "2011-01-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "aac_2011.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2011.png", "start_date": "2011-01-07", "end_date": "2011-01-29" }
   },
   {
     "id": "AAC2007",
     "name": "2007 AFC Asian Cup Indonesia-Malaysia-Thailand-Vietnam",
     "tournament_type_id": "AAC",
-    "start_date": "2007-07-07",
-    "end_date": "2007-07-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "aac_2007.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2007.png", "start_date": "2007-07-07", "end_date": "2007-07-29" }
   },
   {
     "id": "AAC2004",
     "name": "2004 AFC Asian Cup China",
     "tournament_type_id": "AAC",
-    "start_date": "2004-07-17",
-    "end_date": "2004-08-07",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "aac_2004.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2004.png", "start_date": "2004-07-17", "end_date": "2004-08-07" }
   },
   {
     "id": "AAC2000",
     "name": "2000 AFC Asian Cup Lebanon",
     "tournament_type_id": "AAC",
-    "start_date": "2000-10-12",
-    "end_date": "2000-10-29",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "aac_2000.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2000.png", "start_date": "2000-10-12", "end_date": "2000-10-29" }
   },
   {
     "id": "AAC1996",
     "name": "1996 AFC Asian Cup United Arab Emirates",
     "tournament_type_id": "AAC",
-    "start_date": "1996-12-04",
-    "end_date": "1996-12-21",
     "active": false,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "aac_1996.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_1996.png", "start_date": "1996-12-04", "end_date": "1996-12-21" }
   },
   {
     "id": "AAC1992",
     "name": "1992 AFC Asian Cup Japan",
     "tournament_type_id": "AAC",
-    "start_date": "1992-10-29",
-    "end_date": "1992-11-08",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1992-10-29", "end_date": "1992-11-08" }
   },
   {
     "id": "AAC1988",
     "name": "1988 AFC Asian Cup Qatar",
     "tournament_type_id": "AAC",
-    "start_date": "1988-12-02",
-    "end_date": "1988-12-18",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1988-12-02", "end_date": "1988-12-18" }
   },
   {
     "id": "AAC1984",
     "name": "1984 AFC Asian Cup Singapore",
     "tournament_type_id": "AAC",
-    "start_date": "1984-12-01",
-    "end_date": "1984-12-16",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1984-12-01", "end_date": "1984-12-16" }
   },
   {
     "id": "AAC1980",
     "name": "1980 AFC Asian Cup Kuwait",
     "tournament_type_id": "AAC",
-    "start_date": "1980-09-15",
-    "end_date": "1980-09-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1980-09-15", "end_date": "1980-09-30" }
   },
   {
     "id": "AAC1976",
     "name": "1976 AFC Asian Cup Iran",
     "tournament_type_id": "AAC",
-    "start_date": "1976-06-03",
-    "end_date": "1976-06-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1976-06-03", "end_date": "1976-06-13" }
   },
   {
     "id": "AAC1972",
     "name": "1972 AFC Asian Cup Thailand",
     "tournament_type_id": "AAC",
-    "start_date": "1972-05-07",
-    "end_date": "1972-05-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1972-05-07", "end_date": "1972-05-19" }
   },
   {
     "id": "AAC1968",
     "name": "1968 AFC Asian Cup Iran",
     "tournament_type_id": "AAC",
-    "start_date": "1968-05-10",
-    "end_date": "1968-05-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1968-05-10", "end_date": "1968-05-19" }
   },
   {
     "id": "AAC1964",
     "name": "1964 AFC Asian Cup Israel",
     "tournament_type_id": "AAC",
-    "start_date": "1964-05-26",
-    "end_date": "1964-06-03",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1964-05-26", "end_date": "1964-06-03" }
   },
   {
     "id": "AAC1960",
     "name": "1960 AFC Asian Cup Korea Republic",
     "tournament_type_id": "AAC",
-    "start_date": "1960-10-14",
-    "end_date": "1960-10-23",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1960-10-14", "end_date": "1960-10-23" }
   },
   {
     "id": "AAC1956",
     "name": "1956 AFC Asian Cup Hong Kong",
     "tournament_type_id": "AAC",
-    "start_date": "1956-09-01",
-    "end_date": "1956-09-15",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "AFC.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC.png", "start_date": "1956-09-01", "end_date": "1956-09-15" }
   },
   {
     "id": "AAC2019",
     "name": "2019 AFC Asian Cup United Arab Emirates",
     "tournament_type_id": "AAC",
-    "start_date": "2019-01-05",
-    "end_date": "2019-02-01",
     "active": true,
     "third_place_ranking": true,
     "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
-    "logo_filename": "aac_2019.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2019.png", "start_date": "2019-01-05", "end_date": "2019-02-01" }
   },
   {
     "id": "ONC2016",
     "name": "2016 OFC Nations Cup Papua New Guinea",
     "tournament_type_id": "ONC",
-    "start_date": "2016-05-28",
-    "end_date": "2016-06-11",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2016-05-28", "end_date": "2016-06-11" }
   },
   {
     "id": "ONC2012",
     "name": "2012 OFC Nations Cup Solomon Islands",
     "tournament_type_id": "ONC",
-    "start_date": "2012-06-01",
-    "end_date": "2012-06-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2012-06-01", "end_date": "2012-06-10" }
   },
   {
     "id": "ONC2008",
     "name": "2008 OFC Nations Cup",
     "tournament_type_id": "ONC",
-    "start_date": "2007-10-17",
-    "end_date": "2008-11-19",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2007-10-17", "end_date": "2008-11-19" }
   },
   {
     "id": "ONC2004",
     "name": "2004 OFC Nations Cup Australia",
     "tournament_type_id": "ONC",
-    "start_date": "2004-05-29",
-    "end_date": "2004-10-12",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2004-05-29", "end_date": "2004-10-12" }
   },
   {
     "id": "ONC2002",
     "name": "2002 OFC Nations Cup New Zealand",
     "tournament_type_id": "ONC",
-    "start_date": "2002-07-05",
-    "end_date": "2002-07-14",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2002-07-05", "end_date": "2002-07-14" }
   },
   {
     "id": "ONC2000",
     "name": "2000 OFC Nations Cup Tahiti",
     "tournament_type_id": "ONC",
-    "start_date": "2000-06-19",
-    "end_date": "2000-06-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2000-06-19", "end_date": "2000-06-28" }
   },
   {
     "id": "ONC1998",
     "name": "1998 OFC Nations Cup Australia",
     "tournament_type_id": "ONC",
-    "start_date": "1998-09-25",
-    "end_date": "1998-10-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1998-09-25", "end_date": "1998-10-04" }
   },
   {
     "id": "ONC1996",
     "name": "1996 OFC Nations Cup",
     "tournament_type_id": "ONC",
-    "start_date": "1995-11-10",
-    "end_date": "1996-11-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01" }
   },
   {
     "id": "ONC1980",
     "name": "1980 OFC Nations Cup New Caledonia",
     "tournament_type_id": "ONC",
-    "start_date": "1980-02-24",
-    "end_date": "1980-03-01",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1980-02-24", "end_date": "1980-03-01" }
   },
   {
     "id": "ONC1973",
     "name": "1973 OFC Nations Cup New Zealand",
     "tournament_type_id": "ONC",
-    "start_date": "1973-02-17",
-    "end_date": "1973-02-24",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "OFCcup.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1973-02-17", "end_date": "1973-02-24" }
   },
   {
     "id": "CONFEDC2017",
     "name": "2017 FIFA Confederations Cup Russia",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2017-06-17",
-    "end_date": "2017-07-02",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "cc_2017.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2017.png", "start_date": "2017-06-17", "end_date": "2017-07-02" }
   },
   {
     "id": "CONFEDC2013",
     "name": "2013 FIFA Confederations Cup Brazil",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2013-06-15",
-    "end_date": "2013-06-30",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "cc_2013.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2013.png", "start_date": "2013-06-15", "end_date": "2013-06-30" }
   },
   {
     "id": "CONFEDC2009",
     "name": "2009 FIFA Confederations Cup South Africa",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2009-06-14",
-    "end_date": "2009-06-28",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "cc_2009.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2009.png", "start_date": "2009-06-14", "end_date": "2009-06-28" }
   },
   {
     "id": "CONFEDC2005",
     "name": "2005 FIFA Confederations Cup Germany",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2005-06-15",
-    "end_date": "2005-06-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "cc_2005.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2005.jpg", "start_date": "2005-06-15", "end_date": "2005-06-29" }
   },
   {
     "id": "CONFEDC2003",
     "name": "2003 FIFA Confederations Cup France",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2003-06-18",
-    "end_date": "2003-06-29",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "cc_2003.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2003.jpg", "start_date": "2003-06-18", "end_date": "2003-06-29" }
   },
   {
     "id": "CONFEDC2001",
     "name": "2001 FIFA Confederations Cup Korea-Japan",
     "tournament_type_id": "CONFEDC",
-    "start_date": "2001-05-30",
-    "end_date": "2001-06-10",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "cc_2001.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_2001.jpg", "start_date": "2001-05-30", "end_date": "2001-06-10" }
   },
   {
     "id": "CONFEDC1999",
     "name": "1999 FIFA Confederations Cup Mexico",
     "tournament_type_id": "CONFEDC",
-    "start_date": "1999-07-24",
-    "end_date": "1999-08-04",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "cc_1999.jpg",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_1999.jpg", "start_date": "1999-07-24", "end_date": "1999-08-04" }
   },
   {
     "id": "CONFEDC1997",
     "name": "1997 FIFA Confederations Cup Saudi Arabia",
     "tournament_type_id": "CONFEDC",
-    "start_date": "1997-12-12",
-    "end_date": "1997-12-21",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "cc_1997.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "cc_1997.png", "start_date": "1997-12-12", "end_date": "1997-12-21" }
   },
   {
     "id": "CONFEDC1995",
     "name": "1995 King Fahd Cup Saudi Arabia",
     "tournament_type_id": "CONFEDC",
-    "start_date": "1995-01-06",
-    "end_date": "1995-01-13",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
-    "logo_filename": "Confederations_Cup.png",
-    "points_for_win": 3
+    "points_for_win": 3,
+    "details": { "logo_filename": "Confederations_Cup.png", "start_date": "1995-01-06", "end_date": "1995-01-13" }
   },
   {
     "id": "CONFEDC1992",
     "name": "1992 King Fahd Cup Saudi Arabia",
     "tournament_type_id": "CONFEDC",
-    "start_date": "1992-10-15",
-    "end_date": "1992-10-20",
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
-    "logo_filename": "Confederations_Cup.png",
-    "points_for_win": 2
+    "points_for_win": 2,
+    "details": { "logo_filename": "Confederations_Cup.png", "start_date": "1992-10-15", "end_date": "1992-10-20" }
   }
 ]
