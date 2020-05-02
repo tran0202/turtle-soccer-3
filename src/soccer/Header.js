@@ -4,21 +4,21 @@ import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const HeaderLinks = (props) => {
-  const { page } = props
+  const { id, page } = props
   return (
     <Nav className="justify-content-center">
       <NavItem>
-        <NavLink disabled={page === 'home' || page === 'matches'} href="/soccer/tournament/WC2018/matches">
+        <NavLink disabled={page === 'matches'} href={`/soccer/tournament/${id}/matches`}>
           Matches
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink disabled={page === 'groups'} href="/soccer/tournament/WC2018/groups">
+        <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
           Groups
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink disabled={page === 'standings'} href="/soccer/tournament/WC2018/standings">
+        <NavLink disabled={page === 'standings'} href={`/soccer/tournament/${id}/standings`}>
           Final standings
         </NavLink>
       </NavItem>
@@ -44,7 +44,7 @@ class Header extends React.Component {
             {tournament.name}
           </h1>
           {moment(details.start_date).format('MMMM D, YYYY')} - {moment(details.end_date).format('MMMM D, YYYY')}
-          <HeaderLinks page={this.props.page} />
+          <HeaderLinks id={tournament.id} page={this.props.page} />
         </Col>
       </Row>
     )

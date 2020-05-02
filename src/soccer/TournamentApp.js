@@ -2,6 +2,7 @@ import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentArray from '../data/Tournament.json'
 import TournamentFormatArray from '../data/TournamentFormat.json'
+import TournamentFormatCurrent from '../data/TournamentFormatCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
 import Intro from './Intro'
@@ -17,6 +18,7 @@ class TournamentApp extends React.Component {
     this.state = {
       tournament: null,
       tournamentType: null,
+      currentTournament: 'WC2014',
     }
   }
 
@@ -33,9 +35,12 @@ class TournamentApp extends React.Component {
     const tf = TournamentFormatArray.find((tf) => tf.id === this.props.id)
     if (tf) {
       return tf
+    } else if (this.props.id === this.state.currentTournament) {
+      console.log('Current')
+      return TournamentFormatCurrent
     } else {
       console.log('Tournament format error', tf)
-      return null
+      return { stages: [] }
     }
   }
 

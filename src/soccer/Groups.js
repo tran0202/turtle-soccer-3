@@ -56,7 +56,7 @@ const Groups = (props) => {
   return (
     <React.Fragment>
       {format && <TournamentFormat format={format} config={config} tournamentType={tournamentType} />}
-      {!format && <Row className="mt-3"></Row>}
+      {!format && <Row className="mt-5"></Row>}
       {rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
       {rrStages.length > 1 && <MultipleGroupStage />}
     </React.Fragment>
