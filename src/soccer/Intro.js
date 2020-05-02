@@ -7,7 +7,6 @@ import NumberFormat from 'react-number-format'
 const Intro = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_positions, statistics, awards } = tournament
-  // console.log('hero_images', hero_images)
   return (
     <React.Fragment>
       <section id="hero" className="mt-5">
