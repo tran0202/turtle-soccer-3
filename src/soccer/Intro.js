@@ -19,7 +19,7 @@ const Intro = (props) => {
                   key={index}
                   className={`carousel-item${index === 0 ? ' active' : ''}`}
                   style={{
-                    backgroundImage: `url('/assets/images/soccer/${id}/${i.filename}')`,
+                    backgroundImage: `url('/assets/images/soccer/tournaments/${id}/${i.filename}')`,
                   }}
                 >
                   <div className="carousel-container">
