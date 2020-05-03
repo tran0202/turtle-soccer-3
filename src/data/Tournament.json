@@ -86,6 +86,18 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
+    "details": {
+      "host": "RUS",
+      "logo_filename": "2018_FIFA_World_Cup.svg",
+      "mascot_filename": "Zabivaka_(mascot).jpg",
+      "start_date": "2018-06-14",
+      "end_date": "2018-07-15",
+      "color": "#930c10",
+      "team_count": "32",
+      "confed_count": "5",
+      "venue_count": "12",
+      "city_count": "11"
+    },
     "hero_images": [
       { "name": "Champions", "filename": "France_champion_of_the_Football_World_Cup_Russia_2018.jpg", "text": "The France team holds the World Cup trophy" },
       { "name": "France", "filename": "France_WC2018_final.jpg", "text": "France's starting line-up for the World Cup Final" },
@@ -105,25 +117,13 @@
       { "name": "Kylian Mbappé", "filename": "Kylian_Mbappe_World_Cup_Trophy.jpg", "text": "Best Young Player" },
       { "name": "Thibaut Courtois", "filename": "Courtois_2018_(cropped).jpg", "text": "Golden Glove" }
     ],
-    "details": {
-      "host": "RUS",
-      "logo_filename": "2018_FIFA_World_Cup.svg",
-      "mascot_filename": "Zabivaka_(mascot).jpg",
-      "start_date": "2018-06-14",
-      "end_date": "2018-07-15",
-      "color": "#930c10",
-      "team_count": "32",
-      "confed_count": "5",
-      "venue_count": "12",
-      "city_count": "11"
-    },
-    "final_positions": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
+    "final_standings": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
     "statistics": { "total_matches": "64", "total_goals": "169", "attendance": "3031768" },
     "awards": {
-      "golden_ball": { "player": "Luka Modrić", "team": "CRO" },
       "golden_boot": { "player": "Harry Kane", "team": "ENG" },
-      "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
+      "golden_ball": { "player": "Luka Modrić", "team": "CRO" },
       "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
+      "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
       "fair_play_team": "ESP"
     }
   },
@@ -136,7 +136,56 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2014_FIFA_World_Cup.svg", "start_date": "2014-06-12", "end_date": "2014-07-13", "color": "#15611e" }
+    "details": {
+      "host": "BRA",
+      "logo_filename": "2014_FIFA_World_Cup.svg",
+      "mascot_filename": "Fuleco.png",
+      "start_date": "2014-06-12",
+      "end_date": "2014-07-13",
+      "color": "#15611e",
+      "team_count": "32",
+      "confed_count": "5",
+      "venue_count": "12",
+      "city_count": "12"
+    },
+    "hero_images": [
+      { "name": "Champions", "filename": "Philipp_Lahm_lifts_the_2014_FIFA_World_Cup.jpg", "text": "Germany captain Philipp Lahm lifts the World Cup trophy" },
+      {
+        "name": "Germany",
+        "filename": "Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(6).jpg",
+        "text": "Germany's Mario Götze scores the match-winning goal in the 113th minute"
+      },
+      {
+        "name": "Argentina",
+        "filename": "Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(36).jpg",
+        "text": "Argentina striker Gonzalo Higuaín challenging Germany goalkeeper Manuel Neuer"
+      },
+      {
+        "name": "James Rodríguez",
+        "filename": "James_Rodriguez.jpg",
+        "text": "Golden Boot. James celebrates after scoring a penalty against Brazil at the 2014 World Cup. He became the first player to score in every single game he played since Rivaldo at the 2002 edition."
+      },
+      {
+        "name": "Lionel Messi",
+        "filename": "Messi_in_Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(24).jpg",
+        "text": "Golden Ball. Argentina's Lionel Messi (front) battles Germany's Mats Hummels for the ball."
+      },
+      { "name": "Paul Pogba", "filename": "FRA-ARG_(11)_-_Paul_Pogba_(cropped).jpg", "text": "Best Young Player" },
+      {
+        "name": "Manuel Neuer",
+        "filename": "Award_ceremony_of_the_World_Cup_in_Brazil_04.jpg",
+        "text": "Golden Glove. Neuer celebrating after Germany's 1–0 victory over Argentina in the FIFA World Cup Final."
+      }
+    ],
+    "final_standings": { "champions": "GER", "runners_up": "ARG", "third_place": "NED", "fourth_place": "BRA" },
+    "statistics": { "total_matches": "64", "total_goals": "171", "attendance": "3429873" },
+    "awards": {
+      "golden_boot": { "player": "James Rodríguez", "team": "COL" },
+      "golden_ball": { "player": "Lionel Messi", "team": "ARG" },
+      "best_young_player": { "player": "Paul Pogba", "team": "FRA" },
+      "golden_glove": { "player": "Manuel Neue", "team": "GER" },
+      "fair_play_team": "COL"
+    }
   },
   {
     "id": "WC2010",

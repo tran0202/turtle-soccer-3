@@ -106,3 +106,91 @@ export const NestedTabs = () => {
 //   })
 // })
 // console.log(JSON.stringify(newTournamentArray))
+
+// const table = TeamPhp.find((x) => x.type === 'table').data
+// console.log('TeamPhp', table)
+// let array = []
+// table.forEach((t) => {
+//   if (t.team_type_id === '1') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'MNT',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '2') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'CLUB',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: t.code,
+//       official_name: t.official_name,
+//     })
+//   } else if (t.team_type_id === '3') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'WNT',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '4') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'U23MNT',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '5') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'U23WNT',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '6') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'FBLT',
+//       nation_id: '',
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '7') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'TENMS',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   } else if (t.team_type_id === '8') {
+//     array.push({
+//       id: t.id,
+//       name: t.name,
+//       team_type_id: 'TENWS',
+//       nation_id: t.nation_id,
+//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
+//       club_code: '',
+//       official_name: '',
+//     })
+//   }
+// })
+// console.log(JSON.stringify(array))

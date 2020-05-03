@@ -15,7 +15,7 @@ export const getTournamentConfig = (tournament) => {
     active: tournament.active,
     hero_images: tournament.hero_images,
     details: tournament.details,
-    final_positions: tournament.final_positions,
+    final_standings: tournament.final_standings,
     statistics: tournament.statistics,
     awards: tournament.awards,
   }

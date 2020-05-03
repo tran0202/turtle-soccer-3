@@ -36,7 +36,6 @@ class TournamentApp extends React.Component {
     if (tf) {
       return tf
     } else if (this.props.id === this.state.currentTournament) {
-      console.log('Current')
       return TournamentFormatCurrent
     } else {
       console.log('Tournament format error', tf)
