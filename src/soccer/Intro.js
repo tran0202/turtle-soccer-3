@@ -1,12 +1,44 @@
 import React from 'react'
-import { getFlagSrc, getTeamName } from './Helper'
+import { getFlagSrc, getTeamName, isWinner } from './Helper'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import NumberFormat from 'react-number-format'
 
+const findFinalStandings = (tournament) => {
+  const koStage = tournament.stages.find((s) => s.type === 'knockout')
+  // console.log('koStage', tournament.stages)
+  if (koStage) {
+    const final = koStage.rounds.find((r) => r.name === 'Final')
+    const third_place_game = koStage.rounds.find((r) => r.name === 'Third place')
+    let champions, runners_up, third_place, fourth_place
+    if (final) {
+      if (isWinner('H', final.matches[0])) {
+        champions = final.matches[0].home_team
+        runners_up = final.matches[0].away_team
+      } else if (isWinner('A', final.matches[0])) {
+        champions = final.matches[0].away_team
+        runners_up = final.matches[0].home_team
+      }
+    }
+    if (third_place_game) {
+      if (isWinner('H', final.matches[0])) {
+        third_place = final.matches[0].home_team
+        fourth_place = final.matches[0].away_team
+      } else if (isWinner('A', final.matches[0])) {
+        third_place = final.matches[0].away_team
+        third_place = final.matches[0].home_team
+      }
+    }
+    return { champions, runners_up, third_place, fourth_place }
+  }
+  return {}
+}
+
 const Intro = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_positions, statistics, awards } = tournament
+
+  const { champions, runners_up, third_place, fourth_place } = findFinalStandings(tournament)
   return (
     <React.Fragment>
       <Row className="mt-5"></Row>
@@ -86,45 +118,53 @@ const Intro = (props) => {
             </Row>
           </Col>
           <Col lg={{ size: 8, offset: 4 }} md={{ size: 9, offset: 3 }} sm={{ size: 10, offset: 2 }}>
-            <h2 className="h2-ff5 mt-3">Final Positions</h2>
+            <h2 className="h2-ff5 mt-3">Final Standings</h2>
           </Col>
           <Col sm={{ size: 10, offset: 1 }}>
-            <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                Champions
-              </Col>
-              <Col md="5" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(final_positions.champions)} alt={final_positions.champions} />
-                &nbsp;{getTeamName(final_positions.champions)}
-              </Col>
-            </Row>
-            <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                Runners-up
-              </Col>
-              <Col md="5" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(final_positions.runners_up)} alt={final_positions.runners_up} />
-                &nbsp;{getTeamName(final_positions.runners_up)}
-              </Col>
-            </Row>
-            <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                Third place
-              </Col>
-              <Col md="5" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(final_positions.third_place)} alt={final_positions.third_place} />
-                &nbsp;{getTeamName(final_positions.third_place)}
-              </Col>
-            </Row>
-            <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                Fourth place
-              </Col>
-              <Col md="5" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(final_positions.fourth_place)} alt={final_positions.fourth_place} />
-                &nbsp;{getTeamName(final_positions.fourth_place)}
-              </Col>
-            </Row>
+            {champions && (
+              <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Champions
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(final_positions.champions)} alt={final_positions.champions} />
+                  &nbsp;{getTeamName(final_positions.champions)}
+                </Col>
+              </Row>
+            )}
+            {runners_up && (
+              <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Runners-up
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(final_positions.runners_up)} alt={final_positions.runners_up} />
+                  &nbsp;{getTeamName(final_positions.runners_up)}
+                </Col>
+              </Row>
+            )}
+            {third_place && (
+              <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Third place
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(final_positions.third_place)} alt={final_positions.third_place} />
+                  &nbsp;{getTeamName(final_positions.third_place)}
+                </Col>
+              </Row>
+            )}
+            {fourth_place && (
+              <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Fourth place
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(final_positions.fourth_place)} alt={final_positions.fourth_place} />
+                  &nbsp;{getTeamName(final_positions.fourth_place)}
+                </Col>
+              </Row>
+            )}
           </Col>
           <Col lg={{ size: 8, offset: 4 }} md={{ size: 9, offset: 3 }} sm={{ size: 10, offset: 2 }}>
             <h2 className="h2-ff5 mt-3">Tournament Statistics</h2>
