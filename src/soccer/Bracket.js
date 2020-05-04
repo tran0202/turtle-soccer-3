@@ -293,7 +293,7 @@ const BracketHook2 = (props) => {
 
 const Bracket = (props) => {
   const { stage } = props
-  const thirdPlace = stage.rounds.find((s) => s.name === 'Third place')
+  const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -317,22 +317,23 @@ const Bracket = (props) => {
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
         <Row className="no-gutters mb-5">
-          {stage.rounds.map((r, index) => {
-            const hookCount = r.matches.length / 2
-            if (r.name === 'Third place') {
-              return null
-            } else if (r.name === 'Final') {
-              return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
-            } else {
-              return (
-                <React.Fragment key={r.name}>
-                  <BracketCol round={r} colIndex={index} />
-                  <BracketHook1 colIndex={index} hookCount={hookCount} />
-                  <BracketHook2 colIndex={index} hookCount={hookCount} />
-                </React.Fragment>
-              )
-            }
-          })}
+          {stage.rounds &&
+            stage.rounds.map((r, index) => {
+              const hookCount = r.matches.length / 2
+              if (r.name === 'Third place') {
+                return null
+              } else if (r.name === 'Final') {
+                return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
+              } else {
+                return (
+                  <React.Fragment key={r.name}>
+                    <BracketCol round={r} colIndex={index} />
+                    <BracketHook1 colIndex={index} hookCount={hookCount} />
+                    <BracketHook2 colIndex={index} hookCount={hookCount} />
+                  </React.Fragment>
+                )
+              }
+            })}
         </Row>
       </Collapse>
     </React.Fragment>

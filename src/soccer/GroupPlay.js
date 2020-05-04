@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { DisplaySchedule, getDateMatchArrayPair } from './Helper'
-import { calculateGroupRankings, collectGroupRankings } from './RankingsHelper'
+import { calculateGroupRankings, collectMatchdayRankings } from './RankingsHelper'
 import Rankings from './Rankings'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 
@@ -42,7 +42,8 @@ const getMatchArrayByDate = (group) => {
 const GroupPlay = (props) => {
   const { group, config } = props
   calculateGroupRankings(group, config)
-  collectGroupRankings(group)
+  const matchDay = group.matches ? Math.ceil(group.matches.length / 2) : 0
+  collectMatchdayRankings(group, matchDay)
   // console.log('Test1')
   return (
     <React.Fragment>

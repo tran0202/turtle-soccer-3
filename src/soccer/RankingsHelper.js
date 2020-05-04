@@ -220,11 +220,14 @@ export const sortGroupRankings = (group, startingIndex) => {
   }
 }
 
-const collectMatchdayRankings = (group, matchDay) => {
+export const collectMatchdayRankings = (group, matchDay) => {
   if (group.teams) {
     group.teams.forEach((t) => {
       if (t.rankings) {
-        const rankings = t.rankings.find((r) => r.md === matchDay)
+        let rankings = t.rankings.find((r) => r.md === matchDay)
+        if (!rankings && matchDay > 1) {
+          rankings = t.rankings.find((r) => r.md === matchDay - 1)
+        }
         if (!group.final_rankings) {
           const newRankings = []
           newRankings.push(rankings)

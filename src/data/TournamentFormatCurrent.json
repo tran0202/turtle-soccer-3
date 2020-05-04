@@ -4,6 +4,9 @@
     {
       "name": "Group Stage",
       "type": "roundrobin",
+      "eliminateRule": "bottom2",
+      "eliminateCount": "16",
+      "next_round": "Round of 16",
       "groups": [
         {
           "name": "Group A",
@@ -18,21 +21,523 @@
               "time": "17:00",
               "stadium": "Arena Corinthians",
               "city": "Sao Paulo"
+            },
+            {
+              "home_team": "MEX",
+              "away_team": "CMR",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-13",
+              "time": "13:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "MEX",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-17",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "CRO",
+              "home_score": "0",
+              "away_score": "4",
+              "date": "2014-06-18",
+              "time": "18:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "BRA",
+              "home_score": "1",
+              "away_score": "4",
+              "date": "2014-06-23",
+              "time": "17:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            },
+            {
+              "home_team": "CRO",
+              "away_team": "MEX",
+              "home_score": "1",
+              "away_score": "3",
+              "date": "2014-06-23",
+              "time": "17:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
             }
           ]
         },
         {
           "name": "Group B",
-          "matches": []
+          "teams": [{ "id": "ESP" }, { "id": "NED" }, { "id": "CHI" }, { "id": "AUS" }],
+          "matches": [
+            {
+              "home_team": "ESP",
+              "away_team": "NED",
+              "home_score": "1",
+              "away_score": "5",
+              "date": "2014-06-13",
+              "time": "16:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "CHI",
+              "away_team": "AUS",
+              "home_score": "3",
+              "away_score": "1",
+              "date": "2014-06-13",
+              "time": "18:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "AUS",
+              "away_team": "NED",
+              "home_score": "2",
+              "away_score": "3",
+              "date": "2014-06-18",
+              "time": "13:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "ESP",
+              "away_team": "CHI",
+              "home_score": "0",
+              "away_score": "2",
+              "date": "2014-06-18",
+              "time": "16:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "AUS",
+              "away_team": "ESP",
+              "home_score": "0",
+              "away_score": "3",
+              "date": "2014-06-23",
+              "time": "13:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "CHI",
+              "home_score": "2",
+              "away_score": "0",
+              "date": "2014-06-23",
+              "time": "13:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
+            }
+          ]
         },
-        { "name": "Group C", "matches": [] },
-        { "name": "Group D", "matches": [] },
-        { "name": "Group E", "matches": [] },
-        { "name": "Group F", "matches": [] },
-        { "name": "Group G", "matches": [] },
-        { "name": "Group H", "matches": [] }
+        {
+          "name": "Group C",
+          "teams": [{ "id": "COL" }, { "id": "GRE" }, { "id": "CIV" }, { "id": "JPN" }],
+          "matches": [
+            {
+              "home_team": "COL",
+              "away_team": "GRE",
+              "home_score": "3",
+              "away_score": "0",
+              "date": "2014-06-14",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            },
+            {
+              "home_team": "CIV",
+              "away_team": "JPN",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-14",
+              "time": "22:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "COL",
+              "away_team": "CIV",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-19",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "GRE",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-19",
+              "time": "19:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "COL",
+              "home_score": "1",
+              "away_score": "4",
+              "date": "2014-06-24",
+              "time": "16:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "GRE",
+              "away_team": "CIV",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-24",
+              "time": "17:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
+            }
+          ]
+        },
+        {
+          "name": "Group D",
+          "teams": [{ "id": "URU" }, { "id": "CRC" }, { "id": "ENG" }, { "id": "ITA" }],
+          "matches": [
+            {
+              "home_team": "URU",
+              "away_team": "CRC",
+              "home_score": "1",
+              "away_score": "3",
+              "date": "2014-06-14",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "ITA",
+              "home_score": "1",
+              "away_score": "2",
+              "date": "2014-06-14",
+              "time": "18:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "URU",
+              "away_team": "ENG",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-19",
+              "time": "16:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "CRC",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-20",
+              "time": "13:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "URU",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-24",
+              "time": "13:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "CRC",
+              "away_team": "ENG",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-24",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            }
+          ]
+        },
+        {
+          "name": "Group E",
+          "teams": [{ "id": "SUI" }, { "id": "ECU" }, { "id": "FRA" }, { "id": "HON" }],
+          "matches": [
+            {
+              "home_team": "SUI",
+              "away_team": "ECU",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-15",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "HON",
+              "home_score": "3",
+              "away_score": "0",
+              "date": "2014-06-15",
+              "time": "16:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "SUI",
+              "away_team": "FRA",
+              "home_score": "2",
+              "away_score": "5",
+              "date": "2014-06-20",
+              "time": "16:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "HON",
+              "away_team": "ECU",
+              "home_score": "1",
+              "away_score": "2",
+              "date": "2014-06-20",
+              "time": "19:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "HON",
+              "away_team": "SUI",
+              "home_score": "0",
+              "away_score": "3",
+              "date": "2014-06-25",
+              "time": "16:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "ECU",
+              "away_team": "FRA",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-25",
+              "time": "17:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            }
+          ]
+        },
+        {
+          "name": "Group F",
+          "teams": [{ "id": "ARG" }, { "id": "BIH" }, { "id": "IRN" }, { "id": "NGA" }],
+          "matches": [
+            {
+              "home_team": "ARG",
+              "away_team": "BIH",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-15",
+              "time": "19:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "NGA",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-16",
+              "time": "16:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "IRN",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-21",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "BIH",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-21",
+              "time": "18:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "ARG",
+              "home_score": "2",
+              "away_score": "3",
+              "date": "2014-06-25",
+              "time": "13:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "BIH",
+              "away_team": "IRN",
+              "home_score": "3",
+              "away_score": "1",
+              "date": "2014-06-25",
+              "time": "13:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            }
+          ]
+        },
+        {
+          "name": "Group G",
+          "teams": [{ "id": "GER" }, { "id": "POR" }, { "id": "GHA" }, { "id": "USA" }],
+          "matches": [
+            {
+              "home_team": "GER",
+              "away_team": "POR",
+              "home_score": "4",
+              "away_score": "0",
+              "date": "2014-06-16",
+              "time": "13:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "GHA",
+              "away_team": "USA",
+              "home_score": "1",
+              "away_score": "2",
+              "date": "2014-06-16",
+              "time": "19:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "GHA",
+              "home_score": "2",
+              "away_score": "2",
+              "date": "2014-06-21",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
+            },
+            {
+              "home_team": "USA",
+              "away_team": "POR",
+              "home_score": "2",
+              "away_score": "2",
+              "date": "2014-06-22",
+              "time": "18:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "USA",
+              "away_team": "GER",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "13:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "POR",
+              "away_team": "GHA",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            }
+          ]
+        },
+        {
+          "name": "Group H",
+          "teams": [{ "id": "BEL" }, { "id": "ALG" }, { "id": "RUS" }, { "id": "KOR" }],
+          "matches": [
+            {
+              "home_team": "BEL",
+              "away_team": "ALG",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-17",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "KOR",
+              "home_score": "1",
+              "away_score": "1",
+              "date": "2014-06-17",
+              "time": "18:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "RUS",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-22",
+              "time": "13:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "ALG",
+              "home_score": "2",
+              "away_score": "4",
+              "date": "2014-06-22",
+              "time": "16:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "BEL",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "17:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
+            },
+            {
+              "home_team": "ALG",
+              "away_team": "RUS",
+              "home_score": "1",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "17:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            }
+          ]
+        }
       ]
     },
-    { "name": "Knockout Stage" }
+    { "name": "Knockout Stage", "type": "knockout" }
   ]
 }

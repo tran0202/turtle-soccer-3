@@ -152,7 +152,7 @@ const Standings = (props) => {
   rrStages.forEach((groupStage) => {
     groupStage.groups.forEach((g) => {
       calculateGroupRankings(g, config)
-      collectGroupRankings(g, config)
+      collectGroupRankings(g)
       eliminateGroupTeams(tournament, groupStage, g)
     })
     sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
@@ -162,7 +162,7 @@ const Standings = (props) => {
   })
 
   const koStage = getKnockoutStage(stages)[0]
-  if (koStage) {
+  if (koStage && koStage.rounds) {
     const earlyRounds = koStage.rounds.filter((r) => r.name !== 'Semifinals' && r.name !== 'Third place' && r.name !== 'Final')
     earlyRounds.forEach((round, index) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)

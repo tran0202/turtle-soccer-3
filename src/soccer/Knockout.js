@@ -11,18 +11,19 @@ const getMatchArrayByDate = (round) => {
 }
 
 const reorderMatches = (stage) => {
-  stage.rounds.map((r) => {
-    r.matches.sort((a, b) => {
-      if (a.order < b.order) {
-        return -1
-      } else if (a.order > b.order) {
-        return 1
-      } else {
-        return 0
-      }
+  stage.rounds &&
+    stage.rounds.map((r) => {
+      r.matches.sort((a, b) => {
+        if (a.order < b.order) {
+          return -1
+        } else if (a.order > b.order) {
+          return 1
+        } else {
+          return 0
+        }
+      })
+      return null
     })
-    return null
-  })
   return stage
 }
 
@@ -32,9 +33,10 @@ const Knockout = (props) => {
   return (
     <React.Fragment>
       <Bracket stage={newStage} />
-      {newStage.rounds.map((r) => {
-        return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r) }} key={r.name} />
-      })}
+      {newStage.rounds &&
+        newStage.rounds.map((r) => {
+          return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r) }} key={r.name} />
+        })}
     </React.Fragment>
   )
 }
