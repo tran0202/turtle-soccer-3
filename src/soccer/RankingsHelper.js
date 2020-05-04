@@ -1,5 +1,5 @@
 export const findTeam = (teamArray, id) => {
-  return teamArray.find((t) => t.id === id)
+  return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
 
 const findLastRanking = (team) => {
@@ -112,7 +112,7 @@ const calculateGroupTeamRanking = (team, match, config) => {
 }
 
 export const calculateGroupRankings = (group, config) => {
-  group.matches.forEach((m, index) => {
+  group.matches.forEach((m) => {
     calculateGroupTeamRanking(findTeam(group.teams, m.home_team), m, config)
     calculateGroupTeamRanking(findTeam(group.teams, m.away_team), m, config)
   })
@@ -173,62 +173,66 @@ const saveDrawTeams = (a, b) => {
 }
 
 export const sortGroupRankings = (group, startingIndex) => {
-  group.final_rankings.sort((a, b) => {
-    if (a.pts > b.pts) {
-      return -1
-    } else if (a.pts < b.pts) {
-      return 1
-    } else {
-      if (a.gd > b.gd) {
+  if (group) {
+    group.final_rankings.sort((a, b) => {
+      if (a.pts > b.pts) {
         return -1
-      } else if (a.gd < b.gd) {
+      } else if (a.pts < b.pts) {
         return 1
       } else {
-        if (a.gf > b.gf) {
+        if (a.gd > b.gd) {
           return -1
-        } else if (a.gf < b.gf) {
+        } else if (a.gd < b.gd) {
           return 1
         } else {
-          if (group.ranking_type === 'round') {
-            saveDrawTeams(a, b)
-            saveDrawTeams(b, a)
-          }
-          const found = findHeadtoHeadMatch(a, b)
-          if (found.length === 1) {
-            const h2hMatch = found[0]
-            const h2hResult = matchResult(a.id, h2hMatch)
-            if (h2hResult === 1) {
-              return 1
-            } else if (h2hResult === -1) {
-              return -1
+          if (a.gf > b.gf) {
+            return -1
+          } else if (a.gf < b.gf) {
+            return 1
+          } else {
+            if (group.ranking_type === 'round') {
+              saveDrawTeams(a, b)
+              saveDrawTeams(b, a)
+            }
+            const found = findHeadtoHeadMatch(a, b)
+            if (found.length === 1) {
+              const h2hMatch = found[0]
+              const h2hResult = matchResult(a.id, h2hMatch)
+              if (h2hResult === 1) {
+                return 1
+              } else if (h2hResult === -1) {
+                return -1
+              } else {
+                return compareFairPoints(a, b)
+              }
             } else {
               return compareFairPoints(a, b)
             }
-          } else {
-            return compareFairPoints(a, b)
           }
         }
       }
-    }
-  })
-  group.final_rankings.forEach((t, index) => {
-    t.r = index + startingIndex
-  })
+    })
+    group.final_rankings.forEach((t, index) => {
+      t.r = index + startingIndex
+    })
+  }
 }
 
 const collectMatchdayRankings = (group, matchDay) => {
-  group.teams.forEach((t) => {
-    const rankings = t.rankings.find((r) => r.md === matchDay)
-    if (!group.final_rankings) {
-      const newRankings = []
-      newRankings.push(rankings)
-      group.final_rankings = newRankings
-      group.ranking_type = 'group'
-    } else {
-      group.final_rankings.push(rankings)
-    }
-  })
-  sortGroupRankings(group, 1)
+  if (group.teams) {
+    group.teams.forEach((t) => {
+      const rankings = t.rankings.find((r) => r.md === matchDay)
+      if (!group.final_rankings) {
+        const newRankings = []
+        newRankings.push(rankings)
+        group.final_rankings = newRankings
+        group.ranking_type = 'group'
+      } else {
+        group.final_rankings.push(rankings)
+      }
+    })
+    sortGroupRankings(group, 1)
+  }
 }
 
 export const collectGroupRankings = (group) => {
@@ -251,67 +255,72 @@ const mergeArray = (a, b) => {
 
 export const createDrawPool = (round) => {
   let pools = []
-  round.final_rankings.forEach((r) => {
-    if (r.draws) {
-      const tmp = [r.id, ...r.draws]
-      if (pools.length === 0) {
-        pools.push(tmp)
-      } else {
-        let found = false
-        let pool = null
-        pools.forEach((p) => {
-          p.forEach((e) => {
-            tmp.forEach((t) => {
-              if (t === e) {
-                found = true
-              }
-            })
-          })
-          pool = p
-        })
-        if (found) {
-          mergeArray(pool, tmp)
-        } else {
+  if (round.final_rankings) {
+    round.final_rankings.forEach((r) => {
+      if (r.draws) {
+        const tmp = [r.id, ...r.draws]
+        if (pools.length === 0) {
           pools.push(tmp)
+        } else {
+          let found = false
+          let pool = null
+          pools.forEach((p) => {
+            p.forEach((e) => {
+              tmp.forEach((t) => {
+                if (t === e) {
+                  found = true
+                }
+              })
+            })
+            pool = p
+          })
+          if (found) {
+            mergeArray(pool, tmp)
+          } else {
+            pools.push(tmp)
+          }
         }
       }
+    })
+    if (pools.length > 0) {
+      round.draw_pools = pools
     }
-  })
-  if (pools.length > 0) {
-    round.draw_pools = pools
   }
 }
 
 export const updateDraws = (round) => {
-  round.final_rankings.forEach((r) => {
-    if (r.draws) {
-      round.draw_pools.forEach((p) => {
-        const found = p.includes(r.id)
-        if (found) {
-          mergeArray(r.draws, p)
-        }
-      })
-    }
-  })
+  round.final_rankings &&
+    round.final_rankings.forEach((r) => {
+      if (r.draws) {
+        round.draw_pools.forEach((p) => {
+          const found = p.includes(r.id)
+          if (found) {
+            mergeArray(r.draws, p)
+          }
+        })
+      }
+    })
 }
 
 export const updateFinalRankings = (round) => {
   let newFinalRankings = []
   let previousDrawCount = 0
   let rankingBundle = []
-  round.final_rankings.forEach((r) => {
-    const drawCount = r.draws ? r.draws.length : 0
-    if (drawCount > 0) {
-      rankingBundle.push(r)
-    } else {
-      if (previousDrawCount > 0) {
-        newFinalRankings.push(rankingBundle)
-        rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
-        rankingBundle = []
+  if (round.final_rankings) {
+    round.final_rankings.forEach((r) => {
+      const drawCount = r.draws ? r.draws.length : 0
+      if (drawCount > 0) {
+        rankingBundle.push(r)
+      } else {
+        if (previousDrawCount > 0) {
+          newFinalRankings.push(rankingBundle)
+          rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
+          rankingBundle = []
+        }
+        newFinalRankings.push(r)
       }
-      newFinalRankings.push(r)
-    }
-    previousDrawCount = drawCount
-  })
-  round.final_rankings = newFinalRankings
+      previousDrawCount = drawCount
+    })
+    round.final_rankings = newFinalRankings
+  }
 }

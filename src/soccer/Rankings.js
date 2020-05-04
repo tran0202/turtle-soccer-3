@@ -92,9 +92,7 @@ const RankingRound = (props) => {
   return (
     <React.Fragment>
       <RankingRowSeparate round={round} />
-      {round.final_rankings.map((r, index) => (
-        <RankingRow row={r} ranking_type={round.ranking_type} key={index} />
-      ))}
+      {round.final_rankings && round.final_rankings.map((r, index) => <RankingRow row={r} ranking_type={round.ranking_type} key={index} />)}
     </React.Fragment>
   )
 }

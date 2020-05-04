@@ -1,4 +1,37 @@
 {
   "id": "WC2014",
-  "stages": []
+  "stages": [
+    {
+      "name": "Group Stage",
+      "type": "roundrobin",
+      "groups": [
+        {
+          "name": "Group A",
+          "matches": [
+            {
+              "home_team": "BRA",
+              "away_team": "CRO",
+              "home_score": "3",
+              "away_score": "1",
+              "date": "2014-06-12",
+              "time": "17:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
+            }
+          ]
+        },
+        {
+          "name": "Group B",
+          "matches": []
+        },
+        { "name": "Group C", "matches": [] },
+        { "name": "Group D", "matches": [] },
+        { "name": "Group E", "matches": [] },
+        { "name": "Group F", "matches": [] },
+        { "name": "Group G", "matches": [] },
+        { "name": "Group H", "matches": [] }
+      ]
+    },
+    { "name": "Knockout Stage" }
+  ]
 }

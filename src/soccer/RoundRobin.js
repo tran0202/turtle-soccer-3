@@ -3,11 +3,13 @@ import { DisplaySchedule, getDateMatchArrayPair } from './Helper'
 
 const getMatchArrayByDate = (stage) => {
   let tmp = []
-  stage.groups.forEach((g) => {
-    g.matches.forEach((m) => {
-      tmp.push({ ...m, group: g.name })
+  stage.groups &&
+    stage.groups.forEach((g) => {
+      g.matches &&
+        g.matches.forEach((m) => {
+          tmp.push({ ...m, group: g.name })
+        })
     })
-  })
   return getDateMatchArrayPair(tmp)
 }
 
