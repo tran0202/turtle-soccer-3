@@ -173,7 +173,7 @@ const saveDrawTeams = (a, b) => {
 }
 
 export const sortGroupRankings = (group, startingIndex) => {
-  if (group) {
+  if (group && group.final_rankings) {
     group.final_rankings.sort((a, b) => {
       if (a.pts > b.pts) {
         return -1
@@ -213,7 +213,9 @@ export const sortGroupRankings = (group, startingIndex) => {
       }
     })
     group.final_rankings.forEach((t, index) => {
-      t.r = index + startingIndex
+      if (t) {
+        t.r = index + startingIndex
+      }
     })
   }
 }
@@ -221,14 +223,16 @@ export const sortGroupRankings = (group, startingIndex) => {
 const collectMatchdayRankings = (group, matchDay) => {
   if (group.teams) {
     group.teams.forEach((t) => {
-      const rankings = t.rankings.find((r) => r.md === matchDay)
-      if (!group.final_rankings) {
-        const newRankings = []
-        newRankings.push(rankings)
-        group.final_rankings = newRankings
-        group.ranking_type = 'group'
-      } else {
-        group.final_rankings.push(rankings)
+      if (t.rankings) {
+        const rankings = t.rankings.find((r) => r.md === matchDay)
+        if (!group.final_rankings) {
+          const newRankings = []
+          newRankings.push(rankings)
+          group.final_rankings = newRankings
+          group.ranking_type = 'group'
+        } else {
+          group.final_rankings.push(rankings)
+        }
       }
     })
     sortGroupRankings(group, 1)
@@ -257,7 +261,7 @@ export const createDrawPool = (round) => {
   let pools = []
   if (round.final_rankings) {
     round.final_rankings.forEach((r) => {
-      if (r.draws) {
+      if (r && r.draws) {
         const tmp = [r.id, ...r.draws]
         if (pools.length === 0) {
           pools.push(tmp)
@@ -291,7 +295,7 @@ export const createDrawPool = (round) => {
 export const updateDraws = (round) => {
   round.final_rankings &&
     round.final_rankings.forEach((r) => {
-      if (r.draws) {
+      if (r && r.draws) {
         round.draw_pools.forEach((p) => {
           const found = p.includes(r.id)
           if (found) {
@@ -308,18 +312,20 @@ export const updateFinalRankings = (round) => {
   let rankingBundle = []
   if (round.final_rankings) {
     round.final_rankings.forEach((r) => {
-      const drawCount = r.draws ? r.draws.length : 0
-      if (drawCount > 0) {
-        rankingBundle.push(r)
-      } else {
-        if (previousDrawCount > 0) {
-          newFinalRankings.push(rankingBundle)
-          rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
-          rankingBundle = []
+      if (r) {
+        const drawCount = r.draws ? r.draws.length : 0
+        if (drawCount > 0) {
+          rankingBundle.push(r)
+        } else {
+          if (previousDrawCount > 0) {
+            newFinalRankings.push(rankingBundle)
+            rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
+            rankingBundle = []
+          }
+          newFinalRankings.push(r)
         }
-        newFinalRankings.push(r)
+        previousDrawCount = drawCount
       }
-      previousDrawCount = drawCount
     })
     round.final_rankings = newFinalRankings
   }

@@ -7,6 +7,7 @@
       "groups": [
         {
           "name": "Group A",
+          "teams": [{ "id": "BRA" }, { "id": "CRO" }, { "id": "MEX" }, { "id": "CMR" }],
           "matches": [
             {
               "home_team": "BRA",
