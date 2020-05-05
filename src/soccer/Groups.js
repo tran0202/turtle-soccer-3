@@ -57,14 +57,14 @@ const Groups = (props) => {
   const { stages } = tournament
   const rrStages = getRoundRobinStage(stages)
   // console.log('rrStages', rrStages)
-  const format = rrStages.length > 0 ? getFormat(rrStages[0]) : null
+  const format = rrStages && rrStages.length > 0 ? getFormat(rrStages[0]) : null
   const config = getTournamentConfig(tournament)
   return (
     <React.Fragment>
       {format && <TournamentFormat format={format} config={config} tournamentType={tournamentType} />}
       {!format && <Row className="mt-5"></Row>}
-      {rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
-      {rrStages.length > 1 && <MultipleGroupStage />}
+      {rrStages && rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
+      {rrStages && rrStages.length > 1 && <MultipleGroupStage />}
     </React.Fragment>
   )
 }

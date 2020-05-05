@@ -151,19 +151,21 @@ const Standings = (props) => {
   const { stages } = tournament
 
   const rrStages = getRoundRobinStage(stages)
-  rrStages.forEach((groupStage) => {
-    groupStage.groups.forEach((g) => {
-      calculateGroupRankings(g, config)
-      collectGroupRankings(g)
-      eliminateGroupTeams(tournament, groupStage, g)
+  rrStages &&
+    rrStages.forEach((groupStage) => {
+      groupStage.groups.forEach((g) => {
+        calculateGroupRankings(g, config)
+        collectGroupRankings(g)
+        eliminateGroupTeams(tournament, groupStage, g)
+      })
+      sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
+      groupStage.groups.forEach((g) => {
+        advanceGroupTeams(tournament, groupStage, g)
+      })
     })
-    sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
-    groupStage.groups.forEach((g) => {
-      advanceGroupTeams(tournament, groupStage, g)
-    })
-  })
 
-  const koStage = getKnockoutStage(stages)[0]
+  const koStages = getKnockoutStage(stages)
+  const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
     const earlyRounds = koStage.rounds.filter((r) => r.name !== 'Semifinals' && r.name !== 'Third place' && r.name !== 'Final')
     earlyRounds.forEach((round, index) => {

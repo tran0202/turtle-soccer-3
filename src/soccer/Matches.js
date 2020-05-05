@@ -7,7 +7,7 @@ import classnames from 'classnames'
 const Matches = (props) => {
   const { tournament } = props
   const { stages } = tournament
-  const defaultStage = stages.length > 0 ? stages[0].name.replace(' ', '-') : 'Group-Stage'
+  const defaultStage = stages && stages.length > 0 ? stages[0].name.replace(' ', '-') : 'Group-Stage'
   const [activeTab, setActiveTab] = useState(defaultStage)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)
@@ -16,7 +16,7 @@ const Matches = (props) => {
   return (
     <React.Fragment>
       <Row className="mt-5"></Row>
-      {stages.length > 0 && (
+      {stages && stages.length > 0 && (
         <React.Fragment>
           <Nav tabs className="mt-3">
             {stages.map((stage) => (

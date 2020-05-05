@@ -1,5 +1,5 @@
 {
-  "id": "WC2018",
+  "id": "WC2014",
   "stages": [
     {
       "name": "Group Stage",
@@ -10,535 +10,529 @@
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "RUS" }, { "id": "URU" }, { "id": "EGY" }, { "id": "KSA" }],
+          "teams": [{ "id": "BRA" }, { "id": "CRO" }, { "id": "MEX" }, { "id": "CMR" }],
           "matches": [
             {
-              "home_team": "RUS",
-              "away_team": "KSA",
-              "home_score": "5",
-              "away_score": "0",
-              "date": "2018-06-14",
-              "time": "18:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "EGY",
-              "away_team": "URU",
-              "home_score": "0",
-              "away_score": "1",
-              "date": "2018-06-15",
-              "time": "17:00",
-              "stadium": "Ekaterinburg Arena",
-              "city": "Ekaterinburg"
-            },
-            {
-              "home_team": "RUS",
-              "away_team": "EGY",
+              "home_team": "BRA",
+              "away_team": "CRO",
               "home_score": "3",
               "away_score": "1",
-              "date": "2018-06-19",
-              "time": "21:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg"
+              "date": "2014-06-12",
+              "time": "17:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
             },
             {
-              "home_team": "URU",
-              "away_team": "KSA",
+              "home_team": "MEX",
+              "away_team": "CMR",
               "home_score": "1",
               "away_score": "0",
-              "date": "2018-06-20",
-              "time": "18:00",
-              "stadium": "Rostov Arena",
-              "city": "Rostov-On-Don"
+              "date": "2014-06-13",
+              "time": "13:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
             },
             {
-              "home_team": "URU",
-              "away_team": "RUS",
-              "home_score": "3",
+              "home_team": "BRA",
+              "away_team": "MEX",
+              "home_score": "0",
               "away_score": "0",
-              "date": "2018-06-25",
-              "time": "18:00",
-              "stadium": "Samara Arena",
-              "city": "Samara"
+              "date": "2014-06-17",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
             },
             {
-              "home_team": "KSA",
-              "away_team": "EGY",
-              "home_score": "2",
-              "away_score": "1",
-              "date": "2018-06-25",
+              "home_team": "CMR",
+              "away_team": "CRO",
+              "home_score": "0",
+              "away_score": "4",
+              "date": "2014-06-18",
+              "time": "18:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "BRA",
+              "home_score": "1",
+              "away_score": "4",
+              "date": "2014-06-23",
               "time": "17:00",
-              "stadium": "Volgograd Arena",
-              "city": "Volgograd"
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            },
+            {
+              "home_team": "CRO",
+              "away_team": "MEX",
+              "home_score": "1",
+              "away_score": "3",
+              "date": "2014-06-23",
+              "time": "17:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "POR" }, { "id": "ESP" }, { "id": "IRN" }, { "id": "MAR" }],
+          "teams": [{ "id": "ESP" }, { "id": "NED" }, { "id": "CHI" }, { "id": "AUS" }],
           "matches": [
             {
-              "home_team": "MAR",
-              "away_team": "IRN",
-              "home_score": "0",
-              "away_score": "1",
-              "date": "2018-06-15",
-              "time": "18:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "ESP",
-              "home_score": "3",
-              "away_score": "3",
-              "date": "2018-06-15",
-              "time": "21:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "MAR",
+              "home_team": "ESP",
+              "away_team": "NED",
               "home_score": "1",
-              "away_score": "0",
-              "date": "2018-06-20",
-              "time": "15:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow"
+              "away_score": "5",
+              "date": "2014-06-13",
+              "time": "16:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
             },
             {
-              "home_team": "IRN",
-              "away_team": "ESP",
-              "home_score": "0",
+              "home_team": "CHI",
+              "away_team": "AUS",
+              "home_score": "3",
               "away_score": "1",
-              "date": "2018-06-20",
-              "time": "21:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan"
+              "date": "2014-06-13",
+              "time": "18:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "AUS",
+              "away_team": "NED",
+              "home_score": "2",
+              "away_score": "3",
+              "date": "2014-06-18",
+              "time": "13:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
             },
             {
               "home_team": "ESP",
-              "away_team": "MAR",
-              "home_score": "2",
+              "away_team": "CHI",
+              "home_score": "0",
               "away_score": "2",
-              "date": "2018-06-25",
-              "time": "20:00",
-              "stadium": "Kaliningrad Stadium",
-              "city": "Kaliningrad"
+              "date": "2014-06-18",
+              "time": "16:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
             },
             {
-              "home_team": "IRN",
-              "away_team": "POR",
-              "home_score": "1",
-              "away_score": "1",
-              "date": "2018-06-25",
-              "time": "21:00",
-              "stadium": "Mordovia Arena",
-              "city": "Saransk"
+              "home_team": "AUS",
+              "away_team": "ESP",
+              "home_score": "0",
+              "away_score": "3",
+              "date": "2014-06-23",
+              "time": "13:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "CHI",
+              "home_score": "2",
+              "away_score": "0",
+              "date": "2014-06-23",
+              "time": "13:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "PER" }, { "id": "AUS" }],
+          "teams": [{ "id": "COL" }, { "id": "GRE" }, { "id": "CIV" }, { "id": "JPN" }],
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "AUS",
+              "home_team": "COL",
+              "away_team": "GRE",
+              "home_score": "3",
+              "away_score": "0",
+              "date": "2014-06-14",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            },
+            {
+              "home_team": "CIV",
+              "away_team": "JPN",
               "home_score": "2",
               "away_score": "1",
-              "date": "2018-06-16",
+              "date": "2014-06-14",
+              "time": "22:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "COL",
+              "away_team": "CIV",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-19",
               "time": "13:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan"
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
             },
             {
-              "home_team": "PER",
-              "away_team": "DEN",
+              "home_team": "JPN",
+              "away_team": "GRE",
               "home_score": "0",
-              "away_score": "1",
-              "date": "2018-06-16",
+              "away_score": "0",
+              "date": "2014-06-19",
               "time": "19:00",
-              "stadium": "Mordovia Arena",
-              "city": "Saransk"
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
             },
             {
-              "home_team": "DEN",
-              "away_team": "AUS",
+              "home_team": "JPN",
+              "away_team": "COL",
               "home_score": "1",
-              "away_score": "1",
-              "date": "2018-06-21",
+              "away_score": "4",
+              "date": "2014-06-24",
               "time": "16:00",
-              "stadium": "Samara Arena",
-              "city": "Samara"
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
             },
             {
-              "home_team": "FRA",
-              "away_team": "PER",
-              "home_score": "1",
-              "away_score": "0",
-              "date": "2018-06-21",
-              "time": "20:00",
-              "stadium": "Ekaterinburg Arena",
-              "city": "Ekaterinburg"
-            },
-            {
-              "home_team": "AUS",
-              "away_team": "PER",
-              "home_score": "0",
-              "away_score": "2",
-              "date": "2018-06-26",
+              "home_team": "GRE",
+              "away_team": "CIV",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-24",
               "time": "17:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi"
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "FRA",
-              "home_score": "0",
-              "away_score": "0",
-              "date": "2018-06-26",
-              "time": "17:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow"
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "CRO" }, { "id": "ARG" }, { "id": "NGA" }, { "id": "ISL" }],
+          "teams": [{ "id": "URU" }, { "id": "CRC" }, { "id": "ENG" }, { "id": "ITA" }],
           "matches": [
             {
-              "home_team": "ARG",
-              "away_team": "ISL",
+              "home_team": "URU",
+              "away_team": "CRC",
               "home_score": "1",
-              "away_score": "1",
-              "date": "2018-06-16",
-              "time": "16:00",
-              "stadium": "Spartak Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "CRO",
-              "away_team": "NGA",
-              "home_score": "2",
-              "away_score": "0",
-              "date": "2018-06-16",
-              "time": "21:00",
-              "stadium": "Kaliningrad Stadium",
-              "city": "Kaliningrad"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "CRO",
-              "home_score": "0",
               "away_score": "3",
-              "date": "2018-06-21",
-              "time": "21:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod"
+              "date": "2014-06-14",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
             },
             {
-              "home_team": "NGA",
-              "away_team": "ISL",
-              "home_score": "2",
-              "away_score": "0",
-              "date": "2018-06-22",
+              "home_team": "ENG",
+              "away_team": "ITA",
+              "home_score": "1",
+              "away_score": "2",
+              "date": "2014-06-14",
               "time": "18:00",
-              "stadium": "Volgograd Arena",
-              "city": "Volgograd"
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
             },
             {
-              "home_team": "NGA",
-              "away_team": "ARG",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-26",
-              "time": "21:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg"
+              "home_team": "URU",
+              "away_team": "ENG",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-19",
+              "time": "16:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
             },
             {
-              "home_team": "ISL",
-              "away_team": "CRO",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-26",
-              "time": "21:00",
-              "stadium": "Rostov Arena",
-              "city": "Rostov-On-Don"
+              "home_team": "ITA",
+              "away_team": "CRC",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-20",
+              "time": "13:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "URU",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-24",
+              "time": "13:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "CRC",
+              "away_team": "ENG",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-24",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
             }
           ]
         },
         {
           "name": "Group E",
-          "teams": [{ "id": "BRA" }, { "id": "SUI" }, { "id": "SRB" }, { "id": "CRC" }],
+          "teams": [{ "id": "SUI" }, { "id": "ECU" }, { "id": "FRA" }, { "id": "HON" }],
           "matches": [
             {
-              "home_team": "CRC",
-              "away_team": "SRB",
-              "home_score": "0",
-              "away_score": "1",
-              "date": "2018-06-17",
-              "time": "16:00",
-              "stadium": "Samara Arena",
-              "city": "Samara"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "SUI",
-              "home_score": "1",
-              "away_score": "1",
-              "date": "2018-06-17",
-              "time": "21:00",
-              "stadium": "Rostov Arena",
-              "city": "Rostov-On-Don"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "CRC",
+              "home_team": "SUI",
+              "away_team": "ECU",
               "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-15",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "HON",
+              "home_score": "3",
               "away_score": "0",
-              "date": "2018-06-22",
-              "time": "15:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg"
-            },
-            {
-              "home_team": "SRB",
-              "away_team": "SUI",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-22",
-              "time": "20:00",
-              "stadium": "Kaliningrad Stadium",
-              "city": "Kaliningrad"
-            },
-            {
-              "home_team": "SRB",
-              "away_team": "BRA",
-              "home_score": "0",
-              "away_score": "2",
-              "date": "2018-06-27",
-              "time": "21:00",
-              "stadium": "Spartak Stadium",
-              "city": "Moscow"
+              "date": "2014-06-15",
+              "time": "16:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
             },
             {
               "home_team": "SUI",
-              "away_team": "CRC",
+              "away_team": "FRA",
               "home_score": "2",
+              "away_score": "5",
+              "date": "2014-06-20",
+              "time": "16:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "HON",
+              "away_team": "ECU",
+              "home_score": "1",
               "away_score": "2",
-              "date": "2018-06-27",
-              "time": "21:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod"
+              "date": "2014-06-20",
+              "time": "19:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "HON",
+              "away_team": "SUI",
+              "home_score": "0",
+              "away_score": "3",
+              "date": "2014-06-25",
+              "time": "16:00",
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
+            },
+            {
+              "home_team": "ECU",
+              "away_team": "FRA",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-25",
+              "time": "17:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
             }
           ]
         },
         {
           "name": "Group F",
-          "teams": [{ "id": "GER" }, { "id": "MEX" }, { "id": "SWE" }, { "id": "KOR" }],
+          "teams": [{ "id": "ARG" }, { "id": "BIH" }, { "id": "IRN" }, { "id": "NGA" }],
           "matches": [
             {
-              "home_team": "GER",
-              "away_team": "MEX",
-              "home_score": "0",
-              "away_score": "1",
-              "date": "2018-06-17",
-              "time": "18:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "KOR",
-              "home_score": "1",
-              "away_score": "0",
-              "date": "2018-06-18",
-              "time": "15:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "MEX",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-23",
-              "time": "18:00",
-              "stadium": "Rostov Arena",
-              "city": "Rostov-On-Don"
-            },
-            {
-              "home_team": "GER",
-              "away_team": "SWE",
+              "home_team": "ARG",
+              "away_team": "BIH",
               "home_score": "2",
               "away_score": "1",
-              "date": "2018-06-23",
-              "time": "21:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "GER",
-              "home_score": "2",
-              "away_score": "0",
-              "date": "2018-06-27",
-              "time": "17:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan"
-            },
-            {
-              "home_team": "MEX",
-              "away_team": "SWE",
-              "home_score": "0",
-              "away_score": "3",
-              "date": "2018-06-27",
+              "date": "2014-06-15",
               "time": "19:00",
-              "stadium": "Ekaterinburg Arena",
-              "city": "Ekaterinburg"
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "NGA",
+              "home_score": "0",
+              "away_score": "0",
+              "date": "2014-06-16",
+              "time": "16:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "IRN",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-21",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "BIH",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-21",
+              "time": "18:00",
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "ARG",
+              "home_score": "2",
+              "away_score": "3",
+              "date": "2014-06-25",
+              "time": "13:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "BIH",
+              "away_team": "IRN",
+              "home_score": "3",
+              "away_score": "1",
+              "date": "2014-06-25",
+              "time": "13:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
             }
           ]
         },
         {
           "name": "Group G",
-          "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "TUN" }, { "id": "PAN" }],
+          "teams": [{ "id": "GER" }, { "id": "POR" }, { "id": "GHA" }, { "id": "USA" }],
           "matches": [
             {
-              "home_team": "BEL",
-              "away_team": "PAN",
-              "home_score": "3",
+              "home_team": "GER",
+              "away_team": "POR",
+              "home_score": "4",
               "away_score": "0",
-              "date": "2018-06-18",
+              "date": "2014-06-16",
+              "time": "13:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "GHA",
+              "away_team": "USA",
+              "home_score": "1",
+              "away_score": "2",
+              "date": "2014-06-16",
+              "time": "19:00",
+              "stadium": "Estadio das Dunas",
+              "city": "Natal"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "GHA",
+              "home_score": "2",
+              "away_score": "2",
+              "date": "2014-06-21",
+              "time": "16:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza"
+            },
+            {
+              "home_team": "USA",
+              "away_team": "POR",
+              "home_score": "2",
+              "away_score": "2",
+              "date": "2014-06-22",
               "time": "18:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi"
+              "stadium": "Arena Amazonia",
+              "city": "Manaus"
             },
             {
-              "home_team": "TUN",
-              "away_team": "ENG",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-18",
-              "time": "21:00",
-              "stadium": "Volgograd Arena",
-              "city": "Volgograd"
-            },
-            {
-              "home_team": "BEL",
-              "away_team": "TUN",
-              "home_score": "5",
-              "away_score": "2",
-              "date": "2018-06-23",
-              "time": "15:00",
-              "stadium": "Spartak Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "PAN",
-              "home_score": "6",
-              "away_score": "1",
-              "date": "2018-06-24",
-              "time": "15:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod"
-            },
-            {
-              "home_team": "PAN",
-              "away_team": "TUN",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-06-28",
-              "time": "21:00",
-              "stadium": "Mordovia Arena",
-              "city": "Saransk"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "BEL",
+              "home_team": "USA",
+              "away_team": "GER",
               "home_score": "0",
               "away_score": "1",
-              "date": "2018-06-28",
-              "time": "20:00",
-              "stadium": "Kaliningrad Stadium",
-              "city": "Kaliningrad"
+              "date": "2014-06-26",
+              "time": "13:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife"
+            },
+            {
+              "home_team": "POR",
+              "away_team": "GHA",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
             }
           ]
         },
         {
           "name": "Group H",
-          "teams": [{ "id": "POL" }, { "id": "COL" }, { "id": "SEN" }, { "id": "JPN" }],
+          "teams": [{ "id": "BEL" }, { "id": "ALG" }, { "id": "RUS" }, { "id": "KOR" }],
           "matches": [
             {
-              "home_team": "COL",
-              "away_team": "JPN",
-              "home_score": "1",
-              "away_score": "2",
-              "away_fair_pts": "-1",
-              "date": "2018-06-19",
-              "time": "15:00",
-              "stadium": "Mordovia Arena",
-              "city": "Saransk"
-            },
-            {
-              "home_team": "POL",
-              "away_team": "SEN",
-              "home_score": "1",
-              "away_score": "2",
-              "away_fair_pts": "-2",
-              "date": "2018-06-19",
-              "time": "18:00",
-              "stadium": "Spartak Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "JPN",
-              "away_team": "SEN",
+              "home_team": "BEL",
+              "away_team": "ALG",
               "home_score": "2",
-              "away_score": "2",
-              "home_fair_pts": "-2",
-              "away_fair_pts": "-3",
-              "date": "2018-06-24",
-              "time": "20:00",
-              "stadium": "Ekaterinburg Arena",
-              "city": "Ekaterinburg"
-            },
-            {
-              "home_team": "POL",
-              "away_team": "COL",
-              "home_score": "0",
-              "away_score": "3",
-              "date": "2018-06-24",
-              "time": "21:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan"
-            },
-            {
-              "home_team": "JPN",
-              "away_team": "POL",
-              "home_score": "0",
               "away_score": "1",
-              "home_fair_pts": "-1",
-              "date": "2018-06-28",
-              "time": "17:00",
-              "stadium": "Volgograd Arena",
-              "city": "Volgograd"
+              "date": "2014-06-17",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte"
             },
             {
-              "home_team": "SEN",
-              "away_team": "COL",
-              "home_score": "0",
+              "home_team": "RUS",
+              "away_team": "KOR",
+              "home_score": "1",
               "away_score": "1",
-              "home_fair_pts": "-1",
-              "date": "2018-06-28",
+              "date": "2014-06-17",
               "time": "18:00",
-              "stadium": "Samara Arena",
-              "city": "Samara"
+              "stadium": "Arena Pantanal",
+              "city": "Cuiaba"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "RUS",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-06-22",
+              "time": "13:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "ALG",
+              "home_score": "2",
+              "away_score": "4",
+              "date": "2014-06-22",
+              "time": "16:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "BEL",
+              "home_score": "0",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "17:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo"
+            },
+            {
+              "home_team": "ALG",
+              "away_team": "RUS",
+              "home_score": "1",
+              "away_score": "1",
+              "date": "2014-06-26",
+              "time": "17:00",
+              "stadium": "Arena da Baixada",
+              "city": "Curitiba"
             }
           ]
         }
@@ -555,103 +549,105 @@
           "next_round": "Quarterfinals",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "ARG",
-              "home_score": "4",
-              "away_score": "3",
-              "date": "2018-06-30",
-              "time": "17:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan",
-              "bracket_order": "2"
-            },
-            {
-              "home_team": "URU",
-              "away_team": "POR",
-              "home_score": "2",
-              "away_score": "1",
-              "date": "2018-06-30",
-              "time": "21:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi",
-              "bracket_order": "1"
-            },
-            {
-              "home_team": "ESP",
-              "away_team": "RUS",
-              "home_score": "1",
-              "away_score": "1",
-              "home_extra_score": "0",
-              "away_extra_score": "0",
-              "home_penalty_score": "3",
-              "away_penalty_score": "4",
-              "date": "2018-07-01",
-              "time": "17:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow",
-              "bracket_order": "5"
-            },
-            {
-              "home_team": "CRO",
-              "away_team": "DEN",
+              "home_team": "BRA",
+              "away_team": "CHI",
               "home_score": "1",
               "away_score": "1",
               "home_extra_score": "0",
               "away_extra_score": "0",
               "home_penalty_score": "3",
               "away_penalty_score": "2",
-              "date": "2018-07-01",
-              "time": "21:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod",
-              "bracket_order": "6"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "MEX",
-              "home_score": "2",
-              "away_score": "0",
-              "date": "2018-07-02",
-              "time": "18:00",
-              "stadium": "Samara Arena",
-              "city": "Samara",
-              "bracket_order": "3"
-            },
-            {
-              "home_team": "BEL",
-              "away_team": "JPN",
-              "home_score": "3",
-              "away_score": "2",
-              "date": "2018-07-02",
-              "time": "18:00",
-              "stadium": "Rostov Arena",
-              "city": "Rostov-On-Don",
-              "bracket_order": "4"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "SUI",
-              "home_score": "1",
-              "away_score": "0",
-              "date": "2018-07-03",
-              "time": "17:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg",
-              "bracket_order": "7"
+              "date": "2014-06-28",
+              "time": "13:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte",
+              "bracket_order": "1"
             },
             {
               "home_team": "COL",
-              "away_team": "ENG",
+              "away_team": "URU",
+              "home_score": "2",
+              "away_score": "0",
+              "date": "2014-06-28",
+              "time": "17:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro",
+              "bracket_order": "2"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "MEX",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-06-29",
+              "time": "13:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza",
+              "bracket_order": "5"
+            },
+            {
+              "home_team": "CRC",
+              "away_team": "GRE",
               "home_score": "1",
               "away_score": "1",
               "home_extra_score": "0",
               "away_extra_score": "0",
-              "home_penalty_score": "3",
-              "away_penalty_score": "4",
-              "date": "2018-07-03",
-              "time": "21:00",
-              "stadium": "Spartak Stadium",
-              "city": "Moscow",
+              "home_penalty_score": "5",
+              "away_penalty_score": "3",
+              "date": "2014-06-29",
+              "time": "17:00",
+              "stadium": "Arena Pernambuco",
+              "city": "Recife",
+              "bracket_order": "6"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "NGA",
+              "home_score": "2",
+              "away_score": "0",
+              "date": "2014-06-30",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia",
+              "bracket_order": "3"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "ALG",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "2",
+              "away_extra_score": "1",
+              "date": "2014-06-30",
+              "time": "17:00",
+              "stadium": "Estadio Beira-Rio",
+              "city": "Porto Alegre",
+              "bracket_order": "4"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "SUI",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "1",
+              "away_extra_score": "0",
+              "date": "2014-07-01",
+              "time": "13:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo",
+              "bracket_order": "7"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "USA",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "2",
+              "away_extra_score": "1",
+              "date": "2014-07-01",
+              "time": "17:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador",
               "bracket_order": "8"
             }
           ]
@@ -663,51 +659,51 @@
           "next_round": "Semifinals",
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "FRA",
+              "home_team": "FRA",
+              "away_team": "GER",
               "home_score": "0",
-              "away_score": "2",
-              "date": "2018-07-06",
-              "time": "17:00",
-              "stadium": "Nizhny Novgorod Stadium",
-              "city": "Nizhny Novgorod",
-              "bracket_order": "1"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "BEL",
-              "home_score": "1",
-              "away_score": "2",
-              "date": "2018-07-06",
-              "time": "21:00",
-              "stadium": "Kazan Arena",
-              "city": "Kazan",
+              "away_score": "1",
+              "date": "2014-07-04",
+              "time": "13:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro",
               "bracket_order": "2"
             },
             {
-              "home_team": "SWE",
-              "away_team": "ENG",
-              "home_score": "0",
-              "away_score": "2",
-              "date": "2018-07-07",
-              "time": "18:00",
-              "stadium": "Samara Arena",
-              "city": "Samara",
+              "home_team": "BRA",
+              "away_team": "COL",
+              "home_score": "2",
+              "away_score": "1",
+              "date": "2014-07-04",
+              "time": "17:00",
+              "stadium": "Estadio Castelao",
+              "city": "Fortaleza",
+              "bracket_order": "1"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "BEL",
+              "home_score": "1",
+              "away_score": "0",
+              "date": "2014-07-05",
+              "time": "13:00",
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia",
               "bracket_order": "4"
             },
             {
-              "home_team": "RUS",
-              "away_team": "CRO",
-              "home_score": "1",
-              "away_score": "1",
-              "home_extra_score": "1",
-              "away_extra_score": "1",
-              "home_penalty_score": "3",
-              "away_penalty_score": "4",
-              "date": "2018-07-07",
-              "time": "21:00",
-              "stadium": "Fisht Stadium",
-              "city": "Sochi",
+              "home_team": "NED",
+              "away_team": "CRC",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "0",
+              "away_extra_score": "0",
+              "home_penalty_score": "4",
+              "away_penalty_score": "3",
+              "date": "2014-07-05",
+              "time": "17:00",
+              "stadium": "Arena Fonte Nova",
+              "city": "Salvador",
               "bracket_order": "3"
             }
           ]
@@ -719,27 +715,29 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "BEL",
+              "home_team": "BRA",
+              "away_team": "GER",
               "home_score": "1",
-              "away_score": "0",
-              "date": "2018-07-10",
-              "time": "21:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg",
+              "away_score": "7",
+              "date": "2014-07-08",
+              "time": "17:00",
+              "stadium": "Estadio Mineirao",
+              "city": "Belo Horizonte",
               "bracket_order": "1"
             },
             {
-              "home_team": "CRO",
-              "away_team": "ENG",
-              "home_score": "1",
-              "away_score": "1",
-              "home_extra_score": "1",
+              "home_team": "NED",
+              "away_team": "ARG",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "0",
               "away_extra_score": "0",
-              "date": "2018-07-11",
-              "time": "21:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow",
+              "home_penalty_score": "2",
+              "away_penalty_score": "4",
+              "date": "2014-07-09",
+              "time": "17:00",
+              "stadium": "Arena Corinthians",
+              "city": "Sao Paulo",
               "bracket_order": "2"
             }
           ]
@@ -749,14 +747,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "BEL",
-              "away_team": "ENG",
-              "home_score": "2",
-              "away_score": "0",
-              "date": "2018-07-14",
+              "home_team": "BRA",
+              "away_team": "NED",
+              "home_score": "0",
+              "away_score": "3",
+              "date": "2014-07-12",
               "time": "17:00",
-              "stadium": "Saint Petersburg Stadium",
-              "city": "St. Petersburg"
+              "stadium": "Estadio Nacional",
+              "city": "Brasilia"
             }
           ]
         },
@@ -765,14 +763,16 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "CRO",
-              "home_score": "4",
-              "away_score": "2",
-              "date": "2018-07-15",
-              "time": "18:00",
-              "stadium": "Luzhniki Stadium",
-              "city": "Moscow"
+              "home_team": "GER",
+              "away_team": "ARG",
+              "home_score": "0",
+              "away_score": "0",
+              "home_extra_score": "1",
+              "away_extra_score": "0",
+              "date": "2014-07-13",
+              "time": "16:00",
+              "stadium": "Estadio do Maracana",
+              "city": "Rio de Janeiro"
             }
           ]
         }

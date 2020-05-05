@@ -18,7 +18,7 @@ class TournamentApp extends React.Component {
     this.state = {
       tournament: null,
       tournamentType: null,
-      currentTournament: 'WC2014',
+      currentTournament: 'WC2010',
     }
   }
 

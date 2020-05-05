@@ -22,13 +22,11 @@ export const getTournamentConfig = (tournament) => {
 }
 
 export const getRoundRobinStage = (stages) => {
-  const result = stages.filter((s) => s.type === 'roundrobin')
-  return result
+  return stages ? stages.filter((s) => s.type === 'roundrobin') : null
 }
 
 export const getKnockoutStage = (stages) => {
-  const result = stages.filter((s) => s.type === 'knockout')
-  return result
+  return stages ? stages.filter((s) => s.type === 'knockout') : null
 }
 
 export const getFlagSrc = (id) => {

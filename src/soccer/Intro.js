@@ -5,6 +5,9 @@ import moment from 'moment'
 import NumberFormat from 'react-number-format'
 
 const findFinalStandings = (tournament) => {
+  if (!tournament.stages) {
+    return {}
+  }
   const koStage = tournament.stages.find((s) => s.type === 'knockout')
   // console.log('koStage', tournament.stages)
   if (koStage) {
