@@ -123,10 +123,11 @@ const calculateKnockoutTeamRanking = (team, match, config) => {
 }
 
 export const calculateKnockoutRankings = (advanced_teams, round, config) => {
-  round.matches.forEach((m) => {
-    calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.home_team), m, config)
-    calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.away_team), m, config)
-  })
+  round.matches &&
+    round.matches.forEach((m) => {
+      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.home_team), m, config)
+      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.away_team), m, config)
+    })
 }
 
 const findHeadtoHeadMatch = (a, b) => {

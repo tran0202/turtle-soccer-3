@@ -29,7 +29,7 @@ const BracketBox = (props) => {
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
             </Col>
-            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block`}>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.home_team)}
               {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
@@ -38,6 +38,16 @@ const BracketBox = (props) => {
                 match.away_extra_score &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
+              {getTeamName(match.home_team)}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+                <AetTooltip target="aetTooltip1" anchor="(e)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {match.home_team}
@@ -95,7 +105,7 @@ const BracketBox = (props) => {
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
             </Col>
-            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block`}>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.away_team)}
               {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
@@ -104,6 +114,16 @@ const BracketBox = (props) => {
                 match.away_extra_score &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
+              {getTeamName(match.away_team)}
+              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+                <AetTooltip target="aetTooltip2" anchor="(e)" />
+              )}
+              {match.home_extra_score &&
+                match.away_extra_score &&
+                match.home_extra_score === match.away_extra_score &&
+                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {match.away_team}
@@ -319,19 +339,24 @@ const Bracket = (props) => {
         <Row className="no-gutters mb-5">
           {stage.rounds &&
             stage.rounds.map((r, index) => {
-              const hookCount = r.matches.length / 2
-              if (r.name === 'Third place') {
-                return null
-              } else if (r.name === 'Final') {
-                return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
+              if (r.matches) {
+                const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
+                // console.log('hookCount', hookCount)
+                if (r.name === 'Third place') {
+                  return null
+                } else if (r.name === 'Final') {
+                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
+                } else {
+                  return (
+                    <React.Fragment key={r.name}>
+                      <BracketCol round={r} colIndex={index} />
+                      <BracketHook1 colIndex={index} hookCount={hookCount} />
+                      <BracketHook2 colIndex={index} hookCount={hookCount} />
+                    </React.Fragment>
+                  )
+                }
               } else {
-                return (
-                  <React.Fragment key={r.name}>
-                    <BracketCol round={r} colIndex={index} />
-                    <BracketHook1 colIndex={index} hookCount={hookCount} />
-                    <BracketHook2 colIndex={index} hookCount={hookCount} />
-                  </React.Fragment>
-                )
+                return null
               }
             })}
         </Row>

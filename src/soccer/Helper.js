@@ -150,7 +150,8 @@ export const DisplaySchedule = (props) => {
                         {m.home_penalty_score && m.away_penalty_score && (
                           <React.Fragment>
                             <br />
-                            {m.home_penalty_score}-{m.away_penalty_score} <PenTooltip target="penTooltip3" anchor="(pen.)" />
+                            {m.home_penalty_score}-{m.away_penalty_score}
+                            <PenTooltip target="penTooltip3" anchor="(pen.)" />
                           </React.Fragment>
                         )}
                       </React.Fragment>

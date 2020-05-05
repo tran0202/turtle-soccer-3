@@ -4,24 +4,26 @@ import Bracket from './Bracket'
 
 const getMatchArrayByDate = (round) => {
   let tmp = []
-  round.matches.forEach((m) => {
-    tmp.push(m)
-  })
+  round.matches &&
+    round.matches.forEach((m) => {
+      tmp.push(m)
+    })
   return getDateMatchArrayPair(tmp)
 }
 
 const reorderMatches = (stage) => {
   stage.rounds &&
     stage.rounds.map((r) => {
-      r.matches.sort((a, b) => {
-        if (a.order < b.order) {
-          return -1
-        } else if (a.order > b.order) {
-          return 1
-        } else {
-          return 0
-        }
-      })
+      r.matches &&
+        r.matches.sort((a, b) => {
+          if (a.bracket_order < b.bracket_order) {
+            return -1
+          } else if (a.bracket_order > b.bracket_order) {
+            return 1
+          } else {
+            return 0
+          }
+        })
       return null
     })
   return stage

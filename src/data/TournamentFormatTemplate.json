@@ -563,7 +563,7 @@
               "time": "17:00",
               "stadium": "Kazan Arena",
               "city": "Kazan",
-              "order": "2"
+              "bracket_order": "2"
             },
             {
               "home_team": "URU",
@@ -574,7 +574,7 @@
               "time": "21:00",
               "stadium": "Fisht Stadium",
               "city": "Sochi",
-              "order": "1"
+              "bracket_order": "1"
             },
             {
               "home_team": "ESP",
@@ -589,7 +589,7 @@
               "time": "17:00",
               "stadium": "Luzhniki Stadium",
               "city": "Moscow",
-              "order": "5"
+              "bracket_order": "5"
             },
             {
               "home_team": "CRO",
@@ -604,7 +604,7 @@
               "time": "21:00",
               "stadium": "Nizhny Novgorod Stadium",
               "city": "Nizhny Novgorod",
-              "order": "6"
+              "bracket_order": "6"
             },
             {
               "home_team": "BRA",
@@ -615,7 +615,7 @@
               "time": "18:00",
               "stadium": "Samara Arena",
               "city": "Samara",
-              "order": "3"
+              "bracket_order": "3"
             },
             {
               "home_team": "BEL",
@@ -626,7 +626,7 @@
               "time": "18:00",
               "stadium": "Rostov Arena",
               "city": "Rostov-On-Don",
-              "order": "4"
+              "bracket_order": "4"
             },
             {
               "home_team": "SWE",
@@ -637,7 +637,7 @@
               "time": "17:00",
               "stadium": "Saint Petersburg Stadium",
               "city": "St. Petersburg",
-              "order": "7"
+              "bracket_order": "7"
             },
             {
               "home_team": "COL",
@@ -652,7 +652,7 @@
               "time": "21:00",
               "stadium": "Spartak Stadium",
               "city": "Moscow",
-              "order": "8"
+              "bracket_order": "8"
             }
           ]
         },
@@ -671,7 +671,7 @@
               "time": "17:00",
               "stadium": "Nizhny Novgorod Stadium",
               "city": "Nizhny Novgorod",
-              "order": "1"
+              "bracket_order": "1"
             },
             {
               "home_team": "BRA",
@@ -682,7 +682,7 @@
               "time": "21:00",
               "stadium": "Kazan Arena",
               "city": "Kazan",
-              "order": "2"
+              "bracket_order": "2"
             },
             {
               "home_team": "SWE",
@@ -693,7 +693,7 @@
               "time": "18:00",
               "stadium": "Samara Arena",
               "city": "Samara",
-              "order": "4"
+              "bracket_order": "4"
             },
             {
               "home_team": "RUS",
@@ -708,7 +708,7 @@
               "time": "21:00",
               "stadium": "Fisht Stadium",
               "city": "Sochi",
-              "order": "3"
+              "bracket_order": "3"
             }
           ]
         },
@@ -727,7 +727,7 @@
               "time": "21:00",
               "stadium": "Saint Petersburg Stadium",
               "city": "St. Petersburg",
-              "order": "1"
+              "bracket_order": "1"
             },
             {
               "home_team": "CRO",
@@ -740,7 +740,7 @@
               "time": "21:00",
               "stadium": "Luzhniki Stadium",
               "city": "Moscow",
-              "order": "2"
+              "bracket_order": "2"
             }
           ]
         },

@@ -11,7 +11,7 @@ const RankingRowSeparate = (props) => {
     round.name !== 'Third place' && (
       <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
         <Col xs="12" className="font-italic gray3">
-          {round.name} finishers
+          {round.name}
         </Col>
       </Row>
     )
