@@ -112,10 +112,11 @@ const calculateGroupTeamRanking = (team, match, config) => {
 }
 
 export const calculateGroupRankings = (group, config) => {
-  group.matches.forEach((m) => {
-    calculateGroupTeamRanking(findTeam(group.teams, m.home_team), m, config)
-    calculateGroupTeamRanking(findTeam(group.teams, m.away_team), m, config)
-  })
+  group.matches &&
+    group.matches.forEach((m) => {
+      calculateGroupTeamRanking(findTeam(group.teams, m.home_team), m, config)
+      calculateGroupTeamRanking(findTeam(group.teams, m.away_team), m, config)
+    })
 }
 
 const calculateKnockoutTeamRanking = (team, match, config) => {
@@ -228,6 +229,9 @@ export const collectMatchdayRankings = (group, matchDay) => {
         let rankings = t.rankings.find((r) => r.md === matchDay)
         if (!rankings && matchDay > 1) {
           rankings = t.rankings.find((r) => r.md === matchDay - 1)
+          if (!rankings && matchDay > 2) {
+            rankings = t.rankings.find((r) => r.md === matchDay - 2)
+          }
         }
         if (!group.final_rankings) {
           const newRankings = []

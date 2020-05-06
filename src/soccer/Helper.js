@@ -10,6 +10,7 @@ export const getTournamentConfig = (tournament) => {
     name: tournament.name,
     golden_goal_rule: tournament.golden_goal_rule,
     head_to_head_tiebreaker: tournament.head_to_head_tiebreaker,
+    tiebreakers: tournament.tiebreakers,
     third_place_ranking: tournament.third_place_ranking,
     points_for_win: tournament.points_for_win,
     active: tournament.active,
@@ -53,42 +54,46 @@ export const getTeamName = (id) => {
 }
 
 export const isWinner = (who, match) => {
-  if (who === 'H') {
-    return (
-      match.home_score > match.away_score ||
-      (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
-      (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score)
-    )
-  } else {
-    return (
-      match.home_score < match.away_score ||
-      (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
-      (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score)
-    )
+  if (match) {
+    if (who === 'H') {
+      return (
+        match.home_score > match.away_score ||
+        (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
+        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score)
+      )
+    } else {
+      return (
+        match.home_score < match.away_score ||
+        (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
+        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score)
+      )
+    }
   }
 }
 
 export const getDateMatchArrayPair = (matches_array) => {
   let matches = [],
     dates = []
-  matches_array.sort((a, b) => {
-    if (a.date + a.time < b.date + b.time) {
-      return -1
-    } else if (a.date + a.time > b.date + a.time) {
-      return 1
-    } else {
-      return 0
-    }
-  })
-  matches_array.forEach((t) => {
-    if (matches[t.date]) {
-      matches[t.date].push(t)
-    } else {
-      dates.push(t.date)
-      matches[t.date] = []
-      matches[t.date].push(t)
-    }
-  })
+  if (matches_array) {
+    matches_array.sort((a, b) => {
+      if (a.date + a.time < b.date + b.time) {
+        return -1
+      } else if (a.date + a.time > b.date + a.time) {
+        return 1
+      } else {
+        return 0
+      }
+    })
+    matches_array.forEach((t) => {
+      if (matches[t.date]) {
+        matches[t.date].push(t)
+      } else {
+        dates.push(t.date)
+        matches[t.date] = []
+        matches[t.date].push(t)
+      }
+    })
+  }
   return { dates, matches }
 }
 

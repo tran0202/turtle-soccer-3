@@ -10,11 +10,11 @@ const findFinalStandings = (tournament) => {
   }
   const koStage = tournament.stages.find((s) => s.type === 'knockout')
   // console.log('koStage', tournament.stages)
-  if (koStage) {
+  if (koStage && koStage.rounds) {
     const final = koStage.rounds.find((r) => r.name === 'Final')
     const third_place_game = koStage.rounds.find((r) => r.name === 'Third place')
     let champions, runners_up, third_place, fourth_place
-    if (final) {
+    if (final && final.matches) {
       if (isWinner('H', final.matches[0])) {
         champions = final.matches[0].home_team
         runners_up = final.matches[0].away_team
@@ -23,16 +23,16 @@ const findFinalStandings = (tournament) => {
         runners_up = final.matches[0].home_team
       }
     }
-    if (third_place_game) {
-      if (isWinner('H', final.matches[0])) {
-        third_place = final.matches[0].home_team
-        fourth_place = final.matches[0].away_team
-      } else if (isWinner('A', final.matches[0])) {
-        third_place = final.matches[0].away_team
-        third_place = final.matches[0].home_team
+    if (third_place_game && third_place_game.matches) {
+      if (isWinner('H', third_place_game.matches[0])) {
+        third_place = third_place_game.matches[0].home_team
+        fourth_place = third_place_game.matches[0].away_team
+      } else if (isWinner('A', third_place_game.matches[0])) {
+        third_place = third_place_game.matches[0].away_team
+        fourth_place = third_place_game.matches[0].home_team
       }
     }
-    return { champions, runners_up, third_place, fourth_place }
+    return { fs1: champions, fs2: runners_up, fs3: third_place, fs4: fourth_place }
   }
   return {}
 }
@@ -225,8 +225,26 @@ const Intro = (props) => {
                   Golden Boot
                 </Col>
                 <Col md="5" sm="7">
-                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot.team)} alt={awards.golden_boot.team} />
-                  &nbsp;{awards.golden_boot.player}
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[0].team)} alt={awards.golden_boot[0].team} />
+                  &nbsp;{awards.golden_boot[0].player}
+                </Col>
+              </Row>
+              <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Silver Boot
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[1].team)} alt={awards.golden_boot[1].team} />
+                  &nbsp;{awards.golden_boot[1].player}
+                </Col>
+              </Row>
+              <Row className="margin-top-xs mb-3">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Bronze Boot
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
+                  &nbsp;{awards.golden_boot[2].player}
                 </Col>
               </Row>
               <Row className="margin-top-xs">
@@ -234,11 +252,29 @@ const Intro = (props) => {
                   Golden Ball
                 </Col>
                 <Col md="5" sm="7">
-                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball.team)} alt={awards.golden_ball.team} />
-                  &nbsp;{awards.golden_ball.player}
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
+                  &nbsp;{awards.golden_ball[0].player}
                 </Col>
               </Row>
               <Row className="margin-top-xs">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Silver Ball
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
+                  &nbsp;{awards.golden_ball[1].player}
+                </Col>
+              </Row>
+              <Row className="margin-top-xs mb-3">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  Bronze Ball
+                </Col>
+                <Col md="5" sm="7">
+                  <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
+                  &nbsp;{awards.golden_ball[2].player}
+                </Col>
+              </Row>
+              <Row className="margin-top-xs mb-3">
                 <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
                   Best Young Player
                 </Col>
@@ -247,7 +283,7 @@ const Intro = (props) => {
                   &nbsp;{awards.best_young_player.player}
                 </Col>
               </Row>
-              <Row className="margin-top-xs">
+              <Row className="margin-top-xs mb-3">
                 <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
                   Golden Glove
                 </Col>

@@ -84,6 +84,7 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
     "details": {
@@ -117,11 +118,18 @@
       { "name": "Kylian Mbappé", "filename": "Kylian_Mbappe_World_Cup_Trophy.jpg", "text": "Best Young Player" },
       { "name": "Thibaut Courtois", "filename": "Courtois_2018_(cropped).jpg", "text": "Golden Glove" }
     ],
-    "final_standings": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
     "statistics": { "total_matches": "64", "total_goals": "169", "attendance": "3031768" },
     "awards": {
-      "golden_boot": { "player": "Harry Kane", "team": "ENG" },
-      "golden_ball": { "player": "Luka Modrić", "team": "CRO" },
+      "golden_boot": [
+        { "player": "Harry Kane", "team": "ENG" },
+        { "player": "Antoine Griezmann", "team": "FRA" },
+        { "player": "Romelu Lukaku", "team": "BEL" }
+      ],
+      "golden_ball": [
+        { "player": "Luka Modrić", "team": "CRO" },
+        { "player": "Eden Hazard", "team": "BEL" },
+        { "player": "Antoine Griezmann", "team": "FRA" }
+      ],
       "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
       "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
       "fair_play_team": "ESP"
@@ -134,6 +142,7 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
     "details": {
@@ -177,11 +186,18 @@
         "text": "Golden Glove. Neuer celebrating after Germany's 1–0 victory over Argentina in the FIFA World Cup Final."
       }
     ],
-    "final_standings": { "champions": "GER", "runners_up": "ARG", "third_place": "NED", "fourth_place": "BRA" },
     "statistics": { "total_matches": "64", "total_goals": "171", "attendance": "3429873" },
     "awards": {
-      "golden_boot": { "player": "James Rodríguez", "team": "COL" },
-      "golden_ball": { "player": "Lionel Messi", "team": "ARG" },
+      "golden_boot": [
+        { "player": "James Rodríguez", "team": "COL" },
+        { "player": "Thomas Muller", "team": "GER" },
+        { "player": "Neymar", "team": "BRA" }
+      ],
+      "golden_ball": [
+        { "player": "Lionel Messi", "team": "ARG" },
+        { "player": "Thomas Muller", "team": "GER" },
+        { "player": "Arjen Robben", "team": "NED" }
+      ],
       "best_young_player": { "player": "Paul Pogba", "team": "FRA" },
       "golden_glove": { "player": "Manuel Neue", "team": "GER" },
       "fair_play_team": "COL"
@@ -194,9 +210,80 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2010.png", "start_date": "2010-06-11", "end_date": "2010-07-11" }
+    "details": {
+      "host": "RSA",
+      "logo_filename": "2010_FIFA_World_Cup.svg",
+      "mascot_filename": "Zakumi.svg",
+      "start_date": "2010-06-11",
+      "end_date": "2010-07-11",
+      "color": "#237832",
+      "team_count": "32",
+      "confed_count": "6",
+      "venue_count": "10",
+      "city_count": "9"
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "FIFA_World_Cup_2010_Spain_with_cup.jpg",
+        "text": "Manager Vicente del Bosque lifting the trophy with the Spanish players"
+      },
+      {
+        "name": "Spain",
+        "filename": "Spain_and_Portugal_match_at_the_FIFA_World_Cup_2010-06-29_7.jpg",
+        "text": "Sergio Ramos of Spain tries to pass the ball to Fernando Torres as Portugal's Fábio Coentrão, Bruno Alves and Cristiano Ronaldo look on"
+      },
+      {
+        "name": "Final",
+        "filename": "FIFA_World_Cup_2010_Final_Line-ups.jpg",
+        "text": "South African president Jacob Zuma and other dignitaries shaking hands with the lined-up teams before kick-off"
+      },
+      {
+        "name": "Thomas Müller",
+        "filename": "Thomas_Muller,_Germany_national_football_team_(03).jpg",
+        "text": "Golden Boot. Best Young Player. Thomas Müller wears number 13 for Germany, a number famously worn by German legend Gerd Müller who said of his namesake; \"he's going to be a great player\""
+      },
+      {
+        "name": "Diego Forlán",
+        "filename": "Suarez_Forlan.jpg",
+        "text": "Golden Ball. Forlán (right) with Luis Suárez at the 2010 World Cup."
+      },
+      {
+        "name": "David Villa",
+        "filename": "Spain-Tahiti,_Confederations_Cup_2013_(02)_(Villa_crop).jpg",
+        "text": "Silver Boot."
+      },
+      {
+        "name": "Wesley Sneijder",
+        "filename": "Sneijder,_Robben_and_de_Jong_Netherlands-Germany_Euro_2012.jpeg",
+        "text": "Bronze Boot. Sneijder (left) with Arjen Robben and Nigel de Jong lining up for the Netherlands in 2012"
+      },
+      {
+        "name": "Iker Casillas",
+        "filename": "Casillas_besando_la_Copa_del_Mundo_de_futbol.jpg",
+        "text": "Golden Glove. Casillas with the World Cup trophy during celebrations in Spain, July 2010."
+      }
+    ],
+    "final_standings": { "champions": "ESP", "runners_up": "NED", "third_place": "GER", "fourth_place": "URU" },
+    "statistics": { "total_matches": "64", "total_goals": "145", "attendance": "3178856" },
+    "awards": {
+      "golden_boot": [
+        { "player": "Thomas Muller", "team": "GER" },
+        { "player": "David Villa", "team": "ESP" },
+        { "player": "Wesley Sneijder", "team": "NED" }
+      ],
+      "golden_ball": [
+        { "player": "Diego Forlan", "team": "URU" },
+        { "player": "Wesley Sneijder", "team": "NED" },
+        { "player": "David Villa", "team": "ESP" }
+      ],
+      "best_young_player": { "player": "Thomas Muller", "team": "GER" },
+      "golden_glove": { "player": "Iker Casillas", "team": "ESP" },
+      "fair_play_team": "ESP"
+    }
   },
   {
     "id": "WC2006",

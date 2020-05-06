@@ -32,6 +32,7 @@ class TournamentApp extends React.Component {
   }
 
   getTournamentFormat = () => {
+    // console.log('TournamentFormatArray', TournamentFormatArray)
     const tf = TournamentFormatArray.find((tf) => tf.id === this.props.id)
     if (tf) {
       return tf
