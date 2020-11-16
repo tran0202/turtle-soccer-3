@@ -239,10 +239,10 @@ const Intro = (props) => {
                 </Col>
               </Row>
               <Row className="margin-top-xs mb-3">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
                   Bronze Boot
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="5" sm="7" className="tournament-award-receiver">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
                   &nbsp;{awards.golden_boot[2].player}
                 </Col>
@@ -266,28 +266,28 @@ const Intro = (props) => {
                 </Col>
               </Row>
               <Row className="margin-top-xs mb-3">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
                   Bronze Ball
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="5" sm="7" className="tournament-award-receiver">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
                   &nbsp;{awards.golden_ball[2].player}
                 </Col>
               </Row>
               <Row className="margin-top-xs mb-3">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
                   Best Young Player
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="5" sm="7" className="tournament-award-receiver">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.best_young_player.team)} alt={awards.best_young_player.team} />
                   &nbsp;{awards.best_young_player.player}
                 </Col>
               </Row>
               <Row className="margin-top-xs mb-3">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
                   Golden Glove
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="5" sm="7" className="tournament-award-receiver">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_glove.team)} alt={awards.golden_glove.team} />
                   &nbsp;{awards.golden_glove.player}
                 </Col>
