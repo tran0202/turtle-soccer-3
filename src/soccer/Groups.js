@@ -18,7 +18,7 @@ const TournamentFormat = (props) => {
   const { format, config, tournamentType } = props
   return (
     format.teamCount !== 0 && (
-      <Row className="mt-5 mb-5 text-left tournament-format">
+      <Row className="mt-3 mb-3 text-left tournament-format">
         <Col xs="9">
           <Row>
             <Col xs="12">
@@ -89,7 +89,7 @@ const Groups = (props) => {
   return (
     <React.Fragment>
       {format && <TournamentFormat format={format} config={config} tournamentType={tournamentType} />}
-      {!format && <Row className="mt-5"></Row>}
+      {!format && <Row className="mt-3"></Row>}
       {rrStages && rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
       {rrStages && rrStages.length > 1 && <MultipleGroupStage />}
     </React.Fragment>

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "WC2022_AFC",
+    "name": "2022 FIFA World Cup AFC Qualification",
+    "tournament_type_id": "WCQ",
+    "tournament_id": "WC2022",
+    "confederation_id": "AFC",
+    "active": true,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "start_date": "2019-06-06",
+      "end_date": "2022-03-01",
+      "color": "#e5cf1d",
+      "team_count": "46"
+    },
+    "statistics": { "total_matches": "107", "total_goals": "313", "attendance": "1611133" },
+    "awards": {
+      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": "7" }
+    }
+  }
+]

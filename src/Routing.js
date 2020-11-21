@@ -16,8 +16,12 @@ import FSTeamApp from './firestore/team/'
 
 function TournamentRoute(props) {
   const page = props.page ? props.page : 'intro'
-  const { id } = useParams()
-  return <TournamentApp id={id} page={page} />
+  const qPage = props.qPage ? props.qPage : 'intro'
+  // console.log('useParams()', useParams())
+  const { id, cid } = useParams()
+  const _cid = cid ? cid : 'QUALIFIED'
+  const query = { id, cid: _cid, page, qPage }
+  return <TournamentApp query={query} />
 }
 
 export default function Routing() {
@@ -30,6 +34,10 @@ export default function Routing() {
         <Route path="/soccer/tournament/:id/matches" children={<TournamentRoute page="matches" />} />
         <Route path="/soccer/tournament/:id/groups" children={<TournamentRoute page="groups" />} />
         <Route path="/soccer/tournament/:id/standings" children={<TournamentRoute page="standings" />} />
+        <Route exact path="/soccer/tournament/:id/qualification" children={<TournamentRoute page="qualification" />} />
+        <Route exact path="/soccer/tournament/:id/qualification/:cid" children={<TournamentRoute page="qualification" />} />
+        <Route path="/soccer/tournament/:id/qualification/:cid/matches" children={<TournamentRoute page="qualification" qPage="matches" />} />
+        <Route path="/soccer/tournament/:id/qualification/:cid/groups" children={<TournamentRoute page="qualification" qPage="groups" />} />
         <Route path="/tennis" children={<TennisApp />} />
         <Route path="/football" children={<FootballApp />} />
         <Route exact path="/admin" children={<FSApp />} />

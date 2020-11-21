@@ -37,10 +37,18 @@ const findFinalStandings = (tournament) => {
   return {}
 }
 
+const getGoldenBootDetails = (player) => {
+  let details = ``
+  details = player.goals ? `(${player.goals} goals)` : details
+  details = player.assists ? `(${player.goals} goals, ${player.assists} assists)` : details
+  details = player.minutes ? `(${player.goals} goals, ${player.assists} assists, ${player.minutes} minutes)` : details
+  return details
+}
+
 const Intro = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_standings, statistics, awards } = tournament
-  const { host, team_count, venue_count } = details
+  const { host, team_count, confed_count, venue_count, city_count } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
   const champions = fs1 ? fs1 : final_standings ? final_standings.champions : null
   const runners_up = fs2 ? fs2 : final_standings ? final_standings.runners_up : null
@@ -115,7 +123,7 @@ const Intro = (props) => {
                 Teams
               </Col>
               <Col md="5" sm="7">
-                {team_count}
+                {team_count} (from {confed_count} confederations)
               </Col>
             </Row>
           )}
@@ -125,7 +133,7 @@ const Intro = (props) => {
                 Venues
               </Col>
               <Col md="5" sm="7">
-                {venue_count}
+                {venue_count} (in {city_count} host cities)
               </Col>
             </Row>
           )}
@@ -200,7 +208,7 @@ const Intro = (props) => {
                   Goals scored
                 </Col>
                 <Col md="5" sm="7">
-                  {statistics.total_goals}
+                  {statistics.total_goals} ({(statistics.total_goals / statistics.total_matches).toFixed(2)} per match)
                 </Col>
               </Row>
               <Row className="margin-top-xs">
@@ -209,6 +217,9 @@ const Intro = (props) => {
                 </Col>
                 <Col md="5" sm="7">
                   <NumberFormat value={statistics.attendance} displayType={'text'} thousandSeparator={true} />
+                  &nbsp;(
+                  <NumberFormat value={(statistics.attendance / statistics.total_matches).toFixed(0)} displayType={'text'} thousandSeparator={true} /> per
+                  match)
                 </Col>
               </Row>
             </Col>
@@ -226,7 +237,7 @@ const Intro = (props) => {
                 </Col>
                 <Col md="5" sm="7">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[0].team)} alt={awards.golden_boot[0].team} />
-                  &nbsp;{awards.golden_boot[0].player}
+                  &nbsp;{awards.golden_boot[0].player} {getGoldenBootDetails(awards.golden_boot[0])}
                 </Col>
               </Row>
               <Row className="margin-top-xs">
@@ -235,7 +246,7 @@ const Intro = (props) => {
                 </Col>
                 <Col md="5" sm="7">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[1].team)} alt={awards.golden_boot[1].team} />
-                  &nbsp;{awards.golden_boot[1].player}
+                  &nbsp;{awards.golden_boot[1].player} {getGoldenBootDetails(awards.golden_boot[1])}
                 </Col>
               </Row>
               <Row className="margin-top-xs mb-3">
@@ -244,7 +255,7 @@ const Intro = (props) => {
                 </Col>
                 <Col md="5" sm="7" className="tournament-award-receiver">
                   <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
-                  &nbsp;{awards.golden_boot[2].player}
+                  &nbsp;{awards.golden_boot[2].player} {getGoldenBootDetails(awards.golden_boot[2])}
                 </Col>
               </Row>
               <Row className="margin-top-xs">

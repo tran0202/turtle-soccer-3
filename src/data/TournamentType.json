@@ -126,6 +126,14 @@
     "order": 4
   },
   {
+    "id": "WCQ",
+    "name": "FIFA World Cup Qualification",
+    "confederation_id": "FIFA",
+    "team_type_id": "MNT",
+    "logo_path": "wc_logos",
+    "sport_id": "SOC"
+  },
+  {
     "id": "NFL",
     "name": "NFL Football Season",
     "team_type_id": "FBLT",

@@ -78,6 +78,27 @@
     "details": { "logo_filename": "UEL.svg", "start_date": "2018-06-28", "end_date": "2019-05-29" }
   },
   {
+    "id": "WC2022",
+    "name": "2022 FIFA World Cup Qatar",
+    "tournament_type_id": "WC",
+    "active": true,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": "QAT",
+      "logo_filename": "2022_FIFA_World_Cup.svg",
+      "start_date": "2022-11-21",
+      "end_date": "2022-12-18",
+      "color": "#8a1538",
+      "team_count": "32",
+      "confed_count": "5 or 6",
+      "venue_count": "8",
+      "city_count": "5"
+    }
+  },
+  {
     "id": "WC2018",
     "name": "2018 FIFA World Cup Russia",
     "tournament_type_id": "WC",
@@ -121,7 +142,7 @@
     "statistics": { "total_matches": "64", "total_goals": "169", "attendance": "3031768" },
     "awards": {
       "golden_boot": [
-        { "player": "Harry Kane", "team": "ENG" },
+        { "player": "Harry Kane", "team": "ENG", "goals": "6" },
         { "player": "Antoine Griezmann", "team": "FRA" },
         { "player": "Romelu Lukaku", "team": "BEL" }
       ],
@@ -189,7 +210,7 @@
     "statistics": { "total_matches": "64", "total_goals": "171", "attendance": "3429873" },
     "awards": {
       "golden_boot": [
-        { "player": "James Rodríguez", "team": "COL" },
+        { "player": "James Rodríguez", "team": "COL", "goals": "6" },
         { "player": "Thomas Muller", "team": "GER" },
         { "player": "Neymar", "team": "BRA" }
       ],
@@ -271,9 +292,9 @@
     "statistics": { "total_matches": "64", "total_goals": "145", "attendance": "3178856" },
     "awards": {
       "golden_boot": [
-        { "player": "Thomas Muller", "team": "GER" },
-        { "player": "David Villa", "team": "ESP" },
-        { "player": "Wesley Sneijder", "team": "NED" }
+        { "player": "Thomas Muller", "team": "GER", "goals": "5", "assists": "3" },
+        { "player": "David Villa", "team": "ESP", "goals": "5", "assists": "1", "minutes": "635" },
+        { "player": "Wesley Sneijder", "team": "NED", "goals": "5", "assists": "1", "minutes": "652" }
       ],
       "golden_ball": [
         { "player": "Diego Forlan", "team": "URU" },
@@ -2156,6 +2177,17 @@
     "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1957-02-10", "end_date": "1957-02-15" }
   },
   {
+    "id": "AAC2019",
+    "name": "2019 AFC Asian Cup United Arab Emirates",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "third_place_ranking": true,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2019.png", "start_date": "2019-01-05", "end_date": "2019-02-01" }
+  },
+  {
     "id": "AAC2015",
     "name": "2015 AFC Asian Cup Australia",
     "tournament_type_id": "AAC",
@@ -2330,17 +2362,6 @@
     "golden_goal_rule": false,
     "points_for_win": 2,
     "details": { "logo_filename": "AFC.png", "start_date": "1956-09-01", "end_date": "1956-09-15" }
-  },
-  {
-    "id": "AAC2019",
-    "name": "2019 AFC Asian Cup United Arab Emirates",
-    "tournament_type_id": "AAC",
-    "active": true,
-    "third_place_ranking": true,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "aac_2019.png", "start_date": "2019-01-05", "end_date": "2019-02-01" }
   },
   {
     "id": "ONC2016",

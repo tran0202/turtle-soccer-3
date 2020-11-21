@@ -641,6 +641,11 @@
   text-align: center;
 }
 
+.qualification-confed-tab {
+  width: 16%;
+  text-align: center;
+}
+
 .card-img-top-height-100 {
   width: auto;
   height: 100px;

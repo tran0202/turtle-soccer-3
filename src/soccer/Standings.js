@@ -206,7 +206,7 @@ const Standings = (props) => {
   const filteredRounds = tournament.final_rankings ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semifinals') : []
   return (
     <React.Fragment>
-      <Row className="mt-5"></Row>
+      <Row className="mt-3"></Row>
       {filteredRounds.length > 0 && <Rankings config={config} rounds={filteredRounds} />}
     </React.Fragment>
   )

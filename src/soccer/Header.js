@@ -4,9 +4,18 @@ import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const HeaderLinks = (props) => {
-  const { id, page } = props
+  const { tournament, query } = props
+  const { page } = query
+  const { id, active, qualification } = tournament
   return (
     <Nav className="justify-content-center">
+      {qualification.length > 0 && active && (
+        <NavItem>
+          <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
+            Qualification
+          </NavLink>
+        </NavItem>
+      )}
       <NavItem>
         <NavLink disabled={page === 'matches'} href={`/soccer/tournament/${id}/matches`}>
           Matches
@@ -22,16 +31,22 @@ const HeaderLinks = (props) => {
           Final standings
         </NavLink>
       </NavItem>
+      {qualification.length > 0 && !active && (
+        <NavItem>
+          <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
+            Qualification
+          </NavLink>
+        </NavItem>
+      )}
     </Nav>
   )
 }
 
 class Header extends React.Component {
   render() {
-    const { param } = this.props
-    const { tournament, tournamentType } = param
+    const { state, query } = this.props
+    const { tournament, tournamentType } = state
     const { details } = getTournamentConfig(tournament)
-    // console.log(details)
     return (
       <Row className="mt-3 text-center">
         <Col lg={{ size: 2, offset: 2 }} md={{ size: 2, offset: 1 }} sm="3" className="mt-3 mb-2">
@@ -44,7 +59,7 @@ class Header extends React.Component {
             {tournament.name}
           </h1>
           {moment(details.start_date).format('MMMM D, YYYY')} - {moment(details.end_date).format('MMMM D, YYYY')}
-          <HeaderLinks id={tournament.id} page={this.props.page} />
+          <HeaderLinks tournament={tournament} query={query} />
         </Col>
       </Row>
     )

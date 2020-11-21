@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import TeamArray from '../data/Team.json'
 import NationArray from '../data/Nation.json'
+import ConfederationIds from '../data/ConfederationId.json'
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
@@ -20,6 +21,12 @@ export const getTournamentConfig = (tournament) => {
     statistics: tournament.statistics,
     awards: tournament.awards,
   }
+}
+
+export const qualificationConfedIds = () => {
+  const qc = ConfederationIds.filter((c) => c !== 'FIFA')
+  qc.push('QUALIFIED')
+  return qc
 }
 
 export const getRoundRobinStage = (stages) => {
@@ -100,7 +107,6 @@ export const getDateMatchArrayPair = (matches_array) => {
 export const DisplaySchedule = (props) => {
   const { round } = props
   const { name, dates, matches } = round
-  // console.log('dates', dates)
   return (
     <React.Fragment>
       <Row>
