@@ -641,9 +641,10 @@
   text-align: center;
 }
 
-.qualification-confed-tab {
-  width: 16%;
-  text-align: center;
+.qualification-confed-links {
+  line-height: 1;
+  border-top: 1px solid #e6e7e9;
+  border-bottom: 1px solid #e6e7e9;
 }
 
 .card-img-top-height-100 {
