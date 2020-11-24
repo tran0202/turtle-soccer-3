@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
-import TeamArray from '../data/Team.json'
+import TeamArray from '../data/soccer/Team.json'
 import NationArray from '../data/Nation.json'
-import ConfederationIds from '../data/ConfederationId.json'
+import ConfederationIds from '../data/soccer/ConfederationId.json'
+import TournamentArray from '../data/soccer/Tournament.json'
+import TournamentWCArray from '../data/soccer/TournamentWC.json'
+import TournamentDataWCArray from '../data/soccer/TournamentDataWC.json'
+import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
+import QualificationTournamentDataWCArray from '../data/soccer/QualificationTournamentDataWC.json'
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
@@ -27,6 +32,22 @@ export const qualificationConfedIds = () => {
   const qc = ConfederationIds.filter((c) => c !== 'FIFA')
   qc.push('QUALIFIED')
   return qc
+}
+
+export const getTournamentArray = () => {
+  return TournamentArray.concat(TournamentWCArray)
+}
+
+export const getTournamentDataArray = () => {
+  return TournamentDataWCArray
+}
+
+export const getQualificationTournamentArray = () => {
+  return QualificationTournamentWCArray
+}
+
+export const getQualificationTournamentDataArray = () => {
+  return QualificationTournamentDataWCArray
 }
 
 export const getRoundRobinStage = (stages) => {

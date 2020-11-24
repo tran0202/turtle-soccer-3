@@ -1,0 +1,40 @@
+[
+  {
+    "id": "USOPEN2017",
+    "name": "2017 US Open",
+    "tournament_type_id": "",
+    "active": false,
+    "details": { "start_date": "2017-08-28", "end_date": "2017-09-10" }
+  },
+  {
+    "id": "USOPEN2018",
+    "name": "2018 US Open",
+    "tournament_type_id": "",
+    "active": false,
+    "details": { "start_date": "2018-08-27", "end_date": "2018-09-09" }
+  },
+  {
+    "id": "USOPEN2017MS",
+    "name": "2017 US Open Men's Singles",
+    "tournament_type_id": "ATP",
+    "active": false,
+    "parent_tournament_id": "USOPEN2017",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2017-08-28", "end_date": "2017-09-10" }
+  },
+  {
+    "id": "USOPEN2018MS",
+    "name": "2018 US Open Men's Singles",
+    "tournament_type_id": "ATP",
+    "active": false,
+    "parent_tournament_id": "USOPEN2018",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2018-08-27", "end_date": "2018-09-09" }
+  },
+  {
+    "id": "USOPEN2018WS",
+    "name": "2018 US Open Women's Singles",
+    "tournament_type_id": "WTA",
+    "active": false,
+    "parent_tournament_id": "USOPEN2018",
+    "details": { "logo_filename": "usopen.svg", "start_date": "2018-08-27", "end_date": "2018-09-09" }
+  }
+]

@@ -1,8 +1,5 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
-import TournamentArray from '../data/Tournament.json'
-import TournamentDataArray from '../data/soccer/TournamentData.json'
-import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
@@ -11,11 +8,8 @@ import Matches from './Matches'
 import Groups from './Groups'
 import Standings from './Standings'
 import Qualification from './Qualification'
+import { getTournamentArray, getTournamentDataArray, getQualificationTournamentArray, getQualificationTournamentDataArray } from './Helper'
 import { Container } from 'reactstrap'
-
-const getQualificationTournamentArray = () => {
-  return QualificationTournamentWCArray
-}
 
 class TournamentApp extends React.Component {
   constructor(props) {
@@ -38,7 +32,7 @@ class TournamentApp extends React.Component {
   }
 
   getTournamentData = () => {
-    const tf = TournamentDataArray.find((tf) => tf.id === this.props.query.id)
+    const tf = getTournamentDataArray().find((tf) => tf.id === this.props.query.id)
     if (tf) {
       return tf
     } else if (this.props.query.id === this.state.currentTournament) {
@@ -49,24 +43,30 @@ class TournamentApp extends React.Component {
     }
   }
 
+  getQualificationTournament = () => {
+    const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
+    const qt = getQualificationTournamentArray().find((qt) => qt.tournament_id === this.props.query.id && qt.confederation_id === this.props.query.cid)
+    const existed = qt ? true : false
+    const qtd = getQualificationTournamentDataArray().find((qtd) => qtd.id === `${this.props.query.id}_${this.props.query.cid}`)
+    const qtdStages = qtd ? qtd.stages : null
+    // console.log('qt', { ...qt, length: qta.length })
+    return { existed, ...qt, stages: qtdStages, confed_count: qta.length }
+  }
+
   getTournament = () => {
-    // console.log('this.props.query.id', this.props.query.id)
-    const t = TournamentArray.find((t) => t.id === this.props.query.id)
+    const t = getTournamentArray().find((t) => t.id === this.props.query.id)
     if (t) {
-      this.setState({ tournament: { ...t, stages: this.getTournamentData().stages, qualification: this.getQualificationTournamentArrayByConfed() } })
+      this.setState({
+        tournament: {
+          ...t,
+          stages: this.getTournamentData().stages,
+          qualification: { ...this.getQualificationTournament() },
+        },
+      })
       this.getTournamentType(t.tournament_type_id)
     } else {
       console.log('Tournament error', t)
     }
-  }
-
-  getQualificationTournamentArrayByConfed = () => {
-    const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
-    let qtabc = []
-    qta.forEach((qt) => {
-      qtabc[qt.confederation_id] = qt
-    })
-    return { tournaments: qtabc, length: qta.length }
   }
 
   getData = () => {

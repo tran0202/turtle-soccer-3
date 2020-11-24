@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import ConfederationIds from '../data/ConfederationId.json'
+import ConfederationIds from '../data/soccer/ConfederationId.json'
 import TournamentTypeArray from '../data/TournamentType.json'
-import TournamentArray from '../data/Tournament.json'
 import Page from '../core/Page'
+import { getTournamentArray } from './Helper'
 import { Container, TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -116,7 +116,7 @@ class SoccerApp extends React.Component {
       tmp[tt.id] = []
       result[tt.id] = []
     })
-    TournamentArray.forEach((doc) => {
+    getTournamentArray().forEach((doc) => {
       if (doc.tournament_type_id !== '') {
         tmp[doc.tournament_type_id].push(doc)
       }

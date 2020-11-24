@@ -9,7 +9,7 @@ const HeaderLinks = (props) => {
   const { id, active, qualification } = tournament
   return (
     <Nav className="justify-content-center">
-      {qualification.length > 0 && active && (
+      {qualification.confed_count > 0 && active && (
         <NavItem>
           <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
             Qualification
@@ -31,7 +31,7 @@ const HeaderLinks = (props) => {
           Final standings
         </NavLink>
       </NavItem>
-      {qualification.length > 0 && !active && (
+      {qualification.confed_count > 0 && !active && (
         <NavItem>
           <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
             Qualification

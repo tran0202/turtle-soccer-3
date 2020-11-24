@@ -48,15 +48,6 @@ class QualificationHeader extends React.Component {
               <PageLinks query={query} />
             </Col>
           </Row>
-          // <Row className="mt-3 text-center">
-          //   <Col>
-          //     <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: qTournament.details.color }}>
-          //       {qTournament.name}
-          //     </h1>
-          //     {moment(qTournament.details.start_date).format('MMMM D, YYYY')} - {moment(qTournament.details.end_date).format('MMMM D, YYYY')}
-          //     <PageLinks query={query} />
-          //   </Col>
-          // </Row>
         )}
       </React.Fragment>
     )

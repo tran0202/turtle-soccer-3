@@ -29,17 +29,20 @@ const Qualification = (props) => {
   const { tournament, query } = props
   const { cid, qPage } = query
   const { qualification } = tournament
-  const qualificationTournament = qualification.tournaments[cid]
-  console.log('qualificationTournament', qualificationTournament)
+  // console.log('qualification', qualification)
 
   return (
     <React.Fragment>
       <Row className="mt-1"></Row>
-      {qualification.length > 0 && (
+      {qualification.confed_count > 0 && (
         <React.Fragment>
           <ConfederationLinks query={query} />
-          {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualificationTournament} query={query} />}
-          {qPage === 'intro' && qualificationTournament && <Intro tournament={qualificationTournament} />}
+          {qualification.existed && (
+            <React.Fragment>
+              {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}
+              {qPage === 'intro' && <Intro tournament={qualification} />}
+            </React.Fragment>
+          )}
         </React.Fragment>
       )}
     </React.Fragment>

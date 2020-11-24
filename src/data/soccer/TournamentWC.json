@@ -1,0 +1,429 @@
+[
+  {
+    "id": "WC2022",
+    "name": "2022 FIFA World Cup Qatar",
+    "tournament_type_id": "WC",
+    "active": true,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": "QAT",
+      "logo_filename": "2022_FIFA_World_Cup.svg",
+      "start_date": "2022-11-21",
+      "end_date": "2022-12-18",
+      "color": "#8a1538",
+      "team_count": "32",
+      "confed_count": "5 or 6",
+      "venue_count": "8",
+      "city_count": "5"
+    }
+  },
+  {
+    "id": "WC2018",
+    "name": "2018 FIFA World Cup Russia",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": "RUS",
+      "logo_filename": "2018_FIFA_World_Cup.svg",
+      "mascot_filename": "Zabivaka_(mascot).jpg",
+      "start_date": "2018-06-14",
+      "end_date": "2018-07-15",
+      "color": "#930c10",
+      "team_count": "32",
+      "confed_count": "5",
+      "venue_count": "12",
+      "city_count": "11"
+    },
+    "hero_images": [
+      { "name": "Champions", "filename": "France_champion_of_the_Football_World_Cup_Russia_2018.jpg", "text": "The France team holds the World Cup trophy" },
+      { "name": "France", "filename": "France_WC2018_final.jpg", "text": "France's starting line-up for the World Cup Final" },
+      { "name": "Croatia", "filename": "Croatia_WC2018_final.jpg", "text": "Croatia's starting eleven for the 2018 World Cup Final" },
+      { "name": "Belgium - Tunisia", "filename": "Bel-Tun_(6).jpg", "text": "Belgium v Tunisia in group G" },
+      {
+        "name": "England - Colombia",
+        "filename": "FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_132.jpg",
+        "text": "Eric Dier scores the winning goal in England's first World Cup penalty shoot-out victory, having lost thrice before."
+      },
+      {
+        "name": "Harry Kane",
+        "filename": "Harry_Kane_FWC_2018_-_Round_of_16_-_COL_v_ENG_-_Photo_027.jpg",
+        "text": "Golden Boot"
+      },
+      { "name": "Luka Modrić", "filename": "Luka_Modric_ISL-HRV_(7).jpg", "text": "Golden Ball" },
+      { "name": "Kylian Mbappé", "filename": "Kylian_Mbappe_World_Cup_Trophy.jpg", "text": "Best Young Player" },
+      { "name": "Thibaut Courtois", "filename": "Courtois_2018_(cropped).jpg", "text": "Golden Glove" }
+    ],
+    "statistics": { "total_matches": "64", "total_goals": "169", "attendance": "3031768" },
+    "awards": {
+      "golden_boot": [
+        { "player": "Harry Kane", "team": "ENG", "goals": "6" },
+        { "player": "Antoine Griezmann", "team": "FRA" },
+        { "player": "Romelu Lukaku", "team": "BEL" }
+      ],
+      "golden_ball": [
+        { "player": "Luka Modrić", "team": "CRO" },
+        { "player": "Eden Hazard", "team": "BEL" },
+        { "player": "Antoine Griezmann", "team": "FRA" }
+      ],
+      "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
+      "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
+      "fair_play_team": "ESP"
+    }
+  },
+  {
+    "id": "WC2014",
+    "name": "2014 FIFA World Cup Brazil",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "lot"],
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": "BRA",
+      "logo_filename": "2014_FIFA_World_Cup.svg",
+      "mascot_filename": "Fuleco.png",
+      "start_date": "2014-06-12",
+      "end_date": "2014-07-13",
+      "color": "#15611e",
+      "team_count": "32",
+      "confed_count": "5",
+      "venue_count": "12",
+      "city_count": "12"
+    },
+    "hero_images": [
+      { "name": "Champions", "filename": "Philipp_Lahm_lifts_the_2014_FIFA_World_Cup.jpg", "text": "Germany captain Philipp Lahm lifts the World Cup trophy" },
+      {
+        "name": "Germany",
+        "filename": "Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(6).jpg",
+        "text": "Germany's Mario Götze scores the match-winning goal in the 113th minute"
+      },
+      {
+        "name": "Argentina",
+        "filename": "Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(36).jpg",
+        "text": "Argentina striker Gonzalo Higuaín challenging Germany goalkeeper Manuel Neuer"
+      },
+      {
+        "name": "James Rodríguez",
+        "filename": "James_Rodriguez.jpg",
+        "text": "Golden Boot. James celebrates after scoring a penalty against Brazil at the 2014 World Cup. He became the first player to score in every single game he played since Rivaldo at the 2002 edition."
+      },
+      {
+        "name": "Lionel Messi",
+        "filename": "Messi_in_Germany_and_Argentina_face_off_in_the_final_of_the_World_Cup_2014_-2014-07-13_(24).jpg",
+        "text": "Golden Ball. Argentina's Lionel Messi (front) battles Germany's Mats Hummels for the ball."
+      },
+      { "name": "Paul Pogba", "filename": "FRA-ARG_(11)_-_Paul_Pogba_(cropped).jpg", "text": "Best Young Player" },
+      {
+        "name": "Manuel Neuer",
+        "filename": "Award_ceremony_of_the_World_Cup_in_Brazil_04.jpg",
+        "text": "Golden Glove. Neuer celebrating after Germany's 1–0 victory over Argentina in the FIFA World Cup Final."
+      }
+    ],
+    "statistics": { "total_matches": "64", "total_goals": "171", "attendance": "3429873" },
+    "awards": {
+      "golden_boot": [
+        { "player": "James Rodríguez", "team": "COL", "goals": "6" },
+        { "player": "Thomas Muller", "team": "GER" },
+        { "player": "Neymar", "team": "BRA" }
+      ],
+      "golden_ball": [
+        { "player": "Lionel Messi", "team": "ARG" },
+        { "player": "Thomas Muller", "team": "GER" },
+        { "player": "Arjen Robben", "team": "NED" }
+      ],
+      "best_young_player": { "player": "Paul Pogba", "team": "FRA" },
+      "golden_glove": { "player": "Manuel Neue", "team": "GER" },
+      "fair_play_team": "COL"
+    }
+  },
+  {
+    "id": "WC2010",
+    "name": "2010 FIFA World Cup South Africa",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "lot"],
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": "RSA",
+      "logo_filename": "2010_FIFA_World_Cup.svg",
+      "mascot_filename": "Zakumi.svg",
+      "start_date": "2010-06-11",
+      "end_date": "2010-07-11",
+      "color": "#237832",
+      "team_count": "32",
+      "confed_count": "6",
+      "venue_count": "10",
+      "city_count": "9"
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "FIFA_World_Cup_2010_Spain_with_cup.jpg",
+        "text": "Manager Vicente del Bosque lifting the trophy with the Spanish players"
+      },
+      {
+        "name": "Spain",
+        "filename": "Spain_and_Portugal_match_at_the_FIFA_World_Cup_2010-06-29_7.jpg",
+        "text": "Sergio Ramos of Spain tries to pass the ball to Fernando Torres as Portugal's Fábio Coentrão, Bruno Alves and Cristiano Ronaldo look on"
+      },
+      {
+        "name": "Final",
+        "filename": "FIFA_World_Cup_2010_Final_Line-ups.jpg",
+        "text": "South African president Jacob Zuma and other dignitaries shaking hands with the lined-up teams before kick-off"
+      },
+      {
+        "name": "Thomas Müller",
+        "filename": "Thomas_Muller,_Germany_national_football_team_(03).jpg",
+        "text": "Golden Boot. Best Young Player. Thomas Müller wears number 13 for Germany, a number famously worn by German legend Gerd Müller who said of his namesake; \"he's going to be a great player\""
+      },
+      {
+        "name": "Diego Forlán",
+        "filename": "Suarez_Forlan.jpg",
+        "text": "Golden Ball. Forlán (right) with Luis Suárez at the 2010 World Cup."
+      },
+      {
+        "name": "David Villa",
+        "filename": "Spain-Tahiti,_Confederations_Cup_2013_(02)_(Villa_crop).jpg",
+        "text": "Silver Boot."
+      },
+      {
+        "name": "Wesley Sneijder",
+        "filename": "Sneijder,_Robben_and_de_Jong_Netherlands-Germany_Euro_2012.jpeg",
+        "text": "Bronze Boot. Sneijder (left) with Arjen Robben and Nigel de Jong lining up for the Netherlands in 2012"
+      },
+      {
+        "name": "Iker Casillas",
+        "filename": "Casillas_besando_la_Copa_del_Mundo_de_futbol.jpg",
+        "text": "Golden Glove. Casillas with the World Cup trophy during celebrations in Spain, July 2010."
+      }
+    ],
+    "final_standings": { "champions": "ESP", "runners_up": "NED", "third_place": "GER", "fourth_place": "URU" },
+    "statistics": { "total_matches": "64", "total_goals": "145", "attendance": "3178856" },
+    "awards": {
+      "golden_boot": [
+        { "player": "Thomas Muller", "team": "GER", "goals": "5", "assists": "3" },
+        { "player": "David Villa", "team": "ESP", "goals": "5", "assists": "1", "minutes": "635" },
+        { "player": "Wesley Sneijder", "team": "NED", "goals": "5", "assists": "1", "minutes": "652" }
+      ],
+      "golden_ball": [
+        { "player": "Diego Forlan", "team": "URU" },
+        { "player": "Wesley Sneijder", "team": "NED" },
+        { "player": "David Villa", "team": "ESP" }
+      ],
+      "best_young_player": { "player": "Thomas Muller", "team": "GER" },
+      "golden_glove": { "player": "Iker Casillas", "team": "ESP" },
+      "fair_play_team": "ESP"
+    }
+  },
+  {
+    "id": "WC2006",
+    "name": "2006 FIFA World Cup Germany",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2006.png", "start_date": "2006-06-09", "end_date": "2006-07-09" }
+  },
+  {
+    "id": "WC2002",
+    "name": "2002 FIFA World Cup Korea-Japan",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2002.png", "start_date": "2002-05-31", "end_date": "2002-06-10" }
+  },
+  {
+    "id": "WC1998",
+    "name": "1998 FIFA World Cup France",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "1998.png", "start_date": "1998-06-10", "end_date": "1998-07-12" }
+  },
+  {
+    "id": "WC1994",
+    "name": "1994 FIFA World Cup USA",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": true,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "1994.png", "start_date": "1994-06-17", "end_date": "1994-07-17" }
+  },
+  {
+    "id": "WC1990",
+    "name": "1990 FIFA World Cup Italy",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": true,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1990.png", "start_date": "1990-06-08", "end_date": "1990-07-08" }
+  },
+  {
+    "id": "WC1986",
+    "name": "1986 FIFA World Cup Mexico",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": true,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1986.png", "start_date": "1986-05-31", "end_date": "1986-06-29" }
+  },
+  {
+    "id": "WC1982",
+    "name": "1982 FIFA World Cup Spain",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1982.png", "start_date": "1982-06-13", "end_date": "1982-07-11" }
+  },
+  {
+    "id": "WC1978",
+    "name": "1978 FIFA World Cup Argentina",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1978.png", "start_date": "1978-06-01", "end_date": "1978-06-25" }
+  },
+  {
+    "id": "WC1974",
+    "name": "1974 FIFA World Cup Germany",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1974.png", "start_date": "1974-06-13", "end_date": "1974-07-07" }
+  },
+  {
+    "id": "WC1970",
+    "name": "1970 FIFA World Cup Mexico",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1970.png", "start_date": "1970-05-31", "end_date": "1970-06-21" }
+  },
+  {
+    "id": "WC1966",
+    "name": "1966 FIFA World Cup England",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1966.png", "start_date": "1966-07-11", "end_date": "1966-07-30" }
+  },
+  {
+    "id": "WC1962",
+    "name": "1962 FIFA World Cup Chile",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1962.png", "start_date": "1962-05-30", "end_date": "1962-06-17" }
+  },
+  {
+    "id": "WC1958",
+    "name": "1958 FIFA World Cup Sweden",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1958.png", "start_date": "1958-06-08", "end_date": "1958-06-29" }
+  },
+  {
+    "id": "WC1954",
+    "name": "1954 FIFA World Cup Switzerland",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1954.png", "start_date": "1954-06-16", "end_date": "1954-07-04" }
+  },
+  {
+    "id": "WC1950",
+    "name": "1950 FIFA World Cup Brazil",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1950.png", "start_date": "1950-06-24", "end_date": "1950-07-16" }
+  },
+  {
+    "id": "WC1938",
+    "name": "1938 FIFA World Cup France",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1938.png", "start_date": "1938-06-04", "end_date": "1938-06-19" }
+  },
+  {
+    "id": "WC1934",
+    "name": "1934 FIFA World Cup Italy",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1934.png", "start_date": "1934-05-27", "end_date": "1934-06-10" }
+  },
+  {
+    "id": "WC1930",
+    "name": "1930 FIFA World Cup Uruguay",
+    "tournament_type_id": "WC",
+    "active": false,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1930.png", "start_date": "1930-07-13", "end_date": "1930-07-30" }
+  }
+]
