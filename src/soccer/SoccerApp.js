@@ -91,12 +91,16 @@ class SoccerApp extends React.Component {
     }
   }
 
+  getTournamentTypeArray = () => {
+    return TournamentTypeArray.filter((tt) => tt.tournament_subtype !== 'qualification')
+  }
+
   getTournamentTypeArrayByConfed = () => {
     let tta = []
     ConfederationIds.forEach((confed) => {
       tta[confed] = []
     })
-    TournamentTypeArray.forEach((tt) => {
+    this.getTournamentTypeArray().forEach((tt) => {
       if (tt.sport_id === 'SOC') {
         tta[tt.confederation_id].push(tt)
       }
@@ -105,9 +109,10 @@ class SoccerApp extends React.Component {
   }
 
   getTournamentArrayByType = () => {
+    // console.log(this.getTournamentTypeArray())
     let result = []
     let tmp = []
-    TournamentTypeArray.forEach((tt) => {
+    this.getTournamentTypeArray().forEach((tt) => {
       tmp[tt.id] = []
       result[tt.id] = []
     })
@@ -116,7 +121,7 @@ class SoccerApp extends React.Component {
         tmp[doc.tournament_type_id].push(doc)
       }
     })
-    TournamentTypeArray.forEach((tt) => {
+    this.getTournamentTypeArray().forEach((tt) => {
       tmp[tt.id].forEach((t) => {
         result[tt.id].push(t)
       })

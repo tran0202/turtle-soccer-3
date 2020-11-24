@@ -129,6 +129,7 @@
     "id": "WCQ",
     "name": "FIFA World Cup Qualification",
     "confederation_id": "FIFA",
+    "tournament_subtype": "qualification",
     "team_type_id": "MNT",
     "logo_path": "wc_logos",
     "sport_id": "SOC"

@@ -1,9 +1,9 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentArray from '../data/Tournament.json'
-import TournamentDataArray from '../data/TournamentData.json'
-import QualificationTournamentArray from '../data/QualificationTournament.json'
-import TournamentDataCurrent from '../data/TournamentDataCurrent.json'
+import TournamentDataArray from '../data/soccer/TournamentData.json'
+import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
+import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
 import Intro from './Intro'
@@ -12,6 +12,10 @@ import Groups from './Groups'
 import Standings from './Standings'
 import Qualification from './Qualification'
 import { Container } from 'reactstrap'
+
+const getQualificationTournamentArray = () => {
+  return QualificationTournamentWCArray
+}
 
 class TournamentApp extends React.Component {
   constructor(props) {
@@ -57,7 +61,7 @@ class TournamentApp extends React.Component {
   }
 
   getQualificationTournamentArrayByConfed = () => {
-    const qta = QualificationTournamentArray.filter((qt) => qt.tournament_id === this.props.query.id)
+    const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
     let qtabc = []
     qta.forEach((qt) => {
       qtabc[qt.confederation_id] = qt
