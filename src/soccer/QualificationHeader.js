@@ -29,7 +29,7 @@ const PageLinks = (props) => {
 
 class QualificationHeader extends React.Component {
   render() {
-    const { qTournament, tournamentType, query } = this.props
+    const { qTournament, query } = this.props
     const { cid } = query
     const logoSrc = `/assets/images/logos/${cid}.png`
     // console.log('qTournamnent', qTournament)

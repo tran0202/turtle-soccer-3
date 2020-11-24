@@ -1,9 +1,9 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentArray from '../data/Tournament.json'
-import TournamentFormatArray from '../data/TournamentFormat.json'
+import TournamentDataArray from '../data/TournamentData.json'
 import QualificationTournamentArray from '../data/QualificationTournament.json'
-import TournamentFormatCurrent from '../data/TournamentFormatCurrent.json'
+import TournamentDataCurrent from '../data/TournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
 import Intro from './Intro'
@@ -33,12 +33,12 @@ class TournamentApp extends React.Component {
     }
   }
 
-  getTournamentFormat = () => {
-    const tf = TournamentFormatArray.find((tf) => tf.id === this.props.query.id)
+  getTournamentData = () => {
+    const tf = TournamentDataArray.find((tf) => tf.id === this.props.query.id)
     if (tf) {
       return tf
     } else if (this.props.query.id === this.state.currentTournament) {
-      return TournamentFormatCurrent
+      return TournamentDataCurrent
     } else {
       console.log('Tournament format error', tf)
       return { stages: [] }
@@ -49,7 +49,7 @@ class TournamentApp extends React.Component {
     // console.log('this.props.query.id', this.props.query.id)
     const t = TournamentArray.find((t) => t.id === this.props.query.id)
     if (t) {
-      this.setState({ tournament: { ...t, stages: this.getTournamentFormat().stages, qualification: this.getQualificationTournamentArrayByConfed() } })
+      this.setState({ tournament: { ...t, stages: this.getTournamentData().stages, qualification: this.getQualificationTournamentArrayByConfed() } })
       this.getTournamentType(t.tournament_type_id)
     } else {
       console.log('Tournament error', t)

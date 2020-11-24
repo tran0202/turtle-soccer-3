@@ -26,7 +26,7 @@ const ConfederationLinks = (props) => {
 }
 
 const Qualification = (props) => {
-  const { tournament, tournamentType, query } = props
+  const { tournament, query } = props
   const { cid, qPage } = query
   const { qualification } = tournament
   const qualificationTournament = qualification.tournaments[cid]
@@ -38,7 +38,7 @@ const Qualification = (props) => {
       {qualification.length > 0 && (
         <React.Fragment>
           <ConfederationLinks query={query} />
-          {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualificationTournament} tournamentType={tournamentType} query={query} />}
+          {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualificationTournament} query={query} />}
           {qPage === 'intro' && qualificationTournament && <Intro tournament={qualificationTournament} />}
         </React.Fragment>
       )}
