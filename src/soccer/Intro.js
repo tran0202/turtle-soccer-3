@@ -49,6 +49,7 @@ const getGoldenBootDetails = (player) => {
 const Intro = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_standings, statistics, awards, qualified } = tournament
+  if (!details) return null
   const { host, team_count, confed_count, venue_count, city_count } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
   const champions = fs1 ? fs1 : final_standings ? final_standings.champions : null
@@ -114,7 +115,8 @@ const Intro = (props) => {
               Dates
             </Col>
             <Col md="5" sm="7">
-              {moment(details.start_date).format('MMMM D, YYYY')} - {moment(details.end_date).format('MMMM D, YYYY')}
+              {details.start_date ? moment(details.start_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+              {details.end_date ? moment(details.end_date).format('MMMM D, YYYY') : ''}
             </Col>
           </Row>
           {team_count && (
@@ -208,7 +210,9 @@ const Intro = (props) => {
                   Goals scored
                 </Col>
                 <Col md="5" sm="7">
-                  {statistics.total_goals} ({(statistics.total_goals / statistics.total_matches).toFixed(2)} per match)
+                  <NumberFormat value={statistics.total_goals} displayType={'text'} />
+                  &nbsp;(
+                  <NumberFormat value={(statistics.total_goals / statistics.total_matches).toFixed(2)} displayType={'text'} /> per match)
                 </Col>
               </Row>
               <Row className="margin-top-xs">
@@ -339,7 +343,7 @@ const Intro = (props) => {
                       Top Scorer
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.top_scorer.team)} alt={awards.top_scorer.team} />
+                      {awards.top_scorer.team && <img className="flag-sm flag-md" src={getFlagSrc(awards.top_scorer.team)} alt={awards.top_scorer.team} />}
                       &nbsp;{awards.top_scorer.player} {getGoldenBootDetails(awards.top_scorer)}
                     </Col>
                   </Row>

@@ -58,7 +58,7 @@ class Header extends React.Component {
           <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: details.color }}>
             {tournament.name}
           </h1>
-          {moment(details.start_date).format('MMMM D, YYYY')} - {moment(details.end_date).format('MMMM D, YYYY')}
+          {moment(details.start_date).format('MMMM D, YYYY')} &mdash; {moment(details.end_date).format('MMMM D, YYYY')}
           <HeaderLinks tournament={tournament} query={query} />
         </Col>
       </Row>

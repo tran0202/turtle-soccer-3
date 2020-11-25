@@ -22,11 +22,11 @@ const QualifiedRow = (props) => {
     <Row className="no-gutters team-row padding-tb-sm">
       <Col className="col-1">{count + 1}</Col>
       <Col className="col-3 text-uppercase text-left">
-        <img className="flag-sm flag-md" src={getFlagSrc(row.team)} alt={row.team} />
+        {row.team && <img className="flag-sm flag-md" src={getFlagSrc(row.team)} alt={row.team} />}
         &nbsp;&nbsp;{getTeamName(row.team)}
       </Col>
       <Col className="col-3 padding-top-xxs">{row.method}</Col>
-      <Col className="col-3 padding-top-xxs">{moment(row.date).format('MMMM D, YYYY')}</Col>
+      <Col className="col-3 padding-top-xxs">{row.date ? moment(row.date).format('MMMM D, YYYY') : ''}</Col>
       <Col className="col-2 padding-top-xxs">
         {ordinalize(row.appearances)}
         {row.appearances === '1' ? ' (debut)' : ''}
