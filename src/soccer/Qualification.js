@@ -2,6 +2,8 @@ import React from 'react'
 import Intro from './Intro'
 import { qualificationConfedIds } from './Helper'
 import QualificationHeader from './QualificationHeader'
+import Matches from './Matches'
+import Groups from './Groups'
 import { Nav, NavItem, NavLink, Row } from 'reactstrap'
 
 const ConfederationLinks = (props) => {
@@ -26,7 +28,7 @@ const ConfederationLinks = (props) => {
 }
 
 const Qualification = (props) => {
-  const { tournament, query } = props
+  const { tournament, tournamentType, query } = props
   const { cid, qPage } = query
   const { qualification } = tournament
   // console.log('qualification', qualification)
@@ -41,6 +43,8 @@ const Qualification = (props) => {
             <React.Fragment>
               {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}
               {qPage === 'intro' && <Intro tournament={qualification} />}
+              {qPage === 'matches' && <Matches tournament={qualification} />}
+              {qPage === 'groups' && <Groups tournament={qualification} tournamentType={tournamentType} />}
             </React.Fragment>
           )}
         </React.Fragment>

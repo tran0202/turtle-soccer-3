@@ -99,6 +99,15 @@ export const isWinner = (who, match) => {
   }
 }
 
+export const getMatchArrayByDate = (round) => {
+  let tmp = []
+  round.matches &&
+    round.matches.forEach((m) => {
+      tmp.push(m)
+    })
+  return getDateMatchArrayPair(tmp)
+}
+
 export const getDateMatchArrayPair = (matches_array) => {
   let matches = [],
     dates = []
@@ -126,7 +135,7 @@ export const getDateMatchArrayPair = (matches_array) => {
 }
 
 export const DisplaySchedule = (props) => {
-  const { round } = props
+  const { round, showMatchYear } = props
   const { name, dates, matches } = round
   return (
     <React.Fragment>
@@ -139,7 +148,7 @@ export const DisplaySchedule = (props) => {
         dates.map((value) => (
           <Row key={value}>
             <Col sm="12" className="h4-ff3 border-bottom-gray2 margin-top-md">
-              {moment(value).format('dddd, MMMM D')}
+              {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
             </Col>
             {matches[value].map((m, index) => (
               <Col sm="12" className="padding-tb-md border-bottom-gray5" key={index}>
@@ -161,19 +170,25 @@ export const DisplaySchedule = (props) => {
                       {m.city}
                     </span>
                   </Col>
-                  <Col sm="3" xs="3" className="team-name text-uppercase text-right team-name-no-padding-right">
+                  <Col
+                    sm="3"
+                    xs="3"
+                    className={`team-name text-uppercase text-right team-name-no-padding-right${
+                      m.home_aggregate_score < m.away_aggregate_score ? ' gray3' : ''
+                    }`}
+                  >
                     {getTeamName(m.home_team)}
                   </Col>
                   <Col sm="1" xs="1" className="padding-top-sm text-center">
-                    <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />
+                    {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
                   </Col>
                   <Col sm="2" xs="2" className="score text-center score-no-padding-right">
-                    {(!m.home_extra_score || !m.away_extra_score) && (
+                    {(m.home_extra_score == null || m.away_extra_score == null) && (
                       <React.Fragment>
                         {m.home_score}-{m.away_score}
                       </React.Fragment>
                     )}
-                    {m.home_extra_score && m.away_extra_score && (
+                    {m.home_extra_score != null && m.away_extra_score != null && (
                       <React.Fragment>
                         {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
                         <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
@@ -186,11 +201,17 @@ export const DisplaySchedule = (props) => {
                         )}
                       </React.Fragment>
                     )}
+                    {m.home_aggregate_score && m.away_aggregate_score && (
+                      <React.Fragment>
+                        <br />
+                        Agg: {m.home_aggregate_score}-{m.away_aggregate_score}
+                      </React.Fragment>
+                    )}
                   </Col>
                   <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
-                    <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />
+                    {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
                   </Col>
-                  <Col sm="3" xs="3" className="team-name text-uppercase">
+                  <Col sm="3" xs="3" className={`team-name text-uppercase${m.home_aggregate_score > m.away_aggregate_score ? ' gray3' : ''}`}>
                     {getTeamName(m.away_team)}
                   </Col>
                 </Row>

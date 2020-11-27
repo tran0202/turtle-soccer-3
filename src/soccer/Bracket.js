@@ -31,41 +31,41 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.home_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getTeamName(match.home_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {match.home_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {match.home_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
@@ -73,23 +73,23 @@ const BracketBox = (props) => {
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
               &nbsp;
               {match.home_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score > match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
-            {!match.home_extra_score && (
+            {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {match.home_score}
               </Col>
             )}
-            {match.home_extra_score && (
+            {match.home_extra_score != null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.home_score) + parseInt(match.home_extra_score)}
-                {match.home_penalty_score && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
+                {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
               </Col>
             )}
           </Row>
@@ -107,41 +107,41 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.away_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getTeamName(match.away_team)}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {match.away_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {match.away_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
@@ -149,23 +149,23 @@ const BracketBox = (props) => {
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
               &nbsp;
               {match.away_team}
-              {match.home_extra_score && match.away_extra_score && match.home_extra_score < match.away_extra_score && (
+              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
-              {match.home_extra_score &&
-                match.away_extra_score &&
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
-            {!match.away_extra_score && (
+            {match.away_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {match.away_score}
               </Col>
             )}
-            {match.away_extra_score && (
+            {match.away_extra_score != null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.away_score) + parseInt(match.away_extra_score)}
-                {match.away_penalty_score && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
+                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
               </Col>
             )}
           </Row>

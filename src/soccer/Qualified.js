@@ -29,7 +29,7 @@ const QualifiedRow = (props) => {
       <Col className="col-3 padding-top-xxs">{row.date ? moment(row.date).format('MMMM D, YYYY') : ''}</Col>
       <Col className="col-2 padding-top-xxs">
         {ordinalize(row.appearances)}
-        {row.appearances === '1' ? ' (debut)' : ''}
+        {row.appearances === 1 ? ' (debut)' : ''}
       </Col>
     </Row>
   )

@@ -1,0 +1,55 @@
+{
+  "id": "WC2010_AFC",
+  "stages": [
+    {
+      "name": "First Round",
+      "type": "knockout2legged",
+      "show_match_year": true,
+      "rounds": [
+        {
+          "name": "First Leg",
+          "matches": [
+            {
+              "home_team": "MNG",
+              "away_team": "BRU",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2019-06-06",
+              "time": "17:00",
+              "stadium": "MFF Football Centre",
+              "city": "Ulaanbaatar"
+            }
+          ]
+        },
+        {
+          "name": "Second Leg",
+          "round_type": "secondleg",
+          "matches": [
+            {
+              "home_team": "BRU",
+              "away_team": "MNG",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2019-06-11",
+              "time": "20:15",
+              "stadium": "Hassanal Bolkiah National Stadium",
+              "city": "Bandar Seri Begawan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Second Round"
+    },
+    {
+      "name": "Third Round"
+    },
+    {
+      "name": "Fourth Round"
+    },
+    {
+      "name": "Inter-confederation play-offs"
+    }
+  ]
+}

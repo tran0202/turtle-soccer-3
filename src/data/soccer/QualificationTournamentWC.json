@@ -13,14 +13,14 @@
     "details": {
       "start_date": "2019-06-06",
       "end_date": "2022-06-01",
-      "team_count": "211",
-      "confed_count": "6"
+      "team_count": 211,
+      "confed_count": 6
     },
-    "statistics": { "total_matches": "155", "total_goals": "437", "attendance": "1776253" },
+    "statistics": { "total_matches": 155, "total_goals": 437, "attendance": 1776253 },
     "awards": {
-      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": "7" }
+      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": 7 }
     },
-    "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": "1" }]
+    "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": 1 }]
   },
   {
     "id": "WC2022_AFC",
@@ -37,13 +37,13 @@
       "start_date": "2019-06-06",
       "end_date": "2022-03-01",
       "color": "#e5cf1d",
-      "team_count": "46",
-      "confed_count": "1"
+      "team_count": 46,
+      "confed_count": 1
     },
-    "statistics": { "total_matches": "107", "total_goals": "313", "attendance": "1611133" },
+    "statistics": { "total_matches": 107, "total_goals": 313, "attendance": 1611133 },
     "awards": {
-      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": "7" }
+      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": 7 }
     },
-    "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": "1" }]
+    "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": 1 }]
   }
 ]

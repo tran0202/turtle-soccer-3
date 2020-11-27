@@ -1,15 +1,6 @@
 import React from 'react'
-import { DisplaySchedule, getDateMatchArrayPair } from './Helper'
+import { DisplaySchedule, getMatchArrayByDate } from './Helper'
 import Bracket from './Bracket'
-
-const getMatchArrayByDate = (round) => {
-  let tmp = []
-  round.matches &&
-    round.matches.forEach((m) => {
-      tmp.push(m)
-    })
-  return getDateMatchArrayPair(tmp)
-}
 
 const reorderMatches = (stage) => {
   stage.rounds &&
@@ -30,13 +21,13 @@ const reorderMatches = (stage) => {
 }
 
 const Knockout = (props) => {
-  const { stage } = props
-  const newStage = reorderMatches(stage)
+  let { stage } = props
+  stage = reorderMatches(stage)
   return (
     <React.Fragment>
-      <Bracket stage={newStage} />
-      {newStage.rounds &&
-        newStage.rounds.map((r) => {
+      <Bracket stage={stage} />
+      {stage.rounds &&
+        stage.rounds.map((r) => {
           return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r) }} key={r.name} />
         })}
     </React.Fragment>

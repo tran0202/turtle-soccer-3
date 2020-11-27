@@ -1,6 +1,7 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
+import QualificationTournamentDataCurrent from '../data/soccer/QualificationTournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
 import Intro from './Intro'
@@ -19,6 +20,7 @@ class TournamentApp extends React.Component {
       tournament: null,
       tournamentType: null,
       currentTournament: 'WC2022',
+      currentQualificationTournament: 'WC2022_AFC',
     }
   }
 
@@ -31,6 +33,26 @@ class TournamentApp extends React.Component {
     }
   }
 
+  getQualificationTournamentData = () => {
+    const qtd = getQualificationTournamentDataArray().find((qtd) => qtd.id === `${this.props.query.id}_${this.props.query.cid}`)
+    if (qtd) {
+      return qtd
+    } else if (`${this.props.query.id}_${this.props.query.cid}` === this.state.currentQualificationTournament) {
+      return QualificationTournamentDataCurrent
+    } else {
+      console.log('Qualification Tournament format error', qtd)
+      return {}
+    }
+  }
+
+  getQualificationTournament = () => {
+    const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
+    const qt = getQualificationTournamentArray().find((qt) => qt.tournament_id === this.props.query.id && qt.confederation_id === this.props.query.cid)
+    const existed = qt ? true : false
+    // console.log('qt', { ...qt, length: qta.length })
+    return { existed, ...qt, stages: this.getQualificationTournamentData().stages, confed_count: qta.length }
+  }
+
   getTournamentData = () => {
     const tf = getTournamentDataArray().find((tf) => tf.id === this.props.query.id)
     if (tf) {
@@ -39,18 +61,8 @@ class TournamentApp extends React.Component {
       return TournamentDataCurrent
     } else {
       console.log('Tournament format error', tf)
-      return { stages: [] }
+      return {}
     }
-  }
-
-  getQualificationTournament = () => {
-    const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
-    const qt = getQualificationTournamentArray().find((qt) => qt.tournament_id === this.props.query.id && qt.confederation_id === this.props.query.cid)
-    const existed = qt ? true : false
-    const qtd = getQualificationTournamentDataArray().find((qtd) => qtd.id === `${this.props.query.id}_${this.props.query.cid}`)
-    const qtdStages = qtd ? qtd.stages : null
-    // console.log('qt', { ...qt, length: qta.length })
-    return { existed, ...qt, stages: qtdStages, confed_count: qta.length }
   }
 
   getTournament = () => {
