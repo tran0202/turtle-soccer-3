@@ -28,7 +28,7 @@ const Knockout = (props) => {
       <Bracket stage={stage} />
       {stage.rounds &&
         stage.rounds.map((r) => {
-          return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r) }} key={r.name} />
+          return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r, true) }} key={r.name} />
         })}
     </React.Fragment>
   )

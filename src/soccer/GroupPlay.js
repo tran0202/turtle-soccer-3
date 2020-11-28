@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DisplaySchedule, getDateMatchArrayPair } from './Helper'
+import { DisplaySchedule, getMatchArrayByDate } from './Helper'
 import { calculateGroupRankings, collectMatchdayRankings } from './RankingsHelper'
 import Rankings from './Rankings'
 import { Collapse, Row, Col, Button } from 'reactstrap'
@@ -28,15 +28,11 @@ const GroupCollapse = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        <DisplaySchedule round={getMatchArrayByDate(group)} />
+        <DisplaySchedule round={getMatchArrayByDate(group, true)} />
         <Row className="mb-5"></Row>
       </Collapse>
     </React.Fragment>
   )
-}
-
-const getMatchArrayByDate = (group) => {
-  return getDateMatchArrayPair(group.matches)
 }
 
 const GroupPlay = (props) => {

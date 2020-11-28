@@ -99,28 +99,30 @@ export const isWinner = (who, match) => {
   }
 }
 
-export const getMatchArrayByDate = (round) => {
+export const getMatchArrayByDate = (round, sorted) => {
   let tmp = []
   round.matches &&
     round.matches.forEach((m) => {
       tmp.push(m)
     })
-  return getDateMatchArrayPair(tmp)
+  return getDateMatchArrayPair(tmp, sorted)
 }
 
-export const getDateMatchArrayPair = (matches_array) => {
+export const getDateMatchArrayPair = (matches_array, sorted) => {
   let matches = [],
     dates = []
   if (matches_array) {
-    matches_array.sort((a, b) => {
-      if (a.date + a.time < b.date + b.time) {
-        return -1
-      } else if (a.date + a.time > b.date + a.time) {
-        return 1
-      } else {
-        return 0
-      }
-    })
+    if (sorted) {
+      matches_array.sort((a, b) => {
+        if (a.date + a.time < b.date + b.time) {
+          return -1
+        } else if (a.date + a.time > b.date + a.time) {
+          return 1
+        } else {
+          return 0
+        }
+      })
+    }
     matches_array.forEach((t) => {
       if (matches[t.date]) {
         matches[t.date].push(t)
@@ -201,7 +203,8 @@ export const DisplaySchedule = (props) => {
                         )}
                       </React.Fragment>
                     )}
-                    {m.home_aggregate_score && m.away_aggregate_score && (
+                    {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
+                    {m.home_aggregate_score != null && m.away_aggregate_score != null && (
                       <React.Fragment>
                         <br />
                         Agg: {m.home_aggregate_score}-{m.away_aggregate_score}
@@ -257,6 +260,18 @@ export const FairPlayTooltip = (props) => {
       &nbsp;
       <span className="box-tip-text" href="#" id={target}>
         [*]
+      </span>
+    </TurtleTooltip>
+  )
+}
+
+export const AwardedTooltip = (props) => {
+  const { target, content } = props
+  return (
+    <TurtleTooltip target={target} placement="top" content={content}>
+      &nbsp;
+      <span className="box-tip-text" href="#" id={target}>
+        [awd.]
       </span>
     </TurtleTooltip>
   )

@@ -18,6 +18,56 @@
               "time": "17:00",
               "stadium": "MFF Football Centre",
               "city": "Ulaanbaatar"
+            },
+            {
+              "home_team": "MAC",
+              "away_team": "SRI",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2019-06-06",
+              "time": "19:30",
+              "stadium": "Zhuhai Sports Center Stadium",
+              "city": "Zhuhai (China)"
+            },
+            {
+              "home_team": "LAO",
+              "away_team": "BAN",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2019-06-06",
+              "time": "18:30",
+              "stadium": "New Laos National Stadium",
+              "city": "Vientiane"
+            },
+            {
+              "home_team": "MAS",
+              "away_team": "TLS",
+              "home_score": 7,
+              "away_score": 1,
+              "date": "2019-06-07",
+              "time": "20:45",
+              "stadium": "Bukit Jalil National Stadium",
+              "city": "Kuala Lumpur"
+            },
+            {
+              "home_team": "CAM",
+              "away_team": "PAK",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2019-06-06",
+              "time": "18:30",
+              "stadium": "Phnom Penh Olympic Stadium",
+              "city": "Phnom Penh"
+            },
+            {
+              "home_team": "BHU",
+              "away_team": "GUM",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2019-06-06",
+              "time": "18:00",
+              "stadium": "Changlimithang Stadium",
+              "city": "Thimphu"
             }
           ]
         },
@@ -34,6 +84,60 @@
               "time": "20:15",
               "stadium": "Hassanal Bolkiah National Stadium",
               "city": "Bandar Seri Begawan"
+            },
+            {
+              "home_team": "SRI",
+              "away_team": "MAC",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2019-06-11",
+              "time": "15:30",
+              "stadium": "Sugathadasa Stadium",
+              "city": "Colombo",
+              "notes": {
+                "awarded": true,
+                "text": "Awarded: Macau did not send their team for the second leg due to safety reasons following the 2019 Sri Lanka Easter bombings. FIFA announced on June 27, 2019 that the match was declared a 3–0 forfeit victory to Sri Lanka, and consequently qualifying Sri Lanka to the second round."
+              }
+            },
+            {
+              "home_team": "BAN",
+              "away_team": "LAO",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2019-06-11",
+              "time": "19:00",
+              "stadium": "Bangabandhu National Stadium",
+              "city": "Dhaka"
+            },
+            {
+              "home_team": "TLS",
+              "away_team": "MAS",
+              "home_score": 1,
+              "away_score": 5,
+              "date": "2019-06-11",
+              "time": "20:45",
+              "stadium": "Bukit Jalil National Stadium",
+              "city": "Kuala Lumpur (Malaysia)"
+            },
+            {
+              "home_team": "PAK",
+              "away_team": "CAM",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2019-06-11",
+              "time": "19:00",
+              "stadium": "Hamad bin Khalifa Stadium",
+              "city": "Doha (Qatar)"
+            },
+            {
+              "home_team": "GUM",
+              "away_team": "BHU",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "2019-06-11",
+              "time": "15:15",
+              "stadium": "Guam F.A. National Training Center",
+              "city": "Dededo"
             }
           ]
         }
