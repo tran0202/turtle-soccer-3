@@ -6,32 +6,36 @@ import moment from 'moment'
 const HeaderLinks = (props) => {
   const { tournament, query } = props
   const { page } = query
-  const { id, active, qualification } = tournament
+  const { id, active, qualification, stages } = tournament
   return (
     <Nav className="justify-content-center">
-      {qualification.confed_count > 0 && active && (
+      {qualification.confed_length > 0 && active && (
         <NavItem>
           <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
             Qualification
           </NavLink>
         </NavItem>
       )}
-      <NavItem>
-        <NavLink disabled={page === 'matches'} href={`/soccer/tournament/${id}/matches`}>
-          Matches
-        </NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
-          Groups
-        </NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink disabled={page === 'standings'} href={`/soccer/tournament/${id}/standings`}>
-          Final standings
-        </NavLink>
-      </NavItem>
-      {qualification.confed_count > 0 && !active && (
+      {stages && (
+        <React.Fragment>
+          <NavItem>
+            <NavLink disabled={page === 'matches'} href={`/soccer/tournament/${id}/matches`}>
+              Matches
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
+              Groups
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink disabled={page === 'standings'} href={`/soccer/tournament/${id}/standings`}>
+              Final standings
+            </NavLink>
+          </NavItem>
+        </React.Fragment>
+      )}
+      {qualification.confed_length > 0 && !active && (
         <NavItem>
           <NavLink disabled={page === 'qualification'} href={`/soccer/tournament/${id}/qualification`}>
             Qualification

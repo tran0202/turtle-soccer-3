@@ -1,17 +1,16 @@
 import React from 'react'
 import Intro from './Intro'
-import { qualificationConfedIds } from './Helper'
 import QualificationHeader from './QualificationHeader'
 import Matches from './Matches'
 import Groups from './Groups'
 import { Nav, NavItem, NavLink, Row } from 'reactstrap'
 
 const ConfederationLinks = (props) => {
-  const { query } = props
+  const { query, confed_names } = props
   const { id, cid } = query
   return (
     <Nav className="justify-content-center qualification-confed-links">
-      {qualificationConfedIds().map((confed) => {
+      {confed_names.map((confed) => {
         const _confed = confed !== 'QUALIFIED' ? confed : ''
         return (
           <NavItem key={confed}>
@@ -36,9 +35,9 @@ const Qualification = (props) => {
   return (
     <React.Fragment>
       <Row className="mt-1"></Row>
-      {qualification.confed_count > 0 && (
+      {qualification.confed_length > 0 && (
         <React.Fragment>
-          <ConfederationLinks query={query} />
+          <ConfederationLinks query={query} confed_names={qualification.confed_names} />
           {qualification.existed && (
             <React.Fragment>
               {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}

@@ -125,7 +125,7 @@ const Intro = (props) => {
                 Teams
               </Col>
               <Col md="5" sm="7">
-                {team_count} (from {confed_count} confederation{confed_count !== '1' ? 's' : ''})
+                {team_count} (from {confed_count} confederation{confed_count !== 1 ? 's' : ''})
               </Col>
             </Row>
           )}

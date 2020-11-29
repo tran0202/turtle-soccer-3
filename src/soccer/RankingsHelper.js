@@ -99,6 +99,7 @@ const accumulateRanking = (team, match, config) => {
 }
 
 const calculateGroupTeamRanking = (team, match, config) => {
+  if (!team) return
   const lr = findLastRanking(team)
   const newRanking = { ...lr }
   accumulateRanking(newRanking, match, config)

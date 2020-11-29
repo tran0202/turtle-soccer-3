@@ -47,10 +47,14 @@ class TournamentApp extends React.Component {
 
   getQualificationTournament = () => {
     const qta = getQualificationTournamentArray().filter((qt) => qt.tournament_id === this.props.query.id)
+    let confed_names = []
+    qta.forEach((qt) => {
+      confed_names.push(qt.confederation_id)
+    })
     const qt = getQualificationTournamentArray().find((qt) => qt.tournament_id === this.props.query.id && qt.confederation_id === this.props.query.cid)
     const existed = qt ? true : false
     // console.log('qt', { ...qt, length: qta.length })
-    return { existed, ...qt, stages: this.getQualificationTournamentData().stages, confed_count: qta.length }
+    return { existed, ...qt, stages: this.getQualificationTournamentData().stages, confed_length: qta.length, confed_names }
   }
 
   getTournamentData = () => {

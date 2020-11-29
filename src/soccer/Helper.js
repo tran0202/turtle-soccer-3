@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import TeamArray from '../data/soccer/Team.json'
 import NationArray from '../data/Nation.json'
-import ConfederationIds from '../data/soccer/ConfederationId.json'
 import TournamentArray from '../data/soccer/Tournament.json'
 import TournamentWCArray from '../data/soccer/TournamentWC.json'
 import TournamentDataWCArray from '../data/soccer/TournamentDataWC.json'
@@ -26,12 +25,6 @@ export const getTournamentConfig = (tournament) => {
     statistics: tournament.statistics,
     awards: tournament.awards,
   }
-}
-
-export const qualificationConfedIds = () => {
-  const qc = ConfederationIds.filter((c) => c !== 'FIFA')
-  qc.push('QUALIFIED')
-  return qc
 }
 
 export const getTournamentArray = () => {

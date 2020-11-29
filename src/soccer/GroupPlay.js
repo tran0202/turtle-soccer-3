@@ -44,7 +44,7 @@ const GroupPlay = (props) => {
   return (
     <React.Fragment>
       <GroupCollapse group={group} />
-      <Rankings rounds={[group]} />
+      <Rankings rounds={[group]} config={config} />
     </React.Fragment>
   )
 }

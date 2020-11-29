@@ -602,10 +602,10 @@ a:hover.hover-pointer {
 .ranking-striped {
   background-color: #ebebeb;
 }
-.advanced-second-round-striped {
+.advanced-next-round-striped {
   background-color: #e3fae3;
 }
-.advanced-third-place-striped {
+.advanced-wild-card-striped {
   background-color: #bbf3ff;
 }
 .advanced-third-round-striped {

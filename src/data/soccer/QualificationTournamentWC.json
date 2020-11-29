@@ -31,6 +31,7 @@
     "active": true,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
     "details": {

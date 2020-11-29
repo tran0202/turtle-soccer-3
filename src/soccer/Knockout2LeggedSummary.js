@@ -97,7 +97,7 @@ const collectKnockout2LeggedMatches = (stage) => {
       })
     })
   }
-  console.log('matchPairs', matchPairs)
+  // console.log('matchPairs', matchPairs)
   return matchPairs
 }
 

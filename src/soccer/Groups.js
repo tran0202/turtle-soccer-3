@@ -8,16 +8,16 @@ const MultipleGroupStage = () => {
 }
 
 const getFormat = (rrStage) => {
-  const { groups } = rrStage
+  const { groups, advancement } = rrStage
   const groupCount = groups ? groups.length : 0
   const teamCount = groups && groups[0] && groups[0].teams ? groups[0].teams.length : 0
-  return { groupCount, teamCount, totalCount: groupCount * teamCount }
+  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement }
 }
 
 const TournamentFormat = (props) => {
-  const { format, config, tournamentType } = props
+  const { config, tournamentType } = props
   return (
-    format.teamCount !== 0 && (
+    config.teamCount !== 0 && (
       <Row className="mt-3 mb-3 text-left tournament-format">
         <Col xs="9">
           <Row>
@@ -28,8 +28,9 @@ const TournamentFormat = (props) => {
             </Col>
             <Col xs="12">
               <p>
-                <strong>Format:</strong> {format.totalCount} teams were divided into {format.groupCount} groups of {format.teamCount} teams. Each group played a
-                round-robin schedule, and the top 2 teams advanced to the knockout stage.
+                <strong>Format:</strong> {config.totalCount} teams are divided into {config.groupCount} groups of {config.teamCount} teams. Each group plays a
+                round-robin schedule. The {config.advancement && config.advancement.teams ? config.advancement.teams.text : 'top 2 teams'} advance to the&nbsp;
+                {config.advancement ? config.advancement.next_round : 'knockout stage'}. {config.advancement ? config.advancement.extra : ''}
               </p>
             </Col>
             <Col xs="12">
@@ -43,17 +44,23 @@ const TournamentFormat = (props) => {
                       return (
                         <React.Fragment key={index}>
                           <li>Points</li>
-                          <li>Goal difference</li>
-                          <li>Number of goals scored</li>
+                          <li>Overall goal difference</li>
+                          <li>Overall goals scored</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'head2head') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points between the teams in question</li>
-                          <li>Goal difference between the teams in question</li>
-                          <li>Number of goals scored between the teams in question</li>
+                          <li>Points in matches between tied teams</li>
+                          <li>Goal difference in matches between tied teams</li>
+                          <li>Goals scored in matches between tied teams</li>
                         </React.Fragment>
+                      )
+                    } else if (tb === 'awaygoals') {
+                      return (
+                        <li key={index}>
+                          Away goals scored in matches between tied teams (if the tie is only between two teams in home-and-away league format)
+                        </li>
                       )
                     } else if (tb === 'fairplay') {
                       return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
@@ -85,10 +92,10 @@ const Groups = (props) => {
   const rrStages = getRoundRobinStage(stages)
   // console.log('rrStages', rrStages)
   const format = rrStages && rrStages.length > 0 ? getFormat(rrStages[0]) : null
-  const config = getTournamentConfig(tournament)
+  const config = { ...getTournamentConfig(tournament), ...format }
   return (
     <React.Fragment>
-      {format && <TournamentFormat format={format} config={config} tournamentType={tournamentType} />}
+      {format && <TournamentFormat config={config} tournamentType={tournamentType} />}
       {!format && <Row className="mt-3"></Row>}
       {rrStages && rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
       {rrStages && rrStages.length > 1 && <MultipleGroupStage />}

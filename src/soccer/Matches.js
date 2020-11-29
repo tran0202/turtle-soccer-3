@@ -8,7 +8,9 @@ import classnames from 'classnames'
 const Matches = (props) => {
   const { tournament } = props
   const { stages } = tournament
-  const defaultStage = stages && stages.length > 0 ? stages[0].name.replace(' ', '-') : 'Group-Stage'
+  const defaultStageIndex = stages && stages.length > 0 ? stages.findIndex((s) => s.default) : -1
+  const defaultStage =
+    stages && stages.length > 0 ? (defaultStageIndex > -1 ? stages[defaultStageIndex].name.replace(' ', '-') : stages[0].name.replace(' ', '-')) : 'Group-Stage'
   const [activeTab, setActiveTab] = useState(defaultStage)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)

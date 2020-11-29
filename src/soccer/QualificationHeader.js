@@ -2,8 +2,15 @@ import React from 'react'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
+const hasAnyGroups = (qTournament) => {
+  if (!qTournament.stages) {
+    return false
+  }
+  return qTournament.stages.some((s) => s.type === 'roundrobin')
+}
+
 const PageLinks = (props) => {
-  const { query } = props
+  const { query, qTournament } = props
   const { id, cid, qPage } = query
 
   return (
@@ -18,11 +25,13 @@ const PageLinks = (props) => {
           Matches
         </NavLink>
       </NavItem>
-      <NavItem>
-        <NavLink disabled={qPage === 'groups'} href={`/soccer/tournament/${id}/qualification/${cid}/groups`}>
-          Groups
-        </NavLink>
-      </NavItem>
+      {hasAnyGroups(qTournament) && (
+        <NavItem>
+          <NavLink disabled={qPage === 'groups'} href={`/soccer/tournament/${id}/qualification/${cid}/groups`}>
+            Groups
+          </NavLink>
+        </NavItem>
+      )}
     </Nav>
   )
 }
@@ -45,7 +54,7 @@ class QualificationHeader extends React.Component {
                 {qTournament.name}
               </h1>
               {moment(qTournament.details.start_date).format('MMMM D, YYYY')} - {moment(qTournament.details.end_date).format('MMMM D, YYYY')}
-              <PageLinks query={query} />
+              <PageLinks query={query} qTournament={qTournament} />
             </Col>
           </Row>
         )}

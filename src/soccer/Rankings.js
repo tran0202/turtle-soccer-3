@@ -66,15 +66,41 @@ const RankingRow2 = (props) => {
   )
 }
 
+const isAdvancedNextRound = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.auto) {
+    let flag = false
+    config.advancement.teams.auto.forEach((a) => (flag = flag || row.r === a))
+    return flag
+  }
+  return row.r === 1 || row.r === 2
+}
+
+const isAdvancedWildCard = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.wild_card) {
+    let flag = false
+    config.advancement.teams.wild_card.forEach((w) => (flag = flag || row.r === w))
+    return flag
+  }
+  return false
+}
+
+const getRowStriped = (row, config) => {
+  return isAdvancedNextRound(row, config) ? ' advanced-next-round-striped' : isAdvancedWildCard(row, config) ? ' advanced-wild-card-striped' : ''
+}
+
 export const RankingRow = (props) => {
-  const { row, ranking_type } = props
-  const advanced_second_round_striped = ranking_type === 'group' && (row.r === 1 || row.r === 2) ? ' advanced-second-round-striped' : ''
+  const { row, ranking_type, config } = props
+  // console.log('config', config)
+  // const row_striped = ranking_type === 'group' && isAdvancedNextRound(row, config) ? ' advanced-next-round-striped' : ''
+  const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
   const gold = ranking_type === 'round' && row.r === 1 ? ' gold' : ''
   const silver = ranking_type === 'round' && row.r === 2 ? ' silver' : ''
   const bronze = ranking_type === 'round' && row.r === 3 ? ' bronze' : ''
   return (
-    <Row className={`no-gutters ranking-tbl team-row text-center${advanced_second_round_striped}${gold}${silver}${bronze}`}>
+    <Row className={`no-gutters ranking-tbl team-row text-center${row_striped}${gold}${silver}${bronze}`}>
       <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>{row.r ? row.r : row[0].r}</Col>
       <Col className="ranking-row col-box-95 padding-tb-md">
         {row.r && <RankingRow2 row={row} ranking_type={ranking_type} />}
@@ -85,20 +111,20 @@ export const RankingRow = (props) => {
 }
 
 const RankingRound = (props) => {
-  const { round } = props
+  const { round, config } = props
   createDrawPool(round)
   updateDraws(round)
   updateFinalRankings(round)
   return (
     <React.Fragment>
       <RankingRowSeparate round={round} />
-      {round.final_rankings && round.final_rankings.map((r, index) => <RankingRow row={r} ranking_type={round.ranking_type} key={index} />)}
+      {round.final_rankings && round.final_rankings.map((r, index) => <RankingRow row={r} ranking_type={round.ranking_type} config={config} key={index} />)}
     </React.Fragment>
   )
 }
 
 const Rankings = (props) => {
-  const { rounds } = props
+  const { rounds, config } = props
   return (
     <React.Fragment>
       <Row className="box-xl mb-5">
@@ -106,7 +132,7 @@ const Rankings = (props) => {
           <Row className="mt-4"></Row>
           <RankingHead />
           {rounds.map((r, index) => (
-            <RankingRound round={r} key={index} />
+            <RankingRound round={r} config={config} key={index} />
           ))}
         </Col>
       </Row>

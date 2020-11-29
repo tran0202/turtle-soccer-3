@@ -66,6 +66,7 @@
   { "id": "PAK", "name": "Pakistan", "team_type_id": "MNT", "nation_id": "PAK", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "SRI", "name": "Sri Lanka", "team_type_id": "MNT", "nation_id": "SRI", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "TLS", "name": "Timor-Leste", "team_type_id": "MNT", "nation_id": "TLS", "parent_team_id": "", "club_code": "", "official_name": "" },
+  { "id": "MDV", "name": "Maldives", "team_type_id": "MNT", "nation_id": "MDV", "parent_team_id": "", "club_code": "", "official_name": "" },
 
   { "id": "213", "name": "Czech Republic", "team_type_id": "MNT", "nation_id": "55", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "215", "name": "Ukraine", "team_type_id": "MNT", "nation_id": "199", "parent_team_id": "", "club_code": "", "official_name": "" },
@@ -1582,6 +1583,5 @@
   { "id": "1116", "name": "Yemen", "team_type_id": "MNT", "nation_id": "209", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "1117", "name": "Nepal", "team_type_id": "MNT", "nation_id": "134", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "1125", "name": "Tajikistan", "team_type_id": "MNT", "nation_id": "187", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "1126", "name": "Maldives", "team_type_id": "MNT", "nation_id": "120", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "1128", "name": "Afghanistan", "team_type_id": "MNT", "nation_id": "1", "parent_team_id": "", "club_code": "", "official_name": "" }
 ]
