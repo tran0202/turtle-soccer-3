@@ -93,7 +93,6 @@ const getRowStriped = (row, config) => {
 export const RankingRow = (props) => {
   const { row, ranking_type, config } = props
   // console.log('config', config)
-  // const row_striped = ranking_type === 'group' && isAdvancedNextRound(row, config) ? ' advanced-next-round-striped' : ''
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
   const gold = ranking_type === 'round' && row.r === 1 ? ' gold' : ''
@@ -131,9 +130,7 @@ const Rankings = (props) => {
         <Col xs={{ size: 10, offset: 1 }}>
           <Row className="mt-4"></Row>
           <RankingHead />
-          {rounds.map((r, index) => (
-            <RankingRound round={r} config={config} key={index} />
-          ))}
+          {rounds && rounds.map((r, index) => <RankingRound round={r} config={config} key={index} />)}
         </Col>
       </Row>
     </React.Fragment>

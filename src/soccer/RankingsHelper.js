@@ -339,3 +339,21 @@ export const updateFinalRankings = (round) => {
     round.final_rankings = newFinalRankings
   }
 }
+
+export const cloneRanking = (ranking) => {
+  return {
+    d: ranking.d,
+    fp: ranking.fp,
+    ga: ranking.ga,
+    gd: ranking.gd,
+    gf: ranking.gf,
+    h2hm: ranking.h2hm,
+    id: ranking.id,
+    l: ranking.l,
+    md: ranking.md,
+    mp: ranking.mp,
+    pts: ranking.pts,
+    r: 1,
+    w: ranking.w,
+  }
+}

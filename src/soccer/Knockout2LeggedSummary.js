@@ -6,13 +6,13 @@ import { Row, Col } from 'reactstrap'
 const SummaryHead = () => {
   return (
     <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
-      <Col className="col-2"></Col>
-      <Col className="col-1"></Col>
-      <Col className="col-2">1st Leg</Col>
-      <Col className="col-2">2nd Leg</Col>
-      <Col className="col-2">Aggregate</Col>
-      <Col className="col-1"></Col>
-      <Col className="col-2"></Col>
+      <Col className="col-box-25"></Col>
+      <Col className="col-box-10"></Col>
+      <Col className="col-box-10">Leg1</Col>
+      <Col className="col-box-10">Leg2</Col>
+      <Col className="col-box-10">Agg</Col>
+      <Col className="col-box-10"></Col>
+      <Col className="col-box-25"></Col>
     </Row>
   )
 }
@@ -22,16 +22,16 @@ const SummaryRow = (props) => {
   return (
     <Row className="padding-tb-md border-bottom-gray5">
       <Col
-        sm="2"
-        xs="2"
-        className={`team-name text-uppercase text-right team-name-no-padding-right${row.home_aggregate_score < row.away_aggregate_score ? ' gray3' : ''}`}
+        className={`team-name text-uppercase text-right team-name-no-padding-right col-box-25${
+          row.home_aggregate_score < row.away_aggregate_score ? ' gray3' : ''
+        }`}
       >
         {getTeamName(row.home_team)}
       </Col>
-      <Col sm="1" xs="1" className="padding-top-sm text-center">
+      <Col className="padding-top-sm text-center col-box-10">
         {row.home_team && <img className="flag-sm flag-md" src={getFlagSrc(row.home_team)} alt={row.home_team} />}
       </Col>
-      <Col sm="2" xs="2" className="score text-center score-no-padding-right">
+      <Col className="score text-center score-no-padding-right col-box-10">
         {row.home_1st_leg_score != null && row.away_1st_leg_score != null && (
           <React.Fragment>
             {row.home_1st_leg_score}-{row.away_1st_leg_score}
@@ -41,7 +41,7 @@ const SummaryRow = (props) => {
           </React.Fragment>
         )}
       </Col>
-      <Col sm="2" xs="2" className="score text-center score-no-padding-right">
+      <Col className="score text-center score-no-padding-right col-box-10">
         {row.home_2nd_leg_score != null && row.away_2nd_leg_score != null && (
           <React.Fragment>
             {row.home_2nd_leg_score}-{row.away_2nd_leg_score}
@@ -51,17 +51,17 @@ const SummaryRow = (props) => {
           </React.Fragment>
         )}
       </Col>
-      <Col sm="2" xs="2" className="score text-center score-no-padding-right">
+      <Col className="score text-center score-no-padding-right col-box-10">
         {row.home_aggregate_score != null && row.away_aggregate_score != null && (
           <React.Fragment>
             {row.home_aggregate_score}-{row.away_aggregate_score}
           </React.Fragment>
         )}
       </Col>
-      <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
+      <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
         {row.away_team && <img className="flag-sm flag-md" src={getFlagSrc(row.away_team)} alt={row.away_team} />}
       </Col>
-      <Col sm="2" xs="2" className={`team-name text-uppercase${row.home_aggregate_score > row.away_aggregate_score ? ' gray3' : ''}`}>
+      <Col className={`team-name text-uppercase col-box-25${row.home_aggregate_score > row.away_aggregate_score ? ' gray3' : ''}`}>
         {getTeamName(row.away_team)}
       </Col>
     </Row>
@@ -112,7 +112,7 @@ const Knockout2LeggedSummary = (props) => {
         </Col>
       </Row>
       <Row className="box-xl mb-5">
-        <Col xs={{ size: 10, offset: 1 }}>
+        <Col>
           <Row className="mt-4"></Row>
           <SummaryHead />
           {matchPairs && matchPairs.map((r, index) => <SummaryRow row={r} key={index} />)}

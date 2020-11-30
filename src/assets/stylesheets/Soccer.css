@@ -122,18 +122,6 @@
   margin-bottom: 2rem;
 }
 
-@media (max-width: 992px) {
-  .team-name-no-padding-right,
-  .score-no-padding-right {
-    padding-right: 0;
-  }
-
-  .team-name-no-padding-left,
-  .flag-no-padding-left {
-    padding-left: 0;
-  }
-}
-
 .box-time {
   font-size: 0.75rem;
   font-weight: 100;
@@ -410,6 +398,18 @@
   .col-box-xl-95 {
     flex: 0 0 95%;
     max-width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-name-no-padding-right,
+  .score-no-padding-right {
+    padding-right: 0;
+  }
+
+  .team-name-no-padding-left,
+  .flag-no-padding-left {
+    padding-left: 0;
   }
 }
 
