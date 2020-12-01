@@ -4,7 +4,7 @@ import Rankings from './Rankings'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 
 const GroupCollapse = (props) => {
-  const { group } = props
+  const { group, config } = props
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -27,7 +27,7 @@ const GroupCollapse = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        <DisplaySchedule round={getMatchArrayByDate(group, true)} />
+        <DisplaySchedule round={getMatchArrayByDate(group, true)} showMatchYear={config.show_match_year} />
         <Row className="mb-5"></Row>
       </Collapse>
     </React.Fragment>
@@ -38,7 +38,7 @@ const GroupPlay = (props) => {
   const { group, config } = props
   return (
     <React.Fragment>
-      <GroupCollapse group={group} />
+      <GroupCollapse group={group} config={config} />
       <Rankings rounds={[group]} config={config} />
     </React.Fragment>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { createDrawPool, updateDraws, updateFinalRankings } from './RankingsHelper'
-import { getFlagSrc, getTeamName, FairPlayTooltip } from './Helper'
+import { getFlagSrc, getTeamName, FairPlayTooltip, WildCardTooltip } from './Helper'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
@@ -66,6 +66,30 @@ const RankingRow2 = (props) => {
   )
 }
 
+const isWildCardRuleExisted = (row, config) => {
+  if (!row) return false
+  if (
+    config &&
+    config.advancement &&
+    config.advancement.teams &&
+    config.advancement.teams.wild_card &&
+    config.advancement.teams.wild_card.count &&
+    config.advancement.teams.wild_card.count_extra &&
+    config.advancement.teams.wild_card.text_extra
+  ) {
+    return true
+  }
+  return false
+}
+
+const isWildCardExtraRow = (row, config) => {
+  if (!row) return false
+  if (isWildCardRuleExisted(row, config)) {
+    return row.r === config.advancement.teams.wild_card.count + config.advancement.teams.wild_card.count_extra
+  }
+  return false
+}
+
 const isAdvancedNextRound = (row, config) => {
   if (!row) return false
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.auto) {
@@ -78,10 +102,8 @@ const isAdvancedNextRound = (row, config) => {
 
 const isAdvancedWildCard = (row, config) => {
   if (!row) return false
-  if (config && config.advancement && config.advancement.teams && config.advancement.teams.wild_card) {
-    let flag = false
-    config.advancement.teams.wild_card.forEach((w) => (flag = flag || row.r === w))
-    return flag
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.wild_card && config.advancement.teams.wild_card.pos) {
+    return row.r === config.advancement.teams.wild_card.pos
   }
   return false
 }
@@ -90,17 +112,36 @@ const getRowStriped = (row, config) => {
   return isAdvancedNextRound(row, config) ? ' advanced-next-round-striped' : isAdvancedWildCard(row, config) ? ' advanced-wild-card-striped' : ''
 }
 
+const getWildCardRowStriped = (row, config) => {
+  if (!row) return ''
+  if (isWildCardRuleExisted(row, config)) {
+    if (row.r <= config.advancement.teams.wild_card.count) {
+      return ' advanced-next-round-striped'
+    } else if (isWildCardExtraRow(row, config)) {
+      return ' advanced-wild-card-striped'
+    } else {
+      return ''
+    }
+  }
+  return ''
+}
+
 export const RankingRow = (props) => {
   const { row, ranking_type, config } = props
   // console.log('config', config)
-  const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ''
+  const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
   const gold = ranking_type === 'round' && row.r === 1 ? ' gold' : ''
   const silver = ranking_type === 'round' && row.r === 2 ? ' silver' : ''
   const bronze = ranking_type === 'round' && row.r === 3 ? ' bronze' : ''
   return (
     <Row className={`no-gutters ranking-tbl team-row text-center${row_striped}${gold}${silver}${bronze}`}>
-      <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>{row.r ? row.r : row[0].r}</Col>
+      <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>
+        {row.r ? row.r : row[0].r}
+        {ranking_type === 'wildcard' && isWildCardExtraRow(row, config) && (
+          <WildCardTooltip target={`wildcardTooltip-${row.r ? row.r : row[0].r}`} content={config.advancement.teams.wild_card.text_extra} />
+        )}
+      </Col>
       <Col className="ranking-row col-box-95 padding-tb-md">
         {row.r && <RankingRow2 row={row} ranking_type={ranking_type} />}
         {!row.r && row.map((r) => <RankingRow2 row={r} ranking_type={ranking_type} key={r.id} />)}

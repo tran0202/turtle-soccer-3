@@ -222,55 +222,44 @@ export const DisplaySchedule = (props) => {
 export const AetTooltip = (props) => {
   const { target, anchor } = props
   const content = 'after extra time'
-  return (
-    <TurtleTooltip target={target} placement="top" content={content}>
-      &nbsp;
-      <span className="box-tip-text" href="#" id={target}>
-        {anchor}
-      </span>
-    </TurtleTooltip>
-  )
+  return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const PenTooltip = (props) => {
   const { target, anchor } = props
   const content = 'penalty shoot-out'
-  return (
-    <TurtleTooltip target={target} placement="top" content={content}>
-      &nbsp;
-      <span className="box-tip-text" href="#" id={target}>
-        {anchor}
-      </span>
-    </TurtleTooltip>
-  )
+  return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const FairPlayTooltip = (props) => {
   const { target, points } = props
   const content = `fair play points: ${points}`
-  return (
-    <TurtleTooltip target={target} placement="top" content={content}>
-      &nbsp;
-      <span className="box-tip-text" href="#" id={target}>
-        [*]
-      </span>
-    </TurtleTooltip>
-  )
+  return <TopTooltip target={target} content={content} />
 }
 
 export const AwardedTooltip = (props) => {
   const { target, content } = props
+  return <TopTooltip target={target} content={content} anchor="[awd.]" />
+}
+
+export const WildCardTooltip = (props) => {
+  const { target, content } = props
+  return <TopTooltip target={target} content={content} />
+}
+
+export const TopTooltip = (props) => {
+  const { target, content, anchor } = props
   return (
     <TurtleTooltip target={target} placement="top" content={content}>
       &nbsp;
       <span className="box-tip-text" href="#" id={target}>
-        [awd.]
+        {anchor ? anchor : '[*]'}
       </span>
     </TurtleTooltip>
   )
 }
 
-const TurtleTooltip = (props) => {
+export const TurtleTooltip = (props) => {
   const { target, placement, content } = props
   const [tooltipOpen, setTooltipOpen] = useState(false)
   const toggle = () => setTooltipOpen(!tooltipOpen)
