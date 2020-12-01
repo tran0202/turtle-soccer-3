@@ -20,11 +20,13 @@ const PageLinks = (props) => {
           Introduction
         </NavLink>
       </NavItem>
-      <NavItem>
-        <NavLink disabled={qPage === 'matches'} href={`/soccer/tournament/${id}/qualification/${cid}/matches`}>
-          Matches
-        </NavLink>
-      </NavItem>
+      {qTournament.stages && (
+        <NavItem>
+          <NavLink disabled={qPage === 'matches'} href={`/soccer/tournament/${id}/qualification/${cid}/matches`}>
+            Matches
+          </NavLink>
+        </NavItem>
+      )}
       {hasAnyGroups(qTournament) && (
         <NavItem>
           <NavLink disabled={qPage === 'groups'} href={`/soccer/tournament/${id}/qualification/${cid}/groups`}>
@@ -50,10 +52,11 @@ class QualificationHeader extends React.Component {
               <img src={logoSrc} alt={cid} className="img-fluid" />
             </Col>
             <Col lg="10" md="9" sm="9">
-              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: qTournament.details.color }}>
+              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: qTournament.details ? qTournament.details.color : '#000' }}>
                 {qTournament.name}
               </h1>
-              {moment(qTournament.details.start_date).format('MMMM D, YYYY')} - {moment(qTournament.details.end_date).format('MMMM D, YYYY')}
+              {qTournament.details && qTournament.details.start_date && moment(qTournament.details.start_date).format('MMMM D, YYYY')} &mdash;&nbsp;
+              {qTournament.details && qTournament.details.end_date && moment(qTournament.details.end_date).format('MMMM D, YYYY')}
               <PageLinks query={query} qTournament={qTournament} />
             </Col>
           </Row>

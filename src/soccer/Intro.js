@@ -340,11 +340,15 @@ const Intro = (props) => {
                 <React.Fragment>
                   <Row className="margin-top-xs">
                     <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
-                      Top Scorer
+                      Top Scorer{awards.top_scorer.length > 1 ? 's' : ''}
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      {awards.top_scorer.team && <img className="flag-sm flag-md" src={getFlagSrc(awards.top_scorer.team)} alt={awards.top_scorer.team} />}
-                      &nbsp;{awards.top_scorer.player} {getGoldenBootDetails(awards.top_scorer)}
+                      {awards.top_scorer.map((ts) => (
+                        <Row key={ts.player}>
+                          {ts.team && <img className="flag-sm flag-md" src={getFlagSrc(ts.team)} alt={ts.team} />}
+                          &nbsp;{ts.player} {getGoldenBootDetails(ts)}
+                        </Row>
+                      ))}
                     </Col>
                   </Row>
                 </React.Fragment>

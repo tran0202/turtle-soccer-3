@@ -18,7 +18,7 @@
     },
     "statistics": { "total_matches": 155, "total_goals": 437, "attendance": 1776253 },
     "awards": {
-      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": 7 }
+      "top_scorer": [{ "player": "Omar Al Somah", "team": "SYR", "goals": 7 }]
     },
     "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": 1 }]
   },
@@ -34,17 +34,33 @@
     "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": {
-      "start_date": "2019-06-06",
-      "end_date": "2022-03-01",
-      "color": "#e5cf1d",
-      "team_count": 46,
-      "confed_count": 1
-    },
+    "details": { "start_date": "2019-06-06", "end_date": "2022-03-01", "color": "#e5cf1d", "team_count": 46, "confed_count": 1 },
     "statistics": { "total_matches": 107, "total_goals": 313, "attendance": 1611133 },
     "awards": {
-      "top_scorer": { "player": "Omar Al Somah", "team": "SYR", "goals": 7 }
+      "top_scorer": [{ "player": "Omar Al Somah", "team": "SYR", "goals": 7 }]
     },
     "qualified": [{ "team": "QAT", "method": "Hosts", "date": "2010-12-02", "appearances": 1 }]
+  },
+  {
+    "id": "WC2022_CAF",
+    "name": "2022 FIFA World Cup - CAF Qualification",
+    "tournament_type_id": "WCQ",
+    "tournament_id": "WC2022",
+    "confederation_id": "CAF",
+    "active": true,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "start_date": "2019-09-04", "end_date": "2021-11-16", "color": "#000000", "team_count": 54, "confed_count": 1 },
+    "statistics": { "total_matches": 28, "total_goals": 57, "attendance": 165000 },
+    "awards": {
+      "top_scorer": [
+        { "player": "Joseph Mendes", "team": "GNB", "goals": 3 },
+        { "player": "Meddie Kagere", "team": "RWA", "goals": 3 },
+        { "player": "Ramadan Agab", "team": "SDN", "goals": 3 }
+      ]
+    }
   }
 ]
