@@ -9,9 +9,9 @@ const Matches = (props) => {
   const { tournament } = props
   const { stages } = tournament
   const defaultStageIndex = stages && stages.length > 0 ? stages.findIndex((s) => s.default) : -1
-  const defaultStage =
-    stages && stages.length > 0 ? (defaultStageIndex > -1 ? stages[defaultStageIndex].name.replace(' ', '-') : stages[0].name.replace(' ', '-')) : 'Group-Stage'
-  const [activeTab, setActiveTab] = useState(defaultStage)
+  const defaultStageName = stages && stages.length > 0 ? (defaultStageIndex > -1 ? stages[defaultStageIndex].name : stages[0].name) : null
+  const defaultStageTab = defaultStageName ? defaultStageName.replace(' ', '-') : 'Group-Stage'
+  const [activeTab, setActiveTab] = useState(defaultStageTab)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)
   }
@@ -24,24 +24,30 @@ const Matches = (props) => {
           <Nav tabs className="mt-3">
             {stages.map((stage) => (
               <NavItem key={stage.name}>
-                <NavLink
-                  className={classnames({ active: activeTab === `${stage.name.replace(' ', '-')}` })}
-                  onClick={() => {
-                    toggle(`${stage.name.replace(' ', '-')}`)
-                  }}
-                >
-                  {stage.name}
-                </NavLink>
+                {stage.name && (
+                  <NavLink
+                    className={classnames({ active: activeTab === `${stage.name.replace(' ', '-')}` })}
+                    onClick={() => {
+                      toggle(`${stage.name.replace(' ', '-')}`)
+                    }}
+                  >
+                    {stage.name}
+                  </NavLink>
+                )}
               </NavItem>
             ))}
           </Nav>
           <TabContent activeTab={activeTab}>
             {stages.map((stage) => (
-              <TabPane tabId={stage.name.replace(' ', '-')} key={stage.name}>
-                {stage.type === 'roundrobin' && <RoundRobin stage={stage} />}
-                {stage.type === 'knockout' && <Knockout stage={stage} />}
-                {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} />}
-              </TabPane>
+              <React.Fragment key={stage.name}>
+                {stage.name && (
+                  <TabPane tabId={stage.name.replace(' ', '-')}>
+                    {stage.type === 'roundrobin' && <RoundRobin stage={stage} />}
+                    {stage.type === 'knockout' && <Knockout stage={stage} />}
+                    {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} />}
+                  </TabPane>
+                )}
+              </React.Fragment>
             ))}
           </TabContent>
         </React.Fragment>

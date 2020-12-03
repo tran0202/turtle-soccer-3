@@ -147,6 +147,10 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.aggregate_text {
+  font-size: 20px;
+}
+
 .ranking-row div.row:nth-child(2),
 .ranking-row div.row:nth-child(3) {
   margin-top: 20px;
@@ -202,6 +206,10 @@
   .box-score-light {
     font-weight: 300;
   }
+
+  .aggregate_text {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -225,6 +233,10 @@
 
   .margin-top-time-xs {
     margin-top: 3px;
+  }
+
+  .aggregate_text {
+    font-size: 10px;
   }
 }
 

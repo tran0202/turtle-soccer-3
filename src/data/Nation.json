@@ -987,6 +987,16 @@
     "end_date": ""
   },
   {
+    "id": "SWZ",
+    "name": "Eswatini",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Swaziland.png",
+    "start_date": "2018-04-19",
+    "end_date": ""
+  },
+  {
     "id": "ETH",
     "name": "Ethiopia",
     "official_name": "",
@@ -2745,14 +2755,14 @@
     "end_date": ""
   },
   {
-    "id": "SWZ",
+    "id": "SWZ-2018",
     "name": "Swaziland",
     "official_name": "",
-    "parent_nation_id": "",
+    "parent_nation_id": "SWZ",
     "nation_type_id": "NATN",
     "flag_filename": "Swaziland.png",
     "start_date": "",
-    "end_date": ""
+    "end_date": "2018-04-19"
   },
   {
     "id": "SWE",

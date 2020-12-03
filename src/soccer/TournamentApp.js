@@ -20,7 +20,7 @@ class TournamentApp extends React.Component {
       tournament: null,
       tournamentType: null,
       currentTournament: 'WC2022',
-      currentQualificationTournament: 'WC2022_AFC',
+      currentQualificationTournament: 'WC2022_CAF',
     }
   }
 
