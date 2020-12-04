@@ -129,36 +129,335 @@ export const getDateMatchArrayPair = (matches_array, sorted) => {
   return { dates, matches }
 }
 
-export const isHomeLoseAggregateLeg1 = (m) => {
+export const isHomeLoseAggregate = (data) => {
+  const {
+    knockoutMatch,
+    secondLegMatch,
+    aggregate_team,
+    away_team,
+    home_score,
+    away_score,
+    home_extra_score,
+    away_extra_score,
+    home_penalty_score,
+    away_penalty_score,
+    home_aggregate_score,
+    away_aggregate_score,
+  } = data
+  if (!knockoutMatch) return false
+  if (!secondLegMatch) {
+    return (
+      (home_score != null && away_score != null && home_score < away_score) ||
+      (home_extra_score != null && away_extra_score != null && home_extra_score < away_extra_score) ||
+      (home_penalty_score != null && home_penalty_score != null && home_penalty_score < away_penalty_score)
+    )
+  }
   return (
-    m.home_2nd_leg_penalty_score < m.away_2nd_leg_penalty_score ||
-    m.home_1st_leg_aggregate_score < m.away_1st_leg_aggregate_score ||
-    m.aggregate_1st_leg_team === m.away_team
+    (home_penalty_score != null && home_penalty_score != null && home_penalty_score < away_penalty_score) ||
+    home_aggregate_score < away_aggregate_score ||
+    aggregate_team === away_team
   )
 }
 
-export const isAwayLoseAggregateLeg1 = (m) => {
+export const isAwayLoseAggregate = (data) => {
+  const {
+    knockoutMatch,
+    secondLegMatch,
+    aggregate_team,
+    home_team,
+    home_score,
+    away_score,
+    home_extra_score,
+    away_extra_score,
+    home_penalty_score,
+    away_penalty_score,
+    home_aggregate_score,
+    away_aggregate_score,
+  } = data
+  if (!knockoutMatch) return false
+  if (!secondLegMatch) {
+    return (
+      (home_score != null && away_score != null && home_score > away_score) ||
+      (home_extra_score != null && away_extra_score != null && home_extra_score > away_extra_score) ||
+      (home_penalty_score != null && home_penalty_score != null && home_penalty_score > away_penalty_score)
+    )
+  }
   return (
-    m.home_2nd_leg_penalty_score > m.away_2nd_leg_penalty_score ||
-    m.home_1st_leg_aggregate_score > m.away_1st_leg_aggregate_score ||
-    m.aggregate_1st_leg_team === m.home_team
+    (home_penalty_score != null && home_penalty_score != null && home_penalty_score > away_penalty_score) ||
+    home_aggregate_score > away_aggregate_score ||
+    aggregate_team === home_team
   )
 }
 
-export const isHomeLoseAggregateLeg2 = (m) => {
+const DisplayAwayGoalsText = (props) => {
+  const { param } = props
+  const { aggregate_team, home_extra_score, away_extra_score } = param
   return (
-    m.home_penalty_score < m.away_penalty_score || m.home_2nd_leg_aggregate_score < m.away_2nd_leg_aggregate_score || m.aggregate_2nd_leg_team === m.away_team
+    <React.Fragment>
+      {aggregate_team && (
+        <React.Fragment>
+          &gt;&gt;&gt; <b>{getTeamName(aggregate_team)}</b> won on away goals
+          {home_extra_score != null && away_extra_score != null && <React.Fragment>&nbsp;after extra time</React.Fragment>}
+        </React.Fragment>
+      )}
+    </React.Fragment>
   )
 }
 
-export const isAwayLoseAggregateLeg2 = (m) => {
+const DisplayExtraTimeText = (props) => {
+  const { param } = props
+  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score } = param
   return (
-    m.home_penalty_score > m.away_penalty_score || m.home_2nd_leg_aggregate_score > m.away_2nd_leg_aggregate_score || m.aggregate_2nd_leg_team === m.home_team
+    <React.Fragment>
+      {home_extra_score != null && away_extra_score != null && (
+        <React.Fragment>
+          {home_penalty_score == null && away_penalty_score == null && (
+            <React.Fragment>
+              {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;&gt;&gt;&gt;&nbsp;</React.Fragment>}
+              {home_extra_score > away_extra_score && (
+                <React.Fragment>
+                  <b>{getTeamName(home_team)}</b>
+                </React.Fragment>
+              )}
+              {home_extra_score < away_extra_score && (
+                <React.Fragment>
+                  <b>{getTeamName(away_team)}</b>
+                </React.Fragment>
+              )}
+              {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;won after extra time</React.Fragment>}
+            </React.Fragment>
+          )}
+          {home_penalty_score != null && away_penalty_score != null && (
+            <React.Fragment>
+              &nbsp;&gt;&gt;&gt;&nbsp;
+              {home_penalty_score > away_penalty_score && (
+                <React.Fragment>
+                  <b>{getTeamName(home_team)}</b>
+                </React.Fragment>
+              )}
+              {home_penalty_score < away_penalty_score && (
+                <React.Fragment>
+                  <b>{getTeamName(away_team)}</b>
+                </React.Fragment>
+              )}
+              &nbsp;won on penalties&nbsp;
+              <b>
+                {home_penalty_score}-{away_penalty_score}
+              </b>
+            </React.Fragment>
+          )}
+        </React.Fragment>
+      )}
+    </React.Fragment>
+  )
+}
+
+export const DisplayKnockout2LeggedMatch = (props) => {
+  const { m } = props
+  const homeLoseData = {
+    knockoutMatch: true,
+    secondLegMatch: true,
+    aggregate_team: m.aggregate_team_1st_leg,
+    away_team: m.away_team,
+    home_score: null,
+    away_score: null,
+    home_extra_score: null,
+    away_extra_score: null,
+    home_penalty_score: m.home_penalty_score_2nd_leg,
+    away_penalty_score: m.away_penalty_score_2nd_leg,
+    home_aggregate_score: m.home_aggregate_score_1st_leg,
+    away_aggregate_score: m.away_aggregate_score_1st_leg,
+  }
+  const awayLoseData = {
+    knockoutMatch: true,
+    secondLegMatch: true,
+    aggregate_team: m.aggregate_team_1st_leg,
+    home_team: m.home_team,
+    home_score: null,
+    away_score: null,
+    home_extra_score: null,
+    away_extra_score: null,
+    home_penalty_score: m.home_penalty_score_2nd_leg,
+    away_penalty_score: m.away_penalty_score_2nd_leg,
+    home_aggregate_score: m.home_aggregate_score_1st_leg,
+    away_aggregate_score: m.away_aggregate_score_1st_leg,
+  }
+  return (
+    <React.Fragment>
+      <Row className="padding-top-md">
+        <Col className={`team-name text-uppercase text-right team-name-no-padding-right col-box-25${isHomeLoseAggregate(homeLoseData) ? ' gray3' : ''}`}>
+          {getTeamName(m.home_team)}
+        </Col>
+        <Col className="padding-top-sm text-center col-box-10">
+          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
+        </Col>
+        <Col className="score text-center score-no-padding-right col-box-10">
+          {m.home_score != null && m.away_score != null && (
+            <React.Fragment>
+              {m.home_score}-{m.away_score}
+              {m.notes_1st_leg && m.notes_1st_leg.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes_1st_leg.text} />}
+            </React.Fragment>
+          )}
+        </Col>
+        <Col className="score text-center score-no-padding-right col-box-10">
+          {m.home_extra_score_2nd_leg == null && m.away_extra_score_2nd_leg == null && (
+            <React.Fragment>
+              {m.home_score_2nd_leg}-{m.away_score_2nd_leg}
+            </React.Fragment>
+          )}
+          {m.home_extra_score_2nd_leg != null && m.away_extra_score_2nd_leg != null && (
+            <React.Fragment>
+              {parseInt(m.home_score_2nd_leg) + parseInt(m.home_extra_score_2nd_leg)}-{parseInt(m.away_score_2nd_leg) + parseInt(m.away_extra_score_2nd_leg)}
+              <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
+            </React.Fragment>
+          )}
+          {m.notes_2nd_leg && m.notes_2nd_leg.awarded && <AwardedTooltip target={`awarded_${m.away_team}_${m.home_team}`} content={m.notes_2nd_leg.text} />}
+        </Col>
+        <Col className="score text-center score-no-padding-right col-box-10">
+          {m.home_aggregate_score_1st_leg != null && m.away_aggregate_score_1st_leg != null && (
+            <React.Fragment>
+              {m.home_aggregate_score_1st_leg}-{m.away_aggregate_score_1st_leg}
+            </React.Fragment>
+          )}
+        </Col>
+        <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
+          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
+        </Col>
+        <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) ? ' gray3' : ''}`}>{getTeamName(m.away_team)}</Col>
+      </Row>
+      <Row>
+        <Col sm={{ size: 6, offset: 6 }} xs={{ size: 6, offset: 6 }} className="aggregate_text margin-top-sm">
+          {m.home_aggregate_score_1st_leg != null && m.away_aggregate_score_1st_leg != null && (
+            <DisplayAwayGoalsText
+              param={{ aggregate_team: m.aggregate_team_1st_leg, home_extra_score: m.home_extra_score_2nd_leg, away_extra_score: m.away_extra_score_2nd_leg }}
+            />
+          )}
+          <DisplayExtraTimeText
+            param={{
+              home_team: m.home_team,
+              away_team: m.away_team,
+              home_extra_score: m.home_extra_score_2nd_leg,
+              away_extra_score: m.away_extra_score_2nd_leg,
+              home_penalty_score: m.home_penalty_score_2nd_leg,
+              away_penalty_score: m.away_penalty_score_2nd_leg,
+            }}
+          />
+        </Col>
+      </Row>
+      <Row className="padding-tb-md border-bottom-gray5"></Row>
+    </React.Fragment>
+  )
+}
+
+const DisplayMatch = (props) => {
+  const { m, config } = props
+  const homeLoseData = {
+    knockoutMatch: config.knockoutMatch,
+    secondLegMatch: config.secondLegMatch,
+    aggregate_team: m.aggregate_team_2nd_leg,
+    away_team: m.away_team,
+    home_score: m.home_score,
+    away_score: m.away_score,
+    home_extra_score: m.home_extra_score,
+    away_extra_score: m.away_extra_score,
+    home_penalty_score: m.home_penalty_score,
+    away_penalty_score: m.away_penalty_score,
+    home_aggregate_score: m.home_aggregate_score_2nd_leg,
+    away_aggregate_score: m.away_aggregate_score_2nd_leg,
+  }
+  const awayLoseData = {
+    knockoutMatch: config.knockoutMatch,
+    secondLegMatch: config.secondLegMatch,
+    aggregate_team: m.aggregate_team_2nd_leg,
+    home_team: m.home_team,
+    home_score: m.home_score,
+    away_score: m.away_score,
+    home_extra_score: m.home_extra_score,
+    away_extra_score: m.away_extra_score,
+    home_penalty_score: m.home_penalty_score,
+    away_penalty_score: m.away_penalty_score,
+    home_aggregate_score: m.home_aggregate_score_2nd_leg,
+    away_aggregate_score: m.away_aggregate_score_2nd_leg,
+  }
+  return (
+    <Col sm="12" className="padding-tb-md border-bottom-gray5">
+      <Row>
+        <Col sm="2" xs="1" className="font-10 margin-top-time-xs">
+          {m.time}
+          {m.group && (
+            <React.Fragment>
+              <br />
+              {m.group}
+            </React.Fragment>
+          )}
+          <span className="no-display-xs">
+            <br />
+            {m.stadium}
+          </span>
+          <span className="no-display-xs">
+            <br />
+            {m.city}
+          </span>
+        </Col>
+        <Col sm="3" xs="3" className={`team-name text-uppercase text-right team-name-no-padding-right${isHomeLoseAggregate(homeLoseData) ? ' gray3' : ''}`}>
+          {getTeamName(m.home_team)}
+        </Col>
+        <Col sm="1" xs="1" className="padding-top-sm text-center">
+          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
+        </Col>
+        <Col sm="2" xs="2" className="score text-center score-no-padding-right">
+          {(m.home_extra_score == null || m.away_extra_score == null) && (
+            <React.Fragment>
+              {m.home_score}-{m.away_score}
+            </React.Fragment>
+          )}
+          {m.home_extra_score != null && m.away_extra_score != null && (
+            <React.Fragment>
+              {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
+              <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
+            </React.Fragment>
+          )}
+          {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
+        </Col>
+        <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
+          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
+        </Col>
+        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) ? ' gray3' : ''}`}>
+          {getTeamName(m.away_team)}
+        </Col>
+      </Row>
+      <Row>
+        <Col sm={{ size: 6, offset: 6 }} xs={{ size: 7, offset: 5 }} className="aggregate_text margin-top-sm">
+          {m.home_aggregate_score_2nd_leg != null && m.away_aggregate_score_2nd_leg != null && (
+            <React.Fragment>
+              Aggregate:&nbsp;
+              <b>
+                {m.home_aggregate_score_2nd_leg}-{m.away_aggregate_score_2nd_leg}
+              </b>
+              <DisplayAwayGoalsText
+                param={{ aggregate_team: m.aggregate_team_2nd_leg, home_extra_score: m.home_extra_score, away_extra_score: m.away_extra_score }}
+              />
+            </React.Fragment>
+          )}
+          <DisplayExtraTimeText
+            param={{
+              home_team: m.home_team,
+              away_team: m.away_team,
+              home_extra_score: m.home_extra_score,
+              away_extra_score: m.away_extra_score,
+              home_penalty_score: m.home_penalty_score,
+              away_penalty_score: m.away_penalty_score,
+            }}
+          />
+        </Col>
+      </Row>
+    </Col>
   )
 }
 
 export const DisplaySchedule = (props) => {
-  const { round, showMatchYear } = props
+  const { round, config } = props
+  const { showMatchYear } = config
   const { name, dates, matches } = round
   return (
     <React.Fragment>
@@ -174,110 +473,7 @@ export const DisplaySchedule = (props) => {
               {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
             </Col>
             {matches[value].map((m, index) => (
-              <Col sm="12" className="padding-tb-md border-bottom-gray5" key={index}>
-                <Row>
-                  <Col sm="2" xs="1" className="font-10 margin-top-time-xs">
-                    {m.time}
-                    {m.group && (
-                      <React.Fragment>
-                        <br />
-                        {m.group}
-                      </React.Fragment>
-                    )}
-                    <span className="no-display-xs">
-                      <br />
-                      {m.stadium}
-                    </span>
-                    <span className="no-display-xs">
-                      <br />
-                      {m.city}
-                    </span>
-                  </Col>
-                  <Col sm="3" xs="3" className={`team-name text-uppercase text-right team-name-no-padding-right${isHomeLoseAggregateLeg2(m) ? ' gray3' : ''}`}>
-                    {getTeamName(m.home_team)}
-                  </Col>
-                  <Col sm="1" xs="1" className="padding-top-sm text-center">
-                    {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
-                  </Col>
-                  <Col sm="2" xs="2" className="score text-center score-no-padding-right">
-                    {(m.home_extra_score == null || m.away_extra_score == null) && (
-                      <React.Fragment>
-                        {m.home_score}-{m.away_score}
-                      </React.Fragment>
-                    )}
-                    {m.home_extra_score != null && m.away_extra_score != null && (
-                      <React.Fragment>
-                        {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
-                        <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
-                      </React.Fragment>
-                    )}
-                    {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
-                  </Col>
-                  <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
-                    {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
-                  </Col>
-                  <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregateLeg2(m) ? ' gray3' : ''}`}>
-                    {getTeamName(m.away_team)}
-                  </Col>
-                </Row>
-                <Row>
-                  <Col sm={{ size: 6, offset: 6 }} xs={{ size: 7, offset: 5 }} className="aggregate_text margin-top-sm">
-                    {m.home_2nd_leg_aggregate_score != null && m.away_2nd_leg_aggregate_score != null && (
-                      <React.Fragment>
-                        Aggregate:&nbsp;
-                        <b>
-                          {m.home_2nd_leg_aggregate_score}-{m.away_2nd_leg_aggregate_score}
-                        </b>
-                        {m.aggregate_2nd_leg_team && (
-                          <React.Fragment>
-                            &nbsp;&gt;&gt;&gt; <b>{getTeamName(m.aggregate_2nd_leg_team)}</b> won on away goals
-                            {m.home_extra_score != null && m.away_extra_score != null && <React.Fragment>&nbsp;after extra time</React.Fragment>}
-                          </React.Fragment>
-                        )}
-                      </React.Fragment>
-                    )}
-                    {m.home_extra_score != null && m.away_extra_score != null && (
-                      <React.Fragment>
-                        {m.home_penalty_score == null && m.away_penalty_score == null && (
-                          <React.Fragment>
-                            {m.home_extra_score !== m.away_extra_score && <React.Fragment>&nbsp;&gt;&gt;&gt;&nbsp;</React.Fragment>}
-                            {m.home_extra_score > m.away_extra_score && (
-                              <React.Fragment>
-                                <b>{getTeamName(m.home_team)}</b>
-                              </React.Fragment>
-                            )}
-                            {m.home_extra_score < m.away_extra_score && (
-                              <React.Fragment>
-                                <b>{getTeamName(m.away_team)}</b>
-                              </React.Fragment>
-                            )}
-                            {m.home_extra_score !== m.away_extra_score && <React.Fragment>&nbsp;won after extra time</React.Fragment>}
-                          </React.Fragment>
-                        )}
-                        {m.home_penalty_score != null && m.away_penalty_score != null && (
-                          <React.Fragment>
-                            &nbsp;&gt;&gt;&gt;&nbsp;
-                            {m.home_penalty_score > m.away_penalty_score && (
-                              <React.Fragment>
-                                <b>{getTeamName(m.home_team)}</b>
-                              </React.Fragment>
-                            )}
-                            {m.home_penalty_score < m.away_penalty_score && (
-                              <React.Fragment>
-                                <b>{getTeamName(m.away_team)}</b>
-                              </React.Fragment>
-                            )}
-                            &nbsp;won on penalties&nbsp;
-                            <b>
-                              {m.home_penalty_score}-{m.away_penalty_score}
-                            </b>
-                          </React.Fragment>
-                        )}
-                      </React.Fragment>
-                    )}
-                  </Col>
-                </Row>
-              </Col>
+              <DisplayMatch m={m} config={config} key={index} />
             ))}
           </Row>
         ))}

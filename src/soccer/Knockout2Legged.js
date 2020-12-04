@@ -32,42 +32,44 @@ export const calculateAggregateScore = (stage) => {
   secondLeg.matches.forEach((m2) => {
     firstLeg.matches.some((m1) => {
       if (m2.home_team === m1.away_team && m2.away_team === m1.home_team) {
-        m1['home_2nd_leg_score'] = m2.away_score
-        m1['away_2nd_leg_score'] = m2.home_score
-        m1['home_2nd_leg_extra_score'] = m2.away_extra_score
-        m1['away_2nd_leg_extra_score'] = m2.home_extra_score
-        m1['home_2nd_leg_penalty_score'] = m2.away_penalty_score
-        m1['away_2nd_leg_penalty_score'] = m2.home_penalty_score
+        m1.home_score_2nd_leg = m2.away_score
+        m1.away_score_2nd_leg = m2.home_score
+        m1.home_extra_score_2nd_leg = m2.away_extra_score
+        m1.away_extra_score_2nd_leg = m2.home_extra_score
+        m1.home_penalty_score_2nd_leg = m2.away_penalty_score
+        m1.away_penalty_score_2nd_leg = m2.home_penalty_score
+        m1.notes_1st_leg = m1.notes
+        m1.notes_2nd_leg = m2.notes
         if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
-          m1.home_1st_leg_aggregate_score = parseInt(m1.home_score) + parseInt(m2.away_score)
-          m1.away_1st_leg_aggregate_score = parseInt(m1.away_score) + parseInt(m2.home_score)
+          m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
+          m1.away_aggregate_score_1st_leg = parseInt(m1.away_score) + parseInt(m2.home_score)
           if (m2.home_extra_score != null && m2.away_extra_score != null) {
-            m1.home_1st_leg_aggregate_score = m1.home_1st_leg_aggregate_score + parseInt(m2.away_extra_score)
-            m1.away_1st_leg_aggregate_score = m1.away_1st_leg_aggregate_score + parseInt(m2.home_extra_score)
+            m1.home_aggregate_score_1st_leg = m1.home_aggregate_score_1st_leg + parseInt(m2.away_extra_score)
+            m1.away_aggregate_score_1st_leg = m1.away_aggregate_score_1st_leg + parseInt(m2.home_extra_score)
           }
-          m2.home_2nd_leg_aggregate_score = parseInt(m2.home_score) + parseInt(m1.away_score)
-          m2.away_2nd_leg_aggregate_score = parseInt(m2.away_score) + parseInt(m1.home_score)
+          m2.home_aggregate_score_2nd_leg = parseInt(m2.home_score) + parseInt(m1.away_score)
+          m2.away_aggregate_score_2nd_leg = parseInt(m2.away_score) + parseInt(m1.home_score)
           if (m2.home_extra_score != null && m2.away_extra_score != null) {
-            m2.home_2nd_leg_aggregate_score = m2.home_2nd_leg_aggregate_score + parseInt(m2.home_extra_score)
-            m2.away_2nd_leg_aggregate_score = m2.away_2nd_leg_aggregate_score + parseInt(m2.away_extra_score)
+            m2.home_aggregate_score_2nd_leg = m2.home_aggregate_score_2nd_leg + parseInt(m2.home_extra_score)
+            m2.away_aggregate_score_2nd_leg = m2.away_aggregate_score_2nd_leg + parseInt(m2.away_extra_score)
           }
         }
-        if (m1.home_1st_leg_aggregate_score === m1.away_1st_leg_aggregate_score) {
+        if (m1.home_aggregate_score_1st_leg === m1.away_aggregate_score_1st_leg) {
           if (m1.away_score > m2.away_score) {
-            m1.aggregate_1st_leg_team = m2.home_team
+            m1.aggregate_team_1st_leg = m2.home_team
           } else if (m1.away_score < m2.away_score) {
-            m1.aggregate_1st_leg_team = m1.home_team
+            m1.aggregate_team_1st_leg = m1.home_team
           } else if (m2.away_extra_score > 0) {
-            m1.aggregate_1st_leg_team = m2.away_team
+            m1.aggregate_team_1st_leg = m2.away_team
           }
         }
-        if (m2.home_2nd_leg_aggregate_score === m2.away_2nd_leg_aggregate_score) {
+        if (m2.home_aggregate_score_2nd_leg === m2.away_aggregate_score_2nd_leg) {
           if (m1.away_score > m2.away_score) {
-            m2.aggregate_2nd_leg_team = m2.home_team
+            m2.aggregate_team_2nd_leg = m2.home_team
           } else if (m1.away_score < m2.away_score) {
-            m2.aggregate_2nd_leg_team = m1.home_team
+            m2.aggregate_team_2nd_leg = m1.home_team
           } else if (m2.away_extra_score > 0) {
-            m2.aggregate_2nd_leg_team = m2.away_team
+            m2.aggregate_team_2nd_leg = m2.away_team
           }
         }
       }
@@ -79,12 +81,20 @@ export const calculateAggregateScore = (stage) => {
 const Knockout2Legged = (props) => {
   const { stage } = props
   calculateAggregateScore(stage)
+  // console.log('stage', stage)
   return (
     <React.Fragment>
       <Knockout2LeggedSummary stage={stage} />
       {stage.rounds &&
         stage.rounds.map((r) => {
-          return <DisplaySchedule round={{ name: r.name, ...getMatchArrayByDate(r, false) }} showMatchYear={stage.show_match_year} key={r.name} />
+          const isSecondLeg = r.round_type === 'secondleg'
+          return (
+            <DisplaySchedule
+              round={{ name: r.name, ...getMatchArrayByDate(r, false) }}
+              config={{ showMatchYear: stage.show_match_year, knockoutMatch: isSecondLeg, secondLegMatch: isSecondLeg }}
+              key={r.name}
+            />
+          )
         })}
     </React.Fragment>
   )

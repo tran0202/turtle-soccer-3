@@ -27,7 +27,7 @@ const GroupCollapse = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        <DisplaySchedule round={getMatchArrayByDate(group, true)} showMatchYear={config.show_match_year} />
+        <DisplaySchedule round={getMatchArrayByDate(group, true)} config={{ showMatchYear: config.show_match_year }} />
         <Row className="mb-5"></Row>
       </Collapse>
     </React.Fragment>

@@ -16,7 +16,7 @@ const getMatchArrayByDate = (stage, sorted) => {
 const RoundRobin = (props) => {
   const { stage } = props
   // console.log('stage', stage)
-  return <DisplaySchedule round={getMatchArrayByDate(stage, true)} showMatchYear={stage.show_match_year} />
+  return <DisplaySchedule round={getMatchArrayByDate(stage, true)} config={{ showMatchYear: stage.show_match_year }} />
 }
 
 export default RoundRobin
