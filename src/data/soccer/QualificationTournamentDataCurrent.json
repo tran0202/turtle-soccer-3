@@ -1,309 +1,272 @@
 {
-  "id": "WC2022_CAF",
+  "id": "WC2022_CONMEBOL",
   "stages": [
     {
-      "name": "First Round",
-      "type": "knockout2legged",
+      "name": "Round-robin",
+      "type": "roundrobinmatchday",
       "show_match_year": true,
-      "rounds": [
+      "default": true,
+      "advancement": {
+        "teams": {
+          "auto": [1, 2, 3, 4],
+          "playoff": 5,
+          "text": "The top 4 teams qualify for the World Cup, and the fifth-placed team advances to the inter-confederation play-offs."
+        }
+      },
+      "groups": [
         {
-          "name": "First Leg",
-          "matches": [
+          "name": "",
+          "teams": [
+            { "id": "URU" },
+            { "id": "COL" },
+            { "id": "PER" },
+            { "id": "BRA" },
+            { "id": "VEN" },
+            { "id": "BOL" },
+            { "id": "PAR" },
+            { "id": "ARG" },
+            { "id": "CHI" },
+            { "id": "ECU" }
+          ],
+          "matchdays": [
             {
-              "home_team": "ETH",
-              "away_team": "LES",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-09-04",
-              "time": "16:00",
-              "stadium": "Bahir Dar Stadium",
-              "city": "Bahir Dar"
+              "name": "Matchday 1",
+              "matches": [
+                {
+                  "home_team": "PAR",
+                  "away_team": "PER",
+                  "home_score": 2,
+                  "away_score": 2,
+                  "date": "2020-10-08",
+                  "time": "19:30",
+                  "stadium": "Estadio Defensores del Chaco",
+                  "city": "Asunción"
+                },
+                {
+                  "home_team": "URU",
+                  "away_team": "CHI",
+                  "home_score": 2,
+                  "away_score": 1,
+                  "date": "2020-10-08",
+                  "time": "19:45",
+                  "stadium": "Estadio Centenario",
+                  "city": "Montevideo"
+                },
+                {
+                  "home_team": "ARG",
+                  "away_team": "ECU",
+                  "home_score": 1,
+                  "away_score": 0,
+                  "date": "2020-10-08",
+                  "time": "21:30",
+                  "stadium": "Estadio Alberto J. Armando",
+                  "city": "Buenos Aires"
+                },
+                {
+                  "home_team": "COL",
+                  "away_team": "VEN",
+                  "home_score": 3,
+                  "away_score": 0,
+                  "date": "2020-10-09",
+                  "time": "18:30",
+                  "stadium": "Estadio Metropolitano Roberto Meléndez",
+                  "city": "Barranquilla"
+                },
+                {
+                  "home_team": "BRA",
+                  "away_team": "BOL",
+                  "home_score": 5,
+                  "away_score": 0,
+                  "date": "2020-10-09",
+                  "time": "21:30",
+                  "stadium": "Neo Química Arena",
+                  "city": "São Paulo"
+                }
+              ]
             },
             {
-              "home_team": "SOM",
-              "away_team": "ZIM",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-09-05",
-              "time": "18:00",
-              "stadium": "El-Hadj Hassan Gouled Aptidon Stadium",
-              "city": "Djibouti (Djibouti)"
+              "name": "Matchday 2",
+              "matches": [
+                {
+                  "home_team": "BOL",
+                  "away_team": "ARG",
+                  "home_score": 1,
+                  "away_score": 2,
+                  "date": "2020-10-13",
+                  "time": "16:00",
+                  "stadium": "Estadio Hernando Siles",
+                  "city": "La Paz"
+                },
+                {
+                  "home_team": "ECU",
+                  "away_team": "URU",
+                  "home_score": 4,
+                  "away_score": 2,
+                  "date": "2020-10-13",
+                  "time": "16:00",
+                  "stadium": "Estadio Rodrigo Paz Delgado",
+                  "city": "Quito"
+                },
+                {
+                  "home_team": "VEN",
+                  "away_team": "PAR",
+                  "home_score": 0,
+                  "away_score": 1,
+                  "date": "2020-10-13",
+                  "time": "18:00",
+                  "stadium": "Estadio Metropolitano de Mérida",
+                  "city": "Mérida"
+                },
+                {
+                  "home_team": "PER",
+                  "away_team": "BRA",
+                  "home_score": 2,
+                  "away_score": 4,
+                  "date": "2020-10-13",
+                  "time": "19:00",
+                  "stadium": "Estadio Nacional",
+                  "city": "Lima"
+                },
+                {
+                  "home_team": "CHI",
+                  "away_team": "COL",
+                  "home_score": 2,
+                  "away_score": 2,
+                  "date": "2020-10-13",
+                  "time": "21:30",
+                  "stadium": "Estadio Nacional Julio Martínez Prádanos",
+                  "city": "Santiago"
+                }
+              ]
             },
             {
-              "home_team": "ERI",
-              "away_team": "NAM",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2019-09-04",
-              "time": "16:00",
-              "stadium": "Denden Stadium",
-              "city": "Asmara"
+              "name": "Matchday 3",
+              "matches": [
+                {
+                  "home_team": "BOL",
+                  "away_team": "ECU",
+                  "home_score": 2,
+                  "away_score": 3,
+                  "date": "2020-11-12",
+                  "time": "16:00",
+                  "stadium": "Estadio Hernando Siles",
+                  "city": "La Paz"
+                },
+                {
+                  "home_team": "ARG",
+                  "away_team": "PAR",
+                  "home_score": 1,
+                  "away_score": 1,
+                  "date": "2020-11-12",
+                  "time": "21:00",
+                  "stadium": "Estadio Alberto J. Armando",
+                  "city": "Buenos Aires"
+                },
+                {
+                  "home_team": "COL",
+                  "away_team": "URU",
+                  "home_score": 0,
+                  "away_score": 3,
+                  "date": "2020-11-13",
+                  "time": "15:30",
+                  "stadium": "Estadio Metropolitano Roberto Meléndez",
+                  "city": "Barranquilla"
+                },
+                {
+                  "home_team": "CHI",
+                  "away_team": "PER",
+                  "home_score": 2,
+                  "away_score": 0,
+                  "date": "2020-11-13",
+                  "time": "20:00",
+                  "stadium": "Estadio Nacional Julio Martínez Prádanos",
+                  "city": "Santiago"
+                },
+                {
+                  "home_team": "BRA",
+                  "away_team": "VEN",
+                  "home_score": 1,
+                  "away_score": 0,
+                  "date": "2020-11-13",
+                  "time": "21:30",
+                  "stadium": "Estádio do Morumbi",
+                  "city": "São Paulo"
+                }
+              ]
             },
             {
-              "home_team": "BDI",
-              "away_team": "TAN",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "15:00",
-              "stadium": "Prince Louis Rwagasore Stadium",
-              "city": "Bujumbura"
+              "name": "Matchday 4",
+              "matches": [
+                {
+                  "home_team": "VEN",
+                  "away_team": "CHI",
+                  "home_score": 2,
+                  "away_score": 1,
+                  "date": "2020-11-17",
+                  "time": "17:00",
+                  "stadium": "Estadio Olímpico de la UCV",
+                  "city": "Caracas"
+                },
+                {
+                  "home_team": "ECU",
+                  "away_team": "COL",
+                  "home_score": 6,
+                  "away_score": 1,
+                  "date": "2020-11-17",
+                  "time": "16:00",
+                  "stadium": "Estadio Rodrigo Paz Delgado",
+                  "city": "Quito"
+                },
+                {
+                  "home_team": "URU",
+                  "away_team": "BRA",
+                  "home_score": 0,
+                  "away_score": 2,
+                  "date": "2020-11-17",
+                  "time": "20:00",
+                  "stadium": "Estadio Centenario",
+                  "city": "Montevideo"
+                },
+                {
+                  "home_team": "PAR",
+                  "away_team": "BOL",
+                  "home_score": 2,
+                  "away_score": 2,
+                  "date": "2020-11-17",
+                  "time": "20:00",
+                  "stadium": "Estadio Defensores del Chaco",
+                  "city": "Asunción"
+                },
+                {
+                  "home_team": "PER",
+                  "away_team": "ARG",
+                  "home_score": 0,
+                  "away_score": 2,
+                  "date": "2020-11-17",
+                  "time": "19:30",
+                  "stadium": "Estadio Nacional",
+                  "city": "Lima"
+                }
+              ]
             },
-            {
-              "home_team": "DJI",
-              "away_team": "SWZ",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "18:00",
-              "stadium": "El-Hadj Hassan Gouled Aptidon Stadium",
-              "city": "Djibouti"
-            },
-            {
-              "home_team": "GAM",
-              "away_team": "ANG",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2019-09-06",
-              "time": "17:00",
-              "stadium": "Independence Stadium",
-              "city": "Bakau"
-            },
-            {
-              "home_team": "BOT",
-              "away_team": "MWI",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-09-07",
-              "time": "16:00",
-              "stadium": "Francistown Stadium",
-              "city": "Francistown"
-            },
-            {
-              "home_team": "LBR",
-              "away_team": "SLE",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "18:00",
-              "stadium": "Samuel Kanyon Doe Sports Complex",
-              "city": "Paynesville"
-            },
-            {
-              "home_team": "MRI",
-              "away_team": "MOZ",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "18:30",
-              "stadium": "Stade Anjalay",
-              "city": "Belle Vue"
-            },
-            {
-              "home_team": "STP",
-              "away_team": "GNB",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "15:30",
-              "stadium": "Estádio Nacional 12 de Julho",
-              "city": "São Tomé"
-            },
-            {
-              "home_team": "SSD",
-              "away_team": "EQG",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2019-09-04",
-              "time": "16:00",
-              "stadium": "Al-Hilal Stadium",
-              "city": "Omdurman (Sudan)"
-            },
-            {
-              "home_team": "COM",
-              "away_team": "TOG",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2019-09-06",
-              "time": "15:00",
-              "stadium": "Stade de Moroni",
-              "city": "Moroni"
-            },
-            {
-              "home_team": "CHA",
-              "away_team": "SDN",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "2019-09-05",
-              "time": "15:30",
-              "stadium": "Stade Omnisports Idriss Mahamat Ouya",
-              "city": "N'Djamena"
-            },
-            {
-              "home_team": "SEY",
-              "away_team": "RWA",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-09-05",
-              "time": "16:00",
-              "stadium": "Stade Linité",
-              "city": "Victoria"
-            }
-          ]
-        },
-        {
-          "name": "Second Leg",
-          "round_type": "secondleg",
-          "matches": [
-            {
-              "home_team": "LES",
-              "away_team": "ETH",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2019-09-08",
-              "time": "15:00",
-              "stadium": "Setsoto Stadium",
-              "city": "Maseru"
-            },
-            {
-              "home_team": "ZIM",
-              "away_team": "SOM",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2019-09-10",
-              "time": "15:00",
-              "stadium": "National Sports Stadium",
-              "city": "Harare"
-            },
-            {
-              "home_team": "NAM",
-              "away_team": "ERI",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "19:00",
-              "stadium": "Sam Nujoma Stadium",
-              "city": "Windhoek"
-            },
-            {
-              "home_team": "TAN",
-              "away_team": "BDI",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 3,
-              "away_penalty_score": 0,
-              "date": "2019-09-08",
-              "time": "16:00",
-              "stadium": "National Stadium",
-              "city": "Dar es Salaam"
-            },
-            {
-              "home_team": "SWZ",
-              "away_team": "DJI",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "15:00",
-              "stadium": "Mavuso Sports Centre",
-              "city": "Manzini"
-            },
-            {
-              "home_team": "MWI",
-              "away_team": "BOT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "14:00",
-              "stadium": "Kamuzu Stadium",
-              "city": "Blantyre"
-            },
-            {
-              "home_team": "ANG",
-              "away_team": "GAM",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2019-09-10",
-              "time": "16:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
-            },
-            {
-              "home_team": "SLE",
-              "away_team": "LBR",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-09-08",
-              "time": "16:30",
-              "stadium": "Siaka Stevens Stadium",
-              "city": "Freetown"
-            },
-            {
-              "home_team": "MOZ",
-              "away_team": "MRI",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "16:00",
-              "stadium": "Estádio do Zimpeto",
-              "city": "Maputo"
-            },
-            {
-              "home_team": "GNB",
-              "away_team": "STP",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2019-09-10",
-              "time": "16:30",
-              "stadium": "Estádio 24 de Setembro",
-              "city": "Bissau"
-            },
-            {
-              "home_team": "EQG",
-              "away_team": "SSD",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-09-08",
-              "time": "17:00",
-              "stadium": "Nuevo Estadio de Malabo",
-              "city": "Malabo"
-            },
-            {
-              "home_team": "TOG",
-              "away_team": "COM",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "16:00",
-              "stadium": "Stade de Kégué",
-              "city": "Lomé"
-            },
-            {
-              "home_team": "SDN",
-              "away_team": "CHA",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "19:00",
-              "stadium": "Al-Merrikh Stadium",
-              "city": "Omdurman"
-            },
-            {
-              "home_team": "RWA",
-              "away_team": "SEY",
-              "home_score": 7,
-              "away_score": 0,
-              "date": "2019-09-10",
-              "time": "18:00",
-              "stadium": "Stade Régional Nyamirambo",
-              "city": "Kigali"
-            }
+            { "name": "Matchday 5" },
+            { "name": "Matchday 6" },
+            { "name": "Matchday 7" },
+            { "name": "Matchday 8" },
+            { "name": "Matchday 9" },
+            { "name": "Matchday 10" },
+            { "name": "Matchday 11" },
+            { "name": "Matchday 12" },
+            { "name": "Matchday 13" },
+            { "name": "Matchday 14" },
+            { "name": "Matchday 15" },
+            { "name": "Matchday 16" },
+            { "name": "Matchday 17" },
+            { "name": "Matchday 18" }
           ]
         }
       ]
     },
-    { "name": "Second Round" },
-    { "name": "Third Round" }
+    { "name": "Inter-confederation play-offs" }
   ]
 }

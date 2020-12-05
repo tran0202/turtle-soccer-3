@@ -3,10 +3,17 @@ import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const hasAnyGroups = (qTournament) => {
-  if (!qTournament.stages) {
-    return false
-  }
-  return qTournament.stages.some((s) => s.type === 'roundrobin')
+  if (!qTournament.stages) return false
+  const rrStage = qTournament.stages.find((s) => s.type === 'roundrobin')
+  if (!rrStage) return false
+  return rrStage.groups && rrStage.groups.length > 0
+}
+
+const hasMdGroups = (qTournament) => {
+  if (!qTournament.stages) return false
+  const rrmdStage = qTournament.stages.find((s) => s.type === 'roundrobinmatchday')
+  if (!rrmdStage) return false
+  return rrmdStage.groups ? rrmdStage.groups.length : 0
 }
 
 const PageLinks = (props) => {
@@ -27,10 +34,17 @@ const PageLinks = (props) => {
           </NavLink>
         </NavItem>
       )}
-      {hasAnyGroups(qTournament) && (
+      {(hasAnyGroups(qTournament) || hasMdGroups(qTournament) > 1) && (
         <NavItem>
           <NavLink disabled={qPage === 'groups'} href={`/soccer/tournament/${id}/qualification/${cid}/groups`}>
             Groups
+          </NavLink>
+        </NavItem>
+      )}
+      {hasMdGroups(qTournament) === 1 && (
+        <NavItem>
+          <NavLink disabled={qPage === 'standings'} href={`/soccer/tournament/${id}/qualification/${cid}/standings`}>
+            Standings
           </NavLink>
         </NavItem>
       )}

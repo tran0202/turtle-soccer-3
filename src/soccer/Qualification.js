@@ -43,7 +43,7 @@ const Qualification = (props) => {
               {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}
               {qPage === 'intro' && <Intro tournament={qualification} />}
               {qPage === 'matches' && <Matches tournament={qualification} />}
-              {qPage === 'groups' && <Groups tournament={qualification} tournamentType={tournamentType} />}
+              {(qPage === 'groups' || qPage === 'standings') && <Groups tournament={qualification} tournamentType={tournamentType} />}
             </React.Fragment>
           )}
         </React.Fragment>

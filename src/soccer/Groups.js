@@ -1,11 +1,12 @@
 import React from 'react'
-import GroupStage from './GroupStage'
-import { getRoundRobinStage, getTournamentConfig } from './Helper'
+import GroupStandings from './GroupStandings'
+import GroupMdStandings from './GroupMdStandings'
+import { getRoundRobinStage, getRoundRobinMdStage, getTournamentConfig } from './Helper'
 import { Row, Col } from 'reactstrap'
 
-const MultipleGroupStage = () => {
-  return <div>Multiple Group Stage</div>
-}
+// const MultipleGroupStage = () => {
+//   return <div>Multiple Group Stage</div>
+// }
 
 const getFormat = (rrStage) => {
   const { groups, advancement } = rrStage
@@ -23,14 +24,20 @@ const TournamentFormat = (props) => {
           <Row>
             <Col xs="12">
               <p>
-                <strong>Points:</strong> {config.points_for_win} points/W - 1 points/D - 0 points/L
+                <strong>Format:&nbsp;</strong>
+                {config.groupCount > 1 && (
+                  <React.Fragment>
+                    {config.totalCount} teams are divided into {config.groupCount} groups of {config.teamCount} teams. Each group plays a round-robin schedule.
+                  </React.Fragment>
+                )}
+                {config.groupCount === 1 && <React.Fragment>{config.totalCount} teams plays a league of home-and-away round-robin matches.</React.Fragment>}
+                &nbsp;{config.advancement && config.advancement.teams ? config.advancement.teams.text : 'The top 2 teams advance to the knockout stage.'}
+                &nbsp;{config.advancement ? config.advancement.extra : ''}
               </p>
             </Col>
             <Col xs="12">
               <p>
-                <strong>Format:</strong> {config.totalCount} teams are divided into {config.groupCount} groups of {config.teamCount} teams. Each group plays a
-                round-robin schedule. The {config.advancement && config.advancement.teams ? config.advancement.teams.text : 'top 2 teams'} advance to the&nbsp;
-                {config.advancement ? config.advancement.next_round : 'knockout stage'}. {config.advancement ? config.advancement.extra : ''}
+                <strong>Points:</strong> {config.points_for_win} points/W - 1 points/D - 0 points/L
               </p>
             </Col>
             <Col xs="12">
@@ -92,15 +99,17 @@ const Groups = (props) => {
   const { tournament, tournamentType } = props
   const { stages } = tournament
   const rrStages = getRoundRobinStage(stages)
-  // console.log('rrStages', rrStages)
-  const format = rrStages && rrStages.length > 0 ? getFormat(rrStages[0]) : null
+  const rrmdStages = getRoundRobinMdStage(stages)
+  const format = rrStages && rrStages.length > 0 ? getFormat(rrStages[0]) : rrmdStages && rrmdStages.length > 0 ? getFormat(rrmdStages[0]) : null
+  // console.log('rrmdStages', rrmdStages)
   const config = { ...getTournamentConfig(tournament), ...format }
   return (
     <React.Fragment>
       {format && <TournamentFormat config={config} tournamentType={tournamentType} />}
       {!format && <Row className="mt-3"></Row>}
-      {rrStages && rrStages.length === 1 && <GroupStage config={config} stage={rrStages[0]} />}
-      {rrStages && rrStages.length > 1 && <MultipleGroupStage />}
+      {rrStages && rrStages.length === 1 && <GroupStandings config={config} stage={rrStages[0]} />}
+      {/* {rrStages && rrStages.length > 1 && <MultipleGroupStage />} */}
+      {rrmdStages && rrmdStages.length === 1 && <GroupMdStandings config={config} stage={rrmdStages[0]} />}
     </React.Fragment>
   )
 }

@@ -108,10 +108,22 @@ const isAdvancedWildCard = (row, config) => {
   return false
 }
 
-const getRowStriped = (row, config) => {
-  return isAdvancedNextRound(row, config) ? ' advanced-next-round-striped' : isAdvancedWildCard(row, config) ? ' advanced-wild-card-striped' : ''
+const isAdvancedPlayoff = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.playoff) {
+    return row.r === config.advancement.teams.playoff
+  }
+  return false
 }
 
+const getRowStriped = (row, config) => {
+  if (isAdvancedNextRound(row, config)) return ' advanced-next-round-striped'
+  if (isAdvancedWildCard(row, config)) return ' advanced-wild-card-striped'
+  if (isAdvancedPlayoff(row, config)) return ' advanced-playoff-striped'
+  return ''
+}
+
+// Wild card rankings
 const getWildCardRowStriped = (row, config) => {
   if (!row) return ''
   if (isWildCardRuleExisted(row, config)) {

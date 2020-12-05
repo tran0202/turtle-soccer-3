@@ -62,5 +62,27 @@
         { "player": "Ramadan Agab", "team": "SDN", "goals": 3 }
       ]
     }
+  },
+  {
+    "id": "WC2022_CONMEBOL",
+    "name": "2022 FIFA World Cup - CONMEBOL Qualification",
+    "tournament_type_id": "WCQ",
+    "tournament_id": "WC2022",
+    "confederation_id": "CONMEBOL",
+    "active": true,
+    "third_place_ranking": false,
+    "head_to_head_tiebreaker": false,
+    "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "start_date": "2020-10-08", "end_date": "2022-03-29", "color": "#cc0000", "team_count": 10, "confed_count": 1 },
+    "statistics": { "total_matches": 20, "total_goals": 67 },
+    "awards": {
+      "top_scorer": [
+        { "player": "Arturo Vidal", "team": "CHI", "goals": 4 },
+        { "player": "Ángel Romero", "team": "PAR", "goals": 4 },
+        { "player": "Luis Suárez", "team": "URU", "goals": 4 }
+      ]
+    }
   }
 ]

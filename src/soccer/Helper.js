@@ -47,6 +47,10 @@ export const getRoundRobinStage = (stages) => {
   return stages ? stages.filter((s) => s.type === 'roundrobin') : null
 }
 
+export const getRoundRobinMdStage = (stages) => {
+  return stages ? stages.filter((s) => s.type === 'roundrobinmatchday') : null
+}
+
 export const getKnockoutStage = (stages) => {
   return stages ? stages.filter((s) => s.type === 'knockout') : null
 }
@@ -94,7 +98,8 @@ export const isWinner = (who, match) => {
 
 export const getMatchArrayByDate = (round, sorted) => {
   let tmp = []
-  round.matches &&
+  round &&
+    round.matches &&
     round.matches.forEach((m) => {
       tmp.push(m)
     })
@@ -117,13 +122,11 @@ export const getDateMatchArrayPair = (matches_array, sorted) => {
       })
     }
     matches_array.forEach((t) => {
-      if (matches[t.date]) {
-        matches[t.date].push(t)
-      } else {
+      if (!matches[t.date]) {
         dates.push(t.date)
         matches[t.date] = []
-        matches[t.date].push(t)
       }
+      matches[t.date].push(t)
     })
   }
   return { dates, matches }

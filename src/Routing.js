@@ -33,11 +33,12 @@ export default function Routing() {
         <Route exact path="/soccer/tournament/:id" children={<TournamentRoute />} />
         <Route path="/soccer/tournament/:id/matches" children={<TournamentRoute page="matches" />} />
         <Route path="/soccer/tournament/:id/groups" children={<TournamentRoute page="groups" />} />
-        <Route path="/soccer/tournament/:id/standings" children={<TournamentRoute page="standings" />} />
+        <Route path="/soccer/tournament/:id/finalstandings" children={<TournamentRoute page="finalstandings" />} />
         <Route exact path="/soccer/tournament/:id/qualification" children={<TournamentRoute page="qualification" />} />
         <Route exact path="/soccer/tournament/:id/qualification/:cid" children={<TournamentRoute page="qualification" />} />
         <Route path="/soccer/tournament/:id/qualification/:cid/matches" children={<TournamentRoute page="qualification" qPage="matches" />} />
         <Route path="/soccer/tournament/:id/qualification/:cid/groups" children={<TournamentRoute page="qualification" qPage="groups" />} />
+        <Route path="/soccer/tournament/:id/qualification/:cid/standings" children={<TournamentRoute page="qualification" qPage="standings" />} />
         <Route path="/tennis" children={<TennisApp />} />
         <Route path="/football" children={<FootballApp />} />
         <Route exact path="/admin" children={<FSApp />} />

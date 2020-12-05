@@ -215,17 +215,19 @@ const Intro = (props) => {
                   <NumberFormat value={(statistics.total_goals / statistics.total_matches).toFixed(2)} displayType={'text'} /> per match)
                 </Col>
               </Row>
-              <Row className="margin-top-xs">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                  Attendance
-                </Col>
-                <Col md="5" sm="7">
-                  <NumberFormat value={statistics.attendance} displayType={'text'} thousandSeparator={true} />
-                  &nbsp;(
-                  <NumberFormat value={(statistics.attendance / statistics.total_matches).toFixed(0)} displayType={'text'} thousandSeparator={true} /> per
-                  match)
-                </Col>
-              </Row>
+              {statistics.attendance && (
+                <Row className="margin-top-xs">
+                  <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                    Attendance
+                  </Col>
+                  <Col md="5" sm="7">
+                    <NumberFormat value={statistics.attendance} displayType={'text'} thousandSeparator={true} />
+                    &nbsp;(
+                    <NumberFormat value={(statistics.attendance / statistics.total_matches).toFixed(0)} displayType={'text'} thousandSeparator={true} /> per
+                    match)
+                  </Col>
+                </Row>
+              )}
             </Col>
           </React.Fragment>
         )}

@@ -150,7 +150,7 @@ export const findRoundAdvancedTeams = (tournament, name) => {
   return tournament.advanced_teams.rounds.find((r) => r.name === name)
 }
 
-const Standings = (props) => {
+const FinalStandings = (props) => {
   const { tournament } = props
   const config = getTournamentConfig(tournament)
   const { stages } = tournament
@@ -212,4 +212,4 @@ const Standings = (props) => {
   )
 }
 
-export default Standings
+export default FinalStandings

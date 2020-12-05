@@ -20,15 +20,16 @@ const collectWildCardRankings = (groups, pos) => {
   return wildCard
 }
 
-const GroupStage = (props) => {
+const GroupStandings = (props) => {
   const { config, stage } = props
   const { groups, advancement, show_match_year } = stage
   const wildCardPos = hasWildCardAdvancement(groups, advancement) ? advancement.teams.wild_card.pos : 3
-  groups.forEach((group) => {
-    calculateGroupRankings(group, config)
-    const matchDay = group.matches ? Math.ceil(group.matches.length / 2) : 0
-    collectMatchdayRankings(group, matchDay)
-  })
+  groups &&
+    groups.forEach((group) => {
+      calculateGroupRankings(group, config)
+      const matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
+      collectMatchdayRankings(group, matchDay)
+    })
   const wildCardRankings = collectWildCardRankings(groups, wildCardPos)
   // console.log('groups', groups)
   stage.wild_card = wildCardRankings[0]
@@ -49,4 +50,4 @@ const GroupStage = (props) => {
   )
 }
 
-export default GroupStage
+export default GroupStandings

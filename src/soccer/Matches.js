@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import RoundRobin from './RoundRobin'
+import RoundRobinMatchDay from './RoundRobinMatchDay'
 import Knockout from './Knockout'
 import Knockout2Legged from './Knockout2Legged'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
@@ -43,6 +44,7 @@ const Matches = (props) => {
                 {stage.name && (
                   <TabPane tabId={stage.name.replace(' ', '-')}>
                     {stage.type === 'roundrobin' && <RoundRobin stage={stage} />}
+                    {stage.type === 'roundrobinmatchday' && <RoundRobinMatchDay stage={stage} />}
                     {stage.type === 'knockout' && <Knockout stage={stage} />}
                     {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} />}
                   </TabPane>

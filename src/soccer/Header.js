@@ -29,7 +29,7 @@ const HeaderLinks = (props) => {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink disabled={page === 'standings'} href={`/soccer/tournament/${id}/standings`}>
+            <NavLink disabled={page === 'finalstandings'} href={`/soccer/tournament/${id}/finalstandings`}>
               Final standings
             </NavLink>
           </NavItem>

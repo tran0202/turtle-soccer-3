@@ -7,7 +7,7 @@ import Header from './Header'
 import Intro from './Intro'
 import Matches from './Matches'
 import Groups from './Groups'
-import Standings from './Standings'
+import FinalStandings from './FinalStandings'
 import Qualification from './Qualification'
 import { getTournamentArray, getTournamentDataArray, getQualificationTournamentArray, getQualificationTournamentDataArray } from './Helper'
 import { Container } from 'reactstrap'
@@ -20,7 +20,7 @@ class TournamentApp extends React.Component {
       tournament: null,
       tournamentType: null,
       currentTournament: 'WC2022',
-      currentQualificationTournament: 'WC2022_CAF',
+      currentQualificationTournament: 'WC2022_CONMEBOL',
     }
   }
 
@@ -111,7 +111,7 @@ class TournamentApp extends React.Component {
               {page === 'intro' && <Intro tournament={tournament} />}
               {page === 'matches' && <Matches tournament={tournament} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
-              {page === 'standings' && <Standings tournament={tournament} />}
+              {page === 'finalstandings' && <FinalStandings tournament={tournament} />}
               {page === 'qualification' && <Qualification tournament={tournament} tournamentType={tournamentType} query={query} />}
             </React.Fragment>
           )}
