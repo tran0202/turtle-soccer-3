@@ -572,38 +572,6 @@
     "end_date": "2006-01-01"
   },
   {
-    "id": "RUS",
-    "name": "Russia",
-    "official_name": "",
-    "parent_nation_id": "",
-    "nation_type_id": "NATN",
-    "flag_filename": "Russia.png",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
-    "id": "CIS",
-    "name": "CIS",
-    "official_name": "Commonwealth of Independent States",
-    "parent_nation_id": "RUS",
-    "nation_type_id": "NATN",
-    "flag_filename": "CIS.png",
-    "code": "CIS",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
-    "id": "URS",
-    "name": "Soviet Union",
-    "official_name": "",
-    "parent_nation_id": "RUS",
-    "nation_type_id": "NATN",
-    "flag_filename": "urs.png",
-    "code": "URS",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
     "id": "COL",
     "name": "Colombia",
     "official_name": "",
@@ -643,71 +611,6 @@
     "code": "CGO",
     "start_date": "1970-01-02",
     "end_date": "1991-06-09"
-  },
-  {
-    "id": "COD",
-    "name": "Congo DR",
-    "official_name": "",
-    "parent_nation_id": "",
-    "nation_type_id": "NATN",
-    "flag_filename": "Congo_DR.png",
-    "start_date": "2006-02-18",
-    "end_date": ""
-  },
-  {
-    "id": "COD-1964-1966",
-    "name": "Congo-Léopoldville",
-    "official_name": "Congo-Léopoldville",
-    "parent_nation_id": "COD",
-    "nation_type_id": "NATN",
-    "flag_filename": "Congo_Leopoldville_1964_1966.png",
-    "code": "COD",
-    "start_date": "1964-08-01",
-    "end_date": "1966-06-01"
-  },
-  {
-    "id": "COD-1966-1971",
-    "name": "Congo-Kinshasa",
-    "official_name": "Congo-Kinshasa",
-    "parent_nation_id": "COD",
-    "nation_type_id": "NATN",
-    "flag_filename": "Congo_Kinshasa_1966_1971.png",
-    "code": "COD",
-    "start_date": "1966-06-01",
-    "end_date": "1971-10-27"
-  },
-  {
-    "id": "COD-1971-1997",
-    "name": "Zaire",
-    "official_name": "",
-    "parent_nation_id": "COD",
-    "nation_type_id": "NATN",
-    "flag_filename": "zai.png",
-    "code": "ZAI",
-    "start_date": "1971-10-27",
-    "end_date": "1997-05-17"
-  },
-  {
-    "id": "COD-1997-2003",
-    "name": "Congo DR",
-    "official_name": "Democratic Republic of the Congo",
-    "parent_nation_id": "COD",
-    "nation_type_id": "NATN",
-    "flag_filename": "Congo_DR_1997_2003.png",
-    "code": "COD",
-    "start_date": "1997-05-17",
-    "end_date": "2003-01-01"
-  },
-  {
-    "id": "COD-2003-2006",
-    "name": "Congo DR",
-    "official_name": "Democratic Republic of the Congo",
-    "parent_nation_id": "COD",
-    "nation_type_id": "NATN",
-    "flag_filename": "Congo_DR_2003_2006.png",
-    "code": "COD",
-    "start_date": "2003-01-01",
-    "end_date": "2006-02-18"
   },
   {
     "id": "COK",
@@ -769,6 +672,28 @@
     "flag_filename": "Curacao.png",
     "start_date": "2010-10-10",
     "end_date": ""
+  },
+  {
+    "id": "CUW-1959-1986",
+    "name": "Netherlands Antilles",
+    "official_name": "Netherlands Antilles",
+    "parent_nation_id": "CUW",
+    "nation_type_id": "NATN",
+    "flag_filename": "Netherlands_Antilles_1959_1986.png",
+    "code": "ANT",
+    "start_date": "1959-01-01",
+    "end_date": "1986-01-01"
+  },
+  {
+    "id": "CUW-1986-2010",
+    "name": "Netherlands_Antilles",
+    "official_name": "",
+    "parent_nation_id": "CUW",
+    "nation_type_id": "NATN",
+    "flag_filename": "Netherlands_Antilles.png",
+    "code": "ANT",
+    "start_date": "1986-01-01",
+    "end_date": "2010-01-01"
   },
   {
     "id": "CYP",
@@ -840,6 +765,71 @@
     "flag_filename": "Dominican_Republic.png",
     "start_date": "",
     "end_date": ""
+  },
+  {
+    "id": "COD",
+    "name": "DR Congo",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Congo_DR.png",
+    "start_date": "2006-02-18",
+    "end_date": ""
+  },
+  {
+    "id": "COD-1964-1966",
+    "name": "Congo-Léopoldville",
+    "official_name": "Congo-Léopoldville",
+    "parent_nation_id": "COD",
+    "nation_type_id": "NATN",
+    "flag_filename": "Congo_Leopoldville_1964_1966.png",
+    "code": "COD",
+    "start_date": "1964-08-01",
+    "end_date": "1966-06-01"
+  },
+  {
+    "id": "COD-1966-1971",
+    "name": "Congo-Kinshasa",
+    "official_name": "Congo-Kinshasa",
+    "parent_nation_id": "COD",
+    "nation_type_id": "NATN",
+    "flag_filename": "Congo_Kinshasa_1966_1971.png",
+    "code": "COD",
+    "start_date": "1966-06-01",
+    "end_date": "1971-10-27"
+  },
+  {
+    "id": "COD-1971-1997",
+    "name": "Zaire",
+    "official_name": "",
+    "parent_nation_id": "COD",
+    "nation_type_id": "NATN",
+    "flag_filename": "zai.png",
+    "code": "ZAI",
+    "start_date": "1971-10-27",
+    "end_date": "1997-05-17"
+  },
+  {
+    "id": "COD-1997-2003",
+    "name": "Congo DR",
+    "official_name": "Democratic Republic of the Congo",
+    "parent_nation_id": "COD",
+    "nation_type_id": "NATN",
+    "flag_filename": "Congo_DR_1997_2003.png",
+    "code": "COD",
+    "start_date": "1997-05-17",
+    "end_date": "2003-01-01"
+  },
+  {
+    "id": "COD-2003-2006",
+    "name": "Congo DR",
+    "official_name": "Democratic Republic of the Congo",
+    "parent_nation_id": "COD",
+    "nation_type_id": "NATN",
+    "flag_filename": "Congo_DR_2003_2006.png",
+    "code": "COD",
+    "start_date": "2003-01-01",
+    "end_date": "2006-02-18"
   },
   {
     "id": "INH",
@@ -995,6 +985,16 @@
     "flag_filename": "Swaziland.png",
     "start_date": "2018-04-19",
     "end_date": ""
+  },
+  {
+    "id": "SWZ-2018",
+    "name": "Swaziland",
+    "official_name": "",
+    "parent_nation_id": "SWZ",
+    "nation_type_id": "NATN",
+    "flag_filename": "Swaziland.png",
+    "start_date": "",
+    "end_date": "2018-04-19"
   },
   {
     "id": "ETH",
@@ -1732,7 +1732,7 @@
     "end_date": ""
   },
   {
-    "id": "LIB",
+    "id": "LBN",
     "name": "Lebanon",
     "official_name": "",
     "parent_nation_id": "",
@@ -2023,28 +2023,6 @@
     "end_date": ""
   },
   {
-    "id": "CUW-1959-1986",
-    "name": "Netherlands Antilles",
-    "official_name": "Netherlands Antilles",
-    "parent_nation_id": "CUW",
-    "nation_type_id": "NATN",
-    "flag_filename": "Netherlands_Antilles_1959_1986.png",
-    "code": "ANT",
-    "start_date": "1959-01-01",
-    "end_date": "1986-01-01"
-  },
-  {
-    "id": "CUW-1986-2010",
-    "name": "Netherlands_Antilles",
-    "official_name": "",
-    "parent_nation_id": "CUW",
-    "nation_type_id": "NATN",
-    "flag_filename": "Netherlands_Antilles.png",
-    "code": "ANT",
-    "start_date": "1986-01-01",
-    "end_date": "2010-01-01"
-  },
-  {
     "id": "NCL",
     "name": "New Caledonia",
     "official_name": "",
@@ -2064,38 +2042,6 @@
     "code": "NCL",
     "start_date": "1973-01-01",
     "end_date": "2008-01-01"
-  },
-  {
-    "id": "VAN",
-    "name": "Vanuatu",
-    "official_name": "",
-    "parent_nation_id": "",
-    "nation_type_id": "NATN",
-    "flag_filename": "Vanuatu.png",
-    "start_date": "1980-07-30",
-    "end_date": ""
-  },
-  {
-    "id": "VAN-1953-1980",
-    "name": "New Hebrides",
-    "official_name": "",
-    "parent_nation_id": "VAN",
-    "nation_type_id": "NATN",
-    "flag_filename": "New_Hebrides.png",
-    "code": "HEB",
-    "start_date": "1953-01-01",
-    "end_date": "1980-07-30"
-  },
-  {
-    "id": "VAN-1980",
-    "name": "New Hebrides",
-    "official_name": "New Hebrides",
-    "parent_nation_id": "VAN",
-    "nation_type_id": "NATN",
-    "flag_filename": "Vanuatu.png",
-    "code": "HEB",
-    "start_date": "1980-07-30",
-    "end_date": ""
   },
   {
     "id": "NZL",
@@ -2342,6 +2288,38 @@
     "end_date": "1989-12-22"
   },
   {
+    "id": "RUS",
+    "name": "Russia",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Russia.png",
+    "start_date": "",
+    "end_date": ""
+  },
+  {
+    "id": "CIS",
+    "name": "CIS",
+    "official_name": "Commonwealth of Independent States",
+    "parent_nation_id": "RUS",
+    "nation_type_id": "NATN",
+    "flag_filename": "CIS.png",
+    "code": "CIS",
+    "start_date": "",
+    "end_date": ""
+  },
+  {
+    "id": "URS",
+    "name": "Soviet Union",
+    "official_name": "",
+    "parent_nation_id": "RUS",
+    "nation_type_id": "NATN",
+    "flag_filename": "urs.png",
+    "code": "URS",
+    "start_date": "",
+    "end_date": ""
+  },
+  {
     "id": "RWA",
     "name": "Rwanda",
     "official_name": "",
@@ -2373,7 +2351,7 @@
   },
   {
     "id": "STP",
-    "name": "São Tomé e Príncipe",
+    "name": "São Tomé and Príncipe",
     "official_name": "",
     "parent_nation_id": "",
     "nation_type_id": "NATN",
@@ -2589,28 +2567,7 @@
     "end_date": ""
   },
   {
-    "id": "VSO",
-    "name": "South Vietnam",
-    "official_name": "",
-    "parent_nation_id": "VIE",
-    "nation_type_id": "NATN",
-    "flag_filename": "South_Vietnam.png",
-    "code": "VSO",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
-    "id": "VIE",
-    "name": "Vietnam",
-    "official_name": "",
-    "parent_nation_id": "",
-    "nation_type_id": "NATN",
-    "flag_filename": "Vietnam.png",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
-    "id": "SYE",
+    "id": "YMD",
     "name": "South Yemen",
     "official_name": "",
     "parent_nation_id": "",
@@ -2755,16 +2712,6 @@
     "end_date": ""
   },
   {
-    "id": "SWZ-2018",
-    "name": "Swaziland",
-    "official_name": "",
-    "parent_nation_id": "SWZ",
-    "nation_type_id": "NATN",
-    "flag_filename": "Swaziland.png",
-    "start_date": "",
-    "end_date": "2018-04-19"
-  },
-  {
     "id": "SWE",
     "name": "Sweden",
     "official_name": "",
@@ -2817,7 +2764,7 @@
   },
   {
     "id": "TJK",
-    "name": "Tajikistann",
+    "name": "Tajikistan",
     "official_name": "",
     "parent_nation_id": "",
     "nation_type_id": "NATN",
@@ -3007,6 +2954,38 @@
     "end_date": ""
   },
   {
+    "id": "VAN",
+    "name": "Vanuatu",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Vanuatu.png",
+    "start_date": "1980-07-30",
+    "end_date": ""
+  },
+  {
+    "id": "VAN-1953-1980",
+    "name": "New Hebrides",
+    "official_name": "",
+    "parent_nation_id": "VAN",
+    "nation_type_id": "NATN",
+    "flag_filename": "New_Hebrides.png",
+    "code": "HEB",
+    "start_date": "1953-01-01",
+    "end_date": "1980-07-30"
+  },
+  {
+    "id": "VAN-1980",
+    "name": "New Hebrides",
+    "official_name": "New Hebrides",
+    "parent_nation_id": "VAN",
+    "nation_type_id": "NATN",
+    "flag_filename": "Vanuatu.png",
+    "code": "HEB",
+    "start_date": "1980-07-30",
+    "end_date": ""
+  },
+  {
     "id": "VEN",
     "name": "Venezuela",
     "official_name": "",
@@ -3037,6 +3016,27 @@
     "code": "VEN",
     "start_date": "1954-01-01",
     "end_date": "2006-03-12"
+  },
+  {
+    "id": "VIE",
+    "name": "Vietnam",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Vietnam.png",
+    "start_date": "",
+    "end_date": ""
+  },
+  {
+    "id": "VSO",
+    "name": "South Vietnam",
+    "official_name": "",
+    "parent_nation_id": "VIE",
+    "nation_type_id": "NATN",
+    "flag_filename": "South_Vietnam.png",
+    "code": "VSO",
+    "start_date": "",
+    "end_date": ""
   },
   {
     "id": "WAL",

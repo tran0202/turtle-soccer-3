@@ -13,7 +13,7 @@
 
 .tournaments .tournament-box i {
   display: block;
-  font-size: 64px;
+  font-size: 80px;
   margin-bottom: 15px;
 }
 
@@ -166,6 +166,12 @@
   padding-top: 115px;
 }
 
+.tournament-logo {
+  width: auto;
+  height: 90px;
+  max-width: 100%;
+}
+
 @media (max-width: 992px) {
   .ranking-tbl {
     font-size: 1.5rem;
@@ -177,6 +183,12 @@
   }
   .rank-col-padding-3 {
     padding-top: 105px;
+  }
+
+  .tournament-logo {
+    width: auto;
+    height: 70px;
+    max-width: 100%;
   }
 }
 
@@ -210,6 +222,12 @@
   .aggregate_text {
     font-size: 15px;
   }
+
+  .tournament-logo {
+    width: auto;
+    height: 50px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -237,6 +255,12 @@
 
   .aggregate_text {
     font-size: 10px;
+  }
+
+  .tournament-logo {
+    width: auto;
+    height: 40px;
+    max-width: 100%;
   }
 }
 

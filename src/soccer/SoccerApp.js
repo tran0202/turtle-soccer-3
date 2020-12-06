@@ -43,7 +43,9 @@ const GetTabs = (props) => {
                   {tournamentTypeArrayByConfed[confed] &&
                     tournamentTypeArrayByConfed[confed].map((tt) => (
                       <ListGroupItem key={tt.id}>
-                        <h2 className="h2-ff1">{tt.name}</h2>
+                        <a href={`/soccer/competition/${tt.id}`}>
+                          <h2 className="h2-ff1">{tt.name}</h2>
+                        </a>
                         {tournamentArrayByType[tt.id] && (
                           <section className="tournaments section-bg">
                             <div className="container">
@@ -64,6 +66,19 @@ const GetTabs = (props) => {
                                     </div>
                                   </div>
                                 ))}
+                                <div className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 text-center" data-aos="fade-up">
+                                  <div className="tournament-box">
+                                    <a href={`/soccer/competition/${tt.id}`}>
+                                      <i className="icofont-football card-img-top-height-100 mx-auto"></i>
+                                    </a>
+                                    <a href={`/soccer/competition/${tt.id}`}>
+                                      <p className="text-center font-bold mt-3">
+                                        More <br></br>
+                                        {tt.name}
+                                      </p>
+                                    </a>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </section>
@@ -84,6 +99,7 @@ class SoccerApp extends React.Component {
   constructor(props) {
     super(props)
     document.title = 'Turtle Soccer'
+    this.tournamentCount = 5
 
     this.state = {
       tournamentArrayByType: [],
@@ -108,7 +124,7 @@ class SoccerApp extends React.Component {
     this.setState({ tournamentTypeArrayByConfed: tta })
   }
 
-  getTournamentArrayByType = () => {
+  getTournamentArrayByType = (count) => {
     // console.log(this.getTournamentTypeArray())
     let result = []
     let tmp = []
@@ -122,8 +138,10 @@ class SoccerApp extends React.Component {
       }
     })
     this.getTournamentTypeArray().forEach((tt) => {
-      tmp[tt.id].forEach((t) => {
-        result[tt.id].push(t)
+      tmp[tt.id].forEach((t, index) => {
+        if (!count || index < count) {
+          result[tt.id].push(t)
+        }
       })
     })
     this.setState({ tournamentArrayByType: result })
@@ -131,7 +149,7 @@ class SoccerApp extends React.Component {
 
   getData = () => {
     this.getTournamentTypeArrayByConfed()
-    this.getTournamentArrayByType()
+    this.getTournamentArrayByType(this.tournamentCount)
   }
 
   componentDidMount() {

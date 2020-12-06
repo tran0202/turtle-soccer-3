@@ -1046,11 +1046,11 @@
         },
         {
           "name": "Group H",
-          "teams": [{ "id": "TKM" }, { "id": "KOR" }, { "id": "LIB" }, { "id": "PRK" }, { "id": "SRI" }],
+          "teams": [{ "id": "TKM" }, { "id": "KOR" }, { "id": "LBN" }, { "id": "PRK" }, { "id": "SRI" }],
           "matches": [
             {
               "home_team": "PRK",
-              "away_team": "LIB",
+              "away_team": "LBN",
               "home_score": 2,
               "away_score": 0,
               "date": "2019-09-05",
@@ -1099,7 +1099,7 @@
               "city": "Hwaseong"
             },
             {
-              "home_team": "LIB",
+              "home_team": "LBN",
               "away_team": "TKM",
               "home_score": 2,
               "away_score": 1,
@@ -1120,7 +1120,7 @@
             },
             {
               "home_team": "SRI",
-              "away_team": "LIB",
+              "away_team": "LBN",
               "home_score": 0,
               "away_score": 3,
               "date": "2019-10-15",
@@ -1139,7 +1139,7 @@
               "city": "Ashgabat"
             },
             {
-              "home_team": "LIB",
+              "home_team": "LBN",
               "away_team": "KOR",
               "home_score": 0,
               "away_score": 0,
@@ -1159,7 +1159,7 @@
               "city": "Ashgabat"
             },
             {
-              "home_team": "LIB",
+              "home_team": "LBN",
               "away_team": "PRK",
               "home_score": 0,
               "away_score": 0,

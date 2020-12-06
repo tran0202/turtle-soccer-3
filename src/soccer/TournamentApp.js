@@ -4,7 +4,7 @@ import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
 import QualificationTournamentDataCurrent from '../data/soccer/QualificationTournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
-import Intro from './Intro'
+import Intro from './About'
 import Matches from './Matches'
 import Groups from './Groups'
 import FinalStandings from './FinalStandings'
@@ -108,7 +108,7 @@ class TournamentApp extends React.Component {
           {tournament && tournamentType && (
             <React.Fragment>
               <Header state={this.state} query={query} />
-              {page === 'intro' && <Intro tournament={tournament} />}
+              {page === 'about' && <Intro tournament={tournament} />}
               {page === 'matches' && <Matches tournament={tournament} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
               {page === 'finalstandings' && <FinalStandings tournament={tournament} />}

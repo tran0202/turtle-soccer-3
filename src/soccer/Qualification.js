@@ -1,5 +1,5 @@
 import React from 'react'
-import Intro from './Intro'
+import About from './About'
 import QualificationHeader from './QualificationHeader'
 import Matches from './Matches'
 import Groups from './Groups'
@@ -41,7 +41,7 @@ const Qualification = (props) => {
           {qualification.existed && (
             <React.Fragment>
               {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}
-              {qPage === 'intro' && <Intro tournament={qualification} />}
+              {qPage === 'about' && <About tournament={qualification} />}
               {qPage === 'matches' && <Matches tournament={qualification} />}
               {(qPage === 'groups' || qPage === 'standings') && <Groups tournament={qualification} tournamentType={tournamentType} />}
             </React.Fragment>

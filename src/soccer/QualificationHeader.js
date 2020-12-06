@@ -23,8 +23,8 @@ const PageLinks = (props) => {
   return (
     <Nav className="justify-content-center">
       <NavItem>
-        <NavLink disabled={qPage === 'intro'} href={`/soccer/tournament/${id}/qualification/${cid}`}>
-          Introduction
+        <NavLink disabled={qPage === 'about'} href={`/soccer/tournament/${id}/qualification/${cid}`}>
+          About
         </NavLink>
       </NavItem>
       {qTournament.stages && (

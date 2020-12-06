@@ -4,7 +4,7 @@ import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const HeaderLinks = (props) => {
-  const { tournament, query } = props
+  const { tournament, tournamentType, query } = props
   const { page } = query
   const { id, active, qualification, stages } = tournament
   return (
@@ -42,6 +42,9 @@ const HeaderLinks = (props) => {
           </NavLink>
         </NavItem>
       )}
+      <NavItem>
+        <NavLink href={`/soccer/competition/${tournamentType.id}`}>More {tournamentType.name}</NavLink>
+      </NavItem>
     </Nav>
   )
 }
@@ -63,7 +66,7 @@ class Header extends React.Component {
             {tournament.name}
           </h1>
           {moment(details.start_date).format('MMMM D, YYYY')} &mdash; {moment(details.end_date).format('MMMM D, YYYY')}
-          <HeaderLinks tournament={tournament} query={query} />
+          <HeaderLinks tournament={tournament} tournamentType={tournamentType} query={query} />
         </Col>
       </Row>
     )

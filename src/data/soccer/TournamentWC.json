@@ -61,6 +61,7 @@
       { "name": "Kylian Mbappé", "filename": "Kylian_Mbappe_World_Cup_Trophy.jpg", "text": "Best Young Player" },
       { "name": "Thibaut Courtois", "filename": "Courtois_2018_(cropped).jpg", "text": "Golden Glove" }
     ],
+    "final_standings": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
     "statistics": { "total_matches": 64, "total_goals": 169, "attendance": 3031768 },
     "awards": {
       "golden_boot": [
@@ -129,6 +130,7 @@
         "text": "Golden Glove. Neuer celebrating after Germany's 1–0 victory over Argentina in the FIFA World Cup Final."
       }
     ],
+    "final_standings": { "champions": "GER", "runners_up": "ARG", "third_place": "NED", "fourth_place": "BRA" },
     "statistics": { "total_matches": 64, "total_goals": 171, "attendance": 3429873 },
     "awards": {
       "golden_boot": [

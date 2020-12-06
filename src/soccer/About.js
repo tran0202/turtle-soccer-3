@@ -46,7 +46,7 @@ const getGoldenBootDetails = (player) => {
   return details
 }
 
-const Intro = (props) => {
+const About = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_standings, statistics, awards, qualified } = tournament
   if (!details) return null
@@ -373,4 +373,4 @@ const Intro = (props) => {
   )
 }
 
-export default Intro
+export default About
