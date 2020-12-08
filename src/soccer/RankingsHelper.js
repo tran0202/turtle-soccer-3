@@ -232,6 +232,12 @@ export const collectMatchdayRankings = (group, matchDay) => {
           rankings = t.rankings.find((r) => r.md === matchDay - 1)
           if (!rankings && matchDay > 2) {
             rankings = t.rankings.find((r) => r.md === matchDay - 2)
+            if (!rankings && matchDay > 3) {
+              rankings = t.rankings.find((r) => r.md === matchDay - 3)
+              if (!rankings && matchDay > 4) {
+                rankings = t.rankings.find((r) => r.md === matchDay - 4)
+              }
+            }
           }
         }
         if (!group.final_rankings) {

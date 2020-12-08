@@ -1,9 +1,11 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
+import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
 import Page from '../core/Page'
-import { getTournamentArray } from './Helper'
-import { Row, Col, Nav, NavItem, NavLink, Container } from 'reactstrap'
 import CompetitionAbout from './CompetitionAbout'
+import AlltimeStandings from './AlltimeStandings'
+import { getTournamentArray, getTournamentDataArray, getCurrentTournament } from './Helper'
+import { Row, Col, Nav, NavItem, NavLink, Container } from 'reactstrap'
 
 const CompHeaderLinks = (props) => {
   const { query } = props
@@ -17,7 +19,7 @@ const CompHeaderLinks = (props) => {
       </NavItem>
       <NavItem>
         <NavLink disabled={page === 'alltimestandings'} href={`/soccer/competition/${id}/alltimestandings`}>
-          All-time standings
+          All-time Standings
         </NavLink>
       </NavItem>
     </Nav>
@@ -42,9 +44,24 @@ class CompetitionApp extends React.Component {
     }
   }
 
+  getTournamentData = (id) => {
+    const tf = getTournamentDataArray().find((tf) => tf.id === id)
+    if (tf) {
+      return tf
+    } else if (id === getCurrentTournament().tournament) {
+      return TournamentDataCurrent
+    } else {
+      console.log('Tournament format error', tf)
+      return {}
+    }
+  }
+
   getCompetition = () => {
     const ta = getTournamentArray().filter((t) => t.tournament_type_id === this.props.query.id)
     if (ta) {
+      ta.forEach((t) => {
+        t.stages = this.getTournamentData(t.id).stages
+      })
       this.setState({
         tournaments: ta,
       })
@@ -81,6 +98,7 @@ class CompetitionApp extends React.Component {
             </Col>
           </Row>
           {page === 'about' && <CompetitionAbout tournaments={tournaments} tournamentType={tournamentType} />}
+          {page === 'alltimestandings' && <AlltimeStandings tournaments={tournaments} />}
         </Container>
       </Page>
     )

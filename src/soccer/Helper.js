@@ -9,6 +9,10 @@ import QualificationTournamentDataWCArray from '../data/soccer/QualificationTour
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
+export const getCurrentTournament = () => {
+  return { tournament: 'WC2022', qualificationTournament: 'WC2022_CONMEBOL' }
+}
+
 export const getTournamentConfig = (tournament) => {
   return {
     id: tournament.id,

@@ -4,12 +4,18 @@ import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
 import QualificationTournamentDataCurrent from '../data/soccer/QualificationTournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
-import Intro from './About'
+import About from './About'
 import Matches from './Matches'
 import Groups from './Groups'
 import FinalStandings from './FinalStandings'
 import Qualification from './Qualification'
-import { getTournamentArray, getTournamentDataArray, getQualificationTournamentArray, getQualificationTournamentDataArray } from './Helper'
+import {
+  getTournamentArray,
+  getTournamentDataArray,
+  getQualificationTournamentArray,
+  getQualificationTournamentDataArray,
+  getCurrentTournament,
+} from './Helper'
 import { Container } from 'reactstrap'
 
 class TournamentApp extends React.Component {
@@ -19,8 +25,6 @@ class TournamentApp extends React.Component {
     this.state = {
       tournament: null,
       tournamentType: null,
-      currentTournament: 'WC2022',
-      currentQualificationTournament: 'WC2022_CONMEBOL',
     }
   }
 
@@ -37,7 +41,7 @@ class TournamentApp extends React.Component {
     const qtd = getQualificationTournamentDataArray().find((qtd) => qtd.id === `${this.props.query.id}_${this.props.query.cid}`)
     if (qtd) {
       return qtd
-    } else if (`${this.props.query.id}_${this.props.query.cid}` === this.state.currentQualificationTournament) {
+    } else if (`${this.props.query.id}_${this.props.query.cid}` === getCurrentTournament().qualificationTournament) {
       return QualificationTournamentDataCurrent
     } else {
       console.log('Qualification Tournament format error', qtd)
@@ -61,7 +65,7 @@ class TournamentApp extends React.Component {
     const tf = getTournamentDataArray().find((tf) => tf.id === this.props.query.id)
     if (tf) {
       return tf
-    } else if (this.props.query.id === this.state.currentTournament) {
+    } else if (this.props.query.id === getCurrentTournament().tournament) {
       return TournamentDataCurrent
     } else {
       console.log('Tournament format error', tf)
@@ -108,7 +112,7 @@ class TournamentApp extends React.Component {
           {tournament && tournamentType && (
             <React.Fragment>
               <Header state={this.state} query={query} />
-              {page === 'about' && <Intro tournament={tournament} />}
+              {page === 'about' && <About tournament={tournament} />}
               {page === 'matches' && <Matches tournament={tournament} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
               {page === 'finalstandings' && <FinalStandings tournament={tournament} />}
