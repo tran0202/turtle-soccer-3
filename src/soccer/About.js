@@ -244,8 +244,14 @@ const About = (props) => {
                       Golden Boot
                     </Col>
                     <Col md="5" sm="7">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[0].team)} alt={awards.golden_boot[0].team} />
-                      &nbsp;{awards.golden_boot[0].player} {getGoldenBootDetails(awards.golden_boot[0])}
+                      {awards.golden_boot[0] && (
+                        <React.Fragment>
+                          {awards.golden_boot[0].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[0].team)} alt={awards.golden_boot[0].team} />
+                          )}
+                          &nbsp;{awards.golden_boot[0].player} {getGoldenBootDetails(awards.golden_boot[0])}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                   <Row className="margin-top-xs">
@@ -253,8 +259,14 @@ const About = (props) => {
                       Silver Boot
                     </Col>
                     <Col md="5" sm="7">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[1].team)} alt={awards.golden_boot[1].team} />
-                      &nbsp;{awards.golden_boot[1].player} {getGoldenBootDetails(awards.golden_boot[1])}
+                      {awards.golden_boot[1] && (
+                        <React.Fragment>
+                          {awards.golden_boot[1].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[1].team)} alt={awards.golden_boot[1].team} />
+                          )}
+                          &nbsp;{awards.golden_boot[1].player} {getGoldenBootDetails(awards.golden_boot[1])}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                   <Row className="margin-top-xs mb-3">
@@ -262,8 +274,14 @@ const About = (props) => {
                       Bronze Boot
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
-                      &nbsp;{awards.golden_boot[2].player} {getGoldenBootDetails(awards.golden_boot[2])}
+                      {awards.golden_boot[2] && (
+                        <React.Fragment>
+                          {awards.golden_boot[2].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
+                          )}
+                          &nbsp;{awards.golden_boot[2].player} {getGoldenBootDetails(awards.golden_boot[2])}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -275,8 +293,14 @@ const About = (props) => {
                       Golden Ball
                     </Col>
                     <Col md="5" sm="7">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
-                      &nbsp;{awards.golden_ball[0].player}
+                      {awards.golden_ball[0] && (
+                        <React.Fragment>
+                          {awards.golden_ball[0].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
+                          )}
+                          &nbsp;{awards.golden_ball[0].player}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                   <Row className="margin-top-xs">
@@ -284,8 +308,14 @@ const About = (props) => {
                       Silver Ball
                     </Col>
                     <Col md="5" sm="7">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
-                      &nbsp;{awards.golden_ball[1].player}
+                      {awards.golden_ball[1] && (
+                        <React.Fragment>
+                          {awards.golden_ball[1].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
+                          )}
+                          &nbsp;{awards.golden_ball[1].player}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                   <Row className="margin-top-xs mb-3">
@@ -293,8 +323,14 @@ const About = (props) => {
                       Bronze Ball
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
-                      &nbsp;{awards.golden_ball[2].player}
+                      {awards.golden_ball[2] && (
+                        <React.Fragment>
+                          {awards.golden_ball[2].team && (
+                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
+                          )}
+                          &nbsp;{awards.golden_ball[2].player}
+                        </React.Fragment>
+                      )}
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -306,7 +342,9 @@ const About = (props) => {
                       Best Young Player
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.best_young_player.team)} alt={awards.best_young_player.team} />
+                      {awards.best_young_player.team && (
+                        <img className="flag-sm flag-md" src={getFlagSrc(awards.best_young_player.team)} alt={awards.best_young_player.team} />
+                      )}
                       &nbsp;{awards.best_young_player.player}
                     </Col>
                   </Row>
@@ -319,7 +357,9 @@ const About = (props) => {
                       Golden Glove
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_glove.team)} alt={awards.golden_glove.team} />
+                      {awards.golden_glove.team && (
+                        <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_glove.team)} alt={awards.golden_glove.team} />
+                      )}
                       &nbsp;{awards.golden_glove.player}
                     </Col>
                   </Row>
@@ -332,8 +372,12 @@ const About = (props) => {
                       Fair play
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
-                      <img className="flag-sm flag-md" src={getFlagSrc(awards.fair_play_team)} alt={awards.fair_play_team} />
-                      &nbsp;{getTeamName(awards.fair_play_team)}
+                      {awards.fair_play_team.map((t) => (
+                        <Row className="no-margin-lr" key={t}>
+                          {t && <img className="flag-sm flag-md" src={getFlagSrc(t)} alt={t} />}
+                          &nbsp;{getTeamName(t)}
+                        </Row>
+                      ))}
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -346,7 +390,7 @@ const About = (props) => {
                     </Col>
                     <Col md="5" sm="7" className="tournament-award-receiver">
                       {awards.top_scorer.map((ts) => (
-                        <Row key={ts.player}>
+                        <Row className="no-margin-lr" key={ts.player}>
                           {ts.team && <img className="flag-sm flag-md" src={getFlagSrc(ts.team)} alt={ts.team} />}
                           &nbsp;{ts.player} {getGoldenBootDetails(ts)}
                         </Row>

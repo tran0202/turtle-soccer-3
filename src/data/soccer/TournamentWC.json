@@ -18,7 +18,8 @@
       "confed_count": "5 or 6",
       "venue_count": 8,
       "city_count": 5
-    }
+    },
+    "hero_images": [{ "name": "Ras Abu Aboud Stadium", "filename": "CG_rendering_of_Ras_Abu_Aboud_Stadium_crop.jpg", "text": "Ras Abu Aboud Stadium" }]
   },
   {
     "id": "WC2018",
@@ -27,9 +28,9 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
-    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "details": {
       "host": "RUS",
       "logo_filename": "2018_FIFA_World_Cup.svg",
@@ -76,7 +77,7 @@
       ],
       "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
       "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
-      "fair_play_team": "ESP"
+      "fair_play_team": ["ESP"]
     }
   },
   {
@@ -86,9 +87,9 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
-    "tiebreakers": ["team", "head2head", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": "BRA",
       "logo_filename": "2014_FIFA_World_Cup.svg",
@@ -144,8 +145,8 @@
         { "player": "Arjen Robben", "team": "NED" }
       ],
       "best_young_player": { "player": "Paul Pogba", "team": "FRA" },
-      "golden_glove": { "player": "Manuel Neue", "team": "GER" },
-      "fair_play_team": "COL"
+      "golden_glove": { "player": "Manuel Neuer", "team": "GER" },
+      "fair_play_team": ["COL"]
     }
   },
   {
@@ -155,9 +156,9 @@
     "active": false,
     "third_place_ranking": false,
     "head_to_head_tiebreaker": false,
-    "tiebreakers": ["team", "head2head", "lot"],
     "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": "RSA",
       "logo_filename": "2010_FIFA_World_Cup.svg",
@@ -227,7 +228,7 @@
       ],
       "best_young_player": { "player": "Thomas Muller", "team": "GER" },
       "golden_glove": { "player": "Iker Casillas", "team": "ESP" },
-      "fair_play_team": "ESP"
+      "fair_play_team": ["ESP"]
     }
   },
   {
@@ -239,7 +240,54 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2006.png", "start_date": "2006-06-09", "end_date": "2006-07-09" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": "GER",
+      "logo_filename": "2006_FIFA_World_Cup.svg",
+      "mascot_filename": "2006-goleo-vi-and-pille.jpg",
+      "start_date": "2006-06-09",
+      "end_date": "2006-07-09",
+      "color": "#1d1d1b",
+      "team_count": 32,
+      "confed_count": 6,
+      "venue_count": 12,
+      "city_count": 12
+    },
+    "hero_images": [
+      { "name": "Champions", "filename": "ItalyWC2006win.jpg", "text": "Cannavaro lifting the World Cup trophy for Italy." },
+      {
+        "name": "Miroslav Klose",
+        "filename": "Miroslav_Klose_Portrait.jpeg",
+        "text": "Golden Boot. Klose during the 2006 FIFA World Cup."
+      },
+      {
+        "name": "Zinedine Zidane",
+        "filename": "Zinedine_zidane_wcf_2006-edit.jpg",
+        "text": "Golden Ball. Zidane during the 2006 World Cup Final."
+      },
+      {
+        "name": "Gianluigi Buffon",
+        "filename": "2006_FIFA_World_Cup_-_Italy_-_Buffon,_Materazzi_and_Perrotta.jpg",
+        "text": "Golden Glove. Buffon with Italy during the 2006 World Cup."
+      }
+    ],
+    "final_standings": { "champions": "ITA", "runners_up": "FRA", "third_place": "GER", "fourth_place": "POR" },
+    "statistics": { "total_matches": 64, "total_goals": 147, "attendance": 3359439 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Miroslav Klose", "team": "GER", "goals": 5 },
+        { "player": "Hernan Crespo", "team": "ARG" },
+        { "player": "Ronaldo", "team": "BRA" }
+      ],
+      "golden_ball": [
+        { "player": "Zinedine Zidane", "team": "FRA" },
+        { "player": "Fabio Cannavaro", "team": "ITA" },
+        { "player": "Andrea Pirlo", "team": "ITA" }
+      ],
+      "best_young_player": { "player": "Lukas Podolski", "team": "GER" },
+      "golden_glove": { "player": "Gianluigi Buffon", "team": "ITA" },
+      "fair_play_team": ["BRA", "ESP"]
+    }
   },
   {
     "id": "WC2002",
