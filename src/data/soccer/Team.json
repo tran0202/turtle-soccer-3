@@ -120,10 +120,18 @@
   { "id": "DJI", "name": "Djibouti", "team_type_id": "MNT", "nation_id": "DJI", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "VEN", "name": "Venezuela", "team_type_id": "MNT", "nation_id": "VEN", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "BOL", "name": "Bolivia", "team_type_id": "MNT", "nation_id": "BOL", "parent_team_id": "", "club_code": "", "official_name": "" },
+  { "id": "CZE", "name": "Czech Republic", "team_type_id": "MNT", "nation_id": "CZE", "parent_team_id": "", "club_code": "", "official_name": "" },
+  { "id": "UKR", "name": "Ukraine", "team_type_id": "MNT", "nation_id": "UKR", "parent_team_id": "", "club_code": "", "official_name": "" },
+  {
+    "id": "SRB-2003-2006",
+    "name": "Serbia and Montenegro",
+    "team_type_id": "MNT",
+    "nation_id": "SRB-2003-2006",
+    "parent_team_id": "SRB",
+    "club_code": "",
+    "official_name": ""
+  },
 
-  { "id": "213", "name": "Czech Republic", "team_type_id": "MNT", "nation_id": "55", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "215", "name": "Ukraine", "team_type_id": "MNT", "nation_id": "199", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "216", "name": "Serbia and Montenegro", "team_type_id": "MNT", "nation_id": "213", "parent_team_id": "24", "club_code": "", "official_name": "" },
   { "id": "217", "name": "Republic of Ireland", "team_type_id": "MNT", "nation_id": "155", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "218", "name": "Turkey", "team_type_id": "MNT", "nation_id": "195", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "220", "name": "Scotland", "team_type_id": "MNT", "nation_id": "163", "parent_team_id": "", "club_code": "", "official_name": "" },

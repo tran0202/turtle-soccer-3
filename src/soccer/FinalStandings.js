@@ -90,7 +90,7 @@ const advanceKnockoutTeams = (tournament, round) => {
 }
 
 const advanceThirdPlaceTeams = (tournament, round) => {
-  const advanced_teams = findRoundAdvancedTeams(tournament, 'Semifinals')
+  const advanced_teams = findRoundAdvancedTeams(tournament, 'Semi-finals')
   round.matches &&
     round.matches.forEach((m) => {
       const next_round = findRoundAdvancedTeams(tournament, 'Third place')
@@ -174,7 +174,7 @@ const FinalStandings = (props) => {
   const koStages = getKnockoutStage(stages)
   const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
-    const earlyRounds = koStage.rounds.filter((r) => r.name !== 'Semifinals' && r.name !== 'Third place' && r.name !== 'Final')
+    const earlyRounds = koStage.rounds.filter((r) => r.name !== 'Semi-finals' && r.name !== 'Third place' && r.name !== 'Final')
     earlyRounds.forEach((round, index) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
       eliminateKnockoutTeams(tournament, round)
@@ -182,7 +182,7 @@ const FinalStandings = (props) => {
       advanceKnockoutTeams(tournament, round)
     })
 
-    const semifinals = koStage.rounds.find((r) => r.name === 'Semifinals')
+    const semifinals = koStage.rounds.find((r) => r.name === 'Semi-finals')
     if (semifinals) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
       eliminateKnockoutTeams(tournament, semifinals)
@@ -203,7 +203,7 @@ const FinalStandings = (props) => {
     }
   }
 
-  const filteredRounds = tournament.final_rankings ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semifinals') : []
+  const filteredRounds = tournament.final_rankings ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semi-finals') : []
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>

@@ -11,6 +11,7 @@ const findLastRanking = (team) => {
 }
 
 const accumulateRanking = (team, match, config) => {
+  if (!team) return
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++
@@ -27,7 +28,7 @@ const accumulateRanking = (team, match, config) => {
     }
   } else if (parseInt(match.home_score) === parseInt(match.away_score)) {
     if (side === 'home') {
-      if (match.home_extra_score && match.away_extra_score) {
+      if (match.home_extra_score != null && match.away_extra_score != null) {
         if (parseInt(match.home_extra_score) > parseInt(match.away_extra_score)) {
           team.w++
           team.gf += parseInt(match.home_score) + parseInt(match.home_extra_score)
@@ -50,7 +51,7 @@ const accumulateRanking = (team, match, config) => {
         team.pts++
       }
     } else {
-      if (match.home_extra_score && match.away_extra_score) {
+      if (match.home_extra_score != null && match.away_extra_score != null) {
         if (parseInt(match.home_extra_score) > parseInt(match.away_extra_score)) {
           team.l++
           team.gf += parseInt(match.away_score) + parseInt(match.away_extra_score)
@@ -236,6 +237,12 @@ export const collectMatchdayRankings = (group, matchDay) => {
               rankings = t.rankings.find((r) => r.md === matchDay - 3)
               if (!rankings && matchDay > 4) {
                 rankings = t.rankings.find((r) => r.md === matchDay - 4)
+                if (!rankings && matchDay > 5) {
+                  rankings = t.rankings.find((r) => r.md === matchDay - 5)
+                  if (!rankings && matchDay > 6) {
+                    rankings = t.rankings.find((r) => r.md === matchDay - 6)
+                  }
+                }
               }
             }
           }

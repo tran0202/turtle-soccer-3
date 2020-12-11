@@ -82,6 +82,22 @@ export const getTeamName = (id) => {
   }
 }
 
+export const getParentTeam = (id) => {
+  const team = TeamArray.find((t) => t.id === id)
+  return TeamArray.find((t) => t.id === team.parent_team_id)
+}
+
+export const getBracketTeamCode = (id) => {
+  const nation = NationArray.find((n) => n.id === id)
+  if (!nation) {
+    console.log('Nation error', nation)
+  } else if (!nation.code) {
+    return id
+  } else {
+    return nation.code
+  }
+}
+
 export const isWinner = (who, match) => {
   if (match) {
     if (who === 'H') {

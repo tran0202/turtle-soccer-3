@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getFlagSrc, isWinner, getTeamName, AetTooltip, PenTooltip } from './Helper'
+import { getFlagSrc, isWinner, getTeamName, getBracketTeamCode, AetTooltip, PenTooltip } from './Helper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
 import moment from 'moment'
 
@@ -21,13 +21,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
           <Row className="no-gutters h3-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+              {match.home_team && <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+              {match.home_team && <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+              {match.home_team && <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.home_team)}
@@ -50,7 +50,7 @@ const BracketBox = (props) => {
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
-              {match.home_team}
+              {getBracketTeamCode(match.home_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
               )}
@@ -60,7 +60,7 @@ const BracketBox = (props) => {
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
-              {match.home_team}
+              {getBracketTeamCode(match.home_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
@@ -72,7 +72,7 @@ const BracketBox = (props) => {
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
               &nbsp;
-              {match.home_team}
+              {getBracketTeamCode(match.home_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
@@ -97,13 +97,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height">
           <Row className="no-gutters h4-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+              {match.away_team && <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+              {match.away_team && <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+              {match.away_team && <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getTeamName(match.away_team)}
@@ -126,7 +126,7 @@ const BracketBox = (props) => {
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
-              {match.away_team}
+              {getBracketTeamCode(match.away_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
               )}
@@ -136,7 +136,7 @@ const BracketBox = (props) => {
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
-              {match.away_team}
+              {getBracketTeamCode(match.away_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip2" anchor="(e)" />
               )}
@@ -148,7 +148,7 @@ const BracketBox = (props) => {
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
               &nbsp;
-              {match.away_team}
+              {getBracketTeamCode(match.away_team)}
               {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
                 <AetTooltip target="aetTooltip1" anchor="(e)" />
               )}
@@ -188,8 +188,10 @@ const BracketColInner = (props) => {
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
       <Row className="no-gutters bracket-col-height">
         <Col xs={{ size: 11, offset: 1 }}>
-          <div className="h2-ff1 margin-top-md d-none d-lg-block">{round.name}</div>
-          <div className="h4-ff1 margin-top-md d-block d-lg-none">{round.short_name}</div>
+          <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
+          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{round.name}</div>
+          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{round.name}</div>
+          <div className="h5-ff1 margin-top-md d-block d-md-none">{round.short_name}</div>
         </Col>
       </Row>
       {round.matches.map((m, index) => (
