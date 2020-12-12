@@ -11,11 +11,12 @@ const hasWildCardAdvancement = (groups, advancement) => {
 
 const collectWildCardRankings = (groups, pos) => {
   let wildCard = [{ final_rankings: [], ranking_type: 'wildcard' }]
-  groups.forEach((g) => {
-    if (!g.final_rankings || g.final_rankings.length === 0 || g.final_rankings.length < pos) return
-    const wcr = cloneRanking(g.final_rankings.find((fr) => fr.r === pos))
-    wildCard[0].final_rankings.push(wcr)
-  })
+  groups &&
+    groups.forEach((g) => {
+      if (!g.final_rankings || g.final_rankings.length === 0 || g.final_rankings.length < pos) return
+      const wcr = cloneRanking(g.final_rankings.find((fr) => fr.r === pos))
+      wildCard[0].final_rankings.push(wcr)
+    })
   sortGroupRankings(wildCard[0], 1)
   return wildCard
 }

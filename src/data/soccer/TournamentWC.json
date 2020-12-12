@@ -9,7 +9,7 @@
     "golden_goal_rule": false,
     "points_for_win": 3,
     "details": {
-      "host": "QAT",
+      "host": ["QAT"],
       "logo_filename": "2022_FIFA_World_Cup.svg",
       "start_date": "2022-11-21",
       "end_date": "2022-12-18",
@@ -32,7 +32,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "details": {
-      "host": "RUS",
+      "host": ["RUS"],
       "logo_filename": "2018_FIFA_World_Cup.svg",
       "mascot_filename": "Zabivaka_(mascot).jpg",
       "start_date": "2018-06-14",
@@ -65,11 +65,9 @@
     "final_standings": { "champions": "FRA", "runners_up": "CRO", "third_place": "BEL", "fourth_place": "ENG" },
     "statistics": { "total_matches": 64, "total_goals": 169, "attendance": 3031768 },
     "awards": {
-      "golden_boot": [
-        { "player": "Harry Kane", "team": "ENG", "goals": 6 },
-        { "player": "Antoine Griezmann", "team": "FRA" },
-        { "player": "Romelu Lukaku", "team": "BEL" }
-      ],
+      "golden_boot": [{ "player": "Harry Kane", "team": "ENG", "goals": 6 }],
+      "silver_boot": [{ "player": "Antoine Griezmann", "team": "FRA" }],
+      "bronze_boot": [{ "player": "Romelu Lukaku", "team": "BEL" }],
       "golden_ball": [
         { "player": "Luka Modrić", "team": "CRO" },
         { "player": "Eden Hazard", "team": "BEL" },
@@ -91,7 +89,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
     "details": {
-      "host": "BRA",
+      "host": ["BRA"],
       "logo_filename": "2014_FIFA_World_Cup.svg",
       "mascot_filename": "Fuleco.png",
       "start_date": "2014-06-12",
@@ -134,11 +132,9 @@
     "final_standings": { "champions": "GER", "runners_up": "ARG", "third_place": "NED", "fourth_place": "BRA" },
     "statistics": { "total_matches": 64, "total_goals": 171, "attendance": 3429873 },
     "awards": {
-      "golden_boot": [
-        { "player": "James Rodríguez", "team": "COL", "goals": 6 },
-        { "player": "Thomas Muller", "team": "GER" },
-        { "player": "Neymar", "team": "BRA" }
-      ],
+      "golden_boot": [{ "player": "James Rodríguez", "team": "COL", "goals": 6 }],
+      "silver_boot": [{ "player": "Thomas Muller", "team": "GER" }],
+      "bronze_boot": [{ "player": "Neymar", "team": "BRA" }],
       "golden_ball": [
         { "player": "Lionel Messi", "team": "ARG" },
         { "player": "Thomas Muller", "team": "GER" },
@@ -160,7 +156,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
     "details": {
-      "host": "RSA",
+      "host": ["RSA"],
       "logo_filename": "2010_FIFA_World_Cup.svg",
       "mascot_filename": "Zakumi.svg",
       "start_date": "2010-06-11",
@@ -216,11 +212,9 @@
     "final_standings": { "champions": "ESP", "runners_up": "NED", "third_place": "GER", "fourth_place": "URU" },
     "statistics": { "total_matches": 64, "total_goals": 145, "attendance": 3178856 },
     "awards": {
-      "golden_boot": [
-        { "player": "Thomas Muller", "team": "GER", "goals": 5, "assists": 3 },
-        { "player": "David Villa", "team": "ESP", "goals": 5, "assists": 1, "minutes": 635 },
-        { "player": "Wesley Sneijder", "team": "NED", "goals": 5, "assists": 1, "minutes": 652 }
-      ],
+      "golden_boot": [{ "player": "Thomas Muller", "team": "GER", "goals": 5, "assists": 3 }],
+      "silver_boot": [{ "player": "David Villa", "team": "ESP", "goals": 5, "assists": 1, "minutes": 635 }],
+      "bronze_boot": [{ "player": "Wesley Sneijder", "team": "NED", "goals": 5, "assists": 1, "minutes": 652 }],
       "golden_ball": [
         { "player": "Diego Forlan", "team": "URU" },
         { "player": "Wesley Sneijder", "team": "NED" },
@@ -242,7 +236,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
     "details": {
-      "host": "GER",
+      "host": ["GER"],
       "logo_filename": "2006_FIFA_World_Cup.svg",
       "mascot_filename": "2006-goleo-vi-and-pille.png",
       "start_date": "2006-06-09",
@@ -274,11 +268,9 @@
     "final_standings": { "champions": "ITA", "runners_up": "FRA", "third_place": "GER", "fourth_place": "POR" },
     "statistics": { "total_matches": 64, "total_goals": 147, "attendance": 3359439 },
     "awards": {
-      "golden_boot": [
-        { "player": "Miroslav Klose", "team": "GER", "goals": 5 },
-        { "player": "Hernan Crespo", "team": "ARG" },
-        { "player": "Ronaldo", "team": "BRA" }
-      ],
+      "golden_boot": [{ "player": "Miroslav Klose", "team": "GER", "goals": 5 }],
+      "silver_boot": [{ "player": "Hernan Crespo", "team": "ARG" }],
+      "bronze_boot": [{ "player": "Ronaldo", "team": "BRA" }],
       "golden_ball": [
         { "player": "Zinedine Zidane", "team": "FRA" },
         { "player": "Fabio Cannavaro", "team": "ITA" },
@@ -298,7 +290,54 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "2002.png", "start_date": "2002-05-31", "end_date": "2002-06-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["KOR", "JPN"],
+      "logo_filename": "2002_FIFA_World_Cup.svg",
+      "mascot_filename": "2002-ato-kaz-and-nik.png",
+      "start_date": "2002-05-31",
+      "end_date": "2002-06-10",
+      "color": "#04428d",
+      "team_count": 32,
+      "confed_count": 5,
+      "venue_count": 20,
+      "city_count": 20
+    },
+    "hero_images": [
+      { "name": "International Stadium Yokohama", "filename": "NISSANSTADIUM20080608.jpeg", "text": "The final was played at International Stadium Yokohama." },
+      {
+        "name": "Seoul Plaza",
+        "filename": "Seoul_Plaza_2002_FIFA_World_Cup.jpg",
+        "text": "South Koreans watching their country playing in a knock out game on the big screens in Seoul Plaza."
+      },
+      {
+        "name": "Japanese Coin",
+        "filename": "FIFA2002-10000yen.jpg",
+        "text": "Japanese 10,000 yen coin for the 2002 FIFA World Cup."
+      },
+      {
+        "name": "Korean Air",
+        "filename": "Boeing_747-4B5,_Korean_Air_AN0241562.jpg",
+        "text": "Korean Air Boeing 747 adorned with 2002 World Cup livery marking South Korea as co-hosts."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "GER", "third_place": "TUR", "fourth_place": "KOR" },
+    "statistics": { "total_matches": 64, "total_goals": 161, "attendance": 2705197 },
+    "awards": {
+      "golden_boot": [{ "player": "Ronaldo", "team": "BRA", "goals": 8 }],
+      "silver_boot": [
+        { "player": "Rivaldo", "team": "BRA" },
+        { "player": "Miroslav Klose", "team": "GER" }
+      ],
+      "golden_ball": [
+        { "player": "Oliver Kahn", "team": "GER" },
+        { "player": "Ronaldo", "team": "BRA" },
+        { "player": "Hong Myungbo", "team": "KOR" }
+      ],
+      "best_young_player": { "player": "Landon Donovan", "team": "USA" },
+      "golden_glove": { "player": "Oliver Kahn", "team": "GER" },
+      "fair_play_team": ["BEL"]
+    }
   },
   {
     "id": "WC1998",

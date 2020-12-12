@@ -1,19 +1,39 @@
 import React, { useState } from 'react'
-import { getFlagSrc, isWinner, getTeamName, getBracketTeamCode, AetTooltip, PenTooltip } from './Helper'
+import { getFlagSrc, isWinner, getBracketTeamName, getBracketTeamCode, AetTooltip, GoldenGoalTooltip, PenTooltip } from './Helper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
 import moment from 'moment'
 
+const getExtraTimeTooltip = (match, config) => {
+  return (
+    <React.Fragment>
+      {config.goldenGoal && match.home_penalty_score == null && match.away_penalty_score == null ? (
+        config.shortAnchor ? (
+          <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g)" />
+        ) : (
+          <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
+        )
+      ) : config.shortAnchor ? (
+        <AetTooltip target="aetTooltip" anchor="(e)" />
+      ) : (
+        <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />
+      )}
+    </React.Fragment>
+  )
+}
+
 const BracketBox = (props) => {
-  const { match, colIndex, lastBox } = props
+  const { match, colIndex, lastBox, config } = props
   return (
     <React.Fragment>
       <Row className="no-gutters box-sm bracket-box-height">
         <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
           <Row className="no-gutters">
             <Col xs={{ size: 11, offset: 1 }}>
-              <span className="box-time d-block d-lg-none">{moment(match.date).format('MMMM D')}</span>
+              <span className="box-time d-block d-lg-none">
+                {moment(match.date).format('MMMM D')} | {match.city}
+              </span>
               <span className="box-time d-none d-lg-block">
-                {moment(match.date).format('MMMM D')} | {match.stadium}
+                {moment(match.date).format('MMMM D')} | {match.stadium}, {match.city}
               </span>
             </Col>
           </Row>
@@ -30,20 +50,22 @@ const BracketBox = (props) => {
               {match.home_team && <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
-              {getTeamName(match.home_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
-              )}
+              {getBracketTeamName(match.home_team)}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score > match.away_extra_score &&
+                getExtraTimeTooltip(match, config)}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
-              {getTeamName(match.home_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(e)" />
-              )}
+              {getBracketTeamName(match.home_team)}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score > match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -51,9 +73,10 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.home_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(a.e.t.)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score > match.away_extra_score &&
+                getExtraTimeTooltip(match, config)}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -61,9 +84,10 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.home_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(e)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score > match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -73,9 +97,10 @@ const BracketBox = (props) => {
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
               &nbsp;
               {getBracketTeamCode(match.home_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score > match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(e)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score > match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -106,20 +131,22 @@ const BracketBox = (props) => {
               {match.away_team && <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
-              {getTeamName(match.away_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
-                <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
-              )}
+              {getBracketTeamName(match.away_team)}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score < match.away_extra_score &&
+                getExtraTimeTooltip(match, config)}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
-              {getTeamName(match.away_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
-                <AetTooltip target="aetTooltip2" anchor="(e)" />
-              )}
+              {getBracketTeamName(match.away_team)}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score < match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -127,9 +154,10 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.away_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
-                <AetTooltip target="aetTooltip2" anchor="(a.e.t.)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score < match.away_extra_score &&
+                getExtraTimeTooltip(match, config)}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -137,9 +165,10 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.away_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
-                <AetTooltip target="aetTooltip2" anchor="(e)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score < match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -149,9 +178,10 @@ const BracketBox = (props) => {
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
               &nbsp;
               {getBracketTeamCode(match.away_team)}
-              {match.home_extra_score != null && match.away_extra_score != null && match.home_extra_score < match.away_extra_score && (
-                <AetTooltip target="aetTooltip1" anchor="(e)" />
-              )}
+              {match.home_extra_score != null &&
+                match.away_extra_score != null &&
+                match.home_extra_score < match.away_extra_score &&
+                getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
@@ -179,7 +209,7 @@ const BracketBox = (props) => {
 }
 
 const BracketColInner = (props) => {
-  const { round, colIndex } = props
+  const { round, colIndex, config } = props
 
   return (
     <React.Fragment>
@@ -195,29 +225,29 @@ const BracketColInner = (props) => {
         </Col>
       </Row>
       {round.matches.map((m, index) => (
-        <BracketBox match={m} key={index} colIndex={colIndex} lastBox={index === round.matches.length - 1} />
+        <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
       ))}
     </React.Fragment>
   )
 }
 
 const BracketCol = (props) => {
-  const { round, colIndex } = props
+  const { round, colIndex, config } = props
   return (
     <Col className="col-brk-22">
-      <BracketColInner round={round} colIndex={colIndex} />
+      <BracketColInner round={round} colIndex={colIndex} config={config} />
     </Col>
   )
 }
 
 const BracketFinalCol = (props) => {
-  const { round, thirdPlace } = props
+  const { round, thirdPlace, config } = props
   // console.log('thirdPlace', thirdPlace)
   return (
     <Col className="col-brk-22">
       <Row className="bracket-gap-height-30"></Row>
-      <BracketColInner round={round} />
-      <BracketColInner round={thirdPlace} />
+      <BracketColInner round={round} config={config} />
+      <BracketColInner round={thirdPlace} config={config} />
     </Col>
   )
 }
@@ -314,7 +344,7 @@ const BracketHook2 = (props) => {
 }
 
 const Bracket = (props) => {
-  const { stage } = props
+  const { stage, config } = props
   const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
@@ -347,11 +377,11 @@ const Bracket = (props) => {
                 if (r.name === 'Third place') {
                   return null
                 } else if (r.name === 'Final') {
-                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} key={r.name} />
+                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={config} key={r.name} />
                 } else {
                   return (
                     <React.Fragment key={r.name}>
-                      <BracketCol round={r} colIndex={index} />
+                      <BracketCol round={r} colIndex={index} config={config} />
                       <BracketHook1 colIndex={index} hookCount={hookCount} />
                       <BracketHook2 colIndex={index} hookCount={hookCount} />
                     </React.Fragment>

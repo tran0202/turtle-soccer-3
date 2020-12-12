@@ -14,7 +14,16 @@
   { "id": "AUS", "name": "Australia", "team_type_id": "MNT", "nation_id": "AUS", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "IRN", "name": "IR Iran", "team_type_id": "MNT", "nation_id": "IRN", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "JPN", "name": "Japan", "team_type_id": "MNT", "nation_id": "JPN", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "KOR", "name": "Korea Republic", "team_type_id": "MNT", "nation_id": "KOR", "parent_team_id": "", "club_code": "", "official_name": "" },
+  {
+    "id": "KOR",
+    "name": "Korea Republic",
+    "short_name": "Korea Rep.",
+    "team_type_id": "MNT",
+    "nation_id": "KOR",
+    "parent_team_id": "",
+    "club_code": "",
+    "official_name": ""
+  },
   { "id": "KSA", "name": "Saudi Arabia", "team_type_id": "MNT", "nation_id": "KSA", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "CRO", "name": "Croatia", "team_type_id": "MNT", "nation_id": "CRO", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "DEN", "name": "Denmark", "team_type_id": "MNT", "nation_id": "DEN", "parent_team_id": "", "club_code": "", "official_name": "" },
@@ -131,9 +140,18 @@
     "club_code": "",
     "official_name": ""
   },
+  { "id": "TUR", "name": "Turkey", "team_type_id": "MNT", "nation_id": "TUR", "parent_team_id": "", "club_code": "", "official_name": "" },
+  {
+    "id": "IRL",
+    "name": "Republic of Ireland",
+    "short_name": "Rep. of Ireland",
+    "team_type_id": "MNT",
+    "nation_id": "IRL",
+    "parent_team_id": "",
+    "club_code": "",
+    "official_name": ""
+  },
 
-  { "id": "217", "name": "Republic of Ireland", "team_type_id": "MNT", "nation_id": "155", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "218", "name": "Turkey", "team_type_id": "MNT", "nation_id": "195", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "220", "name": "Scotland", "team_type_id": "MNT", "nation_id": "163", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "221", "name": "Norway", "team_type_id": "MNT", "nation_id": "142", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "222", "name": "Austria", "team_type_id": "MNT", "nation_id": "13", "parent_team_id": "", "club_code": "", "official_name": "" },
@@ -146,7 +164,16 @@
   { "id": "231", "name": "West Germany", "team_type_id": "MNT", "nation_id": "215", "parent_team_id": "2", "club_code": "", "official_name": "" },
   { "id": "232", "name": "Canada", "team_type_id": "MNT", "nation_id": "36", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "233", "name": "Hungary", "team_type_id": "MNT", "nation_id": "89", "parent_team_id": "", "club_code": "", "official_name": "" },
-  { "id": "234", "name": "Northern Ireland", "team_type_id": "MNT", "nation_id": "141", "parent_team_id": "", "club_code": "", "official_name": "" },
+  {
+    "id": "234",
+    "name": "Northern Ireland",
+
+    "team_type_id": "MNT",
+    "nation_id": "141",
+    "parent_team_id": "",
+    "club_code": "",
+    "official_name": ""
+  },
   { "id": "235", "name": "Iraq", "team_type_id": "MNT", "nation_id": "94", "parent_team_id": "1064", "club_code": "", "official_name": "" },
   { "id": "236", "name": "El Salvador", "team_type_id": "MNT", "nation_id": "62", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "238", "name": "East Germany", "team_type_id": "MNT", "nation_id": "218", "parent_team_id": "", "club_code": "", "official_name": "" },

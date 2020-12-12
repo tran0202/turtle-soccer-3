@@ -10,7 +10,7 @@ import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WC2006', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WC2002', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentConfig = (tournament) => {
@@ -77,6 +77,19 @@ export const getTeamName = (id) => {
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     return team.name
+  } else {
+    console.log('Team error', team)
+  }
+}
+
+export const getBracketTeamName = (id) => {
+  const team = TeamArray.find((t) => t.id === id)
+  if (team) {
+    if (team.short_name) {
+      return team.short_name
+    } else {
+      return team.name
+    }
   } else {
     console.log('Team error', team)
   }
@@ -229,7 +242,7 @@ const DisplayAwayGoalsText = (props) => {
 
 const DisplayExtraTimeText = (props) => {
   const { param } = props
-  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score } = param
+  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, goldenGoal } = param
   return (
     <React.Fragment>
       {home_extra_score != null && away_extra_score != null && (
@@ -247,7 +260,15 @@ const DisplayExtraTimeText = (props) => {
                   <b>{getTeamName(away_team)}</b>
                 </React.Fragment>
               )}
-              {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;won after extra time</React.Fragment>}
+              {home_extra_score !== away_extra_score && (
+                <React.Fragment>
+                  {goldenGoal && home_penalty_score == null && away_penalty_score == null ? (
+                    <React.Fragment>&nbsp;won on golden goal</React.Fragment>
+                  ) : (
+                    <React.Fragment>&nbsp;won after extra time</React.Fragment>
+                  )}
+                </React.Fragment>
+              )}
             </React.Fragment>
           )}
           {home_penalty_score != null && away_penalty_score != null && (
@@ -437,7 +458,11 @@ const DisplayMatch = (props) => {
           {m.home_extra_score != null && m.away_extra_score != null && (
             <React.Fragment>
               {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
-              <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
+              {config.goldenGoal && m.home_penalty_score == null && m.away_penalty_score == null ? (
+                <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
+              ) : (
+                <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />
+              )}
             </React.Fragment>
           )}
           {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
@@ -470,6 +495,7 @@ const DisplayMatch = (props) => {
               away_extra_score: m.away_extra_score,
               home_penalty_score: m.home_penalty_score,
               away_penalty_score: m.away_penalty_score,
+              goldenGoal: config.goldenGoal,
             }}
           />
         </Col>
@@ -507,6 +533,12 @@ export const DisplaySchedule = (props) => {
 export const AetTooltip = (props) => {
   const { target, anchor } = props
   const content = 'after extra time'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const GoldenGoalTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'golden goal'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

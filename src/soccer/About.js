@@ -101,40 +101,44 @@ const About = (props) => {
         <Col sm={{ size: 10, offset: 1 }}>
           {host && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Host
               </Col>
-              <Col md="5" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(host)} alt={host} />
-                &nbsp;{getTeamName(host)}
+              <Col md="6" sm="7">
+                {host.map((h) => (
+                  <Row className="no-margin-lr" key={h}>
+                    {h && <img className="flag-sm flag-md" src={getFlagSrc(h)} alt={h} />}
+                    &nbsp;{getTeamName(h)}
+                  </Row>
+                ))}
               </Col>
             </Row>
           )}
           <Row className="margin-top-xs">
-            <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm={{ size: 5, offset: 0 }} className="font-weight-bold">
+            <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
               Dates
             </Col>
-            <Col md="5" sm="7">
+            <Col md="6" sm="7">
               {details.start_date ? moment(details.start_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
               {details.end_date ? moment(details.end_date).format('MMMM D, YYYY') : ''}
             </Col>
           </Row>
           {team_count && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Teams
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 {team_count} (from {confed_count} confederation{confed_count !== 1 ? 's' : ''})
               </Col>
             </Row>
           )}
           {venue_count && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Venues
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 {venue_count} (in {city_count} host cities)
               </Col>
             </Row>
@@ -148,10 +152,10 @@ const About = (props) => {
         <Col sm={{ size: 10, offset: 1 }}>
           {champions && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Champions
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(champions)} alt={champions} />
                 &nbsp;{getTeamName(champions)}
               </Col>
@@ -159,10 +163,10 @@ const About = (props) => {
           )}
           {runners_up && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Runners-up
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(runners_up)} alt={runners_up} />
                 &nbsp;{getTeamName(runners_up)}
               </Col>
@@ -170,10 +174,10 @@ const About = (props) => {
           )}
           {third_place && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Third place
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} />
                 &nbsp;{getTeamName(third_place)}
               </Col>
@@ -181,10 +185,10 @@ const About = (props) => {
           )}
           {fourth_place && (
             <Row className="margin-top-xs">
-              <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Fourth place
               </Col>
-              <Col md="5" sm="7">
+              <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(fourth_place)} alt={fourth_place} />
                 &nbsp;{getTeamName(fourth_place)}
               </Col>
@@ -198,18 +202,18 @@ const About = (props) => {
             </Col>
             <Col sm={{ size: 10, offset: 1 }}>
               <Row className="margin-top-xs">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                   Matches played
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="6" sm="7">
                   {statistics.total_matches}
                 </Col>
               </Row>
               <Row className="margin-top-xs">
-                <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                   Goals scored
                 </Col>
-                <Col md="5" sm="7">
+                <Col md="6" sm="7">
                   <NumberFormat value={statistics.total_goals} displayType={'text'} />
                   &nbsp;(
                   <NumberFormat value={(statistics.total_goals / statistics.total_matches).toFixed(2)} displayType={'text'} /> per match)
@@ -217,10 +221,10 @@ const About = (props) => {
               </Row>
               {statistics.attendance && (
                 <Row className="margin-top-xs">
-                  <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                  <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                     Attendance
                   </Col>
-                  <Col md="5" sm="7">
+                  <Col md="6" sm="7">
                     <NumberFormat value={statistics.attendance} displayType={'text'} thousandSeparator={true} />
                     &nbsp;(
                     <NumberFormat value={(statistics.attendance / statistics.total_matches).toFixed(0)} displayType={'text'} thousandSeparator={true} /> per
@@ -238,61 +242,61 @@ const About = (props) => {
             </Col>
             <Col sm={{ size: 10, offset: 1 }}>
               {awards.golden_boot && (
-                <React.Fragment>
-                  <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                      Golden Boot
-                    </Col>
-                    <Col md="5" sm="7">
-                      {awards.golden_boot[0] && (
-                        <React.Fragment>
-                          {awards.golden_boot[0].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[0].team)} alt={awards.golden_boot[0].team} />
-                          )}
-                          &nbsp;{awards.golden_boot[0].player} {getGoldenBootDetails(awards.golden_boot[0])}
-                        </React.Fragment>
-                      )}
-                    </Col>
-                  </Row>
-                  <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
-                      Silver Boot
-                    </Col>
-                    <Col md="5" sm="7">
-                      {awards.golden_boot[1] && (
-                        <React.Fragment>
-                          {awards.golden_boot[1].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[1].team)} alt={awards.golden_boot[1].team} />
-                          )}
-                          &nbsp;{awards.golden_boot[1].player} {getGoldenBootDetails(awards.golden_boot[1])}
-                        </React.Fragment>
-                      )}
-                    </Col>
-                  </Row>
-                  <Row className="margin-top-xs mb-3">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
-                      Bronze Boot
-                    </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
-                      {awards.golden_boot[2] && (
-                        <React.Fragment>
-                          {awards.golden_boot[2].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_boot[2].team)} alt={awards.golden_boot[2].team} />
-                          )}
-                          &nbsp;{awards.golden_boot[2].player} {getGoldenBootDetails(awards.golden_boot[2])}
-                        </React.Fragment>
-                      )}
-                    </Col>
-                  </Row>
-                </React.Fragment>
+                <Row className="margin-top-xs">
+                  <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                    Golden Boot
+                  </Col>
+                  <Col md="6" sm="7">
+                    {awards.golden_boot.map((p) => (
+                      <Row className="no-margin-lr" key={p}>
+                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
+                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                      </Row>
+                    ))}
+                  </Col>
+                </Row>
               )}
+              {awards.silver_boot && (
+                <Row className="margin-top-xs">
+                  <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                    Silver Boot
+                  </Col>
+                  <Col md="6" sm="7">
+                    {awards.silver_boot.map((p) => (
+                      <Row className="no-margin-lr" key={p}>
+                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
+                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                      </Row>
+                    ))}
+                  </Col>
+                </Row>
+              )}
+              {awards.bronze_boot && (
+                <Row className="margin-top-xs">
+                  <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                    Bronze Boot
+                  </Col>
+                  <Col md="6" sm="7">
+                    {awards.bronze_boot.map((p) => (
+                      <Row className="no-margin-lr" key={p}>
+                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
+                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                      </Row>
+                    ))}
+                  </Col>
+                </Row>
+              )}
+              <Row className="margin-top-xs mb-3">
+                <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award"></Col>
+                <Col md="5" sm="7" className="tournament-award-receiver"></Col>
+              </Row>
               {awards.golden_ball && (
                 <React.Fragment>
                   <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                       Golden Ball
                     </Col>
-                    <Col md="5" sm="7">
+                    <Col md="6" sm="7">
                       {awards.golden_ball[0] && (
                         <React.Fragment>
                           {awards.golden_ball[0].team && (
@@ -304,10 +308,10 @@ const About = (props) => {
                     </Col>
                   </Row>
                   <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                       Silver Ball
                     </Col>
-                    <Col md="5" sm="7">
+                    <Col md="6" sm="7">
                       {awards.golden_ball[1] && (
                         <React.Fragment>
                           {awards.golden_ball[1].team && (
@@ -319,10 +323,10 @@ const About = (props) => {
                     </Col>
                   </Row>
                   <Row className="margin-top-xs mb-3">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
                       Bronze Ball
                     </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
+                    <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.golden_ball[2] && (
                         <React.Fragment>
                           {awards.golden_ball[2].team && (
@@ -338,10 +342,10 @@ const About = (props) => {
               {awards.best_young_player && (
                 <React.Fragment>
                   <Row className="margin-top-xs mb-3">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
                       Best Young Player
                     </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
+                    <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.best_young_player.team && (
                         <img className="flag-sm flag-md" src={getFlagSrc(awards.best_young_player.team)} alt={awards.best_young_player.team} />
                       )}
@@ -353,10 +357,10 @@ const About = (props) => {
               {awards.golden_glove && (
                 <React.Fragment>
                   <Row className="margin-top-xs mb-3">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
                       Golden Glove
                     </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
+                    <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.golden_glove.team && (
                         <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_glove.team)} alt={awards.golden_glove.team} />
                       )}
@@ -368,10 +372,10 @@ const About = (props) => {
               {awards.fair_play_team && (
                 <React.Fragment>
                   <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
                       Fair play
                     </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
+                    <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.fair_play_team.map((t) => (
                         <Row className="no-margin-lr" key={t}>
                           {t && <img className="flag-sm flag-md" src={getFlagSrc(t)} alt={t} />}
@@ -385,10 +389,10 @@ const About = (props) => {
               {awards.top_scorer && (
                 <React.Fragment>
                   <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 4 }} md={{ size: 4, offset: 3 }} sm="5" className="font-weight-bold tournament-award">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
                       Top Scorer{awards.top_scorer.length > 1 ? 's' : ''}
                     </Col>
-                    <Col md="5" sm="7" className="tournament-award-receiver">
+                    <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.top_scorer.map((ts) => (
                         <Row className="no-margin-lr" key={ts.player}>
                           {ts.team && <img className="flag-sm flag-md" src={getFlagSrc(ts.team)} alt={ts.team} />}

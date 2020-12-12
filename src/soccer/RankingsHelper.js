@@ -349,6 +349,9 @@ export const updateFinalRankings = (round) => {
         previousDrawCount = drawCount
       }
     })
+    if (rankingBundle.length > 0) {
+      newFinalRankings.push(rankingBundle)
+    }
     round.final_rankings = newFinalRankings
   }
 }
