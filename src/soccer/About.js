@@ -106,9 +106,9 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 {host.map((h) => (
-                  <Row className="no-margin-lr" key={h}>
+                  <Row className="no-margin-lr margin-bottom-xs" key={h}>
                     {h && <img className="flag-sm flag-md" src={getFlagSrc(h)} alt={h} />}
-                    &nbsp;{getTeamName(h)}
+                    <span className="padding-top-xs">&nbsp;{getTeamName(h)}</span>
                   </Row>
                 ))}
               </Col>
@@ -157,7 +157,7 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(champions)} alt={champions} />
-                &nbsp;{getTeamName(champions)}
+                <span className="padding-top-xs">&nbsp;{getTeamName(champions)}</span>
               </Col>
             </Row>
           )}
@@ -168,7 +168,7 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(runners_up)} alt={runners_up} />
-                &nbsp;{getTeamName(runners_up)}
+                <span className="padding-top-xs">&nbsp;{getTeamName(runners_up)}</span>
               </Col>
             </Row>
           )}
@@ -179,7 +179,7 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} />
-                &nbsp;{getTeamName(third_place)}
+                <span className="padding-top-xs">&nbsp;{getTeamName(third_place)}</span>
               </Col>
             </Row>
           )}
@@ -190,7 +190,7 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(fourth_place)} alt={fourth_place} />
-                &nbsp;{getTeamName(fourth_place)}
+                <span className="padding-top-xs">&nbsp;{getTeamName(fourth_place)}</span>
               </Col>
             </Row>
           )}
@@ -248,9 +248,11 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.golden_boot.map((p) => (
-                      <Row className="no-margin-lr" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
-                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        <span className="padding-top-xs">
+                          &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        </span>
                       </Row>
                     ))}
                   </Col>
@@ -263,9 +265,11 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.silver_boot.map((p) => (
-                      <Row className="no-margin-lr" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
-                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        <span className="padding-top-xs">
+                          &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        </span>
                       </Row>
                     ))}
                   </Col>
@@ -278,9 +282,11 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.bronze_boot.map((p) => (
-                      <Row className="no-margin-lr" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
-                        &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        <span className="padding-top-xs">
+                          &nbsp;{p.player} {getGoldenBootDetails(p)}
+                        </span>
                       </Row>
                     ))}
                   </Col>
@@ -302,7 +308,7 @@ const About = (props) => {
                           {awards.golden_ball[0].team && (
                             <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
                           )}
-                          &nbsp;{awards.golden_ball[0].player}
+                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[0].player}</span>
                         </React.Fragment>
                       )}
                     </Col>
@@ -317,7 +323,7 @@ const About = (props) => {
                           {awards.golden_ball[1].team && (
                             <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
                           )}
-                          &nbsp;{awards.golden_ball[1].player}
+                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[1].player}</span>
                         </React.Fragment>
                       )}
                     </Col>
@@ -332,7 +338,7 @@ const About = (props) => {
                           {awards.golden_ball[2].team && (
                             <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
                           )}
-                          &nbsp;{awards.golden_ball[2].player}
+                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[2].player}</span>
                         </React.Fragment>
                       )}
                     </Col>
@@ -349,7 +355,7 @@ const About = (props) => {
                       {awards.best_young_player.team && (
                         <img className="flag-sm flag-md" src={getFlagSrc(awards.best_young_player.team)} alt={awards.best_young_player.team} />
                       )}
-                      &nbsp;{awards.best_young_player.player}
+                      <span className="padding-top-xs">&nbsp;{awards.best_young_player.player}</span>
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -364,7 +370,7 @@ const About = (props) => {
                       {awards.golden_glove.team && (
                         <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_glove.team)} alt={awards.golden_glove.team} />
                       )}
-                      &nbsp;{awards.golden_glove.player}
+                      <span className="padding-top-xs">&nbsp;{awards.golden_glove.player}</span>
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -377,9 +383,9 @@ const About = (props) => {
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.fair_play_team.map((t) => (
-                        <Row className="no-margin-lr" key={t}>
+                        <Row className="no-margin-lr margin-bottom-xs" key={t}>
                           {t && <img className="flag-sm flag-md" src={getFlagSrc(t)} alt={t} />}
-                          &nbsp;{getTeamName(t)}
+                          <span className="padding-top-xs">&nbsp;{getTeamName(t)}</span>
                         </Row>
                       ))}
                     </Col>
@@ -394,9 +400,11 @@ const About = (props) => {
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.top_scorer.map((ts) => (
-                        <Row className="no-margin-lr" key={ts.player}>
+                        <Row className="no-margin-lr margin-bottom-xs" key={ts.player}>
                           {ts.team && <img className="flag-sm flag-md" src={getFlagSrc(ts.team)} alt={ts.team} />}
-                          &nbsp;{ts.player} {getGoldenBootDetails(ts)}
+                          <span className="padding-top-xs">
+                            &nbsp;{ts.player} {getGoldenBootDetails(ts)}
+                          </span>
                         </Row>
                       ))}
                     </Col>

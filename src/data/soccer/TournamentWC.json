@@ -348,7 +348,58 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "1998.png", "start_date": "1998-06-10", "end_date": "1998-07-12" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["FRA"],
+      "logo_filename": "1998_FIFA_World_Cup.svg",
+      "mascot_filename": "1998-footix.png",
+      "start_date": "1998-06-10",
+      "end_date": "1998-07-12",
+      "color": "#103d69",
+      "team_count": 32,
+      "confed_count": 5,
+      "venue_count": 10,
+      "city_count": 10
+    },
+    "hero_images": [
+      {
+        "name": "Stade de France, Saint-Denis",
+        "filename": "Euro_2016_stade_de_France_France-Roumanie_(27307532960).jpg",
+        "text": "The Stade de France held the final."
+      },
+      {
+        "name": "Coca-Cola",
+        "filename": "Coca_cola_world_cup_1998.jpg",
+        "text": "Coca-Cola was one of the sponsors of FIFA World Cup 1998."
+      },
+      {
+        "name": "Stade Vélodrome, Marseille",
+        "filename": "Vue_du_virage_Depé.jpg",
+        "text": "The Stade Vélodrome held the semi-final."
+      },
+      {
+        "name": "Parc des Princes, Paris",
+        "filename": "Paris-Parc-des-Princes.jpg",
+        "text": "Parc des Princes held Germany versus United States."
+      }
+    ],
+    "final_standings": { "champions": "FRA", "runners_up": "BRA", "third_place": "CRO", "fourth_place": "NED" },
+    "statistics": { "total_matches": 64, "total_goals": 171, "attendance": 2784687 },
+    "awards": {
+      "golden_boot": [{ "player": "Davor Šuker", "team": "CRO", "goals": 6 }],
+      "silver_boot": [
+        { "player": "Gabriel Batistuta", "team": "ARG" },
+        { "player": "Christian Vieri", "team": "ITA" }
+      ],
+      "golden_ball": [
+        { "player": "Ronaldo", "team": "BRA" },
+        { "player": "Davor Šuker", "team": "CRO" },
+        { "player": "Lilian Thuram", "team": "FRA" }
+      ],
+      "best_young_player": { "player": "Michael Owen", "team": "ENG" },
+      "golden_glove": { "player": "Fabien Barthez", "team": "FRA" },
+      "fair_play_team": ["ENG", "FRA"]
+    }
   },
   {
     "id": "WC1994",
