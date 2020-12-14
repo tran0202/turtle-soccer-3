@@ -608,11 +608,11 @@ a:hover.hover-pointer {
 .advanced-wild-card-striped {
   background-color: #bbf3ff;
 }
+.advanced-wild-card-extra-striped {
+  background-color: #ffffbb;
+}
 .advanced-playoff-striped {
   background-color: #bbf3ff;
-}
-.advanced-third-round-striped {
-  background-color: #ffffbb;
 }
 .advanced-fourth-round-striped {
   background-color: #bbf3ff;

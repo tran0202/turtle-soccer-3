@@ -410,7 +410,57 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "1994.png", "start_date": "1994-06-17", "end_date": "1994-07-17" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "1994_FIFA_World_Cup.svg",
+      "mascot_filename": "1994-striker.png",
+      "start_date": "1994-06-17",
+      "end_date": "1994-07-17",
+      "color": "#0f246a",
+      "team_count": 24,
+      "confed_count": 5,
+      "venue_count": 9,
+      "city_count": 9
+    },
+    "hero_images": [
+      { "name": "Champions", "filename": "Brasil_seleccion_1994.jpg", "text": "The Brazilian squad" },
+      {
+        "name": "Quarter-final",
+        "filename": "WorldCup1994BulgariaGermany.jpg",
+        "text": "Lothar Matthäus scoring a penalty kick in Germany's quarter-final against Bulgaria at Giants Stadium on July 10. Bulgaria came back to win the game."
+      },
+      {
+        "name": "Round of 16",
+        "filename": "FIFA_WM_Football_(Soccer)_1994_03.jpg",
+        "text": "Republic of Ireland in attack in the game against the Netherlands."
+      },
+      {
+        "name": "Group E",
+        "filename": "ItalyVsNorway1994inUSA.jpg",
+        "text": "Italy and Norway getting ready to play at Giants Stadium."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "ITA", "third_place": "SWE", "fourth_place": "BUL" },
+    "statistics": { "total_matches": 52, "total_goals": 141, "attendance": 3597042 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Hristo Stoichkov", "team": "BUL", "goals": 6 },
+        { "player": "Oleg Salenko", "team": "RUS", "goals": 6 }
+      ],
+      "bronze_boot": [
+        { "player": "Romário", "team": "BRA" },
+        { "player": "Kennet Andersson", "team": "SWE" }
+      ],
+      "golden_ball": [
+        { "player": "Romário", "team": "BRA" },
+        { "player": "Roberto Baggio", "team": "ITA" },
+        { "player": "Hristo Stoichkov", "team": "BUL" }
+      ],
+      "best_young_player": { "player": "Marc Overmars", "team": "NED" },
+      "golden_glove": { "player": "Michel Preud'homme", "team": "BEL" },
+      "fair_play_team": ["BRA"]
+    }
   },
   {
     "id": "WC1990",

@@ -248,7 +248,7 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.golden_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
                         <span className="padding-top-xs">
                           &nbsp;{p.player} {getGoldenBootDetails(p)}
@@ -265,7 +265,7 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.silver_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
                         <span className="padding-top-xs">
                           &nbsp;{p.player} {getGoldenBootDetails(p)}
@@ -282,7 +282,7 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.bronze_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p}>
+                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
                         {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} />}
                         <span className="padding-top-xs">
                           &nbsp;{p.player} {getGoldenBootDetails(p)}

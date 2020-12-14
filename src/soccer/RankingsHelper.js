@@ -1,3 +1,5 @@
+import { getTeamName } from './Helper'
+
 export const findTeam = (teamArray, id) => {
   return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
@@ -134,6 +136,7 @@ export const calculateKnockoutRankings = (advanced_teams, round, config) => {
 }
 
 const findHeadtoHeadMatch = (a, b) => {
+  // console.log('a', a)
   return a.h2hm.filter((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
 }
 
@@ -150,17 +153,17 @@ const compareFairPoints = (a, b) => {
 const matchResult = (id, m) => {
   if (m.home_team === id) {
     if (m.home_score > m.away_score) {
-      return 1
-    } else if (m.home_score < m.away_score) {
       return -1
+    } else if (m.home_score < m.away_score) {
+      return 1
     } else {
       return 0
     }
   } else if (m.away_team === id) {
     if (m.home_score > m.away_score) {
-      return -1
-    } else if (m.home_score < m.away_score) {
       return 1
+    } else if (m.home_score < m.away_score) {
+      return -1
     } else {
       return 0
     }
@@ -203,8 +206,22 @@ export const sortGroupRankings = (group, startingIndex) => {
               const h2hMatch = found[0]
               const h2hResult = matchResult(a.id, h2hMatch)
               if (h2hResult === 1) {
+                if (a.id === h2hMatch.home_team) {
+                  a.h2h_notes = `Note1` // `${getTeamName(a.id)} lost ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(b.id)}`
+                  b.h2h_notes = `Note2` // `${getTeamName(b.id)} won ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(a.id)}`
+                } else {
+                  a.h2h_notes = `${getTeamName(a.id)} lost ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(b.id)}`
+                  b.h2h_notes = `${getTeamName(b.id)} won ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(a.id)}`
+                }
                 return 1
               } else if (h2hResult === -1) {
+                if (a.id === h2hMatch.home_team) {
+                  a.h2h_notes = `${getTeamName(a.id)} won ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(b.id)}`
+                  b.h2h_notes = `${getTeamName(b.id)} lost ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(a.id)}`
+                } else {
+                  a.h2h_notes = `${getTeamName(a.id)} won ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(b.id)}`
+                  b.h2h_notes = `${getTeamName(b.id)} lost ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(a.id)}`
+                }
                 return -1
               } else {
                 return compareFairPoints(a, b)
@@ -263,6 +280,98 @@ export const collectMatchdayRankings = (group, matchDay) => {
 
 export const collectGroupRankings = (group) => {
   return collectMatchdayRankings(group, 3)
+}
+
+export const collectWildCardRankings = (stage) => {
+  const pos = stage.groups && hasWildCardAdvancement(stage) ? stage.advancement.teams.wild_card.pos : 3
+  let wildCard = { final_rankings: [], ranking_type: 'wildcard' }
+  stage.groups &&
+    stage.groups.forEach((g) => {
+      if (!g.final_rankings || g.final_rankings.length === 0 || g.final_rankings.length < pos) return
+      const wcr = cloneRanking(g.final_rankings.find((fr) => fr.r === pos))
+      wildCard.final_rankings.push(wcr)
+    })
+  sortGroupRankings(wildCard, 1)
+  return wildCard
+}
+
+export const hasWildCardAdvancement = (stage) => {
+  return (
+    stage &&
+    stage.advancement &&
+    stage.advancement.teams &&
+    stage.advancement.teams.wild_card &&
+    stage.advancement.teams.wild_card.pos &&
+    stage.advancement.teams.wild_card.count
+  )
+}
+
+export const isWildCardExtraRow = (row, config) => {
+  if (hasWildCardAdvancement(config)) {
+    return config.advancement.teams.wild_card.count_extra
+      ? row.r === config.advancement.teams.wild_card.count + config.advancement.teams.wild_card.count_extra
+      : false
+  }
+  return false
+}
+
+export const isAdvancedNextRound = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.auto) {
+    let flag = false
+    config.advancement.teams.auto.forEach((a) => (flag = flag || row.r === a))
+    return flag
+  }
+  return false
+}
+
+export const isAdvancedWildCard = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.wild_card && config.advancement.teams.wild_card.pos) {
+    return row.r === config.advancement.teams.wild_card.pos
+  }
+  return false
+}
+
+export const isAdvancedPlayoff = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.playoff) {
+    return row.r === config.advancement.teams.playoff
+  }
+  return false
+}
+
+export const isEliminated = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
+    let flag = false
+    config.advancement.teams.eliminated.forEach((e) => (flag = flag || row.r === e))
+    // console.log('flag', flag)
+    return flag
+  }
+  return false
+}
+
+export const getRowStriped = (row, config) => {
+  if (isAdvancedNextRound(row, config)) return ' advanced-next-round-striped'
+  if (isAdvancedWildCard(row, config)) return ' advanced-wild-card-striped'
+  if (isAdvancedPlayoff(row, config)) return ' advanced-playoff-striped'
+  return ''
+}
+
+// Wild card rankings
+export const getWildCardRowStriped = (row, config) => {
+  if (!row) return ''
+  if (hasWildCardAdvancement(config)) {
+    if (row.r <= config.advancement.teams.wild_card.count) {
+      return ' advanced-wild-card-striped'
+    } else if (isWildCardExtraRow(row, config)) {
+      return ' advanced-wild-card-extra-striped'
+    } else {
+      return ''
+    }
+  }
+  return ''
 }
 
 const mergeArray = (a, b) => {

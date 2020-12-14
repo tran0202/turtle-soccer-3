@@ -1,7 +1,16 @@
 import React from 'react'
 import Rankings from './Rankings'
+import { hasWildCardAdvancement, collectWildCardRankings } from './RankingsHelper'
 import { getRoundRobinStage, getKnockoutStage, getTournamentConfig, isWinner } from './Helper'
-import { calculateGroupRankings, collectGroupRankings, sortGroupRankings, calculateKnockoutRankings, findTeam } from './RankingsHelper'
+import {
+  calculateGroupRankings,
+  collectGroupRankings,
+  sortGroupRankings,
+  calculateKnockoutRankings,
+  isEliminated,
+  isAdvancedNextRound,
+  findTeam,
+} from './RankingsHelper'
 import { Row } from 'reactstrap'
 
 const eliminateGroupTeams = (tournament, groupStage, group) => {
@@ -11,11 +20,13 @@ const eliminateGroupTeams = (tournament, groupStage, group) => {
   if (!tournament.final_rankings.rounds) {
     tournament.final_rankings.rounds = []
   }
-  if (groupStage.eliminateRule === 'bottom2' && group.final_rankings) {
-    const eliminated = group.final_rankings.filter((t) => t && (t.r === 3 || t.r === 4))
+  if (group.final_rankings) {
+    const eliminated = group.final_rankings.filter((t) => t && isEliminated(t, groupStage))
     const tmp = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
     if (tmp) {
-      tmp.final_rankings.push(eliminated[0], eliminated[1])
+      eliminated.forEach((fr) => {
+        tmp.final_rankings.push(fr)
+      })
     } else {
       tournament.final_rankings.rounds.push({ name: groupStage.name, ranking_type: 'round', final_rankings: eliminated })
     }
@@ -29,16 +40,34 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
   if (!tournament.advanced_teams.rounds) {
     tournament.advanced_teams.rounds = []
   }
-  if (groupStage.eliminateRule === 'bottom2' && group.final_rankings) {
-    const advanced = group.final_rankings.filter((t) => t && (t.r === 1 || t.r === 2))
-    const advanced0 = { ...advanced[0] }
-    const advanced1 = { ...advanced[1] }
+  if (group.final_rankings) {
+    const advanced = group.final_rankings.filter((t) => t && isAdvancedNextRound(t, groupStage))
     const tmp = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
     if (tmp) {
-      tmp.final_rankings.push(advanced0, advanced1)
+      advanced.forEach((fr) => {
+        tmp.final_rankings.push(fr)
+      })
     } else {
-      tournament.advanced_teams.rounds.push({ name: groupStage.next_round, ranking_type: 'round', final_rankings: [advanced0, advanced1] })
+      tournament.advanced_teams.rounds.push({ name: groupStage.next_round, ranking_type: 'round', final_rankings: advanced })
     }
+  }
+}
+
+const advanceWildCardTeams = (tournament, groupStage) => {
+  const wildCardRankings = hasWildCardAdvancement(groupStage) ? collectWildCardRankings(groupStage) : null
+  if (!wildCardRankings) return
+  // console.log('wildCardRankings', wildCardRankings)
+  const tmpFinalRankings = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
+  const tmpAdvancedTeams = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
+  if (tmpFinalRankings && tmpAdvancedTeams) {
+    wildCardRankings.final_rankings &&
+      wildCardRankings.final_rankings.forEach((fr, index) => {
+        if (index < groupStage.advancement.teams.wild_card.count) {
+          tmpAdvancedTeams.final_rankings.push(fr)
+        } else {
+          tmpFinalRankings.final_rankings.push(fr)
+        }
+      })
   }
 }
 
@@ -164,10 +193,12 @@ const FinalStandings = (props) => {
           collectGroupRankings(g)
           eliminateGroupTeams(tournament, groupStage, g)
         })
-        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
+        // sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
         groupStage.groups.forEach((g) => {
           advanceGroupTeams(tournament, groupStage, g)
         })
+        advanceWildCardTeams(tournament, groupStage)
+        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
       }
     })
 

@@ -10,7 +10,7 @@ import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WC1998', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WC1994', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentConfig = (tournament) => {
@@ -532,25 +532,31 @@ export const DisplaySchedule = (props) => {
 
 export const AetTooltip = (props) => {
   const { target, anchor } = props
-  const content = 'after extra time'
+  const content = 'After extra time'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const GoldenGoalTooltip = (props) => {
   const { target, anchor } = props
-  const content = 'golden goal'
+  const content = 'Golden goal'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const PenTooltip = (props) => {
   const { target, anchor } = props
-  const content = 'penalty shoot-out'
+  const content = 'Penalty shoot-out'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const FairPlayTooltip = (props) => {
   const { target, points } = props
-  const content = `fair play points: ${points}`
+  const content = `Fair play points: ${points}`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const Head2HeadTooltip = (props) => {
+  const { target, h2h_notes } = props
+  const content = `Head-to-head: ${h2h_notes}`
   return <TopTooltip target={target} content={content} />
 }
 
