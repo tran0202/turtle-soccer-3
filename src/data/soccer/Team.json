@@ -144,7 +144,7 @@
   {
     "id": "IRL",
     "name": "Republic of Ireland",
-    "short_name": "Rep. of Ireland",
+    "short_name": "Rep. Ireland",
     "team_type_id": "MNT",
     "nation_id": "IRL",
     "parent_team_id": "",
@@ -208,15 +208,7 @@
   { "id": "SOL", "name": "Solomon Islands", "team_type_id": "MNT", "nation_id": "SOL", "parent_team_id": "", "club_code": "", "official_name": "" },
 
   { "id": "233", "name": "Hungary", "team_type_id": "MNT", "nation_id": "89", "parent_team_id": "", "club_code": "", "official_name": "" },
-  {
-    "id": "NIR",
-    "name": "Northern Ireland",
-    "team_type_id": "MNT",
-    "nation_id": "NIR",
-    "parent_team_id": "",
-    "club_code": "",
-    "official_name": ""
-  },
+  { "id": "NIR", "name": "Northern Ireland", "team_type_id": "MNT", "nation_id": "NIR", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "235", "name": "Iraq", "team_type_id": "MNT", "nation_id": "94", "parent_team_id": "1064", "club_code": "", "official_name": "" },
   { "id": "236", "name": "El Salvador", "team_type_id": "MNT", "nation_id": "62", "parent_team_id": "", "club_code": "", "official_name": "" },
   { "id": "238", "name": "East Germany", "team_type_id": "MNT", "nation_id": "218", "parent_team_id": "", "club_code": "", "official_name": "" },

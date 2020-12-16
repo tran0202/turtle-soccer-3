@@ -136,8 +136,17 @@ export const calculateKnockoutRankings = (advanced_teams, round, config) => {
 }
 
 const findHeadtoHeadMatch = (a, b) => {
-  // console.log('a', a)
   return a.h2hm.filter((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
+}
+
+const drawingLots = (a, b) => {
+  // Italia 90
+  if (a.id === 'NED' && b.id === 'IRL') {
+    a.draw_lot_notes = 'Netherlands lost.'
+    b.draw_lot_notes = 'Republic of Ireland won.'
+    return 1
+  }
+  return 0
 }
 
 const compareFairPoints = (a, b) => {
@@ -146,7 +155,7 @@ const compareFairPoints = (a, b) => {
   } else if (a.fp < b.fp) {
     return 1
   } else {
-    return 0
+    return drawingLots(a, b)
   }
 }
 

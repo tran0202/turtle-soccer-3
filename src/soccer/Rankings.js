@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { createDrawPool, updateDraws, updateFinalRankings, getRowStriped, isWildCardExtraRow, getWildCardRowStriped } from './RankingsHelper'
-import { getFlagSrc, getTeamName, FairPlayTooltip, WildCardTooltip, Head2HeadTooltip } from './Helper'
+import { getFlagSrc, getTeamName, FairPlayTooltip, WildCardTooltip, Head2HeadTooltip, DrawLotTooltip } from './Helper'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
@@ -62,6 +62,7 @@ const RankingRow2 = (props) => {
         {row.pts}
         {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
         {ranking_type === 'group' && row.h2h_notes && <Head2HeadTooltip target={`h2hTooltip-${row.id}`} h2h_notes={row.h2h_notes} />}
+        {ranking_type === 'group' && row.draw_lot_notes && <DrawLotTooltip target={`drawLotTooltip-${row.id}`} draw_lot_notes={row.draw_lot_notes} />}
       </Col>
     </Row>
   )
