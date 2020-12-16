@@ -57,6 +57,8 @@ const advanceWildCardTeams = (tournament, groupStage) => {
   const wildCardRankings = hasWildCardAdvancement(groupStage) ? collectWildCardRankings(groupStage) : null
   if (!wildCardRankings) return
   // console.log('wildCardRankings', wildCardRankings)
+  if (!tournament.final_rankings) return
+  if (!tournament.advanced_teams) return
   const tmpFinalRankings = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   const tmpAdvancedTeams = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
   if (tmpFinalRankings && tmpAdvancedTeams) {

@@ -10,7 +10,7 @@ import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WC1994', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WC1990', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentConfig = (tournament) => {
