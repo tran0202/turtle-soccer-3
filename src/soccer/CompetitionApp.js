@@ -1,10 +1,10 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
-import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
+import TournamentDataCurrent from '../data/soccer/tournamentData/TournamentDataCurrent.json'
 import Page from '../core/Page'
 import CompetitionAbout from './CompetitionAbout'
 import AlltimeStandings from './AlltimeStandings'
-import { getTournamentArray, getTournamentDataArray, getCurrentTournament } from './Helper'
+import { getCurrentTournament, getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { Row, Col, Nav, NavItem, NavLink, Container } from 'reactstrap'
 
 const CompHeaderLinks = (props) => {

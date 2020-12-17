@@ -1,17 +1,8 @@
 import React, { useState } from 'react'
 import TeamArray from '../data/soccer/Team.json'
 import NationArray from '../data/Nation.json'
-import TournamentArray from '../data/soccer/Tournament.json'
-import TournamentWCArray from '../data/soccer/TournamentWC.json'
-import TournamentDataWCArray from '../data/soccer/TournamentDataWC.json'
-import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
-import QualificationTournamentDataWCArray from '../data/soccer/QualificationTournamentDataWC.json'
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
-
-export const getCurrentTournament = () => {
-  return { tournament: 'WC1990', qualificationTournament: 'WC2022_CONMEBOL' }
-}
 
 export const getTournamentConfig = (tournament) => {
   return {
@@ -29,22 +20,6 @@ export const getTournamentConfig = (tournament) => {
     statistics: tournament.statistics,
     awards: tournament.awards,
   }
-}
-
-export const getTournamentArray = () => {
-  return TournamentArray.concat(TournamentWCArray)
-}
-
-export const getTournamentDataArray = () => {
-  return TournamentDataWCArray
-}
-
-export const getQualificationTournamentArray = () => {
-  return QualificationTournamentWCArray
-}
-
-export const getQualificationTournamentDataArray = () => {
-  return QualificationTournamentDataWCArray
 }
 
 export const getRoundRobinStage = (stages) => {

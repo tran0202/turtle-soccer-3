@@ -1,7 +1,7 @@
 import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
-import TournamentDataCurrent from '../data/soccer/TournamentDataCurrent.json'
-import QualificationTournamentDataCurrent from '../data/soccer/QualificationTournamentDataCurrent.json'
+import TournamentDataCurrent from '../data/soccer/tournamentData/TournamentDataCurrent.json'
+import QualificationTournamentDataCurrent from '../data/soccer/qualTournamentData/QualificationTournamentDataCurrent.json'
 import Page from '../core/Page'
 import Header from './Header'
 import About from './About'
@@ -9,13 +9,7 @@ import Matches from './Matches'
 import Groups from './Groups'
 import FinalStandings from './FinalStandings'
 import Qualification from './Qualification'
-import {
-  getTournamentArray,
-  getTournamentDataArray,
-  getQualificationTournamentArray,
-  getQualificationTournamentDataArray,
-  getCurrentTournament,
-} from './Helper'
+import { getCurrentTournament,getTournamentArray,getTournamentDataArray,getQualificationTournamentArray,getQualificationTournamentDataArray } from './DataHelper'
 import { Container } from 'reactstrap'
 
 class TournamentApp extends React.Component {

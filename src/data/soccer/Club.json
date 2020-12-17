@@ -1,0 +1,1167 @@
+[
+  {
+    "id": "525",
+    "name": "Atletico Madrid",
+    "team_type_id": "CLUB",
+    "nation_id": "175",
+    "parent_team_id": "",
+    "club_code": "ATM",
+    "official_name": "Club Atlético de Madrid"
+  },
+  { "id": "526", "name": "Barcelona", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "FCB", "official_name": "FC Barcelona" },
+  {
+    "id": "527",
+    "name": "Bayern Munich",
+    "team_type_id": "CLUB",
+    "nation_id": "76",
+    "parent_team_id": "",
+    "club_code": "BAY",
+    "official_name": "FC Bayern München"
+  },
+  { "id": "528", "name": "Club Brugge", "team_type_id": "CLUB", "nation_id": "20", "parent_team_id": "", "club_code": "BRU", "official_name": "Club Brugge" },
+  {
+    "id": "529",
+    "name": "CSKA Moscow",
+    "team_type_id": "CLUB",
+    "nation_id": "157",
+    "parent_team_id": "",
+    "club_code": "CSK",
+    "official_name": "PFC CSKA Moskva"
+  },
+  {
+    "id": "530",
+    "name": "Borussia Dortmund",
+    "team_type_id": "CLUB",
+    "nation_id": "76",
+    "parent_team_id": "",
+    "club_code": "DOR",
+    "official_name": "Borussia Dortmund"
+  },
+  {
+    "id": "531",
+    "name": "Galatasaray",
+    "team_type_id": "CLUB",
+    "nation_id": "195",
+    "parent_team_id": "",
+    "club_code": "GAL",
+    "official_name": "Galatasaray AŞ"
+  },
+  {
+    "id": "532",
+    "name": "1899 Hoffenheim",
+    "team_type_id": "CLUB",
+    "nation_id": "76",
+    "parent_team_id": "",
+    "club_code": "TSG",
+    "official_name": "TSG 1899 Hoffenheim"
+  },
+  {
+    "id": "533",
+    "name": "Inter Milan",
+    "team_type_id": "CLUB",
+    "nation_id": "96",
+    "parent_team_id": "",
+    "club_code": "INT",
+    "official_name": "FC Internazionale Milano"
+  },
+  { "id": "534", "name": "Juventus", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "JUV", "official_name": "Juventus" },
+  { "id": "535", "name": "Liverpool", "team_type_id": "CLUB", "nation_id": "63", "parent_team_id": "", "club_code": "LIV", "official_name": "Liverpool FC" },
+  {
+    "id": "536",
+    "name": "Lokomotiv Moscow",
+    "team_type_id": "CLUB",
+    "nation_id": "157",
+    "parent_team_id": "",
+    "club_code": "LMO",
+    "official_name": "FC Lokomotiv Moskva"
+  },
+  {
+    "id": "537",
+    "name": "Olympique Lyonnais",
+    "team_type_id": "CLUB",
+    "nation_id": "71",
+    "parent_team_id": "",
+    "club_code": "LYO",
+    "official_name": "Olympique Lyonnais"
+  },
+  {
+    "id": "538",
+    "name": "Manchester City",
+    "team_type_id": "CLUB",
+    "nation_id": "63",
+    "parent_team_id": "",
+    "club_code": "MCI",
+    "official_name": "Manchester City FC"
+  },
+  {
+    "id": "539",
+    "name": "Manchester United",
+    "team_type_id": "CLUB",
+    "nation_id": "63",
+    "parent_team_id": "",
+    "club_code": "MUN",
+    "official_name": "Manchester United FC"
+  },
+  { "id": "540", "name": "Monaco", "team_type_id": "CLUB", "nation_id": "71", "parent_team_id": "", "club_code": "AMO", "official_name": "AS Monaco FC" },
+  { "id": "541", "name": "Napoli", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "NAP", "official_name": "SSC Napoli" },
+  {
+    "id": "542",
+    "name": "Paris Saint-Germain",
+    "team_type_id": "CLUB",
+    "nation_id": "71",
+    "parent_team_id": "",
+    "club_code": "PSG",
+    "official_name": "Paris Saint-Germain"
+  },
+  {
+    "id": "543",
+    "name": "Viktoria Plzen",
+    "team_type_id": "CLUB",
+    "nation_id": "55",
+    "parent_team_id": "",
+    "club_code": "VPL",
+    "official_name": "FC Viktoria Plzeň"
+  },
+  { "id": "544", "name": "Porto", "team_type_id": "CLUB", "nation_id": "152", "parent_team_id": "", "club_code": "POR", "official_name": "FC Porto" },
+  {
+    "id": "545",
+    "name": "Real Madrid",
+    "team_type_id": "CLUB",
+    "nation_id": "175",
+    "parent_team_id": "",
+    "club_code": "MAD",
+    "official_name": "Real Madrid CF"
+  },
+  { "id": "546", "name": "AS Roma", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "ROM", "official_name": "AS Roma" },
+  { "id": "547", "name": "Schalke 04", "team_type_id": "CLUB", "nation_id": "76", "parent_team_id": "", "club_code": "S04", "official_name": "FC Schalke 04" },
+  {
+    "id": "548",
+    "name": "Shakhtar Donetsk",
+    "team_type_id": "CLUB",
+    "nation_id": "199",
+    "parent_team_id": "",
+    "club_code": "SHK",
+    "official_name": "FC Shakhtar Donetsk"
+  },
+  {
+    "id": "549",
+    "name": "Tottenham Hotspur",
+    "team_type_id": "CLUB",
+    "nation_id": "63",
+    "parent_team_id": "",
+    "club_code": "TOT",
+    "official_name": "Tottenham Hotspur FC"
+  },
+  { "id": "550", "name": "Valencia", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "VAL", "official_name": "Valencia CF" },
+  { "id": "551", "name": "AEK Athens", "team_type_id": "CLUB", "nation_id": "79", "parent_team_id": "", "club_code": "AEK", "official_name": "AEK Athens FC" },
+  { "id": "552", "name": "Ajax Amsterdam", "team_type_id": "CLUB", "nation_id": "135", "parent_team_id": "", "club_code": "AJA", "official_name": "AFC Ajax" },
+  {
+    "id": "553",
+    "name": "BATE Borisov",
+    "team_type_id": "CLUB",
+    "nation_id": "19",
+    "parent_team_id": "",
+    "club_code": "BAT",
+    "official_name": "FC BATE Borisov"
+  },
+  { "id": "554", "name": "Benfica", "team_type_id": "CLUB", "nation_id": "152", "parent_team_id": "", "club_code": "SLB", "official_name": "SL Benfica" },
+  {
+    "id": "555",
+    "name": "Red Star Belgrade",
+    "team_type_id": "CLUB",
+    "nation_id": "165",
+    "parent_team_id": "",
+    "club_code": "CRV",
+    "official_name": "FK Crvena zvezda"
+  },
+  {
+    "id": "556",
+    "name": "Dinamo Zagreb",
+    "team_type_id": "CLUB",
+    "nation_id": "51",
+    "parent_team_id": "",
+    "club_code": "DZA",
+    "official_name": "GNK Dinamo Zagreb"
+  },
+  {
+    "id": "557",
+    "name": "Dynamo Kyiv",
+    "team_type_id": "CLUB",
+    "nation_id": "199",
+    "parent_team_id": "",
+    "club_code": "DYK",
+    "official_name": "FC Dynamo Kyiv"
+  },
+  { "id": "558", "name": "PAOK", "team_type_id": "CLUB", "nation_id": "79", "parent_team_id": "", "club_code": "PAO", "official_name": "PAOK FC" },
+  {
+    "id": "559",
+    "name": "PSV Eindhoven",
+    "team_type_id": "CLUB",
+    "nation_id": "135",
+    "parent_team_id": "",
+    "club_code": "PSV",
+    "official_name": "PSV Eindhoven"
+  },
+  {
+    "id": "560",
+    "name": "Red Bull Salzburg",
+    "team_type_id": "CLUB",
+    "nation_id": "13",
+    "parent_team_id": "",
+    "club_code": "RBS",
+    "official_name": "FC Salzburg"
+  },
+  { "id": "561", "name": "Vidi", "team_type_id": "CLUB", "nation_id": "89", "parent_team_id": "", "club_code": "VID", "official_name": "Vidi FC" },
+  {
+    "id": "562",
+    "name": "Young Boys",
+    "team_type_id": "CLUB",
+    "nation_id": "184",
+    "parent_team_id": "",
+    "club_code": "YBO",
+    "official_name": "BSC Young Boys"
+  },
+  { "id": "563", "name": "Alashkert", "team_type_id": "CLUB", "nation_id": "10", "parent_team_id": "", "club_code": "ASH", "official_name": "Alashkert FC" },
+  { "id": "564", "name": "APOEL", "team_type_id": "CLUB", "nation_id": "54", "parent_team_id": "", "club_code": "APO", "official_name": "APOEL FC" },
+  { "id": "565", "name": "Astana", "team_type_id": "CLUB", "nation_id": "100", "parent_team_id": "", "club_code": "AST", "official_name": "FC Astana" },
+  { "id": "566", "name": "Basel", "team_type_id": "CLUB", "nation_id": "184", "parent_team_id": "", "club_code": "BAS", "official_name": "FC Basel 1893" },
+  { "id": "567", "name": "Celtic", "team_type_id": "CLUB", "nation_id": "163", "parent_team_id": "", "club_code": "CEL", "official_name": "Celtic FC" },
+  { "id": "568", "name": "CFR Cluj", "team_type_id": "CLUB", "nation_id": "156", "parent_team_id": "", "club_code": "CFR", "official_name": "CFR 1907 Cluj" },
+  { "id": "569", "name": "Cork City", "team_type_id": "CLUB", "nation_id": "155", "parent_team_id": "", "club_code": "COR", "official_name": "Cork City FC" },
+  { "id": "570", "name": "Crusaders", "team_type_id": "CLUB", "nation_id": "141", "parent_team_id": "", "club_code": "CRS", "official_name": "Crusaders FC" },
+  { "id": "571", "name": "Drita", "team_type_id": "CLUB", "nation_id": "104", "parent_team_id": "", "club_code": "DRI", "official_name": "KF Drita" },
+  {
+    "id": "572",
+    "name": "F91 Dudelange",
+    "team_type_id": "CLUB",
+    "nation_id": "115",
+    "parent_team_id": "",
+    "club_code": "F91",
+    "official_name": "F91 Dudelange"
+  },
+  {
+    "id": "573",
+    "name": "Santa Coloma",
+    "team_type_id": "CLUB",
+    "nation_id": "5",
+    "parent_team_id": "",
+    "club_code": "SAC",
+    "official_name": "FC Santa Coloma"
+  },
+  { "id": "574", "name": "Fenerbahce", "team_type_id": "CLUB", "nation_id": "195", "parent_team_id": "", "club_code": "FEN", "official_name": "Fenerbahçe SK" },
+  {
+    "id": "575",
+    "name": "Flora Tallinn",
+    "team_type_id": "CLUB",
+    "nation_id": "66",
+    "parent_team_id": "",
+    "club_code": "FTA",
+    "official_name": "FC Flora Tallinn"
+  },
+  {
+    "id": "576",
+    "name": "Hapoel Beer-Sheva",
+    "team_type_id": "CLUB",
+    "nation_id": "95",
+    "parent_team_id": "",
+    "club_code": "HBS",
+    "official_name": "Hapoel Beer-Sheva FC"
+  },
+  { "id": "577", "name": "HJK Helsinki", "team_type_id": "CLUB", "nation_id": "70", "parent_team_id": "", "club_code": "HJK", "official_name": "HJK Helsinki" },
+  { "id": "578", "name": "Kukesi", "team_type_id": "CLUB", "nation_id": "2", "parent_team_id": "", "club_code": "KUK", "official_name": "FK Kukësi" },
+  { "id": "579", "name": "La Fiorita", "team_type_id": "CLUB", "nation_id": "160", "parent_team_id": "", "club_code": "SPL", "official_name": "SP La Fiorita" },
+  {
+    "id": "580",
+    "name": "Legia Warsaw",
+    "team_type_id": "CLUB",
+    "nation_id": "151",
+    "parent_team_id": "",
+    "club_code": "LEG",
+    "official_name": "Legia Warszawa"
+  },
+  {
+    "id": "581",
+    "name": "Lincoln Red Imps",
+    "team_type_id": "CLUB",
+    "nation_id": "78",
+    "parent_team_id": "",
+    "club_code": "LRI",
+    "official_name": "Lincoln Red Imps FC"
+  },
+  {
+    "id": "582",
+    "name": "Ludogorets Razgrad",
+    "team_type_id": "CLUB",
+    "nation_id": "31",
+    "parent_team_id": "",
+    "club_code": "LUD",
+    "official_name": "PFC Ludogorets 1945"
+  },
+  { "id": "583", "name": "Malmo", "team_type_id": "CLUB", "nation_id": "183", "parent_team_id": "", "club_code": "MAL", "official_name": "Malmö FF" },
+  {
+    "id": "584",
+    "name": "Midtjylland",
+    "team_type_id": "CLUB",
+    "nation_id": "56",
+    "parent_team_id": "",
+    "club_code": "FCM",
+    "official_name": "FC Midtjylland"
+  },
+  {
+    "id": "585",
+    "name": "Olimpija Ljubljana",
+    "team_type_id": "CLUB",
+    "nation_id": "170",
+    "parent_team_id": "",
+    "club_code": "OLJ",
+    "official_name": "NK Olimpija Ljubljana"
+  },
+  { "id": "586", "name": "Qarabag", "team_type_id": "CLUB", "nation_id": "14", "parent_team_id": "", "club_code": "QAR", "official_name": "Qarabağ FK" },
+  { "id": "587", "name": "Rosenborg", "team_type_id": "CLUB", "nation_id": "142", "parent_team_id": "", "club_code": "ROS", "official_name": "Rosenborg BK" },
+  {
+    "id": "588",
+    "name": "Sheriff Tiraspol",
+    "team_type_id": "CLUB",
+    "nation_id": "126",
+    "parent_team_id": "",
+    "club_code": "STI",
+    "official_name": "FC Sheriff Tiraspol"
+  },
+  { "id": "589", "name": "Shkendija", "team_type_id": "CLUB", "nation_id": "72", "parent_team_id": "", "club_code": "SKE", "official_name": "KF Shkëndija" },
+  {
+    "id": "590",
+    "name": "Slavia Prague",
+    "team_type_id": "CLUB",
+    "nation_id": "55",
+    "parent_team_id": "",
+    "club_code": "SLP",
+    "official_name": "SK Slavia Praha"
+  },
+  {
+    "id": "591",
+    "name": "Spartak Moscow",
+    "team_type_id": "CLUB",
+    "nation_id": "157",
+    "parent_team_id": "",
+    "club_code": "SPM",
+    "official_name": "FC Spartak Moskva"
+  },
+  {
+    "id": "592",
+    "name": "Spartak Trnava",
+    "team_type_id": "CLUB",
+    "nation_id": "169",
+    "parent_team_id": "",
+    "club_code": "SPT",
+    "official_name": "FC Spartak Trnava"
+  },
+  {
+    "id": "593",
+    "name": "Spartaks Jurmala",
+    "team_type_id": "CLUB",
+    "nation_id": "108",
+    "parent_team_id": "",
+    "club_code": "JUR",
+    "official_name": "FK Spartaks Jūrmala"
+  },
+  {
+    "id": "594",
+    "name": "Standard Liege",
+    "team_type_id": "CLUB",
+    "nation_id": "20",
+    "parent_team_id": "",
+    "club_code": "STL",
+    "official_name": "R. Standard de Liège"
+  },
+  { "id": "595", "name": "Sturm Graz", "team_type_id": "CLUB", "nation_id": "13", "parent_team_id": "", "club_code": "SGR", "official_name": "SK Sturm Graz" },
+  {
+    "id": "596",
+    "name": "Suduva Marijampole",
+    "team_type_id": "CLUB",
+    "nation_id": "114",
+    "parent_team_id": "",
+    "club_code": "SUD",
+    "official_name": "FK Sūduva"
+  },
+  {
+    "id": "597",
+    "name": "Sutjeska Niksic",
+    "team_type_id": "CLUB",
+    "nation_id": "128",
+    "parent_team_id": "",
+    "club_code": "SUJ",
+    "official_name": "FK Sutjeska"
+  },
+  {
+    "id": "598",
+    "name": "The New Saints",
+    "team_type_id": "CLUB",
+    "nation_id": "208",
+    "parent_team_id": "",
+    "club_code": "TNS",
+    "official_name": "The New Saints FC"
+  },
+  {
+    "id": "599",
+    "name": "Torpedo Kutaisi",
+    "team_type_id": "CLUB",
+    "nation_id": "75",
+    "parent_team_id": "",
+    "club_code": "KUT",
+    "official_name": "FC Torpedo Kutaisi"
+  },
+  { "id": "600", "name": "Valletta", "team_type_id": "CLUB", "nation_id": "122", "parent_team_id": "", "club_code": "VFC", "official_name": "Valletta FC" },
+  { "id": "601", "name": "Valur", "team_type_id": "CLUB", "nation_id": "90", "parent_team_id": "", "club_code": "VRE", "official_name": "Valur Reykjavík" },
+  { "id": "602", "name": "Vikingur Gota", "team_type_id": "CLUB", "nation_id": "68", "parent_team_id": "", "club_code": "VIK", "official_name": "Víkingur" },
+  {
+    "id": "603",
+    "name": "Zrinjski Mostar",
+    "team_type_id": "CLUB",
+    "nation_id": "26",
+    "parent_team_id": "",
+    "club_code": "ZRI",
+    "official_name": "HŠK Zrinjski"
+  },
+  {
+    "id": "604",
+    "name": "Akhisar Belediyespor",
+    "team_type_id": "CLUB",
+    "nation_id": "195",
+    "parent_team_id": "",
+    "club_code": "AKB",
+    "official_name": "Akhisar Belediyespor"
+  },
+  { "id": "605", "name": "Anderlecht", "team_type_id": "CLUB", "nation_id": "20", "parent_team_id": "", "club_code": "ADL", "official_name": "RSC Anderlecht" },
+  { "id": "606", "name": "Arsenal", "team_type_id": "CLUB", "nation_id": "63", "parent_team_id": "", "club_code": "ARS", "official_name": "Arsenal FC" },
+  {
+    "id": "607",
+    "name": "Real Betis",
+    "team_type_id": "CLUB",
+    "nation_id": "175",
+    "parent_team_id": "",
+    "club_code": "BET",
+    "official_name": "Real Betis Balompié"
+  },
+  { "id": "608", "name": "Chelsea", "team_type_id": "CLUB", "nation_id": "63", "parent_team_id": "", "club_code": "CHE", "official_name": "Chelsea FC" },
+  {
+    "id": "609",
+    "name": "Eintracht Frankfurt",
+    "team_type_id": "CLUB",
+    "nation_id": "76",
+    "parent_team_id": "",
+    "club_code": "SGE",
+    "official_name": "Eintracht Frankfurt"
+  },
+  { "id": "610", "name": "Jablonec", "team_type_id": "CLUB", "nation_id": "55", "parent_team_id": "", "club_code": "JAB", "official_name": "FK Jablonec" },
+  { "id": "611", "name": "Krasnodar", "team_type_id": "CLUB", "nation_id": "157", "parent_team_id": "", "club_code": "KRA", "official_name": "FC Krasnodar" },
+  { "id": "612", "name": "Lazio", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "LAZ", "official_name": "SS Lazio" },
+  {
+    "id": "613",
+    "name": "Bayer Leverkusen",
+    "team_type_id": "CLUB",
+    "nation_id": "76",
+    "parent_team_id": "",
+    "club_code": "B04",
+    "official_name": "Bayer 04 Leverkusen"
+  },
+  {
+    "id": "614",
+    "name": "Olympique Marseille",
+    "team_type_id": "CLUB",
+    "nation_id": "71",
+    "parent_team_id": "",
+    "club_code": "OLM",
+    "official_name": "Olympique de Marseille"
+  },
+  { "id": "615", "name": "AC Milan", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "MIL", "official_name": "AC Milan" },
+  { "id": "616", "name": "Rennes", "team_type_id": "CLUB", "nation_id": "71", "parent_team_id": "", "club_code": "REN", "official_name": "Stade Rennais FC" },
+  {
+    "id": "617",
+    "name": "Sporting Lisbon",
+    "team_type_id": "CLUB",
+    "nation_id": "152",
+    "parent_team_id": "",
+    "club_code": "SLI",
+    "official_name": "Sporting Clube de Portugal"
+  },
+  { "id": "618", "name": "Villarreal", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "VIL", "official_name": "Villarreal CF" },
+  {
+    "id": "619",
+    "name": "Vorskla Poltava",
+    "team_type_id": "CLUB",
+    "nation_id": "199",
+    "parent_team_id": "",
+    "club_code": "VPO",
+    "official_name": "FC Vorskla Poltava"
+  },
+  { "id": "620", "name": "Zurich", "team_type_id": "CLUB", "nation_id": "184", "parent_team_id": "", "club_code": "ZUR", "official_name": "FC Zürich" },
+  {
+    "id": "621",
+    "name": "AEK Larnaca",
+    "team_type_id": "CLUB",
+    "nation_id": "54",
+    "parent_team_id": "",
+    "club_code": "LAR",
+    "official_name": "AEK Larnaca FC"
+  },
+  {
+    "id": "622",
+    "name": "Apollon Limassol",
+    "team_type_id": "CLUB",
+    "nation_id": "54",
+    "parent_team_id": "",
+    "club_code": "APL",
+    "official_name": "Apollon Limassol FC"
+  },
+  { "id": "623", "name": "Atalanta", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "ATT", "official_name": "Atalanta BC" },
+  { "id": "624", "name": "Besiktas", "team_type_id": "CLUB", "nation_id": "195", "parent_team_id": "", "club_code": "BES", "official_name": "Beşiktaş JK" },
+  {
+    "id": "625",
+    "name": "Bordeaux",
+    "team_type_id": "CLUB",
+    "nation_id": "71",
+    "parent_team_id": "",
+    "club_code": "BOR",
+    "official_name": "FC Girondins de Bordeaux"
+  },
+  { "id": "626", "name": "Brondby", "team_type_id": "CLUB", "nation_id": "56", "parent_team_id": "", "club_code": "BIF", "official_name": "Brøndby IF" },
+  { "id": "627", "name": "Burnley", "team_type_id": "CLUB", "nation_id": "63", "parent_team_id": "", "club_code": "BUR", "official_name": "Burnley FC" },
+  {
+    "id": "628",
+    "name": "Steaua Bucharest",
+    "team_type_id": "CLUB",
+    "nation_id": "156",
+    "parent_team_id": "",
+    "club_code": "SBU",
+    "official_name": "FC Steaua București"
+  },
+  { "id": "629", "name": "Genk", "team_type_id": "CLUB", "nation_id": "20", "parent_team_id": "", "club_code": "GNK", "official_name": "KRC Genk" },
+  { "id": "630", "name": "Gent", "team_type_id": "CLUB", "nation_id": "20", "parent_team_id": "", "club_code": "GNT", "official_name": "KAA Gent" },
+  { "id": "631", "name": "Copenhagen", "team_type_id": "CLUB", "nation_id": "56", "parent_team_id": "", "club_code": "KOB", "official_name": "FC København" },
+  { "id": "632", "name": "RB Leipzig", "team_type_id": "CLUB", "nation_id": "76", "parent_team_id": "", "club_code": "RBL", "official_name": "RB Leipzig" },
+  {
+    "id": "633",
+    "name": "Maccabi Tel Aviv",
+    "team_type_id": "CLUB",
+    "nation_id": "195",
+    "parent_team_id": "",
+    "club_code": "MTA",
+    "official_name": "Maccabi Tel-Aviv FC"
+  },
+  { "id": "634", "name": "Molde", "team_type_id": "CLUB", "nation_id": "142", "parent_team_id": "", "club_code": "MOL", "official_name": "Molde FK" },
+  { "id": "635", "name": "Olympiacos", "team_type_id": "CLUB", "nation_id": "79", "parent_team_id": "", "club_code": "OLY", "official_name": "Olympiacos FC" },
+  {
+    "id": "636",
+    "name": "Partizan Belgrade",
+    "team_type_id": "CLUB",
+    "nation_id": "165",
+    "parent_team_id": "",
+    "club_code": "PBE",
+    "official_name": "FK Partizan"
+  },
+  { "id": "637", "name": "Rangers", "team_type_id": "CLUB", "nation_id": "163", "parent_team_id": "", "club_code": "RFC", "official_name": "Rangers FC" },
+  {
+    "id": "638",
+    "name": "Rapid Vienna",
+    "team_type_id": "CLUB",
+    "nation_id": "13",
+    "parent_team_id": "",
+    "club_code": "RAV",
+    "official_name": "SK Rapid Wien"
+  },
+  {
+    "id": "639",
+    "name": "Sarpsborg",
+    "team_type_id": "CLUB",
+    "nation_id": "142",
+    "parent_team_id": "",
+    "club_code": "S08",
+    "official_name": "Sarpsborg 08 FF"
+  },
+  { "id": "640", "name": "Sevilla", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "SEV", "official_name": "Sevilla FC" },
+  {
+    "id": "641",
+    "name": "Sigma Olomouc",
+    "team_type_id": "CLUB",
+    "nation_id": "55",
+    "parent_team_id": "",
+    "club_code": "SIG",
+    "official_name": "SK Sigma Olomouc"
+  },
+  { "id": "642", "name": "Trencin", "team_type_id": "CLUB", "nation_id": "169", "parent_team_id": "", "club_code": "TRN", "official_name": "AS Trenčín" },
+  { "id": "643", "name": "Ufa", "team_type_id": "CLUB", "nation_id": "157", "parent_team_id": "", "club_code": "UFA", "official_name": "FC Ufa" },
+  {
+    "id": "644",
+    "name": "Zenit St Petersburg",
+    "team_type_id": "CLUB",
+    "nation_id": "157",
+    "parent_team_id": "",
+    "club_code": "ZSP",
+    "official_name": "FC Zenit"
+  },
+  {
+    "id": "645",
+    "name": "Zorya Luhansk",
+    "team_type_id": "CLUB",
+    "nation_id": "199",
+    "parent_team_id": "",
+    "club_code": "ZOR",
+    "official_name": "FC Zorya Luhansk"
+  },
+  { "id": "646", "name": "Aberdeen", "team_type_id": "CLUB", "nation_id": "163", "parent_team_id": "", "club_code": "ABE", "official_name": "Aberdeen FC" },
+  {
+    "id": "647",
+    "name": "Admira",
+    "team_type_id": "CLUB",
+    "nation_id": "13",
+    "parent_team_id": "",
+    "club_code": "ADM",
+    "official_name": "FC Admira Wacker Mödling"
+  },
+  { "id": "648", "name": "AIK", "team_type_id": "CLUB", "nation_id": "183", "parent_team_id": "", "club_code": "AIK", "official_name": "AIK" },
+  {
+    "id": "649",
+    "name": "Anorthosis Famagusta",
+    "team_type_id": "CLUB",
+    "nation_id": "54",
+    "parent_team_id": "",
+    "club_code": "ANO",
+    "official_name": "Anorthosis Famagusta FC"
+  },
+  {
+    "id": "650",
+    "name": "Asteras Tripolis",
+    "team_type_id": "CLUB",
+    "nation_id": "79",
+    "parent_team_id": "",
+    "club_code": "ATR",
+    "official_name": "Asteras Tripolis FC"
+  },
+  { "id": "651", "name": "Atromitos", "team_type_id": "CLUB", "nation_id": "79", "parent_team_id": "", "club_code": "ATS", "official_name": "Atromitos FC" },
+  { "id": "652", "name": "AZ Alkmaar", "team_type_id": "CLUB", "nation_id": "135", "parent_team_id": "", "club_code": "AZA", "official_name": "AZ Alkmaar" },
+  { "id": "653", "name": "B36 Torshavn", "team_type_id": "CLUB", "nation_id": "68", "parent_team_id": "", "club_code": "B36", "official_name": "B36 Tórshavn" },
+  { "id": "654", "name": "Bala Town", "team_type_id": "CLUB", "nation_id": "208", "parent_team_id": "", "club_code": "BTO", "official_name": "Bala Town FC" },
+  { "id": "655", "name": "Balzan", "team_type_id": "CLUB", "nation_id": "122", "parent_team_id": "", "club_code": "BAL", "official_name": "Balzan FC" },
+  { "id": "656", "name": "Banants", "team_type_id": "CLUB", "nation_id": "10", "parent_team_id": "", "club_code": "BNA", "official_name": "FC Banants" },
+  {
+    "id": "657",
+    "name": "Beitar Jerusalem",
+    "team_type_id": "CLUB",
+    "nation_id": "95",
+    "parent_team_id": "",
+    "club_code": "BEJ",
+    "official_name": "Beitar Jerusalem FC"
+  },
+  { "id": "658", "name": "Birkirkara", "team_type_id": "CLUB", "nation_id": "122", "parent_team_id": "", "club_code": "BIR", "official_name": "Birkirkara FC" },
+  { "id": "659", "name": "Braga", "team_type_id": "CLUB", "nation_id": "152", "parent_team_id": "", "club_code": "SBR", "official_name": "SC Braga" },
+  {
+    "id": "660",
+    "name": "Buducnost Podgorica",
+    "team_type_id": "CLUB",
+    "nation_id": "128",
+    "parent_team_id": "",
+    "club_code": "BUP",
+    "official_name": "FK Budućnost Podgorica"
+  },
+  {
+    "id": "661",
+    "name": "Cefn Druids",
+    "team_type_id": "CLUB",
+    "nation_id": "208",
+    "parent_team_id": "",
+    "club_code": "CED",
+    "official_name": "Cefn Druids AFC"
+  },
+  {
+    "id": "662",
+    "name": "Chikhura Sachkhere",
+    "team_type_id": "CLUB",
+    "nation_id": "75",
+    "parent_team_id": "",
+    "club_code": "CHS",
+    "official_name": "FC Chikhura Sachkhere"
+  },
+  {
+    "id": "663",
+    "name": "Cliftonville",
+    "team_type_id": "CLUB",
+    "nation_id": "141",
+    "parent_team_id": "",
+    "club_code": "CLI",
+    "official_name": "Cliftonville FC"
+  },
+  { "id": "664", "name": "Coleraine", "team_type_id": "CLUB", "nation_id": "141", "parent_team_id": "", "club_code": "CFC", "official_name": "Coleraine FC" },
+  {
+    "id": "665",
+    "name": "Connah's Quay",
+    "team_type_id": "CLUB",
+    "nation_id": "208",
+    "parent_team_id": "",
+    "club_code": "CQN",
+    "official_name": "Connah's Quay Nomads FC"
+  },
+  { "id": "666", "name": "CSKA Sofia", "team_type_id": "CLUB", "nation_id": "31", "parent_team_id": "", "club_code": "CSO", "official_name": "PFC CSKA-Sofia" },
+  { "id": "667", "name": "Derry City", "team_type_id": "CLUB", "nation_id": "155", "parent_team_id": "", "club_code": "DER", "official_name": "Derry City FC" },
+  {
+    "id": "668",
+    "name": "Dynamo Brest",
+    "team_type_id": "CLUB",
+    "nation_id": "19",
+    "parent_team_id": "",
+    "club_code": "DRB",
+    "official_name": "FC Dynamo Brest"
+  },
+  {
+    "id": "669",
+    "name": "Dinamo Minsk",
+    "team_type_id": "CLUB",
+    "nation_id": "19",
+    "parent_team_id": "",
+    "club_code": "DMI",
+    "official_name": "FC Dinamo Minsk"
+  },
+  {
+    "id": "670",
+    "name": "Dinamo Tbilisi",
+    "team_type_id": "CLUB",
+    "nation_id": "75",
+    "parent_team_id": "",
+    "club_code": "TBI",
+    "official_name": "FC Dinamo Tbilisi"
+  },
+  {
+    "id": "671",
+    "name": "Djurgardens",
+    "team_type_id": "CLUB",
+    "nation_id": "183",
+    "parent_team_id": "",
+    "club_code": "DJU",
+    "official_name": "Djurgårdens IF"
+  },
+  { "id": "672", "name": "Domzale", "team_type_id": "CLUB", "nation_id": "170", "parent_team_id": "", "club_code": "DOM", "official_name": "NK Domžale" },
+  {
+    "id": "673",
+    "name": "Dunajska Streda",
+    "team_type_id": "CLUB",
+    "nation_id": "169",
+    "parent_team_id": "",
+    "club_code": "DAC",
+    "official_name": "FC DAC 1904 Dunajská Streda"
+  },
+  { "id": "674", "name": "Dundalk", "team_type_id": "CLUB", "nation_id": "155", "parent_team_id": "", "club_code": "DUN", "official_name": "Dundalk FC" },
+  { "id": "675", "name": "Engordany", "team_type_id": "CLUB", "nation_id": "5", "parent_team_id": "", "club_code": "UEE", "official_name": "UE Engordany" },
+  { "id": "676", "name": "Europa", "team_type_id": "CLUB", "nation_id": "78", "parent_team_id": "", "club_code": "EUR", "official_name": "Europa FC" },
+  {
+    "id": "677",
+    "name": "Ferencvaros",
+    "team_type_id": "CLUB",
+    "nation_id": "89",
+    "parent_team_id": "",
+    "club_code": "FER",
+    "official_name": "Ferencvárosi TC"
+  },
+  {
+    "id": "678",
+    "name": "Feyenoord Rotterdam",
+    "team_type_id": "CLUB",
+    "nation_id": "135",
+    "parent_team_id": "",
+    "club_code": "FEY",
+    "official_name": "Feyenoord"
+  },
+  { "id": "679", "name": "FH", "team_type_id": "CLUB", "nation_id": "90", "parent_team_id": "", "club_code": "FHA", "official_name": "FH Hafnarfjördur" },
+  { "id": "680", "name": "Fola Esch", "team_type_id": "CLUB", "nation_id": "115", "parent_team_id": "", "club_code": "FOL", "official_name": "CS Fola Esch" },
+  { "id": "681", "name": "Folgore", "team_type_id": "CLUB", "nation_id": "160", "parent_team_id": "", "club_code": "FOG", "official_name": "SS Folgore" },
+  { "id": "682", "name": "Gabala", "team_type_id": "CLUB", "nation_id": "14", "parent_team_id": "", "club_code": "GAB", "official_name": "Gabala SC" },
+  {
+    "id": "683",
+    "name": "Gandzasar Kapan",
+    "team_type_id": "CLUB",
+    "nation_id": "10",
+    "parent_team_id": "",
+    "club_code": "GAN",
+    "official_name": "FC Gandzasar"
+  },
+  { "id": "684", "name": "Glenavon", "team_type_id": "CLUB", "nation_id": "141", "parent_team_id": "", "club_code": "GLE", "official_name": "Glenavon FC" },
+  {
+    "id": "685",
+    "name": "Gornik Zabrze",
+    "team_type_id": "CLUB",
+    "nation_id": "151",
+    "parent_team_id": "",
+    "club_code": "ZAB",
+    "official_name": "Górnik Zabrze"
+  },
+  {
+    "id": "686",
+    "name": "Gzira United",
+    "team_type_id": "CLUB",
+    "nation_id": "122",
+    "parent_team_id": "",
+    "club_code": "GZU",
+    "official_name": "Gżira United FC"
+  },
+  {
+    "id": "687",
+    "name": "Hapoel Haifa",
+    "team_type_id": "CLUB",
+    "nation_id": "95",
+    "parent_team_id": "",
+    "club_code": "HHA",
+    "official_name": "Hapoel Haifa FC"
+  },
+  { "id": "688", "name": "Hacken", "team_type_id": "CLUB", "nation_id": "183", "parent_team_id": "", "club_code": "HAC", "official_name": "BK Häcken" },
+  {
+    "id": "689",
+    "name": "Hajduk Split",
+    "team_type_id": "CLUB",
+    "nation_id": "51",
+    "parent_team_id": "",
+    "club_code": "HAJ",
+    "official_name": "HNK Hajduk Split"
+  },
+  { "id": "690", "name": "Hibernian", "team_type_id": "CLUB", "nation_id": "163", "parent_team_id": "", "club_code": "HIB", "official_name": "Hibernian FC" },
+  {
+    "id": "691",
+    "name": "Budapest Honved",
+    "team_type_id": "CLUB",
+    "nation_id": "89",
+    "parent_team_id": "",
+    "club_code": "BUH",
+    "official_name": "Budapest Honvéd FC"
+  },
+  { "id": "692", "name": "IBV", "team_type_id": "CLUB", "nation_id": "90", "parent_team_id": "", "club_code": "IBV", "official_name": "ÍBV Vestmannaeyjar" },
+  {
+    "id": "693",
+    "name": "Ilves Tampere",
+    "team_type_id": "CLUB",
+    "nation_id": "70",
+    "parent_team_id": "",
+    "club_code": "ILV",
+    "official_name": "Ilves Tampere"
+  },
+  {
+    "id": "694",
+    "name": "Irtysh Pavlodar",
+    "team_type_id": "CLUB",
+    "nation_id": "100",
+    "parent_team_id": "",
+    "club_code": "IPA",
+    "official_name": "FC Irtysh Pavlodar"
+  },
+  {
+    "id": "695",
+    "name": "Istanbul Basaksehir",
+    "team_type_id": "CLUB",
+    "nation_id": "195",
+    "parent_team_id": "",
+    "club_code": "IBA",
+    "official_name": "İstanbul Başakşehir"
+  },
+  {
+    "id": "696",
+    "name": "Jagiellonia Bialystok",
+    "team_type_id": "CLUB",
+    "nation_id": "151",
+    "parent_team_id": "",
+    "club_code": "JAG",
+    "official_name": "Jagiellonia Białystok"
+  },
+  { "id": "697", "name": "Kairat", "team_type_id": "CLUB", "nation_id": "100", "parent_team_id": "", "club_code": "KAI", "official_name": "FC Kairat Almaty" },
+  {
+    "id": "698",
+    "name": "Nomme Kalju",
+    "team_type_id": "CLUB",
+    "nation_id": "66",
+    "parent_team_id": "",
+    "club_code": "NOM",
+    "official_name": "Nõmme Kalju FC"
+  },
+  { "id": "699", "name": "Kesla", "team_type_id": "CLUB", "nation_id": "14", "parent_team_id": "", "club_code": "KES", "official_name": "Keşla FK" },
+  { "id": "700", "name": "KI Klaksvik", "team_type_id": "CLUB", "nation_id": "68", "parent_team_id": "", "club_code": "KIK", "official_name": "KÍ Klaksvík" },
+  { "id": "701", "name": "KuPS", "team_type_id": "CLUB", "nation_id": "70", "parent_team_id": "", "club_code": "KUP", "official_name": "KuPS Kuopio" },
+  { "id": "702", "name": "Laci", "team_type_id": "CLUB", "nation_id": "2", "parent_team_id": "", "club_code": "LAC", "official_name": "KF Laçi" },
+  { "id": "703", "name": "Lahti", "team_type_id": "CLUB", "nation_id": "70", "parent_team_id": "", "club_code": "LAH", "official_name": "FC Lahti" },
+  { "id": "704", "name": "LASK Linz", "team_type_id": "CLUB", "nation_id": "13", "parent_team_id": "", "club_code": "LIN", "official_name": "LASK Linz" },
+  {
+    "id": "705",
+    "name": "Lech Poznan",
+    "team_type_id": "CLUB",
+    "nation_id": "151",
+    "parent_team_id": "",
+    "club_code": "POZ",
+    "official_name": "KKS Lech Poznań"
+  },
+  {
+    "id": "706",
+    "name": "Levadia Tallinn",
+    "team_type_id": "CLUB",
+    "nation_id": "66",
+    "parent_team_id": "",
+    "club_code": "LET",
+    "official_name": "FC Levadia Tallinn"
+  },
+  {
+    "id": "707",
+    "name": "Levski Sofia",
+    "team_type_id": "CLUB",
+    "nation_id": "31",
+    "parent_team_id": "",
+    "club_code": "LSO",
+    "official_name": "PFC Levski Sofia"
+  },
+  { "id": "708", "name": "Liepaja", "team_type_id": "CLUB", "nation_id": "108", "parent_team_id": "", "club_code": "LIE", "official_name": "FK Liepāja" },
+  { "id": "709", "name": "Lillestrom", "team_type_id": "CLUB", "nation_id": "142", "parent_team_id": "", "club_code": "LSK", "official_name": "Lillestrøm SK" },
+  { "id": "710", "name": "Luftetari", "team_type_id": "CLUB", "nation_id": "2", "parent_team_id": "", "club_code": "LUF", "official_name": "KS Luftëtari" },
+  { "id": "711", "name": "Luzern", "team_type_id": "CLUB", "nation_id": "184", "parent_team_id": "", "club_code": "LUZ", "official_name": "FC Luzern" },
+  { "id": "712", "name": "Maribor", "team_type_id": "CLUB", "nation_id": "170", "parent_team_id": "", "club_code": "MAR", "official_name": "NK Maribor" },
+  { "id": "713", "name": "Mariupol", "team_type_id": "CLUB", "nation_id": "199", "parent_team_id": "", "club_code": "MRP", "official_name": "FC Mariupol" },
+  {
+    "id": "714",
+    "name": "Milsami Orhei",
+    "team_type_id": "CLUB",
+    "nation_id": "126",
+    "parent_team_id": "",
+    "club_code": "ORH",
+    "official_name": "FC Milsami Orhei"
+  },
+  { "id": "715", "name": "Neftchi Baku", "team_type_id": "CLUB", "nation_id": "14", "parent_team_id": "", "club_code": "BAK", "official_name": "Neftçi PFK" },
+  {
+    "id": "716",
+    "name": "Nordsjaelland",
+    "team_type_id": "CLUB",
+    "nation_id": "56",
+    "parent_team_id": "",
+    "club_code": "FCN",
+    "official_name": "FC Nordsjælland"
+  },
+  { "id": "717", "name": "NSI Runavik", "team_type_id": "CLUB", "nation_id": "68", "parent_team_id": "", "club_code": "RUN", "official_name": "NSÍ Runavík" },
+  { "id": "718", "name": "Osijek", "team_type_id": "CLUB", "nation_id": "51", "parent_team_id": "", "club_code": "OSI", "official_name": "NK Osijek" },
+  {
+    "id": "719",
+    "name": "Partizani Tirana",
+    "team_type_id": "CLUB",
+    "nation_id": "2",
+    "parent_team_id": "",
+    "club_code": "TIR",
+    "official_name": "FK Partizani"
+  },
+  {
+    "id": "720",
+    "name": "Petrocub Hincesti",
+    "team_type_id": "CLUB",
+    "nation_id": "126",
+    "parent_team_id": "",
+    "club_code": "HIN",
+    "official_name": "CS Petrocub"
+  },
+  { "id": "721", "name": "Prishtina", "team_type_id": "CLUB", "nation_id": "104", "parent_team_id": "", "club_code": "PRI", "official_name": "FC Prishtina" },
+  {
+    "id": "722",
+    "name": "Progres Niederkorn",
+    "team_type_id": "CLUB",
+    "nation_id": "115",
+    "parent_team_id": "",
+    "club_code": "PRO",
+    "official_name": "FC Progrès Niederkorn"
+  },
+  { "id": "723", "name": "Pyunik", "team_type_id": "CLUB", "nation_id": "10", "parent_team_id": "", "club_code": "PYU", "official_name": "FC Pyunik" },
+  { "id": "724", "name": "Rabotnicki", "team_type_id": "CLUB", "nation_id": "72", "parent_team_id": "", "club_code": "RAB", "official_name": "FK Rabotnicki" },
+  {
+    "id": "725",
+    "name": "Racing Union",
+    "team_type_id": "CLUB",
+    "nation_id": "115",
+    "parent_team_id": "",
+    "club_code": "RUL",
+    "official_name": "Racing FC Union Lëtzebuerg"
+  },
+  {
+    "id": "726",
+    "name": "Radnicki Nis",
+    "team_type_id": "CLUB",
+    "nation_id": "165",
+    "parent_team_id": "",
+    "club_code": "RAD",
+    "official_name": "FK Radnicki Niš"
+  },
+  { "id": "727", "name": "Riga", "team_type_id": "CLUB", "nation_id": "108", "parent_team_id": "", "club_code": "RIG", "official_name": "Riga FC" },
+  { "id": "728", "name": "Rijeka", "team_type_id": "CLUB", "nation_id": "51", "parent_team_id": "", "club_code": "RIJ", "official_name": "HNK Rijeka" },
+  { "id": "729", "name": "Rio Ave", "team_type_id": "CLUB", "nation_id": "152", "parent_team_id": "", "club_code": "RIO", "official_name": "Rio Ave FC" },
+  {
+    "id": "730",
+    "name": "Rudar Pljevlja",
+    "team_type_id": "CLUB",
+    "nation_id": "128",
+    "parent_team_id": "",
+    "club_code": "PLJ",
+    "official_name": "FK Rudar Pljevlja"
+  },
+  {
+    "id": "731",
+    "name": "Rudar Velenje",
+    "team_type_id": "CLUB",
+    "nation_id": "128",
+    "parent_team_id": "",
+    "club_code": "RUV",
+    "official_name": "NK Rudar Velenje"
+  },
+  { "id": "732", "name": "Samtredia", "team_type_id": "CLUB", "nation_id": "75", "parent_team_id": "", "club_code": "FCS", "official_name": "FC Samtredia" },
+  { "id": "733", "name": "Sant Julia", "team_type_id": "CLUB", "nation_id": "5", "parent_team_id": "", "club_code": "SJU", "official_name": "UE Sant Julià" },
+  { "id": "734", "name": "Sarajevo", "team_type_id": "CLUB", "nation_id": "26", "parent_team_id": "", "club_code": "SAR", "official_name": "FK Sarajevo" },
+  {
+    "id": "735",
+    "name": "Shakhtyor Soligorsk",
+    "team_type_id": "CLUB",
+    "nation_id": "19",
+    "parent_team_id": "",
+    "club_code": "SSO",
+    "official_name": "FC Shakhtyor Soligorsk"
+  },
+  {
+    "id": "736",
+    "name": "Shamrock Rovers",
+    "team_type_id": "CLUB",
+    "nation_id": "155",
+    "parent_team_id": "",
+    "club_code": "SHR",
+    "official_name": "Shamrock Rovers FC"
+  },
+  { "id": "737", "name": "Shkupi", "team_type_id": "CLUB", "nation_id": "72", "parent_team_id": "", "club_code": "FKS", "official_name": "FK Shkupi" },
+  {
+    "id": "738",
+    "name": "Siroki Brijeg",
+    "team_type_id": "CLUB",
+    "nation_id": "26",
+    "parent_team_id": "",
+    "club_code": "SIB",
+    "official_name": "NK Široki Brijeg"
+  },
+  {
+    "id": "739",
+    "name": "Slavia Sofia",
+    "team_type_id": "CLUB",
+    "nation_id": "31",
+    "parent_team_id": "",
+    "club_code": "SOF",
+    "official_name": "PFC Slavia Sofia"
+  },
+  {
+    "id": "740",
+    "name": "Slovan Bratislava",
+    "team_type_id": "CLUB",
+    "nation_id": "169",
+    "parent_team_id": "",
+    "club_code": "SKS",
+    "official_name": "ŠK Slovan Bratislava"
+  },
+  {
+    "id": "741",
+    "name": "Sparta Prague",
+    "team_type_id": "CLUB",
+    "nation_id": "55",
+    "parent_team_id": "",
+    "club_code": "SPP",
+    "official_name": "AC Sparta Praha"
+  },
+  {
+    "id": "742",
+    "name": "Spartak Subotica",
+    "team_type_id": "CLUB",
+    "nation_id": "165",
+    "parent_team_id": "",
+    "club_code": "SUB",
+    "official_name": "FK Spartak Subotica"
+  },
+  { "id": "743", "name": "St. Gallen", "team_type_id": "CLUB", "nation_id": "184", "parent_team_id": "", "club_code": "STG", "official_name": "FC St. Gallen" },
+  {
+    "id": "744",
+    "name": "St Joseph's",
+    "team_type_id": "CLUB",
+    "nation_id": "78",
+    "parent_team_id": "",
+    "club_code": "SJO",
+    "official_name": "St Joseph's FC"
+  },
+  { "id": "745", "name": "Stjarnan", "team_type_id": "CLUB", "nation_id": "90", "parent_team_id": "", "club_code": "UMF", "official_name": "UMF Stjarnan" },
+  {
+    "id": "746",
+    "name": "Stumbras Kaunas",
+    "team_type_id": "CLUB",
+    "nation_id": "114",
+    "parent_team_id": "",
+    "club_code": "KAU",
+    "official_name": "FC Stumbras"
+  },
+  {
+    "id": "747",
+    "name": "Titograd Podgorica",
+    "team_type_id": "CLUB",
+    "nation_id": "128",
+    "parent_team_id": "",
+    "club_code": "POD",
+    "official_name": "OFK Titograd"
+  },
+  { "id": "748", "name": "Tobol", "team_type_id": "CLUB", "nation_id": "100", "parent_team_id": "", "club_code": "TOB", "official_name": "FC Tobol Kostanay" },
+  { "id": "749", "name": "Trakai", "team_type_id": "CLUB", "nation_id": "114", "parent_team_id": "", "club_code": "FKT", "official_name": "FK Trakai" },
+  {
+    "id": "750",
+    "name": "Narva Trans",
+    "team_type_id": "CLUB",
+    "nation_id": "66",
+    "parent_team_id": "",
+    "club_code": "NAR",
+    "official_name": "JK Narva Trans"
+  },
+  { "id": "751", "name": "Tre Fiori", "team_type_id": "CLUB", "nation_id": "160", "parent_team_id": "", "club_code": "TRF", "official_name": "SP Tre Fiori" },
+  { "id": "752", "name": "Ujpest", "team_type_id": "CLUB", "nation_id": "89", "parent_team_id": "", "club_code": "UJP", "official_name": "Újpest FC" },
+  {
+    "id": "753",
+    "name": "Universitatea Craiova",
+    "team_type_id": "CLUB",
+    "nation_id": "156",
+    "parent_team_id": "",
+    "club_code": "UNC",
+    "official_name": "U Craiova 1948 Club Sportiv"
+  },
+  { "id": "754", "name": "Vaduz", "team_type_id": "CLUB", "nation_id": "113", "parent_team_id": "", "club_code": "VAD", "official_name": "FC Vaduz" },
+  { "id": "755", "name": "Vardar", "team_type_id": "CLUB", "nation_id": "72", "parent_team_id": "", "club_code": "VAR", "official_name": "FK Vardar" },
+  { "id": "756", "name": "Ventspils", "team_type_id": "CLUB", "nation_id": "108", "parent_team_id": "", "club_code": "VEN", "official_name": "FK Ventspils" },
+  {
+    "id": "757",
+    "name": "Viitorul Constanta",
+    "team_type_id": "CLUB",
+    "nation_id": "108",
+    "parent_team_id": "",
+    "club_code": "VCO",
+    "official_name": "Viitorul"
+  },
+  { "id": "758", "name": "Vitesse", "team_type_id": "CLUB", "nation_id": "135", "parent_team_id": "", "club_code": "VIT", "official_name": "Vitesse" },
+  {
+    "id": "759",
+    "name": "Zalgiris Vilnius",
+    "team_type_id": "CLUB",
+    "nation_id": "114",
+    "parent_team_id": "",
+    "club_code": "ZAL",
+    "official_name": "FK Žalgiris Vilnius"
+  },
+  {
+    "id": "760",
+    "name": "Zaria Balti",
+    "team_type_id": "CLUB",
+    "nation_id": "126",
+    "parent_team_id": "",
+    "club_code": "ZAR",
+    "official_name": "FC Zaria Balti"
+  },
+  {
+    "id": "761",
+    "name": "Zeljeznicar",
+    "team_type_id": "CLUB",
+    "nation_id": "26",
+    "parent_team_id": "",
+    "club_code": "ZEL",
+    "official_name": "FK Željezničar"
+  }
+]

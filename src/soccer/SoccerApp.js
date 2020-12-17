@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ConfederationIds from '../data/soccer/ConfederationId.json'
 import TournamentTypeArray from '../data/TournamentType.json'
 import Page from '../core/Page'
-import { getTournamentArray } from './Helper'
+import { getTournamentArray } from './DataHelper'
 import { Container, TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, ListGroup, ListGroupItem } from 'reactstrap'
 import classnames from 'classnames'
 

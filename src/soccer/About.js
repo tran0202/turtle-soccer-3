@@ -292,56 +292,56 @@ const About = (props) => {
                   </Col>
                 </Row>
               )}
-              <Row className="margin-top-xs mb-3">
-                <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award"></Col>
-                <Col md="5" sm="7" className="tournament-award-receiver"></Col>
-              </Row>
+              {(awards.golden_boot || awards.silver_boot || awards.bronze_boot) && (
+                <Row className="margin-top-xs mb-3">
+                  <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award"></Col>
+                  <Col md="5" sm="7" className="tournament-award-receiver"></Col>
+                </Row>
+              )}
               {awards.golden_ball && (
                 <React.Fragment>
-                  <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                      Golden Ball
-                    </Col>
-                    <Col md="6" sm="7">
-                      {awards.golden_ball[0] && (
-                        <React.Fragment>
-                          {awards.golden_ball[0].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
-                          )}
-                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[0].player}</span>
-                        </React.Fragment>
-                      )}
-                    </Col>
-                  </Row>
-                  <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                      Silver Ball
-                    </Col>
-                    <Col md="6" sm="7">
-                      {awards.golden_ball[1] && (
-                        <React.Fragment>
-                          {awards.golden_ball[1].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
-                          )}
-                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[1].player}</span>
-                        </React.Fragment>
-                      )}
-                    </Col>
-                  </Row>
+                  {awards.golden_ball[0] && (
+                    <Row className="margin-top-xs">
+                      <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                        Golden Ball
+                      </Col>
+                      <Col md="6" sm="7">
+                        {awards.golden_ball[0].team && (
+                          <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[0].team)} alt={awards.golden_ball[0].team} />
+                        )}
+                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[0].player}</span>
+                      </Col>
+                    </Row>
+                  )}
+                  {awards.golden_ball[1] && (
+                    <Row className="margin-top-xs">
+                      <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                        Silver Ball
+                      </Col>
+                      <Col md="6" sm="7">
+                        {awards.golden_ball[1].team && (
+                          <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[1].team)} alt={awards.golden_ball[1].team} />
+                        )}
+                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[1].player}</span>
+                      </Col>
+                    </Row>
+                  )}
+                  {awards.golden_ball[2] && (
+                    <Row className="margin-top-xs mb-3">
+                      <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                        Bronze Ball
+                      </Col>
+                      <Col md="6" sm="7">
+                        {awards.golden_ball[2].team && (
+                          <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
+                        )}
+                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[2].player}</span>
+                      </Col>
+                    </Row>
+                  )}
                   <Row className="margin-top-xs mb-3">
-                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
-                      Bronze Ball
-                    </Col>
-                    <Col md="6" sm="7" className="tournament-award-receiver">
-                      {awards.golden_ball[2] && (
-                        <React.Fragment>
-                          {awards.golden_ball[2].team && (
-                            <img className="flag-sm flag-md" src={getFlagSrc(awards.golden_ball[2].team)} alt={awards.golden_ball[2].team} />
-                          )}
-                          <span className="padding-top-xs">&nbsp;{awards.golden_ball[2].player}</span>
-                        </React.Fragment>
-                      )}
-                    </Col>
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award"></Col>
+                    <Col md="5" sm="7" className="tournament-award-receiver"></Col>
                   </Row>
                 </React.Fragment>
               )}
