@@ -22,16 +22,27 @@ export const getTournamentConfig = (tournament) => {
   }
 }
 
-export const getRoundRobinStage = (stages) => {
+export const getRoundRobinStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'roundrobin') : null
 }
 
-export const getRoundRobinMdStage = (stages) => {
+export const getRoundRobinMdStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'roundrobinmatchday') : null
 }
 
-export const getKnockoutStage = (stages) => {
+export const getAllRoundRobinStages = (stages) => {
+  return stages ? stages.filter((s) => s.type === 'roundrobin' || s.type === 'roundrobinmatchday') : null
+}
+
+export const getKnockoutStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'knockout') : null
+}
+
+export const getDefaultStageTab = (stages) => {
+  if (!stages || stages.length === 0) return 'Group-Stage'
+  const defaultStageIndex = stages.findIndex((s) => s.default)
+  const defaultStageName = defaultStageIndex > -1 ? stages[defaultStageIndex].name : stages[0].name
+  return defaultStageName.replace(' ', '-')
 }
 
 export const getFlagSrc = (id) => {

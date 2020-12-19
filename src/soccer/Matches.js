@@ -3,7 +3,7 @@ import RoundRobin from './RoundRobin'
 import RoundRobinMatchDay from './RoundRobinMatchDay'
 import Knockout from './Knockout'
 import Knockout2Legged from './Knockout2Legged'
-import { getTournamentConfig } from './Helper'
+import { getTournamentConfig, getDefaultStageTab } from './Helper'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -11,10 +11,7 @@ const Matches = (props) => {
   const { tournament } = props
   const { stages } = tournament
   const config = getTournamentConfig(tournament)
-  const defaultStageIndex = stages && stages.length > 0 ? stages.findIndex((s) => s.default) : -1
-  const defaultStageName = stages && stages.length > 0 ? (defaultStageIndex > -1 ? stages[defaultStageIndex].name : stages[0].name) : null
-  const defaultStageTab = defaultStageName ? defaultStageName.replace(' ', '-') : 'Group-Stage'
-  const [activeTab, setActiveTab] = useState(defaultStageTab)
+  const [activeTab, setActiveTab] = useState(getDefaultStageTab(stages))
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)
   }

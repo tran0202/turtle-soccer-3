@@ -4,14 +4,6 @@ export const findTeam = (teamArray, id) => {
   return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
 
-const findLastRanking = (team) => {
-  if (!team.rankings) {
-    return { id: team.id, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, fp: null, h2hm: [] }
-  } else {
-    return team.rankings[team.rankings.length - 1]
-  }
-}
-
 const accumulateRanking = (team, match, config) => {
   if (!team) return
   const side = match.home_team === team.id ? 'home' : 'away'
@@ -101,26 +93,54 @@ const accumulateRanking = (team, match, config) => {
   team.h2hm.push(match)
 }
 
-const calculateGroupTeamRanking = (team, match, config) => {
-  if (!team) return
-  const lr = findLastRanking(team)
-  const newRanking = { ...lr }
-  accumulateRanking(newRanking, match, config)
-  if (!team.rankings) {
-    let newRankings = []
-    newRankings.push(newRanking)
-    team.rankings = newRankings
-  } else {
-    team.rankings.push(newRanking)
-  }
+const getBlankRanking = (teamId) => {
+  return { id: teamId, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, fp: null, h2hm: [] }
 }
 
-export const calculateGroupRankings = (group, config) => {
-  group.matches &&
-    group.matches.forEach((m) => {
-      calculateGroupTeamRanking(findTeam(group.teams, m.home_team), m, config)
-      calculateGroupTeamRanking(findTeam(group.teams, m.away_team), m, config)
+const findLastTeamRanking = (teams, teamId) => {
+  const team = teams.find((t) => t.id === teamId)
+  if (!team) {
+    teams.push({ id: teamId, rankings: [] })
+    return getBlankRanking(teamId)
+  }
+  if (!team.rankings) {
+    team.rankings = []
+    return getBlankRanking(teamId)
+  }
+  // console.log('team', team)
+  return team.rankings[team.rankings.length - 1]
+}
+
+const calculateTeamRanking = (container, team, match, config) => {
+  if (!team) return
+  if (!container) return
+  const lr = findLastTeamRanking(container, team.id)
+  const newRanking = { ...lr }
+  accumulateRanking(newRanking, match, config)
+  const teamProgressRanking = container.find((t) => t.id === team.id)
+  teamProgressRanking.rankings.push(newRanking)
+}
+
+export const calculateRoundRankings = (container, teams, matches, config) => {
+  matches &&
+    matches.forEach((m) => {
+      calculateTeamRanking(container, findTeam(teams, m.home_team), m, config)
+      calculateTeamRanking(container, findTeam(teams, m.away_team), m, config)
     })
+}
+
+export const calculateProgressRankings = (tournament, teams, matches, config) => {
+  if (!tournament.progress_rankings) {
+    tournament.progress_rankings = {}
+  }
+  if (!tournament.progress_rankings.teams) {
+    tournament.progress_rankings.teams = []
+  }
+  calculateRoundRankings(tournament.progress_rankings.teams, teams, matches, config)
+}
+
+export const calculateGroupRankings = (container, teams, matches, config) => {
+  calculateRoundRankings(container, teams, matches, config)
 }
 
 const calculateKnockoutTeamRanking = (team, match, config) => {
@@ -250,45 +270,44 @@ export const sortGroupRankings = (group, startingIndex) => {
   }
 }
 
-export const collectMatchdayRankings = (group, matchDay) => {
-  if (group.teams) {
-    group.teams.forEach((t) => {
-      if (t.rankings) {
-        let rankings = t.rankings.find((r) => r.md === matchDay)
-        if (!rankings && matchDay > 1) {
-          rankings = t.rankings.find((r) => r.md === matchDay - 1)
-          if (!rankings && matchDay > 2) {
-            rankings = t.rankings.find((r) => r.md === matchDay - 2)
-            if (!rankings && matchDay > 3) {
-              rankings = t.rankings.find((r) => r.md === matchDay - 3)
-              if (!rankings && matchDay > 4) {
-                rankings = t.rankings.find((r) => r.md === matchDay - 4)
-                if (!rankings && matchDay > 5) {
-                  rankings = t.rankings.find((r) => r.md === matchDay - 5)
-                  if (!rankings && matchDay > 6) {
-                    rankings = t.rankings.find((r) => r.md === matchDay - 6)
-                  }
-                }
-              }
-            }
-          }
-        }
-        if (!group.final_rankings) {
-          const newRankings = []
-          newRankings.push(rankings)
-          group.final_rankings = newRankings
-          group.ranking_type = 'group'
-        } else {
-          group.final_rankings.push(rankings)
-        }
+export const collectGroupRankings = (group, matchDay) => {
+  if (!group.teams) return
+  group.teams.forEach((team) => {
+    if (team.rankings) {
+      const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
+      const rankings = team.rankings.find((r) => r.md === md)
+      if (!group.final_rankings) {
+        const newRankings = []
+        newRankings.push(rankings)
+        group.final_rankings = newRankings
+        group.ranking_type = 'group'
+      } else {
+        group.final_rankings.push(rankings)
       }
-    })
-    sortGroupRankings(group, 1)
-  }
+    }
+  })
+  sortGroupRankings(group, 1)
 }
 
-export const collectGroupRankings = (group) => {
-  return collectMatchdayRankings(group, 3)
+export const collectProgressRankings = (tournament, group, matchDay) => {
+  if (!group.teams) return
+  if (!tournament || !tournament.progress_rankings || !tournament.progress_rankings.teams) return
+  group.teams.forEach((t) => {
+    const team = tournament.progress_rankings.teams.find((t2) => t2.id === t.id)
+    if (team && team.rankings) {
+      const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
+      const rankings = team.rankings.find((r) => r.md === md)
+      if (!group.final_rankings) {
+        const newRankings = []
+        newRankings.push(rankings)
+        group.final_rankings = newRankings
+        group.ranking_type = 'group'
+      } else {
+        group.final_rankings.push(rankings)
+      }
+    }
+  })
+  sortGroupRankings(group, 1)
 }
 
 export const collectWildCardRankings = (stage) => {
@@ -355,7 +374,6 @@ export const isEliminated = (row, config) => {
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
     let flag = false
     config.advancement.teams.eliminated.forEach((e) => (flag = flag || row.r === e))
-    // console.log('flag', flag)
     return flag
   }
   return false

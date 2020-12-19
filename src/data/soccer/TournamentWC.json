@@ -587,7 +587,50 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1982.png", "start_date": "1982-06-13", "end_date": "1982-07-11" }
+    "tiebreakers": ["team", "lot"],
+    "details": {
+      "host": ["ESP"],
+      "logo_filename": "1982_FIFA_World_Cup.svg",
+      "mascot_filename": "1982-naranjito.png",
+      "start_date": "1982-06-13",
+      "end_date": "1982-07-11",
+      "color": "#da010c",
+      "team_count": 24,
+      "confed_count": 6,
+      "venue_count": 17,
+      "city_count": 14
+    },
+    "hero_images": [
+      {
+        "name": "Tango España",
+        "filename": "Adidas_Tango_España.jpg",
+        "text": "Adidas Tango España, official match ball of Spain '82"
+      },
+      {
+        "name": "Camp Nou, Barcelona",
+        "filename": "Camp_Nou_aerial_(cropped).jpg",
+        "text": "The Camp Nou held the opening match"
+      },
+      {
+        "name": "Santiago Bernabeu",
+        "filename": "The_Santiago_Bernabeu_Stadium_-_U-g-g-B-o-y.jpg",
+        "text": "The Santiago Bernabéu Stadium held the final"
+      }
+    ],
+    "final_standings": { "champions": "ITA", "runners_up": "GER-1949-1990", "third_place": "POL", "fourth_place": "FRA" },
+    "statistics": { "total_matches": 52, "total_goals": 146, "attendance": 2109723 },
+    "awards": {
+      "golden_boot": [{ "player": "Paolo Rossi", "team": "ITA", "goals": 6 }],
+      "silver_boot": [{ "player": "Karl-Heinz Rummenigge", "team": "GER-1949-1990" }],
+      "bronze_boot": [{ "player": "Zico", "team": "BRA" }],
+      "golden_ball": [
+        { "player": "Paolo Rossi", "team": "ITA" },
+        { "player": "Falcao", "team": "BRA" },
+        { "player": "Karl-Heinz Rummenigge", "team": "GER-1949-1990" }
+      ],
+      "best_young_player": { "player": "Manuel Amoros", "team": "FRA" },
+      "fair_play_team": ["BRA"]
+    }
   },
   {
     "id": "WC1978",

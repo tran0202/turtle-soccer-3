@@ -1,12 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import GroupStandings from './GroupStandings'
 import GroupMdStandings from './GroupMdStandings'
-import { getRoundRobinStage, getRoundRobinMdStage, getTournamentConfig } from './Helper'
-import { Row, Col } from 'reactstrap'
-
-// const MultipleGroupStage = () => {
-//   return <div>Multiple Group Stage</div>
-// }
+import { getTournamentConfig, getDefaultStageTab, getAllRoundRobinStages } from './Helper'
+import { calculateGroupRankings, calculateProgressRankings, collectGroupRankings, hasWildCardAdvancement, collectWildCardRankings } from './RankingsHelper'
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
+import classnames from 'classnames'
 
 const getFormat = (rrStage) => {
   const { groups, advancement } = rrStage
@@ -31,7 +29,10 @@ const TournamentFormat = (props) => {
                   </React.Fragment>
                 )}
                 {config.groupCount === 1 && <React.Fragment>{config.totalCount} teams plays a league of home-and-away round-robin matches.</React.Fragment>}
-                &nbsp;{config.advancement && config.advancement.teams ? config.advancement.teams.text : 'The top 2 teams advance to the knockout stage.'}
+                &nbsp;
+                {config.advancement && config.advancement.teams && config.advancement.teams.text
+                  ? config.advancement.teams.text
+                  : 'The top 2 teams advance to the knockout stage.'}
                 &nbsp;{config.advancement ? config.advancement.extra : ''}
               </p>
             </Col>
@@ -72,7 +73,7 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'fairplay') {
                       return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
                     } else if (tb === 'lot') {
-                      return <li key={index}>Drawing lot</li>
+                      return <li key={index}>Drawing lots</li>
                     } else {
                       return null
                     }
@@ -95,21 +96,97 @@ const TournamentFormat = (props) => {
   )
 }
 
-const Groups = (props) => {
-  const { tournament, tournamentType } = props
-  const { stages } = tournament
-  const rrStages = getRoundRobinStage(stages)
-  const rrmdStages = getRoundRobinMdStage(stages)
-  const format = rrStages && rrStages.length > 0 ? getFormat(rrStages[0]) : rrmdStages && rrmdStages.length > 0 ? getFormat(rrmdStages[0]) : null
-  // console.log('rrmdStages', rrmdStages)
+const collectMdMatches = (group) => {
+  let matches = []
+  group.matchdays &&
+    group.matchdays.forEach((md) => {
+      md.matches &&
+        md.matches.forEach((m) => {
+          matches.push(m)
+        })
+    })
+  group.matches = matches
+}
+
+const calculateStageRankings = (tournament, config, stage) => {
+  const { groups } = stage
+  groups &&
+    groups.forEach((group) => {
+      if (stage.type === 'roundrobinmatchday') {
+        collectMdMatches(group)
+      }
+      // console.log('group', group)
+      group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
+      const matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
+      collectGroupRankings(group, matchDay)
+      group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
+    })
+  stage.wild_card = groups && hasWildCardAdvancement(stage) ? collectWildCardRankings(stage) : {}
+}
+
+const DisplayStage = (props) => {
+  const { tournament, tournamentType, stage } = props
+  if (!stage) return
+  const format = getFormat(stage)
   const config = { ...getTournamentConfig(tournament), ...format }
   return (
     <React.Fragment>
       {format && <TournamentFormat config={config} tournamentType={tournamentType} />}
-      {!format && <Row className="mt-3"></Row>}
-      {rrStages && rrStages.length === 1 && <GroupStandings config={config} stage={rrStages[0]} />}
-      {/* {rrStages && rrStages.length > 1 && <MultipleGroupStage />} */}
-      {rrmdStages && rrmdStages.length === 1 && <GroupMdStandings config={config} stage={rrmdStages[0]} />}
+      {stage.type === 'roundrobin' && <GroupStandings config={config} stage={stage} />}
+      {stage.type === 'roundrobinmatchday' && <GroupMdStandings config={config} stage={stage} />}
+    </React.Fragment>
+  )
+}
+
+const Groups = (props) => {
+  const { tournament, tournamentType } = props
+  const { stages } = tournament
+  const rrStages = getAllRoundRobinStages(stages)
+  !tournament.calculated &&
+    rrStages.forEach((stage) => {
+      calculateStageRankings(tournament, getTournamentConfig(tournament), stage)
+      tournament.calculated = true
+    })
+  const [activeTab, setActiveTab] = useState(getDefaultStageTab(rrStages))
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab)
+  }
+
+  return (
+    <React.Fragment>
+      <Row className="mt-3"></Row>
+      {rrStages && rrStages.length === 1 && <DisplayStage tournament={tournament} tournamentType={tournamentType} stage={rrStages[0]} />}
+      {rrStages && rrStages.length > 1 && (
+        <React.Fragment>
+          <Nav tabs className="mt-3">
+            {rrStages.map((stage) => (
+              <NavItem key={stage.name}>
+                {stage.name && (
+                  <NavLink
+                    className={classnames({ active: activeTab === `${stage.name.replace(' ', '-')}` })}
+                    onClick={() => {
+                      toggle(`${stage.name.replace(' ', '-')}`)
+                    }}
+                  >
+                    {stage.name}
+                  </NavLink>
+                )}
+              </NavItem>
+            ))}
+          </Nav>
+          <TabContent activeTab={activeTab}>
+            {rrStages.map((stage) => (
+              <React.Fragment key={stage.name}>
+                {stage.name && (
+                  <TabPane tabId={stage.name.replace(' ', '-')}>
+                    <DisplayStage tournament={tournament} tournamentType={tournamentType} stage={stage} />
+                  </TabPane>
+                )}
+              </React.Fragment>
+            ))}
+          </TabContent>
+        </React.Fragment>
+      )}
     </React.Fragment>
   )
 }

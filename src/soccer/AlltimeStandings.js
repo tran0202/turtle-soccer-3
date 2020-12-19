@@ -1,6 +1,6 @@
 import React from 'react'
 import Rankings from './Rankings'
-import { calculateGroupRankings, collectMatchdayRankings, sortGroupRankings } from './RankingsHelper'
+import { calculateProgressRankings, collectProgressRankings, sortGroupRankings } from './RankingsHelper'
 import { getTournamentConfig, getParentTeam } from './Helper'
 import { Row } from 'reactstrap'
 
@@ -37,9 +37,8 @@ const collectRankings = (tournaments) => {
                 })
             })
         })
-      calculateGroupRankings(rankings, config)
-      const matchDay = 7
-      collectMatchdayRankings(rankings, matchDay)
+      rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
+      collectProgressRankings(t, rankings, 7)
       rankingArray.push(rankings)
     })
 
@@ -71,7 +70,6 @@ const collectRankings = (tournaments) => {
         }
       })
   })
-  // console.log('allRankings', allRankings)
   sortGroupRankings(allRankings, 1)
 
   return [allRankings]

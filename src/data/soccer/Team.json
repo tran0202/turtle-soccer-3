@@ -141,6 +141,7 @@
   { "id": "NIR", "name": "Northern Ireland", "team_type_id": "MNT", "nation_id": "NIR", "parent_team_id": "" },
   { "id": "IRQ-1963-1991", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-1963-1991", "parent_team_id": "IRQ" },
   { "id": "BUL-1971-1990", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "BUL-1971-1990", "parent_team_id": "BUL" },
+  { "id": "SLV", "name": "El Salvador", "team_type_id": "MNT", "nation_id": "SLV", "parent_team_id": "" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -169,7 +170,6 @@
   { "id": "NCL", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "NCL", "parent_team_id": "" },
   { "id": "SOL", "name": "Solomon Islands", "team_type_id": "MNT", "nation_id": "SOL", "parent_team_id": "" },
 
-  { "id": "236", "name": "El Salvador", "team_type_id": "MNT", "nation_id": "62", "parent_team_id": "" },
   { "id": "238", "name": "East Germany", "team_type_id": "MNT", "nation_id": "218", "parent_team_id": "" },
   { "id": "239", "name": "Zaire", "team_type_id": "MNT", "nation_id": "219", "parent_team_id": "241" },
   { "id": "HAI", "name": "Haiti", "team_type_id": "MNT", "nation_id": "HAI", "parent_team_id": "" },
