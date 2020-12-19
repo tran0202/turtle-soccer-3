@@ -245,7 +245,9 @@ const BracketFinalCol = (props) => {
   // console.log('thirdPlace', thirdPlace)
   return (
     <Col className="col-brk-22">
-      <Row className="bracket-gap-height-30"></Row>
+      {config.roundCount === 3 && <Row className="bracket-gap-height-10"></Row>}
+      {config.roundCount === 4 && <Row className="bracket-gap-height-20"></Row>}
+      {config.roundCount === 5 && <Row className="bracket-gap-height-30"></Row>}
       <BracketColInner round={round} config={config} />
       <BracketColInner round={thirdPlace} config={config} />
     </Col>
@@ -377,7 +379,7 @@ const Bracket = (props) => {
                 if (r.name === 'Third place') {
                   return null
                 } else if (r.name === 'Final') {
-                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={config} key={r.name} />
+                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: stage.rounds.length }} key={r.name} />
                 } else {
                   return (
                     <React.Fragment key={r.name}>

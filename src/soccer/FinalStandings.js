@@ -216,7 +216,7 @@ const FinalStandings = (props) => {
   const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
     const earlyRounds = koStage.rounds.filter((r) => r.name !== 'Semi-finals' && r.name !== 'Third place' && r.name !== 'Final')
-    earlyRounds.forEach((round, index) => {
+    earlyRounds.forEach((round) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
       eliminateKnockoutTeams(tournament, round)
       sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1)
