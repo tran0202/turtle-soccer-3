@@ -10,6 +10,7 @@ import {
   calculateKnockoutRankings,
   isEliminated,
   isAdvancedNextRound,
+  isAdvancedThirdPlace,
   findTeam,
 } from './RankingsHelper'
 import { Row } from 'reactstrap'
@@ -59,6 +60,19 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
       const advancedTeamRanking = advancedTeamProgess.rankings ? advancedTeamProgess.rankings[advancedTeamProgess.rankings.length - 1] : {}
       tmp.final_rankings.push(advancedTeamRanking)
     })
+  const advancedThirdPlaceTeam = group.final_rankings.find((t) => t && isAdvancedThirdPlace(t, groupStage))
+  if (advancedThirdPlaceTeam) {
+    tmp = tournament.advanced_teams.rounds.find((r) => r.name === 'Third place')
+    if (!tmp) {
+      tournament.advanced_teams.rounds.unshift({ name: 'Third place', ranking_type: 'round', final_rankings: [] })
+      tmp = tournament.advanced_teams.rounds.find((r) => r.name === 'Third place')
+    }
+    const advancedThirdPlaceTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === advancedThirdPlaceTeam.id)
+    const advancedThirdPlaceTeamRanking = advancedThirdPlaceTeamProgess.rankings
+      ? advancedThirdPlaceTeamProgess.rankings[advancedThirdPlaceTeamProgess.rankings.length - 1]
+      : {}
+    tmp.final_rankings.push(advancedThirdPlaceTeamRanking)
+  }
 }
 
 const advanceWildCardTeams = (tournament, groupStage) => {
@@ -234,7 +248,9 @@ const FinalStandings = (props) => {
     if (thirdPlace) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, thirdPlace.name), thirdPlace, config)
       createFinalRankings(tournament, thirdPlace)
-      advanceKnockoutTeams(tournament, semifinals)
+      if (semifinals) {
+        advanceKnockoutTeams(tournament, semifinals)
+      }
     }
 
     const final = koStage.rounds.find((r) => r.name === 'Final')

@@ -640,7 +640,60 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1978.png", "start_date": "1978-06-01", "end_date": "1978-06-25" }
+    "tiebreakers": ["team", "lot"],
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "1978_FIFA_World_Cup.png",
+      "mascot_filename": "1978-gauchito.png",
+      "start_date": "1978-06-01",
+      "end_date": "1978-06-25",
+      "color": "#63b7e8",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Passarella_world_cup.jpg",
+        "text": "Captain Daniel Passarella raising the trophy"
+      },
+      {
+        "name": "Final",
+        "filename": "Kempes_versus_Holanda3.jpeg",
+        "text": "Mario Kempes scoring the first goal of the match"
+      },
+      {
+        "name": "Second round - Group B",
+        "filename": "Kempes_mano_vs_polonia.jpg",
+        "text": "Mario Kempes saving Argentina goal with his hand so the referee awarded a penalty kick to Poland"
+      },
+      {
+        "name": "First round - Group 1",
+        "filename": "France_vs_hungary_kimberley.jpg",
+        "text": "France (wearing Club Kimberley jerseys) v Hungary. Jean Petit carrying the ball"
+      },
+      {
+        "name": "First round - Group 4",
+        "filename": "WC78_PER-SCO_2.jpg",
+        "text": "Teófilo Cubillas's free kick for a Peru goal v Scotland"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "NED", "third_place": "BRA", "fourth_place": "ITA" },
+    "statistics": { "total_matches": 38, "total_goals": 102, "attendance": 1545791 },
+    "awards": {
+      "golden_boot": [{ "player": "Mario Kempes", "team": "ARG", "goals": 6 }],
+      "silver_boot": [{ "player": "Teofilo Cubillas", "team": "PER" }],
+      "bronze_boot": [{ "player": "Rob Rensenbrink", "team": "NED" }],
+      "golden_ball": [
+        { "player": "Mario Kempes", "team": "ARG" },
+        { "player": "Paolo Rossi", "team": "ITA" },
+        { "player": "Dirceu", "team": "BRA" }
+      ],
+      "best_young_player": { "player": "Antonio Cabrini", "team": "ITA" },
+      "fair_play_team": ["ARG"]
+    }
   },
   {
     "id": "WC1974",

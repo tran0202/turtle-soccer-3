@@ -42,7 +42,7 @@ export const getDefaultStageTab = (stages) => {
   if (!stages || stages.length === 0) return 'Group-Stage'
   const defaultStageIndex = stages.findIndex((s) => s.default)
   const defaultStageName = defaultStageIndex > -1 ? stages[defaultStageIndex].name : stages[0].name
-  return defaultStageName.replace(' ', '-')
+  return defaultStageName ? defaultStageName.replace(' ', '-') : ''
 }
 
 export const getFlagSrc = (id) => {

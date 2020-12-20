@@ -369,6 +369,14 @@ export const isAdvancedPlayoff = (row, config) => {
   return false
 }
 
+export const isAdvancedThirdPlace = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.third_place) {
+    return row.r === config.advancement.teams.third_place
+  }
+  return false
+}
+
 export const isEliminated = (row, config) => {
   if (!row) return false
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
@@ -383,6 +391,7 @@ export const getRowStriped = (row, config) => {
   if (isAdvancedNextRound(row, config)) return ' advanced-next-round-striped'
   if (isAdvancedWildCard(row, config)) return ' advanced-wild-card-striped'
   if (isAdvancedPlayoff(row, config)) return ' advanced-playoff-striped'
+  if (isAdvancedThirdPlace(row, config)) return ' advanced-third-place-striped'
   return ''
 }
 

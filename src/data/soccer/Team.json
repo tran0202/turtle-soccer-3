@@ -142,6 +142,8 @@
   { "id": "IRQ-1963-1991", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-1963-1991", "parent_team_id": "IRQ" },
   { "id": "BUL-1971-1990", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "BUL-1971-1990", "parent_team_id": "BUL" },
   { "id": "SLV", "name": "El Salvador", "team_type_id": "MNT", "nation_id": "SLV", "parent_team_id": "" },
+  { "id": "ESP-1977-1981", "name": "Spain", "team_type_id": "MNT", "nation_id": "ESP-1977-1981", "parent_team_id": "ESP" },
+  { "id": "IRN-1964-1980", "name": "Iran", "team_type_id": "MNT", "nation_id": "IRN-1964-1980", "parent_team_id": "IRN" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -408,7 +410,6 @@
   { "id": "1059", "name": "Romania", "team_type_id": "MNT", "nation_id": "264", "parent_team_id": "226" },
   { "id": "1060", "name": "Haiti", "team_type_id": "MNT", "nation_id": "265", "parent_team_id": "240" },
   { "id": "1061", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "260", "parent_team_id": "223" },
-  { "id": "1062", "name": "Iran", "team_type_id": "MNT", "nation_id": "266", "parent_team_id": "14" },
   { "id": "1063", "name": "Spain", "team_type_id": "MNT", "nation_id": "267", "parent_team_id": "6" },
   { "id": "1065", "name": "Iraq", "team_type_id": "MNT", "nation_id": "275", "parent_team_id": "1064" },
   { "id": "1066", "name": "Hungary", "team_type_id": "U23MNT", "nation_id": "277", "parent_team_id": "904" },
