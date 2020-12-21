@@ -154,6 +154,7 @@
   { "id": "ROU-1965-1989", "name": "Romania", "team_type_id": "MNT", "nation_id": "ROU-1965-1989", "parent_team_id": "ROU" },
   { "id": "ESP-1945-1977", "name": "Spain", "team_type_id": "MNT", "nation_id": "ESP-1945-1977", "parent_team_id": "ESP" },
   { "id": "BUL-1948-1967", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "BUL-1948-1967", "parent_team_id": "BUL" },
+  { "id": "YUG-1946-1963", "name": "Yugoslavia", "team_type_id": "MNT", "nation_id": "YUG-1946-1963", "parent_team_id": "SRB" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -400,7 +401,6 @@
   { "id": "1043", "name": "Vanuatu", "team_type_id": "MNT", "nation_id": "205", "parent_team_id": "" },
   { "id": "1044", "name": "Cook Islands", "team_type_id": "MNT", "nation_id": "48", "parent_team_id": "" },
   { "id": "1046", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "235", "parent_team_id": "1043" },
-  { "id": "1047", "name": "Yugoslavia", "team_type_id": "MNT", "nation_id": "241", "parent_team_id": "24" },
   { "id": "1048", "name": "Italy", "team_type_id": "MNT", "nation_id": "244", "parent_team_id": "203" },
   { "id": "1049", "name": "Germany", "team_type_id": "MNT", "nation_id": "245", "parent_team_id": "2" },
   { "id": "1051", "name": "Hungary", "team_type_id": "MNT", "nation_id": "248", "parent_team_id": "233" },

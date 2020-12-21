@@ -1,5 +1,5 @@
 {
-  "id": "WC1966",
+  "id": "WC1962",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,265 +16,265 @@
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "ENG" }, { "id": "URU" }, { "id": "FRA" }, { "id": "MEX" }],
+          "teams": [{ "id": "URU" }, { "id": "COL" }, { "id": "URS" }, { "id": "YUG-1946-1963" }],
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "URU",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1966-07-11",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "MEX",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1966-07-13",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
-            },
-            {
               "home_team": "URU",
-              "away_team": "FRA",
+              "away_team": "COL",
               "home_score": 2,
               "away_score": 1,
-              "date": "1966-07-15",
-              "time": "19:30",
-              "stadium": "White City Stadium",
-              "city": "London"
+              "date": "1962-05-30",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
             },
             {
-              "home_team": "ENG",
-              "away_team": "MEX",
+              "home_team": "URS",
+              "away_team": "YUG-1946-1963",
               "home_score": 2,
               "away_score": 0,
-              "date": "1966-07-16",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
+              "date": "1962-05-31",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
             },
             {
-              "home_team": "MEX",
+              "home_team": "YUG-1946-1963",
               "away_team": "URU",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1966-07-19",
-              "time": "16:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1962-06-02",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
             },
             {
-              "home_team": "ENG",
-              "away_team": "FRA",
+              "home_team": "URS",
+              "away_team": "COL",
+              "home_score": 4,
+              "away_score": 4,
+              "date": "1962-06-03",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
+            },
+            {
+              "home_team": "URS",
+              "away_team": "URU",
               "home_score": 2,
+              "away_score": 1,
+              "date": "1962-06-06",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
+            },
+            {
+              "home_team": "YUG-1946-1963",
+              "away_team": "COL",
+              "home_score": 5,
               "away_score": 0,
-              "date": "1966-07-20",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
+              "date": "1962-06-07",
+              "time": "15:00",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "SUI" }, { "id": "ARG" }, { "id": "ESP-1945-1977" }],
+          "teams": [{ "id": "CHI" }, { "id": "SUI" }, { "id": "GER-1949-1990" }, { "id": "ITA" }],
           "matches": [
             {
+              "home_team": "CHI",
+              "away_team": "SUI",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1962-05-30",
+              "time": "15:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
+            },
+            {
               "home_team": "GER-1949-1990",
-              "away_team": "SUI",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1966-07-12",
-              "time": "19:30",
-              "stadium": "Hillsborough Stadium",
-              "city": "Sheffield"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "ESP-1945-1977",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-13",
-              "time": "19:30",
-              "stadium": "Villa Park",
-              "city": "Birmingham"
-            },
-            {
-              "home_team": "ESP-1945-1977",
-              "away_team": "SUI",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-15",
-              "time": "19:30",
-              "stadium": "Hillsborough Stadium",
-              "city": "Sheffield"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "GER-1949-1990",
+              "away_team": "ITA",
               "home_score": 0,
               "away_score": 0,
-              "date": "1966-07-16",
+              "date": "1962-05-31",
               "time": "15:00",
-              "stadium": "Villa Park",
-              "city": "Birmingham"
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             },
             {
-              "home_team": "ARG",
-              "away_team": "SUI",
+              "home_team": "CHI",
+              "away_team": "ITA",
               "home_score": 2,
               "away_score": 0,
-              "date": "1966-07-19",
-              "time": "19:30",
-              "stadium": "Hillsborough Stadium",
-              "city": "Sheffield"
+              "date": "1962-06-02",
+              "time": "15:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             },
             {
               "home_team": "GER-1949-1990",
-              "away_team": "ESP-1945-1977",
+              "away_team": "SUI",
               "home_score": 2,
               "away_score": 1,
-              "date": "1966-07-20",
-              "time": "19:30",
-              "stadium": "Villa Park",
-              "city": "Birmingham"
+              "date": "1962-06-03",
+              "time": "15:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "CHI",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1962-06-06",
+              "time": "15:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "SUI",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "1962-06-07",
+              "time": "15:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             }
           ]
         },
         {
           "name": "Group 3",
-          "teams": [{ "id": "BRA" }, { "id": "BUL-1948-1967" }, { "id": "POR" }, { "id": "HUN" }],
+          "teams": [{ "id": "BRA" }, { "id": "MEX" }, { "id": "TCH" }, { "id": "ESP-1945-1977" }],
           "matches": [
             {
               "home_team": "BRA",
-              "away_team": "BUL-1948-1967",
+              "away_team": "MEX",
               "home_score": 2,
               "away_score": 0,
-              "date": "1966-07-12",
-              "time": "19:30",
-              "stadium": "Goodison Park",
-              "city": "Liverpool"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "HUN",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1966-07-13",
-              "time": "19:30",
-              "stadium": "Old Trafford",
-              "city": "Manchester"
-            },
-            {
-              "home_team": "HUN",
-              "away_team": "BRA",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1966-07-15",
-              "time": "19:30",
-              "stadium": "Goodison Park",
-              "city": "Liverpool"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "BUL-1948-1967",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1966-07-16",
+              "date": "1962-05-30",
               "time": "15:00",
-              "stadium": "Old Trafford",
-              "city": "Manchester"
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
             },
             {
-              "home_team": "POR",
-              "away_team": "BRA",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1966-07-19",
-              "time": "19:30",
-              "stadium": "Goodison Park",
-              "city": "Liverpool"
+              "home_team": "TCH",
+              "away_team": "ESP-1945-1977",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1962-05-31",
+              "time": "15:00",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
             },
             {
-              "home_team": "HUN",
-              "away_team": "BUL-1948-1967",
+              "home_team": "BRA",
+              "away_team": "TCH",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1962-06-02",
+              "time": "15:00",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
+            },
+            {
+              "home_team": "ESP-1945-1977",
+              "away_team": "MEX",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1962-06-03",
+              "time": "15:00",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "ESP-1945-1977",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1962-06-06",
+              "time": "15:00",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
+            },
+            {
+              "home_team": "MEX",
+              "away_team": "TCH",
               "home_score": 3,
               "away_score": 1,
-              "date": "1966-07-20",
-              "time": "19:30",
-              "stadium": "Old Trafford",
-              "city": "Manchester"
+              "date": "1962-06-07",
+              "time": "15:00",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar"
             }
           ]
         },
         {
           "name": "Group 4",
-          "teams": [{ "id": "URS" }, { "id": "PRK" }, { "id": "ITA" }, { "id": "CHI" }],
+          "teams": [{ "id": "ARG" }, { "id": "BUL-1948-1967" }, { "id": "HUN" }, { "id": "ENG" }],
           "matches": [
             {
-              "home_team": "URS",
-              "away_team": "PRK",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1966-07-12",
-              "time": "19:30",
-              "stadium": "Ayresome Park",
-              "city": "Middlesbrough"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "CHI",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1966-07-13",
-              "time": "19:30",
-              "stadium": "Roker Park",
-              "city": "Sunderland"
-            },
-            {
-              "home_team": "CHI",
-              "away_team": "PRK",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1966-07-15",
-              "time": "19:30",
-              "stadium": "Ayresome Park",
-              "city": "Middlesbrough"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "ITA",
+              "home_team": "ARG",
+              "away_team": "BUL-1948-1967",
               "home_score": 1,
               "away_score": 0,
-              "date": "1966-07-16",
+              "date": "1962-05-30",
               "time": "15:00",
-              "stadium": "Roker Park",
-              "city": "Sunderland"
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
             },
             {
-              "home_team": "PRK",
-              "away_team": "ITA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1966-07-19",
-              "time": "19:30",
-              "stadium": "Ayresome Park",
-              "city": "Middlesbrough"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "CHI",
+              "home_team": "HUN",
+              "away_team": "ENG",
               "home_score": 2,
               "away_score": 1,
-              "date": "1966-07-20",
-              "time": "19:30",
-              "stadium": "Roker Park",
-              "city": "Sunderland"
+              "date": "1962-05-31",
+              "time": "15:00",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "ARG",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1962-06-02",
+              "time": "15:00",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
+            },
+            {
+              "home_team": "HUN",
+              "away_team": "BUL-1948-1967",
+              "home_score": 6,
+              "away_score": 1,
+              "date": "1962-06-03",
+              "time": "15:00",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
+            },
+            {
+              "home_team": "HUN",
+              "away_team": "ARG",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1962-06-06",
+              "time": "15:00",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "BUL-1948-1967",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1962-06-07",
+              "time": "15:00",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua"
             }
           ]
         }
@@ -291,48 +291,48 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "ARG",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1966-07-23",
-              "time": "15:00",
-              "stadium": "Wembley Stadium",
-              "city": "London",
+              "home_team": "CHI",
+              "away_team": "URS",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1962-06-10",
+              "time": "14:30",
+              "stadium": "Estadio Carlos Dittborn",
+              "city": "Arica",
               "bracket_order": 1
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "URU",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1966-07-23",
-              "time": "15:00",
-              "stadium": "Hillsborough Stadium",
-              "city": "Sheffield",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "URS",
+              "home_team": "TCH",
               "away_team": "HUN",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-23",
-              "time": "15:00",
-              "stadium": "Roker Park",
-              "city": "Sunderland",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1962-06-10",
+              "time": "14:30",
+              "stadium": "Estadio El Teniente",
+              "city": "Rancagua",
               "bracket_order": 4
             },
             {
-              "home_team": "POR",
-              "away_team": "PRK",
-              "home_score": 5,
-              "away_score": 3,
-              "date": "1966-07-23",
-              "time": "15:00",
-              "stadium": "Goodison Park",
-              "city": "Liverpool",
+              "home_team": "BRA",
+              "away_team": "ENG",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1962-06-10",
+              "time": "14:30",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar",
               "bracket_order": 2
+            },
+            {
+              "home_team": "YUG-1946-1963",
+              "away_team": "GER-1949-1990",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1962-06-10",
+              "time": "14:30",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago",
+              "bracket_order": 3
             }
           ]
         },
@@ -343,25 +343,25 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "URS",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-25",
-              "time": "19:30",
-              "stadium": "Goodison Park",
-              "city": "Liverpool",
+              "home_team": "YUG-1946-1963",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1962-06-13",
+              "time": "14:30",
+              "stadium": "Estadio Sausalito",
+              "city": "Viña del Mar",
               "bracket_order": 2
             },
             {
-              "home_team": "ENG",
-              "away_team": "POR",
+              "home_team": "CHI",
+              "away_team": "BRA",
               "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-26",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London",
+              "away_score": 4,
+              "date": "1962-06-13",
+              "time": "14:30",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago",
               "bracket_order": 1
             }
           ]
@@ -371,14 +371,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "POR",
-              "away_team": "URS",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1966-07-28",
-              "time": "19:30",
-              "stadium": "Wembley Stadium",
-              "city": "London"
+              "home_team": "CHI",
+              "away_team": "YUG-1946-1963",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1962-06-16",
+              "time": "14:30",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             }
           ]
         },
@@ -387,16 +387,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "GER-1949-1990",
-              "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 2,
-              "away_extra_score": 0,
-              "date": "1966-07-30",
-              "time": "15:00",
-              "stadium": "Wembley Stadium",
-              "city": "London"
+              "home_team": "BRA",
+              "away_team": "TCH",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1962-06-17",
+              "time": "14:30",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             }
           ]
         }

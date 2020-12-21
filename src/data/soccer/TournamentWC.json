@@ -863,7 +863,48 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1962.png", "start_date": "1962-05-30", "end_date": "1962-06-17" }
+    "tiebreakers": ["goalratio", "lot"],
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "1962_FIFA_World_Cup.jpg",
+      "start_date": "1962-05-30",
+      "end_date": "1962-06-17",
+      "color": "#fa300f",
+      "team_count": 16,
+      "confed_count": 3,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champion",
+        "filename": "lossy-page1-1615px-Seleção_Brasileira_de_Futebol_na_Copa_do_Mundo_de_1962.tiff.jpg",
+        "text": "Brazil national football team in the World Cup 1962."
+      },
+      {
+        "name": "Poster",
+        "filename": "1962_Football_World_Cup_poster.jpg",
+        "text": "Official 1962 FIFA World Cup poster"
+      },
+      {
+        "name": "Estadio Nacional de Chile, Santiago",
+        "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
+        "text": "The Estadio Nacional de Chile held the opening match and the final"
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "TCH", "third_place": "CHI", "fourth_place": "YUG-1946-1963" },
+    "statistics": { "total_matches": 32, "total_goals": 89, "attendance": 893172 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Garrincha", "team": "BRA", "goals": 4 },
+        { "player": "Vava", "team": "BRA", "goals": 4 },
+        { "player": "Leonel Sánchez", "team": "CHI", "goals": 4 },
+        { "player": "Flórián Albert", "team": "HUN", "goals": 4 },
+        { "player": "Valentin Ivanov", "team": "URS", "goals": 4 },
+        { "player": "Dražan Jerković", "team": "YUG-1946-1963", "goals": 4 }
+      ],
+      "best_young_player": { "player": "Flórián Albert", "team": "HUN" }
+    }
   },
   {
     "id": "WC1958",
