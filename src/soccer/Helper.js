@@ -68,7 +68,7 @@ export const getTeamName = (id) => {
   }
 }
 
-export const getBracketTeamName = (id) => {
+export const getShortTeamName = (id) => {
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     if (team.short_name) {
@@ -79,6 +79,10 @@ export const getBracketTeamName = (id) => {
   } else {
     console.log('Team error', team)
   }
+}
+
+export const getBracketTeamName = (id) => {
+  return getShortTeamName(id)
 }
 
 export const getParentTeam = (id) => {

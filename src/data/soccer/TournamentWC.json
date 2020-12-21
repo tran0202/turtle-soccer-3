@@ -806,7 +806,54 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1966.png", "start_date": "1966-07-11", "end_date": "1966-07-30" }
+    "tiebreakers": ["goalratio", "lot"],
+    "details": {
+      "host": ["ENG"],
+      "logo_filename": "1966_FIFA_World_Cup.png",
+      "mascot_filename": "1966-world-cup-willie.png",
+      "start_date": "1966-07-11",
+      "end_date": "1966-07-30",
+      "color": "#c61422",
+      "team_count": 16,
+      "confed_count": 4,
+      "venue_count": 8,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Champion",
+        "filename": "The_Queen_presents_the_1966_World_Cup_to_England_Captain,_Bobby_Moore._(7936243534).jpg",
+        "text": "Elizabeth II presents the Jules Rimet Trophy to England's team captain Bobby Moore."
+      },
+      {
+        "name": "Final",
+        "filename": "England_germany_entering_pitch.jpg",
+        "text": "Both teams entering the pitch"
+      },
+      {
+        "name": "Final",
+        "filename": "Ghost_Goal_World_Cup_1966.jpg",
+        "text": "Geoff Hurst's \"Wembley Goal\""
+      },
+      {
+        "name": "Group 2",
+        "filename": "Weber_x_artime.jpeg",
+        "text": "Wolfgang Weber (left) and Luis Artime during the match between West Germany and Argentina in Birmingham"
+      }
+    ],
+    "final_standings": { "champions": "ENG", "runners_up": "GER-1949-1990", "third_place": "POR", "fourth_place": "URS" },
+    "statistics": { "total_matches": 32, "total_goals": 89, "attendance": 1563135 },
+    "awards": {
+      "golden_boot": [{ "player": "Eusébio", "team": "POR", "goals": 9 }],
+      "silver_boot": [{ "player": "Helmut Haller", "team": "GER-1949-1990" }],
+      "bronze_boot": [
+        { "player": "Valeriy Porkuyan", "team": "URS" },
+        { "player": "Franz Beckenbauer", "team": "GER-1949-1990" },
+        { "player": "Ferenc Bene", "team": "HUN" },
+        { "player": "Geoff Hurst", "team": "ENG" }
+      ],
+      "best_young_player": { "player": "Franz Beckenbauer", "team": "GER-1949-1990" }
+    }
   },
   {
     "id": "WC1962",

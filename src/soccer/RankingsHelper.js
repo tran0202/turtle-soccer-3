@@ -4,6 +4,12 @@ export const findTeam = (teamArray, id) => {
   return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
 
+export const isGoalRatioTiebreaker = (config) => {
+  const { tiebreakers } = config
+  if (!tiebreakers) return false
+  return tiebreakers.find((tb) => tb === 'goalratio') != null
+}
+
 const accumulateRanking = (team, match, config) => {
   if (!team) return
   const side = match.home_team === team.id ? 'home' : 'away'
@@ -81,6 +87,7 @@ const accumulateRanking = (team, match, config) => {
     }
   }
   team.gd = team.gf - team.ga
+  team.gr = isGoalRatioTiebreaker(config) && team.ga !== 0 ? team.gf / team.ga : null
   if (side === 'home') {
     if (match.home_fair_pts) {
       team.fp = (team.fp ? team.fp : 0) + parseInt(match.home_fair_pts)
@@ -94,7 +101,7 @@ const accumulateRanking = (team, match, config) => {
 }
 
 const getBlankRanking = (teamId) => {
-  return { id: teamId, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, fp: null, h2hm: [] }
+  return { id: teamId, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, gr: null, pts: 0, fp: null, h2hm: [] }
 }
 
 const findLastTeamRanking = (teams, teamId) => {
@@ -159,7 +166,6 @@ const findHeadtoHeadMatch = (a, b) => {
 }
 
 const drawingLots = (a, b) => {
-  // console.log('drawingLots a', a)
   // Italia 1990
   if (a.id === 'NED' && b.id === 'IRL') {
     a.draw_lot_notes = 'Netherlands took 3rd place after finished identical records (points, goal difference and goad forward) with Republic of Ireland.'
@@ -214,7 +220,8 @@ const saveDrawTeams = (a, b) => {
   }
 }
 
-export const sortGroupRankings = (group, startingIndex) => {
+export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) => {
+  // console.log('isGoalRatioTiebreaker', isGoalRatioTiebreaker)
   if (group && group.final_rankings) {
     group.final_rankings.sort((a, b) => {
       if (a.pts > b.pts) {
@@ -222,7 +229,23 @@ export const sortGroupRankings = (group, startingIndex) => {
       } else if (a.pts < b.pts) {
         return 1
       } else {
-        if (a.gd > b.gd) {
+        if (isGoalRatioTiebreaker) {
+          if (a.gr != null && b.gr != null) {
+            if (a.gr > b.gr) {
+              return -1
+            } else if (a.gr < b.gr) {
+              return 1
+            } else {
+              return 0
+            }
+          } else if (a.gr === null) {
+            return 1
+          } else if (b.gr === null) {
+            return -1
+          } else {
+            return 0
+          }
+        } else if (a.gd > b.gd) {
           return -1
         } else if (a.gd < b.gd) {
           return 1
@@ -278,7 +301,7 @@ export const sortGroupRankings = (group, startingIndex) => {
   }
 }
 
-export const collectGroupRankings = (group, matchDay) => {
+export const collectGroupRankings = (tournament, group, matchDay) => {
   if (!group.teams) return
   group.teams.forEach((team) => {
     if (team.rankings) {
@@ -294,7 +317,7 @@ export const collectGroupRankings = (group, matchDay) => {
       }
     }
   })
-  sortGroupRankings(group, 1)
+  sortGroupRankings(group, 1, isGoalRatioTiebreaker(tournament))
 }
 
 export const collectProgressRankings = (tournament, group, matchDay) => {
@@ -315,7 +338,8 @@ export const collectProgressRankings = (tournament, group, matchDay) => {
       }
     }
   })
-  sortGroupRankings(group, 1)
+  // console.log('tournament', tournament)
+  sortGroupRankings(group, 1, null)
 }
 
 export const collectWildCardRankings = (stage) => {
@@ -327,7 +351,7 @@ export const collectWildCardRankings = (stage) => {
       const wcr = cloneRanking(g.final_rankings.find((fr) => fr.r === pos))
       wildCard.final_rankings.push(wcr)
     })
-  sortGroupRankings(wildCard, 1)
+  sortGroupRankings(wildCard, 1, null)
   return wildCard
 }
 
@@ -516,6 +540,7 @@ export const cloneRanking = (ranking) => {
     ga: ranking.ga,
     gd: ranking.gd,
     gf: ranking.gf,
+    gr: ranking.gr,
     h2hm: ranking.h2hm,
     id: ranking.id,
     l: ranking.l,

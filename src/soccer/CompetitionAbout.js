@@ -1,5 +1,5 @@
 import React from 'react'
-import { getBracketTeamName, getFlagSrc } from './Helper'
+import { getShortTeamName, getFlagSrc } from './Helper'
 import { Row, Col } from 'reactstrap'
 
 const ResultHead = () => {
@@ -34,7 +34,7 @@ const ResultRow = (props) => {
               <img className="flag-sm flag-md " src={getFlagSrc(row.final_standings.champions)} alt={row.final_standings.champions} />
             )}
             <br></br>
-            {getBracketTeamName(row.final_standings.champions)}
+            {getShortTeamName(row.final_standings.champions)}
           </React.Fragment>
         )}
       </Col>
@@ -45,7 +45,7 @@ const ResultRow = (props) => {
               <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.runners_up)} alt={row.final_standings.runners_up} />
             )}
             <br></br>
-            {getBracketTeamName(row.final_standings.runners_up)}
+            {getShortTeamName(row.final_standings.runners_up)}
           </React.Fragment>
         )}
       </Col>
@@ -56,7 +56,7 @@ const ResultRow = (props) => {
               <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.third_place)} alt={row.final_standings.third_place} />
             )}
             <br></br>
-            {getBracketTeamName(row.final_standings.third_place)}
+            {getShortTeamName(row.final_standings.third_place)}
           </React.Fragment>
         )}
       </Col>
@@ -67,7 +67,7 @@ const ResultRow = (props) => {
               <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.fourth_place)} alt={row.final_standings.fourth_place} />
             )}
             <br></br>
-            {getBracketTeamName(row.final_standings.fourth_place)}
+            {getShortTeamName(row.final_standings.fourth_place)}
           </React.Fragment>
         )}
       </Col>

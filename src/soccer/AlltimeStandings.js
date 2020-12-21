@@ -70,7 +70,7 @@ const collectRankings = (tournaments) => {
         }
       })
   })
-  sortGroupRankings(allRankings, 1)
+  sortGroupRankings(allRankings, 1, null)
 
   return [allRankings]
 }

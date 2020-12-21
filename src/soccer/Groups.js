@@ -63,6 +63,13 @@ const TournamentFormat = (props) => {
                           <li>Overall goal difference</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'goalratio') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points</li>
+                          <li>Overall goal ratio</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'firstroundposition') {
                       return (
                         <React.Fragment key={index}>
@@ -130,7 +137,7 @@ const calculateStageRankings = (tournament, config, stage) => {
       }
       group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
       const matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
-      collectGroupRankings(group, matchDay)
+      collectGroupRankings(tournament, group, matchDay)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })
   stage.wild_card = groups && hasWildCardAdvancement(stage) ? collectWildCardRankings(stage) : {}

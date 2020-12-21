@@ -1,429 +1,281 @@
 {
-  "id": "WC1978",
+  "id": "WC1970",
   "stages": [
     {
-      "name": "First Round",
+      "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 8,
-      "next_round": "Second Round",
+      "next_round": "Quarter-finals",
       "advancement": {
         "teams": {
           "auto": [1, 2],
           "eliminated": [3, 4],
-          "text": "The top 2 teams advance to the second round."
+          "text": "The top 2 teams advance to the quarter-finals."
         }
       },
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "ITA" }, { "id": "FRA" }, { "id": "ARG" }, { "id": "HUN" }],
+          "tiebreak_pts_gd": true,
+          "teams": [{ "id": "MEX" }, { "id": "URS" }, { "id": "BEL" }, { "id": "SLV" }],
           "matches": [
             {
-              "home_team": "ITA",
-              "away_team": "FRA",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1978-06-02",
-              "time": "13:45",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "HUN",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1978-06-02",
-              "time": "19:15",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "HUN",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1978-06-06",
-              "time": "13:45",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "FRA",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1978-06-06",
-              "time": "19:15",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "HUN",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1978-06-10",
-              "time": "15:10",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "ITA",
+              "home_team": "MEX",
+              "away_team": "URS",
               "home_score": 0,
+              "away_score": 0,
+              "date": "1970-05-31",
+              "time": "12:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "SLV",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "1970-06-03",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
+            },
+            {
+              "home_team": "URS",
+              "away_team": "BEL",
+              "home_score": 4,
               "away_score": 1,
-              "date": "1978-06-10",
-              "time": "19:15",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
+              "date": "1970-06-06",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
+            },
+            {
+              "home_team": "MEX",
+              "away_team": "SLV",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "1970-06-07",
+              "time": "12:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
+            },
+            {
+              "home_team": "URS",
+              "away_team": "SLV",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1970-06-10",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
+            },
+            {
+              "home_team": "MEX",
+              "away_team": "BEL",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1970-06-11",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "POL" }, { "id": "TUN" }, { "id": "MEX" }],
+          "teams": [{ "id": "URU" }, { "id": "ISR" }, { "id": "ITA" }, { "id": "SWE" }],
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "POL",
-              "home_score": 0,
+              "home_team": "URU",
+              "away_team": "ISR",
+              "home_score": 2,
               "away_score": 0,
-              "date": "1978-06-01",
-              "time": "15:00",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
+              "date": "1970-06-02",
+              "time": "16:00",
+              "stadium": "Estadio Cuauhtemoc",
+              "city": "Puebla"
             },
             {
-              "home_team": "TUN",
-              "away_team": "MEX",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1978-06-02",
-              "time": "16:45",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "MEX",
-              "home_score": 6,
-              "away_score": 0,
-              "date": "1978-06-06",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "POL",
-              "away_team": "TUN",
+              "home_team": "ITA",
+              "away_team": "SWE",
               "home_score": 1,
               "away_score": 0,
-              "date": "1978-06-06",
-              "time": "16:45",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
+              "date": "1970-06-03",
+              "time": "16:00",
+              "stadium": "Estadio Luis Dosal",
+              "city": "Toluca"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "TUN",
+              "home_team": "URU",
+              "away_team": "ITA",
               "home_score": 0,
               "away_score": 0,
-              "date": "1978-06-10",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
+              "date": "1970-06-06",
+              "time": "16:00",
+              "stadium": "Estadio Cuauhtemoc",
+              "city": "Puebla"
             },
             {
-              "home_team": "POL",
-              "away_team": "MEX",
-              "home_score": 3,
+              "home_team": "SWE",
+              "away_team": "ISR",
+              "home_score": 1,
               "away_score": 1,
-              "date": "1978-06-10",
-              "time": "16:45",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
+              "date": "1970-06-07",
+              "time": "12:00",
+              "stadium": "Estadio Luis Dosal",
+              "city": "Toluca"
+            },
+            {
+              "home_team": "SWE",
+              "away_team": "URU",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1970-06-10",
+              "time": "16:00",
+              "stadium": "Estadio Cuauhtemoc",
+              "city": "Puebla"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "ISR",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1970-06-11",
+              "time": "16:00",
+              "stadium": "Estadio Luis Dosal",
+              "city": "Toluca"
             }
           ]
         },
         {
           "name": "Group 3",
-          "teams": [{ "id": "AUT" }, { "id": "ESP-1977-1981" }, { "id": "BRA" }, { "id": "SWE" }],
+          "teams": [{ "id": "ROU-1965-1989" }, { "id": "ENG" }, { "id": "TCH" }, { "id": "BRA" }],
           "matches": [
             {
-              "home_team": "AUT",
-              "away_team": "ESP-1977-1981",
+              "home_team": "ENG",
+              "away_team": "ROU-1965-1989",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1970-06-02",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "TCH",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "1970-06-03",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
+            },
+            {
+              "home_team": "ROU-1965-1989",
+              "away_team": "TCH",
               "home_score": 2,
               "away_score": 1,
-              "date": "1978-06-03",
-              "time": "13:45",
-              "stadium": "José Amalfitani Stadium",
-              "city": "Buenos Aires"
+              "date": "1970-06-06",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
             },
             {
               "home_team": "BRA",
-              "away_team": "SWE",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1978-06-03",
-              "time": "13:45",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
-            },
-            {
-              "home_team": "AUT",
-              "away_team": "SWE",
+              "away_team": "ENG",
               "home_score": 1,
               "away_score": 0,
-              "date": "1978-06-07",
-              "time": "13:45",
-              "stadium": "José Amalfitani Stadium",
-              "city": "Buenos Aires"
+              "date": "1970-06-07",
+              "time": "12:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
             },
             {
               "home_team": "BRA",
-              "away_team": "ESP-1977-1981",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1978-06-07",
-              "time": "13:45",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
+              "away_team": "ROU-1965-1989",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1970-06-10",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
             },
             {
-              "home_team": "ESP-1977-1981",
-              "away_team": "SWE",
+              "home_team": "ENG",
+              "away_team": "TCH",
               "home_score": 1,
               "away_score": 0,
-              "date": "1978-06-11",
-              "time": "13:45",
-              "stadium": "José Amalfitani Stadium",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "AUT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1978-06-11",
-              "time": "13:45",
-              "stadium": "Estadio José María Minella",
-              "city": "Mar del Plata"
+              "date": "1970-06-11",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara"
             }
           ]
         },
         {
           "name": "Group 4",
-          "teams": [{ "id": "PER" }, { "id": "SCO" }, { "id": "NED" }, { "id": "IRN-1964-1980" }],
+          "teams": [{ "id": "PER" }, { "id": "BUL-1967-1971" }, { "id": "GER-1949-1990" }, { "id": "MAR" }],
           "matches": [
             {
               "home_team": "PER",
-              "away_team": "SCO",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1978-06-03",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "IRN-1964-1980",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1978-06-03",
-              "time": "16:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
-            },
-            {
-              "home_team": "SCO",
-              "away_team": "IRN-1964-1980",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1978-06-07",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "PER",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1978-06-07",
-              "time": "16:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
-            },
-            {
-              "home_team": "PER",
-              "away_team": "IRN-1964-1980",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1978-06-11",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "SCO",
-              "away_team": "NED",
+              "away_team": "BUL-1967-1971",
               "home_score": 3,
               "away_score": 2,
-              "date": "1978-06-11",
-              "time": "16:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Second Round",
-      "type": "roundrobin",
-      "default": true,
-      "eliminateCount": 4,
-      "next_round": "Final",
-      "advancement": {
-        "teams": {
-          "auto": [1],
-          "third_place": 2,
-          "eliminated": [3, 4],
-          "text": "The winners advance to the final. The runners-up advance to the third place match."
-        }
-      },
-      "groups": [
-        {
-          "name": "Group A",
-          "teams": [{ "id": "AUT" }, { "id": "NED" }, { "id": "ITA" }, { "id": "GER-1949-1990" }],
-          "matches": [
-            {
-              "home_team": "AUT",
-              "away_team": "NED",
-              "home_score": 1,
-              "away_score": 5,
-              "date": "1978-06-14",
-              "time": "13:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
+              "date": "1970-06-02",
+              "time": "16:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
             },
             {
-              "home_team": "ITA",
-              "away_team": "GER-1949-1990",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1978-06-14",
-              "time": "13:45",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "GER-1949-1990",
+              "home_team": "GER-1949-1990",
+              "away_team": "MAR",
               "home_score": 2,
-              "away_score": 2,
-              "date": "1978-06-18",
-              "time": "16:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "AUT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1978-06-18",
-              "time": "16:45",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "AUT",
-              "away_team": "GER-1949-1990",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1978-06-21",
-              "time": "13:45",
-              "stadium": "Estadio Olímpico Chateau Carreras",
-              "city": "Córdoba"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "NED",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "1978-06-21",
-              "time": "13:45",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            }
-          ]
-        },
-        {
-          "name": "Group B",
-          "teams": [{ "id": "PER" }, { "id": "BRA" }, { "id": "ARG" }, { "id": "POL" }],
-          "matches": [
-            {
-              "home_team": "PER",
-              "away_team": "BRA",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "1978-06-14",
-              "time": "16:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "POL",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1978-06-14",
-              "time": "19:15",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
-            },
-            {
-              "home_team": "PER",
-              "away_team": "POL",
-              "home_score": 0,
               "away_score": 1,
-              "date": "1978-06-18",
-              "time": "13:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
+              "date": "1970-06-03",
+              "time": "16:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
             },
             {
-              "home_team": "ARG",
-              "away_team": "BRA",
-              "home_score": 0,
+              "home_team": "PER",
+              "away_team": "MAR",
+              "home_score": 3,
               "away_score": 0,
-              "date": "1978-06-18",
-              "time": "19:15",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
+              "date": "1970-06-06",
+              "time": "16:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
             },
             {
-              "home_team": "POL",
-              "away_team": "BRA",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1978-06-21",
-              "time": "16:45",
-              "stadium": "Estadio Ciudad de Mendoza",
-              "city": "Mendoza"
+              "home_team": "GER-1949-1990",
+              "away_team": "BUL-1967-1971",
+              "home_score": 5,
+              "away_score": 2,
+              "date": "1970-06-07",
+              "time": "12:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
             },
             {
-              "home_team": "ARG",
+              "home_team": "GER-1949-1990",
               "away_team": "PER",
-              "home_score": 6,
-              "away_score": 0,
-              "date": "1978-06-21",
-              "time": "19:15",
-              "stadium": "Estadio Gigante de Arroyito",
-              "city": "Rosario"
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1970-06-10",
+              "time": "16:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
+            },
+            {
+              "home_team": "BUL-1967-1971",
+              "away_team": "MAR",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1970-06-11",
+              "time": "16:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León"
             }
           ]
         }
@@ -434,18 +286,106 @@
       "type": "knockout",
       "rounds": [
         {
+          "name": "Quarter-finals",
+          "short_name": "1/4",
+          "eliminateCount": 4,
+          "next_round": "Semi-finals",
+          "matches": [
+            {
+              "home_team": "URS",
+              "away_team": "URU",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "1970-06-14",
+              "time": "12:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "MEX",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "1970-06-14",
+              "time": "12:00",
+              "stadium": "Estadio Luis Dosal",
+              "city": "Toluca",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "PER",
+              "home_score": 4,
+              "away_score": 2,
+              "date": "1970-06-14",
+              "time": "12:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "ENG",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 1,
+              "away_extra_score": 0,
+              "date": "1970-06-14",
+              "time": "12:00",
+              "stadium": "Estadio Nou Camp",
+              "city": "León",
+              "bracket_order": 4
+            }
+          ]
+        },
+        {
+          "name": "Semi-finals",
+          "short_name": "1/2",
+          "eliminateCount": 2,
+          "next_round": "Final",
+          "matches": [
+            {
+              "home_team": "URU",
+              "away_team": "BRA",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1970-06-17",
+              "time": "16:00",
+              "stadium": "Estadio Jalisco",
+              "city": "Guadalajara",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "GER-1949-1990",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 3,
+              "away_extra_score": 2,
+              "date": "1970-06-17",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City",
+              "bracket_order": 2
+            }
+          ]
+        },
+        {
           "name": "Third place",
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "ITA",
-              "home_score": 2,
+              "home_team": "URU",
+              "away_team": "GER-1949-1990",
+              "home_score": 0,
               "away_score": 1,
-              "date": "1978-06-24",
-              "time": "15:00",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
+              "date": "1970-06-20",
+              "time": "16:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
             }
           ]
         },
@@ -454,16 +394,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "ARG",
-              "away_team": "NED",
-              "home_score": 1,
+              "home_team": "BRA",
+              "away_team": "ITA",
+              "home_score": 4,
               "away_score": 1,
-              "home_extra_score": 2,
-              "away_extra_score": 0,
-              "date": "1978-06-25",
-              "time": "15:00",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
+              "date": "1970-06-21",
+              "time": "12:00",
+              "stadium": "Estadio Azteca",
+              "city": "Mexico City"
             }
           ]
         }

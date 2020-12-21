@@ -1,7 +1,16 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import { createDrawPool, updateDraws, updateFinalRankings, getRowStriped, isWildCardExtraRow, getWildCardRowStriped } from './RankingsHelper'
+import {
+  createDrawPool,
+  updateDraws,
+  updateFinalRankings,
+  isGoalRatioTiebreaker,
+  getRowStriped,
+  isWildCardExtraRow,
+  getWildCardRowStriped,
+} from './RankingsHelper'
 import { getFlagSrc, getTeamName, FairPlayTooltip, WildCardTooltip, Head2HeadTooltip, DrawLotTooltip } from './Helper'
+import NumberFormat from 'react-number-format'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
@@ -18,7 +27,12 @@ const RankingRowSeparate = (props) => {
   )
 }
 
-export const RankingHead = () => {
+const showGoalRatio = (config) => {
+  return isGoalRatioTiebreaker(config) && config.ranking_type === 'group'
+}
+
+export const RankingHead = (props) => {
+  const { config } = props
   return (
     <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
       <Col className="col-box-5"></Col>
@@ -32,7 +46,8 @@ export const RankingHead = () => {
           <Col className="col-box-7">L</Col>
           <Col className="col-box-7">GF</Col>
           <Col className="col-box-7">GA</Col>
-          <Col className="col-box-7">+/-</Col>
+          {!showGoalRatio(config) && <Col className="col-box-7">+/-</Col>}
+          {showGoalRatio(config) && <Col className="col-box-7">GR</Col>}
           <Col className="col-box-7">Pts</Col>
         </Row>
       </Col>
@@ -41,7 +56,8 @@ export const RankingHead = () => {
 }
 
 const RankingRow2 = (props) => {
-  const { row, ranking_type } = props
+  const { row, config } = props
+  const { ranking_type } = config
   return (
     <Row className="no-gutters">
       <Col className="col-box-10">
@@ -54,10 +70,18 @@ const RankingRow2 = (props) => {
       <Col className="col-box-7 padding-top-xxs">{row.l}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.gf}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.ga}</Col>
-      <Col className="col-box-7 padding-top-xxs">
-        {row.gd > 0 ? '+' : ''}
-        {row.gd}
-      </Col>
+      {!showGoalRatio(config) && (
+        <Col className="col-box-7 padding-top-xxs">
+          {row.gd > 0 ? '+' : ''}
+          {row.gd}
+        </Col>
+      )}
+      {showGoalRatio(config) && (
+        <Col className="col-box-7 padding-top-xxs">
+          {row.gr !== null && <NumberFormat value={row.gr.toFixed(3)} displayType={'text'} />}
+          {row.gr === null && <span>&mdash;</span>}
+        </Col>
+      )}
       <Col className="col-box-7 padding-top-xxs">
         {row.pts}
         {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
@@ -69,7 +93,9 @@ const RankingRow2 = (props) => {
 }
 
 export const RankingRow = (props) => {
-  const { row, ranking_type, config } = props
+  const { row, config } = props
+  const { ranking_type } = config
+  // console.log('ranking_type', ranking_type)
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
   const gold = ranking_type === 'round' && row.r === 1 ? ' gold' : ''
@@ -84,8 +110,8 @@ export const RankingRow = (props) => {
         )}
       </Col>
       <Col className="ranking-row col-box-95 padding-tb-md">
-        {row.r && <RankingRow2 row={row} ranking_type={ranking_type} />}
-        {!row.r && row.map((r) => <RankingRow2 row={r} ranking_type={ranking_type} key={r.id} />)}
+        {row.r && <RankingRow2 row={row} config={config} />}
+        {!row.r && row.map((r) => <RankingRow2 row={r} config={config} key={r.id} />)}
       </Col>
     </Row>
   )
@@ -99,19 +125,21 @@ const RankingRound = (props) => {
   return (
     <React.Fragment>
       <RankingRowSeparate round={round} />
-      {round.final_rankings && round.final_rankings.map((r, index) => <RankingRow row={r} ranking_type={round.ranking_type} config={config} key={index} />)}
+      {round.final_rankings &&
+        round.final_rankings.map((r, index) => <RankingRow row={r} config={{ ...config, ranking_type: round.ranking_type }} key={index} />)}
     </React.Fragment>
   )
 }
 
 const Rankings = (props) => {
   const { rounds, config } = props
+  const ranking_type = rounds && rounds.length > 0 ? rounds[0].ranking_type : ''
   return (
     <React.Fragment>
       <Row className="box-xl mb-5">
         <Col xs={{ size: 10, offset: 1 }}>
           <Row className="mt-4"></Row>
-          <RankingHead />
+          <RankingHead config={{ ...config, ranking_type }} />
           {rounds && rounds.map((r, index) => <RankingRound round={r} config={config} key={index} />)}
         </Col>
       </Row>

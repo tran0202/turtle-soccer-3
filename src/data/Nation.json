@@ -2598,25 +2598,47 @@
     "end_date": "1931-04-27"
   },
   {
-    "id": "ESP-1931-1939",
+    "id": "ESP-1931-1936",
     "name": "Spain",
     "official_name": "Second Spanish Republic",
     "parent_nation_id": "ESP",
     "nation_type_id": "NATN",
-    "flag_filename": "Spain_1931_1939.png",
+    "flag_filename": "Spain_1931_1936.png",
     "code": "ESP",
-    "start_date": "1931-04-27",
-    "end_date": "1939-04-01"
+    "start_date": "1931-04-14",
+    "end_date": "1936-08-29"
   },
   {
-    "id": "ESP-1939-1977",
+    "id": "ESP-1936-1938",
+    "name": "Spain",
+    "official_name": "Spanish State",
+    "parent_nation_id": "ESP",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Spain_1936-1938.svg",
+    "code": "ESP",
+    "start_date": "1936-08-29",
+    "end_date": "1938-01-01"
+  },
+  {
+    "id": "ESP-1938-1945",
+    "name": "Spain",
+    "official_name": "Spanish State",
+    "parent_nation_id": "ESP",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Spain_(1938–1945).svg",
+    "code": "ESP",
+    "start_date": "1938-01-01",
+    "end_date": "1945-07-26"
+  },
+  {
+    "id": "ESP-1945-1977",
     "name": "Spain",
     "official_name": "Spanish State",
     "parent_nation_id": "ESP",
     "nation_type_id": "NATN",
     "flag_filename": "Spanish_State.png",
     "code": "ESP",
-    "start_date": "1939-04-01",
+    "start_date": "1945-07-26",
     "end_date": "1977-01-21"
   },
   {

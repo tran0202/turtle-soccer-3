@@ -213,7 +213,7 @@ const FinalStandings = (props) => {
       if (groupStage.groups) {
         groupStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
-          collectGroupRankings(g, 3)
+          collectGroupRankings(tournament, g, 3)
           g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
           eliminateGroupTeams(tournament, groupStage, g)
         })
@@ -221,7 +221,7 @@ const FinalStandings = (props) => {
           advanceGroupTeams(tournament, groupStage, g)
         })
         advanceWildCardTeams(tournament, groupStage)
-        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1)
+        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1, null)
       }
     })
   // console.log('tournament.final_rankings', tournament.final_rankings)
@@ -233,7 +233,7 @@ const FinalStandings = (props) => {
     earlyRounds.forEach((round) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
       eliminateKnockoutTeams(tournament, round)
-      sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1)
+      sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
       advanceKnockoutTeams(tournament, round)
     })
 
