@@ -56,6 +56,12 @@ const TournamentFormat = (props) => {
                           <li>Overall goals scored</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'firstroundposition') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Higher finishing position in the first round table</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'head2head') {
                       return (
                         <React.Fragment key={index}>
@@ -115,7 +121,6 @@ const calculateStageRankings = (tournament, config, stage) => {
       if (stage.type === 'roundrobinmatchday') {
         collectMdMatches(group)
       }
-      // console.log('group', group)
       group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
       const matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
       collectGroupRankings(group, matchDay)
@@ -127,8 +132,11 @@ const calculateStageRankings = (tournament, config, stage) => {
 const DisplayStage = (props) => {
   const { tournament, tournamentType, stage } = props
   if (!stage) return
+  // console.log('stage', stage)
   const format = getFormat(stage)
-  const config = { ...getTournamentConfig(tournament), ...format }
+  const config = stage.tiebreakers
+    ? { ...getTournamentConfig(tournament), ...format, tiebreakers: stage.tiebreakers }
+    : { ...getTournamentConfig(tournament), ...format }
   return (
     <React.Fragment>
       {format && <TournamentFormat config={config} tournamentType={tournamentType} />}

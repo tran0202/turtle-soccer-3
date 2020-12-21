@@ -703,7 +703,52 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1974.png", "start_date": "1974-06-13", "end_date": "1974-07-07" }
+    "tiebreakers": ["team", "lot"],
+    "details": {
+      "host": ["GER-1949-1990"],
+      "logo_filename": "1974_FIFA_World_Cup.svg",
+      "mascot_filename": "1974-tip-and-tap.png",
+      "start_date": "1974-06-13",
+      "end_date": "1974-07-07",
+      "color": "#1d1d1b",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 9,
+      "city_count": 9
+    },
+    "hero_images": [
+      {
+        "name": "Second round - Group A",
+        "filename": "Bundesarchiv_Bild_183-N0704-308,_Fußball-WM,_DDR_-_Argentinien_1-1.jpg",
+        "text": "Streich heads East Germany into the lead v. Argentina"
+      },
+      {
+        "name": "First round - Group 1",
+        "filename": "Bundesarchiv_Bild_183-N0615-0011,_X._Fußball-WM,_DDR-Nationalmannschaft.jpg",
+        "text": "East German line-up v. Australia"
+      },
+      {
+        "name": "First round - Group 2",
+        "filename": "Bundesarchiv_Bild_183-N0622-0031,_Fußball-WM,_Zaire_-_Brasilien_0-3.jpg",
+        "text": "Jairzinho's goal against Zaire"
+      },
+      {
+        "name": "First round - Group 4",
+        "filename": "Bundesarchiv_Bild_183-N0615-0032,_Fußball-WM,_Italien_-_Haiti_3-1.jpg",
+        "text": "Capello (No.8) is brought down v. Haiti"
+      }
+    ],
+    "final_standings": { "champions": "GER-1949-1990", "runners_up": "NED", "third_place": "POL", "fourth_place": "BRA" },
+    "statistics": { "total_matches": 38, "total_goals": 97, "attendance": 1865762 },
+    "awards": {
+      "golden_boot": [{ "player": "Grzegorz Lato", "team": "POL", "goals": 7 }],
+      "silver_boot": [
+        { "player": "Johan Neeskens", "team": "NED" },
+        { "player": "Andrzej Szarmach", "team": "POL" }
+      ],
+      "best_young_player": { "player": "Władysław Żmuda", "team": "POL" },
+      "fair_play_team": ["GER-1949-1990"]
+    }
   },
   {
     "id": "WC1970",

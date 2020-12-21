@@ -1,11 +1,11 @@
 {
-  "id": "WC1982",
+  "id": "WC1978",
   "stages": [
     {
-      "name": "First Group Stage",
+      "name": "First Round",
       "type": "roundrobin",
-      "eliminateCount": 12,
-      "next_round": "Second Group Stage",
+      "eliminateCount": 8,
+      "next_round": "Second Round",
       "advancement": {
         "teams": {
           "auto": [1, 2],
@@ -16,556 +16,414 @@
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "ITA" }, { "id": "POL" }, { "id": "PER" }, { "id": "CMR" }],
+          "teams": [{ "id": "ITA" }, { "id": "FRA" }, { "id": "ARG" }, { "id": "HUN" }],
           "matches": [
             {
               "home_team": "ITA",
-              "away_team": "POL",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1982-06-14",
-              "time": "17:15",
-              "stadium": "Estadio Municipal de Balaídos",
-              "city": "Vigo"
-            },
-            {
-              "home_team": "PER",
-              "away_team": "CMR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1982-06-15",
-              "time": "17:15",
-              "stadium": "Estadio de Riazor",
-              "city": "A Coruña"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "PER",
-              "home_score": 1,
+              "away_team": "FRA",
+              "home_score": 2,
               "away_score": 1,
-              "date": "1982-06-18",
-              "time": "17:15",
-              "stadium": "Estadio Municipal de Balaídos",
-              "city": "Vigo"
+              "date": "1978-06-02",
+              "time": "13:45",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
             },
             {
-              "home_team": "POL",
-              "away_team": "CMR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1982-06-19",
+              "home_team": "ARG",
+              "away_team": "HUN",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1978-06-02",
               "time": "19:15",
-              "stadium": "Estadio de Riazor",
-              "city": "A Coruña"
-            },
-            {
-              "home_team": "POL",
-              "away_team": "PER",
-              "home_score": 5,
-              "away_score": 1,
-              "date": "1982-06-22",
-              "time": "17:15",
-              "stadium": "Estadio de Riazor",
-              "city": "A Coruña"
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             },
             {
               "home_team": "ITA",
-              "away_team": "CMR",
-              "home_score": 1,
+              "away_team": "HUN",
+              "home_score": 3,
               "away_score": 1,
-              "date": "1982-06-23",
-              "time": "17:15",
-              "stadium": "Estadio Municipal de Balaídos",
-              "city": "Vigo"
+              "date": "1978-06-06",
+              "time": "13:45",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "FRA",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1978-06-06",
+              "time": "19:15",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "HUN",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1978-06-10",
+              "time": "15:10",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "ITA",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1978-06-10",
+              "time": "19:15",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "ALG" }, { "id": "CHI" }, { "id": "AUT" }],
+          "teams": [{ "id": "GER-1949-1990" }, { "id": "POL" }, { "id": "TUN" }, { "id": "MEX" }],
           "matches": [
             {
               "home_team": "GER-1949-1990",
-              "away_team": "ALG",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "1982-06-16",
-              "time": "17:15",
-              "stadium": "Estadio El Molinón",
-              "city": "Gijón"
-            },
-            {
-              "home_team": "CHI",
-              "away_team": "AUT",
+              "away_team": "POL",
               "home_score": 0,
-              "away_score": 1,
-              "date": "1982-06-17",
-              "time": "17:15",
-              "stadium": "Estadio Carlos Tartiere",
-              "city": "Oviedo"
+              "away_score": 0,
+              "date": "1978-06-01",
+              "time": "15:00",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "CHI",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1982-06-20",
-              "time": "17:15",
-              "stadium": "Estadio El Molinón",
-              "city": "Gijón"
-            },
-            {
-              "home_team": "ALG",
-              "away_team": "AUT",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "1982-06-21",
-              "time": "17:15",
-              "stadium": "Estadio Carlos Tartiere",
-              "city": "Oviedo"
-            },
-            {
-              "home_team": "ALG",
-              "away_team": "CHI",
+              "home_team": "TUN",
+              "away_team": "MEX",
               "home_score": 3,
-              "away_score": 2,
-              "date": "1982-06-24",
-              "time": "17:15",
-              "stadium": "Estadio Carlos Tartiere",
-              "city": "Oviedo"
+              "away_score": 1,
+              "date": "1978-06-02",
+              "time": "16:45",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
             },
             {
               "home_team": "GER-1949-1990",
-              "away_team": "AUT",
+              "away_team": "MEX",
+              "home_score": 6,
+              "away_score": 0,
+              "date": "1978-06-06",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "TUN",
               "home_score": 1,
               "away_score": 0,
-              "date": "1982-06-25",
-              "time": "17:15",
-              "stadium": "Estadio El Molinón",
-              "city": "Gijón"
+              "date": "1978-06-06",
+              "time": "16:45",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "TUN",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1978-06-10",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "MEX",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1978-06-10",
+              "time": "16:45",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
             }
           ]
         },
         {
           "name": "Group 3",
-          "teams": [{ "id": "ARG" }, { "id": "BEL" }, { "id": "HUN" }, { "id": "SLV" }],
+          "teams": [{ "id": "AUT" }, { "id": "ESP-1977-1981" }, { "id": "BRA" }, { "id": "SWE" }],
           "matches": [
             {
-              "home_team": "ARG",
-              "away_team": "BEL",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1982-06-13",
-              "time": "20:00",
-              "stadium": "Camp Nou",
-              "city": "Barcelona"
-            },
-            {
-              "home_team": "HUN",
-              "away_team": "SLV",
-              "home_score": 10,
-              "away_score": 1,
-              "date": "1982-06-15",
-              "time": "21:00",
-              "stadium": "Nuevo Estadio",
-              "city": "Elche"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "HUN",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1982-06-18",
-              "time": "21:00",
-              "stadium": "Estadio José Rico Pérez",
-              "city": "Alicante"
-            },
-            {
-              "home_team": "BEL",
-              "away_team": "SLV",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1982-06-19",
-              "time": "21:00",
-              "stadium": "Nuevo Estadio",
-              "city": "Elche"
-            },
-            {
-              "home_team": "BEL",
-              "away_team": "HUN",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1982-06-22",
-              "time": "21:00",
-              "stadium": "Nuevo Estadio",
-              "city": "Elche"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "SLV",
+              "home_team": "AUT",
+              "away_team": "ESP-1977-1981",
               "home_score": 2,
+              "away_score": 1,
+              "date": "1978-06-03",
+              "time": "13:45",
+              "stadium": "José Amalfitani Stadium",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "SWE",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1978-06-03",
+              "time": "13:45",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
+            },
+            {
+              "home_team": "AUT",
+              "away_team": "SWE",
+              "home_score": 1,
               "away_score": 0,
-              "date": "1982-06-23",
-              "time": "21:00",
-              "stadium": "Estadio José Rico Pérez",
-              "city": "Alicante"
+              "date": "1978-06-07",
+              "time": "13:45",
+              "stadium": "José Amalfitani Stadium",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "ESP-1977-1981",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1978-06-07",
+              "time": "13:45",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
+            },
+            {
+              "home_team": "ESP-1977-1981",
+              "away_team": "SWE",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1978-06-11",
+              "time": "13:45",
+              "stadium": "José Amalfitani Stadium",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "AUT",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1978-06-11",
+              "time": "13:45",
+              "stadium": "Estadio José María Minella",
+              "city": "Mar del Plata"
             }
           ]
         },
         {
           "name": "Group 4",
-          "teams": [{ "id": "ENG" }, { "id": "FRA" }, { "id": "TCH" }, { "id": "KUW" }],
+          "teams": [{ "id": "PER" }, { "id": "SCO" }, { "id": "NED" }, { "id": "IRN-1964-1980" }],
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "FRA",
+              "home_team": "PER",
+              "away_team": "SCO",
               "home_score": 3,
               "away_score": 1,
-              "date": "1982-06-16",
-              "time": "17:15",
-              "stadium": "San Mamés Stadium",
-              "city": "Bilbao"
+              "date": "1978-06-03",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
             },
             {
-              "home_team": "TCH",
-              "away_team": "KUW",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1982-06-17",
-              "time": "17:45",
-              "stadium": "Estadio José Zorrilla",
-              "city": "Valladolid"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "TCH",
-              "home_score": 2,
+              "home_team": "NED",
+              "away_team": "IRN-1964-1980",
+              "home_score": 3,
               "away_score": 0,
-              "date": "1982-06-20",
-              "time": "17:15",
-              "stadium": "San Mamés Stadium",
-              "city": "Bilbao"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "KUW",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1982-06-21",
-              "time": "17:15",
-              "stadium": "Estadio José Zorrilla",
-              "city": "Valladolid"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "TCH",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1982-06-24",
-              "time": "17:15",
-              "stadium": "Estadio José Zorrilla",
-              "city": "Valladolid"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "KUW",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1982-06-25",
-              "time": "17:15",
-              "stadium": "San Mamés Stadium",
-              "city": "Bilbao"
-            }
-          ]
-        },
-        {
-          "name": "Group 5",
-          "teams": [{ "id": "ESP" }, { "id": "HON" }, { "id": "YUG" }, { "id": "NIR" }],
-          "matches": [
-            {
-              "home_team": "ESP",
-              "away_team": "HON",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1982-06-16",
-              "time": "21:00",
-              "stadium": "Estadio Luis Casanova",
-              "city": "Valencia"
-            },
-            {
-              "home_team": "YUG",
-              "away_team": "NIR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1982-06-17",
-              "time": "21:00",
-              "stadium": "Estadio La Romareda",
-              "city": "Zaragoza"
-            },
-            {
-              "home_team": "ESP",
-              "away_team": "YUG",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1982-06-20",
-              "time": "21:00",
-              "stadium": "Estadio Luis Casanova",
-              "city": "Valencia"
-            },
-            {
-              "home_team": "HON",
-              "away_team": "NIR",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1982-06-21",
-              "time": "21:00",
-              "stadium": "Estadio La Romareda",
-              "city": "Zaragoza"
-            },
-            {
-              "home_team": "HON",
-              "away_team": "YUG",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1982-06-24",
-              "time": "21:00",
-              "stadium": "Estadio La Romareda",
-              "city": "Zaragoza"
-            },
-            {
-              "home_team": "ESP",
-              "away_team": "NIR",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1982-06-25",
-              "time": "21:00",
-              "stadium": "Estadio Luis Casanova",
-              "city": "Valencia"
-            }
-          ]
-        },
-        {
-          "name": "Group 6",
-          "teams": [{ "id": "BRA" }, { "id": "URS" }, { "id": "SCO" }, { "id": "NZL" }],
-          "matches": [
-            {
-              "home_team": "BRA",
-              "away_team": "URS",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1982-06-14",
-              "time": "21:00",
-              "stadium": "Ramón Sánchez Pizjuán Stadium",
-              "city": "Seville"
+              "date": "1978-06-03",
+              "time": "16:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
             },
             {
               "home_team": "SCO",
-              "away_team": "NZL",
-              "home_score": 5,
-              "away_score": 2,
-              "date": "1982-06-15",
-              "time": "21:00",
-              "stadium": "Estadio La Rosaleda",
-              "city": "Málaga"
+              "away_team": "IRN-1964-1980",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1978-06-07",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
             },
             {
-              "home_team": "BRA",
-              "away_team": "SCO",
+              "home_team": "NED",
+              "away_team": "PER",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1978-06-07",
+              "time": "16:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
+            },
+            {
+              "home_team": "PER",
+              "away_team": "IRN-1964-1980",
               "home_score": 4,
               "away_score": 1,
-              "date": "1982-06-18",
-              "time": "21:00",
-              "stadium": "Estadio Benito Villamarín",
-              "city": "Seville"
+              "date": "1978-06-11",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
             },
             {
-              "home_team": "URS",
-              "away_team": "NZL",
+              "home_team": "SCO",
+              "away_team": "NED",
               "home_score": 3,
-              "away_score": 0,
-              "date": "1982-06-19",
-              "time": "21:00",
-              "stadium": "Estadio La Rosaleda",
-              "city": "Málaga"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "SCO",
-              "home_score": 2,
               "away_score": 2,
-              "date": "1982-06-22",
-              "time": "21:00",
-              "stadium": "Estadio La Rosaleda",
-              "city": "Málaga"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "NZL",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1982-06-23",
-              "time": "21:00",
-              "stadium": "Estadio Benito Villamarín",
-              "city": "Seville"
+              "date": "1978-06-11",
+              "time": "16:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
             }
           ]
         }
       ]
     },
     {
-      "name": "Second Group Stage",
+      "name": "Second Round",
       "type": "roundrobin",
+      "default": true,
       "eliminateCount": 4,
-      "next_round": "Semi-finals",
+      "next_round": "Final",
       "advancement": {
         "teams": {
           "auto": [1],
-          "eliminated": [2, 3],
-          "text": "The winners advance to the semi-finals round."
+          "third_place": 2,
+          "eliminated": [3, 4],
+          "text": "The winners advance to the final. The runners-up advance to the third place match."
         }
       },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "POL" }, { "id": "BEL" }, { "id": "URS" }],
+          "teams": [{ "id": "AUT" }, { "id": "NED" }, { "id": "ITA" }, { "id": "GER-1949-1990" }],
           "matches": [
             {
-              "home_team": "POL",
-              "away_team": "BEL",
+              "home_team": "AUT",
+              "away_team": "NED",
+              "home_score": 1,
+              "away_score": 5,
+              "date": "1978-06-14",
+              "time": "13:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "GER-1949-1990",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1978-06-14",
+              "time": "13:45",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "GER-1949-1990",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1978-06-18",
+              "time": "16:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "AUT",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1978-06-18",
+              "time": "16:45",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "AUT",
+              "away_team": "GER-1949-1990",
               "home_score": 3,
-              "away_score": 0,
-              "date": "1982-06-28",
-              "time": "21:00",
-              "stadium": "Camp Nou",
-              "city": "Barcelona"
+              "away_score": 2,
+              "date": "1978-06-21",
+              "time": "13:45",
+              "stadium": "Estadio Olímpico Chateau Carreras",
+              "city": "Córdoba"
             },
             {
-              "home_team": "BEL",
-              "away_team": "URS",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1982-07-01",
-              "time": "21:00",
-              "stadium": "Camp Nou",
-              "city": "Barcelona"
-            },
-            {
-              "home_team": "POL",
-              "away_team": "URS",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1982-07-04",
-              "time": "21:00",
-              "stadium": "Camp Nou",
-              "city": "Barcelona"
+              "home_team": "ITA",
+              "away_team": "NED",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1978-06-21",
+              "time": "13:45",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "ENG" }, { "id": "ESP" }],
+          "teams": [{ "id": "PER" }, { "id": "BRA" }, { "id": "ARG" }, { "id": "POL" }],
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "ENG",
+              "home_team": "PER",
+              "away_team": "BRA",
               "home_score": 0,
-              "away_score": 0,
-              "date": "1982-06-29",
-              "time": "21:00",
-              "stadium": "Santiago Bernabéu Stadium",
-              "city": "Madrid"
+              "away_score": 3,
+              "date": "1978-06-14",
+              "time": "16:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "ESP",
+              "home_team": "ARG",
+              "away_team": "POL",
               "home_score": 2,
-              "away_score": 1,
-              "date": "1982-07-02",
-              "time": "21:00",
-              "stadium": "Santiago Bernabéu Stadium",
-              "city": "Madrid"
+              "away_score": 0,
+              "date": "1978-06-14",
+              "time": "19:15",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
             },
             {
-              "home_team": "ESP",
-              "away_team": "ENG",
+              "home_team": "PER",
+              "away_team": "POL",
               "home_score": 0,
-              "away_score": 0,
-              "date": "1982-07-05",
-              "time": "21:00",
-              "stadium": "Santiago Bernabéu Stadium",
-              "city": "Madrid"
-            }
-          ]
-        },
-        {
-          "name": "Group C",
-          "teams": [{ "id": "ITA" }, { "id": "BRA" }, { "id": "ARG" }],
-          "matches": [
-            {
-              "home_team": "ITA",
-              "away_team": "ARG",
-              "home_score": 2,
               "away_score": 1,
-              "date": "1982-06-29",
-              "time": "17:15",
-              "stadium": "Sarrià Stadium",
-              "city": "Barcelona"
+              "date": "1978-06-18",
+              "time": "13:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
             },
             {
               "home_team": "ARG",
               "away_team": "BRA",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1978-06-18",
+              "time": "19:15",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "BRA",
               "home_score": 1,
               "away_score": 3,
-              "date": "1982-07-02",
-              "time": "17:15",
-              "stadium": "Sarrià Stadium",
-              "city": "Barcelona"
+              "date": "1978-06-21",
+              "time": "16:45",
+              "stadium": "Estadio Ciudad de Mendoza",
+              "city": "Mendoza"
             },
             {
-              "home_team": "ITA",
-              "away_team": "BRA",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1982-07-05",
-              "time": "17:15",
-              "stadium": "Sarrià Stadium",
-              "city": "Barcelona"
-            }
-          ]
-        },
-        {
-          "name": "Group D",
-          "teams": [{ "id": "FRA" }, { "id": "AUT" }, { "id": "NIR" }],
-          "matches": [
-            {
-              "home_team": "AUT",
-              "away_team": "FRA",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1982-06-28",
-              "time": "17:15",
-              "stadium": "Vicente Calderón Stadium",
-              "city": "Madrid"
-            },
-            {
-              "home_team": "AUT",
-              "away_team": "NIR",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1982-07-01",
-              "time": "17:15",
-              "stadium": "Vicente Calderón Stadium",
-              "city": "Madrid"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "NIR",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1982-07-04",
-              "time": "17:15",
-              "stadium": "Vicente Calderón Stadium",
-              "city": "Madrid"
+              "home_team": "ARG",
+              "away_team": "PER",
+              "home_score": 6,
+              "away_score": 0,
+              "date": "1978-06-21",
+              "time": "19:15",
+              "stadium": "Estadio Gigante de Arroyito",
+              "city": "Rosario"
             }
           ]
         }
@@ -576,52 +434,18 @@
       "type": "knockout",
       "rounds": [
         {
-          "name": "Semi-finals",
-          "short_name": "1/2",
-          "eliminateCount": 2,
-          "next_round": "Final",
-          "matches": [
-            {
-              "home_team": "POL",
-              "away_team": "ITA",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "1982-07-08",
-              "time": "17:15",
-              "stadium": "Camp Nou",
-              "city": "Barcelona",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "FRA",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 2,
-              "away_extra_score": 2,
-              "home_penalty_score": 5,
-              "away_penalty_score": 4,
-              "date": "1982-07-08",
-              "time": "21:00",
-              "stadium": "Ramón Sánchez Pizjuán Stadium",
-              "city": "Seville",
-              "bracket_order": 2
-            }
-          ]
-        },
-        {
           "name": "Third place",
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "POL",
-              "away_team": "FRA",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1982-07-10",
-              "time": "20:00",
-              "stadium": "Estadio José Rico Pérez",
-              "city": "Alicante"
+              "home_team": "BRA",
+              "away_team": "ITA",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1978-06-24",
+              "time": "15:00",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             }
           ]
         },
@@ -630,14 +454,16 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "ITA",
-              "away_team": "GER-1949-1990",
-              "home_score": 3,
+              "home_team": "ARG",
+              "away_team": "NED",
+              "home_score": 1,
               "away_score": 1,
-              "date": "1982-07-11",
-              "time": "20:00",
-              "stadium": "Santiago Bernabéu Stadium",
-              "city": "Madrid"
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "1978-06-25",
+              "time": "15:00",
+              "stadium": "Estadio Monumental",
+              "city": "Buenos Aires"
             }
           ]
         }
