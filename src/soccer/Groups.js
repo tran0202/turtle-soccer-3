@@ -56,6 +56,13 @@ const TournamentFormat = (props) => {
                           <li>Overall goals scored</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'pointandgoaldifferent') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points</li>
+                          <li>Overall goal difference</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'firstroundposition') {
                       return (
                         <React.Fragment key={index}>

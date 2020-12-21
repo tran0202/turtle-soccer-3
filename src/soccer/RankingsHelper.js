@@ -107,7 +107,6 @@ const findLastTeamRanking = (teams, teamId) => {
     team.rankings = []
     return getBlankRanking(teamId)
   }
-  // console.log('team', team)
   return team.rankings[team.rankings.length - 1]
 }
 
@@ -160,11 +159,18 @@ const findHeadtoHeadMatch = (a, b) => {
 }
 
 const drawingLots = (a, b) => {
-  // Italia 90
+  // console.log('drawingLots a', a)
+  // Italia 1990
   if (a.id === 'NED' && b.id === 'IRL') {
-    a.draw_lot_notes = 'Netherlands lost.'
-    b.draw_lot_notes = 'Republic of Ireland won.'
+    a.draw_lot_notes = 'Netherlands took 3rd place after finished identical records (points, goal difference and goad forward) with Republic of Ireland.'
+    b.draw_lot_notes = 'Republic of Ireland took 2nd place after finished identical records (points, goal difference and goad forward) with Netherlands.'
     return 1
+  }
+  // Mexico 1970
+  if (a.id === 'URS' && b.id === 'MEX') {
+    a.draw_lot_notes = 'Soviet Union took 1st place after finished level (points and goal difference) with Mexico.'
+    b.draw_lot_notes = 'Mexico took 2nd place after finished level (points and goal difference) with Soviet Union.'
+    return -1
   }
   return 0
 }
@@ -221,7 +227,9 @@ export const sortGroupRankings = (group, startingIndex) => {
         } else if (a.gd < b.gd) {
           return 1
         } else {
-          if (a.gf > b.gf) {
+          if (group.tiebreak_pts_gd) {
+            return drawingLots(a, b)
+          } else if (a.gf > b.gf) {
             return -1
           } else if (a.gf < b.gf) {
             return 1
