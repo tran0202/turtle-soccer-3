@@ -7,7 +7,12 @@ export const findTeam = (teamArray, id) => {
 export const isGoalRatioTiebreaker = (config) => {
   const { tiebreakers } = config
   if (!tiebreakers) return false
-  return tiebreakers.find((tb) => tb === 'goalratio') != null
+  return tiebreakers.find((tb) => tb.indexOf('goalratio') !== -1) != null
+}
+
+export const hasGroupPlayoff = (group) => {
+  if (!group.matches) return false
+  return group.matches.find((m) => m.group_playoff) !== undefined
 }
 
 const accumulateRanking = (team, match, config) => {
@@ -161,8 +166,14 @@ export const calculateKnockoutRankings = (advanced_teams, round, config) => {
     })
 }
 
-const findHeadtoHeadMatch = (a, b) => {
-  return a.h2hm.filter((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
+const findHeadtoHeadMatch = (a, b, group_playoff) => {
+  const cond = (m) => {
+    return (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id)
+  }
+  const cond2 = (m) => {
+    return group_playoff ? m.group_playoff : !m.group_playoff
+  }
+  return a.h2hm.filter((m) => cond(m) && cond2(m))
 }
 
 const drawingLots = (a, b) => {
@@ -198,7 +209,13 @@ const matchResult = (id, m) => {
     } else if (m.home_score < m.away_score) {
       return 1
     } else {
-      return 0
+      if (m.home_extra_score > m.away_extra_score) {
+        return -1
+      } else if (m.home_extra_score < m.away_extra_score) {
+        return 1
+      } else {
+        return 0
+      }
     }
   } else if (m.away_team === id) {
     if (m.home_score > m.away_score) {
@@ -206,7 +223,13 @@ const matchResult = (id, m) => {
     } else if (m.home_score < m.away_score) {
       return -1
     } else {
-      return 0
+      if (m.home_extra_score > m.away_extra_score) {
+        return 1
+      } else if (m.home_extra_score < m.away_extra_score) {
+        return -1
+      } else {
+        return 0
+      }
     }
   }
 }
@@ -220,8 +243,39 @@ const saveDrawTeams = (a, b) => {
   }
 }
 
+const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
+  // console.log('h2hMatch', h2hMatch)
+  const show_home_score = h2hMatch.home_extra_score != null ? parseInt(h2hMatch.home_score) + parseInt(h2hMatch.home_extra_score) : h2hMatch.home_score
+  const show_away_score = h2hMatch.away_extra_score != null ? parseInt(h2hMatch.away_score) + parseInt(h2hMatch.away_extra_score) : h2hMatch.away_score
+  const h2hResult = matchResult(a.id, h2hMatch)
+  if (h2hResult === 1) {
+    if (a.id === h2hMatch.home_team) {
+      a.h2h_notes = `${getTeamName(a.id)} lost ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} won ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+    } else {
+      a.h2h_notes = `${getTeamName(a.id)} lost ${show_away_score}-${show_home_score} against ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} won ${show_home_score}-${show_away_score} against ${getTeamName(a.id)}`
+    }
+    a.group_playoff = h2hMatch.group_playoff
+    b.group_playoff = h2hMatch.group_playoff
+    return 1
+  } else if (h2hResult === -1) {
+    if (a.id === h2hMatch.home_team) {
+      a.h2h_notes = `${getTeamName(a.id)} won ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} lost ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+    } else {
+      a.h2h_notes = `${getTeamName(a.id)} won ${show_away_score}-${show_home_score} against ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} lost ${show_home_score}-${show_away_score} against ${getTeamName(a.id)}`
+    }
+    a.group_playoff = h2hMatch.group_playoff
+    b.group_playoff = h2hMatch.group_playoff
+    return -1
+  } else {
+    return drawFunction
+  }
+}
+
 export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) => {
-  // console.log('isGoalRatioTiebreaker', isGoalRatioTiebreaker)
   if (group && group.final_rankings) {
     group.final_rankings.sort((a, b) => {
       if (a.pts > b.pts) {
@@ -230,7 +284,13 @@ export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) =
         return 1
       } else {
         if (isGoalRatioTiebreaker) {
-          if (a.gr != null && b.gr != null) {
+          const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
+          if (found.length === 1) {
+            const h2hMatch = found[0]
+            return createH2hNotes(h2hMatch, a, b, () => {
+              return 0
+            })
+          } else if (a.gr != null && b.gr != null) {
             if (a.gr > b.gr) {
               return -1
             } else if (a.gr < b.gr) {
@@ -261,31 +321,10 @@ export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) =
               saveDrawTeams(a, b)
               saveDrawTeams(b, a)
             }
-            const found = findHeadtoHeadMatch(a, b)
+            const found = findHeadtoHeadMatch(a, b, false)
             if (found.length === 1) {
               const h2hMatch = found[0]
-              const h2hResult = matchResult(a.id, h2hMatch)
-              if (h2hResult === 1) {
-                if (a.id === h2hMatch.home_team) {
-                  a.h2h_notes = `Note1` // `${getTeamName(a.id)} lost ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(b.id)}`
-                  b.h2h_notes = `Note2` // `${getTeamName(b.id)} won ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(a.id)}`
-                } else {
-                  a.h2h_notes = `${getTeamName(a.id)} lost ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(b.id)}`
-                  b.h2h_notes = `${getTeamName(b.id)} won ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(a.id)}`
-                }
-                return 1
-              } else if (h2hResult === -1) {
-                if (a.id === h2hMatch.home_team) {
-                  a.h2h_notes = `${getTeamName(a.id)} won ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(b.id)}`
-                  b.h2h_notes = `${getTeamName(b.id)} lost ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(a.id)}`
-                } else {
-                  a.h2h_notes = `${getTeamName(a.id)} won ${h2hMatch.away_score}-${h2hMatch.home_score} against ${getTeamName(b.id)}`
-                  b.h2h_notes = `${getTeamName(b.id)} lost ${h2hMatch.home_score}-${h2hMatch.away_score} against ${getTeamName(a.id)}`
-                }
-                return -1
-              } else {
-                return compareFairPoints(a, b)
-              }
+              return createH2hNotes(h2hMatch, a, b, compareFairPoints(a, b))
             } else {
               return compareFairPoints(a, b)
             }
@@ -338,7 +377,6 @@ export const collectProgressRankings = (tournament, group, matchDay) => {
       }
     }
   })
-  // console.log('tournament', tournament)
   sortGroupRankings(group, 1, null)
 }
 

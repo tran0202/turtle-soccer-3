@@ -121,12 +121,18 @@ export const isWinner = (who, match) => {
 
 export const getMatchArrayByDate = (round, sorted) => {
   let tmp = []
+  let tmpPlayoff = []
   round &&
     round.matches &&
     round.matches.forEach((m) => {
-      tmp.push(m)
+      if (!m.group_playoff) {
+        tmp.push(m)
+      } else {
+        tmpPlayoff.push(m)
+      }
     })
-  return getDateMatchArrayPair(tmp, sorted)
+  const tmp2 = [getDateMatchArrayPair(tmp, sorted), { ...getDateMatchArrayPair(tmpPlayoff, sorted), name: 'Playoff' }]
+  return tmpPlayoff.length === 0 ? getDateMatchArrayPair(tmp, sorted) : tmp2
 }
 
 export const getDateMatchArrayPair = (matches_array, sorted) => {
@@ -232,12 +238,12 @@ const DisplayAwayGoalsText = (props) => {
 
 const DisplayExtraTimeText = (props) => {
   const { param } = props
-  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, goldenGoal } = param
+  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, group_playoff, goldenGoal } = param
   return (
     <React.Fragment>
       {home_extra_score != null && away_extra_score != null && (
         <React.Fragment>
-          {home_penalty_score == null && away_penalty_score == null && (
+          {home_penalty_score == null && away_penalty_score == null && !group_playoff && (
             <React.Fragment>
               {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;&gt;&gt;&gt;&nbsp;</React.Fragment>}
               {home_extra_score > away_extra_score && (
@@ -421,7 +427,7 @@ const DisplayMatch = (props) => {
           {m.group && (
             <React.Fragment>
               <br />
-              {m.group}
+              {m.group} {m.group_playoff ? 'Playoff' : ''}
             </React.Fragment>
           )}
           <span className="no-display-xs">
@@ -485,6 +491,7 @@ const DisplayMatch = (props) => {
               away_extra_score: m.away_extra_score,
               home_penalty_score: m.home_penalty_score,
               away_penalty_score: m.away_penalty_score,
+              group_playoff: m.group_playoff,
               goldenGoal: config.goldenGoal,
             }}
           />
@@ -545,8 +552,8 @@ export const FairPlayTooltip = (props) => {
 }
 
 export const Head2HeadTooltip = (props) => {
-  const { target, h2h_notes } = props
-  const content = `Head-to-head: ${h2h_notes}`
+  const { target, h2h_notes, group_playoff } = props
+  const content = group_playoff ? `Playoff: ${h2h_notes}` : `Head-to-head: ${h2h_notes}`
   return <TopTooltip target={target} content={content} />
 }
 
@@ -570,7 +577,6 @@ export const TopTooltip = (props) => {
   const { target, content, anchor } = props
   return (
     <TurtleTooltip target={target} placement="top" content={content}>
-      &nbsp;
       <span className="box-tip-text" href="#" id={target}>
         {anchor ? anchor : '[*]'}
       </span>

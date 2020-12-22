@@ -155,6 +155,8 @@
   { "id": "ESP-1945-1977", "name": "Spain", "team_type_id": "MNT", "nation_id": "ESP-1945-1977", "parent_team_id": "ESP" },
   { "id": "BUL-1948-1967", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "BUL-1948-1967", "parent_team_id": "BUL" },
   { "id": "YUG-1946-1963", "name": "Yugoslavia", "team_type_id": "MNT", "nation_id": "YUG-1946-1963", "parent_team_id": "SRB" },
+  { "id": "WAL", "name": "Wales", "team_type_id": "MNT", "nation_id": "WAL", "parent_team_id": "" },
+  { "id": "WAL-1953-1959", "name": "Wales", "team_type_id": "MNT", "nation_id": "WAL-1953-1959", "parent_team_id": "WAL" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -183,7 +185,6 @@
   { "id": "NCL", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "NCL", "parent_team_id": "" },
   { "id": "SOL", "name": "Solomon Islands", "team_type_id": "MNT", "nation_id": "SOL", "parent_team_id": "" },
 
-  { "id": "WAL", "name": "Wales", "team_type_id": "MNT", "nation_id": "WAL", "parent_team_id": "" },
   { "id": "244", "name": "Dutch East Indies", "team_type_id": "MNT", "nation_id": "220", "parent_team_id": "IDN" },
   { "id": "246", "name": "Cuba", "team_type_id": "MNT", "nation_id": "52", "parent_team_id": "" },
   { "id": "ALB", "name": "Albania", "team_type_id": "MNT", "nation_id": "ALB", "parent_team_id": "" },
@@ -408,7 +409,6 @@
   { "id": "1053", "name": "Germany", "team_type_id": "MNT", "nation_id": "246", "parent_team_id": "2" },
   { "id": "1054", "name": "Spain", "team_type_id": "MNT", "nation_id": "252", "parent_team_id": "6" },
   { "id": "1055", "name": "Hungary", "team_type_id": "MNT", "nation_id": "254", "parent_team_id": "233" },
-  { "id": "1056", "name": "Wales", "team_type_id": "MNT", "nation_id": "256", "parent_team_id": "243" },
   { "id": "1061", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "260", "parent_team_id": "223" },
   { "id": "1063", "name": "Spain", "team_type_id": "MNT", "nation_id": "267", "parent_team_id": "6" },
   { "id": "1065", "name": "Iraq", "team_type_id": "MNT", "nation_id": "275", "parent_team_id": "1064" },

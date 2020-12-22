@@ -914,7 +914,51 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1958.png", "start_date": "1958-06-08", "end_date": "1958-06-29" }
+    "tiebreakers": ["goalratiogroupplayoff", "lot"],
+    "details": {
+      "host": ["SWE"],
+      "logo_filename": "1958_FIFA_World_Cup.jpg",
+      "start_date": "1958-06-08",
+      "end_date": "1958-06-29",
+      "color": "#1d5f9a",
+      "team_count": 16,
+      "confed_count": 3,
+      "venue_count": 12,
+      "city_count": 12
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Gilmar_and_Hamrin_1958_WC_final.jpg",
+        "text": "Brazilian goalkeeper Gilmar faces the Swedish forward Hamrin during the 1958 World Cup final."
+      },
+      {
+        "name": "Poster",
+        "filename": "1958_Football_World_Cup_poster.jpg",
+        "text": "Official 1958 FIFA World Cup poster"
+      },
+      {
+        "name": "Råsunda Stadium, Solna",
+        "filename": "Råsunda_February_2013_01.jpg",
+        "text": "The Råsunda Stadium held the opening match and the final"
+      },
+      {
+        "name": "Ullevi Stadium, Gothenburg",
+        "filename": "Ullevi_1959-06-03.jpg",
+        "text": "The Ullevi Stadium held the semi-final match between Sweden and Germany"
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "SWE", "third_place": "FRA", "fourth_place": "GER-1949-1990" },
+    "statistics": { "total_matches": 35, "total_goals": 126, "attendance": 819810 },
+    "awards": {
+      "golden_boot": [{ "player": "Just Fontaine", "team": "FRA", "goals": 13 }],
+      "silver_boot": [
+        { "player": "Helmut Rahn", "team": "GER-1949-1990" },
+        { "player": "Pele", "team": "BRA" }
+      ],
+      "golden_ball": [{ "player": "Didi", "team": "BRA" }],
+      "best_young_player": { "player": "Pele", "team": "BRA" }
+    }
   },
   {
     "id": "WC1954",

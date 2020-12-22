@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { DisplaySchedule, getMatchArrayByDate } from './Helper'
 import Rankings from './Rankings'
+import { hasGroupPlayoff } from './RankingsHelper'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 
 const GroupCollapse = (props) => {
   const { group, config } = props
+  const matchArray = getMatchArrayByDate(group, true)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -27,7 +29,13 @@ const GroupCollapse = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        <DisplaySchedule round={getMatchArrayByDate(group, true)} config={{ showMatchYear: config.show_match_year }} />
+        {!hasGroupPlayoff(group) && <DisplaySchedule round={matchArray} config={{ showMatchYear: config.show_match_year }} />}
+        {hasGroupPlayoff(group) && (
+          <React.Fragment>
+            <DisplaySchedule round={matchArray[0]} config={{ showMatchYear: config.show_match_year }} />
+            <DisplaySchedule round={matchArray[1]} config={{ showMatchYear: config.show_match_year }} />
+          </React.Fragment>
+        )}
         <Row className="mb-5"></Row>
       </Collapse>
     </React.Fragment>
