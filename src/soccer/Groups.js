@@ -2,19 +2,28 @@ import React, { useState } from 'react'
 import GroupStandings from './GroupStandings'
 import GroupMdStandings from './GroupMdStandings'
 import { getTournamentConfig, getDefaultStageTab, getAllRoundRobinStages } from './Helper'
-import { calculateGroupRankings, calculateProgressRankings, collectGroupRankings, hasWildCardAdvancement, collectWildCardRankings } from './RankingsHelper'
+import {
+  calculateGroupRankings,
+  calculateProgressRankings,
+  collectGroupRankings,
+  hasWildCardAdvancement,
+  collectWildCardRankings,
+  isGroupPlayoffTiebreaker,
+  isLotGroupPlayoffTiebreaker,
+} from './RankingsHelper'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
 import classnames from 'classnames'
 
 const getFormat = (rrStage) => {
-  const { groups, advancement } = rrStage
+  const { groups, advancement, odd_format } = rrStage
   const groupCount = groups ? groups.length : 0
   const teamCount = groups && groups[0] && groups[0].teams ? groups[0].teams.length : 0
-  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement }
+  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement, odd_format }
 }
 
 const TournamentFormat = (props) => {
   const { config, tournamentType } = props
+  // console.log('config', config)
   return (
     config.teamCount !== 0 && (
       <Row className="mt-3 mb-3 text-left tournament-format">
@@ -25,14 +34,16 @@ const TournamentFormat = (props) => {
                 <strong>Format:&nbsp;</strong>
                 {config.groupCount > 1 && (
                   <React.Fragment>
-                    {config.totalCount} teams are divided into {config.groupCount} groups of {config.teamCount} teams. Each group plays a round-robin schedule.
+                    {config.totalCount} teams were divided into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
+                    {!config.odd_format && <React.Fragment>Each group played a round-robin schedule.</React.Fragment>}
+                    {config.odd_format}
                   </React.Fragment>
                 )}
-                {config.groupCount === 1 && <React.Fragment>{config.totalCount} teams plays a league of home-and-away round-robin matches.</React.Fragment>}
+                {config.groupCount === 1 && <React.Fragment>{config.totalCount} teams played a league of home-and-away round-robin matches.</React.Fragment>}
                 &nbsp;
                 {config.advancement && config.advancement.teams && config.advancement.teams.text
                   ? config.advancement.teams.text
-                  : 'The top 2 teams advance to the knockout stage.'}
+                  : 'The top 2 teams would advance to the knockout stage.'}
                 &nbsp;{config.advancement ? config.advancement.extra : ''}
               </p>
             </Col>
@@ -77,6 +88,14 @@ const TournamentFormat = (props) => {
                           <li>Overall goal ratio if the first 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
                           <li>Goal ratio from group matches if the playoff match ends with a draw</li>
+                        </React.Fragment>
+                      )
+                    } else if (tb === 'lotgroupplayoff') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points</li>
+                          <li>Drawing lots if the first 2 teams on equal points</li>
+                          <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'firstroundposition') {
@@ -145,8 +164,10 @@ const calculateStageRankings = (tournament, config, stage) => {
         collectMdMatches(group)
       }
       group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
-      // const matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
-      collectGroupRankings(tournament, group, 3)
+      let matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
+      matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
+      matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
+      collectGroupRankings(tournament, group, matchDay)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })
   stage.wild_card = groups && hasWildCardAdvancement(stage) ? collectWildCardRankings(stage) : {}
@@ -155,7 +176,6 @@ const calculateStageRankings = (tournament, config, stage) => {
 const DisplayStage = (props) => {
   const { tournament, tournamentType, stage } = props
   if (!stage) return
-  // console.log('stage', stage)
   const format = getFormat(stage)
   const config = stage.tiebreakers
     ? { ...getTournamentConfig(tournament), ...format, tiebreakers: stage.tiebreakers }

@@ -239,6 +239,7 @@ const DisplayAwayGoalsText = (props) => {
 const DisplayExtraTimeText = (props) => {
   const { param } = props
   const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, group_playoff, goldenGoal } = param
+  // console.log('group_playoff', group_playoff)
   return (
     <React.Fragment>
       {home_extra_score != null && away_extra_score != null && (

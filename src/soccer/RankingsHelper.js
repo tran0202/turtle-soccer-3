@@ -10,6 +10,18 @@ export const isGoalRatioTiebreaker = (config) => {
   return tiebreakers.find((tb) => tb.indexOf('goalratio') !== -1) != null
 }
 
+export const isGroupPlayoffTiebreaker = (config) => {
+  const { tiebreakers } = config
+  if (!tiebreakers) return false
+  return tiebreakers.find((tb) => tb.indexOf('groupplayoff') !== -1) != null
+}
+
+export const isLotGroupPlayoffTiebreaker = (config) => {
+  const { tiebreakers } = config
+  if (!tiebreakers) return false
+  return tiebreakers.find((tb) => tb.indexOf('lotgroupplayoff') !== -1) != null
+}
+
 export const hasGroupPlayoff = (group) => {
   if (!group.matches) return false
   return group.matches.find((m) => m.group_playoff) !== undefined
@@ -189,6 +201,19 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Mexico took 2nd place after finished level (points and goal difference) with Soviet Union.'
     return -1
   }
+  // Switzerland 1954
+  // console.log('a', a)
+  if (a.id === 'YUG-1946-1963' && b.id === 'BRA') {
+    a.draw_lot_notes = 'Yugoslavia took 2nd place after finished level points with Brazil.'
+    b.draw_lot_notes = 'Brazil took 1st place after finished level points with Yugoslavia.'
+    return 1
+  }
+  if (a.id === 'AUT' && b.id === 'URU') {
+    a.draw_lot_notes = 'Austria took 2nd place after finished level points with Uruguay.'
+    b.draw_lot_notes = 'Uruguay took 1st place after finished level points with Austria.'
+    return 1
+  }
+
   return 0
 }
 
@@ -275,15 +300,28 @@ const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
   }
 }
 
-export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) => {
+export const sortGroupRankings = (group, startingIndex, config) => {
   if (group && group.final_rankings) {
+    const isGoalRatioTiebreaker = config ? config.isGoalRatioTiebreaker : false
+    const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
     group.final_rankings.sort((a, b) => {
       if (a.pts > b.pts) {
         return -1
       } else if (a.pts < b.pts) {
         return 1
       } else {
-        if (isGoalRatioTiebreaker) {
+        if (isLotGroupPlayoffTiebreaker) {
+          const dl = drawingLots(a, b)
+          if (dl !== 0) return dl
+          const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
+          if (found.length === 1) {
+            const h2hMatch = found[0]
+            return createH2hNotes(h2hMatch, a, b, () => {
+              return 0
+            })
+          }
+          return 0
+        } else if (isGoalRatioTiebreaker) {
           const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
           if (found.length === 1) {
             const h2hMatch = found[0]
@@ -342,6 +380,7 @@ export const sortGroupRankings = (group, startingIndex, isGoalRatioTiebreaker) =
 
 export const collectGroupRankings = (tournament, group, matchDay) => {
   if (!group.teams) return
+  const config = { isGoalRatioTiebreaker: isGoalRatioTiebreaker(tournament), isLotGroupPlayoffTiebreaker: isLotGroupPlayoffTiebreaker(tournament) }
   group.teams.forEach((team) => {
     if (team.rankings) {
       const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
@@ -356,7 +395,7 @@ export const collectGroupRankings = (tournament, group, matchDay) => {
       }
     }
   })
-  sortGroupRankings(group, 1, isGoalRatioTiebreaker(tournament))
+  sortGroupRankings(group, 1, config)
 }
 
 export const collectProgressRankings = (tournament, group, matchDay) => {

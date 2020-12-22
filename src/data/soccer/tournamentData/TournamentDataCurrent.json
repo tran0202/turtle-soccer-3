@@ -1,314 +1,226 @@
 {
-  "id": "WC1958",
+  "id": "WC1954",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 8,
       "next_round": "Quarter-finals",
+      "odd_format": "Each group contained 2 seeded teams and 2 unseeded teams. Only 4 matches were scheduled for each group, each pitting a seeded team against an unseeded team. Another oddity was that extra time would be played in the group matches if the scores were level after 90 minutes. The match would result to be a draw if the scores were still level after 120 minutes.",
       "advancement": {
         "teams": {
           "auto": [1, 2],
           "eliminated": [3, 4],
-          "text": "The top 2 teams advance to the quarter-finals."
+          "text": "The top 2 teams would advance to the quarter-finals."
         }
       },
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "ARG" }, { "id": "GER-1949-1990" }, { "id": "NIR" }, { "id": "TCH" }],
+          "teams": [{ "id": "BRA" }, { "id": "MEX" }, { "id": "YUG-1946-1963" }, { "id": "FRA" }],
           "matches": [
             {
-              "home_team": "ARG",
-              "away_team": "GER-1949-1990",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
+              "home_team": "BRA",
+              "away_team": "MEX",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "1954-06-16",
+              "time": "18:00",
+              "stadium": "Charmilles Stadium",
+              "city": "Geneva"
             },
             {
-              "home_team": "NIR",
-              "away_team": "TCH",
+              "home_team": "YUG-1946-1963",
+              "away_team": "FRA",
               "home_score": 1,
               "away_score": 0,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Örjans Vall",
-              "city": "Halmstad"
+              "date": "1954-06-16",
+              "time": "18:00",
+              "stadium": "Stade Olympique de la Pontaise",
+              "city": "Lausanne"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "TCH",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Olympiastadion",
-              "city": "Helsingborg"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "NIR",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Örjans Vall",
-              "city": "Halmstad"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "NIR",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
-            },
-            {
-              "home_team": "TCH",
-              "away_team": "ARG",
-              "home_score": 6,
-              "away_score": 1,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Olympiastadion",
-              "city": "Helsingborg"
-            },
-            {
-              "home_team": "NIR",
-              "away_team": "TCH",
+              "home_team": "BRA",
+              "away_team": "YUG-1946-1963",
               "home_score": 1,
               "away_score": 1,
-              "home_extra_score": 1,
+              "home_extra_score": 0,
               "away_extra_score": 0,
-              "date": "1958-06-17",
-              "time": "19:00",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö",
-              "group_playoff": true
+              "date": "1954-06-19",
+              "time": "17:00",
+              "stadium": "Stade Olympique de la Pontaise",
+              "city": "Lausanne"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "MEX",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1954-06-19",
+              "time": "17:00",
+              "stadium": "Charmilles Stadium",
+              "city": "Geneva"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "FRA" }, { "id": "PAR" }, { "id": "YUG-1946-1963" }, { "id": "SCO" }],
+          "teams": [{ "id": "GER-1949-1990" }, { "id": "TUR" }, { "id": "HUN-1949-1956" }, { "id": "KOR" }],
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "PAR",
-              "home_score": 7,
-              "away_score": 3,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
-            },
-            {
-              "home_team": "YUG-1946-1963",
-              "away_team": "SCO",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Arosvallen",
-              "city": "Västerås"
-            },
-            {
-              "home_team": "YUG-1946-1963",
-              "away_team": "FRA",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Arosvallen",
-              "city": "Västerås"
-            },
-            {
-              "home_team": "PAR",
-              "away_team": "SCO",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "SCO",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Eyravallen",
-              "city": "Örebro"
-            },
-            {
-              "home_team": "PAR",
-              "away_team": "YUG-1946-1963",
-              "home_score": 3,
-              "away_score": 3,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Tunavallen",
-              "city": "Eskilstuna"
-            }
-          ]
-        },
-        {
-          "name": "Group 3",
-          "teams": [{ "id": "SWE" }, { "id": "MEX" }, { "id": "HUN" }, { "id": "WAL-1953-1959" }],
-          "matches": [
-            {
-              "home_team": "SWE",
-              "away_team": "MEX",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1958-06-08",
-              "time": "14:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "HUN",
-              "away_team": "WAL-1953-1959",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Jernvallen",
-              "city": "Sandviken"
-            },
-            {
-              "home_team": "MEX",
-              "away_team": "WAL-1953-1959",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "HUN",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1958-06-12",
-              "time": "19:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "WAL-1953-1959",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1958-06-15",
-              "time": "14:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "HUN",
-              "away_team": "MEX",
+              "home_team": "GER-1949-1990",
+              "away_team": "TUR",
               "home_score": 4,
-              "away_score": 0,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Jernvallen",
-              "city": "Sandviken"
+              "away_score": 1,
+              "date": "1954-06-17",
+              "time": "18:00",
+              "stadium": "Wankdorf Stadium",
+              "city": "Bern"
             },
             {
-              "home_team": "WAL-1953-1959",
-              "away_team": "HUN",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1958-06-17",
-              "time": "19:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna",
+              "home_team": "HUN-1949-1956",
+              "away_team": "KOR",
+              "home_score": 9,
+              "away_score": 0,
+              "date": "1954-06-17",
+              "time": "18:00",
+              "stadium": "Hardturm",
+              "city": "Zurich"
+            },
+            {
+              "home_team": "HUN-1949-1956",
+              "away_team": "GER-1949-1990",
+              "home_score": 8,
+              "away_score": 3,
+              "date": "1954-06-20",
+              "time": "16:50",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel"
+            },
+            {
+              "home_team": "TUR",
+              "away_team": "KOR",
+              "home_score": 7,
+              "away_score": 0,
+              "date": "1954-06-20",
+              "time": "17:00",
+              "stadium": "Charmilles Stadium",
+              "city": "Geneva"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "TUR",
+              "home_score": 7,
+              "away_score": 2,
+              "date": "1954-06-23",
+              "time": "18:00",
+              "stadium": "Hardturm",
+              "city": "Zurich",
               "group_playoff": true
             }
           ]
         },
         {
-          "name": "Group 4",
-          "teams": [{ "id": "BRA" }, { "id": "AUT" }, { "id": "URS" }, { "id": "ENG" }],
+          "name": "Group 3",
+          "teams": [{ "id": "URU" }, { "id": "TCH" }, { "id": "AUT" }, { "id": "SCO" }],
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "AUT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Rimnersvallen",
-              "city": "Uddevalla"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "ENG",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1958-06-08",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "ENG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "AUT",
+              "home_team": "URU",
+              "away_team": "TCH",
               "home_score": 2,
               "away_score": 0,
-              "date": "1958-06-11",
-              "time": "19:00",
-              "stadium": "Ryavallen",
-              "city": "Borås"
+              "date": "1954-06-16",
+              "time": "18:00",
+              "stadium": "Wankdorf Stadium",
+              "city": "Bern"
+            },
+            {
+              "home_team": "AUT",
+              "away_team": "SCO",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1954-06-16",
+              "time": "18:00",
+              "stadium": "Hardturm",
+              "city": "Zurich"
+            },
+            {
+              "home_team": "URU",
+              "away_team": "SCO",
+              "home_score": 7,
+              "away_score": 0,
+              "date": "1954-06-19",
+              "time": "16:50",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel"
+            },
+            {
+              "home_team": "AUT",
+              "away_team": "TCH",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "1954-06-19",
+              "time": "17:00",
+              "stadium": "Hardturm",
+              "city": "Zurich"
+            }
+          ]
+        },
+        {
+          "name": "Group 4",
+          "teams": [{ "id": "SUI" }, { "id": "ITA" }, { "id": "ENG" }, { "id": "BEL" }],
+          "matches": [
+            {
+              "home_team": "SUI",
+              "away_team": "ITA",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1954-06-17",
+              "time": "17:50",
+              "stadium": "Stade Olympique de la Pontaise",
+              "city": "Lausanne"
             },
             {
               "home_team": "ENG",
-              "away_team": "AUT",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Ryavallen",
-              "city": "Borås"
+              "away_team": "BEL",
+              "home_score": 3,
+              "away_score": 3,
+              "home_extra_score": 1,
+              "away_extra_score": 1,
+              "date": "1954-06-17",
+              "time": "18:10",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel"
             },
             {
-              "home_team": "BRA",
-              "away_team": "URS",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1958-06-15",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
+              "home_team": "ITA",
+              "away_team": "BEL",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "1954-06-20",
+              "time": "17:00",
+              "stadium": "Cornaredo Stadium",
+              "city": "Lugano"
             },
             {
-              "home_team": "URS",
-              "away_team": "ENG",
-              "home_score": 1,
+              "home_team": "ENG",
+              "away_team": "SUI",
+              "home_score": 2,
               "away_score": 0,
-              "date": "1958-06-17",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg",
+              "date": "1954-06-20",
+              "time": "17:10",
+              "stadium": "Wankdorf Stadium",
+              "city": "Bern"
+            },
+            {
+              "home_team": "SUI",
+              "away_team": "ITA",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "1954-06-23",
+              "time": "18:00",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel",
               "group_playoff": true
             }
           ]
@@ -326,48 +238,48 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "WAL-1953-1959",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1958-06-19",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "NIR",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1958-06-19",
-              "time": "19:00",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping",
+              "home_team": "AUT",
+              "away_team": "SUI",
+              "home_score": 7,
+              "away_score": 5,
+              "date": "1954-06-26",
+              "time": "17:00",
+              "stadium": "Stade Olympique de la Pontaise",
+              "city": "Lausanne",
               "bracket_order": 2
             },
             {
-              "home_team": "SWE",
-              "away_team": "URS",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1958-06-19",
-              "time": "19:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna",
-              "bracket_order": 3
+              "home_team": "URU",
+              "away_team": "ENG",
+              "home_score": 4,
+              "away_score": 2,
+              "date": "1954-06-26",
+              "time": "17:00",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel",
+              "bracket_order": 4
             },
             {
               "home_team": "GER-1949-1990",
               "away_team": "YUG-1946-1963",
-              "home_score": 1,
+              "home_score": 2,
               "away_score": 0,
-              "date": "1958-06-19",
-              "time": "19:00",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö",
-              "bracket_order": 4
+              "date": "1954-06-27",
+              "time": "17:00",
+              "stadium": "Charmilles Stadium",
+              "city": "Geneva",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "HUN-1949-1956",
+              "away_team": "BRA",
+              "home_score": 4,
+              "away_score": 2,
+              "date": "1954-06-27",
+              "time": "17:00",
+              "stadium": "Wankdorf Stadium",
+              "city": "Bern",
+              "bracket_order": 3
             }
           ]
         },
@@ -378,25 +290,27 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "FRA",
-              "home_score": 5,
-              "away_score": 2,
-              "date": "1958-06-24",
-              "time": "19:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna",
+              "home_team": "GER-1949-1990",
+              "away_team": "AUT",
+              "home_score": 6,
+              "away_score": 1,
+              "date": "1954-06-30",
+              "time": "18:00",
+              "stadium": "St. Jakob Stadium",
+              "city": "Basel",
               "bracket_order": 1
             },
             {
-              "home_team": "SWE",
-              "away_team": "GER-1949-1990",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1958-06-24",
-              "time": "19:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg",
+              "home_team": "HUN-1949-1956",
+              "away_team": "URU",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "1954-06-30",
+              "time": "18:00",
+              "stadium": "Stade Olympique de la Pontaise",
+              "city": "Lausanne",
               "bracket_order": 2
             }
           ]
@@ -406,14 +320,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "GER-1949-1990",
-              "home_score": 6,
-              "away_score": 3,
-              "date": "1958-06-28",
+              "home_team": "AUT",
+              "away_team": "URU",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1954-07-03",
               "time": "17:00",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
+              "stadium": "Hardturm",
+              "city": "Zurich"
             }
           ]
         },
@@ -422,14 +336,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "SWE",
-              "home_score": 5,
+              "home_team": "GER-1949-1990",
+              "away_team": "HUN-1949-1956",
+              "home_score": 3,
               "away_score": 2,
-              "date": "1958-06-29",
-              "time": "15:00",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
+              "date": "1954-07-04",
+              "time": "17:00",
+              "stadium": "Wankdorf Stadium",
+              "city": "Bern"
             }
           ]
         }

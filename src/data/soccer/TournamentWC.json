@@ -968,7 +968,45 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1954.png", "start_date": "1954-06-16", "end_date": "1954-07-04" }
+    "tiebreakers": ["lotgroupplayoff"],
+    "details": {
+      "host": ["SUI"],
+      "logo_filename": "1954_FIFA_World_Cup.jpg",
+      "start_date": "1954-06-16",
+      "end_date": "1954-07-04",
+      "color": "#dc171e",
+      "team_count": 16,
+      "confed_count": 4,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Les_deux_capitaines_de_la_finale_de_Coupe_du_monde_de_football_1954_(G._Walter,_D._Puskas,_arbitre_Orlandini).jpg",
+        "text": "The captains Fritz Walter and Ferenc Puskás with referee Ling (Liebig football card from 1966)"
+      },
+      {
+        "name": "Wankdorf Stadium, Bern",
+        "filename": "lossy-page1-2722px-ETH-BIB-Bern,_Wankdorf-Stadion,_Fussballspiel-LBS_H1-016067_crop.tif.jpg",
+        "text": "The Wankdorf Stadium held the final"
+      },
+      {
+        "name": "St. Jakob Stadium, Basel",
+        "filename": "lossy-page1-3129px-ETH-BIB-Basel,_St._Jakob,_Stadion,_Fussballspiel-LBS_H1-016082.tif.jpg",
+        "text": "The St. Jakob Stadium held the semi-final match between Sweden and Germany"
+      }
+    ],
+    "final_standings": { "champions": "GER-1949-1990", "runners_up": "HUN-1949-1956", "third_place": "AUT", "fourth_place": "URU" },
+    "statistics": { "total_matches": 26, "total_goals": 140, "attendance": 768607 },
+    "awards": {
+      "golden_boot": [{ "player": "Sándor Kocsis", "team": "HUN-1949-1956", "goals": 11 }],
+      "silver_boot": [
+        { "player": "Erich Probst", "team": "AUT" },
+        { "player": "Josef Hügi", "team": "SUI" },
+        { "player": "Max Morlock", "team": "GER-1949-1990" }
+      ]
+    }
   },
   {
     "id": "WC1950",

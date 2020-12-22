@@ -157,6 +157,7 @@
   { "id": "YUG-1946-1963", "name": "Yugoslavia", "team_type_id": "MNT", "nation_id": "YUG-1946-1963", "parent_team_id": "SRB" },
   { "id": "WAL", "name": "Wales", "team_type_id": "MNT", "nation_id": "WAL", "parent_team_id": "" },
   { "id": "WAL-1953-1959", "name": "Wales", "team_type_id": "MNT", "nation_id": "WAL-1953-1959", "parent_team_id": "WAL" },
+  { "id": "HUN-1949-1956", "name": "Hungary", "team_type_id": "MNT", "nation_id": "HUN-1949-1956", "parent_team_id": "HUN" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -404,7 +405,6 @@
   { "id": "1046", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "235", "parent_team_id": "1043" },
   { "id": "1048", "name": "Italy", "team_type_id": "MNT", "nation_id": "244", "parent_team_id": "203" },
   { "id": "1049", "name": "Germany", "team_type_id": "MNT", "nation_id": "245", "parent_team_id": "2" },
-  { "id": "1051", "name": "Hungary", "team_type_id": "MNT", "nation_id": "248", "parent_team_id": "233" },
   { "id": "1052", "name": "Egypt", "team_type_id": "MNT", "nation_id": "249", "parent_team_id": "8" },
   { "id": "1053", "name": "Germany", "team_type_id": "MNT", "nation_id": "246", "parent_team_id": "2" },
   { "id": "1054", "name": "Spain", "team_type_id": "MNT", "nation_id": "252", "parent_team_id": "6" },

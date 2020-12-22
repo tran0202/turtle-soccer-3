@@ -1,5 +1,5 @@
 {
-  "id": "WC1970",
+  "id": "WC1958",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,266 +16,300 @@
       "groups": [
         {
           "name": "Group 1",
-          "tiebreak_pts_gd": true,
-          "teams": [{ "id": "MEX" }, { "id": "URS" }, { "id": "BEL" }, { "id": "SLV" }],
+          "teams": [{ "id": "ARG" }, { "id": "GER-1949-1990" }, { "id": "NIR" }, { "id": "TCH" }],
           "matches": [
             {
-              "home_team": "MEX",
-              "away_team": "URS",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1970-05-31",
-              "time": "12:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
+              "home_team": "ARG",
+              "away_team": "GER-1949-1990",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Malmö Stadion",
+              "city": "Malmö"
             },
             {
-              "home_team": "BEL",
-              "away_team": "SLV",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1970-06-03",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "BEL",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1970-06-06",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
-            },
-            {
-              "home_team": "MEX",
-              "away_team": "SLV",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1970-06-07",
-              "time": "12:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
-            },
-            {
-              "home_team": "URS",
-              "away_team": "SLV",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1970-06-10",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
-            },
-            {
-              "home_team": "MEX",
-              "away_team": "BEL",
+              "home_team": "NIR",
+              "away_team": "TCH",
               "home_score": 1,
               "away_score": 0,
-              "date": "1970-06-11",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Örjans Vall",
+              "city": "Halmstad"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "TCH",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Olympiastadion",
+              "city": "Helsingborg"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "NIR",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Örjans Vall",
+              "city": "Halmstad"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "NIR",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Malmö Stadion",
+              "city": "Malmö"
+            },
+            {
+              "home_team": "TCH",
+              "away_team": "ARG",
+              "home_score": 6,
+              "away_score": 1,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Olympiastadion",
+              "city": "Helsingborg"
+            },
+            {
+              "home_team": "NIR",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 1,
+              "away_extra_score": 0,
+              "date": "1958-06-17",
+              "time": "19:00",
+              "stadium": "Malmö Stadion",
+              "city": "Malmö",
+              "group_playoff": true
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "URU" }, { "id": "ISR" }, { "id": "ITA" }, { "id": "SWE" }],
+          "teams": [{ "id": "FRA" }, { "id": "PAR" }, { "id": "YUG-1946-1963" }, { "id": "SCO" }],
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "ISR",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1970-06-02",
-              "time": "16:00",
-              "stadium": "Estadio Cuauhtemoc",
-              "city": "Puebla"
+              "home_team": "FRA",
+              "away_team": "PAR",
+              "home_score": 7,
+              "away_score": 3,
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Idrottsparken",
+              "city": "Norrköping"
             },
             {
-              "home_team": "ITA",
-              "away_team": "SWE",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1970-06-03",
-              "time": "16:00",
-              "stadium": "Estadio Luis Dosal",
-              "city": "Toluca"
-            },
-            {
-              "home_team": "URU",
-              "away_team": "ITA",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1970-06-06",
-              "time": "16:00",
-              "stadium": "Estadio Cuauhtemoc",
-              "city": "Puebla"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "ISR",
+              "home_team": "YUG-1946-1963",
+              "away_team": "SCO",
               "home_score": 1,
               "away_score": 1,
-              "date": "1970-06-07",
-              "time": "12:00",
-              "stadium": "Estadio Luis Dosal",
-              "city": "Toluca"
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Arosvallen",
+              "city": "Västerås"
             },
             {
-              "home_team": "SWE",
-              "away_team": "URU",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1970-06-10",
-              "time": "16:00",
-              "stadium": "Estadio Cuauhtemoc",
-              "city": "Puebla"
+              "home_team": "YUG-1946-1963",
+              "away_team": "FRA",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Arosvallen",
+              "city": "Västerås"
             },
             {
-              "home_team": "ITA",
-              "away_team": "ISR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1970-06-11",
-              "time": "16:00",
-              "stadium": "Estadio Luis Dosal",
-              "city": "Toluca"
+              "home_team": "PAR",
+              "away_team": "SCO",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Idrottsparken",
+              "city": "Norrköping"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "SCO",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Eyravallen",
+              "city": "Örebro"
+            },
+            {
+              "home_team": "PAR",
+              "away_team": "YUG-1946-1963",
+              "home_score": 3,
+              "away_score": 3,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Tunavallen",
+              "city": "Eskilstuna"
             }
           ]
         },
         {
           "name": "Group 3",
-          "teams": [{ "id": "ROU-1965-1989" }, { "id": "ENG" }, { "id": "TCH" }, { "id": "BRA" }],
+          "teams": [{ "id": "SWE" }, { "id": "MEX" }, { "id": "HUN" }, { "id": "WAL-1953-1959" }],
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "ROU-1965-1989",
-              "home_score": 1,
+              "home_team": "SWE",
+              "away_team": "MEX",
+              "home_score": 3,
               "away_score": 0,
-              "date": "1970-06-02",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
+              "date": "1958-06-08",
+              "time": "14:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna"
             },
             {
-              "home_team": "BRA",
-              "away_team": "TCH",
-              "home_score": 4,
+              "home_team": "HUN",
+              "away_team": "WAL-1953-1959",
+              "home_score": 1,
               "away_score": 1,
-              "date": "1970-06-03",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Jernvallen",
+              "city": "Sandviken"
             },
             {
-              "home_team": "ROU-1965-1989",
-              "away_team": "TCH",
+              "home_team": "MEX",
+              "away_team": "WAL-1953-1959",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna"
+            },
+            {
+              "home_team": "SWE",
+              "away_team": "HUN",
               "home_score": 2,
               "away_score": 1,
-              "date": "1970-06-06",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
+              "date": "1958-06-12",
+              "time": "19:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna"
             },
             {
-              "home_team": "BRA",
-              "away_team": "ENG",
-              "home_score": 1,
+              "home_team": "SWE",
+              "away_team": "WAL-1953-1959",
+              "home_score": 0,
               "away_score": 0,
-              "date": "1970-06-07",
-              "time": "12:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
+              "date": "1958-06-15",
+              "time": "14:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna"
             },
             {
-              "home_team": "BRA",
-              "away_team": "ROU-1965-1989",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1970-06-10",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "TCH",
-              "home_score": 1,
+              "home_team": "HUN",
+              "away_team": "MEX",
+              "home_score": 4,
               "away_score": 0,
-              "date": "1970-06-11",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara"
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Jernvallen",
+              "city": "Sandviken"
+            },
+            {
+              "home_team": "WAL-1953-1959",
+              "away_team": "HUN",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1958-06-17",
+              "time": "19:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna",
+              "group_playoff": true
             }
           ]
         },
         {
           "name": "Group 4",
-          "teams": [{ "id": "PER" }, { "id": "BUL-1967-1971" }, { "id": "GER-1949-1990" }, { "id": "MAR" }],
+          "teams": [{ "id": "BRA" }, { "id": "AUT" }, { "id": "URS" }, { "id": "ENG" }],
           "matches": [
             {
-              "home_team": "PER",
-              "away_team": "BUL-1967-1971",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1970-06-02",
-              "time": "16:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "MAR",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1970-06-03",
-              "time": "16:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
-            },
-            {
-              "home_team": "PER",
-              "away_team": "MAR",
+              "home_team": "BRA",
+              "away_team": "AUT",
               "home_score": 3,
               "away_score": 0,
-              "date": "1970-06-06",
-              "time": "16:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Rimnersvallen",
+              "city": "Uddevalla"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "BUL-1967-1971",
-              "home_score": 5,
+              "home_team": "URS",
+              "away_team": "ENG",
+              "home_score": 2,
               "away_score": 2,
-              "date": "1970-06-07",
-              "time": "12:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
+              "date": "1958-06-08",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "PER",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1970-06-10",
-              "time": "16:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
+              "home_team": "BRA",
+              "away_team": "ENG",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg"
             },
             {
-              "home_team": "BUL-1967-1971",
-              "away_team": "MAR",
+              "home_team": "URS",
+              "away_team": "AUT",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1958-06-11",
+              "time": "19:00",
+              "stadium": "Ryavallen",
+              "city": "Borås"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "AUT",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Ryavallen",
+              "city": "Borås"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "URS",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1958-06-15",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg"
+            },
+            {
+              "home_team": "URS",
+              "away_team": "ENG",
               "home_score": 1,
-              "away_score": 1,
-              "date": "1970-06-11",
-              "time": "16:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León"
+              "away_score": 0,
+              "date": "1958-06-17",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg",
+              "group_playoff": true
             }
           ]
         }
@@ -292,51 +326,47 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "URS",
-              "away_team": "URU",
-              "home_score": 0,
+              "home_team": "BRA",
+              "away_team": "WAL-1953-1959",
+              "home_score": 1,
               "away_score": 0,
-              "home_extra_score": 0,
-              "away_extra_score": 1,
-              "date": "1970-06-14",
-              "time": "12:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City",
+              "date": "1958-06-19",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg",
               "bracket_order": 1
             },
             {
-              "home_team": "ITA",
-              "away_team": "MEX",
+              "home_team": "FRA",
+              "away_team": "NIR",
               "home_score": 4,
-              "away_score": 1,
-              "date": "1970-06-14",
-              "time": "12:00",
-              "stadium": "Estadio Luis Dosal",
-              "city": "Toluca",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "PER",
-              "home_score": 4,
-              "away_score": 2,
-              "date": "1970-06-14",
-              "time": "12:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara",
+              "away_score": 0,
+              "date": "1958-06-19",
+              "time": "19:00",
+              "stadium": "Idrottsparken",
+              "city": "Norrköping",
               "bracket_order": 2
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "ENG",
+              "home_team": "SWE",
+              "away_team": "URS",
               "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "1970-06-14",
-              "time": "12:00",
-              "stadium": "Estadio Nou Camp",
-              "city": "León",
+              "away_score": 0,
+              "date": "1958-06-19",
+              "time": "19:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "YUG-1946-1963",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1958-06-19",
+              "time": "19:00",
+              "stadium": "Malmö Stadion",
+              "city": "Malmö",
               "bracket_order": 4
             }
           ]
@@ -348,27 +378,25 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "BRA",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1970-06-17",
-              "time": "16:00",
-              "stadium": "Estadio Jalisco",
-              "city": "Guadalajara",
+              "home_team": "BRA",
+              "away_team": "FRA",
+              "home_score": 5,
+              "away_score": 2,
+              "date": "1958-06-24",
+              "time": "19:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna",
               "bracket_order": 1
             },
             {
-              "home_team": "ITA",
+              "home_team": "SWE",
               "away_team": "GER-1949-1990",
-              "home_score": 1,
+              "home_score": 3,
               "away_score": 1,
-              "home_extra_score": 3,
-              "away_extra_score": 2,
-              "date": "1970-06-17",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City",
+              "date": "1958-06-24",
+              "time": "19:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg",
               "bracket_order": 2
             }
           ]
@@ -378,14 +406,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "URU",
+              "home_team": "FRA",
               "away_team": "GER-1949-1990",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1970-06-20",
-              "time": "16:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
+              "home_score": 6,
+              "away_score": 3,
+              "date": "1958-06-28",
+              "time": "17:00",
+              "stadium": "Ullevi",
+              "city": "Gothenburg"
             }
           ]
         },
@@ -395,13 +423,13 @@
           "matches": [
             {
               "home_team": "BRA",
-              "away_team": "ITA",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "1970-06-21",
-              "time": "12:00",
-              "stadium": "Estadio Azteca",
-              "city": "Mexico City"
+              "away_team": "SWE",
+              "home_score": 5,
+              "away_score": 2,
+              "date": "1958-06-29",
+              "time": "15:00",
+              "stadium": "Råsunda Stadium",
+              "city": "Solna"
             }
           ]
         }
