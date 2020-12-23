@@ -1108,7 +1108,43 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1934.png", "start_date": "1934-05-27", "end_date": "1934-06-10" }
+    "details": {
+      "host": ["ITA-1861-1946"],
+      "logo_filename": "1934_FIFA_World_Cup.jpg",
+      "start_date": "1934-05-27",
+      "end_date": "1934-06-10",
+      "color": "#3d8e2b",
+      "team_count": 16,
+      "confed_count": 4,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "1934_FIFA_World_Cup_Final_-_Italy_v_Czechoslovakia_-_Pozzo,_Monzeglio,_Bertolini,_Combi,_Monti_and_Carcano.jpg",
+        "text": "From left to right: Italian manager Pozzo, Monzeglio, Bertolini, the goalkeeper and captain Combi, Monti (half-hidden) and the assistant manager Carcano (behind) before the start of extra time in the victorius final versus Czechoslovakia"
+      },
+      {
+        "name": "Stadio Nazionale PNF, Rome",
+        "filename": "Stadio_Pnf.jpg",
+        "text": "The Stadio Nazionale PNF held the final."
+      },
+      {
+        "name": "Stadio San Siro, Milan",
+        "filename": "StadioMilano1934.jpg",
+        "text": "The Stadio San Siro held the semi-final between Italy and Austria."
+      }
+    ],
+    "final_standings": { "champions": "ITA-1861-1946", "runners_up": "TCH", "third_place": "GER-1933-1935", "fourth_place": "AUT" },
+    "statistics": { "total_matches": 17, "total_goals": 70, "attendance": 363000 },
+    "awards": {
+      "golden_boot": [{ "player": "Oldřich Nejedlý", "team": "TCH", "goals": 5 }],
+      "silver_boot": [
+        { "player": "Edmund Conen", "team": "GER-1933-1935" },
+        { "player": "Angelo Schiavio", "team": "ITA-1861-1946" }
+      ]
+    }
   },
   {
     "id": "WC1930",
