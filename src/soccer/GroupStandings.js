@@ -7,11 +7,12 @@ import ordinalize from 'ordinalize'
 
 const GroupStandings = (props) => {
   const { config, stage } = props
-  const { groups, advancement, show_match_year } = stage
+  // console.log('stage', stage)
+  const { groups, advancement, show_match_year, championship_round } = stage
   const wildCardPos = groups && hasWildCardAdvancement(stage) ? advancement.teams.wild_card.pos : 3
   return (
     <React.Fragment>
-      {groups && groups.map((g) => <GroupPlay group={g} config={{ ...config, show_match_year }} key={g.name} />)}
+      {groups && groups.map((g) => <GroupPlay group={g} config={{ ...config, show_match_year, championship_round }} key={g.name} />)}
       {groups && hasWildCardAdvancement(stage) && (
         <React.Fragment>
           <Row>

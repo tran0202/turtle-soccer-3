@@ -194,6 +194,25 @@ const createFinalRankings = (tournament, round) => {
   }
 }
 
+const createFinalRoundRankings = (tournament, groupStage, group) => {
+  if (!tournament.progress_rankings || !tournament.progress_rankings.teams) return
+  if (!group.final_rankings) return
+  if (!tournament.final_rankings) {
+    tournament.final_rankings = {}
+  }
+  if (!tournament.final_rankings.rounds) {
+    tournament.final_rankings.rounds = []
+  }
+  // console.log('group.final_rankings', group.final_rankings)
+  tournament.final_rankings.rounds.unshift({ name: groupStage.name, ranking_type: 'round', final_rankings: [] })
+  const finalRound = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
+  group.final_rankings.forEach((fr, index) => {
+    const teamProgess = tournament.progress_rankings.teams.find((t) => t.id === fr.id)
+    const teamRanking = teamProgess.rankings ? teamProgess.rankings[teamProgess.rankings.length - 1] : {}
+    finalRound.final_rankings.push({ ...teamRanking, r: index + 1 })
+  })
+}
+
 export const findRoundFinalRanking = (tournament, name) => {
   return tournament.final_rankings && tournament.final_rankings.rounds.find((r) => r.name === name)
 }
@@ -210,21 +229,23 @@ const FinalStandings = (props) => {
   const rrStages = getRoundRobinStages(stages)
   rrStages &&
     rrStages.forEach((groupStage) => {
+      // console.log('groupStage', groupStage)
       if (groupStage.groups) {
         groupStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
           collectGroupRankings(tournament, g, 3)
           g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
-          eliminateGroupTeams(tournament, groupStage, g)
+          !groupStage.championship_round && eliminateGroupTeams(tournament, groupStage, g)
+          groupStage.championship_round && createFinalRoundRankings(tournament, groupStage, g)
         })
-        groupStage.groups.forEach((g) => {
-          advanceGroupTeams(tournament, groupStage, g)
-        })
+        !groupStage.championship_round &&
+          groupStage.groups.forEach((g) => {
+            advanceGroupTeams(tournament, groupStage, g)
+          })
         advanceWildCardTeams(tournament, groupStage)
-        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1, null)
+        !groupStage.championship_round && sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1, null)
       }
     })
-  // console.log('tournament.final_rankings', tournament.final_rankings)
 
   const koStages = getKnockoutStages(stages)
   const koStage = koStages ? koStages[0] : null

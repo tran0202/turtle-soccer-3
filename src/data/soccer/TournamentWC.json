@@ -1016,7 +1016,42 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1950.png", "start_date": "1950-06-24", "end_date": "1950-07-16" }
+    "tiebreakers": ["1stplaceplayoff"],
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "1950.png",
+      "start_date": "1950-06-24",
+      "end_date": "1950-07-16",
+      "color": "#15611e",
+      "team_count": 13,
+      "confed_count": 3,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Gol_ghiggia_vs_brasil.jpg",
+        "text": "Uruguayan forward Alcides Ghiggia celebrates after scoring the 2nd goal"
+      },
+      {
+        "name": "Maracana Stadium, Rio de Janeiro",
+        "filename": "lossy-page1-1521px-Jogo_no_Estádio_do_Maracanã,_antes_da_Copa_do_Mundo_de_1950.tif.jpg",
+        "text": "The Maracana Stadium held the opening match and the final round."
+      },
+      {
+        "name": "Brazil 1950 stamp",
+        "filename": "Selo_da_Copa_de_1950_Cr_1,20.jpg",
+        "text": "A 1950 Brazilian stamp promoting the tournament."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "BRA", "third_place": "SWE", "fourth_place": "ESP-1945-1977" },
+    "statistics": { "total_matches": 22, "total_goals": 88, "attendance": 1045246 },
+    "awards": {
+      "golden_boot": [{ "player": "Ademir", "team": "BRA", "goals": 8 }],
+      "silver_boot": [{ "player": "Óscar Míguez", "team": "URU" }],
+      "bronze_boot": [{ "player": "Estanislau Basora", "team": "ESP-1945-1977" }]
+    }
   },
   {
     "id": "WC1938",

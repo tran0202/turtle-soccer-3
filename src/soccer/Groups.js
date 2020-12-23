@@ -35,6 +35,7 @@ const TournamentFormat = (props) => {
                 {config.groupCount > 1 && (
                   <React.Fragment>
                     {config.totalCount} teams were divided into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
+                    {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals).&nbsp;</React.Fragment>}
                     {!config.odd_format && <React.Fragment>Each group played a round-robin schedule.</React.Fragment>}
                     {config.odd_format}
                   </React.Fragment>
@@ -59,7 +60,13 @@ const TournamentFormat = (props) => {
               <ul className="no-margin-bottom">
                 {config.tiebreakers &&
                   config.tiebreakers.map((tb, index) => {
-                    if (tb === 'team') {
+                    if (tb === 'points') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points</li>
+                        </React.Fragment>
+                      )
+                    } else if (tb === 'team') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points</li>
@@ -85,7 +92,7 @@ const TournamentFormat = (props) => {
                       return (
                         <React.Fragment key={index}>
                           <li>Points</li>
-                          <li>Overall goal ratio if the first 2 teams on equal points</li>
+                          <li>Overall goal ratio if the top 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
                           <li>Goal ratio from group matches if the playoff match ends with a draw</li>
                         </React.Fragment>
@@ -94,8 +101,15 @@ const TournamentFormat = (props) => {
                       return (
                         <React.Fragment key={index}>
                           <li>Points</li>
-                          <li>Drawing lots if the first 2 teams on equal points</li>
+                          <li>Drawing lots if the top 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
+                        </React.Fragment>
+                      )
+                    } else if (tb === '1stplaceplayoff') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points</li>
+                          <li>Playoff match if the top 2 teams on equal points</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'firstroundposition') {

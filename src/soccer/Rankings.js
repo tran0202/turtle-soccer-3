@@ -17,7 +17,8 @@ const RankingRowSeparate = (props) => {
   return (
     round.ranking_type === 'round' &&
     round.name !== 'Final' &&
-    round.name !== 'Third place' && (
+    round.name !== 'Third place' &&
+    round.name !== 'Final Round' && (
       <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
         <Col xs="12" className="font-italic gray3">
           {round.name}
@@ -98,13 +99,13 @@ const RankingRow2 = (props) => {
 
 export const RankingRow = (props) => {
   const { row, config } = props
-  const { ranking_type } = config
-  // console.log('ranking_type', ranking_type)
+  const { ranking_type, championship_round } = config
+  // console.log('championship_round', championship_round)
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
-  const gold = ranking_type === 'round' && row.r === 1 ? ' gold' : ''
-  const silver = ranking_type === 'round' && row.r === 2 ? ' silver' : ''
-  const bronze = ranking_type === 'round' && row.r === 3 ? ' bronze' : ''
+  const gold = (ranking_type === 'round' || championship_round) && row.r === 1 ? ' gold' : ''
+  const silver = (ranking_type === 'round' || championship_round) && row.r === 2 ? ' silver' : ''
+  const bronze = (ranking_type === 'round' || championship_round) && row.r === 3 ? ' bronze' : ''
   return (
     <Row className={`no-gutters ranking-tbl team-row text-center${row_striped}${gold}${silver}${bronze}`}>
       <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>
