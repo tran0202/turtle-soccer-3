@@ -27,8 +27,14 @@ export const hasGroupPlayoff = (group) => {
   return group.matches.find((m) => m.group_playoff) !== undefined
 }
 
+export const hasReplay = (round) => {
+  if (!round.matches) return false
+  return round.matches.find((m) => m.replay) !== undefined
+}
+
 const accumulateRanking = (team, match, config) => {
   if (!team) return
+  if (match.walkover) return
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++
@@ -117,7 +123,7 @@ const accumulateRanking = (team, match, config) => {
   team.h2hm.push(match)
 }
 
-const getBlankRanking = (teamId) => {
+export const getBlankRanking = (teamId) => {
   return { id: teamId, md: 0, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, gr: null, pts: 0, fp: null, h2hm: [] }
 }
 
@@ -147,8 +153,10 @@ const calculateTeamRanking = (container, team, match, config) => {
 export const calculateRoundRankings = (container, teams, matches, config) => {
   matches &&
     matches.forEach((m) => {
-      calculateTeamRanking(container, findTeam(teams, m.home_team), m, config)
-      calculateTeamRanking(container, findTeam(teams, m.away_team), m, config)
+      if (!m.walkover) {
+        calculateTeamRanking(container, findTeam(teams, m.home_team), m, config)
+        calculateTeamRanking(container, findTeam(teams, m.away_team), m, config)
+      }
     })
 }
 
@@ -202,7 +210,6 @@ const drawingLots = (a, b) => {
     return -1
   }
   // Switzerland 1954
-  // console.log('a', a)
   if (a.id === 'YUG-1946-1963' && b.id === 'BRA') {
     a.draw_lot_notes = 'Yugoslavia took 2nd place after finished level points with Brazil.'
     b.draw_lot_notes = 'Brazil took 1st place after finished level points with Yugoslavia.'

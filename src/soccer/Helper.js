@@ -105,15 +105,19 @@ export const isWinner = (who, match) => {
   if (match) {
     if (who === 'H') {
       return (
+        match.home_walkover ||
         match.home_score > match.away_score ||
         (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
-        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score)
+        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score) ||
+        match.home_replay_score > match.away_replay_score
       )
     } else {
       return (
+        match.away_walkover ||
         match.home_score < match.away_score ||
         (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
-        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score)
+        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score) ||
+        match.home_replay_score < match.away_replay_score
       )
     }
   }
@@ -122,17 +126,25 @@ export const isWinner = (who, match) => {
 export const getMatchArrayByDate = (round, sorted) => {
   let tmp = []
   let tmpPlayoff = []
+  let tmpReplay = []
   round &&
     round.matches &&
     round.matches.forEach((m) => {
-      if (!m.group_playoff) {
+      if (!m.group_playoff && !m.replay) {
         tmp.push(m)
+      } else if (m.replay) {
+        tmpReplay.push(m)
       } else {
         tmpPlayoff.push(m)
       }
     })
-  const tmp2 = [getDateMatchArrayPair(tmp, sorted), { ...getDateMatchArrayPair(tmpPlayoff, sorted), name: 'Playoff' }]
-  return tmpPlayoff.length === 0 ? getDateMatchArrayPair(tmp, sorted) : tmp2
+  if (tmpPlayoff.length === 0 && tmpReplay.length === 0) {
+    return getDateMatchArrayPair(tmp, sorted)
+  } else if (tmpReplay.length > 0) {
+    return [getDateMatchArrayPair(tmp, sorted), { ...getDateMatchArrayPair(tmpReplay, sorted), name: `${round.name} Replay` }]
+  } else {
+    return [getDateMatchArrayPair(tmp, sorted), { ...getDateMatchArrayPair(tmpPlayoff, sorted), name: 'Playoff' }]
+  }
 }
 
 export const getDateMatchArrayPair = (matches_array, sorted) => {
@@ -326,7 +338,11 @@ export const DisplayKnockout2LeggedMatch = (props) => {
   return (
     <React.Fragment>
       <Row className="padding-top-md">
-        <Col className={`team-name text-uppercase text-right team-name-no-padding-right col-box-25${isHomeLoseAggregate(homeLoseData) ? ' gray3' : ''}`}>
+        <Col
+          className={`team-name text-uppercase text-right team-name-no-padding-right col-box-25${
+            isHomeLoseAggregate(homeLoseData) || m.away_walkover ? ' gray3' : ''
+          }`}
+        >
           {getTeamName(m.home_team)}
         </Col>
         <Col className="padding-top-sm text-center col-box-10">
@@ -335,7 +351,12 @@ export const DisplayKnockout2LeggedMatch = (props) => {
         <Col className="score text-center score-no-padding-right col-box-10">
           {m.home_score != null && m.away_score != null && (
             <React.Fragment>
-              {m.home_score}-{m.away_score}
+              {m.walkover && <WalkoverTooltip target={`walkover_${m.home_team}_${m.away_team}`} content={m.walkover} anchor="(w/o)" />}
+              {!m.walkover && (
+                <React.Fragment>
+                  {m.home_score}-{m.away_score}
+                </React.Fragment>
+              )}
               {m.notes_1st_leg && m.notes_1st_leg.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes_1st_leg.text} />}
             </React.Fragment>
           )}
@@ -364,7 +385,9 @@ export const DisplayKnockout2LeggedMatch = (props) => {
         <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
         </Col>
-        <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) ? ' gray3' : ''}`}>{getTeamName(m.away_team)}</Col>
+        <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
+          {getTeamName(m.away_team)}
+        </Col>
       </Row>
       <Row>
         <Col sm={{ size: 6, offset: 6 }} xs={{ size: 6, offset: 6 }} className="aggregate_text margin-top-sm">
@@ -440,7 +463,11 @@ const DisplayMatch = (props) => {
             {m.city}
           </span>
         </Col>
-        <Col sm="3" xs="3" className={`team-name text-uppercase text-right team-name-no-padding-right${isHomeLoseAggregate(homeLoseData) ? ' gray3' : ''}`}>
+        <Col
+          sm="3"
+          xs="3"
+          className={`team-name text-uppercase text-right team-name-no-padding-right${isHomeLoseAggregate(homeLoseData) || m.away_walkover ? ' gray3' : ''}`}
+        >
           {getTeamName(m.home_team)}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
@@ -449,7 +476,12 @@ const DisplayMatch = (props) => {
         <Col sm="2" xs="2" className="score text-center score-no-padding-right">
           {(m.home_extra_score == null || m.away_extra_score == null) && (
             <React.Fragment>
-              {m.home_score}-{m.away_score}
+              {m.walkover && <WalkoverTooltip target={`walkover_${m.home_team}_${m.away_team}`} content={m.walkover} anchor="(w/o)" />}
+              {!m.walkover && (
+                <React.Fragment>
+                  {m.home_score}-{m.away_score}
+                </React.Fragment>
+              )}
             </React.Fragment>
           )}
           {m.home_extra_score != null && m.away_extra_score != null && (
@@ -467,7 +499,7 @@ const DisplayMatch = (props) => {
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
         </Col>
-        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) ? ' gray3' : ''}`}>
+        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
           {getTeamName(m.away_team)}
         </Col>
       </Row>
@@ -546,6 +578,12 @@ export const PenTooltip = (props) => {
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const ReplayTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Replay'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const FairPlayTooltip = (props) => {
   const { target, points } = props
   const content = `Fair play points: ${points}`
@@ -566,7 +604,12 @@ export const DrawLotTooltip = (props) => {
 
 export const AwardedTooltip = (props) => {
   const { target, content } = props
-  return <TopTooltip target={target} content={content} anchor="[awd.]" />
+  return <TopTooltip target={target} content={content} anchor="(awd.)" />
+}
+
+export const WalkoverTooltip = (props) => {
+  const { target, content, anchor } = props
+  return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const WildCardTooltip = (props) => {

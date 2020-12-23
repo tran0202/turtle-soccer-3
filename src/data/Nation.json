@@ -835,9 +835,9 @@
     "id": "INH",
     "name": "Dutch East Indies",
     "official_name": "",
-    "parent_nation_id": "",
+    "parent_nation_id": "IDN",
     "nation_type_id": "NATN",
-    "flag_filename": "inh.png",
+    "flag_filename": "640px-Flag_of_the_Netherlands.svg.png",
     "start_date": "",
     "end_date": ""
   },
@@ -1411,7 +1411,7 @@
     "end_date": "1918-11-16"
   },
   {
-    "id": "HUN-1920-1946",
+    "id": "HUN-1919-1946",
     "name": "Hungary",
     "official_name": "Kingdom of Hungary",
     "parent_nation_id": "HUN",

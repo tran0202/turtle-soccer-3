@@ -1,5 +1,16 @@
 import React, { useState } from 'react'
-import { getFlagSrc, isWinner, getBracketTeamName, getBracketTeamCode, AetTooltip, GoldenGoalTooltip, PenTooltip } from './Helper'
+import {
+  getFlagSrc,
+  isWinner,
+  getBracketTeamName,
+  getBracketTeamCode,
+  AetTooltip,
+  GoldenGoalTooltip,
+  PenTooltip,
+  WalkoverTooltip,
+  ReplayTooltip,
+} from './Helper'
+import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
 import moment from 'moment'
 
@@ -21,6 +32,15 @@ const getExtraTimeTooltip = (match, config) => {
   )
 }
 
+const getMatchDate = (match) => {
+  if (!match) return
+  return (
+    <React.Fragment>
+      {moment(match.date).format('MMMM D')} {match.replay_date && <React.Fragment>({moment(match.replay_date).format('MMMM D')})</React.Fragment>}
+    </React.Fragment>
+  )
+}
+
 const BracketBox = (props) => {
   const { match, colIndex, lastBox, config } = props
   return (
@@ -30,10 +50,10 @@ const BracketBox = (props) => {
           <Row className="no-gutters">
             <Col xs={{ size: 11, offset: 1 }}>
               <span className="box-time d-block d-lg-none">
-                {moment(match.date).format('MMMM D')} | {match.city}
+                {getMatchDate(match)} | {match.city}
               </span>
               <span className="box-time d-none d-lg-block">
-                {moment(match.date).format('MMMM D')} | {match.stadium}, {match.city}
+                {getMatchDate(match)} | {match.stadium}, {match.city}
               </span>
             </Col>
           </Row>
@@ -51,6 +71,9 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.home_team)}
+              {match.walkover && match.home_walkover && (
+                <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w/o)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
@@ -59,9 +82,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.home_team)}
+              {match.walkover && match.home_walkover && (
+                <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
@@ -70,9 +99,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.home_team)}
+              {match.walkover && match.home_walkover && (
+                <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w/o)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
@@ -81,9 +116,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.home_team)}
+              {match.walkover && match.home_walkover && (
+                <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
@@ -92,11 +133,17 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
               &nbsp;
               {getBracketTeamCode(match.home_team)}
+              {match.walkover && match.home_walkover && (
+                <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
@@ -105,16 +152,21 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {match.home_score}
+                {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
               </Col>
             )}
             {match.home_extra_score != null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.home_score) + parseInt(match.home_extra_score)}
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
+                {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
               </Col>
             )}
           </Row>
@@ -132,6 +184,9 @@ const BracketBox = (props) => {
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.away_team)}
+              {match.walkover && match.away_walkover && (
+                <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w/o)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
@@ -140,9 +195,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.away_team)}
+              {match.walkover && match.away_walkover && (
+                <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
@@ -151,9 +212,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.away_team)}
+              {match.walkover && match.away_walkover && (
+                <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w/o)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
@@ -162,9 +229,15 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
+              )}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.away_team)}
+              {match.walkover && match.away_walkover && (
+                <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
@@ -173,11 +246,17 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
               &nbsp;
               {getBracketTeamCode(match.away_team)}
+              {match.walkover && match.away_walkover && (
+                <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w)" />
+              )}
               {match.home_extra_score != null &&
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
@@ -186,16 +265,21 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score === match.away_extra_score &&
                 match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
+                <ReplayTooltip target="replayTooltip" anchor="(r)" />
+              )}
             </Col>
             {match.away_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {match.away_score}
+                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
               </Col>
             )}
             {match.away_extra_score != null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {parseInt(match.away_score) + parseInt(match.away_extra_score)}
                 {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
+                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
               </Col>
             )}
           </Row>
@@ -345,6 +429,34 @@ const BracketHook2 = (props) => {
   )
 }
 
+const attachReplayMatches = (round) => {
+  if (!round.matches) return
+  // console.log('round', round)
+  const roundMatches = round.matches.filter((m) => !m.replay)
+  const replayMatches = round.matches.filter((m) => m.replay)
+  roundMatches.forEach((m) => {
+    const cond1 = (rm) => {
+      return m.home_team === rm.home_team && m.away_team === rm.away_team
+    }
+    const cond2 = (rm) => {
+      return m.home_team === rm.away_team && m.away_team === rm.home_team
+    }
+    const rm = replayMatches.find((rm) => cond1(rm) || cond2(rm))
+    if (rm) {
+      if (m.home_team === rm.home_team && m.away_team === rm.away_team) {
+        m.home_replay_score = rm.home_score
+        m.away_replay_score = rm.away_score
+      } else if (m.home_team === rm.away_team && m.away_team === rm.home_team) {
+        m.home_replay_score = rm.away_score
+        m.away_replay_score = rm.home_score
+      }
+      m.replay_date = rm.date
+      m.replay_time = rm.time
+    }
+  })
+  return { ...round, matches: roundMatches }
+}
+
 const Bracket = (props) => {
   const { stage, config } = props
   const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
@@ -372,7 +484,8 @@ const Bracket = (props) => {
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
         <Row className="no-gutters mb-5">
           {stage.rounds &&
-            stage.rounds.map((r, index) => {
+            stage.rounds.map((_r, index) => {
+              const r = hasReplay(_r) ? attachReplayMatches(_r) : _r
               if (r.matches) {
                 const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
                 // console.log('hookCount', hookCount)

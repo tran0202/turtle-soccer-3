@@ -1,5 +1,6 @@
 import TournamentArray from '../data/soccer/Tournament.json'
 import TournamentWCArray from '../data/soccer/TournamentWC.json'
+import td_WC_1950 from '../data/soccer/tournamentData/td_WC_1950.json'
 import td_WC_1954 from '../data/soccer/tournamentData/td_WC_1954.json'
 import td_WC_1958 from '../data/soccer/tournamentData/td_WC_1958.json'
 import td_WC_1962 from '../data/soccer/tournamentData/td_WC_1962.json'
@@ -21,7 +22,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WC1950', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WC1938', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -30,6 +31,7 @@ export const getTournamentArray = () => {
 
 export const getTournamentDataArray = () => {
   return [].concat(
+    [td_WC_1950],
     [td_WC_1954],
     [td_WC_1958],
     [td_WC_1962],

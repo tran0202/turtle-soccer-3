@@ -28,14 +28,20 @@ const collectRankings = (tournaments) => {
                   _matches.push(m)
                 })
             })
-          s.type === 'knockout' &&
+          if (s.type === 'knockout') {
+            // console.log('s.teams', s.teams)
+            s.teams &&
+              s.teams.forEach((t) => {
+                _teams.push(t)
+              })
             s.rounds &&
-            s.rounds.forEach((r) => {
-              r.matches &&
-                r.matches.forEach((m) => {
-                  _matches.push(m)
-                })
-            })
+              s.rounds.forEach((r) => {
+                r.matches &&
+                  r.matches.forEach((m) => {
+                    _matches.push(m)
+                  })
+              })
+          }
         })
       rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
       collectProgressRankings(t, rankings, 7)

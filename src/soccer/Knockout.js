@@ -1,5 +1,6 @@
 import React from 'react'
 import { DisplaySchedule, getMatchArrayByDate } from './Helper'
+import { hasReplay } from './RankingsHelper'
 import Bracket from './Bracket'
 
 const reorderMatches = (stage) => {
@@ -28,13 +29,19 @@ const Knockout = (props) => {
       <Bracket stage={stage} config={{ goldenGoal: config.golden_goal_rule }} />
       {stage.rounds &&
         stage.rounds.map((r) => {
-          return (
-            <DisplaySchedule
-              round={{ name: r.name, ...getMatchArrayByDate(r, true) }}
-              config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }}
-              key={r.name}
-            />
-          )
+          const matchArray = getMatchArrayByDate(r, true)
+          if (!hasReplay(r)) {
+            return (
+              <DisplaySchedule round={{ name: r.name, ...matchArray }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} key={r.name} />
+            )
+          } else {
+            return (
+              <React.Fragment key={r.name}>
+                <DisplaySchedule round={{ name: r.name, ...matchArray[0] }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} />
+                <DisplaySchedule round={{ ...matchArray[1] }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} />
+              </React.Fragment>
+            )
+          }
         })}
     </React.Fragment>
   )
