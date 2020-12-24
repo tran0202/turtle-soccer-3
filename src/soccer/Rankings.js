@@ -18,6 +18,7 @@ const RankingRowSeparate = (props) => {
     round.ranking_type === 'round' &&
     round.name !== 'Final' &&
     round.name !== 'Third place' &&
+    round.name !== 'Semi-finals' &&
     round.name !== 'Final Round' && (
       <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
         <Col xs="12" className="font-italic gray3">

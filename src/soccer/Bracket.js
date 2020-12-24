@@ -329,11 +329,12 @@ const BracketFinalCol = (props) => {
   // console.log('thirdPlace', thirdPlace)
   return (
     <Col className="col-brk-22">
+      {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
       {config.roundCount === 3 && <Row className="bracket-gap-height-10"></Row>}
       {config.roundCount === 4 && <Row className="bracket-gap-height-20"></Row>}
       {config.roundCount === 5 && <Row className="bracket-gap-height-30"></Row>}
       <BracketColInner round={round} config={config} />
-      <BracketColInner round={thirdPlace} config={config} />
+      {thirdPlace && <BracketColInner round={thirdPlace} config={config} />}
     </Col>
   )
 }
@@ -460,6 +461,7 @@ const attachReplayMatches = (round) => {
 const Bracket = (props) => {
   const { stage, config } = props
   const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
+  // console.log('thirdPlace', thirdPlace)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -488,7 +490,6 @@ const Bracket = (props) => {
               const r = hasReplay(_r) ? attachReplayMatches(_r) : _r
               if (r.matches) {
                 const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
-                // console.log('hookCount', hookCount)
                 if (r.name === 'Third place') {
                   return null
                 } else if (r.name === 'Final') {

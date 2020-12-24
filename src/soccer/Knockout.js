@@ -30,6 +30,7 @@ const Knockout = (props) => {
       {stage.rounds &&
         stage.rounds.map((r) => {
           const matchArray = getMatchArrayByDate(r, true)
+          // console.log('r', r)
           if (!hasReplay(r)) {
             return (
               <DisplaySchedule round={{ name: r.name, ...matchArray }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} key={r.name} />

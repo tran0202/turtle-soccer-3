@@ -288,6 +288,7 @@ const FinalStandings = (props) => {
     if (semifinals) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
       eliminateKnockoutTeams(tournament, semifinals)
+      sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
       advanceThirdPlaceTeams(tournament, semifinals)
     }
 
@@ -295,9 +296,10 @@ const FinalStandings = (props) => {
     if (thirdPlace) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, thirdPlace.name), thirdPlace, config)
       createFinalRankings(tournament, thirdPlace)
-      if (semifinals) {
-        advanceKnockoutTeams(tournament, semifinals)
-      }
+    }
+
+    if (semifinals) {
+      advanceKnockoutTeams(tournament, semifinals)
     }
 
     const final = koStage.rounds.find((r) => r.name === 'Final')
@@ -307,7 +309,11 @@ const FinalStandings = (props) => {
     }
   }
 
-  const filteredRounds = tournament.final_rankings ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semi-finals') : []
+  const hasThirdPlaceRound = tournament.final_rankings ? tournament.final_rankings.rounds.find((r) => r.name === 'Third place') !== undefined : false
+  const filteredRounds =
+    tournament.final_rankings && hasThirdPlaceRound
+      ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semi-finals')
+      : tournament.final_rankings.rounds
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>
