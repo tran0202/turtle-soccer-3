@@ -585,8 +585,8 @@ export const ReplayTooltip = (props) => {
 }
 
 export const FairPlayTooltip = (props) => {
-  const { target, points } = props
-  const content = `Fair play points: ${points}`
+  const { target, fp_notes } = props
+  const content = `Fair play points: ${fp_notes}`
   return <TopTooltip target={target} content={content} />
 }
 

@@ -49,7 +49,7 @@ const collectRankings = (tournaments) => {
     })
 
   let final_rankings = []
-  let allRankings = { final_rankings }
+  let allRankings = { final_rankings, ranking_type: 'alltimeround' }
   rankingArray.forEach((tou) => {
     tou.final_rankings &&
       tou.final_rankings.forEach((fr) => {

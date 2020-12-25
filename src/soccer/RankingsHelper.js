@@ -226,8 +226,12 @@ const drawingLots = (a, b) => {
 
 const compareFairPoints = (a, b) => {
   if (a.fp > b.fp) {
+    a.fp_notes = `${getTeamName(a.id)} ${a.fp}`
+    b.fp_notes = `${getTeamName(b.id)} ${b.fp}`
     return -1
   } else if (a.fp < b.fp) {
+    a.fp_notes = `${getTeamName(a.id)} ${a.fp}`
+    b.fp_notes = `${getTeamName(b.id)} ${b.fp}`
     return 1
   } else {
     return drawingLots(a, b)
@@ -362,7 +366,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
           } else if (a.gf < b.gf) {
             return 1
           } else {
-            if (group.ranking_type === 'round') {
+            if (group.ranking_type === 'round' || group.ranking_type === 'alltimeround') {
               saveDrawTeams(a, b)
               saveDrawTeams(b, a)
             }
@@ -599,6 +603,12 @@ export const updateFinalRankings = (round) => {
         const drawCount = r.draws ? r.draws.length : 0
         if (drawCount > 0) {
           rankingBundle.push(r)
+          rankingBundle.sort((a, b) => {
+            if (a.id > b.id) {
+              return 1
+            }
+            return -1
+          })
         } else {
           if (previousDrawCount > 0) {
             newFinalRankings.push(rankingBundle)

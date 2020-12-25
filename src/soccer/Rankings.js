@@ -87,7 +87,7 @@ const RankingRow2 = (props) => {
       <Col className="col-box-7 padding-top-xxs">
         {row.pts}
         <React.Fragment>
-          {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} points={row.fp} />}
+          {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />}
           {ranking_type === 'group' && row.h2h_notes && (
             <Head2HeadTooltip target={`h2hTooltip-${row.id}`} h2h_notes={row.h2h_notes} group_playoff={row.group_playoff} />
           )}
@@ -139,6 +139,7 @@ const RankingRound = (props) => {
 
 const Rankings = (props) => {
   const { rounds, config } = props
+  // console.log('rounds', rounds)
   const ranking_type = rounds && rounds.length > 0 ? rounds[0].ranking_type : ''
   return (
     <React.Fragment>
