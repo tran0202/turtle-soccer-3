@@ -9,7 +9,13 @@ import Matches from './Matches'
 import Groups from './Groups'
 import FinalStandings from './FinalStandings'
 import Qualification from './Qualification'
-import { getCurrentTournament,getTournamentArray,getTournamentDataArray,getQualificationTournamentArray,getQualificationTournamentDataArray } from './DataHelper'
+import {
+  getCurrentTournament,
+  getTournamentArray,
+  getTournamentDataArray,
+  getQualificationTournamentArray,
+  getQualificationTournamentDataArray,
+} from './DataHelper'
 import { Container } from 'reactstrap'
 
 class TournamentApp extends React.Component {
@@ -20,6 +26,30 @@ class TournamentApp extends React.Component {
       tournament: null,
       tournamentType: null,
     }
+  }
+  getSortedTournamentArray = (tournament_type_id) => {
+    const ta = getTournamentArray().filter((t) => t.tournament_type_id === tournament_type_id)
+    ta.sort((a, b) => {
+      return a > b ? 1 : -1
+    })
+    return ta
+  }
+
+  getPreviousTournament = (tournament_type_id, current_id) => {
+    const ta = this.getSortedTournamentArray(tournament_type_id)
+    const current_tournament_index = ta.findIndex((t) => t.id === current_id)
+    return current_tournament_index !== -1 && current_tournament_index !== 0
+      ? { id: ta[current_tournament_index - 1].id, year: ta[current_tournament_index - 1].year }
+      : null
+  }
+
+  getNextTournament = (tournament_type_id, current_id) => {
+    const ta = this.getSortedTournamentArray(tournament_type_id)
+    const current_tournament_index = ta.findIndex((t) => t.id === current_id)
+    console.log('current_tournament_index', current_tournament_index)
+    return current_tournament_index !== -1 && current_tournament_index !== ta.length - 1
+      ? { id: ta[current_tournament_index + 1].id, year: ta[current_tournament_index + 1].year }
+      : null
   }
 
   getTournamentType = (tournament_type_id) => {
@@ -51,7 +81,6 @@ class TournamentApp extends React.Component {
     })
     const qt = getQualificationTournamentArray().find((qt) => qt.tournament_id === this.props.query.id && qt.confederation_id === this.props.query.cid)
     const existed = qt ? true : false
-    // console.log('qt', { ...qt, length: qta.length })
     return { existed, ...qt, stages: this.getQualificationTournamentData().stages, confed_length: qta.length, confed_names }
   }
 
@@ -73,6 +102,8 @@ class TournamentApp extends React.Component {
       this.setState({
         tournament: {
           ...t,
+          previous_tournament: this.getPreviousTournament(t.tournament_type_id, this.props.query.id),
+          next_tournament: this.getNextTournament(t.tournament_type_id, this.props.query.id),
           stages: this.getTournamentData().stages,
           qualification: { ...this.getQualificationTournament() },
         },
