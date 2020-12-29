@@ -61,13 +61,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
           <Row className="no-gutters h3-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              {match.home_team && <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
+              {match.home_team && <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              {match.home_team && <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
+              {match.home_team && <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              {match.home_team && <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />}
+              {match.home_team && <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.home_team)}
@@ -138,7 +138,7 @@ const BracketBox = (props) => {
               )}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
-              <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} />
+              <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />
               &nbsp;
               {getBracketTeamCode(match.home_team)}
               {match.walkover && match.home_walkover && (
@@ -174,13 +174,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height">
           <Row className="no-gutters h4-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              {match.away_team && <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
+              {match.away_team && <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              {match.away_team && <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
+              {match.away_team && <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              {match.away_team && <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />}
+              {match.away_team && <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.away_team)}
@@ -251,7 +251,7 @@ const BracketBox = (props) => {
               )}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
-              <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} />
+              <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />
               &nbsp;
               {getBracketTeamCode(match.away_team)}
               {match.walkover && match.away_walkover && (

@@ -8,6 +8,7 @@ export const getTournamentConfig = (tournament) => {
   return {
     id: tournament.id,
     name: tournament.name,
+    year: tournament.year,
     golden_goal_rule: tournament.golden_goal_rule,
     head_to_head_tiebreaker: tournament.head_to_head_tiebreaker,
     tiebreakers: tournament.tiebreakers,
@@ -59,6 +60,20 @@ export const getFlagSrc = (id) => {
   }
 }
 
+export const getNationOfficialName = (id) => {
+  const team = TeamArray.find((t) => t.id === id)
+  if (team) {
+    const nation = NationArray.find((n) => n.id === team.nation_id)
+    if (nation) {
+      return nation.official_name
+    } else {
+      console.log('Nation error', nation)
+    }
+  } else {
+    console.log('Team error', team)
+  }
+}
+
 export const getTeamName = (id) => {
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
@@ -99,6 +114,11 @@ export const getBracketTeamCode = (id) => {
   } else {
     return nation.code
   }
+}
+
+export const isSuccessor = (id) => {
+  const team = TeamArray.find((t) => t.id === id)
+  return !team.successor ? false : team.successor
 }
 
 export const isWinner = (who, match) => {
@@ -346,7 +366,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
           {getTeamName(m.home_team)}
         </Col>
         <Col className="padding-top-sm text-center col-box-10">
-          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
+          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
         </Col>
         <Col className="score text-center score-no-padding-right col-box-10">
           {m.home_score != null && m.away_score != null && (
@@ -383,7 +403,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
           )}
         </Col>
         <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
-          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
+          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
         </Col>
         <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
           {getTeamName(m.away_team)}
@@ -471,7 +491,7 @@ const DisplayMatch = (props) => {
           {getTeamName(m.home_team)}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
-          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} />}
+          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
         </Col>
         <Col sm="2" xs="2" className="score text-center score-no-padding-right">
           {(m.home_extra_score == null || m.away_extra_score == null) && (
@@ -497,7 +517,7 @@ const DisplayMatch = (props) => {
           {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
-          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} />}
+          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
         </Col>
         <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
           {getTeamName(m.away_team)}
@@ -617,6 +637,38 @@ export const WildCardTooltip = (props) => {
   return <TopTooltip target={target} content={content} />
 }
 
+export const SuccessorTooltip = (props) => {
+  const { target, children_teams, parent_team } = props
+  let content = () => {
+    if (!children_teams) return
+    return (
+      <React.Fragment>
+        Includes participation as&nbsp;
+        {children_teams.reverse().map((ct, index) => {
+          return (
+            <React.Fragment key={index}>
+              <img className="flag-xxs" src={getFlagSrc(ct.id)} alt={ct.id} title={ct.id} />
+              &nbsp;
+              {getTeamName(ct.id)}
+              {ct.year && ct.year.length === 1 && <React.Fragment>&nbsp;in {ct.year[0]}</React.Fragment>}
+              {ct.year && ct.year.length > 1 && (
+                <React.Fragment>
+                  &nbsp;from {ct.year[ct.year.length - 1]} to {ct.year[0]}
+                </React.Fragment>
+              )}
+              {index < children_teams.length - 2 && <React.Fragment>,&nbsp;</React.Fragment>}
+              {index === children_teams.length - 2 && <React.Fragment>&nbsp;and&nbsp;</React.Fragment>}
+              {index === children_teams.length - 1 && <React.Fragment>.</React.Fragment>}
+            </React.Fragment>
+          )
+        })}
+        &nbsp;<a href={`#successor_${parent_team.replace(' ', '_')}`}>See breakdown below.</a>
+      </React.Fragment>
+    )
+  }
+  return <TopTooltip target={target} content={content()} />
+}
+
 export const TopTooltip = (props) => {
   const { target, content, anchor } = props
   return (
@@ -636,7 +688,15 @@ export const TurtleTooltip = (props) => {
   return (
     <React.Fragment>
       {props.children}
-      <Tooltip target={target} placement={placement} isOpen={tooltipOpen} autohide={false} toggle={toggle}>
+      <Tooltip
+        target={target}
+        placement={placement}
+        isOpen={tooltipOpen}
+        autohide={false}
+        toggle={toggle}
+        delay={{ hide: 1000 }}
+        innerClassName="successor-tooltip"
+      >
         {content}
       </Tooltip>
     </React.Fragment>

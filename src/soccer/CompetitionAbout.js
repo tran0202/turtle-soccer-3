@@ -23,7 +23,7 @@ const ResultRow = (props) => {
       <Col className="score-no-padding-right col-2">
         {row.details && row.details.logo_filename && (
           <a href={`/soccer/tournament/${row.id}`}>
-            <img src={`/assets/images/${tt.logo_path}/${row.details.logo_filename}`} alt={`Mascot ${row.name}`} className="tournament-logo" />
+            <img src={`/assets/images/${tt.logo_path}/${row.details.logo_filename}`} alt={row.name} title={row.name} className="tournament-logo" />
           </a>
         )}
       </Col>
@@ -31,7 +31,12 @@ const ResultRow = (props) => {
         {row.final_standings && (
           <React.Fragment>
             {row.final_standings.champions && (
-              <img className="flag-sm flag-md " src={getFlagSrc(row.final_standings.champions)} alt={row.final_standings.champions} />
+              <img
+                className="flag-sm flag-md "
+                src={getFlagSrc(row.final_standings.champions)}
+                alt={row.final_standings.champions}
+                title={row.final_standings.champions}
+              />
             )}
             <br></br>
             {getShortTeamName(row.final_standings.champions)}
@@ -42,7 +47,12 @@ const ResultRow = (props) => {
         {row.final_standings && (
           <React.Fragment>
             {row.final_standings.runners_up && (
-              <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.runners_up)} alt={row.final_standings.runners_up} />
+              <img
+                className="flag-sm flag-md"
+                src={getFlagSrc(row.final_standings.runners_up)}
+                alt={row.final_standings.runners_up}
+                title={row.final_standings.runners_up}
+              />
             )}
             <br></br>
             {getShortTeamName(row.final_standings.runners_up)}
@@ -53,7 +63,12 @@ const ResultRow = (props) => {
         {row.final_standings && (
           <React.Fragment>
             {row.final_standings.third_place && (
-              <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.third_place)} alt={row.final_standings.third_place} />
+              <img
+                className="flag-sm flag-md"
+                src={getFlagSrc(row.final_standings.third_place)}
+                alt={row.final_standings.third_place}
+                title={row.final_standings.third_place}
+              />
             )}
             <br></br>
             {getShortTeamName(row.final_standings.third_place)}
@@ -64,7 +79,12 @@ const ResultRow = (props) => {
         {row.final_standings && (
           <React.Fragment>
             {row.final_standings.fourth_place && (
-              <img className="flag-sm flag-md" src={getFlagSrc(row.final_standings.fourth_place)} alt={row.final_standings.fourth_place} />
+              <img
+                className="flag-sm flag-md"
+                src={getFlagSrc(row.final_standings.fourth_place)}
+                alt={row.final_standings.fourth_place}
+                title={row.final_standings.fourth_place}
+              />
             )}
             <br></br>
             {getShortTeamName(row.final_standings.fourth_place)}
@@ -90,7 +110,8 @@ const CompetitionAbout = (props) => {
           {tournamentType && tournamentType.trophy_filename && (
             <img
               src={`/assets/images/${tournamentType.logo_path}/${tournamentType.trophy_filename}`}
-              alt={`Mascot ${tournamentType.name}`}
+              alt={`Trophy ${tournamentType.name}`}
+              title={`Trophy ${tournamentType.name}`}
               className="tournament-mascot"
             />
           )}

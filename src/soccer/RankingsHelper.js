@@ -144,7 +144,7 @@ const calculateTeamRanking = (container, team, match, config) => {
   if (!team) return
   if (!container) return
   const lr = findLastTeamRanking(container, team.id)
-  const newRanking = { ...lr }
+  const newRanking = { ...lr, year: config.year }
   accumulateRanking(newRanking, match, config)
   const teamProgressRanking = container.find((t) => t.id === team.id)
   teamProgressRanking.rankings.push(newRanking)

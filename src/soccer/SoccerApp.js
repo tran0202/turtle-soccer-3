@@ -28,7 +28,7 @@ const GetTabs = (props) => {
                   toggle(confed)
                 }}
               >
-                <img src={logoSrc} alt={confed} style={{ height: '35px' }} className="img-fluid" />
+                <img src={logoSrc} alt={confed} title={confed} style={{ height: '35px' }} className="img-fluid" />
               </NavLink>
             </NavItem>
           )
@@ -57,6 +57,7 @@ const GetTabs = (props) => {
                                         <img
                                           src={`/assets/images/${tt.logo_path}/${t.details.logo_filename}`}
                                           alt={t.name}
+                                          title={t.name}
                                           className="card-img-top-height-100 mx-auto"
                                         />
                                       </a>

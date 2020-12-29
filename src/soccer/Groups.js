@@ -156,6 +156,7 @@ const TournamentFormat = (props) => {
             <img
               src={`/assets/images/${tournamentType.logo_path}/${config.details.mascot_filename}`}
               alt={`Mascot ${config.name}`}
+              title={`Mascot ${config.name}`}
               className="tournament-mascot"
             />
           )}

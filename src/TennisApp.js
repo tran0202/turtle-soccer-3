@@ -31,7 +31,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: '15px' }} alt="Serbia" />
+                        Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: '15px' }} alt="Serbia" title="Serbia" />
                       </h4>
                       <span>Australia Open 2020</span>
                     </div>
@@ -45,7 +45,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Sofia Kenin <img src="/assets/images/flags/USA.png" style={{ height: '15px' }} alt="USA" />
+                        Sofia Kenin <img src="/assets/images/flags/USA.png" style={{ height: '15px' }} alt="USA" title="USA" />
                       </h4>
                       <span>Australia Open 2020</span>
                     </div>
@@ -59,7 +59,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: '15px' }} alt="Spain" />
+                        Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: '15px' }} alt="Spain" title="Spain" />
                       </h4>
                       <span>French Open 2019</span>
                     </div>
@@ -73,7 +73,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Ashleigh Barty <img src="/assets/images/flags/Australia.png" style={{ height: '15px' }} alt="Australia" />
+                        Ashleigh Barty <img src="/assets/images/flags/Australia.png" style={{ height: '15px' }} alt="Australia" title="Australia" />
                       </h4>
                       <span>French Open 2019</span>
                     </div>
@@ -87,7 +87,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: '15px' }} alt="Serbia" />
+                        Novak Djokovic <img src="/assets/images/flags/Serbia.png" style={{ height: '15px' }} alt="Serbia" title="Serbia" />
                       </h4>
                       <span>Wimbledon 2019</span>
                     </div>
@@ -101,7 +101,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Simona Halep <img src="/assets/images/flags/Romania.png" style={{ height: '15px' }} alt="Romania" />
+                        Simona Halep <img src="/assets/images/flags/Romania.png" style={{ height: '15px' }} alt="Romania" title="Romania" />
                       </h4>
                       <span>Wimbledon 2019</span>
                     </div>
@@ -115,7 +115,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: '15px' }} alt="Spain" />
+                        Rafael Nadal <img src="/assets/images/flags/Spain.png" style={{ height: '15px' }} alt="Spain" title="Spain" />
                       </h4>
                       <span>US Open 2019</span>
                     </div>
@@ -129,7 +129,7 @@ class TennisApp extends React.Component {
                     </div>
                     <div className="player-info">
                       <h4>
-                        Bianca Andreescu <img src="/assets/images/flags/Canada.png" style={{ height: '15px' }} alt="Canada" />
+                        Bianca Andreescu <img src="/assets/images/flags/Canada.png" style={{ height: '15px' }} alt="Canada" title="Canada" />
                       </h4>
                       <span>US Open 2019</span>
                     </div>

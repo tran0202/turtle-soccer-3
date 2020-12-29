@@ -13,7 +13,7 @@ class FootballApp extends React.Component {
     return (
       <Col xl="2" lg="3" md="4" sm="6" className={`fblteam-item filter-${confer} filter-${div}`}>
         <div className="fblteam-wrap">
-          <img src={`/assets/images/nfl_logos/${imageSrc}`} className="img-fluid" alt={name} />
+          <img src={`/assets/images/nfl_logos/${imageSrc}`} className="img-fluid" alt={name} title={name} />
           <div className="fblteam-info">
             <h4>{name}</h4>
             <p>{confer}</p>

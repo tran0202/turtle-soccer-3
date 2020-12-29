@@ -63,7 +63,7 @@ class QualificationHeader extends React.Component {
         {qTournament && (
           <Row className="mt-3 text-center">
             <Col lg="2" md="2" sm="3" className="mt-3 mb-2">
-              <img src={logoSrc} alt={cid} className="img-fluid" />
+              <img src={logoSrc} alt={cid} title={cid} className="img-fluid" />
             </Col>
             <Col lg="10" md="9" sm="9">
               <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: qTournament.details ? qTournament.details.color : '#000' }}>

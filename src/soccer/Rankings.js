@@ -9,20 +9,32 @@ import {
   isWildCardExtraRow,
   getWildCardRowStriped,
 } from './RankingsHelper'
-import { getFlagSrc, getTeamName, FairPlayTooltip, WildCardTooltip, Head2HeadTooltip, DrawLotTooltip } from './Helper'
+import {
+  getFlagSrc,
+  getTeamName,
+  getNationOfficialName,
+  isSuccessor,
+  FairPlayTooltip,
+  WildCardTooltip,
+  SuccessorTooltip,
+  Head2HeadTooltip,
+  DrawLotTooltip,
+} from './Helper'
 import NumberFormat from 'react-number-format'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
   return (
-    round.ranking_type === 'round' &&
+    (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
+    round.name != null &&
     round.name !== 'Final' &&
     round.name !== 'Third place' &&
     round.name !== 'Semi-finals' &&
     round.name !== 'Final Round' && (
       <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
         <Col xs="12" className="font-italic gray3">
-          {round.name}
+          {round.ranking_type !== 'successorround' && <React.Fragment>{round.name}</React.Fragment>}
+          {round.ranking_type === 'successorround' && <div id={`successor_${round.name.replace(' ', '_')}`}>{round.name}</div>}
         </Col>
       </Row>
     )
@@ -63,9 +75,23 @@ const RankingRow2 = (props) => {
   return (
     <Row className="no-gutters">
       <Col className="col-box-10">
-        <img className="flag-sm flag-md" src={getFlagSrc(row.id)} alt={row.id} />
+        <img
+          className="flag-sm flag-md"
+          src={getFlagSrc(row.id)}
+          alt={`${row.id} ${getNationOfficialName(row.id)}`}
+          title={`${row.id} ${getNationOfficialName(row.id)}`}
+        />
       </Col>
-      <Col className="col-box-34 text-uppercase text-left">&nbsp;&nbsp;{getTeamName(row.id)}</Col>
+      <Col className="col-box-34 text-uppercase text-left">
+        &nbsp;&nbsp;{getTeamName(row.id)}
+        {isSuccessor(row.id) && ranking_type === 'alltimeround' && (
+          <SuccessorTooltip target={`successorTooltip-${row.id}`} children_teams={row.children_teams} parent_team={getTeamName(row.id)} />
+        )}
+        {ranking_type === 'successorround' && row.years.length > 1 && (
+          <span className="successor-subscript">{`(${row.years[row.years.length - 1]}-${row.years[0]})`}</span>
+        )}
+        {ranking_type === 'successorround' && row.years.length === 1 && <span className="successor-subscript">{`(${row.years[0]})`}</span>}
+      </Col>
       <Col className="col-box-7 padding-top-xxs">{row.mp}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.w}</Col>
       <Col className="col-box-7 padding-top-xxs">{row.d}</Col>
@@ -99,7 +125,7 @@ const RankingRow2 = (props) => {
 }
 
 export const RankingRow = (props) => {
-  const { row, config } = props
+  const { row, config, index } = props
   const { ranking_type, championship_round } = config
   // console.log('championship_round', championship_round)
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
@@ -111,6 +137,11 @@ export const RankingRow = (props) => {
     <Row className={`no-gutters ranking-tbl team-row text-center${row_striped}${gold}${silver}${bronze}`}>
       <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>
         {row.r ? row.r : row[0].r}
+        {ranking_type === 'successorround' && index === 0 && `a`}
+        {ranking_type === 'successorround' && index === 1 && `b`}
+        {ranking_type === 'successorround' && index === 2 && `c`}
+        {ranking_type === 'successorround' && index === 3 && `d`}
+        {ranking_type === 'successorround' && index === 4 && `e`}
         {ranking_type === 'wildcard' && isWildCardExtraRow(row, config) && (
           <WildCardTooltip target={`wildcardTooltip-${row.r ? row.r : row[0].r}`} content={config.advancement.teams.wild_card.text_extra} />
         )}
@@ -132,7 +163,7 @@ const RankingRound = (props) => {
     <React.Fragment>
       <RankingRowSeparate round={round} />
       {round.final_rankings &&
-        round.final_rankings.map((r, index) => <RankingRow row={r} config={{ ...config, ranking_type: round.ranking_type }} key={index} />)}
+        round.final_rankings.map((r, index) => <RankingRow row={r} config={{ ...config, ranking_type: round.ranking_type }} key={index} index={index} />)}
     </React.Fragment>
   )
 }

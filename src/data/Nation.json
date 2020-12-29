@@ -2465,18 +2465,7 @@
     "end_date": "1945-11-29"
   },
   {
-    "id": "YUG-1946-1963",
-    "name": "Yugoslavia",
-    "official_name": "Federal People's Republic of Yugoslavia",
-    "parent_nation_id": "SRB",
-    "nation_type_id": "NATN",
-    "flag_filename": "Flag_of_Yugoslavia_(1946-1992).svg",
-    "code": "YUG",
-    "start_date": "1945-11-29",
-    "end_date": "1963-04-07"
-  },
-  {
-    "id": "YUG-1963-1992",
+    "id": "YUG-1945-1992",
     "name": "Yugoslavia",
     "official_name": "Socialist Federal Republic of Yugoslavia",
     "parent_nation_id": "SRB",
@@ -2485,6 +2474,17 @@
     "code": "YUG",
     "start_date": "1945-11-29",
     "end_date": "1992-04-27"
+  },
+  {
+    "id": "YUG-1945-1963",
+    "name": "Yugoslavia",
+    "official_name": "Federal People's Republic of Yugoslavia",
+    "parent_nation_id": "SRB",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Yugoslavia_(1946-1992).svg",
+    "code": "YUG",
+    "start_date": "1945-11-29",
+    "end_date": "1963-04-07"
   },
   {
     "id": "SEY",

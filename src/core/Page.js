@@ -23,7 +23,7 @@ class Page extends React.Component {
               <Col sm="7" md="5">
                 <div className="logo float-left">
                   <a href="/">
-                    <img src={turtleLogo} alt="Turtle Soccer" className="img-fluid" />
+                    <img src={turtleLogo} alt="Turtle Soccer" className="img-fluid" title="Turtle Soccer" />
                   </a>
                 </div>
               </Col>

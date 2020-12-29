@@ -694,6 +694,15 @@
   margin-bottom: 1rem;
 }
 
+.successor-tooltip {
+  max-width: 300px;
+  text-align: left;
+}
+
+.successor-subscript {
+  font-size: 14px;
+}
+
 /* ========== Nav Tabs Override ========== */
 
 .nav-link.disabled {
