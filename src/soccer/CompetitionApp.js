@@ -93,7 +93,9 @@ class CompetitionApp extends React.Component {
         <Container>
           <Row className="mt-3 text-center">
             <Col>
-              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title">{tournamentType ? tournamentType.name : ''}</h1>
+              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: tournamentType ? tournamentType.color : '' }}>
+                {tournamentType ? tournamentType.name : ''}
+              </h1>
               <CompHeaderLinks query={query} />
             </Col>
           </Row>

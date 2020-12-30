@@ -1,5 +1,7 @@
-import TournamentArray from '../data/soccer/Tournament.json'
-import TournamentWCArray from '../data/soccer/TournamentWC.json'
+import TournamentArray from '../data/soccer/tournament/Tournament.json'
+import t_WC from '../data/soccer/tournament/t_WC.json'
+import t_EURO from '../data/soccer/tournament/t_EURO.json'
+
 import td_WC_1930 from '../data/soccer/tournamentData/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/td_WC_1934.json'
 import td_WC_1938 from '../data/soccer/tournamentData/td_WC_1938.json'
@@ -21,6 +23,7 @@ import td_WC_2006 from '../data/soccer/tournamentData/td_WC_2006.json'
 import td_WC_2010 from '../data/soccer/tournamentData/td_WC_2010.json'
 import td_WC_2014 from '../data/soccer/tournamentData/td_WC_2014.json'
 import td_WC_2018 from '../data/soccer/tournamentData/td_WC_2018.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
@@ -29,7 +32,7 @@ export const getCurrentTournament = () => {
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(TournamentWCArray)
+  return TournamentArray.concat(t_WC, t_EURO)
 }
 
 export const getTournamentDataArray = () => {

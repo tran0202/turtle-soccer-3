@@ -73,6 +73,13 @@ const TournamentFormat = (props) => {
                           <li>Points</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'goaldifferenceandgoalscored') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Overall goal difference</li>
+                          <li>Overall goals scored</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'team') {
                       return (
                         <React.Fragment key={index}>
@@ -81,7 +88,7 @@ const TournamentFormat = (props) => {
                           <li>Overall goals scored</li>
                         </React.Fragment>
                       )
-                    } else if (tb === 'pointandgoaldifferent') {
+                    } else if (tb === 'pointandgoaldifference') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points</li>
@@ -133,14 +140,24 @@ const TournamentFormat = (props) => {
                           <li>Goals scored in matches between tied teams</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'head2headreapply') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Reapply the above criteria for the remaining level teams if needed</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'awaygoals') {
                       return (
                         <li key={index}>
                           Away goals scored in matches between tied teams (if the tie is only between two teams in home-and-away league format)
                         </li>
                       )
+                    } else if (tb === 'penalty') {
+                      return <li key={index}>Penalty shoot-out in the last round of the group stage</li>
                     } else if (tb === 'fairplay') {
                       return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
+                    } else if (tb === 'coefficient') {
+                      return <li key={index}>Position in the coefficient ranking system.</li>
                     } else if (tb === 'lot') {
                       return <li key={index}>Drawing lots</li>
                     } else {

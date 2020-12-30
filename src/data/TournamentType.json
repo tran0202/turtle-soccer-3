@@ -2,35 +2,43 @@
   {
     "id": "WC",
     "name": "FIFA World Cup",
-    "confederation_id": "FIFA",
+    "color": "rgb(9, 54, 151)",
     "team_type_id": "MNT",
+    "confederation_id": "FIFA",
     "logo_path": "wc_logos",
+    "trophy_filename": "FIFA_Trophy.jpg",
     "sport_id": "SOC",
     "description": [
       "The FIFA World Cup is an international association football competition contested by the senior men's national teams of the members of the FIFA. The championship has been awarded every four years since 1930, except in 1942 and 1946. The current champion is France, which won its second title in Russia 2018.",
       "The current format involves a qualification phase, which takes place over the preceding three years, to determine which teams qualify for the tournament phase. In the tournament phase, 32 teams, including the automatically qualifying host nation(s), compete for the title at venues within the host nation(s) over about a month.",
       "The 21 World Cup tournaments have been won by eight national teams. Brazil have won five times, and they are the only team to have played in every tournament. The other World Cup winners are Germany and Italy, with four titles each; Argentina, France, and inaugural winner Uruguay, with two titles each; and England and Spain, with one title each."
     ],
-    "trophy_filename": "FIFA_Trophy.jpg",
+    "order": 1
+  },
+  {
+    "id": "EURO",
+    "name": "UEFA European Championship",
+    "color": "rgb(250, 4, 24)",
+    "team_type_id": "MNT",
+    "confederation_id": "UEFA",
+    "logo_path": "euro_logos",
+    "trophy_filename": "Coupe_Henri_Delaunay_2017.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The UEFA European Football Championship, commonly known as the UEFA European Championship and informally as the Euros, is the primary association football competition contested by the senior men's national teams of the members of the Union of European Football Associations (UEFA), determining the continental champion of Europe.",
+      "The 15 European Championship tournaments have been won by ten national teams: Germany and Spain each have won three titles, France has two titles, and the Soviet Union, Italy, Czechoslovakia, Netherlands, Denmark, Greece and Portugal have won one title each. To date, Spain is the only team in history to have won consecutive titles, doing so in 2008 and 2012.",
+      "The most recent championship, hosted by France in 2016, was won by Portugal, who beat France 1–0 in the final at the Stade de France in Saint-Denis after extra time. The final also averaged 284 million viewers which is the second most viewed game in European tournament history."
+    ],
     "order": 1
   },
   {
     "id": "CONFEDC",
     "name": "FIFA Confederations Cup",
-    "confederation_id": "FIFA",
     "team_type_id": "MNT",
+    "confederation_id": "FIFA",
     "logo_path": "cc_logos",
     "sport_id": "SOC",
     "order": 5
-  },
-  {
-    "id": "EURO",
-    "name": "UEFA European Championship",
-    "team_type_id": "MNT",
-    "confederation_id": "UEFA",
-    "logo_path": "euro_logos",
-    "sport_id": "SOC",
-    "order": 1
   },
   {
     "id": "UNL",
@@ -44,6 +52,7 @@
   {
     "id": "ONC",
     "name": "OFC Nations Cup",
+    "color": "rgb(26, 51, 116)",
     "team_type_id": "MNT",
     "confederation_id": "OFC",
     "logo_path": "logos",
@@ -53,6 +62,7 @@
   {
     "id": "AAC",
     "name": "AFC Asian Cup",
+    "color": "rgb(0, 35, 149)",
     "team_type_id": "MNT",
     "confederation_id": "AFC",
     "logo_path": "aac_logos",
@@ -62,6 +72,7 @@
   {
     "id": "AFCON",
     "name": "CAF Africa Cup of Nations",
+    "color": "rgb(26, 159, 75)",
     "team_type_id": "MNT",
     "confederation_id": "CAF",
     "logo_path": "afcon_logos",
@@ -71,6 +82,7 @@
   {
     "id": "GC",
     "name": "CONCACAF Gold Cup",
+    "color": "rgb(213, 186, 129)",
     "team_type_id": "MNT",
     "confederation_id": "CONCACAF",
     "logo_path": "gc_logos",
@@ -80,6 +92,7 @@
   {
     "id": "COPA",
     "name": "CONMEBOL Copa America",
+    "color": "rgb(0, 92, 164)",
     "team_type_id": "MNT",
     "confederation_id": "CONMEBOL",
     "logo_path": "copa_logos",
@@ -134,9 +147,9 @@
   {
     "id": "WCQ",
     "name": "FIFA World Cup Qualification",
+    "team_type_id": "MNT",
     "confederation_id": "FIFA",
     "tournament_subtype": "qualification",
-    "team_type_id": "MNT",
     "logo_path": "wc_logos",
     "sport_id": "SOC"
   },

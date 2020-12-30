@@ -1,0 +1,202 @@
+[
+  {
+    "id": "EURO2016",
+    "year": "2016",
+    "name": "UEFA Euro 2016 France",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplay", "coefficient"],
+    "no_third_place": true,
+    "details": {
+      "host": ["FRA"],
+      "logo_filename": "Euro_2016.png",
+      "mascot_filename": "mascot_2016.jpg",
+      "start_date": "2016-06-10",
+      "end_date": "2016-07-10",
+      "color": "#e12631",
+      "team_count": 24,
+      "venue_count": 10,
+      "city_count": 10
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Ricardo_Quaresma_performing_a_bicycle_kick_against_France_at_Euro_2016_final.jpg",
+        "text": "Ricardo Quaresma takes a shot at goal during the match."
+      },
+      { "name": "Final programme", "filename": "Euro2016matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 2016 Final." },
+      {
+        "name": "Opening ceremony",
+        "filename": "Uefa_Euro_2016_Opening_Ceremony.jpg",
+        "text": "The opening ceremony at Stade de France, Saint-Denis "
+      },
+      { "name": "Group C", "filename": "Germany_vs_Poland_0-0_(27103531294).jpg", "text": "Gremany vs Poland" }
+    ],
+    "final_standings": { "champions": "POR", "runners_up": "FRA", "semi_finalist1": "GER", "semi_finalist2": "WAL" },
+    "statistics": { "total_matches": 51, "total_goals": 108, "attendance": 2427303 },
+    "awards": {
+      "golden_boot": [{ "player": "Antoine Griezmann", "team": "FRA", "goals": 6 }],
+      "silver_boot": [{ "player": "Olivier Giroud", "team": "FRA" }],
+      "bronze_boot": [{ "player": "Álvaro Morata", "team": "ESP" }],
+      "golden_ball": [{ "player": "Antoine Griezmann", "team": "FRA" }],
+      "best_young_player": { "player": " Renato Sanches", "team": "POR" }
+    }
+  },
+  {
+    "id": "EURO2012",
+    "year": "2012",
+    "name": "UEFA Euro 2012 Poland-Ukraine",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2012.png", "start_date": "2012-06-08", "end_date": "2012-07-01" }
+  },
+  {
+    "id": "EURO2008",
+    "year": "2008",
+    "name": "UEFA Euro 2008 Austria-Switzerland",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2008.png", "start_date": "2008-06-07", "end_date": "2008-06-29" }
+  },
+  {
+    "id": "EURO2004",
+    "year": "2004",
+    "name": "UEFA Euro 2004 Portugal",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2004.png", "start_date": "2004-06-12", "end_date": "2004-07-04" }
+  },
+  {
+    "id": "EURO2000",
+    "year": "2000",
+    "name": "UEFA Euro 2000 Belgium-Netherlands",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_2000.png", "start_date": "2000-06-10", "end_date": "2000-07-02" }
+  },
+  {
+    "id": "EURO1996",
+    "year": "1996",
+    "name": "UEFA Euro 1996 England",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "Euro_1996.png", "start_date": "1996-06-08", "end_date": "1996-06-30" }
+  },
+  {
+    "id": "EURO1992",
+    "year": "1992",
+    "name": "UEFA Euro 1992 Sweden",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1992.png", "start_date": "1992-06-10", "end_date": "1992-06-26" }
+  },
+  {
+    "id": "EURO1988",
+    "year": "1988",
+    "name": "UEFA Euro 1988 West Germany",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1988.png", "start_date": "1988-06-10", "end_date": "1988-06-25" }
+  },
+  {
+    "id": "EURO1984",
+    "year": "1984",
+    "name": "UEFA Euro 1984 France",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1984.png", "start_date": "1984-06-12", "end_date": "1984-06-27" }
+  },
+  {
+    "id": "EURO1980",
+    "year": "1980",
+    "name": "UEFA Euro 1980 Italy",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1980.png", "start_date": "1980-06-11", "end_date": "1980-06-22" }
+  },
+  {
+    "id": "EURO1976",
+    "year": "1976",
+    "name": "UEFA Euro 1976 Yugoslavia",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1976.png", "start_date": "1976-06-16", "end_date": "1976-06-20" }
+  },
+  {
+    "id": "EURO1972",
+    "year": "1972",
+    "name": "UEFA Euro 1972 Belgium",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1972.png", "start_date": "1972-06-14", "end_date": "1972-06-18" }
+  },
+  {
+    "id": "EURO1968",
+    "year": "1968",
+    "name": "UEFA Euro 1968 Italy",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1968.png", "start_date": "1968-06-05", "end_date": "1968-06-10" }
+  },
+  {
+    "id": "EURO1964",
+    "year": "1964",
+    "name": "UEFA Euro 1964 Spain",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1964.png", "start_date": "1964-06-17", "end_date": "1964-06-21" }
+  },
+  {
+    "id": "EURO1960",
+    "year": "1960",
+    "name": "UEFA Euro 1960 France",
+    "tournament_type_id": "EURO",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Euro_1960.png", "start_date": "1960-07-06", "end_date": "1960-07-10" }
+  }
+]

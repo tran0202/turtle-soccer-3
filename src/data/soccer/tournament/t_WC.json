@@ -758,7 +758,7 @@
     "active": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
-    "tiebreakers": ["pointandgoaldifferent", "lot"],
+    "tiebreakers": ["pointandgoaldifference", "lot"],
     "details": {
       "host": ["MEX"],
       "logo_filename": "1970_FIFA_World_Cup.svg",
