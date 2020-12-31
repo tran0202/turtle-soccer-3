@@ -1,1 +1,223 @@
-{}
+{
+  "id": "EURO2016",
+  "stages": [
+    {
+      "name": "Group Stage",
+      "type": "roundrobin",
+      "eliminateCount": 16,
+      "next_round": "Round of 16",
+      "advancement": {
+        "teams": {
+          "auto": [1, 2],
+          "wild_card": { "pos": 3, "count": 4 },
+          "eliminated": [4],
+          "text": "The top 2 teams and the four best third-placed teams would advance to the knockout stage."
+        }
+      },
+      "groups": [
+        {
+          "name": "Group A",
+          "teams": [{ "id": "FRA" }, { "id": "ROU" }, { "id": "ALB" }, { "id": "SUI" }],
+          "matches": [
+            {
+              "home_team": "FRA",
+              "away_team": "ROU",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2016-06-10",
+              "time": "21:00",
+              "stadium": "Stade de France",
+              "city": "Saint-Denis"
+            },
+            {
+              "home_team": "ALB",
+              "away_team": "SUI",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2016-06-11",
+              "time": "15:00",
+              "stadium": "Stade Bollaert-Delelis",
+              "city": "Lens"
+            },
+            {
+              "home_team": "ROU",
+              "away_team": "SUI",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2016-06-15",
+              "time": "18:00",
+              "stadium": "Parc des Princes",
+              "city": "Paris"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "ALB",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2016-06-15",
+              "time": "21:00",
+              "stadium": "Stade Vélodrome",
+              "city": "Marseille"
+            },
+            {
+              "home_team": "ROU",
+              "away_team": "ALB",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2016-06-19",
+              "time": "21:00",
+              "stadium": "Parc Olympique Lyonnais",
+              "city": "Décines-Charpieu"
+            },
+            {
+              "home_team": "SUI",
+              "away_team": "FRA",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2016-06-19",
+              "time": "21:00",
+              "stadium": "Stade Pierre-Mauroy",
+              "city": "Villeneuve-d'Ascq"
+            }
+          ]
+        },
+        {
+          "name": "Group B",
+          "teams": [{ "id": "WAL" }, { "id": "SVK" }, { "id": "ENG" }, { "id": "RUS" }],
+          "matches": [
+            {
+              "home_team": "WAL",
+              "away_team": "SVK",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2016-06-11",
+              "time": "18:00",
+              "stadium": "Nouveau Stade de Bordeaux",
+              "city": "Bordeaux"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "RUS",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2016-06-11",
+              "time": "21:00",
+              "stadium": "Stade Vélodrome",
+              "city": "Marseille"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "SVK",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2016-06-15",
+              "time": "15:00",
+              "stadium": "Stade Pierre-Mauroy",
+              "city": "Villeneuve-d'Ascq"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "WAL",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2016-06-16",
+              "time": "15:00",
+              "stadium": "Stade Bollaert-Delelis",
+              "city": "Lens"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "WAL",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2016-06-20",
+              "time": "21:00",
+              "stadium": "Stadium Municipal",
+              "city": "Toulouse"
+            },
+            {
+              "home_team": "SVK",
+              "away_team": "ENG",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2016-06-20",
+              "time": "21:00",
+              "stadium": "Stade Geoffroy-Guichard",
+              "city": "Saint-Étienne"
+            }
+          ]
+        },
+        {
+          "name": "Group C",
+          "teams": [{ "id": "POL" }, { "id": "NIR" }, { "id": "GER" }, { "id": "UKR" }],
+          "matches": [
+            {
+              "home_team": "POL",
+              "away_team": "NIR",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2016-06-12",
+              "time": "18:00",
+              "stadium": "Stade de Nice",
+              "city": "Nice"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "UKR",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2016-06-12",
+              "time": "21:00",
+              "stadium": "Stade Pierre-Mauroy",
+              "city": "Villeneuve-d'Ascq"
+            },
+            {
+              "home_team": "UKR",
+              "away_team": "NIR",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2016-06-16",
+              "time": "18:00",
+              "stadium": "Parc Olympique Lyonnais",
+              "city": "Décines-Charpieu"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "POL",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2016-06-16",
+              "time": "21:00",
+              "stadium": "Stade de France",
+              "city": "Saint-Denis"
+            },
+            {
+              "home_team": "UKR",
+              "away_team": "POL",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2016-06-21",
+              "time": "18:00",
+              "stadium": "Stade Vélodrome",
+              "city": "Marseille"
+            },
+            {
+              "home_team": "NIR",
+              "away_team": "GER",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2016-06-21",
+              "time": "18:00",
+              "stadium": "Parc des Princes",
+              "city": "Paris"
+            }
+          ]
+        },
+        { "name": "Group D", "teams": [{ "id": "TUR" }, { "id": "CRO" }, { "id": "ESP" }, { "id": "CZE" }], "matches": [] },
+        { "name": "Group E", "teams": [{ "id": "IRL" }, { "id": "SWE" }, { "id": "BEL" }, { "id": "ITA" }], "matches": [] },
+        { "name": "Group F", "teams": [{ "id": "AUT" }, { "id": "HUN" }, { "id": "POR" }, { "id": "ISL" }], "matches": [] }
+      ]
+    },
+    { "name": "Knockout Stage" }
+  ]
+}

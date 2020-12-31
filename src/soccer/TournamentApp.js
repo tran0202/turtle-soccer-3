@@ -46,7 +46,7 @@ class TournamentApp extends React.Component {
   getNextTournament = (tournament_type_id, current_id) => {
     const ta = this.getSortedTournamentArray(tournament_type_id)
     const current_tournament_index = ta.findIndex((t) => t.id === current_id)
-    console.log('current_tournament_index', current_tournament_index)
+    // console.log('current_tournament_index', current_tournament_index)
     return current_tournament_index !== -1 && current_tournament_index !== ta.length - 1
       ? { id: ta[current_tournament_index + 1].id, year: ta[current_tournament_index + 1].year }
       : null

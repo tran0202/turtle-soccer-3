@@ -113,10 +113,10 @@ const RankingRow2 = (props) => {
       <Col className="col-box-7 padding-top-xxs">
         {row.pts}
         <React.Fragment>
-          {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />}
-          {ranking_type === 'group' && row.h2h_notes && (
+          {ranking_type === 'group' && row.h2h_notes && !row.fp && (
             <Head2HeadTooltip target={`h2hTooltip-${row.id}`} h2h_notes={row.h2h_notes} group_playoff={row.group_playoff} />
           )}
+          {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />}
           {ranking_type === 'group' && row.draw_lot_notes && <DrawLotTooltip target={`drawLotTooltip-${row.id}`} draw_lot_notes={row.draw_lot_notes} />}
         </React.Fragment>
       </Col>

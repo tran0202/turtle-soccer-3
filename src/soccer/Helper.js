@@ -694,7 +694,7 @@ export const TurtleTooltip = (props) => {
         isOpen={tooltipOpen}
         autohide={false}
         toggle={toggle}
-        delay={{ hide: 1000 }}
+        delay={{ hide: 500 }}
         innerClassName="successor-tooltip"
       >
         {content}

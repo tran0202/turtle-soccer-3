@@ -22,6 +22,12 @@ export const isLotGroupPlayoffTiebreaker = (config) => {
   return tiebreakers.find((tb) => tb.indexOf('lotgroupplayoff') !== -1) != null
 }
 
+export const isHead2HeadBeforeGoalDifference = (config) => {
+  const { tiebreakers } = config
+  if (!tiebreakers) return false
+  return tiebreakers.findIndex((tb) => tb === 'head2head') < tiebreakers.findIndex((tb) => tb === 'goaldifferenceandgoalscored')
+}
+
 export const hasGroupPlayoff = (group) => {
   if (!group.matches) return false
   return group.matches.find((m) => m.group_playoff) !== undefined
@@ -279,8 +285,14 @@ const saveDrawTeams = (a, b) => {
   }
 }
 
+const saveDrawBothTeams = (group, a, b) => {
+  if (group.ranking_type === 'round' || group.ranking_type === 'alltimeround') {
+    saveDrawTeams(a, b)
+    saveDrawTeams(b, a)
+  }
+}
+
 const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
-  // console.log('h2hMatch', h2hMatch)
   const show_home_score = h2hMatch.home_extra_score != null ? parseInt(h2hMatch.home_score) + parseInt(h2hMatch.home_extra_score) : h2hMatch.home_score
   const show_away_score = h2hMatch.away_extra_score != null ? parseInt(h2hMatch.away_score) + parseInt(h2hMatch.away_extra_score) : h2hMatch.away_score
   const h2hResult = matchResult(a.id, h2hMatch)
@@ -307,7 +319,47 @@ const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
     b.group_playoff = h2hMatch.group_playoff
     return -1
   } else {
-    return drawFunction
+    // console.log('a', a)
+    a.h2h_notes = `${getTeamName(a.id)} drew ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
+    b.h2h_notes = `${getTeamName(b.id)} drew ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+    return drawFunction()
+  }
+}
+
+const compareH2h = (a, b, group_playoff, drawFunction) => {
+  const found = findHeadtoHeadMatch(a, b, group_playoff)
+  if (found.length === 1) {
+    const h2hMatch = found[0]
+    return createH2hNotes(h2hMatch, a, b, drawFunction)
+  }
+  return drawFunction()
+}
+
+const compareGoalForward = (a, b, drawFunction) => {
+  if (a.gf > b.gf) {
+    return -1
+  } else if (a.gf < b.gf) {
+    return 1
+  } else {
+    return drawFunction()
+  }
+}
+
+const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
+  if (a.gd > b.gd) {
+    if (savingNotes) {
+      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd >= 0 ? '+' : ''}${a.gd}`
+      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd >= 0 ? '+' : ''}${b.gd}`
+    }
+    return -1
+  } else if (a.gd < b.gd) {
+    if (savingNotes) {
+      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd >= 0 ? '+' : ''}${a.gd}`
+      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd >= 0 ? '+' : ''}${b.gd}`
+    }
+    return 1
+  } else {
+    return drawFunction()
   }
 }
 
@@ -315,23 +367,26 @@ export const sortGroupRankings = (group, startingIndex, config) => {
   if (group && group.final_rankings) {
     const isGoalRatioTiebreaker = config ? config.isGoalRatioTiebreaker : false
     const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
+    const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
     group.final_rankings.sort((a, b) => {
       if (a.pts > b.pts) {
         return -1
       } else if (a.pts < b.pts) {
         return 1
       } else {
-        if (isLotGroupPlayoffTiebreaker) {
-          const dl = drawingLots(a, b)
-          if (dl !== 0) return dl
-          const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
-          if (found.length === 1) {
-            const h2hMatch = found[0]
-            return createH2hNotes(h2hMatch, a, b, () => {
+        if (isHead2HeadBeforeGoalDifference) {
+          // console.log('a', a)
+          return compareH2h(a, b, false, () => {
+            return compareGoalDifference(a, b, true, () => {
               return 0
             })
-          }
-          return 0
+          })
+        } else if (isLotGroupPlayoffTiebreaker) {
+          const dl = drawingLots(a, b)
+          if (dl !== 0) return dl
+          return compareH2h(a, b, true, () => {
+            return 0
+          })
         } else if (isGoalRatioTiebreaker) {
           const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
           if (found.length === 1) {
@@ -359,25 +414,18 @@ export const sortGroupRankings = (group, startingIndex, config) => {
         } else if (a.gd < b.gd) {
           return 1
         } else {
-          if (group.tiebreak_pts_gd) {
-            return drawingLots(a, b)
-          } else if (a.gf > b.gf) {
-            return -1
-          } else if (a.gf < b.gf) {
-            return 1
-          } else {
-            if (group.ranking_type === 'round' || group.ranking_type === 'alltimeround') {
-              saveDrawTeams(a, b)
-              saveDrawTeams(b, a)
-            }
-            const found = findHeadtoHeadMatch(a, b, false)
-            if (found.length === 1) {
-              const h2hMatch = found[0]
-              return createH2hNotes(h2hMatch, a, b, compareFairPoints(a, b))
+          return compareGoalDifference(a, b, false, () => {
+            if (group.tiebreak_pts_gd) {
+              return drawingLots(a, b)
             } else {
-              return compareFairPoints(a, b)
+              return compareGoalForward(a, b, () => {
+                saveDrawBothTeams(group, a, b)
+                return compareH2h(a, b, false, () => {
+                  return compareFairPoints(a, b)
+                })
+              })
             }
-          }
+          })
         }
       }
     })
@@ -391,7 +439,11 @@ export const sortGroupRankings = (group, startingIndex, config) => {
 
 export const collectGroupRankings = (tournament, group, matchDay) => {
   if (!group.teams) return
-  const config = { isGoalRatioTiebreaker: isGoalRatioTiebreaker(tournament), isLotGroupPlayoffTiebreaker: isLotGroupPlayoffTiebreaker(tournament) }
+  const config = {
+    isGoalRatioTiebreaker: isGoalRatioTiebreaker(tournament),
+    isLotGroupPlayoffTiebreaker: isLotGroupPlayoffTiebreaker(tournament),
+    isHead2HeadBeforeGoalDifference: isHead2HeadBeforeGoalDifference(tournament),
+  }
   group.teams.forEach((team) => {
     if (team.rankings) {
       const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay

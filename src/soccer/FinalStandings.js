@@ -313,7 +313,9 @@ const FinalStandings = (props) => {
   const filteredRounds =
     tournament.final_rankings && hasThirdPlaceRound
       ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semi-finals')
-      : tournament.final_rankings.rounds
+      : tournament.final_rankings
+      ? tournament.final_rankings.rounds
+      : []
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>
