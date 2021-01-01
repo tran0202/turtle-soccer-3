@@ -4,6 +4,7 @@ import {
   createDrawPool,
   updateDraws,
   updateFinalRankings,
+  createSemifinalistsPool,
   isGoalRatioTiebreaker,
   getRowStriped,
   isWildCardExtraRow,
@@ -113,7 +114,7 @@ const RankingRow2 = (props) => {
       <Col className="col-box-7 padding-top-xxs">
         {row.pts}
         <React.Fragment>
-          {ranking_type === 'group' && row.h2h_notes && !row.fp && (
+          {ranking_type === 'group' && row.h2h_notes && !row.fp && !row.draw_lot_notes && (
             <Head2HeadTooltip target={`h2hTooltip-${row.id}`} h2h_notes={row.h2h_notes} group_playoff={row.group_playoff} />
           )}
           {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />}
@@ -159,6 +160,9 @@ const RankingRound = (props) => {
   createDrawPool(round)
   updateDraws(round)
   updateFinalRankings(round)
+  if (config.no_third_place && round.name === 'Semi-finals') {
+    createSemifinalistsPool(round)
+  }
   return (
     <React.Fragment>
       <RankingRowSeparate round={round} />

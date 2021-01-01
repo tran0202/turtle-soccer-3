@@ -348,14 +348,14 @@ const compareGoalForward = (a, b, drawFunction) => {
 const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
   if (a.gd > b.gd) {
     if (savingNotes) {
-      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd >= 0 ? '+' : ''}${a.gd}`
-      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd >= 0 ? '+' : ''}${b.gd}`
+      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd > 0 ? '+' : ''}${a.gd}`
+      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd > 0 ? '+' : ''}${b.gd}`
     }
     return -1
   } else if (a.gd < b.gd) {
     if (savingNotes) {
-      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd >= 0 ? '+' : ''}${a.gd}`
-      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd >= 0 ? '+' : ''}${b.gd}`
+      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd > 0 ? '+' : ''}${a.gd}`
+      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd > 0 ? '+' : ''}${b.gd}`
     }
     return 1
   } else {
@@ -369,16 +369,19 @@ export const sortGroupRankings = (group, startingIndex, config) => {
     const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
     const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
     group.final_rankings.sort((a, b) => {
-      if (a.pts > b.pts) {
+      if (group.name === 'Semi-finals') {
+        return getTeamName(a.id) > getTeamName(b.id) ? 1 : -1
+      } else if (a.pts > b.pts) {
         return -1
       } else if (a.pts < b.pts) {
         return 1
       } else {
         if (isHead2HeadBeforeGoalDifference) {
-          // console.log('a', a)
           return compareH2h(a, b, false, () => {
             return compareGoalDifference(a, b, true, () => {
-              return 0
+              return compareGoalForward(a, b, () => {
+                return 0
+              })
             })
           })
         } else if (isLotGroupPlayoffTiebreaker) {
@@ -431,7 +434,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
     })
     group.final_rankings.forEach((t, index) => {
       if (t) {
-        t.r = index + startingIndex
+        t.r = group.name === 'Semi-finals' ? startingIndex : index + startingIndex
       }
     })
   }
@@ -628,6 +631,7 @@ export const createDrawPool = (round) => {
     if (pools.length > 0) {
       round.draw_pools = pools
     }
+    // console.log('round.draw_pools', round.draw_pools)
   }
 }
 
@@ -677,6 +681,17 @@ export const updateFinalRankings = (round) => {
     }
     round.final_rankings = newFinalRankings
   }
+}
+
+export const createSemifinalistsPool = (round) => {
+  if (!round.final_rankings) return
+  let pool = []
+  round.final_rankings.forEach((fr) => {
+    pool.push(fr)
+  })
+  round.final_rankings = []
+  round.final_rankings.push(pool)
+  console.log('round.final_rankings', round.final_rankings)
 }
 
 export const cloneRanking = (ranking) => {

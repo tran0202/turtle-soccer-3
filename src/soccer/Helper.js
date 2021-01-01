@@ -12,6 +12,7 @@ export const getTournamentConfig = (tournament) => {
     golden_goal_rule: tournament.golden_goal_rule,
     head_to_head_tiebreaker: tournament.head_to_head_tiebreaker,
     tiebreakers: tournament.tiebreakers,
+    no_third_place: tournament.no_third_place,
     third_place_ranking: tournament.third_place_ranking,
     points_for_win: tournament.points_for_win,
     active: tournament.active,
