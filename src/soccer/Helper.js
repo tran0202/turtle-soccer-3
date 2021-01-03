@@ -494,6 +494,7 @@ const DisplayMatch = (props) => {
         <Col sm="1" xs="1" className="padding-top-sm text-center">
           {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
         </Col>
+
         <Col sm="2" xs="2" className="score text-center score-no-padding-right">
           {(m.home_extra_score == null || m.away_extra_score == null) && (
             <React.Fragment>

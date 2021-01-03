@@ -41,9 +41,56 @@ const findFinalStandings = (tournament) => {
 const getGoldenBootDetails = (player) => {
   let details = ``
   details = player.goals ? `(${player.goals} goals)` : details
-  details = player.assists ? `(${player.goals} goals, ${player.assists} assists)` : details
-  details = player.minutes ? `(${player.goals} goals, ${player.assists} assists, ${player.minutes} minutes)` : details
+  if (player.assists && player.minutes) {
+    details = `(${player.goals} goals, ${player.assists} assists, ${player.minutes} minutes)`
+  } else if (player.assists && !player.minutes) {
+    details = `(${player.goals} goals, ${player.assists} assists)`
+  } else if (!player.assists && player.minutes) {
+    details = `(${player.goals} goals, ${player.minutes} minutes)`
+  }
   return details
+}
+
+const getTopScorerLabel = (tournament, position) => {
+  if (!tournament.year || !tournament.tournament_type_id || !position) return
+  if (position === 1) {
+    if (tournament.tournament_type_id === 'WC') {
+      if (tournament.year <= '1978') {
+        return 'Top scorer'
+      } else if (tournament.year <= '2006') {
+        return 'Golden Shoe'
+      }
+      return 'Golden Boot'
+    }
+    return 'Golden Boot'
+  } else if (position === 2) {
+    if (tournament.tournament_type_id === 'WC') {
+      if (tournament.year <= '1978') {
+        return 'Runner-up'
+      } else if (tournament.year <= '2006') {
+        return 'Silver Shoe'
+      }
+      return 'Silver Boot'
+    }
+    return 'Silver Boot'
+  } else {
+    if (tournament.tournament_type_id === 'WC') {
+      if (tournament.year <= '1978') {
+        return 'Third place'
+      } else if (tournament.year <= '2006') {
+        return 'Bronze Shoe'
+      }
+      return 'Bronze Boot'
+    }
+    return 'Bronze Boot'
+  }
+}
+
+const getGoldenBallLabel = (tournament) => {
+  if (tournament.tournament_type_id === 'EURO') {
+    return 'Player of the Tournament'
+  }
+  return 'Golden Ball'
 }
 
 const About = (props) => {
@@ -249,7 +296,7 @@ const About = (props) => {
               {awards.golden_boot && (
                 <Row className="margin-top-xs">
                   <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                    Golden Boot
+                    {getTopScorerLabel(tournament, 1)}
                   </Col>
                   <Col md="6" sm="7">
                     {awards.golden_boot.map((p) => (
@@ -266,7 +313,7 @@ const About = (props) => {
               {awards.silver_boot && (
                 <Row className="margin-top-xs">
                   <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                    Silver Boot
+                    {getTopScorerLabel(tournament, 2)}
                   </Col>
                   <Col md="6" sm="7">
                     {awards.silver_boot.map((p) => (
@@ -283,7 +330,7 @@ const About = (props) => {
               {awards.bronze_boot && (
                 <Row className="margin-top-xs">
                   <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                    Bronze Boot
+                    {getTopScorerLabel(tournament, 3)}
                   </Col>
                   <Col md="6" sm="7">
                     {awards.bronze_boot.map((p) => (
@@ -308,7 +355,7 @@ const About = (props) => {
                   {awards.golden_ball[0] && (
                     <Row className="margin-top-xs">
                       <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                        Golden Ball
+                        {getGoldenBallLabel(tournament)}
                       </Col>
                       <Col md="6" sm="7">
                         {awards.golden_ball[0].team && (

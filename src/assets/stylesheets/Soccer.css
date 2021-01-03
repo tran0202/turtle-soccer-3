@@ -273,30 +273,35 @@
 .col-box-7,
 .col-box-10,
 .col-box-25,
+.col-box-31,
 .col-box-34,
 .col-box-95,
 .col-box-sm-5,
 .col-box-sm-7,
 .col-box-sm-10,
 .col-box-sm-25,
+.col-box-sm-31,
 .col-box-sm-34,
 .col-box-sm-95,
 .col-box-md-5,
 .col-box-md-7,
 .col-box-md-10,
 .col-box-md-25,
+.col-box-md-31,
 .col-box-md-34,
 .col-box-md-95,
 .col-box-lg-5,
 .col-box-lg-7,
 .col-box-lg-10,
 .col-box-lg-25,
+.col-box-lg-31,
 .col-box-lg-34,
 .col-box-lg-95,
 .col-box-xl-5,
 .col-box-xl-7,
 .col-box-xl-10,
 .col-box-xl-25,
+.col-box-xl-31,
 .col-box-xl-34,
 .col-box-xl-95 {
   position: relative;
@@ -319,6 +324,10 @@
 .col-box-25 {
   flex: 0 0 25%;
   max-width: 25%;
+}
+.col-box-31 {
+  flex: 0 0 31%;
+  max-width: 31%;
 }
 .col-box-34 {
   flex: 0 0 34%;
@@ -345,6 +354,10 @@
   .col-box-sm-25 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .col-box-sm-31 {
+    flex: 0 0 31%;
+    max-width: 31%;
   }
   .col-box-sm-34 {
     flex: 0 0 34%;
@@ -373,6 +386,10 @@
     flex: 0 0 25%;
     max-width: 25%;
   }
+  .col-box-md-31 {
+    flex: 0 0 31%;
+    max-width: 31%;
+  }
   .col-box-md-34 {
     flex: 0 0 34%;
     max-width: 34%;
@@ -400,6 +417,10 @@
     flex: 0 0 25%;
     max-width: 25%;
   }
+  .col-box-lg-31 {
+    flex: 0 0 31%;
+    max-width: 31%;
+  }
   .col-box-lg-34 {
     flex: 0 0 34%;
     max-width: 34%;
@@ -426,6 +447,10 @@
   .col-box-xl-25 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .col-box-xl-31 {
+    flex: 0 0 31%;
+    max-width: 31%;
   }
   .col-box-xl-34 {
     flex: 0 0 34%;

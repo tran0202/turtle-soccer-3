@@ -5,7 +5,6 @@
     "name": "UEFA Euro 2016 France",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
     "points_for_win": 3,
     "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplay", "coefficient"],
@@ -31,7 +30,7 @@
       {
         "name": "Opening ceremony",
         "filename": "Uefa_Euro_2016_Opening_Ceremony.jpg",
-        "text": "The opening ceremony at Stade de France, Saint-Denis "
+        "text": "The opening ceremony at Stade de France, Saint-Denis"
       },
       { "name": "Group C", "filename": "Germany_vs_Poland_0-0_(27103531294).jpg", "text": "Gremany vs Poland" }
     ],
@@ -39,8 +38,8 @@
     "statistics": { "total_matches": 51, "total_goals": 108, "attendance": 2427303 },
     "awards": {
       "golden_boot": [{ "player": "Antoine Griezmann", "team": "FRA", "goals": 6 }],
-      "silver_boot": [{ "player": "Olivier Giroud", "team": "FRA" }],
-      "bronze_boot": [{ "player": "Álvaro Morata", "team": "ESP" }],
+      "silver_boot": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 3, "assists": 3 }],
+      "bronze_boot": [{ "player": "Olivier Giroud", "team": "FRA", "goals": 3, "assists": 2 }],
       "golden_ball": [{ "player": "Antoine Griezmann", "team": "FRA" }],
       "best_young_player": { "player": " Renato Sanches", "team": "POR" }
     }
@@ -51,10 +50,57 @@
     "name": "UEFA Euro 2012 Poland-Ukraine",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "Euro_2012.png", "start_date": "2012-06-08", "end_date": "2012-07-01" }
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["POL", "UKR"],
+      "logo_filename": "Euro_2012.png",
+      "mascot_filename": "mascot_2012.jpg",
+      "start_date": "2012-06-08",
+      "end_date": "2012-07-01",
+      "color": "#1797ce",
+      "team_count": 16,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Spain_national_football_team_Euro_2012_trophy_01.jpg",
+        "text": "Spanish players celebrating their victory"
+      },
+      {
+        "name": "Champions",
+        "filename": "Spain_national_football_team_Euro_2012_trophy_02.jpg",
+        "text": "Spain players holding the Henri Delaunay Trophy."
+      },
+      {
+        "name": "Final",
+        "filename": "Di_Natale,_Torres_and_Balotelli_Euro_2012_final.jpg",
+        "text": "Fernando Torres and Mario Balotelli (both with number 9) in the final match"
+      },
+      { "name": "Final", "filename": "Andrés_Iniesta_shot_Euro_2012_final.jpg", "text": "Iniesta takes a shot on Gianluigi Buffon's goal." },
+      { "name": "Olympic Stadium, Kyiv", "filename": "Фінал_Євро-2012._1-й_тайм.jpeg", "text": "The Olympic Stadium in Kyiv hosted the final" },
+      { "name": "Spain", "filename": "Spain_national_football_team_Euro_2012_final.jpg", "text": "Spain's starting line-up in the Final" },
+      { "name": "Italy", "filename": "Italy_national_football_team_Euro_2012_final.jpg", "text": "Italy's starting line-up in the Final" },
+      {
+        "name": "Mascots",
+        "filename": "Slavek&Slavko_(3).jpg",
+        "text": "The mascots Slavek & Slavko"
+      },
+      { "name": "Adidas Tango 12", "filename": "Euro_2012.jpg", "text": "Monumental Adidas Tango 12 in Kiev" },
+      { "name": "Final programme", "filename": "Euro2012matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 2012 Final." }
+    ],
+    "final_standings": { "champions": "ESP", "runners_up": "ITA", "semi_finalist1": "GER", "semi_finalist2": "POR" },
+    "statistics": { "total_matches": 31, "total_goals": 76, "attendance": 1440896 },
+    "awards": {
+      "golden_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 3, "assists": 1, "minutes": 189 }],
+      "silver_boot": [{ "player": "Mario Gomez", "team": "GER", "goals": 3, "assists": 1, "minutes": 282 }],
+      "bronze_boot": [{ "player": "Alan Dzagoev", "team": "RUS", "goals": 3, "minutes": 253 }],
+      "golden_ball": [{ "player": "Andrés Iniesta", "team": "ESP" }]
+    }
   },
   {
     "id": "EURO2008",

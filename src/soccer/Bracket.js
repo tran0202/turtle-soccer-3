@@ -330,8 +330,8 @@ const BracketFinalCol = (props) => {
   return (
     <Col className="col-brk-22">
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
-      {config.roundCount === 3 && <Row className="bracket-gap-height-10"></Row>}
-      {config.roundCount === 4 && thirdPlace && <Row className="bracket-gap-height-20"></Row>}
+      {config.roundCount === 3 && thirdPlace && <Row className="bracket-gap-height-10"></Row>}
+      {((config.roundCount === 4 && thirdPlace) || (config.roundCount === 3 && !thirdPlace)) && <Row className="bracket-gap-height-20"></Row>}
       {(config.roundCount === 5 || (config.roundCount === 4 && !thirdPlace)) && <Row className="bracket-gap-height-30"></Row>}
       <BracketColInner round={round} config={config} />
       {thirdPlace && <BracketColInner round={thirdPlace} config={config} />}
