@@ -1,5 +1,5 @@
 {
-  "id": "EURO2012",
+  "id": "EURO2008",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,265 +16,265 @@
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "POL" }, { "id": "GRE" }, { "id": "RUS" }, { "id": "CZE" }],
+          "teams": [{ "id": "SUI" }, { "id": "CZE" }, { "id": "POR" }, { "id": "TUR" }],
           "matches": [
             {
-              "home_team": "POL",
-              "away_team": "GRE",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2012-06-08",
-              "time": "18:00",
-              "stadium": "National Stadium",
-              "city": "Warsaw"
-            },
-            {
-              "home_team": "RUS",
+              "home_team": "SUI",
               "away_team": "CZE",
-              "home_score": 4,
+              "home_score": 0,
               "away_score": 1,
-              "date": "2012-06-08",
-              "time": "20:45",
-              "stadium": "Stadion Miejski",
-              "city": "Wrocław"
-            },
-            {
-              "home_team": "GRE",
-              "away_team": "CZE",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2012-06-12",
+              "date": "2008-06-07",
               "time": "18:00",
-              "stadium": "Stadion Miejski",
-              "city": "Wrocław"
+              "stadium": "St. Jakob-Park",
+              "city": "Basel"
             },
             {
-              "home_team": "POL",
-              "away_team": "RUS",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2012-06-12",
+              "home_team": "POR",
+              "away_team": "TUR",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2008-06-07",
               "time": "20:45",
-              "stadium": "National Stadium",
-              "city": "Warsaw"
+              "stadium": "Stade de Genève",
+              "city": "Geneva"
             },
             {
               "home_team": "CZE",
-              "away_team": "POL",
+              "away_team": "POR",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2012-06-16",
-              "time": "20:45",
-              "stadium": "Stadion Miejski",
-              "city": "Wrocław"
+              "away_score": 3,
+              "date": "2008-06-11",
+              "time": "18:00",
+              "stadium": "Stade de Genève",
+              "city": "Geneva"
             },
             {
-              "home_team": "GRE",
-              "away_team": "RUS",
+              "home_team": "SUI",
+              "away_team": "TUR",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2012-06-16",
+              "away_score": 2,
+              "date": "2008-06-11",
               "time": "20:45",
-              "stadium": "National Stadium",
-              "city": "Warsaw"
+              "stadium": "St. Jakob-Park",
+              "city": "Basel"
+            },
+            {
+              "home_team": "SUI",
+              "away_team": "POR",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2008-06-15",
+              "time": "20:45",
+              "stadium": "St. Jakob-Park",
+              "city": "Basel"
+            },
+            {
+              "home_team": "TUR",
+              "away_team": "CZE",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "2008-06-15",
+              "time": "20:45",
+              "stadium": "Stade de Genève",
+              "city": "Geneva"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "NED" }, { "id": "DEN" }, { "id": "GER" }, { "id": "POR" }],
+          "teams": [{ "id": "AUT" }, { "id": "CRO" }, { "id": "GER" }, { "id": "POL" }],
           "matches": [
             {
-              "home_team": "NED",
-              "away_team": "DEN",
+              "home_team": "AUT",
+              "away_team": "CRO",
               "home_score": 0,
               "away_score": 1,
-              "date": "2012-06-09",
-              "time": "19:00",
-              "stadium": "Metalist Stadium",
-              "city": "Kharkiv"
+              "date": "2008-06-08",
+              "time": "18:00",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna"
             },
             {
               "home_team": "GER",
-              "away_team": "POR",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2012-06-09",
-              "time": "21:45",
-              "stadium": "Arena Lviv",
-              "city": "Lviv"
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "POR",
+              "away_team": "POL",
               "home_score": 2,
-              "away_score": 3,
-              "date": "2012-06-13",
-              "time": "19:00",
-              "stadium": "Arena Lviv",
-              "city": "Lviv"
+              "away_score": 0,
+              "date": "2008-06-08",
+              "time": "20:45",
+              "stadium": "Wörthersee Stadionn",
+              "city": "Klagenfurt"
             },
             {
-              "home_team": "NED",
+              "home_team": "CRO",
               "away_team": "GER",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2012-06-13",
-              "time": "21:45",
-              "stadium": "Metalist Stadium",
-              "city": "Kharkiv"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "NED",
               "home_score": 2,
               "away_score": 1,
-              "date": "2012-06-17",
-              "time": "21:45",
-              "stadium": "Metalist Stadium",
-              "city": "Kharkiv"
+              "date": "2008-06-12",
+              "time": "18:00",
+              "stadium": "Wörthersee Stadionn",
+              "city": "Klagenfurt"
             },
             {
-              "home_team": "DEN",
-              "away_team": "GER",
+              "home_team": "AUT",
+              "away_team": "POL",
               "home_score": 1,
-              "away_score": 2,
-              "date": "2012-06-17",
-              "time": "21:45",
-              "stadium": "Arena Lviv",
-              "city": "Lviv"
+              "away_score": 1,
+              "date": "2008-06-12",
+              "time": "20:45",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "CRO",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2008-06-16",
+              "time": "20:45",
+              "stadium": "Wörthersee Stadionn",
+              "city": "Klagenfurt"
+            },
+            {
+              "home_team": "AUT",
+              "away_team": "GER",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2008-06-16",
+              "time": "20:45",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "ESP" }, { "id": "ITA" }, { "id": "IRL" }, { "id": "CRO" }],
+          "teams": [{ "id": "ROU" }, { "id": "FRA" }, { "id": "NED" }, { "id": "ITA" }],
           "matches": [
             {
-              "home_team": "ESP",
-              "away_team": "ITA",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2012-06-10",
-              "time": "18:00",
-              "stadium": "PGE Arena",
-              "city": "Gdańsk"
-            },
-            {
-              "home_team": "IRL",
-              "away_team": "CRO",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "2012-06-10",
-              "time": "20:45",
-              "stadium": "Stadion Poznań",
-              "city": "Poznań"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "CRO",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2012-06-14",
-              "time": "18:00",
-              "stadium": "Stadion Poznań",
-              "city": "Poznań"
-            },
-            {
-              "home_team": "ESP",
-              "away_team": "IRL",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "2012-06-14",
-              "time": "20:45",
-              "stadium": "PGE Arena",
-              "city": "Gdańsk"
-            },
-            {
-              "home_team": "CRO",
-              "away_team": "ESP",
+              "home_team": "ROU",
+              "away_team": "FRA",
               "home_score": 0,
-              "away_score": 1,
-              "date": "2012-06-18",
+              "away_score": 0,
+              "date": "2008-06-09",
+              "time": "18:00",
+              "stadium": "Letzigrund",
+              "city": "Zürich"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "ITA",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2008-06-09",
               "time": "20:45",
-              "stadium": "PGE Arena",
-              "city": "Gdańsk"
+              "stadium": "Stade de Suisse",
+              "city": "Bern"
             },
             {
               "home_team": "ITA",
-              "away_team": "IRL",
+              "away_team": "ROU",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2008-06-13",
+              "time": "18:00",
+              "stadium": "Letzigrund",
+              "city": "Zürich"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "FRA",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "2008-06-13",
+              "time": "20:45",
+              "stadium": "Stade de Suisse",
+              "city": "Bern"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "ROU",
               "home_score": 2,
               "away_score": 0,
-              "date": "2012-06-18",
+              "date": "2008-06-17",
               "time": "20:45",
-              "stadium": "Stadion Poznań",
-              "city": "Poznań"
+              "stadium": "Stade de Suisse",
+              "city": "Bern"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "ITA",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2008-06-17",
+              "time": "20:45",
+              "stadium": "Letzigrund",
+              "city": "Zürich"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "FRA" }, { "id": "ENG" }, { "id": "UKR" }, { "id": "SWE" }],
+          "teams": [{ "id": "ESP" }, { "id": "RUS" }, { "id": "GRE" }, { "id": "SWE" }],
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "ENG",
-              "home_score": 1,
+              "home_team": "ESP",
+              "away_team": "RUS",
+              "home_score": 4,
               "away_score": 1,
-              "date": "2012-06-11",
-              "time": "19:00",
-              "stadium": "Donbas Arena",
-              "city": "Donetsk"
+              "date": "2008-06-10",
+              "time": "18:00",
+              "stadium": "Tivoli-Neu",
+              "city": "Innsbruck"
             },
             {
-              "home_team": "UKR",
+              "home_team": "GRE",
               "away_team": "SWE",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2012-06-11",
-              "time": "21:45",
-              "stadium": "Olympic Stadium",
-              "city": "Kyiv"
-            },
-            {
-              "home_team": "UKR",
-              "away_team": "FRA",
               "home_score": 0,
               "away_score": 2,
-              "date": "2012-06-15",
-              "time": "19:00",
-              "stadium": "Donbas Arena",
-              "city": "Donetsk"
+              "date": "2008-06-10",
+              "time": "20:45",
+              "stadium": "Stadion Wals-Siezenheim",
+              "city": "Salzburg"
             },
             {
               "home_team": "SWE",
-              "away_team": "ENG",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "2012-06-15",
-              "time": "22:00",
-              "stadium": "Olympic Stadium",
-              "city": "Kyiv"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "UKR",
+              "away_team": "ESP",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2012-06-19",
-              "time": "21:45",
-              "stadium": "Donbas Arena",
-              "city": "Donetsk"
+              "away_score": 2,
+              "date": "2008-06-14",
+              "time": "18:00",
+              "stadium": "Tivoli-Neu",
+              "city": "Innsbruck"
             },
             {
-              "home_team": "SWE",
-              "away_team": "FRA",
+              "home_team": "GRE",
+              "away_team": "RUS",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2008-06-14",
+              "time": "20:45",
+              "stadium": "Stadion Wals-Siezenheim",
+              "city": "Salzburg"
+            },
+            {
+              "home_team": "GRE",
+              "away_team": "ESP",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2008-06-18",
+              "time": "20:45",
+              "stadium": "Stadion Wals-Siezenheim",
+              "city": "Salzburg"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "SWE",
               "home_score": 2,
               "away_score": 0,
-              "date": "2012-06-19",
-              "time": "21:45",
-              "stadium": "Olympic Stadium",
-              "city": "Kyiv"
+              "date": "2008-06-18",
+              "time": "20:45",
+              "stadium": "Tivoli-Neu",
+              "city": "Innsbruck"
             }
           ]
         }
@@ -291,51 +291,57 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "CZE",
-              "away_team": "POR",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2012-06-21",
+              "home_team": "POR",
+              "away_team": "GER",
+              "home_score": 2,
+              "away_score": 3,
+              "date": "2008-06-19",
               "time": "20:45",
-              "stadium": "National Stadium",
-              "city": "Warsaw",
+              "stadium": "St. Jakob-Park",
+              "city": "Basel",
               "bracket_order": 1
             },
             {
-              "home_team": "GER",
-              "away_team": "GRE",
-              "home_score": 4,
-              "away_score": 2,
-              "date": "2012-06-22",
+              "home_team": "CRO",
+              "away_team": "TUR",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 1,
+              "away_extra_score": 1,
+              "home_penalty_score": 1,
+              "away_penalty_score": 3,
+              "date": "2008-06-20",
               "time": "20:45",
-              "stadium": "PGE Arena",
-              "city": "Gdańsk",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "NED",
+              "away_team": "RUS",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 2,
+              "date": "2008-06-21",
+              "time": "20:45",
+              "stadium": "St. Jakob-Park",
+              "city": "Basel",
               "bracket_order": 3
             },
             {
               "home_team": "ESP",
-              "away_team": "FRA",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2012-06-23",
-              "time": "21:45",
-              "stadium": "Donbas Arena",
-              "city": "Donetsk",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "ENG",
               "away_team": "ITA",
               "home_score": 0,
               "away_score": 0,
               "home_extra_score": 0,
               "away_extra_score": 0,
-              "home_penalty_score": 2,
-              "away_penalty_score": 4,
-              "date": "2012-06-24",
-              "time": "21:45",
-              "stadium": "Olympic Stadium",
-              "city": "Kyiv",
+              "home_penalty_score": 4,
+              "away_penalty_score": 2,
+              "date": "2008-06-22",
+              "time": "20:45",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna",
               "bracket_order": 4
             }
           ]
@@ -347,29 +353,25 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "POR",
-              "away_team": "ESP",
-              "home_score": 0,
-              "away_score": 0,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 2,
-              "away_penalty_score": 4,
-              "date": "2012-06-27",
-              "time": "21:45",
-              "stadium": "Donbas Arena",
-              "city": "Donetsk",
+              "home_team": "GER",
+              "away_team": "TUR",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "2008-06-25",
+              "time": "20:45",
+              "stadium": "St. Jakob-Park",
+              "city": "Basel",
               "bracket_order": 1
             },
             {
-              "home_team": "GER",
-              "away_team": "ITA",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2012-06-28",
+              "home_team": "RUS",
+              "away_team": "ESP",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2008-06-26",
               "time": "20:45",
-              "stadium": "National Stadium",
-              "city": "Warsaw",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna",
               "bracket_order": 2
             }
           ]
@@ -379,14 +381,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "ESP",
-              "away_team": "ITA",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "2012-07-01",
-              "time": "21:45",
-              "stadium": "Olympic Stadium",
-              "city": "Kyiv"
+              "home_team": "GER",
+              "away_team": "ESP",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2008-06-29",
+              "time": "20:45",
+              "stadium": "Ernst-Happel-Stadion",
+              "city": "Vienna"
             }
           ]
         }

@@ -24,6 +24,13 @@ export const getTournamentConfig = (tournament) => {
   }
 }
 
+export const getTournamentTitleFont = (tournamentType) => {
+  if (tournamentType.id === 'EURO') {
+    return 'tournament-title-EURO'
+  }
+  return 'h1-ff5 tournament-title'
+}
+
 export const getRoundRobinStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'roundrobin') : null
 }

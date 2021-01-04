@@ -1,4 +1,5 @@
 import React from 'react'
+import { getTournamentTitleFont } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
@@ -54,7 +55,7 @@ const PageLinks = (props) => {
 
 class QualificationHeader extends React.Component {
   render() {
-    const { qTournament, query } = this.props
+    const { qTournament, query, tournamentType } = this.props
     const { cid } = query
     const logoSrc = `/assets/images/logos/${cid}.png`
     // console.log('qTournamnent', qTournament)
@@ -66,7 +67,10 @@ class QualificationHeader extends React.Component {
               <img src={logoSrc} alt={cid} title={cid} className="img-fluid" />
             </Col>
             <Col lg="10" md="9" sm="9">
-              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: qTournament.details ? qTournament.details.color : '#000' }}>
+              <h1
+                className={`text-center mt-3 mb-2 ${getTournamentTitleFont(tournamentType)}`}
+                style={{ color: qTournament.details ? qTournament.details.color : '#000' }}
+              >
                 {qTournament.name}
               </h1>
               {qTournament.details && qTournament.details.start_date && moment(qTournament.details.start_date).format('MMMM D, YYYY')} &mdash;&nbsp;

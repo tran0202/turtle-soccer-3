@@ -108,10 +108,47 @@
     "name": "UEFA Euro 2008 Austria-Switzerland",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "Euro_2008.png", "start_date": "2008-06-07", "end_date": "2008-06-29" }
+    "tiebreakers": ["points", "penalty", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["AUT", "SUI"],
+      "logo_filename": "Euro_2008.png",
+      "mascot_filename": "mascot_2008.jpg",
+      "start_date": "2008-06-07",
+      "end_date": "2008-06-29",
+      "color": "#ff0000",
+      "team_count": 16,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Celebracion_Eurocopa_1.jpg",
+        "text": "The Spanish football team touring Madrid as champions"
+      },
+      {
+        "name": "Champions",
+        "filename": "Spain_Euro_08_celebration_2.jpg",
+        "text": "Cesc Fàbregas celebrating Spain's Euro 2008 title"
+      },
+      {
+        "name": "Player of the Tournament",
+        "filename": "Xavi_Selección.jpg",
+        "text": "Spain midfielder Xavi was selected as the Player of the Tournament."
+      },
+      { "name": "Group C", "filename": "NL-IT-Bern-Voetbal-09-06-08.jpeg", "text": "A free kick in the match between Netherlands and Italy on 9 June" },
+      { "name": "Group D", "filename": "España_Suecia_inicio.jpg", "text": "The beginning of the match between Sweden and Spain." },
+      { "name": "Final programme", "filename": "Euro2008matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 2008 Final." }
+    ],
+    "final_standings": { "champions": "ESP", "runners_up": "GER", "semi_finalist1": "RUS", "semi_finalist2": "TUR" },
+    "statistics": { "total_matches": 31, "total_goals": 77, "attendance": 1143990 },
+    "awards": {
+      "golden_boot": [{ "player": "David Villa", "team": "ESP", "goals": 4 }],
+      "golden_ball": [{ "player": "Xavi", "team": "ESP" }]
+    }
   },
   {
     "id": "EURO2004",

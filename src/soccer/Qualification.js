@@ -40,7 +40,7 @@ const Qualification = (props) => {
           <ConfederationLinks query={query} confed_names={qualification.confed_names} />
           {qualification.existed && (
             <React.Fragment>
-              {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} />}
+              {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} tournamentType={tournamentType} />}
               {qPage === 'about' && <About tournament={qualification} />}
               {qPage === 'matches' && <Matches tournament={qualification} />}
               {(qPage === 'groups' || qPage === 'standings') && <Groups tournament={qualification} tournamentType={tournamentType} />}

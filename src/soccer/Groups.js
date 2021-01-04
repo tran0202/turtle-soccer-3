@@ -153,7 +153,7 @@ const TournamentFormat = (props) => {
                         </li>
                       )
                     } else if (tb === 'penalty') {
-                      return <li key={index}>Penalty shoot-out in the last round of the group stage</li>
+                      return <li key={index}>Penalty shoot-out if 2 teams tied alone in the last round of the group stage</li>
                     } else if (tb === 'fairplay') {
                       return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
                     } else if (tb === 'coefficient') {

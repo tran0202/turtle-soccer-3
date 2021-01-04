@@ -683,6 +683,10 @@
   font-family: 'Dusha', serif;
 }
 
+.tournament-title-EURO {
+  font-family: 'Bridge', sans-serif;
+}
+
 .tournament-format {
   vertical-align: middle;
   border: 1px solid #a2a9b1;

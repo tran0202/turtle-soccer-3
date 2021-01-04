@@ -5,6 +5,7 @@ import Page from '../core/Page'
 import CompetitionAbout from './CompetitionAbout'
 import AlltimeStandings from './AlltimeStandings'
 import { getCurrentTournament, getTournamentArray, getTournamentDataArray } from './DataHelper'
+import { getTournamentTitleFont } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink, Container } from 'reactstrap'
 
 const CompHeaderLinks = (props) => {
@@ -93,7 +94,10 @@ class CompetitionApp extends React.Component {
         <Container>
           <Row className="mt-3 text-center">
             <Col>
-              <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: tournamentType ? tournamentType.color : '' }}>
+              <h1
+                className={`text-center mt-3 mb-2 ${tournamentType ? getTournamentTitleFont(tournamentType) : ''}`}
+                style={{ color: tournamentType ? tournamentType.color : '' }}
+              >
                 {tournamentType ? tournamentType.name : ''}
               </h1>
               <CompHeaderLinks query={query} />

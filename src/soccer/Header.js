@@ -1,5 +1,5 @@
 import React from 'react'
-import { getTournamentConfig, getRoundRobinStages } from './Helper'
+import { getTournamentConfig, getRoundRobinStages, getTournamentTitleFont } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
@@ -85,7 +85,7 @@ class Header extends React.Component {
           </a>
         </Col>
         <Col lg="9" md="10" sm="9">
-          <h1 className="h1-ff5 text-center mt-3 mb-2 tournament-title" style={{ color: details.color }}>
+          <h1 className={`text-center mt-3 mb-2 ${getTournamentTitleFont(tournamentType)}`} style={{ color: details.color }}>
             {tournament.name}
           </h1>
           {moment(details.start_date).format('MMMM D, YYYY')} &mdash; {moment(details.end_date).format('MMMM D, YYYY')}

@@ -6,6 +6,10 @@
   font-family: 'Capture it';
   src: url('fonts/Capture it.ttf');
 }
+@font-face {
+  font-family: 'Bridge';
+  src: url('fonts/Bridge_Type_-_UEFA_Euro_2020.ttf');
+}
 
 @media (min-width: 768px) {
 }

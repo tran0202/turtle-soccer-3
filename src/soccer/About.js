@@ -52,33 +52,36 @@ const getGoldenBootDetails = (player) => {
 }
 
 const getTopScorerLabel = (tournament, position) => {
-  if (!tournament.year || !tournament.tournament_type_id || !position) return
+  if (!tournament.year || !tournament.tournament_type_id || !tournament.awards || !position) return
   if (position === 1) {
+    if (!tournament.awards.golden_boot) return
     if (tournament.tournament_type_id === 'WC') {
       if (tournament.year <= '1978') {
-        return 'Top scorer'
+        return tournament.awards.golden_boot.length > 1 ? 'Top scorers' : 'Top scorer'
       } else if (tournament.year <= '2006') {
-        return 'Golden Shoe'
+        return tournament.awards.golden_boot.length > 1 ? 'Golden Shoes' : 'Golden Shoe'
       }
       return 'Golden Boot'
     }
     return 'Golden Boot'
   } else if (position === 2) {
+    if (!tournament.awards.silver_boot) return
     if (tournament.tournament_type_id === 'WC') {
       if (tournament.year <= '1978') {
-        return 'Runner-up'
+        return tournament.awards.silver_boot.length > 1 ? 'Runners-up' : 'Runner-up'
       } else if (tournament.year <= '2006') {
-        return 'Silver Shoe'
+        return tournament.awards.silver_boot.length > 1 ? 'Silver Shoes' : 'Silver Shoe'
       }
       return 'Silver Boot'
     }
     return 'Silver Boot'
   } else {
+    if (!tournament.awards.bronze_boot) return
     if (tournament.tournament_type_id === 'WC') {
       if (tournament.year <= '1978') {
         return 'Third place'
       } else if (tournament.year <= '2006') {
-        return 'Bronze Shoe'
+        return tournament.awards.bronze_boot.length > 1 ? 'Bronze Shoes' : 'Bronze Shoe'
       }
       return 'Bronze Boot'
     }
