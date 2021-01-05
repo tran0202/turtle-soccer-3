@@ -10,7 +10,7 @@ export const getTournamentConfig = (tournament) => {
     name: tournament.name,
     year: tournament.year,
     golden_goal_rule: tournament.golden_goal_rule,
-    head_to_head_tiebreaker: tournament.head_to_head_tiebreaker,
+    silver_goal_rule: tournament.silver_goal_rule,
     tiebreakers: tournament.tiebreakers,
     no_third_place: tournament.no_third_place,
     third_place_ranking: tournament.third_place_ranking,
@@ -278,7 +278,7 @@ const DisplayAwayGoalsText = (props) => {
 
 const DisplayExtraTimeText = (props) => {
   const { param } = props
-  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, group_playoff, goldenGoal } = param
+  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, group_playoff, goldenGoal, silverGoal } = param
   // console.log('group_playoff', group_playoff)
   return (
     <React.Fragment>
@@ -299,8 +299,12 @@ const DisplayExtraTimeText = (props) => {
               )}
               {home_extra_score !== away_extra_score && (
                 <React.Fragment>
-                  {goldenGoal && home_penalty_score == null && away_penalty_score == null ? (
-                    <React.Fragment>&nbsp;won on golden goal</React.Fragment>
+                  {(goldenGoal || silverGoal) && home_penalty_score == null && away_penalty_score == null ? (
+                    goldenGoal ? (
+                      <React.Fragment>&nbsp;won on golden goal</React.Fragment>
+                    ) : (
+                      <React.Fragment>&nbsp;won on silver goal</React.Fragment>
+                    )
                   ) : (
                     <React.Fragment>&nbsp;won after extra time</React.Fragment>
                   )}
@@ -516,8 +520,12 @@ const DisplayMatch = (props) => {
           {m.home_extra_score != null && m.away_extra_score != null && (
             <React.Fragment>
               {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
-              {config.goldenGoal && m.home_penalty_score == null && m.away_penalty_score == null ? (
-                <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
+              {(config.goldenGoal || config.silverGoal) && m.home_penalty_score == null && m.away_penalty_score == null ? (
+                config.goldenGoal ? (
+                  <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
+                ) : (
+                  <SilverGoalTooltip target="silvergoalTooltip" anchor="(s.g.)" />
+                )
               ) : (
                 <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />
               )}
@@ -555,6 +563,7 @@ const DisplayMatch = (props) => {
               away_penalty_score: m.away_penalty_score,
               group_playoff: m.group_playoff,
               goldenGoal: config.goldenGoal,
+              silverGoal: config.silverGoal,
             }}
           />
         </Col>
@@ -598,6 +607,12 @@ export const AetTooltip = (props) => {
 export const GoldenGoalTooltip = (props) => {
   const { target, anchor } = props
   const content = 'Golden goal'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const SilverGoalTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Silver goal'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

@@ -5,7 +5,7 @@ import { getTournamentConfig, getDefaultStageTab, getAllRoundRobinStages } from 
 import {
   calculateGroupRankings,
   calculateProgressRankings,
-  collectGroupRankings,
+  createGroupFinalRankings,
   hasWildCardAdvancement,
   collectWildCardRankings,
   isGroupPlayoffTiebreaker,
@@ -206,7 +206,7 @@ const calculateStageRankings = (tournament, config, stage) => {
       let matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
       matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
       matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
-      collectGroupRankings(tournament, group, matchDay)
+      createGroupFinalRankings(tournament, group, matchDay)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })
   stage.wild_card = groups && hasWildCardAdvancement(stage) ? collectWildCardRankings(stage) : {}

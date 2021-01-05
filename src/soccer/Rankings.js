@@ -1,15 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import {
-  createDrawPool,
-  updateDraws,
-  updateFinalRankings,
-  createSemifinalistsPool,
-  isGoalRatioTiebreaker,
-  getRowStriped,
-  isWildCardExtraRow,
-  getWildCardRowStriped,
-} from './RankingsHelper'
+import { updateFinalRankings, createSemifinalistsPool, isGoalRatioTiebreaker, getRowStriped, isWildCardExtraRow, getWildCardRowStriped } from './RankingsHelper'
 import {
   getFlagSrc,
   getTeamName,
@@ -157,8 +148,7 @@ export const RankingRow = (props) => {
 
 const RankingRound = (props) => {
   const { round, config } = props
-  createDrawPool(round)
-  updateDraws(round)
+  // console.log('round', round)
   updateFinalRankings(round)
   if (config.no_third_place && round.name === 'Semi-finals') {
     createSemifinalistsPool(round)
@@ -174,7 +164,6 @@ const RankingRound = (props) => {
 
 const Rankings = (props) => {
   const { rounds, config } = props
-  // console.log('rounds', rounds)
   const ranking_type = rounds && rounds.length > 0 ? rounds[0].ranking_type : ''
   return (
     <React.Fragment>

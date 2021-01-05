@@ -156,10 +156,50 @@
     "name": "UEFA Euro 2004 Portugal",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": true,
+    "silver_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "Euro_2004.png", "start_date": "2004-06-12", "end_date": "2004-07-04" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["POR"],
+      "logo_filename": "Euro_2004.png",
+      "mascot_filename": "mascots_-_uefa_euro_2004_kinas.jpeg",
+      "start_date": "2004-06-12",
+      "end_date": "2004-07-04",
+      "color": "#f37121",
+      "team_count": 16,
+      "venue_count": 10,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Opening Ceremony",
+        "filename": "Euro2004OpeningCeremony.jpg",
+        "text": "Opening ceremony at the Estádio do Dragão in Porto"
+      },
+      {
+        "name": "Final",
+        "filename": "Charisteas'_Siegtreffer_im_Finale_der_Euro_2004.jpg",
+        "text": "Angelos Charisteas (first from left with white shirt), scoring Greece's winner against Portugal in the final."
+      },
+      {
+        "name": "Player of the Tournament",
+        "filename": "Theodoros_Zagorakis.jpg",
+        "text": "Greece's Theodoros Zagorakis was selected as the Player of the Tournament."
+      },
+      {
+        "name": "Quarter-final",
+        "filename": "Henrik_Larsson_Euro_2004.jpg",
+        "text": "Swedish striker Henrik Larsson taking a free kick against the Netherlands in the quarter-finals"
+      },
+      { "name": "Final programme", "filename": "Euro2004matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 2004 Final." }
+    ],
+    "final_standings": { "champions": "GRE", "runners_up": "POR", "semi_finalist1": "CZE", "semi_finalist2": "NED" },
+    "statistics": { "total_matches": 31, "total_goals": 77, "attendance": 1160802 },
+    "awards": {
+      "golden_boot": [{ "player": "Milan Baroš", "team": "CZE", "goals": 5 }],
+      "golden_ball": [{ "player": "Theodoros Zagorakis", "team": "GRE" }]
+    }
   },
   {
     "id": "EURO2000",

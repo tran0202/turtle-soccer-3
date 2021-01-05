@@ -6,6 +6,7 @@ import {
   getBracketTeamCode,
   AetTooltip,
   GoldenGoalTooltip,
+  SilverGoalTooltip,
   PenTooltip,
   WalkoverTooltip,
   ReplayTooltip,
@@ -17,11 +18,17 @@ import moment from 'moment'
 const getExtraTimeTooltip = (match, config) => {
   return (
     <React.Fragment>
-      {config.goldenGoal && match.home_penalty_score == null && match.away_penalty_score == null ? (
+      {(config.goldenGoal || config.silverGoal) && match.home_penalty_score == null && match.away_penalty_score == null ? (
         config.shortAnchor ? (
-          <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g)" />
-        ) : (
+          config.goldenGoal ? (
+            <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g)" />
+          ) : (
+            <SilverGoalTooltip target="silvergoalTooltip" anchor="(s)" />
+          )
+        ) : config.goldenGoal ? (
           <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
+        ) : (
+          <SilverGoalTooltip target="silvergoalTooltip" anchor="(s.g.)" />
         )
       ) : config.shortAnchor ? (
         <AetTooltip target="aetTooltip" anchor="(e)" />

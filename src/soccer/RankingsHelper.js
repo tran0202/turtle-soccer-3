@@ -281,15 +281,16 @@ const saveDrawTeams = (a, b) => {
     a.draws = []
     a.draws.push(b.id)
   } else {
-    a.draws.push(b.id)
+    const tmp = a.draws.find((x) => x === b.id)
+    if (tmp === undefined) {
+      a.draws.push(b.id)
+    }
   }
 }
 
 const saveDrawBothTeams = (group, a, b) => {
-  if (group.ranking_type === 'round' || group.ranking_type === 'alltimeround') {
-    saveDrawTeams(a, b)
-    saveDrawTeams(b, a)
-  }
+  saveDrawTeams(a, b)
+  saveDrawTeams(b, a)
 }
 
 const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
@@ -298,30 +299,29 @@ const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
   const h2hResult = matchResult(a.id, h2hMatch)
   if (h2hResult === 1) {
     if (a.id === h2hMatch.home_team) {
-      a.h2h_notes = `${getTeamName(a.id)} lost ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
-      b.h2h_notes = `${getTeamName(b.id)} won ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+      a.h2h_notes = `${getTeamName(a.id)} ${show_home_score}-${show_away_score} ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} ${show_away_score}-${show_home_score} ${getTeamName(a.id)}`
     } else {
-      a.h2h_notes = `${getTeamName(a.id)} lost ${show_away_score}-${show_home_score} against ${getTeamName(b.id)}`
-      b.h2h_notes = `${getTeamName(b.id)} won ${show_home_score}-${show_away_score} against ${getTeamName(a.id)}`
+      a.h2h_notes = `${getTeamName(a.id)} ${show_away_score}-${show_home_score} ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} ${show_home_score}-${show_away_score} ${getTeamName(a.id)}`
     }
     a.group_playoff = h2hMatch.group_playoff
     b.group_playoff = h2hMatch.group_playoff
     return 1
   } else if (h2hResult === -1) {
     if (a.id === h2hMatch.home_team) {
-      a.h2h_notes = `${getTeamName(a.id)} won ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
-      b.h2h_notes = `${getTeamName(b.id)} lost ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+      a.h2h_notes = `${getTeamName(a.id)} ${show_home_score}-${show_away_score} ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} ${show_away_score}-${show_home_score} ${getTeamName(a.id)}`
     } else {
-      a.h2h_notes = `${getTeamName(a.id)} won ${show_away_score}-${show_home_score} against ${getTeamName(b.id)}`
-      b.h2h_notes = `${getTeamName(b.id)} lost ${show_home_score}-${show_away_score} against ${getTeamName(a.id)}`
+      a.h2h_notes = `${getTeamName(a.id)} ${show_away_score}-${show_home_score} ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} ${show_home_score}-${show_away_score} ${getTeamName(a.id)}`
     }
     a.group_playoff = h2hMatch.group_playoff
     b.group_playoff = h2hMatch.group_playoff
     return -1
   } else {
-    // console.log('a', a)
-    a.h2h_notes = `${getTeamName(a.id)} drew ${show_home_score}-${show_away_score} against ${getTeamName(b.id)}`
-    b.h2h_notes = `${getTeamName(b.id)} drew ${show_away_score}-${show_home_score} against ${getTeamName(a.id)}`
+    a.h2h_notes = `${getTeamName(a.id)} ${show_home_score}-${show_away_score} ${getTeamName(b.id)}`
+    b.h2h_notes = `${getTeamName(b.id)} ${show_away_score}-${show_home_score} ${getTeamName(a.id)}`
     return drawFunction()
   }
 }
@@ -335,10 +335,20 @@ const compareH2h = (a, b, group_playoff, drawFunction) => {
   return drawFunction()
 }
 
-const compareGoalForward = (a, b, drawFunction) => {
+const compareGoalForward = (a, b, savingNotes, drawFunction) => {
+  const tmpA = `Overall goals >>> ${getTeamName(a.id)} ${a.gf}`
+  const tmpB = `Overall goals >>> ${getTeamName(b.id)} ${b.gf}`
+  const saveNotes = () => {
+    if (savingNotes) {
+      a.h2h_notes = a.h2h_notes ? `${a.h2h_notes} ${tmpA}` : null
+      b.h2h_notes = b.h2h_notes ? `${b.h2h_notes} ${tmpB}` : null
+    }
+  }
   if (a.gf > b.gf) {
+    saveNotes()
     return -1
   } else if (a.gf < b.gf) {
+    saveNotes()
     return 1
   } else {
     return drawFunction()
@@ -346,21 +356,76 @@ const compareGoalForward = (a, b, drawFunction) => {
 }
 
 const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
-  if (a.gd > b.gd) {
+  const tmpA = `Overall goal difference >>> ${getTeamName(a.id)} ${a.gd > 0 ? '+' : ''}${a.gd}`
+  const tmpB = `Overall goal difference >>> ${getTeamName(b.id)} ${b.gd > 0 ? '+' : ''}${b.gd}`
+  const saveNotes = () => {
     if (savingNotes) {
-      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd > 0 ? '+' : ''}${a.gd}`
-      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd > 0 ? '+' : ''}${b.gd}`
+      a.h2h_notes = a.h2h_notes ? `${a.h2h_notes}. ${tmpA}` : null
+      b.h2h_notes = b.h2h_notes ? `${b.h2h_notes}. ${tmpB}` : null
     }
+  }
+  // console.log('a.h2h_notes', a.h2h_notes)
+  if (a.gd > b.gd) {
+    saveNotes()
     return -1
   } else if (a.gd < b.gd) {
-    if (savingNotes) {
-      a.h2h_notes = `${a.h2h_notes}. Goal Difference: ${getTeamName(a.id)} ${a.gd > 0 ? '+' : ''}${a.gd}`
-      b.h2h_notes = `${b.h2h_notes}. Goal Difference: ${getTeamName(b.id)} ${b.gd > 0 ? '+' : ''}${b.gd}`
-    }
+    saveNotes()
     return 1
   } else {
+    if (savingNotes) {
+      a.h2h_notes = a.h2h_notes ? `${a.h2h_notes} and tied on overall goal difference (${a.gd > 0 ? '+' : ''}${a.gd}).` : null
+      b.h2h_notes = b.h2h_notes ? `${b.h2h_notes} and tied on overall goal difference (${b.gd > 0 ? '+' : ''}${b.gd}).` : null
+    }
     return drawFunction()
   }
+}
+
+export const updateDrawPool = (group, a, b, config) => {
+  if (!group) return
+  if (!group.draw_pools) {
+    group.draw_pools = []
+  }
+  const pool = group.draw_pools.find((p) => p.pts === a.pts)
+  if (pool === undefined) {
+    group.draw_pools.push({ pts: a.pts, teams: [{ id: a.id }, { id: b.id }], matches: findHeadtoHeadMatch(a, b, false) })
+  } else {
+    const newTeamA = pool.teams.find((t) => t.id === a.id)
+    if (newTeamA === undefined) {
+      pool.teams.push({ id: a.id })
+    }
+    const newTeamB = pool.teams.find((t) => t.id === b.id)
+    if (newTeamB === undefined) {
+      pool.teams.push({ id: b.id })
+    }
+    const newMatch = pool.matches.find((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
+    if (newMatch === undefined) {
+      pool.matches.push(findHeadtoHeadMatch(a, b, false)[0])
+    }
+  }
+}
+
+export const sortDrawPoolRankings = (pool) => {
+  if (!pool || !pool.final_rankings) return
+  pool.final_rankings.sort((a, b) => {
+    if (a.pts > b.pts) {
+      return -1
+    } else if (a.pts < b.pts) {
+      return 1
+    } else {
+      if (a.gd > b.gd) {
+        return -1
+      } else if (a.gd < b.gd) {
+        return 1
+      } else {
+        if (a.gf > b.gf) {
+          return -1
+        } else if (a.gf < b.gf) {
+          return 1
+        }
+        return 0
+      }
+    }
+  })
 }
 
 export const sortGroupRankings = (group, startingIndex, config) => {
@@ -377,9 +442,10 @@ export const sortGroupRankings = (group, startingIndex, config) => {
         return 1
       } else {
         if (isHead2HeadBeforeGoalDifference) {
+          updateDrawPool(group, a, b, config)
           return compareH2h(a, b, false, () => {
             return compareGoalDifference(a, b, true, () => {
-              return compareGoalForward(a, b, () => {
+              return compareGoalForward(a, b, true, () => {
                 return 0
               })
             })
@@ -421,7 +487,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
             if (group.tiebreak_pts_gd) {
               return drawingLots(a, b)
             } else {
-              return compareGoalForward(a, b, () => {
+              return compareGoalForward(a, b, false, () => {
                 saveDrawBothTeams(group, a, b)
                 return compareH2h(a, b, false, () => {
                   return compareFairPoints(a, b)
@@ -437,16 +503,50 @@ export const sortGroupRankings = (group, startingIndex, config) => {
         t.r = group.name === 'Semi-finals' ? startingIndex : index + startingIndex
       }
     })
+    if (group.draw_pools) {
+      group.draw_pools.forEach((p) => {
+        if (p.teams && p.teams.length === 3) {
+          let allTeamNames = ``
+          p.teams.forEach((t, index) => {
+            allTeamNames = `${allTeamNames}${getTeamName(t.id)}${index < p.teams.length - 2 ? ',' : ''}${index === p.teams.length - 2 ? ' & ' : ''} `
+          })
+          calculateGroupRankings(p.teams, p.teams, p.matches, config)
+          collectGroupRankings(p, 3)
+          sortDrawPoolRankings(p)
+          p.final_rankings.forEach((fr, index) => {
+            fr.r = index + 1
+            fr.h2h_notes = `Teams ${allTeamNames} all tied on points (${fr.pts}) and goal difference (${fr.gd}). Goals >>> ${getTeamName(fr.id)} ${fr.gf}`
+          })
+        }
+      })
+      group.final_rankings.forEach((fr) => {
+        const pool = group.draw_pools.find((p) => p.pts === fr.pts)
+        if (pool !== undefined && pool.final_rankings) {
+          const team = pool.final_rankings.find((pfr) => pfr.id === fr.id)
+          if (team !== undefined) {
+            fr.r = team.r
+            fr.h2h_notes = team.h2h_notes
+          }
+        }
+      })
+    }
   }
 }
 
-export const collectGroupRankings = (tournament, group, matchDay) => {
+export const createGroupFinalRankings = (tournament, group, matchDay) => {
   if (!group.teams) return
+  collectGroupRankings(group, matchDay)
   const config = {
     isGoalRatioTiebreaker: isGoalRatioTiebreaker(tournament),
     isLotGroupPlayoffTiebreaker: isLotGroupPlayoffTiebreaker(tournament),
     isHead2HeadBeforeGoalDifference: isHead2HeadBeforeGoalDifference(tournament),
+    points_for_win: tournament.points_for_win,
   }
+  sortGroupRankings(group, 1, config)
+}
+
+export const collectGroupRankings = (group, matchDay) => {
+  if (!group.teams) return
   group.teams.forEach((team) => {
     if (team.rankings) {
       const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
@@ -461,7 +561,6 @@ export const collectGroupRankings = (tournament, group, matchDay) => {
       }
     }
   })
-  sortGroupRankings(group, 1, config)
 }
 
 export const collectProgressRankings = (tournament, group, matchDay) => {
@@ -482,7 +581,6 @@ export const collectProgressRankings = (tournament, group, matchDay) => {
       }
     }
   })
-  sortGroupRankings(group, 1, null)
 }
 
 export const collectWildCardRankings = (stage) => {
@@ -585,71 +683,23 @@ export const getWildCardRowStriped = (row, config) => {
   return ''
 }
 
-const mergeArray = (a, b) => {
-  b.forEach((be) => {
-    let merging = true
-    a.forEach((ae) => {
-      if (ae === be) {
-        merging = false
-      }
-    })
-    if (merging) {
-      a.push(be)
-    }
-  })
-}
-
-export const createDrawPool = (round) => {
-  let pools = []
-  if (round.final_rankings) {
-    round.final_rankings.forEach((r) => {
-      if (r && r.draws) {
-        const tmp = [r.id, ...r.draws]
-        if (pools.length === 0) {
-          pools.push(tmp)
-        } else {
-          let found = false
-          let pool = null
-          pools.forEach((p) => {
-            p.forEach((e) => {
-              tmp.forEach((t) => {
-                if (t === e) {
-                  found = true
-                }
-              })
-            })
-            pool = p
-          })
-          if (found) {
-            mergeArray(pool, tmp)
-          } else {
-            pools.push(tmp)
-          }
-        }
-      }
-    })
-    if (pools.length > 0) {
-      round.draw_pools = pools
-    }
-    // console.log('round.draw_pools', round.draw_pools)
-  }
-}
-
-export const updateDraws = (round) => {
-  round.final_rankings &&
-    round.final_rankings.forEach((r) => {
-      if (r && r.draws) {
-        round.draw_pools.forEach((p) => {
-          const found = p.includes(r.id)
-          if (found) {
-            mergeArray(r.draws, p)
-          }
-        })
-      }
-    })
-}
+// const mergeArray = (a, b) => {
+//   b.forEach((be) => {
+//     let merging = true
+//     a.forEach((ae) => {
+//       if (ae === be) {
+//         merging = false
+//       }
+//     })
+//     if (merging) {
+//       a.push(be)
+//     }
+//   })
+// }
 
 export const updateFinalRankings = (round) => {
+  // console.log('round', round)
+  if (round.ranking_type !== 'round' && round.ranking_type !== 'alltimeround') return
   let newFinalRankings = []
   let previousDrawCount = 0
   let rankingBundle = []

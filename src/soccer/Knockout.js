@@ -35,22 +35,21 @@ const getBracketStage = (stage) => {
 const Knockout = (props) => {
   const { stage, config } = props
   const bracket_stage = getBracketStage(stage)
+  const displayScheduleConfig = { knockoutMatch: true, goldenGoal: config.golden_goal_rule, silverGoal: config.silver_goal_rule }
   // console.log('stage', stage)
   return (
     <React.Fragment>
-      <Bracket stage={bracket_stage} config={{ goldenGoal: config.golden_goal_rule }} />
+      <Bracket stage={bracket_stage} config={{ goldenGoal: config.golden_goal_rule, silverGoal: config.silver_goal_rule }} />
       {stage.rounds &&
         stage.rounds.map((r) => {
           const matchArray = getMatchArrayByDate(r, true)
           if (!hasReplay(r)) {
-            return (
-              <DisplaySchedule round={{ name: r.name, ...matchArray }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} key={r.name} />
-            )
+            return <DisplaySchedule round={{ name: r.name, ...matchArray }} config={displayScheduleConfig} key={r.name} />
           } else {
             return (
               <React.Fragment key={r.name}>
-                <DisplaySchedule round={{ name: r.name, ...matchArray[0] }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} />
-                <DisplaySchedule round={{ ...matchArray[1] }} config={{ knockoutMatch: true, goldenGoal: config.golden_goal_rule }} />
+                <DisplaySchedule round={{ name: r.name, ...matchArray[0] }} config={displayScheduleConfig} />
+                <DisplaySchedule round={{ ...matchArray[1] }} config={displayScheduleConfig} />
               </React.Fragment>
             )
           }

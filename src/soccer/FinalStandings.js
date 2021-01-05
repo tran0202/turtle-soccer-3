@@ -5,7 +5,7 @@ import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner }
 import {
   calculateGroupRankings,
   calculateProgressRankings,
-  collectGroupRankings,
+  createGroupFinalRankings,
   sortGroupRankings,
   calculateKnockoutRankings,
   isEliminated,
@@ -257,7 +257,7 @@ const FinalStandings = (props) => {
       if (groupStage.groups) {
         groupStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
-          collectGroupRankings(tournament, g, 3)
+          createGroupFinalRankings(tournament, g, 3)
           g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
           !groupStage.championship_round && eliminateGroupTeams(tournament, groupStage, g)
           groupStage.championship_round && createFinalRoundRankings(tournament, groupStage, g)
