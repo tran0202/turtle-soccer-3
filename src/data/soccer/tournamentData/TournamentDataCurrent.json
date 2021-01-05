@@ -1,5 +1,5 @@
 {
-  "id": "EURO2000",
+  "id": "EURO1996",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,265 +16,265 @@
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "GER" }, { "id": "ROU" }, { "id": "POR" }, { "id": "ENG" }],
+          "teams": [{ "id": "ENG" }, { "id": "SUI" }, { "id": "NED" }, { "id": "SCO" }],
           "matches": [
             {
-              "home_team": "GER",
-              "away_team": "ROU",
+              "home_team": "ENG",
+              "away_team": "SUI",
               "home_score": 1,
               "away_score": 1,
-              "date": "2000-06-12",
-              "time": "18:00",
-              "stadium": "Stade Maurice Dufrasne",
-              "city": "Liège"
+              "date": "1996-06-08",
+              "time": "15:00",
+              "stadium": "Wembley Stadium",
+              "city": "London"
             },
             {
-              "home_team": "POR",
-              "away_team": "ENG",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "2000-06-12",
-              "time": "20:45",
-              "stadium": "Philips Stadion",
-              "city": "Eindhoven"
-            },
-            {
-              "home_team": "ROU",
-              "away_team": "POR",
+              "home_team": "NED",
+              "away_team": "SCO",
               "home_score": 0,
-              "away_score": 1,
-              "date": "2000-06-17",
-              "time": "18:00",
-              "stadium": "GelreDome",
-              "city": "Arnhem"
+              "away_score": 0,
+              "date": "1996-06-10",
+              "time": "16:30",
+              "stadium": "Villa Park",
+              "city": "Birmingham"
             },
             {
-              "home_team": "ENG",
-              "away_team": "GER",
+              "home_team": "SUI",
+              "away_team": "NED",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "1996-06-13",
+              "time": "19:30",
+              "stadium": "Villa Park",
+              "city": "Birmingham"
+            },
+            {
+              "home_team": "SCO",
+              "away_team": "ENG",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "1996-06-15",
+              "time": "15:00",
+              "stadium": "Wembley Stadium",
+              "city": "London"
+            },
+            {
+              "home_team": "SCO",
+              "away_team": "SUI",
               "home_score": 1,
               "away_score": 0,
-              "date": "2000-06-17",
-              "time": "20:45",
-              "stadium": "Stade du Pays de Charleroi",
-              "city": "Charleroi"
+              "date": "1996-06-18",
+              "time": "19:30",
+              "stadium": "Villa Park",
+              "city": "Birmingham"
             },
             {
-              "home_team": "ENG",
-              "away_team": "ROU",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "2000-06-20",
-              "time": "20:45",
-              "stadium": "Stade du Pays de Charleroi",
-              "city": "Charleroi"
-            },
-            {
-              "home_team": "POR",
-              "away_team": "GER",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "2000-06-20",
-              "time": "20:45",
-              "stadium": "Stadion Feijenoord",
-              "city": "Rotterdam"
+              "home_team": "NED",
+              "away_team": "ENG",
+              "home_score": 1,
+              "away_score": 4,
+              "date": "1996-06-18",
+              "time": "19:30",
+              "stadium": "Wembley Stadium",
+              "city": "London"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "BEL" }, { "id": "SWE" }, { "id": "TUR" }, { "id": "ITA" }],
+          "teams": [{ "id": "ESP" }, { "id": "BUL" }, { "id": "ROU" }, { "id": "FRA" }],
           "matches": [
             {
-              "home_team": "BEL",
-              "away_team": "SWE",
-              "home_score": 2,
+              "home_team": "ESP",
+              "away_team": "BUL",
+              "home_score": 1,
               "away_score": 1,
-              "date": "2000-06-10",
-              "time": "20:45",
-              "stadium": "King Baudouin Stadium",
-              "city": "Brussels"
+              "date": "1996-06-09",
+              "time": "14:30",
+              "stadium": "Elland Road",
+              "city": "Leeds"
             },
             {
-              "home_team": "TUR",
-              "away_team": "ITA",
+              "home_team": "ROU",
+              "away_team": "FRA",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1996-06-10",
+              "time": "19:30",
+              "stadium": "St James' Park",
+              "city": "Newcastle"
+            },
+            {
+              "home_team": "BUL",
+              "away_team": "ROU",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1996-06-13",
+              "time": "16:30",
+              "stadium": "St James' Park",
+              "city": "Newcastle"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "ESP",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1996-06-15",
+              "time": "18:00",
+              "stadium": "Elland Road",
+              "city": "Leeds"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "BUL",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "1996-06-18",
+              "time": "16:30",
+              "stadium": "St James' Park",
+              "city": "Newcastle"
+            },
+            {
+              "home_team": "ROU",
+              "away_team": "ESP",
               "home_score": 1,
               "away_score": 2,
-              "date": "2000-06-11",
-              "time": "14:30",
-              "stadium": "GelreDome",
-              "city": "Arnhem"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "BEL",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2000-06-14",
-              "time": "20:45",
-              "stadium": "King Baudouin Stadium",
-              "city": "Brussels"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "TUR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2000-06-15",
-              "time": "20:45",
-              "stadium": "Philips Stadion",
-              "city": "Eindhoven"
-            },
-            {
-              "home_team": "TUR",
-              "away_team": "BEL",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2000-06-19",
-              "time": "20:45",
-              "stadium": "King Baudouin Stadium",
-              "city": "Brussels"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "SWE",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2000-06-19",
-              "time": "20:45",
-              "stadium": "Philips Stadion",
-              "city": "Eindhoven"
+              "date": "1996-06-18",
+              "time": "16:30",
+              "stadium": "Elland Road",
+              "city": "Leeds"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "ESP" }, { "id": "NOR" }, { "id": "YUG-1992-2003" }, { "id": "SVN" }],
+          "teams": [{ "id": "GER" }, { "id": "CZE" }, { "id": "ITA" }, { "id": "RUS" }],
           "matches": [
             {
-              "home_team": "ESP",
-              "away_team": "NOR",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2000-06-13",
-              "time": "18:00",
-              "stadium": "Stadion Feijenoord",
-              "city": "Rotterdam"
+              "home_team": "GER",
+              "away_team": "CZE",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1996-06-09",
+              "time": "17:00",
+              "stadium": "Old Trafford",
+              "city": "Manchester"
             },
             {
-              "home_team": "YUG-1992-2003",
-              "away_team": "SVN",
+              "home_team": "ITA",
+              "away_team": "RUS",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1996-06-11",
+              "time": "16:30",
+              "stadium": "Anfield",
+              "city": "Liverpool"
+            },
+            {
+              "home_team": "CZE",
+              "away_team": "ITA",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1996-06-14",
+              "time": "19:30",
+              "stadium": "Anfield",
+              "city": "Liverpool"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "GER",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "1996-06-16",
+              "time": "15:00",
+              "stadium": "Old Trafford",
+              "city": "Manchester"
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "CZE",
               "home_score": 3,
               "away_score": 3,
-              "date": "2000-06-13",
-              "time": "20:45",
-              "stadium": "Stade du Pays de Charleroi",
-              "city": "Charleroi"
+              "date": "1996-06-19",
+              "time": "19:30",
+              "stadium": "Anfield",
+              "city": "Liverpool"
             },
             {
-              "home_team": "SVN",
-              "away_team": "ESP",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2000-06-18",
-              "time": "18:00",
-              "stadium": "Amsterdam",
-              "city": "Amsterdam Arena"
-            },
-            {
-              "home_team": "NOR",
-              "away_team": "YUG-1992-2003",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2000-06-18",
-              "time": "20:45",
-              "stadium": "Stade Maurice Dufrasne",
-              "city": "Liège"
-            },
-            {
-              "home_team": "YUG-1992-2003",
-              "away_team": "ESP",
-              "home_score": 3,
-              "away_score": 4,
-              "date": "2000-06-21",
-              "time": "18:00",
-              "stadium": "Jan Breydel Stadium",
-              "city": "Bruges"
-            },
-            {
-              "home_team": "SVN",
-              "away_team": "NOR",
+              "home_team": "ITA",
+              "away_team": "GER",
               "home_score": 0,
               "away_score": 0,
-              "date": "2000-06-21",
-              "time": "18:00",
-              "stadium": "GelreDome",
-              "city": "Arnhem"
+              "date": "1996-06-19",
+              "time": "19:30",
+              "stadium": "Old Trafford",
+              "city": "Manchester"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "NED" }, { "id": "CZE" }],
+          "teams": [{ "id": "DEN" }, { "id": "POR" }, { "id": "TUR" }, { "id": "CRO" }],
           "matches": [
             {
-              "home_team": "FRA",
+              "home_team": "DEN",
+              "away_team": "POR",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1996-06-09",
+              "time": "19:30",
+              "stadium": "Hillsborough",
+              "city": "Sheffield"
+            },
+            {
+              "home_team": "TUR",
+              "away_team": "CRO",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1996-06-11",
+              "time": "19:30",
+              "stadium": "City Ground",
+              "city": "Nottingham"
+            },
+            {
+              "home_team": "POR",
+              "away_team": "TUR",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1996-06-14",
+              "time": "16:30",
+              "stadium": "City Ground",
+              "city": "Nottingham"
+            },
+            {
+              "home_team": "CRO",
               "away_team": "DEN",
               "home_score": 3,
               "away_score": 0,
-              "date": "2000-06-11",
+              "date": "1996-06-16",
               "time": "18:00",
-              "stadium": "Jan Breydel Stadium",
-              "city": "Bruges"
+              "stadium": "Hillsborough",
+              "city": "Sheffield"
             },
             {
-              "home_team": "NED",
-              "away_team": "CZE",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2000-06-11",
-              "time": "20:45",
-              "stadium": "Amsterdam",
-              "city": "Amsterdam Arena"
-            },
-            {
-              "home_team": "CZE",
-              "away_team": "FRA",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2000-06-16",
-              "time": "18:00",
-              "stadium": "Jan Breydel Stadium",
-              "city": "Bruges"
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "NED",
+              "home_team": "CRO",
+              "away_team": "POR",
               "home_score": 0,
               "away_score": 3,
-              "date": "2000-06-16",
-              "time": "20:45",
-              "stadium": "Stadion Feijenoord",
-              "city": "Rotterdam"
+              "date": "1996-06-19",
+              "time": "16:30",
+              "stadium": "City Ground",
+              "city": "Nottingham"
             },
             {
-              "home_team": "DEN",
-              "away_team": "CZE",
+              "home_team": "TUR",
+              "away_team": "DEN",
               "home_score": 0,
-              "away_score": 2,
-              "date": "2000-06-21",
-              "time": "20:45",
-              "stadium": "Stade Maurice Dufrasne",
-              "city": "Liège"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "NED",
-              "home_score": 2,
               "away_score": 3,
-              "date": "2000-06-21",
-              "time": "20:45",
-              "stadium": "Amsterdam",
-              "city": "Amsterdam Arena"
+              "date": "1996-06-19",
+              "time": "16:30",
+              "stadium": "Hillsborough",
+              "city": "Sheffield"
             }
           ]
         }
@@ -291,48 +291,56 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "TUR",
-              "away_team": "POR",
+              "home_team": "ESP",
+              "away_team": "ENG",
               "home_score": 0,
-              "away_score": 2,
-              "date": "2000-06-24",
-              "time": "18:00",
-              "stadium": "Amsterdam",
-              "city": "Amsterdam Arena",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "ROU",
-              "home_score": 2,
               "away_score": 0,
-              "date": "2000-06-24",
-              "time": "20:45",
-              "stadium": "King Baudouin Stadium",
-              "city": "Brussels",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "NED",
-              "away_team": "YUG-1992-2003",
-              "home_score": 6,
-              "away_score": 1,
-              "date": "2000-06-25",
-              "time": "18:00",
-              "stadium": "Stadion Feijenoord",
-              "city": "Rotterdam",
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 2,
+              "away_penalty_score": 4,
+              "date": "1996-06-22",
+              "time": "15:00",
+              "stadium": "Wembley Stadium",
+              "city": "London",
               "bracket_order": 4
             },
             {
-              "home_team": "ESP",
-              "away_team": "FRA",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2000-06-25",
-              "time": "20:45",
-              "stadium": "Jan Breydel Stadium",
-              "city": "Bruges",
+              "home_team": "FRA",
+              "away_team": "NED",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 5,
+              "away_penalty_score": 4,
+              "date": "1996-06-22",
+              "time": "18:30",
+              "stadium": "Anfield",
+              "city": "Liverpool",
               "bracket_order": 1
+            },
+            {
+              "home_team": "GER",
+              "away_team": "CRO",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1996-06-23",
+              "time": "15:00",
+              "stadium": "Old Trafford",
+              "city": "Manchester",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "CZE",
+              "away_team": "POR",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1996-06-23",
+              "time": "18:30",
+              "stadium": "Villa Park",
+              "city": "Birmingham",
+              "bracket_order": 2
             }
           ]
         },
@@ -344,30 +352,32 @@
           "matches": [
             {
               "home_team": "FRA",
-              "away_team": "POR",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "2000-06-28",
-              "time": "20:45",
-              "stadium": "King Baudouin Stadium",
-              "city": "Brussels",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "NED",
+              "away_team": "CZE",
               "home_score": 0,
               "away_score": 0,
               "home_extra_score": 0,
               "away_extra_score": 0,
-              "home_penalty_score": 3,
-              "away_penalty_score": 1,
-              "date": "2000-06-29",
-              "time": "18:00",
-              "stadium": "Amsterdam",
-              "city": "Amsterdam Arena",
+              "home_penalty_score": 5,
+              "away_penalty_score": 6,
+              "date": "1996-06-26",
+              "time": "16:00",
+              "stadium": "Old Trafford",
+              "city": "Manchester",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "GER",
+              "away_team": "ENG",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 6,
+              "away_penalty_score": 5,
+              "date": "1996-06-26",
+              "time": "19:30",
+              "stadium": "Wembley Stadium",
+              "city": "London",
               "bracket_order": 2
             }
           ]
@@ -377,16 +387,16 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "ITA",
+              "home_team": "CZE",
+              "away_team": "GER",
               "home_score": 1,
               "away_score": 1,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "2000-07-02",
-              "time": "20:00",
-              "stadium": "Stadion Feijenoord",
-              "city": "Rotterdam"
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "1996-06-30",
+              "time": "19:00",
+              "stadium": "Wembley Stadium",
+              "city": "London"
             }
           ]
         }

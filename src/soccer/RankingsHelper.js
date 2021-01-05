@@ -380,7 +380,7 @@ const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
   }
 }
 
-export const updateDrawPool = (group, a, b, config) => {
+export const updateDrawPool = (group, a, b) => {
   if (!group) return
   if (!group.draw_pools) {
     group.draw_pools = []
@@ -397,9 +397,13 @@ export const updateDrawPool = (group, a, b, config) => {
     if (newTeamB === undefined) {
       pool.teams.push({ id: b.id })
     }
+    // console.log('pool.matches', pool.matches)
     const newMatch = pool.matches.find((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
     if (newMatch === undefined) {
-      pool.matches.push(findHeadtoHeadMatch(a, b, false)[0])
+      const found = findHeadtoHeadMatch(a, b, false)
+      if (found.length > 0) {
+        pool.matches.push(found[0])
+      }
     }
   }
 }
@@ -442,7 +446,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
         return 1
       } else {
         if (isHead2HeadBeforeGoalDifference) {
-          updateDrawPool(group, a, b, config)
+          updateDrawPool(group, a, b)
           return compareH2h(a, b, false, () => {
             return compareGoalDifference(a, b, true, () => {
               return compareGoalForward(a, b, true, () => {

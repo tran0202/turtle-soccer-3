@@ -256,10 +256,45 @@
     "name": "UEFA Euro 1996 England",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "Euro_1996.png", "start_date": "1996-06-08", "end_date": "1996-06-30" }
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["ENG"],
+      "logo_filename": "Euro_1996.png",
+      "mascot_filename": "mascot_1996_goaliath.jpg",
+      "start_date": "1996-06-08",
+      "end_date": "1996-06-30",
+      "color": "#2e5e9c",
+      "team_count": 16,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Group A",
+        "filename": "Scotland-holland_euro_96.jpg",
+        "text": "A Group A game between Scotland and the Netherlands at Villa Park"
+      },
+      {
+        "name": "Group C",
+        "filename": "Stamps_of_Azerbaijan,_1996-423.jpg",
+        "text": "The match between the Czech Republic and Germany, commemorated on an Azerbaijani postage stamp"
+      },
+      {
+        "name": "Wembley Stadium, London",
+        "filename": "The_Charity_Shield_of_1974_at_Wembley_-_geograph.org.uk_-_620498.jpg",
+        "text": "The Wembley Stadium held the final."
+      },
+      { "name": "Final programme", "filename": "Euro1996matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 1996 Final." }
+    ],
+    "final_standings": { "champions": "GER", "runners_up": "CZE", "semi_finalist1": "ENG", "semi_finalist2": "FRA" },
+    "statistics": { "total_matches": 31, "total_goals": 64, "attendance": 1275857 },
+    "awards": {
+      "golden_boot": [{ "player": "Alan Shearer", "team": "ENG", "goals": 5 }],
+      "golden_ball": [{ "player": "Matthias Sammer", "team": "GER" }]
+    }
   },
   {
     "id": "EURO1992",
