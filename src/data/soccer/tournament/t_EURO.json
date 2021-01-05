@@ -207,10 +207,48 @@
     "name": "UEFA Euro 2000 Belgium-Netherlands",
     "tournament_type_id": "EURO",
     "active": false,
-    "head_to_head_tiebreaker": true,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "Euro_2000.png", "start_date": "2000-06-10", "end_date": "2000-07-02" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["BEL", "NED"],
+      "logo_filename": "Euro_2000.png",
+      "mascot_filename": "mascot_2000_benelucky.jpg",
+      "start_date": "2000-06-10",
+      "end_date": "2000-07-02",
+      "color": "#ee312f",
+      "team_count": 16,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Italy_-_France,_2_July_2000.jpg",
+        "text": "France and Italy before the final on 2 July"
+      },
+      {
+        "name": "Adidas Terrestra Silverstream",
+        "filename": "Euro_2000_ball.jpeg",
+        "text": "The match ball used at the tournament."
+      },
+      {
+        "name": "Italian supporters",
+        "filename": "Euro_2000_supporters.jpg",
+        "text": "Italian supporters during the final."
+      },
+      { "name": "Final programme", "filename": "Euro2000matchprogramme.jpg", "text": "This is the official match programme for the UEFA Euro 2000 Final." }
+    ],
+    "final_standings": { "champions": "FRA", "runners_up": "ITA", "semi_finalist1": "NED", "semi_finalist2": "POR" },
+    "statistics": { "total_matches": 31, "total_goals": 85, "attendance": 1122833 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Savo Milošević", "team": "YUG-1992-2003", "goals": 5 },
+        { "player": "Patrick Kluivert", "team": "NED", "goals": 5 }
+      ],
+      "golden_ball": [{ "player": "Zinedine Zidane", "team": "FRA" }]
+    }
   },
   {
     "id": "EURO1996",
