@@ -1,148 +1,149 @@
 {
-  "id": "EURO1984",
+  "id": "EURO1980",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 4,
-      "next_round": "Semi-finals",
+      "next_round": "Final",
       "advancement": {
         "teams": {
-          "auto": [1, 2],
+          "auto": [1],
+          "third_place": 2,
           "eliminated": [3, 4],
-          "text": "The top 2 teams would advance to the semi-finals."
+          "text": "The winners would advance to the final. The runners-up would advance to the third place match."
         }
       },
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "BEL" }, { "id": "YUG-1945-1992" }],
+          "teams": [{ "id": "TCH" }, { "id": "GER-1949-1990" }, { "id": "NED" }, { "id": "GRE" }],
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "DEN",
+              "home_team": "TCH",
+              "away_team": "GER-1949-1990",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1980-06-11",
+              "time": "17:45",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "GRE",
               "home_score": 1,
               "away_score": 0,
-              "date": "1984-06-12",
+              "date": "1980-06-11",
               "time": "20:30",
-              "stadium": "Parc des Princes",
-              "city": "Paris"
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
             },
             {
-              "home_team": "BEL",
-              "away_team": "YUG-1945-1992",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1984-06-13",
-              "time": "20:30",
-              "stadium": "Stade Félix-Bollaert",
-              "city": "Lens"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "BEL",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1984-06-16",
-              "time": "17:15",
-              "stadium": "Stade de la Beaujoire",
-              "city": "Nantes"
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "YUG-1945-1992",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1984-06-16",
-              "time": "20:30",
-              "stadium": "Stade de Gerland",
-              "city": "Lyon"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "YUG-1945-1992",
+              "home_team": "GER-1949-1990",
+              "away_team": "NED",
               "home_score": 3,
               "away_score": 2,
-              "date": "1984-06-19",
-              "time": "20:30",
-              "stadium": "Stade Geoffroy-Guichard",
-              "city": "Saint-Étienne"
+              "date": "1980-06-14",
+              "time": "17:45",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
             },
             {
-              "home_team": "DEN",
-              "away_team": "BEL",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1984-06-19",
+              "home_team": "GRE",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1980-06-14",
               "time": "20:30",
-              "stadium": "Stade de la Meinau",
-              "city": "Strasbourg"
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1980-06-17",
+              "time": "17:45",
+              "stadium": "San Siro",
+              "city": "Milan"
+            },
+            {
+              "home_team": "GRE",
+              "away_team": "GER-1949-1990",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1980-06-17",
+              "time": "20:30",
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "POR" }, { "id": "ROU-1965-1989" }, { "id": "ESP" }],
+          "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "ESP-1977-1981" }, { "id": "ITA" }],
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "POR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1984-06-14",
-              "time": "17:15",
-              "stadium": "Stade de la Meinau",
-              "city": "Strasbourg"
-            },
-            {
-              "home_team": "ROU-1965-1989",
-              "away_team": "ESP",
+              "home_team": "BEL",
+              "away_team": "ENG",
               "home_score": 1,
               "away_score": 1,
-              "date": "1984-06-14",
-              "time": "20:30",
-              "stadium": "Stade Geoffroy-Guichard",
-              "city": "Saint-Étienne"
+              "date": "1980-06-12",
+              "time": "17:45",
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "ROU-1965-1989",
+              "home_team": "ESP-1977-1981",
+              "away_team": "ITA",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1980-06-12",
+              "time": "20:30",
+              "stadium": "San Siro",
+              "city": "Milan"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "ESP-1977-1981",
               "home_score": 2,
               "away_score": 1,
-              "date": "1984-06-17",
-              "time": "17:15",
-              "stadium": "Stade Félix-Bollaert",
-              "city": "Lens"
+              "date": "1980-06-15",
+              "time": "17:45",
+              "stadium": "San Siro",
+              "city": "Milan"
             },
             {
-              "home_team": "POR",
-              "away_team": "ESP",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1984-06-17",
-              "time": "20:30",
-              "stadium": "Stade Vélodrome",
-              "city": "Marseille"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "ESP",
+              "home_team": "ENG",
+              "away_team": "ITA",
               "home_score": 0,
               "away_score": 1,
-              "date": "1984-06-20",
+              "date": "1980-06-15",
               "time": "20:30",
-              "stadium": "Parc des Princes",
-              "city": "Paris"
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
             },
             {
-              "home_team": "POR",
-              "away_team": "ROU-1965-1989",
+              "home_team": "ESP-1977-1981",
+              "away_team": "ENG",
               "home_score": 1,
+              "away_score": 2,
+              "date": "1980-06-18",
+              "time": "17:45",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "BEL",
+              "home_score": 0,
               "away_score": 0,
-              "date": "1984-06-20",
+              "date": "1980-06-18",
               "time": "20:30",
-              "stadium": "Stade de la Beaujoire",
-              "city": "Nantes"
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             }
           ]
         }
@@ -153,38 +154,20 @@
       "type": "knockout",
       "rounds": [
         {
-          "name": "Semi-finals",
-          "short_name": "1/2",
-          "eliminateCount": 2,
-          "next_round": "Final",
+          "name": "Third place",
+          "short_name": "3rd",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "POR",
+              "home_team": "TCH",
+              "away_team": "ITA",
               "home_score": 1,
               "away_score": 1,
-              "home_extra_score": 2,
-              "away_extra_score": 1,
-              "date": "1984-06-23",
-              "time": "20:00",
-              "stadium": "Stade Vélodrome",
-              "city": "Marseille",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "ESP",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 4,
-              "away_penalty_score": 5,
-              "date": "1984-06-24",
-              "time": "20:00",
-              "stadium": "Stade de Gerland",
-              "city": "Lyon",
-              "bracket_order": 2
+              "home_penalty_score": 9,
+              "away_penalty_score": 8,
+              "date": "1980-06-21",
+              "time": "20:30",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
             }
           ]
         },
@@ -193,14 +176,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "FRA",
-              "away_team": "ESP",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1984-06-27",
-              "time": "20:00",
-              "stadium": "Parc des Princes",
-              "city": "Paris"
+              "home_team": "BEL",
+              "away_team": "GER-1949-1990",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1980-06-22",
+              "time": "20:30",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             }
           ]
         }

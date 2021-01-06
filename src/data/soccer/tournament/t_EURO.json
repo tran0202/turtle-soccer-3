@@ -427,7 +427,43 @@
     "name": "UEFA Euro 1980 Italy",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1980.png", "start_date": "1980-06-11", "end_date": "1980-06-22" }
+    "tiebreakers": ["team", "lot"],
+    "details": {
+      "host": ["ITA"],
+      "logo_filename": "Euro_1980.png",
+      "mascot_filename": "mascot_euro_80_pinocchio.jpeg",
+      "start_date": "1980-06-11",
+      "end_date": "1980-06-22",
+      "color": "#00ab4e",
+      "team_count": 8,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Stadio Olimpico, Rome",
+        "filename": "Stadio_Olimpico_2008.jpeg",
+        "text": "The Stadio Olimpico held the final"
+      },
+      {
+        "name": "Stadio San Paolo, Naples",
+        "filename": "Stadio_San_Paolo.jpg",
+        "text": "The Stadio San Paolo held the third place match."
+      },
+      {
+        "name": "San Siro, Milan",
+        "filename": "Stadio_Meazza.jpg",
+        "text": "The San Siro held the group matches."
+      },
+      {
+        "name": "Stadio Comunale, Turin",
+        "filename": "Stadio_Olimpico_in_Turin,_2007,_Torino_v_Peñarol.jpg",
+        "text": "The Stadio Comunale held the group matches."
+      }
+    ],
+    "final_standings": { "champions": "GER-1949-1990", "runners_up": "BEL", "third_place": "TCH", "fourth_place": "ITA" },
+    "statistics": { "total_matches": 14, "total_goals": 27, "attendance": 345463 },
+    "awards": { "golden_boot": [{ "player": "Klaus Allofs", "team": "GER-1949-1990", "goals": 3 }] }
   },
   {
     "id": "EURO1976",

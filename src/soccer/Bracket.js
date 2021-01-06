@@ -166,6 +166,7 @@ const BracketBox = (props) => {
             {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
                 {match.home_score}
+                {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
               </Col>
             )}
@@ -279,6 +280,7 @@ const BracketBox = (props) => {
             {match.away_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
                 {match.away_score}
+                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
                 {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
               </Col>
             )}

@@ -312,25 +312,26 @@ const DisplayExtraTimeText = (props) => {
               )}
             </React.Fragment>
           )}
-          {home_penalty_score != null && away_penalty_score != null && (
+        </React.Fragment>
+      )}
+      {home_penalty_score != null && away_penalty_score != null && (
+        <React.Fragment>
+          &nbsp;&gt;&gt;&gt;&nbsp;
+          {home_penalty_score > away_penalty_score && (
             <React.Fragment>
-              &nbsp;&gt;&gt;&gt;&nbsp;
-              {home_penalty_score > away_penalty_score && (
-                <React.Fragment>
-                  <b>{getTeamName(home_team)}</b>
-                </React.Fragment>
-              )}
-              {home_penalty_score < away_penalty_score && (
-                <React.Fragment>
-                  <b>{getTeamName(away_team)}</b>
-                </React.Fragment>
-              )}
-              &nbsp;won on penalties&nbsp;
-              <b>
-                {home_penalty_score}-{away_penalty_score}
-              </b>
+              <b>{getTeamName(home_team)}</b>
             </React.Fragment>
           )}
+          {home_penalty_score < away_penalty_score && (
+            <React.Fragment>
+              <b>{getTeamName(away_team)}</b>
+            </React.Fragment>
+          )}
+          &nbsp;won on penalties&nbsp;
+          <b>
+            {home_penalty_score}-{away_penalty_score}
+          </b>
+          {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
         </React.Fragment>
       )}
     </React.Fragment>
