@@ -459,6 +459,11 @@
         "name": "Stadio Comunale, Turin",
         "filename": "Stadio_Olimpico_in_Turin,_2007,_Torino_v_Peñarol.jpg",
         "text": "The Stadio Comunale held the group matches."
+      },
+      {
+        "name": "Euro 1980",
+        "filename": "UEFA_Euro_1980_logo.svg",
+        "text": "Alternate tournament logo"
       }
     ],
     "final_standings": { "champions": "GER-1949-1990", "runners_up": "BEL", "third_place": "TCH", "fourth_place": "ITA" },
@@ -468,10 +473,39 @@
   {
     "id": "EURO1976",
     "year": "1976",
-    "name": "UEFA Euro 1976 Yugoslavia",
+    "name": "UEFA Euro 1976 SFR Yugoslavia",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1976.png", "start_date": "1976-06-16", "end_date": "1976-06-20" }
+    "details": {
+      "host": ["YUG-1945-1992"],
+      "logo_filename": "Euro_1976.png",
+      "start_date": "1976-06-16",
+      "end_date": "1976-06-20",
+      "color": "#0066b3",
+      "team_count": 4,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Red Star Stadium, Belgrade",
+        "filename": "Fk_Red_Star_stadium.jpg",
+        "text": "The Red Star Stadium, aka Marakana, held the final."
+      },
+      {
+        "name": "Stadion Maksimir, Zagreb",
+        "filename": "Maksimirski_stadion_Zagreb.jpg",
+        "text": "The Stadion Maksimir held the semi-final between Czechoslovakia and Netherlands."
+      },
+      {
+        "name": "Euro 1976",
+        "filename": "UEFA_Euro_1976_logo.svg",
+        "text": "Alternate tournament logo"
+      }
+    ],
+    "final_standings": { "champions": "TCH", "runners_up": "GER-1949-1990", "third_place": "NED", "fourth_place": "YUG-1945-1992" },
+    "statistics": { "total_matches": 4, "total_goals": 19, "attendance": 106087 },
+    "awards": { "golden_boot": [{ "player": "Dieter Müller", "team": "GER-1949-1990", "goals": 4 }] }
   },
   {
     "id": "EURO1972",

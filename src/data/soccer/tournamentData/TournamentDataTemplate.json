@@ -1,148 +1,149 @@
 {
-  "id": "EURO1992",
+  "id": "EURO1980",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 4,
-      "next_round": "Semi-finals",
+      "next_round": "Final",
       "advancement": {
         "teams": {
-          "auto": [1, 2],
+          "auto": [1],
+          "third_place": 2,
           "eliminated": [3, 4],
-          "text": "The top 2 teams would advance to the semi-finals."
+          "text": "The winners would advance to the final. The runners-up would advance to the third place match."
         }
       },
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "SWE" }, { "id": "FRA" }, { "id": "DEN" }, { "id": "ENG" }],
+          "teams": [{ "id": "TCH" }, { "id": "GER-1949-1990" }, { "id": "NED" }, { "id": "GRE" }],
           "matches": [
             {
-              "home_team": "SWE",
-              "away_team": "FRA",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1992-06-10",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "DEN",
-              "away_team": "ENG",
+              "home_team": "TCH",
+              "away_team": "GER-1949-1990",
               "home_score": 0,
-              "away_score": 0,
-              "date": "1992-06-11",
-              "time": "20:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "ENG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1992-06-14",
-              "time": "17:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "DEN",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1992-06-14",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "ENG",
-              "home_score": 2,
               "away_score": 1,
-              "date": "1992-06-17",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
+              "date": "1980-06-11",
+              "time": "17:45",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             },
             {
-              "home_team": "FRA",
-              "away_team": "DEN",
+              "home_team": "NED",
+              "away_team": "GRE",
               "home_score": 1,
+              "away_score": 0,
+              "date": "1980-06-11",
+              "time": "20:30",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "NED",
+              "home_score": 3,
               "away_score": 2,
-              "date": "1992-06-17",
-              "time": "20:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
+              "date": "1980-06-14",
+              "time": "17:45",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
+            },
+            {
+              "home_team": "GRE",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1980-06-14",
+              "time": "20:30",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
+            },
+            {
+              "home_team": "NED",
+              "away_team": "TCH",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1980-06-17",
+              "time": "17:45",
+              "stadium": "San Siro",
+              "city": "Milan"
+            },
+            {
+              "home_team": "GRE",
+              "away_team": "GER-1949-1990",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1980-06-17",
+              "time": "20:30",
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "NED" }, { "id": "SCO" }, { "id": "CIS" }, { "id": "GER" }],
+          "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "ESP-1977-1981" }, { "id": "ITA" }],
           "matches": [
             {
-              "home_team": "NED",
-              "away_team": "SCO",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1992-06-12",
-              "time": "17:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "CIS",
-              "away_team": "GER",
+              "home_team": "BEL",
+              "away_team": "ENG",
               "home_score": 1,
               "away_score": 1,
-              "date": "1992-06-12",
-              "time": "20:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
+              "date": "1980-06-12",
+              "time": "17:45",
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
             },
             {
-              "home_team": "SCO",
-              "away_team": "GER",
+              "home_team": "ESP-1977-1981",
+              "away_team": "ITA",
               "home_score": 0,
+              "away_score": 0,
+              "date": "1980-06-12",
+              "time": "20:30",
+              "stadium": "San Siro",
+              "city": "Milan"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "ESP-1977-1981",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1980-06-15",
+              "time": "17:45",
+              "stadium": "San Siro",
+              "city": "Milan"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "ITA",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1980-06-15",
+              "time": "20:30",
+              "stadium": "Stadio Comunale",
+              "city": "Turin"
+            },
+            {
+              "home_team": "ESP-1977-1981",
+              "away_team": "ENG",
+              "home_score": 1,
               "away_score": 2,
-              "date": "1992-06-15",
-              "time": "17:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
+              "date": "1980-06-18",
+              "time": "17:45",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
             },
             {
-              "home_team": "NED",
-              "away_team": "CIS",
+              "home_team": "ITA",
+              "away_team": "BEL",
               "home_score": 0,
               "away_score": 0,
-              "date": "1992-06-15",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "GER",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1992-06-18",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "SCO",
-              "away_team": "CIS",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1992-06-18",
-              "time": "20:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
+              "date": "1980-06-18",
+              "time": "20:30",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             }
           ]
         }
@@ -153,36 +154,20 @@
       "type": "knockout",
       "rounds": [
         {
-          "name": "Semi-finals",
-          "short_name": "1/2",
-          "eliminateCount": 2,
-          "next_round": "Final",
+          "name": "Third place",
+          "short_name": "3rd",
           "matches": [
             {
-              "home_team": "SWE",
-              "away_team": "GER",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "1992-06-21",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "NED",
-              "away_team": "DEN",
-              "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 4,
-              "away_penalty_score": 5,
-              "date": "1992-06-22",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg",
-              "bracket_order": 1
+              "home_team": "TCH",
+              "away_team": "ITA",
+              "home_score": 1,
+              "away_score": 1,
+              "home_penalty_score": 9,
+              "away_penalty_score": 8,
+              "date": "1980-06-21",
+              "time": "20:30",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples"
             }
           ]
         },
@@ -191,14 +176,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "DEN",
-              "away_team": "GER",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1992-06-26",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
+              "home_team": "BEL",
+              "away_team": "GER-1949-1990",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1980-06-22",
+              "time": "20:30",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             }
           ]
         }
