@@ -169,6 +169,7 @@
   { "id": "MEX-1916-1934", "name": "Mexico", "team_type_id": "MNT", "nation_id": "MEX-1916-1934", "parent_team_id": "MEX" },
   { "id": "ALB", "name": "Albania", "team_type_id": "MNT", "nation_id": "ALB", "parent_team_id": "" },
   { "id": "LVA", "name": "Latvia", "team_type_id": "MNT", "nation_id": "LVA", "parent_team_id": "" },
+  { "id": "CIS", "name": "CIS", "team_type_id": "MNT", "nation_id": "CIS", "parent_team_id": "RUS" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -367,7 +368,6 @@
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
   { "id": "959", "name": "Taiwan", "team_type_id": "U23MNT", "nation_id": "308", "parent_team_id": "932" },
   { "id": "960", "name": "Netherlands Antilles", "team_type_id": "U23MNT", "nation_id": "226", "parent_team_id": "938" },
-  { "id": "962", "name": "CIS", "team_type_id": "MNT", "nation_id": "228", "parent_team_id": "23" },
   { "id": "964", "name": "French Guiana", "team_type_id": "MNT", "nation_id": "229", "parent_team_id": "" },
   { "id": "965", "name": "Martinique", "team_type_id": "MNT", "nation_id": "230", "parent_team_id": "" },
   { "id": "966", "name": "Nicaragua", "team_type_id": "MNT", "nation_id": "138", "parent_team_id": "" },
