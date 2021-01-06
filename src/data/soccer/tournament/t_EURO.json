@@ -513,7 +513,41 @@
     "name": "UEFA Euro 1972 Belgium",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1972.png", "start_date": "1972-06-14", "end_date": "1972-06-18" }
+    "details": {
+      "host": ["BEL"],
+      "logo_filename": "Euro_1972.png",
+      "start_date": "1972-06-14",
+      "end_date": "1972-06-18",
+      "color": "#dc4128",
+      "team_count": 4,
+      "venue_count": 4,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Heysel Stadium, Brussels",
+        "filename": "Stade_Roi_Baudouin.jpeg",
+        "text": "The Heysel Stadium held the final."
+      },
+      {
+        "name": "Stade Maurice Dufrasne, Liège",
+        "filename": "Standard_liege_kaerjeng02.jpg",
+        "text": "The Stade Maurice Dufrasne held the third place match."
+      },
+      {
+        "name": "Stade Émile Versé, Brussels",
+        "filename": "3564constantVandenStockStadium.jpg",
+        "text": "The Stade Émile Versé held the semi-final between Hungary and Soviet Union."
+      },
+      {
+        "name": "Bosuilstadion, Antwerp",
+        "filename": "20110720_bosuil.jpg",
+        "text": "The Bosuilstadion held the semi-final between Belgium and Germany FR."
+      }
+    ],
+    "final_standings": { "champions": "GER-1949-1990", "runners_up": "URS", "third_place": "BEL", "fourth_place": "HUN" },
+    "statistics": { "total_matches": 4, "total_goals": 10, "attendance": 121880 },
+    "awards": { "golden_boot": [{ "player": "Gerd Müller", "team": "GER-1949-1990", "goals": 4 }] }
   },
   {
     "id": "EURO1968",

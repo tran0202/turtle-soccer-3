@@ -1,173 +1,60 @@
 {
-  "id": "EURO1980",
+  "id": "EURO1976",
   "stages": [
-    {
-      "name": "Group Stage",
-      "type": "roundrobin",
-      "eliminateCount": 4,
-      "next_round": "Final",
-      "advancement": {
-        "teams": {
-          "auto": [1],
-          "third_place": 2,
-          "eliminated": [3, 4],
-          "text": "The winners would advance to the final. The runners-up would advance to the third place match."
-        }
-      },
-      "groups": [
-        {
-          "name": "Group 1",
-          "teams": [{ "id": "TCH" }, { "id": "GER-1949-1990" }, { "id": "NED" }, { "id": "GRE" }],
-          "matches": [
-            {
-              "home_team": "TCH",
-              "away_team": "GER-1949-1990",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1980-06-11",
-              "time": "17:45",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "GRE",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1980-06-11",
-              "time": "20:30",
-              "stadium": "Stadio San Paolo",
-              "city": "Naples"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "NED",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1980-06-14",
-              "time": "17:45",
-              "stadium": "Stadio San Paolo",
-              "city": "Naples"
-            },
-            {
-              "home_team": "GRE",
-              "away_team": "TCH",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1980-06-14",
-              "time": "20:30",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "TCH",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-06-17",
-              "time": "17:45",
-              "stadium": "San Siro",
-              "city": "Milan"
-            },
-            {
-              "home_team": "GRE",
-              "away_team": "GER-1949-1990",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-06-17",
-              "time": "20:30",
-              "stadium": "Stadio Comunale",
-              "city": "Turin"
-            }
-          ]
-        },
-        {
-          "name": "Group 2",
-          "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "ESP-1977-1981" }, { "id": "ITA" }],
-          "matches": [
-            {
-              "home_team": "BEL",
-              "away_team": "ENG",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-06-12",
-              "time": "17:45",
-              "stadium": "Stadio Comunale",
-              "city": "Turin"
-            },
-            {
-              "home_team": "ESP-1977-1981",
-              "away_team": "ITA",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-06-12",
-              "time": "20:30",
-              "stadium": "San Siro",
-              "city": "Milan"
-            },
-            {
-              "home_team": "BEL",
-              "away_team": "ESP-1977-1981",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1980-06-15",
-              "time": "17:45",
-              "stadium": "San Siro",
-              "city": "Milan"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "ITA",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1980-06-15",
-              "time": "20:30",
-              "stadium": "Stadio Comunale",
-              "city": "Turin"
-            },
-            {
-              "home_team": "ESP-1977-1981",
-              "away_team": "ENG",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "1980-06-18",
-              "time": "17:45",
-              "stadium": "Stadio San Paolo",
-              "city": "Naples"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "BEL",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-06-18",
-              "time": "20:30",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
-            }
-          ]
-        }
-      ]
-    },
     {
       "name": "Knockout Stage",
       "type": "knockout",
+      "teams": [{ "id": "TCH" }, { "id": "NED" }, { "id": "YUG-1945-1992" }, { "id": "GER-1949-1990" }],
       "rounds": [
+        {
+          "name": "Semi-finals",
+          "short_name": "1/2",
+          "eliminateCount": 2,
+          "next_round": "Final",
+          "matches": [
+            {
+              "home_team": "TCH",
+              "away_team": "NED",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "1976-06-16",
+              "time": "20:15",
+              "stadium": "Stadion Maksimir",
+              "city": "Zagreb",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "YUG-1945-1992",
+              "away_team": "GER-1949-1990",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 0,
+              "away_extra_score": 2,
+              "date": "1976-06-17",
+              "time": "20:15",
+              "stadium": "Red Star Stadium",
+              "city": "Belgrade",
+              "bracket_order": 2
+            }
+          ]
+        },
         {
           "name": "Third place",
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "TCH",
-              "away_team": "ITA",
-              "home_score": 1,
-              "away_score": 1,
-              "home_penalty_score": 9,
-              "away_penalty_score": 8,
-              "date": "1980-06-21",
-              "time": "20:30",
-              "stadium": "Stadio San Paolo",
-              "city": "Naples"
+              "home_team": "NED",
+              "away_team": "YUG-1945-1992",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 1,
+              "away_extra_score": 0,
+              "date": "1976-06-19",
+              "time": "20:15",
+              "stadium": "Stadion Maksimir",
+              "city": "Zagreb"
             }
           ]
         },
@@ -176,14 +63,18 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "BEL",
+              "home_team": "TCH",
               "away_team": "GER-1949-1990",
-              "home_score": 1,
+              "home_score": 2,
               "away_score": 2,
-              "date": "1980-06-22",
-              "time": "20:30",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 5,
+              "away_penalty_score": 3,
+              "date": "1976-06-20",
+              "time": "20:15",
+              "stadium": "Red Star Stadium",
+              "city": "Belgrade"
             }
           ]
         }
