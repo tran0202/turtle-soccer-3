@@ -1,5 +1,5 @@
 {
-  "id": "EURO1992",
+  "id": "EURO1988",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,133 +16,133 @@
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "SWE" }, { "id": "FRA" }, { "id": "DEN" }, { "id": "ENG" }],
+          "teams": [{ "id": "GER-1949-1990" }, { "id": "ITA" }, { "id": "DEN" }, { "id": "ESP" }],
           "matches": [
             {
-              "home_team": "SWE",
-              "away_team": "FRA",
+              "home_team": "GER-1949-1990",
+              "away_team": "ITA",
               "home_score": 1,
               "away_score": 1,
-              "date": "1992-06-10",
+              "date": "1988-06-10",
               "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
+              "stadium": "Rheinstadion",
+              "city": "Düsseldorf"
             },
             {
               "home_team": "DEN",
-              "away_team": "ENG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1992-06-11",
-              "time": "20:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
-            },
-            {
-              "home_team": "FRA",
-              "away_team": "ENG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1992-06-14",
-              "time": "17:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "DEN",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1992-06-14",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
-            },
-            {
-              "home_team": "SWE",
-              "away_team": "ENG",
+              "away_team": "ESP",
               "home_score": 2,
-              "away_score": 1,
-              "date": "1992-06-17",
-              "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna"
+              "away_score": 3,
+              "date": "1988-06-11",
+              "time": "15:30",
+              "stadium": "Niedersachsenstadion",
+              "city": "Hanover"
             },
             {
-              "home_team": "FRA",
+              "home_team": "GER-1949-1990",
               "away_team": "DEN",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1988-06-14",
+              "time": "17:15",
+              "stadium": "Parkstadion",
+              "city": "Gelsenkirchen"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "ESP",
               "home_score": 1,
-              "away_score": 2,
-              "date": "1992-06-17",
+              "away_score": 0,
+              "date": "1988-06-14",
               "time": "20:15",
-              "stadium": "Malmö Stadion",
-              "city": "Malmö"
+              "stadium": "Waldstadion",
+              "city": "Frankfurt"
+            },
+            {
+              "home_team": "GER-1949-1990",
+              "away_team": "ESP",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1988-06-17",
+              "time": "20:15",
+              "stadium": "Olympiastadion",
+              "city": "Munich"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "DEN",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1988-06-17",
+              "time": "20:15",
+              "stadium": "Müngersdorfer Stadion",
+              "city": "Cologne"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "NED" }, { "id": "SCO" }, { "id": "CIS" }, { "id": "GER" }],
+          "teams": [{ "id": "ENG" }, { "id": "IRL" }, { "id": "NED" }, { "id": "URS" }],
           "matches": [
             {
-              "home_team": "NED",
-              "away_team": "SCO",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1992-06-12",
-              "time": "17:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
+              "home_team": "ENG",
+              "away_team": "IRL",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1988-06-12",
+              "time": "15:30",
+              "stadium": "Neckarstadion",
+              "city": "Stuttgart"
             },
             {
-              "home_team": "CIS",
-              "away_team": "GER",
+              "home_team": "NED",
+              "away_team": "URS",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1988-06-12",
+              "time": "20:15",
+              "stadium": "Müngersdorfer Stadion",
+              "city": "Cologne"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "NED",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1988-06-15",
+              "time": "17:15",
+              "stadium": "Rheinstadion",
+              "city": "Düsseldorf"
+            },
+            {
+              "home_team": "IRL",
+              "away_team": "URS",
               "home_score": 1,
               "away_score": 1,
-              "date": "1992-06-12",
+              "date": "1988-06-15",
               "time": "20:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
+              "stadium": "Niedersachsenstadion",
+              "city": "Hanover"
             },
             {
-              "home_team": "SCO",
-              "away_team": "GER",
+              "home_team": "ENG",
+              "away_team": "URS",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1988-06-18",
+              "time": "15:30",
+              "stadium": "Waldstadion",
+              "city": "Frankfurt"
+            },
+            {
+              "home_team": "IRL",
+              "away_team": "NED",
               "home_score": 0,
-              "away_score": 2,
-              "date": "1992-06-15",
-              "time": "17:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "CIS",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1992-06-15",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "GER",
-              "home_score": 3,
               "away_score": 1,
-              "date": "1992-06-18",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
-            },
-            {
-              "home_team": "SCO",
-              "away_team": "CIS",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1992-06-18",
-              "time": "20:15",
-              "stadium": "Idrottsparken",
-              "city": "Norrköping"
+              "date": "1988-06-18",
+              "time": "15:30",
+              "stadium": "Parkstadion",
+              "city": "Gelsenkirchen"
             }
           ]
         }
@@ -159,29 +159,25 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "SWE",
-              "away_team": "GER",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "1992-06-21",
+              "home_team": "GER-1949-1990",
+              "away_team": "NED",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1988-06-21",
               "time": "20:15",
-              "stadium": "Råsunda Stadium",
-              "city": "Solna",
+              "stadium": "Volksparkstadion",
+              "city": "Hamburg",
               "bracket_order": 2
             },
             {
-              "home_team": "NED",
-              "away_team": "DEN",
+              "home_team": "URS",
+              "away_team": "ITA",
               "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 4,
-              "away_penalty_score": 5,
-              "date": "1992-06-22",
+              "away_score": 0,
+              "date": "1988-06-22",
               "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg",
+              "stadium": "Neckarstadion",
+              "city": "Stuttgart",
               "bracket_order": 1
             }
           ]
@@ -191,14 +187,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "DEN",
-              "away_team": "GER",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1992-06-26",
-              "time": "20:15",
-              "stadium": "Ullevi",
-              "city": "Gothenburg"
+              "home_team": "URS",
+              "away_team": "NED",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "1988-06-25",
+              "time": "15:30",
+              "stadium": "Olympiastadion",
+              "city": "Munich"
             }
           ]
         }
