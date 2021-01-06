@@ -374,9 +374,7 @@
     ],
     "final_standings": { "champions": "NED", "runners_up": "URS", "semi_finalist1": "GER-1949-1990", "semi_finalist2": "ITA" },
     "statistics": { "total_matches": 15, "total_goals": 34, "attendance": 849844 },
-    "awards": {
-      "golden_boot": [{ "player": "Marco van Basten", "team": "NED", "goals": 5 }]
-    }
+    "awards": { "golden_boot": [{ "player": "Marco van Basten", "team": "NED", "goals": 5 }] }
   },
   {
     "id": "EURO1984",
@@ -384,7 +382,44 @@
     "name": "UEFA Euro 1984 France",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1984.png", "start_date": "1984-06-12", "end_date": "1984-06-27" }
+    "tiebreakers": ["team", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["FRA"],
+      "logo_filename": "Euro_1984.png",
+      "mascot_filename": "mascot_1984_peno.jpg",
+      "start_date": "1984-06-12",
+      "end_date": "1984-06-27",
+      "color": "#0077c0",
+      "team_count": 8,
+      "venue_count": 7,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Parc des Princes, Paris",
+        "filename": "PSG-Nantes_Parc_des_Princes_06.jpg",
+        "text": "The Parc des Princes held the final"
+      },
+      {
+        "name": "Stade Vélodrome, Marseille",
+        "filename": "Vue_du_virage_Depé.jpg",
+        "text": "The Stade Vélodrome held the semi-final between France and Portugal"
+      },
+      {
+        "name": "Stade de Gerland, Lyon",
+        "filename": "Stade-Gerland-RWC2007.jpeg",
+        "text": "The Stade de Gerland held the semi-final between Denmark and Spain."
+      },
+      {
+        "name": "Stade Geoffroy-Guichard, Saint-Étienne",
+        "filename": "Geoffroy_Guichard_ASSE.jpeg",
+        "text": "The Stade Geoffroy-Guichard held the group matches."
+      }
+    ],
+    "final_standings": { "champions": "FRA", "runners_up": "ESP", "semi_finalist1": "DEN", "semi_finalist2": "POR" },
+    "statistics": { "total_matches": 15, "total_goals": 41, "attendance": 599669 },
+    "awards": { "golden_boot": [{ "player": "Michel Platini", "team": "FRA", "goals": 9 }] }
   },
   {
     "id": "EURO1980",

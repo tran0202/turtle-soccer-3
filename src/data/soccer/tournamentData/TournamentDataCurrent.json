@@ -1,5 +1,5 @@
 {
-  "id": "EURO1988",
+  "id": "EURO1984",
   "stages": [
     {
       "name": "Group Stage",
@@ -16,133 +16,133 @@
       "groups": [
         {
           "name": "Group 1",
-          "teams": [{ "id": "GER-1949-1990" }, { "id": "ITA" }, { "id": "DEN" }, { "id": "ESP" }],
+          "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "BEL" }, { "id": "YUG-1945-1992" }],
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "ITA",
+              "home_team": "FRA",
+              "away_team": "DEN",
               "home_score": 1,
-              "away_score": 1,
-              "date": "1988-06-10",
-              "time": "20:15",
-              "stadium": "Rheinstadion",
-              "city": "Düsseldorf"
+              "away_score": 0,
+              "date": "1984-06-12",
+              "time": "20:30",
+              "stadium": "Parc des Princes",
+              "city": "Paris"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "YUG-1945-1992",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1984-06-13",
+              "time": "20:30",
+              "stadium": "Stade Félix-Bollaert",
+              "city": "Lens"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "BEL",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "1984-06-16",
+              "time": "17:15",
+              "stadium": "Stade de la Beaujoire",
+              "city": "Nantes"
             },
             {
               "home_team": "DEN",
-              "away_team": "ESP",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "1988-06-11",
-              "time": "15:30",
-              "stadium": "Niedersachsenstadion",
-              "city": "Hanover"
+              "away_team": "YUG-1945-1992",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "1984-06-16",
+              "time": "20:30",
+              "stadium": "Stade de Gerland",
+              "city": "Lyon"
             },
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "DEN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1988-06-14",
-              "time": "17:15",
-              "stadium": "Parkstadion",
-              "city": "Gelsenkirchen"
+              "home_team": "FRA",
+              "away_team": "YUG-1945-1992",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1984-06-19",
+              "time": "20:30",
+              "stadium": "Stade Geoffroy-Guichard",
+              "city": "Saint-Étienne"
             },
             {
-              "home_team": "ITA",
-              "away_team": "ESP",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1988-06-14",
-              "time": "20:15",
-              "stadium": "Waldstadion",
-              "city": "Frankfurt"
-            },
-            {
-              "home_team": "GER-1949-1990",
-              "away_team": "ESP",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1988-06-17",
-              "time": "20:15",
-              "stadium": "Olympiastadion",
-              "city": "Munich"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "DEN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1988-06-17",
-              "time": "20:15",
-              "stadium": "Müngersdorfer Stadion",
-              "city": "Cologne"
+              "home_team": "DEN",
+              "away_team": "BEL",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1984-06-19",
+              "time": "20:30",
+              "stadium": "Stade de la Meinau",
+              "city": "Strasbourg"
             }
           ]
         },
         {
           "name": "Group 2",
-          "teams": [{ "id": "ENG" }, { "id": "IRL" }, { "id": "NED" }, { "id": "URS" }],
+          "teams": [{ "id": "GER-1949-1990" }, { "id": "POR" }, { "id": "ROU-1965-1989" }, { "id": "ESP" }],
           "matches": [
             {
-              "home_team": "ENG",
-              "away_team": "IRL",
+              "home_team": "GER-1949-1990",
+              "away_team": "POR",
               "home_score": 0,
-              "away_score": 1,
-              "date": "1988-06-12",
-              "time": "15:30",
-              "stadium": "Neckarstadion",
-              "city": "Stuttgart"
-            },
-            {
-              "home_team": "NED",
-              "away_team": "URS",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1988-06-12",
-              "time": "20:15",
-              "stadium": "Müngersdorfer Stadion",
-              "city": "Cologne"
-            },
-            {
-              "home_team": "ENG",
-              "away_team": "NED",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1988-06-15",
+              "away_score": 0,
+              "date": "1984-06-14",
               "time": "17:15",
-              "stadium": "Rheinstadion",
-              "city": "Düsseldorf"
+              "stadium": "Stade de la Meinau",
+              "city": "Strasbourg"
             },
             {
-              "home_team": "IRL",
-              "away_team": "URS",
+              "home_team": "ROU-1965-1989",
+              "away_team": "ESP",
               "home_score": 1,
               "away_score": 1,
-              "date": "1988-06-15",
-              "time": "20:15",
-              "stadium": "Niedersachsenstadion",
-              "city": "Hanover"
+              "date": "1984-06-14",
+              "time": "20:30",
+              "stadium": "Stade Geoffroy-Guichard",
+              "city": "Saint-Étienne"
             },
             {
-              "home_team": "ENG",
-              "away_team": "URS",
+              "home_team": "GER-1949-1990",
+              "away_team": "ROU-1965-1989",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1984-06-17",
+              "time": "17:15",
+              "stadium": "Stade Félix-Bollaert",
+              "city": "Lens"
+            },
+            {
+              "home_team": "POR",
+              "away_team": "ESP",
               "home_score": 1,
-              "away_score": 3,
-              "date": "1988-06-18",
-              "time": "15:30",
-              "stadium": "Waldstadion",
-              "city": "Frankfurt"
+              "away_score": 1,
+              "date": "1984-06-17",
+              "time": "20:30",
+              "stadium": "Stade Vélodrome",
+              "city": "Marseille"
             },
             {
-              "home_team": "IRL",
-              "away_team": "NED",
+              "home_team": "GER-1949-1990",
+              "away_team": "ESP",
               "home_score": 0,
               "away_score": 1,
-              "date": "1988-06-18",
-              "time": "15:30",
-              "stadium": "Parkstadion",
-              "city": "Gelsenkirchen"
+              "date": "1984-06-20",
+              "time": "20:30",
+              "stadium": "Parc des Princes",
+              "city": "Paris"
+            },
+            {
+              "home_team": "POR",
+              "away_team": "ROU-1965-1989",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1984-06-20",
+              "time": "20:30",
+              "stadium": "Stade de la Beaujoire",
+              "city": "Nantes"
             }
           ]
         }
@@ -159,26 +159,32 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "NED",
+              "home_team": "FRA",
+              "away_team": "POR",
               "home_score": 1,
-              "away_score": 2,
-              "date": "1988-06-21",
-              "time": "20:15",
-              "stadium": "Volksparkstadion",
-              "city": "Hamburg",
-              "bracket_order": 2
+              "away_score": 1,
+              "home_extra_score": 2,
+              "away_extra_score": 1,
+              "date": "1984-06-23",
+              "time": "20:00",
+              "stadium": "Stade Vélodrome",
+              "city": "Marseille",
+              "bracket_order": 1
             },
             {
-              "home_team": "URS",
-              "away_team": "ITA",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1988-06-22",
-              "time": "20:15",
-              "stadium": "Neckarstadion",
-              "city": "Stuttgart",
-              "bracket_order": 1
+              "home_team": "DEN",
+              "away_team": "ESP",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 5,
+              "date": "1984-06-24",
+              "time": "20:00",
+              "stadium": "Stade de Gerland",
+              "city": "Lyon",
+              "bracket_order": 2
             }
           ]
         },
@@ -187,14 +193,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "URS",
-              "away_team": "NED",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "1988-06-25",
-              "time": "15:30",
-              "stadium": "Olympiastadion",
-              "city": "Munich"
+              "home_team": "FRA",
+              "away_team": "ESP",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1984-06-27",
+              "time": "20:00",
+              "stadium": "Parc des Princes",
+              "city": "Paris"
             }
           ]
         }
