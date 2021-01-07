@@ -555,7 +555,41 @@
     "name": "UEFA Euro 1968 Italy",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1968.png", "start_date": "1968-06-05", "end_date": "1968-06-10" }
+    "details": {
+      "host": ["ITA"],
+      "logo_filename": "Euro_1968.png",
+      "start_date": "1968-06-05",
+      "end_date": "1968-06-10",
+      "color": "#00a766",
+      "team_count": 4,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "UEFA_Euro_1968_Final_-_Italy.jpg",
+        "text": "The Italian line-up on the pitch prior to the start of the final replay"
+      },
+      {
+        "name": "Champion",
+        "filename": "UEFA_Euro_1968_Final_-_Italian_captain_Giacinto_Facchetti_with_the_trophy.jpg",
+        "text": "Italian captain Giacinto Facchetti with the trophy"
+      },
+      {
+        "name": "Stadio Olimpico, Rome",
+        "filename": "Stadio_Olimpico_2008.jpeg",
+        "text": "The Stadio Olimpico held the final and the replay."
+      },
+      {
+        "name": "Stadio Comunale, Florence",
+        "filename": "Soccer_in_Florence,_Italy,_2007.jpg",
+        "text": "The Stadio Comunale held the semi-final between Yugoslavia and England."
+      }
+    ],
+    "final_standings": { "champions": "ITA", "runners_up": "YUG-1945-1992", "third_place": "ENG", "fourth_place": "URS" },
+    "statistics": { "total_matches": 5, "total_goals": 7, "attendance": 260916 },
+    "awards": { "golden_boot": [{ "player": "Dragan Džajić", "team": "YUG-1945-1992", "goals": 2 }] }
   },
   {
     "id": "EURO1964",

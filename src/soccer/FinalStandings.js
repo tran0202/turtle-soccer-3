@@ -172,10 +172,12 @@ const advanceThirdPlaceTeams = (tournament, round) => {
 const createFinalRankings = (tournament, round) => {
   const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
   if (round.matches && advanced_teams) {
-    const m = round.matches[0]
+    const m = round.matches[round.matches.length - 1]
     if (m) {
       let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
+      console.log('home_ranking', home_ranking)
+      console.log('away_ranking', away_ranking)
       const rankWinner = round.name === 'Final' ? 1 : 3
       const rankLoser = round.name === 'Final' ? 2 : 4
       if (isWinner('H', m)) {
@@ -208,7 +210,6 @@ const createFinalRoundRankings = (tournament, groupStage, group) => {
   if (!tournament.final_rankings.rounds) {
     tournament.final_rankings.rounds = []
   }
-  // console.log('group.final_rankings', group.final_rankings)
   tournament.final_rankings.rounds.unshift({ name: groupStage.name, ranking_type: 'round', final_rankings: [] })
   const finalRound = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   group.final_rankings.forEach((fr, index) => {

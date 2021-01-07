@@ -10,6 +10,7 @@ import {
   PenTooltip,
   WalkoverTooltip,
   ReplayTooltip,
+  CoinTossTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -50,6 +51,7 @@ const getMatchDate = (match) => {
 
 const BracketBox = (props) => {
   const { match, colIndex, lastBox, config } = props
+  // console.log('match', match)
   return (
     <React.Fragment>
       <Row className="no-gutters box-sm bracket-box-height">
@@ -92,6 +94,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.home_team)}
@@ -109,6 +112,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -126,6 +130,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -143,6 +148,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />
@@ -162,6 +168,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
             </Col>
             {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>

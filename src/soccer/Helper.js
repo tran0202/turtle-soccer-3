@@ -134,6 +134,7 @@ export const isWinner = (who, match) => {
     if (who === 'H') {
       return (
         match.home_walkover ||
+        match.home_coin_toss ||
         match.home_score > match.away_score ||
         (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
         (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score) ||
@@ -278,7 +279,18 @@ const DisplayAwayGoalsText = (props) => {
 
 const DisplayExtraTimeText = (props) => {
   const { param } = props
-  const { home_team, away_team, home_extra_score, away_extra_score, home_penalty_score, away_penalty_score, group_playoff, goldenGoal, silverGoal } = param
+  const {
+    home_team,
+    away_team,
+    home_extra_score,
+    away_extra_score,
+    home_penalty_score,
+    away_penalty_score,
+    home_coin_toss,
+    group_playoff,
+    goldenGoal,
+    silverGoal,
+  } = param
   // console.log('group_playoff', group_playoff)
   return (
     <React.Fragment>
@@ -332,6 +344,11 @@ const DisplayExtraTimeText = (props) => {
             {home_penalty_score}-{away_penalty_score}
           </b>
           {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
+        </React.Fragment>
+      )}
+      {home_coin_toss && (
+        <React.Fragment>
+          &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(home_team)}</b> won on coin toss
         </React.Fragment>
       )}
     </React.Fragment>
@@ -537,7 +554,7 @@ const DisplayMatch = (props) => {
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
         </Col>
-        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
+        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_coin_toss ? ' gray3' : ''}`}>
           {getTeamName(m.away_team)}
         </Col>
       </Row>
@@ -562,6 +579,7 @@ const DisplayMatch = (props) => {
               away_extra_score: m.away_extra_score,
               home_penalty_score: m.home_penalty_score,
               away_penalty_score: m.away_penalty_score,
+              home_coin_toss: m.home_coin_toss,
               group_playoff: m.group_playoff,
               goldenGoal: config.goldenGoal,
               silverGoal: config.silverGoal,
@@ -626,6 +644,12 @@ export const PenTooltip = (props) => {
 export const ReplayTooltip = (props) => {
   const { target, anchor } = props
   const content = 'Replay'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const CoinTossTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Coin toss'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

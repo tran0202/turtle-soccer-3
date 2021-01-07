@@ -1,10 +1,10 @@
 {
-  "id": "EURO1972",
+  "id": "EURO1968",
   "stages": [
     {
       "name": "Knockout Stage",
       "type": "knockout",
-      "teams": [{ "id": "HUN" }, { "id": "URS" }, { "id": "BEL" }, { "id": "GER-1949-1990" }],
+      "teams": [{ "id": "ITA" }, { "id": "URS" }, { "id": "YUG-1945-1992" }, { "id": "ENG" }],
       "rounds": [
         {
           "name": "Semi-finals",
@@ -13,26 +13,29 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "HUN",
+              "home_team": "ITA",
               "away_team": "URS",
               "home_score": 0,
-              "away_score": 1,
-              "date": "1972-06-14",
-              "time": "20:00",
-              "stadium": "Stade Émile Versé",
-              "city": "Brussels",
-              "bracket_order": 2
+              "away_score": 0,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_coin_toss": true,
+              "date": "1968-06-05",
+              "time": "18:00",
+              "stadium": "Stadio San Paolo",
+              "city": "Naples",
+              "bracket_order": 1
             },
             {
-              "home_team": "BEL",
-              "away_team": "GER-1949-1990",
+              "home_team": "YUG-1945-1992",
+              "away_team": "ENG",
               "home_score": 1,
-              "away_score": 2,
-              "date": "1972-06-14",
-              "time": "20:00",
-              "stadium": "Bosuilstadion",
-              "city": "Antwerp",
-              "bracket_order": 1
+              "away_score": 0,
+              "date": "1968-06-05",
+              "time": "21:15",
+              "stadium": "Stadio Comunale",
+              "city": "Florence",
+              "bracket_order": 2
             }
           ]
         },
@@ -41,14 +44,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "BEL",
-              "away_team": "HUN",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1972-06-17",
-              "time": "20:00",
-              "stadium": "Stade Maurice Dufrasne",
-              "city": "Liège"
+              "home_team": "URS",
+              "away_team": "ENG",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "1968-06-08",
+              "time": "15:00",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
             }
           ]
         },
@@ -57,14 +60,27 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "GER-1949-1990",
-              "away_team": "URS",
-              "home_score": 3,
+              "home_team": "ITA",
+              "away_team": "YUG-1945-1992",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "date": "1968-06-08",
+              "time": "21:15",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome"
+            },
+            {
+              "home_team": "ITA",
+              "away_team": "YUG-1945-1992",
+              "home_score": 2,
               "away_score": 0,
-              "date": "1972-06-18",
-              "time": "16:00",
-              "stadium": "Heysel Stadium",
-              "city": "Brussels"
+              "date": "1968-06-10",
+              "time": "21:15",
+              "stadium": "Stadio Olimpico",
+              "city": "Rome",
+              "replay": true
             }
           ]
         }
