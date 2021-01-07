@@ -635,6 +635,38 @@
     "name": "UEFA Euro 1960 France",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1960.png", "start_date": "1960-07-06", "end_date": "1960-07-10" }
+    "details": {
+      "host": ["FRA"],
+      "logo_filename": "Euro_1960.png",
+      "start_date": "1960-07-06",
+      "end_date": "1960-07-10",
+      "color": "#0077c0",
+      "team_count": 4,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Parc des Princes, Paris",
+        "filename": "Paris-Parc-des-Princes.jpg",
+        "text": "The Parc des Princes held the final"
+      },
+      {
+        "name": "Stade Vélodrome, Marseille",
+        "filename": "Le_Stade_vélodrome_de_Marseille,_le_13_juin_1937.jpg",
+        "text": "The Stade Vélodrome held the semi-final between Czechoslovakia and Soviet Union."
+      }
+    ],
+    "final_standings": { "champions": "URS", "runners_up": "YUG-1945-1992", "third_place": "TCH", "fourth_place": "FRA" },
+    "statistics": { "total_matches": 4, "total_goals": 17, "attendance": 78958 },
+    "awards": {
+      "golden_boot": [
+        { "player": "François Heutte", "team": "FRA", "goals": 2 },
+        { "player": "Valentin Ivanov", "team": "URS", "goals": 2 },
+        { "player": "Viktor Ponedelnik", "team": "URS", "goals": 2 },
+        { "player": "Milan Galić", "team": "YUG-1945-1992", "goals": 2 },
+        { "player": "Dražan Jerković", "team": "YUG-1945-1992", "goals": 2 }
+      ]
+    }
   }
 ]
