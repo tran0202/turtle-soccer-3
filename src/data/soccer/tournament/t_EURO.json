@@ -597,7 +597,37 @@
     "name": "UEFA Euro 1964 Spain",
     "tournament_type_id": "EURO",
     "points_for_win": 2,
-    "details": { "logo_filename": "Euro_1964.png", "start_date": "1964-06-17", "end_date": "1964-06-21" }
+    "details": {
+      "host": ["ESP-1945-1977"],
+      "logo_filename": "Euro_1964.png",
+      "start_date": "1964-06-17",
+      "end_date": "1964-06-21",
+      "color": "#d82c20",
+      "team_count": 4,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Santiago Bernabéu, Madrid",
+        "filename": "The_Santiago_Bernabeu_Stadium_-_U-g-g-B-o-y.jpg",
+        "text": "The Santiago Bernabéu held the final"
+      },
+      {
+        "name": "Camp Nou, Barcelona",
+        "filename": "Camp_Nou_FC_Barcelona.jpeg",
+        "text": "The Camp Nou held the semi-final between Denmark and Soviet Union."
+      }
+    ],
+    "final_standings": { "champions": "ESP-1945-1977", "runners_up": "URS", "third_place": "HUN", "fourth_place": "DEN" },
+    "statistics": { "total_matches": 4, "total_goals": 13, "attendance": 156253 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Ferenc Bene", "team": "HUN", "goals": 2 },
+        { "player": "Dezső Novák", "team": "HUN", "goals": 2 },
+        { "player": "Jesús María Pereda", "team": "ESP-1945-1977", "goals": 2 }
+      ]
+    }
   },
   {
     "id": "EURO1960",

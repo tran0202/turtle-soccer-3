@@ -176,8 +176,8 @@ const createFinalRankings = (tournament, round) => {
     if (m) {
       let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      console.log('home_ranking', home_ranking)
-      console.log('away_ranking', away_ranking)
+      // console.log('home_ranking', home_ranking)
+      // console.log('away_ranking', away_ranking)
       const rankWinner = round.name === 'Final' ? 1 : 3
       const rankLoser = round.name === 'Final' ? 2 : 4
       if (isWinner('H', m)) {

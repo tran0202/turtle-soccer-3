@@ -1,10 +1,10 @@
 {
-  "id": "EURO1968",
+  "id": "EURO1964",
   "stages": [
     {
       "name": "Knockout Stage",
       "type": "knockout",
-      "teams": [{ "id": "ITA" }, { "id": "URS" }, { "id": "YUG-1945-1992" }, { "id": "ENG" }],
+      "teams": [{ "id": "ESP-1945-1977" }, { "id": "HUN" }, { "id": "DEN" }, { "id": "URS" }],
       "rounds": [
         {
           "name": "Semi-finals",
@@ -13,28 +13,27 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "ITA",
-              "away_team": "URS",
-              "home_score": 0,
-              "away_score": 0,
-              "home_extra_score": 0,
+              "home_team": "ESP-1945-1977",
+              "away_team": "HUN",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 1,
               "away_extra_score": 0,
-              "home_coin_toss": true,
-              "date": "1968-06-05",
-              "time": "18:00",
-              "stadium": "Stadio San Paolo",
-              "city": "Naples",
+              "date": "1964-06-17",
+              "time": "20:00",
+              "stadium": "Santiago Bernabéu",
+              "city": "Madrid",
               "bracket_order": 1
             },
             {
-              "home_team": "YUG-1945-1992",
-              "away_team": "ENG",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1968-06-05",
-              "time": "21:15",
-              "stadium": "Stadio Comunale",
-              "city": "Florence",
+              "home_team": "DEN",
+              "away_team": "URS",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "1964-06-17",
+              "time": "22:30",
+              "stadium": "Camp Nou",
+              "city": "Barcelona",
               "bracket_order": 2
             }
           ]
@@ -44,14 +43,16 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "URS",
-              "away_team": "ENG",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "1968-06-08",
-              "time": "15:00",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
+              "home_team": "HUN",
+              "away_team": "DEN",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "1964-06-20",
+              "time": "22:00",
+              "stadium": "Camp Nou",
+              "city": "Barcelona"
             }
           ]
         },
@@ -60,27 +61,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "ITA",
-              "away_team": "YUG-1945-1992",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "date": "1968-06-08",
-              "time": "21:15",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome"
-            },
-            {
-              "home_team": "ITA",
-              "away_team": "YUG-1945-1992",
+              "home_team": "ESP-1945-1977",
+              "away_team": "URS",
               "home_score": 2,
-              "away_score": 0,
-              "date": "1968-06-10",
-              "time": "21:15",
-              "stadium": "Stadio Olimpico",
-              "city": "Rome",
-              "replay": true
+              "away_score": 1,
+              "date": "1964-06-21",
+              "time": "18:30",
+              "stadium": "Santiago Bernabéu",
+              "city": "Madrid"
             }
           ]
         }
