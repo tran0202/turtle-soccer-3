@@ -1,6 +1,7 @@
 import TournamentArray from '../data/soccer/tournament/Tournament.json'
 import t_WC from '../data/soccer/tournament/t_WC.json'
 import t_EURO from '../data/soccer/tournament/t_EURO.json'
+import t_MOFT from '../data/soccer/tournament/t_MOFT.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -44,35 +45,22 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'EURO1960', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'MOFT2016', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_EURO)
-}
-
-export const getTournamentDataEURO = () => {
-  return [].concat(
-    [td_EURO_1960],
-    [td_EURO_1964],
-    [td_EURO_1968],
-    [td_EURO_1972],
-    [td_EURO_1976],
-    [td_EURO_1980],
-    [td_EURO_1984],
-    [td_EURO_1988],
-    [td_EURO_1992],
-    [td_EURO_1996],
-    [td_EURO_2000],
-    [td_EURO_2004],
-    [td_EURO_2008],
-    [td_EURO_2012],
-    [td_EURO_2016],
-  )
+  return TournamentArray.concat(t_WC, t_EURO, t_MOFT)
 }
 
 export const getTournamentDataArray = () => {
-  return [].concat(getTournamentDataWC(), getTournamentDataEURO())
+  return [].concat(getTournamentDataWC(), getTournamentDataEURO(), getTournamentDataMOFT())
+}
+
+export const getTournamentDataMOFT = () => {
+  // return [].concat(
+  //   [td_MOFT_2016]
+  // )
+  return []
 }
 
 export const getQualificationTournamentArray = () => {
@@ -106,5 +94,25 @@ export const getTournamentDataWC = () => {
     [td_WC_2010],
     [td_WC_2014],
     [td_WC_2018],
+  )
+}
+
+export const getTournamentDataEURO = () => {
+  return [].concat(
+    [td_EURO_1960],
+    [td_EURO_1964],
+    [td_EURO_1968],
+    [td_EURO_1972],
+    [td_EURO_1976],
+    [td_EURO_1980],
+    [td_EURO_1984],
+    [td_EURO_1988],
+    [td_EURO_1992],
+    [td_EURO_1996],
+    [td_EURO_2000],
+    [td_EURO_2004],
+    [td_EURO_2008],
+    [td_EURO_2012],
+    [td_EURO_2016],
   )
 }

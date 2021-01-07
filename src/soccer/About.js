@@ -62,6 +62,8 @@ const getTopScorerLabel = (tournament, position) => {
         return tournament.awards.golden_boot.length > 1 ? 'Golden Shoes' : 'Golden Shoe'
       }
       return 'Golden Boot'
+    } else if (tournament.tournament_type_id === 'MOFT' || tournament.tournament_type_id === 'WOFT') {
+      return tournament.awards.golden_boot.length > 1 ? 'Top scorers' : 'Top scorer'
     }
     return 'Golden Boot'
   } else if (position === 2) {

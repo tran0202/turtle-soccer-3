@@ -48,7 +48,8 @@ const updateSuccessorRankings = (successor_rankings, all_rankings) => {
     } else {
       tmp_rankings.push(fr)
       const successor = successor_rankings.successors.find((s) => s.r === fr.r)
-      successor.name = getTeamName(fr.id)
+      // console.log('fr', fr)
+      successor.name = getTeamName(fr.parent_id ? fr.parent_id : fr.id)
     }
     previousRank = fr.r
   })
@@ -66,7 +67,6 @@ const collectSuccessorRankings = (successor_rankings, fr, parentTeam) => {
 }
 
 const collectRankings = (tournaments) => {
-  // console.log('tournaments', tournaments)
   let rankingArray = []
   tournaments &&
     tournaments.forEach((t) => {

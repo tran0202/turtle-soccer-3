@@ -12,8 +12,7 @@
       "The FIFA World Cup is an international association football competition contested by the senior men's national teams of the members of the FIFA. The championship has been awarded every four years since 1930, except in 1942 and 1946. The current champion is France, which won its second title in Russia 2018.",
       "The current format involves a qualification phase, which takes place over the preceding three years, to determine which teams qualify for the tournament phase. In the tournament phase, 32 teams, including the automatically qualifying host nation(s), compete for the title at venues within the host nation(s) over about a month.",
       "The 21 World Cup tournaments have been won by eight national teams. Brazil have won five times, and they are the only team to have played in every tournament. The other World Cup winners are Germany and Italy, with four titles each; Argentina, France, and inaugural winner Uruguay, with two titles each; and England and Spain, with one title each."
-    ],
-    "order": 1
+    ]
   },
   {
     "id": "EURO",
@@ -28,17 +27,37 @@
       "The UEFA European Football Championship, commonly known as the UEFA European Championship and informally as the Euros, is the primary association football competition contested by the senior men's national teams of the members of the Union of European Football Associations (UEFA), determining the continental champion of Europe.",
       "The 15 European Championship tournaments have been won by ten national teams: Germany and Spain each have won three titles, France has two titles, and the Soviet Union, Italy, Czechoslovakia, Netherlands, Denmark, Greece and Portugal have won one title each. To date, Spain is the only team in history to have won consecutive titles, doing so in 2008 and 2012.",
       "The most recent championship, hosted by France in 2016, was won by Portugal, who beat France 1–0 in the final at the Stade de France in Saint-Denis after extra time. The final also averaged 284 million viewers which is the second most viewed game in European tournament history."
-    ],
-    "order": 1
+    ]
   },
   {
-    "id": "CONFEDC",
-    "name": "FIFA Confederations Cup",
-    "team_type_id": "MNT",
+    "id": "MOFT",
+    "name": "Men's Olympic Football Tournament",
+    "color": "rgb(21, 97, 30)",
+    "team_type_id": "U23MNT",
     "confederation_id": "FIFA",
-    "logo_path": "cc_logos",
+    "logo_path": "olympic_logos",
+    "trophy_filename": "Medalhas_Rio_2016.jpg",
     "sport_id": "SOC",
-    "order": 5
+    "description": [
+      "Football at the Summer Olympics, commonly known as football or soccer, has been included in every Summer Olympic Games as a men's competition sport, except 1896 and 1932.",
+      "The competition consists of a round-robin group stage followed by a knockout stage. Teams are placed into groups of 4 teams, with each team playing each other team in its group once. Teams earn 3 points for a win, 1 point for a draw, and 0 points for a loss. The top two teams in each group advance to the knockout rounds. The knockout rounds are a single-elimination tournament consisting of quarterfinals, semifinals, and the gold and bronze medal matches.",
+      "The qualifying tournament, like that for the World Cup, is organised along continental lines. Most continental confederations organise a special Under-23 qualifying tournament, although the European qualifiers are drawn from the finalists of the UEFA Under-21 Championship and South American qualifiers from the South American Youth Championship, which is a U-20 tournament. Teams participating in the preliminary and final competitions must be composed of U-23 players, with up to three players who are at least 23."
+    ]
+  },
+  {
+    "id": "WOFT",
+    "name": "Women's Olympic Football Tournament",
+    "color": "rgb(250, 34, 0)",
+    "team_type_id": "U23WNT",
+    "confederation_id": "FIFA",
+    "logo_path": "olympic_logos",
+    "trophy_filename": "Beijing_2008.png",
+    "sport_id": "SOC",
+    "description": [
+      "Women's football at the Summer Olympics was added to the official program at the 1996 Atlanta Games.",
+      "The competition consists of a round-robin group stage followed by a knockout stage. Teams are placed into groups of 4 teams, with each team playing each other team in its group once. Teams earn 3 points for a win, 1 point for a draw, and 0 points for a loss. The top two teams in each group and the top two third-place finishers advance to the knockout rounds. The knockout rounds are a single-elimination tournament consisting of quarterfinals, semifinals, and the gold and bronze medal matches.",
+      "The women's tournament is contested between full national sides, with no age restrictions. One place is reserved for the host country. Of the remaining teams, as in World Cup contests a specific number of places are reserved for teams from each continental region; the European (UEFA) teams are chosen from the most successful European teams in the previous year's World Cup, whilst the other continental regions host their own qualifying tournaments in the build-up to the Olympics."
+    ]
   },
   {
     "id": "UNL",
@@ -127,24 +146,6 @@
     "order": 2
   },
   {
-    "id": "OFT",
-    "name": "Olympic Football Tournament",
-    "team_type_id": "U23MNT",
-    "confederation_id": "FIFA",
-    "logo_path": "olympic_logos",
-    "sport_id": "SOC",
-    "order": 3
-  },
-  {
-    "id": "WOFT",
-    "name": "Women's Olympic Football Tournament",
-    "team_type_id": "U23WNT",
-    "confederation_id": "FIFA",
-    "logo_path": "olympic_logos",
-    "sport_id": "SOC",
-    "order": 4
-  },
-  {
     "id": "WCQ",
     "name": "FIFA World Cup Qualification",
     "team_type_id": "MNT",
@@ -152,6 +153,15 @@
     "tournament_subtype": "qualification",
     "logo_path": "wc_logos",
     "sport_id": "SOC"
+  },
+  {
+    "id": "CONFEDC",
+    "name": "FIFA Confederations Cup",
+    "team_type_id": "MNT",
+    "confederation_id": "FIFA",
+    "logo_path": "cc_logos",
+    "sport_id": "SOC",
+    "order": 5
   },
   {
     "id": "NFL",

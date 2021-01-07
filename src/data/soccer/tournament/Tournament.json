@@ -100,246 +100,6 @@
     "details": { "logo_filename": "1991.png", "start_date": "1991-11-16", "end_date": "1991-11-30" }
   },
   {
-    "id": "OFT2016",
-    "name": "Olympic Football Tournament Rio 2016",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "2016.png", "start_date": "2016-08-03", "end_date": "2016-08-20" }
-  },
-  {
-    "id": "OFT2012",
-    "name": "Olympic Football Tournament London 2012",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "2012.png", "start_date": "2012-07-26", "end_date": "2012-08-11" }
-  },
-  {
-    "id": "OFT2008",
-    "name": "Olympic Football Tournament Beijing 2008",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "2008.png", "start_date": "2008-08-07", "end_date": "2008-08-23" }
-  },
-  {
-    "id": "OFT2004",
-    "name": "Olympic Football Tournament Athens 2004",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "2004.png", "start_date": "2004-08-11", "end_date": "2004-08-28" }
-  },
-  {
-    "id": "OFT2000",
-    "name": "Olympic Football Tournament Sydney 2000",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": true,
-    "points_for_win": 3,
-    "details": { "logo_filename": "2000.png", "start_date": "2000-09-15", "end_date": "2000-09-30" }
-  },
-  {
-    "id": "OFT1996",
-    "name": "Olympic Football Tournament Atlanta 1996",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": true,
-    "points_for_win": 3,
-    "details": { "logo_filename": "1996.png", "start_date": "1996-07-20", "end_date": "1996-08-03" }
-  },
-  {
-    "id": "OFT1992",
-    "name": "Olympic Football Tournament Barcelona 1992",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1992.png", "start_date": "1992-07-24", "end_date": "1992-08-08" }
-  },
-  {
-    "id": "OFT1988",
-    "name": "Olympic Football Tournament Seoul 1988",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1988.png", "start_date": "1988-09-17", "end_date": "1988-10-01" }
-  },
-  {
-    "id": "OFT1984",
-    "name": "Olympic Football Tournament Los Angeles 1984",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1984.png", "start_date": "1984-07-29", "end_date": "1984-08-11" }
-  },
-  {
-    "id": "OFT1980",
-    "name": "Olympic Football Tournament Moscow 1980",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1980.png", "start_date": "1980-07-20", "end_date": "1980-08-02" }
-  },
-  {
-    "id": "OFT1976",
-    "name": "Olympic Football Tournament Montreal 1976",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1976.png", "start_date": "1976-07-18", "end_date": "1976-07-31" }
-  },
-  {
-    "id": "OFT1972",
-    "name": "Olympic Football Tournament Munich 1972",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1972.png", "start_date": "1972-08-27", "end_date": "1972-09-10" }
-  },
-  {
-    "id": "OFT1968",
-    "name": "Olympic Football Tournament Mexico City 1968",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1968.png", "start_date": "1968-10-13", "end_date": "1968-10-26" }
-  },
-  {
-    "id": "OFT1964",
-    "name": "Olympic Football Tournament Tokyo 1964",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1964.png", "start_date": "1964-10-11", "end_date": "1964-10-23" }
-  },
-  {
-    "id": "OFT1960",
-    "name": "Olympic Football Tournament Roma 1960",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1960.png", "start_date": "1960-08-26", "end_date": "1960-09-10" }
-  },
-  {
-    "id": "OFT1956",
-    "name": "Olympic Football Tournament Melbourne 1956",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1956.png", "start_date": "1956-11-24", "end_date": "1956-12-08" }
-  },
-  {
-    "id": "OFT1952",
-    "name": "Olympic Football Tournament Helsinki 1952",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1952.png", "start_date": "1952-07-15", "end_date": "1952-08-02" }
-  },
-  {
-    "id": "OFT1948",
-    "name": "Olympic Football Tournament London 1948",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1948.png", "start_date": "1948-07-26", "end_date": "1948-08-13" }
-  },
-  {
-    "id": "OFT1936",
-    "name": "Olympic Football Tournament Berlin 1936",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1936.png", "start_date": "1936-08-03", "end_date": "1936-08-15" }
-  },
-  {
-    "id": "OFT1928",
-    "name": "Olympic Football Tournament Amsterdam 1928",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1928.jpg", "start_date": "1928-05-27", "end_date": "1928-06-13" }
-  },
-  {
-    "id": "OFT1924",
-    "name": "Olympic Football Tournament Paris 1924",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1924.png", "start_date": "1924-05-25", "end_date": "1924-06-09" }
-  },
-  {
-    "id": "OFT1920",
-    "name": "Olympic Football Tournament Antwerp 1920",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1920.gif", "start_date": "1920-08-28", "end_date": "1920-09-05" }
-  },
-  {
-    "id": "OFT1912",
-    "name": "Olympic Football Tournament Stockholm 1912",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1912.gif", "start_date": "1912-06-29", "end_date": "1912-07-04" }
-  },
-  {
-    "id": "OFT1908",
-    "name": "Olympic Football Tournament London 1908",
-    "tournament_type_id": "OFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
-    "points_for_win": 2,
-    "details": { "logo_filename": "1908.gif", "start_date": "1908-10-19", "end_date": "1908-10-24" }
-  },
-  {
     "id": "WOFT2016",
     "name": "Women's Olympic Football Tournament Rio 2016",
     "tournament_type_id": "WOFT",
@@ -347,7 +107,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2016.png", "start_date": "2016-08-03", "end_date": "2016-08-20" }
+    "details": { "logo_filename": "2016_Summer_Olympics_logo.svg", "start_date": "2016-08-03", "end_date": "2016-08-20" }
   },
   {
     "id": "WOFT2012",
@@ -357,7 +117,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2012.png", "start_date": "2012-07-25", "end_date": "2012-08-09" }
+    "details": { "logo_filename": "2012_Summer_Olympics_logo.svg", "start_date": "2012-07-25", "end_date": "2012-08-09" }
   },
   {
     "id": "WOFT2008",
@@ -367,7 +127,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2008.png", "start_date": "2008-08-06", "end_date": "2008-08-21" }
+    "details": { "logo_filename": "2008_Summer_Olympics_logo.svg", "start_date": "2008-08-06", "end_date": "2008-08-21" }
   },
   {
     "id": "WOFT2004",
@@ -377,7 +137,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2004.png", "start_date": "2004-08-11", "end_date": "2004-08-26" }
+    "details": { "logo_filename": "2004_Summer_Olympics_logo.svg", "start_date": "2004-08-11", "end_date": "2004-08-26" }
   },
   {
     "id": "WOFT2000",
@@ -387,7 +147,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2000.png", "start_date": "2000-09-13", "end_date": "2000-09-28" }
+    "details": { "logo_filename": "2000_Summer_Olympics_logo.svg", "start_date": "2000-09-13", "end_date": "2000-09-28" }
   },
   {
     "id": "WOFT1996",
@@ -397,7 +157,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "1996.png", "start_date": "1996-07-21", "end_date": "1996-08-01" }
+    "details": { "logo_filename": "1996_Summer_Olympics_logo.svg", "start_date": "1996-07-21", "end_date": "1996-08-01" }
   },
   {
     "id": "COPA2016",

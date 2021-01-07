@@ -12,15 +12,19 @@ const getNoThirdPlaceMatchTournament = (tournaments) => {
 
 const ResultHead = (props) => {
   const { config } = props
+  // console.log('config', config)
+  const championLabel = config.id !== 'MOFT' && config.id !== 'WOFT' ? 'Champions' : 'Gold'
+  const runnerupLabel = config.id !== 'MOFT' && config.id !== 'WOFT' ? 'Runners-up' : 'Silver'
+  const thirdPlaceLabel = config.id !== 'MOFT' && config.id !== 'WOFT' ? 'Third-place' : 'Bronze'
   return (
     <Row className="ranking-tbl team-row padding-tb-md text-center">
       <Col className="col-1">No.</Col>
       <Col className="score-no-padding-right col-2">Edition</Col>
-      <Col className="text-center score-no-padding-right col-2">Champion</Col>
-      <Col className="text-center score-no-padding-right col-2">Runner-up</Col>
+      <Col className="text-center score-no-padding-right col-2">{championLabel}</Col>
+      <Col className="text-center score-no-padding-right col-2">{runnerupLabel}</Col>
       {!config.no_third_place && (
         <React.Fragment>
-          <Col className="text-center score-no-padding-right col-2">Third-place</Col>
+          <Col className="text-center score-no-padding-right col-2">{thirdPlaceLabel}</Col>
           <Col className="text-center score-no-padding-right col-2">Fourth-place</Col>
         </React.Fragment>
       )}
@@ -168,7 +172,6 @@ const ResultTable = (props) => {
 
 const CompetitionAbout = (props) => {
   const { tournaments, tournamentType } = props
-  // console.log('qTournamnent', qTournament)
   return (
     <React.Fragment>
       <Row className="mt-3 mb-3 text-left tournament-format">
