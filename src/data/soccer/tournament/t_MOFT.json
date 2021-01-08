@@ -7,7 +7,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
     "details": {
-      "host": ["BRA"],
+      "host": ["BRA_U23MNT"],
       "logo_filename": "2016_Summer_Olympics_logo.svg",
       "mascot_filename": "Football,_Rio_2016.png",
       "start_date": "2016-08-04",
@@ -65,20 +65,20 @@
         "text": "The Iraq Olympic football team"
       }
     ],
-    "final_standings": { "champions": "BRA", "runners_up": "GER", "third_place": "NGA", "fourth_place": "HON" },
+    "final_standings": { "champions": "BRA_U23MNT", "runners_up": "GER_U23MNT", "third_place": "NGA_U23MNT", "fourth_place": "HON_U23MNT" },
     "statistics": { "total_matches": 32, "total_goals": 104, "attendance": 1008426 },
     "awards": {
       "golden_boot": [
-        { "player": "Serge Gnabry", "team": "GER", "goals": 6 },
-        { "player": "Nils Petersen", "team": "GER", "goals": 6 }
+        { "player": "Serge Gnabry", "team": "GER_U23MNT", "goals": 6 },
+        { "player": "Nils Petersen", "team": "GER_U23MNT", "goals": 6 }
       ],
-      "fair_play_team": ["DEN"]
+      "fair_play_team": ["DEN_U23MNT"]
     }
   },
   {
     "id": "MOFT2012",
     "year": "2012",
-    "name": "Men's Men's Olympic Football Tournament London 2012",
+    "name": "Men's Olympic Football Tournament London 2012",
     "tournament_type_id": "MOFT",
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,

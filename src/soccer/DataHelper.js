@@ -41,11 +41,13 @@ import td_EURO_2008 from '../data/soccer/tournamentData/EURO/td_EURO_2008.json'
 import td_EURO_2012 from '../data/soccer/tournamentData/EURO/td_EURO_2012.json'
 import td_EURO_2016 from '../data/soccer/tournamentData/EURO/td_EURO_2016.json'
 
+import td_MOFT_2016 from '../data/soccer/tournamentData/MOFT/td_MOFT_2016.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'MOFT2016', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'MOFT2012', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -57,10 +59,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataMOFT = () => {
-  // return [].concat(
-  //   [td_MOFT_2016]
-  // )
-  return []
+  return [].concat([td_MOFT_2016])
 }
 
 export const getQualificationTournamentArray = () => {
