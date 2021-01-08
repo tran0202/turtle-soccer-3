@@ -9,11 +9,11 @@ export const getTournamentConfig = (tournament) => {
     id: tournament.id,
     name: tournament.name,
     year: tournament.year,
+    tournament_type_id: tournament.tournament_type_id,
     golden_goal_rule: tournament.golden_goal_rule,
     silver_goal_rule: tournament.silver_goal_rule,
     tiebreakers: tournament.tiebreakers,
     no_third_place: tournament.no_third_place,
-    third_place_ranking: tournament.third_place_ranking,
     points_for_win: tournament.points_for_win,
     active: tournament.active,
     hero_images: tournament.hero_images,
@@ -114,11 +114,17 @@ export const getParentTeam = (id) => {
 }
 
 export const getBracketTeamCode = (id) => {
-  const nation = NationArray.find((n) => n.id === id)
+  // console.log('id', id)
+  const team = TeamArray.find((t) => t.id === id)
+  if (!team) {
+    console.log('Team error', team)
+    return
+  }
+  const nation = NationArray.find((n) => n.id === team.nation_id)
   if (!nation) {
     console.log('Nation error', nation)
   } else if (!nation.code) {
-    return id
+    return team.nation_id
   } else {
     return nation.code
   }
@@ -595,11 +601,15 @@ export const DisplaySchedule = (props) => {
   const { round, config } = props
   const { showMatchYear } = config
   const { name, dates, matches } = round
+  const groupName =
+    name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
+      ? name.replace('Third place', 'Bronze medal match').replace('Final', 'Gold medal match')
+      : name
   return (
     <React.Fragment>
       <Row>
         <Col>
-          <div className="h2-ff1 margin-top-md">{name}</div>
+          <div className="h2-ff1 margin-top-md">{groupName}</div>
         </Col>
       </Row>
       {dates &&

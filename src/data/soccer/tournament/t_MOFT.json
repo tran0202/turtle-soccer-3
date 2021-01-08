@@ -80,10 +80,48 @@
     "year": "2012",
     "name": "Men's Olympic Football Tournament London 2012",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2012_Summer_Olympics_logo.svg", "start_date": "2012-07-26", "end_date": "2012-08-11" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GBR_U23MNT"],
+      "logo_filename": "2012_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_London_2012.png",
+      "start_date": "2012-07-26",
+      "end_date": "2012-08-11",
+      "color": "#15296d",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Group A",
+        "filename": "Football_at_the_2012_Summer_Olympics_–_Mens_tournament.jpeg",
+        "text": "The match of Great Britain against Senegal in Old Trafford, Manchester"
+      },
+      {
+        "name": "Group C",
+        "filename": "Brazil_Belarus_kickoff.jpeg",
+        "text": "Brazil (yellow) and Belarus (red) kick off their preliminary Olympic football match at Old Trafford on 29 July 2012"
+      },
+      {
+        "name": "Group D",
+        "filename": "2012_Olympic_Football_-_Spain_v_Japan.jpg",
+        "text": "Juan Mata taking a corner in the match between Spain and Japan"
+      },
+      {
+        "name": "Group D",
+        "filename": "2012_Olympic_Football_-_Mens_tournament_-_Honduras_Vs_Morocco.jpg",
+        "text": "Football at the 2012 Summer Olympics – Men's tournament - Preliminary round (Honduras Vs Morocco)"
+      }
+    ],
+    "final_standings": { "champions": "MEX_U23MNT", "runners_up": "BRA_U23MNT", "third_place": "KOR_U23MNT", "fourth_place": "JPN_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 76, "attendance": 1525134 },
+    "awards": {
+      "golden_boot": [{ "player": "Leandro Damião", "team": "BRA_U23MNT", "goals": 6 }],
+      "fair_play_team": ["JPN_U23MNT"]
+    }
   },
   {
     "id": "MOFT2008",

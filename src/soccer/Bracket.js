@@ -310,6 +310,11 @@ const BracketBox = (props) => {
 
 const BracketColInner = (props) => {
   const { round, colIndex, config } = props
+  // console.log('config', config)
+  const roundName =
+    round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
+      ? round.name.replace('Third place', 'Bronze medal').replace('Final', 'Gold medal')
+      : round.name
 
   return (
     <React.Fragment>
@@ -318,9 +323,9 @@ const BracketColInner = (props) => {
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
       <Row className="no-gutters bracket-col-height">
         <Col xs={{ size: 11, offset: 1 }}>
-          <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
-          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{round.name}</div>
-          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{round.name}</div>
+          <div className="h2-ff1 margin-top-md d-none d-xl-block">{roundName}</div>
+          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{roundName}</div>
+          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{roundName}</div>
           <div className="h5-ff1 margin-top-md d-block d-md-none">{round.short_name}</div>
         </Col>
       </Row>
@@ -342,7 +347,6 @@ const BracketCol = (props) => {
 
 const BracketFinalCol = (props) => {
   const { round, thirdPlace, config } = props
-  // console.log('thirdPlace', thirdPlace)
   return (
     <Col className="col-brk-22">
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
@@ -477,7 +481,6 @@ const attachReplayMatches = (round) => {
 const Bracket = (props) => {
   const { stage, config } = props
   const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
-  // console.log('thirdPlace', thirdPlace)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')

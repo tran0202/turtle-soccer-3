@@ -35,11 +35,19 @@ const getBracketStage = (stage) => {
 const Knockout = (props) => {
   const { stage, config } = props
   const bracket_stage = getBracketStage(stage)
-  const displayScheduleConfig = { knockoutMatch: true, goldenGoal: config.golden_goal_rule, silverGoal: config.silver_goal_rule }
+  const bracketConfig = {
+    tournamentTypeId: config.tournament_type_id,
+    goldenGoal: config.golden_goal_rule,
+    silverGoal: config.silver_goal_rule,
+  }
+  const displayScheduleConfig = {
+    knockoutMatch: true,
+    ...bracketConfig,
+  }
   // console.log('stage', stage)
   return (
     <React.Fragment>
-      <Bracket stage={bracket_stage} config={{ goldenGoal: config.golden_goal_rule, silverGoal: config.silver_goal_rule }} />
+      <Bracket stage={bracket_stage} config={bracketConfig} />
       {stage.rounds &&
         stage.rounds.map((r) => {
           const matchArray = getMatchArrayByDate(r, true)
