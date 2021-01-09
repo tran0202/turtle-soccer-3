@@ -313,7 +313,7 @@ const BracketColInner = (props) => {
   // console.log('config', config)
   const roundName =
     round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
-      ? round.name.replace('Third place', 'Bronze medal').replace('Final', 'Gold medal')
+      ? round.name.replace('Third-place', 'Bronze medal').replace('Final', 'Gold medal')
       : round.name
 
   return (
@@ -480,7 +480,7 @@ const attachReplayMatches = (round) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
-  const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third place') : {}
+  const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third-place') : {}
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -509,7 +509,7 @@ const Bracket = (props) => {
               const r = hasReplay(_r) ? attachReplayMatches(_r) : _r
               if (r.matches) {
                 const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
-                if (r.name === 'Third place') {
+                if (r.name === 'Third-place') {
                   return null
                 } else if (r.name === 'Final') {
                   return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: stage.rounds.length }} key={r.name} />

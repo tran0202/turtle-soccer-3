@@ -603,7 +603,7 @@ export const DisplaySchedule = (props) => {
   const { name, dates, matches } = round
   const groupName =
     name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
-      ? name.replace('Third place', 'Bronze medal match').replace('Final', 'Gold medal match')
+      ? name.replace('Third-place', 'Bronze medal match').replace('Final', 'Gold medal match')
       : name
   return (
     <React.Fragment>

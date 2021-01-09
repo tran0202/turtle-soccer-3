@@ -273,10 +273,51 @@
     "year": "1996",
     "name": "Men's Olympic Football Tournament Atlanta 1996",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "1996_Summer_Olympics_logo.svg", "start_date": "1996-07-20", "end_date": "1996-08-03" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA_U23MNT"],
+      "logo_filename": "1996_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1996-07-20",
+      "end_date": "1996-08-03",
+      "color": "#e12631",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Sanford Stadium, Athens",
+        "filename": "Football_game_kickoff_(Georgia_vs_South_Carolina),_Sanford_Stadium,_September_2007.jpg",
+        "text": "The Sanford Stadium held the gold medal match."
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl held the quarter-final match Portugal vs France"
+      },
+      {
+        "name": "Legion Field, Birmingham",
+        "filename": "Legion_Field_-_with_upper_deck.jpg",
+        "text": "The Legion Field held the quarter-final Argentina vs Spain"
+      },
+      {
+        "name": "Citrus Bowl, Orlando",
+        "filename": "Citrus_Bowl_aerial_view.jpg",
+        "text": "The Citrus Bowl held group D matches"
+      }
+    ],
+    "final_standings": { "champions": "NGA_U23MNT", "runners_up": "ARG_U23MNT", "third_place": "BRA_U23MNT", "fourth_place": "POR_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 90, "attendance": 1364142 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Bebeto", "team": "BRA_U23MNT", "goals": 6 },
+        { "player": "Hernán Crespo", "team": "ARG_U23MNT", "goals": 6 }
+      ]
+    }
   },
   {
     "id": "MOFT1992",
