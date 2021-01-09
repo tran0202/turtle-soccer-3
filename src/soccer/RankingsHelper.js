@@ -226,7 +226,6 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Uruguay took 1st place after finished level points with Austria.'
     return 1
   }
-
   return 0
 }
 
@@ -714,7 +713,7 @@ export const updateFinalRankings = (round) => {
         if (drawCount > 0) {
           rankingBundle.push(r)
           rankingBundle.sort((a, b) => {
-            if (a.id > b.id) {
+            if (getTeamName(a.id) > getTeamName(b.id)) {
               return 1
             }
             return -1

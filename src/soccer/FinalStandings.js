@@ -35,7 +35,6 @@ const eliminateGroupTeams = (tournament, groupStage, group) => {
       const eliminatedTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === et.id)
       const eliminatedTeamRanking = eliminatedTeamProgess.rankings ? eliminatedTeamProgess.rankings[eliminatedTeamProgess.rankings.length - 1] : {}
       tmp.final_rankings.push(eliminatedTeamRanking)
-      // console.log('tmp', tmp)
     })
 }
 

@@ -128,20 +128,95 @@
     "year": "2008",
     "name": "Men's Olympic Football Tournament Beijing 2008",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2008_Summer_Olympics_logo.svg", "start_date": "2008-08-07", "end_date": "2008-08-23" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CHN_U23MNT"],
+      "logo_filename": "2008_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_at_the_2008_Summer_Olympics.jpg",
+      "start_date": "2008-08-07",
+      "end_date": "2008-08-23",
+      "color": "#fa2200",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Gold medal",
+        "filename": "Argentina_Campeones_Beijing.jpg",
+        "text": "Argentina celebration"
+      },
+      {
+        "name": "Semi-final",
+        "filename": "Olymics_semi-final_2008.jpg",
+        "text": "Messi plays in the semifinal of the 2008 Olympic Games."
+      },
+      {
+        "name": "Semi-final",
+        "filename": "Messi_olympics-soccer-11.jpg",
+        "text": "Messi plays in the semifinal of the 2008 Olympic Games"
+      },
+      {
+        "name": "Semi-final",
+        "filename": "Argentina_Brasil_-_Gol_de_Riquelme.jpg",
+        "text": "Penalty kick by Riquelme"
+      },
+      {
+        "name": "Group D",
+        "filename": "2008_Olympic_Football_Korea_Republic_vs_Honduras_(1).jpg",
+        "text": "2008 Olympic Football Korea Republic vs Honduras"
+      }
+    ],
+    "final_standings": { "champions": "ARG_U23MNT", "runners_up": "NGA_U23MNT", "third_place": "BRA_U23MNT", "fourth_place": "BEL_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 75, "attendance": 1404254 },
+    "awards": {
+      "golden_boot": [{ "player": "Giuseppe Rossi", "team": "ITA_U23MNT", "goals": 4 }],
+      "fair_play_team": ["CIV_U23MNT"]
+    }
   },
   {
     "id": "MOFT2004",
     "year": "2004",
     "name": "Men's Olympic Football Tournament Athens 2004",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2004_Summer_Olympics_logo.svg", "start_date": "2004-08-11", "end_date": "2004-08-28" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GRE_U23MNT"],
+      "logo_filename": "2004_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_Athens_2004.png",
+      "start_date": "2004-08-11",
+      "end_date": "2004-08-28",
+      "color": "#2251a2",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Semi-final",
+        "filename": "Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg",
+        "text": "Argentina Vs Italy 3-0 2004 Olympics Athens"
+      },
+      {
+        "name": "Pankritio Stadium, Heraklion",
+        "filename": "Pagkritio.jpg",
+        "text": "The Pankritio Stadium during a 2004 Olympic Games soccer match"
+      },
+      {
+        "name": "Panthessaliko Stadium, Volos",
+        "filename": "Volos,_Greece_stadium_at_2004_Olympic_Games.jpg",
+        "text": "The Panthessaliko Stadium held Group D matches"
+      }
+    ],
+    "final_standings": { "champions": "ARG_U23MNT", "runners_up": "PAR_U23MNT", "third_place": "ITA_U23MNT", "fourth_place": "IRQ-2004-2008_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 101, "attendance": 401415 },
+    "awards": {
+      "golden_boot": [{ "player": "Carlos Tevez", "team": "ARG_U23MNT", "goals": 8 }]
+    }
   },
   {
     "id": "MOFT2000",
