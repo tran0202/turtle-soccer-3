@@ -215,7 +215,8 @@
     "final_standings": { "champions": "ARG_U23MNT", "runners_up": "PAR_U23MNT", "third_place": "ITA_U23MNT", "fourth_place": "IRQ-2004-2008_U23MNT" },
     "statistics": { "total_matches": 32, "total_goals": 101, "attendance": 401415 },
     "awards": {
-      "golden_boot": [{ "player": "Carlos Tevez", "team": "ARG_U23MNT", "goals": 8 }]
+      "golden_boot": [{ "player": "Carlos Tevez", "team": "ARG_U23MNT", "goals": 8 }],
+      "fair_play_team": ["ARG_U23MNT", "IRQ-2004-2008_U23MNT"]
     }
   },
   {
@@ -223,10 +224,49 @@
     "year": "2000",
     "name": "Men's Olympic Football Tournament Sydney 2000",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "2000_Summer_Olympics_logo.svg", "start_date": "2000-09-15", "end_date": "2000-09-30" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["AUS_U23MNT"],
+      "logo_filename": "2000_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_Sydney_2000.png",
+      "start_date": "2000-09-15",
+      "end_date": "2000-09-30",
+      "color": "#15296d",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Olympic Stadium, Sydney",
+        "filename": "Womens-long-jump-final.jpg",
+        "text": "The Olympic Stadium held the gold medal match."
+      },
+      {
+        "name": "Sydney Football Stadium",
+        "filename": "Allianz_Stadium_-_13_October_2012.jpg",
+        "text": "The Sydney Football Stadium held the bronze medal match"
+      },
+      {
+        "name": "Melbourne Cricket Ground",
+        "filename": "MCG_stadium.jpg",
+        "text": "The Melbourne Cricket Ground held the semi-final Chile vs Cameroon"
+      },
+      {
+        "name": "Hindmarsh Stadium, Adelaide",
+        "filename": "HindmarshStadium.jpeg",
+        "text": "The Hindmarsh Stadium held the quarter-final United States vs Japan"
+      }
+    ],
+    "final_standings": { "champions": "CMR_U23MNT", "runners_up": "ESP_U23MNT", "third_place": "CHI_U23MNT", "fourth_place": "USA_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 103, "attendance": 1034500 },
+    "awards": {
+      "golden_boot": [{ "player": "Iván Zamorano", "team": "CHI_U23MNT", "goals": 6 }],
+      "fair_play_team": ["BRA_U23MNT"]
+    }
   },
   {
     "id": "MOFT1996",
