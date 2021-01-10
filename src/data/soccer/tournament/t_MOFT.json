@@ -324,10 +324,47 @@
     "year": "1992",
     "name": "Men's Olympic Football Tournament Barcelona 1992",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1992_Summer_Olympics_logo.svg", "start_date": "1992-07-24", "end_date": "1992-08-08" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ESP_U23MNT"],
+      "logo_filename": "1992_Summer_Olympics_logo.svg",
+      "mascot_filename": "Olympic_rings_without_rims.svg",
+      "start_date": "1992-07-24",
+      "end_date": "1992-08-08",
+      "color": "#da010c",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Camp Nou, Barcelona",
+        "filename": "Camp_Nou_aerial_(cropped).jpg",
+        "text": "The Camp Nou held the gold medal match."
+      },
+      {
+        "name": "Estadio Luis Casanova, Valencia",
+        "filename": "Mestalla_trofeu_taronja_120811.jpg",
+        "text": "The Estadio Luis Casanova held the semi-final match Spain vs Ghana"
+      },
+      {
+        "name": "Estadio La Romareda, Zaragoza",
+        "filename": "La_Romareda_en_día_de_partido.jpg",
+        "text": "The Estadio La Romareda held the quarter-final Paraguay vs Ghana"
+      },
+      {
+        "name": "Estadi de la Nova Creu Alta, Sabadell",
+        "filename": "Estadinovacreualta_2.jpg",
+        "text": "The Estadi de la Nova Creu Alta held group D matches"
+      }
+    ],
+    "final_standings": { "champions": "ESP_U23MNT", "runners_up": "POL_U23MNT", "third_place": "GHA_U23MNT", "fourth_place": "AUS_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 87, "attendance": 466300 },
+    "awards": {
+      "golden_boot": [{ "player": "Andrzej Juskowiak", "team": "POL_U23MNT", "goals": 7 }]
+    }
   },
   {
     "id": "MOFT1988",

@@ -222,6 +222,8 @@
   { "id": "FRA_U23MNT", "name": "France", "team_type_id": "U23MNT", "nation_id": "FRA", "parent_team_id": "" },
   { "id": "KSA_U23MNT", "name": "Saudi Arabia", "team_type_id": "U23MNT", "nation_id": "KSA", "parent_team_id": "" },
   { "id": "HUN_U23MNT", "name": "Hungary", "team_type_id": "U23MNT", "nation_id": "HUN", "parent_team_id": "" },
+  { "id": "POL_U23MNT", "name": "Poland", "team_type_id": "U23MNT", "nation_id": "POL", "parent_team_id": "" },
+  { "id": "QAT_U23MNT", "name": "Qatar", "team_type_id": "U23MNT", "nation_id": "QAT", "parent_team_id": "" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -316,8 +318,6 @@
   { "id": "869", "name": "Italy", "team_type_id": "WNT", "nation_id": "96", "parent_team_id": "" },
   { "id": "870", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "43", "parent_team_id": "" },
 
-  { "id": "905", "name": "Poland", "team_type_id": "U23MNT", "nation_id": "151", "parent_team_id": "" },
-  { "id": "906", "name": "Qatar", "team_type_id": "U23MNT", "nation_id": "154", "parent_team_id": "" },
   { "id": "907", "name": "West Germany", "team_type_id": "U23MNT", "nation_id": "215", "parent_team_id": "844" },
   { "id": "908", "name": "Zambia", "team_type_id": "U23MNT", "nation_id": "210", "parent_team_id": "" },
   { "id": "909", "name": "Guatemala", "team_type_id": "U23MNT", "nation_id": "82", "parent_team_id": "" },
