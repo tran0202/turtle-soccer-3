@@ -418,10 +418,51 @@
     "year": "1984",
     "name": "Men's Olympic Football Tournament Los Angeles 1984",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1984.png", "start_date": "1984-07-29", "end_date": "1984-08-11" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA_U23MNT"],
+      "logo_filename": "1984.png",
+      "mascot_filename": "Olympic_rings_without_rims.svg",
+      "start_date": "1984-07-29",
+      "end_date": "1984-08-11",
+      "color": "#e12631",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Opening Ceremony",
+        "filename": "George_H._W._Bush_participates_in_the_Opening_Ceremonies_for_Olympic_Soccer.jpg",
+        "text": "Vice President George H. W. Bush participates in the Opening Ceremonies for Olympic Soccer, Boston, MA."
+      },
+      {
+        "name": "Rose Bowl, Pasadena",
+        "filename": "Inter_vs_Chelsea_at_the_Rose_Bowl.jpg",
+        "text": "The Rose Bowl held the final match."
+      },
+      {
+        "name": "Stanford Stadium",
+        "filename": "StanfordStadium2004.jpg",
+        "text": "The Stanford Stadium held the semi-final match Italy vs Brazil."
+      },
+      {
+        "name": "Harvard Stadium, Boston",
+        "filename": "Harvard_Stadium_aerial_axonometric.jpeg",
+        "text": "The Harvard Stadium held group B matches"
+      }
+    ],
+    "final_standings": { "champions": "FRA_U23MNT", "runners_up": "BRA_U23MNT", "third_place": "YUG-1945-1992_U23MNT", "fourth_place": "ITA_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 84, "attendance": 1425181 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Borislav Cvetković", "team": "YUG-1945-1992_U23MNT", "goals": 5 },
+        { "player": "Stjepan Deverić", "team": "YUG-1945-1992_U23MNT", "goals": 5 },
+        { "player": "Daniel Xuereb", "team": "FRA_U23MNT", "goals": 5 }
+      ]
+    }
   },
   {
     "id": "MOFT1980",
