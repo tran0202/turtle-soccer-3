@@ -371,10 +371,47 @@
     "year": "1988",
     "name": "Men's Olympic Football Tournament Seoul 1988",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1988_Summer_Olympics_logo.svg", "start_date": "1988-09-17", "end_date": "1988-10-01" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["KOR_U23MNT"],
+      "logo_filename": "1988_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1988-09-17",
+      "end_date": "1988-10-01",
+      "color": "#e62b27",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Olympic Stadium, Seoul",
+        "filename": "Seoul_Olympic_Stadium_.jpg",
+        "text": "The Olympic Stadium held the gold medal match."
+      },
+      {
+        "name": "Busan Stadium, Busan",
+        "filename": "Gudeok_Stadium_3.jpeg",
+        "text": "The Busan Stadium held the semi-final match Soviet Union vs Italy."
+      },
+      {
+        "name": "Daegu Stadium, Daegu",
+        "filename": "DaeguCivil_stadium2.jpeg",
+        "text": "The Daegu Stadium held the quarter-final Sweden vs Italy"
+      },
+      {
+        "name": "Daejeon Stadium, Daejeon",
+        "filename": "Gwangju_Mudeung_Stadium.jpeg",
+        "text": "The Daejeon Stadium held group B matches"
+      }
+    ],
+    "final_standings": { "champions": "URS_U23MNT", "runners_up": "BRA_U23MNT", "third_place": "GER-1949-1990_U23MNT", "fourth_place": "ITA_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 95, "attendance": 729000 },
+    "awards": {
+      "golden_boot": [{ "player": "Romario", "team": "BRA_U23MNT", "goals": 7 }]
+    }
   },
   {
     "id": "MOFT1984",

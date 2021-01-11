@@ -224,6 +224,20 @@
   { "id": "HUN_U23MNT", "name": "Hungary", "team_type_id": "U23MNT", "nation_id": "HUN", "parent_team_id": "" },
   { "id": "POL_U23MNT", "name": "Poland", "team_type_id": "U23MNT", "nation_id": "POL", "parent_team_id": "" },
   { "id": "QAT_U23MNT", "name": "Qatar", "team_type_id": "U23MNT", "nation_id": "QAT", "parent_team_id": "" },
+  {
+    "id": "GER-1949-1990_U23MNT",
+    "name": "Germany FR",
+    "short_name": "Germany",
+    "team_type_id": "U23MNT",
+    "nation_id": "GER-1949-1990",
+    "parent_team_id": "GER_U23MNT"
+  },
+  { "id": "ZAM_U23MNT", "name": "Zambia", "team_type_id": "U23MNT", "nation_id": "ZAM", "parent_team_id": "" },
+  { "id": "GUA_U23MNT", "name": "Guatemala", "team_type_id": "U23MNT", "nation_id": "GUA", "parent_team_id": "" },
+  { "id": "RUS_U23MNT", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "RUS", "parent_team_id": "" },
+  { "id": "URS_U23MNT", "name": "Soviet Union", "short_name": "USSR", "team_type_id": "U23MNT", "nation_id": "URS", "parent_team_id": "RUS_U23MNT" },
+  { "id": "YUG-1945-1992_U23MNT", "name": "Yugoslavia", "team_type_id": "U23MNT", "nation_id": "YUG-1945-1992", "parent_team_id": "SRB_U23MNT" },
+  { "id": "IRQ-1963-1991_U23MNT", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "IRQ-1963-1991", "parent_team_id": "IRQ_U23MNT" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -318,11 +332,6 @@
   { "id": "869", "name": "Italy", "team_type_id": "WNT", "nation_id": "96", "parent_team_id": "" },
   { "id": "870", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "43", "parent_team_id": "" },
 
-  { "id": "907", "name": "West Germany", "team_type_id": "U23MNT", "nation_id": "215", "parent_team_id": "844" },
-  { "id": "908", "name": "Zambia", "team_type_id": "U23MNT", "nation_id": "210", "parent_team_id": "" },
-  { "id": "909", "name": "Guatemala", "team_type_id": "U23MNT", "nation_id": "82", "parent_team_id": "" },
-  { "id": "910", "name": "Soviet Union", "team_type_id": "U23MNT", "nation_id": "216", "parent_team_id": "944" },
-  { "id": "911", "name": "Yugoslavia", "team_type_id": "U23MNT", "nation_id": "214", "parent_team_id": "884" },
   { "id": "912", "name": "Norway", "team_type_id": "U23MNT", "nation_id": "142", "parent_team_id": "" },
   { "id": "913", "name": "Canada", "team_type_id": "U23MNT", "nation_id": "36", "parent_team_id": "" },
   { "id": "914", "name": "Cuba", "team_type_id": "U23MNT", "nation_id": "52", "parent_team_id": "" },
