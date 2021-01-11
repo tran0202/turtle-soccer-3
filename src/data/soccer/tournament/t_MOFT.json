@@ -469,10 +469,47 @@
     "year": "1980",
     "name": "Men's Olympic Football Tournament Moscow 1980",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "Emblem_of_the_1980_Summer_Olympics.svg", "start_date": "1980-07-20", "end_date": "1980-08-02" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["URS_U23MNT"],
+      "logo_filename": "Emblem_of_the_1980_Summer_Olympics.svg",
+      "mascot_filename": "Misha1980.jpeg",
+      "start_date": "1980-07-20",
+      "end_date": "1980-08-02",
+      "color": "#930c10",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 5,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Opening Ceremony",
+        "filename": "RIAN_archive_487039_Opening_ceremony_of_the_1980_Olympic_Games.jpg",
+        "text": "Opening ceremony of the 1980 Olympic Games. Parade of nations. View on the Central Lenin Stadium in Luzhniki."
+      },
+      {
+        "name": "Dynamo Stadium, Moscow",
+        "filename": "Dynamo_Stadium.jpg",
+        "text": "The Dynamo Stadium held the semi-final match Czechoslovakia vs Yugoslavia"
+      },
+      {
+        "name": "Republican Stadium, Kiev",
+        "filename": "Фінал_Євро-2012._НСК_«Олімпійський»._3_хвилини_після_фінального_свистка.jpeg",
+        "text": "The Republican Stadium held the quarter-final match Germany DR vs Iraq."
+      },
+      {
+        "name": "Kirov Stadium, Leningrad",
+        "filename": "Kirov_stadium.jpg",
+        "text": "The Kirow Stadium held group B matches"
+      }
+    ],
+    "final_standings": { "champions": "TCH_U23MNT", "runners_up": "GDR_U23MNT", "third_place": "URS_U23MNT", "fourth_place": "YUG-1945-1992_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 82, "attendance": 1821624 },
+    "awards": {
+      "golden_boot": [{ "player": "Sergey Andreyev", "team": "URS_U23MNT", "goals": 5 }]
+    }
   },
   {
     "id": "MOFT1976",

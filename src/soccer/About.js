@@ -99,8 +99,7 @@ const getGoldenBallLabel = (tournament) => {
 
 const About = (props) => {
   const { tournament } = props
-  // console.log('tournament', tournament)
-  const { id, hero_images, details, final_standings, statistics, awards, qualified,tournament_type_id } = tournament
+  const { id, hero_images, details, final_standings, statistics, awards, qualified, tournament_type_id } = tournament
   if (!details) return null
   const { host, team_count, confed_count, venue_count, city_count } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
@@ -108,6 +107,7 @@ const About = (props) => {
   const runners_up = fs2 ? fs2 : final_standings ? final_standings.runners_up : null
   const third_place = fs3 ? fs3 : final_standings ? final_standings.third_place : null
   const fourth_place = fs4 ? fs4 : final_standings ? final_standings.fourth_place : null
+  // console.log('champions', champions)
   return (
     <React.Fragment>
       {hero_images && (
@@ -210,7 +210,11 @@ const About = (props) => {
           {champions && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                {(tournament_type_id==='MOFT'||tournament_type_id==='WOFT')? <React.Fragment>Gold medal</React.Fragment>:<React.Fragment>Champions</React.Fragment>}
+                {tournament_type_id === 'MOFT' || tournament_type_id === 'WOFT' ? (
+                  <React.Fragment>Gold medal</React.Fragment>
+                ) : (
+                  <React.Fragment>Champions</React.Fragment>
+                )}
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(champions)} alt={champions} title={champions} />
@@ -221,7 +225,11 @@ const About = (props) => {
           {runners_up && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                {(tournament_type_id==='MOFT'||tournament_type_id==='WOFT')? <React.Fragment>Silver medal</React.Fragment>:<React.Fragment>Runners-up</React.Fragment>}                
+                {tournament_type_id === 'MOFT' || tournament_type_id === 'WOFT' ? (
+                  <React.Fragment>Silver medal</React.Fragment>
+                ) : (
+                  <React.Fragment>Runners-up</React.Fragment>
+                )}
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(runners_up)} alt={runners_up} title={runners_up} />
@@ -232,7 +240,11 @@ const About = (props) => {
           {third_place && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                {(tournament_type_id==='MOFT'||tournament_type_id==='WOFT')? <React.Fragment>Bronze medal</React.Fragment>:<React.Fragment>Third-place</React.Fragment>}
+                {tournament_type_id === 'MOFT' || tournament_type_id === 'WOFT' ? (
+                  <React.Fragment>Bronze medal</React.Fragment>
+                ) : (
+                  <React.Fragment>Third-place</React.Fragment>
+                )}
               </Col>
               <Col md="6" sm="7">
                 <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} title={third_place} />
