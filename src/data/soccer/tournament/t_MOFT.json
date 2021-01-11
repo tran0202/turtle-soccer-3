@@ -516,10 +516,42 @@
     "year": "1976",
     "name": "Men's Olympic Football Tournament Montreal 1976",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1976_Summer_Olympics_logo.svg", "start_date": "1976-07-18", "end_date": "1976-07-31" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CAN_U23MNT"],
+      "logo_filename": "1976_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1976-07-18",
+      "end_date": "1976-07-31",
+      "color": "#f72337",
+      "team_count": 13,
+      "confed_count": 4,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Olympic Stadium, Montreal",
+        "filename": "Le_Stade_Olympique_3.jpg",
+        "text": "The Olympic Stadium held the final match"
+      },
+      {
+        "name": "Varsity Stadium, Toronto",
+        "filename": "Varsity_Centre.jpeg",
+        "text": "The Varsity Stadium held the semi-final match Poland vs Brazil."
+      },
+      {
+        "name": "Lansdowne Park, Ottawa",
+        "filename": "Lansdowne_Park_3.jpg",
+        "text": "The Lansdowne Park held group B matches"
+      }
+    ],
+    "final_standings": { "champions": "GDR_U23MNT", "runners_up": "POL_U23MNT", "third_place": "URS_U23MNT", "fourth_place": "BRA_U23MNT" },
+    "statistics": { "total_matches": 23, "total_goals": 66, "attendance": 580156 },
+    "awards": {
+      "golden_boot": [{ "player": "Andrzej Szarmach", "team": "POL_U23MNT", "goals": 6 }]
+    }
   },
   {
     "id": "MOFT1972",
