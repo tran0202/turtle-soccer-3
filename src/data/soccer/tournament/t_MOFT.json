@@ -558,10 +558,47 @@
     "year": "1972",
     "name": "Men's Olympic Football Tournament Munich 1972",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1972_Summer_Olympics_logo.svg", "start_date": "1972-08-27", "end_date": "1972-09-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GER-1949-1990_U23MNT"],
+      "logo_filename": "1972_Summer_Olympics_logo.svg",
+      "mascot_filename": "Olympic_rings_without_rims.svg",
+      "start_date": "1972-08-27",
+      "end_date": "1972-09-10",
+      "color": "#1d1d1b",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Olympiastadion, Munich",
+        "filename": "2014_Olympiastadion_Munich.jpg",
+        "text": "The Olympiastadion held the final match"
+      },
+      {
+        "name": "Dreiflüssestadion, Passau",
+        "filename": "Dreiflüssestadion_2.jpeg",
+        "text": "The Dreiflüssestadion held Second Round, Group 1 matches."
+      },
+      {
+        "name": "Frankenstadion, Nuremberg",
+        "filename": "Frankenstadion_4.jpeg",
+        "text": "The Frankenstadion held Second Round, Group 2 matches."
+      },
+      {
+        "name": "Jahnstadion, Regensburg",
+        "filename": "Jahnstadion_(Regensburg)-_Jahn_vs._Unterhaching_2010.jpg",
+        "text": "The Jahnstadion held group B matches"
+      }
+    ],
+    "final_standings": { "champions": "POL_U23MNT", "runners_up": "HUN_U23MNT", "third_place": ["GDR_U23MNT", "URS_U23MNT"] },
+    "statistics": { "total_matches": 38, "total_goals": 135 },
+    "awards": {
+      "golden_boot": [{ "player": "Kazimierz Deyna", "team": "POL_U23MNT", "goals": 9 }]
+    }
   },
   {
     "id": "MOFT1968",

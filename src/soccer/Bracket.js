@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {
   getFlagSrc,
   isWinner,
+  isSharedBronze,
   getBracketTeamName,
   getBracketTeamCode,
   AetTooltip,
@@ -11,6 +12,7 @@ import {
   WalkoverTooltip,
   ReplayTooltip,
   CoinTossTooltip,
+  SharedBronzeTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -95,6 +97,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.home_team)}
@@ -113,6 +116,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -131,6 +135,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -149,6 +154,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />
@@ -169,6 +175,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
@@ -213,6 +220,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.away_team)}
@@ -230,6 +238,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.away_team)}
@@ -247,6 +256,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.away_team)}
@@ -264,6 +274,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />
@@ -283,6 +294,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             {match.away_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>

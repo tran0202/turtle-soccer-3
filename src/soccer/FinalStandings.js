@@ -1,7 +1,7 @@
 import React from 'react'
 import Rankings from './Rankings'
 import { hasWildCardAdvancement, collectWildCardRankings, getBlankRanking } from './RankingsHelper'
-import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner } from './Helper'
+import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner, isSharedBronze } from './Helper'
 import {
   calculateGroupRankings,
   calculateProgressRankings,
@@ -175,8 +175,6 @@ const createFinalRankings = (tournament, round) => {
     if (m) {
       let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      // console.log('home_ranking', home_ranking)
-      // console.log('away_ranking', away_ranking)
       const rankWinner = round.name === 'Final' ? 1 : 3
       const rankLoser = round.name === 'Final' ? 2 : 4
       if (isWinner('H', m)) {
@@ -190,6 +188,17 @@ const createFinalRankings = (tournament, round) => {
       } else if (isWinner('A', m)) {
         home_ranking.r = rankLoser
         away_ranking.r = rankWinner
+        tournament.final_rankings.rounds.unshift({
+          name: round.name,
+          ranking_type: 'round',
+          final_rankings: [away_ranking, home_ranking],
+        })
+      }
+      if (isSharedBronze(m)) {
+        // console.log('home_ranking', home_ranking)
+        // console.log('away_ranking', away_ranking)
+        home_ranking.r = 3
+        away_ranking.r = 3
         tournament.final_rankings.rounds.unshift({
           name: round.name,
           ranking_type: 'round',

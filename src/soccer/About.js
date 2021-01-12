@@ -1,6 +1,6 @@
 import React from 'react'
 import Qualified from './Qualified'
-import { getFlagSrc, getTeamName, isWinner } from './Helper'
+import { getFlagSrc, getTeamName, isWinner, SharedBronzeTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import NumberFormat from 'react-number-format'
@@ -247,8 +247,23 @@ const About = (props) => {
                 )}
               </Col>
               <Col md="6" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} title={third_place} />
-                <span className="padding-top-xs">&nbsp;{getTeamName(third_place)}</span>
+                {typeof third_place === 'string' && (
+                  <React.Fragment>
+                    <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} title={third_place} />
+                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place)}</span>
+                  </React.Fragment>
+                )}
+                {typeof third_place === 'object' && (
+                  <React.Fragment>
+                    <img className="flag-sm flag-md" src={getFlagSrc(third_place[0])} alt={third_place[0]} title={third_place[0]} />
+                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place[0])}</span>
+                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                    <br></br>
+                    <img className="flag-sm flag-md" src={getFlagSrc(third_place[1])} alt={third_place[1]} title={third_place[1]} />
+                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place[1])}</span>
+                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                  </React.Fragment>
+                )}
               </Col>
             </Row>
           )}

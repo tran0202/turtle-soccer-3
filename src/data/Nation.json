@@ -397,16 +397,6 @@
     "end_date": ""
   },
   {
-    "id": "BUR",
-    "name": "Burma",
-    "official_name": "",
-    "parent_nation_id": "",
-    "nation_type_id": "NATN",
-    "flag_filename": "Burma.png",
-    "start_date": "",
-    "end_date": ""
-  },
-  {
     "id": "BDI",
     "name": "Burundi",
     "official_name": "",
@@ -2001,6 +1991,36 @@
     "flag_filename": "640px-Flag_of_Myanmar.svg.png",
     "start_date": "",
     "end_date": ""
+  },
+  {
+    "id": "BUR-1948-1974",
+    "name": "Burma",
+    "official_name": "Union of Burma",
+    "parent_nation_id": "MYA",
+    "nation_type_id": "NATN",
+    "flag_filename": "Burma.png",
+    "start_date": "1948-01-04",
+    "end_date": "1974-01-03"
+  },
+  {
+    "id": "BUR-1974-1988",
+    "name": "Burma",
+    "official_name": "Socialist Republic of the Union of Burma",
+    "parent_nation_id": "MYA",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Myanmar_(1974–2010).svg",
+    "start_date": "1974-01-03",
+    "end_date": "1988-09-18"
+  },
+  {
+    "id": "BUR-1988-2010",
+    "name": "Myanmar",
+    "official_name": "Union of Myanmar",
+    "parent_nation_id": "MYA",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Myanmar_(1974–2010).svg",
+    "start_date": "1988-09-18",
+    "end_date": "2010-10-21"
   },
   {
     "id": "NAM",

@@ -92,6 +92,7 @@ export const getTeamName = (id) => {
 }
 
 export const getShortTeamName = (id) => {
+  // console.log('id', id)
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     if (team.short_name) {
@@ -114,7 +115,6 @@ export const getParentTeam = (id) => {
 }
 
 export const getBracketTeamCode = (id) => {
-  // console.log('id', id)
   const team = TeamArray.find((t) => t.id === id)
   if (!team) {
     console.log('Team error', team)
@@ -128,6 +128,10 @@ export const getBracketTeamCode = (id) => {
   } else {
     return nation.code
   }
+}
+
+export const isSharedBronze = (match) => {
+  return match.date === '1972-09-10' && match.home_team === 'URS_U23MNT' && match.away_team === 'GDR_U23MNT'
 }
 
 export const isSuccessor = (id) => {
@@ -591,6 +595,7 @@ const DisplayMatch = (props) => {
               silverGoal: config.silverGoal,
             }}
           />
+          {isSharedBronze(m) && <React.Fragment>&gt;&gt;&gt;&nbsp;Both teams were awarded bronze medals.</React.Fragment>}
         </Col>
       </Row>
     </Col>
@@ -684,6 +689,12 @@ export const DrawLotTooltip = (props) => {
 export const AwardedTooltip = (props) => {
   const { target, content } = props
   return <TopTooltip target={target} content={content} anchor="(awd.)" />
+}
+
+export const SharedBronzeTooltip = (props) => {
+  const { target, notes } = props
+  const content = `${notes ? notes : ''} Both teams were awarded bronze medals.`
+  return <TopTooltip target={target} content={content} />
 }
 
 export const WalkoverTooltip = (props) => {

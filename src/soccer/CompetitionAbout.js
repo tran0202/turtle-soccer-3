@@ -1,5 +1,5 @@
 import React from 'react'
-import { getShortTeamName, getFlagSrc } from './Helper'
+import { getShortTeamName, getFlagSrc, SharedBronzeTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 
 const getThirdPlaceMatchTournament = (tournaments) => {
@@ -35,6 +35,7 @@ const ResultHead = (props) => {
 
 const ResultRow = (props) => {
   const { row, config, count } = props
+  // console.log('row.final_standings.third_place.length', typeof row.final_standings.third_place)
   return (
     <Row className="ranking-tbl team-row padding-tb-md text-center">
       <Col className="col-1">{count + 1}</Col>
@@ -82,16 +83,40 @@ const ResultRow = (props) => {
           <Col className="text-center score-no-padding-right col-2">
             {row.final_standings && (
               <React.Fragment>
-                {row.final_standings.third_place && (
-                  <img
-                    className="flag-sm flag-md"
-                    src={getFlagSrc(row.final_standings.third_place)}
-                    alt={row.final_standings.third_place}
-                    title={row.final_standings.third_place}
-                  />
+                {typeof row.final_standings.third_place === 'string' && (
+                  <React.Fragment>
+                    <img
+                      className="flag-sm flag-md"
+                      src={getFlagSrc(row.final_standings.third_place)}
+                      alt={row.final_standings.third_place}
+                      title={row.final_standings.third_place}
+                    />
+                    <br></br>
+                    {getShortTeamName(row.final_standings.third_place)}
+                  </React.Fragment>
                 )}
-                <br></br>
-                {getShortTeamName(row.final_standings.third_place)}
+                {typeof row.final_standings.third_place === 'object' && (
+                  <React.Fragment>
+                    <img
+                      className="flag-sm flag-md"
+                      src={getFlagSrc(row.final_standings.third_place[0])}
+                      alt={row.final_standings.third_place[0]}
+                      title={row.final_standings.third_place[0]}
+                    />
+                    <br></br>
+                    {getShortTeamName(row.final_standings.third_place[0])}
+                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                    <img
+                      className="flag-sm flag-md"
+                      src={getFlagSrc(row.final_standings.third_place[1])}
+                      alt={row.final_standings.third_place[1]}
+                      title={row.final_standings.third_place[1]}
+                    />
+                    <br></br>
+                    {getShortTeamName(row.final_standings.third_place[1])}
+                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                  </React.Fragment>
+                )}
               </React.Fragment>
             )}
           </Col>
@@ -99,15 +124,17 @@ const ResultRow = (props) => {
             {row.final_standings && (
               <React.Fragment>
                 {row.final_standings.fourth_place && (
-                  <img
-                    className="flag-sm flag-md"
-                    src={getFlagSrc(row.final_standings.fourth_place)}
-                    alt={row.final_standings.fourth_place}
-                    title={row.final_standings.fourth_place}
-                  />
+                  <React.Fragment>
+                    <img
+                      className="flag-sm flag-md"
+                      src={getFlagSrc(row.final_standings.fourth_place)}
+                      alt={row.final_standings.fourth_place}
+                      title={row.final_standings.fourth_place}
+                    />
+                    <br></br>
+                    {getShortTeamName(row.final_standings.fourth_place)}
+                  </React.Fragment>
                 )}
-                <br></br>
-                {getShortTeamName(row.final_standings.fourth_place)}
               </React.Fragment>
             )}
           </Col>

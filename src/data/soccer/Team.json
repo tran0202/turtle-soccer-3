@@ -254,6 +254,10 @@
   { "id": "IRN-1964-1980_U23MNT", "name": "Iran", "team_type_id": "U23MNT", "nation_id": "IRN-1964-1980", "parent_team_id": "IRN_U23MNT" },
   { "id": "PRK_U23MNT", "name": "Korea DPR", "team_type_id": "U23MNT", "nation_id": "PRK", "parent_team_id": "" },
   { "id": "ESP-1945-1977_U23MNT", "name": "Spain", "team_type_id": "U23MNT", "nation_id": "ESP-1945-1977", "parent_team_id": "ESP_U23MNT" },
+  { "id": "MAS_U23MNT", "name": "Malaysia", "team_type_id": "U23MNT", "nation_id": "MAS", "parent_team_id": "" },
+  { "id": "MYA_U23MNT", "name": "Myanmar", "team_type_id": "U23MNT", "nation_id": "MYA", "parent_team_id": "" },
+  { "id": "BUR-1948-1974_U23MNT", "name": "Burma", "team_type_id": "U23MNT", "nation_id": "BUR-1948-1974", "parent_team_id": "MYA_U23MNT" },
+  { "id": "SDN_U23MNT", "name": "Sudan", "team_type_id": "U23MNT", "nation_id": "SDN", "parent_team_id": "" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -348,9 +352,6 @@
   { "id": "869", "name": "Italy", "team_type_id": "WNT", "nation_id": "96", "parent_team_id": "" },
   { "id": "870", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "43", "parent_team_id": "" },
 
-  { "id": "923", "name": "Malaysia", "team_type_id": "U23MNT", "nation_id": "119", "parent_team_id": "" },
-  { "id": "924", "name": "Myanmar", "team_type_id": "U23MNT", "nation_id": "132", "parent_team_id": "" },
-  { "id": "925", "name": "Sudan", "team_type_id": "U23MNT", "nation_id": "180", "parent_team_id": "" },
   { "id": "926", "name": "Guinea", "team_type_id": "U23MNT", "nation_id": "83", "parent_team_id": "" },
   { "id": "927", "name": "El Salvador", "team_type_id": "U23MNT", "nation_id": "62", "parent_team_id": "" },
   { "id": "928", "name": "Bulgaria", "team_type_id": "U23MNT", "nation_id": "31", "parent_team_id": "" },
@@ -382,7 +383,6 @@
   { "id": "954", "name": "Greece", "team_type_id": "U23WNT", "nation_id": "79", "parent_team_id": "" },
   { "id": "955", "name": "Denmark", "team_type_id": "U23WNT", "nation_id": "56", "parent_team_id": "" },
   { "id": "956", "name": "Spain", "team_type_id": "U23MNT", "nation_id": "222", "parent_team_id": "881" },
-  { "id": "957", "name": "Burma", "team_type_id": "U23MNT", "nation_id": "223", "parent_team_id": "924" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
   { "id": "959", "name": "Taiwan", "team_type_id": "U23MNT", "nation_id": "308", "parent_team_id": "932" },
   { "id": "960", "name": "Netherlands Antilles", "team_type_id": "U23MNT", "nation_id": "226", "parent_team_id": "938" },
