@@ -605,10 +605,47 @@
     "year": "1968",
     "name": "Men's Olympic Football Tournament Mexico City 1968",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1968_Mexico_emblem.svg", "start_date": "1968-10-13", "end_date": "1968-10-26" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["MEX_U23MNT"],
+      "logo_filename": "1968_Mexico_emblem.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1968-10-13",
+      "end_date": "1968-10-26",
+      "color": "#24a45f",
+      "team_count": 16,
+      "confed_count": 5,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Azteca Stadium, Mexico City",
+        "filename": "Estadio_Azteca1706p2.jpg",
+        "text": "The Azteca Stadium held the final match"
+      },
+      {
+        "name": "Estadio Jalisco, Guadalajara",
+        "filename": "Barra_51.jpg",
+        "text": "The Estadio Jalisco held the semi-final match Mexico vs Bulgaria."
+      },
+      {
+        "name": "Estadio Cuauhtémoc, Puebla",
+        "filename": "Estadio_Cuauhtémoc_Innenansicht.jpg",
+        "text": "The Estadio Cuauhtémoc held the quarter-final match Mexico vs Spain."
+      },
+      {
+        "name": "Estadio León, León",
+        "filename": "Estadio_León_(Nou_Camp),_León,_Guanajuato,_México_-Imagen_Actual-_2013-12-10_14-09.jpg",
+        "text": "The Estadio León held group C matches"
+      }
+    ],
+    "final_standings": { "champions": "HUN_U23MNT", "runners_up": "BUL-1967-1971_U23MNT", "third_place": "JPN_U23MNT", "fourth_place": "MEX_U23MNT" },
+    "statistics": { "total_matches": 32, "total_goals": 116 },
+    "awards": {
+      "golden_boot": [{ "player": "Kunishige Kamamoto", "team": "JPN_U23MNT", "goals": 7 }]
+    }
   },
   {
     "id": "MOFT1964",

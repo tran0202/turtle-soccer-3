@@ -701,7 +701,6 @@ export const getWildCardRowStriped = (row, config) => {
 // }
 
 export const updateFinalRankings = (round) => {
-  // console.log('round', round)
   if (round.ranking_type !== 'round' && round.ranking_type !== 'alltimeround') return
   let newFinalRankings = []
   let previousDrawCount = 0
@@ -709,7 +708,19 @@ export const updateFinalRankings = (round) => {
   if (round.final_rankings) {
     round.final_rankings.forEach((r) => {
       if (r) {
+        if (r.draws) {
+          const retainIds = []
+          r.draws.forEach((d) => {
+            round.final_rankings.forEach((r2) => {
+              if (r2.id && r2.id === d) {
+                retainIds.push(d)
+              }
+            })
+          })
+          r.draws = retainIds
+        }
         const drawCount = r.draws ? r.draws.length : 0
+        // console.log('rankingBundle', rankingBundle)
         if (drawCount > 0) {
           rankingBundle.push(r)
           rankingBundle.sort((a, b) => {
@@ -721,7 +732,13 @@ export const updateFinalRankings = (round) => {
         } else {
           if (previousDrawCount > 0) {
             newFinalRankings.push(rankingBundle)
-            rankingBundle.forEach((r) => (r.r = rankingBundle[0].r))
+            let min = rankingBundle[0].r
+            rankingBundle.forEach((r) => {
+              if (min > r.r) {
+                min = r.r
+              }
+            })
+            rankingBundle.forEach((r) => (r.r = min))
             rankingBundle = []
           }
           newFinalRankings.push(r)
