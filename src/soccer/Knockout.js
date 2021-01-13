@@ -17,6 +17,29 @@ const reorderMatches = (matches) => {
   return matches
 }
 
+const getFinalPathStage = (stage) => {
+  if (!stage.rounds) return
+  const newStage = { rounds: [] }
+  stage.rounds.forEach((r) => {
+    if (r.name !== 'Consolation' && r.name !== 'Fifth-place') {
+      newStage.rounds.push(r)
+    }
+  })
+  // console.log('finalPathRounds', finalPathRounds)
+  return newStage
+}
+
+const getConsolationPathStage = (stage) => {
+  if (!stage.rounds) return
+  const newStage = { rounds: [] }
+  stage.rounds.forEach((r) => {
+    if (r.name === 'Consolation' || r.name === 'Fifth-place') {
+      newStage.rounds.push(r)
+    }
+  })
+  return newStage
+}
+
 const getBracketStage = (stage) => {
   const rounds = []
   const bracket_stage = { name: stage.name, type: stage.type, teams: stage.teams, rounds }
@@ -34,20 +57,25 @@ const getBracketStage = (stage) => {
 
 const Knockout = (props) => {
   const { stage, config } = props
-  const bracket_stage = getBracketStage(stage)
+  const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
+  const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
   const bracketConfig = {
     tournamentTypeId: config.tournament_type_id,
     goldenGoal: config.golden_goal_rule,
     silverGoal: config.silver_goal_rule,
   }
+  const bracketConsolationConfig = {
+    consolation_bracket: true,
+    ...bracketConfig,
+  }
   const displayScheduleConfig = {
     knockoutMatch: true,
     ...bracketConfig,
   }
-  // console.log('stage', stage)
   return (
     <React.Fragment>
-      <Bracket stage={bracket_stage} config={bracketConfig} />
+      <Bracket stage={final_path_bracket_stage} config={bracketConfig} />
+      {stage.consolation_round && <Bracket stage={consolation_path_bracket_stage} config={bracketConsolationConfig} />}
       {stage.rounds &&
         stage.rounds.map((r) => {
           const matchArray = getMatchArrayByDate(r, true)

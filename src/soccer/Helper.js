@@ -606,7 +606,7 @@ export const DisplaySchedule = (props) => {
   const { round, config } = props
   const { showMatchYear } = config
   const { name, dates, matches } = round
-  const groupName =
+  let groupName =
     name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? name.replace('Third-place', 'Bronze medal match').replace('Final', 'Gold medal match')
       : name
@@ -614,7 +614,10 @@ export const DisplaySchedule = (props) => {
     <React.Fragment>
       <Row>
         <Col>
-          <div className="h2-ff1 margin-top-md">{groupName}</div>
+          <div className="h2-ff1 margin-top-md">
+            {groupName}
+            {groupName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+          </div>
         </Col>
       </Row>
       {dates &&
@@ -694,6 +697,12 @@ export const AwardedTooltip = (props) => {
 export const SharedBronzeTooltip = (props) => {
   const { target, notes } = props
   const content = `${notes ? notes : ''} Both teams were awarded bronze medals.`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const ConsolationTooltip = (props) => {
+  const { target } = props
+  const content = `Played by losing quarter-finalists`
   return <TopTooltip target={target} content={content} />
 }
 

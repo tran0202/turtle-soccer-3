@@ -441,7 +441,7 @@
       {
         "name": "Rose Bowl, Pasadena",
         "filename": "Inter_vs_Chelsea_at_the_Rose_Bowl.jpg",
-        "text": "The Rose Bowl held the final match."
+        "text": "The Rose Bowl held the gold medal match."
       },
       {
         "name": "Stanford Stadium",
@@ -534,7 +534,7 @@
       {
         "name": "Olympic Stadium, Montreal",
         "filename": "Le_Stade_Olympique_3.jpg",
-        "text": "The Olympic Stadium held the final match"
+        "text": "The Olympic Stadium held the gold medal match"
       },
       {
         "name": "Varsity Stadium, Toronto",
@@ -576,7 +576,7 @@
       {
         "name": "Olympiastadion, Munich",
         "filename": "2014_Olympiastadion_Munich.jpg",
-        "text": "The Olympiastadion held the final match"
+        "text": "The Olympiastadion held the gold medal match"
       },
       {
         "name": "Dreiflüssestadion, Passau",
@@ -623,7 +623,7 @@
       {
         "name": "Azteca Stadium, Mexico City",
         "filename": "Estadio_Azteca1706p2.jpg",
-        "text": "The Azteca Stadium held the final match"
+        "text": "The Azteca Stadium held the gold medal match"
       },
       {
         "name": "Estadio Jalisco, Guadalajara",
@@ -652,10 +652,47 @@
     "year": "1964",
     "name": "Men's Olympic Football Tournament Tokyo 1964",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "Tokyo_1964_Summer_Olympics_logo.svg", "start_date": "1964-10-11", "end_date": "1964-10-23" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["JPN_U23MNT"],
+      "logo_filename": "Tokyo_1964_Summer_Olympics_logo.svg",
+      "mascot_filename": "1964_Olympics_football_stamp_of_Japan.jpg",
+      "start_date": "1964-10-11",
+      "end_date": "1964-10-23",
+      "color": "#619ae0",
+      "team_count": 14,
+      "confed_count": 5,
+      "venue_count": 8,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "National Olympic Stadium, Tokyo",
+        "filename": "Yamazaki-nabisco-Cup_final_2004.jpg",
+        "text": "The National Olympic Stadium held the gold medal match"
+      },
+      {
+        "name": "Komazawa Olympic Park Stadium, Setagaya, Tokyo",
+        "filename": "Komazawa_feeld.jpg",
+        "text": "The Komazawa Olympic Park Stadium held the semi-final match Czechoslovakia vs Germany."
+      },
+      {
+        "name": "Ōmiya Park Soccer Stadium, Omiya, Saitama",
+        "filename": "Ōmiya_Park_Soccer_Stadium,_R1068484.jpg",
+        "text": "The Ōmiya Park Soccer Stadium held the quarter-final match United Arab Republic vs Ghana."
+      },
+      {
+        "name": "Mitsuzawa Soccer Stadium, Yokohama, Kanagawa",
+        "filename": "Mitsuzawa1.jpg",
+        "text": "The Mitsuzawa Soccer Stadium held group A matches"
+      }
+    ],
+    "final_standings": { "champions": "HUN_U23MNT", "runners_up": "TCH_U23MNT", "third_place": "GER_U23MNT", "fourth_place": "EGY-1958-1971_U23MNT" },
+    "statistics": { "total_matches": 29, "total_goals": 123 },
+    "awards": {
+      "golden_boot": [{ "player": "Ferenc Bene", "team": "HUN_U23MNT", "goals": 12 }]
+    }
   },
   {
     "id": "MOFT1960",

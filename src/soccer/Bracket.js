@@ -13,6 +13,7 @@ import {
   ReplayTooltip,
   CoinTossTooltip,
   SharedBronzeTooltip,
+  ConsolationTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -328,6 +329,13 @@ const BracketColInner = (props) => {
       ? round.name.replace('Third-place', 'Bronze medal').replace('Final', 'Gold medal')
       : round.name
 
+  const roundNameBlock = (
+    <React.Fragment>
+      {roundName}
+      {roundName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+    </React.Fragment>
+  )
+
   return (
     <React.Fragment>
       {colIndex === 0 && <Row className="bracket-gap-height-00"></Row>}
@@ -335,10 +343,13 @@ const BracketColInner = (props) => {
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
       <Row className="no-gutters bracket-col-height">
         <Col xs={{ size: 11, offset: 1 }}>
-          <div className="h2-ff1 margin-top-md d-none d-xl-block">{roundName}</div>
-          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{roundName}</div>
-          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{roundName}</div>
-          <div className="h5-ff1 margin-top-md d-block d-md-none">{round.short_name}</div>
+          <div className="h2-ff1 margin-top-md d-none d-xl-block">{roundNameBlock}</div>
+          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{roundNameBlock}</div>
+          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{roundNameBlock}</div>
+          <div className="h5-ff1 margin-top-md d-block d-md-none">
+            {round.short_name}
+            {roundName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+          </div>
         </Col>
       </Row>
       {round.matches.map((m, index) => (
@@ -506,7 +517,8 @@ const Bracket = (props) => {
       <Row className="mt-3 text-center">
         <Col sm="12">
           <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse">
-            Bracket&nbsp;
+            {!config.consolation_bracket && <React.Fragment>Bracket&nbsp;</React.Fragment>}
+            {config.consolation_bracket && <React.Fragment>Consolation Bracket&nbsp;</React.Fragment>}
             {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
             {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
             {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
