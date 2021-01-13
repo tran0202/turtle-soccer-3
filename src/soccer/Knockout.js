@@ -19,30 +19,19 @@ const reorderMatches = (matches) => {
 
 const getFinalPathStage = (stage) => {
   if (!stage.rounds) return
-  const newStage = { rounds: [] }
-  stage.rounds.forEach((r) => {
-    if (r.name !== 'Consolation' && r.name !== 'Fifth-place') {
-      newStage.rounds.push(r)
-    }
-  })
-  // console.log('finalPathRounds', finalPathRounds)
-  return newStage
+  const newRounds = stage.rounds.filter((r) => r.name !== 'Consolation' && r.name !== 'Fifth-place')
+  return { ...stage, rounds: newRounds }
 }
 
 const getConsolationPathStage = (stage) => {
   if (!stage.rounds) return
-  const newStage = { rounds: [] }
-  stage.rounds.forEach((r) => {
-    if (r.name === 'Consolation' || r.name === 'Fifth-place') {
-      newStage.rounds.push(r)
-    }
-  })
-  return newStage
+  const newRounds = stage.rounds.filter((r) => r.name === 'Consolation' || r.name === 'Fifth-place')
+  return { ...stage, rounds: newRounds }
 }
 
 const getBracketStage = (stage) => {
+  if (!stage) return {}
   const rounds = []
-  const bracket_stage = { name: stage.name, type: stage.type, teams: stage.teams, rounds }
   stage.rounds &&
     stage.rounds.forEach((r) => {
       const roundMatches = []
@@ -50,15 +39,16 @@ const getBracketStage = (stage) => {
         r.matches.forEach((m) => {
           roundMatches.push(m)
         })
-      rounds.push({ matches: reorderMatches(roundMatches), eliminateCount: r.eliminateCount, name: r.name, short_name: r.short_name, next_round: r.next_round })
+      rounds.push({ ...r, matches: reorderMatches(roundMatches) })
     })
-  return bracket_stage
+  return { ...stage, rounds }
 }
 
 const Knockout = (props) => {
   const { stage, config } = props
   const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
   const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
+  // console.log('stage', stage)
   const bracketConfig = {
     tournamentTypeId: config.tournament_type_id,
     goldenGoal: config.golden_goal_rule,

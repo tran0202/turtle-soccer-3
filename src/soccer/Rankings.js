@@ -16,9 +16,11 @@ import NumberFormat from 'react-number-format'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
+  // console.log('round', round)
   const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round') : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
+    roundName !== '' &&
     roundName !== 'Final' &&
     roundName !== 'Third-place' &&
     roundName !== 'Semi-finals' &&
@@ -120,7 +122,6 @@ const RankingRow2 = (props) => {
 export const RankingRow = (props) => {
   const { row, config, index } = props
   const { ranking_type, championship_round } = config
-  // console.log('championship_round', championship_round)
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
   const gold = (ranking_type === 'round' || championship_round) && row.r === 1 ? ' gold' : ''

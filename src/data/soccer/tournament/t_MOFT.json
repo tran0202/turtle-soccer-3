@@ -697,12 +697,49 @@
   {
     "id": "MOFT1960",
     "year": "1960",
-    "name": "Men's Olympic Football Tournament Roma 1960",
+    "name": "Men's Olympic Football Tournament Rome 1960",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1960_Summer_Olympics_logo.png", "start_date": "1960-08-26", "end_date": "1960-09-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ITA_U23MNT"],
+      "logo_filename": "1960_Summer_Olympics_logo.png",
+      "mascot_filename": "Olympic_rings_without_rims.svg",
+      "start_date": "1960-08-26",
+      "end_date": "1960-09-10",
+      "color": "#3d8e2b",
+      "team_count": 16,
+      "confed_count": 4,
+      "venue_count": 7,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Stadio Flaminio, Rome",
+        "filename": "Stadio_Flaminio_a_Roma.jpg",
+        "text": "The Stadio Flaminio held the gold medal match"
+      },
+      {
+        "name": "Stadio San Paolo, Naples",
+        "filename": "San_Paolo_-_Curva_A.jpg",
+        "text": "The Stadio San Paolo held the semi-final match Italy vs Yugoslavia."
+      },
+      {
+        "name": "Stadio Olimpico Comunale, Grosseto",
+        "filename": "20100410GrStadioVonCurvaNord.jpeg",
+        "text": "The Stadio Olimpico Comunale held a group A match Bulgaria vs Turkey."
+      },
+      {
+        "name": "Stadio Comunale, L'Aquila",
+        "filename": "Stadio_fattori.jpeg",
+        "text": "The Stadio Comunale held a group C match Denmark vs Tunisia"
+      }
+    ],
+    "final_standings": { "champions": "YUG-1945-1992_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "HUN_U23MNT", "fourth_place": "ITA_U23MNT" },
+    "statistics": { "total_matches": 28, "total_goals": 120 },
+    "awards": {
+      "golden_boot": [{ "player": "Harald Nielsen", "team": "DEN_U23MNT", "goals": 8 }]
+    }
   },
   {
     "id": "MOFT1956",

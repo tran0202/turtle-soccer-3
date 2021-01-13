@@ -41,6 +41,7 @@ import td_EURO_2008 from '../data/soccer/tournamentData/EURO/td_EURO_2008.json'
 import td_EURO_2012 from '../data/soccer/tournamentData/EURO/td_EURO_2012.json'
 import td_EURO_2016 from '../data/soccer/tournamentData/EURO/td_EURO_2016.json'
 
+import td_MOFT_1960 from '../data/soccer/tournamentData/MOFT/td_MOFT_1960.json'
 import td_MOFT_1964 from '../data/soccer/tournamentData/MOFT/td_MOFT_1964.json'
 import td_MOFT_1968 from '../data/soccer/tournamentData/MOFT/td_MOFT_1968.json'
 import td_MOFT_1972 from '../data/soccer/tournamentData/MOFT/td_MOFT_1972.json'
@@ -60,7 +61,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'MOFT1964', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'MOFT1956', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -73,6 +74,7 @@ export const getTournamentDataArray = () => {
 
 export const getTournamentDataMOFT = () => {
   return [].concat(
+    [td_MOFT_1960],
     [td_MOFT_1964],
     [td_MOFT_1968],
     [td_MOFT_1972],

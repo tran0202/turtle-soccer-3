@@ -221,6 +221,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
@@ -239,6 +240,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
@@ -257,6 +259,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
+              {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
@@ -275,6 +278,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
@@ -295,6 +299,7 @@ const BracketBox = (props) => {
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
+              {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             {match.away_extra_score == null && (

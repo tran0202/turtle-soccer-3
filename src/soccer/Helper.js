@@ -153,6 +153,7 @@ export const isWinner = (who, match) => {
     } else {
       return (
         match.away_walkover ||
+        match.away_coin_toss ||
         match.home_score < match.away_score ||
         (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
         (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score) ||
@@ -297,6 +298,7 @@ const DisplayExtraTimeText = (props) => {
     home_penalty_score,
     away_penalty_score,
     home_coin_toss,
+    away_coin_toss,
     group_playoff,
     goldenGoal,
     silverGoal,
@@ -359,6 +361,11 @@ const DisplayExtraTimeText = (props) => {
       {home_coin_toss && (
         <React.Fragment>
           &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(home_team)}</b> won on coin toss
+        </React.Fragment>
+      )}
+      {away_coin_toss && (
+        <React.Fragment>
+          &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(away_team)}</b> won on coin toss
         </React.Fragment>
       )}
     </React.Fragment>
@@ -526,7 +533,9 @@ const DisplayMatch = (props) => {
         <Col
           sm="3"
           xs="3"
-          className={`team-name text-uppercase text-right team-name-no-padding-right${isHomeLoseAggregate(homeLoseData) || m.away_walkover ? ' gray3' : ''}`}
+          className={`team-name text-uppercase text-right team-name-no-padding-right${
+            isHomeLoseAggregate(homeLoseData) || m.away_walkover || m.away_coin_toss ? ' gray3' : ''
+          }`}
         >
           {getTeamName(m.home_team)}
         </Col>
@@ -590,6 +599,7 @@ const DisplayMatch = (props) => {
               home_penalty_score: m.home_penalty_score,
               away_penalty_score: m.away_penalty_score,
               home_coin_toss: m.home_coin_toss,
+              away_coin_toss: m.away_coin_toss,
               group_playoff: m.group_playoff,
               goldenGoal: config.goldenGoal,
               silverGoal: config.silverGoal,
