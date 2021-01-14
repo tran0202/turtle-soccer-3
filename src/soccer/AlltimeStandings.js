@@ -100,7 +100,9 @@ const collectRankings = (tournaments) => {
               s.rounds.forEach((r) => {
                 r.matches &&
                   r.matches.forEach((m) => {
-                    _matches.push(m)
+                    if (!m.away_withdrew && !m.postponed) {
+                      _matches.push(m)
+                    }
                   })
               })
           }

@@ -100,15 +100,18 @@ const eliminateKnockoutTeams = (tournament, round) => {
     round.matches.forEach((m) => {
       let finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
       let nextConsolationRound = findRoundAdvancedTeams(tournament, round.next_consolation_round)
-      // console.log('next_consolation_round', next_consolation_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      if (!isWinner('H', m) && !m.walkover) {
+      if (!isWinner('H', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
         if (!finalStandingRound) {
           tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [home_ranking] })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
         } else {
-          finalStandingRound.final_rankings.push(home_ranking)
+          // console.log('home_ranking2', home_ranking)
+          const tmp = finalStandingRound.final_rankings.find((fr) => fr.id === home_ranking.id)
+          if (!tmp) {
+            finalStandingRound.final_rankings.push(home_ranking)
+          }
         }
         finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== m.away_team)
         if (round.next_consolation_round) {
@@ -120,12 +123,15 @@ const eliminateKnockoutTeams = (tournament, round) => {
           }
           nextConsolationRound.final_rankings = nextConsolationRound.final_rankings.filter((fr) => fr.id !== m.away_team)
         }
-      } else if (!isWinner('A', m) && !m.walkover) {
+      } else if (!isWinner('A', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
         if (!finalStandingRound) {
           tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [away_ranking] })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
         } else {
-          finalStandingRound.final_rankings.push(away_ranking)
+          const tmp = finalStandingRound.final_rankings.find((fr) => fr.id === away_ranking.id)
+          if (!tmp) {
+            finalStandingRound.final_rankings.push(away_ranking)
+          }
         }
         finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== m.home_team)
         if (round.next_consolation_round) {
@@ -159,6 +165,12 @@ const advanceKnockoutTeams = (tournament, round) => {
           tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [away_ranking] })
         } else {
           next_round.final_rankings.push(away_ranking)
+        }
+      } else if (m.postponed) {
+        if (!next_round) {
+          tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [home_ranking, away_ranking] })
+        } else {
+          next_round.final_rankings.push(home_ranking, away_ranking)
         }
       }
     })
@@ -214,8 +226,6 @@ const createFinalRankings = (tournament, round) => {
         })
       }
       if (isSharedBronze(m)) {
-        // console.log('home_ranking', home_ranking)
-        // console.log('away_ranking', away_ranking)
         home_ranking.r = 3
         away_ranking.r = 3
         tournament.final_rankings.rounds.unshift({
@@ -303,7 +313,7 @@ const FinalStandings = (props) => {
   const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
     initKnockoutRankings(tournament, koStage)
-    const earlyRounds = koStage.rounds.filter((r) => r.name === 'Round of 16' || r.name === 'Quarter-finals')
+    const earlyRounds = koStage.rounds.filter((r) => r.name === 'First round' || r.name === 'Round of 16' || r.name === 'Quarter-finals')
     earlyRounds.forEach((round) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
       eliminateKnockoutTeams(tournament, round)

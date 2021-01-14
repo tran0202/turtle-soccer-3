@@ -147,7 +147,8 @@
   font-family: 'Oswald', sans-serif;
 }
 
-.successor-subscript {
+.successor-subscript,
+.withdrew-subscript {
   font-size: 1rem;
 }
 
@@ -183,7 +184,8 @@
     font-family: 'Oswald', sans-serif;
   }
 
-  .successor-subscript {
+  .successor-subscript,
+  .withdrew-subscript {
     font-size: 1rem;
   }
   .rank-col-padding-2 {
@@ -210,7 +212,8 @@
     padding-top: 11px;
   }
 
-  .successor-subscript {
+  .successor-subscript,
+  .withdrew-subscript {
     font-size: 0.5rem;
   }
   .rank-col-padding-2 {

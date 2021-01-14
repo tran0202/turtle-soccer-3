@@ -746,10 +746,45 @@
     "year": "1956",
     "name": "Men's Olympic Football Tournament Melbourne 1956",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1956_Summer_Olympics_logo.svg", "start_date": "1956-11-24", "end_date": "1956-12-08" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["AUS_U23MNT"],
+      "logo_filename": "1956_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1956-11-24",
+      "end_date": "1956-12-08",
+      "color": "#15296d",
+      "team_count": 11,
+      "venue_count": 2,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Bronze medal match",
+        "filename": "India_national_football_team_at1956_Olympics.png",
+        "text": "Indian team at a tussle against Bulgaria in the bronze-medal match.a"
+      },
+      {
+        "name": "Melbourne Cricket Ground",
+        "filename": "VFL_Grand_Final_in_1945_at_the_MCG.jpg",
+        "text": "The Melbourne Cricket Ground held the gold medal match"
+      },
+      {
+        "name": "Olympic Park Stadium, Melbourne",
+        "filename": "Olympicparkmel.jpeg",
+        "text": "The Olympic Park Stadium held the semi-final match Soviet Union vs Bulgaria."
+      }
+    ],
+    "final_standings": { "champions": "URS_U23MNT", "runners_up": "YUG-1945-1992_U23MNT", "third_place": "BUL-1948-1967_U23MNT", "fourth_place": "IND_U23MNT" },
+    "statistics": { "total_matches": 12, "total_goals": 53, "attendance": 194333 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Neville D'Souza", "team": "IND_U23MNT", "goals": 4 },
+        { "player": "Todor Veselinović", "team": "YUG-1945-1992_U23MNT", "goals": 4 },
+        { "player": "Dimitar Milanov", "team": "BUL-1948-1967_U23MNT", "goals": 4 }
+      ]
+    }
   },
   {
     "id": "MOFT1952",

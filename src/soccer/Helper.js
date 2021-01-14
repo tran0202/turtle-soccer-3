@@ -145,6 +145,7 @@ export const isWinner = (who, match) => {
       return (
         match.home_walkover ||
         match.home_coin_toss ||
+        match.home_bye ||
         match.home_score > match.away_score ||
         (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
         (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score) ||
@@ -534,22 +535,35 @@ const DisplayMatch = (props) => {
           sm="3"
           xs="3"
           className={`team-name text-uppercase text-right team-name-no-padding-right${
-            isHomeLoseAggregate(homeLoseData) || m.away_walkover || m.away_coin_toss ? ' gray3' : ''
+            isHomeLoseAggregate(homeLoseData) || m.away_walkover || m.away_coin_toss || m.home_withdrew || m.postponed ? ' gray3' : ''
           }`}
         >
           {getTeamName(m.home_team)}
+          {m.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" />}
+          {m.home_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
           {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
         </Col>
 
-        <Col sm="2" xs="2" className="score text-center score-no-padding-right">
+        <Col sm="2" xs="2" className={`score text-center score-no-padding-right${m.postponed ? ' withdrew-subscript gray3' : ''}`}>
           {(m.home_extra_score == null || m.away_extra_score == null) && (
             <React.Fragment>
               {m.walkover && <WalkoverTooltip target={`walkover_${m.home_team}_${m.away_team}`} content={m.walkover} anchor="(w/o)" />}
-              {!m.walkover && (
+              {!m.walkover && !m.postponed && (
                 <React.Fragment>
                   {m.home_score}-{m.away_score}
+                </React.Fragment>
+              )}
+              {m.postponed && (
+                <React.Fragment>
+                  postponed
+                  {m.postponed_notes && (
+                    <React.Fragment>
+                      <br></br>
+                      {m.postponed_notes}
+                    </React.Fragment>
+                  )}
                 </React.Fragment>
               )}
             </React.Fragment>
@@ -573,8 +587,15 @@ const DisplayMatch = (props) => {
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
         </Col>
-        <Col sm="3" xs="3" className={`team-name text-uppercase${isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_coin_toss ? ' gray3' : ''}`}>
+        <Col
+          sm="3"
+          xs="3"
+          className={`team-name text-uppercase${
+            isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_coin_toss || m.home_bye || m.away_withdrew || m.postponed ? ' gray3' : ''
+          }`}
+        >
           {getTeamName(m.away_team)}
+          {m.away_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
       </Row>
       <Row>
@@ -678,6 +699,24 @@ export const ReplayTooltip = (props) => {
 export const CoinTossTooltip = (props) => {
   const { target, anchor } = props
   const content = 'Coin toss'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const ByeTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Bye - Opponent withdrew'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const WithdrewTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Withdrew'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const MatchPostponedTooltip = (props) => {
+  const { target, anchor, notes } = props
+  const content = `Match postponed ${notes ? notes : ''}`
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

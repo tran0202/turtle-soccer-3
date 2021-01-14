@@ -1,283 +1,90 @@
 {
-  "id": "MOFT1980",
+  "id": "MOFT1956",
   "stages": [
-    {
-      "name": "Group Stage",
-      "type": "roundrobin",
-      "eliminateCount": 8,
-      "next_round": "Quarter-finals",
-      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the quarter-finals." } },
-      "groups": [
-        {
-          "name": "Group A",
-          "teams": [{ "id": "CUB_U23MNT" }, { "id": "ZAM_U23MNT" }, { "id": "URS_U23MNT" }, { "id": "VEN-1954-2006_U23MNT" }],
-          "matches": [
-            {
-              "home_team": "CUB_U23MNT",
-              "away_team": "ZAM_U23MNT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1980-07-20",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            },
-            {
-              "home_team": "URS_U23MNT",
-              "away_team": "VEN-1954-2006_U23MNT",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1980-07-20",
-              "time": "12:00",
-              "stadium": "Lenin Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "CUB_U23MNT",
-              "away_team": "VEN-1954-2006_U23MNT",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1980-07-22",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            },
-            {
-              "home_team": "URS_U23MNT",
-              "away_team": "ZAM_U23MNT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1980-07-22",
-              "time": "12:00",
-              "stadium": "Lenin Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "URS_U23MNT",
-              "away_team": "CUB_U23MNT",
-              "home_score": 8,
-              "away_score": 0,
-              "date": "1980-07-24",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "VEN-1954-2006_U23MNT",
-              "away_team": "ZAM_U23MNT",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1980-07-24",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            }
-          ]
-        },
-        {
-          "name": "Group B",
-          "teams": [{ "id": "TCH_U23MNT" }, { "id": "COL_U23MNT" }, { "id": "KUW_U23MNT" }, { "id": "NGA_U23MNT" }],
-          "matches": [
-            {
-              "home_team": "TCH_U23MNT",
-              "away_team": "COL_U23MNT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1980-07-21",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            },
-            {
-              "home_team": "KUW_U23MNT",
-              "away_team": "NGA_U23MNT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "1980-07-21",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "COL_U23MNT",
-              "away_team": "KUW_U23MNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-07-23",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "TCH_U23MNT",
-              "away_team": "NGA_U23MNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-07-23",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            },
-            {
-              "home_team": "COL_U23MNT",
-              "away_team": "NGA_U23MNT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1980-07-25",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow"
-            },
-            {
-              "home_team": "TCH_U23MNT",
-              "away_team": "KUW_U23MNT",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-07-25",
-              "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad"
-            }
-          ]
-        },
-        {
-          "name": "Group C",
-          "teams": [{ "id": "GDR_U23MNT" }, { "id": "IOC-ESP_U23MNT" }, { "id": "ALG_U23MNT" }, { "id": "SYR_U23MNT" }],
-          "matches": [
-            {
-              "home_team": "GDR_U23MNT",
-              "away_team": "IOC-ESP_U23MNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-07-20",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            },
-            {
-              "home_team": "ALG_U23MNT",
-              "away_team": "SYR_U23MNT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1980-07-20",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            },
-            {
-              "home_team": "GDR_U23MNT",
-              "away_team": "ALG_U23MNT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1980-07-22",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            },
-            {
-              "home_team": "IOC-ESP_U23MNT",
-              "away_team": "SYR_U23MNT",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-07-22",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            },
-            {
-              "home_team": "IOC-ESP_U23MNT",
-              "away_team": "ALG_U23MNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-07-24",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            },
-            {
-              "home_team": "GDR_U23MNT",
-              "away_team": "SYR_U23MNT",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1980-07-24",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            }
-          ]
-        },
-        {
-          "name": "Group D",
-          "teams": [{ "id": "YUG-1945-1992_U23MNT" }, { "id": "FIN_U23MNT" }, { "id": "IRQ-1963-1991_U23MNT" }, { "id": "CRC_U23MNT" }],
-          "matches": [
-            {
-              "home_team": "YUG-1945-1992_U23MNT",
-              "away_team": "FIN_U23MNT",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1980-07-21",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            },
-            {
-              "home_team": "IRQ-1963-1991_U23MNT",
-              "away_team": "CRC_U23MNT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1980-07-21",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            },
-            {
-              "home_team": "YUG-1945-1992_U23MNT",
-              "away_team": "CRC_U23MNT",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "1980-07-23",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            },
-            {
-              "home_team": "FIN_U23MNT",
-              "away_team": "IRQ-1963-1991_U23MNT",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1980-07-23",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            },
-            {
-              "home_team": "FIN_U23MNT",
-              "away_team": "CRC_U23MNT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1980-07-25",
-              "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev"
-            },
-            {
-              "home_team": "YUG-1945-1992_U23MNT",
-              "away_team": "IRQ-1963-1991_U23MNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1980-07-25",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk"
-            }
-          ]
-        }
-      ]
-    },
     {
       "name": "Knockout Stage",
       "type": "knockout",
+      "teams": [
+        { "id": "URS_U23MNT" },
+        { "id": "GER-1956-1968_U23MNT" },
+        { "id": "GBR_U23MNT" },
+        { "id": "THA_U23MNT" },
+        { "id": "AUS_U23MNT" },
+        { "id": "JPN_U23MNT" },
+        { "id": "YUG-1945-1992_U23MNT" },
+        { "id": "USA_U23MNT" },
+        { "id": "IDN_U23MNT" },
+        { "id": "BUL-1948-1967_U23MNT" },
+        { "id": "IND_U23MNT" }
+      ],
       "rounds": [
+        {
+          "name": "First round",
+          "short_name": "1/8",
+          "eliminateCount": 8,
+          "next_round": "Quarter-finals",
+          "matches": [
+            {
+              "home_team": "BUL-1948-1967_U23MNT",
+              "away_team": "EGY-1953-1958_U23MNT",
+              "home_bye": true,
+              "away_withdrew": true,
+              "date": "1956-11-23",
+              "bracket_order": 7
+            },
+            {
+              "home_team": "IND_U23MNT",
+              "away_team": "HUN-1949-1956_U23MNT",
+              "home_bye": true,
+              "away_withdrew": true,
+              "date": "1956-11-23",
+              "bracket_order": 4
+            },
+            { "home_team": "IDN_U23MNT", "away_team": "VSO_U23MNT", "home_bye": true, "away_withdrew": true, "date": "1956-11-23", "bracket_order": 5 },
+            { "home_team": "CHN_U23MNT", "away_team": "TUR_U23MNT", "home_withdrew": true, "away_withdrew": true, "date": "1956-11-23", "bracket_order": 2 },
+            {
+              "home_team": "YUG-1945-1992_U23MNT",
+              "away_team": "USA_U23MNT",
+              "postponed": true,
+              "postponed_notes": "to the quarter-finals",
+              "date": "1956-11-23",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "URS_U23MNT",
+              "away_team": "GER-1956-1968_U23MNT",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1956-11-24",
+              "time": "12:00",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
+              "bracket_order": 6
+            },
+            {
+              "home_team": "GBR_U23MNT",
+              "away_team": "THA_U23MNT",
+              "home_score": 9,
+              "away_score": 0,
+              "date": "1956-11-26",
+              "time": "12:00",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
+              "bracket_order": 8
+            },
+            {
+              "home_team": "AUS_U23MNT",
+              "away_team": "JPN_U23MNT",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1956-11-27",
+              "time": "12:00",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
+              "bracket_order": 3
+            }
+          ]
+        },
         {
           "name": "Quarter-finals",
           "short_name": "1/4",
@@ -286,46 +93,60 @@
           "matches": [
             {
               "home_team": "YUG-1945-1992_U23MNT",
-              "away_team": "ALG_U23MNT",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1980-07-27",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Minsk",
-              "bracket_order": 4
-            },
-            {
-              "home_team": "URS_U23MNT",
-              "away_team": "KUW_U23MNT",
-              "home_score": 2,
+              "away_team": "USA_U23MNT",
+              "home_score": 9,
               "away_score": 1,
-              "date": "1980-07-27",
+              "date": "1956-11-28",
               "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow",
+              "stadium": "Olympic Park Stadium",
+              "city": "Melbourne",
               "bracket_order": 1
             },
             {
-              "home_team": "TCH_U23MNT",
-              "away_team": "CUB_U23MNT",
-              "home_score": 3,
+              "home_team": "IDN_U23MNT",
+              "away_team": "URS_U23MNT",
+              "home_score": 0,
               "away_score": 0,
-              "date": "1980-07-27",
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "date": "1956-11-29",
               "time": "12:00",
-              "stadium": "Kirov Stadium",
-              "city": "Leningrad",
+              "stadium": "Olympic Park Stadium",
+              "city": "Melbourne",
               "bracket_order": 3
             },
             {
-              "home_team": "GDR_U23MNT",
-              "away_team": "IRQ-1963-1991_U23MNT",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "1980-07-27",
+              "home_team": "IDN_U23MNT",
+              "away_team": "URS_U23MNT",
+              "home_score": 0,
+              "away_score": 4,
+              "date": "1956-12-01",
               "time": "12:00",
-              "stadium": "Republican Stadium",
-              "city": "Kiev",
+              "stadium": "Olympic Park Stadium",
+              "city": "Melbourne",
+              "replay": true,
+              "bracket_order": 3
+            },
+            {
+              "home_team": "BUL-1948-1967_U23MNT",
+              "away_team": "GBR_U23MNT",
+              "home_score": 6,
+              "away_score": 1,
+              "date": "1956-11-30",
+              "time": "12:00",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
+              "bracket_order": 4
+            },
+            {
+              "home_team": "AUS_U23MNT",
+              "away_team": "IND_U23MNT",
+              "home_score": 2,
+              "away_score": 4,
+              "date": "1956-12-01",
+              "time": "12:00",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
               "bracket_order": 2
             }
           ]
@@ -337,26 +158,28 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "URS_U23MNT",
-              "away_team": "GDR_U23MNT",
-              "home_score": 0,
+              "home_team": "YUG-1945-1992_U23MNT",
+              "away_team": "IND_U23MNT",
+              "home_score": 4,
               "away_score": 1,
-              "date": "1980-07-29",
+              "date": "1956-12-04",
               "time": "12:00",
-              "stadium": "Lenin Stadium",
-              "city": "Moscow",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne",
               "bracket_order": 1
             },
             {
-              "home_team": "TCH_U23MNT",
-              "away_team": "YUG-1945-1992_U23MNT",
-              "home_score": 2,
+              "home_team": "URS_U23MNT",
+              "away_team": "BUL-1948-1967_U23MNT",
+              "home_score": 0,
               "away_score": 0,
-              "date": "1980-07-29",
-              "time": "13:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow",
-              "bracket_order": 1
+              "home_extra_score": 2,
+              "away_extra_score": 1,
+              "date": "1956-12-05",
+              "time": "12:00",
+              "stadium": "Olympic Park Stadium",
+              "city": "Melbourne",
+              "bracket_order": 2
             }
           ]
         },
@@ -365,14 +188,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "URS_U23MNT",
-              "away_team": "YUG-1945-1992_U23MNT",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1980-08-01",
-              "time": "12:00",
-              "stadium": "Dinamo Stadium",
-              "city": "Moscow"
+              "home_team": "IND_U23MNT",
+              "away_team": "BUL-1948-1967_U23MNT",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "1956-12-07",
+              "time": "14:15",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne"
             }
           ]
         },
@@ -381,14 +204,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "GDR_U23MNT",
-              "away_team": "TCH_U23MNT",
+              "home_team": "YUG-1945-1992_U23MNT",
+              "away_team": "URS_U23MNT",
               "home_score": 0,
               "away_score": 1,
-              "date": "1980-08-02",
-              "time": "12:00",
-              "stadium": "Lenin Stadium",
-              "city": "Moscow"
+              "date": "1956-12-08",
+              "time": "14:15",
+              "stadium": "Melbourne Cricket Ground",
+              "city": "Melbourne"
             }
           ]
         }

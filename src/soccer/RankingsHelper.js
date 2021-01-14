@@ -40,7 +40,7 @@ export const hasReplay = (round) => {
 
 const accumulateRanking = (team, match, config) => {
   if (!team) return
-  if (match.walkover) return
+  if (match.walkover || match.away_withdrew || match.postponed) return
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++
@@ -159,7 +159,7 @@ const calculateTeamRanking = (container, team, match, config) => {
 export const calculateRoundRankings = (container, teams, matches, config) => {
   matches &&
     matches.forEach((m) => {
-      if (!m.walkover) {
+      if (!m.walkover && !m.away_withdrew && !m.postponed) {
         calculateTeamRanking(container, findTeam(teams, m.home_team), m, config)
         calculateTeamRanking(container, findTeam(teams, m.away_team), m, config)
       }

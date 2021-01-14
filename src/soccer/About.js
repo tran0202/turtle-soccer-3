@@ -196,7 +196,7 @@ const About = (props) => {
                 Venues
               </Col>
               <Col md="6" sm="7">
-                {venue_count} (in {city_count} host cities)
+                {venue_count} (in {city_count} host cit{city_count !== 1 ? 'ies' : 'y'})
               </Col>
             </Row>
           )}
