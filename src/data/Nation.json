@@ -664,7 +664,7 @@
     "end_date": ""
   },
   {
-    "id": "CUW-1959-1986",
+    "id": "ANT-1959-1986",
     "name": "Netherlands Antilles",
     "official_name": "Netherlands Antilles",
     "parent_nation_id": "CUW",
@@ -675,15 +675,14 @@
     "end_date": "1986-01-01"
   },
   {
-    "id": "CUW-1986-2010",
-    "name": "Netherlands_Antilles",
+    "id": "ANT",
+    "name": "Netherlands Antilles",
     "official_name": "",
     "parent_nation_id": "CUW",
     "nation_type_id": "NATN",
     "flag_filename": "Netherlands_Antilles.png",
-    "code": "ANT",
     "start_date": "1986-01-01",
-    "end_date": "2010-01-01"
+    "end_date": "2010-10-10"
   },
   {
     "id": "CYP",

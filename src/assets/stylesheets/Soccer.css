@@ -157,7 +157,8 @@
 }
 
 .ranking-row div.row:nth-child(2),
-.ranking-row div.row:nth-child(3) {
+.ranking-row div.row:nth-child(3),
+.ranking-row div.row:nth-child(4) {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #e6e7e9;
@@ -169,6 +170,10 @@
 
 .rank-col-padding-3 {
   padding-top: 115px;
+}
+
+.rank-col-padding-4 {
+  padding-top: 155px;
 }
 
 .tournament-logo {
@@ -193,6 +198,9 @@
   }
   .rank-col-padding-3 {
     padding-top: 105px;
+  }
+  .rank-col-padding-4 {
+    padding-top: 140px;
   }
 
   .tournament-logo {
@@ -221,6 +229,9 @@
   }
   .rank-col-padding-3 {
     padding-top: 90px;
+  }
+  .rank-col-padding-4 {
+    padding-top: 120px;
   }
   .box-team-name,
   .box-score {
@@ -262,6 +273,9 @@
   }
   .rank-col-padding-3 {
     padding-top: 90px;
+  }
+  .rank-col-padding-4 {
+    padding-top: 120px;
   }
 
   .no-display-xs {

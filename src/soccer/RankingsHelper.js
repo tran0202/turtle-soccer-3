@@ -720,7 +720,6 @@ export const updateFinalRankings = (round) => {
           r.draws = retainIds
         }
         const drawCount = r.draws ? r.draws.length : 0
-        // console.log('rankingBundle', rankingBundle)
         if (drawCount > 0) {
           rankingBundle.push(r)
           rankingBundle.sort((a, b) => {

@@ -102,12 +102,12 @@ const eliminateKnockoutTeams = (tournament, round) => {
       let nextConsolationRound = findRoundAdvancedTeams(tournament, round.next_consolation_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
+      // console.log('home_ranking', home_ranking)
       if (!isWinner('H', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
         if (!finalStandingRound) {
           tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [home_ranking] })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
         } else {
-          // console.log('home_ranking2', home_ranking)
           const tmp = finalStandingRound.final_rankings.find((fr) => fr.id === home_ranking.id)
           if (!tmp) {
             finalStandingRound.final_rankings.push(home_ranking)
@@ -172,6 +172,19 @@ const advanceKnockoutTeams = (tournament, round) => {
         } else {
           next_round.final_rankings.push(home_ranking, away_ranking)
         }
+      }
+    })
+}
+
+const advanceByeTeams = (tournament, round) => {
+  if (!round.bye_teams) return
+  const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
+  const next_round = findRoundAdvancedTeams(tournament, round.next_round)
+  next_round &&
+    round.bye_teams.forEach((t) => {
+      const bye_team = advanced_teams.final_rankings.find((fr) => fr.id === t.id)
+      if (bye_team) {
+        next_round.final_rankings.push(bye_team)
       }
     })
 }
@@ -313,12 +326,15 @@ const FinalStandings = (props) => {
   const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
     initKnockoutRankings(tournament, koStage)
-    const earlyRounds = koStage.rounds.filter((r) => r.name === 'First round' || r.name === 'Round of 16' || r.name === 'Quarter-finals')
+    const earlyRounds = koStage.rounds.filter(
+      (r) => r.name === 'Preliminary round' || r.name === 'First round' || r.name === 'Round of 16' || r.name === 'Quarter-finals',
+    )
     earlyRounds.forEach((round) => {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
       eliminateKnockoutTeams(tournament, round)
       sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
       advanceKnockoutTeams(tournament, round)
+      advanceByeTeams(tournament, round)
     })
 
     if (koStage.consolation_round) {

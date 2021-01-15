@@ -400,6 +400,7 @@ const BracketCol = (props) => {
 
 const BracketFinalCol = (props) => {
   const { round, thirdPlace, config } = props
+  // console.log('config.roundCount', config.roundCount)
   return (
     <Col className="col-brk-22">
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
@@ -505,7 +506,6 @@ const BracketHook2 = (props) => {
 
 const attachReplayMatches = (round) => {
   if (!round.matches) return
-  // console.log('round', round)
   const roundMatches = round.matches.filter((m) => !m.replay)
   const replayMatches = round.matches.filter((m) => m.replay)
   roundMatches.forEach((m) => {
@@ -533,7 +533,8 @@ const attachReplayMatches = (round) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
-  const thirdPlace = stage.rounds ? stage.rounds.find((s) => s.name === 'Third-place') : {}
+  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round') : {}
+  const thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -558,15 +559,15 @@ const Bracket = (props) => {
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
         <Row className="no-gutters mb-5">
-          {stage.rounds &&
-            stage.rounds.map((_r, index) => {
+          {filteredRounds &&
+            filteredRounds.map((_r, index) => {
               const r = hasReplay(_r) ? attachReplayMatches(_r) : _r
               if (r.matches) {
                 const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
                 if (r.name === 'Third-place') {
                   return null
                 } else if (r.name === 'Final') {
-                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: stage.rounds.length }} key={r.name} />
+                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: filteredRounds.length }} key={r.name} />
                 } else {
                   return (
                     <React.Fragment key={r.name}>

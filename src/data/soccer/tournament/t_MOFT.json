@@ -763,7 +763,7 @@
       {
         "name": "Bronze medal match",
         "filename": "India_national_football_team_at1956_Olympics.png",
-        "text": "Indian team at a tussle against Bulgaria in the bronze-medal match.a"
+        "text": "Indian team at a tussle against Bulgaria in the bronze-medal match."
       },
       {
         "name": "Melbourne Cricket Ground",
@@ -791,10 +791,50 @@
     "year": "1952",
     "name": "Men's Olympic Football Tournament Helsinki 1952",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1952_Summer_Olympics_logo.svg", "start_date": "1952-07-15", "end_date": "1952-08-02" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["FIN_U23MNT"],
+      "logo_filename": "1952_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_at_the_1952_Summer_Olympics_Finnish_stamp.jpg",
+      "start_date": "1952-07-15",
+      "end_date": "1952-08-02",
+      "color": "#1d4d93",
+      "team_count": 25,
+      "confed_count": 5,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Kuusela_Hungary_1952.jpg",
+        "text": "Miss Universe 1952 Armi Kuusela awarding the Hungarian team"
+      },
+      {
+        "name": "Olympic Stadium, Helsinki",
+        "filename": "Suomi-Portugali_lämmittely.jpg",
+        "text": "The Olympic Stadium held the gold medal match"
+      },
+      {
+        "name": "Kotkan Urheilukeskus, Kotka",
+        "filename": "Arto_Tolsa_-areena_1.jpg",
+        "text": "The Kotkan urheilukeskus held the quarter-final match Hungary vs Turkey."
+      },
+      {
+        "name": "Kupittaan Jalkapallostadion, Turku",
+        "filename": "Veritas_Stadion_23.7.2015.jpg",
+        "text": "The Kupittaan Jalkapallostadion held the first round matches."
+      }
+    ],
+    "final_standings": { "champions": "HUN-1949-1956_U23MNT", "runners_up": "YUG-1945-1992_U23MNT", "third_place": "SWE_U23MNT", "fourth_place": "GER_U23MNT" },
+    "statistics": { "total_matches": 26, "total_goals": 135 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Rajko Mitić", "team": "YUG-1945-1992_U23MNT", "goals": 7 },
+        { "player": "Branko Zebec", "team": "YUG-1945-1992_U23MNT", "goals": 7 }
+      ]
+    }
   },
   {
     "id": "MOFT1948",

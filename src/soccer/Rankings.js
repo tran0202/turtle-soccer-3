@@ -121,9 +121,10 @@ const RankingRow2 = (props) => {
 
 export const RankingRow = (props) => {
   const { row, config, index } = props
+  // console.log('row', row)
   const { ranking_type, championship_round } = config
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
-  const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : 'rank-col-padding-3'
+  const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : row.length === 3 ? 'rank-col-padding-3' : 'rank-col-padding-4'
   const gold = (ranking_type === 'round' || championship_round) && row.r === 1 ? ' gold' : ''
   const silver = (ranking_type === 'round' || championship_round) && row.r === 2 ? ' silver' : ''
   const bronze = (ranking_type === 'round' || championship_round) && row.r === 3 ? ' bronze' : ''
