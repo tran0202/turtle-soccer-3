@@ -938,10 +938,47 @@
     "year": "1928",
     "name": "Men's Olympic Football Tournament Amsterdam 1928",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1928.jpg", "start_date": "1928-05-27", "end_date": "1928-06-13" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["NED_U23MNT"],
+      "logo_filename": "1928.jpg",
+      "mascot_filename": "1928_Summer_Olympics_stamp_of_the_Netherlands_football.jpg",
+      "start_date": "1928-05-27",
+      "end_date": "1928-06-13",
+      "color": "#f93127",
+      "team_count": 17,
+      "confed_count": 5,
+      "venue_count": 2,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_1928_olympics.jpg",
+        "text": "Uruguay, winner of the tournament"
+      },
+      {
+        "name": "Silver Medal",
+        "filename": "Argentina_football_team_Olympics_1928.jpg",
+        "text": "The Argentina team won the Silver Medal"
+      },
+      {
+        "name": "Final",
+        "filename": "Final_football_Argentina_vs_Uruguay_Olympics_1928.jpg",
+        "text": "Uruguay-Argentina captains, referee Johannes Mutters and linesmen before the final match"
+      },
+      {
+        "name": "Egypt",
+        "filename": "1928_Egyptian_Olympic_football_team.jpg",
+        "text": "The Egyptian squad"
+      }
+    ],
+    "final_standings": { "champions": "URU_U23MNT", "runners_up": "ARG_U23MNT", "third_place": "ITA-1861-1946_U23MNT", "fourth_place": "EGY-1922-1953_U23MNT" },
+    "statistics": { "total_matches": 19, "total_goals": 116 },
+    "awards": {
+      "golden_boot": [{ "player": "Domingo Tarasconi", "team": "ARG_U23MNT", "goals": 11 }]
+    }
   },
   {
     "id": "MOFT1924",
