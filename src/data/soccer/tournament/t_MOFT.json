@@ -841,10 +841,50 @@
     "year": "1948",
     "name": "Men's Olympic Football Tournament London 1948",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1948_Summer_Olympics_logos.svg", "start_date": "1948-07-26", "end_date": "1948-08-13" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GBR_U23MNT"],
+      "logo_filename": "1948_Summer_Olympics_logos.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1948-07-26",
+      "end_date": "1948-08-13",
+      "color": "#15296d",
+      "team_count": 18,
+      "confed_count": 5,
+      "venue_count": 13,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Swedennationalfootballteamolympic1948.jpg",
+        "text": "Swedish gold medal team"
+      },
+      {
+        "name": "Ireland",
+        "filename": "1948_Eire_Olympic_Soccer_Team.jpg",
+        "text": "The Irish team"
+      },
+      {
+        "name": "India",
+        "filename": "India_national_team_at_Olympics_1948.jpg",
+        "text": "Indian team at 1948 Olympics, captain T. Ao at the centre of first row, goal scorer S. Raman next to Ao and coach Balaidas Chatterjee to the extreme right."
+      },
+      {
+        "name": "Match Ball",
+        "filename": "1948_Olympic_football_final_match_ball.jpg",
+        "text": "The final match ball."
+      }
+    ],
+    "final_standings": { "champions": "SWE_U23MNT", "runners_up": "YUG-1945-1992_U23MNT", "third_place": "DEN_U23MNT", "fourth_place": "GBR_U23MNT" },
+    "statistics": { "total_matches": 18, "total_goals": 102 },
+    "awards": {
+      "golden_boot": [
+        { "player": "John Hansen", "team": "DEN_U23MNT", "goals": 7 },
+        { "player": "Gunnar Nordahl", "team": "SWE_U23MNT", "goals": 7 }
+      ]
+    }
   },
   {
     "id": "MOFT1936",
