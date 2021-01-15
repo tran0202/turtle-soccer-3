@@ -891,10 +891,47 @@
     "year": "1936",
     "name": "Men's Olympic Football Tournament Berlin 1936",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1936.png", "start_date": "1936-08-03", "end_date": "1936-08-15" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GER-1935-1945_U23MNT"],
+      "logo_filename": "1936.png",
+      "mascot_filename": "Olympic_rings_without_rims.svg",
+      "start_date": "1936-08-03",
+      "end_date": "1936-08-15",
+      "color": "#1d1d1b",
+      "team_count": 16,
+      "confed_count": 4,
+      "venue_count": 4,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Italy1936_olympic.jpg",
+        "text": "The Italian squad that won the Gold Medal"
+      },
+      {
+        "name": "Quarter-final",
+        "filename": "Peru_v_Austria_1936_Valdivieso.png",
+        "text": "Peruvian goalkeeper Juan Valdivieso reaches out for the football during match between Austria and Peru."
+      },
+      {
+        "name": "Peru",
+        "filename": "Peru_Football_1936_Olympics.png",
+        "text": "The Peru national football team that participated in the 1936 Berlin Olympics. The squad, also known as \"The Black Roller\" (Spanish: El Rodillo Negro), stands prior to its quarterfinals match against Austria. Front: Adelfo Magallanes, Jorge Alcalde, Teodoro Fernández, José Morales, and Alejandro Villanueva. Back: Carlos Tovar, Víctor Guarderas Lavalle, Juan Valdivieso, Arturo Fernández, Segundo Castillo, and Orestes Jordán."
+      },
+      {
+        "name": "Olympiastadion, Berlin",
+        "filename": "Bundesarchiv_Bild_183-R82532,_Berlin,_Olympia-Stadion_(Luftaufnahme).jpg",
+        "text": "The Olympiastadion held the gold medal match"
+      }
+    ],
+    "final_standings": { "champions": "ITA-1861-1946_U23MNT", "runners_up": "AUT_U23MNT", "third_place": "NOR_U23MNT", "fourth_place": "POL_U23MNT" },
+    "statistics": { "total_matches": 16, "total_goals": 78 },
+    "awards": {
+      "golden_boot": [{ "player": "Annibale Frossi", "team": "ITA-1861-1946_U23MNT", "goals": 7 }]
+    }
   },
   {
     "id": "MOFT1928",

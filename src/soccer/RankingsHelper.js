@@ -40,7 +40,7 @@ export const hasReplay = (round) => {
 
 const accumulateRanking = (team, match, config) => {
   if (!team) return
-  if (match.walkover || match.away_withdrew || match.postponed) return
+  if (match.walkover || match.away_withdrew || match.postponed || match.match_void) return
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++

@@ -142,6 +142,7 @@ export const isSuccessor = (id) => {
 export const isWinner = (who, match) => {
   if (match) {
     if (who === 'H') {
+      if (match.match_void) return match.away_withdrew
       return (
         match.home_walkover ||
         match.home_coin_toss ||
@@ -152,6 +153,7 @@ export const isWinner = (who, match) => {
         match.home_replay_score > match.away_replay_score
       )
     } else {
+      if (match.match_void) return match.home_withdrew
       return (
         match.away_walkover ||
         match.away_coin_toss ||
@@ -228,13 +230,16 @@ export const isHomeLoseAggregate = (data) => {
     away_penalty_score,
     home_aggregate_score,
     away_aggregate_score,
+    match_void,
+    away_withdrew,
   } = data
   if (!knockoutMatch) return false
   if (!secondLegMatch) {
     return (
-      (home_score != null && away_score != null && home_score < away_score) ||
-      (home_extra_score != null && away_extra_score != null && home_extra_score < away_extra_score) ||
-      (home_penalty_score != null && home_penalty_score != null && home_penalty_score < away_penalty_score)
+      !(match_void && away_withdrew) &&
+      ((home_score != null && away_score != null && home_score < away_score) ||
+        (home_extra_score != null && away_extra_score != null && home_extra_score < away_extra_score) ||
+        (home_penalty_score != null && home_penalty_score != null && home_penalty_score < away_penalty_score))
     )
   }
   return (
@@ -258,13 +263,17 @@ export const isAwayLoseAggregate = (data) => {
     away_penalty_score,
     home_aggregate_score,
     away_aggregate_score,
+    match_void,
+    home_withdrew,
   } = data
   if (!knockoutMatch) return false
   if (!secondLegMatch) {
+    // console.log('match_void', match_void)
     return (
-      (home_score != null && away_score != null && home_score > away_score) ||
-      (home_extra_score != null && away_extra_score != null && home_extra_score > away_extra_score) ||
-      (home_penalty_score != null && home_penalty_score != null && home_penalty_score > away_penalty_score)
+      !(match_void && home_withdrew) &&
+      ((home_score != null && away_score != null && home_score > away_score) ||
+        (home_extra_score != null && away_extra_score != null && home_extra_score > away_extra_score) ||
+        (home_penalty_score != null && home_penalty_score != null && home_penalty_score > away_penalty_score))
     )
   }
   return (
@@ -303,70 +312,76 @@ const DisplayExtraTimeText = (props) => {
     group_playoff,
     goldenGoal,
     silverGoal,
+    void_notes,
   } = param
   // console.log('group_playoff', group_playoff)
   return (
     <React.Fragment>
-      {home_extra_score != null && away_extra_score != null && (
+      {void_notes && <React.Fragment>&gt;&gt;&gt;&nbsp;{void_notes}</React.Fragment>}
+      {!void_notes && (
         <React.Fragment>
-          {home_penalty_score == null && away_penalty_score == null && !group_playoff && (
+          {home_extra_score != null && away_extra_score != null && (
             <React.Fragment>
-              {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;&gt;&gt;&gt;&nbsp;</React.Fragment>}
-              {home_extra_score > away_extra_score && (
+              {home_penalty_score == null && away_penalty_score == null && !group_playoff && (
                 <React.Fragment>
-                  <b>{getTeamName(home_team)}</b>
-                </React.Fragment>
-              )}
-              {home_extra_score < away_extra_score && (
-                <React.Fragment>
-                  <b>{getTeamName(away_team)}</b>
-                </React.Fragment>
-              )}
-              {home_extra_score !== away_extra_score && (
-                <React.Fragment>
-                  {(goldenGoal || silverGoal) && home_penalty_score == null && away_penalty_score == null ? (
-                    goldenGoal ? (
-                      <React.Fragment>&nbsp;won on golden goal</React.Fragment>
-                    ) : (
-                      <React.Fragment>&nbsp;won on silver goal</React.Fragment>
-                    )
-                  ) : (
-                    <React.Fragment>&nbsp;won after extra time</React.Fragment>
+                  {home_extra_score !== away_extra_score && <React.Fragment>&nbsp;&gt;&gt;&gt;&nbsp;</React.Fragment>}
+                  {home_extra_score > away_extra_score && (
+                    <React.Fragment>
+                      <b>{getTeamName(home_team)}</b>
+                    </React.Fragment>
+                  )}
+                  {home_extra_score < away_extra_score && (
+                    <React.Fragment>
+                      <b>{getTeamName(away_team)}</b>
+                    </React.Fragment>
+                  )}
+                  {home_extra_score !== away_extra_score && (
+                    <React.Fragment>
+                      {(goldenGoal || silverGoal) && home_penalty_score == null && away_penalty_score == null ? (
+                        goldenGoal ? (
+                          <React.Fragment>&nbsp;won on golden goal</React.Fragment>
+                        ) : (
+                          <React.Fragment>&nbsp;won on silver goal</React.Fragment>
+                        )
+                      ) : (
+                        <React.Fragment>&nbsp;won after extra time</React.Fragment>
+                      )}
+                    </React.Fragment>
                   )}
                 </React.Fragment>
               )}
             </React.Fragment>
           )}
-        </React.Fragment>
-      )}
-      {home_penalty_score != null && away_penalty_score != null && (
-        <React.Fragment>
-          &nbsp;&gt;&gt;&gt;&nbsp;
-          {home_penalty_score > away_penalty_score && (
+          {home_penalty_score != null && away_penalty_score != null && (
             <React.Fragment>
-              <b>{getTeamName(home_team)}</b>
+              &nbsp;&gt;&gt;&gt;&nbsp;
+              {home_penalty_score > away_penalty_score && (
+                <React.Fragment>
+                  <b>{getTeamName(home_team)}</b>
+                </React.Fragment>
+              )}
+              {home_penalty_score < away_penalty_score && (
+                <React.Fragment>
+                  <b>{getTeamName(away_team)}</b>
+                </React.Fragment>
+              )}
+              &nbsp;won on penalties&nbsp;
+              <b>
+                {home_penalty_score}-{away_penalty_score}
+              </b>
+              {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
             </React.Fragment>
           )}
-          {home_penalty_score < away_penalty_score && (
+          {home_coin_toss && (
             <React.Fragment>
-              <b>{getTeamName(away_team)}</b>
+              &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(home_team)}</b> won on coin toss
             </React.Fragment>
           )}
-          &nbsp;won on penalties&nbsp;
-          <b>
-            {home_penalty_score}-{away_penalty_score}
-          </b>
-          {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
-        </React.Fragment>
-      )}
-      {home_coin_toss && (
-        <React.Fragment>
-          &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(home_team)}</b> won on coin toss
-        </React.Fragment>
-      )}
-      {away_coin_toss && (
-        <React.Fragment>
-          &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(away_team)}</b> won on coin toss
+          {away_coin_toss && (
+            <React.Fragment>
+              &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(away_team)}</b> won on coin toss
+            </React.Fragment>
+          )}
         </React.Fragment>
       )}
     </React.Fragment>
@@ -483,6 +498,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
 
 const DisplayMatch = (props) => {
   const { m, config } = props
+  // console.log('m.void_notes', m.void_notes)
   const homeLoseData = {
     knockoutMatch: config.knockoutMatch,
     secondLegMatch: config.secondLegMatch,
@@ -496,6 +512,9 @@ const DisplayMatch = (props) => {
     away_penalty_score: m.away_penalty_score,
     home_aggregate_score: m.home_aggregate_score_2nd_leg,
     away_aggregate_score: m.away_aggregate_score_2nd_leg,
+    match_void: m.match_void,
+    home_withdrew: m.home_withdrew,
+    away_withdrew: m.away_withdrew,
   }
   const awayLoseData = {
     knockoutMatch: config.knockoutMatch,
@@ -510,6 +529,9 @@ const DisplayMatch = (props) => {
     away_penalty_score: m.away_penalty_score,
     home_aggregate_score: m.home_aggregate_score_2nd_leg,
     away_aggregate_score: m.away_aggregate_score_2nd_leg,
+    match_void: m.match_void,
+    home_withdrew: m.home_withdrew,
+    away_withdrew: m.away_withdrew,
   }
   return (
     <Col sm="12" className="padding-tb-md border-bottom-gray5">
@@ -624,6 +646,7 @@ const DisplayMatch = (props) => {
               group_playoff: m.group_playoff,
               goldenGoal: config.goldenGoal,
               silverGoal: config.silverGoal,
+              void_notes: m.void_notes,
             }}
           />
           {isSharedBronze(m) && <React.Fragment>&gt;&gt;&gt;&nbsp;Both teams were awarded bronze medals.</React.Fragment>}
@@ -717,6 +740,12 @@ export const WithdrewTooltip = (props) => {
 export const MatchPostponedTooltip = (props) => {
   const { target, anchor, notes } = props
   const content = `Match postponed ${notes ? notes : ''}`
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const MatchVoidedTooltip = (props) => {
+  const { target, anchor, notes } = props
+  const content = `Match voided${notes ? `: ${notes}` : ''}`
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

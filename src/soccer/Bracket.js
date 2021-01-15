@@ -15,6 +15,7 @@ import {
   ByeTooltip,
   WithdrewTooltip,
   MatchPostponedTooltip,
+  MatchVoidedTooltip,
   SharedBronzeTooltip,
   ConsolationTooltip,
 } from './Helper'
@@ -203,6 +204,7 @@ const BracketBox = (props) => {
                 {match.home_score}
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
+                {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
               </Col>
             )}
             {match.home_extra_score != null && (
@@ -210,6 +212,7 @@ const BracketBox = (props) => {
                 {parseInt(match.home_score) + parseInt(match.home_extra_score)}
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
+                {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
               </Col>
             )}
           </Row>
@@ -533,7 +536,7 @@ const attachReplayMatches = (round) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
-  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round') : {}
+  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round') : []
   const thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
