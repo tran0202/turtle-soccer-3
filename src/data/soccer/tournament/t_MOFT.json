@@ -985,10 +985,52 @@
     "year": "1924",
     "name": "Men's Olympic Football Tournament Paris 1924",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1924_Summer_Olympics_logo.svg", "start_date": "1924-05-25", "end_date": "1924-06-09" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["FRA_U23MNT"],
+      "logo_filename": "1924_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1924-05-25",
+      "end_date": "1924-06-09",
+      "color": "#103d69",
+      "team_count": 22,
+      "confed_count": 4,
+      "venue_count": 4,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay1924_olympic.jpg",
+        "text": "The Uruguayan team that won its first Gold Medal"
+      },
+      {
+        "name": "Uruguay",
+        "filename": "Uruguay_1923.jpg",
+        "text": "The Uruguay team had won the Sudamericano one year before the Games"
+      },
+      {
+        "name": "Semi-finalist",
+        "filename": "Netherlands_football_team_1924.jpg",
+        "text": "The Netherlands were defeated by Uruguay at the semifinal stage"
+      },
+      {
+        "name": "Quarter-finalist",
+        "filename": "France_football_1924_olympics.jpg",
+        "text": "The French squad, eliminated by Uruguay"
+      },
+      {
+        "name": "Yugoslavia",
+        "filename": "Yugoslavia_football_team_1924.jpg",
+        "text": "The Yugoslavia side had a poor showing"
+      }
+    ],
+    "final_standings": { "champions": "URU_U23MNT", "runners_up": "SUI_U23MNT", "third_place": "SWE_U23MNT", "fourth_place": "NED_U23MNT" },
+    "statistics": { "total_matches": 16, "total_goals": 66, "attendance": 210424 },
+    "awards": {
+      "golden_boot": [{ "player": "Pedro Petrone", "team": "URU_U23MNT", "goals": 7 }]
+    }
   },
   {
     "id": "MOFT1920",

@@ -356,7 +356,7 @@ const BracketBox = (props) => {
 
 const BracketColInner = (props) => {
   const { round, colIndex, config } = props
-  // console.log('config', config)
+  // console.log('round', round)
   const roundName =
     round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? round.name.replace('Third-place', 'Bronze medal').replace('Final', 'Gold medal')
@@ -403,7 +403,6 @@ const BracketCol = (props) => {
 
 const BracketFinalCol = (props) => {
   const { round, thirdPlace, config } = props
-  // console.log('config.roundCount', config.roundCount)
   return (
     <Col className="col-brk-22">
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
@@ -509,6 +508,7 @@ const BracketHook2 = (props) => {
 
 const attachReplayMatches = (round) => {
   if (!round.matches) return
+  // console.log('attachReplayMatches', round)
   const roundMatches = round.matches.filter((m) => !m.replay)
   const replayMatches = round.matches.filter((m) => m.replay)
   roundMatches.forEach((m) => {
@@ -537,7 +537,7 @@ const attachReplayMatches = (round) => {
 const Bracket = (props) => {
   const { stage, config } = props
   const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round') : []
-  const thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
+  let thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -568,6 +568,7 @@ const Bracket = (props) => {
               if (r.matches) {
                 const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
                 if (r.name === 'Third-place') {
+                  thirdPlace = r
                   return null
                 } else if (r.name === 'Final') {
                   return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: filteredRounds.length }} key={r.name} />

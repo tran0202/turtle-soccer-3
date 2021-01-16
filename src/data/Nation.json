@@ -2259,8 +2259,28 @@
     "parent_nation_id": "",
     "nation_type_id": "NATN",
     "flag_filename": "Flag_of_Ireland.svg",
-    "start_date": "",
+    "start_date": "1953-01-01",
     "end_date": ""
+  },
+  {
+    "id": "IRL-1936-1950",
+    "name": "Ireland",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Ireland.svg",
+    "start_date": "1936-01-01",
+    "end_date": "1950-01-01"
+  },
+  {
+    "id": "IRL-1924-1936",
+    "name": "Irish Free State",
+    "official_name": "",
+    "parent_nation_id": "",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Ireland.svg",
+    "start_date": "1924-01-01",
+    "end_date": "1936-01-01"
   },
   {
     "id": "ROU",
