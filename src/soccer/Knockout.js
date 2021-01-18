@@ -20,7 +20,12 @@ const reorderMatches = (matches) => {
 const getFinalPathStage = (stage) => {
   if (!stage.rounds) return
   const newRounds = stage.rounds.filter(
-    (r) => r.name !== 'Consolation' && r.name !== 'Fifth-place' && r.name !== 'Playoff First Round' && r.name !== 'Playoff Second Round',
+    (r) =>
+      r.name !== 'Consolation First Round' &&
+      r.name !== 'Consolation Semi-finals' &&
+      r.name !== 'Fifth-place' &&
+      r.name !== 'Playoff First Round' &&
+      r.name !== 'Playoff Second Round',
   )
   return { ...stage, rounds: newRounds }
 }
@@ -28,7 +33,12 @@ const getFinalPathStage = (stage) => {
 const getConsolationPathStage = (stage) => {
   if (!stage.rounds) return
   const newRounds = stage.rounds.filter(
-    (r) => r.name === 'Consolation' || r.name === 'Fifth-place' || r.name === 'Playoff First Round' || r.name === 'Playoff Second Round',
+    (r) =>
+      r.name === 'Consolation First Round' ||
+      r.name === 'Consolation Semi-finals' ||
+      r.name === 'Fifth-place' ||
+      r.name === 'Playoff First Round' ||
+      r.name === 'Playoff Second Round',
   )
   return { ...stage, rounds: newRounds }
 }
@@ -53,7 +63,6 @@ const Knockout = (props) => {
   const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
   const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
   const consolationBracketName = stage.rounds && stage.rounds.find((r) => r.name === 'Playoff First Round') !== undefined ? 'Playoff' : 'Consolation'
-  // console.log('stage', stage)
   const bracketConfig = {
     tournamentTypeId: config.tournament_type_id,
     goldenGoal: config.golden_goal_rule,
@@ -76,12 +85,14 @@ const Knockout = (props) => {
         stage.rounds.map((r) => {
           const matchArray = getMatchArrayByDate(r, true)
           if (!hasReplay(r)) {
-            return <DisplaySchedule round={{ name: r.name, ...matchArray }} config={displayScheduleConfig} key={r.name} />
+            return (
+              <DisplaySchedule round={{ name: r.name, ...matchArray, consolation_notes: r.consolation_notes }} config={displayScheduleConfig} key={r.name} />
+            )
           } else {
             return (
               <React.Fragment key={r.name}>
-                <DisplaySchedule round={{ name: r.name, ...matchArray[0] }} config={displayScheduleConfig} />
-                <DisplaySchedule round={{ ...matchArray[1] }} config={displayScheduleConfig} />
+                <DisplaySchedule round={{ name: r.name, ...matchArray[0], consolation_notes: r.consolation_notes }} config={displayScheduleConfig} />
+                <DisplaySchedule round={{ ...matchArray[1], consolation_notes: r.consolation_notes }} config={displayScheduleConfig} />
               </React.Fragment>
             )
           }

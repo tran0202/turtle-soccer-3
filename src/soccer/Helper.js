@@ -665,7 +665,8 @@ const DisplayMatch = (props) => {
 export const DisplaySchedule = (props) => {
   const { round, config } = props
   const { showMatchYear } = config
-  const { name, dates, matches } = round
+  const { name, dates, matches, consolation_notes } = round
+  // console.log('round', round)
   let groupName =
     name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? name.replace('Third-place', 'Bronze medal match').replace('Final', 'Gold medal match')
@@ -676,7 +677,8 @@ export const DisplaySchedule = (props) => {
         <Col>
           <div className="h2-ff1 margin-top-md">
             {groupName}
-            {(groupName === 'Consolation' || groupName === 'Playoff First Round') && <ConsolationTooltip target="consolationTooltip" />}
+            {(groupName === 'Consolation First Round' || groupName === 'Consolation Semi-finals' || groupName === 'Playoff First Round') &&
+              consolation_notes && <ConsolationTooltip target="consolationTooltip" notes={consolation_notes} />}
             {groupName === 'Playoff Second Round' && <PlayoffSecondRoundTooltip target="playoffSecondRoundTooltip" />}
           </div>
         </Col>
@@ -792,8 +794,8 @@ export const SharedBronzeTooltip = (props) => {
 }
 
 export const ConsolationTooltip = (props) => {
-  const { target } = props
-  const content = `Played by losing quarter-finalists`
+  const { target, notes } = props
+  const content = notes
   return <TopTooltip target={target} content={content} />
 }
 

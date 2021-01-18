@@ -21,6 +21,7 @@ import {
   SharedBronzeTooltip,
   ConsolationTooltip,
   Extra140Tooltip,
+  PlayoffSecondRoundTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -371,10 +372,11 @@ const BracketBox = (props) => {
 
 const BracketColInner = (props) => {
   const { round, colIndex, config } = props
-  // console.log('round', round)
   const roundName =
     round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? round.name
+          .replace('Consolation First Round', 'Consol 1st')
+          .replace('Consolation Semi-finals', 'Consol Semi')
           .replace('Third-place', 'Bronze medal')
           .replace('Final', 'Gold medal')
           .replace('Silver medal match', 'Silver medal')
@@ -382,10 +384,14 @@ const BracketColInner = (props) => {
           .replace('Playoff Second Round', 'P/o 2nd round')
       : round.name
 
+  // console.log('roundName', roundName)
   const roundNameBlock = (
     <React.Fragment>
       {roundName}
-      {roundName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+      {(roundName === 'Consol 1st' || roundName === 'Consol Semi' || roundName === 'P/o 1st round') && round.consolation_notes && (
+        <ConsolationTooltip target="consolationTooltip" notes={round.consolation_notes} />
+      )}
+      {roundName === 'P/o 2nd round' && <PlayoffSecondRoundTooltip target="playoffSecondRoundTooltip" />}
     </React.Fragment>
   )
 
@@ -401,7 +407,10 @@ const BracketColInner = (props) => {
           <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{roundNameBlock}</div>
           <div className="h5-ff1 margin-top-md d-block d-md-none">
             {round.short_name}
-            {roundName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+            {(roundName === 'Consol Semi' || roundName === 'P/o 1st round') && round.consolation_notes && (
+              <ConsolationTooltip target="consolationTooltip" notes={round.consolation_notes} />
+            )}
+            {roundName === 'P/o 2nd round' && <PlayoffSecondRoundTooltip target="playoffSecondRoundTooltip" />}
           </div>
         </Col>
       </Row>

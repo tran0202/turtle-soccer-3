@@ -24,7 +24,7 @@ const RankingRowSeparate = (props) => {
     roundName !== 'Final' &&
     roundName !== 'Third-place' &&
     roundName !== 'Semi-finals' &&
-    roundName !== 'Consolation' &&
+    roundName !== 'Consolation Semi-finals' &&
     roundName !== 'Playoff First Round' &&
     roundName !== 'Silver medal match' &&
     roundName !== 'Final Round' && (

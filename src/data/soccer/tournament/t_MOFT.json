@@ -1048,7 +1048,7 @@
       "color": "#dc171e",
       "team_count": 14,
       "confed_count": 2,
-      "venue_count": 1,
+      "venue_count": 4,
       "city_count": 1
     },
     "hero_images": [
@@ -1084,10 +1084,47 @@
     "year": "1912",
     "name": "Men's Olympic Football Tournament Stockholm 1912",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1912_Summer_Olympics_poster.jpg", "start_date": "1912-06-29", "end_date": "1912-07-04" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["SWE_U23MNT"],
+      "logo_filename": "1912_Summer_Olympics_poster.jpg",
+      "mascot_filename": "Football_at_the_1912_Summer_Olympics.jpeg",
+      "start_date": "1912-06-29",
+      "end_date": "1912-07-04",
+      "color": "#1d5f9a",
+      "team_count": 11,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Football_at_the_1912_Summer_Olympics_-_UK_squad.jpeg",
+        "text": "Great Britain, Gold Medal"
+      },
+      {
+        "name": "Silver medalists",
+        "filename": "Football_at_the_1912_Summer_Olympics_-_Denmark_squad.jpeg",
+        "text": "Denmark team, Silver Medal winner"
+      },
+      {
+        "name": "Bronze medalists",
+        "filename": "Football_at_the_1912_Summer_Olympics_-_Netherlands_squad.jpeg",
+        "text": "The Netherlands team, Bronze Medal"
+      },
+      {
+        "name": "Golden Boot",
+        "filename": "Gottfried_Fuchs.jpg",
+        "text": "German player Gottfried Fuchs was the topscorer of the tournament with 10 goals"
+      }
+    ],
+    "final_standings": { "champions": "GBR_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "NED_U23MNT", "fourth_place": "FIN-1809-1917_U23MNT" },
+    "statistics": { "total_matches": 17, "total_goals": 94 },
+    "awards": {
+      "golden_boot": [{ "player": "Gottfried Fuchs", "team": "GER-1866-1918_U23MNT", "goals": 10 }]
+    }
   },
   {
     "id": "MOFT1908",

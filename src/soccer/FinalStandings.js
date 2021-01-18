@@ -420,12 +420,22 @@ const FinalStandings = (props) => {
     })
 
     if (koStage.consolation_round) {
-      const consolation = koStage.rounds.find((r) => r.name === 'Consolation' || r.name === 'Playoff First Round')
+      const consolation = koStage.rounds.find((r) => r.name === 'Consolation First Round')
       if (consolation) {
         calculateKnockoutRankings(findRoundAdvancedTeams(tournament, consolation.name), consolation, config)
         eliminateKnockoutTeams(tournament, consolation)
         sortGroupRankings(findRoundFinalRanking(tournament, consolation.name), parseInt(consolation.eliminateCount) + 1, null)
         advanceKnockoutTeams(tournament, consolation)
+      }
+    }
+
+    if (koStage.consolation_round) {
+      const consolation2 = koStage.rounds.find((r) => r.name === 'Consolation Semi-finals' || r.name === 'Playoff First Round')
+      if (consolation2) {
+        calculateKnockoutRankings(findRoundAdvancedTeams(tournament, consolation2.name), consolation2, config)
+        eliminateKnockoutTeams(tournament, consolation2)
+        sortGroupRankings(findRoundFinalRanking(tournament, consolation2.name), parseInt(consolation2.eliminateCount) + 1, null)
+        advanceKnockoutTeams(tournament, consolation2)
       }
     }
 
@@ -480,8 +490,11 @@ const FinalStandings = (props) => {
       : tournament.final_rankings
       ? tournament.final_rankings.rounds
       : []
-  if (filteredRounds.find((r) => r.name === 'Consolation' || r.name === 'Playoff First Round')) {
+  if (filteredRounds.find((r) => r.name === 'Consolation First Round' || r.name === 'Consolation Semi-finals' || r.name === 'Playoff First Round')) {
     filteredRounds = filteredRounds.filter((r) => r.name !== 'Quarter-finals')
+  }
+  if (filteredRounds.find((r) => r.name === 'Consolation First Round')) {
+    filteredRounds = filteredRounds.filter((r) => r.name !== 'First round')
   }
   // console.log('filteredRounds', filteredRounds)
   return (
