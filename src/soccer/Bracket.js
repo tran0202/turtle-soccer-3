@@ -6,6 +6,7 @@ import {
   getBracketTeamName,
   getBracketTeamCode,
   AetTooltip,
+  AwardedTooltip,
   GoldenGoalTooltip,
   SilverGoalTooltip,
   PenTooltip,
@@ -16,8 +17,10 @@ import {
   WithdrewTooltip,
   MatchPostponedTooltip,
   MatchVoidedTooltip,
+  DisqualifiedTooltip,
   SharedBronzeTooltip,
   ConsolationTooltip,
+  Extra140Tooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -104,10 +107,11 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" />}
+              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.home_team)}
@@ -126,10 +130,11 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" />}
+              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -148,10 +153,11 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" />}
+              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.home_team)}
@@ -170,10 +176,11 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" />}
+              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />
@@ -194,10 +201,11 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" />}
+              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             {match.home_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
@@ -205,6 +213,7 @@ const BracketBox = (props) => {
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
                 {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
+                {match.notes && match.notes.awarded && <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.notes.text} />}
               </Col>
             )}
             {match.home_extra_score != null && (
@@ -213,6 +222,7 @@ const BracketBox = (props) => {
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
                 {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
+                {match.notes && match.notes.awarded && <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.notes.text} />}
               </Col>
             )}
           </Row>
@@ -246,6 +256,7 @@ const BracketBox = (props) => {
               )}
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
+              {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
@@ -266,6 +277,7 @@ const BracketBox = (props) => {
               )}
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
+              {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
@@ -286,6 +298,7 @@ const BracketBox = (props) => {
               )}
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
+              {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
@@ -306,6 +319,7 @@ const BracketBox = (props) => {
               )}
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
+              {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
@@ -328,6 +342,7 @@ const BracketBox = (props) => {
               )}
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
+              {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             {match.away_extra_score == null && (
@@ -359,7 +374,12 @@ const BracketColInner = (props) => {
   // console.log('round', round)
   const roundName =
     round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
-      ? round.name.replace('Third-place', 'Bronze medal').replace('Final', 'Gold medal')
+      ? round.name
+          .replace('Third-place', 'Bronze medal')
+          .replace('Final', 'Gold medal')
+          .replace('Silver medal match', 'Silver medal')
+          .replace('Playoff First Round', 'P/o 1st round')
+          .replace('Playoff Second Round', 'P/o 2nd round')
       : round.name
 
   const roundNameBlock = (
@@ -402,7 +422,7 @@ const BracketCol = (props) => {
 }
 
 const BracketFinalCol = (props) => {
-  const { round, thirdPlace, config } = props
+  const { round, thirdPlace, silverMedal, config } = props
   return (
     <Col className="col-brk-22">
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
@@ -411,6 +431,7 @@ const BracketFinalCol = (props) => {
       {(config.roundCount === 5 || (config.roundCount === 4 && !thirdPlace)) && <Row className="bracket-gap-height-30"></Row>}
       <BracketColInner round={round} config={config} />
       {thirdPlace && <BracketColInner round={thirdPlace} config={config} />}
+      {silverMedal && <BracketColInner round={silverMedal} config={config} />}
     </Col>
   )
 }
@@ -536,7 +557,8 @@ const attachReplayMatches = (round) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
-  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round') : []
+  let silverMedal = stage.rounds ? stage.rounds.find((s) => s.name === 'Silver medal match') : {}
+  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round' && r.name !== 'Silver medal match') : []
   let thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
@@ -552,7 +574,7 @@ const Bracket = (props) => {
         <Col sm="12">
           <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse">
             {!config.consolation_bracket && <React.Fragment>Bracket&nbsp;</React.Fragment>}
-            {config.consolation_bracket && <React.Fragment>Consolation Bracket&nbsp;</React.Fragment>}
+            {config.consolation_bracket && config.consolation_bracket_name && <React.Fragment>{config.consolation_bracket_name} Bracket&nbsp;</React.Fragment>}
             {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
             {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
             {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
@@ -571,7 +593,15 @@ const Bracket = (props) => {
                   thirdPlace = r
                   return null
                 } else if (r.name === 'Final') {
-                  return <BracketFinalCol round={r} thirdPlace={thirdPlace} config={{ ...config, roundCount: filteredRounds.length }} key={r.name} />
+                  return (
+                    <BracketFinalCol
+                      round={r}
+                      thirdPlace={thirdPlace}
+                      silverMedal={silverMedal}
+                      config={{ ...config, roundCount: filteredRounds.length }}
+                      key={r.name}
+                    />
+                  )
                 } else {
                   return (
                     <React.Fragment key={r.name}>

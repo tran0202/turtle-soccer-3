@@ -55,6 +55,7 @@ export const getDefaultStageTab = (stages) => {
 }
 
 export const getFlagSrc = (id) => {
+  if (!id) return
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     const nation = NationArray.find((n) => n.id === team.nation_id)
@@ -83,6 +84,7 @@ export const getNationOfficialName = (id) => {
 }
 
 export const getTeamName = (id) => {
+  if (!id) return
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     return team.name
@@ -93,6 +95,7 @@ export const getTeamName = (id) => {
 
 export const getShortTeamName = (id) => {
   // console.log('id', id)
+  if (!id) return
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
     if (team.short_name) {
@@ -115,6 +118,7 @@ export const getParentTeam = (id) => {
 }
 
 export const getBracketTeamCode = (id) => {
+  if (!id) return
   const team = TeamArray.find((t) => t.id === id)
   if (!team) {
     console.log('Team error', team)
@@ -561,7 +565,7 @@ const DisplayMatch = (props) => {
           }`}
         >
           {getTeamName(m.home_team)}
-          {m.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" />}
+          {m.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={m.bye_notes} />}
           {m.home_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
@@ -605,6 +609,7 @@ const DisplayMatch = (props) => {
             </React.Fragment>
           )}
           {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
+          {m.extra_140 && <Extra140Tooltip target={`extra140`} />}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
@@ -617,6 +622,7 @@ const DisplayMatch = (props) => {
           }`}
         >
           {getTeamName(m.away_team)}
+          {m.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={m.disqualified_notes} />}
           {m.away_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
       </Row>
@@ -670,7 +676,8 @@ export const DisplaySchedule = (props) => {
         <Col>
           <div className="h2-ff1 margin-top-md">
             {groupName}
-            {groupName === 'Consolation' && <ConsolationTooltip target="consolationTooltip" />}
+            {(groupName === 'Consolation' || groupName === 'Playoff First Round') && <ConsolationTooltip target="consolationTooltip" />}
+            {groupName === 'Playoff Second Round' && <PlayoffSecondRoundTooltip target="playoffSecondRoundTooltip" />}
           </div>
         </Col>
       </Row>
@@ -726,8 +733,8 @@ export const CoinTossTooltip = (props) => {
 }
 
 export const ByeTooltip = (props) => {
-  const { target, anchor } = props
-  const content = 'Bye - Opponent withdrew'
+  const { target, anchor, notes } = props
+  const content = `Bye${notes ? `: ${notes}` : ''}`
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
@@ -746,6 +753,12 @@ export const MatchPostponedTooltip = (props) => {
 export const MatchVoidedTooltip = (props) => {
   const { target, anchor, notes } = props
   const content = `Match voided${notes ? `: ${notes}` : ''}`
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const DisqualifiedTooltip = (props) => {
+  const { target, anchor, notes } = props
+  const content = `Disqualified${notes ? `: ${notes}` : ''}`
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
@@ -781,6 +794,18 @@ export const SharedBronzeTooltip = (props) => {
 export const ConsolationTooltip = (props) => {
   const { target } = props
   const content = `Played by losing quarter-finalists`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const PlayoffSecondRoundTooltip = (props) => {
+  const { target } = props
+  const content = `Winner will face Netherlands for the silver medal`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const Extra140Tooltip = (props) => {
+  const { target } = props
+  const content = `After 120 minutes expired with the score tied at 1-1, both captains and the referee agreed to play a second extra time of 2x10 minutes, meaning this match lasted 140 minutes.`
   return <TopTooltip target={target} content={content} />
 }
 
@@ -831,7 +856,7 @@ export const TopTooltip = (props) => {
   return (
     <TurtleTooltip target={target} placement="top" content={content}>
       <span className="box-tip-text" href="#" id={target}>
-        {anchor ? anchor : '[*]'}
+        {anchor ? anchor : '(*)'}
       </span>
     </TurtleTooltip>
   )

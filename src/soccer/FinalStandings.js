@@ -102,7 +102,6 @@ const eliminateKnockoutTeams = (tournament, round) => {
       let nextConsolationRound = findRoundAdvancedTeams(tournament, round.next_consolation_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      // console.log('home_ranking', home_ranking)
       if (!isWinner('H', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
         if (!finalStandingRound) {
           tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [home_ranking] })
@@ -123,7 +122,9 @@ const eliminateKnockoutTeams = (tournament, round) => {
           }
           nextConsolationRound.final_rankings = nextConsolationRound.final_rankings.filter((fr) => fr.id !== m.away_team)
         }
-      } else if (!isWinner('A', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
+      } else if (m.away_team !== '' && !isWinner('A', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
+        // console.log('m.home_team', m.home_team)
+        // console.log('m.away_team', m.away_team)
         if (!finalStandingRound) {
           tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [away_ranking] })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
@@ -212,15 +213,41 @@ const advanceThirdPlaceTeams = (tournament, round) => {
     })
 }
 
-const createFinalRankings = (tournament, round) => {
+const advanceSilverMedalTeams = (tournament, round) => {
+  const advanced_teams = findRoundAdvancedTeams(tournament, 'Playoff Second Round')
+  round.matches &&
+    round.matches.forEach((m) => {
+      const next_round = findRoundAdvancedTeams(tournament, 'Silver medal match')
+      const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
+      const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
+      if (isWinner('H', m)) {
+        if (!next_round) {
+          tournament.advanced_teams.rounds.push({ name: 'Silver medal match', ranking_type: 'round', final_rankings: [home_ranking] })
+        } else {
+          next_round.final_rankings.push(home_ranking)
+        }
+      } else if (isWinner('A', m)) {
+        if (!next_round) {
+          tournament.advanced_teams.rounds.push({ name: 'Silver medal match', ranking_type: 'round', final_rankings: [away_ranking] })
+        } else {
+          next_round.final_rankings.push(away_ranking)
+        }
+      }
+      const semiFinalists = findRoundAdvancedTeams(tournament, 'Semi-finals')
+      const netherlands = findTeam(semiFinalists.final_rankings, 'NED_U23MNT')
+      findRoundAdvancedTeams(tournament, 'Silver medal match').final_rankings.push(netherlands)
+    })
+}
+
+const createSilverMedalRankings = (tournament, round) => {
   const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
   if (round.matches && advanced_teams) {
     const m = round.matches[round.matches.length - 1]
     if (m) {
       let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      const rankWinner = round.name === 'Final' ? 1 : round.name === 'Third-place' ? 3 : 5
-      const rankLoser = round.name === 'Final' ? 2 : round.name === 'Third-place' ? 4 : 6
+      const rankWinner = 2
+      const rankLoser = 3
       if (isWinner('H', m)) {
         home_ranking.r = rankWinner
         away_ranking.r = rankLoser
@@ -237,6 +264,61 @@ const createFinalRankings = (tournament, round) => {
           ranking_type: 'round',
           final_rankings: [away_ranking, home_ranking],
         })
+      }
+    }
+  }
+  const semiFinalists = findRoundFinalRanking(tournament, 'Semi-finals')
+  semiFinalists.final_rankings = semiFinalists.final_rankings.filter((fr) => fr.id !== 'NED_U23MNT')
+  semiFinalists.final_rankings[0].r = 4
+  // console.log('semiFinalists', semiFinalists)
+}
+
+const createFinalRankings = (tournament, round) => {
+  const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
+  if (round.matches && advanced_teams) {
+    const m = round.matches[round.matches.length - 1]
+    if (m) {
+      let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
+      let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
+      const rankWinner = round.name === 'Final' ? 1 : round.name === 'Third-place' ? 3 : round.name === 'Fifth-place' ? 5 : 4
+      const rankLoser = round.name === 'Final' ? 2 : round.name === 'Third-place' ? 4 : round.name === 'Fifth-place' ? 6 : 5
+      if (isWinner('H', m)) {
+        home_ranking.r = rankWinner
+        away_ranking.r = rankLoser
+        if (!m.away_disqualified) {
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [home_ranking, away_ranking],
+          })
+        } else {
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [home_ranking],
+          })
+          tournament.final_rankings.rounds.push({
+            name: 'Disqualified',
+            ranking_type: 'round',
+            final_rankings: [{ ...away_ranking, r: 'DQ' }],
+          })
+        }
+      } else if (isWinner('A', m)) {
+        home_ranking.r = rankLoser
+        away_ranking.r = rankWinner
+        if (round.name === 'Playoff Second Round') {
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [home_ranking],
+          })
+        } else {
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [away_ranking, home_ranking],
+          })
+        }
       }
       if (isSharedBronze(m)) {
         home_ranking.r = 3
@@ -338,7 +420,7 @@ const FinalStandings = (props) => {
     })
 
     if (koStage.consolation_round) {
-      const consolation = koStage.rounds.find((r) => r.name === 'Consolation')
+      const consolation = koStage.rounds.find((r) => r.name === 'Consolation' || r.name === 'Playoff First Round')
       if (consolation) {
         calculateKnockoutRankings(findRoundAdvancedTeams(tournament, consolation.name), consolation, config)
         eliminateKnockoutTeams(tournament, consolation)
@@ -353,6 +435,13 @@ const FinalStandings = (props) => {
       createFinalRankings(tournament, fifthPlace)
     }
 
+    const playoffSecondRound = koStage.rounds.find((r) => r.name === 'Playoff Second Round')
+    if (playoffSecondRound) {
+      calculateKnockoutRankings(findRoundAdvancedTeams(tournament, playoffSecondRound.name), playoffSecondRound, config)
+      createFinalRankings(tournament, playoffSecondRound)
+      advanceSilverMedalTeams(tournament, playoffSecondRound)
+    }
+
     const semifinals = koStage.rounds.find((r) => r.name === 'Semi-finals')
     if (semifinals) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
@@ -365,6 +454,12 @@ const FinalStandings = (props) => {
     if (thirdPlace) {
       calculateKnockoutRankings(findRoundAdvancedTeams(tournament, thirdPlace.name), thirdPlace, config)
       createFinalRankings(tournament, thirdPlace)
+    }
+
+    const silverMedal = koStage.rounds.find((r) => r.name === 'Silver medal match')
+    if (silverMedal) {
+      calculateKnockoutRankings(findRoundAdvancedTeams(tournament, silverMedal.name), silverMedal, config)
+      createSilverMedalRankings(tournament, silverMedal)
     }
 
     if (semifinals) {
@@ -385,7 +480,7 @@ const FinalStandings = (props) => {
       : tournament.final_rankings
       ? tournament.final_rankings.rounds
       : []
-  if (filteredRounds.find((r) => r.name === 'Consolation')) {
+  if (filteredRounds.find((r) => r.name === 'Consolation' || r.name === 'Playoff First Round')) {
     filteredRounds = filteredRounds.filter((r) => r.name !== 'Quarter-finals')
   }
   // console.log('filteredRounds', filteredRounds)

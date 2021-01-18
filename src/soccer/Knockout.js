@@ -19,13 +19,17 @@ const reorderMatches = (matches) => {
 
 const getFinalPathStage = (stage) => {
   if (!stage.rounds) return
-  const newRounds = stage.rounds.filter((r) => r.name !== 'Consolation' && r.name !== 'Fifth-place')
+  const newRounds = stage.rounds.filter(
+    (r) => r.name !== 'Consolation' && r.name !== 'Fifth-place' && r.name !== 'Playoff First Round' && r.name !== 'Playoff Second Round',
+  )
   return { ...stage, rounds: newRounds }
 }
 
 const getConsolationPathStage = (stage) => {
   if (!stage.rounds) return
-  const newRounds = stage.rounds.filter((r) => r.name === 'Consolation' || r.name === 'Fifth-place')
+  const newRounds = stage.rounds.filter(
+    (r) => r.name === 'Consolation' || r.name === 'Fifth-place' || r.name === 'Playoff First Round' || r.name === 'Playoff Second Round',
+  )
   return { ...stage, rounds: newRounds }
 }
 
@@ -48,6 +52,7 @@ const Knockout = (props) => {
   const { stage, config } = props
   const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
   const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
+  const consolationBracketName = stage.rounds && stage.rounds.find((r) => r.name === 'Playoff First Round') !== undefined ? 'Playoff' : 'Consolation'
   // console.log('stage', stage)
   const bracketConfig = {
     tournamentTypeId: config.tournament_type_id,
@@ -56,6 +61,7 @@ const Knockout = (props) => {
   }
   const bracketConsolationConfig = {
     consolation_bracket: true,
+    consolation_bracket_name: consolationBracketName,
     ...bracketConfig,
   }
   const displayScheduleConfig = {

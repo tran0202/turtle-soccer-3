@@ -17,7 +17,7 @@ import NumberFormat from 'react-number-format'
 const RankingRowSeparate = (props) => {
   const { round } = props
   // console.log('round', round)
-  const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round') : ''
+  const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round').replace('Playoff Second Round', 'Playoff') : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
     roundName !== '' &&
@@ -25,6 +25,8 @@ const RankingRowSeparate = (props) => {
     roundName !== 'Third-place' &&
     roundName !== 'Semi-finals' &&
     roundName !== 'Consolation' &&
+    roundName !== 'Playoff First Round' &&
+    roundName !== 'Silver medal match' &&
     roundName !== 'Final Round' && (
       <Row className="no-gutters ranking-tbl team-row padding-tb-md text-center">
         <Col xs="12" className="font-italic gray3">
