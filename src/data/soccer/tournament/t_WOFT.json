@@ -57,17 +57,47 @@
     "year": "2012",
     "name": "Women's Olympic Football Tournament London 2012",
     "tournament_type_id": "WOFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["GBR_U23WNT"],
       "logo_filename": "2012_Summer_Olympics_logo.svg",
       "mascot_filename": "Football,_London_2012.png",
       "start_date": "2012-07-25",
       "end_date": "2012-08-09",
-      "color": "#15296d"
+      "color": "#15296d",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Great Britain",
+        "filename": "Team_GB_during_anthem.jpg",
+        "text": "Team GB during anthem before a match between Team GB and New Zealand at the Olympics."
+      },
+      {
+        "name": "Group E",
+        "filename": "Players_coming_out_GBR_v_New_Zealand.jpg",
+        "text": "Players coming out for match between Team GB and New Zealand at the Olympics."
+      },
+      {
+        "name": "Group E",
+        "filename": "Millennium_Stadium_GBR-NZL.jpg",
+        "text": "Great Britain vs New Zealand"
+      },
+      {
+        "name": "Group E",
+        "filename": "Player_taking_a_shot.jpg",
+        "text": "Great Britain vs New Zealand - GB player taking a shot"
+      }
+    ],
+    "final_standings": { "champions": "USA_U23WNT", "runners_up": "JPN_U23WNT", "third_place": "CAN_U23WNT", "fourth_place": "FRA_U23WNT" },
+    "statistics": { "total_matches": 26, "total_goals": 71, "attendance": 661016 },
+    "awards": {
+      "golden_boot": [{ "player": "Christine Sinclair", "team": "CAN_U23WNT", "goals": 6 }],
+      "fair_play_team": ["USA_U23WNT"]
     }
   },
   {
