@@ -3,6 +3,7 @@ import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentDataCurrent from '../data/soccer/tournamentData/TournamentDataCurrent.json'
 import QualificationTournamentDataCurrent from '../data/soccer/qualTournamentData/QualificationTournamentDataCurrent.json'
 import Page from '../core/Page'
+import { Style } from '../core/Utilities'
 import Header from './Header'
 import About from './About'
 import Matches from './Matches'
@@ -133,6 +134,7 @@ class TournamentApp extends React.Component {
     const { page } = query
     return (
       <Page>
+        <Style tournamentType={tournamentType} />
         <Container>
           {tournament && tournamentType && (
             <React.Fragment>

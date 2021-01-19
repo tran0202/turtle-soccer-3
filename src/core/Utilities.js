@@ -2,6 +2,23 @@ import React, { useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
 import classnames from 'classnames'
 
+export const Style = (props) => {
+  const { tournamentType } = props
+  // console.log('tournamentType', tournamentType)
+  if (tournamentType && tournamentType.id === 'WOFT') {
+    return (
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `a, .nav-menu a { color: #ff4d94; } 
+          a:hover, .nav-menu a:hover, .nav-menu li:hover > a { color: #4d94ff; }
+          .nav-link.disabled { color: #ff80b3 }`,
+        }}
+      />
+    )
+  }
+  return null
+}
+
 export const NestedTabs = () => {
   const [activeTab, setActiveTab] = useState({ level1: '1', level2: '1' })
 
@@ -89,108 +106,3 @@ export const NestedTabs = () => {
     </div>
   )
 }
-
-// const newTournamentArray = []
-// TournamentArray.forEach((t) => {
-//   newTournamentArray.push({
-//     id: t.id,
-//     name: t.name,
-//     tournament_type_id: t.tournament_type_id,
-//     active: t.active,
-//     third_place_ranking: t.third_place_ranking,
-//     head_to_head_tiebreaker: t.head_to_head_tiebreaker,
-//     golden_goal_rule: t.golden_goal_rule,
-//     points_for_win: t.points_for_win,
-//     parent_tournament_id: t.parent_tournament_id,
-//     details: { logo_filename: t.logo_filename, start_date: t.start_date, end_date: t.end_date },
-//   })
-// })
-// console.log(JSON.stringify(newTournamentArray))
-
-// const table = TeamPhp.find((x) => x.type === 'table').data
-// console.log('TeamPhp', table)
-// let array = []
-// table.forEach((t) => {
-//   if (t.team_type_id === '1') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'MNT',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '2') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'CLUB',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: t.code,
-//       official_name: t.official_name,
-//     })
-//   } else if (t.team_type_id === '3') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'WNT',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '4') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'U23MNT',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '5') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'U23WNT',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '6') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'FBLT',
-//       nation_id: '',
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '7') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'TENMS',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   } else if (t.team_type_id === '8') {
-//     array.push({
-//       id: t.id,
-//       name: t.name,
-//       team_type_id: 'TENWS',
-//       nation_id: t.nation_id,
-//       parent_team_id: t.parent_team_id ? t.parent_team_id : '',
-//       club_code: '',
-//       official_name: '',
-//     })
-//   }
-// })
-// console.log(JSON.stringify(array))

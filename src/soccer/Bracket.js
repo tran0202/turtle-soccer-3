@@ -101,10 +101,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
                 getExtraTimeTooltip(match, config)}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+              {match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
@@ -124,10 +121,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
@@ -147,10 +141,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
                 getExtraTimeTooltip(match, config)}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
+              {match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
@@ -170,10 +161,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
@@ -195,10 +183,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score > match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_penalty_score > match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score > match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
@@ -249,10 +234,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
                 getExtraTimeTooltip(match, config)}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+              {match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
@@ -271,10 +253,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
+              {match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
@@ -293,10 +272,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
                 getExtraTimeTooltip(match, config)}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
+              {match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(pen.)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
@@ -315,10 +291,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
+              {match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip2" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
@@ -339,10 +312,7 @@ const BracketBox = (props) => {
                 match.away_extra_score != null &&
                 match.home_extra_score < match.away_extra_score &&
                 getExtraTimeTooltip(match, { ...config, shortAnchor: true })}
-              {match.home_extra_score != null &&
-                match.away_extra_score != null &&
-                match.home_extra_score === match.away_extra_score &&
-                match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
+              {match.home_penalty_score < match.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(p)" />}
               {match.home_replay_score != null && match.away_replay_score != null && match.home_replay_score < match.away_replay_score && (
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}

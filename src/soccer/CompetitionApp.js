@@ -2,6 +2,7 @@ import React from 'react'
 import TournamentTypeArray from '../data/TournamentType.json'
 import TournamentDataCurrent from '../data/soccer/tournamentData/TournamentDataCurrent.json'
 import Page from '../core/Page'
+import { Style } from '../core/Utilities'
 import CompetitionAbout from './CompetitionAbout'
 import AlltimeStandings from './AlltimeStandings'
 import { getCurrentTournament, getTournamentArray, getTournamentDataArray } from './DataHelper'
@@ -91,6 +92,7 @@ class CompetitionApp extends React.Component {
     const { page } = query
     return (
       <Page>
+        <Style tournamentType={tournamentType} />
         <Container>
           <Row className="mt-3 text-center">
             <Col>

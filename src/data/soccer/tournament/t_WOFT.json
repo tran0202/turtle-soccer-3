@@ -1,0 +1,145 @@
+[
+  {
+    "id": "WOFT2016",
+    "year": "2016",
+    "name": "Women's Olympic Football Tournament Rio 2016",
+    "tournament_type_id": "WOFT",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["BRA_U23WNT"],
+      "logo_filename": "2016_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_Rio_2016.png",
+      "start_date": "2016-08-03",
+      "end_date": "2016-08-19",
+      "color": "#15611e",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 7,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Semi-final",
+        "filename": "Alemanha_x_Canadá_-_Futebol_feminino_-_Olimpíada_Rio_2016_(28592213900).jpg",
+        "text": "Germany vs Canada"
+      },
+      {
+        "name": "Semi-final",
+        "filename": "Futebol_feminino_olímpico-_Brasil_e_Suécia_no_Maracanã_(28746917250).jpg",
+        "text": "Brazil vs Sweden"
+      },
+      {
+        "name": "Quarter-final",
+        "filename": "Chloe_Logarzo_in_action_at_2016_Rio_Olympics.jpeg",
+        "text": "Brazil vs Australia"
+      },
+      {
+        "name": "Group E",
+        "filename": "China_x_Suécia_-_Futebol_feminino_-_Olimpíada_Rio_2016_(28266134914).jpg",
+        "text": "China vs Sweden"
+      },
+      {
+        "name": "Group F",
+        "filename": "Seleções_feminina_do_Canadá_e_Austrália_enfrentam-se_em_SP_(28643707552).jpg",
+        "text": "Canada vs Australia"
+      }
+    ],
+    "final_standings": { "champions": "GER_U23WNT", "runners_up": "SWE_U23WNT", "third_place": "CAN_U23WNT", "fourth_place": "BRA_U23WNT" },
+    "statistics": { "total_matches": 26, "total_goals": 66, "attendance": 635885 },
+    "awards": {
+      "golden_boot": [{ "player": "Melanie Behringer", "team": "GER_U23WNT", "goals": 5 }],
+      "fair_play_team": ["SWE_U23WNT"]
+    }
+  },
+  {
+    "id": "WOFT2012",
+    "year": "2012",
+    "name": "Women's Olympic Football Tournament London 2012",
+    "tournament_type_id": "WOFT",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": ["GBR_U23WNT"],
+      "logo_filename": "2012_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_London_2012.png",
+      "start_date": "2012-07-25",
+      "end_date": "2012-08-09",
+      "color": "#15296d"
+    }
+  },
+  {
+    "id": "WOFT2008",
+    "year": "2008",
+    "name": "Women's Olympic Football Tournament Beijing 2008",
+    "tournament_type_id": "WOFT",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": ["CHN_U23WNT"],
+      "logo_filename": "2008_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_at_the_2008_Summer_Olympics.jpg",
+      "start_date": "2008-08-06",
+      "end_date": "2008-08-21",
+      "color": "#fa2200"
+    }
+  },
+  {
+    "id": "WOFT2004",
+    "year": "2004",
+    "name": "Women's Olympic Football Tournament Athens 2004",
+    "tournament_type_id": "WOFT",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": ["GRE_U23WNT"],
+      "logo_filename": "2004_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_Athens_2004.png",
+      "start_date": "2004-08-11",
+      "end_date": "2004-08-26",
+      "color": "#2251a2"
+    }
+  },
+  {
+    "id": "WOFT2000",
+    "year": "2000",
+    "name": "Women's Olympic Football Tournament Sydney 2000",
+    "tournament_type_id": "WOFT",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "host": ["AUS_U23WNT"],
+      "logo_filename": "2000_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football,_Sydney_2000.png",
+      "start_date": "2000-09-13",
+      "end_date": "2000-09-28",
+      "color": "#15296d"
+    }
+  },
+  {
+    "id": "WOFT1996",
+    "year": "1996",
+    "name": "Women's Olympic Football Tournament Atlanta 1996",
+    "tournament_type_id": "WOFT",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": {
+      "host": ["USA_U23WNT"],
+      "logo_filename": "1996_Summer_Olympics_logo.svg",
+      "mascot_filename": "Football_pictogram_1948.svg",
+      "start_date": "1996-07-21",
+      "end_date": "1996-08-01",
+      "color": "#e12631"
+    }
+  }
+]
