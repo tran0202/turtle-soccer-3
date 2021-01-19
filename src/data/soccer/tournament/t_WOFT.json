@@ -105,17 +105,46 @@
     "year": "2008",
     "name": "Women's Olympic Football Tournament Beijing 2008",
     "tournament_type_id": "WOFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["CHN_U23WNT"],
       "logo_filename": "2008_Summer_Olympics_logo.svg",
       "mascot_filename": "Football_at_the_2008_Summer_Olympics.jpg",
       "start_date": "2008-08-06",
       "end_date": "2008-08-21",
-      "color": "#fa2200"
+      "color": "#fa2200",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Workers' Stadium, Beijing",
+        "filename": "Beijing_Workers_Stadium,_August_19,_2008.jpg",
+        "text": "The Workers' Stadium held the gold medal match"
+      },
+      {
+        "name": "Shanghai Stadium",
+        "filename": "Shanghai_Stadium_2008.jpeg",
+        "text": "The Shanghai Stadium held the semi-final match Brazil vs Germany"
+      },
+      {
+        "name": "Qinhuangdao Olympic Stadium",
+        "filename": "秦皇岛奥体中心（尼日利亚—科特迪瓦）_-_panoramio.jpg",
+        "text": "The Qinhuangdao Olympic Stadium held the quarter-final match China vs Japan"
+      },
+      {
+        "name": "Shenyang Olympic Stadium",
+        "filename": "Олимпийский_стадион_Шэньян2.jpeg",
+        "text": "The Shenyang Olympic Stadium held the quarter-final match Sweden vs Germany"
+      }
+    ],
+    "final_standings": { "champions": "USA_U23WNT", "runners_up": "BRA_U23WNT", "third_place": "GER_U23WNT", "fourth_place": "JPN_U23WNT" },
+    "statistics": { "total_matches": 26, "total_goals": 66, "attendance": 740014 },
+    "awards": {
+      "golden_boot": [{ "player": "Cristiane", "team": "BRA_U23WNT", "goals": 5 }]
     }
   },
   {
