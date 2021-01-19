@@ -22,6 +22,7 @@ import {
   ConsolationTooltip,
   Extra140Tooltip,
   PlayoffSecondRoundTooltip,
+  ReplacementTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
@@ -108,7 +109,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={match.bye_notes} />}
+              {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
@@ -131,7 +132,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
+              {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
@@ -154,7 +155,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(rep.)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={match.bye_notes} />}
+              {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
@@ -177,7 +178,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
+              {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
@@ -202,7 +203,7 @@ const BracketBox = (props) => {
                 <ReplayTooltip target="replayTooltip" anchor="(r)" />
               )}
               {match.home_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
-              {match.home_bye && <ByeTooltip target="byeTooltip" anchor="(b)" notes={match.bye_notes} />}
+              {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
@@ -258,6 +259,7 @@ const BracketBox = (props) => {
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
+              {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
@@ -279,6 +281,7 @@ const BracketBox = (props) => {
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
+              {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
@@ -300,6 +303,7 @@ const BracketBox = (props) => {
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(coin.)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
+              {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
@@ -321,6 +325,7 @@ const BracketBox = (props) => {
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
+              {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
@@ -344,6 +349,7 @@ const BracketBox = (props) => {
               {match.away_coin_toss && <CoinTossTooltip target="coinTossTooltip" anchor="(ct)" />}
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
+              {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
             </Col>
             {match.away_extra_score == null && (

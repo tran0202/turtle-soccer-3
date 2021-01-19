@@ -95,6 +95,7 @@ const advanceWildCardTeams = (tournament, groupStage) => {
 }
 
 const eliminateKnockoutTeams = (tournament, round) => {
+  const exception = tournament.id === 'MOFT1908' && round.name === 'Semi-finals' ? true : false
   const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
   round.matches &&
     round.matches.forEach((m) => {
@@ -104,7 +105,12 @@ const eliminateKnockoutTeams = (tournament, round) => {
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
       if (!isWinner('H', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
         if (!finalStandingRound) {
-          tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [home_ranking] })
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [home_ranking],
+            exception,
+          })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
         } else {
           const tmp = finalStandingRound.final_rankings.find((fr) => fr.id === home_ranking.id)
@@ -115,7 +121,12 @@ const eliminateKnockoutTeams = (tournament, round) => {
         finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== m.away_team)
         if (round.next_consolation_round) {
           if (!nextConsolationRound) {
-            tournament.advanced_teams.rounds.push({ name: round.next_consolation_round, ranking_type: 'round', final_rankings: [home_ranking] })
+            tournament.advanced_teams.rounds.push({
+              name: round.next_consolation_round,
+              ranking_type: 'round',
+              final_rankings: [home_ranking],
+              exception,
+            })
             nextConsolationRound = tournament.advanced_teams.rounds.find((r) => r.name === round.next_consolation_round)
           } else {
             nextConsolationRound.final_rankings.push(home_ranking)
@@ -123,10 +134,13 @@ const eliminateKnockoutTeams = (tournament, round) => {
           nextConsolationRound.final_rankings = nextConsolationRound.final_rankings.filter((fr) => fr.id !== m.away_team)
         }
       } else if (m.away_team !== '' && !isWinner('A', m) && !m.walkover && !m.away_withdrew && !m.postponed) {
-        // console.log('m.home_team', m.home_team)
-        // console.log('m.away_team', m.away_team)
         if (!finalStandingRound) {
-          tournament.final_rankings.rounds.unshift({ name: round.name, ranking_type: 'round', final_rankings: [away_ranking] })
+          tournament.final_rankings.rounds.unshift({
+            name: round.name,
+            ranking_type: 'round',
+            final_rankings: [away_ranking],
+            exception,
+          })
           finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
         } else {
           const tmp = finalStandingRound.final_rankings.find((fr) => fr.id === away_ranking.id)
@@ -137,7 +151,12 @@ const eliminateKnockoutTeams = (tournament, round) => {
         finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== m.home_team)
         if (round.next_consolation_round) {
           if (!nextConsolationRound) {
-            tournament.advanced_teams.rounds.push({ name: round.next_consolation_round, ranking_type: 'round', final_rankings: [away_ranking] })
+            tournament.advanced_teams.rounds.push({
+              name: round.next_consolation_round,
+              ranking_type: 'round',
+              final_rankings: [away_ranking],
+              exception,
+            })
             nextConsolationRound = tournament.advanced_teams.rounds.find((r) => r.name === round.next_consolation_round)
           } else {
             nextConsolationRound.final_rankings.push(away_ranking)
@@ -404,6 +423,7 @@ const FinalStandings = (props) => {
       }
     })
 
+  const exception = tournament.id === 'MOFT1908' ? true : false
   const koStages = getKnockoutStages(stages)
   const koStage = koStages ? koStages[0] : null
   if (koStage && koStage.rounds) {
@@ -458,6 +478,25 @@ const FinalStandings = (props) => {
       eliminateKnockoutTeams(tournament, semifinals)
       sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
       advanceThirdPlaceTeams(tournament, semifinals)
+
+      if (exception) {
+        let finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === semifinals.name)
+        finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== 'NED_U23MNT')
+        let tmp = finalStandingRound.final_rankings.find((fr) => fr.id === 'FRA_U23MNT')
+        if (tmp) {
+          tmp.r = 5
+        }
+        finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === 'First round')
+        // console.log('finalStandingRound', finalStandingRound)
+        const sweden = finalStandingRound.final_rankings.find((fr) => fr.id === 'SWE_U23MNT')
+        finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== 'SWE_U23MNT')
+        tmp = finalStandingRound.final_rankings.find((fr) => fr.id === 'FRA-B_U23MNT')
+        if (tmp) {
+          tmp.r = 6
+        }
+        const thirdPlaceAdvancedRound = tournament.advanced_teams.rounds.find((r) => r.name === 'Third-place')
+        thirdPlaceAdvancedRound.final_rankings.push(sweden)
+      }
     }
 
     const thirdPlace = koStage.rounds.find((r) => r.name === 'Third-place')
@@ -485,7 +524,7 @@ const FinalStandings = (props) => {
 
   const hasThirdPlaceRound = tournament.final_rankings ? tournament.final_rankings.rounds.find((r) => r.name === 'Third-place') !== undefined : false
   let filteredRounds =
-    tournament.final_rankings && hasThirdPlaceRound
+    tournament.final_rankings && hasThirdPlaceRound && !exception
       ? tournament.final_rankings.rounds.filter((r) => r.name !== 'Semi-finals')
       : tournament.final_rankings
       ? tournament.final_rankings.rounds

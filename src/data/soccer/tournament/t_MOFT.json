@@ -1131,9 +1131,46 @@
     "year": "1908",
     "name": "Men's Olympic Football Tournament London 1908",
     "tournament_type_id": "MOFT",
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "Olympic_games_1908_London.jpg", "start_date": "1908-10-19", "end_date": "1908-10-24" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GBR_U23MNT"],
+      "logo_filename": "Olympic_games_1908_London.jpg",
+      "mascot_filename": "London_1908_Football_Challenge_Cup.jpg",
+      "start_date": "1908-10-19",
+      "end_date": "1908-10-24",
+      "color": "#15296d",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "London_1908_English_Amateur_Football_National_Team.jpg",
+        "text": "Great Britain won the Gold Medal after beating Denmark at the final"
+      },
+      {
+        "name": "Silver medalists",
+        "filename": "DK_football1908.jpg",
+        "text": "Denmark won the Silver Medal"
+      },
+      {
+        "name": "White City Stadium",
+        "filename": "White_City_Stadium_1908.jpg",
+        "text": "The White City Stadium hosted all the matches"
+      },
+      {
+        "name": "Certificate",
+        "filename": "Olympic_football_certificate_1908.jpg",
+        "text": "Winner's certificate"
+      }
+    ],
+    "final_standings": { "champions": "GBR_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "NED_U23MNT", "fourth_place": "SWE_U23MNT" },
+    "statistics": { "total_matches": 6, "total_goals": 48 },
+    "awards": {
+      "golden_boot": [{ "player": "Sophus Nielsen", "team": "DEN_U23MNT", "goals": 11 }]
+    }
   }
 ]

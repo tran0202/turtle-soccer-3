@@ -41,6 +41,7 @@ import td_EURO_2008 from '../data/soccer/tournamentData/EURO/td_EURO_2008.json'
 import td_EURO_2012 from '../data/soccer/tournamentData/EURO/td_EURO_2012.json'
 import td_EURO_2016 from '../data/soccer/tournamentData/EURO/td_EURO_2016.json'
 
+import td_MOFT_1908 from '../data/soccer/tournamentData/MOFT/td_MOFT_1908.json'
 import td_MOFT_1912 from '../data/soccer/tournamentData/MOFT/td_MOFT_1912.json'
 import td_MOFT_1920 from '../data/soccer/tournamentData/MOFT/td_MOFT_1920.json'
 import td_MOFT_1924 from '../data/soccer/tournamentData/MOFT/td_MOFT_1924.json'
@@ -69,7 +70,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'MOFT1908', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'MOFT1904', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -78,34 +79,6 @@ export const getTournamentArray = () => {
 
 export const getTournamentDataArray = () => {
   return [].concat(getTournamentDataWC(), getTournamentDataEURO(), getTournamentDataMOFT())
-}
-
-export const getTournamentDataMOFT = () => {
-  return [].concat(
-    [td_MOFT_1912],
-    [td_MOFT_1920],
-    [td_MOFT_1924],
-    [td_MOFT_1928],
-    [td_MOFT_1936],
-    [td_MOFT_1948],
-    [td_MOFT_1952],
-    [td_MOFT_1956],
-    [td_MOFT_1960],
-    [td_MOFT_1964],
-    [td_MOFT_1968],
-    [td_MOFT_1972],
-    [td_MOFT_1976],
-    [td_MOFT_1980],
-    [td_MOFT_1984],
-    [td_MOFT_1988],
-    [td_MOFT_1992],
-    [td_MOFT_1996],
-    [td_MOFT_2000],
-    [td_MOFT_2004],
-    [td_MOFT_2008],
-    [td_MOFT_2012],
-    [td_MOFT_2016],
-  )
 }
 
 export const getQualificationTournamentArray = () => {
@@ -159,5 +132,34 @@ export const getTournamentDataEURO = () => {
     [td_EURO_2008],
     [td_EURO_2012],
     [td_EURO_2016],
+  )
+}
+
+export const getTournamentDataMOFT = () => {
+  return [].concat(
+    [td_MOFT_1908],
+    [td_MOFT_1912],
+    [td_MOFT_1920],
+    [td_MOFT_1924],
+    [td_MOFT_1928],
+    [td_MOFT_1936],
+    [td_MOFT_1948],
+    [td_MOFT_1952],
+    [td_MOFT_1956],
+    [td_MOFT_1960],
+    [td_MOFT_1964],
+    [td_MOFT_1968],
+    [td_MOFT_1972],
+    [td_MOFT_1976],
+    [td_MOFT_1980],
+    [td_MOFT_1984],
+    [td_MOFT_1988],
+    [td_MOFT_1992],
+    [td_MOFT_1996],
+    [td_MOFT_2000],
+    [td_MOFT_2004],
+    [td_MOFT_2008],
+    [td_MOFT_2012],
+    [td_MOFT_2016],
   )
 }

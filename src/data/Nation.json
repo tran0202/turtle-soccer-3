@@ -701,7 +701,7 @@
     "parent_nation_id": "",
     "nation_type_id": "NATN",
     "flag_filename": "Czech_Republic.png",
-    "start_date": "",
+    "start_date": "1993-01-01",
     "end_date": ""
   },
   {
@@ -712,8 +712,19 @@
     "nation_type_id": "NATN",
     "flag_filename": "Flag_of_the_Czech_Republic.svg",
     "code": "TCH",
-    "start_date": "",
-    "end_date": ""
+    "start_date": "1918-10-01",
+    "end_date": "1993-01-01"
+  },
+  {
+    "id": "BOH",
+    "name": "Bohemia",
+    "official_name": "",
+    "parent_nation_id": "CZE",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Bohemia.svg",
+    "code": "BOH",
+    "start_date": "1903-04-05",
+    "end_date": "1918-10-01"
   },
   {
     "id": "DEN",

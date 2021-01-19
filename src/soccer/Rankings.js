@@ -16,14 +16,14 @@ import NumberFormat from 'react-number-format'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
-  // console.log('round', round)
+  // console.log('round2', round)
   const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round').replace('Playoff Second Round', 'Playoff') : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
     roundName !== '' &&
     roundName !== 'Final' &&
     roundName !== 'Third-place' &&
-    roundName !== 'Semi-finals' &&
+    (roundName !== 'Semi-finals' || (roundName === 'Semi-finals' && round.exception)) &&
     roundName !== 'Consolation Semi-finals' &&
     roundName !== 'Playoff First Round' &&
     roundName !== 'Silver medal match' &&
@@ -154,6 +154,7 @@ export const RankingRow = (props) => {
 const RankingRound = (props) => {
   const { round, config } = props
   // console.log('round', round)
+  // console.log('config', config)
   updateFinalRankings(round)
   if (config.no_third_place && round.name === 'Semi-finals') {
     createSemifinalistsPool(round)

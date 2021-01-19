@@ -565,7 +565,7 @@ const DisplayMatch = (props) => {
           }`}
         >
           {getTeamName(m.home_team)}
-          {m.home_bye && <ByeTooltip target="byeTooltip" anchor="(bye)" notes={m.bye_notes} />}
+          {m.home_bye && <ByeTooltip target={`byeTooltip_${m.home_team}_${m.away_team}`} anchor="(bye)" notes={m.bye_notes} />}
           {m.home_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
@@ -623,6 +623,7 @@ const DisplayMatch = (props) => {
         >
           {getTeamName(m.away_team)}
           {m.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={m.disqualified_notes} />}
+          {m.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={m.replacement_notes} />}
           {m.away_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
         </Col>
       </Row>
@@ -756,6 +757,12 @@ export const MatchVoidedTooltip = (props) => {
   const { target, anchor, notes } = props
   const content = `Match voided${notes ? `: ${notes}` : ''}`
   return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const ReplacementTooltip = (props) => {
+  const { target, notes } = props
+  const content = `Replacement${notes ? `: ${notes}` : ''}`
+  return <TopTooltip target={target} content={content} />
 }
 
 export const DisqualifiedTooltip = (props) => {

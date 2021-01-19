@@ -187,7 +187,7 @@ const AlltimeStandings = (props) => {
     <React.Fragment>
       <Row className="mt-3"></Row>
       {tournaments && <Rankings rounds={ats} config={{}} />}
-      {tournaments && tournaments.successor_rankings && (
+      {tournaments && tournaments.successor_rankings && tournaments.successor_rankings.length > 0 && (
         <React.Fragment>
           <Row>
             <Col>
