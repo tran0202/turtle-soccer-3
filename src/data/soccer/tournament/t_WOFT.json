@@ -245,17 +245,51 @@
     "year": "1996",
     "name": "Women's Olympic Football Tournament Atlanta 1996",
     "tournament_type_id": "WOFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["USA_U23WNT"],
       "logo_filename": "1996_Summer_Olympics_logo.svg",
       "mascot_filename": "Football_pictogram_1948.svg",
       "start_date": "1996-07-21",
       "end_date": "1996-08-01",
-      "color": "#e12631"
+      "color": "#e12631",
+      "team_count": 8,
+      "confed_count": 4,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Sanford Stadium, Athens, Georgia",
+        "filename": "Football_game_kickoff_(Georgia_vs_South_Carolina),_Sanford_Stadium,_September_2007.jpg",
+        "text": "The Sanford Stadium held the gold medal match"
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl held group E matches"
+      },
+      {
+        "name": "Robert F. Kennedy Stadium, Washington, D.C.",
+        "filename": "RFK_Stadium_aerial_photo,_1988.jpeg",
+        "text": "The Robert F. Kennedy Stadium held group F matches"
+      },
+      {
+        "name": "Legion Field, Birmingham",
+        "filename": "Legion_Field_-_with_upper_deck.jpg",
+        "text": "The Legion Field held group F matches"
+      }
+    ],
+    "final_standings": { "champions": "USA_U23WNT", "runners_up": "CHN_U23WNT", "third_place": "NOR_U23WNT", "fourth_place": "BRA_U23WNT" },
+    "statistics": { "total_matches": 16, "total_goals": 53, "attendance": 691762 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Ann Kristin Aarønes", "team": "NOR_U23WNT", "goals": 4 },
+        { "player": "Linda Medalen", "team": "NOR_U23WNT", "goals": 4 },
+        { "player": "Pretinha", "team": "BRA_U23WNT", "goals": 4 }
+      ]
     }
   }
 ]

@@ -341,6 +341,7 @@
   { "id": "NOR_U23WNT", "name": "Norway", "team_type_id": "U23WNT", "nation_id": "NOR", "parent_team_id": "" },
   { "id": "GRE_U23WNT", "name": "Greece", "team_type_id": "U23WNT", "nation_id": "GRE", "parent_team_id": "" },
   { "id": "MEX_U23WNT", "name": "Mexico", "team_type_id": "U23WNT", "nation_id": "MEX", "parent_team_id": "" },
+  { "id": "DEN_U23WNT", "name": "Denmark", "team_type_id": "U23WNT", "nation_id": "DEN", "parent_team_id": "" },
 
   { "id": "CTA", "name": "Central African Republic", "team_type_id": "MNT", "nation_id": "CTA", "parent_team_id": "" },
   { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -425,7 +426,6 @@
 
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
 
-  { "id": "955", "name": "Denmark", "team_type_id": "U23WNT", "nation_id": "56", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
   { "id": "964", "name": "French Guiana", "team_type_id": "MNT", "nation_id": "229", "parent_team_id": "" },
   { "id": "965", "name": "Martinique", "team_type_id": "MNT", "nation_id": "230", "parent_team_id": "" },
