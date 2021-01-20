@@ -152,17 +152,49 @@
     "year": "2004",
     "name": "Women's Olympic Football Tournament Athens 2004",
     "tournament_type_id": "WOFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["GRE_U23WNT"],
       "logo_filename": "2004_Summer_Olympics_logo.svg",
       "mascot_filename": "Football,_Athens_2004.png",
       "start_date": "2004-08-11",
       "end_date": "2004-08-26",
-      "color": "#2251a2"
+      "color": "#2251a2",
+      "team_count": 10,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Karaiskakis Stadium, Athens",
+        "filename": "Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg",
+        "text": "The Karaiskakis Stadium held the gold medal match"
+      },
+      {
+        "name": "Pampeloponnisiako Stadium, Patras",
+        "filename": "Pampeloponisiako_Olympic_Stadium(1).jpg",
+        "text": "The Pampeloponnisiako Stadium held the semi-final match Brazil vs Sweden"
+      },
+      {
+        "name": "Pankritio Stadium, Heraklion",
+        "filename": "Pagkritio.jpg",
+        "text": "The Pankritio Stadium held the semi-final match United States vs Germany"
+      },
+      {
+        "name": "Kaftanzoglio Stadium, Thessaloniki",
+        "filename": "Kaftanzoglio_west_stand.jpg",
+        "text": "The Kaftanzoglio Stadium held the quarter-final match United States vs Japan"
+      }
+    ],
+    "final_standings": { "champions": "USA_U23WNT", "runners_up": "BRA_U23WNT", "third_place": "GER_U23WNT", "fourth_place": "SWE_U23WNT" },
+    "statistics": { "total_matches": 20, "total_goals": 55, "attendance": 208637 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Cristiane", "team": "BRA_U23WNT", "goals": 5 },
+        { "player": "Birgit Prinz", "team": "GER_U23WNT", "goals": 5 }
+      ]
     }
   },
   {
