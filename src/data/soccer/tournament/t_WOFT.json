@@ -202,17 +202,42 @@
     "year": "2000",
     "name": "Women's Olympic Football Tournament Sydney 2000",
     "tournament_type_id": "WOFT",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["AUS_U23WNT"],
       "logo_filename": "2000_Summer_Olympics_logo.svg",
       "mascot_filename": "Football,_Sydney_2000.png",
-      "start_date": "2000-09-13",
+      "start_date": "2000-09-15",
       "end_date": "2000-09-28",
-      "color": "#15296d"
+      "color": "#15296d",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Sydney Football Stadium",
+        "filename": "Allianz_Stadium_-_13_October_2012.jpg",
+        "text": "The Sydney Football Stadium held the gold medal match"
+      },
+      {
+        "name": "Bruce Stadium, Canberra",
+        "filename": "BruceStadium19032005.jpeg",
+        "text": "The Bruce Stadium held the semi-final match United States vs Brazil"
+      },
+      {
+        "name": "Melbourne Cricket Ground",
+        "filename": "MCG_stadium.jpg",
+        "text": "The Melbourne Cricket Ground held group F matches"
+      }
+    ],
+    "final_standings": { "champions": "NOR_U23WNT", "runners_up": "USA_U23WNT", "third_place": "GER_U23WNT", "fourth_place": "BRA_U23WNT" },
+    "statistics": { "total_matches": 16, "total_goals": 42, "attendance": 326215 },
+    "awards": {
+      "golden_boot": [{ "player": "Sun Wen", "team": "CHN_U23WNT", "goals": 4 }],
+      "fair_play_team": ["GER_U23WNT"]
     }
   },
   {

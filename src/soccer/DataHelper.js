@@ -67,6 +67,7 @@ import td_MOFT_2008 from '../data/soccer/tournamentData/MOFT/td_MOFT_2008.json'
 import td_MOFT_2012 from '../data/soccer/tournamentData/MOFT/td_MOFT_2012.json'
 import td_MOFT_2016 from '../data/soccer/tournamentData/MOFT/td_MOFT_2016.json'
 
+import td_WOFT_2000 from '../data/soccer/tournamentData/WOFT/td_WOFT_2000.json'
 import td_WOFT_2004 from '../data/soccer/tournamentData/WOFT/td_WOFT_2004.json'
 import td_WOFT_2008 from '../data/soccer/tournamentData/WOFT/td_WOFT_2008.json'
 import td_WOFT_2012 from '../data/soccer/tournamentData/WOFT/td_WOFT_2012.json'
@@ -76,7 +77,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WOFT2000', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WOFT1996', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -88,7 +89,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataWOFT = () => {
-  return [].concat([td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016])
+  return [].concat([td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016])
 }
 
 export const getQualificationTournamentArray = () => {
