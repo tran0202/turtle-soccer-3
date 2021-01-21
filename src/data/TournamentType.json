@@ -9,7 +9,7 @@
     "trophy_filename": "FIFA_Trophy.jpg",
     "sport_id": "SOC",
     "description": [
-      "The FIFA World Cup is an international association football competition contested by the senior men's national teams of the members of the FIFA. The championship has been awarded every four years since 1930, except in 1942 and 1946. The current champion is France, which won its second title in Russia 2018.",
+      "The FIFA World Cup, often simply called the World Cup, is an international association football competition contested by the senior men's national teams of the members of the FIFA. The championship has been awarded every four years since 1930, except in 1942 and 1946. The current champion is France, which won its second title in Russia 2018.",
       "The current format involves a qualification phase, which takes place over the preceding three years, to determine which teams qualify for the tournament phase. In the tournament phase, 32 teams, including the automatically qualifying host nation(s), compete for the title at venues within the host nation(s) over about a month.",
       "The 21 World Cup tournaments have been won by eight national teams. Brazil have won five times, and they are the only team to have played in every tournament. The other World Cup winners are Germany and Italy, with four titles each; Argentina, France, and inaugural winner Uruguay, with two titles each; and England and Spain, with one title each."
     ]
@@ -60,6 +60,22 @@
     ]
   },
   {
+    "id": "COPA",
+    "name": "CONMEBOL Copa America",
+    "color": "rgb(0, 92, 164)",
+    "team_type_id": "MNT",
+    "confederation_id": "CONMEBOL",
+    "logo_path": "copa_logos",
+    "trophy_filename": "Copa_america_trofeo.jpg",
+    "sport_id": "SOC",
+    "order": 1,
+    "description": [
+      "CONMEBOL Copa América is the main men's football tournament contested among national teams from CONMEBOL. It is the oldest international football competition, and is the third most watched competition. The competition determines the champions of South America.",
+      "Since 1993, the tournament has generally featured 12 teams – all 10 CONMEBOL teams and two additional teams from other confederations. The 2016 version of the event, Copa América Centenario, featured sixteen teams, with six teams from CONCACAF in addition to the 10 from CONMEBOL. Mexico's two runner-up finishes are the highest for a non-CONMEBOL side.",
+      "Eight of the ten CONMEBOL national teams have won the tournament at least once in its 46 stagings since the event's inauguration in 1916, with only Ecuador and Venezuela yet to win. Uruguay has the most championships in the tournament's history, with 15 cups, followed by Argentina with 14 cups; while the current champion, Brazil, has nine cups."
+    ]
+  },
+  {
     "id": "UNL",
     "name": "UEFA Nations League",
     "team_type_id": "MNT",
@@ -105,16 +121,6 @@
     "team_type_id": "MNT",
     "confederation_id": "CONCACAF",
     "logo_path": "gc_logos",
-    "sport_id": "SOC",
-    "order": 1
-  },
-  {
-    "id": "COPA",
-    "name": "CONMEBOL Copa America",
-    "color": "rgb(0, 92, 164)",
-    "team_type_id": "MNT",
-    "confederation_id": "CONMEBOL",
-    "logo_path": "copa_logos",
     "sport_id": "SOC",
     "order": 1
   },

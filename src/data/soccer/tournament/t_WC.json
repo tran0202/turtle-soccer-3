@@ -2,7 +2,7 @@
   {
     "id": "WC2022",
     "year": "2022",
-    "name": "2022 FIFA World Cup Qatar",
+    "name": "FIFA World Cup Qatar 2022",
     "tournament_type_id": "WC",
     "active": true,
     "points_for_win": 3,
@@ -22,7 +22,7 @@
   {
     "id": "WC2018",
     "year": "2018",
-    "name": "2018 FIFA World Cup Russia",
+    "name": "FIFA World Cup Russia 2018",
     "tournament_type_id": "WC",
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "fairplay", "lot"],
@@ -76,7 +76,7 @@
   {
     "id": "WC2014",
     "year": "2014",
-    "name": "2014 FIFA World Cup Brazil",
+    "name": "FIFA World Cup Brazil 2014",
     "tournament_type_id": "WC",
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -140,7 +140,7 @@
   {
     "id": "WC2010",
     "year": "2010",
-    "name": "2010 FIFA World Cup South Africa",
+    "name": "FIFA World Cup South Africa 2010",
     "tournament_type_id": "WC",
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -217,7 +217,7 @@
   {
     "id": "WC2006",
     "year": "2006",
-    "name": "2006 FIFA World Cup Germany",
+    "name": "FIFA World Cup Germany 2006",
     "tournament_type_id": "WC",
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -270,7 +270,7 @@
   {
     "id": "WC2002",
     "year": "2002",
-    "name": "2002 FIFA World Cup Korea-Japan",
+    "name": "FIFA World Cup Korea-Japan 2002",
     "tournament_type_id": "WC",
     "golden_goal_rule": true,
     "points_for_win": 3,
@@ -326,7 +326,7 @@
   {
     "id": "WC1998",
     "year": "1998",
-    "name": "1998 FIFA World Cup France",
+    "name": "FIFA World Cup France 1998",
     "tournament_type_id": "WC",
     "golden_goal_rule": true,
     "points_for_win": 3,
@@ -386,7 +386,7 @@
   {
     "id": "WC1994",
     "year": "1994",
-    "name": "1994 FIFA World Cup USA",
+    "name": "FIFA World Cup USA 1994",
     "tournament_type_id": "WC",
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -444,7 +444,7 @@
   {
     "id": "WC1990",
     "year": "1990",
-    "name": "1990 FIFA World Cup Italy",
+    "name": "FIFA World Cup Italy 1990",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -503,7 +503,7 @@
   {
     "id": "WC1986",
     "year": "1986",
-    "name": "1986 FIFA World Cup Mexico",
+    "name": "FIFA World Cup Mexico 1986",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2head", "lot"],
@@ -572,7 +572,7 @@
   {
     "id": "WC1982",
     "year": "1982",
-    "name": "1982 FIFA World Cup Spain",
+    "name": "FIFA World Cup Spain 1982",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["team", "lot"],
@@ -623,7 +623,7 @@
   {
     "id": "WC1978",
     "year": "1978",
-    "name": "1978 FIFA World Cup Argentina",
+    "name": "FIFA World Cup Argentina 1978",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["team", "lot"],
@@ -684,7 +684,8 @@
   {
     "id": "WC1974",
     "year": "1974",
-    "name": "1974 FIFA World Cup Germany",
+    "name": "FIFA World Cup Germany 1974",
+    "short_name": "Germany 1974",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["team", "lot"],
@@ -737,7 +738,7 @@
   {
     "id": "WC1970",
     "year": "1970",
-    "name": "1970 FIFA World Cup Mexico",
+    "name": "FIFA World Cup Mexico 1970",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["pointandgoaldifference", "lot"],
@@ -783,7 +784,8 @@
   {
     "id": "WC1966",
     "year": "1966",
-    "name": "1966 FIFA World Cup England",
+    "name": "FIFA World Cup England 1966",
+    "short_name": "England 1966",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["goalratio", "lot"],
@@ -838,7 +840,8 @@
   {
     "id": "WC1962",
     "year": "1962",
-    "name": "1962 FIFA World Cup Chile",
+    "name": "FIFA World Cup Chile 1962",
+    "short_name": "Chile 1962",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["goalratio", "lot"],
@@ -888,7 +891,8 @@
   {
     "id": "WC1958",
     "year": "1958",
-    "name": "1958 FIFA World Cup Sweden",
+    "name": "FIFA World Cup Sweden 1958",
+    "short_name": "Sweden 1958",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["goalratiogroupplayoff", "lot"],
@@ -940,7 +944,8 @@
   {
     "id": "WC1954",
     "year": "1954",
-    "name": "1954 FIFA World Cup Switzerland",
+    "name": "FIFA World Cup Switzerland 1954",
+    "short_name": "Switzerland 1954",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["lotgroupplayoff"],
@@ -986,7 +991,8 @@
   {
     "id": "WC1950",
     "year": "1950",
-    "name": "1950 FIFA World Cup Brazil",
+    "name": "FIFA World Cup Brazil 1950",
+    "short_name": "Brazil 1950",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["1stplaceplayoff"],
@@ -1034,7 +1040,8 @@
   {
     "id": "WC1938",
     "year": "1938",
-    "name": "1938 FIFA World Cup France",
+    "name": "FIFA World Cup France 1938",
+    "short_name": "France 1938",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "details": {
@@ -1079,7 +1086,8 @@
   {
     "id": "WC1934",
     "year": "1934",
-    "name": "1934 FIFA World Cup Italy",
+    "name": "FIFA World Cup Italy 1934",
+    "short_name": "Italy 1934",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "details": {
@@ -1123,7 +1131,8 @@
   {
     "id": "WC1930",
     "year": "1930",
-    "name": "1930 FIFA World Cup Uruguay",
+    "name": "FIFA World Cup Uruguay 1930",
+    "short_name": "Uruguay 1930",
     "tournament_type_id": "WC",
     "points_for_win": 2,
     "tiebreakers": ["points"],

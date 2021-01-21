@@ -3,6 +3,7 @@ import t_WC from '../data/soccer/tournament/t_WC.json'
 import t_EURO from '../data/soccer/tournament/t_EURO.json'
 import t_MOFT from '../data/soccer/tournament/t_MOFT.json'
 import t_WOFT from '../data/soccer/tournament/t_WOFT.json'
+import t_COPA from '../data/soccer/tournament/t_COPA.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -78,15 +79,19 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WC2022', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'COPA2019', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT)
+  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA)
 }
 
 export const getTournamentDataArray = () => {
-  return [].concat(getTournamentDataWC(), getTournamentDataEURO(), getTournamentDataMOFT(), getTournamentDataWOFT())
+  return [].concat(getTournamentDataWC(), getTournamentDataEURO(), getTournamentDataMOFT(), getTournamentDataWOFT(), getTournamentDataCOPA())
+}
+
+export const getTournamentDataCOPA = () => {
+  return [] //.concat([td_WOFT_1996], [td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016])
 }
 
 export const getQualificationTournamentArray = () => {

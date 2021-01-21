@@ -111,6 +111,11 @@
 .box-xl:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
+.box-xl .team-header-row,
+.group-modal .team-header-row {
+  border-top: 1px solid #5c6066;
+  border-bottom: 1px solid #5c6066;
+}
 .box-xl .team-row,
 .group-modal .team-row {
   border-bottom: 1px solid #e6e7e9;
@@ -145,6 +150,11 @@
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Oswald', sans-serif;
+}
+.ranking-tbl-sm {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 .successor-subscript,
@@ -181,12 +191,24 @@
   height: 90px;
   max-width: 100%;
 }
+.tournament-logo-sm {
+  width: auto;
+  height: 70px;
+  max-width: 100%;
+}
 
 @media (max-width: 992px) {
   .ranking-tbl {
     font-size: 1.5rem;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .ranking-tbl-sm {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
   }
 
   .successor-subscript,
@@ -208,6 +230,11 @@
     height: 70px;
     max-width: 100%;
   }
+  .tournament-logo-sm {
+    width: auto;
+    height: 50px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -217,7 +244,13 @@
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Oswald', sans-serif;
-    padding-top: 11px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .ranking-tbl-sm {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.5rem;
   }
 
   .successor-subscript,
@@ -254,6 +287,11 @@
     height: 50px;
     max-width: 100%;
   }
+  .tournament-logo-sm {
+    width: auto;
+    height: 40px;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -262,6 +300,13 @@
   .score {
     font-size: 0.75rem;
     font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+  .ranking-tbl-sm {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 0.25rem;
   }
 
   .successor-subscript {
@@ -293,6 +338,11 @@
   .tournament-logo {
     width: auto;
     height: 40px;
+    max-width: 100%;
+  }
+  .tournament-logo-sm {
+    width: auto;
+    height: 30px;
     max-width: 100%;
   }
 }
@@ -713,11 +763,19 @@
 /* ========== Miscelaneous ========== */
 
 .tournament-title {
-  font-family: 'Dusha', serif;
+  font-family: 'Dusha', sans-serif;
 }
-
 .tournament-title-EURO {
   font-family: 'Bridge', sans-serif;
+}
+.tournament-title-OLYMPIC {
+  font-family: 'London 2012', sans-serif;
+}
+.tournament-title-OLYMPIC-2 {
+  font-family: 'Mexcellent 3D', sans-serif;
+}
+.tournament-title-COPA {
+  font-family: 'Copa America', sans-serif;
 }
 
 .tournament-format {

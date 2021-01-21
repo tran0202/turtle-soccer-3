@@ -10,6 +10,22 @@
   font-family: 'Bridge';
   src: url('fonts/Bridge_Type_-_UEFA_Euro_2020.ttf');
 }
+@font-face {
+  font-family: 'London 2012';
+  src: url('fonts/LONDO___.TTF');
+}
+@font-face {
+  font-family: 'Mexcellent';
+  src: url('fonts/mexcellent rg.ttf');
+}
+@font-face {
+  font-family: 'Mexcellent 3D';
+  src: url('fonts/mexcellent 3d.ttf');
+}
+@font-face {
+  font-family: 'Copa America';
+  src: url('fonts/copa-america-regular.ttf');
+}
 
 @media (min-width: 768px) {
 }
@@ -629,6 +645,12 @@ a:hover.hover-pointer {
 }
 .relegation-striped {
   background-color: #ffbbbb;
+}
+.gray-striped {
+  background-color: #eaecf0;
+}
+.ltblue-striped {
+  background-color: #eaf4ff;
 }
 
 .gold {

@@ -25,10 +25,24 @@ export const getTournamentConfig = (tournament) => {
 }
 
 export const getTournamentTitleFont = (tournamentType) => {
-  if (tournamentType.id === 'EURO') {
-    return 'tournament-title-EURO'
+  let fontClassName
+  switch (tournamentType.id) {
+    case 'EURO':
+      fontClassName = 'tournament-title-EURO'
+      break
+    case 'MOFT':
+      fontClassName = 'tournament-title-OLYMPIC'
+      break
+    case 'WOFT':
+      fontClassName = 'tournament-title-OLYMPIC-2'
+      break
+    case 'COPA':
+      fontClassName = 'tournament-title-COPA'
+      break
+    default:
+      fontClassName = 'h1-ff5 tournament-title'
   }
-  return 'h1-ff5 tournament-title'
+  return fontClassName
 }
 
 export const getRoundRobinStages = (stages) => {
@@ -809,6 +823,12 @@ export const ConsolationTooltip = (props) => {
 export const PlayoffSecondRoundTooltip = (props) => {
   const { target } = props
   const content = `Winner will face Netherlands for the silver medal`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const SemifinalistsTooltip = (props) => {
+  const { target } = props
+  const content = `No third-place match was played. Semi-finalists are listed in alphabetical order.`
   return <TopTooltip target={target} content={content} />
 }
 
