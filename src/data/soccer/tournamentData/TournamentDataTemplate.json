@@ -1,148 +1,215 @@
 {
-  "id": "WOFT2000",
+  "id": "COPA2019",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
-      "eliminateCount": 4,
-      "next_round": "Semi-finals",
+      "eliminateCount": 8,
+      "next_round": "Quarter-finals",
       "advancement": {
         "teams": {
           "auto": [1, 2],
-          "eliminated": [3, 4],
-          "text": "The top 2 teams would advance to the Semi-finals."
+          "wild_card": { "pos": 3, "count": 2 },
+          "eliminated": [4],
+          "text": "The top 2 teams and the 2 best third-placed teams would advance to the Quarter-finals."
         }
       },
       "groups": [
         {
-          "name": "Group E",
-          "teams": [{ "id": "AUS_U23WNT" }, { "id": "GER_U23WNT" }, { "id": "SWE_U23WNT" }, { "id": "BRA_U23WNT" }],
+          "name": "Group A",
+          "teams": [{ "id": "BRA" }, { "id": "BOL" }, { "id": "VEN" }, { "id": "PER" }],
           "matches": [
             {
-              "home_team": "AUS_U23WNT",
-              "away_team": "GER_U23WNT",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2000-09-13",
-              "time": "17:00",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "SWE_U23WNT",
-              "away_team": "BRA_U23WNT",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2000-09-13",
-              "time": "17:00",
-              "stadium": "Melbourne Cricket Ground",
-              "city": "Melbourne"
-            },
-            {
-              "home_team": "AUS_U23WNT",
-              "away_team": "SWE_U23WNT",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2000-09-16",
-              "time": "17:00",
-              "stadium": "Sydney Football Stadium",
-              "city": "Sydney"
-            },
-            {
-              "home_team": "GER_U23WNT",
-              "away_team": "BRA_U23WNT",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2000-09-16",
-              "time": "17:30",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "AUS_U23WNT",
-              "away_team": "BRA_U23WNT",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2000-09-19",
-              "time": "17:30",
-              "stadium": "Sydney Football Stadium",
-              "city": "Sydney"
-            },
-            {
-              "home_team": "GER_U23WNT",
-              "away_team": "SWE_U23WNT",
-              "home_score": 1,
+              "home_team": "BRA",
+              "away_team": "BOL",
+              "home_score": 3,
               "away_score": 0,
-              "date": "2000-09-19",
-              "time": "17:30",
-              "stadium": "Melbourne Cricket Ground",
-              "city": "Melbourne"
+              "date": "2019-06-14",
+              "time": "21:30",
+              "stadium": "Estádio do Morumbi",
+              "city": "São Paulo"
+            },
+            {
+              "home_team": "VEN",
+              "away_team": "PER",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2019-06-15",
+              "time": "16:00",
+              "stadium": "Arena do Grêmio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "BOL",
+              "away_team": "PER",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "2019-06-18",
+              "time": "18:30",
+              "stadium": "Estádio do Maracanã",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "VEN",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2019-06-18",
+              "time": "21:30",
+              "stadium": "Itaipava Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "PER",
+              "away_team": "BRA",
+              "home_score": 0,
+              "away_score": 5,
+              "date": "2019-06-22",
+              "time": "16:00",
+              "stadium": "Arena Corinthians",
+              "city": "São Paulo"
+            },
+            {
+              "home_team": "BOL",
+              "away_team": "VEN",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "2019-06-22",
+              "time": "16:00",
+              "stadium": "Estádio Mineirão",
+              "city": "Belo Horizonte"
             }
           ]
         },
         {
-          "name": "Group F",
-          "teams": [{ "id": "USA_U23WNT" }, { "id": "NOR_U23WNT" }, { "id": "CHN_U23WNT" }, { "id": "NGA_U23WNT" }],
+          "name": "Group B",
+          "teams": [{ "id": "ARG" }, { "id": "COL" }, { "id": "PAR" }, { "id": "QAT" }],
           "matches": [
             {
-              "home_team": "USA_U23WNT",
-              "away_team": "NOR_U23WNT",
+              "home_team": "ARG",
+              "away_team": "COL",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2019-06-15",
+              "time": "19:00",
+              "stadium": "Itaipava Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "PAR",
+              "away_team": "QAT",
               "home_score": 2,
+              "away_score": 2,
+              "date": "2019-06-16",
+              "time": "16:00",
+              "stadium": "Estádio do Maracanã",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "COL",
+              "away_team": "QAT",
+              "home_score": 1,
               "away_score": 0,
-              "date": "2000-09-14",
-              "time": "17:30",
-              "stadium": "Melbourne Cricket Ground",
-              "city": "Melbourne"
+              "date": "2019-06-19",
+              "time": "18:30",
+              "stadium": "Estádio do Morumbi",
+              "city": "São Paulo"
             },
             {
-              "home_team": "CHN_U23WNT",
-              "away_team": "NGA_U23WNT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2000-09-14",
-              "time": "17:30",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "USA_U23WNT",
-              "away_team": "CHN_U23WNT",
+              "home_team": "ARG",
+              "away_team": "PAR",
               "home_score": 1,
               "away_score": 1,
-              "date": "2000-09-17",
-              "time": "17:30",
-              "stadium": "Melbourne Cricket Ground",
-              "city": "Melbourne"
+              "date": "2019-06-19",
+              "time": "21:30",
+              "stadium": "Estádio Mineirão",
+              "city": "Belo Horizonte"
             },
             {
-              "home_team": "NOR_U23WNT",
-              "away_team": "NGA_U23WNT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2000-09-17",
-              "time": "17:30",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra"
+              "home_team": "QAT",
+              "away_team": "ARG",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2019-06-23",
+              "time": "16:00",
+              "stadium": "Arena do Grêmio",
+              "city": "Porto Alegre"
             },
             {
-              "home_team": "USA_U23WNT",
-              "away_team": "NGA_U23WNT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2000-09-20",
-              "time": "17:30",
-              "stadium": "Melbourne Cricket Ground",
-              "city": "Melbourne"
+              "home_team": "COL",
+              "away_team": "PAR",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2019-06-23",
+              "time": "16:00",
+              "stadium": "Itaipava Arena Fonte Nova",
+              "city": "Salvador"
+            }
+          ]
+        },
+        {
+          "name": "Group C",
+          "teams": [{ "id": "URU" }, { "id": "ECU" }, { "id": "JPN" }, { "id": "CHI" }],
+          "matches": [
+            {
+              "home_team": "URU",
+              "away_team": "ECU",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "2019-06-16",
+              "time": "19:00",
+              "stadium": "Estádio Mineirão",
+              "city": "Belo Horizonte"
             },
             {
-              "home_team": "NOR_U23WNT",
-              "away_team": "CHN_U23WNT",
+              "home_team": "JPN",
+              "away_team": "CHI",
+              "home_score": 0,
+              "away_score": 4,
+              "date": "2019-06-17",
+              "time": "20:00",
+              "stadium": "Estádio do Morumbi",
+              "city": "São Paulo"
+            },
+            {
+              "home_team": "URU",
+              "away_team": "JPN",
               "home_score": 2,
+              "away_score": 2,
+              "date": "2019-06-20",
+              "time": "20:00",
+              "stadium": "Arena do Grêmio",
+              "city": "Porto Alegre"
+            },
+            {
+              "home_team": "ECU",
+              "away_team": "CHI",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2019-06-21",
+              "time": "20:00",
+              "stadium": "Itaipava Arena Fonte Nova",
+              "city": "Salvador"
+            },
+            {
+              "home_team": "CHI",
+              "away_team": "URU",
+              "home_score": 0,
               "away_score": 1,
-              "date": "2000-09-20",
-              "time": "17:30",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra"
+              "date": "2019-06-24",
+              "time": "20:00",
+              "stadium": "Estádio do Maracanã",
+              "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "ECU",
+              "away_team": "JPN",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2019-06-24",
+              "time": "20:00",
+              "stadium": "Estádio Mineirão",
+              "city": "Belo Horizonte"
             }
           ]
         }
@@ -153,31 +220,89 @@
       "type": "knockout",
       "rounds": [
         {
+          "name": "Quarter-finals",
+          "short_name": "1/4",
+          "eliminateCount": 4,
+          "next_round": "Semi-finals",
+          "matches": [
+            {
+              "home_team": "BRA",
+              "away_team": "PAR",
+              "home_score": 0,
+              "away_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 3,
+              "date": "2019-06-27",
+              "time": "21:30",
+              "stadium": "Arena do Grêmio",
+              "city": "Porto Alegre",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "VEN",
+              "away_team": "ARG",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2019-06-28",
+              "time": "16:00",
+              "stadium": "Estádio do Maracanã",
+              "city": "Rio de Janeiro",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "COL",
+              "away_team": "CHI",
+              "home_score": 0,
+              "away_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 5,
+              "date": "2019-06-28",
+              "time": "20:20",
+              "stadium": "Arena Corinthians",
+              "city": "São Paulo",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "URU",
+              "away_team": "PER",
+              "home_score": 0,
+              "away_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 5,
+              "date": "2019-06-29",
+              "time": "16:00",
+              "stadium": "Itaipava Arena Fonte Nova",
+              "city": "Salvador",
+              "bracket_order": 4
+            }
+          ]
+        },
+        {
           "name": "Semi-finals",
           "short_name": "1/2",
           "eliminateCount": 2,
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "GER_U23WNT",
-              "away_team": "NOR_U23WNT",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2000-09-24",
-              "time": "17:30",
-              "stadium": "Sydney Football Stadium",
-              "city": "Sydney",
+              "home_team": "BRA",
+              "away_team": "ARG",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2019-07-02",
+              "time": "21:30",
+              "stadium": "Estádio Mineirão",
+              "city": "Belo Horizonte",
               "bracket_order": 1
             },
             {
-              "home_team": "USA_U23WNT",
-              "away_team": "BRA_U23WNT",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2000-09-24",
-              "time": "17:30",
-              "stadium": "Bruce Stadium",
-              "city": "Canberra",
+              "home_team": "CHI",
+              "away_team": "PER",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2019-07-03",
+              "time": "21:30",
+              "stadium": "Arena do Grêmio",
+              "city": "Porto Alegre",
               "bracket_order": 2
             }
           ]
@@ -187,14 +312,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "GER_U23WNT",
-              "away_team": "BRA_U23WNT",
+              "home_team": "ARG",
+              "away_team": "CHI",
               "home_score": 2,
-              "away_score": 0,
-              "date": "2000-09-28",
-              "time": "17:00",
-              "stadium": "Sydney Football Stadium",
-              "city": "Sydney"
+              "away_score": 1,
+              "date": "2019-07-06",
+              "time": "16:00",
+              "stadium": "Arena Corinthians",
+              "city": "São Paulo"
             }
           ]
         },
@@ -203,16 +328,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "NOR_U23WNT",
-              "away_team": "USA_U23WNT",
-              "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "2000-09-28",
-              "time": "20:00",
-              "stadium": "Sydney Football Stadium",
-              "city": "Sydney"
+              "home_team": "BRA",
+              "away_team": "PER",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "2019-07-07",
+              "time": "17:00",
+              "stadium": "Estádio do Maracanã",
+              "city": "Rio de Janeiro"
             }
           ]
         }

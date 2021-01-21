@@ -5,7 +5,7 @@
     "name": "Copa America Brazil 2019",
     "tournament_type_id": "COPA",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "lot"],
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "details": {
       "host": ["BRA"],
       "logo_filename": "2019_Copa_América_logo.svg",
