@@ -75,13 +75,14 @@ import td_WOFT_2008 from '../data/soccer/tournamentData/WOFT/td_WOFT_2008.json'
 import td_WOFT_2012 from '../data/soccer/tournamentData/WOFT/td_WOFT_2012.json'
 import td_WOFT_2016 from '../data/soccer/tournamentData/WOFT/td_WOFT_2016.json'
 
+import td_COPA_2016 from '../data/soccer/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/soccer/tournamentData/COPA/td_COPA_2019.json'
 
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'COPA2016', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'COPA2015', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -93,7 +94,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataCOPA = () => {
-  return [].concat([td_COPA_2019])
+  return [].concat([td_COPA_2016], [td_COPA_2019])
 }
 
 export const getQualificationTournamentArray = () => {

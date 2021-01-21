@@ -53,11 +53,50 @@
     "year": "2016",
     "name": "Copa America Centenario USA 2016",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "Copa_América_Centenario.svg", "start_date": "2016-06-03", "end_date": "2016-06-26" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "Copa_América_Centenario.svg",
+      "mascot_filename": "Copa_america_centenario_clean.jpg",
+      "start_date": "2016-06-03",
+      "end_date": "2016-06-26",
+      "color": "#b61f24",
+      "team_count": 16,
+      "confed_count": 2,
+      "venue_count": 10,
+      "city_count": 10
+    },
+    "hero_images": [
+      {
+        "name": "MetLife Stadium, East Rutherford",
+        "filename": "Copa_America_game_between_Columbia_vs_Peru_at_the_MetLife_Stadium.jpg",
+        "text": "The MetLife Stadium hosted the final."
+      },
+      {
+        "name": "Soldier Field, Chicago",
+        "filename": "Soldier_Field,_Chicago,_Illinois_(cropped).jpg",
+        "text": "The Soldier Field hosted the semi-final match Colombia vs Chile."
+      },
+      {
+        "name": "NRG Stadium, Houston",
+        "filename": "NRG_Stadium_before_Super_Bowl_LI.jpg",
+        "text": "The NRG Stadium hosted the semi-final match United States vs Argentina."
+      },
+      {
+        "name": "Levi's Stadium, Santa Clara",
+        "filename": "Levis_Stadium_interior_1.jpg",
+        "text": "The Levi's Stadium hosted the quarter-final match Mexico vs Chile."
+      }
+    ],
+    "final_standings": { "champions": "CHI", "runners_up": "ARG", "third_place": "COL", "fourth_place": "USA" },
+    "statistics": { "total_matches": 32, "total_goals": 91, "attendance": 1483855 },
+    "awards": {
+      "golden_boot": [{ "player": "Eduardo Vargas", "team": "CHI", "goals": 6 }],
+      "golden_ball": [{ "player": "Alexis Sánchez", "team": "CHI" }],
+      "golden_glove": { "player": "Claudio Bravo", "team": "CHI" },
+      "fair_play_team": ["ARG"]
+    }
   },
   {
     "id": "COPA2015",
