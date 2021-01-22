@@ -217,11 +217,48 @@
     "year": "2007",
     "name": "Copa America Venezuela 2007",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2007_Copa_América_logo.svg", "start_date": "2007-06-26", "end_date": "2007-07-15" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["VEN"],
+      "logo_filename": "2007_Copa_América_logo.svg",
+      "mascot_filename": "Guaky_on_his_tour_of_((Venezuela))._2007.jpg",
+      "start_date": "2007-06-26",
+      "end_date": "2007-07-15",
+      "color": "#003399",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 9,
+      "city_count": 9
+    },
+    "hero_images": [
+      {
+        "name": "Estadio José Pachencho Romero, Maracaibo",
+        "filename": "Brazil_vs._Uruguay_Semifinals_Copa_América_2007_-_2.jpg",
+        "text": "The Estadio José Pachencho Romero hosted the final match."
+      },
+      {
+        "name": "Polideportivo Cachamay, Ciudad Guayana",
+        "filename": "CTE_Chamay_Aereo_Cut.jpg",
+        "text": "The Polideportivo Cachamay hosted the semi-final match Mexico vs Argentina."
+      },
+      {
+        "name": "Estadio Metropolitano de Fútbol de Lara, Barquisimeto",
+        "filename": "Estadio_Metropolitano_de_Lara.jpg",
+        "text": "The Estadio Metropolitano de Fútbol de Laray hosted the quarter-final match Argentina vs Peru."
+      },
+      {
+        "name": "Estadio Monumental de Maturín, Maturín",
+        "filename": "Monumental_de_maturin_3.jpg",
+        "text": "The Estadio Monumental de Maturín hosted the quarter-final match Mexico vs Paraguay."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "MEX", "fourth_place": "URU" },
+    "statistics": { "total_matches": 26, "total_goals": 86, "attendance": 1050230 },
+    "awards": {
+      "golden_boot": [{ "player": "Robinho", "team": "BRA", "goals": 6 }],
+      "golden_ball": [{ "player": "Robinho", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA2004",
