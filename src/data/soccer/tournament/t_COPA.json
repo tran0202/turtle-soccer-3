@@ -167,11 +167,50 @@
     "year": "2011",
     "name": "Copa America Argentina 2011",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2011_Copa_América_logo.svg", "start_date": "2011-07-01", "end_date": "2011-07-24" }
+    "tiebreakers": ["team", "head2head", "penalty", "lot"],
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "2011_Copa_América_logo.svg",
+      "start_date": "2011-07-01",
+      "end_date": "2011-07-24",
+      "color": "#0589bc",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_players_with_CA_trophy.jpg",
+        "text": "Uruguayan players celebrating their 15th Copa America title."
+      },
+      {
+        "name": "MVP",
+        "filename": "Luis_Suarez_-_CA2011_mvp_award.jpg",
+        "text": "Uruguay player Luis Suárez, awarded as MVP of the tournament."
+      },
+      {
+        "name": "Opening game",
+        "filename": "Argentina_vs_Bolivia_-_2011-07-01.jpg",
+        "text": "Argentina v. Bolivia"
+      },
+      {
+        "name": "Estadio Monumental, Buenos Aires",
+        "filename": "RiverPlateStadium.jpg",
+        "text": "The Estadio Monumental hosted the final match."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "PAR", "third_place": "PER", "fourth_place": "VEN" },
+    "statistics": { "total_matches": 26, "total_goals": 54, "attendance": 882621 },
+    "awards": {
+      "golden_boot": [{ "player": "Paolo Guerrero", "team": "PER", "goals": 5 }],
+      "golden_ball": [{ "player": "Luis Suárez", "team": "URU" }],
+      "best_young_player": { "player": "Sebastián Coates", "team": "URU" },
+      "golden_glove": { "player": "Justo Villar", "team": "PAR" },
+      "fair_play_team": ["URU"]
+    }
   },
   {
     "id": "COPA2007",
