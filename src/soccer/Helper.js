@@ -814,6 +814,12 @@ export const SharedBronzeTooltip = (props) => {
   return <TopTooltip target={target} content={content} />
 }
 
+export const GoldenBallRejectedTooltip = (props) => {
+  const { target, notes } = props
+  const content = `Award Rejected${notes ? `: ${notes}` : ''}`
+  return <TopTooltip target={target} content={content} />
+}
+
 export const ConsolationTooltip = (props) => {
   const { target, notes } = props
   const content = notes

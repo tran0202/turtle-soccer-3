@@ -1,6 +1,6 @@
 import React from 'react'
 import Qualified from './Qualified'
-import { getFlagSrc, getTeamName, isWinner, SharedBronzeTooltip } from './Helper'
+import { getFlagSrc, getTeamName, isWinner, SharedBronzeTooltip, GoldenBallRejectedTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import NumberFormat from 'react-number-format'
@@ -61,7 +61,7 @@ const getTopScorerLabel = (tournament, position) => {
         return tournament.awards.golden_boot.length > 1 ? 'Golden Shoes' : 'Golden Shoe'
       }
       return 'Golden Boot'
-    } else if (tournament.tournament_type_id === 'MOFT' || tournament.tournament_type_id === 'WOFT') {
+    } else if (tournament.tournament_type_id === 'MOFT' || tournament.tournament_type_id === 'WOFT' || tournament.tournament_type_id === 'COPA') {
       return tournament.awards.golden_boot.length > 1 ? 'Top scorers' : 'Top scorer'
     }
     return 'Golden Boot'
@@ -93,8 +93,17 @@ const getTopScorerLabel = (tournament, position) => {
 const getGoldenBallLabel = (tournament) => {
   if (tournament.tournament_type_id === 'EURO') {
     return 'Player of the Tournament'
+  } else if (tournament.tournament_type_id === 'COPA') {
+    return 'Best Player'
   }
   return 'Golden Ball'
+}
+
+const getGoldenGloveLabel = (tournament) => {
+  if (tournament.tournament_type_id === 'COPA') {
+    return 'Best Goalkeeper'
+  }
+  return 'Golden Glove'
 }
 
 const About = (props) => {
@@ -399,6 +408,9 @@ const About = (props) => {
                           />
                         )}
                         <span className="padding-top-xs">&nbsp;{awards.golden_ball[0].player}</span>
+                        {awards.golden_ball[0].rejected && (
+                          <GoldenBallRejectedTooltip target="goldenBallTooltip" notes={awards.golden_ball[0].rejected_notes} />
+                        )}
                       </Col>
                     </Row>
                   )}
@@ -468,7 +480,7 @@ const About = (props) => {
                 <React.Fragment>
                   <Row className="margin-top-xs mb-3">
                     <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
-                      Golden Glove
+                      {getGoldenGloveLabel(tournament)}
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.golden_glove.team && (

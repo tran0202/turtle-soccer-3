@@ -20,6 +20,11 @@
     },
     "hero_images": [
       {
+        "name": "Champions",
+        "filename": "2019_Final_da_Copa_América_2019_-_48226557731.jpg",
+        "text": "Brazil"
+      },
+      {
         "name": "Estádio do Maracanã, Rio de Janeiro",
         "filename": "Estádio_Maracanã_1.jpg",
         "text": "The Estádio do Maracanã in Rio de Janeiro hosted the final."
@@ -103,11 +108,59 @@
     "year": "2015",
     "name": "Copa America Chile 2015",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2015_Copa_América.svg", "start_date": "2015-06-11", "end_date": "2015-07-04" }
+    "tiebreakers": ["team", "head2head", "penalty", "lot"],
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "2015_Copa_América.svg",
+      "mascot_filename": "Jefa_de_Estado_recibe_invitación_para_la_Copa_América_2015_(17380237702)_(cropped).jpg",
+      "start_date": "2015-06-11",
+      "end_date": "2015-07-04",
+      "color": "#003375",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 9,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Chile_Vs_Uruguay_(19090559799).jpg",
+        "text": "Chile national football team line-up for game against Uruguay at 2015 Copa America"
+      },
+      {
+        "name": "Estadio Nacional, Santiago",
+        "filename": "El_Estadio_Nacional_de_Chile_durante_la_final_de_la_Copa_América_2015.jpeg",
+        "text": "The Estadio Nacional hosted the final"
+      },
+      {
+        "name": "Estadio Municipal de Concepción, Concepción",
+        "filename": "Estadio_Ester_Roa_Rebolledo.jpeg",
+        "text": "The Estadio Municipal de Concepción hosted the semi-final match Argentina vs Paraguay."
+      },
+      {
+        "name": "Estadio Sausalito, Viña del Mar",
+        "filename": "Everton_-_Coquimbo_Unido,_28-02-2016_-_Estadio_Sausalito_03.jpeg",
+        "text": "The Estadio Sausalito hosted the quarter-final match Argentina vs Colombia."
+      },
+      {
+        "name": "Alexis Sánchez, Chile",
+        "filename": "Alexis_Sánchez_2011.jpg",
+        "text": "Alexis Sánchez scored the winner for Chile in the penalty shootout of the final match."
+      }
+    ],
+    "final_standings": { "champions": "CHI", "runners_up": "ARG", "third_place": "PER", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 26, "total_goals": 59, "attendance": 655902 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Eduardo Vargas", "team": "CHI", "goals": 4 },
+        { "player": "Paolo Guerrero", "team": "PER", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Lionel Messi", "team": "ARG", "rejected": true, "rejected_notes": "Messi was to receive the award but rejected it." }],
+      "best_young_player": { "player": "Jeison Murillo", "team": "COL" },
+      "golden_glove": { "player": "Claudio Bravo", "team": "CHI" },
+      "fair_play_team": ["PER"]
+    }
   },
   {
     "id": "COPA2011",
