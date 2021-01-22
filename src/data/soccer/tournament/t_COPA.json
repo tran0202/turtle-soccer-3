@@ -265,11 +265,47 @@
     "year": "2004",
     "name": "Copa America Peru 2004",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2004_Copa_América_logo.svg", "start_date": "2004-07-06", "end_date": "2004-07-25" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "2004_Copa_América_logo.svg",
+      "start_date": "2004-07-06",
+      "end_date": "2004-07-25",
+      "color": "#e2001a",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 7,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Celebration",
+        "filename": "Copa_America-2004-02.jpg",
+        "text": "Final celebration"
+      },
+      {
+        "name": "Celebration",
+        "filename": "Copa_America-2004-01.jpg",
+        "text": "Final celebration"
+      },
+      {
+        "name": "Estadio Nacional, Lima",
+        "filename": "Estadio_Nacional_del_Perú.jpg",
+        "text": "The Estadio Nacional hosted the final match."
+      },
+      {
+        "name": "Estadio Miguel Grau, Piura",
+        "filename": "ESTADIO_MIGUEL_GRAU_CALLAO.jpg",
+        "text": "The Estadio Miguel Grau hosted the quarter-final match Mexico vs Brazil."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "URU", "fourth_place": "COL" },
+    "statistics": { "total_matches": 26, "total_goals": 78 },
+    "awards": {
+      "golden_boot": [{ "player": "Adriano", "team": "BRA", "goals": 7 }],
+      "golden_ball": [{ "player": "Adriano", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA2001",
