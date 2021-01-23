@@ -359,11 +359,50 @@
     "year": "1999",
     "name": "Copa America Paraguay 1999",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "1999_Copa_América_logo.svg", "start_date": "1999-06-29", "end_date": "1999-07-18" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["PAR"],
+      "logo_filename": "1999_Copa_América_logo.svg",
+      "start_date": "1999-06-29",
+      "end_date": "1999-07-18",
+      "color": "#0066a6",
+      "team_count": 12,
+      "confed_count": 3,
+      "venue_count": 5,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Defensores del Chaco, Asunción",
+        "filename": "Defensores_del_Chaco.jpeg",
+        "text": "The Estadio Defensores del Chaco hosted the final match."
+      },
+      {
+        "name": "Estadio Antonio Oddone Sarubbi, Ciudad del Este",
+        "filename": "3_de_febrero.jpg",
+        "text": "The Estadio Antonio Oddone Sarubbi hosted the semi-final match Brazil vs Mexico."
+      },
+      {
+        "name": "Estadio Feliciano Cáceres, Luque",
+        "filename": "Estadio_Feliciano_Caceres_2010.jpg",
+        "text": "The Estadio Feliciano Cáceres hosted the quarter-final match Chile vs Colombia."
+      },
+      {
+        "name": "Monumental Río Parapití, Pedro Juan Caballero",
+        "filename": "Estadio_Rio_Parapiti.png",
+        "text": "The Monumental Río Parapití hosted the group A matches."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "MEX", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 26, "total_goals": 74 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Ronaldo", "team": "BRA", "goals": 5 },
+        { "player": "Rivaldo", "team": "BRA", "goals": 5 }
+      ],
+      "golden_ball": [{ "player": "Rivaldo", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1997",
