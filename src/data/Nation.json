@@ -3078,25 +3078,25 @@
     "end_date": ""
   },
   {
-    "id": "VEN-1930-1954",
-    "name": "Venezuela",
-    "official_name": "Venezuela",
-    "parent_nation_id": "VEN",
-    "nation_type_id": "NATN",
-    "flag_filename": "Venezuela_1930_1954.png",
-    "code": "VEN",
-    "start_date": "1930-01-01",
-    "end_date": "1954-01-01"
-  },
-  {
     "id": "VEN-1954-2006",
     "name": "Venezuela",
     "official_name": "Venezuela",
     "parent_nation_id": "VEN",
     "nation_type_id": "NATN",
-    "flag_filename": "Venezuela_1954_2006.png",
+    "flag_filename": "State_flag_of_Venezuela_(1954–2006).svg",
     "code": "VEN",
     "start_date": "1954-01-01",
+    "end_date": "2006-03-12"
+  },
+  {
+    "id": "VEN-1930-2006",
+    "name": "Venezuela",
+    "official_name": "Venezuela",
+    "parent_nation_id": "VEN",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_Venezuela_(1930–2006).svg",
+    "code": "VEN",
+    "start_date": "1930-01-01",
     "end_date": "2006-03-12"
   },
   {

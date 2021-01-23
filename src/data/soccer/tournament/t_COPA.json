@@ -409,11 +409,47 @@
     "year": "1997",
     "name": "Copa America Bolivia 1997",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "1997_Copa_América_logo.svg", "start_date": "1997-06-11", "end_date": "1997-06-29" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["BOL"],
+      "logo_filename": "1997_Copa_América_logo.svg",
+      "start_date": "1997-06-11",
+      "end_date": "1997-06-29",
+      "color": "#00a651",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Hernando Siles, La Paz",
+        "filename": "Hernando_Siles_Stadium_-_La_Paz.jpg",
+        "text": "The Hernando Siles hosted the final match."
+      },
+      {
+        "name": "Estadio Ramón Aguilera, Santa Cruz",
+        "filename": "TahuichiAguileraBlooming.jpg",
+        "text": "The Estadio Ramón Aguilera hosted the semi-final match Peru vs Brazil."
+      },
+      {
+        "name": "Estadio Félix Capriles, Cochabamba",
+        "filename": "Estadio_Departamental_Félix_Capriles_Int.1.jpg",
+        "text": "The Estadio Félix Capriles hosted the quarter-final match Mexico vs Ecuador."
+      },
+      {
+        "name": "Estadio Olímpico Patria, Sucre",
+        "filename": "Estadioolimpicopatria.jpg",
+        "text": "The Estadio Olímpico Patria hosted the quarter-final match Peru vs Argentina."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "BOL", "third_place": "MEX", "fourth_place": "PER" },
+    "statistics": { "total_matches": 26, "total_goals": 67 },
+    "awards": {
+      "golden_boot": [{ "player": "Luis Hernández", "team": "MEX", "goals": 6 }],
+      "golden_ball": [{ "player": "Ronaldo", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1995",

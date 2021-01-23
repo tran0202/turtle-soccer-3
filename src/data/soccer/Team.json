@@ -170,6 +170,7 @@
   { "id": "ALB", "name": "Albania", "team_type_id": "MNT", "nation_id": "ALB", "parent_team_id": "" },
   { "id": "LVA", "name": "Latvia", "team_type_id": "MNT", "nation_id": "LVA", "parent_team_id": "" },
   { "id": "CIS", "name": "CIS", "team_type_id": "MNT", "nation_id": "CIS", "parent_team_id": "RUS" },
+  { "id": "VEN-1930-2006", "name": "Venezuela", "team_type_id": "MNT", "nation_id": "VEN-1930-2006", "parent_team_id": "VEN" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -478,7 +479,6 @@
   { "id": "1088", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "275", "parent_team_id": "1090" },
   { "id": "1089", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "276", "parent_team_id": "1090" },
   { "id": "1090", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "268", "parent_team_id": "" },
-  { "id": "1091", "name": "Venezuela", "team_type_id": "MNT", "nation_id": "288", "parent_team_id": "963" },
   { "id": "1092", "name": "Costa Rica", "team_type_id": "MNT", "nation_id": "289", "parent_team_id": "27" },
   { "id": "1093", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "290", "parent_team_id": "1035" },
   { "id": "1094", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "291", "parent_team_id": "1035" },
