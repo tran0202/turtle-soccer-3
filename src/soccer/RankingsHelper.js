@@ -657,6 +657,7 @@ export const isEliminated = (row, config) => {
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
     let flag = false
     config.advancement.teams.eliminated.forEach((e) => (flag = flag || row.r === e))
+    // console.log('row', row)
     return flag
   }
   return false
@@ -741,7 +742,6 @@ export const updateFinalRankings = (round) => {
           adjustRankingCount(rankingBundle)
         } else {
           if (previousDrawCount > 0) {
-            // console.log('rankingBundle', rankingBundle)
             newFinalRankings.push(rankingBundle)
             adjustRankingCount(rankingBundle)
             rankingBundle = []

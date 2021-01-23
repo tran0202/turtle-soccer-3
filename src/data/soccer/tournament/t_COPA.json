@@ -556,11 +556,47 @@
     "name": "Copa America Chile 1991",
     "short_name": "Chile 1991",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "copa-1991.png", "start_date": "1991-07-06", "end_date": "1991-07-21" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "copa-1991.png",
+      "start_date": "1991-07-06",
+      "end_date": "1991-07-21",
+      "color": "#4b6ebf",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_seleccion_1991.jpg",
+        "text": "The Argentina squad that won the cup"
+      },
+      {
+        "name": "Claudio Caniggia",
+        "filename": "Caniggia_define_vs_paraguay.jpg",
+        "text": "Claudio Caniggia scoring v Paraguay in the first round"
+      },
+      {
+        "name": "Estadio Nacional de Chile, Santiago",
+        "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
+        "text": "The Estadio Nacional de Chile hosted the final round."
+      },
+      {
+        "name": "Estadio Sausalito, Viña del Mar",
+        "filename": "EstadioSausalito.jpg",
+        "text": "The Estadio Sausalito hosted the group B matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "COL" },
+    "statistics": { "total_matches": 26, "total_goals": 73 },
+    "awards": {
+      "golden_boot": [{ "player": "Gabriel Batistuta", "team": "ARG", "goals": 6 }],
+      "golden_ball": [{ "player": "Leonardo Rodríguez", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1989",
