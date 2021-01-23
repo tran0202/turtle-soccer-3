@@ -40,7 +40,7 @@
   { "id": "ECU", "name": "Ecuador", "team_type_id": "MNT", "nation_id": "ECU", "parent_team_id": "" },
   { "id": "HON", "name": "Honduras", "team_type_id": "MNT", "nation_id": "HON", "parent_team_id": "" },
   { "id": "BIH", "name": "Bosnia and Herzegovina", "team_type_id": "MNT", "nation_id": "BIH", "parent_team_id": "" },
-  { "id": "USA", "name": "United States", "team_type_id": "MNT", "nation_id": "USA", "parent_team_id": "" },
+  { "id": "USA", "name": "United States", "short_name": "USA", "team_type_id": "MNT", "nation_id": "USA", "parent_team_id": "" },
   { "id": "GHA", "name": "Ghana", "team_type_id": "MNT", "nation_id": "GHA", "parent_team_id": "" },
   { "id": "ALG", "name": "Algeria", "team_type_id": "MNT", "nation_id": "ALG", "parent_team_id": "" },
   { "id": "RSA", "name": "South Africa", "team_type_id": "MNT", "nation_id": "RSA", "parent_team_id": "" },
@@ -171,6 +171,7 @@
   { "id": "LVA", "name": "Latvia", "team_type_id": "MNT", "nation_id": "LVA", "parent_team_id": "" },
   { "id": "CIS", "name": "CIS", "team_type_id": "MNT", "nation_id": "CIS", "parent_team_id": "RUS" },
   { "id": "VEN-1930-2006", "name": "Venezuela", "team_type_id": "MNT", "nation_id": "VEN-1930-2006", "parent_team_id": "VEN" },
+  { "id": "VEN-1954-2006", "name": "Venezuela", "team_type_id": "MNT", "nation_id": "VEN-1954-2006", "parent_team_id": "VEN" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },

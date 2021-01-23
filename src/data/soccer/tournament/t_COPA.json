@@ -457,11 +457,50 @@
     "name": "Copa America Uruguay 1995",
     "short_name": "Uruguay 1995",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1995-07-05", "end_date": "1995-07-23" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1995-07-05",
+      "end_date": "1995-07-23",
+      "color": "#005ca4",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Centenario, Montevideo",
+        "filename": "Estadio_Centenario_(vista_aérea).jpg",
+        "text": "The Estadio Centenario hosted the final match."
+      },
+      {
+        "name": "Estadio Campus Municipal, Maldonado",
+        "filename": "2016_Americas_Rugby_Championship_-_Uruguay_vs_Argentina_XV_-_Crowd_2.jpeg",
+        "text": "The Estadio Campus Municipal hosted the semi-final match Brazil vs United States."
+      },
+      {
+        "name": "Estadio Atilio Paiva Olivera, Rivera",
+        "filename": "Riveraestadio.jpg",
+        "text": "The Estadio Atilio Paiva Olivera hosted the quarter-final match Brazil vs Argentina."
+      },
+      {
+        "name": "Estadio Parque Artigas, Paysandú",
+        "filename": "Estadio_Parque_Artigas_-_4.png",
+        "text": "The Estadio Parque Artigas hosted the quarter-final match United States vs Mexico."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "BRA", "third_place": "COL", "fourth_place": "USA" },
+    "statistics": { "total_matches": 26, "total_goals": 69 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Gabriel Batistuta", "team": "ARG", "goals": 4 },
+        { "player": "Luis García", "team": "MEX", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Enzo Francescoli", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1993",
