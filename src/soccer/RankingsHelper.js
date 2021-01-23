@@ -396,7 +396,6 @@ export const updateDrawPool = (group, a, b) => {
     if (newTeamB === undefined) {
       pool.teams.push({ id: b.id })
     }
-    // console.log('pool.matches', pool.matches)
     const newMatch = pool.matches.find((m) => (m.home_team === a.id && m.away_team === b.id) || (m.home_team === b.id && m.away_team === a.id))
     if (newMatch === undefined) {
       const found = findHeadtoHeadMatch(a, b, false)
@@ -700,6 +699,17 @@ export const getWildCardRowStriped = (row, config) => {
 //   })
 // }
 
+const adjustRankingCount = (rankingBundle) => {
+  if (!rankingBundle || rankingBundle.length === 0) return
+  let min = rankingBundle[0].r
+  rankingBundle.forEach((r) => {
+    if (min > r.r) {
+      min = r.r
+    }
+  })
+  rankingBundle.forEach((r) => (r.r = min))
+}
+
 export const updateFinalRankings = (round) => {
   if (round.ranking_type !== 'round' && round.ranking_type !== 'alltimeround') return
   let newFinalRankings = []
@@ -728,16 +738,12 @@ export const updateFinalRankings = (round) => {
             }
             return -1
           })
+          adjustRankingCount(rankingBundle)
         } else {
           if (previousDrawCount > 0) {
+            // console.log('rankingBundle', rankingBundle)
             newFinalRankings.push(rankingBundle)
-            let min = rankingBundle[0].r
-            rankingBundle.forEach((r) => {
-              if (min > r.r) {
-                min = r.r
-              }
-            })
-            rankingBundle.forEach((r) => (r.r = min))
+            adjustRankingCount(rankingBundle)
             rankingBundle = []
           }
           newFinalRankings.push(r)

@@ -109,7 +109,7 @@
     "name": "Copa America Chile 2015",
     "tournament_type_id": "COPA",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "penalty", "lot"],
+    "tiebreakers": ["team", "head2headresults", "penalty", "lot"],
     "details": {
       "host": ["CHI"],
       "logo_filename": "2015_Copa_América.svg",
@@ -168,7 +168,7 @@
     "name": "Copa America Argentina 2011",
     "tournament_type_id": "COPA",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "penalty", "lot"],
+    "tiebreakers": ["team", "head2headresults", "penalty", "lot"],
     "details": {
       "host": ["ARG"],
       "logo_filename": "2011_Copa_América_logo.svg",
@@ -218,7 +218,7 @@
     "name": "Copa America Venezuela 2007",
     "tournament_type_id": "COPA",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "lot"],
+    "tiebreakers": ["team", "head2headresults", "lot"],
     "details": {
       "host": ["VEN"],
       "logo_filename": "2007_Copa_América_logo.svg",
@@ -266,7 +266,7 @@
     "name": "Copa America Peru 2004",
     "tournament_type_id": "COPA",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "lot"],
+    "tiebreakers": ["team", "head2headresults", "lot"],
     "details": {
       "host": ["PER"],
       "logo_filename": "2004_Copa_América_logo.svg",
@@ -312,11 +312,47 @@
     "year": "2001",
     "name": "Copa America Colombia 2001",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "Copa_América_2001_official_logo.png", "start_date": "2001-07-11", "end_date": "2001-07-29" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["COL"],
+      "logo_filename": "Copa_América_2001_official_logo.png",
+      "start_date": "2001-07-11",
+      "end_date": "2001-07-29",
+      "color": "#433c80",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 7,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Estadio El Campín, Bogotá",
+        "filename": "Elcampin1.jpg",
+        "text": "The Estadio El Campín hosted the final match."
+      },
+      {
+        "name": "Estadio Palogrande, Manizales",
+        "filename": "Estadio_Palogrande_CRC_-_ESP_2011.jpg",
+        "text": "The Estadio Palogrande hosted the semi-final match Colombia vs Honduras."
+      },
+      {
+        "name": "Estadio Hernán Ramírez Villegas, Pereira",
+        "filename": "Q_079.jpeg",
+        "text": "The Estadio Hernán Ramírez Villegas hosted the semi-final match Mexico vs Uruguay."
+      },
+      {
+        "name": "Estadio Centenario, Armenia",
+        "filename": "Estadio_Centenario_de_Armenia.jpg",
+        "text": "The Estadio Centenario hosted the quarter-final match Colombia vs Peru."
+      }
+    ],
+    "final_standings": { "champions": "COL", "runners_up": "MEX", "third_place": "HON", "fourth_place": "URU" },
+    "statistics": { "total_matches": 26, "total_goals": 60 },
+    "awards": {
+      "golden_boot": [{ "player": "Víctor Aristizábal", "team": "COL", "goals": 6 }],
+      "golden_ball": [{ "player": "Amado Guevara", "team": "HON" }]
+    }
   },
   {
     "id": "COPA1999",
