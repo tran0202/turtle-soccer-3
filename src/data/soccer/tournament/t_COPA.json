@@ -508,11 +508,47 @@
     "name": "Copa America Ecuador 1993",
     "short_name": "Ecuador 1993",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "copa-1993.jpg", "start_date": "1993-06-15", "end_date": "1993-07-04" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["ECU"],
+      "logo_filename": "copa-1993.jpg",
+      "start_date": "1993-06-15",
+      "end_date": "1993-07-04",
+      "color": "#21216b",
+      "team_count": 12,
+      "confed_count": 2,
+      "venue_count": 7,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_podio_copa_america.jpg",
+        "text": "Argentine players at the podium."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Jugadores_argentina_copa_america.jpg",
+        "text": "Argentine players celebrating after the match"
+      },
+      {
+        "name": "Best Player",
+        "filename": "Goycochea_batistuta_celebran.jpg",
+        "text": "Sergio Goycochea and Gabriel Batistuta in the final"
+      },
+      {
+        "name": "Final",
+        "filename": "Batistuta_gol_mexico.jpg",
+        "text": "Gabriel Batistuta scoring one of his two goals"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "MEX", "third_place": "COL", "fourth_place": "ECU" },
+    "statistics": { "total_matches": 26, "total_goals": 64 },
+    "awards": {
+      "golden_boot": [{ "player": "José Luis Dolgetta", "team": "VEN-1954-2006", "goals": 4 }],
+      "golden_ball": [{ "player": "Sergio Goycochea", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1991",
