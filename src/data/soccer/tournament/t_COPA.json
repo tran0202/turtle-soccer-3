@@ -652,15 +652,51 @@
     "name": "Copa America Argentina 1987",
     "short_name": "Argentina 1987",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1987-06-27", "end_date": "1987-07-12" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1987-06-27",
+      "end_date": "1987-07-12",
+      "color": "#005ca4",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_copa_1987.jpg",
+        "text": "Players of Uruguay holding the trophy, as covered on El Gráfico"
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_equipo_1987.jpg",
+        "text": "Argentine squad during the Copa América, posing at Monumental of Buenos Aires. Players are: (up): Sergio Batista, José L. Cucciufo, Julio Olarticoechea, Luis Islas, José Luis Brown, Oscar Ruggeri, Diego Maradona; (down): Ricardo Giusti, Roque Alfaro, José Percudani, Daniel Tapia"
+      },
+      {
+        "name": "Third-place match",
+        "filename": "Valderrama_maradona_saludo.jpg",
+        "text": "Captains of Colombia and Argentina, Carlos Valderrama and Diego Maradona, shaking hands before the third-place match of Copa América."
+      },
+      {
+        "name": "Group A",
+        "filename": "Argentina_v_peru_copa_america.jpg",
+        "text": "Argentina v Peru match"
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "CHI", "third_place": "COL", "fourth_place": "ARG" },
+    "statistics": { "total_matches": 13, "total_goals": 33, "attendance": 263000 },
+    "awards": {
+      "golden_boot": [{ "player": "Arnoldo Iguarán", "team": "COL", "goals": 4 }],
+      "golden_ball": [{ "player": "Carlos Valderrama", "team": "COL" }]
+    }
   },
   {
     "id": "COPA1983",
-    "year": "19839",
+    "year": "1983",
     "name": "Copa America 1983",
     "short_name": "1983",
     "tournament_type_id": "COPA",

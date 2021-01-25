@@ -77,20 +77,22 @@ const collectRankings = (tournaments) => {
       let rankings = { teams: _teams, matches: _matches }
       t.stages &&
         t.stages.forEach((s) => {
-          s.type === 'roundrobin' &&
+          if (s.type === 'roundrobin') {
+            s.bye_teams && s.bye_teams.forEach((t) => _teams.push(t))
             s.groups &&
-            s.groups.forEach((g) => {
-              g.teams &&
-                g.teams.forEach((t) => {
-                  if (!_teams.find((t2) => t.id === t2.id)) {
-                    _teams.push(t)
-                  }
-                })
-              g.matches &&
-                g.matches.forEach((m) => {
-                  _matches.push(m)
-                })
-            })
+              s.groups.forEach((g) => {
+                g.teams &&
+                  g.teams.forEach((t) => {
+                    if (!_teams.find((t2) => t.id === t2.id)) {
+                      _teams.push(t)
+                    }
+                  })
+                g.matches &&
+                  g.matches.forEach((m) => {
+                    _matches.push(m)
+                  })
+              })
+          }
           if (s.type === 'knockout') {
             s.teams &&
               s.teams.forEach((t) => {

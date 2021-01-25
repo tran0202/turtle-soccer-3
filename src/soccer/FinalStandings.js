@@ -199,7 +199,12 @@ const advanceKnockoutTeams = (tournament, round) => {
 const advanceByeTeams = (tournament, round) => {
   if (!round.bye_teams) return
   const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
-  const next_round = findRoundAdvancedTeams(tournament, round.next_round)
+  // console.log('advanced_teams', advanced_teams)
+  let next_round = findRoundAdvancedTeams(tournament, round.next_round)
+  if (!next_round) {
+    tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [] })
+    next_round = tournament.advanced_teams.rounds.find((r) => r.name === round.next_round)
+  }
   next_round &&
     round.bye_teams.forEach((t) => {
       const bye_team = advanced_teams.final_rankings.find((fr) => fr.id === t.id)
@@ -289,7 +294,6 @@ const createSilverMedalRankings = (tournament, round) => {
   const semiFinalists = findRoundFinalRanking(tournament, 'Semi-finals')
   semiFinalists.final_rankings = semiFinalists.final_rankings.filter((fr) => fr.id !== 'NED_U23MNT')
   semiFinalists.final_rankings[0].r = 4
-  // console.log('semiFinalists', semiFinalists)
 }
 
 const createFinalRankings = (tournament, round) => {
@@ -398,6 +402,25 @@ const initKnockoutRankings = (tournament, stage) => {
   }
 }
 
+const initByeRankings = (tournament, stage) => {
+  // console.log('stage1', stage)
+  if (tournament.advanced_teams && tournament.final_rankings) return
+  if (!tournament.advanced_teams) {
+    tournament.advanced_teams = {}
+    tournament.advanced_teams.rounds = []
+    let finalRankings = []
+    stage.bye_teams &&
+      stage.bye_teams.forEach((t) => {
+        finalRankings.push(getBlankRanking(t.id))
+      })
+    tournament.advanced_teams.rounds.push({ name: stage.name, ranking_type: 'round', final_rankings: finalRankings })
+  }
+  if (!tournament.final_rankings) {
+    tournament.final_rankings = {}
+    tournament.final_rankings.rounds = []
+  }
+}
+
 const FinalStandings = (props) => {
   const { tournament } = props
   const config = getTournamentConfig(tournament)
@@ -406,6 +429,10 @@ const FinalStandings = (props) => {
   const rrStages = getRoundRobinStages(stages)
   rrStages &&
     rrStages.forEach((groupStage) => {
+      if (groupStage.bye_teams) {
+        initByeRankings(tournament, groupStage)
+        advanceByeTeams(tournament, groupStage)
+      }
       if (groupStage.groups) {
         groupStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
