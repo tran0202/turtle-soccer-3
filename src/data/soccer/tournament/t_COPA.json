@@ -604,11 +604,47 @@
     "name": "Copa America Brazil 1989",
     "short_name": "Brazil 1989",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "copa-1989.png", "start_date": "1989-07-01", "end_date": "1989-07-16" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "copa-1989.png",
+      "start_date": "1989-07-01",
+      "end_date": "1989-07-16",
+      "color": "#008400",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Estádio do Maracanã, Rio de Janeiro",
+        "filename": "Maracanã_Stadium_in_Rio_de_Janeiro.jpg",
+        "text": "The Estádio do Maracanã hosted the final round."
+      },
+      {
+        "name": "Estádio Fonte Nova, Salvador",
+        "filename": "2116RP037.jpg",
+        "text": "The Estádio Fonte Nova hosted the group A matches."
+      },
+      {
+        "name": "Estádio do Arruda, Recife",
+        "filename": "Estádio_Santa_Cruz.jpg",
+        "text": "The Estádio do Arruda hosted the group A matches."
+      },
+      {
+        "name": "Estádio Serra Dourada, Goiânia",
+        "filename": "Serradourada01.jpg",
+        "text": "The Estádio Serra Dourada hosted the group B matches."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 26, "total_goals": 55 },
+    "awards": {
+      "golden_boot": [{ "player": "Bebeto", "team": "BRA", "goals": 6 }],
+      "golden_ball": [{ "player": "Rubén Sosa", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1987",

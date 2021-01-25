@@ -23,7 +23,6 @@ const getFormat = (rrStage) => {
 
 const TournamentFormat = (props) => {
   const { config, tournamentType } = props
-  // console.log('config', config)
   return (
     config.teamCount !== 0 && (
       <Row className="mt-3 mb-3 text-left tournament-format">
@@ -220,9 +219,10 @@ const calculateStageRankings = (tournament, config, stage) => {
         collectMdMatches(group)
       }
       group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
-      let matchDay = group.matches ? Math.ceil(group.matches.length / (group.teams.length / 2)) : 0
+      let matchDay = group.matches ? Math.ceil(group.matches.length / Math.floor(group.teams.length / 2)) : 0
       matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
       matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
+      // console.log('matchDay', matchDay)
       createGroupFinalRankings(tournament, group, matchDay)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })
