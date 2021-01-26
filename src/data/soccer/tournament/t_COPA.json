@@ -750,11 +750,43 @@
     "name": "Copa America 1979",
     "short_name": "1979",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1979-07-18", "end_date": "1979-12-12" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "no_third_place": true,
+    "details": {
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1979-07-18",
+      "end_date": "1979-12-12",
+      "color": "#005ca4",
+      "team_count": 10,
+      "confed_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Defensores del Chaco, Asunción",
+        "filename": "Defensores_del_Chaco_6-10-2016_2.jpg",
+        "text": "The Defensores del Chaco hosted one of the finals match"
+      },
+      {
+        "name": "Estadio Nacional, Santiago",
+        "filename": "Estadio_Nacional_Copa_América_2015_(18273644630).jpg",
+        "text": "The Estadio Nacional hosted one of the finals match"
+      },
+      {
+        "name": "José Amalfitani, Buenos Aires",
+        "filename": "Argentina_A_vs_Inglaterra_A_02.jpeg",
+        "text": "The José Amalfitani hosted one of the finals match"
+      }
+    ],
+    "final_standings": { "champions": "PAR", "runners_up": "CHI", "semi_finalist1": "BRA", "semi_finalist2": "PER" },
+    "statistics": { "total_matches": 25, "total_goals": 63, "attendance": 1144000 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Jorge Peredo", "team": "CHI", "goals": 4 },
+        { "player": "Eugenio Morel", "team": "PAR", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Carlos Caszely", "team": "CHI" }]
+    }
   },
   {
     "id": "COPA1975",

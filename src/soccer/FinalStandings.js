@@ -319,9 +319,21 @@ const createFinalRankings = (tournament, round) => {
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
       // console.log('m', m)
       const rankWinner =
-        round.name === 'Final' || round.name === 'Final Second Leg' ? 1 : round.name === 'Third-place' ? 3 : round.name === 'Fifth-place' ? 5 : 4
+        round.name === 'Final' || round.name === 'Final Second Leg' || round.name === 'Final Playoff'
+          ? 1
+          : round.name === 'Third-place'
+          ? 3
+          : round.name === 'Fifth-place'
+          ? 5
+          : 4
       const rankLoser =
-        round.name === 'Final' || round.name === 'Final Second Leg' ? 2 : round.name === 'Third-place' ? 4 : round.name === 'Fifth-place' ? 6 : 5
+        round.name === 'Final' || round.name === 'Final Second Leg' || round.name === 'Final Playoff'
+          ? 2
+          : round.name === 'Third-place'
+          ? 4
+          : round.name === 'Fifth-place'
+          ? 6
+          : 5
       if (isWinner('H', m)) {
         home_ranking.r = rankWinner
         away_ranking.r = rankLoser
@@ -596,7 +608,17 @@ const FinalStandings = (props) => {
       if (final2ndLeg) {
         calculateAggregateScore(koStage)
         calculateKnockoutRankings(findRoundAdvancedTeams(tournament, final2ndLeg.name), final2ndLeg, config)
-        createFinalRankings(tournament, final2ndLeg)
+        if (!final2ndLeg.need_playoff) {
+          createFinalRankings(tournament, final2ndLeg)
+        } else {
+          advance1stLegTeams(tournament, final2ndLeg)
+        }
+      }
+
+      const finalPlayoffLeg = koStage.rounds.find((r) => r.name === 'Final Playoff')
+      if (finalPlayoffLeg) {
+        calculateKnockoutRankings(findRoundAdvancedTeams(tournament, finalPlayoffLeg.name), finalPlayoffLeg, config)
+        createFinalRankings(tournament, finalPlayoffLeg)
       }
     }
   })

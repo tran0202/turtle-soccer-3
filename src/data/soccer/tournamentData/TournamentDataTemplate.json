@@ -1,5 +1,5 @@
 {
-  "id": "COPA1983",
+  "id": "COPA1979",
   "stages": [
     {
       "name": "Group Stage",
@@ -7,210 +7,210 @@
       "home_and_away": true,
       "eliminateCount": 4,
       "next_round": "Semi-finals First Leg",
-      "bye_teams": [{ "id": "PAR" }],
+      "bye_teams": [{ "id": "PER" }],
       "advancement": {
         "teams": {
           "auto": [1],
           "eliminated": [2, 3],
-          "text": "The winners would advance to the semi-finals. Defending champions Paraguay received a bye into the semi-finals."
+          "text": "The winners would advance to the semi-finals. Defending champions Peru received a bye into the semi-finals."
         }
       },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "URU" }, { "id": "CHI" }, { "id": "VEN-1954-2006" }],
+          "teams": [{ "id": "VEN-1954-2006" }, { "id": "COL" }, { "id": "CHI" }],
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "CHI",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1983-09-01",
-              "time": "12:00",
-              "stadium": "Estádio Centenario",
-              "city": "Montevideo"
-            },
-            {
-              "home_team": "URU",
-              "away_team": "VEN-1954-2006",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1983-09-04",
-              "time": "12:00",
-              "stadium": "Estádio Centenario",
-              "city": "Montevideo"
-            },
-            {
-              "home_team": "CHI",
-              "away_team": "VEN-1954-2006",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1983-09-08",
-              "time": "12:00",
-              "stadium": "Estádio Nacional",
-              "city": "Santiago"
-            },
-            {
-              "home_team": "CHI",
-              "away_team": "URU",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1983-09-11",
-              "time": "12:00",
-              "stadium": "Estádio Nacional",
-              "city": "Santiago"
-            },
-            {
               "home_team": "VEN-1954-2006",
-              "away_team": "URU",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "1983-09-18",
-              "time": "12:00",
-              "stadium": "Brígido Iriarte Stadium",
-              "city": "Caracas"
-            },
-            {
-              "home_team": "VEN-1954-2006",
-              "away_team": "CHI",
+              "away_team": "COL",
               "home_score": 0,
               "away_score": 0,
-              "date": "1983-09-21",
+              "date": "1979-08-01",
               "time": "12:00",
-              "stadium": "Brígido Iriarte Stadium",
-              "city": "Caracas"
+              "stadium": "Pueblo Nuevo",
+              "city": "San Cristóbal"
+            },
+            {
+              "home_team": "VEN-1954-2006",
+              "away_team": "CHI",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "1979-08-08",
+              "time": "12:00",
+              "stadium": "Pueblo Nuevo",
+              "city": "San Cristóbal"
+            },
+            {
+              "home_team": "COL",
+              "away_team": "CHI",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1979-08-15",
+              "time": "12:00",
+              "stadium": "Estadio El Campín",
+              "city": "Bogotá"
+            },
+            {
+              "home_team": "COL",
+              "away_team": "VEN-1954-2006",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "1979-08-22",
+              "time": "12:00",
+              "stadium": "Estadio El Campín",
+              "city": "Bogotá"
+            },
+            {
+              "home_team": "CHI",
+              "away_team": "VEN-1954-2006",
+              "home_score": 7,
+              "away_score": 0,
+              "date": "1979-08-29",
+              "time": "12:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
+            },
+            {
+              "home_team": "CHI",
+              "away_team": "COL",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1979-09-05",
+              "time": "12:00",
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "ECU" }, { "id": "ARG" }, { "id": "BRA" }],
+          "teams": [{ "id": "BOL" }, { "id": "ARG" }, { "id": "BRA" }],
           "matches": [
             {
-              "home_team": "ECU",
+              "home_team": "BOL",
               "away_team": "ARG",
               "home_score": 2,
-              "away_score": 2,
-              "date": "1983-08-10",
-              "time": "12:00",
-              "stadium": "Estadio Olímpico Atahualpa",
-              "city": "Quito"
-            },
-            {
-              "home_team": "ECU",
-              "away_team": "BRA",
-              "home_score": 0,
               "away_score": 1,
-              "date": "1983-08-17",
+              "date": "1979-07-18",
               "time": "12:00",
-              "stadium": "Estadio Olímpico Atahualpa",
-              "city": "Quito"
+              "stadium": "Estadio Hernando Siles",
+              "city": "La Paz"
             },
             {
-              "home_team": "ARG",
+              "home_team": "BOL",
               "away_team": "BRA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1983-08-24",
-              "time": "12:00",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "ECU",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "1983-09-01",
-              "time": "12:00",
-              "stadium": "Estadio Serra Dourada",
-              "city": "Goiânia"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "ECU",
               "home_score": 2,
-              "away_score": 2,
-              "date": "1983-09-07",
+              "away_score": 1,
+              "date": "1979-07-26",
               "time": "12:00",
-              "stadium": "Estadio Monumental",
-              "city": "Buenos Aires"
+              "stadium": "Estadio Hernando Siles",
+              "city": "La Paz"
             },
             {
               "home_team": "BRA",
               "away_team": "ARG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "1983-09-14",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1979-08-02",
               "time": "12:00",
-              "stadium": "Maracanã Stadium",
+              "stadium": "Estadio do Maracanã",
               "city": "Rio de Janeiro"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "BOL",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "1979-08-08",
+              "time": "12:00",
+              "stadium": "José Amalfitani Stadium",
+              "city": "Buenos Aires"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "BOL",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1979-08-16",
+              "time": "12:00",
+              "stadium": "Estádio do Morumbi",
+              "city": "São Paulo"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "BRA",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1979-08-23",
+              "time": "12:00",
+              "stadium": "Estádio Monumental",
+              "city": "Buenos Aires"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "BOL" }, { "id": "COL" }, { "id": "PER" }],
+          "teams": [{ "id": "ECU" }, { "id": "PAR" }, { "id": "URU" }],
           "matches": [
             {
-              "home_team": "BOL",
-              "away_team": "COL",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1983-08-14",
+              "home_team": "ECU",
+              "away_team": "PAR",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1979-08-29",
               "time": "12:00",
-              "stadium": "Estadio Hernando Siles",
-              "city": "La Paz"
+              "stadium": "Estádio Olímpico Atahualpa",
+              "city": "Quito"
             },
             {
-              "home_team": "PER",
-              "away_team": "COL",
-              "home_score": 1,
+              "home_team": "ECU",
+              "away_team": "URU",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1979-09-05",
+              "time": "12:00",
+              "stadium": "Estádio Olímpico Atahualpa",
+              "city": "Quito"
+            },
+            {
+              "home_team": "PAR",
+              "away_team": "ECU",
+              "home_score": 2,
               "away_score": 0,
-              "date": "1983-08-17",
+              "date": "1979-09-13",
               "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Lima"
+              "stadium": "Defensores del Chaco",
+              "city": "Asunción"
             },
             {
-              "home_team": "BOL",
-              "away_team": "PER",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1983-08-21",
-              "time": "12:00",
-              "stadium": "Estadio Hernando Siles",
-              "city": "La Paz"
-            },
-            {
-              "home_team": "COL",
-              "away_team": "PER",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1983-08-28",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
-            },
-            {
-              "home_team": "COL",
-              "away_team": "BOL",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "1983-08-31",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
-            },
-            {
-              "home_team": "PER",
-              "away_team": "BOL",
+              "home_team": "URU",
+              "away_team": "ECU",
               "home_score": 2,
               "away_score": 1,
-              "date": "1983-09-04",
+              "date": "1979-09-16",
               "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Lima"
+              "stadium": "Estadio Centenario",
+              "city": "Montevideo"
+            },
+            {
+              "home_team": "PAR",
+              "away_team": "URU",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1979-09-20",
+              "time": "12:00",
+              "stadium": "Defensores del Chaco",
+              "city": "Asunción"
+            },
+            {
+              "home_team": "URU",
+              "away_team": "PAR",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1979-09-26",
+              "time": "12:00",
+              "stadium": "Estadio Centenario",
+              "city": "Montevideo"
             }
           ]
         }
@@ -227,10 +227,10 @@
           "matches": [
             {
               "home_team": "PER",
-              "away_team": "URU",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1983-10-13",
+              "away_team": "CHI",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1979-10-17",
               "time": "12:00",
               "stadium": "Estadio Nacional",
               "city": "Lima"
@@ -238,9 +238,9 @@
             {
               "home_team": "PAR",
               "away_team": "BRA",
-              "home_score": 1,
+              "home_score": 2,
               "away_score": 1,
-              "date": "1983-10-13",
+              "date": "1979-10-24",
               "time": "12:00",
               "stadium": "Defensores del Chaco",
               "city": "Asunción"
@@ -254,26 +254,24 @@
           "next_round": "Final First Leg",
           "matches": [
             {
-              "home_team": "URU",
+              "home_team": "CHI",
               "away_team": "PER",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1983-10-20",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1979-10-24",
               "time": "12:00",
-              "stadium": "Estadio Centenario",
-              "city": "Montevideo"
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
             },
             {
               "home_team": "BRA",
               "away_team": "PAR",
-              "home_score": 0,
-              "away_score": 0,
-              "home_coin_toss": true,
-              "bypass_away_goals": true,
-              "date": "1983-10-20",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "1979-10-31",
               "time": "12:00",
-              "stadium": "Parque de Sabiá",
-              "city": "Uberlandia"
+              "stadium": "Estadio do Maracanã",
+              "city": "Rio de Janeiro"
             }
           ]
         }
@@ -289,30 +287,52 @@
           "next_round": "Final Second Leg",
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "BRA",
-              "home_score": 2,
+              "home_team": "PAR",
+              "away_team": "CHI",
+              "home_score": 3,
               "away_score": 0,
-              "date": "1983-10-27",
+              "date": "1979-11-28",
               "time": "12:00",
-              "stadium": "Estadio Centenario",
-              "city": "Montevideo"
+              "stadium": "Defensores del Chaco",
+              "city": "Asunción"
             }
           ]
         },
         {
           "name": "Final Second Leg",
           "round_type": "secondleg",
+          "next_round": "Final Playoff",
           "matches": [
             {
-              "home_team": "BRA",
-              "away_team": "URU",
+              "home_team": "CHI",
+              "away_team": "PAR",
               "home_score": 1,
-              "away_score": 1,
-              "date": "1983-11-04",
+              "away_score": 0,
+              "need_playoff": true,
+              "date": "1979-12-05",
               "time": "12:00",
-              "stadium": "Estadio Fonte Nova",
-              "city": "Salvador"
+              "stadium": "Estadio Nacional",
+              "city": "Santiago"
+            }
+          ]
+        },
+        {
+          "name": "Final Playoff",
+          "round_type": "playoffleg",
+          "matches": [
+            {
+              "home_team": "PAR",
+              "away_team": "CHI",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_playoff_win": true,
+              "playoff_notes": "As both teams finished tied on points, Paraguay won the playoff on aggregate goals from the first and second legs (3–1)",
+              "date": "1979-12-11",
+              "time": "12:00",
+              "stadium": "José Amalfitani",
+              "city": "Buenos Aires"
             }
           ]
         }

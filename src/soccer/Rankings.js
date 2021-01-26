@@ -23,6 +23,7 @@ const RankingRowSeparate = (props) => {
     roundName !== '' &&
     roundName !== 'Final' &&
     roundName !== 'Final Second Leg' &&
+    roundName !== 'Final Playoff' &&
     roundName !== 'Third-place' &&
     (roundName !== 'Semi-finals' || (roundName === 'Semi-finals' && round.exception)) &&
     roundName !== 'Consolation Semi-finals' &&
