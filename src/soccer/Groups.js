@@ -15,14 +15,15 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap
 import classnames from 'classnames'
 
 const getFormat = (rrStage) => {
-  const { groups, advancement, odd_format } = rrStage
+  const { groups, advancement, home_and_away, odd_format } = rrStage
   const groupCount = groups ? groups.length : 0
   const teamCount = groups && groups[0] && groups[0].teams ? groups[0].teams.length : 0
-  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement, odd_format }
+  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement, home_and_away, odd_format }
 }
 
 const TournamentFormat = (props) => {
   const { config, tournamentType } = props
+  // console.log('config', config)
   return (
     config.teamCount !== 0 && (
       <Row className="mt-3 mb-3 text-left tournament-format">
@@ -47,11 +48,17 @@ const TournamentFormat = (props) => {
                       </React.Fragment>
                     )}
                     {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals).&nbsp;</React.Fragment>}
-                    {!config.odd_format && <React.Fragment>Each group played a round-robin schedule.</React.Fragment>}
+                    {!config.odd_format && (
+                      <React.Fragment>Each group played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.</React.Fragment>
+                    )}
                     {config.odd_format}
                   </React.Fragment>
                 )}
-                {config.groupCount === 1 && <React.Fragment>{config.totalCount} teams played a league of home-and-away round-robin matches.</React.Fragment>}
+                {config.groupCount === 1 && (
+                  <React.Fragment>
+                    {config.totalCount} teams played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.
+                  </React.Fragment>
+                )}
                 &nbsp;
                 {config.advancement && config.advancement.teams && config.advancement.teams.text
                   ? config.advancement.teams.text
@@ -222,7 +229,6 @@ const calculateStageRankings = (tournament, config, stage) => {
       let matchDay = group.matches ? Math.ceil(group.matches.length / Math.floor(group.teams.length / 2)) : 0
       matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
       matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
-      // console.log('matchDay', matchDay)
       createGroupFinalRankings(tournament, group, matchDay)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })

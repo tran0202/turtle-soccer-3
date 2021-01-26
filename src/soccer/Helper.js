@@ -58,7 +58,7 @@ export const getAllRoundRobinStages = (stages) => {
 }
 
 export const getKnockoutStages = (stages) => {
-  return stages ? stages.filter((s) => s.type === 'knockout') : null
+  return stages ? stages.filter((s) => s.type === 'knockout' || s.type === 'knockout2legged') : null
 }
 
 export const getDefaultStageTab = (stages) => {
@@ -157,6 +157,7 @@ export const isSuccessor = (id) => {
   return !team.successor ? false : team.successor
 }
 
+// (match.second_leg && match.home_aggregate_score_2nd_leg > match.away_aggregate_score_2nd_leg) ||
 export const isWinner = (who, match) => {
   if (match) {
     if (who === 'H') {
@@ -165,20 +166,28 @@ export const isWinner = (who, match) => {
         match.home_walkover ||
         match.home_coin_toss ||
         match.home_bye ||
-        match.home_score > match.away_score ||
-        (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
-        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score > match.away_penalty_score) ||
-        match.home_replay_score > match.away_replay_score
+        (!match.second_leg &&
+          (match.home_score > match.away_score ||
+            (match.home_score === match.away_score && match.home_extra_score > match.away_extra_score) ||
+            (match.home_score === match.away_score &&
+              match.home_extra_score === match.away_extra_score &&
+              match.home_penalty_score > match.away_penalty_score) ||
+            match.home_replay_score > match.away_replay_score)) ||
+        (match.second_leg && match.home_aggregate_score_2nd_leg > match.away_aggregate_score_2nd_leg)
       )
     } else {
       if (match.match_void) return match.home_withdrew
       return (
         match.away_walkover ||
         match.away_coin_toss ||
-        match.home_score < match.away_score ||
-        (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
-        (match.home_score === match.away_score && match.home_extra_score === match.away_extra_score && match.home_penalty_score < match.away_penalty_score) ||
-        match.home_replay_score < match.away_replay_score
+        (!match.second_leg &&
+          (match.home_score < match.away_score ||
+            (match.home_score === match.away_score && match.home_extra_score < match.away_extra_score) ||
+            (match.home_score === match.away_score &&
+              match.home_extra_score === match.away_extra_score &&
+              match.home_penalty_score < match.away_penalty_score) ||
+            match.home_replay_score < match.away_replay_score)) ||
+        (match.second_leg && match.home_aggregate_score_2nd_leg < match.away_aggregate_score_2nd_leg)
       )
     }
   }
@@ -232,6 +241,100 @@ export const getDateMatchArrayPair = (matches_array, sorted) => {
     })
   }
   return { dates, matches }
+}
+
+export const isKnockout2LeggedStageValid = (stage) => {
+  if (stage.type !== 'knockout2legged') {
+    console.log('Not a knockout2legged stage')
+    return false
+  }
+  if (!stage.rounds || stage.rounds.length !== 2) {
+    console.log('Invalid knockout2legged stage')
+    return false
+  }
+  const firstLeg = stage.rounds[0]
+  let secondLeg = stage.rounds[1]
+  if (!firstLeg.matches || firstLeg.matches.length === 0) {
+    console.log('No matches in first leg')
+    return false
+  }
+  if (!secondLeg.matches || secondLeg.matches.length === 0) {
+    console.log('No matches in second leg')
+    return false
+  }
+  return true
+}
+
+export const calculateAggregateScore = (stage) => {
+  if (!isKnockout2LeggedStageValid(stage)) return
+
+  const firstLeg = stage.rounds[0]
+  let secondLeg = stage.rounds[1]
+  secondLeg.matches.forEach((m2) => {
+    firstLeg.matches.some((m1) => {
+      if (m2.home_team === m1.away_team && m2.away_team === m1.home_team) {
+        m1.round_type = firstLeg.round_type
+        m2.round_type = secondLeg.round_type
+        m1.first_leg = true
+        m2.second_leg = true
+        m1.home_score_2nd_leg = m2.away_score
+        m1.away_score_2nd_leg = m2.home_score
+        m1.home_extra_score_2nd_leg = m2.away_extra_score
+        m1.away_extra_score_2nd_leg = m2.home_extra_score
+        m1.home_penalty_score_2nd_leg = m2.away_penalty_score
+        m1.away_penalty_score_2nd_leg = m2.home_penalty_score
+        m1.notes_1st_leg = m1.notes
+        m1.notes_2nd_leg = m2.notes
+        if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
+          m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
+          m1.away_aggregate_score_1st_leg = parseInt(m1.away_score) + parseInt(m2.home_score)
+          if (m2.home_extra_score != null && m2.away_extra_score != null) {
+            m1.home_aggregate_score_1st_leg = m1.home_aggregate_score_1st_leg + parseInt(m2.away_extra_score)
+            m1.away_aggregate_score_1st_leg = m1.away_aggregate_score_1st_leg + parseInt(m2.home_extra_score)
+          }
+          m2.home_aggregate_score_2nd_leg = parseInt(m2.home_score) + parseInt(m1.away_score)
+          m2.away_aggregate_score_2nd_leg = parseInt(m2.away_score) + parseInt(m1.home_score)
+          if (m2.home_extra_score != null && m2.away_extra_score != null) {
+            m2.home_aggregate_score_2nd_leg = m2.home_aggregate_score_2nd_leg + parseInt(m2.home_extra_score)
+            m2.away_aggregate_score_2nd_leg = m2.away_aggregate_score_2nd_leg + parseInt(m2.away_extra_score)
+          }
+        }
+        if (m1.home_aggregate_score_1st_leg === m1.away_aggregate_score_1st_leg) {
+          if (m1.away_score > m2.away_score) {
+            m1.aggregate_team_1st_leg = m2.home_team
+          } else if (m1.away_score < m2.away_score) {
+            m1.aggregate_team_1st_leg = m1.home_team
+          } else if (m2.away_extra_score > 0) {
+            m1.aggregate_team_1st_leg = m2.away_team
+          }
+        }
+        if (m2.home_aggregate_score_2nd_leg === m2.away_aggregate_score_2nd_leg) {
+          if (m1.away_score > m2.away_score) {
+            m2.aggregate_team_2nd_leg = m2.home_team
+          } else if (m1.away_score < m2.away_score) {
+            m2.aggregate_team_2nd_leg = m1.home_team
+          } else if (m2.away_extra_score > 0) {
+            m2.aggregate_team_2nd_leg = m2.away_team
+          }
+        }
+        if (m1.home_coin_toss) {
+          m2.away_coin_toss = true
+        } else if (m1.away_coin_toss) {
+          m2.home_coin_toss = true
+        } else if (m2.home_coin_toss) {
+          m1.away_coin_toss = true
+        } else if (m2.away_coin_toss) {
+          m1.home_coin_toss = true
+        }
+        if (m1.bypass_away_goals) {
+          m2.bypass_away_goals = m1.bypass_away_goals
+        } else if (m2.bypass_away_goals) {
+          m1.bypass_away_goals = m2.bypass_away_goals
+        }
+      }
+      return m2.home_team === m1.away_team && m2.away_team === m1.home_team
+    })
+  })
 }
 
 export const isHomeLoseAggregate = (data) => {
@@ -328,11 +431,12 @@ const DisplayExtraTimeText = (props) => {
     home_coin_toss,
     away_coin_toss,
     group_playoff,
+    round_type,
     goldenGoal,
     silverGoal,
     void_notes,
   } = param
-  // console.log('group_playoff', group_playoff)
+  // console.log('round_type', round_type)
   return (
     <React.Fragment>
       {void_notes && <React.Fragment>&gt;&gt;&gt;&nbsp;{void_notes}</React.Fragment>}
@@ -390,12 +494,12 @@ const DisplayExtraTimeText = (props) => {
               {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
             </React.Fragment>
           )}
-          {home_coin_toss && (
+          {home_coin_toss && (round_type === 'secondleg' || round_type === undefined) && (
             <React.Fragment>
               &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(home_team)}</b> won on coin toss
             </React.Fragment>
           )}
-          {away_coin_toss && (
+          {away_coin_toss && (round_type === 'secondleg' || round_type === undefined) && (
             <React.Fragment>
               &nbsp;&gt;&gt;&gt;&nbsp;<b>{getTeamName(away_team)}</b> won on coin toss
             </React.Fragment>
@@ -436,12 +540,13 @@ export const DisplayKnockout2LeggedMatch = (props) => {
     home_aggregate_score: m.home_aggregate_score_1st_leg,
     away_aggregate_score: m.away_aggregate_score_1st_leg,
   }
+  // console.log('bypass_away_goals', m.bypass_away_goals)
   return (
     <React.Fragment>
       <Row className="padding-top-md">
         <Col
           className={`team-name text-uppercase text-right team-name-no-padding-right col-box-25${
-            isHomeLoseAggregate(homeLoseData) || m.away_walkover ? ' gray3' : ''
+            isHomeLoseAggregate(homeLoseData) || m.away_walkover || m.away_coin_toss ? ' gray3' : ''
           }`}
         >
           {getTeamName(m.home_team)}
@@ -486,13 +591,13 @@ export const DisplayKnockout2LeggedMatch = (props) => {
         <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
           {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
         </Col>
-        <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) || m.home_walkover ? ' gray3' : ''}`}>
+        <Col className={`team-name text-uppercase col-box-25${isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_coin_toss ? ' gray3' : ''}`}>
           {getTeamName(m.away_team)}
         </Col>
       </Row>
       <Row>
         <Col sm={{ size: 6, offset: 6 }} xs={{ size: 6, offset: 6 }} className="aggregate_text margin-top-sm">
-          {m.home_aggregate_score_1st_leg != null && m.away_aggregate_score_1st_leg != null && (
+          {m.home_aggregate_score_1st_leg != null && m.away_aggregate_score_1st_leg != null && !m.bypass_away_goals && (
             <DisplayAwayGoalsText
               param={{ aggregate_team: m.aggregate_team_1st_leg, home_extra_score: m.home_extra_score_2nd_leg, away_extra_score: m.away_extra_score_2nd_leg }}
             />
@@ -505,6 +610,8 @@ export const DisplayKnockout2LeggedMatch = (props) => {
               away_extra_score: m.away_extra_score_2nd_leg,
               home_penalty_score: m.home_penalty_score_2nd_leg,
               away_penalty_score: m.away_penalty_score_2nd_leg,
+              home_coin_toss: m.home_coin_toss,
+              away_coin_toss: m.away_coin_toss,
             }}
           />
         </Col>
@@ -575,7 +682,9 @@ const DisplayMatch = (props) => {
           sm="3"
           xs="3"
           className={`team-name text-uppercase text-right team-name-no-padding-right${
-            isHomeLoseAggregate(homeLoseData) || m.away_walkover || m.away_coin_toss || m.home_withdrew || m.postponed ? ' gray3' : ''
+            isHomeLoseAggregate(homeLoseData) || m.away_walkover || (m.away_coin_toss && m.round_type !== 'firstleg') || m.home_withdrew || m.postponed
+              ? ' gray3'
+              : ''
           }`}
         >
           {getTeamName(m.home_team)}
@@ -632,7 +741,14 @@ const DisplayMatch = (props) => {
           sm="3"
           xs="3"
           className={`team-name text-uppercase${
-            isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_coin_toss || m.home_bye || m.away_withdrew || m.postponed ? ' gray3' : ''
+            isAwayLoseAggregate(awayLoseData) ||
+            m.home_walkover ||
+            (m.home_coin_toss && m.round_type !== 'firstleg') ||
+            m.home_bye ||
+            m.away_withdrew ||
+            m.postponed
+              ? ' gray3'
+              : ''
           }`}
         >
           {getTeamName(m.away_team)}
@@ -649,9 +765,11 @@ const DisplayMatch = (props) => {
               <b>
                 {m.home_aggregate_score_2nd_leg}-{m.away_aggregate_score_2nd_leg}
               </b>
-              <DisplayAwayGoalsText
-                param={{ aggregate_team: m.aggregate_team_2nd_leg, home_extra_score: m.home_extra_score, away_extra_score: m.away_extra_score }}
-              />
+              {!m.bypass_away_goals && (
+                <DisplayAwayGoalsText
+                  param={{ aggregate_team: m.aggregate_team_2nd_leg, home_extra_score: m.home_extra_score, away_extra_score: m.away_extra_score }}
+                />
+              )}
             </React.Fragment>
           )}
           <DisplayExtraTimeText
@@ -665,6 +783,7 @@ const DisplayMatch = (props) => {
               home_coin_toss: m.home_coin_toss,
               away_coin_toss: m.away_coin_toss,
               group_playoff: m.group_playoff,
+              round_type: m.round_type,
               goldenGoal: config.goldenGoal,
               silverGoal: config.silverGoal,
               void_notes: m.void_notes,

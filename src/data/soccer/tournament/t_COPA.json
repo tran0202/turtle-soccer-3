@@ -700,11 +700,49 @@
     "name": "Copa America 1983",
     "short_name": "1983",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1983-08-10", "end_date": "1983-11-04" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "no_third_place": true,
+    "details": {
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1983-08-10",
+      "end_date": "1983-11-04",
+      "color": "#005ca4",
+      "team_count": 10,
+      "confed_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Group B - Argentina vs Ecuador",
+        "filename": "Argentina_v_ecuador_copa_america.jpg",
+        "text": "Jorge Rinaldi (right) and Víctor Ramos, trying to take advantage of Ecuadorian defenders, in Buenos Aires."
+      },
+      {
+        "name": "Group B - Argentina vs Ecuador",
+        "filename": "Argentina_v_ecuador.jpg",
+        "text": "Argentina v. Ecuador at the Copa América, played in Buenos Aires. Enzo Trossero (3) defending the goal."
+      },
+      {
+        "name": "Group B - Argentina vs Ecuador",
+        "filename": "Ecuador_argentina_1983.jpg",
+        "text": "Jorge Burruchaga (right) shoting to goal sorrunded by Ecuatorian players Klinger and Narváez. Néstor Clausen (13) watches. The match ended 2-2."
+      },
+      {
+        "name": "Group B - Argentina vs Ecuador",
+        "filename": "Sabella_v_ecuador.jpg",
+        "text": "Alejandro Sabella (10) shooting the ball while goalkeeper Delgado tries to stop him, during the match Ecuador v. Argentina at Copa América (final result: 2-2)."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "BRA", "semi_finalist1": "PAR", "semi_finalist2": "PER" },
+    "statistics": { "total_matches": 24, "total_goals": 55, "attendance": 1119738 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Jorge Burruchaga", "team": "ARG", "goals": 3 },
+        { "player": "Roberto Dinamite", "team": "BRA", "goals": 3 },
+        { "player": "Carlos Aguilera", "team": "URU", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Enzo Francéscoli", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1979",

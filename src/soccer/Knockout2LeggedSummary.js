@@ -1,6 +1,5 @@
 import React from 'react'
-import { isKnockout2LeggedStageValid } from './Knockout2Legged'
-import { DisplayKnockout2LeggedMatch } from './Helper'
+import { DisplayKnockout2LeggedMatch, isKnockout2LeggedStageValid } from './Helper'
 import { Row, Col } from 'reactstrap'
 
 const SummaryHead = () => {
@@ -23,7 +22,7 @@ const Knockout2LeggedSummary = (props) => {
     <React.Fragment>
       <Row>
         <Col>
-          <div className="h2-ff1 margin-top-md">Summary</div>
+          <div className="h2-ff1 margin-top-md"></div>
         </Col>
       </Row>
       <Row className="box-xl mb-5">

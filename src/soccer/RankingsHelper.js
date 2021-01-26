@@ -436,7 +436,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
     const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
     const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
     group.final_rankings.sort((a, b) => {
-      if (group.name === 'Semi-finals') {
+      if (group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg') {
         return getTeamName(a.id) > getTeamName(b.id) ? 1 : -1
       } else if (a.pts > b.pts) {
         return -1
@@ -502,7 +502,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
     })
     group.final_rankings.forEach((t, index) => {
       if (t) {
-        t.r = group.name === 'Semi-finals' ? startingIndex : index + startingIndex
+        t.r = group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg' ? startingIndex : index + startingIndex
       }
     })
     if (group.draw_pools) {
@@ -766,7 +766,7 @@ export const createSemifinalistsPool = (round) => {
   })
   round.final_rankings = []
   round.final_rankings.push(pool)
-  console.log('round.final_rankings', round.final_rankings)
+  // console.log('round.final_rankings', round.final_rankings)
 }
 
 export const cloneRanking = (ranking) => {

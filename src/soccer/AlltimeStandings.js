@@ -93,7 +93,7 @@ const collectRankings = (tournaments) => {
                   })
               })
           }
-          if (s.type === 'knockout') {
+          if (s.type === 'knockout' || s.type === 'knockout2legged') {
             s.teams &&
               s.teams.forEach((t) => {
                 _teams.push(t)
@@ -110,7 +110,7 @@ const collectRankings = (tournaments) => {
           }
         })
       rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
-      collectProgressRankings(t, rankings, 7)
+      collectProgressRankings(t, rankings, 8)
       rankingArray.push(rankings)
     })
 

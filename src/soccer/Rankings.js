@@ -22,9 +22,11 @@ const RankingRowSeparate = (props) => {
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
     roundName !== '' &&
     roundName !== 'Final' &&
+    roundName !== 'Final Second Leg' &&
     roundName !== 'Third-place' &&
     (roundName !== 'Semi-finals' || (roundName === 'Semi-finals' && round.exception)) &&
     roundName !== 'Consolation Semi-finals' &&
+    roundName !== 'Semi-finals Second Leg' &&
     roundName !== 'Playoff First Round' &&
     roundName !== 'Silver medal match' &&
     roundName !== 'Final Round' && (
@@ -156,7 +158,7 @@ const RankingRound = (props) => {
   // console.log('round', round)
   // console.log('config', config)
   updateFinalRankings(round)
-  if (config.no_third_place && round.name === 'Semi-finals') {
+  if (config.no_third_place && (round.name === 'Semi-finals' || round.name === 'Semi-finals Second Leg')) {
     createSemifinalistsPool(round)
   }
   return (
