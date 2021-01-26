@@ -12,10 +12,11 @@ const Knockout2Legged = (props) => {
       {stage.rounds &&
         stage.rounds.map((r) => {
           const isSecondLeg = r.round_type === 'secondleg'
+          const isPlayoffLeg = r.round_type === 'playoffleg'
           return (
             <DisplaySchedule
               round={{ name: r.name, ...getMatchArrayByDate(r, false) }}
-              config={{ showMatchYear: stage.show_match_year, knockoutMatch: isSecondLeg, secondLegMatch: isSecondLeg }}
+              config={{ showMatchYear: stage.show_match_year, knockoutMatch: isSecondLeg || isPlayoffLeg, secondLegMatch: isSecondLeg }}
               key={r.name}
             />
           )

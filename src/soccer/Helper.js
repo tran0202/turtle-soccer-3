@@ -416,6 +416,7 @@ export const isAwayLoseAggregate = (data) => {
     need_playoff,
     home_withdrew,
   } = data
+  // console.log('knockoutMatch', knockoutMatch)
   if (!knockoutMatch) return false
   if (!secondLegMatch) {
     return (
@@ -569,7 +570,6 @@ export const DisplayKnockout2LeggedMatch = (props) => {
     away_aggregate_score: m.away_aggregate_score_1st_leg,
     need_playoff: m.need_playoff,
   }
-  // console.log('need_playoff', m.need_playoff)
   return (
     <React.Fragment>
       <Row className="padding-top-md">
