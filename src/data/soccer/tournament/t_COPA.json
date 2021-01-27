@@ -797,36 +797,40 @@
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
     "no_third_place": true,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1975-07-17", "end_date": "1975-10-28",
+    "details": {
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1975-07-17",
+      "end_date": "1975-10-28",
       "color": "#005ca4",
       "team_count": 10,
-      "confed_count": 1 },
-      "hero_images": [
-        {
-          "name": "Estadio El Campín, Bogotá",
-          "filename": "Estadio_El_Campin_Seleccion_Colombia-Caminos.jpg",
-          "text": "The Estadio El Campín hosted one of the finals match"
-        },
-        {
-          "name": "Estadio Nacional, Lima",
-          "filename": "Estadio_Nacional_nuevo_07_10_2011.jpg",
-          "text": "Estadio Nacional hosted one of the finals match"
-        },
-        {
-          "name": "Estadio Olímpico, Caracas",
-          "filename": "Olimpico_ucv.jpg",
-          "text": "The Estadio Olímpico hosted one of the finals match"
-        }
-      ],
-      "final_standings": { "champions": "PER", "runners_up": "COL", "semi_finalist1": "BRA", "semi_finalist2": "URU" },
-      "statistics": { "total_matches": 25, "total_goals": 79, "attendance": 1053000 },
-      "awards": {
-        "golden_boot": [
-          { "player": "Leopoldo Luque", "team": "ARG", "goals": 4 },
-          { "player": "Ernesto Díaz", "team": "COL", "goals": 4 }
-        ],
-        "golden_ball": [{ "player": "Teófilo Cubillas", "team": "PER" }]
+      "confed_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio El Campín, Bogotá",
+        "filename": "Estadio_El_Campin_Seleccion_Colombia-Caminos.jpg",
+        "text": "The Estadio El Campín hosted one of the finals match"
+      },
+      {
+        "name": "Estadio Nacional, Lima",
+        "filename": "Estadio_Nacional_nuevo_07_10_2011.jpg",
+        "text": "Estadio Nacional hosted one of the finals match"
+      },
+      {
+        "name": "Estadio Olímpico, Caracas",
+        "filename": "Olimpico_ucv.jpg",
+        "text": "The Estadio Olímpico hosted one of the finals match"
       }
+    ],
+    "final_standings": { "champions": "PER", "runners_up": "COL", "semi_finalist1": "BRA", "semi_finalist2": "URU" },
+    "statistics": { "total_matches": 25, "total_goals": 79, "attendance": 1053000 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Leopoldo Luque", "team": "ARG", "goals": 4 },
+        { "player": "Ernesto Díaz", "team": "COL", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Teófilo Cubillas", "team": "PER" }]
+    }
   },
   {
     "id": "COPA1967",
@@ -834,11 +838,32 @@
     "name": "South American Championship Uruguay 1967",
     "short_name": "Uruguay 1967",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1967-01-13", "end_date": "1967-02-02" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1967-01-13",
+      "end_date": "1967-02-02",
+      "color": "#259bc2",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Centenario, Montevideo",
+        "filename": "Stad_de_centario_uruguay1930_montevideo.jpg",
+        "text": "The Estadio Centenario hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 15, "total_goals": 49 },
+    "awards": {
+      "golden_boot": [{ "player": "Luis Artime", "team": "ARG", "goals": 5 }],
+      "golden_ball": [{ "player": "Pedro Rocha", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1963",
