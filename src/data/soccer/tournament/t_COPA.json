@@ -1145,11 +1145,47 @@
     "name": "South American Championship Brazil 1949",
     "short_name": "Brazil 1949",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1949-04-03", "end_date": "1949-05-11" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1949-04-03",
+      "end_date": "1949-05-11",
+      "color": "#008400",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 5,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Estádio São Januário, Rio de Janeiro",
+        "filename": "Sao_janu_sociais.jpg",
+        "text": "The Estádio São Januário hosted the tournament matches."
+      },
+      {
+        "name": "Estádio Sete de Setembro, Belo Horizonte",
+        "filename": "Independ1.jpg",
+        "text": "The Estádio Sete de Setembro hosted the tournament matches."
+      },
+      {
+        "name": "Estádio do Pacaembu, São Paulo",
+        "filename": "Pacaembu.jpg",
+        "text": "The Estádio do Pacaembu hosted the tournament matches."
+      },
+      {
+        "name": "Estádio Vila Belmiro, Santos",
+        "filename": "Vila_Belmiro_SantosFC.jpg",
+        "text": "The Estádio Vila Belmiro hosted the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "PAR", "third_place": "PER", "fourth_place": "BOL" },
+    "statistics": { "total_matches": 29, "total_goals": 135 },
+    "awards": {
+      "golden_boot": [{ "player": "Jair da Rosa Pinto", "team": "BRA", "goals": 9 }],
+      "golden_ball": [{ "player": "Ademir", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1947",

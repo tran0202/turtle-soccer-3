@@ -558,6 +558,7 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
 
 export const collectGroupRankings = (group, matchDay) => {
   if (!group.teams) return
+  // console.log('matchDay', matchDay)
   group.teams.forEach((team) => {
     if (team.rankings) {
       const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
@@ -666,7 +667,6 @@ export const isEliminated = (row, config) => {
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
     let flag = false
     config.advancement.teams.eliminated.forEach((e) => (flag = flag || row.r === e))
-    // console.log('row', row)
     return flag
   }
   return false
