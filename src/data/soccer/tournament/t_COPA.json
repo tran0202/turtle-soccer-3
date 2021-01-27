@@ -1193,11 +1193,32 @@
     "name": "South American Championship Ecuador 1947",
     "short_name": "Ecuador 1947",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1947-11-30", "end_date": "1947-12-31" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["ECU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1947-11-30",
+      "end_date": "1947-12-31",
+      "color": "#21216b",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_1947.jpg",
+        "text": "Argentina won its 9th title"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "PAR", "third_place": "URU", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 28, "total_goals": 102 },
+    "awards": {
+      "golden_boot": [{ "player": "Nicolás Falero", "team": "URU", "goals": 8 }],
+      "golden_ball": [{ "player": "José Manuel Moreno", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1946",
@@ -1205,11 +1226,9 @@
     "name": "South American Championship Argentina 1946",
     "short_name": "Argentina 1946",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1946-01-12", "end_date": "1946-02-10" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1946-01-12", "end_date": "1946-02-10" }
   },
   {
     "id": "COPA1945",
@@ -1217,11 +1236,9 @@
     "name": "South American Championship Chile 1945",
     "short_name": "Chile 1945",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1945-01-14", "end_date": "1945-02-28" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["CHI"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1945-01-14", "end_date": "1945-02-28" }
   },
   {
     "id": "COPA1942",
@@ -1229,11 +1246,9 @@
     "name": "South American Championship Uruguay 1942",
     "short_name": "Uruguay 1942",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1942-01-10", "end_date": "1942-02-07" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["URU"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1942-01-10", "end_date": "1942-02-07" }
   },
   {
     "id": "COPA1941",
@@ -1241,11 +1256,9 @@
     "name": "South American Championship Chile 1941",
     "short_name": "Chile 1941",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1941-02-02", "end_date": "1941-03-04" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["CHI"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1941-02-02", "end_date": "1941-03-04" }
   },
   {
     "id": "COPA1939",
@@ -1253,11 +1266,9 @@
     "name": "South American Championship Peru 1939",
     "short_name": "Peru 1939",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1939-01-15", "end_date": "1939-02-12" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["PER"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1939-01-15", "end_date": "1939-02-12" }
   },
   {
     "id": "COPA1937",
@@ -1265,11 +1276,9 @@
     "name": "South American Championship Argentina 1937",
     "short_name": "Argentina 1937",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1936-12-27", "end_date": "1937-02-01" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1936-12-27", "end_date": "1937-02-01" }
   },
   {
     "id": "COPA1935",
@@ -1277,11 +1286,9 @@
     "name": "South American Championship Peru 1935",
     "short_name": "Peru 1935",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1935-01-06", "end_date": "1935-01-27" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["PER"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1935-01-06", "end_date": "1935-01-27" }
   },
   {
     "id": "COPA1929",
@@ -1289,11 +1296,9 @@
     "name": "South American Championship Argentina 1929",
     "short_name": "Argentina 1929",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1929-11-01", "end_date": "1929-11-17" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1929-11-01", "end_date": "1929-11-17" }
   },
   {
     "id": "COPA1927",
@@ -1301,10 +1306,8 @@
     "name": "South American Championship Peru 1927",
     "short_name": "Peru 1927",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1927-10-30", "end_date": "1927-11-27" }
   },
   {
@@ -1313,10 +1316,8 @@
     "name": "South American Championship Chile 1926",
     "short_name": "Chile 1926",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1926-10-12", "end_date": "1926-11-03" }
   },
   {
@@ -1325,10 +1326,8 @@
     "name": "South American Championship Argentina 1925",
     "short_name": "Argentina 1925",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1925-11-29", "end_date": "1925-12-25" }
   },
   {
@@ -1337,10 +1336,8 @@
     "name": "South American Championship Uruguay 1924",
     "short_name": "Uruguay 1924",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1924-10-12", "end_date": "1924-11-02" }
   },
   {
@@ -1349,10 +1346,8 @@
     "name": "South American Championship Uruguay 1923",
     "short_name": "Uruguay 1923",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1923-10-29", "end_date": "1923-12-02" }
   },
   {
@@ -1361,10 +1356,8 @@
     "name": "South American Championship Brazil 1922",
     "short_name": "Brazil 1922",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1922-09-17", "end_date": "1922-10-22" }
   },
   {
@@ -1373,10 +1366,8 @@
     "name": "South American Championship Argentina 1921",
     "short_name": "Argentina 1921",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1921-10-02", "end_date": "1921-10-30" }
   },
   {
@@ -1385,10 +1376,8 @@
     "name": "South American Championship Chile 1920",
     "short_name": "Chile 1920",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1920-09-11", "end_date": "1920-10-03" }
   },
   {
@@ -1397,10 +1386,8 @@
     "name": "South American Championship Brazil 1919",
     "short_name": "Brazil 1919",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1919-05-11", "end_date": "1919-05-29" }
   },
   {
@@ -1409,10 +1396,8 @@
     "name": "South American Championship Uruguay 1917",
     "short_name": "Uruguay 1917",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1917-09-30", "end_date": "1917-10-14" }
   },
   {
@@ -1421,10 +1406,8 @@
     "name": "South American Championship Argentina 1916",
     "short_name": "Argentina 1916",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headmatch", "lot"],
     "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1916-07-02", "end_date": "1916-07-17" }
   }
 ]
