@@ -74,10 +74,16 @@ const accumulateRanking = (team, match, config) => {
           team.ga += parseInt(match.away_score) + parseInt(match.away_extra_score)
         }
       } else {
-        team.d++
+        if (match.home_awarded_adjust) {
+          team.w++
+          team.pts += config.points_for_win
+        } else {
+          // console.log('team2', team)
+          team.d++
+          team.pts++
+        }
         team.gf += parseInt(match.home_score)
         team.ga += parseInt(match.away_score)
-        team.pts++
       }
     } else {
       if (match.home_extra_score != null && match.away_extra_score != null) {
@@ -97,10 +103,14 @@ const accumulateRanking = (team, match, config) => {
           team.pts += config.points_for_win
         }
       } else {
-        team.d++
+        if (match.home_awarded_adjust) {
+          team.l++
+        } else {
+          team.d++
+          team.pts++
+        }
         team.gf += parseInt(match.away_score)
         team.ga += parseInt(match.home_score)
-        team.pts++
       }
     }
   } else {
@@ -363,7 +373,6 @@ const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
       b.h2h_notes = b.h2h_notes ? `${b.h2h_notes}. ${tmpB}` : null
     }
   }
-  // console.log('a.h2h_notes', a.h2h_notes)
   if (a.gd > b.gd) {
     saveNotes()
     return -1

@@ -727,6 +727,9 @@ const DisplayMatch = (props) => {
           {m.home_bye && <ByeTooltip target={`byeTooltip_${m.home_team}_${m.away_team}`} anchor="(bye)" notes={m.bye_notes} />}
           {m.home_withdrew && <span className="withdrew-subscript">(withdrew)</span>}
           {m.home_playoff_win && <PlayoffWinTooltip target={`playoffWin_${m.home_team}_${m.away_team}`} notes={m.playoff_notes} />}
+          {m.home_awarded_adjust && m.awarded_adjust_text && (
+            <AwardedTooltip target={`awardedAdjust_${m.home_team}_${m.away_team}`} content={m.awarded_adjust_text} />
+          )}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
           {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}

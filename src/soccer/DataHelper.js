@@ -75,6 +75,7 @@ import td_WOFT_2008 from '../data/soccer/tournamentData/WOFT/td_WOFT_2008.json'
 import td_WOFT_2012 from '../data/soccer/tournamentData/WOFT/td_WOFT_2012.json'
 import td_WOFT_2016 from '../data/soccer/tournamentData/WOFT/td_WOFT_2016.json'
 
+import td_COPA_1953 from '../data/soccer/tournamentData/COPA/td_COPA_1953.json'
 import td_COPA_1955 from '../data/soccer/tournamentData/COPA/td_COPA_1955.json'
 import td_COPA_1956 from '../data/soccer/tournamentData/COPA/td_COPA_1956.json'
 import td_COPA_1957 from '../data/soccer/tournamentData/COPA/td_COPA_1957.json'
@@ -104,7 +105,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'COPA1953', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'COPA1949', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -117,6 +118,7 @@ export const getTournamentDataArray = () => {
 
 export const getTournamentDataCOPA = () => {
   return [].concat(
+    [td_COPA_1953],
     [td_COPA_1955],
     [td_COPA_1956],
     [td_COPA_1957],

@@ -226,7 +226,8 @@ const calculateStageRankings = (tournament, config, stage) => {
         collectMdMatches(group)
       }
       group.teams && group.matches && calculateGroupRankings(group.teams, group.teams, group.matches, config)
-      let matchDay = group.matches ? Math.ceil(group.matches.length / Math.floor(group.teams.length / 2)) : 0
+      // let matchDay = group.matches ? Math.ceil(group.matches.length / Math.floor(group.teams.length / 2)) : 0
+      let matchDay = group.teams ? (stage.home_and_away ? (group.teams.length - 1) * 2 : group.teams.length - 1) : 3
       matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
       matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
       createGroupFinalRankings(tournament, group, matchDay)

@@ -1112,11 +1112,32 @@
     "name": "South American Championship Peru 1953",
     "short_name": "Peru 1953",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1953-02-22", "end_date": "1953-04-01" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1953-02-22",
+      "end_date": "1953-04-01",
+      "color": "#e2001a",
+      "team_count": 7,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Nacional de Lima, Lima",
+        "filename": "Inside_Estadio_Nacional_(Lima,_Peru).jpg",
+        "text": "The Estadio Nacional de Lima hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "PAR", "runners_up": "BRA", "third_place": "URU", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 22, "total_goals": 67 },
+    "awards": {
+      "golden_boot": [{ "player": "Francisco Molina", "team": "CHI", "goals": 7 }],
+      "golden_ball": [{ "player": "Heriberto Herrera", "team": "PAR" }]
+    }
   },
   {
     "id": "COPA1949",

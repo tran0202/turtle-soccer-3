@@ -483,7 +483,6 @@ const FinalStandings = (props) => {
   const koStages = getKnockoutStages(stages)
   koStages.forEach((koStage) => {
     if (koStage && koStage.rounds) {
-      // console.log('koStage', koStage)
       initKnockoutRankings(tournament, koStage)
       const earlyRounds = koStage.rounds.filter(
         (r) =>
