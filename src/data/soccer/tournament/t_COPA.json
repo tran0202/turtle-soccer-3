@@ -947,11 +947,47 @@
     "name": "South American Championship Argentina 1959",
     "short_name": "Argentina 1959",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1959-03-07", "end_date": "1959-04-04" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1959-03-07",
+      "end_date": "1959-04-04",
+      "color": "#0589bc",
+      "team_count": 7,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Brazil",
+        "filename": "Bra_par1959ca.jpg",
+        "text": "Brazil national football team (Brazil - Paraguay, Buenos Aires, Copa Averica 1959)"
+      },
+      {
+        "name": "Pele",
+        "filename": "Goles_0555_pele.jpg",
+        "text": "Pelé on the cover, Brazil v Chile, Copa América"
+      },
+      {
+        "name": "Argentina vs Peru",
+        "filename": "Gómez_Sánchez_(Perú)_y_Mouriño_(Argentina)_-_El_Gráfico_2066.jpg",
+        "text": "Oscar Gómez Sánchez (Perú) and Eliseo Mouriño (Argentina), camaraderie before the Argentina (3) vs Peru (1) match."
+      },
+      {
+        "name": "Estadio Monumental, Buenos Aires",
+        "filename": "002.Buenos_Aires_desde_el_cielo_(Estadio_de_River).jpeg",
+        "text": "The Estadio Monumental hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR", "fourth_place": "PER" },
+    "statistics": { "total_matches": 21, "total_goals": 86 },
+    "awards": {
+      "golden_boot": [{ "player": "Pele", "team": "BRA", "goals": 8 }],
+      "golden_ball": [{ "player": "Pele", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1957",
