@@ -914,11 +914,32 @@
     "name": "South American Championship Ecuador 1959",
     "short_name": "Ecuador 1959",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1959-12-05", "end_date": "1959-12-25" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["ECU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1959-12-05",
+      "end_date": "1959-12-25",
+      "color": "#21216b",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Modelo, Guayaquil",
+        "filename": "Estadio_modelo_ecuador.jpg",
+        "text": "The Estadio Modelo hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "ECU" },
+    "statistics": { "total_matches": 10, "total_goals": 40 },
+    "awards": {
+      "golden_boot": [{ "player": "José Sanfilippo", "team": "ARG", "goals": 6 }],
+      "golden_ball": [{ "player": "Alcides Silveira", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1959ARG",
