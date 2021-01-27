@@ -1046,11 +1046,32 @@
     "name": "South American Championship Uruguay 1956",
     "short_name": "Uruguay 1956",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1956-01-21", "end_date": "1956-02-15" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1956-01-21",
+      "end_date": "1956-02-15",
+      "color": "#259bc2",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Centenario, Montevideo",
+        "filename": "Stad_de_centario_uruguay1930_montevideo.jpg",
+        "text": "The Estadio Centenario hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "CHI", "third_place": "ARG", "fourth_place": "BRA" },
+    "statistics": { "total_matches": 15, "total_goals": 38, "attendance": 568000 },
+    "awards": {
+      "golden_boot": [{ "player": "Enrique Hormazábal", "team": "CHI", "goals": 4 }],
+      "golden_ball": [{ "player": "Óscar Míguez", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1955",
