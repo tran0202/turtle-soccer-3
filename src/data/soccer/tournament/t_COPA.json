@@ -1228,7 +1228,45 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1946-01-12", "end_date": "1946-02-10" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1946-01-12",
+      "end_date": "1946-02-10",
+      "color": "#0589bc",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_1946_sudamericano.jpg",
+        "text": "The Argentina team that beat Brazil 2-0 in the final"
+      },
+      {
+        "name": "Estadio Monumental, Buenos Aires",
+        "filename": "002.Buenos_Aires_desde_el_cielo_(Estadio_de_River).jpeg",
+        "text": "The Estádio Monumentalo hosted the tournament matches."
+      },
+      {
+        "name": "Estadio Gasómetro de Boedo, Buenos Aires",
+        "filename": "El_Gasometro.jpeg",
+        "text": "The Estadio Gasómetro de Boedo hosted the tournament matches."
+      },
+      {
+        "name": "Estadio Independiente, Avellaneda",
+        "filename": "Avellaneda_Futbol_-_aerial_(cropped).jpg",
+        "text": "The Estadio Independiente hosted the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR", "fourth_place": "URU" },
+    "statistics": { "total_matches": 15, "total_goals": 61 },
+    "awards": {
+      "golden_boot": [{ "player": "José María Medina", "team": "URU", "goals": 7 }],
+      "golden_ball": [{ "player": "Adolfo Pedernera", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1945",
