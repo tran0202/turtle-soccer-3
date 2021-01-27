@@ -995,11 +995,50 @@
     "name": "South American Championship Peru 1957",
     "short_name": "Peru 1957",
     "tournament_type_id": "COPA",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1957-03-07", "end_date": "1957-04-06" }
+    "tiebreakers": ["team", "head2headmatch", "lot"],
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1957-03-07",
+      "end_date": "1957-04-06",
+      "color": "#e2001a",
+      "team_count": 7,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_Copa_América_1957.jpg",
+        "text": "Argentina national team –nicknamed Los Carasucias– that won the 1957 South American championship in Lima, winning 5 of 6 matches. Players are, f.l.t.r (standing): Juan Carlos Giménez, Guillermo Stábile (coach), Rogelio Domínguez, Pedro Dellacha, Néstor Rossi, Federico Vairo, Ángel Schandlein; (bent): Orestes Corbatta, Humberto Maschio, Antonio Angelillo, Enrique Sívori, Osvaldo Cruz."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_saludando_publico_lima_1957.jpg",
+        "text": "The Argentine team saluting the crowd at Lima."
+      },
+      {
+        "name": "Enrique O. Sívori, Argentina",
+        "filename": "Sivori_v_ecuador.jpg",
+        "text": "Enrique O. Sívori scoring vs Ecuador"
+      },
+      {
+        "name": "Antonio Angelillo, Argentina",
+        "filename": "Argentina_gol_angelillo_brasil.jpg",
+        "text": "Forward Antonio Angelillo scoring v Brazil"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PER" },
+    "statistics": { "total_matches": 21, "total_goals": 101 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Humberto Maschio", "team": "ARG", "goals": 9 },
+        { "player": "Javier Ambrois", "team": "URU", "goals": 9 }
+      ],
+      "golden_ball": [{ "player": "Omar Sívori", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1956",
