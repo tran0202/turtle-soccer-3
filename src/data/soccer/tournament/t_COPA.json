@@ -1868,7 +1868,38 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1920-09-11", "end_date": "1920-10-03" }
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1920-09-11",
+      "end_date": "1920-10-03",
+      "color": "#4b6ebf",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_campeón_1920.jpg",
+        "text": "Uruguay's winning squad"
+      },
+      {
+        "name": "Estadio Valparaíso Sporting Club, Viña del Mar",
+        "filename": "Tribunas_Valparaíso_Sporting,_Viña_del_Mar_20200206_12.jpg",
+        "text": "The Estadio Valparaíso Sporting Club hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 6, "total_goals": 16 },
+    "awards": {
+      "golden_boot": [
+        { "player": "José Pérez", "team": "URU", "goals": 3 },
+        { "player": "Ángel Romano", "team": "URU", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "José Piendibene", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1919",
@@ -1878,7 +1909,48 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1919-05-11", "end_date": "1919-05-29" }
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1919-05-11",
+      "end_date": "1919-05-29",
+      "color": ":#008400",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_1921.jpg",
+        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_team_v_uruguay_1921.jpg",
+        "text": "The Argentina team that beat Uruguay in the last game"
+      },
+      {
+        "name": "Top scorer",
+        "filename": "Julio_libonatti.jpg",
+        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+      },
+      {
+        "name": "Sportivo Barracas stadium, Buenos Aires",
+        "filename": "Sp_barracas_sudamericano_1921.jpg",
+        "text": "Sportivo Barracas stadium at the South American Championship"
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 7, "total_goals": 27 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Arthur Friedenreich", "team": "BRA", "goals": 4 },
+        { "player": "Neco", "team": "BRA", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Arthur Friedenreich", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1917",
@@ -1888,7 +1960,45 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1917-09-30", "end_date": "1917-10-14" }
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1917-09-30",
+      "end_date": "1917-10-14",
+      "color": "#259bc2",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_1921.jpg",
+        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_team_v_uruguay_1921.jpg",
+        "text": "The Argentina team that beat Uruguay in the last game"
+      },
+      {
+        "name": "Top scorer",
+        "filename": "Julio_libonatti.jpg",
+        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+      },
+      {
+        "name": "Sportivo Barracas stadium, Buenos Aires",
+        "filename": "Sp_barracas_sudamericano_1921.jpg",
+        "text": "Sportivo Barracas stadium at the South American Championship"
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 6, "total_goals": 21 },
+    "awards": {
+      "golden_boot": [{ "player": "Ángel Romano", "team": "URU", "goals": 4 }],
+      "golden_ball": [{ "player": "Héctor Scarone", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1916",
@@ -1898,6 +2008,44 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1916-07-02", "end_date": "1916-07-17" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1916-07-02",
+      "end_date": "1916-07-17",
+      "color": "#63b7e8",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_1921.jpg",
+        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_team_v_uruguay_1921.jpg",
+        "text": "The Argentina team that beat Uruguay in the last game"
+      },
+      {
+        "name": "Top scorer",
+        "filename": "Julio_libonatti.jpg",
+        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+      },
+      {
+        "name": "Sportivo Barracas stadium, Buenos Aires",
+        "filename": "Sp_barracas_sudamericano_1921.jpg",
+        "text": "Sportivo Barracas stadium at the South American Championship"
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 6, "total_goals": 18 },
+    "awards": {
+      "golden_boot": [{ "player": "Isabelino Gradín", "team": "URU", "goals": 3 }],
+      "golden_ball": [{ "player": "Isabelino Gradín", "team": "URU" }]
+    }
   }
 ]
