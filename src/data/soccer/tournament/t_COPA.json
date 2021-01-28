@@ -1703,7 +1703,35 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["URU"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1924-10-12", "end_date": "1924-11-02" }
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1924-10-12",
+      "end_date": "1924-11-02",
+      "color": "#259bc2",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay1924_olympic.jpg",
+        "text": "The Uruguayan side had previously won the Olympics championship in Paris"
+      },
+      {
+        "name": "Estadio Gran Parque Central, Montevideo",
+        "filename": "Parque_central_1923.jpg",
+        "text": "The Estadio Gran Parque Central hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PAR", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 6, "total_goals": 15 },
+    "awards": {
+      "golden_boot": [{ "player": "Pedro Petrone", "team": "URU", "goals": 4 }],
+      "golden_ball": [{ "player": "Pedro Petrone", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1923",
