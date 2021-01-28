@@ -1492,7 +1492,30 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["PER"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1935-01-06", "end_date": "1935-01-27" }
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1935-01-06",
+      "end_date": "1935-01-27",
+      "color": "#e2001a",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Nacional, Lima",
+        "filename": "Estadio_ingles_lima.jpg",
+        "text": "The Estadio Nacional hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PER", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 6, "total_goals": 18 },
+    "awards": {
+      "golden_boot": [{ "player": "Herminio Masantonio", "team": "ARG", "goals": 4 }],
+      "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1929",
