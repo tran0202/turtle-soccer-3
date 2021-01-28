@@ -1741,7 +1741,38 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1923-10-29", "end_date": "1923-12-02" }
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1923-10-29",
+      "end_date": "1923-12-02",
+      "color": "#259bc2",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_1923.jpg",
+        "text": "The Uruguayan squad won its 4th title"
+      },
+      {
+        "name": "Estadio Gran Parque Central, Montevideo",
+        "filename": "Parque_central_1923.jpg",
+        "text": "The Estadio Gran Parque Central hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PAR", "fourth_place": "BRA" },
+    "statistics": { "total_matches": 6, "total_goals": 18 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Vicente Aguirre", "team": "ARG", "goals": 3 },
+        { "player": "Pedro Petrone", "team": "URU", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1922",
