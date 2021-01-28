@@ -1525,7 +1525,45 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1929-11-01", "end_date": "1929-11-17" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1929-11-01",
+      "end_date": "1929-11-17",
+      "color": "#0589bc",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentinesquad1929.jpg",
+        "text": "The Argentine team, winner of the tournament"
+      },
+      {
+        "name": "Paraguay",
+        "filename": "Paraguay_1929.jpeg",
+        "text": "Paraguay national football team at the 1929 Campeonato Sudamericano."
+      },
+      {
+        "name": "Peru",
+        "filename": "Peru_1929.jpeg",
+        "text": "Peru national football team at the 1929 Campeonato Sudamericano."
+      },
+      {
+        "name": "Uruguay",
+        "filename": "Uruguay_1929.jpeg",
+        "text": "Uruguay national football team at the 1929 Campeonato Sudamericano, before playing the match against Argentina. Back row, l. to r.: Álvaro Gestido, Gildeón Silva, José Nasazzi, Andrés Mazali, Pedro Arispe, Lorenzo Fernández. Front row, l. to r.: Conduelo Píriz, Héctor Scarone, Héctor Castro, Pedro Cea, Antonio Cámpolo."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "PAR", "third_place": "URU", "fourth_place": "PER" },
+    "statistics": { "total_matches": 6, "total_goals": 23 },
+    "awards": {
+      "golden_boot": [{ "player": "Aurelio González", "team": "PAR", "goals": 5 }],
+      "golden_ball": [{ "player": "Manuel Ferreira", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1927",
