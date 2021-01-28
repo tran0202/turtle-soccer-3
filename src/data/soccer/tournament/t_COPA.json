@@ -1406,7 +1406,35 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["PER"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1939-01-15", "end_date": "1939-02-12" }
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1939-01-15",
+      "end_date": "1939-02-12",
+      "color": "#e2001a",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Peru_1939.jpg",
+        "text": "The Peruvian team that won its first title"
+      },
+      {
+        "name": "Estadio Nacional, Lima",
+        "filename": "Estadio_ingles_lima.jpg",
+        "text": "The Estadio Nacional hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "PER", "runners_up": "URU", "third_place": "PAR", "fourth_place": "CHI" },
+    "statistics": { "total_matches": 10, "total_goals": 47 },
+    "awards": {
+      "golden_boot": [{ "player": "Teodoro Fernández", "team": "PER", "goals": 7 }],
+      "golden_ball": [{ "player": "Teodoro Fernández", "team": "PER" }]
+    }
   },
   {
     "id": "COPA1937",
