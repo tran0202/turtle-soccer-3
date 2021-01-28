@@ -1296,7 +1296,7 @@
       {
         "name": "Estadio Nacional de Chile, Santiago",
         "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
-        "text": "Estadio Nacional de Chile hosted all of the tournament matches."
+        "text": "The Estadio Nacional de Chile hosted all of the tournament matches."
       }
     ],
     "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "URU" },
@@ -1317,7 +1317,48 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["URU"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1942-01-10", "end_date": "1942-02-07" }
+    "details": {
+      "host": ["URU"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1942-01-10",
+      "end_date": "1942-02-07",
+      "color": "#259bc2",
+      "team_count": 7,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay_1942.jpg",
+        "text": "The Uruguayan squad"
+      },
+      {
+        "name": "Brazil",
+        "filename": "Brazil_v_chile_sudamericano_1942.jpg",
+        "text": "Team of Brazil"
+      },
+      {
+        "name": "Chile",
+        "filename": "Chile_v_brazil_1942.jpg",
+        "text": "Team of Chile v Brazil"
+      },
+      {
+        "name": "Estadio Centenario, Montevideo",
+        "filename": "Stad_de_centario_uruguay1930_montevideo.jpg",
+        "text": "The Estadio Centenario hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 21, "total_goals": 81 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Herminio Masantonio", "team": "ARG", "goals": 7 },
+        { "player": "José Manuel Moreno", "team": "ARG", "goals": 7 }
+      ],
+      "golden_ball": [{ "player": "Obdulio Varela", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1941",
