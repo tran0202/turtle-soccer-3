@@ -1660,7 +1660,40 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1925-11-29", "end_date": "1925-12-25" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1925-11-29",
+      "end_date": "1925-12-25",
+      "color": "#0589bc",
+      "team_count": 3,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_vs_paraguay_1925.jpg",
+        "text": "The Argentina squad (here pictured in the first match v Paraguay) won its second title"
+      },
+      {
+        "name": "Sportivo Barracas Stadium, Buenos Aires",
+        "filename": "Stadio_Sportivo_Barracas.jpg",
+        "text": "The Sportivo Barracas Stadium hosted the tournament matches."
+      },
+      {
+        "name": "Estadio Ministro Brin y Senguel, Buenos Aires",
+        "filename": "Tribuna_oficial_viejo_estadio_boca.jpg",
+        "text": "The Estadio Ministro Brin y Senguel hosted the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR" },
+    "statistics": { "total_matches": 6, "total_goals": 26 },
+    "awards": {
+      "golden_boot": [{ "player": "Manuel Seoane", "team": "ARG", "goals": 6 }],
+      "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1924",
@@ -1670,7 +1703,7 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1924-10-12", "end_date": "1924-11-02" }
+    "details": { "host": ["URU"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1924-10-12", "end_date": "1924-11-02" }
   },
   {
     "id": "COPA1923",
