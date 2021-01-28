@@ -1276,7 +1276,38 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["CHI"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1945-01-14", "end_date": "1945-02-28" }
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1945-01-14",
+      "end_date": "1945-02-28",
+      "color": "#003375",
+      "team_count": 7,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_martino_andas.jpg",
+        "text": "Argentine player Rinaldo Martino being carried by the fans after the 1–0 win v. Uruguay. He scored the only goal."
+      },
+      {
+        "name": "Estadio Nacional de Chile, Santiago",
+        "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
+        "text": "Estadio Nacional de Chile hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "URU" },
+    "statistics": { "total_matches": 21, "total_goals": 89 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Norberto Méndez", "team": "ARG", "goals": 6 },
+        { "player": "Heleno de Freitasz", "team": "BRA", "goals": 6 }
+      ],
+      "golden_ball": [{ "player": "Domingos da Guia", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1942",
