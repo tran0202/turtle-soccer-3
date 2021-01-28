@@ -1914,7 +1914,7 @@
       "logo_filename": "CONMEBOL_logo_(2017).svg",
       "start_date": "1919-05-11",
       "end_date": "1919-05-29",
-      "color": ":#008400",
+      "color": "#008400",
       "team_count": 4,
       "confed_count": 1,
       "venue_count": 1,
@@ -1923,23 +1923,23 @@
     "hero_images": [
       {
         "name": "Champions",
-        "filename": "Argentina_equipo_1921.jpg",
-        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+        "filename": "Brazil-CopaAmerica-1919.jpg",
+        "text": "The Brazil national football team that won the Copa America in 1919. Standing: Píndaro (Flamengo), Sérgio I (Paulistano), Marcos (Fluminense), Fortes (Fluminense), Bianco (Palestra Itália) and Amílcar (Corinthians); Kneeling: Millón (Santos), Neco (Corinthians), Friedenreich (Paulistano), Héitor (Palestra Itália) and Arnaldo (Santos)."
       },
       {
         "name": "Argentina",
-        "filename": "Argentina_team_v_uruguay_1921.jpg",
-        "text": "The Argentina team that beat Uruguay in the last game"
+        "filename": "Argentina_equipo_1919.jpg",
+        "text": "Team of Argentina at the 1919 Sudamericano; fltr (up): Eduardo Uslengui, Ernesto Mattozzi, Armando Reyes, Carlos Isola (GK), Pedro Martínez, Roberto Castagnola; (down): Pedro Calomino, José Laiolo, Edwin Clarke, Carlos Izaguirre, Juan Perinetti."
       },
       {
-        "name": "Top scorer",
-        "filename": "Julio_libonatti.jpg",
-        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+        "name": "Brazil vs Argentina",
+        "filename": "Brazil_v_argentina_1919.jpg",
+        "text": "The match Brazil vs Argentina"
       },
       {
-        "name": "Sportivo Barracas stadium, Buenos Aires",
-        "filename": "Sp_barracas_sudamericano_1921.jpg",
-        "text": "Sportivo Barracas stadium at the South American Championship"
+        "name": "Brazil vs Uruguay",
+        "filename": "Brazil_v_uruguay_1919.jpg",
+        "text": "The final game of the tournament"
       }
     ],
     "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "CHI" },
