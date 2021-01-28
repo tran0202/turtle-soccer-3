@@ -1820,7 +1820,45 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1921-10-02", "end_date": "1921-10-30" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1921-10-02",
+      "end_date": "1921-10-30",
+      "color": "#0589bc",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_1921.jpg",
+        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+      },
+      {
+        "name": "Argentina",
+        "filename": "Argentina_team_v_uruguay_1921.jpg",
+        "text": "The Argentina team that beat Uruguay in the last game"
+      },
+      {
+        "name": "Top scorer",
+        "filename": "Julio_libonatti.jpg",
+        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+      },
+      {
+        "name": "Sportivo Barracas stadium, Buenos Aires",
+        "filename": "Sp_barracas_sudamericano_1921.jpg",
+        "text": "Sportivo Barracas stadium at the South American Championship"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 6, "total_goals": 14 },
+    "awards": {
+      "golden_boot": [{ "player": "Julio Libonatti", "team": "ARG", "goals": 3 }],
+      "golden_ball": [{ "player": "Américo Tesoriere", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1920",
