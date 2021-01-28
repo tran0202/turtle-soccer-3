@@ -1444,7 +1444,45 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["ARG"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1936-12-27", "end_date": "1937-02-01" }
+    "details": {
+      "host": ["ARG"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1936-12-27",
+      "end_date": "1937-02-01",
+      "color": "#0589bc",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_vs_brasil_1937.jpg",
+        "text": "Players for the rematch (or playoff) at Estadio Gasómetro. As Minella, Iribarren and Scopelli were injured, they were replaced by Lazzatti, Fazio and Cherro. (down): the attacking line: Guaita, Varallo, Zozaya, Scopelli, E. García."
+      },
+      {
+        "name": "Chile",
+        "filename": "Chile_en_el_Sudamericano_de_1937,_Estadio,_1944-07-14_(74).jpg",
+        "text": "The Chilean team"
+      },
+      {
+        "name": "Final",
+        "filename": "Argentina_al_tunel_final_vs_brasil.jpg",
+        "text": "Argentina to the final"
+      },
+      {
+        "name": "Top scorer",
+        "filename": "Raúl_Toro.jpg",
+        "text": "Chilean Raúl Toro, top scorer of the tournament"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 16, "total_goals": 69 },
+    "awards": {
+      "golden_boot": [{ "player": "Raúl Toro Julio", "team": "CHI", "goals": 7 }],
+      "golden_ball": [{ "player": "Vicente de la Mata", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1935",
