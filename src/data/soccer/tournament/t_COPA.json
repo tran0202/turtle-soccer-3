@@ -1974,23 +1974,18 @@
     "hero_images": [
       {
         "name": "Champions",
-        "filename": "Argentina_equipo_1921.jpg",
-        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+        "filename": "Uruguay_Copa_America_1917.jpg",
+        "text": "The Uruguay national football team before playing a match in the Campeonato Sudamericano. Uruguay won that tournament. From left to right (Up): J. Pacheco, J. Vanzzino, C. Saporiti, G. Rodríguez, M. Varela, A. Foglino. (Down): J. Perez, H. Scarone, A. Romano, C. Scarone, P. Somma."
       },
       {
-        "name": "Argentina",
-        "filename": "Argentina_team_v_uruguay_1921.jpg",
-        "text": "The Argentina team that beat Uruguay in the last game"
+        "name": "Brazil",
+        "filename": "Brasil_football_team_1917.jpg",
+        "text": "The Brazilian national football team during the 1917 Copa América."
       },
       {
-        "name": "Top scorer",
-        "filename": "Julio_libonatti.jpg",
-        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
-      },
-      {
-        "name": "Sportivo Barracas stadium, Buenos Aires",
-        "filename": "Sp_barracas_sudamericano_1921.jpg",
-        "text": "Sportivo Barracas stadium at the South American Championship"
+        "name": "Estadio Parque Pereira, Montevideo",
+        "filename": "Parque_pereira.jpg",
+        "text": "The Estadio Parque Pereira hosted all of the tournament matches"
       }
     ],
     "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
@@ -2011,34 +2006,35 @@
     "details": {
       "host": ["ARG"],
       "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "mascot_filename": "Sudamericano_de_football_1916_brazilian_art.jpg",
       "start_date": "1916-07-02",
       "end_date": "1916-07-17",
       "color": "#63b7e8",
       "team_count": 4,
       "confed_count": 1,
-      "venue_count": 1,
-      "city_count": 1
+      "venue_count": 2,
+      "city_count": 2
     },
     "hero_images": [
       {
         "name": "Champions",
-        "filename": "Argentina_equipo_1921.jpg",
-        "text": "Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín."
+        "filename": "Uruguay_1916.jpg",
+        "text": "The Uruguay national team that won the first \"Copa América\"."
       },
       {
         "name": "Argentina",
-        "filename": "Argentina_team_v_uruguay_1921.jpg",
-        "text": "The Argentina team that beat Uruguay in the last game"
+        "filename": "Argentina-Copa-America-1916.jpg",
+        "text": "The Argentina national team"
       },
       {
-        "name": "Top scorer",
-        "filename": "Julio_libonatti.jpg",
-        "text": "Argentine player Julio Libonatti, top scorer of the 1921 South American championship."
+        "name": "Gimnasia y Esgrima, Buenos Aires",
+        "filename": "Estadio_geba_tribuna_1910.jpg",
+        "text": "The Gimnasia y Esgrima hosted the tournament matches."
       },
       {
-        "name": "Sportivo Barracas stadium, Buenos Aires",
-        "filename": "Sp_barracas_sudamericano_1921.jpg",
-        "text": "Sportivo Barracas stadium at the South American Championship"
+        "name": "Racing, Avellaneda",
+        "filename": "Racing_tribunas_1922.jpg",
+        "text": "The Racing hosted 1 tournament match."
       }
     ],
     "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
