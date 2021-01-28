@@ -1627,7 +1627,30 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1926-10-12", "end_date": "1926-11-03" }
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1926-10-12",
+      "end_date": "1926-11-03",
+      "color": "#4b6ebf",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Uruguay1926.jpeg",
+        "text": "Uruguay squad, winners"
+      }
+    ],
+    "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
+    "statistics": { "total_matches": 10, "total_goals": 55 },
+    "awards": {
+      "golden_boot": [{ "player": "David Arellano", "team": "CHI", "goals": 7 }],
+      "golden_ball": [{ "player": "José Leandro Andrade", "team": "URU" }]
+    }
   },
   {
     "id": "COPA1925",
