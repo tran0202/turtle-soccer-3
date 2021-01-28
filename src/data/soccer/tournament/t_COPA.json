@@ -1368,7 +1368,35 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "host": ["CHI"], "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1941-02-02", "end_date": "1941-03-04" }
+    "details": {
+      "host": ["CHI"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1941-02-02",
+      "end_date": "1941-03-04",
+      "color": "#fa300f",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_1941.jpg",
+        "text": "The Argentina squad that won its 6th South American title"
+      },
+      {
+        "name": "Estadio Nacional de Chile, Santiago",
+        "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
+        "text": "The Estadio Nacional de Chile hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "URU", "third_place": "CHI", "fourth_place": "PER" },
+    "statistics": { "total_matches": 10, "total_goals": 32 },
+    "awards": {
+      "golden_boot": [{ "player": "Juan Marvezzi", "team": "ARG", "goals": 5 }],
+      "golden_ball": [{ "player": "Sergio Livingstone", "team": "CHI" }]
+    }
   },
   {
     "id": "COPA1939",
