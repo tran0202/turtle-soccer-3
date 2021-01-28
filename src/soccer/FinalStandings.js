@@ -618,6 +618,14 @@ const FinalStandings = (props) => {
       if (finalPlayoffLeg) {
         calculateKnockoutRankings(findRoundAdvancedTeams(tournament, finalPlayoffLeg.name), finalPlayoffLeg, config)
         createFinalRankings(tournament, finalPlayoffLeg)
+        if (tournament.id === 'COPA1922') {
+          const at = findRoundAdvancedTeams(tournament, finalPlayoffLeg.name)
+          const uruguay = at.final_rankings.find((fr) => fr.id === 'URU')
+          uruguay.r = 3
+          // console.log('uruguay', uruguay)
+          const fr = findRoundFinalRanking(tournament, finalPlayoffLeg.name)
+          fr.final_rankings.push(uruguay)
+        }
       }
     }
   })
@@ -635,7 +643,6 @@ const FinalStandings = (props) => {
   if (filteredRounds.find((r) => r.name === 'Consolation First Round')) {
     filteredRounds = filteredRounds.filter((r) => r.name !== 'First round')
   }
-  // console.log('filteredRounds', filteredRounds)
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>

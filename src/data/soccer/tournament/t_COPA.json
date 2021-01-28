@@ -1782,7 +1782,35 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1922-09-17", "end_date": "1922-10-22" }
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1922-09-17",
+      "end_date": "1922-10-22",
+      "color": "#6d923d",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Brasil_1922.jpg",
+        "text": "The Brazilian squad"
+      },
+      {
+        "name": "Estadio das Laranjeiras, Rio de Janeiro",
+        "filename": "Das_laranjeiras_1922.jpg",
+        "text": "The Estadio das Laranjeiras hosted all of the tournament matches."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "PAR", "third_place": "URU", "fourth_place": "ARG" },
+    "statistics": { "total_matches": 11, "total_goals": 22 },
+    "awards": {
+      "golden_boot": [{ "player": "Julio Francia", "team": "ARG", "goals": 4 }],
+      "golden_ball": [{ "player": "Agostinho Fortes Filho", "team": "BRA" }]
+    }
   },
   {
     "id": "COPA1921",
