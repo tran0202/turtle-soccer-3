@@ -1573,7 +1573,51 @@
     "tournament_type_id": "COPA",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headmatch", "lot"],
-    "details": { "logo_filename": "CONMEBOL_logo_(2017).svg", "start_date": "1927-10-30", "end_date": "1927-11-27" }
+    "details": {
+      "host": ["PER"],
+      "logo_filename": "CONMEBOL_logo_(2017).svg",
+      "start_date": "1927-10-30",
+      "end_date": "1927-11-27",
+      "color": "#e2001a",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Argentina_equipo_vs_bolivia_1927.jpg",
+        "text": "Team of Argentina vs Bolivia, (up): Juan Evaristo, Ludovico Bidoglio, Octavio Diaz, Humberto Recanatini, José Fossa, Luis Monti; (down): Alfredo Carricaberry, Pedro Ochoa, Manuel \"Nolo\" Ferreira, Manuel Seoane, Segundo Luna."
+      },
+      {
+        "name": "Argentina vs Uruguay",
+        "filename": "Arg_vs_urug_1927.jpg",
+        "text": "The match between Argentina and Uruguay national football teams played in the Estadio Nacional of Lima, Perú, during the Copa América held in that country. Argentina won by 3-2."
+      },
+      {
+        "name": "Peru",
+        "filename": "Peru_national_football_team_parading_in_1927_South_American_Championship.png",
+        "text": "Peru national football team parading during the 1927 South American Championship (Copa America)"
+      },
+      {
+        "name": "Argentina vs Bolivia",
+        "filename": "Argentina_gol_bolivia_1927.jpg",
+        "text": "The second goal v Bolivia by Alfredo Carricaberry."
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "URU", "third_place": "PER", "fourth_place": "BOL" },
+    "statistics": { "total_matches": 6, "total_goals": 37 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Alfredo Carricaberry", "team": "ARG", "goals": 3 },
+        { "player": "Segundo Luna", "team": "ARG", "goals": 3 },
+        { "player": "Roberto Figueroa", "team": "URU", "goals": 3 },
+        { "player": "Pedro Petrone", "team": "URU", "goals": 3 },
+        { "player": "Héctor Scarone", "team": "URU", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }]
+    }
   },
   {
     "id": "COPA1926",
