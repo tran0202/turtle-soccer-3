@@ -73,7 +73,7 @@ const TournamentFormat = (props) => {
             </Col>
             <Col xs="12">
               <p className="no-margin-bottom">
-                <strong>Tiebreakers:</strong>
+                <strong>Tiebreakers:</strong> The ranking of teams was determined as follows:
               </p>
               <ul className="no-margin-bottom">
                 {config.tiebreakers &&

@@ -68,11 +68,26 @@
     "logo_path": "copa_logos",
     "trophy_filename": "Copa_america_trofeo.jpg",
     "sport_id": "SOC",
-    "order": 1,
     "description": [
-      "CONMEBOL Copa América is the main men's football tournament contested among national teams from CONMEBOL. It is the oldest international football competition, and is the third most watched competition. The competition determines the champions of South America.",
+      "CONMEBOL Copa América is the main men's football tournament contested among national teams from CONMEBOL. It is the oldest international football competition, and is the third most watched competition. The competition determines the champions of South America. It was known as the South American Football Championship until 1975 when it officially acquired the name Copa América.",
       "Since 1993, the tournament has generally featured 12 teams – all 10 CONMEBOL teams and two additional teams from other confederations. The 2016 version of the event, Copa América Centenario, featured sixteen teams, with six teams from CONCACAF in addition to the 10 from CONMEBOL. Mexico's two runner-up finishes are the highest for a non-CONMEBOL side.",
       "Eight of the ten CONMEBOL national teams have won the tournament at least once in its 46 stagings since the event's inauguration in 1916, with only Ecuador and Venezuela yet to win. Uruguay has the most championships in the tournament's history, with 15 cups, followed by Argentina with 14 cups; while the current champion, Brazil, has nine cups."
+    ]
+  },
+  {
+    "id": "GC",
+    "name": "CONCACAF Gold Cup",
+    "color": "rgb(213, 186, 129)",
+    "team_type_id": "MNT",
+    "confederation_id": "CONCACAF",
+    "logo_path": "gc_logos",
+    "trophy_filename": "901410497_6.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The CONCACAF Gold Cup is the main association football competition of the men's national football teams governed by CONCACAF, determining the continental champion of North America, Central America, and the Caribbean. The Gold Cup is held every two years. It was previously referred to as the CONCACAF Championship before being renamed to the CONCACAF Gold Cup starting in 1991.",
+      "CONCACAF was founded in 1961 through the merging of NAFC and CCCF which resulted in a single championship being held for the continent. The first CONCACAF tournament was held in 1963 in El Salvador with Costa Rica becoming the first champion. The CONCACAF Campeonato de Naciones, as it was called, was held every two years from 1963 to 1973.",
+      "In 1990, CONCACAF renamed and restructured the CONCACAF Championship as the CONCACAF Gold Cup, with the United States hosting the first competition in 1991, and hosting or co-hosting every subsequent iteration of the tournament (as of 2019). The host country was the inaugural champion of the eight-team tournament.",
+      "Starting with the 2000 Gold Cup, the tournament field was increased to twelve teams and for the 2007 tournament, the Gold Cup again was contested exclusively by nations within CONCACAF. In January 2017, Victor Montagliani announced the expansion of the Gold Cup from 12 to 16 teams, starting with the 2019 tournament."
     ]
   },
   {
@@ -111,16 +126,6 @@
     "team_type_id": "MNT",
     "confederation_id": "CAF",
     "logo_path": "afcon_logos",
-    "sport_id": "SOC",
-    "order": 1
-  },
-  {
-    "id": "GC",
-    "name": "CONCACAF Gold Cup",
-    "color": "rgb(213, 186, 129)",
-    "team_type_id": "MNT",
-    "confederation_id": "CONCACAF",
-    "logo_path": "gc_logos",
     "sport_id": "SOC",
     "order": 1
   },

@@ -4,6 +4,7 @@ import t_EURO from '../data/soccer/tournament/t_EURO.json'
 import t_MOFT from '../data/soccer/tournament/t_MOFT.json'
 import t_WOFT from '../data/soccer/tournament/t_WOFT.json'
 import t_COPA from '../data/soccer/tournament/t_COPA.json'
+import t_GC from '../data/soccer/tournament/t_GC.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -122,70 +123,32 @@ import td_COPA_2015 from '../data/soccer/tournamentData/COPA/td_COPA_2015.json'
 import td_COPA_2016 from '../data/soccer/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/soccer/tournamentData/COPA/td_COPA_2019.json'
 
+import td_GC_2019 from '../data/soccer/tournamentData/GC/td_GC_2019.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'COPA2021', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'GC2017', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA)
+  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC)
 }
 
 export const getTournamentDataArray = () => {
-  return [].concat(getTournamentDataWC(), getTournamentDataEURO(), getTournamentDataMOFT(), getTournamentDataWOFT(), getTournamentDataCOPA())
+  return [].concat(
+    getTournamentDataWC(),
+    getTournamentDataEURO(),
+    getTournamentDataMOFT(),
+    getTournamentDataWOFT(),
+    getTournamentDataCOPA(),
+    getTournamentDataGC(),
+  )
 }
 
-export const getTournamentDataCOPA = () => {
-  return [].concat(
-    [td_COPA_1916],
-    [td_COPA_1917],
-    [td_COPA_1919],
-    [td_COPA_1920],
-    [td_COPA_1921],
-    [td_COPA_1922],
-    [td_COPA_1923],
-    [td_COPA_1924],
-    [td_COPA_1925],
-    [td_COPA_1926],
-    [td_COPA_1927],
-    [td_COPA_1929],
-    [td_COPA_1935],
-    [td_COPA_1937],
-    [td_COPA_1939],
-    [td_COPA_1941],
-    [td_COPA_1942],
-    [td_COPA_1945],
-    [td_COPA_1946],
-    [td_COPA_1947],
-    [td_COPA_1949],
-    [td_COPA_1953],
-    [td_COPA_1955],
-    [td_COPA_1956],
-    [td_COPA_1957],
-    [td_COPA_1959ARG],
-    [td_COPA_1959ECU],
-    [td_COPA_1963],
-    [td_COPA_1967],
-    [td_COPA_1975],
-    [td_COPA_1979],
-    [td_COPA_1983],
-    [td_COPA_1987],
-    [td_COPA_1989],
-    [td_COPA_1991],
-    [td_COPA_1993],
-    [td_COPA_1995],
-    [td_COPA_1997],
-    [td_COPA_1999],
-    [td_COPA_2001],
-    [td_COPA_2004],
-    [td_COPA_2007],
-    [td_COPA_2011],
-    [td_COPA_2015],
-    [td_COPA_2016],
-    [td_COPA_2019],
-  )
+export const getTournamentDataGC = () => {
+  return [].concat([td_GC_2019])
 }
 
 export const getQualificationTournamentArray = () => {
@@ -273,4 +236,55 @@ export const getTournamentDataMOFT = () => {
 
 export const getTournamentDataWOFT = () => {
   return [].concat([td_WOFT_1996], [td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016])
+}
+
+export const getTournamentDataCOPA = () => {
+  return [].concat(
+    [td_COPA_1916],
+    [td_COPA_1917],
+    [td_COPA_1919],
+    [td_COPA_1920],
+    [td_COPA_1921],
+    [td_COPA_1922],
+    [td_COPA_1923],
+    [td_COPA_1924],
+    [td_COPA_1925],
+    [td_COPA_1926],
+    [td_COPA_1927],
+    [td_COPA_1929],
+    [td_COPA_1935],
+    [td_COPA_1937],
+    [td_COPA_1939],
+    [td_COPA_1941],
+    [td_COPA_1942],
+    [td_COPA_1945],
+    [td_COPA_1946],
+    [td_COPA_1947],
+    [td_COPA_1949],
+    [td_COPA_1953],
+    [td_COPA_1955],
+    [td_COPA_1956],
+    [td_COPA_1957],
+    [td_COPA_1959ARG],
+    [td_COPA_1959ECU],
+    [td_COPA_1963],
+    [td_COPA_1967],
+    [td_COPA_1975],
+    [td_COPA_1979],
+    [td_COPA_1983],
+    [td_COPA_1987],
+    [td_COPA_1989],
+    [td_COPA_1991],
+    [td_COPA_1993],
+    [td_COPA_1995],
+    [td_COPA_1997],
+    [td_COPA_1999],
+    [td_COPA_2001],
+    [td_COPA_2004],
+    [td_COPA_2007],
+    [td_COPA_2011],
+    [td_COPA_2015],
+    [td_COPA_2016],
+    [td_COPA_2019],
+  )
 }

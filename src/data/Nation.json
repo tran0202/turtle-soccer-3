@@ -1888,9 +1888,19 @@
     "official_name": "",
     "parent_nation_id": "",
     "nation_type_id": "TER",
-    "flag_filename": "Martinique.png",
-    "start_date": "",
+    "flag_filename": "Flag_of_the_Territorial_Collectivity_of_Martinique.svg",
+    "start_date": "2019-05-10",
     "end_date": ""
+  },
+  {
+    "id": "MTQ-2019",
+    "name": "Martinique",
+    "official_name": "",
+    "parent_nation_id": "MTQ",
+    "nation_type_id": "TER",
+    "flag_filename": "Martinique.png",
+    "start_date": "1766-08-04",
+    "end_date": "2019-05-10"
   },
   {
     "id": "MTN",

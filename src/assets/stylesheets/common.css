@@ -26,6 +26,10 @@
   font-family: 'Copa America';
   src: url('fonts/copa-america-regular.ttf');
 }
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('fonts/coolvetica.regular.ttf');
+}
 
 @media (min-width: 768px) {
 }
