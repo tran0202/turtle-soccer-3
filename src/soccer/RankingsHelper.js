@@ -40,7 +40,9 @@ export const hasReplay = (round) => {
 
 const accumulateRanking = (team, match, config) => {
   if (!team) return
-  if (match.walkover || match.home_bye || match.postponed || match.match_void || (match.notes && match.notes.awarded)) return
+  if (match.walkover || match.home_bye || match.home_awarded_score_not_counted || match.postponed || match.match_void || (match.notes && match.notes.awarded))
+    return
+  // console.log('match',match)
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++

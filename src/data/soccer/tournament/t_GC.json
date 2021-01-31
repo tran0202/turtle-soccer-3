@@ -53,11 +53,55 @@
     "name": "2017 Gold Cup United States",
     "short_name": "2017 United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2017.png", "start_date": "2017-07-07", "end_date": "2017-07-26" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2017.png",
+      "start_date": "2017-07-07",
+      "end_date": "2017-07-26",
+      "color": "#eb1821",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 14,
+      "city_count": 14
+    },
+    "hero_images": [
+      {
+        "name": "Opening game",
+        "filename": "French_Guiana_on_the_Big_Stage_at_Long_Last.jpg",
+        "text": "In Red Bull Arena, French Guiana is in action against Canada as French Guiana attempts a corner kick during a 2017 CONCACAF Gold Cup match on July 7, 2017. This match was not only the opening game of the 2017 CONCACAF Gold Cup, but it was also the first every match at a major international tournament for French Guiana."
+      },
+      {
+        "name": "Honduras vs Costa Rica",
+        "filename": "Honduras_and_Costa_Rica_in_a_familiar_rivalry_in_New_Jersey.jpg",
+        "text": "Action during the 2017 CONCACAF Gold Cup match between Honduras and Costa Rica."
+      },
+      {
+        "name": "Levi's Stadium, Santa Clara",
+        "filename": "Entering_Levis_Stadium.jpeg",
+        "text": "The Levi's Stadium hosted the final."
+      },
+      {
+        "name": "AT&T Stadium, Arlington",
+        "filename": "Cowboys_Stadium_field.jpg",
+        "text": "The AT&T Stadium hosted the semi-final Costa Rica vs United States."
+      }
+    ],
+    "final_standings": { "champions": "USA", "runners_up": "JAM", "semi_finalist1": "CRC", "semi_finalist2": "MEX" },
+    "statistics": { "total_matches": 25, "total_goals": 55, "attendance": 875667 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Alphonso Davies", "team": "CAN", "goals": 3 },
+        { "player": "Kévin Parsemain", "team": "MTQ-2019", "goals": 3 },
+        { "player": "Jordan Morris", "team": "USA", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Michael Bradley", "team": "USA" }],
+      "best_young_player": { "player": "Alphonso Davies", "team": "CAN" },
+      "golden_glove": { "player": "Andre Blake", "team": "JAM" },
+      "fair_play_team": ["USA"]
+    }
   },
   {
     "id": "GC2015",

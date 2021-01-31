@@ -275,8 +275,6 @@ export const calculateAggregateScore = (stage) => {
   const firstLeg = stage.rounds.find((r) => r.round_type === 'firstleg')
   let secondLeg = stage.rounds.find((r) => r.round_type === 'secondleg')
   let playoffLeg = stage.rounds.find((r) => r.round_type === 'playoffleg')
-  // console.log('firstLeg', firstLeg)
-  // console.log('secondLeg', secondLeg)
   secondLeg.matches.forEach((m2) => {
     playoffLeg &&
       playoffLeg.matches.some((m3) => {
@@ -300,8 +298,16 @@ export const calculateAggregateScore = (stage) => {
         m1.away_extra_score_2nd_leg = m2.home_extra_score
         m1.home_penalty_score_2nd_leg = m2.away_penalty_score
         m1.away_penalty_score_2nd_leg = m2.home_penalty_score
-        m1.notes_1st_leg = m1.notes
-        m1.notes_2nd_leg = m2.notes
+        if (m1.home_awarded) {
+          m1.home_awarded_1st_leg = m1.home_awarded
+          m1.awarded_text_1st_leg = m1.awarded_text
+        }
+        if (m2.home_awarded) {
+          m1.home_awarded_2nd_leg = m2.home_awarded
+          m1.awarded_text_2nd_leg = m2.awarded_text
+          // console.log('home_awarded', m2.home_awarded)
+          // console.log('awarded_text', m2.awarded_text)
+        }
         if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
           m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
           m1.away_aggregate_score_1st_leg = parseInt(m1.away_score) + parseInt(m2.home_score)
@@ -596,7 +602,9 @@ export const DisplayKnockout2LeggedMatch = (props) => {
                   {m.home_score}-{m.away_score}
                 </React.Fragment>
               )}
-              {m.notes_1st_leg && m.notes_1st_leg.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes_1st_leg.text} />}
+              {m.home_awarded_1st_leg && m.awarded_text_1st_leg && (
+                <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text_1st_leg} />
+              )}
             </React.Fragment>
           )}
         </Col>
@@ -612,7 +620,9 @@ export const DisplayKnockout2LeggedMatch = (props) => {
               <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
             </React.Fragment>
           )}
-          {m.notes_2nd_leg && m.notes_2nd_leg.awarded && <AwardedTooltip target={`awarded_${m.away_team}_${m.home_team}`} content={m.notes_2nd_leg.text} />}
+          {m.home_awarded_2nd_leg && m.awarded_text_2nd_leg && (
+            <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text_2nd_leg} />
+          )}
         </Col>
         <Col className="score text-center score-no-padding-right col-box-10">
           {m.home_aggregate_score_1st_leg != null && m.away_aggregate_score_1st_leg != null && (
@@ -774,7 +784,9 @@ const DisplayMatch = (props) => {
               )}
             </React.Fragment>
           )}
-          {m.notes && m.notes.awarded && <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.notes.text} />}
+          {(m.home_awarded || m.home_awarded_score_not_counted) && m.awarded_text && (
+            <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text} />
+          )}
           {m.extra_140 && <Extra140Tooltip target={`extra140`} />}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">

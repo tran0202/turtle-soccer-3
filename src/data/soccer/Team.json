@@ -177,6 +177,8 @@
   { "id": "NCA", "name": "Nicaragua", "team_type_id": "MNT", "nation_id": "NCA", "parent_team_id": "" },
   { "id": "CUW", "name": "Curaçao", "team_type_id": "MNT", "nation_id": "CUW", "parent_team_id": "" },
   { "id": "GUY", "name": "Guyana", "team_type_id": "MNT", "nation_id": "GUY", "parent_team_id": "" },
+  { "id": "MTQ-2019", "name": "Martinique", "team_type_id": "MNT", "nation_id": "MTQ-2019", "parent_team_id": "MTQ" },
+  { "id": "GUF", "name": "French Guiana", "team_type_id": "MNT", "nation_id": "GUF", "parent_team_id": "" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -430,9 +432,8 @@
   { "id": "870", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "43", "parent_team_id": "" },
 
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
-
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
-  { "id": "964", "name": "French Guiana", "team_type_id": "MNT", "nation_id": "229", "parent_team_id": "" },
+
   { "id": "GUA", "name": "Guatemala", "team_type_id": "MNT", "nation_id": "GUA", "parent_team_id": "" },
   { "id": "969", "name": "Belize", "team_type_id": "MNT", "nation_id": "21", "parent_team_id": "" },
   { "id": "GRN", "name": "Grenada", "team_type_id": "MNT", "nation_id": "GRN", "parent_team_id": "" },

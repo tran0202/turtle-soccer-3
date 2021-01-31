@@ -151,6 +151,12 @@ const TournamentFormat = (props) => {
                           <li>Goals scored in matches between tied teams</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'head2headpoints') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points in matches between tied teams</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'head2headresults') {
                       return (
                         <React.Fragment key={index}>

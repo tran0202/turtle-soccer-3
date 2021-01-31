@@ -200,7 +200,9 @@ const BracketBox = (props) => {
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
                 {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
-                {match.notes && match.notes.awarded && <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.notes.text} />}
+                {(match.home_awarded || match.home_awarded_score_not_counted) && match.awarded_text && (
+                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
+                )}
               </Col>
             )}
             {match.home_extra_score != null && (
@@ -209,7 +211,9 @@ const BracketBox = (props) => {
                 {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
                 {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
                 {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
-                {match.notes && match.notes.awarded && <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.notes.text} />}
+                {(match.home_awarded || match.home_awarded_score_not_counted) && match.awarded_text && (
+                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
+                )}
               </Col>
             )}
           </Row>
