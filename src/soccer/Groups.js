@@ -67,11 +67,6 @@ const TournamentFormat = (props) => {
               </p>
             </Col>
             <Col xs="12">
-              <p>
-                <strong>Points:</strong> {config.points_for_win} points/W - 1 points/D - 0 points/L
-              </p>
-            </Col>
-            <Col xs="12">
               <p className="no-margin-bottom">
                 <strong>Tiebreakers:</strong> The ranking of teams was determined as follows:
               </p>
@@ -81,7 +76,7 @@ const TournamentFormat = (props) => {
                     if (tb === 'points') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'goaldifferenceandgoalscored') {
@@ -94,7 +89,7 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'team') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Overall goal difference</li>
                           <li>Overall goals scored</li>
                         </React.Fragment>
@@ -102,21 +97,21 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'pointandgoaldifference') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Overall goal difference</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'goalratio') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Overall goal ratio</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'goalratiogroupplayoff') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Overall goal ratio if the top 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
                           <li>Goal ratio from group matches if the playoff match ends with a draw</li>
@@ -125,7 +120,7 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'lotgroupplayoff') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Drawing lots if the top 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
                         </React.Fragment>
@@ -133,7 +128,7 @@ const TournamentFormat = (props) => {
                     } else if (tb === '1stplaceplayoff') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points</li>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                           <li>Playoff match if the top 2 teams on equal points</li>
                         </React.Fragment>
                       )

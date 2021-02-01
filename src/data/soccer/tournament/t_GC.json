@@ -109,11 +109,50 @@
     "name": "2015 Gold Cup United States-Canada",
     "short_name": "United States-Canada",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2015.png", "start_date": "2015-07-07", "end_date": "2015-07-26" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA", "CAN"],
+      "logo_filename": "gc_2015.png",
+      "start_date": "2015-07-07",
+      "end_date": "2015-07-26",
+      "color": "#f72337",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 14,
+      "city_count": 14
+    },
+    "hero_images": [
+      {
+        "name": "United States vs Cuba",
+        "filename": "USMNT_players_lineup_vs_Cuba_2015_Gold_Cup_Baltimore.jpg",
+        "text": "USMNT Gold Cup Baltimore"
+      },
+      {
+        "name": "Cuba",
+        "filename": "CubaUSACGC2015_(2).jpg",
+        "text": "CONCACAF Quarter-Finals (USA vs Cuba) - Baltimore, MD (July 2015) Cuba national football team"
+      },
+      {
+        "name": "Panama",
+        "filename": "Panamá_celebra_su_victoria_en_penaltis.jpg",
+        "text": "Panama national team during their celebration against Trinidad & Tobago in 2015 Gold Cup."
+      },
+      {
+        "name": "Chris Wondolowski, United States",
+        "filename": "Chris_Wondolowski2.jpg",
+        "text": "Chris Wondolowski warming up for the Gold Cup game against Panama on 13JUL2015 at Sporting Park, Kansas City, Kansas."
+      }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "JAM", "third_place": "PAN", "fourth_place": "USA" },
+    "statistics": { "total_matches": 26, "total_goals": 62, "attendance": 1090396 },
+    "awards": {
+      "golden_boot": [{ "player": "Clint Dempsey", "team": "USA", "goals": 7 }],
+      "golden_ball": [{ "player": "Andrés Guardado", "team": "MEX" }],
+      "best_young_player": { "player": "Jesús Manuel Corona", "team": "MEX" },
+      "golden_glove": { "player": "Brad Guzan", "team": "USA" },
+      "fair_play_team": ["JAM"]
+    }
   },
   {
     "id": "GC2013",
