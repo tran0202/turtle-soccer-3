@@ -123,6 +123,7 @@ import td_COPA_2015 from '../data/soccer/tournamentData/COPA/td_COPA_2015.json'
 import td_COPA_2016 from '../data/soccer/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/soccer/tournamentData/COPA/td_COPA_2019.json'
 
+import td_GC_2005 from '../data/soccer/tournamentData/GC/td_GC_2005.json'
 import td_GC_2007 from '../data/soccer/tournamentData/GC/td_GC_2007.json'
 import td_GC_2009 from '../data/soccer/tournamentData/GC/td_GC_2009.json'
 import td_GC_2011 from '../data/soccer/tournamentData/GC/td_GC_2011.json'
@@ -135,7 +136,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'GC2005', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'GC2003', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -154,7 +155,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataGC = () => {
-  return [].concat([td_GC_2007], [td_GC_2009], [td_GC_2011], [td_GC_2013], [td_GC_2015], [td_GC_2017], [td_GC_2019])
+  return [].concat([td_GC_2005], [td_GC_2009], [td_GC_2011], [td_GC_2013], [td_GC_2015], [td_GC_2017], [td_GC_2019])
 }
 
 export const getQualificationTournamentArray = () => {

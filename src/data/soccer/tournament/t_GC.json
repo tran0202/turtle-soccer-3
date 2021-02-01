@@ -350,7 +350,7 @@
       {
         "name": "The Home Depot Center, Carson",
         "filename": "HomeDepotCenter1.jpg",
-        "text": "The Home Depot Center hosted the group B matches"
+        "text": "The Home Depot Center hosted group B matches"
       }
     ],
     "final_standings": { "champions": "USA", "runners_up": "MEX", "semi_finalist1": "CAN", "semi_finalist2": "GLP" },
@@ -368,11 +368,56 @@
     "name": "2005 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2005.png", "start_date": "2005-07-06", "end_date": "2005-07-24" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2005.png",
+      "start_date": "2005-07-06",
+      "end_date": "2005-07-24",
+      "color": "#e6bf7a",
+      "team_count": 12,
+      "confed_count": 3,
+      "venue_count": 7,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Giants Stadium, East Rutherford",
+        "filename": "NY_Red_Bulls_vs_LA_Galaxy.jpg",
+        "text": "The Giants Stadium hosted the final"
+      },
+      {
+        "name": "Reliant Stadium, Houston",
+        "filename": "Reliantstadium.jpg",
+        "text": "The Reliant Stadium hosted 2 quarter-finals"
+      },
+      {
+        "name": "Qwest Field, Seattle",
+        "filename": "Soundersfcqwestfield.jpg",
+        "text": "The Qwest Field hosted group B matches"
+      },
+      {
+        "name": "Los Angeles Memorial Coliseum, Los Angeles",
+        "filename": "11-11-06-LA-Coliseum-USC-UO.jpg",
+        "text": "The Los Angeles Memorial Coliseum hosted group C matches"
+      }
+    ],
+    "final_standings": { "champions": "USA", "runners_up": "PAN", "semi_finalist1": "COL", "semi_finalist2": "HON" },
+    "statistics": { "total_matches": 25, "total_goals": 73, "attendance": 340018 },
+    "awards": {
+      "golden_boot": [
+        { "player": "DaMarcus Beasley", "team": "USA", "goals": 3 },
+        { "player": "Landon Donovan", "team": "USA", "goals": 3 },
+        { "player": "Carlos Ruiz", "team": "GUA", "goals": 3 },
+        { "player": "Luis Tejada", "team": "PAN", "goals": 3 },
+        { "player": "Wilmer Velasquez", "team": "HON", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Luis Tejada", "team": "PAN" }],
+      "golden_glove": { "player": "Jaime Penedo", "team": "PAN" },
+      "fair_play_team": ["HON"]
+    }
   },
   {
     "id": "GC2003",
