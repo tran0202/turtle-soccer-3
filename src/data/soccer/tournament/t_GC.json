@@ -317,11 +317,50 @@
     "name": "2007 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2007.png", "start_date": "2007-06-06", "end_date": "2007-06-24" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2007.png",
+      "start_date": "2007-06-06",
+      "end_date": "2007-06-24",
+      "color": "#0f246a",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Soldier Field, Chicago",
+        "filename": "UsavsHonduras.jpeg",
+        "text": "The Soldier Field hosted the final"
+      },
+      {
+        "name": "Reliant Stadium, Houston",
+        "filename": "Reliantstadium.jpg",
+        "text": "The Reliant Stadium hosted 2 quarter-finals"
+      },
+      {
+        "name": "Gillette Stadium, Foxborough",
+        "filename": "Gillette_Stadium02.jpg",
+        "text": "The Gillette Stadium hosted 2 quarter-finals"
+      },
+      {
+        "name": "The Home Depot Center, Carson",
+        "filename": "HomeDepotCenter1.jpg",
+        "text": "The Home Depot Center hosted the group B matches"
+      }
+    ],
+    "final_standings": { "champions": "USA", "runners_up": "MEX", "semi_finalist1": "CAN", "semi_finalist2": "GLP" },
+    "statistics": { "total_matches": 25, "total_goals": 64, "attendance": 921464 },
+    "awards": {
+      "golden_boot": [{ "player": "Carlos Pavón", "team": "HON", "goals": 5 }],
+      "golden_ball": [{ "player": "Julian de Guzman", "team": "CAN" }],
+      "golden_glove": { "player": "Franck Grandel", "team": "GLP" },
+      "fair_play_team": ["HON"]
+    }
   },
   {
     "id": "GC2005",
