@@ -216,7 +216,7 @@
     "short_name": "United States",
     "tournament_type_id": "GC",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
     "no_third_place": true,
     "details": {
       "host": ["USA"],
@@ -266,11 +266,50 @@
     "name": "2009 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2009.png", "start_date": "2009-07-03", "end_date": "2009-07-26" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2009.png",
+      "start_date": "2009-07-03",
+      "end_date": "2009-07-26",
+      "color": "#eb1821",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 13,
+      "city_count": 13
+    },
+    "hero_images": [
+      {
+        "name": "Semi-final",
+        "filename": "MexicovsCostaRica.jpeg",
+        "text": "Mexico vs Costa Rica"
+      },
+      {
+        "name": "Semi-final",
+        "filename": "UsavsHonduras.jpeg",
+        "text": "Usa vs Honduras"
+      },
+      {
+        "name": "Panama",
+        "filename": "Panamanationalteam.jpeg",
+        "text": "Panama national football team lined up for the national anthem at the 2009 CONCACAF Gold Cup, 12 July 2009."
+      },
+      {
+        "name": "Giants Stadium, East Rutherford",
+        "filename": "NY_Red_Bulls_vs_LA_Galaxy.jpg",
+        "text": "The Giants Stadium hosted the final"
+      }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "USA", "semi_finalist1": "CRC", "semi_finalist2": "HON" },
+    "statistics": { "total_matches": 25, "total_goals": 66, "attendance": 860046 },
+    "awards": {
+      "golden_boot": [{ "player": "Miguel Sabah", "team": "MEX", "goals": 4 }],
+      "golden_ball": [{ "player": "Giovani dos Santos", "team": "MEX" }],
+      "golden_glove": { "player": "Keylor Navas", "team": "CRC" },
+      "fair_play_team": ["USA"]
+    }
   },
   {
     "id": "GC2007",
