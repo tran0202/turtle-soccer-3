@@ -517,6 +517,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
       }
     })
     if (group.draw_pools) {
+      // console.log('group.draw_pools', group.draw_pools)
       group.draw_pools.forEach((p) => {
         if (p.teams && p.teams.length === 3) {
           let allTeamNames = ``
@@ -556,11 +557,30 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
     points_for_win: tournament.points_for_win,
   }
   sortGroupRankings(group, 1, config)
+  if (tournament.id === 'GC2002' && group.name === 'Group D') {
+    group.final_rankings[0].r = 3
+    group.final_rankings[0].h2h_notes = null
+    group.final_rankings[0].draw_lot_notes =
+      'Ecuador took 3rd place after finished identical records (points, goal difference and goad forward) with Canada and Haiti.'
+    group.final_rankings[1].r = 1
+    group.final_rankings[1].h2h_notes = null
+    group.final_rankings[1].draw_lot_notes =
+      'Canada took 1st place after finished identical records (points, goal difference and goad forward) with Haiti and Ecuador.'
+    group.final_rankings[2].r = 2
+    group.final_rankings[2].h2h_notes = null
+    group.final_rankings[2].draw_lot_notes =
+      'Haiti took 2nd place after finished identical records (points, goal difference and goad forward) with Canada and Ecuador.'
+    group.final_rankings.sort((a, b) => {
+      // console.log('a', a)
+      if (a.r < b.r) return -1
+      else if (a.r > b.r) return 1
+      else return 0
+    })
+  }
 }
 
 export const collectGroupRankings = (group, matchDay) => {
   if (!group.teams) return
-  // console.log('matchDay', matchDay)
   group.teams.forEach((team) => {
     if (team.rankings) {
       const md = team.rankings.length <= matchDay ? team.rankings.length : matchDay
@@ -777,7 +797,6 @@ export const createSemifinalistsPool = (round) => {
   })
   round.final_rankings = []
   round.final_rankings.push(pool)
-  // console.log('round.final_rankings', round.final_rankings)
 }
 
 export const cloneRanking = (ranking) => {

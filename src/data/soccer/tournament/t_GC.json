@@ -428,40 +428,45 @@
     "golden_goal_rule": true,
     "points_for_win": 3,
     "tiebreakers": ["team", "head2headpoints", "lot"],
-    "details": { "host": ["USA","MEX"],"logo_filename": "gc_2003.png", "start_date": "2003-07-12", "end_date": "2003-07-27",
+    "details": {
+      "host": ["USA", "MEX"],
+      "logo_filename": "gc_2003.png",
+      "start_date": "2003-07-12",
+      "end_date": "2003-07-27",
       "color": "#24a45f",
       "team_count": 12,
       "confed_count": 2,
       "venue_count": 3,
-      "city_count": 3 },
-      "hero_images": [
-        {
-          "name": "Estadio Azteca, Mexico City",
-          "filename": "Estadio_Azteca_07a.jpg",
-          "text": "The Estadio Azteca hosted the final"
-        },
-        {
-          "name": "Orange Bowl, Miami",
-          "filename": "Orange_Bowl.jpg",
-          "text": "The Orange Bowl hosted the semi-final United States vs Brazil"
-        },
-        {
-          "name": "Gillette Stadium, Foxboro",
-          "filename": "Gillette_Stadium02.jpg",
-          "text": "The Gillette Stadium hosted the quarter-final United States vs Cuba"
-        }
-      ],
-      "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "CRC" },
-      "statistics": { "total_matches": 20, "total_goals": 50 },
-      "awards": {
-        "golden_boot": [
-          { "player": "Walter Centeno", "team": "CRC", "goals": 4 },
-          { "player": "Landon Donovan", "team": "USA", "goals": 4 }
-        ],
-        "golden_ball": [{ "player": "Jesús Arellano", "team": "MEX" }],
-        "golden_glove": { "player": "Oswaldo Sánchez", "team": "MEX" },
-        "fair_play_team": ["USA"]
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Azteca, Mexico City",
+        "filename": "Estadio_Azteca_07a.jpg",
+        "text": "The Estadio Azteca hosted the final"
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl hosted the semi-final United States vs Brazil"
+      },
+      {
+        "name": "Gillette Stadium, Foxboro",
+        "filename": "Gillette_Stadium02.jpg",
+        "text": "The Gillette Stadium hosted the quarter-final United States vs Cuba"
       }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "CRC" },
+    "statistics": { "total_matches": 20, "total_goals": 50 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Walter Centeno", "team": "CRC", "goals": 4 },
+        { "player": "Landon Donovan", "team": "USA", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Jesús Arellano", "team": "MEX" }],
+      "golden_glove": { "player": "Oswaldo Sánchez", "team": "MEX" },
+      "fair_play_team": ["USA"]
+    }
   },
   {
     "id": "GC2002",
@@ -469,11 +474,40 @@
     "name": "2002 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2002.png", "start_date": "2002-01-18", "end_date": "2002-02-02" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2002.png",
+      "start_date": "2002-01-18",
+      "end_date": "2002-02-02",
+      "color": "#eb1821",
+      "team_count": 12,
+      "confed_count": 3,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Rose Bowl, Pasadena",
+        "filename": "Rose_Bowl,_panorama.jpg",
+        "text": "The Rose Bowl hosted the final"
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl hosted 2 quarter-finals"
+      }
+    ],
+    "final_standings": { "champions": "USA", "runners_up": "CRC", "third_place": "CAN", "fourth_place": "KOR" },
+    "statistics": { "total_matches": 20, "total_goals": 39 },
+    "awards": {
+      "golden_boot": [{ "player": "Brian McBride", "team": "USA", "goals": 4 }],
+      "golden_ball": [{ "player": "Brian McBride", "team": "USA" }],
+      "golden_glove": { "player": "Lars Hirschfeld", "team": "CAN" },
+      "fair_play_team": ["CRC"]
+    }
   },
   {
     "id": "GC2000",
