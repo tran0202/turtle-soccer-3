@@ -80,7 +80,6 @@ const accumulateRanking = (team, match, config) => {
           team.w++
           team.pts += config.points_for_win
         } else {
-          // console.log('team2', team)
           team.d++
           team.pts++
         }
@@ -238,6 +237,14 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Uruguay took 1st place after finished level points with Austria.'
     return 1
   }
+  // Gold Cup 2000
+  if (a.id === 'KOR' && b.id === 'CAN') {
+    a.draw_lot_notes = 'Korea Republic took 3rd place after finished identical records (points, goal difference and goad forward) with Canada.'
+    b.draw_lot_notes = 'Canada took 2nd place after finished identical records (points, goal difference and goad forward) with Korea Republic.'
+    return 1
+  }
+  // console.log('a', a)
+  // console.log('b', b)
   return 0
 }
 

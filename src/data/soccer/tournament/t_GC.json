@@ -515,11 +515,47 @@
     "name": "2000 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_2000.png", "start_date": "2000-02-12", "end_date": "2000-02-27" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_2000.png",
+      "start_date": "2000-02-12",
+      "end_date": "2000-02-27",
+      "color": "#0f246a",
+      "team_count": 12,
+      "confed_count": 3,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Los Angeles Memorial Coliseum, Los Angeles",
+        "filename": "Usctrojans.jpg",
+        "text": "The Los Angeles Memorial Coliseum hosted the final"
+      },
+      {
+        "name": "Qualcomm Stadium, San Diego",
+        "filename": "Qualcomm_Stadium.jpg",
+        "text": "The Qualcomm Stadium hosted the semi-final Colombia vs Peru"
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl hosted 2 quarter-finals"
+      }
+    ],
+    "final_standings": { "champions": "CAN", "runners_up": "COL", "semi_finalist1": "PER", "semi_finalist2": "TRI" },
+    "statistics": { "total_matches": 19, "total_goals": 55, "attendance": 695087 },
+    "awards": {
+      "golden_boot": [{ "player": "Carlo Corazzin", "team": "CAN", "goals": 4 }],
+      "golden_ball": [{ "player": "Craig Forrest", "team": "CAN" }],
+      "best_young_player": { "player": "Richard Hastings", "team": "CAN" },
+      "golden_glove": { "player": "Craig Forrest", "team": "CAN" },
+      "fair_play_team": ["CAN"]
+    }
   },
   {
     "id": "GC1998",
@@ -527,11 +563,46 @@
     "name": "1998 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_1998.png", "start_date": "1998-02-01", "end_date": "1998-02-15" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_1998.png",
+      "start_date": "1998-02-01",
+      "end_date": "1998-02-15",
+      "color": "#e6bf7a",
+      "team_count": 10,
+      "confed_count": 2,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Los Angeles Memorial Coliseum, Los Angeles",
+        "filename": "11-11-06-LA-Coliseum-USC-UO.jpg",
+        "text": "The Los Angeles Memorial Coliseum hosted the final"
+      },
+      {
+        "name": "Orange Bowl, Miami",
+        "filename": "Orange_Bowl.jpg",
+        "text": "The Orange Bowl hosted group A matches"
+      },
+      {
+        "name": "Oakland Coliseum, Oakland",
+        "filename": "Oakland_Coliseum_field_from_Mt._Davis.jpeg",
+        "text": "The Oakland Coliseum hosted group C matches"
+      }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "USA", "third_place": "BRA", "fourth_place": "JAM" },
+    "statistics": { "total_matches": 16, "total_goals": 44 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Paulo Wanchope", "team": "CRC", "goals": 4 },
+        { "player": "Luis Hernández", "team": "MEX", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Kasey Keller", "team": "USA" }]
+    }
   },
   {
     "id": "GC1996",

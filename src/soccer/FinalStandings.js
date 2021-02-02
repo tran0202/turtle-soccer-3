@@ -29,7 +29,9 @@ const eliminateGroupTeams = (tournament, groupStage, group) => {
     tournament.final_rankings.rounds.unshift({ name: groupStage.name, ranking_type: 'round', final_rankings: [] })
     tmp = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   }
-  const eliminatedTeams = group.final_rankings.filter((t) => t && isEliminated(t, groupStage))
+  const config = group.advancement ? group : groupStage
+  // console.log('config', config)
+  const eliminatedTeams = group.final_rankings.filter((t) => t && isEliminated(t, config))
   eliminatedTeams &&
     eliminatedTeams.forEach((et) => {
       const eliminatedTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === et.id)
@@ -52,7 +54,8 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
     tournament.advanced_teams.rounds.unshift({ name: groupStage.next_round, ranking_type: 'round', final_rankings: [] })
     tmp = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
   }
-  const advancedTeams = group.final_rankings.filter((t) => t && isAdvancedNextRound(t, groupStage))
+  const config = group.advancement ? group : groupStage
+  const advancedTeams = group.final_rankings.filter((t) => t && isAdvancedNextRound(t, config))
   advancedTeams &&
     advancedTeams.forEach((at) => {
       const advancedTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === at.id)
@@ -317,7 +320,6 @@ const createFinalRankings = (tournament, round) => {
     if (m) {
       let home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       let away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      // console.log('m', m)
       const rankWinner =
         round.name === 'Final' || round.name === 'Final Second Leg' || round.name === 'Final Playoff'
           ? 1

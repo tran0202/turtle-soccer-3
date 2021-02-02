@@ -42,7 +42,12 @@ const TournamentFormat = (props) => {
                         10 teams were drawn into 3 groups, with Group E &amp; F containing 3 teams and Group G containing 4.&nbsp;
                       </React.Fragment>
                     )}
-                    {config.id !== 'WC1930' && config.id !== 'WOFT2004' && (
+                    {config.id === 'GC1998' && (
+                      <React.Fragment>
+                        10 teams were drawn into 3 groups, with Group A containing 4 teams and Group B &amp; C containing 3.&nbsp;
+                      </React.Fragment>
+                    )}
+                    {config.id !== 'WC1930' && config.id !== 'WOFT2004' && config.id !== 'GC1998' && (
                       <React.Fragment>
                         {config.totalCount} teams were drawn into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
                       </React.Fragment>

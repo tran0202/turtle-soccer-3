@@ -155,9 +155,10 @@ export const RankingRow = (props) => {
 }
 
 const RankingRound = (props) => {
-  const { round, config } = props
+  const { round } = props
+  let { config } = props
   // console.log('round', round)
-  // console.log('config', config)
+  config = round.advancement ? { ...config, advancement: round.advancement } : config
   updateFinalRankings(round)
   if (config.no_third_place && (round.name === 'Semi-finals' || round.name === 'Semi-finals Second Leg')) {
     createSemifinalistsPool(round)
