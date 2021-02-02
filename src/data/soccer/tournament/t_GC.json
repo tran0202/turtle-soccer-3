@@ -737,11 +737,52 @@
     "short_name": "1989",
     "era": "CONCACAF Championship",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1989-03-19", "end_date": "1989-11-19" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1989-03-19",
+      "end_date": "1989-11-19",
+      "color": "#d5ba81",
+      "team_count": 5,
+      "confed_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Mateo Flores, Guatemala City",
+        "filename": "Tribuna_Mateo_Flores.jpg",
+        "text": "Estadio Mateo Flores, Guatemala City"
+      },
+      {
+        "name": "Saint Louis Soccer Park, Fenton",
+        "filename": "World_Wide_Technology_Soccer_Park_.jpg",
+        "text": "Saint Louis Soccer Park, Fenton"
+      },
+      {
+        "name": "National Stadium, Port of Spain",
+        "filename": "HCStadium2013.jpg",
+        "text": "National Stadium, Port of Spain, Trinidad and Tobago"
+      },
+      {
+        "name": "Estadio Nacional, Tegucigalpa",
+        "filename": "Estadio_Carías.jpg",
+        "text": "Estadio Nacional, Tegucigalpa, Honduras"
+      }
+    ],
+    "final_standings": { "champions": "CRC", "runners_up": "USA", "third_place": "TRI", "fourth_place": "GUA" },
+    "statistics": { "total_matches": 18, "total_goals": 29 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Evaristo Coronado", "team": "CRC", "goals": 2 },
+        { "player": "Juan Arnoldo Cayasso", "team": "CRC", "goals": 2 },
+        { "player": "Leónidas Flores", "team": "CRC", "goals": 2 },
+        { "player": "Raúl Chacón", "team": "GUA", "goals": 2 },
+        { "player": "Julio Rodas", "team": "GUA", "goals": 2 },
+        { "player": "Leonson Lewis", "team": "TRI", "goals": 2 },
+        { "player": "Kerry Jamerson", "team": "TRI", "goals": 2 },
+        { "player": "Philibert Jones", "team": "TRI", "goals": 2 }
+      ]
+    }
   },
   {
     "id": "GC1985",
