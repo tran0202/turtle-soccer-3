@@ -698,17 +698,44 @@
     "name": "1991 Gold Cup United States",
     "short_name": "1991 United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "gc_1991.jpg", "start_date": "1991-06-28", "end_date": "1991-07-07" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_1991.jpg",
+      "start_date": "1991-06-28",
+      "end_date": "1991-07-07",
+      "color": "#0f246a",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Memorial Coliseum, Los Angeles",
+        "filename": "11-11-06-LA-Coliseum-USC-UO.jpg",
+        "text": "The Memorial Coliseum hosted the final"
+      },
+      {
+        "name": "Rose Bowl, Pasadena",
+        "filename": "Rose_Bowl,_panorama.jpg",
+        "text": "The Rose Bowl hosted group B matches"
+      }
+    ],
+    "final_standings": { "champions": "USA", "runners_up": "HON", "third_place": "MEX", "fourth_place": "CRC" },
+    "statistics": { "total_matches": 16, "total_goals": 50, "attendance": 397124 },
+    "awards": {
+      "golden_boot": [{ "player": "Benjamín Galindo", "team": "MEX", "goals": 4 }],
+      "golden_ball": [{ "player": "Tony Meola", "team": "USA" }]
+    }
   },
   {
     "id": "GC1989",
     "year": "1989",
     "name": "1989 CONCACAF Championship",
     "short_name": "1989",
+    "era": "CONCACAF Championship",
     "tournament_type_id": "GC",
     "active": false,
     "head_to_head_tiebreaker": false,

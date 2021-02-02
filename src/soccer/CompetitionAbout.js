@@ -38,6 +38,11 @@ const ResultRow = (props) => {
   const { row, config, count } = props
   return (
     <React.Fragment>
+      {row.era && (
+        <Row className="ranking-tbl team-header-row padding-tb-md text-center gray-striped">
+          <Col>{row.era}</Col>
+        </Row>
+      )}
       {config.showHeader && <ResultHead config={config} />}
       <Row className={`ranking-tbl team-row padding-tb-md text-center${count % 2 !== 0 ? ' ltblue-striped' : ''}`}>
         <Col className="col-1">{count}</Col>

@@ -108,7 +108,7 @@ const getGoldenGloveLabel = (tournament) => {
 
 const About = (props) => {
   const { tournament } = props
-  const { id, hero_images, details, final_standings, statistics, awards, qualified, tournament_type_id } = tournament
+  const { id, hero_images, details, final_standings, statistics, awards, qualified, tournament_type_id, original_name } = tournament
   if (!details) return null
   const { host, team_count, confed_count, venue_count, city_count } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
@@ -160,6 +160,16 @@ const About = (props) => {
           <h2 className="h2-ff5 mt-3">Tournament details</h2>
         </Col>
         <Col sm={{ size: 10, offset: 1 }}>
+          {original_name && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Original Name
+              </Col>
+              <Col md="6" sm="7">
+                {original_name}
+              </Col>
+            </Row>
+          )}
           {host && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
