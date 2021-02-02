@@ -840,13 +840,22 @@
       "host": ["HON"],
       "logo_filename": "CONCACAF.png",
       "start_date": "1981-11-01",
-      "end_date": "1981-11-21",
+      "end_date": "1981-11-22",
       "color": "#1d5f9a",
-      "team_count": 9,
-      "confed_count": 1
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
     },
+    "hero_images": [
+      {
+        "name": "Estadio Tiburcio Carías Andino, Tegucigalpa",
+        "filename": "Estadio_Carías.jpg",
+        "text": "The national stadium of Honduras in Tegucigalpa (Estadio Nacional de Tegucigalpa) also known as Estadio Tiburcio Carías Andino."
+      }
+    ],
     "final_standings": { "champions": "HON", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
-    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "statistics": { "total_matches": 15, "total_goals": 28 },
     "awards": {
       "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }]
     }
