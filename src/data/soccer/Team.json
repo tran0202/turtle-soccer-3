@@ -183,6 +183,7 @@
   { "id": "GRN", "name": "Grenada", "team_type_id": "MNT", "nation_id": "GRN", "parent_team_id": "" },
   { "id": "GUA", "name": "Guatemala", "team_type_id": "MNT", "nation_id": "GUA", "parent_team_id": "" },
   { "id": "GLP", "name": "Guadeloupe", "team_type_id": "MNT", "nation_id": "GLP", "parent_team_id": "" },
+  { "id": "VIN", "name": "Saint Vincent and the Grenadines", "team_type_id": "MNT", "nation_id": "VIN", "parent_team_id": "" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -438,7 +439,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "VIN", "name": "St. Vincent / Grenadines", "team_type_id": "MNT", "nation_id": "VIN", "parent_team_id": "" },
   { "id": "973", "name": "Suriname", "team_type_id": "MNT", "nation_id": "181", "parent_team_id": "" },
   { "id": "974", "name": "Netherlands Antilles", "team_type_id": "MNT", "nation_id": "226", "parent_team_id": "967" },
   { "id": "BFA", "name": "Burkina Faso", "team_type_id": "MNT", "nation_id": "BFA", "parent_team_id": "" },

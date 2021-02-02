@@ -610,11 +610,43 @@
     "name": "1996 Gold Cup United States",
     "short_name": "United States",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_1996.png", "start_date": "1996-01-10", "end_date": "1996-01-21" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA"],
+      "logo_filename": "gc_1996.png",
+      "start_date": "1996-01-10",
+      "end_date": "1996-01-21",
+      "color": "#eb1821",
+      "team_count": 9,
+      "confed_count": 2,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Los Angeles Memorial Coliseum, Los Angeles",
+        "filename": "11-11-06-LA-Coliseum-USC-UO.jpg",
+        "text": "The Los Angeles Memorial Coliseum hosted the final"
+      },
+      {
+        "name": "Jack Murphy Stadium, San Diego",
+        "filename": "Qualcomm_Stadium.jpg",
+        "text": "The Jack Murphy Stadium hosted the semi-final Mexico vs Guatemala"
+      },
+      {
+        "name": "Anaheim Stadium, Anaheim",
+        "filename": "Anaheim_Stadium_1986.jpg",
+        "text": "The Anaheim Stadium hosted group C matches"
+      }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "GUA" },
+    "statistics": { "total_matches": 13, "total_goals": 42, "attendance": 487439 },
+    "awards": {
+      "golden_boot": [{ "player": "Eric Wynalda", "team": "USA", "goals": 4 }],
+      "golden_ball": [{ "player": "Raúl Lara", "team": "MEX" }]
+    }
   },
   {
     "id": "GC1993",
