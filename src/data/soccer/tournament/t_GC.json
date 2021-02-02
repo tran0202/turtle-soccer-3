@@ -790,11 +790,43 @@
     "name": "1985 CONCACAF Championship",
     "short_name": "1985",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1985-02-24", "end_date": "1985-09-14" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1985-02-24",
+      "end_date": "1985-09-14",
+      "color": "#d5ba81",
+      "team_count": 9,
+      "confed_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Varsity Stadium, Toronto, Canada",
+        "filename": "Varsity_Centre.jpeg",
+        "text": "Varsity Stadium, Toronto, Canada"
+      },
+      {
+        "name": "Tegucigalpa, Honduras",
+        "filename": "Tegucigalpa-INE_Building.jpg",
+        "text": "Tegucigalpa, Honduras"
+      },
+      {
+        "name": "Torrance, United States",
+        "filename": "Torranceca.jpg",
+        "text": "Torrance, United States"
+      },
+      {
+        "name": "Alajuela, Costa Rica",
+        "filename": "Alajuela,_Costa_Rica_-_Night_Skyline.png",
+        "text": "Alajuela, Costa Rica"
+      }
+    ],
+    "final_standings": { "champions": "CAN", "runners_up": "HON", "third_place": "CRC", "fourth_place": "SLV" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Roberto Figueroa", "team": "HON", "goals": 5 }]
+    }
   },
   {
     "id": "GC1981",
@@ -802,11 +834,22 @@
     "name": "1981 CONCACAF Championship Honduras",
     "short_name": "1981 Honduras",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1981-11-01", "end_date": "1981-11-21" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["HON"],
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1981-11-01",
+      "end_date": "1981-11-21",
+      "color": "#1d5f9a",
+      "team_count": 9,
+      "confed_count": 1
+    },
+    "final_standings": { "champions": "HON", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }]
+    }
   },
   {
     "id": "GC1977",
@@ -814,11 +857,22 @@
     "name": "1977 CONCACAF Championship Mexico",
     "short_name": "1977 Mexico",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1977-10-08", "end_date": "1977-10-23" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["MEX"],
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1977-10-08",
+      "end_date": "1977-10-23",
+      "color": "#24a45f",
+      "team_count": 9,
+      "confed_count": 1
+    },
+    "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "SLV", "fourth_place": "CAN" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Víctor Rangel", "team": "MEX", "goals": 6 }]
+    }
   },
   {
     "id": "GC1973",
@@ -826,11 +880,22 @@
     "name": "1973 CONCACAF Championship Haiti",
     "short_name": "1973 Haiti",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1973-11-29", "end_date": "1973-12-18" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["HAI-1964-1986"],
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1973-11-29",
+      "end_date": "1973-12-18",
+      "color": "#01209f",
+      "team_count": 9,
+      "confed_count": 1
+    },
+    "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
+    }
   },
   {
     "id": "GC1971",
@@ -838,22 +903,30 @@
     "name": "1971 CONCACAF Championship Trinidad and Tobago",
     "short_name": "1971 Trinidad and Tobago",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1971-11-20", "end_date": "1971-12-05" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["TRI"],
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1971-11-20",
+      "end_date": "1971-12-05",
+      "color": "#fa2200",
+      "team_count": 9,
+      "confed_count": 1
+    },
+    "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "CRC", "fourth_place": "CUB" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
+    }
   },
   {
     "id": "GC1969",
     "year": "1969",
     "name": "1969 CONCACAF Championship Costa Rica",
     "short_name": "1969 Costa Rica",
-    "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headpoints", "lot"],
     "details": { "logo_filename": "CONCACAF.png", "start_date": "1969-11-23", "end_date": "1969-12-07" }
   },
   {
@@ -862,10 +935,8 @@
     "name": "1967 CONCACAF Championship Honduras",
     "short_name": "1967 Honduras",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headpoints", "lot"],
     "details": { "logo_filename": "CONCACAF.png", "start_date": "1967-03-05", "end_date": "1967-03-19" }
   },
   {
@@ -874,10 +945,8 @@
     "name": "1965 CONCACAF Championship Guatemala",
     "short_name": "1965 Guatemala",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headpoints", "lot"],
     "details": { "logo_filename": "CONCACAF.png", "start_date": "1965-03-28", "end_date": "1965-04-11" }
   },
   {
@@ -886,10 +955,8 @@
     "name": "1963 CONCACAF Championship El Salvador",
     "short_name": "1963 El Salvador",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2headpoints", "lot"],
     "details": { "logo_filename": "CONCACAF.png", "start_date": "1963-03-23", "end_date": "1963-04-07" }
   }
 ]

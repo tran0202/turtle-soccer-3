@@ -401,6 +401,7 @@ const createFinalRoundRankings = (tournament, groupStage, group) => {
   const finalRound = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   group.final_rankings.forEach((fr, index) => {
     const teamProgess = tournament.progress_rankings.teams.find((t) => t.id === fr.id)
+    // console.log('teamProgess', teamProgess)
     const teamRanking = teamProgess.rankings ? teamProgess.rankings[teamProgess.rankings.length - 1] : {}
     finalRound.final_rankings.push({ ...teamRanking, r: index + 1 })
   })
@@ -435,7 +436,6 @@ const initKnockoutRankings = (tournament, stage) => {
 }
 
 const initByeRankings = (tournament, stage) => {
-  // console.log('stage1', stage)
   if (tournament.advanced_teams && tournament.final_rankings) return
   if (!tournament.advanced_teams) {
     tournament.advanced_teams = {}
