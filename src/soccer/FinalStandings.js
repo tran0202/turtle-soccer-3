@@ -1,7 +1,7 @@
 import React from 'react'
 import Rankings from './Rankings'
 import { hasWildCardAdvancement, collectWildCardRankings, getBlankRanking } from './RankingsHelper'
-import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner, isSharedBronze, calculateAggregateScore } from './Helper'
+import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner, isSharedBronze, calculateAggregateScore, getTeamName } from './Helper'
 import {
   calculateGroupRankings,
   calculateProgressRankings,
@@ -30,7 +30,6 @@ const eliminateGroupTeams = (tournament, groupStage, group) => {
     tmp = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   }
   const config = group.advancement ? group : groupStage
-  // console.log('config', config)
   const eliminatedTeams = group.final_rankings.filter((t) => t && isEliminated(t, config))
   eliminatedTeams &&
     eliminatedTeams.forEach((et) => {
@@ -375,12 +374,14 @@ const createFinalRankings = (tournament, round) => {
         }
       }
       if (isSharedBronze(m)) {
+        // console.log('m', m)
         home_ranking.r = 3
         away_ranking.r = 3
+        const fr = getTeamName(home_ranking.id) > getTeamName(away_ranking.id) ? [away_ranking, home_ranking] : [home_ranking, away_ranking]
         tournament.final_rankings.rounds.unshift({
           name: round.name,
           ranking_type: 'round',
-          final_rankings: [away_ranking, home_ranking],
+          final_rankings: fr,
         })
       }
     }

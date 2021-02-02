@@ -128,7 +128,7 @@ const ResultRow = (props) => {
                       />
                       <br></br>
                       {getShortTeamName(row.final_standings.third_place[0])}
-                      <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                      <SharedBronzeTooltip target="sharedTooltip" notes={row.final_standings.third_place_text} />
                       <img
                         className="flag-sm flag-md"
                         src={getFlagSrc(row.final_standings.third_place[1])}
@@ -137,7 +137,7 @@ const ResultRow = (props) => {
                       />
                       <br></br>
                       {getShortTeamName(row.final_standings.third_place[1])}
-                      <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                      <SharedBronzeTooltip target="sharedTooltip" notes={row.final_standings.third_place_text} />
                     </React.Fragment>
                   )}
                 </React.Fragment>

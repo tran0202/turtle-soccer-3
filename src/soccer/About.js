@@ -266,11 +266,11 @@ const About = (props) => {
                   <React.Fragment>
                     <img className="flag-sm flag-md" src={getFlagSrc(third_place[0])} alt={third_place[0]} title={third_place[0]} />
                     <span className="padding-top-xs">&nbsp;{getTeamName(third_place[0])}</span>
-                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                    <SharedBronzeTooltip target="sharedTooltip" notes={final_standings.third_place_text} />
                     <br></br>
                     <img className="flag-sm flag-md" src={getFlagSrc(third_place[1])} alt={third_place[1]} title={third_place[1]} />
                     <span className="padding-top-xs">&nbsp;{getTeamName(third_place[1])}</span>
-                    <SharedBronzeTooltip target="sharedTooltip" notes="Tied 2–2 at the end of extra time." />
+                    <SharedBronzeTooltip target="sharedTooltip" notes={final_standings.third_place_text} />
                   </React.Fragment>
                 )}
               </Col>

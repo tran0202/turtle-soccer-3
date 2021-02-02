@@ -152,7 +152,7 @@ export const getBracketTeamCode = (id) => {
 }
 
 export const isSharedBronze = (match) => {
-  return match.date === '1972-09-10' && match.home_team === 'URS_U23MNT' && match.away_team === 'GDR_U23MNT'
+  return match.shared_bronze
 }
 
 export const isSuccessor = (id) => {
@@ -773,7 +773,10 @@ const DisplayMatch = (props) => {
           {m.home_extra_score != null && m.away_extra_score != null && (
             <React.Fragment>
               {parseInt(m.home_score) + parseInt(m.home_extra_score)}-{parseInt(m.away_score) + parseInt(m.away_extra_score)}
-              {(config.goldenGoal || config.silverGoal) && m.home_penalty_score == null && m.away_penalty_score == null ? (
+              {(config.goldenGoal || config.silverGoal) &&
+              (m.home_extra_score !== 0 || m.away_extra_score !== 0) &&
+              m.home_penalty_score == null &&
+              m.away_penalty_score == null ? (
                 config.goldenGoal ? (
                   <GoldenGoalTooltip target="goldengoalTooltip" anchor="(g.g.)" />
                 ) : (
@@ -845,7 +848,7 @@ const DisplayMatch = (props) => {
               void_notes: m.void_notes,
             }}
           />
-          {isSharedBronze(m) && <React.Fragment>&gt;&gt;&gt;&nbsp;Both teams were awarded bronze medals.</React.Fragment>}
+          {isSharedBronze(m) && <React.Fragment>&gt;&gt;&gt;&nbsp;{m.shared_bronze_text}</React.Fragment>}
         </Col>
       </Row>
     </Col>
@@ -991,8 +994,7 @@ export const AwardedTooltip = (props) => {
 
 export const SharedBronzeTooltip = (props) => {
   const { target, notes } = props
-  const content = `${notes ? notes : ''} Both teams were awarded bronze medals.`
-  return <TopTooltip target={target} content={content} />
+  return <TopTooltip target={target} content={notes} />
 }
 
 export const GoldenBallRejectedTooltip = (props) => {

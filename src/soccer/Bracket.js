@@ -109,7 +109,7 @@ const BracketBox = (props) => {
               {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
@@ -129,7 +129,7 @@ const BracketBox = (props) => {
               {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
@@ -149,7 +149,7 @@ const BracketBox = (props) => {
               {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(bye)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
@@ -169,7 +169,7 @@ const BracketBox = (props) => {
               {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
@@ -191,7 +191,7 @@ const BracketBox = (props) => {
               {match.home_bye && <ByeTooltip target={`byeTooltip_${match.home_team}_${match.away_team}`} anchor="(b)" notes={match.bye_notes} />}
               {match.home_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.postponed && <MatchPostponedTooltip target="matchPostponedTooltip" anchor="(ppd)" notes={match.postponed_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             {match.home_extra_score == null && (
@@ -246,7 +246,7 @@ const BracketBox = (props) => {
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(match.away_team)}
@@ -265,7 +265,7 @@ const BracketBox = (props) => {
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(match.away_team)}
@@ -284,7 +284,7 @@ const BracketBox = (props) => {
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(match.away_team)}
@@ -303,7 +303,7 @@ const BracketBox = (props) => {
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
               <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />
@@ -324,7 +324,7 @@ const BracketBox = (props) => {
               {match.away_withdrew && <WithdrewTooltip target="withdrewTooltip" anchor="(wdr)" />}
               {match.away_disqualified && <DisqualifiedTooltip target="disqualifiedTooltip" anchor="(dq)" notes={match.disqualified_notes} />}
               {match.away_replacement && <ReplacementTooltip target="replacementTooltip" notes={match.replacement_notes} />}
-              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" />}
+              {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             {match.away_extra_score == null && (
               <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>

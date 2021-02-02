@@ -654,11 +654,43 @@
     "name": "1993 Gold Cup United States-Mexico",
     "short_name": "United States-Mexico",
     "tournament_type_id": "GC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "gc_1993.jpg", "start_date": "1993-07-10", "end_date": "1993-07-25" }
+    "tiebreakers": ["team", "head2headpoints", "lot"],
+    "details": {
+      "host": ["USA", "MEX"],
+      "logo_filename": "gc_1993.jpg",
+      "start_date": "1993-07-10",
+      "end_date": "1993-07-25",
+      "color": "#24a45f",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Azteca, Mexico City",
+        "filename": "Estadio_Azteca_07a.jpg",
+        "text": "The Estadio Azteca hosted the final"
+      },
+      {
+        "name": "Cotton Bowl, Dallas",
+        "filename": "Image_of_TX_OU_Red_River_Shootout_in_Cotton_Bowl_seen_from_fair_grounds_-_original.jpg",
+        "text": "The Cotton Bowl hosted group A matches"
+      }
+    ],
+    "final_standings": {
+      "champions": "MEX",
+      "runners_up": "USA",
+      "third_place": ["CRC", "JAM"],
+      "third_place_text": "Tied 1-1 at the end of extra time. Both teams shared the third place."
+    },
+    "statistics": { "total_matches": 16, "total_goals": 60, "attendance": 709348 },
+    "awards": {
+      "golden_boot": [{ "player": "Zaguinho", "team": "MEX", "goals": 11 }],
+      "golden_ball": [{ "player": "Ramón Ramírez", "team": "MEX" }]
+    }
   },
   {
     "id": "GC1991",
