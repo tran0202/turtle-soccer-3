@@ -1033,8 +1033,20 @@
       "venue_count": 1,
       "city_count": 1
     },
+    "hero_images": [
+      {
+        "name": "Estadio Tiburcio Carías Andino, Tegucigalpa",
+        "filename": "Estadio_Carías.jpg",
+        "text": "The national stadium of Honduras in Tegucigalpa (Estadio Nacional de Tegucigalpa) also known as Estadio Tiburcio Carías Andino."
+      },
+      {
+        "name": "Tegucigalpa, Honduras",
+        "filename": "Tegucigalpa-INE_Building.jpg",
+        "text": "Tegucigalpa, Honduras"
+      }
+    ],
     "final_standings": { "champions": "GUA", "runners_up": "MEX", "third_place": "HON", "fourth_place": "TRI" },
-    "statistics": { "total_matches": 15, "total_goals": 54 },
+    "statistics": { "total_matches": 15, "total_goals": 35 },
     "awards": {
       "golden_boot": [
         { "player": "Luis Estrada", "team": "MEX", "goals": 4 },
@@ -1056,13 +1068,23 @@
       "start_date": "1965-03-28",
       "end_date": "1965-04-11",
       "color": "#5795de",
-      "team_count": 9,
-      "confed_count": 1,
-      "venue_count": 1,
-      "city_count": 1
+      "team_count": 6,
+      "confed_count": 1
     },
+    "hero_images": [
+      {
+        "name": "Estadio Mateo Flores, Guatemala City",
+        "filename": "Cremas-calentando.jpg",
+        "text": "Estadio Mateo Flores, Guatemala City"
+      },
+      {
+        "name": "Guatemala City",
+        "filename": "Guatemala_City_-_Guatemala.jpg",
+        "text": "Guatemala City is the biggest and most populated city in central america."
+      }
+    ],
     "final_standings": { "champions": "MEX", "runners_up": "GUA", "third_place": "CRC", "fourth_place": "SLV" },
-    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "statistics": { "total_matches": 15, "total_goals": 49 },
     "awards": {
       "golden_boot": [{ "player": "Ernesto Cisneros", "team": "MEX", "goals": 5 }]
     }
