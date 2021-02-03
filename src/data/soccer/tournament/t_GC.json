@@ -948,16 +948,35 @@
       "start_date": "1971-11-20",
       "end_date": "1971-12-05",
       "color": "#fa2200",
-      "team_count": 9,
+      "team_count": 6,
       "confed_count": 1,
-      "venue_count": 1,
-      "city_count": 1
+      "venue_count": 4,
+      "city_count": 3
     },
+    "hero_images": [
+      {
+        "name": "Queen's Park Oval, Port of Spain",
+        "filename": "Port_of_Spain.jpeg",
+        "text": "Queen's Park Oval, Port of Spain, Trinidad and Tobago"
+      },
+      {
+        "name": "Port of Spain, Trinidad and Tobago",
+        "filename": "POSMontage.png",
+        "text": "Port of Spain, Trinidad and Tobago"
+      },
+      {
+        "name": "Arima Velodrome, Arima",
+        "filename": "TnT_Arima_Velodrome_1.jpg",
+        "text": "Arima Velodrome, Arima"
+      },
+      {
+        "name": "Arima, Trinidad and Tobago",
+        "filename": "TnT_Arima_The_Dial.jpg",
+        "text": "Arima, Trinidad and Tobago"
+      }
+    ],
     "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "CRC", "fourth_place": "CUB" },
-    "statistics": { "total_matches": 24, "total_goals": 54 },
-    "awards": {
-      "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
-    }
+    "statistics": { "total_matches": 15, "total_goals": 37 }
   },
   {
     "id": "GC1969",
