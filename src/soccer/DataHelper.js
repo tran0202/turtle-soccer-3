@@ -123,6 +123,7 @@ import td_COPA_2015 from '../data/soccer/tournamentData/COPA/td_COPA_2015.json'
 import td_COPA_2016 from '../data/soccer/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/soccer/tournamentData/COPA/td_COPA_2019.json'
 
+import td_GC_1973 from '../data/soccer/tournamentData/GC/td_GC_1973.json'
 import td_GC_1977 from '../data/soccer/tournamentData/GC/td_GC_1977.json'
 import td_GC_1981 from '../data/soccer/tournamentData/GC/td_GC_1981.json'
 import td_GC_1985 from '../data/soccer/tournamentData/GC/td_GC_1985.json'
@@ -147,7 +148,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'GC1973', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'GC1971', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -167,6 +168,7 @@ export const getTournamentDataArray = () => {
 
 export const getTournamentDataGC = () => {
   return [].concat(
+    [td_GC_1973],
     [td_GC_1977],
     [td_GC_1981],
     [td_GC_1985],

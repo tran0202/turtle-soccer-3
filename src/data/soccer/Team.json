@@ -185,6 +185,8 @@
   { "id": "GLP", "name": "Guadeloupe", "team_type_id": "MNT", "nation_id": "GLP", "parent_team_id": "" },
   { "id": "VIN", "name": "Saint Vincent and the Grenadines", "team_type_id": "MNT", "nation_id": "VIN", "parent_team_id": "" },
   { "id": "SUR", "name": "Suriname", "team_type_id": "MNT", "nation_id": "SUR", "parent_team_id": "" },
+  { "id": "ANT", "name": "Netherlands Antilles", "team_type_id": "MNT", "nation_id": "ANT", "parent_team_id": "CUW" },
+  { "id": "ANT-1959-1986", "name": "Netherlands Antilles", "team_type_id": "MNT", "nation_id": "ANT-1959-1986", "parent_team_id": "CUW" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -440,7 +442,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "974", "name": "Netherlands Antilles", "team_type_id": "MNT", "nation_id": "226", "parent_team_id": "967" },
   { "id": "BFA", "name": "Burkina Faso", "team_type_id": "MNT", "nation_id": "BFA", "parent_team_id": "" },
   { "id": "GAB", "name": "Gabon", "team_type_id": "MNT", "nation_id": "GAB", "parent_team_id": "" },
   { "id": "MLI", "name": "Mali", "team_type_id": "MNT", "nation_id": "MLI", "parent_team_id": "" },
@@ -500,7 +501,6 @@
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
   { "id": "1110", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "305", "parent_team_id": "1043" },
-  { "id": "1111", "name": "Netherlands Antilles", "team_type_id": "MNT", "nation_id": "306", "parent_team_id": "967" },
   { "id": "1112", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "307", "parent_team_id": "870" },
   { "id": "1113", "name": "China", "team_type_id": "U23MNT", "nation_id": "309", "parent_team_id": "932" }
 ]
