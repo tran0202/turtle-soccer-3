@@ -874,11 +874,25 @@
       "start_date": "1977-10-08",
       "end_date": "1977-10-23",
       "color": "#24a45f",
-      "team_count": 9,
-      "confed_count": 1
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
     },
+    "hero_images": [
+      {
+        "name": "Estadio Azteca, Mexico City",
+        "filename": "Estadio_Azteca_07a.jpg",
+        "text": "Estadio Azteca, Mexico City"
+      },
+      {
+        "name": "Estadio Universitario, Monterrey",
+        "filename": "Estadio_Universitario_UANL.jpg",
+        "text": "Estadio Universitario, Monterrey"
+      }
+    ],
     "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "SLV", "fourth_place": "CAN" },
-    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "statistics": { "total_matches": 15, "total_goals": 55 },
     "awards": {
       "golden_boot": [{ "player": "Víctor Rangel", "team": "MEX", "goals": 6 }]
     }
@@ -898,7 +912,9 @@
       "end_date": "1973-12-18",
       "color": "#01209f",
       "team_count": 9,
-      "confed_count": 1
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
     },
     "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON" },
     "statistics": { "total_matches": 24, "total_goals": 54 },
@@ -921,7 +937,9 @@
       "end_date": "1971-12-05",
       "color": "#fa2200",
       "team_count": 9,
-      "confed_count": 1
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
     },
     "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "CRC", "fourth_place": "CUB" },
     "statistics": { "total_matches": 24, "total_goals": 54 },
@@ -936,7 +954,22 @@
     "short_name": "1969 Costa Rica",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2headpoints", "lot"],
-    "details": { "logo_filename": "CONCACAF.png", "start_date": "1969-11-23", "end_date": "1969-12-07" }
+    "details": {
+      "host": ["CRC"],
+      "logo_filename": "CONCACAF.png",
+      "start_date": "1969-11-23",
+      "end_date": "1969-12-07",
+      "color": "#2251a2",
+      "team_count": 9,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "final_standings": { "champions": "CRC", "runners_up": "GUA", "third_place": "CRC", "fourth_place": "CUB" },
+    "statistics": { "total_matches": 24, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
+    }
   },
   {
     "id": "GC1967",
