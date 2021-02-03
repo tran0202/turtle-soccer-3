@@ -1,0 +1,416 @@
+[
+  {
+    "id": "AFCON2019",
+    "year": "2019",
+    "name": "Africa Cup of Nations Egypt 2019",
+    "tournament_type_id": "AFCON",
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["EGY"],
+      "logo_filename": "2019_Africa_Cup_of_Nations_logo.svg",
+      "mascot_filename": "_Tut,_Africa_Cup_of_Nations_Egypt_2019_Mascot,_May_2019_.jpeg",
+      "start_date": "2019-06-21",
+      "end_date": "2019-07-19",
+      "color": "#ca0b0f",
+      "team_count": 24,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "806px-V3f2uf9o_algeria-win-afcon-afp_625x300_20_July_19.webp.png",
+        "text": "Algeria"
+      },
+      {
+        "name": "Cairo International Stadium, Cairo",
+        "filename": "Panorma_Cairo_Stadium.jpg",
+        "text": "The Cairo International Stadium in Cairo hosted the final."
+      },
+      {
+        "name": "30 June Stadium, Cairo",
+        "filename": "30_June_Stadium_Cairo.jpg",
+        "text": "The 30 June Stadium hosted the semi-final Senegal vs Tunisia"
+      },
+      { "name": "Al Salam Stadium, Cairo", "filename": "Al_Ahly_Stadium.jpg", "text": "The Al Salam Stadium hosted the quarter-final Madagascar vs Tunisia" }
+    ],
+    "final_standings": { "champions": "ALG", "runners_up": "SEN", "third_place": "NGA", "fourth_place": "TUN" },
+    "statistics": { "total_matches": 52, "total_goals": 102, "attendance": 943053 },
+    "awards": {
+      "golden_boot": [{ "player": "Odion Ighalo", "team": "NGA", "goals": 5 }],
+      "golden_ball": [{ "player": "Ismaël Bennacer", "team": "ALG" }],
+      "best_young_player": { "player": "Krépin Diatta", "team": "SEN" },
+      "golden_glove": { "player": "Raïs M'Bolhi", "team": "ALG" },
+      "fair_play_team": ["SEN"]
+    }
+  },
+  {
+    "id": "AFCON2017",
+    "year": "2017",
+    "name": "Africa Cup of Nations Gabon 2017",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2017.png", "start_date": "2017-01-14", "end_date": "2017-02-05" }
+  },
+  {
+    "id": "AFCON2015",
+    "year": "2015",
+    "name": "Africa Cup of Nations Equatorial Guinea 2015",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2015.png", "start_date": "2015-01-17", "end_date": "2015-02-08" }
+  },
+  {
+    "id": "AFCON2013",
+    "year": "2013",
+    "name": "Africa Cup of Nations South Africa 2013",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2013.png", "start_date": "2013-01-19", "end_date": "2013-02-10" }
+  },
+  {
+    "id": "AFCON2012",
+    "year": "2012",
+    "name": "Africa Cup of Nations Gabon-Equatorial Guinea 2012",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2012.png", "start_date": "2012-01-21", "end_date": "2012-02-12" }
+  },
+  {
+    "id": "AFCON2010",
+    "year": "2010",
+    "name": "Africa Cup of Nations Angola 2010",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": true,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",
+      "mascot_filename": "Palanquinha.svg",
+      "start_date": "2010-01-10",
+      "end_date": "2010-01-31"
+    }
+  },
+  {
+    "id": "AFCON2008",
+    "year": "2008",
+    "name": "Africa Cup of Nations Ghana 2008",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg", "start_date": "2008-01-20", "end_date": "2008-02-10" }
+  },
+  {
+    "id": "AFCON2006",
+    "year": "2006",
+    "name": "Africa Cup of Nations Egypt 2006",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": {
+      "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",
+      "mascot_filename": "Croconile.jpg",
+      "start_date": "2006-01-20",
+      "end_date": "2006-02-10"
+    }
+  },
+  {
+    "id": "AFCON2004",
+    "year": "2004",
+    "name": "Africa Cup of Nations Tunisia 2004",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg", "start_date": "2004-01-24", "end_date": "2004-02-14" }
+  },
+  {
+    "id": "AFCON2002",
+    "year": "2002",
+    "name": "Africa Cup of Nations Mali 2002",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2002.png", "start_date": "2002-01-19", "end_date": "2002-02-10" }
+  },
+  {
+    "id": "AFCON2000",
+    "year": "2000",
+    "name": "Africa Cup of Nations Ghana-Nigeria 2000",
+    "short_name": "Ghana-Nigeria 2000",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_2000.png", "start_date": "2000-01-22", "end_date": "2000-02-13" }
+  },
+  {
+    "id": "AFCON1998",
+    "year": "1998",
+    "name": "Africa Cup of Nations Burkina Faso 1998",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_1998.png", "start_date": "1998-02-07", "end_date": "1998-02-28" }
+  },
+  {
+    "id": "AFCON1996",
+    "year": "1996",
+    "name": "Africa Cup of Nations South Africa 1996",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "afcon_1996.jpg", "start_date": "1996-01-13", "end_date": "1996-02-03" }
+  },
+  {
+    "id": "AFCON1994",
+    "year": "1994",
+    "name": "Africa Cup of Nations Tunisia 1994",
+    "short_name": "Tunisia 1994",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1994-03-26", "end_date": "1994-04-10" }
+  },
+  {
+    "id": "AFCON1992",
+    "year": "1992",
+    "name": "Africa Cup of Nations Senegal 1992",
+    "short_name": "Senegal 1992",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1992-01-12", "end_date": "1992-01-26" }
+  },
+  {
+    "id": "AFCON1990",
+    "year": "1990",
+    "name": "Africa Cup of Nations Algeria 1990",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1990.png", "start_date": "1990-03-02", "end_date": "1990-03-16" }
+  },
+  {
+    "id": "AFCON1988",
+    "year": "1988",
+    "name": "Africa Cup of Nations Morocco 1988",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1988.png", "start_date": "1988-03-13", "end_date": "1988-03-27" }
+  },
+  {
+    "id": "AFCON1986",
+    "year": "1986",
+    "name": "Africa Cup of Nations Egypt 1986",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "CAN_1986_(logo).png", "start_date": "1986-03-07", "end_date": "1986-03-21" }
+  },
+  {
+    "id": "AFCON1984",
+    "year": "1984",
+    "name": "Africa Cup of Nations Ivory Coast 1984",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1984.png", "start_date": "1984-03-04", "end_date": "1984-03-18" }
+  },
+  {
+    "id": "AFCON1982",
+    "year": "1982",
+    "name": "Africa Cup of Nations Libya 1982",
+    "short_name": "Libya 1982",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "afcon_1982.png", "start_date": "1982-03-05", "end_date": "1982-03-19" }
+  },
+  {
+    "id": "AFCON1980",
+    "year": "1980",
+    "name": "Africa Cup of Nations Nigeria 1980",
+    "short_name": "Nigeria 1980",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1980-03-08", "end_date": "1980-03-22" }
+  },
+  {
+    "id": "AFCON1978",
+    "year": "1978",
+    "name": "Africa Cup of Nations Ghana 1978",
+    "short_name": "Ghana 1978",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1978-03-05", "end_date": "1978-03-16" }
+  },
+  {
+    "id": "AFCON1976",
+    "year": "1976",
+    "name": "Africa Cup of Nations Ethiopia 1976",
+    "short_name": "Ethiopia 1976",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1976-02-29", "end_date": "1976-03-14" }
+  },
+  {
+    "id": "AFCON1974",
+    "year": "1974",
+    "name": "Africa Cup of Nations Egypt 1974",
+    "short_name": "Egypt 1974",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1974-03-01", "end_date": "1974-03-14" }
+  },
+  {
+    "id": "AFCON1972",
+    "year": "1972",
+    "name": "Africa Cup of Nations Cameroon 1972",
+    "short_name": "Cameroon 1972",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1972-02-23", "end_date": "1972-03-05" }
+  },
+  {
+    "id": "AFCON1970",
+    "year": "1970",
+    "name": "Africa Cup of Nations Sudan 1970",
+    "short_name": "Sudan 1970",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1970-02-06", "end_date": "1970-02-16" }
+  },
+  {
+    "id": "AFCON1968",
+    "year": "1968",
+    "name": "Africa Cup of Nations Ethiopia 1968",
+    "short_name": "Ethiopia 1968",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1968-01-12", "end_date": "1968-01-21" }
+  },
+  {
+    "id": "AFCON1965",
+    "year": "1965",
+    "name": "Africa Cup of Nations Tunisia 1965",
+    "short_name": "Tunisia 1965",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1965-11-12", "end_date": "1965-11-21" }
+  },
+  {
+    "id": "AFCON1963",
+    "year": "1963",
+    "name": "Africa Cup of Nations Ghana 1963",
+    "short_name": "Ghana 1963",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1963-11-24", "end_date": "1963-12-01" }
+  },
+  {
+    "id": "AFCON1962",
+    "year": "1962",
+    "name": "Africa Cup of Nations Ethiopia 1962",
+    "short_name": "Ethiopia 1962",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1962-01-14", "end_date": "1962-01-21" }
+  },
+  {
+    "id": "AFCON1959",
+    "year": "1959",
+    "name": "Africa Cup of Nations United Arab Republic 1959",
+    "short_name": "United Arab Republic 1959",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1959-05-22", "end_date": "1959-05-29" }
+  },
+  {
+    "id": "AFCON1957",
+    "year": "1957",
+    "name": "Africa Cup of Nations Sudan 1957",
+    "short_name": "Sudan 1957",
+    "tournament_type_id": "AFCON",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1957-02-10", "end_date": "1957-02-15" }
+  }
+]

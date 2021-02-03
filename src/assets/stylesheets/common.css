@@ -30,6 +30,10 @@
   font-family: 'Coolvetica';
   src: url('fonts/coolvetica.regular.ttf');
 }
+@font-face {
+  font-family: 'Hemi Head';
+  src: url('fonts/hemi head bd it.ttf');
+}
 
 @media (min-width: 768px) {
 }

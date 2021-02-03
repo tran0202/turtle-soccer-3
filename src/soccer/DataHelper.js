@@ -5,6 +5,7 @@ import t_MOFT from '../data/soccer/tournament/t_MOFT.json'
 import t_WOFT from '../data/soccer/tournament/t_WOFT.json'
 import t_COPA from '../data/soccer/tournament/t_COPA.json'
 import t_GC from '../data/soccer/tournament/t_GC.json'
+import t_AFCON from '../data/soccer/tournament/t_AFCON.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -123,6 +124,7 @@ import td_COPA_2015 from '../data/soccer/tournamentData/COPA/td_COPA_2015.json'
 import td_COPA_2016 from '../data/soccer/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/soccer/tournamentData/COPA/td_COPA_2019.json'
 
+import td_GC_1963 from '../data/soccer/tournamentData/GC/td_GC_1963.json'
 import td_GC_1965 from '../data/soccer/tournamentData/GC/td_GC_1965.json'
 import td_GC_1967 from '../data/soccer/tournamentData/GC/td_GC_1967.json'
 import td_GC_1969 from '../data/soccer/tournamentData/GC/td_GC_1969.json'
@@ -152,11 +154,11 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'GC1963', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'GC1961', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC)
+  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON)
 }
 
 export const getTournamentDataArray = () => {
@@ -172,6 +174,7 @@ export const getTournamentDataArray = () => {
 
 export const getTournamentDataGC = () => {
   return [].concat(
+    [td_GC_1963],
     [td_GC_1965],
     [td_GC_1967],
     [td_GC_1969],

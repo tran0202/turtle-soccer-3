@@ -42,6 +42,9 @@ export const getTournamentTitleFont = (tournamentType) => {
     case 'GC':
       fontClassName = 'tournament-title-GC'
       break
+    case 'AFCON':
+      fontClassName = 'tournament-title-AFCON'
+      break
     default:
       fontClassName = 'h1-ff5 tournament-title'
   }

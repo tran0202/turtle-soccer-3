@@ -61,7 +61,7 @@ const getTopScorerLabel = (tournament, position) => {
         return tournament.awards.golden_boot.length > 1 ? 'Golden Shoes' : 'Golden Shoe'
       }
       return 'Golden Boot'
-    } else if (tournament.tournament_type_id === 'MOFT' || tournament.tournament_type_id === 'WOFT' || tournament.tournament_type_id === 'COPA') {
+    } else if (tournament.tournament_type_id === 'MOFT' || tournament.tournament_type_id === 'WOFT' || tournament.tournament_type_id === 'AFCON') {
       return tournament.awards.golden_boot.length > 1 ? 'Top scorers' : 'Top scorer'
     }
     return 'Golden Boot'
@@ -93,14 +93,14 @@ const getTopScorerLabel = (tournament, position) => {
 const getGoldenBallLabel = (tournament) => {
   if (tournament.tournament_type_id === 'EURO') {
     return 'Player of the Tournament'
-  } else if (tournament.tournament_type_id === 'COPA') {
-    return 'Best Player'
+  } else if (tournament.tournament_type_id === 'AFCON') {
+    return 'Man of the Competition'
   }
   return 'Golden Ball'
 }
 
 const getGoldenGloveLabel = (tournament) => {
-  if (tournament.tournament_type_id === 'COPA') {
+  if (tournament.tournament_type_id === 'AFCON') {
     return 'Best Goalkeeper'
   }
   return 'Golden Glove'
