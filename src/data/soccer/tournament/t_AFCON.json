@@ -51,11 +51,45 @@
     "year": "2017",
     "name": "Africa Cup of Nations Gabon 2017",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2017.png", "start_date": "2017-01-14", "end_date": "2017-02-05" }
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["GAB"],
+      "logo_filename": "afcon_2017.png",
+      "mascot_filename": "12472337_1013610275372599_3491603779303180603_n.png",
+      "start_date": "2017-01-14",
+      "end_date": "2017-02-05",
+      "color": "#3775b8",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Cameroon_celebrating_winning_2017_Africa_Cup_of_Nations_(cropped).jpg",
+        "text": "Cameroon celebrating winning 2017 Africa Cup of Nation"
+      },
+      {
+        "name": "Libreville, Gabon",
+        "filename": "Libreville.jpg",
+        "text": "Libreville, Gabon"
+      },
+      {
+        "name": "Franceville, Gabon",
+        "filename": "Franceville.jpg",
+        "text": "Franceville, Gabon"
+      },
+      { "name": "Port-Gentil, Gabon", "filename": "POG-From_The_Air.jpg", "text": "Port-Gentil, Gabon" }
+    ],
+    "final_standings": { "champions": "CMR", "runners_up": "EGY", "third_place": "BFA", "fourth_place": "GHA" },
+    "statistics": { "total_matches": 32, "total_goals": 66 },
+    "awards": {
+      "golden_boot": [{ "player": "Junior Kabananga", "team": "COD", "goals": 5 }],
+      "golden_ball": [{ "player": "Christian Bassogog", "team": "CMR" }],
+      "fair_play_team": ["EGY"]
+    }
   },
   {
     "id": "AFCON2015",

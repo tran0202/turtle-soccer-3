@@ -150,11 +150,14 @@ import td_GC_2015 from '../data/soccer/tournamentData/GC/td_GC_2015.json'
 import td_GC_2017 from '../data/soccer/tournamentData/GC/td_GC_2017.json'
 import td_GC_2019 from '../data/soccer/tournamentData/GC/td_GC_2019.json'
 
+import td_AFCON_2017 from '../data/soccer/tournamentData/AFCON/td_AFCON_2017.json'
+import td_AFCON_2019 from '../data/soccer/tournamentData/AFCON/td_AFCON_2019.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'AFCON2019', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'AFCON2015', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -169,37 +172,12 @@ export const getTournamentDataArray = () => {
     getTournamentDataWOFT(),
     getTournamentDataCOPA(),
     getTournamentDataGC(),
+    getTournamentDataAFCON(),
   )
 }
 
-export const getTournamentDataGC = () => {
-  return [].concat(
-    [td_GC_1963],
-    [td_GC_1965],
-    [td_GC_1967],
-    [td_GC_1969],
-    [td_GC_1971],
-    [td_GC_1973],
-    [td_GC_1977],
-    [td_GC_1981],
-    [td_GC_1985],
-    [td_GC_1989],
-    [td_GC_1991],
-    [td_GC_1993],
-    [td_GC_1996],
-    [td_GC_1998],
-    [td_GC_2000],
-    [td_GC_2002],
-    [td_GC_2003],
-    [td_GC_2005],
-    [td_GC_2007],
-    [td_GC_2009],
-    [td_GC_2011],
-    [td_GC_2013],
-    [td_GC_2015],
-    [td_GC_2017],
-    [td_GC_2019],
-  )
+export const getTournamentDataAFCON = () => {
+  return [].concat([td_AFCON_2017], [td_AFCON_2019])
 }
 
 export const getQualificationTournamentArray = () => {
@@ -337,5 +315,35 @@ export const getTournamentDataCOPA = () => {
     [td_COPA_2015],
     [td_COPA_2016],
     [td_COPA_2019],
+  )
+}
+
+export const getTournamentDataGC = () => {
+  return [].concat(
+    [td_GC_1963],
+    [td_GC_1965],
+    [td_GC_1967],
+    [td_GC_1969],
+    [td_GC_1971],
+    [td_GC_1973],
+    [td_GC_1977],
+    [td_GC_1981],
+    [td_GC_1985],
+    [td_GC_1989],
+    [td_GC_1991],
+    [td_GC_1993],
+    [td_GC_1996],
+    [td_GC_1998],
+    [td_GC_2000],
+    [td_GC_2002],
+    [td_GC_2003],
+    [td_GC_2005],
+    [td_GC_2007],
+    [td_GC_2009],
+    [td_GC_2011],
+    [td_GC_2013],
+    [td_GC_2015],
+    [td_GC_2017],
+    [td_GC_2019],
   )
 }
