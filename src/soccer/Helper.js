@@ -862,7 +862,6 @@ export const DisplaySchedule = (props) => {
   const { round, config } = props
   const { showMatchYear } = config
   const { name, dates, matches, consolation_notes } = round
-  // console.log('round', round)
   let groupName =
     name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? name.replace('Third-place', 'Bronze medal match').replace('Final', 'Gold medal match')
@@ -1043,10 +1042,18 @@ export const WildCardTooltip = (props) => {
 export const SuccessorTooltip = (props) => {
   const { target, children_teams, parent_team } = props
   let content = () => {
-    if (!children_teams) return
+    if (!children_teams) {
+      // console.log('parent_team', parent_team)
+      return (
+        <React.Fragment>
+          As a successor, {parent_team}'s rankings might include ones' that it succeeded.&nbsp;
+          <a href={`#successor_${parent_team.replace(' ', '_')}`}>See breakdown below.</a>
+        </React.Fragment>
+      )
+    }
     return (
       <React.Fragment>
-        Includes participation as&nbsp;
+        As a successor, {parent_team}'s rankings include participation as&nbsp;
         {children_teams.reverse().map((ct, index) => {
           return (
             <React.Fragment key={index}>
