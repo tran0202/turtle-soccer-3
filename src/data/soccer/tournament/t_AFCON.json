@@ -96,11 +96,57 @@
     "year": "2015",
     "name": "Africa Cup of Nations Equatorial Guinea 2015",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2015.png", "start_date": "2015-01-17", "end_date": "2015-02-08" }
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["EQG"],
+      "logo_filename": "afcon_2015.png",
+      "mascot_filename": "2021640_mascot_pnglarge_jpeg8f784e2506d7c8ba43738faf6eb50334.jpeg",
+      "start_date": "2015-01-17",
+      "end_date": "2015-02-08",
+      "color": "#2470b5",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Acon_final_2015_(16331506630).jpg",
+        "text": "Ivory Coast celebrating winning 2015 Africa Cup of Nation"
+      },
+      { "name": "Ivory Coast", "filename": "Acon_final_2015_(16511522851).jpg", "text": "The Ivory Coast national team in the final" },
+      {
+        "name": "Ghana",
+        "filename": "Acon_final_2015_(16325527428).jpg",
+        "text": "The Ghana national team in the final"
+      },
+      {
+        "name": "Final",
+        "filename": "Acon_final_2015_(16325795950).jpg",
+        "text": "Ivory Coast vs Ghana"
+      },
+      {
+        "name": "Quarter-final",
+        "filename": "ACON_2015_GHA_GUI_(16511976922).jpg",
+        "text": "Ghana vs Guinea"
+      }
+    ],
+    "final_standings": { "champions": "CIV", "runners_up": "GHA", "third_place": "COD", "fourth_place": "EQG" },
+    "statistics": { "total_matches": 32, "total_goals": 68, "attendance": 617374 },
+    "awards": {
+      "golden_boot": [
+        { "player": "André Ayew", "team": "GHA", "goals": 3 },
+        { "player": "Thievy Bifouma", "team": "CGO", "goals": 3 },
+        { "player": "Dieumerci Mbokani", "team": "COD", "goals": 3 },
+        { "player": "Javier Balboa", "team": "EQG", "goals": 3 },
+        { "player": "Ahmed Akaïchi", "team": "TUN", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Christian Atsu", "team": "GHA" }],
+      "golden_glove": { "player": "Sylvain Gbohouo", "team": "CIV" },
+      "fair_play_team": ["COD"]
+    }
   },
   {
     "id": "AFCON2013",

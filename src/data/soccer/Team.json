@@ -106,7 +106,7 @@
   { "id": "SLE", "name": "Sierra Leone", "team_type_id": "MNT", "nation_id": "SLE", "parent_team_id": "" },
   { "id": "MOZ", "name": "Mozambique", "team_type_id": "MNT", "nation_id": "MOZ", "parent_team_id": "" },
   { "id": "MWI", "name": "Malawi", "team_type_id": "MNT", "nation_id": "MWI", "parent_team_id": "" },
-  { "id": "EQG", "name": "Equatorial Guinea", "team_type_id": "MNT", "nation_id": "EQG", "parent_team_id": "" },
+  { "id": "EQG", "name": "Equatorial Guinea", "short_name": "Equ Guinea", "team_type_id": "MNT", "nation_id": "EQG", "parent_team_id": "" },
   { "id": "SWZ", "name": "Eswatini", "team_type_id": "MNT", "nation_id": "SWZ", "parent_team_id": "" },
   { "id": "COM", "name": "Comoros", "team_type_id": "MNT", "nation_id": "COM", "parent_team_id": "" },
   { "id": "BOT", "name": "Botswana", "team_type_id": "MNT", "nation_id": "BOT", "parent_team_id": "" },
@@ -196,6 +196,9 @@
   { "id": "BEN", "name": "Benin", "team_type_id": "MNT", "nation_id": "BEN", "parent_team_id": "" },
   { "id": "GAB", "name": "Gabon", "team_type_id": "MNT", "nation_id": "GAB", "parent_team_id": "" },
   { "id": "BFA", "name": "Burkina Faso", "short_name": "BurkinaFaso", "team_type_id": "MNT", "nation_id": "BFA", "parent_team_id": "" },
+  { "id": "CGO", "name": "Congo", "team_type_id": "MNT", "nation_id": "CGO", "parent_team_id": "" },
+  { "id": "ZAM", "name": "Zambia", "team_type_id": "MNT", "nation_id": "ZAM", "parent_team_id": "" },
+  { "id": "CPV", "name": "Cape Verde", "team_type_id": "MNT", "nation_id": "CPV", "parent_team_id": "" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -449,9 +452,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "CGO", "name": "Congo", "team_type_id": "MNT", "nation_id": "CGO", "parent_team_id": "" },
-  { "id": "CPV", "name": "Cabo Verde", "team_type_id": "MNT", "nation_id": "CPV", "parent_team_id": "" },
-  { "id": "ZAM", "name": "Zambia", "team_type_id": "MNT", "nation_id": "ZAM", "parent_team_id": "" },
   { "id": "NIG", "name": "Niger", "team_type_id": "MNT", "nation_id": "NIG", "parent_team_id": "" },
   { "id": "LBY", "name": "Libya", "team_type_id": "MNT", "nation_id": "LBY", "parent_team_id": "" },
   { "id": "1001", "name": "Upper Volta", "team_type_id": "MNT", "nation_id": "232", "parent_team_id": "975" },

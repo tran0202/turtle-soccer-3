@@ -243,6 +243,12 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Canada took 2nd place after finished identical records (points, goal difference and goad forward) with Korea Republic.'
     return 1
   }
+  // AFCON 2015
+  if (a.id === 'MLI' && b.id === 'GUI') {
+    a.draw_lot_notes = 'Mali took 3rd place after tying with Guinea on head-to-head match, overall goal difference and overall goad forward.'
+    b.draw_lot_notes = 'Guinea took 2nd place after tying with Mali on head-to-head match, overall goal difference and overall goad forward.'
+    return 1
+  }
   // console.log('a', a)
   // console.log('b', b)
   return 0
@@ -466,7 +472,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
           return compareH2h(a, b, false, () => {
             return compareGoalDifference(a, b, true, () => {
               return compareGoalForward(a, b, true, () => {
-                return 0
+                return drawingLots(a, b)
               })
             })
           })

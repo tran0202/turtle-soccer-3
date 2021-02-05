@@ -531,7 +531,7 @@ const DisplayExtraTimeText = (props) => {
               <b>
                 {home_penalty_score}-{away_penalty_score}
               </b>
-              {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time played)</React.Fragment>}
+              {home_extra_score == null && away_extra_score == null && <React.Fragment>&nbsp;(No extra time was played)</React.Fragment>}
             </React.Fragment>
           )}
           {home_coin_toss && (round_type === 'secondleg' || round_type === undefined) && (
