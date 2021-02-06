@@ -153,11 +153,51 @@
     "year": "2013",
     "name": "Africa Cup of Nations South Africa 2013",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2013.png", "start_date": "2013-01-19", "end_date": "2013-02-10" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
+    "details": {
+      "host": ["RSA"],
+      "logo_filename": "afcon_2013.png",
+      "mascot_filename": "11750_401983089894620_2026646383_n.png",
+      "start_date": "2013-01-19",
+      "end_date": "2013-02-10",
+      "color": "#0d8a5f",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "A_la_coupe_dAfrique_des_Nations.jpg",
+        "text": "Nigeria celebrating winning 2013 Africa Cup of Nation"
+      },
+      {
+        "name": "Group A",
+        "filename": "Angola_vs_Morocco_2013_AFCON.jpg",
+        "text": "Morocco clash with Angola in a Group A game of the 2013 CAN on January 19th."
+      },
+      {
+        "name": "Group D",
+        "filename": "Ivory_Coast_vs_Tunisia_2013_AFCON.jpg",
+        "text": "Even though Cote d'Ivoire beat Tunisia on January 26, the Carthage Eagles have one more chance to reach the next round at CAN."
+      },
+      {
+        "name": "Group D",
+        "filename": "Tunisia_vs_Algeria_2013_AFCON.jpg",
+        "text": "Algeria played Tunisia in the 2013 African Cup of Nations."
+      }
+    ],
+    "final_standings": { "champions": "NGA", "runners_up": "BFA", "third_place": "MLI", "fourth_place": "GHA" },
+    "statistics": { "total_matches": 32, "total_goals": 69, "attendance": 729000 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Emmanuel Emenike", "team": "NGA", "goals": 4 },
+        { "player": "Wakaso Mubarak", "team": "GHA", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Jonathan Pitroipa", "team": "BFA" }]
+    }
   },
   {
     "id": "AFCON2012",
