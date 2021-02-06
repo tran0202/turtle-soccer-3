@@ -138,10 +138,10 @@
     "awards": {
       "golden_boot": [
         { "player": "André Ayew", "team": "GHA", "goals": 3 },
-        { "player": "Thievy Bifouma", "team": "CGO", "goals": 3 },
-        { "player": "Dieumerci Mbokani", "team": "COD", "goals": 3 },
+        { "player": "Ahmed Akaïchi", "team": "TUN", "goals": 3 },
         { "player": "Javier Balboa", "team": "EQG", "goals": 3 },
-        { "player": "Ahmed Akaïchi", "team": "TUN", "goals": 3 }
+        { "player": "Thievy Bifouma", "team": "CGO", "goals": 3 },
+        { "player": "Dieumerci Mbokani", "team": "COD", "goals": 3 }
       ],
       "golden_ball": [{ "player": "Christian Atsu", "team": "GHA" }],
       "golden_glove": { "player": "Sylvain Gbohouo", "team": "CIV" },
@@ -194,7 +194,7 @@
     "awards": {
       "golden_boot": [
         { "player": "Emmanuel Emenike", "team": "NGA", "goals": 4 },
-        { "player": "Wakaso Mubarak", "team": "GHA", "goals": 4 }
+        { "player": "Mubarak Wakaso", "team": "GHA", "goals": 4 }
       ],
       "golden_ball": [{ "player": "Jonathan Pitroipa", "team": "BFA" }]
     }
@@ -204,11 +204,47 @@
     "year": "2012",
     "name": "Africa Cup of Nations Gabon-Equatorial Guinea 2012",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2012.png", "start_date": "2012-01-21", "end_date": "2012-02-12" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
+    "details": {
+      "host": ["GAB", "EQG"],
+      "logo_filename": "afcon_2012.png",
+      "mascot_filename": "high_1297629038.jpg",
+      "start_date": "2012-01-21",
+      "end_date": "2012-02-12",
+      "color": "#3775b8",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Estadio de Bata, Bata",
+        "filename": "Estadio_de_Bata_(15896737884).jpg",
+        "text": "The Estadio de Bata hosted the semi-final Zambia vs Ghana"
+      },
+      {
+        "name": "Nuevo Estadio de Malabo, Malabo",
+        "filename": "Estadio_de_Malabo_Equatorial_Guinea.jpeg",
+        "text": "The Nuevo Estadio de Malabo hosted the quarter-final Ivory Coast vs Equatorial Guinea"
+      }
+    ],
+    "final_standings": { "champions": "ZAM", "runners_up": "CIV", "third_place": "MLI", "fourth_place": "GHA" },
+    "statistics": { "total_matches": 32, "total_goals": 76, "attendance": 456332 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Emmanuel Mayuka", "team": "ZAM", "goals": 3 },
+        { "player": "Manucho", "team": "ANG", "goals": 3 },
+        { "player": "Pierre-Emerick Aubameyang", "team": "GAB", "goals": 3 },
+        { "player": "Didier Drogba", "team": "CIV", "goals": 3 },
+        { "player": "Cheick Diabaté", "team": "MLI", "goals": 3 },
+        { "player": "Houssine Kharja", "team": "MAR", "goals": 3 },
+        { "player": "Christopher Katongo", "team": "ZAM", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Christopher Katongo", "team": "ZAM" }],
+      "fair_play_team": ["CIV"]
+    }
   },
   {
     "id": "AFCON2010",
