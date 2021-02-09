@@ -300,11 +300,48 @@
     "year": "2008",
     "name": "Africa Cup of Nations Ghana 2008",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg", "start_date": "2008-01-20", "end_date": "2008-02-10" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["GHA"],
+      "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg",
+      "start_date": "2008-01-20",
+      "end_date": "2008-02-10",
+      "color": "#237832",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Ohene Djan Stadium, Accra",
+        "filename": "Ohene_Djan_stadium,_Accra.jpg",
+        "text": "The Ohene Djan Stadium hosted the final."
+      },
+      {
+        "name": "Baba Yara Stadium, Kumasi",
+        "filename": "Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
+        "text": "The Baba Yara Stadium hosted the semi-final Ivory Coast vs Egypt"
+      },
+      {
+        "name": "Tamale Stadium, Tamale",
+        "filename": "Stadium_tamale2.jpg",
+        "text": "The Tamale Stadium hosted the quarter-final Tunisia vs Cameroon"
+      },
+      {
+        "name": "Sekondi Stadium, Sekondi",
+        "filename": "Sekondi-Takoradi_Stadium.jpg",
+        "text": "The Sekondi Stadium hosted the quarter-final Ivory Coast vs Guinea"
+      }
+    ],
+    "final_standings": { "champions": "EGY", "runners_up": "CMR", "third_place": "GHA", "fourth_place": "CIV" },
+    "statistics": { "total_matches": 32, "total_goals": 99, "attendance": 714000 },
+    "awards": {
+      "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
+      "golden_ball": [{ "player": "Hosny Abd Rabo", "team": "EGY" }],
+      "golden_glove": { "player": "Essam El-Hadary", "team": "EGY" }
+    }
   },
   {
     "id": "AFCON2006",
