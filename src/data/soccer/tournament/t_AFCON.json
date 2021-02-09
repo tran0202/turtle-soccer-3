@@ -396,11 +396,53 @@
     "year": "2004",
     "name": "Africa Cup of Nations Tunisia 2004",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg", "start_date": "2004-01-24", "end_date": "2004-02-14" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["TUN"],
+      "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg",
+      "start_date": "2004-01-24",
+      "end_date": "2004-02-14",
+      "color": "#0089cc",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Stade Olympique de Radès, Radès",
+        "filename": "Tunisia_-_Netherlands_(Stade_de_Radès).jpg",
+        "text": "The Stade Olympique de Radès hosted the final."
+      },
+      {
+        "name": "Stade Olympique de Sousse, Sousse",
+        "filename": "Stade_olympique_de_Sousse.jpg",
+        "text": "The Stade Olympique de Sousse hosted the semi-final Morocco vs Mali"
+      },
+      {
+        "name": "Stade Mustapha Ben Jannet, Monastir",
+        "filename": "Stade_Mustapha-Ben-Jennet.jpg",
+        "text": "The Stade Mustapha Ben Jannet hosted the quarter-final Cameroon vs Nigeria"
+      },
+      {
+        "name": "Stade El Menzah, Tunis",
+        "filename": "Stade_El_Menzah.jpg",
+        "text": "The Stade El Menzah hosted the quarter-final Mali vs Guinea"
+      }
+    ],
+    "final_standings": { "champions": "TUN", "runners_up": "MAR", "third_place": "NGA", "fourth_place": "MLI" },
+    "statistics": { "total_matches": 32, "total_goals": 88, "attendance": 553500 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Frédéric Kanouté", "team": "MLI", "goals": 4 },
+        { "player": "Patrick Mboma", "team": "CMR", "goals": 4 },
+        { "player": "Youssef Mokhtari", "team": "MAR", "goals": 4 },
+        { "player": "Jay-Jay Okocha", "team": "NGA", "goals": 4 },
+        { "player": "Francileudo dos Santos", "team": "TUN", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Jay-Jay Okocha", "team": "NGA" }]
+    }
   },
   {
     "id": "AFCON2002",
