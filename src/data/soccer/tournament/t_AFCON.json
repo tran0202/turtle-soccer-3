@@ -348,15 +348,47 @@
     "year": "2006",
     "name": "Africa Cup of Nations Egypt 2006",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
     "details": {
+      "host": ["EGY"],
       "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",
       "mascot_filename": "Croconile.jpg",
       "start_date": "2006-01-20",
-      "end_date": "2006-02-10"
+      "end_date": "2006-02-10",
+      "color": "#ca0b0f",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Cairo International Stadium, Cairo",
+        "filename": "Crowd_in_Cairo_Stadium.jpg",
+        "text": "The Cairo International Stadium hosted the final."
+      },
+      {
+        "name": "Harras El-Hedoud Stadium, Alexandria",
+        "filename": "Harras_El-Hedoud_Stadium.jpg",
+        "text": "The Harras El-Hedoud Stadium hosted the semi-final Nigeria vs Ivory Coast"
+      },
+      {
+        "name": "Cairo Military Academy Stadium, Cairo",
+        "filename": "EGY_x_GUI._August_12,_2009.jpg",
+        "text": "The Cairo Military Academy Stadium hosted the quarter-final Cameroon vs Ivory Coast"
+      },
+      {
+        "name": "Ismailia Stadium, Ismailia",
+        "filename": "Ismailia_Stadium.jpg",
+        "text": "The Ismailia Stadium hosted group D matches"
+      }
+    ],
+    "final_standings": { "champions": "EGY", "runners_up": "CIV", "third_place": "NGA", "fourth_place": "SEN" },
+    "statistics": { "total_matches": 32, "total_goals": 73, "attendance": 714054 },
+    "awards": {
+      "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
+      "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }]
     }
   },
   {

@@ -201,6 +201,8 @@
   { "id": "CPV", "name": "Cape Verde", "team_type_id": "MNT", "nation_id": "CPV", "parent_team_id": "" },
   { "id": "NIG", "name": "Niger", "team_type_id": "MNT", "nation_id": "NIG", "parent_team_id": "" },
   { "id": "LBY", "name": "Libya", "team_type_id": "MNT", "nation_id": "LBY", "parent_team_id": "" },
+  { "id": "LBY-1977-2011", "name": "Libya", "team_type_id": "MNT", "nation_id": "LBY-1977-2011", "parent_team_id": "LBY" },
+  { "id": "COD-2003-2006", "name": "Congo DR", "team_type_id": "MNT", "nation_id": "COD-2003-2006", "parent_team_id": "COD" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -495,8 +497,6 @@
   { "id": "1102", "name": "Congo", "team_type_id": "MNT", "nation_id": "298", "parent_team_id": "981" },
   { "id": "1103", "name": "Egypt", "team_type_id": "MNT", "nation_id": "251", "parent_team_id": "8" },
   { "id": "1104", "name": "Ethiopia", "team_type_id": "MNT", "nation_id": "299", "parent_team_id": "987" },
-  { "id": "1105", "name": "Libya", "team_type_id": "MNT", "nation_id": "300", "parent_team_id": "988" },
-  { "id": "1106", "name": "Congo DR", "team_type_id": "MNT", "nation_id": "301", "parent_team_id": "241" },
   { "id": "1107", "name": "Congo DR", "team_type_id": "MNT", "nation_id": "302", "parent_team_id": "241" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },

@@ -521,9 +521,11 @@ export const createDrawPools = (group, startingIndex, config) => {
       } else if (dp.teams && dp.teams.length === 3) {
         calculateGroupRankings(dp.teams, dp.teams, dp.matches, config)
         collectGroupRankings(dp, 2)
+        let gd_tied = false
         dp.final_rankings.sort((a, b) => {
           return comparePoints(a, b, () => {
             return compareGoalDifference(a, b, true, () => {
+              gd_tied = true
               return compareGoalForward(a, b, true, () => {
                 return drawingLots(a, b)
               })
@@ -535,9 +537,13 @@ export const createDrawPools = (group, startingIndex, config) => {
           dp.teams.forEach((t, index) => {
             allTeamNames = `${allTeamNames}${getTeamName(t.id)}${index < dp.teams.length - 2 ? ',' : ''}${index === dp.teams.length - 2 ? ' & ' : ''} `
           })
-          fr.h2h_notes = `Considering only the matches between themselves, teams ${allTeamNames} all tied on points (${fr.pts}) and goal difference (${
-            fr.gd
-          }). Goals >>> ${getTeamName(fr.id)} ${fr.gf}`
+          fr.h2h_notes = !gd_tied
+            ? `Considering only the matches between themselves, teams ${allTeamNames} all tied on points (${fr.pts}). ${getTeamName(fr.id)} GF/GA = ${fr.gf}/${
+                fr.ga
+              }. Goal Difference >>> ${getTeamName(fr.id)} ${fr.gd}`
+            : `Considering only the matches between themselves, teams ${allTeamNames} all tied on points (${fr.pts}) and goal difference (${
+                fr.gd
+              }). ${getTeamName(fr.id)} GF/GA = ${fr.gf}/${fr.ga}. Goals >>> ${getTeamName(fr.id)} ${fr.gf}`
         })
       }
     })

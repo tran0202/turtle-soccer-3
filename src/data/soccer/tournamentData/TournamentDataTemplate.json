@@ -1,280 +1,278 @@
 {
-  "id": "AFCON2017",
+  "id": "AFCON2010",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 8,
       "next_round": "Quarter-finals",
-      "advancement": {
-        "teams": {
-          "auto": [1, 2],
-          "eliminated": [3, 4],
-          "text": "The top 2 teams would advance to the Quarter-finals."
-        }
-      },
+      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the Quarter-finals." } },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "GAB" }, { "id": "GNB" }, { "id": "BFA" }, { "id": "CMR" }],
+          "teams": [{ "id": "ANG" }, { "id": "MLI" }, { "id": "MWI" }, { "id": "ALG" }],
           "matches": [
             {
-              "home_team": "GAB",
-              "away_team": "GNB",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2017-01-14",
-              "time": "17:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
-            },
-            {
-              "home_team": "BFA",
-              "away_team": "CMR",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2017-01-14",
+              "home_team": "ANG",
+              "away_team": "MLI",
+              "home_score": 4,
+              "away_score": 4,
+              "date": "2010-01-10",
               "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
             },
             {
-              "home_team": "GAB",
-              "away_team": "BFA",
-              "home_score": 1,
+              "home_team": "MWI",
+              "away_team": "ALG",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2010-01-11",
+              "time": "14:45",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
+            },
+            {
+              "home_team": "MLI",
+              "away_team": "ALG",
+              "home_score": 0,
               "away_score": 1,
-              "date": "2017-01-18",
+              "date": "2010-01-14",
               "time": "17:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
             },
             {
-              "home_team": "CMR",
-              "away_team": "GNB",
+              "home_team": "ANG",
+              "away_team": "MWI",
               "home_score": 2,
-              "away_score": 1,
-              "date": "2017-01-18",
-              "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "away_score": 0,
+              "date": "2010-01-14",
+              "time": "19:30",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
             },
             {
-              "home_team": "CMR",
-              "away_team": "GAB",
+              "home_team": "ANG",
+              "away_team": "ALG",
               "home_score": 0,
               "away_score": 0,
-              "date": "2017-01-22",
-              "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "date": "2010-01-18",
+              "time": "17:00",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
             },
             {
-              "home_team": "GNB",
-              "away_team": "BFA",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2017-01-22",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
+              "home_team": "MLI",
+              "away_team": "MWI",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "2010-01-18",
+              "time": "17:00",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "ALG" }, { "id": "ZIM" }, { "id": "TUN" }, { "id": "SEN" }],
+          "teams": [{ "id": "CIV" }, { "id": "BFA" }, { "id": "GHA" }, { "id": "TOG" }],
           "matches": [
             {
-              "home_team": "ALG",
-              "away_team": "ZIM",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "2017-01-15",
-              "time": "17:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
-            },
-            {
-              "home_team": "TUN",
-              "away_team": "SEN",
+              "home_team": "CIV",
+              "away_team": "BFA",
               "home_score": 0,
-              "away_score": 2,
-              "date": "2017-01-15",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
-            },
-            {
-              "home_team": "ALG",
-              "away_team": "TUN",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2017-01-19",
-              "time": "17:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
-            },
-            {
-              "home_team": "SEN",
-              "away_team": "ZIM",
-              "home_score": 2,
               "away_score": 0,
-              "date": "2017-01-19",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
+              "date": "2010-01-11",
+              "time": "17:00",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
             },
             {
-              "home_team": "SEN",
-              "away_team": "ALG",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "2017-01-23",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville"
+              "home_team": "GHA",
+              "away_team": "TOG",
+              "match_cancelled": true,
+              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
+              "away_withdrew": true,
+              "date": "2010-01-11",
+              "time": "19:30",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
             },
             {
-              "home_team": "ZIM",
-              "away_team": "TUN",
-              "home_score": 2,
-              "away_score": 4,
-              "date": "2017-01-23",
-              "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "home_team": "BFA",
+              "away_team": "TOG",
+              "match_cancelled": true,
+              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
+              "away_withdrew": true,
+              "date": "2010-01-15",
+              "time": "17:00",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
+            },
+            {
+              "home_team": "CIV",
+              "away_team": "GHA",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "2010-01-15",
+              "time": "19:30",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
+            },
+            {
+              "home_team": "BFA",
+              "away_team": "GHA",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2010-01-19",
+              "time": "17:00",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
+            },
+            {
+              "home_team": "CIV",
+              "away_team": "TOG",
+              "match_cancelled": true,
+              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
+              "away_withdrew": true,
+              "date": "2010-01-19",
+              "time": "17:00",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "CIV" }, { "id": "TOG" }, { "id": "COD" }, { "id": "MAR" }],
+          "teams": [{ "id": "EGY" }, { "id": "NGA" }, { "id": "MOZ" }, { "id": "BEN" }],
           "matches": [
             {
-              "home_team": "CIV",
-              "away_team": "TOG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2017-01-16",
-              "time": "17:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
-            },
-            {
-              "home_team": "COD",
-              "away_team": "MAR",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-16",
-              "time": "20:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
-            },
-            {
-              "home_team": "CIV",
-              "away_team": "COD",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "2017-01-20",
-              "time": "17:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
-            },
-            {
-              "home_team": "MAR",
-              "away_team": "TOG",
+              "home_team": "EGY",
+              "away_team": "NGA",
               "home_score": 3,
               "away_score": 1,
-              "date": "2017-01-20",
-              "time": "20:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
+              "date": "2010-01-12",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
             },
             {
-              "home_team": "MAR",
-              "away_team": "CIV",
+              "home_team": "MOZ",
+              "away_team": "BEN",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2010-01-12",
+              "time": "19:30",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "BEN",
               "home_score": 1,
               "away_score": 0,
-              "date": "2017-01-24",
-              "time": "20:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
+              "date": "2010-01-16",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
             },
             {
-              "home_team": "TOG",
-              "away_team": "COD",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "2017-01-24",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
+              "home_team": "EGY",
+              "away_team": "MOZ",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2010-01-16",
+              "time": "19:30",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
+            },
+            {
+              "home_team": "EGY",
+              "away_team": "BEN",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2010-01-20",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "MOZ",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2010-01-20",
+              "time": "17:00",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "GHA" }, { "id": "UGA" }, { "id": "MLI" }, { "id": "EGY" }],
+          "teams": [{ "id": "CMR" }, { "id": "GAB" }, { "id": "ZAM" }, { "id": "TUN" }],
+          "three_way_tied": true,
           "matches": [
             {
-              "home_team": "GHA",
-              "away_team": "UGA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-17",
-              "time": "17:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
-            },
-            {
-              "home_team": "MLI",
-              "away_team": "EGY",
+              "home_team": "CMR",
+              "away_team": "GAB",
               "home_score": 0,
-              "away_score": 0,
-              "date": "2017-01-17",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
-            },
-            {
-              "home_team": "GHA",
-              "away_team": "MLI",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-21",
+              "away_score": 1,
+              "date": "2010-01-13",
               "time": "17:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
             },
             {
-              "home_team": "EGY",
-              "away_team": "UGA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-21",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
-            },
-            {
-              "home_team": "EGY",
-              "away_team": "GHA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-25",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
-            },
-            {
-              "home_team": "UGA",
-              "away_team": "MLI",
+              "home_team": "ZAM",
+              "away_team": "TUN",
               "home_score": 1,
               "away_score": 1,
-              "date": "2017-01-25",
-              "time": "20:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem"
+              "date": "2010-01-13",
+              "time": "19:30",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
+            },
+            {
+              "home_team": "GAB",
+              "away_team": "TUN",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2010-01-17",
+              "time": "17:00",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "ZAM",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "2010-01-17",
+              "time": "19:30",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
+            },
+            {
+              "home_team": "GAB",
+              "away_team": "ZAM",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2010-01-21",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "TUN",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2010-01-21",
+              "time": "17:00",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango"
             }
           ]
         }
@@ -291,51 +289,55 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "BFA",
-              "away_team": "TUN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2017-01-28",
+              "home_team": "ANG",
+              "away_team": "GHA",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2010-01-24",
               "time": "17:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda",
               "bracket_order": 1
             },
             {
-              "home_team": "SEN",
+              "home_team": "CIV",
+              "away_team": "ALG",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "2010-01-24",
+              "time": "20:30",
+              "stadium": "Estádio do Chiazi",
+              "city": "Cabinda",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "EGY",
               "away_team": "CMR",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "2010-01-25",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela",
+              "bracket_order": 4
+            },
+            {
+              "home_team": "ZAM",
+              "away_team": "NGA",
               "home_score": 0,
               "away_score": 0,
               "home_extra_score": 0,
               "away_extra_score": 0,
               "home_penalty_score": 4,
               "away_penalty_score": 5,
-              "date": "2017-01-28",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "COD",
-              "away_team": "GHA",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2017-01-29",
-              "time": "17:00",
-              "stadium": "Stade d'Oyem",
-              "city": "Oyem",
-              "bracket_order": 4
-            },
-            {
-              "home_team": "EGY",
-              "away_team": "MAR",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2017-01-29",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil",
+              "date": "2010-01-25",
+              "time": "20:30",
+              "stadium": "Estádio Nacional da Tundavala",
+              "city": "Lubango",
               "bracket_order": 2
             }
           ]
@@ -347,29 +349,25 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "BFA",
-              "away_team": "EGY",
+              "home_team": "GHA",
+              "away_team": "NGA",
               "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 3,
-              "away_penalty_score": 4,
-              "date": "2017-02-01",
-              "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville",
+              "away_score": 0,
+              "date": "2010-01-28",
+              "time": "16:00",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda",
               "bracket_order": 1
             },
             {
-              "home_team": "CMR",
-              "away_team": "GHA",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2017-02-02",
-              "time": "20:00",
-              "stadium": "Stade de Franceville",
-              "city": "Franceville",
+              "home_team": "ALG",
+              "away_team": "EGY",
+              "home_score": 0,
+              "away_score": 4,
+              "date": "2010-01-28",
+              "time": "20:30",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela",
               "bracket_order": 2
             }
           ]
@@ -379,14 +377,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "BFA",
-              "away_team": "GHA",
+              "home_team": "NGA",
+              "away_team": "ALG",
               "home_score": 1,
               "away_score": 0,
-              "date": "2017-02-04",
-              "time": "20:00",
-              "stadium": "Stade de Port-Gentil",
-              "city": "Port-Gentil"
+              "date": "2010-01-30",
+              "time": "17:00",
+              "stadium": "Estádio Nacional de Ombaka",
+              "city": "Benguela"
             }
           ]
         },
@@ -395,14 +393,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "EGY",
-              "away_team": "CMR",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2017-02-05",
-              "time": "20:00",
-              "stadium": "Stade de l'Amitié",
-              "city": "Libreville"
+              "home_team": "GHA",
+              "away_team": "EGY",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2010-01-31",
+              "time": "17:00",
+              "stadium": "Estádio 11 de Novembro",
+              "city": "Luanda"
             }
           ]
         }
