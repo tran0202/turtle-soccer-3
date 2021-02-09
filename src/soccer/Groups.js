@@ -55,7 +55,12 @@ const TournamentFormat = (props) => {
                         {config.totalCount} teams were drawn into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
                       </React.Fragment>
                     )}
-                    {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals).&nbsp;</React.Fragment>}
+                    {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals.)&nbsp;</React.Fragment>}
+                    {config.id === 'AFCON2010' && (
+                      <React.Fragment>
+                        (The withdrawal of Togo in group B after a terrorist attack on their bus reduced the number of participating nations to 15.)&nbsp;
+                      </React.Fragment>
+                    )}
                     {!config.odd_format && (
                       <React.Fragment>Each group played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.</React.Fragment>
                     )}

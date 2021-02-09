@@ -251,15 +251,48 @@
     "year": "2010",
     "name": "Africa Cup of Nations Angola 2010",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
     "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
     "details": {
+      "host": ["ANG"],
       "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",
       "mascot_filename": "Palanquinha.svg",
       "start_date": "2010-01-10",
-      "end_date": "2010-01-31"
+      "end_date": "2010-01-31",
+      "color": "#fa2200",
+      "team_count": 15,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Sign",
+        "filename": "Sign_for_African_Nations_Cup.jpg",
+        "text": "Countdown to the Africa Cup soccer tournament to be hosted in Angola at the end of the year."
+      },
+      {
+        "name": "Group D",
+        "filename": "TunisieCamerounAngola2010.jpeg",
+        "text": "Tunisia vs Cameroon"
+      },
+      {
+        "name": "Estádio 11 de Novembro, Luanda",
+        "filename": "Estadio-11Nov-Luanda_05_linke-Seite-Totale_LWS-2011-08-NC_1001.jpg",
+        "text": "The Estádio 11 de Novembro hosted the final"
+      },
+      {
+        "name": "Estádio Nacional de Ombaka, Benguela",
+        "filename": "Estádio_Nacional_de_Ombaka_(19151153514).jpg",
+        "text": "The Estádio Nacional de Ombaka hosted the semi-final Algeria vs Egypt"
+      }
+    ],
+    "final_standings": { "champions": "EGY", "runners_up": "GHA", "third_place": "NGA", "fourth_place": "ALG" },
+    "statistics": { "total_matches": 29, "total_goals": 71, "attendance": 543500 },
+    "awards": {
+      "golden_boot": [{ "player": "Gedo", "team": "EGY", "goals": 5 }],
+      "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }],
+      "golden_glove": { "player": "Essam El-Hadary", "team": "EGY" }
     }
   },
   {

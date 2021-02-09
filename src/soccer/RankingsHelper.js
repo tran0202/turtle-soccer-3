@@ -40,7 +40,15 @@ export const hasReplay = (round) => {
 
 const accumulateRanking = (team, match, config) => {
   if (!team) return
-  if (match.walkover || match.home_bye || match.home_awarded_score_not_counted || match.postponed || match.match_void || (match.notes && match.notes.awarded))
+  if (
+    match.walkover ||
+    match.home_bye ||
+    match.home_awarded_score_not_counted ||
+    match.postponed ||
+    match.match_void ||
+    match.match_cancelled ||
+    (match.notes && match.notes.awarded)
+  )
     return
   // console.log('match',match)
   const side = match.home_team === team.id ? 'home' : 'away'
@@ -170,7 +178,7 @@ const calculateTeamRanking = (container, team, match, config) => {
 export const calculateRoundRankings = (container, teams, matches, config) => {
   matches &&
     matches.forEach((m) => {
-      if (!m.walkover && !m.away_withdrew && !m.postponed) {
+      if (!m.walkover && !m.away_withdrew && !m.postponed && !m.match_cancelled) {
         calculateTeamRanking(container, findTeam(teams, m.home_team), m, config)
         calculateTeamRanking(container, findTeam(teams, m.away_team), m, config)
       }
@@ -403,6 +411,16 @@ const compareGoalDifference = (a, b, savingNotes, drawFunction) => {
   }
 }
 
+const comparePoints = (a, b, drawFunction) => {
+  if (a.pts > b.pts) {
+    return -1
+  } else if (a.pts < b.pts) {
+    return 1
+  } else {
+    return drawFunction()
+  }
+}
+
 export const updateDrawPool = (group, a, b) => {
   if (!group) return
   if (!group.draw_pools) {
@@ -454,83 +472,177 @@ export const sortDrawPoolRankings = (pool) => {
   })
 }
 
-export const sortGroupRankings = (group, startingIndex, config) => {
-  if (group && group.final_rankings) {
-    const isGoalRatioTiebreaker = config ? config.isGoalRatioTiebreaker : false
-    const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
-    const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
-    group.final_rankings.sort((a, b) => {
-      if (group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg') {
-        return getTeamName(a.id) > getTeamName(b.id) ? 1 : -1
-      } else if (a.pts > b.pts) {
+export const createDrawPools = (group, startingIndex, config) => {
+  if (!group || !group.final_rankings) return
+  // console.log('group', group)
+  group.final_rankings.forEach((fr) => {
+    if (!group.draw_pools) {
+      group.draw_pools = []
+    }
+    let _dp = group.draw_pools.find((dp) => dp.pts === fr.pts)
+    if (_dp === undefined) {
+      group.draw_pools.push({ pts: fr.pts, teams: [{ id: fr.id }] })
+      _dp = group.draw_pools.find((dp) => dp.pts === fr.pts)
+    } else {
+      const _t = _dp.teams.find((t) => t.id === fr.id)
+      if (_t === undefined) {
+        _dp.teams.push({ id: fr.id })
+      }
+      _dp.teams.forEach((t) => {
+        if (t.id !== fr.id) {
+          const newMatch = group.matches.find((m) => (m.home_team === t.id && m.away_team === fr.id) || (m.home_team === fr.id && m.away_team === t.id))
+          if (!_dp.matches) {
+            _dp.matches = []
+          }
+          _dp.matches.push(newMatch)
+        }
+      })
+    }
+  })
+  group.draw_pools &&
+    group.draw_pools.sort((a, b) => {
+      if (a.pts > b.pts) {
         return -1
       } else if (a.pts < b.pts) {
         return 1
       } else {
-        if (isHead2HeadBeforeGoalDifference) {
-          updateDrawPool(group, a, b)
-          return compareH2h(a, b, false, () => {
+        return 0
+      }
+    })
+  group.draw_pools &&
+    group.draw_pools.forEach((dp) => {
+      if (dp.teams && dp.teams.length === 1) {
+        const _fr = group.final_rankings.find((fr) => fr.id === dp.teams[0].id)
+        if (_fr !== undefined) {
+          dp.final_rankings = [_fr]
+        }
+      } else if (dp.teams && dp.teams.length === 2) {
+        console.log('dp.teams.length', dp.teams.length)
+      } else if (dp.teams && dp.teams.length === 3) {
+        calculateGroupRankings(dp.teams, dp.teams, dp.matches, config)
+        collectGroupRankings(dp, 2)
+        dp.final_rankings.sort((a, b) => {
+          return comparePoints(a, b, () => {
             return compareGoalDifference(a, b, true, () => {
               return compareGoalForward(a, b, true, () => {
                 return drawingLots(a, b)
               })
             })
           })
-        } else if (isLotGroupPlayoffTiebreaker) {
-          const dl = drawingLots(a, b)
-          if (dl !== 0) return dl
-          return compareH2h(a, b, true, () => {
-            return 0
+        })
+        dp.final_rankings.forEach((fr) => {
+          let allTeamNames = ``
+          dp.teams.forEach((t, index) => {
+            allTeamNames = `${allTeamNames}${getTeamName(t.id)}${index < dp.teams.length - 2 ? ',' : ''}${index === dp.teams.length - 2 ? ' & ' : ''} `
           })
-        } else if (isGoalRatioTiebreaker) {
-          const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
-          if (found.length === 1) {
-            const h2hMatch = found[0]
-            return createH2hNotes(h2hMatch, a, b, () => {
-              return 0
-            })
-          } else if (a.gr != null && b.gr != null) {
-            if (a.gr > b.gr) {
-              return -1
-            } else if (a.gr < b.gr) {
-              return 1
-            } else {
-              return 0
-            }
-          } else if (a.gr === null) {
-            return 1
-          } else if (b.gr === null) {
-            return -1
-          } else {
-            return 0
+          fr.h2h_notes = `Considering only the matches between themselves, teams ${allTeamNames} all tied on points (${fr.pts}) and goal difference (${
+            fr.gd
+          }). Goals >>> ${getTeamName(fr.id)} ${fr.gf}`
+        })
+      }
+    })
+  group.draw_pools &&
+    group.draw_pools.forEach((dp) => {
+      dp.final_rankings &&
+        dp.final_rankings.forEach((fr) => {
+          if (!group.final_rankings2) {
+            group.final_rankings2 = []
           }
-        } else if (a.gd > b.gd) {
+          const _fr = group.final_rankings.find((fr2) => fr2.id === fr.id)
+          if (_fr !== undefined) {
+            _fr.h2h_notes = fr.h2h_notes
+            group.final_rankings2.push(_fr)
+          }
+        })
+    })
+  group.final_rankings = group.final_rankings2
+  group.final_rankings.forEach((t, index) => {
+    if (t) {
+      t.r = group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg' ? startingIndex : index + startingIndex
+    }
+  })
+}
+
+export const sortGroupRankings = (group, startingIndex, config) => {
+  if (group && group.final_rankings) {
+    const isGoalRatioTiebreaker = config ? config.isGoalRatioTiebreaker : false
+    const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
+    const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
+    if (group.three_way_tied) {
+      createDrawPools(group, startingIndex, config)
+    } else {
+      group.final_rankings.sort((a, b) => {
+        if (group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg') {
+          return getTeamName(a.id) > getTeamName(b.id) ? 1 : -1
+        } else if (a.pts > b.pts) {
           return -1
-        } else if (a.gd < b.gd) {
+        } else if (a.pts < b.pts) {
           return 1
         } else {
-          return compareGoalDifference(a, b, false, () => {
-            if (group.tiebreak_pts_gd) {
-              return drawingLots(a, b)
-            } else {
-              return compareGoalForward(a, b, false, () => {
-                saveDrawBothTeams(group, a, b)
-                return compareH2h(a, b, false, () => {
-                  return compareFairPoints(a, b)
+          if (isHead2HeadBeforeGoalDifference) {
+            updateDrawPool(group, a, b)
+            return compareH2h(a, b, false, () => {
+              return compareGoalDifference(a, b, true, () => {
+                return compareGoalForward(a, b, true, () => {
+                  return drawingLots(a, b)
                 })
               })
+            })
+          } else if (isLotGroupPlayoffTiebreaker) {
+            const dl = drawingLots(a, b)
+            if (dl !== 0) return dl
+            return compareH2h(a, b, true, () => {
+              return 0
+            })
+          } else if (isGoalRatioTiebreaker) {
+            const found = findHeadtoHeadMatch(a, b, true) // Group Playoff
+            if (found.length === 1) {
+              const h2hMatch = found[0]
+              return createH2hNotes(h2hMatch, a, b, () => {
+                return 0
+              })
+            } else if (a.gr != null && b.gr != null) {
+              if (a.gr > b.gr) {
+                return -1
+              } else if (a.gr < b.gr) {
+                return 1
+              } else {
+                return 0
+              }
+            } else if (a.gr === null) {
+              return 1
+            } else if (b.gr === null) {
+              return -1
+            } else {
+              return 0
             }
-          })
+          } else if (a.gd > b.gd) {
+            return -1
+          } else if (a.gd < b.gd) {
+            return 1
+          } else {
+            return compareGoalDifference(a, b, false, () => {
+              if (group.tiebreak_pts_gd) {
+                return drawingLots(a, b)
+              } else {
+                return compareGoalForward(a, b, false, () => {
+                  saveDrawBothTeams(group, a, b)
+                  return compareH2h(a, b, false, () => {
+                    return compareFairPoints(a, b)
+                  })
+                })
+              }
+            })
+          }
         }
-      }
-    })
-    group.final_rankings.forEach((t, index) => {
-      if (t) {
-        t.r = group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg' ? startingIndex : index + startingIndex
-      }
-    })
-    if (group.draw_pools) {
-      // console.log('group.draw_pools', group.draw_pools)
+      })
+      group.final_rankings.forEach((t, index) => {
+        if (t) {
+          t.r = group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg' ? startingIndex : index + startingIndex
+        }
+      })
+    }
+    if (group.draw_pools && !group.three_way_tied) {
       group.draw_pools.forEach((p) => {
         if (p.teams && p.teams.length === 3) {
           let allTeamNames = ``

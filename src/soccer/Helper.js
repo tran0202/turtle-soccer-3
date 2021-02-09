@@ -755,11 +755,6 @@ const DisplayMatch = (props) => {
           {(m.home_extra_score == null || m.away_extra_score == null) && (
             <React.Fragment>
               {m.walkover && <WalkoverTooltip target={`walkover_${m.home_team}_${m.away_team}`} content={m.walkover} anchor="(w/o)" />}
-              {!m.walkover && !m.postponed && (
-                <React.Fragment>
-                  {m.home_score}-{m.away_score}
-                </React.Fragment>
-              )}
               {m.postponed && (
                 <React.Fragment>
                   postponed
@@ -769,6 +764,17 @@ const DisplayMatch = (props) => {
                       {m.postponed_notes}
                     </React.Fragment>
                   )}
+                </React.Fragment>
+              )}
+              {m.match_cancelled && (
+                <React.Fragment>
+                  cancelled
+                  <CancelledTooltip target={`cancelled_${m.home_team}_${m.away_team}`} notes={m.cancelled_text} />
+                </React.Fragment>
+              )}
+              {!m.walkover && !m.postponed && !m.match_cancelled && (
+                <React.Fragment>
+                  {m.home_score}-{m.away_score}
                 </React.Fragment>
               )}
             </React.Fragment>
@@ -1032,6 +1038,12 @@ export const Extra140Tooltip = (props) => {
 export const WalkoverTooltip = (props) => {
   const { target, content, anchor } = props
   return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const CancelledTooltip = (props) => {
+  const { target, notes } = props
+  const content = `Cancelled${notes ? `: ${notes}` : ''}`
+  return <TopTooltip target={target} content={content} />
 }
 
 export const WildCardTooltip = (props) => {
