@@ -61,6 +61,9 @@ const TournamentFormat = (props) => {
                         (The withdrawal of Togo in group B after a terrorist attack on their bus reduced the number of participating nations to 15.)&nbsp;
                       </React.Fragment>
                     )}
+                    {config.id === 'AFCON1996' && (
+                      <React.Fragment> (Nigeria withdrew from the tournament at the final moment, reducing the field to 15.)&nbsp; </React.Fragment>
+                    )}
                     {!config.odd_format && (
                       <React.Fragment>Each group played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.</React.Fragment>
                     )}

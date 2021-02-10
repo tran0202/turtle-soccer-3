@@ -599,7 +599,46 @@
     "name": "Africa Cup of Nations South Africa 1996",
     "tournament_type_id": "AFCON",
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_1996.jpg", "start_date": "1996-01-13", "end_date": "1996-02-03" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["RSA"],
+      "logo_filename": "afcon_1996.jpg",
+      "start_date": "1996-01-13",
+      "end_date": "1996-02-03",
+      "color": "#178338",
+      "team_count": 15,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "FNB Stadium, Johannesburg",
+        "filename": "FNB-Stadion.jpg",
+        "text": "The FNB Stadium hosted the final."
+      },
+      {
+        "name": "Kings Park Stadium, Durban",
+        "filename": "King's_Park_Stadium,_Durban.jpg",
+        "text": "The Kings Park Stadium hosted the semi-final Zambia vs Tunisia"
+      },
+      {
+        "name": "Port Elizabeth, South Africa",
+        "filename": "City_Hall_Port_Elizabeth-003.jpg",
+        "text": "City Hall, Market Square, Port Elizabeth"
+      },
+      {
+        "name": "Free State Stadium, Bloemfontein",
+        "filename": "Free_State_Stadium1.jpg",
+        "text": "The Free State Stadium hosted the quarter-final Zambia vs Egypt"
+      }
+    ],
+    "final_standings": { "champions": "RSA", "runners_up": "TUN", "third_place": "ZAM", "fourth_place": "GHA" },
+    "statistics": { "total_matches": 29, "total_goals": 78, "attendance": 640880 },
+    "awards": {
+      "golden_boot": [{ "player": "Kalusha Bwalya", "team": "ZAM", "goals": 5 }],
+      "golden_ball": [{ "player": "Kalusha Bwalyay", "team": "ZAM" }]
+    }
   },
   {
     "id": "AFCON1994",
@@ -608,7 +647,7 @@
     "short_name": "Tunisia 1994",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1994-03-26", "end_date": "1994-04-10" }
+    "details": { "host": ["TUN"], "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1994-03-26", "end_date": "1994-04-10" }
   },
   {
     "id": "AFCON1992",
