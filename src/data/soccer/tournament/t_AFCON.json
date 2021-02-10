@@ -449,11 +449,51 @@
     "year": "2002",
     "name": "Africa Cup of Nations Mali 2002",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2002.png", "start_date": "2002-01-19", "end_date": "2002-02-10" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["MLI"],
+      "logo_filename": "afcon_2002.png",
+      "start_date": "2002-01-19",
+      "end_date": "2002-02-10",
+      "color": "#29398c",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Stade du 26 Mars, Bamako",
+        "filename": "Stade_de_26-mars.png",
+        "text": "The Stade du 26 Mars hosted the final."
+      },
+      {
+        "name": "Stade Modibo Kéïta, Bamako",
+        "filename": "Stade_modibo_keita.jpg",
+        "text": "The Stade Modibo Kéïta hosted the semi-final Nigeria vs Senegal"
+      },
+      {
+        "name": "Bamako, Mali",
+        "filename": "Bamako_night_hills_may_2007.jpg",
+        "text": "Bamako at night. The capital of Mali, seen from the hills surrounding it, May 2007"
+      },
+      {
+        "name": "Mopti, Mali",
+        "filename": "Mosque_Mopti.jpg",
+        "text": "Mosque in Mopti, Mali"
+      }
+    ],
+    "final_standings": { "champions": "CMR", "runners_up": "SEN", "third_place": "NGA", "fourth_place": "MLI" },
+    "statistics": { "total_matches": 32, "total_goals": 48, "attendance": 570000 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Julius Aghahowa", "team": "NGA", "goals": 3 },
+        { "player": "Patrick Mboma", "team": "CMR", "goals": 3 },
+        { "player": "Salomon Olembé", "team": "CMR", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Rigobert Song", "team": "CMR" }]
+    }
   },
   {
     "id": "AFCON2000",
