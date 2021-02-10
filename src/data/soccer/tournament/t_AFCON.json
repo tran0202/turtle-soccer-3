@@ -501,11 +501,47 @@
     "name": "Africa Cup of Nations Ghana-Nigeria 2000",
     "short_name": "Ghana-Nigeria 2000",
     "tournament_type_id": "AFCON",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "afcon_2000.png", "start_date": "2000-01-22", "end_date": "2000-02-13" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GHA", "NGA"],
+      "logo_filename": "afcon_2000.png",
+      "start_date": "2000-01-22",
+      "end_date": "2000-02-13",
+      "color": "#008040",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "National Stadium, Lagos, Nigeria",
+        "filename": "A_side_view_of_the_National_Stadium.jpg",
+        "text": "The National Stadium hosted the final."
+      },
+      {
+        "name": "Accra Sports Stadium, Accra, Ghana",
+        "filename": "Ohene_Djan_stadium,_Accra.jpg",
+        "text": "The Accra Sports Stadium hosted the semi-final Cameroon vs Tunisia"
+      },
+      {
+        "name": "Kano, Nigeria",
+        "filename": "KanofromDalaHill.jpg",
+        "text": "Kano from Dala Hill"
+      },
+      {
+        "name": "Kumasi Sports Stadium, Kumasi, Ghana",
+        "filename": "Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
+        "text": "The Kumasi Sports Stadium hosted the quarter-final South Africa vs Ghana"
+      }
+    ],
+    "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "RSA", "fourth_place": "TUN" },
+    "statistics": { "total_matches": 32, "total_goals": 73, "attendance": 677500 },
+    "awards": {
+      "golden_boot": [{ "player": "Shaun Bartlett", "team": "RSA", "goals": 5 }],
+      "golden_ball": [{ "player": "Lauren", "team": "CMR" }]
+    }
   },
   {
     "id": "AFCON1998",

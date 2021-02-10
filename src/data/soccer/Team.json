@@ -43,7 +43,7 @@
   { "id": "USA", "name": "United States", "short_name": "USA", "team_type_id": "MNT", "nation_id": "USA", "parent_team_id": "" },
   { "id": "GHA", "name": "Ghana", "team_type_id": "MNT", "nation_id": "GHA", "parent_team_id": "" },
   { "id": "ALG", "name": "Algeria", "team_type_id": "MNT", "nation_id": "ALG", "parent_team_id": "" },
-  { "id": "RSA", "name": "South Africa", "team_type_id": "MNT", "nation_id": "RSA", "parent_team_id": "" },
+  { "id": "RSA", "name": "South Africa", "short_name": "SouthAfrica", "team_type_id": "MNT", "nation_id": "RSA", "parent_team_id": "" },
   { "id": "PRK", "name": "Korea DPR", "team_type_id": "MNT", "nation_id": "PRK", "parent_team_id": "" },
   { "id": "PAR", "name": "Paraguay", "team_type_id": "MNT", "nation_id": "PAR", "parent_team_id": "" },
   { "id": "NZL", "name": "New Zealand", "team_type_id": "MNT", "nation_id": "NZL", "parent_team_id": "" },
