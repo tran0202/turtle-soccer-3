@@ -1,278 +1,280 @@
 {
-  "id": "AFCON2010",
+  "id": "AFCON1998",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 8,
       "next_round": "Quarter-finals",
-      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the Quarter-finals." } },
+      "advancement": {
+        "teams": {
+          "auto": [1, 2],
+          "eliminated": [3, 4],
+          "text": "The top 2 teams would advance to the Quarter-finals."
+        }
+      },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "ANG" }, { "id": "MLI" }, { "id": "MWI" }, { "id": "ALG" }],
+          "teams": [{ "id": "BFA" }, { "id": "CMR" }, { "id": "ALG" }, { "id": "GUI" }],
           "matches": [
             {
-              "home_team": "ANG",
-              "away_team": "MLI",
-              "home_score": 4,
-              "away_score": 4,
-              "date": "2010-01-10",
-              "time": "20:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
-            },
-            {
-              "home_team": "MWI",
-              "away_team": "ALG",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "2010-01-11",
-              "time": "14:45",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
-            },
-            {
-              "home_team": "MLI",
-              "away_team": "ALG",
+              "home_team": "BFA",
+              "away_team": "CMR",
               "home_score": 0,
               "away_score": 1,
-              "date": "2010-01-14",
-              "time": "17:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
+              "date": "1998-02-07",
+              "time": "16:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
             },
             {
-              "home_team": "ANG",
-              "away_team": "MWI",
+              "home_team": "ALG",
+              "away_team": "GUI",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "1998-02-08",
+              "time": "20:30",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "GUI",
               "home_score": 2,
-              "away_score": 0,
-              "date": "2010-01-14",
-              "time": "19:30",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
+              "away_score": 2,
+              "date": "1998-02-11",
+              "time": "15:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             },
             {
-              "home_team": "ANG",
+              "home_team": "BFA",
               "away_team": "ALG",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2010-01-18",
-              "time": "17:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1998-02-11",
+              "time": "20:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
             },
             {
-              "home_team": "MLI",
-              "away_team": "MWI",
-              "home_score": 3,
+              "home_team": "BFA",
+              "away_team": "GUI",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1998-02-15",
+              "time": "16:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
+            },
+            {
+              "home_team": "CMR",
+              "away_team": "ALG",
+              "home_score": 2,
               "away_score": 1,
-              "date": "2010-01-18",
-              "time": "17:00",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
+              "date": "1998-02-15",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "CIV" }, { "id": "BFA" }, { "id": "GHA" }, { "id": "TOG" }],
+          "teams": [{ "id": "COD-1997-2003" }, { "id": "TOG" }, { "id": "GHA" }, { "id": "TUN" }],
           "matches": [
             {
-              "home_team": "CIV",
-              "away_team": "BFA",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2010-01-11",
-              "time": "17:00",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
+              "home_team": "COD-1997-2003",
+              "away_team": "TOG",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1998-02-09",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             },
             {
               "home_team": "GHA",
-              "away_team": "TOG",
-              "match_cancelled": true,
-              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
-              "away_withdrew": true,
-              "date": "2010-01-11",
-              "time": "19:30",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
+              "away_team": "TUN",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1998-02-09",
+              "time": "20:30",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
             },
             {
-              "home_team": "BFA",
-              "away_team": "TOG",
-              "match_cancelled": true,
-              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
-              "away_withdrew": true,
-              "date": "2010-01-15",
-              "time": "17:00",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
+              "home_team": "TUN",
+              "away_team": "COD-1997-2003",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1998-02-12",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             },
             {
-              "home_team": "CIV",
+              "home_team": "TOG",
               "away_team": "GHA",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "1998-02-12",
+              "time": "20:30",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
+            },
+            {
+              "home_team": "COD-1997-2003",
+              "away_team": "GHA",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "1998-02-16",
+              "time": "17:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
+            },
+            {
+              "home_team": "TUN",
+              "away_team": "TOG",
               "home_score": 3,
               "away_score": 1,
-              "date": "2010-01-15",
-              "time": "19:30",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
-            },
-            {
-              "home_team": "BFA",
-              "away_team": "GHA",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2010-01-19",
+              "date": "1998-02-16",
               "time": "17:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
-            },
-            {
-              "home_team": "CIV",
-              "away_team": "TOG",
-              "match_cancelled": true,
-              "cancelled_text": "Togo withdrew from the tournament after a terrorist attack on their bus",
-              "away_withdrew": true,
-              "date": "2010-01-19",
-              "time": "17:00",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda"
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "EGY" }, { "id": "NGA" }, { "id": "MOZ" }, { "id": "BEN" }],
+          "teams": [{ "id": "RSA" }, { "id": "ANG" }, { "id": "CIV" }, { "id": "NAM" }],
           "matches": [
             {
-              "home_team": "EGY",
-              "away_team": "NGA",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2010-01-12",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
+              "home_team": "RSA",
+              "away_team": "ANG",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "1998-02-08",
+              "time": "15:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             },
             {
-              "home_team": "MOZ",
-              "away_team": "BEN",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "2010-01-12",
-              "time": "19:30",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
+              "home_team": "CIV",
+              "away_team": "NAM",
+              "home_score": 4,
+              "away_score": 3,
+              "date": "1998-02-08",
+              "time": "18:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             },
             {
-              "home_team": "NGA",
-              "away_team": "BEN",
+              "home_team": "CIV",
+              "away_team": "RSA",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2010-01-16",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
+              "away_score": 1,
+              "date": "1998-02-11",
+              "time": "17:15",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             },
             {
-              "home_team": "EGY",
-              "away_team": "MOZ",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2010-01-16",
-              "time": "19:30",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
-            },
-            {
-              "home_team": "EGY",
-              "away_team": "BEN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2010-01-20",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
-            },
-            {
-              "home_team": "NGA",
-              "away_team": "MOZ",
+              "home_team": "ANG",
+              "away_team": "NAM",
               "home_score": 3,
-              "away_score": 0,
-              "date": "2010-01-20",
-              "time": "17:00",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
+              "away_score": 3,
+              "date": "1998-02-12",
+              "time": "18:15",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
+            },
+            {
+              "home_team": "CIV",
+              "away_team": "ANG",
+              "home_score": 5,
+              "away_score": 2,
+              "date": "1998-02-16",
+              "time": "20:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
+            },
+            {
+              "home_team": "RSA",
+              "away_team": "NAM",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "1998-02-16",
+              "time": "20:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "CMR" }, { "id": "GAB" }, { "id": "ZAM" }, { "id": "TUN" }],
-          "three_way_tied": true,
+          "teams": [{ "id": "MAR" }, { "id": "ZAM" }, { "id": "EGY" }, { "id": "MOZ" }],
           "matches": [
             {
-              "home_team": "CMR",
-              "away_team": "GAB",
-              "home_score": 0,
+              "home_team": "MAR",
+              "away_team": "ZAM",
+              "home_score": 1,
               "away_score": 1,
-              "date": "2010-01-13",
+              "date": "1998-02-09",
+              "time": "18:15",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
+            },
+            {
+              "home_team": "EGY",
+              "away_team": "MOZ",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1998-02-10",
+              "time": "18:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
+            },
+            {
+              "home_team": "EGY",
+              "away_team": "ZAM",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "1998-02-13",
               "time": "17:00",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
+            },
+            {
+              "home_team": "MAR",
+              "away_team": "MOZ",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "1998-02-13",
+              "time": "20:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             },
             {
               "home_team": "ZAM",
-              "away_team": "TUN",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2010-01-13",
-              "time": "19:30",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
-            },
-            {
-              "home_team": "GAB",
-              "away_team": "TUN",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2010-01-17",
-              "time": "17:00",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
-            },
-            {
-              "home_team": "CMR",
-              "away_team": "ZAM",
+              "away_team": "MOZ",
               "home_score": 3,
-              "away_score": 2,
-              "date": "2010-01-17",
-              "time": "19:30",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
+              "away_score": 1,
+              "date": "1998-02-17",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso"
             },
             {
-              "home_team": "GAB",
-              "away_team": "ZAM",
+              "home_team": "MAR",
+              "away_team": "EGY",
               "home_score": 1,
-              "away_score": 2,
-              "date": "2010-01-21",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
-            },
-            {
-              "home_team": "CMR",
-              "away_team": "TUN",
-              "home_score": 2,
-              "away_score": 2,
-              "date": "2010-01-21",
-              "time": "17:00",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango"
+              "away_score": 0,
+              "date": "1998-02-17",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             }
           ]
         }
@@ -289,55 +291,55 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "ANG",
-              "away_team": "GHA",
+              "home_team": "CMR",
+              "away_team": "COD-1997-2003",
               "home_score": 0,
               "away_score": 1,
-              "date": "2010-01-24",
-              "time": "17:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda",
+              "date": "1998-02-20",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso",
               "bracket_order": 1
             },
             {
-              "home_team": "CIV",
-              "away_team": "ALG",
-              "home_score": 2,
-              "away_score": 2,
+              "home_team": "TUN",
+              "away_team": "BFA",
+              "home_score": 1,
+              "away_score": 1,
               "home_extra_score": 0,
-              "away_extra_score": 1,
-              "date": "2010-01-24",
-              "time": "20:30",
-              "stadium": "Estádio do Chiazi",
-              "city": "Cabinda",
+              "away_extra_score": 0,
+              "home_penalty_score": 7,
+              "away_penalty_score": 8,
+              "date": "1998-02-21",
+              "time": "17:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou",
               "bracket_order": 3
             },
             {
-              "home_team": "EGY",
-              "away_team": "CMR",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 2,
-              "away_extra_score": 0,
-              "date": "2010-01-25",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela",
-              "bracket_order": 4
-            },
-            {
-              "home_team": "ZAM",
-              "away_team": "NGA",
+              "home_team": "CIV",
+              "away_team": "EGY",
               "home_score": 0,
               "away_score": 0,
               "home_extra_score": 0,
               "away_extra_score": 0,
               "home_penalty_score": 4,
               "away_penalty_score": 5,
-              "date": "2010-01-25",
-              "time": "20:30",
-              "stadium": "Estádio Nacional da Tundavala",
-              "city": "Lubango",
+              "date": "1998-02-21",
+              "time": "20:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou",
+              "bracket_order": 4
+            },
+            {
+              "home_team": "MAR",
+              "away_team": "RSA",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1998-02-22",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou",
               "bracket_order": 2
             }
           ]
@@ -349,25 +351,27 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "GHA",
-              "away_team": "NGA",
+              "home_team": "COD-1997-2003",
+              "away_team": "RSA",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2010-01-28",
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "1998-02-25",
               "time": "16:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou",
               "bracket_order": 1
             },
             {
-              "home_team": "ALG",
+              "home_team": "BFA",
               "away_team": "EGY",
               "home_score": 0,
-              "away_score": 4,
-              "date": "2010-01-28",
-              "time": "20:30",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela",
+              "away_score": 2,
+              "date": "1998-02-25",
+              "time": "20:00",
+              "stadium": "Stade Municipal",
+              "city": "Bobo-Dioulasso",
               "bracket_order": 2
             }
           ]
@@ -377,14 +381,18 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "NGA",
-              "away_team": "ALG",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2010-01-30",
-              "time": "17:00",
-              "stadium": "Estádio Nacional de Ombaka",
-              "city": "Benguela"
+              "home_team": "COD-1997-2003",
+              "away_team": "BFA",
+              "home_score": 4,
+              "away_score": 4,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 1,
+              "date": "1998-02-27",
+              "time": "16:00",
+              "stadium": "Stade Municipal",
+              "city": "Ouagadougou"
             }
           ]
         },
@@ -393,14 +401,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "GHA",
+              "home_team": "RSA",
               "away_team": "EGY",
               "home_score": 0,
-              "away_score": 1,
-              "date": "2010-01-31",
-              "time": "17:00",
-              "stadium": "Estádio 11 de Novembro",
-              "city": "Luanda"
+              "away_score": 2,
+              "date": "1998-02-28",
+              "time": "16:00",
+              "stadium": "Stade du 4 Août",
+              "city": "Ouagadougou"
             }
           ]
         }
