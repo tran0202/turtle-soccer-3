@@ -738,7 +738,46 @@
     "name": "Africa Cup of Nations Algeria 1990",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "afcon_1990.png", "start_date": "1990-03-02", "end_date": "1990-03-16" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ALG"],
+      "logo_filename": "afcon_1990.png",
+      "start_date": "1990-03-02",
+      "end_date": "1990-03-16",
+      "color": "#c80724",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade 5 Juillet 1962, Algiers",
+        "filename": "Olimpiai_Komplexum,_szemben_az_1962._július_5.-e_Stadion._Fortepan_100571.jpg",
+        "text": "The Stade 5 Juillet 1962 hosted the final."
+      },
+      {
+        "name": "Algiers, Algeria",
+        "filename": "Algiers_Montage.png",
+        "text": "Clockwise: Buildings along the Mediterranean coast of Algiers, Martyrs Memorial, Notre-Dame d'Afrique, Ketchaoua Mosque, Casbah, the Grand Post Office and the Ministry of Finance of Algeria"
+      },
+      {
+        "name": "Stade 19 Mai 1956, Annaba",
+        "filename": "Stade_19_Mai_1956_(Annaba).jpg",
+        "text": "The Stade 19 Mai 1956 hosted the semi-final Zambia vs Nigeria."
+      },
+      {
+        "name": "Annaba, Algeria",
+        "filename": "Annaba,_algeria04.jpg",
+        "text": "Annaba, Algeria"
+      }
+    ],
+    "final_standings": { "champions": "ALG", "runners_up": "NGA", "third_place": "ZAM", "fourth_place": "SEN" },
+    "statistics": { "total_matches": 16, "total_goals": 30, "attendance": 768000 },
+    "awards": {
+      "golden_boot": [{ "player": "Djamel Menad", "team": "ALG", "goals": 4 }],
+      "golden_ball": [{ "player": "Rabah Madjer", "team": "ALG" }]
+    }
   },
   {
     "id": "AFCON1988",
@@ -746,7 +785,52 @@
     "name": "Africa Cup of Nations Morocco 1988",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "afcon_1988.png", "start_date": "1988-03-13", "end_date": "1988-03-27" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["MAR"],
+      "logo_filename": "afcon_1988.png",
+      "start_date": "1988-03-13",
+      "end_date": "1988-03-27",
+      "color": "#f55535",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade Mohamed V, Casablanca",
+        "filename": "Raja_de_Casablanca_vs_Mouloudia_dOujda,_November_02_2008-04.jpg",
+        "text": "The Stade Mohamed V hosted the final."
+      },
+      {
+        "name": "Casablanca, Morocco",
+        "filename": "La_grande_mosquée_hassan_II.jpg",
+        "text": "Casablanca, Morocco"
+      },
+      {
+        "name": "Stade Moulay Abdellah, Rabat",
+        "filename": "FAR_Rabat_vs_AS_Sale,_November_6_2012-2.jpg",
+        "text": "The Stade Moulay Abdellah hosted the semi-final Nigeria vs Algeria."
+      },
+      {
+        "name": "Rabat, Morocco",
+        "filename": "Morocco_-_Rabat_(31387775324).jpg",
+        "text": "Rabat, Morocco"
+      }
+    ],
+    "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "ALG", "fourth_place": "MAR" },
+    "statistics": { "total_matches": 16, "total_goals": 23 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Lakhdar Belloumi", "team": "ALG", "goals": 2 },
+        { "player": "Roger Milla", "team": "CMR", "goals": 2 },
+        { "player": "Gamal Abdelhamid", "team": "EGY", "goals": 2 },
+        { "player": "Abdoulaye Traoré", "team": "CIV", "goals": 2 }
+      ],
+      "golden_ball": [{ "player": "Aziz Bouderbala", "team": "MAR" }],
+      "golden_glove": { "player": "Joseph-Antoine Bell", "team": "CMR" }
+    }
   },
   {
     "id": "AFCON1986",

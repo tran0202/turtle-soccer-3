@@ -257,6 +257,12 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Guinea took 2nd place after tying with Mali on head-to-head match, overall goal difference and overall goad forward.'
     return 1
   }
+  // AFCON 1988
+  if (a.id === 'ALG' && b.id === 'CIV') {
+    a.draw_lot_notes = 'Algeria took 2nd place after finished identical records (points, goal difference and goad forward) with Ivory Coast.'
+    b.draw_lot_notes = 'Ivory Coast took 3rd place after finished identical records (points, goal difference and goad forward) with Algeria.'
+    return -1
+  }
   // console.log('a', a)
   // console.log('b', b)
   return 0
