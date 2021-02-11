@@ -1080,7 +1080,41 @@
     "short_name": "Ethiopia 1976",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1976-02-29", "end_date": "1976-03-14" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ETH-1975-1987"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1976-02-29",
+      "end_date": "1976-03-14",
+      "color": "#078930",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Addis Ababa Stadium, Addis Ababa",
+        "filename": "Addis_Ababa_Stadium.jpg",
+        "text": "The Addis Ababa Stadium hosted the final round."
+      },
+      {
+        "name": "Addis Ababa, Ethiopia",
+        "filename": "Addis_abeba_meskele_square.jpg",
+        "text": "Addis Ababa, Ethiopia"
+      },
+      {
+        "name": "Dire Dawa, Ethiopia",
+        "filename": "ET-Dire_Dawa,_Ethiopia_(13).jpeg",
+        "text": "Dire Dawa, Ethiopia"
+      }
+    ],
+    "final_standings": { "champions": "MAR", "runners_up": "GUI", "third_place": "NGA", "fourth_place": "EGY" },
+    "statistics": { "total_matches": 18, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "N'Jo Léa", "team": "GUI", "goals": 4 }],
+      "golden_ball": [{ "player": "Ahmed Faras", "team": "MAR" }]
+    }
   },
   {
     "id": "AFCON1974",
