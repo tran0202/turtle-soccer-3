@@ -934,7 +934,46 @@
     "short_name": "Libya 1982",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "afcon_1982.png", "start_date": "1982-03-05", "end_date": "1982-03-19" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["LBY-1977-2011"],
+      "logo_filename": "afcon_1982.png",
+      "start_date": "1982-03-05",
+      "end_date": "1982-03-19",
+      "color": "#01004b",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "11 June Stadium, Tripoli",
+        "filename": "11_June_Stadium_BenTaher.jpg",
+        "text": "The 11 June Stadium hosted the final."
+      },
+      {
+        "name": "Tripoli, Libya",
+        "filename": "Tripoli_Montage.jpg",
+        "text": "Top:: That El Emad Towers; Middle: Martyrs' Square; Bottom left: Marcus Aurelius Arch; Bottom right: Souq al-Mushir – Tripoli Medina"
+      },
+      {
+        "name": "28 March Stadium, Benghazi",
+        "filename": "28_March_Stadium_BenTaher_2007.jpg",
+        "text": "The 28 March Stadium hosted the semi-final Ghana vs Algeria"
+      },
+      {
+        "name": "Benghazi, Libya",
+        "filename": "Al_Daawa_alIslamiyah2.jpeg",
+        "text": "Benghazi seafront"
+      }
+    ],
+    "final_standings": { "champions": "GHA", "runners_up": "LBY-1977-2011", "third_place": "ZAM", "fourth_place": "ALG" },
+    "statistics": { "total_matches": 16, "total_goals": 32 },
+    "awards": {
+      "golden_boot": [{ "player": "George Alhassan", "team": "GHA", "goals": 4 }],
+      "golden_ball": [{ "player": "Fawzi Al-Issawi", "team": "LBY-1977-2011" }]
+    }
   },
   {
     "id": "AFCON1980",

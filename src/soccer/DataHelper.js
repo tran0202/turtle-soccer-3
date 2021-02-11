@@ -150,6 +150,7 @@ import td_GC_2015 from '../data/soccer/tournamentData/GC/td_GC_2015.json'
 import td_GC_2017 from '../data/soccer/tournamentData/GC/td_GC_2017.json'
 import td_GC_2019 from '../data/soccer/tournamentData/GC/td_GC_2019.json'
 
+import td_AFCON_1982 from '../data/soccer/tournamentData/AFCON/td_AFCON_1982.json'
 import td_AFCON_1984 from '../data/soccer/tournamentData/AFCON/td_AFCON_1984.json'
 import td_AFCON_1986 from '../data/soccer/tournamentData/AFCON/td_AFCON_1986.json'
 import td_AFCON_1988 from '../data/soccer/tournamentData/AFCON/td_AFCON_1988.json'
@@ -174,7 +175,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'AFCON1982', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'AFCON1980', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -195,6 +196,7 @@ export const getTournamentDataArray = () => {
 
 export const getTournamentDataAFCON = () => {
   return [].concat(
+    [td_AFCON_1982],
     [td_AFCON_1984],
     [td_AFCON_1986],
     [td_AFCON_1988],
