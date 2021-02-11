@@ -885,7 +885,47 @@
     "name": "Africa Cup of Nations Ivory Coast 1984",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "afcon_1984.png", "start_date": "1984-03-04", "end_date": "1984-03-18" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CIV"],
+      "logo_filename": "afcon_1984.png",
+      "start_date": "1984-03-04",
+      "end_date": "1984-03-18",
+      "color": "#e98611",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade Félix Houphouët-Boigny, Abidjan",
+        "filename": "StadeFHB.jpg",
+        "text": "The Stade Félix Houphouët-Boigny hosted the final."
+      },
+      {
+        "name": "Abidjan, Ivory Coast",
+        "filename": "Abidjan_Ville_Collage.jpg",
+        "text": "City of Abidjan"
+      },
+      {
+        "name": "Stade Bouaké, Bouaké",
+        "filename": "Stade_de_la_paix_en_reconstruction.png",
+        "text": "The Stade Bouaké hosted the semi-final Algeria vs Cameroon"
+      },
+      {
+        "name": "Bouaké, Ivory Coast",
+        "filename": "Bouaké_Montage.jpg",
+        "text": "Bouaké, Ivory Coast"
+      }
+    ],
+    "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "ALG", "fourth_place": "EGY" },
+    "statistics": { "total_matches": 16, "total_goals": 39 },
+    "awards": {
+      "golden_boot": [{ "player": "Taher Abouzaid", "team": "EGY", "goals": 4 }],
+      "golden_ball": [{ "player": "Théophile Abega", "team": "CMR" }],
+      "golden_glove": { "player": "Joseph-Antoine Bell", "team": "CMR" }
+    }
   },
   {
     "id": "AFCON1982",
