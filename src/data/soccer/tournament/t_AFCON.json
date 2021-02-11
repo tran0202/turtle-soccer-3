@@ -982,7 +982,44 @@
     "short_name": "Nigeria 1980",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1980-03-08", "end_date": "1980-03-22" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["NGA"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1980-03-08",
+      "end_date": "1980-03-22",
+      "color": "#568629",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Surulere Stadium, Lagos",
+        "filename": "A_side_view_of_the_National_Stadium.jpg",
+        "text": "The Surulere Stadium hosted the final."
+      },
+      {
+        "name": "Lagos, Nigeria",
+        "filename": "2014_Victoria_Island_Lagos_Nigeria_15006436297.jpg",
+        "text": "Victoria Island, Lagos, Nigeria"
+      },
+      {
+        "name": "Ibadan, Nigeria",
+        "filename": "Nigerias_Oyo_state,_Ibadan_has_beautiful_place_by_kingknx.jpg",
+        "text": "Sango, Ibadan"
+      }
+    ],
+    "final_standings": { "champions": "NGA", "runners_up": "ALG", "third_place": "MAR", "fourth_place": "EGY" },
+    "statistics": { "total_matches": 16, "total_goals": 33 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Khaled Labied", "team": "MAR", "goals": 3 },
+        { "player": "Segun Odegbami", "team": "NGA", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Christian Chukwu", "team": "NGA" }]
+    }
   },
   {
     "id": "AFCON1978",
