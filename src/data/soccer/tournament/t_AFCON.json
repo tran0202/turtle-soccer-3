@@ -1028,7 +1028,50 @@
     "short_name": "Ghana 1978",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1978-03-05", "end_date": "1978-03-16" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GHA"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1978-03-05",
+      "end_date": "1978-03-16",
+      "color": "#fa2200",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Accra Sports Stadium, Accra",
+        "filename": "Ohene_Djan_stadium,_Accra.jpg",
+        "text": "The Accra Sports Stadium hosted the final."
+      },
+      {
+        "name": "Accra, Ghana",
+        "filename": "A_drone_footage_of_Accra_central,_Ghana.jpg",
+        "text": "Accra, Ghana"
+      },
+      {
+        "name": "Kumasi Sports Stadium, Kumasi",
+        "filename": "Kumasi900.jpeg",
+        "text": "The Kumasi Sports Stadium hosted the semi-final Uganda vs Nigeria."
+      },
+      {
+        "name": "Kumasi, Ghana",
+        "filename": "St_Peters_Cathedral_Basilica_Kumasi_(4).jpg",
+        "text": "St Peter's Cathedral Basilica, Kumasi"
+      }
+    ],
+    "final_standings": { "champions": "GHA", "runners_up": "UGA", "third_place": "NGA", "fourth_place": "TUN" },
+    "statistics": { "total_matches": 16, "total_goals": 38 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Opoku Afriyie", "team": "GHA", "goals": 3 },
+        { "player": "Segun Odegbami", "team": "NGA", "goals": 3 },
+        { "player": "Phillip Omondi", "team": "UGA", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Karim Abdul Razak", "team": "GHA" }]
+    }
   },
   {
     "id": "AFCON1976",
