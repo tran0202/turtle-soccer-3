@@ -838,7 +838,46 @@
     "name": "Africa Cup of Nations Egypt 1986",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "CAN_1986_(logo).png", "start_date": "1986-03-07", "end_date": "1986-03-21" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["EGY"],
+      "logo_filename": "CAN_1986_(logo).png",
+      "start_date": "1986-03-07",
+      "end_date": "1986-03-21",
+      "color": "#ca0b0f",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Cairo International Stadium, Cairo",
+        "filename": "In_Cairo_Stadium.jpg",
+        "text": "The Cairo International Stadium hosted the final."
+      },
+      {
+        "name": "Cairo, Egypt",
+        "filename": "Cairo-Nile-2020(1).jpg",
+        "text": "Cairo, Egypt"
+      },
+      {
+        "name": "Alexandria Stadium, Alexandria",
+        "filename": "GD-EG-Alex-Stade002.jpeg",
+        "text": "The Alexandria Stadium hosted the semi-final Cameroon vs Ivory Coast."
+      },
+      {
+        "name": "Alexandria, Egypt",
+        "filename": "Suez_canalst-Alexandria,_Egypt.jpg",
+        "text": "Suez Canal St. in Alexandria, Egypt"
+      }
+    ],
+    "final_standings": { "champions": "EGY", "runners_up": "CMR", "third_place": "CIV", "fourth_place": "MAR" },
+    "statistics": { "total_matches": 16, "total_goals": 31 },
+    "awards": {
+      "golden_boot": [{ "player": "Roger Milla", "team": "CMR", "goals": 4 }],
+      "golden_ball": [{ "player": "Roger Milla", "team": "CMR" }]
+    }
   },
   {
     "id": "AFCON1984",
