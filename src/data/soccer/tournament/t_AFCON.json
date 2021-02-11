@@ -695,6 +695,7 @@
     "short_name": "Senegal 1992",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "host": ["SEN"],
       "logo_filename": "Africa_Cup_of_Nations.png",
@@ -703,8 +704,32 @@
       "color": "#24a45f",
       "team_count": 12,
       "confed_count": 1,
-      "venue_count": 3,
+      "venue_count": 2,
       "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade de l'Amitié, Dakar",
+        "filename": "Senegal_1_-_Cameroon_0_-_Stade_Léopold_Sédar_Senghor.jpg",
+        "text": "The Stade de l'Amitié hosted the final."
+      },
+      {
+        "name": "Dakar, Senegal",
+        "filename": "Dakar_-_Panorama_urbain.jpg",
+        "text": "Skyline of Dakar, Senegal"
+      },
+      {
+        "name": "Ziguinchor, Senegal",
+        "filename": "Ziguinchor6.JPG",
+        "text": "Downtown of Ziguinchor"
+      }
+    ],
+    "final_standings": { "champions": "CIV", "runners_up": "GHA", "third_place": "NGA", "fourth_place": "CMR" },
+    "statistics": { "total_matches": 20, "total_goals": 34 },
+    "awards": {
+      "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 4 }],
+      "golden_ball": [{ "player": "Abedi Pele", "team": "GHA" }],
+      "golden_glove": { "player": "Alain Gouaméné", "team": "CIV" }
     }
   },
   {
