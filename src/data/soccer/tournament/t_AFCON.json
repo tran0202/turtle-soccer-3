@@ -647,7 +647,46 @@
     "short_name": "Tunisia 1994",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "host": ["TUN"], "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1994-03-26", "end_date": "1994-04-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["TUN"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1994-03-26",
+      "end_date": "1994-04-10",
+      "color": "#fa2200",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade El Menzah, Tunis",
+        "filename": "Stade_Olympique_dEl_Menzah.jpg",
+        "text": "The Stade El Menzah hosted the final."
+      },
+      {
+        "name": "Stade Olympique de Sousse, Sousse",
+        "filename": "Stade_olympique_de_Sousse.jpg",
+        "text": "The Stade Olympique de Sousse hosted the quarter-final Ghana vs Ivory Coast"
+      },
+      {
+        "name": "Sousse, Tunisia",
+        "filename": "Sousse_Ribat_Aussicht.jpeg",
+        "text": "View from the tower of the Ribat of Sousse, Tunisia"
+      },
+      {
+        "name": "Stade Chedli Zouiten, Tunis",
+        "filename": "Tnplaces_12.jpg",
+        "text": "The Stade Chedli Zouite hosted group B matches"
+      }
+    ],
+    "final_standings": { "champions": "NGA", "runners_up": "ZAM", "third_place": "CIV", "fourth_place": "MLI" },
+    "statistics": { "total_matches": 20, "total_goals": 44, "attendance": 273000 },
+    "awards": {
+      "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 5 }],
+      "golden_ball": [{ "player": "Rashidi Yekini", "team": "NGA" }]
+    }
   },
   {
     "id": "AFCON1992",
@@ -656,7 +695,17 @@
     "short_name": "Senegal 1992",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1992-01-12", "end_date": "1992-01-26" }
+    "details": {
+      "host": ["SEN"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1992-01-12",
+      "end_date": "1992-01-26",
+      "color": "#24a45f",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 2
+    }
   },
   {
     "id": "AFCON1990",
