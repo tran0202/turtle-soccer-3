@@ -1395,7 +1395,39 @@
     "short_name": "Ethiopia 1962",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1962-01-14", "end_date": "1962-01-21" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ETH-1941-1974"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1962-01-14",
+      "end_date": "1962-01-21",
+      "color": "#0e9061",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Hailé Sélassié Stadium, Addis Ababa",
+        "filename": "ET_Addis_asv2018-01_img02_Stadium.jpg",
+        "text": "The Hailé Sélassié Stadium hosted all the matches."
+      },
+      {
+        "name": "Addis Ababa, Ethiopia",
+        "filename": "Holy_trinty_cathedral_church.jpg",
+        "text": "Addis Ababa, Ethiopia"
+      }
+    ],
+    "final_standings": { "champions": "ETH-1941-1974", "runners_up": "UAR", "third_place": "TUN", "fourth_place": "UGA-1914-1962" },
+    "statistics": { "total_matches": 4, "total_goals": 18 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Badawi Abdel Fattah", "team": "UAR", "goals": 3 },
+        { "player": "Mengistu Worku", "team": "ETH-1941-1974", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Mengistu Worku", "team": "ETH-1941-1974" }]
+    }
   },
   {
     "id": "AFCON1959",
