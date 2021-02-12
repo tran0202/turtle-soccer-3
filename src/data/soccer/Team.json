@@ -223,6 +223,8 @@
   { "id": "GHA-1964-1966", "name": "Ghana", "team_type_id": "MNT", "nation_id": "GHA-1964-1966", "parent_team_id": "GHA" },
   { "id": "COD-1964-1966", "name": "Congo-Léopoldville", "team_type_id": "MNT", "nation_id": "COD-1964-1966", "parent_team_id": "COD" },
   { "id": "UGA-1914-1962", "name": "Uganda", "team_type_id": "MNT", "nation_id": "UGA-1914-1962", "parent_team_id": "UGA" },
+  { "id": "EGY-1953-1958", "name": "Egypt", "team_type_id": "MNT", "nation_id": "EGY-1953-1958", "parent_team_id": "EGY" },
+  { "id": "RSA-1928-1957", "name": "South Africa", "short_name": "SouthAfrica", "team_type_id": "MNT", "nation_id": "RSA-1928-1957", "parent_team_id": "RSA" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -503,8 +505,6 @@
   { "id": "1093", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "290", "parent_team_id": "1035" },
   { "id": "1094", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "291", "parent_team_id": "1035" },
   { "id": "1095", "name": "Iraq", "team_type_id": "MNT", "nation_id": "276", "parent_team_id": "1064" },
-  { "id": "1096", "name": "Egypt", "team_type_id": "MNT", "nation_id": "250", "parent_team_id": "8" },
-  { "id": "1103", "name": "Egypt", "team_type_id": "MNT", "nation_id": "251", "parent_team_id": "8" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
   { "id": "1110", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "305", "parent_team_id": "1043" },

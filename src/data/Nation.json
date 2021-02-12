@@ -2633,8 +2633,18 @@
     "parent_nation_id": "",
     "nation_type_id": "NATN",
     "flag_filename": "640px-Flag_of_South_Africa.svg.png",
-    "start_date": "",
+    "start_date": "1957-01-01",
     "end_date": ""
+  },
+  {
+    "id": "RSA-1928-1957",
+    "name": "South Africa",
+    "official_name": "",
+    "parent_nation_id": "RSA",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_South_Africa_(1928–1994).svg",
+    "start_date": "1928-01-01",
+    "end_date": "1957-01-01"
   },
   {
     "id": "SSD",

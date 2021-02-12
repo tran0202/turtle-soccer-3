@@ -1474,6 +1474,30 @@
     "short_name": "Sudan 1957",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1957-02-10", "end_date": "1957-02-15" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["SDN-1956-1970"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1957-02-10",
+      "end_date": "1957-02-16",
+      "color": "#fa2200",
+      "team_count": 3,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Khartoum, Sudan",
+        "filename": "University_of_Khartoum_001.jpeg",
+        "text": "The University of Khartoum"
+      }
+    ],
+    "final_standings": { "champions": "EGY-1953-1958", "runners_up": "ETH-1941-1974", "third_place": "SDN-1956-1970" },
+    "statistics": { "total_matches": 2, "total_goals": 7 },
+    "awards": {
+      "golden_boot": [{ "player": "Ad-Diba", "team": "EGY-1953-1958", "goals": 5 }],
+      "golden_ball": [{ "player": "Ad-Diba", "team": "EGY-1953-1958" }]
+    }
   }
 ]
