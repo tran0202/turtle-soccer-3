@@ -1436,7 +1436,36 @@
     "short_name": "United Arab Republic 1959",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1959-05-22", "end_date": "1959-05-29" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["UAR"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1959-05-22",
+      "end_date": "1959-05-29",
+      "color": "#ca0b0f",
+      "team_count": 3,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Prince Farouk Stadium, Cairo",
+        "filename": "Mokhtar_El_tetsh_stadium.jpg",
+        "text": "The Prince Farouk Stadium hosted all the matches."
+      },
+      {
+        "name": "Cairo, Egypt",
+        "filename": "Muizz_Street_-_Egypt.jpg",
+        "text": "Cairo, Egypt"
+      }
+    ],
+    "final_standings": { "champions": "UAR", "runners_up": "SDN-1956-1970", "third_place": "ETH-1941-1974" },
+    "statistics": { "total_matches": 3, "total_goals": 8 },
+    "awards": {
+      "golden_boot": [{ "player": "Mahmoud El-Gohary", "team": "UAR", "goals": 3 }],
+      "golden_ball": [{ "player": "Mahmoud El-Gohary", "team": "UAR" }]
+    }
   },
   {
     "id": "AFCON1957",
