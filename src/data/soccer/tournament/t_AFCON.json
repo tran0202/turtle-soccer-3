@@ -1347,7 +1347,46 @@
     "short_name": "Ghana 1963",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1963-11-24", "end_date": "1963-12-01" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GHA-1964-1966"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1963-11-24",
+      "end_date": "1963-12-01",
+      "color": "#fcd20f",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Accra Sports Stadium, Accra",
+        "filename": "Ohene_Djan_stadium,_Accra.jpg",
+        "text": "The Accra Sports Stadium hosted the final"
+      },
+      {
+        "name": "Accra, Ghana",
+        "filename": "National_Theatre.jpg",
+        "text": "The National Theater was built by a Chinese contractor as part of an effort to increase patronage of the performing arts in Ghana. It houses the National Orchestra which plays using traditional instruments."
+      },
+      {
+        "name": "Kumasi Sports Stadium, Kumasi",
+        "filename": "Baba_Yara_Sports_Stadium_in_Kumasi.jpg",
+        "text": "The Kumasi Sports Stadium hosted group B matches"
+      },
+      {
+        "name": "Kumasi, Ghana",
+        "filename": "Komfo_Anokye_Teaching_Hospital,_Kumasi,_Ghana.jpg",
+        "text": "Komfo Anokye Teaching Hospital"
+      }
+    ],
+    "final_standings": { "champions": "GHA-1964-1966", "runners_up": "SDN-1956-1970", "third_place": "UAR", "fourth_place": "ETH-1941-1974" },
+    "statistics": { "total_matches": 8, "total_goals": 33 },
+    "awards": {
+      "golden_boot": [{ "player": "Hassan El-Shazly", "team": "UAR", "goals": 6 }],
+      "golden_ball": [{ "player": "Hassan El-Shazly", "team": "UAR" }]
+    }
   },
   {
     "id": "AFCON1962",
