@@ -95,6 +95,13 @@ const TournamentFormat = (props) => {
                           <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
                         </React.Fragment>
                       )
+                    } else if (tb === 'pointslot') {
+                      return (
+                        <React.Fragment key={index}>
+                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
+                          <li>Drawing lots</li>
+                        </React.Fragment>
+                      )
                     } else if (tb === 'goaldifferenceandgoalscored') {
                       return (
                         <React.Fragment key={index}>

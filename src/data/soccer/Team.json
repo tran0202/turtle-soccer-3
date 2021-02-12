@@ -220,6 +220,8 @@
     "parent_team_id": "COD"
   },
   { "id": "CGO-1959-1970", "name": "Congo-Brazzaville", "team_type_id": "MNT", "nation_id": "CGO-1959-1970", "parent_team_id": "CGO" },
+  { "id": "GHA-1964-1966", "name": "Ghana", "team_type_id": "MNT", "nation_id": "GHA-1964-1966", "parent_team_id": "GHA" },
+  { "id": "COD-1964-1966", "name": "Congo-Léopoldville", "team_type_id": "MNT", "nation_id": "COD-1964-1966", "parent_team_id": "COD" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -473,7 +475,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "1007", "name": "Congo-Léopoldville", "team_type_id": "MNT", "nation_id": "295", "parent_team_id": "241" },
   { "id": "1028", "name": "South Yemen", "team_type_id": "MNT", "nation_id": "233", "parent_team_id": "" },
   { "id": "1030", "name": "Khmer Republic", "team_type_id": "MNT", "nation_id": "34", "parent_team_id": "1029" },
   { "id": "1032", "name": "Burma", "team_type_id": "MNT", "nation_id": "223", "parent_team_id": "1031" },
@@ -503,7 +504,6 @@
   { "id": "1095", "name": "Iraq", "team_type_id": "MNT", "nation_id": "276", "parent_team_id": "1064" },
   { "id": "1096", "name": "Egypt", "team_type_id": "MNT", "nation_id": "250", "parent_team_id": "8" },
   { "id": "1099", "name": "Uganda", "team_type_id": "MNT", "nation_id": "294", "parent_team_id": "980" },
-  { "id": "1100", "name": "Ghana", "team_type_id": "MNT", "nation_id": "286", "parent_team_id": "195" },
   { "id": "1103", "name": "Egypt", "team_type_id": "MNT", "nation_id": "251", "parent_team_id": "8" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },

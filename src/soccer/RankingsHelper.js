@@ -22,6 +22,12 @@ export const isLotGroupPlayoffTiebreaker = (config) => {
   return tiebreakers.find((tb) => tb.indexOf('lotgroupplayoff') !== -1) != null
 }
 
+export const isPointsLotTiebreaker = (config) => {
+  const { tiebreakers } = config
+  if (!tiebreakers) return false
+  return tiebreakers.find((tb) => tb.indexOf('pointslot') !== -1) != null
+}
+
 export const isHead2HeadBeforeGoalDifference = (config) => {
   const { tiebreakers } = config
   if (!tiebreakers) return false
@@ -262,6 +268,12 @@ const drawingLots = (a, b) => {
     a.draw_lot_notes = 'Algeria took 2nd place after finished identical records (points, goal difference and goad forward) with Ivory Coast.'
     b.draw_lot_notes = 'Ivory Coast took 3rd place after finished identical records (points, goal difference and goad forward) with Algeria.'
     return -1
+  }
+  // AFCON 1965
+  if (a.id === 'SEN' && b.id === 'TUN') {
+    a.draw_lot_notes = 'Senegal took 2nd place after finished level points with Tunisia.'
+    b.draw_lot_notes = 'Tunisia took 1st place after finished level points with Senegal.'
+    return 1
   }
   // console.log('a', a)
   // console.log('b', b)
@@ -579,6 +591,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
   if (group && group.final_rankings) {
     const isGoalRatioTiebreaker = config ? config.isGoalRatioTiebreaker : false
     const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
+    const isPointsLotTiebreaker = config ? config.isPointsLotTiebreaker : false
     const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
     if (group.three_way_tied) {
       createDrawPools(group, startingIndex, config)
@@ -600,6 +613,8 @@ export const sortGroupRankings = (group, startingIndex, config) => {
                 })
               })
             })
+          } else if (isPointsLotTiebreaker) {
+            return drawingLots(a, b)
           } else if (isLotGroupPlayoffTiebreaker) {
             const dl = drawingLots(a, b)
             if (dl !== 0) return dl
@@ -690,9 +705,11 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
   const config = {
     isGoalRatioTiebreaker: isGoalRatioTiebreaker(tournament),
     isLotGroupPlayoffTiebreaker: isLotGroupPlayoffTiebreaker(tournament),
+    isPointsLotTiebreaker: isPointsLotTiebreaker(tournament),
     isHead2HeadBeforeGoalDifference: isHead2HeadBeforeGoalDifference(tournament),
     points_for_win: tournament.points_for_win,
   }
+  // console.log('config', config)
   sortGroupRankings(group, 1, config)
   if (tournament.id === 'GC2002' && group.name === 'Group D') {
     group.final_rankings[0].r = 3
@@ -708,7 +725,6 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
     group.final_rankings[2].draw_lot_notes =
       'Haiti took 2nd place after finished identical records (points, goal difference and goad forward) with Canada and Ecuador.'
     group.final_rankings.sort((a, b) => {
-      // console.log('a', a)
       if (a.r < b.r) return -1
       else if (a.r > b.r) return 1
       else return 0

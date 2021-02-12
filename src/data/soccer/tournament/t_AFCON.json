@@ -1295,7 +1295,50 @@
     "short_name": "Tunisia 1965",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1965-11-12", "end_date": "1965-11-21" }
+    "tiebreakers": ["pointslot"],
+    "details": {
+      "host": ["TUN"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1965-11-12",
+      "end_date": "1965-11-21",
+      "color": "#fa2200",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Stade Chedli Zouiten, Tunis",
+        "filename": "Tunis_-_Stade_Municipal_Géo_André.jpg",
+        "text": "The Stade Chedli Zouite hosted the final"
+      },
+      {
+        "name": "Stade Taïeb Mhiri, Sfax",
+        "filename": "Stade_taieb_mehiri.jpeg",
+        "text": "The Stade Taïeb Mhiri hosted group B match Ivory Coast vs Congo-Léopoldville"
+      },
+      {
+        "name": "Sousse, Tunisia",
+        "filename": "Grande_Mosquée_sousah.jpg",
+        "text": "Sousse, Tunisia"
+      },
+      {
+        "name": "Bizerte, Tunisia",
+        "filename": "CityHallBizerte.jpeg",
+        "text": "Bizerte City Hall in Belgique Street area"
+      }
+    ],
+    "final_standings": { "champions": "GHA-1964-1966", "runners_up": "TUN", "third_place": "CIV", "fourth_place": "SEN" },
+    "statistics": { "total_matches": 8, "total_goals": 31 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Ben Acheampong", "team": "GHA-1964-1966", "goals": 3 },
+        { "player": "Osei Kofi", "team": "GHA-1964-1966", "goals": 3 },
+        { "player": "Eustache Manglé", "team": "CIV", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Osei Kofi", "team": "GHA-1964-1966" }]
+    }
   },
   {
     "id": "AFCON1963",
