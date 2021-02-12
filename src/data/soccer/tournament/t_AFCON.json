@@ -1214,7 +1214,36 @@
     "short_name": "Sudan 1970",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1970-02-06", "end_date": "1970-02-16" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["SDN-1956-1970"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1970-02-06",
+      "end_date": "1970-02-16",
+      "color": "#fa2200",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Khartoum, Sudan",
+        "filename": "Khartoumdowntown.jpg",
+        "text": "Khartoum at night"
+      },
+      {
+        "name": "Wad Medani, Sudan",
+        "filename": "Wad_Medani_Blue_Nile.jpg",
+        "text": "Tourist boats on the Blue Nile at Wad Medani"
+      }
+    ],
+    "final_standings": { "champions": "SDN-1956-1970", "runners_up": "GHA", "third_place": "UAR", "fourth_place": "CIV" },
+    "statistics": { "total_matches": 16, "total_goals": 51 },
+    "awards": {
+      "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 8 }],
+      "golden_ball": [{ "player": "Laurent Pokou", "team": "CIV" }]
+    }
   },
   {
     "id": "AFCON1968",
