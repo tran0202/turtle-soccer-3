@@ -1123,7 +1123,46 @@
     "short_name": "Egypt 1974",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1974-03-01", "end_date": "1974-03-14" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["EGY"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1974-03-01",
+      "end_date": "1974-03-14",
+      "color": "#ca0b0f",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Cairo International Stadium, Cairo",
+        "filename": "Cairo_International_Stadium.jpg",
+        "text": "The Cairo International Stadium hosted the final."
+      },
+      {
+        "name": "Alexandria Stadium, Alexandria",
+        "filename": "GD-EG-Alex-Stade002.jpeg",
+        "text": "The Alexandria Stadium hosted the semi-final Congo vs Zambia"
+      },
+      {
+        "name": "El Mahalla Stadium, El-Mahalla El-Kubra",
+        "filename": "El_Mahalla_El_Kobra_gate.jpeg",
+        "text": "The El Mahalla Stadium hosted group A matches"
+      },
+      {
+        "name": "Damanhour, Egypt",
+        "filename": "Opera_damanhour.jpg",
+        "text": "Opera Damanhour"
+      }
+    ],
+    "final_standings": { "champions": "ZAI", "runners_up": "ZAM", "third_place": "EGY", "fourth_place": "CGO-1970-1991" },
+    "statistics": { "total_matches": 17, "total_goals": 54 },
+    "awards": {
+      "golden_boot": [{ "player": "Ndaye Mulamba", "team": "ZAI", "goals": 9 }],
+      "golden_ball": [{ "player": "Ndaye Mulamba", "team": "ZAI" }]
+    }
   },
   {
     "id": "AFCON1972",
