@@ -1171,7 +1171,41 @@
     "short_name": "Cameroon 1972",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1972-02-23", "end_date": "1972-03-05" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CMR-1961-1975"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1972-02-23",
+      "end_date": "1972-03-05",
+      "color": "#24a45f",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Stade Omnisports, Yaoundé",
+        "filename": "Ahmadou_Ahidjo_stadium.jpg",
+        "text": "The Stade Omnisports hosted the final."
+      },
+      {
+        "name": "Yaoundé, Cameroon",
+        "filename": "Ngousso_Ntem.jpg",
+        "text": "Yaoundé, Cameroon"
+      },
+      {
+        "name": "Douala, Cameroon",
+        "filename": "Ars&Urbis_International_Workshop_-_Emiliano_Gandolfi_36.jpeg",
+        "text": "Douala, Cameroon"
+      }
+    ],
+    "final_standings": { "champions": "CGO-1970-1991", "runners_up": "MLI", "third_place": "CMR-1961-1975", "fourth_place": "ZAI" },
+    "statistics": { "total_matches": 16, "total_goals": 53 },
+    "awards": {
+      "golden_boot": [{ "player": "Fantamady Keita", "team": "MLI", "goals": 5 }],
+      "golden_ball": [{ "player": "François M'Pelé", "team": "CGO-1970-1991" }]
+    }
   },
   {
     "id": "AFCON1970",

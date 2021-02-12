@@ -207,6 +207,7 @@
   { "id": "ETH-1975-1987", "name": "Ethiopia", "team_type_id": "MNT", "nation_id": "ETH-1975-1987", "parent_team_id": "ETH" },
   { "id": "UPV", "name": "Upper Volta", "team_type_id": "MNT", "nation_id": "UPV", "parent_team_id": "BFA" },
   { "id": "CGO-1970-1991", "name": "Congo", "team_type_id": "MNT", "nation_id": "CGO-1970-1991", "parent_team_id": "CGO" },
+  { "id": "CMR-1961-1975", "name": "Cameroon", "team_type_id": "MNT", "nation_id": "CMR-1961-1975", "parent_team_id": "CMR" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -495,7 +496,6 @@
   { "id": "1098", "name": "Sudan", "team_type_id": "MNT", "nation_id": "293", "parent_team_id": "989" },
   { "id": "1099", "name": "Uganda", "team_type_id": "MNT", "nation_id": "294", "parent_team_id": "980" },
   { "id": "1100", "name": "Ghana", "team_type_id": "MNT", "nation_id": "286", "parent_team_id": "195" },
-  { "id": "1101", "name": "Cameroon", "team_type_id": "MNT", "nation_id": "297", "parent_team_id": "194" },
   { "id": "1103", "name": "Egypt", "team_type_id": "MNT", "nation_id": "251", "parent_team_id": "8" },
   { "id": "1104", "name": "Ethiopia", "team_type_id": "MNT", "nation_id": "299", "parent_team_id": "987" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
