@@ -211,7 +211,15 @@
   { "id": "SDN-1956-1970", "name": "Sudan", "team_type_id": "MNT", "nation_id": "SDN-1956-1970", "parent_team_id": "SDN" },
   { "id": "UAR", "name": "United Arab Republic", "short_name": "UtdArabRep", "team_type_id": "MNT", "nation_id": "UAR", "parent_team_id": "EGY" },
   { "id": "ETH-1941-1974", "name": "Ethiopia", "team_type_id": "MNT", "nation_id": "ETH-1941-1974", "parent_team_id": "ETH" },
-  { "id": "COD-1966-1971", "name": "Congo-Kinshasa", "team_type_id": "MNT", "nation_id": "COD-1966-1971", "parent_team_id": "COD" },
+  {
+    "id": "COD-1966-1971",
+    "name": "Congo-Kinshasa",
+    "short_name": "CongoKinsh",
+    "team_type_id": "MNT",
+    "nation_id": "COD-1966-1971",
+    "parent_team_id": "COD"
+  },
+  { "id": "CGO-1959-1970", "name": "Congo-Brazzaville", "team_type_id": "MNT", "nation_id": "CGO-1959-1970", "parent_team_id": "CGO" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -465,7 +473,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "1006", "name": "Congo-Brazzaville", "team_type_id": "MNT", "nation_id": "46", "parent_team_id": "981" },
   { "id": "1007", "name": "Congo-Léopoldville", "team_type_id": "MNT", "nation_id": "295", "parent_team_id": "241" },
   { "id": "1028", "name": "South Yemen", "team_type_id": "MNT", "nation_id": "233", "parent_team_id": "" },
   { "id": "1030", "name": "Khmer Republic", "team_type_id": "MNT", "nation_id": "34", "parent_team_id": "1029" },

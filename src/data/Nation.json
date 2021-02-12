@@ -587,9 +587,19 @@
     "official_name": "",
     "parent_nation_id": "",
     "nation_type_id": "NATN",
-    "flag_filename": "Congo.png",
+    "flag_filename": "Flag_of_the_Republic_of_the_Congo.svg",
     "start_date": "1991-06-09",
     "end_date": ""
+  },
+  {
+    "id": "CGO-1959-1970",
+    "name": "Congo-Brazzaville",
+    "parent_nation_id": "CGO",
+    "nation_type_id": "NATN",
+    "flag_filename": "Flag_of_the_Republic_of_the_Congo.svg",
+    "code": "CGO",
+    "start_date": "1959-09-15",
+    "end_date": "1970-01-02"
   },
   {
     "id": "CGO-1970-1991",

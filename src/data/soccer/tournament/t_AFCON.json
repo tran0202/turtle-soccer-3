@@ -1252,7 +1252,41 @@
     "short_name": "Ethiopia 1968",
     "tournament_type_id": "AFCON",
     "points_for_win": 2,
-    "details": { "logo_filename": "Africa_Cup_of_Nations.png", "start_date": "1968-01-12", "end_date": "1968-01-21" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["ETH-1941-1974"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "1968-01-12",
+      "end_date": "1968-01-21",
+      "color": "#0e9061",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Hailé Sélassié Stadium, Addis Ababa",
+        "filename": "ET_Addis_asv2018-01_img02_Stadium.jpg",
+        "text": "The Hailé Sélassié Stadium hosted the final"
+      },
+      {
+        "name": "Addis Ababa, Ethiopia",
+        "filename": "AddisView.jpg",
+        "text": "Partial view of Addis Ababa skyline from Sheger park"
+      },
+      {
+        "name": "Asmara, Eritrea",
+        "filename": "Asmara_Montage.png",
+        "text": "Clockwise from top: Cityscape, Sunset view over Asmara, Church of Our Lady of the Rosary, Fiat Tagliero Building sign, 23d ISCOE East Africa conference in Asmara 2019"
+      }
+    ],
+    "final_standings": { "champions": "COD-1966-1971", "runners_up": "GHA", "third_place": "CIV", "fourth_place": "ETH-1941-1974" },
+    "statistics": { "total_matches": 16, "total_goals": 52 },
+    "awards": {
+      "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 6 }],
+      "golden_ball": [{ "player": "Kazadi Mwamba", "team": "COD-1966-1971" }]
+    }
   },
   {
     "id": "AFCON1965",
