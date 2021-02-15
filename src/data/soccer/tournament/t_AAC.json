@@ -153,22 +153,104 @@
     "year": "2007",
     "name": "AFC Asian Cup Indonesia-Malaysia-Thailand-Vietnam 2007",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "aac_2007.png", "start_date": "2007-07-07", "end_date": "2007-07-29" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["IDN", "MAS", "THA", "VIE"],
+      "logo_filename": "aac_2007.png",
+      "start_date": "2007-07-07",
+      "end_date": "2007-07-29",
+      "color": "#105f49",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 8,
+      "city_count": 7
+    },
+    "hero_images": [
+      {
+        "name": "Group A",
+        "filename": "Asian_Cup_2007-Australia-Oman.jpg",
+        "text": "Players from Oman and Australia line up during the national anthems."
+      },
+      {
+        "name": "Group A",
+        "filename": "Asian_Cup_Australia-Iraq_II.jpg",
+        "text": "During the Iraq V Australia match. Iraq won 3:1"
+      },
+      {
+        "name": "Group A",
+        "filename": "Asian_Cup_Thailand-Oman.jpg",
+        "text": "Thailand vs Oman"
+      },
+      {
+        "name": "Gelora Bung Karno Stadium, Jakarta",
+        "filename": "BungKarno-indonoob.jpeg",
+        "text": "The Gelora Bung Karno Stadium hosted the final."
+      }
+    ],
+    "final_standings": { "champions": "IRQ-2004-2008", "runners_up": "KSA", "third_place": "KOR", "fourth_place": "JPN" },
+    "statistics": { "total_matches": 32, "total_goals": 84, "attendance": 724222 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Younis Mahmoud", "team": "IRQ-2004-2008", "goals": 4 },
+        { "player": "Naohiro Takahara", "team": "JPN", "goals": 4 },
+        { "player": "Yasser Al-Qahtani", "team": "KSA", "goals": 4 }
+      ],
+      "golden_ball": [{ "player": "Younis Mahmoud", "team": "IRQ-2004-2008" }],
+      "golden_glove": { "player": "Noor Sabri", "team": "IRQ-2004-2008" },
+      "fair_play_team": ["JPN"]
+    }
   },
   {
     "id": "AAC2004",
     "year": "2004",
     "name": "AFC Asian Cup China 2004",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "aac_2004.png", "start_date": "2004-07-17", "end_date": "2004-08-07" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CHN"],
+      "logo_filename": "aac_2004.png",
+      "start_date": "2004-07-17",
+      "end_date": "2004-08-07",
+      "color": "#ee2c29",
+      "team_count": 16,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Workers Stadium, Beijing",
+        "filename": "Workers_Stadium.jpg",
+        "text": "The Workers Stadium hosted the final."
+      },
+      {
+        "name": "Shandong Sports Center, Jinan",
+        "filename": "SHANGDONGSPORTS.jpg",
+        "text": "The Shandong Sports Center hosted the semi-final Bahrain vs Japan."
+      },
+      {
+        "name": "Chongqing Olympic Sports Center, Chongqing",
+        "filename": "Chongqing_Olympic_Stadium.jpg",
+        "text": "The Chongqing Olympic Sports Center hosted the quarter-final Japan vs Jordan."
+      },
+      {
+        "name": "Chengdu, China",
+        "filename": "Niushikou,_Jinjiang,_Chengdu,_Sichuan,_China_-_panoramio_(cropped).jpg",
+        "text": "Chengdu, China"
+      }
+    ],
+    "final_standings": { "champions": "JPN", "runners_up": "CHN", "third_place": "IRN", "fourth_place": "BHR" },
+    "statistics": { "total_matches": 32, "total_goals": 96, "attendance": 937650 },
+    "awards": {
+      "golden_boot": [
+        { "player": "A'ala Hubail", "team": "BHR", "goals": 5 },
+        { "player": "Ali Karimi", "team": "IRN", "goals": 5 }
+      ],
+      "golden_ball": [{ "player": "Shunsuke Nakamura", "team": "JPN" }],
+      "fair_play_team": ["CHN"]
+    }
   },
   {
     "id": "AAC2000",
