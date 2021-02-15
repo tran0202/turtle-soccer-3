@@ -107,6 +107,20 @@
     ]
   },
   {
+    "id": "AAC",
+    "name": "AFC Asian Cup",
+    "color": "rgb(0, 35, 149)",
+    "team_type_id": "MNT",
+    "confederation_id": "AFC",
+    "logo_path": "aac_logos",
+    "trophy_filename": "AFC_Asian_Cup_at_Fed_Square.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The AFC Asian Cup is an international association football tournament run by the Asian Football Confederation (AFC). It is the second oldest continental football championship in the world after Copa América. The winning team becomes the champion of Asia.",
+      "The Asian Cup was held once every four years from the 1956 edition in Hong Kong until the 2004 tournament in China. However, since the Summer Olympic Games and the European Football Championship were also scheduled in the same year as the Asian Cup, the AFC decided to move their championship to a less crowded cycle. After 2004, the tournament was next held in 2007 when it was co-hosted by four nations: Indonesia, Malaysia, Thailand and Vietnam. Thereafter, it has been held every four years."
+    ]
+  },
+  {
     "id": "UNL",
     "name": "UEFA Nations League",
     "team_type_id": "MNT",
@@ -122,16 +136,6 @@
     "team_type_id": "MNT",
     "confederation_id": "OFC",
     "logo_path": "logos",
-    "sport_id": "SOC",
-    "order": 1
-  },
-  {
-    "id": "AAC",
-    "name": "AFC Asian Cup",
-    "color": "rgb(0, 35, 149)",
-    "team_type_id": "MNT",
-    "confederation_id": "AFC",
-    "logo_path": "aac_logos",
     "sport_id": "SOC",
     "order": 1
   },

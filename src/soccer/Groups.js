@@ -105,39 +105,39 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'goaldifferenceandgoalscored') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Overall goal difference</li>
-                          <li>Overall goals scored</li>
+                          <li>Goal difference in all group matches</li>
+                          <li>Goals scored in all group matches</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'team') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Overall goal difference</li>
-                          <li>Overall goals scored</li>
+                          <li>Goal difference in all group matches</li>
+                          <li>Goals scored in all group matches</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'pointandgoaldifference') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Overall goal difference</li>
+                          <li>Goal difference in all group matches</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'goalratio') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Overall goal ratio</li>
+                          <li>Goal ratio in all group matches</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'goalratiogroupplayoff') {
                       return (
                         <React.Fragment key={index}>
                           <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Overall goal ratio if the top 2 teams on equal points</li>
+                          <li>Goal ratio in all group matches if the top 2 teams on equal points</li>
                           <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
-                          <li>Goal ratio from group matches if the playoff match ends with a draw</li>
+                          <li>Goal ratio in all group matches if the playoff match ends with a draw</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'lotgroupplayoff') {
@@ -164,9 +164,9 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'head2head') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Points in matches between tied teams</li>
-                          <li>Goal difference in matches between tied teams</li>
-                          <li>Goals scored in matches between tied teams</li>
+                          <li>Points in head-to-head matches between tied teams</li>
+                          <li>Goal difference in head-to-head matches between tied teams</li>
+                          <li>Goals scored in head-to-head matches between tied teams</li>
                         </React.Fragment>
                       )
                     } else if (tb === 'head2headpoints') {
@@ -190,7 +190,10 @@ const TournamentFormat = (props) => {
                     } else if (tb === 'head2headreapply') {
                       return (
                         <React.Fragment key={index}>
-                          <li>Reapply the above criteria for the remaining level teams if needed</li>
+                          <li>
+                            If more than two teams were tied, and after applying all head-to-head criteria above, a subset of teams were still tied, all
+                            head-to-head criteria above were reapplied exclusively to this subset of teams.
+                          </li>
                         </React.Fragment>
                       )
                     } else if (tb === 'awaygoals') {
@@ -200,7 +203,9 @@ const TournamentFormat = (props) => {
                         </li>
                       )
                     } else if (tb === 'penalty') {
-                      return <li key={index}>Penalty shoot-out if 2 teams tied alone in the last round of the group stage</li>
+                      return <li key={index}>Penalty shoot-out if only 2 teams were tied and they met in the last round of the group stage</li>
+                    } else if (tb === 'fairplaylight') {
+                      return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -3. Yellow and Direct Red -4.</li>
                     } else if (tb === 'fairplay') {
                       return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
                     } else if (tb === 'coefficient') {

@@ -56,7 +56,6 @@ const accumulateRanking = (team, match, config) => {
     (match.notes && match.notes.awarded)
   )
     return
-  // console.log('match',match)
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++
@@ -144,11 +143,12 @@ const accumulateRanking = (team, match, config) => {
   team.gr = isGoalRatioTiebreaker(config) && team.ga !== 0 ? team.gf / team.ga : null
   if (side === 'home') {
     if (match.home_fair_pts) {
-      team.fp = (team.fp ? team.fp : 0) + parseInt(match.home_fair_pts)
+      // console.log('team', team)
+      team.fp = (team.fp ? team.fp : 0) + match.home_fair_pts
     }
   } else {
     if (match.away_fair_pts) {
-      team.fp = (team.fp ? team.fp : 0) + parseInt(match.away_fair_pts)
+      team.fp = (team.fp ? team.fp : 0) + match.away_fair_pts
     }
   }
   team.h2hm.push(match)
@@ -275,12 +275,13 @@ const drawingLots = (a, b) => {
     b.draw_lot_notes = 'Tunisia took 1st place after finished level points with Senegal.'
     return 1
   }
-  // console.log('a', a)
-  // console.log('b', b)
   return 0
 }
 
 const compareFairPoints = (a, b) => {
+  // console.log('a', a)
+  // console.log('b', b)
+  if (!a.fp || !b.fp) return 0
   if (a.fp > b.fp) {
     a.fp_notes = `${getTeamName(a.id)} ${a.fp}`
     b.fp_notes = `${getTeamName(b.id)} ${b.fp}`
@@ -593,6 +594,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
     const isLotGroupPlayoffTiebreaker = config ? config.isLotGroupPlayoffTiebreaker : false
     const isPointsLotTiebreaker = config ? config.isPointsLotTiebreaker : false
     const isHead2HeadBeforeGoalDifference = config ? config.isHead2HeadBeforeGoalDifference : false
+    const noSavingDraws = config ? config.noSavingDraws : false
     if (group.three_way_tied) {
       createDrawPools(group, startingIndex, config)
     } else {
@@ -605,6 +607,7 @@ export const sortGroupRankings = (group, startingIndex, config) => {
           return 1
         } else {
           if (isHead2HeadBeforeGoalDifference) {
+            // console.log('config', config)
             updateDrawPool(group, a, b)
             return compareH2h(a, b, false, () => {
               return compareGoalDifference(a, b, true, () => {
@@ -653,7 +656,9 @@ export const sortGroupRankings = (group, startingIndex, config) => {
                 return drawingLots(a, b)
               } else {
                 return compareGoalForward(a, b, false, () => {
-                  saveDrawBothTeams(group, a, b)
+                  if (!noSavingDraws) {
+                    saveDrawBothTeams(group, a, b)
+                  }
                   return compareH2h(a, b, false, () => {
                     return compareFairPoints(a, b)
                   })
@@ -709,7 +714,6 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
     isHead2HeadBeforeGoalDifference: isHead2HeadBeforeGoalDifference(tournament),
     points_for_win: tournament.points_for_win,
   }
-  // console.log('config', config)
   sortGroupRankings(group, 1, config)
   if (tournament.id === 'GC2002' && group.name === 'Group D') {
     group.final_rankings[0].r = 3
@@ -779,7 +783,7 @@ export const collectWildCardRankings = (stage) => {
       const wcr = cloneRanking(g.final_rankings.find((fr) => fr.r === pos))
       wildCard.final_rankings.push(wcr)
     })
-  sortGroupRankings(wildCard, 1, null)
+  sortGroupRankings(wildCard, 1, { noSavingDraws: true })
   return wildCard
 }
 

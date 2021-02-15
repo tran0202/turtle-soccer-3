@@ -1,0 +1,239 @@
+[
+  {
+    "id": "AAC2019",
+    "year": "2019",
+    "name": "AFC Asian Cup United Arab Emirates 2019",
+    "tournament_type_id": "AAC",
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["UAE"],
+      "logo_filename": "aac_2019.png",
+      "mascot_filename": "mascot_UAE_2019_Athletic-Pride.jpg",
+      "start_date": "2019-01-05",
+      "end_date": "2019-02-01",
+      "color": "#ff0000",
+      "team_count": 24,
+      "confed_count": 1,
+      "venue_count": 8,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Qatar_-_Japan,_AFC_Asian_Cup_2019_56.jpg",
+        "text": "Qatar"
+      },
+      {
+        "name": "Qatar",
+        "filename": "Qatar_-_Japan,_AFC_Asian_Cup_2019_05.jpg",
+        "text": "Qatar's starting lineup for the final"
+      },
+      {
+        "name": "Japan",
+        "filename": "IRN-JPN_20190128_02.jpg",
+        "text": "Japan's starting lineup for the semi-final match against Iran"
+      },
+      {
+        "name": "Golden Boot",
+        "filename": "Qatar_v_Japan_–_AFC_Asian_Cup_2019_final_32.jpg",
+        "text": "Almoez Ali won the top scorer award as well as the MVP award as the best player of the tournament."
+      }
+    ],
+    "final_standings": { "champions": "QAT", "runners_up": "JPN", "semi_finalist1": "IRN", "semi_finalist2": "UAE" },
+    "statistics": { "total_matches": 51, "total_goals": 130, "attendance": 644307 },
+    "awards": {
+      "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 9 }],
+      "golden_ball": [{ "player": "Almoez Ali", "team": "QAT" }],
+      "golden_glove": { "player": "Saad Al Sheeb", "team": "QAT" },
+      "fair_play_team": ["JPN"]
+    }
+  },
+  {
+    "id": "AAC2015",
+    "year": "2015",
+    "name": "AFC Asian Cup Australia 2015",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2015.png", "start_date": "2015-01-09", "end_date": "2015-01-31" }
+  },
+  {
+    "id": "AAC2011",
+    "year": "2011",
+    "name": "AFC Asian Cup Qatar 2011",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2011.png", "start_date": "2011-01-07", "end_date": "2011-01-29" }
+  },
+  {
+    "id": "AAC2007",
+    "year": "2007",
+    "name": "AFC Asian Cup Indonesia-Malaysia-Thailand-Vietnam 2007",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2007.png", "start_date": "2007-07-07", "end_date": "2007-07-29" }
+  },
+  {
+    "id": "AAC2004",
+    "year": "2004",
+    "name": "AFC Asian Cup China 2004",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2004.png", "start_date": "2004-07-17", "end_date": "2004-08-07" }
+  },
+  {
+    "id": "AAC2000",
+    "year": "2000",
+    "name": "AFC Asian Cup Lebanon 2000",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_2000.png", "start_date": "2000-10-12", "end_date": "2000-10-29" }
+  },
+  {
+    "id": "AAC1996",
+    "year": "1996",
+    "name": "AFC Asian Cup United Arab Emirates 1996",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "aac_1996.png", "start_date": "1996-12-04", "end_date": "1996-12-21" }
+  },
+  {
+    "id": "AAC1992",
+    "year": "1992",
+    "name": "AFC Asian Cup Japan 1992",
+    "short_name": "Japan 1992",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1992-10-29", "end_date": "1992-11-08" }
+  },
+  {
+    "id": "AAC1988",
+    "year": "1988",
+    "name": "AFC Asian Cup Qatar 1988",
+    "short_name": "Qatar 1988",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1988-12-02", "end_date": "1988-12-18" }
+  },
+  {
+    "id": "AAC1984",
+    "year": "1984",
+    "name": "AFC Asian Cup Singapore 1984",
+    "short_name": "Singapore 1984",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1984-12-01", "end_date": "1984-12-16" }
+  },
+  {
+    "id": "AAC1980",
+    "year": "1980",
+    "name": "AFC Asian Cup Kuwait 1980",
+    "short_name": "Kuwait 1980",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1980-09-15", "end_date": "1980-09-30" }
+  },
+  {
+    "id": "AAC1976",
+    "year": "1976",
+    "name": "AFC Asian Cup Iran 1976",
+    "short_name": "Iran 1976",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1976-06-03", "end_date": "1976-06-13" }
+  },
+  {
+    "id": "AAC1972",
+    "year": "1972",
+    "name": "AFC Asian Cup Thailand 1972",
+    "short_name": "Thailand 1972",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1972-05-07", "end_date": "1972-05-19" }
+  },
+  {
+    "id": "AAC1968",
+    "year": "1968",
+    "name": "AFC Asian Cup Iran 1968",
+    "short_name": "Iran 1968",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1968-05-10", "end_date": "1968-05-19" }
+  },
+  {
+    "id": "AAC1964",
+    "year": "1964",
+    "name": "AFC Asian Cup Israel 1964",
+    "short_name": "Israel 1964",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1964-05-26", "end_date": "1964-06-03" }
+  },
+  {
+    "id": "AAC1960",
+    "year": "1960",
+    "name": "AFC Asian Cup Korea Republic 1960",
+    "short_name": "Korea Republic 1960",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1960-10-14", "end_date": "1960-10-23" }
+  },
+  {
+    "id": "AAC1956",
+    "year": "1956",
+    "name": "AFC Asian Cup Hong Kong 1956",
+    "short_name": "Hong Kong 1956",
+    "tournament_type_id": "AAC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1956-09-01", "end_date": "1956-09-15" }
+  }
+]

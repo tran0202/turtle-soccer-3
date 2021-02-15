@@ -34,6 +34,10 @@
   font-family: 'Hemi Head';
   src: url('fonts/hemi head bd it.ttf');
 }
+@font-face {
+  font-family: 'Go3';
+  src: url('fonts/go3v2.ttf');
+}
 
 @media (min-width: 768px) {
 }

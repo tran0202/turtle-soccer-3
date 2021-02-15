@@ -16,7 +16,6 @@ import NumberFormat from 'react-number-format'
 
 const RankingRowSeparate = (props) => {
   const { round } = props
-  // console.log('round2', round)
   const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round').replace('Playoff Second Round', 'Playoff') : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
@@ -72,6 +71,7 @@ export const RankingHead = (props) => {
 const RankingRow2 = (props) => {
   const { row, config } = props
   const { ranking_type } = config
+  // console.log('ranking_type', ranking_type)
   return (
     <Row className="no-gutters">
       <Col className="col-box-10">
@@ -116,7 +116,9 @@ const RankingRow2 = (props) => {
           {ranking_type === 'group' && row.h2h_notes && !row.fp && !row.draw_lot_notes && (
             <Head2HeadTooltip target={`h2hTooltip-${row.id}`} h2h_notes={row.h2h_notes} group_playoff={row.group_playoff} />
           )}
-          {ranking_type === 'group' && row.fp && <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />}
+          {(ranking_type === 'group' || ranking_type === 'wildcard') && row.fp && row.fp_notes && (
+            <FairPlayTooltip target={`fairPlayTooltip-${row.id}`} fp_notes={row.fp_notes} />
+          )}
           {ranking_type === 'group' && row.draw_lot_notes && <DrawLotTooltip target={`drawLotTooltip-${row.id}`} draw_lot_notes={row.draw_lot_notes} />}
         </React.Fragment>
       </Col>
