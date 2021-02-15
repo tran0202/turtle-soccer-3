@@ -55,11 +55,44 @@
     "year": "2015",
     "name": "AFC Asian Cup Australia 2015",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "aac_2015.png", "start_date": "2015-01-09", "end_date": "2015-01-31" }
+    "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+    "details": { "host": ["AUS"],"logo_filename": "aac_2015.png", "mascot_filename": "mascot_Australia_2015.jpg","start_date": "2015-01-09", "end_date": "2015-01-31",
+        "color": "#00008b",
+        "team_count": 16,
+        "confed_count": 1,
+        "venue_count": 5,
+        "city_count": 5 },
+        "hero_images": [
+          {
+            "name": "Final",
+            "filename": "2015_Asian_Cup_Final.jpg",
+            "text": "2015 AFC Asian Cup Final"
+          },
+          {
+            "name": "Opening match",
+            "filename": "2015_AFC_Asian_Cup_opening_match_Australia_Kuwait,_9_January_2015_(11).jpg",
+            "text": "Opening match between Australia and Kuwait"
+          },
+          {
+            "name": "Opening ceremony",
+            "filename": "AFC_Asian_Cup_Australia_2015.jpg",
+            "text": "Asian Cup opening ceremony"
+          },
+          {
+            "name": "Group C",
+            "filename": "AAMI_Park_2015_AFC_Asian_Cup_Iran_v_Bahrain.jpg",
+            "text": "Iran v Bahrain during the 2015 AFC Asian Cup"
+          }
+        ],
+        "final_standings": { "champions": "AUS", "runners_up": "KOR", "third_place": "UAE", "fourth_place": "IRQ" },
+        "statistics": { "total_matches": 32, "total_goals": 85, "attendance": 705705 },
+        "awards": {
+          "golden_boot": [{ "player": "Ali Mabkhout", "team": "UAE", "goals": 5 }],
+          "golden_ball": [{ "player": "Massimo Luongo", "team": "AUS" }],
+          "golden_glove": { "player": "Mathew Ryan", "team": "AUS" },
+          "fair_play_team": ["AUS"]
+        }
   },
   {
     "id": "AAC2011",

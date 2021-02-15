@@ -1,424 +1,274 @@
 {
-  "id": "AAC2019",
+  "id": "AAC2015",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
-      "eliminateCount": 16,
-      "next_round": "Round of 16",
-      "advancement": {
-        "teams": {
-          "auto": [1, 2],
-          "wild_card": { "pos": 3, "count": 4 },
-          "eliminated": [4],
-          "text": "The top 2 teams and the 4 best third-placed teams would advance to the Round of 16."
-        }
-      },
+      "eliminateCount": 8,
+      "next_round": "Quarter-finals",
+      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the quarter-finals." } },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "UAE" }, { "id": "BHR" }, { "id": "THA" }, { "id": "IND" }],
+          "teams": [{ "id": "AUS" }, { "id": "KUW" }, { "id": "KOR" }, { "id": "OMA" }],
           "matches": [
             {
-              "home_team": "UAE",
-              "away_team": "BHR",
-              "home_score": 1,
+              "home_team": "AUS",
+              "away_team": "KUW",
+              "home_score": 4,
               "away_score": 1,
-              "date": "2019-01-05",
-              "time": "20:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
+              "date": "2015-01-09",
+              "time": "12:00",
+              "stadium": "Melbourne Rectangular Stadium",
+              "city": "Melbourne"
             },
             {
-              "home_team": "THA",
-              "away_team": "IND",
+              "home_team": "KOR",
+              "away_team": "OMA",
               "home_score": 1,
+              "away_score": 0,
+              "date": "2015-01-10",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
+            },
+            {
+              "home_team": "KUW",
+              "away_team": "KOR",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2015-01-13",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
+            },
+            {
+              "home_team": "OMA",
+              "away_team": "AUS",
+              "home_score": 0,
               "away_score": 4,
-              "date": "2019-01-06",
-              "time": "17:30",
-              "stadium": "Al Nahyan Stadium",
-              "city": "Abu Dhabi"
+              "date": "2015-01-13",
+              "time": "12:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney"
             },
             {
-              "home_team": "BHR",
-              "away_team": "THA",
+              "home_team": "AUS",
+              "away_team": "KOR",
               "home_score": 0,
               "away_score": 1,
-              "date": "2019-01-10",
-              "time": "15:00",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai"
+              "date": "2015-01-17",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
             },
             {
-              "home_team": "IND",
-              "away_team": "UAE",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2019-01-10",
-              "time": "20:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "UAE",
-              "away_team": "THA",
+              "home_team": "OMA",
+              "away_team": "KUW",
               "home_score": 1,
-              "away_score": 1,
-              "date": "2019-01-14",
-              "time": "20:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain"
-            },
-            {
-              "home_team": "IND",
-              "away_team": "BHR",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2019-01-14",
-              "time": "20:00",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah"
+              "away_score": 0,
+              "date": "2015-01-17",
+              "time": "12:00",
+              "stadium": "Newcastle Stadium",
+              "city": "Newcastle"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "AUS" }, { "id": "JOR" }, { "id": "SYR" }, { "id": "PLE" }],
+          "teams": [{ "id": "UZB" }, { "id": "PRK" }, { "id": "KSA" }, { "id": "CHN" }],
           "matches": [
             {
-              "home_team": "AUS",
-              "away_team": "JOR",
+              "home_team": "UZB",
+              "away_team": "PRK",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2015-01-10",
+              "time": "12:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney"
+            },
+            {
+              "home_team": "KSA",
+              "away_team": "CHN",
               "home_score": 0,
               "away_score": 1,
-              "date": "2019-01-06",
-              "time": "15:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain"
+              "date": "2015-01-10",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
             },
             {
-              "home_team": "SYR",
-              "away_team": "PLE",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-01-06",
-              "time": "20:00",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah"
+              "home_team": "PRK",
+              "away_team": "KSA",
+              "home_score": 1,
+              "away_score": 4,
+              "date": "2015-01-14",
+              "time": "12:00",
+              "stadium": "Melbourne Rectangular Stadium",
+              "city": "Melbourne"
             },
             {
-              "home_team": "JOR",
-              "away_team": "SYR",
+              "home_team": "CHN",
+              "away_team": "UZB",
               "home_score": 2,
-              "away_score": 0,
-              "date": "2019-01-10",
-              "time": "17:30",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain"
+              "away_score": 1,
+              "date": "2015-01-14",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
             },
             {
-              "home_team": "PLE",
-              "away_team": "AUS",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-01-11",
-              "time": "15:00",
-              "stadium": "Rashid Stadium",
-              "city": "Dubai"
-            },
-            {
-              "home_team": "AUS",
-              "away_team": "SYR",
+              "home_team": "UZB",
+              "away_team": "KSA",
               "home_score": 3,
-              "away_score": 2,
-              "date": "2019-01-15",
-              "time": "17:30",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain"
+              "away_score": 1,
+              "date": "2015-01-18",
+              "time": "12:00",
+              "stadium": "AAMI Park",
+              "city": "Melbourne"
             },
             {
-              "home_team": "PLE",
-              "away_team": "JOR",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-01-15",
-              "time": "17:30",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi"
+              "home_team": "CHN",
+              "away_team": "PRK",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2015-01-18",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "CHN" }, { "id": "KGZ" }, { "id": "KOR" }, { "id": "PHI" }],
+          "teams": [{ "id": "UAE" }, { "id": "QAT" }, { "id": "IRN" }, { "id": "BHR" }],
           "matches": [
             {
-              "home_team": "CHN",
-              "away_team": "KGZ",
-              "home_score": 2,
+              "home_team": "UAE",
+              "away_team": "QAT",
+              "home_score": 4,
               "away_score": 1,
-              "away_fair_pts": -1,
-              "date": "2019-01-07",
-              "time": "15:00",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain"
+              "date": "2015-01-11",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
             },
             {
-              "home_team": "KOR",
-              "away_team": "PHI",
+              "home_team": "IRN",
+              "away_team": "BHR",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2015-01-11",
+              "time": "12:00",
+              "stadium": "Melbourne Rectangular Stadium",
+              "city": "Melbourne"
+            },
+            {
+              "home_team": "BHR",
+              "away_team": "UAE",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2015-01-15",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
+            },
+            {
+              "home_team": "QAT",
+              "away_team": "IRN",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2015-01-15",
+              "time": "12:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "UAE",
               "home_score": 1,
               "away_score": 0,
-              "date": "2019-01-07",
-              "time": "17:30",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai"
+              "date": "2015-01-19",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
             },
             {
-              "home_team": "PHI",
-              "away_team": "CHN",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-01-11",
-              "time": "17:30",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "KGZ",
-              "away_team": "KOR",
-              "home_score": 0,
-              "away_score": 1,
-              "home_fair_pts": -1,
-              "date": "2019-01-11",
-              "time": "20:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "CHN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2019-01-16",
-              "time": "17:30",
-              "stadium": "Al Nahyan Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "KGZ",
-              "away_team": "PHI",
-              "home_score": 3,
-              "away_score": 1,
-              "home_fair_pts": -3,
-              "date": "2019-01-16",
-              "time": "17:30",
-              "stadium": "Rashid Stadium",
-              "city": "Dubai"
+              "home_team": "QAT",
+              "away_team": "BHR",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2015-01-19",
+              "time": "12:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney"
             }
           ]
         },
         {
           "name": "Group D",
-          "teams": [{ "id": "IRN" }, { "id": "YEM" }, { "id": "IRQ" }, { "id": "VIE" }],
+          "teams": [{ "id": "JPN" }, { "id": "PLE" }, { "id": "JOR" }, { "id": "IRQ" }],
           "matches": [
             {
-              "home_team": "IRN",
-              "away_team": "YEM",
-              "home_score": 5,
+              "home_team": "JPN",
+              "away_team": "PLE",
+              "home_score": 4,
               "away_score": 0,
-              "date": "2019-01-07",
-              "time": "20:00",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi"
+              "date": "2015-01-12",
+              "time": "12:00",
+              "stadium": "Newcastle Stadium",
+              "city": "Newcastle"
+            },
+            {
+              "home_team": "JOR",
+              "away_team": "IRQ",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2015-01-12",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
+            },
+            {
+              "home_team": "PLE",
+              "away_team": "JOR",
+              "home_score": 1,
+              "away_score": 5,
+              "date": "2015-01-16",
+              "time": "12:00",
+              "stadium": "Melbourne Rectangular Stadium",
+              "city": "Melbourne"
             },
             {
               "home_team": "IRQ",
-              "away_team": "VIE",
-              "home_score": 3,
-              "away_score": 2,
-              "away_fair_pts": -2,
-              "date": "2019-01-08",
-              "time": "17:30",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "VIE",
-              "away_team": "IRN",
-              "home_score": 0,
-              "away_score": 2,
-              "home_fair_pts": -2,
-              "date": "2019-01-12",
-              "time": "15:00",
-              "stadium": "Al Nahyan Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "YEM",
-              "away_team": "IRQ",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-01-12",
-              "time": "17:30",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah"
-            },
-            {
-              "home_team": "VIE",
-              "away_team": "YEM",
-              "home_score": 2,
-              "away_score": 0,
-              "home_fair_pts": -1,
-              "date": "2019-01-16",
-              "time": "20:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain"
-            },
-            {
-              "home_team": "IRN",
-              "away_team": "IRQ",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2019-01-16",
-              "time": "20:00",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai"
-            }
-          ]
-        },
-        {
-          "name": "Group E",
-          "teams": [{ "id": "KSA" }, { "id": "PRK" }, { "id": "QAT" }, { "id": "LBN" }],
-          "matches": [
-            {
-              "home_team": "KSA",
-              "away_team": "PRK",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "2019-01-08",
-              "time": "20:00",
-              "stadium": "Rashid Stadium",
-              "city": "Dubai"
-            },
-            {
-              "home_team": "QAT",
-              "away_team": "LBN",
-              "home_score": 2,
-              "away_score": 0,
-              "away_fair_pts": -2,
-              "date": "2019-01-09",
-              "time": "20:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain"
-            },
-            {
-              "home_team": "LBN",
-              "away_team": "KSA",
-              "home_score": 0,
-              "away_score": 2,
-              "home_fair_pts": -3,
-              "date": "2019-01-12",
-              "time": "20:00",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai"
-            },
-            {
-              "home_team": "PRK",
-              "away_team": "QAT",
-              "home_score": 0,
-              "away_score": 6,
-              "date": "2019-01-13",
-              "time": "15:00",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain"
-            },
-            {
-              "home_team": "KSA",
-              "away_team": "QAT",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2019-01-17",
-              "time": "20:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "LBN",
-              "away_team": "PRK",
-              "home_score": 4,
-              "away_score": 1,
-              "home_fair_pts": -2,
-              "date": "2019-01-17",
-              "time": "20:00",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah"
-            }
-          ]
-        },
-        {
-          "name": "Group F",
-          "teams": [{ "id": "JPN" }, { "id": "TKM" }, { "id": "UZB" }, { "id": "OMA" }],
-          "matches": [
-            {
-              "home_team": "JPN",
-              "away_team": "TKM",
-              "home_score": 3,
-              "away_score": 2,
-              "date": "2019-01-09",
-              "time": "15:00",
-              "stadium": "Al Nahyan Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "UZB",
-              "away_team": "OMA",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2019-01-09",
-              "time": "17:30",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah"
-            },
-            {
-              "home_team": "OMA",
               "away_team": "JPN",
               "home_score": 0,
               "away_score": 1,
-              "home_fair_pts": -3,
-              "date": "2019-01-13",
-              "time": "17:30",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
-            },
-            {
-              "home_team": "TKM",
-              "away_team": "UZB",
-              "home_score": 0,
-              "away_score": 4,
-              "date": "2019-01-13",
-              "time": "20:00",
-              "stadium": "Rashid Stadium",
-              "city": "Dubai"
-            },
-            {
-              "home_team": "OMA",
-              "away_team": "TKM",
-              "home_score": 3,
-              "away_score": 1,
-              "home_fair_pts": -3,
-              "date": "2019-01-17",
-              "time": "17:30",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi"
+              "date": "2015-01-16",
+              "time": "12:00",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane"
             },
             {
               "home_team": "JPN",
-              "away_team": "UZB",
+              "away_team": "JOR",
               "home_score": 2,
-              "away_score": 1,
-              "date": "2019-01-17",
-              "time": "17:30",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain"
+              "away_score": 0,
+              "date": "2015-01-20",
+              "time": "12:00",
+              "stadium": "Melbourne Rectangular Stadium",
+              "city": "Melbourne"
+            },
+            {
+              "home_team": "IRQ",
+              "away_team": "PLE",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2015-01-20",
+              "time": "12:00",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra"
             }
           ]
         }
@@ -429,161 +279,63 @@
       "type": "knockout",
       "rounds": [
         {
-          "name": "Round of 16",
-          "short_name": "1/8",
-          "eliminateCount": 8,
-          "next_round": "Quarter-finals",
-          "matches": [
-            {
-              "home_team": "JOR",
-              "away_team": "VIE",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 2,
-              "away_penalty_score": 4,
-              "date": "2019-01-20",
-              "time": "15:00",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "THA",
-              "away_team": "CHN",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2019-01-20",
-              "time": "18:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "IRN",
-              "away_team": "OMA",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2019-01-20",
-              "time": "21:00",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "JPN",
-              "away_team": "KSA",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-01-21",
-              "time": "15:00",
-              "stadium": "Sharjah Stadium",
-              "city": "Sharjah",
-              "bracket_order": 4
-            },
-            {
-              "home_team": "AUS",
-              "away_team": "UZB",
-              "home_score": 0,
-              "away_score": 0,
-              "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 4,
-              "away_penalty_score": 2,
-              "date": "2019-01-21",
-              "time": "18:00",
-              "stadium": "Khalifa bin Zayed Stadium",
-              "city": "Al Ain",
-              "bracket_order": 8
-            },
-            {
-              "home_team": "UAE",
-              "away_team": "KGZ",
-              "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "2019-01-21",
-              "time": "21:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi",
-              "bracket_order": 7
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "BHR",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 1,
-              "away_extra_score": 0,
-              "date": "2019-01-22",
-              "time": "17:00",
-              "stadium": "Rashid Stadium",
-              "city": "Dubai",
-              "bracket_order": 5
-            },
-            {
-              "home_team": "QAT",
-              "away_team": "IRQ",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2019-01-22",
-              "time": "20:00",
-              "stadium": "Al Nahyan Stadium",
-              "city": "Abu Dhabi",
-              "bracket_order": 6
-            }
-          ]
-        },
-        {
           "name": "Quarter-finals",
           "short_name": "1/4",
           "eliminateCount": 4,
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "VIE",
-              "away_team": "JPN",
+              "home_team": "KOR",
+              "away_team": "UZB",
               "home_score": 0,
-              "away_score": 1,
-              "date": "2019-01-24",
-              "time": "17:00",
-              "stadium": "Al Maktoum Stadium",
-              "city": "Dubai",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "CHN",
-              "away_team": "IRN",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-01-24",
-              "time": "20:00",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi",
+              "away_score": 0,
+              "home_extra_score": 2,
+              "away_extra_score": 0,
+              "date": "2015-01-22",
+              "time": "18:30",
+              "stadium": "AAMI Park",
+              "city": "Melbourne",
               "bracket_order": 1
             },
             {
-              "home_team": "KOR",
-              "away_team": "QAT",
+              "home_team": "CHN",
+              "away_team": "AUS",
               "home_score": 0,
-              "away_score": 1,
-              "date": "2019-01-25",
-              "time": "17:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi",
+              "away_score": 2,
+              "date": "2015-01-22",
+              "time": "20:30",
+              "stadium": "Brisbane Stadium",
+              "city": "Brisbane",
               "bracket_order": 3
             },
             {
-              "home_team": "UAE",
-              "away_team": "AUS",
+              "home_team": "IRN",
+              "away_team": "IRQ",
               "home_score": 1,
-              "away_score": 0,
-              "date": "2019-01-25",
-              "time": "20:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain",
+              "away_score": 1,
+              "home_extra_score": 2,
+              "away_extra_score": 2,
+              "home_penalty_score": 6,
+              "away_penalty_score": 7,
+              "date": "2015-01-23",
+              "time": "17:30",
+              "stadium": "Canberra Stadium",
+              "city": "Canberra",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "UAE",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 4,
+              "away_penalty_score": 5,
+              "date": "2015-01-23",
+              "time": "20:30",
+              "stadium": "Stadium Australia",
+              "city": "Sydney",
               "bracket_order": 4
             }
           ]
@@ -595,26 +347,42 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "IRN",
-              "away_team": "JPN",
-              "home_score": 0,
-              "away_score": 3,
-              "date": "2019-01-28",
-              "time": "18:00",
-              "stadium": "Hazza bin Zayed Stadium",
-              "city": "Al Ain",
+              "home_team": "KOR",
+              "away_team": "IRQ",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2015-01-26",
+              "time": "20:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney",
               "bracket_order": 1
             },
             {
-              "home_team": "QAT",
+              "home_team": "AUS",
               "away_team": "UAE",
-              "home_score": 4,
+              "home_score": 2,
               "away_score": 0,
-              "date": "2019-01-29",
-              "time": "18:00",
-              "stadium": "Mohammed bin Zayed Stadium",
-              "city": "Abu Dhabi",
+              "date": "2015-01-27",
+              "time": "20:00",
+              "stadium": "Newcastle Stadium",
+              "city": "Newcastle",
               "bracket_order": 2
+            }
+          ]
+        },
+        {
+          "name": "Third-place",
+          "short_name": "3rd",
+          "matches": [
+            {
+              "home_team": "IRQ",
+              "away_team": "UAE",
+              "home_score": 2,
+              "away_score": 3,
+              "date": "2015-01-30",
+              "time": "20:00",
+              "stadium": "Newcastle Stadium",
+              "city": "Newcastle"
             }
           ]
         },
@@ -623,14 +391,16 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "JPN",
-              "away_team": "QAT",
+              "home_team": "KOR",
+              "away_team": "AUS",
               "home_score": 1,
-              "away_score": 3,
-              "date": "2019-02-01",
-              "time": "18:00",
-              "stadium": "Zayed Sports City Stadium",
-              "city": "Abu Dhabi"
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "2015-01-31",
+              "time": "20:00",
+              "stadium": "Stadium Australia",
+              "city": "Sydney"
             }
           ]
         }
