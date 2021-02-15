@@ -1,274 +1,215 @@
 {
-  "id": "AAC2015",
+  "id": "AAC2000",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
       "eliminateCount": 8,
       "next_round": "Quarter-finals",
-      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the quarter-finals." } },
+      "advancement": {
+        "teams": {
+          "auto": [1, 2],
+          "wild_card": { "pos": 3, "count": 2 },
+          "eliminated": [4],
+          "text": "The top 2 teams and the 2 best third-placed teams would advance to the Quarter-finals."
+        }
+      },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "AUS" }, { "id": "KUW" }, { "id": "KOR" }, { "id": "OMA" }],
+          "teams": [{ "id": "IRQ-1991-2004" }, { "id": "THA" }, { "id": "LBN" }, { "id": "IRN" }],
           "matches": [
             {
-              "home_team": "AUS",
-              "away_team": "KUW",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "2015-01-09",
-              "time": "12:00",
-              "stadium": "Melbourne Rectangular Stadium",
-              "city": "Melbourne"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "OMA",
-              "home_score": 1,
+              "home_team": "IRQ-1991-2004",
+              "away_team": "THA",
+              "home_score": 2,
               "away_score": 0,
-              "date": "2015-01-10",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
+              "date": "2000-10-12",
+              "time": "15:00",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
             },
             {
-              "home_team": "KUW",
-              "away_team": "KOR",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2015-01-13",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "OMA",
-              "away_team": "AUS",
+              "home_team": "LBN",
+              "away_team": "IRN",
               "home_score": 0,
               "away_score": 4,
-              "date": "2015-01-13",
-              "time": "12:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney"
+              "date": "2000-10-12",
+              "time": "20:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             },
             {
-              "home_team": "AUS",
-              "away_team": "KOR",
-              "home_score": 0,
+              "home_team": "IRN",
+              "away_team": "THA",
+              "home_score": 1,
               "away_score": 1,
-              "date": "2015-01-17",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
+              "date": "2000-10-15",
+              "time": "17:00",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             },
             {
-              "home_team": "OMA",
-              "away_team": "KUW",
+              "home_team": "LBN",
+              "away_team": "IRQ-1991-2004",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2000-10-15",
+              "time": "19:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "IRQ-1991-2004",
               "home_score": 1,
               "away_score": 0,
-              "date": "2015-01-17",
-              "time": "12:00",
-              "stadium": "Newcastle Stadium",
-              "city": "Newcastle"
+              "date": "2000-10-18",
+              "time": "19:30",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
+            },
+            {
+              "home_team": "LBN",
+              "away_team": "THA",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2000-10-18",
+              "time": "19:30",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "UZB" }, { "id": "PRK" }, { "id": "KSA" }, { "id": "CHN" }],
+          "teams": [{ "id": "KOR" }, { "id": "CHN" }, { "id": "KUW" }, { "id": "IDN" }],
           "matches": [
             {
-              "home_team": "UZB",
-              "away_team": "PRK",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2015-01-10",
-              "time": "12:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney"
+              "home_team": "KOR",
+              "away_team": "CHN",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2000-10-13",
+              "time": "17:00",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli"
             },
             {
-              "home_team": "KSA",
-              "away_team": "CHN",
+              "home_team": "KUW",
+              "away_team": "IDN",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2000-10-13",
+              "time": "19:45",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli"
+            },
+            {
+              "home_team": "CHN",
+              "away_team": "IDN",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "2000-10-16",
+              "time": "17:00",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "KUW",
               "home_score": 0,
               "away_score": 1,
-              "date": "2015-01-10",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
-            },
-            {
-              "home_team": "PRK",
-              "away_team": "KSA",
-              "home_score": 1,
-              "away_score": 4,
-              "date": "2015-01-14",
-              "time": "12:00",
-              "stadium": "Melbourne Rectangular Stadium",
-              "city": "Melbourne"
+              "date": "2000-10-16",
+              "time": "19:45",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli"
             },
             {
               "home_team": "CHN",
-              "away_team": "UZB",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2015-01-14",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
+              "away_team": "KUW",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2000-10-19",
+              "time": "19:30",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli"
             },
             {
-              "home_team": "UZB",
-              "away_team": "KSA",
+              "home_team": "KOR",
+              "away_team": "IDN",
               "home_score": 3,
-              "away_score": 1,
-              "date": "2015-01-18",
-              "time": "12:00",
-              "stadium": "AAMI Park",
-              "city": "Melbourne"
-            },
-            {
-              "home_team": "CHN",
-              "away_team": "PRK",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2015-01-18",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
+              "away_score": 0,
+              "date": "2000-10-19",
+              "time": "19:30",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "UAE" }, { "id": "QAT" }, { "id": "IRN" }, { "id": "BHR" }],
+          "teams": [{ "id": "KSA" }, { "id": "JPN" }, { "id": "QAT" }, { "id": "UZB" }],
           "matches": [
             {
-              "home_team": "UAE",
-              "away_team": "QAT",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "2015-01-11",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "IRN",
-              "away_team": "BHR",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2015-01-11",
-              "time": "12:00",
-              "stadium": "Melbourne Rectangular Stadium",
-              "city": "Melbourne"
-            },
-            {
-              "home_team": "BHR",
-              "away_team": "UAE",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2015-01-15",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
-            },
-            {
-              "home_team": "QAT",
-              "away_team": "IRN",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2015-01-15",
-              "time": "12:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney"
-            },
-            {
-              "home_team": "IRN",
-              "away_team": "UAE",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "2015-01-19",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
-            },
-            {
-              "home_team": "QAT",
-              "away_team": "BHR",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2015-01-19",
-              "time": "12:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney"
-            }
-          ]
-        },
-        {
-          "name": "Group D",
-          "teams": [{ "id": "JPN" }, { "id": "PLE" }, { "id": "JOR" }, { "id": "IRQ" }],
-          "matches": [
-            {
-              "home_team": "JPN",
-              "away_team": "PLE",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "2015-01-12",
-              "time": "12:00",
-              "stadium": "Newcastle Stadium",
-              "city": "Newcastle"
-            },
-            {
-              "home_team": "JOR",
-              "away_team": "IRQ",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "2015-01-12",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
-            },
-            {
-              "home_team": "PLE",
-              "away_team": "JOR",
-              "home_score": 1,
-              "away_score": 5,
-              "date": "2015-01-16",
-              "time": "12:00",
-              "stadium": "Melbourne Rectangular Stadium",
-              "city": "Melbourne"
-            },
-            {
-              "home_team": "IRQ",
+              "home_team": "KSA",
               "away_team": "JPN",
-              "home_score": 0,
+              "home_score": 1,
+              "away_score": 4,
+              "date": "2000-10-14",
+              "time": "17:00",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
+            },
+            {
+              "home_team": "QAT",
+              "away_team": "UZB",
+              "home_score": 1,
               "away_score": 1,
-              "date": "2015-01-16",
-              "time": "12:00",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane"
+              "date": "2000-10-14",
+              "time": "19:45",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
             },
             {
               "home_team": "JPN",
-              "away_team": "JOR",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2015-01-20",
-              "time": "12:00",
-              "stadium": "Melbourne Rectangular Stadium",
-              "city": "Melbourne"
+              "away_team": "UZB",
+              "home_score": 8,
+              "away_score": 1,
+              "date": "2000-10-17",
+              "time": "17:00",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
             },
             {
-              "home_team": "IRQ",
-              "away_team": "PLE",
-              "home_score": 2,
+              "home_team": "KSA",
+              "away_team": "QAT",
+              "home_score": 0,
               "away_score": 0,
-              "date": "2015-01-20",
-              "time": "12:00",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra"
+              "date": "2000-10-17",
+              "time": "19:45",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
+            },
+            {
+              "home_team": "KSA",
+              "away_team": "UZB",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "2000-10-20",
+              "time": "19:30",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "QAT",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2000-10-20",
+              "time": "19:30",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             }
           ]
         }
@@ -285,57 +226,51 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "KOR",
-              "away_team": "UZB",
-              "home_score": 0,
-              "away_score": 0,
-              "home_extra_score": 2,
-              "away_extra_score": 0,
-              "date": "2015-01-22",
-              "time": "18:30",
-              "stadium": "AAMI Park",
-              "city": "Melbourne",
-              "bracket_order": 1
-            },
-            {
-              "home_team": "CHN",
-              "away_team": "AUS",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2015-01-22",
-              "time": "20:30",
-              "stadium": "Brisbane Stadium",
-              "city": "Brisbane",
-              "bracket_order": 3
-            },
-            {
               "home_team": "IRN",
-              "away_team": "IRQ",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 2,
-              "away_extra_score": 2,
-              "home_penalty_score": 6,
-              "away_penalty_score": 7,
-              "date": "2015-01-23",
-              "time": "17:30",
-              "stadium": "Canberra Stadium",
-              "city": "Canberra",
-              "bracket_order": 2
-            },
-            {
-              "home_team": "JPN",
-              "away_team": "UAE",
+              "away_team": "KOR",
               "home_score": 1,
               "away_score": 1,
               "home_extra_score": 0,
-              "away_extra_score": 0,
-              "home_penalty_score": 4,
-              "away_penalty_score": 5,
-              "date": "2015-01-23",
-              "time": "20:30",
-              "stadium": "Stadium Australia",
-              "city": "Sydney",
+              "away_extra_score": 1,
+              "date": "2000-10-23",
+              "time": "16:45",
+              "stadium": "International Olympic Stadium",
+              "city": "Tripoli",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "CHN",
+              "away_team": "QAT",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "2000-10-23",
+              "time": "19:45",
+              "stadium": "Saida International Stadium",
+              "city": "Sidon",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "IRQ-1991-2004",
+              "home_score": 4,
+              "away_score": 1,
+              "date": "2000-10-24",
+              "time": "16:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "KUW",
+              "away_team": "KSA",
+              "home_score": 2,
+              "away_score": 2,
+              "home_extra_score": 0,
+              "away_extra_score": 1,
+              "date": "2000-10-24",
+              "time": "19:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut",
               "bracket_order": 4
             }
           ]
@@ -348,25 +283,25 @@
           "matches": [
             {
               "home_team": "KOR",
-              "away_team": "IRQ",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2015-01-26",
-              "time": "20:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney",
-              "bracket_order": 1
+              "away_team": "KSA",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2000-10-26",
+              "time": "16:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut",
+              "bracket_order": 2
             },
             {
-              "home_team": "AUS",
-              "away_team": "UAE",
+              "home_team": "CHN",
+              "away_team": "JPN",
               "home_score": 2,
-              "away_score": 0,
-              "date": "2015-01-27",
-              "time": "20:00",
-              "stadium": "Newcastle Stadium",
-              "city": "Newcastle",
-              "bracket_order": 2
+              "away_score": 3,
+              "date": "2000-10-26",
+              "time": "19:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut",
+              "bracket_order": 1
             }
           ]
         },
@@ -375,14 +310,14 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "IRQ",
-              "away_team": "UAE",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "2015-01-30",
-              "time": "20:00",
-              "stadium": "Newcastle Stadium",
-              "city": "Newcastle"
+              "home_team": "CHN",
+              "away_team": "KOR",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2000-10-29",
+              "time": "17:00",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             }
           ]
         },
@@ -391,16 +326,14 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "KOR",
-              "away_team": "AUS",
+              "home_team": "JPN",
+              "away_team": "KSA",
               "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 1,
-              "date": "2015-01-31",
-              "time": "20:00",
-              "stadium": "Stadium Australia",
-              "city": "Sydney"
+              "away_score": 0,
+              "date": "2000-10-29",
+              "time": "19:45",
+              "stadium": "Sports City Stadium",
+              "city": "Beirut"
             }
           ]
         }
