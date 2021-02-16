@@ -619,11 +619,40 @@
     "name": "AFC Asian Cup Iran 1968",
     "short_name": "Iran 1968",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1968-05-10", "end_date": "1968-05-19" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["IRN-1964-1980"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1968-05-10",
+      "end_date": "1968-05-19",
+      "color": "#089748",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Amjadieh Stadium, Tehran",
+        "filename": "Amjadieh_Stadium.jpg",
+        "text": "The Amjadieh Stadium hosted all the matches."
+      },
+      {
+        "name": "Tehran, Iran",
+        "filename": "Azadi_Tower_(29358497718)_(cropped).jpg",
+        "text": "The Azadi Tower"
+      }
+    ],
+    "final_standings": { "champions": "IRN-1964-1980", "runners_up": "BUR-1948-1974", "third_place": "ISR", "fourth_place": "TPE-1960-1979" },
+    "statistics": { "total_matches": 10, "total_goals": 32 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Homayoun Behzadi", "team": "IRN-1964-1980", "goals": 4 },
+        { "player": "Moshe Romano", "team": "ISR", "goals": 4 },
+        { "player": "Giora Spiegel", "team": "ISR", "goals": 4 }
+      ]
+    }
   },
   {
     "id": "AAC1964",

@@ -229,6 +229,16 @@
   { "id": "IRQ-1991-2004", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-1991-2004", "parent_team_id": "IRQ" },
   { "id": "YMD", "name": "South Yemen", "team_type_id": "MNT", "nation_id": "YMD", "parent_team_id": "" },
   { "id": "CAM-1970-1975", "name": "Khmer Republic", "short_name": "Khmer Rep.", "team_type_id": "MNT", "nation_id": "CAM-1970-1975", "parent_team_id": "CAM" },
+  { "id": "BUR-1948-1974", "name": "Burma", "team_type_id": "MNT", "nation_id": "BUR-1948-1974", "parent_team_id": "MYA" },
+  {
+    "id": "TPE-1960-1979",
+    "name": "Republic of China",
+    "short_name": "Rep. China",
+    "team_type_id": "MNT",
+    "nation_id": "TPE-1960-1979",
+    "parent_team_id": "TPE"
+  },
+  { "id": "HKG-1959-1997", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "HKG-1959-1997", "parent_team_id": "HKG" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -482,8 +492,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "1032", "name": "Burma", "team_type_id": "MNT", "nation_id": "223", "parent_team_id": "1031" },
-  { "id": "1034", "name": "Republic of China", "team_type_id": "MNT", "nation_id": "225", "parent_team_id": "1033" },
   { "id": "1036", "name": "South Vietnam", "team_type_id": "MNT", "nation_id": "234", "parent_team_id": "1000" },
   { "id": "PNG", "name": "Papua New Guinea", "team_type_id": "MNT", "nation_id": "PNG", "parent_team_id": "" },
   { "id": "1038", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "136", "parent_team_id": "" },
@@ -503,7 +511,6 @@
   { "id": "1089", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "276", "parent_team_id": "1090" },
   { "id": "1090", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "268", "parent_team_id": "" },
   { "id": "1092", "name": "Costa Rica", "team_type_id": "MNT", "nation_id": "289", "parent_team_id": "27" },
-  { "id": "1093", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "290", "parent_team_id": "1035" },
   { "id": "1094", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "291", "parent_team_id": "1035" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
