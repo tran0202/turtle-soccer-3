@@ -239,6 +239,7 @@
     "parent_team_id": "TPE"
   },
   { "id": "HKG-1959-1997", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "HKG-1959-1997", "parent_team_id": "HKG" },
+  { "id": "VSO", "name": "South Vietnam", "short_name": "S. Vietnam", "team_type_id": "MNT", "nation_id": "VSO", "parent_team_id": "VIE" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -492,7 +493,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "1036", "name": "South Vietnam", "team_type_id": "MNT", "nation_id": "234", "parent_team_id": "1000" },
   { "id": "PNG", "name": "Papua New Guinea", "team_type_id": "MNT", "nation_id": "PNG", "parent_team_id": "" },
   { "id": "1038", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "136", "parent_team_id": "" },
   { "id": "1039", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "186", "parent_team_id": "" },
