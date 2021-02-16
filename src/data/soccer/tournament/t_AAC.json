@@ -330,7 +330,7 @@
       {
         "name": "Al-Maktoum Stadium, Dubai",
         "filename": "Al_Maktoum_Stadium_20190110.jpg",
-        "text": "The Al-Maktoum Stadium hosted the quarter-final Korea Republic PR vs Iran."
+        "text": "The Al-Maktoum Stadium hosted the quarter-final Korea Republic vs Iran."
       },
       {
         "name": "Abu Dhabi, United Arab Emirates",
@@ -358,11 +358,42 @@
     "name": "AFC Asian Cup Japan 1992",
     "short_name": "Japan 1992",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1992-10-29", "end_date": "1992-11-08" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": { "host": ["JPN"],"logo_filename": "AFC_Asian_Cup.png", "start_date": "1992-10-29", "end_date": "1992-11-08",
+      "color": "#fa2200",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 2 },
+      "hero_images": [
+        {
+          "name": "Hiroshima Big Arch, Hiroshima",
+          "filename": "Bigarch050423.jpg",
+          "text": "The Hiroshima Big Arch hosted the final."
+        },
+        {
+          "name": "Hiroshima Stadium, Hiroshima",
+          "filename": "HIROSHIMA_Sogo_Ground_1988.jpg",
+          "text": "The Hiroshima Stadium hosted the semi-final Saudi Arabia vs United Arab Emirates."
+        },
+        {
+          "name": "Bingo Sports Park, Onomichi",
+          "filename": "Bingoriku1.jpg",
+          "text": "The Bingo Sports Park hosted several group matches."
+        },
+        {
+          "name": "Hiroshima, Japan",
+          "filename": "Hiroshima_Peace_Memorial_2008_02_(cropped).JPG",
+          "text": "Hiroshima Peace Memorial"
+        }
+      ],
+      "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "CHN", "fourth_place": "UAE" },
+      "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 316496 },
+      "awards": {
+        "golden_boot": [{ "player": "Fahad Al-Bishi", "team": "KSA", "goals": 3 }],
+        "golden_ball": [{ "player": "Kazuyoshi Miura", "team": "JPN" }]
+      }
   },
   {
     "id": "AAC1988",
