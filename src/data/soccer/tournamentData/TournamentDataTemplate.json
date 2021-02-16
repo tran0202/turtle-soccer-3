@@ -1,5 +1,5 @@
 {
-  "id": "AAC2000",
+  "id": "AAC1996",
   "stages": [
     {
       "name": "Group Stage",
@@ -17,199 +17,199 @@
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "IRQ-1991-2004" }, { "id": "THA" }, { "id": "LBN" }, { "id": "IRN" }],
+          "teams": [{ "id": "UAE" }, { "id": "KOR" }, { "id": "IDN" }, { "id": "KUW" }],
           "matches": [
             {
-              "home_team": "IRQ-1991-2004",
-              "away_team": "THA",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2000-10-12",
-              "time": "15:00",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
-            },
-            {
-              "home_team": "LBN",
-              "away_team": "IRN",
-              "home_score": 0,
-              "away_score": 4,
-              "date": "2000-10-12",
-              "time": "20:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
-            },
-            {
-              "home_team": "IRN",
-              "away_team": "THA",
+              "home_team": "UAE",
+              "away_team": "KOR",
               "home_score": 1,
               "away_score": 1,
-              "date": "2000-10-15",
-              "time": "17:00",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "date": "1996-12-04",
+              "time": "16:45",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             },
             {
-              "home_team": "LBN",
-              "away_team": "IRQ-1991-2004",
+              "home_team": "IDN",
+              "away_team": "KUW",
               "home_score": 2,
               "away_score": 2,
-              "date": "2000-10-15",
-              "time": "19:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "date": "1996-12-04",
+              "time": "18:45",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             },
             {
-              "home_team": "IRN",
-              "away_team": "IRQ-1991-2004",
-              "home_score": 1,
+              "home_team": "UAE",
+              "away_team": "KUW",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "1996-12-07",
+              "time": "16:45",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "IDN",
+              "home_score": 4,
+              "away_score": 2,
+              "date": "1996-12-07",
+              "time": "19:00",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
+            },
+            {
+              "home_team": "UAE",
+              "away_team": "IDN",
+              "home_score": 2,
               "away_score": 0,
-              "date": "2000-10-18",
-              "time": "19:30",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
+              "date": "1996-12-10",
+              "time": "16:45",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             },
             {
-              "home_team": "LBN",
-              "away_team": "THA",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2000-10-18",
-              "time": "19:30",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "home_team": "KUW",
+              "away_team": "KOR",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1996-12-10",
+              "time": "19:00",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "KOR" }, { "id": "CHN" }, { "id": "KUW" }, { "id": "IDN" }],
+          "teams": [{ "id": "KSA" }, { "id": "THA" }, { "id": "IRN" }, { "id": "IRQ-1991-2004" }],
           "matches": [
             {
-              "home_team": "KOR",
-              "away_team": "CHN",
-              "home_score": 2,
+              "home_team": "KSA",
+              "away_team": "THA",
+              "home_score": 6,
+              "away_score": 0,
+              "date": "1996-12-05",
+              "time": "16:45",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "IRQ-1991-2004",
+              "home_score": 1,
               "away_score": 2,
-              "date": "2000-10-13",
-              "time": "17:00",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli"
+              "date": "1996-12-05",
+              "time": "19:00",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
             },
             {
-              "home_team": "KUW",
-              "away_team": "IDN",
-              "home_score": 0,
+              "home_team": "KSA",
+              "away_team": "IRQ-1991-2004",
+              "home_score": 1,
               "away_score": 0,
-              "date": "2000-10-13",
-              "time": "19:45",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli"
+              "date": "1996-12-08",
+              "time": "16:45",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
             },
             {
-              "home_team": "CHN",
-              "away_team": "IDN",
+              "home_team": "THA",
+              "away_team": "IRN",
+              "home_score": 1,
+              "away_score": 3,
+              "date": "1996-12-08",
+              "time": "19:00",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
+            },
+            {
+              "home_team": "KSA",
+              "away_team": "IRN",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "1996-12-11",
+              "time": "16:45",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
+            },
+            {
+              "home_team": "IRQ-1991-2004",
+              "away_team": "THA",
               "home_score": 4,
-              "away_score": 0,
-              "date": "2000-10-16",
-              "time": "17:00",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "KUW",
-              "home_score": 0,
               "away_score": 1,
-              "date": "2000-10-16",
-              "time": "19:45",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli"
-            },
-            {
-              "home_team": "CHN",
-              "away_team": "KUW",
-              "home_score": 0,
-              "away_score": 0,
-              "date": "2000-10-19",
-              "time": "19:30",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "IDN",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "2000-10-19",
-              "time": "19:30",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "date": "1996-12-11",
+              "time": "19:00",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "KSA" }, { "id": "JPN" }, { "id": "QAT" }, { "id": "UZB" }],
+          "teams": [{ "id": "JPN" }, { "id": "SYR" }, { "id": "CHN" }, { "id": "UZB" }],
           "matches": [
             {
-              "home_team": "KSA",
-              "away_team": "JPN",
-              "home_score": 1,
-              "away_score": 4,
-              "date": "2000-10-14",
-              "time": "17:00",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
-            },
-            {
-              "home_team": "QAT",
-              "away_team": "UZB",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2000-10-14",
-              "time": "19:45",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
-            },
-            {
               "home_team": "JPN",
-              "away_team": "UZB",
-              "home_score": 8,
+              "away_team": "SYR",
+              "home_score": 2,
               "away_score": 1,
-              "date": "2000-10-17",
-              "time": "17:00",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
+              "date": "1996-12-06",
+              "time": "16:45",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
             },
             {
-              "home_team": "KSA",
-              "away_team": "QAT",
+              "home_team": "CHN",
+              "away_team": "UZB",
               "home_score": 0,
-              "away_score": 0,
-              "date": "2000-10-17",
-              "time": "19:45",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
-            },
-            {
-              "home_team": "KSA",
-              "away_team": "UZB",
-              "home_score": 5,
-              "away_score": 0,
-              "date": "2000-10-20",
-              "time": "19:30",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon"
+              "away_score": 2,
+              "date": "1996-12-06",
+              "time": "19:00",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
             },
             {
               "home_team": "JPN",
-              "away_team": "QAT",
+              "away_team": "UZB",
+              "home_score": 4,
+              "away_score": 0,
+              "date": "1996-12-09",
+              "time": "16:45",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
+            },
+            {
+              "home_team": "SYR",
+              "away_team": "CHN",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "1996-12-09",
+              "time": "19:00",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "CHN",
               "home_score": 1,
-              "away_score": 1,
-              "date": "2000-10-20",
-              "time": "19:30",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "away_score": 0,
+              "date": "1996-12-12",
+              "time": "16:45",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
+            },
+            {
+              "home_team": "UZB",
+              "away_team": "SYR",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "1996-12-12",
+              "time": "19:00",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain"
             }
           ]
         }
@@ -226,51 +226,49 @@
           "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "IRN",
-              "away_team": "KOR",
-              "home_score": 1,
-              "away_score": 1,
-              "home_extra_score": 0,
-              "away_extra_score": 1,
-              "date": "2000-10-23",
+              "home_team": "UAE",
+              "away_team": "IRQ-1991-2004",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 1,
+              "away_extra_score": 0,
+              "date": "1996-12-15",
               "time": "16:45",
-              "stadium": "International Olympic Stadium",
-              "city": "Tripoli",
-              "bracket_order": 3
-            },
-            {
-              "home_team": "CHN",
-              "away_team": "QAT",
-              "home_score": 3,
-              "away_score": 1,
-              "date": "2000-10-23",
-              "time": "19:45",
-              "stadium": "Saida International Stadium",
-              "city": "Sidon",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi",
               "bracket_order": 1
             },
             {
-              "home_team": "JPN",
-              "away_team": "IRQ-1991-2004",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "2000-10-24",
-              "time": "16:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut",
+              "home_team": "KUW",
+              "away_team": "JPN",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "1996-12-15",
+              "time": "19:30",
+              "stadium": "Tahnoun Bin Mohamed Stadium",
+              "city": "Al Ain",
               "bracket_order": 2
             },
             {
-              "home_team": "KUW",
-              "away_team": "KSA",
+              "home_team": "KOR",
+              "away_team": "IRN",
               "home_score": 2,
-              "away_score": 2,
-              "home_extra_score": 0,
-              "away_extra_score": 1,
-              "date": "2000-10-24",
-              "time": "19:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut",
+              "away_score": 6,
+              "date": "1996-12-16",
+              "time": "16:45",
+              "stadium": "Al-Maktoum Stadium",
+              "city": "Dubai",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "KSA",
+              "away_team": "CHN",
+              "home_score": 4,
+              "away_score": 3,
+              "date": "1996-12-16",
+              "time": "19:30",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi",
               "bracket_order": 4
             }
           ]
@@ -282,26 +280,30 @@
           "next_round": "Final",
           "matches": [
             {
-              "home_team": "KOR",
-              "away_team": "KSA",
+              "home_team": "UAE",
+              "away_team": "KUW",
               "home_score": 1,
-              "away_score": 2,
-              "date": "2000-10-26",
+              "away_score": 0,
+              "date": "1996-12-19",
               "time": "16:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut",
-              "bracket_order": 2
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi",
+              "bracket_order": 1
             },
             {
-              "home_team": "CHN",
-              "away_team": "JPN",
-              "home_score": 2,
-              "away_score": 3,
-              "date": "2000-10-26",
-              "time": "19:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut",
-              "bracket_order": 1
+              "home_team": "IRN",
+              "away_team": "KSA",
+              "home_score": 0,
+              "away_score": 0,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 3,
+              "away_penalty_score": 4,
+              "date": "1996-12-19",
+              "time": "19:30",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi",
+              "bracket_order": 2
             }
           ]
         },
@@ -310,14 +312,16 @@
           "short_name": "3rd",
           "matches": [
             {
-              "home_team": "CHN",
-              "away_team": "KOR",
-              "home_score": 0,
+              "home_team": "KUW",
+              "away_team": "IRN",
+              "home_score": 1,
               "away_score": 1,
-              "date": "2000-10-29",
-              "time": "17:00",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "home_penalty_score": 2,
+              "away_penalty_score": 3,
+              "date": "1996-12-21",
+              "time": "16:45",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             }
           ]
         },
@@ -326,14 +330,18 @@
           "short_name": "1st",
           "matches": [
             {
-              "home_team": "JPN",
+              "home_team": "UAE",
               "away_team": "KSA",
-              "home_score": 1,
+              "home_score": 0,
               "away_score": 0,
-              "date": "2000-10-29",
-              "time": "19:45",
-              "stadium": "Sports City Stadium",
-              "city": "Beirut"
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 2,
+              "away_penalty_score": 4,
+              "date": "1996-12-21",
+              "time": "19:30",
+              "stadium": "Sheikh Zayed Stadium",
+              "city": "Abu Dhabi"
             }
           ]
         }

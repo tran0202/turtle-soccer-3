@@ -260,55 +260,97 @@
     "golden_goal_rule": true,
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
-    "details": { "host": ["LBN"],"logo_filename": "aac_2000.png", "start_date": "2000-10-12", "end_date": "2000-10-29",
-        "color": "#149552",
-        "team_count": 12,
-        "confed_count": 1,
-        "venue_count": 3,
-        "city_count": 3 },
-        "hero_images": [
-          {
-            "name": "Sports City Stadium, Beirut",
-            "filename": "Camille_Chamoun_Sports_City_Stadium_2018_-_Beirut_derby_(Nejmeh_fans).png",
-            "text": "The Sports City Stadium hosted the final."
-          },
-          {
-            "name": "Saida International Stadium, Sidon",
-            "filename": "Saida_International_Stadium_with_beachgoers.jpg",
-            "text": "The Saida International Stadium hosted the quarter-final China PR vs Qatar."
-          },
-          {
-            "name": "Beirut, Lebanon",
-            "filename": "Beirut,_Mohammed_al-Amin_Mosque_(6822615915).jpg",
-            "text": "Beirut, Lebanon"
-          },
-          {
-            "name": "Tripoli, Lebanon",
-            "filename": "Tripoli_(Lebanon)_-_El_Marad_1.jpg",
-            "text": "Tripoli, Lebanon"
-          }
-        ],
-        "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "KOR", "fourth_place": "CHN" },
-        "statistics": { "total_matches": 26, "total_goals": 77, "attendance": 276488 },
-        "awards": {
-          "golden_boot": [
-            { "player": "Lee Dong-Gook", "team": "KOR", "goals": 6 }
-          ],
-          "golden_ball": [{ "player": "Hiroshi Nanami", "team": "JPN" }],
-          "golden_glove": { "player": "Jiang Jin", "team": "CHN" },
-          "fair_play_team": ["KSA"]
-        }
+    "details": {
+      "host": ["LBN"],
+      "logo_filename": "aac_2000.png",
+      "start_date": "2000-10-12",
+      "end_date": "2000-10-29",
+      "color": "#149552",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Sports City Stadium, Beirut",
+        "filename": "Camille_Chamoun_Sports_City_Stadium_2018_-_Beirut_derby_(Nejmeh_fans).png",
+        "text": "The Sports City Stadium hosted the final."
+      },
+      {
+        "name": "Saida International Stadium, Sidon",
+        "filename": "Saida_International_Stadium_with_beachgoers.jpg",
+        "text": "The Saida International Stadium hosted the quarter-final China PR vs Qatar."
+      },
+      {
+        "name": "Beirut, Lebanon",
+        "filename": "Beirut,_Mohammed_al-Amin_Mosque_(6822615915).jpg",
+        "text": "Beirut, Lebanon"
+      },
+      {
+        "name": "Tripoli, Lebanon",
+        "filename": "Tripoli_(Lebanon)_-_El_Marad_1.jpg",
+        "text": "Tripoli, Lebanon"
+      }
+    ],
+    "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "KOR", "fourth_place": "CHN" },
+    "statistics": { "total_matches": 26, "total_goals": 77, "attendance": 276488 },
+    "awards": {
+      "golden_boot": [{ "player": "Lee Dong-Gook", "team": "KOR", "goals": 6 }],
+      "golden_ball": [{ "player": "Hiroshi Nanami", "team": "JPN" }],
+      "golden_glove": { "player": "Jiang Jin", "team": "CHN" },
+      "fair_play_team": ["KSA"]
+    }
   },
   {
     "id": "AAC1996",
     "year": "1996",
     "name": "AFC Asian Cup United Arab Emirates 1996",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "aac_1996.png", "start_date": "1996-12-04", "end_date": "1996-12-21" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["UAE"],
+      "logo_filename": "aac_1996.png",
+      "start_date": "1996-12-04",
+      "end_date": "1996-12-21",
+      "color": "#ff0000",
+      "team_count": 12,
+      "confed_count": 1,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Sheikh Zayed Stadium, Abu Dhabi",
+        "filename": "Gulf_Cup_(36).jpg",
+        "text": "The Sheikh Zayed Stadium hosted the final."
+      },
+      {
+        "name": "Al-Maktoum Stadium, Dubai",
+        "filename": "Al_Maktoum_Stadium_20190110.jpg",
+        "text": "The Al-Maktoum Stadium hosted the quarter-final Korea Republic PR vs Iran."
+      },
+      {
+        "name": "Abu Dhabi, United Arab Emirates",
+        "filename": "Abu_dhabi_skylines_2014.jpg",
+        "text": "Abu Dhabi skyline"
+      },
+      {
+        "name": "Al Ain, United Arab Emirates",
+        "filename": "Al-AinMontageII.png",
+        "text": "Clockwise, from top: Qasr Al-Muwaiji, Al-Murabba Fort, Street in Al-Ain, Sheikha Salama Mosque, Hazza Bin Zayed Stadium"
+      }
+    ],
+    "final_standings": { "champions": "KSA", "runners_up": "UAE", "third_place": "IRN", "fourth_place": "KUW" },
+    "statistics": { "total_matches": 26, "total_goals": 80, "attendance": 448000 },
+    "awards": {
+      "golden_boot": [{ "player": "Ali Daei", "team": "IRN", "goals": 8 }],
+      "golden_ball": [{ "player": "Khodadad Azizi", "team": "IRN" }],
+      "golden_glove": { "player": "Mohamed Al-Deayea", "team": "KSA" },
+      "fair_play_team": ["IRN"]
+    }
   },
   {
     "id": "AAC1992",
