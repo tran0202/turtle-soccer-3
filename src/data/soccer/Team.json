@@ -227,6 +227,7 @@
   { "id": "RSA-1928-1957", "name": "South Africa", "short_name": "SouthAfrica", "team_type_id": "MNT", "nation_id": "RSA-1928-1957", "parent_team_id": "RSA" },
   { "id": "IRQ-2004-2008", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-2004-2008", "parent_team_id": "IRQ" },
   { "id": "IRQ-1991-2004", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-1991-2004", "parent_team_id": "IRQ" },
+  { "id": "YMD", "name": "South Yemen", "team_type_id": "MNT", "nation_id": "YMD", "parent_team_id": "" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -480,7 +481,6 @@
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
-  { "id": "1028", "name": "South Yemen", "team_type_id": "MNT", "nation_id": "233", "parent_team_id": "" },
   { "id": "1030", "name": "Khmer Republic", "team_type_id": "MNT", "nation_id": "34", "parent_team_id": "1029" },
   { "id": "1032", "name": "Burma", "team_type_id": "MNT", "nation_id": "223", "parent_team_id": "1031" },
   { "id": "1034", "name": "Republic of China", "team_type_id": "MNT", "nation_id": "225", "parent_team_id": "1033" },

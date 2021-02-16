@@ -529,11 +529,51 @@
     "name": "AFC Asian Cup Iran 1976",
     "short_name": "Iran 1976",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1976-06-03", "end_date": "1976-06-13" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["IRN-1964-1980"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1976-06-03",
+      "end_date": "1976-06-13",
+      "color": "#089748",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Aryamehr Stadium, Tehran",
+        "filename": "Azadi_Stadium_ACL_2018.jpg",
+        "text": "The Aryamehr Stadium hosted the final."
+      },
+      {
+        "name": "Tehran, Iran",
+        "filename": "Tehran_sky.jpg",
+        "text": "Tehran, Iran"
+      },
+      {
+        "name": "Bagh Shomal Stadium, Tabriz",
+        "filename": "Takhti_Stadium_Tabriz.jpg",
+        "text": "The Bagh Shomal Stadium hosted group A matches."
+      },
+      {
+        "name": "Tabriz, Iran",
+        "filename": "Panorama_of_Tabriz.jpg",
+        "text": "Tabriz, Iran"
+      }
+    ],
+    "final_standings": { "champions": "IRN-1964-1980", "runners_up": "KUW", "third_place": "CHN", "fourth_place": "IRQ-1963-1991" },
+    "statistics": { "total_matches": 10, "total_goals": 25 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Fathi Kamel", "team": "KUW", "goals": 3 },
+        { "player": "Gholam Hossein Mazloumi", "team": "IRN-1964-1980", "goals": 3 },
+        { "player": "Nasser Nouraei", "team": "IRN-1964-1980", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Ali Parvin", "team": "IRN-1964-1980" }]
+    }
   },
   {
     "id": "AAC1972",
