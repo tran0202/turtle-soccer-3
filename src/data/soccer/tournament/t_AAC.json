@@ -360,40 +360,45 @@
     "tournament_type_id": "AAC",
     "points_for_win": 2,
     "tiebreakers": ["team", "head2head", "lot"],
-    "details": { "host": ["JPN"],"logo_filename": "AFC_Asian_Cup.png", "start_date": "1992-10-29", "end_date": "1992-11-08",
+    "details": {
+      "host": ["JPN"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1992-10-29",
+      "end_date": "1992-11-08",
       "color": "#fa2200",
       "team_count": 8,
       "confed_count": 1,
       "venue_count": 3,
-      "city_count": 2 },
-      "hero_images": [
-        {
-          "name": "Hiroshima Big Arch, Hiroshima",
-          "filename": "Bigarch050423.jpg",
-          "text": "The Hiroshima Big Arch hosted the final."
-        },
-        {
-          "name": "Hiroshima Stadium, Hiroshima",
-          "filename": "HIROSHIMA_Sogo_Ground_1988.jpg",
-          "text": "The Hiroshima Stadium hosted the semi-final Saudi Arabia vs United Arab Emirates."
-        },
-        {
-          "name": "Bingo Sports Park, Onomichi",
-          "filename": "Bingoriku1.jpg",
-          "text": "The Bingo Sports Park hosted several group matches."
-        },
-        {
-          "name": "Hiroshima, Japan",
-          "filename": "Hiroshima_Peace_Memorial_2008_02_(cropped).JPG",
-          "text": "Hiroshima Peace Memorial"
-        }
-      ],
-      "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "CHN", "fourth_place": "UAE" },
-      "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 316496 },
-      "awards": {
-        "golden_boot": [{ "player": "Fahad Al-Bishi", "team": "KSA", "goals": 3 }],
-        "golden_ball": [{ "player": "Kazuyoshi Miura", "team": "JPN" }]
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Hiroshima Big Arch, Hiroshima",
+        "filename": "Bigarch050423.jpg",
+        "text": "The Hiroshima Big Arch hosted the final."
+      },
+      {
+        "name": "Hiroshima Stadium, Hiroshima",
+        "filename": "HIROSHIMA_Sogo_Ground_1988.jpg",
+        "text": "The Hiroshima Stadium hosted the semi-final Saudi Arabia vs United Arab Emirates."
+      },
+      {
+        "name": "Bingo Sports Park, Onomichi",
+        "filename": "Bingoriku1.jpg",
+        "text": "The Bingo Sports Park hosted several group matches."
+      },
+      {
+        "name": "Hiroshima, Japan",
+        "filename": "Hiroshima_Peace_Memorial_2008_02_(cropped).JPG",
+        "text": "Hiroshima Peace Memorial"
       }
+    ],
+    "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "CHN", "fourth_place": "UAE" },
+    "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 316496 },
+    "awards": {
+      "golden_boot": [{ "player": "Fahad Al-Bishi", "team": "KSA", "goals": 3 }],
+      "golden_ball": [{ "player": "Kazuyoshi Miura", "team": "JPN" }]
+    }
   },
   {
     "id": "AAC1988",
@@ -401,11 +406,38 @@
     "name": "AFC Asian Cup Qatar 1988",
     "short_name": "Qatar 1988",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1988-12-02", "end_date": "1988-12-18" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["QAT"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1988-12-02",
+      "end_date": "1988-12-18",
+      "color": "#671637",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Qatar SC Stadium, Doha",
+        "filename": "Interior_view_of_Suheim_Bin_Hamad_Stadium_in_2020.jpg",
+        "text": "Qatar SC Stadium, Doha"
+      },
+      {
+        "name": "Doha, Qatar",
+        "filename": "Doha_skyline_in_the_morning_(12544910974)_(cropped).jpg",
+        "text": "Doha skyline in the morning"
+      }
+    ],
+    "final_standings": { "champions": "KSA", "runners_up": "KOR", "third_place": "IRN", "fourth_place": "CHN" },
+    "statistics": { "total_matches": 24, "total_goals": 40 },
+    "awards": {
+      "golden_boot": [{ "player": "Lee Tae-Ho", "team": "KOR", "goals": 3 }],
+      "golden_ball": [{ "player": "Kim Joo-Sung", "team": "KOR" }],
+      "golden_glove": { "player": "Zhang Huikang", "team": "CHN" }
+    }
   },
   {
     "id": "AAC1984",
