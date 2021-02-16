@@ -445,11 +445,43 @@
     "name": "AFC Asian Cup Singapore 1984",
     "short_name": "Singapore 1984",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1984-12-01", "end_date": "1984-12-16" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["SIN"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1984-12-01",
+      "end_date": "1984-12-16",
+      "color": "#f93127",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "National Stadium, Kallang",
+        "filename": "National_stadium_kallang_sg_z.JPG",
+        "text": "The National Stadium hosted all the matches."
+      },
+      {
+        "name": "Kallang, Singapore",
+        "filename": "Condos_and_the_Singapore_Flyer_by_the_Kallang_River.jpg",
+        "text": "A cluster of condos near the East Coast Expressway, Singapore. On the right is the \"Singapore Flyer\", a giant observation wheel that features brilliant engineering breakthroughs and is set to be Asia's most visible iconic visitor attraction."
+      }
+    ],
+    "final_standings": { "champions": "KSA", "runners_up": "CHN", "third_place": "KUW", "fourth_place": "IRN" },
+    "statistics": { "total_matches": 24, "total_goals": 44 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Shahrokh Bayani", "team": "IRN", "goals": 3 },
+        { "player": "Nasser Mohammadkhani", "team": "IRN", "goals": 3 },
+        { "player": "Jia Xiuquan", "team": "CHN", "goals": 3 }
+      ],
+      "golden_ball": [{ "player": "Jia Xiuquan", "team": "CHN" }],
+      "golden_glove": { "player": "Abdullah Al-Deayea", "team": "KSA" },
+      "fair_play_team": ["CHN"]
+    }
   },
   {
     "id": "AAC1980",
