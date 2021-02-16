@@ -54,6 +54,10 @@ export const getTournamentTitleFont = (tournamentType) => {
   return fontClassName
 }
 
+export const getAllocationStages = (stages) => {
+  return stages ? stages.filter((s) => s.type === 'allocation') : null
+}
+
 export const getRoundRobinStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'roundrobin') : null
 }

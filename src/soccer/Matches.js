@@ -42,7 +42,7 @@ const Matches = (props) => {
               <React.Fragment key={stage.name}>
                 {stage.name && (
                   <TabPane tabId={stage.name.replace(' ', '-')}>
-                    {stage.type === 'roundrobin' && <RoundRobin stage={stage} />}
+                    {(stage.type === 'roundrobin' || stage.type === 'allocation') && <RoundRobin stage={stage} />}
                     {stage.type === 'roundrobinmatchday' && <RoundRobinMatchDay stage={stage} />}
                     {stage.type === 'knockout' && <Knockout stage={stage} config={config} />}
                     {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} />}

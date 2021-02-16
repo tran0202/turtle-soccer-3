@@ -1,7 +1,16 @@
 import React from 'react'
 import Rankings from './Rankings'
 import { hasWildCardAdvancement, collectWildCardRankings, getBlankRanking } from './RankingsHelper'
-import { getRoundRobinStages, getKnockoutStages, getTournamentConfig, isWinner, isSharedBronze, calculateAggregateScore, getTeamName } from './Helper'
+import {
+  getAllocationStages,
+  getRoundRobinStages,
+  getKnockoutStages,
+  getTournamentConfig,
+  isWinner,
+  isSharedBronze,
+  calculateAggregateScore,
+  getTeamName,
+} from './Helper'
 import {
   calculateGroupRankings,
   calculateProgressRankings,
@@ -54,6 +63,7 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
     tmp = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
   }
   const config = group.advancement ? group : groupStage
+  // console.log('config', config)
   const advancedTeams = group.final_rankings.filter((t) => t && isAdvancedNextRound(t, config))
   advancedTeams &&
     advancedTeams.forEach((at) => {
@@ -374,7 +384,6 @@ const createFinalRankings = (tournament, round) => {
         }
       }
       if (isSharedBronze(m)) {
-        // console.log('m', m)
         home_ranking.r = 3
         away_ranking.r = 3
         const fr = getTeamName(home_ranking.id) > getTeamName(away_ranking.id) ? [away_ranking, home_ranking] : [home_ranking, away_ranking]
@@ -457,6 +466,18 @@ const FinalStandings = (props) => {
   const { tournament } = props
   const config = getTournamentConfig(tournament)
   const { stages } = tournament
+
+  const alloStages = getAllocationStages(stages)
+  alloStages &&
+    alloStages.forEach((alloStage) => {
+      alloStage.groups &&
+        alloStage.groups.forEach((g) => {
+          g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
+          createGroupFinalRankings(tournament, g, 1)
+          g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
+          advanceGroupTeams(tournament, alloStage, g)
+        })
+    })
 
   const rrStages = getRoundRobinStages(stages)
   rrStages &&

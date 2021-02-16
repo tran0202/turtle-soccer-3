@@ -77,7 +77,7 @@ const collectRankings = (tournaments) => {
       let rankings = { teams: _teams, matches: _matches }
       t.stages &&
         t.stages.forEach((s) => {
-          if (s.type === 'roundrobin') {
+          if (s.type === 'allocation' || s.type === 'roundrobin') {
             s.bye_teams && s.bye_teams.forEach((t) => _teams.push(t))
             s.groups &&
               s.groups.forEach((g) => {

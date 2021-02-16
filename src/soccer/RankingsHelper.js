@@ -809,6 +809,7 @@ export const isWildCardExtraRow = (row, config) => {
 
 export const isAdvancedNextRound = (row, config) => {
   if (!row) return false
+  if (config.type === 'allocation') return true
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.auto) {
     let flag = false
     config.advancement.teams.auto.forEach((a) => (flag = flag || row.r === a))

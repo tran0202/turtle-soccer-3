@@ -581,11 +581,37 @@
     "name": "AFC Asian Cup Thailand 1972",
     "short_name": "Thailand 1972",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1972-05-07", "end_date": "1972-05-19" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["THA"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1972-05-07",
+      "end_date": "1972-05-19",
+      "color": "#2251a2",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "National Stadium, Bangkok",
+        "filename": "Suphachalasai_3116.JPG",
+        "text": "The National Stadium hosted all the matches."
+      },
+      {
+        "name": "Bangkok, Thailand",
+        "filename": "Bangkok_montage_3.jpg",
+        "text": "Clockwise from top: Si Lom–Sathon business district, the Giant Swing, Victory Monument, Rama VIII Bridge, Wat Arun, and the Grand Palace"
+      }
+    ],
+    "final_standings": { "champions": "IRN-1964-1980", "runners_up": "KOR", "third_place": "THA", "fourth_place": "CAM-1970-1975" },
+    "statistics": { "total_matches": 13, "total_goals": 38 },
+    "awards": {
+      "golden_boot": [{ "player": "Hossein Kalani", "team": "IRN-1964-1980", "goals": 5 }],
+      "golden_ball": [{ "player": "Ebrahim Ashtiani", "team": "IRN-1964-1980" }]
+    }
   },
   {
     "id": "AAC1968",
