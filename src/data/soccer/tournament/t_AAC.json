@@ -660,11 +660,44 @@
     "name": "AFC Asian Cup Israel 1964",
     "short_name": "Israel 1964",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1964-05-26", "end_date": "1964-06-03" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": { "host": ["ISR"],"logo_filename": "AFC_Asian_Cup.png", "start_date": "1964-05-26", "end_date": "1964-06-03",
+      "color": "#15296d",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 4 },
+      "hero_images": [
+        {
+          "name": "Champions",
+          "filename": "Flickr_-_Government_Press_Office_(GPO)_-_The_Asian_Cup.jpg",
+          "text": "The Israeli soccer team holds the Asian Cup after its victory over South Korea at Ramat Gan stadium."
+        },
+        {
+          "name": "Ramat Gan Stadium, Ramat Gan",
+          "filename": "Ramat_Gan_Stadium.jpg",
+          "text": "The Ramat Gan Stadium hosted a group match."
+        },
+        {
+          "name": "Kiryat Eliezer Stadium, Haifa",
+          "filename": "Qiryat_Eliezer_Stadium.jpg",
+          "text": "The Kiryat Eliezer Stadium hosted a group match."
+        },
+        {
+          "name": "Bloomfield Stadium, Tel Aviv",
+          "filename": "Bloomfield_Stadium21.jpg",
+          "text": "The Bloomfield Stadium hosted a group match."
+        }
+      ],
+      "final_standings": { "champions": "ISR", "runners_up": "IND", "third_place": "KOR", "fourth_place": "HKG-1959-1997" },
+      "statistics": { "total_matches": 6, "total_goals": 13 },
+      "awards": {
+        "golden_boot": [
+          { "player": "Inder Singh", "team": "IND", "goals": 2 },
+          { "player": "Mordechai Spiegler", "team": "ISR", "goals": 2 }
+        ]
+      }
   },
   {
     "id": "AAC1960",
