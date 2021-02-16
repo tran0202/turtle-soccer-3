@@ -489,11 +489,39 @@
     "name": "AFC Asian Cup Kuwait 1980",
     "short_name": "Kuwait 1980",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1980-09-15", "end_date": "1980-09-30" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["KUW"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1980-09-15",
+      "end_date": "1980-09-30",
+      "color": "#4fb24a",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Sabah Al-Salem Stadium, Kuwait City",
+        "filename": "ArabiStagium.jpg",
+        "text": "The Sabah Al-Salem Stadium hosted all the matches."
+      },
+      {
+        "name": "Kuwait City, Kuwait",
+        "filename": "Kuwait_montage.png",
+        "text": "Kuwait City, Kuwait"
+      }
+    ],
+    "final_standings": { "champions": "KUW", "runners_up": "KOR", "third_place": "IRN", "fourth_place": "PRK" },
+    "statistics": { "total_matches": 24, "total_goals": 76 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Behtash Fariba", "team": "IRN", "goals": 7 },
+        { "player": "Choi Soon-ho", "team": "KOR", "goals": 7 }
+      ]
+    }
   },
   {
     "id": "AAC1976",
