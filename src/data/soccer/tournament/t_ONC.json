@@ -270,11 +270,36 @@
     "name": "OFC Nations Cup Australia 1998",
     "short_name": "Australia 1998",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "1998-09-25", "end_date": "1998-10-04" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["AUS"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "1998-09-25",
+      "end_date": "1998-10-04",
+      "color": "#178338",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Lang Park, Brisbane",
+        "filename": "Suncorp_Stadium,_Milton_Road_facade,_Brisbane_05.jpg",
+        "text": "The Lang Park hosted all the matches of the tournament."
+      },
+      {
+        "name": "Brisbane, Australia",
+        "filename": "Skylines_of_Brisbane_in_winter_misty_morning_seen_from_Kangaroo_Point,_Queensland_04.jpg",
+        "text": "Brisbane, Australia"
+      }
+    ],
+    "final_standings": { "champions": "NZL", "runners_up": "AUS", "third_place": "FIJ", "fourth_place": "TAH" },
+    "statistics": { "total_matches": 10, "total_goals": 52 },
+    "awards": {
+      "golden_boot": [{ "player": "Damian Mori", "team": "AUS", "goals": 10 }]
+    }
   },
   {
     "id": "ONC1996",
