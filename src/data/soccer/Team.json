@@ -240,6 +240,7 @@
   },
   { "id": "HKG-1959-1997", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "HKG-1959-1997", "parent_team_id": "HKG" },
   { "id": "VSO", "name": "South Vietnam", "short_name": "S. Vietnam", "team_type_id": "MNT", "nation_id": "VSO", "parent_team_id": "VIE" },
+  { "id": "HKG-1955-1959", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "HKG-1955-1959", "parent_team_id": "HKG" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -511,7 +512,6 @@
   { "id": "1089", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "276", "parent_team_id": "1090" },
   { "id": "1090", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "268", "parent_team_id": "" },
   { "id": "1092", "name": "Costa Rica", "team_type_id": "MNT", "nation_id": "289", "parent_team_id": "27" },
-  { "id": "1094", "name": "Hong Kong", "team_type_id": "MNT", "nation_id": "291", "parent_team_id": "1035" },
   { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
   { "id": "1110", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "305", "parent_team_id": "1043" },

@@ -747,10 +747,35 @@
     "name": "AFC Asian Cup Hong Kong 1956",
     "short_name": "Hong Kong 1956",
     "tournament_type_id": "AAC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "AFC_Asian_Cup.png", "start_date": "1956-09-01", "end_date": "1956-09-15" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["HKG-1955-1959"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "1956-09-01",
+      "end_date": "1956-09-15",
+      "color": "#fa300f",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Government Stadium, Hong Kong",
+        "filename": "Hong_Kong_Stadium-1.jpg",
+        "text": "The Government Stadium hosted all matches."
+      },
+      {
+        "name": "Hong Kong",
+        "filename": "Hong_Kong_Island_Skyline_201108.jpg",
+        "text": "Hong Kong Skyline"
+      }
+    ],
+    "final_standings": { "champions": "KOR", "runners_up": "ISR", "third_place": "HKG-1955-1959", "fourth_place": "VSO" },
+    "statistics": { "total_matches": 6, "total_goals": 27, "attendance": 136000 },
+    "awards": {
+      "golden_boot": [{ "player": "Nahum Stelmach", "team": "ISR", "goals": 4 }]
+    }
   }
 ]
