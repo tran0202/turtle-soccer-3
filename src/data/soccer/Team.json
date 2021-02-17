@@ -256,6 +256,7 @@
     "nation_id": "NCL-1973-2008",
     "parent_team_id": "NCL"
   },
+  { "id": "COK", "name": "Cook Islands", "team_type_id": "MNT", "nation_id": "COK", "parent_team_id": "" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -446,7 +447,6 @@
   { "id": "MSR", "name": "Montserrat", "team_type_id": "MNT", "nation_id": "MSR", "parent_team_id": "" },
   { "id": "SKN", "name": "St. Kitts and Nevis", "team_type_id": "MNT", "nation_id": "SKN", "parent_team_id": "" },
   { "id": "ASA", "name": "American Samoa", "team_type_id": "MNT", "nation_id": "ASA", "parent_team_id": "" },
-  { "id": "COK", "name": "Cook Islands", "team_type_id": "MNT", "nation_id": "COK", "parent_team_id": "" },
   { "id": "TGA", "name": "Tonga", "team_type_id": "MNT", "nation_id": "TGA", "parent_team_id": "" },
   { "id": "VAN", "name": "Vanuatu", "team_type_id": "MNT", "nation_id": "VAN", "parent_team_id": "" },
   { "id": "SOL", "name": "Solomon Islands", "team_type_id": "MNT", "nation_id": "SOL", "parent_team_id": "" },

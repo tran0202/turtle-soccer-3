@@ -235,11 +235,34 @@
     "name": "OFC Nations Cup Tahiti 2000",
     "short_name": "Tahiti 2000",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "2000-06-19", "end_date": "2000-06-28" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["TAH"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "2000-06-19",
+      "end_date": "2000-06-28",
+      "color": "#fe0000",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Papeete, Tahiti",
+        "filename": "FP-papeete-hafen-1.jpg",
+        "text": "Papeete's city center and marina"
+      }
+    ],
+    "final_standings": { "champions": "AUS", "runners_up": "NZL", "third_place": "SOL", "fourth_place": "VAN" },
+    "statistics": { "total_matches": 10, "total_goals": 48 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Craig Foster", "team": "AUS", "goals": 5 },
+        { "player": "Clayton Zane", "team": "AUS", "goals": 5 }
+      ]
+    }
   },
   {
     "id": "ONC1998",
