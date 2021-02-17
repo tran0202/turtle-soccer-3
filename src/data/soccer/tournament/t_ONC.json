@@ -132,11 +132,49 @@
     "name": "OFC Nations Cup Australia 2004",
     "short_name": "Australia 2004",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "2004-05-29", "end_date": "2004-10-12" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["AUS"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "2004-05-29",
+      "end_date": "2004-10-12",
+      "color": "#178338",
+      "team_count": 6,
+      "confed_count": 1,
+      "venue_count": 4,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Sydney Football Stadium, Sydney",
+        "filename": "Allianz_Stadium_-_13_October_2012.jpg",
+        "text": "The Sydney Football Stadium hosted the 2nd-leg final."
+      },
+      {
+        "name": "Lawson Tama Stadium, Honiara",
+        "filename": "Lawson_Tama_Stadium.jpg",
+        "text": "The Lawson Tama Stadium hosted the 1st-leg final."
+      },
+      {
+        "name": "Hindmarsh Stadium, Adelaide",
+        "filename": "HindmarshStadium.jpeg",
+        "text": "The Hindmarsh Stadium hosted several matches of the final tournament."
+      },
+      {
+        "name": "Marden Sports Complex, Adelaide",
+        "filename": "Marden_Sports_Complex.jpg",
+        "text": "The Marden Sports Complex hosted several matches of the final tournament."
+      }
+    ],
+    "final_standings": { "champions": "AUS", "runners_up": "SOL", "third_place": "NZL", "fourth_place": "FIJ" },
+    "statistics": { "total_matches": 17, "total_goals": 69 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Tim Cahill", "team": "AUS", "goals": 6 },
+        { "player": "Vaughan Coveny", "team": "NZL", "goals": 6 }
+      ]
+    }
   },
   {
     "id": "ONC2002",
