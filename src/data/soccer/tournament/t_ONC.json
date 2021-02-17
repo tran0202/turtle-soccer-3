@@ -182,11 +182,52 @@
     "name": "OFC Nations Cup New Zealand 2002",
     "short_name": "New Zealand 2002",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "mascot_filename": "OFC3-copy-2002.jpeg", "start_date": "2002-07-05", "end_date": "2002-07-14" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["NZL"],
+      "logo_filename": "OFCcup.png",
+      "mascot_filename": "OFC3-copy-2002.jpeg",
+      "start_date": "2002-07-05",
+      "end_date": "2002-07-14",
+      "color": "#1d368a",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Ericsson Stadium, Auckland",
+        "filename": "EricssonStadium00.jpg",
+        "text": "The Ericsson Stadium hosted the final."
+      },
+      {
+        "name": "Auckland, New Zealand",
+        "filename": "Auckland_Habour_Bridge_(9380408897).jpg",
+        "text": "This angle of the Auckland Habour Bridge was taken from the North Shore looking back over the Auckland City."
+      },
+      {
+        "name": "North Harbour Stadium, Albany",
+        "filename": "North_Harbour_Stadium_East_Side.jpg",
+        "text": "The North Harbour Stadium hosted group B matches."
+      },
+      {
+        "name": "Albany, New Zealand",
+        "filename": "Lucas_Creek_from_Kell_Park_platform.jpg",
+        "text": "Lucas Creek in Kell Park, Albany"
+      }
+    ],
+    "final_standings": { "champions": "NZL", "runners_up": "AUS", "third_place": "TAH", "fourth_place": "VAN" },
+    "statistics": { "total_matches": 16, "total_goals": 64 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Bobby Despotovski", "team": "AUS", "goals": 5 },
+        { "player": "Joel Porter", "team": "AUS", "goals": 5 },
+        { "player": "Chris Killen", "team": "NZL", "goals": 5 },
+        { "player": "Jeff Campbell", "team": "NZL", "goals": 5 }
+      ]
+    }
   },
   {
     "id": "ONC2000",
