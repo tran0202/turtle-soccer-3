@@ -27,11 +27,14 @@ export const getTournamentConfig = (tournament) => {
 export const getTournamentTitleFont = (tournamentType) => {
   let fontClassName
   switch (tournamentType.id) {
+    case 'WC':
+      fontClassName = 'h1-ff5 tournament-title-WC'
+      break
     case 'EURO':
       fontClassName = 'tournament-title-EURO'
       break
     case 'MOFT':
-      fontClassName = 'tournament-title-OLYMPIC'
+      fontClassName = 'h1-ff5 tournament-title-OLYMPIC'
       break
     case 'WOFT':
       fontClassName = 'tournament-title-OLYMPIC-2'
@@ -47,6 +50,9 @@ export const getTournamentTitleFont = (tournamentType) => {
       break
     case 'AAC':
       fontClassName = 'tournament-title-AAC'
+      break
+    case 'ONC':
+      fontClassName = 'tournament-title-ONC'
       break
     default:
       fontClassName = 'h1-ff5 tournament-title'

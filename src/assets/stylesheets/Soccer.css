@@ -765,6 +765,9 @@
 .tournament-title {
   font-family: 'Dusha', sans-serif;
 }
+.tournament-title-WC {
+  font-family: 'Dusha', sans-serif;
+}
 .tournament-title-EURO {
   font-family: 'Bridge', sans-serif;
 }
@@ -785,6 +788,9 @@
 }
 .tournament-title-AAC {
   font-family: 'Go3', sans-serif;
+}
+.tournament-title-ONC {
+  font-family: 'Capture it', sans-serif;
 }
 
 .tournament-format {

@@ -3,10 +3,6 @@
   src: url('fonts/Dusha_-_FIFA_World_Cup_2018.ttf');
 }
 @font-face {
-  font-family: 'Capture it';
-  src: url('fonts/Capture it.ttf');
-}
-@font-face {
   font-family: 'Bridge';
   src: url('fonts/Bridge_Type_-_UEFA_Euro_2020.ttf');
 }
@@ -37,6 +33,10 @@
 @font-face {
   font-family: 'Go3';
   src: url('fonts/go3v2.ttf');
+}
+@font-face {
+  font-family: 'Capture it';
+  src: url('fonts/Capture it.ttf');
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,151 @@
+[
+  {
+    "id": "ONC2016",
+    "year": "2016",
+    "name": "OFC Nations Cup Papua New Guinea 2016",
+    "short_name": "Papua New Guinea 2016",
+    "tournament_type_id": "ONC",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["PNG"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "2016-05-28",
+      "end_date": "2016-06-11",
+      "color": "#e1151e",
+      "team_count": 8,
+      "confed_count": "1",
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Sir John Guise Stadium, Port Moresby",
+        "filename": "Sir._John_Guise_Stadium.jpg",
+        "text": "The Sir John Guise Stadium hosted all the matches."
+      },
+      {
+        "name": "Port Moresby, Papua New Guinea",
+        "filename": "POM_Downtown.jpg",
+        "text": "Downtown"
+      }
+    ],
+    "final_standings": { "champions": "NZL", "runners_up": "PNG", "semi_finalist1": "NCL", "semi_finalist2": "SOL" },
+    "statistics": { "total_matches": 15, "total_goals": 48, "attendance": 41996 },
+    "awards": {
+      "golden_boot": [{ "player": "Raymond Gunemba", "team": "PNG", "goals": 5 }],
+      "golden_ball": [{ "player": "David Muta", "team": "PNG" }],
+      "golden_glove": { "player": "Stefan Marinovic", "team": "NZL" },
+      "fair_play_team": ["NCL"]
+    }
+  },
+  {
+    "id": "ONC2012",
+    "year": "2012",
+    "name": "OFC Nations Cup Solomon Islands 2012",
+    "short_name": "Solomon Islands 2012",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2012-06-01", "end_date": "2012-06-10" }
+  },
+  {
+    "id": "ONC2008",
+    "year": "2008",
+    "name": "OFC Nations Cup 2008",
+    "short_name": "2008",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2007-10-17", "end_date": "2008-11-19" }
+  },
+  {
+    "id": "ONC2004",
+    "year": "2004",
+    "name": "OFC Nations Cup Australia 2004",
+    "short_name": "Australia 2004",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2004-05-29", "end_date": "2004-10-12" }
+  },
+  {
+    "id": "ONC2002",
+    "year": "2002",
+    "name": "OFC Nations Cup New Zealand 2002",
+    "short_name": "New Zealand 2002",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "mascot_filename": "OFC3-copy-2002.jpeg", "start_date": "2002-07-05", "end_date": "2002-07-14" }
+  },
+  {
+    "id": "ONC2000",
+    "year": "2000",
+    "name": "OFC Nations Cup Tahiti 2000",
+    "short_name": "Tahiti 2000",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "2000-06-19", "end_date": "2000-06-28" }
+  },
+  {
+    "id": "ONC1998",
+    "year": "1998",
+    "name": "OFC Nations Cup Australia 1998",
+    "short_name": "Australia 1998",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1998-09-25", "end_date": "1998-10-04" }
+  },
+  {
+    "id": "ONC1996",
+    "year": "1996",
+    "name": "OFC Nations Cup 1996",
+    "short_name": "1996",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01" }
+  },
+  {
+    "id": "ONC1980",
+    "year": "1980",
+    "name": "Oceania Nations Cup New Caledonia 1980",
+    "short_name": "New Caledonia 1980",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1980-02-24", "end_date": "1980-03-01" }
+  },
+  {
+    "id": "ONC1973",
+    "year": "1973",
+    "name": "Oceania Nations Cup New Zealand 1973",
+    "short_name": "New Zealand 1973",
+    "tournament_type_id": "ONC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1973-02-17", "end_date": "1973-02-24" }
+  }
+]

@@ -7,6 +7,7 @@ import t_COPA from '../data/soccer/tournament/t_COPA.json'
 import t_GC from '../data/soccer/tournament/t_GC.json'
 import t_AFCON from '../data/soccer/tournament/t_AFCON.json'
 import t_AAC from '../data/soccer/tournament/t_AAC.json'
+import t_ONC from '../data/soccer/tournament/t_ONC.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -202,15 +203,17 @@ import td_ACC_2011 from '../data/soccer/tournamentData/AAC/td_AAC_2011.json'
 import td_ACC_2015 from '../data/soccer/tournamentData/AAC/td_AAC_2015.json'
 import td_ACC_2019 from '../data/soccer/tournamentData/AAC/td_AAC_2019.json'
 
+import td_ONC_2016 from '../data/soccer/tournamentData/ONC/td_ONC_2016.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'AAC2023', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'ONC2016', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON, t_AAC)
+  return TournamentArray.concat(t_WC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
 }
 
 export const getTournamentDataArray = () => {
@@ -223,29 +226,12 @@ export const getTournamentDataArray = () => {
     getTournamentDataGC(),
     getTournamentDataAFCON(),
     getTournamentDataAAC(),
+    getTournamentDataONC(),
   )
 }
 
-export const getTournamentDataAAC = () => {
-  return [].concat(
-    [td_ACC_1956],
-    [td_ACC_1960],
-    [td_ACC_1964],
-    [td_ACC_1968],
-    [td_ACC_1972],
-    [td_ACC_1976],
-    [td_ACC_1980],
-    [td_ACC_1984],
-    [td_ACC_1988],
-    [td_ACC_1992],
-    [td_ACC_1996],
-    [td_ACC_2000],
-    [td_ACC_2004],
-    [td_ACC_2007],
-    [td_ACC_2011],
-    [td_ACC_2015],
-    [td_ACC_2019],
-  )
+export const getTournamentDataONC = () => {
+  return [].concat([td_ONC_2016])
 }
 
 export const getQualificationTournamentArray = () => {
@@ -450,5 +436,27 @@ export const getTournamentDataAFCON = () => {
     [td_AFCON_2015],
     [td_AFCON_2017],
     [td_AFCON_2019],
+  )
+}
+
+export const getTournamentDataAAC = () => {
+  return [].concat(
+    [td_ACC_1956],
+    [td_ACC_1960],
+    [td_ACC_1964],
+    [td_ACC_1968],
+    [td_ACC_1972],
+    [td_ACC_1976],
+    [td_ACC_1980],
+    [td_ACC_1984],
+    [td_ACC_1988],
+    [td_ACC_1992],
+    [td_ACC_1996],
+    [td_ACC_2000],
+    [td_ACC_2004],
+    [td_ACC_2007],
+    [td_ACC_2011],
+    [td_ACC_2015],
+    [td_ACC_2019],
   )
 }
