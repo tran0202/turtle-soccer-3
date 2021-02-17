@@ -86,11 +86,45 @@
     "name": "OFC Nations Cup 2008",
     "short_name": "2008",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "2007-10-17", "end_date": "2008-11-19" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "logo_filename": "OFCcup.png",
+      "start_date": "2007-10-17",
+      "end_date": "2008-11-19",
+      "color": "#192e71",
+      "team_count": 4,
+      "confed_count": 1,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Westpac Stadium, Wellington",
+        "filename": "Westpac_Trust_stadium_viewed_from_Wadestown.jpg",
+        "text": "Westpac Stadium, Wellington"
+      },
+      {
+        "name": "Wellington, New Zealand",
+        "filename": "Lambton_Harbour,_Wellington_(cropped).jpg",
+        "text": "A vista of Lambton Harbour, Wellington City"
+      },
+      {
+        "name": "North Harbour Stadium, Auckland",
+        "filename": "North_Harbour_Stadium_East_Side.jpg",
+        "text": "North Harbour Stadium, Auckland"
+      },
+      {
+        "name": "Auckland, New Zealand",
+        "filename": "Auckland_skyline_2019.jpg",
+        "text": "Auckland, New Zealand"
+      }
+    ],
+    "final_standings": { "champions": "NZL", "runners_up": "NCL-1973-2008", "third_place": "FIJ", "fourth_place": "VAN" },
+    "statistics": { "total_matches": 12, "total_goals": 39 },
+    "awards": {
+      "golden_boot": [{ "player": "Shane Smeltz", "team": "NZL", "goals": 8 }]
+    }
   },
   {
     "id": "ONC2004",
