@@ -307,11 +307,37 @@
     "name": "OFC Nations Cup 1996",
     "short_name": "1996",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "no_third_place": true,
+    "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01", "color": "#192e71", "team_count": 4, "confed_count": 1 },
+    "hero_images": [
+      {
+        "name": "Bruce Stadium, Canberra",
+        "filename": "BruceStadium19032005.jpeg",
+        "text": "The Bruce Stadium hosted the 2nd-leg of the final."
+      },
+      {
+        "name": "Lawson Tama Stadium, Honiara",
+        "filename": "Lawson_Tama_Stadium.jpg",
+        "text": "The Lawson Tama Stadium hosted the 1st-leg of the semi-final Solomon Islands vs Tahiti."
+      },
+      {
+        "name": "Queen Elizabeth II Park, Christchurch",
+        "filename": "QEII1.jpg",
+        "text": "The Queen Elizabeth II Park hosted the 1st-leg of the semi-final New Zealand vs Australia."
+      },
+      {
+        "name": "Christchurch, New Zealand",
+        "filename": "Christchurch_Skyline.jpg",
+        "text": "Christchurch, New Zealand"
+      }
+    ],
+    "final_standings": { "champions": "AUS", "runners_up": "TAH", "semi_finalist1": "NZL", "semi_finalist2": "SOL" },
+    "statistics": { "total_matches": 6, "total_goals": 18 },
+    "awards": {
+      "golden_boot": [{ "player": "Kris Trajanovski", "team": "AUS", "goals": 7 }]
+    }
   },
   {
     "id": "ONC1980",

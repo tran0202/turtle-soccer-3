@@ -280,7 +280,6 @@ export const isKnockout2LeggedStageValid = (stage) => {
   }
   if (!secondLeg.matches || secondLeg.matches.length === 0) {
     console.log('No matches in second leg')
-    return false
   }
   return true
 }
@@ -565,6 +564,7 @@ const DisplayExtraTimeText = (props) => {
 
 export const DisplayKnockout2LeggedMatch = (props) => {
   const { m } = props
+  // console.log('m', m)
   const homeLoseData = {
     knockoutMatch: true,
     secondLegMatch: true,
@@ -686,7 +686,6 @@ export const DisplayKnockout2LeggedMatch = (props) => {
 
 const DisplayMatch = (props) => {
   const { m, config } = props
-  // console.log('m.playoff_notes', m.playoff_notes)
   const homeLoseData = {
     knockoutMatch: config.knockoutMatch,
     secondLegMatch: config.secondLegMatch,
