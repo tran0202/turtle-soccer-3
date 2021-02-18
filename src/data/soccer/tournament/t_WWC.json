@@ -9,6 +9,7 @@
     "details": {
       "host": ["FRA_WNT"],
       "logo_filename": "2019_FIFA_Women's_World_Cup.svg",
+      "mascot_filename": "csm_ettie_7ca1be65ec.png",
       "start_date": "2019-06-07",
       "end_date": "2015-07-07",
       "color": "#103d69",
@@ -70,11 +71,57 @@
     "year": "2015",
     "name": "FIFA Women's World Cup Canada 2015",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2015.png", "start_date": "2015-06-06", "end_date": "2015-07-05" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CAN_WNT"],
+      "logo_filename": "2015_FIFA_Women's_World_Cup.svg",
+      "mascot_filename": "mascot_2015.jpg",
+      "start_date": "2015-06-06",
+      "end_date": "2015-07-05",
+      "color": "#f72337",
+      "team_count": 24,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Champions!_(19185117834).jpg",
+        "text": "Confetti time"
+      },
+      {
+        "name": "United States",
+        "filename": "Starting_lineup_(19184905224).jpg",
+        "text": "Starting lineu"
+      },
+      {
+        "name": "Final",
+        "filename": "Singing_the_national_anthem_(19781316956).jpg",
+        "text": "United States vs Japan"
+      },
+      {
+        "name": "Golden Ball",
+        "filename": "Carli_Lloyd_pointing.jpg",
+        "text": "Carli Lloyd broke multiple goal scoring records in the final."
+      }
+    ],
+    "final_standings": { "champions": "USA_WNT", "runners_up": "JPN_WNT", "third_place": "ENG_WNT", "fourth_place": "GER_WNT" },
+    "statistics": { "total_matches": 52, "total_goals": 146, "attendance": 1353506 },
+    "awards": {
+      "golden_boot": [{ "player": "Célia Šašić", "team": "GER_WNT", "goals": 6, "assists": 1, "minutes": 553 }],
+      "silver_boot": [{ "player": "Carli Lloyd", "team": "USA_WNT", "goals": 6, "assists": 1, "minutes": 630 }],
+      "bronze_boot": [{ "player": "Anja Mittag", "team": "GER_WNT", "goals": 5, "assists": 2, "minutes": 474 }],
+      "golden_ball": [
+        { "player": "Carli Lloyd", "team": "USA_WNT" },
+        { "player": "Amandine Henry", "team": "FRA_WNT" },
+        { "player": "Aya Miyama", "team": "JPN_WNT" }
+      ],
+      "best_young_player": { "player": "Kadeisha Buchanan", "team": "CAN_WNT" },
+      "golden_glove": { "player": "Hope Solo", "team": "USA_WNT" },
+      "fair_play_team": ["FRA_WNT"]
+    }
   },
   {
     "id": "WWC2011",
@@ -85,7 +132,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2011.png", "start_date": "2011-06-26", "end_date": "2011-07-17" }
+    "details": { "logo_filename": "2011_FIFA_Women's_World_Cup.svg", "start_date": "2011-06-26", "end_date": "2011-07-17" }
   },
   {
     "id": "WWC2007",
@@ -96,7 +143,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2007.png", "start_date": "2007-09-10", "end_date": "2007-09-30" }
+    "details": { "logo_filename": "2007_FIFA_Women's_World_Cup.svg", "start_date": "2007-09-10", "end_date": "2007-09-30" }
   },
   {
     "id": "WWC2003",
@@ -107,7 +154,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "2003.png", "start_date": "2003-09-20", "end_date": "2003-10-12" }
+    "details": { "logo_filename": "2003_FIFA_Women's_World_Cup.svg", "start_date": "2003-09-20", "end_date": "2003-10-12" }
   },
   {
     "id": "WWC1999",

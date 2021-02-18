@@ -434,6 +434,12 @@
   { "id": "NZL_WNT", "name": "New Zealand", "team_type_id": "WNT", "nation_id": "NZL", "parent_team_id": "" },
   { "id": "CHI_WNT", "name": "Chile", "team_type_id": "WNT", "nation_id": "CHI", "parent_team_id": "" },
   { "id": "THA_WNT", "name": "Thailand", "team_type_id": "WNT", "nation_id": "THA", "parent_team_id": "" },
+  { "id": "CIV_WNT", "name": "Ivory Coast", "team_type_id": "WNT", "nation_id": "CIV", "parent_team_id": "" },
+  { "id": "SUI_WNT", "name": "Switzerland", "team_type_id": "WNT", "nation_id": "SUI", "parent_team_id": "" },
+  { "id": "ECU_WNT", "name": "Ecuador", "team_type_id": "WNT", "nation_id": "ECU", "parent_team_id": "" },
+  { "id": "CRC_WNT", "name": "Costa Rica", "team_type_id": "WNT", "nation_id": "CRC", "parent_team_id": "" },
+  { "id": "COL_WNT", "name": "Colombia", "team_type_id": "WNT", "nation_id": "COL", "parent_team_id": "" },
+  { "id": "MEX_WNT", "name": "Mexico", "team_type_id": "WNT", "nation_id": "MEX", "parent_team_id": "" },
 
   { "id": "BRA_U23WNT", "name": "Brazil", "team_type_id": "U23WNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "GER_U23WNT", "name": "Germany", "team_type_id": "U23WNT", "nation_id": "GER", "parent_team_id": "" },
@@ -498,13 +504,6 @@
   { "id": "MKD", "name": "North Macedonia", "team_type_id": "MNT", "nation_id": "MKD", "parent_team_id": "" },
   { "id": "GIB", "name": "Gibraltar", "team_type_id": "MNT", "nation_id": "GIB", "parent_team_id": "" },
   { "id": "LIE", "name": "Liechtenstein", "team_type_id": "MNT", "nation_id": "LIE", "parent_team_id": "" },
-
-  { "id": "818", "name": "Ivory Coast", "team_type_id": "WNT", "nation_id": "50", "parent_team_id": "" },
-  { "id": "821", "name": "Switzerland", "team_type_id": "WNT", "nation_id": "184", "parent_team_id": "" },
-  { "id": "822", "name": "Ecuador", "team_type_id": "WNT", "nation_id": "60", "parent_team_id": "" },
-  { "id": "829", "name": "Costa Rica", "team_type_id": "WNT", "nation_id": "49", "parent_team_id": "" },
-  { "id": "833", "name": "Colombia", "team_type_id": "WNT", "nation_id": "44", "parent_team_id": "" },
-  { "id": "834", "name": "Mexico", "team_type_id": "WNT", "nation_id": "125", "parent_team_id": "" },
 
   { "id": "863", "name": "Korea DPR", "team_type_id": "WNT", "nation_id": "102", "parent_team_id": "" },
   { "id": "864", "name": "Equatorial Guinea", "team_type_id": "WNT", "nation_id": "64", "parent_team_id": "" },
