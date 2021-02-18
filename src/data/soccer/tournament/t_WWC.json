@@ -72,7 +72,7 @@
     "name": "FIFA Women's World Cup Canada 2015",
     "tournament_type_id": "WWC",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "lot"],
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
     "details": {
       "host": ["CAN_WNT"],
       "logo_filename": "2015_FIFA_Women's_World_Cup.svg",
@@ -94,7 +94,7 @@
       {
         "name": "United States",
         "filename": "Starting_lineup_(19184905224).jpg",
-        "text": "Starting lineu"
+        "text": "Starting lineup"
       },
       {
         "name": "Final",
@@ -128,11 +128,57 @@
     "year": "2011",
     "name": "FIFA Women's World Cup Germany 2011",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2011_FIFA_Women's_World_Cup.svg", "start_date": "2011-06-26", "end_date": "2011-07-17" }
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "details": {
+      "host": ["GER_WNT"],
+      "logo_filename": "2011_FIFA_Women's_World_Cup.svg",
+      "mascot_filename": "Karla_Kick.jpg",
+      "start_date": "2011-06-26",
+      "end_date": "2011-07-17",
+      "color": "#1d1d1b",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 9,
+      "city_count": 9
+    },
+    "hero_images": [
+      {
+        "name": "Opening ceremony",
+        "filename": "FIFA_Womens_World_Cup_2011_Olympiastadion_Berlin.jpg",
+        "text": "Opening ceremony"
+      },
+      {
+        "name": "Final",
+        "filename": "Penalty_vainqueur_de_Saki_Kumagai_en_2011.jpg",
+        "text": "Saki Kumagai of Japan scoring the winning penalty"
+      },
+      {
+        "name": "Japan",
+        "filename": "Seleção_japonesa_agradece_o_apoio_da_torcida_(DSC01105).jpg",
+        "text": "Japan team thank you for your support."
+      },
+      {
+        "name": "United States",
+        "filename": "Jogadoras_dos_Estados_Unidos_comemoram_gol_(DSC01163).jpg",
+        "text": "USA players celebrates a goal."
+      }
+    ],
+    "final_standings": { "champions": "JPN_WNT", "runners_up": "USA_WNT", "third_place": "SWE_WNT", "fourth_place": "FRA_WNT" },
+    "statistics": { "total_matches": 32, "total_goals": 86, "attendance": 845711 },
+    "awards": {
+      "golden_boot": [{ "player": "Homare Sawa", "team": "JPN_WNT", "goals": 5, "assists": 1 }],
+      "silver_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 4, "assists": 2 }],
+      "bronze_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 4, "assists": 1 }],
+      "golden_ball": [
+        { "player": "Homare Sawa", "team": "JPN_WNT" },
+        { "player": "Abby Wambach", "team": "USA_WNT" },
+        { "player": "Hope Solo", "team": "USA_WNT" }
+      ],
+      "best_young_player": { "player": "Caitlin Foord", "team": "AUS_WNT" },
+      "golden_glove": { "player": "Hope Solo", "team": "USA_WNT" },
+      "fair_play_team": ["JPN_WNT"]
+    }
   },
   {
     "id": "WWC2007",
