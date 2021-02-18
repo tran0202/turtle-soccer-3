@@ -63,7 +63,6 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
     tmp = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
   }
   const config = group.advancement ? group : groupStage
-  // console.log('config', config)
   const advancedTeams = group.final_rankings.filter((t) => t && isAdvancedNextRound(t, config))
   advancedTeams &&
     advancedTeams.forEach((at) => {
@@ -71,18 +70,21 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
       const advancedTeamRanking = advancedTeamProgess.rankings ? advancedTeamProgess.rankings[advancedTeamProgess.rankings.length - 1] : {}
       tmp.final_rankings.push(advancedTeamRanking)
     })
-  const advancedThirdPlaceTeam = group.final_rankings.find((t) => t && isAdvancedThirdPlace(t, groupStage))
-  if (advancedThirdPlaceTeam) {
+  const advancedThirdPlaceTeams = group.final_rankings.filter((t) => t && isAdvancedThirdPlace(t, groupStage))
+  // console.log('advancedThirdPlaceTeams', advancedThirdPlaceTeams)
+  if (advancedThirdPlaceTeams.length > 0) {
     tmp = tournament.advanced_teams.rounds.find((r) => r.name === 'Third-place')
     if (!tmp) {
       tournament.advanced_teams.rounds.unshift({ name: 'Third-place', ranking_type: 'round', final_rankings: [] })
       tmp = tournament.advanced_teams.rounds.find((r) => r.name === 'Third-place')
     }
-    const advancedThirdPlaceTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === advancedThirdPlaceTeam.id)
-    const advancedThirdPlaceTeamRanking = advancedThirdPlaceTeamProgess.rankings
-      ? advancedThirdPlaceTeamProgess.rankings[advancedThirdPlaceTeamProgess.rankings.length - 1]
-      : {}
-    tmp.final_rankings.push(advancedThirdPlaceTeamRanking)
+    advancedThirdPlaceTeams.forEach((atpt) => {
+      const advancedThirdPlaceTeamProgess = tournament.progress_rankings.teams.find((t) => t.id === atpt.id)
+      const advancedThirdPlaceTeamRanking = advancedThirdPlaceTeamProgess.rankings
+        ? advancedThirdPlaceTeamProgess.rankings[advancedThirdPlaceTeamProgess.rankings.length - 1]
+        : {}
+      tmp.final_rankings.push(advancedThirdPlaceTeamRanking)
+    })
   }
 }
 

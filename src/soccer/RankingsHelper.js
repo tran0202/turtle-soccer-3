@@ -837,7 +837,9 @@ export const isAdvancedPlayoff = (row, config) => {
 export const isAdvancedThirdPlace = (row, config) => {
   if (!row) return false
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.third_place) {
-    return row.r === config.advancement.teams.third_place
+    let flag = false
+    config.advancement.teams.third_place.forEach((a) => (flag = flag || row.r === a))
+    return flag
   }
   return false
 }

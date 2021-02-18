@@ -380,10 +380,39 @@
     "name": "Oceania Nations Cup New Zealand 1973",
     "short_name": "New Zealand 1973",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "1973-02-17", "end_date": "1973-02-24" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["NZL"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "1973-02-17",
+      "end_date": "1973-02-24",
+      "color": "#1d368a",
+      "team_count": 5,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Newmarket Park, Auckland",
+        "filename": "Southwestern_Entrance_To_Newmarket_Park.jpg",
+        "text": "Newmarket Park, Auckland"
+      },
+      {
+        "name": "Auckland, New Zealand",
+        "filename": "Auckland,_Albert_Park.jpg",
+        "text": "Albert Park in Auckland"
+      }
+    ],
+    "final_standings": { "champions": "NZL", "runners_up": "TAH-1794-1984", "third_place": "NCL-1973-2008", "fourth_place": "VAN-1953-1980" },
+    "statistics": { "total_matches": 12, "total_goals": 37 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Segin Wayewol (NCL)", "team": "NCL-1973-2008", "goals": 3 },
+        { "player": "Alan Marley", "team": "NZL", "goals": 3 },
+        { "player": "Erroll Bennett (TAH)", "team": "TAH-1794-1984", "goals": 3 }
+      ]
+    }
   }
 ]
