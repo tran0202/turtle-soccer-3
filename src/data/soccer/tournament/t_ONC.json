@@ -345,11 +345,34 @@
     "name": "Oceania Nations Cup New Caledonia 1980",
     "short_name": "New Caledonia 1980",
     "tournament_type_id": "ONC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "OFCcup.png", "start_date": "1980-02-24", "end_date": "1980-03-01" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["NCL-1973-2008"],
+      "logo_filename": "OFCcup.png",
+      "start_date": "1980-02-24",
+      "end_date": "1980-03-01",
+      "color": "#009543",
+      "team_count": 8,
+      "confed_count": 1,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Nouméa, New Caledonia",
+        "filename": "Noumea_centre_1402561139_375c811796_o.jpg",
+        "text": "City centre and Nouméa Cathedral"
+      }
+    ],
+    "final_standings": { "champions": "AUS", "runners_up": "TAH-1794-1984", "third_place": "NCL-1973-2008", "fourth_place": "FIJ" },
+    "statistics": { "total_matches": 14, "total_goals": 94 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Ian Hunter", "team": "AUS", "goals": 5 },
+        { "player": "Eddie Krncevic", "team": "AUS", "goals": 5 }
+      ]
+    }
   },
   {
     "id": "ONC1973",

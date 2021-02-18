@@ -257,6 +257,8 @@
     "parent_team_id": "NCL"
   },
   { "id": "COK", "name": "Cook Islands", "team_type_id": "MNT", "nation_id": "COK", "parent_team_id": "" },
+  { "id": "TAH-1794-1984", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "TAH-1794-1984", "parent_team_id": "TAH" },
+  { "id": "VAN-1980", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "VAN-1980", "parent_team_id": "VAN" },
 
   { "id": "BRA_U23MNT", "name": "Brazil", "team_type_id": "U23MNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "ARG_U23MNT", "name": "Argentina", "team_type_id": "U23MNT", "nation_id": "ARG", "parent_team_id": "" },
@@ -509,7 +511,6 @@
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
   { "id": "1044", "name": "Cook Islands", "team_type_id": "MNT", "nation_id": "48", "parent_team_id": "" },
-  { "id": "1046", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "235", "parent_team_id": "1043" },
   { "id": "1061", "name": "Bulgaria", "team_type_id": "MNT", "nation_id": "260", "parent_team_id": "223" },
   { "id": "1063", "name": "Spain", "team_type_id": "MNT", "nation_id": "267", "parent_team_id": "6" },
   { "id": "1072", "name": "Spain", "team_type_id": "U23MNT", "nation_id": "282", "parent_team_id": "881" },
@@ -519,7 +520,6 @@
   { "id": "1089", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "276", "parent_team_id": "1090" },
   { "id": "1090", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "268", "parent_team_id": "" },
   { "id": "1092", "name": "Costa Rica", "team_type_id": "MNT", "nation_id": "289", "parent_team_id": "27" },
-  { "id": "1108", "name": "Tahiti", "team_type_id": "MNT", "nation_id": "303", "parent_team_id": "1039" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
   { "id": "1110", "name": "New Hebrides", "team_type_id": "MNT", "nation_id": "305", "parent_team_id": "1043" },
   { "id": "1112", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "307", "parent_team_id": "870" },
