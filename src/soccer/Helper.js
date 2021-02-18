@@ -30,6 +30,9 @@ export const getTournamentTitleFont = (tournamentType) => {
     case 'WC':
       fontClassName = 'h1-ff5 tournament-title-WC'
       break
+    case 'WWC':
+      fontClassName = 'tournament-title-WWC'
+      break
     case 'EURO':
       fontClassName = 'tournament-title-EURO'
       break

@@ -5,7 +5,7 @@ import classnames from 'classnames'
 export const Style = (props) => {
   const { tournamentType } = props
   // console.log('tournamentType', tournamentType)
-  if (tournamentType && tournamentType.id === 'WOFT') {
+  if (tournamentType && (tournamentType.id === 'WOFT' || tournamentType.id === 'WWC')) {
     return (
       <style
         dangerouslySetInnerHTML={{

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "WWC2019",
+    "year": "2019",
+    "name": "FIFA Women's World Cup France 2019",
+    "tournament_type_id": "WWC",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "details": {
+      "host": ["FRA_WNT"],
+      "logo_filename": "2019_FIFA_Women's_World_Cup.svg",
+      "start_date": "2019-06-07",
+      "end_date": "2015-07-07",
+      "color": "#103d69",
+      "team_count": 24,
+      "confed_count": 6,
+      "venue_count": 9,
+      "city_count": 9
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "FIFA_Womens_World_Cup_2019_Final_-_US_team_on_podium_(4).jpg",
+        "text": "The US team receiving their champion medals."
+      },
+      {
+        "name": "Golden Boot & Golden Ball",
+        "filename": "Megan_Rapinoe_(May_2019)_(cropped).jpg",
+        "text": "Megan Rapinoe scored second-half goals for the United States in the final."
+      },
+      {
+        "name": "Silver Boot",
+        "filename": "Alex_Morgan_May19.jpg",
+        "text": "Alex Morgan scored six times for the United States, including five in their opening match."
+      },
+      {
+        "name": "Bronze Ball",
+        "filename": "Rose_Lavelle_(36648133634).jpg",
+        "text": "Rose Lavelle scored second-half goals for the United States in the final."
+      },
+      {
+        "name": "Golden Glove",
+        "filename": "20141015_-_PSG-Twente_084_(cropped).jpg",
+        "text": "Dutch goalkeeper Sari van Veenendaal won the Golden Glove award as best goalkeeper of the tournament."
+      },
+      {
+        "name": "Winning Coach",
+        "filename": "Jillian_Ellis_2015.jpg",
+        "text": "U.S. coach Jill Ellis was vying to become the first manager to win two Women's World Cup titles."
+      }
+    ],
+    "final_standings": { "champions": "USA_WNT", "runners_up": "NED_WNT", "third_place": "SWE_WNT", "fourth_place": "ENG_WNT" },
+    "statistics": { "total_matches": 52, "total_goals": 146, "attendance": 1131312 },
+    "awards": {
+      "golden_boot": [{ "player": "Megan Rapinoe", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 428 }],
+      "silver_boot": [{ "player": "Alex Morgan", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 490 }],
+      "bronze_boot": [{ "player": "Ellen White", "team": "ENG_WNT", "goals": 6, "assists": 0, "minutes": 514 }],
+      "golden_ball": [
+        { "player": "Megan Rapinoe", "team": "USA_WNT" },
+        { "player": "Lucy Bronze", "team": "ENG_WNT" },
+        { "player": "Rose Lavelle", "team": "USA_WNT" }
+      ],
+      "best_young_player": { "player": "Giulia Gwinn", "team": "GER_WNT" },
+      "golden_glove": { "player": "Sari van Veenendaal", "team": "NED_WNT" },
+      "fair_play_team": ["FRA_WNT"]
+    }
+  },
+  {
+    "id": "WWC2015",
+    "year": "2015",
+    "name": "FIFA Women's World Cup Canada 2015",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2015.png", "start_date": "2015-06-06", "end_date": "2015-07-05" }
+  },
+  {
+    "id": "WWC2011",
+    "year": "2011",
+    "name": "FIFA Women's World Cup Germany 2011",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2011.png", "start_date": "2011-06-26", "end_date": "2011-07-17" }
+  },
+  {
+    "id": "WWC2007",
+    "year": "2007",
+    "name": "FIFA Women's World Cup China 2007",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2007.png", "start_date": "2007-09-10", "end_date": "2007-09-30" }
+  },
+  {
+    "id": "WWC2003",
+    "year": "2003",
+    "name": "FIFA Women's World Cup USA 2003",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "2003.png", "start_date": "2003-09-20", "end_date": "2003-10-12" }
+  },
+  {
+    "id": "WWC1999",
+    "year": "1999",
+    "name": "FIFA Women's World Cup USA 1999",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": true,
+    "points_for_win": 3,
+    "details": { "logo_filename": "1999.png", "start_date": "1999-06-19", "end_date": "1999-07-10" }
+  },
+  {
+    "id": "WWC1995",
+    "year": "1995",
+    "name": "FIFA Women's World Cup Sweden 1995",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 3,
+    "details": { "logo_filename": "1995.png", "start_date": "1995-06-05", "end_date": "1995-06-18" }
+  },
+  {
+    "id": "WWC1991",
+    "year": "1991",
+    "name": "FIFA Women's World Cup China 1991",
+    "short_name": "China 1991",
+    "tournament_type_id": "WWC",
+    "active": false,
+    "head_to_head_tiebreaker": false,
+    "golden_goal_rule": false,
+    "points_for_win": 2,
+    "details": { "logo_filename": "1991.png", "start_date": "1991-11-16", "end_date": "1991-11-30" }
+  }
+]

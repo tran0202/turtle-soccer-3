@@ -135,6 +135,20 @@
     ]
   },
   {
+    "id": "WWC",
+    "name": "FIFA Women's World Cup",
+    "color": "rgb(250, 34, 0)",
+    "team_type_id": "WNT",
+    "confederation_id": "FIFA",
+    "logo_path": "wwc_logos",
+    "trophy_filename": "women_world_cup_trophy.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The FIFA Women's World Cup is an international football competition contested by the senior women's national teams of the members of Fédération Internationale de Football Association (FIFA), the sport's international governing body. The competition has been held every four years since 1991.",
+      "The eight FIFA Women's World Cup tournaments have been won by four national teams. The United States has won four times, and is the current champion after winning it at the 2019 tournament in France. The other winners are Germany, with two titles, and Japan and Norway with one title each."
+    ]
+  },
+  {
     "id": "UNL",
     "name": "UEFA Nations League",
     "team_type_id": "MNT",
@@ -160,15 +174,6 @@
     "logo_path": "club_logos",
     "sport_id": "SOC",
     "order": 3
-  },
-  {
-    "id": "WWC",
-    "name": "FIFA Women's World Cup",
-    "team_type_id": "WNT",
-    "confederation_id": "FIFA",
-    "logo_path": "wwc_logos",
-    "sport_id": "SOC",
-    "order": 2
   },
   {
     "id": "WCQ",
