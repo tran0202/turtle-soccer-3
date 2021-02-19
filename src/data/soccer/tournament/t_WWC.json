@@ -357,11 +357,54 @@
     "year": "1995",
     "name": "FIFA Women's World Cup Sweden 1995",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "1995.png", "start_date": "1995-06-05", "end_date": "1995-06-18" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["SWE_WNT"],
+      "logo_filename": "1995.png",
+      "start_date": "1995-06-05",
+      "end_date": "1995-06-18",
+      "color": "#1d5f9a",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Råsunda Stadium, Solna",
+        "filename": "Råsunda_Stadium.jpg",
+        "text": "The Råsunda Stadium in Solna hosted the final."
+      },
+      {
+        "name": "Olympia, Helsingborg",
+        "filename": "Olympia_Helsingborg.jpg",
+        "text": "The Olympia hosted the semi-final Germany vs China PR."
+      },
+      {
+        "name": "Tingvalla IP, Karlstad",
+        "filename": "Tingvalla_IP.jpeg",
+        "text": "The Tingvalla IP hosted the quarter-final Norway vs Denmark."
+      },
+      {
+        "name": "Strömvallen, Gävle",
+        "filename": "Strömvallen3.jpg",
+        "text": "The Strömvallen hosted the quarter-final Japan vs United States."
+      }
+    ],
+    "final_standings": { "champions": "NOR_WNT", "runners_up": "GER_WNT", "third_place": "USA_WNT", "fourth_place": "CHN_WNT" },
+    "statistics": { "total_matches": 26, "total_goals": 99, "attendance": 112213 },
+    "awards": {
+      "golden_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 6, "assists": 0 }],
+      "silver_boot": [{ "player": "Hege Riise", "team": "NOR_WNT", "goals": 5, "assists": 5 }],
+      "bronze_boot": [{ "player": "Shi Guihongs", "team": "CHN_WNT", "goals": 3, "assists": 2 }],
+      "golden_ball": [
+        { "player": "Hege Riise", "team": "NOR_WNT" },
+        { "player": "Gro Espeseth", "team": "NOR_WNT" },
+        { "player": "Ann Kristin Aarønes", "team": "NOR_WNT" }
+      ],
+      "fair_play_team": ["SWE_WNT"]
+    }
   },
   {
     "id": "WWC1991",
