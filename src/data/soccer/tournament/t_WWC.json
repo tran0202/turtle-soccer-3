@@ -185,11 +185,55 @@
     "year": "2007",
     "name": "FIFA Women's World Cup China 2007",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2007_FIFA_Women's_World_Cup.svg", "start_date": "2007-09-10", "end_date": "2007-09-30" }
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "details": {
+      "host": ["CHN_WNT"],
+      "logo_filename": "2007_FIFA_Women's_World_Cup.svg",
+      "start_date": "2007-09-10",
+      "end_date": "2007-09-30",
+      "color": "#fa2200",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Hongkou Football Stadium, Shanghai",
+        "filename": "Hongkou_Stadium_in_Shanghai.jpg",
+        "text": "The Hongkou Stadium hosted the final."
+      },
+      {
+        "name": "Yellow Dragon Stadium, Hangzhou",
+        "filename": "Hangzhou-yellow-dragon-stad.jpg",
+        "text": "The Yellow Dragon Stadium hosted the semi-final United States vs Brazil"
+      },
+      {
+        "name": "Tianjin Olympic Center Stadium, Tianjin",
+        "filename": "Tianjin_Olympic_Center_Stadium.jpg",
+        "text": "The Tianjin Olympic Center Stadium hosted the semi-final Germany vs Norway."
+      },
+      {
+        "name": "Chengdu Sports Centre Stadium, Chengdu",
+        "filename": "Chengdu_Sports_Center.jpeg",
+        "text": "The Chengdu Sports Centre Stadium hosted group A matches."
+      }
+    ],
+    "final_standings": { "champions": "GER_WNT", "runners_up": "BRA_WNT", "third_place": "USA_WNT", "fourth_place": "NOR_WNT" },
+    "statistics": { "total_matches": 32, "total_goals": 111, "attendance": 1190971 },
+    "awards": {
+      "golden_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 7, "assists": 5 }],
+      "silver_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 6, "assists": 2 }],
+      "bronze_boot": [{ "player": "Ragnhild Gulbrandsen", "team": "NOR_WNT", "goals": 6, "assists": 0 }],
+      "golden_ball": [
+        { "player": "Marta", "team": "BRA_WNT" },
+        { "player": "Birgit Prinz", "team": "GER_WNT" },
+        { "player": "Cristiane", "team": "BRA_WNT" }
+      ],
+      "golden_glove": { "player": "Nadine Angerer", "team": "GER_WNT" },
+      "fair_play_team": ["NOR_WNT"]
+    }
   },
   {
     "id": "WWC2003",
