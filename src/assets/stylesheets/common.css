@@ -38,6 +38,10 @@
   font-family: 'Capture it';
   src: url('fonts/Capture it.ttf');
 }
+@font-face {
+  font-family: 'Philosopher';
+  src: url('fonts/Philosopher-Regular.ttf');
+}
 
 @media (min-width: 768px) {
 }

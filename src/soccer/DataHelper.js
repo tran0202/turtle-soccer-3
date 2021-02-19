@@ -9,6 +9,7 @@ import t_GC from '../data/soccer/tournament/t_GC.json'
 import t_AFCON from '../data/soccer/tournament/t_AFCON.json'
 import t_AAC from '../data/soccer/tournament/t_AAC.json'
 import t_ONC from '../data/soccer/tournament/t_ONC.json'
+import t_CONFEDC from '../data/soccer/tournament/t_CONFEDC.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -224,15 +225,17 @@ import td_ONC_2008 from '../data/soccer/tournamentData/ONC/td_ONC_2008.json'
 import td_ONC_2012 from '../data/soccer/tournamentData/ONC/td_ONC_2012.json'
 import td_ONC_2016 from '../data/soccer/tournamentData/ONC/td_ONC_2016.json'
 
+import td_CONFEDC_2017 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2017.json'
+
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'CONFEDC1991', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'CONFEDC2017', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_WWC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
+  return TournamentArray.concat(t_WC, t_WWC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC, t_CONFEDC)
 }
 
 export const getTournamentDataArray = () => {
@@ -247,11 +250,12 @@ export const getTournamentDataArray = () => {
     getTournamentDataAFCON(),
     getTournamentDataAAC(),
     getTournamentDataONC(),
+    getTournamentDataCONFEDC(),
   )
 }
 
-export const getTournamentDataWWC = () => {
-  return [].concat([td_WWC_1991], [td_WWC_1995], [td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
+export const getTournamentDataCONFEDC = () => {
+  return [].concat([td_CONFEDC_2017])
 }
 
 export const getQualificationTournamentArray = () => {
@@ -286,6 +290,10 @@ export const getTournamentDataWC = () => {
     [td_WC_2014],
     [td_WC_2018],
   )
+}
+
+export const getTournamentDataWWC = () => {
+  return [].concat([td_WWC_1991], [td_WWC_1995], [td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
 }
 
 export const getTournamentDataEURO = () => {
