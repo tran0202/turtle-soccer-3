@@ -169,11 +169,55 @@
     "year": "2005",
     "name": "FIFA Confederations Cup Germany 2005",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "cc_2005.jpg", "start_date": "2005-06-15", "end_date": "2005-06-29" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["GER"],
+      "logo_filename": "cc_2005.jpg",
+      "start_date": "2005-06-15",
+      "end_date": "2005-06-29",
+      "color": "#281e1d",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 5,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "Confed-Cup_Finale.jpeg",
+        "text": "Brazil vs Argentina"
+      },
+      {
+        "name": "Group A",
+        "filename": "Confed-Cup_2005_Argentinien_-_Deutschland.jpg",
+        "text": "Argentina vs Germany"
+      },
+      {
+        "name": "Group A",
+        "filename": "Confed-Cup_2005_Eröffnungsspiel_(Freistoß_Australien).jpeg",
+        "text": "Germany vs Australia"
+      },
+      {
+        "name": "Group A",
+        "filename": "Deutschland_-_Tunesien_Aufwärmen.jpeg",
+        "text": "The football team of Germany while warming up before the match against Tunisia during the Confederations Cup 2005."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "GER", "fourth_place": "MEX" },
+    "statistics": { "total_matches": 16, "total_goals": 56, "attendance": 603106 },
+    "awards": {
+      "golden_boot": [{ "player": "Adriano", "team": "BRA", "goals": 5 }],
+      "silver_boot": [{ "player": "Michael Ballack", "team": "GER", "goals": 4 }],
+      "bronze_boot": [{ "player": "John Aloisi", "team": "AUS", "goals": 4 }],
+      "golden_ball": [
+        { "player": "Adriano", "team": "BRA" },
+        { "player": "Riquelme", "team": "ARG" },
+        { "player": "Ronaldinho", "team": "BRA" }
+      ],
+      "golden_glove": [{ "player": "Oswaldo Sánchez", "team": "MEX" }],
+      "fair_play_team": ["GRE"]
+    }
   },
   {
     "id": "CONFEDC2003",
