@@ -445,6 +445,8 @@
   { "id": "GHA_WNT", "name": "Ghana", "team_type_id": "WNT", "nation_id": "GHA", "parent_team_id": "" },
   { "id": "DEN_WNT", "name": "Denmark", "team_type_id": "WNT", "nation_id": "DEN", "parent_team_id": "" },
   { "id": "RUS_WNT", "name": "Russia", "team_type_id": "WNT", "nation_id": "RUS", "parent_team_id": "" },
+  { "id": "TPE_WNT", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "TPE", "parent_team_id": "" },
+  { "id": "TPE-1979-2006_WNT", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "TPE-1979-2006", "parent_team_id": "TPE_WNT" },
 
   { "id": "BRA_U23WNT", "name": "Brazil", "team_type_id": "U23WNT", "nation_id": "BRA", "parent_team_id": "" },
   { "id": "GER_U23WNT", "name": "Germany", "team_type_id": "U23WNT", "nation_id": "GER", "parent_team_id": "" },
@@ -510,8 +512,6 @@
   { "id": "GIB", "name": "Gibraltar", "team_type_id": "MNT", "nation_id": "GIB", "parent_team_id": "" },
   { "id": "LIE", "name": "Liechtenstein", "team_type_id": "MNT", "nation_id": "LIE", "parent_team_id": "" },
 
-  { "id": "870", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "43", "parent_team_id": "" },
-
   { "id": "944", "name": "Russia", "team_type_id": "U23MNT", "nation_id": "157", "parent_team_id": "" },
   { "id": "958", "name": "United Arab Republic", "team_type_id": "U23MNT", "nation_id": "224", "parent_team_id": "877" },
 
@@ -526,6 +526,5 @@
   { "id": "1090", "name": "Iraq", "team_type_id": "U23MNT", "nation_id": "268", "parent_team_id": "" },
   { "id": "1092", "name": "Costa Rica", "team_type_id": "MNT", "nation_id": "289", "parent_team_id": "27" },
   { "id": "1109", "name": "New Caledonia", "team_type_id": "MNT", "nation_id": "304", "parent_team_id": "1038" },
-  { "id": "1112", "name": "Chinese Taipei", "team_type_id": "WNT", "nation_id": "307", "parent_team_id": "870" },
   { "id": "1113", "name": "China", "team_type_id": "U23MNT", "nation_id": "309", "parent_team_id": "932" }
 ]

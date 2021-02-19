@@ -412,10 +412,56 @@
     "name": "FIFA Women's World Cup China 1991",
     "short_name": "China 1991",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
-    "details": { "logo_filename": "1991.png", "start_date": "1991-11-16", "end_date": "1991-11-30" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["CHN_WNT"],
+      "logo_filename": "1991.png",
+      "start_date": "1991-11-16",
+      "end_date": "1991-11-30",
+      "color": "#fa2200",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Tianhe Stadium, Guangzhou",
+        "filename": "Tianhe_Stadium.jpg",
+        "text": "The Tianhe Stadium hosted the final."
+      },
+      {
+        "name": "Guangdong Provincial Stadium, Guangzhou",
+        "filename": "Guangdong_Provincial_Peoples_Stadium.jpg",
+        "text": "The Guangdong Provincial Stadium hosted the semi-final Germany vs United States."
+      },
+      {
+        "name": "Guangzhou, China",
+        "filename": "Guangzhou_Twin_Towers.jpg",
+        "text": "Guangzhou Twin Towers"
+      },
+      {
+        "name": "Zhongshan Stadium, Zhongshan",
+        "filename": "Zhongshan_Sports_Center_Stadium_-02.jpg",
+        "text": "The Zhongshan Stadium hosted the quarter-final Denmark vs Germany."
+      }
+    ],
+    "final_standings": { "champions": "USA_WNT", "runners_up": "NOR_WNT", "third_place": "SWE_WNT", "fourth_place": "GER_WNT" },
+    "statistics": { "total_matches": 26, "total_goals": 99, "attendance": 510000 },
+    "awards": {
+      "golden_boot": [{ "player": "Michelle Akers-Stahl", "team": "USA_WNT", "goals": 10 }],
+      "silver_boot": [{ "player": "Heidi Mohr", "team": "GER_WNT", "goals": 7 }],
+      "bronze_boot": [
+        { "player": "Linda Medalen", "team": "NOR_WNT", "goals": 6 },
+        { "player": "Carin Jennings", "team": "USA_WNT", "goals": 6 }
+      ],
+      "golden_ball": [
+        { "player": "Carin Jennings", "team": "USA_WNT" },
+        { "player": "Michelle Akers-Stahl", "team": "USA_WNT" },
+        { "player": "Linda Medalen", "team": "NOR_WNT" }
+      ],
+      "fair_play_team": ["GER_WNT"]
+    }
   }
 ]
