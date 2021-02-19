@@ -114,11 +114,55 @@
     "year": "2009",
     "name": "FIFA Confederations Cup South Africa 2009",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2009_FIFA_Confederations_Cup.svg", "start_date": "2009-06-14", "end_date": "2009-06-28" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["RSA"],
+      "logo_filename": "2009_FIFA_Confederations_Cup.svg",
+      "start_date": "2009-06-14",
+      "end_date": "2009-06-28",
+      "color": "#0c733b",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 4,
+      "city_count": 4
+    },
+    "hero_images": [
+      {
+        "name": "Ellis Park Stadium, Johannesburg",
+        "filename": "Ellis_Park_Stadium.jpg",
+        "text": "The Ellis Park Stadium hosted the final."
+      },
+      {
+        "name": "Golden Boot",
+        "filename": "JSP_0799.jpeg",
+        "text": "Luís Fabiano scored two goals during Brazil's second-half comeback to win the final"
+      },
+      {
+        "name": "Bronze Ball",
+        "filename": "Clint_Dempsey_20110622.jpg",
+        "text": "Clint Dempsey scored the second goal for the United States in their semi-final upset of Spain."
+      },
+      {
+        "name": "Match Ball",
+        "filename": "2009_FIFA_Confederations_Cup_ball_by_adidas.jpeg",
+        "text": "A replica of The Adidas Kopanya (the official match ball of the 2009 FIFA Confederations Cup) with the traditional 32-panel structure. The official match ball has the same structure and surface as the Adidas Europass."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "USA", "third_place": "ESP", "fourth_place": "RSA" },
+    "statistics": { "total_matches": 16, "total_goals": 44, "attendance": 584894 },
+    "awards": {
+      "golden_boot": [{ "player": "Luís Fabiano", "team": "BRA", "goals": 5 }],
+      "silver_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 3 }],
+      "bronze_boot": [{ "player": "David Villa", "team": "ESP", "goals": 3 }],
+      "golden_ball": [
+        { "player": "Kaká", "team": "BRA" },
+        { "player": "Luís Fabiano", "team": "ESP" },
+        { "player": "Clint Dempsey", "team": "USA" }
+      ],
+      "golden_glove": [{ "player": "Tim Howard", "team": "USA" }],
+      "fair_play_team": ["BRA"]
+    }
   },
   {
     "id": "CONFEDC2005",
