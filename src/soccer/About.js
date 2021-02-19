@@ -493,15 +493,13 @@ const About = (props) => {
                       {getGoldenGloveLabel(tournament)}
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
-                      {awards.golden_glove.team && (
-                        <img
-                          className="flag-sm flag-md"
-                          src={getFlagSrc(awards.golden_glove.team)}
-                          alt={awards.golden_glove.team}
-                          title={awards.golden_glove.team}
-                        />
-                      )}
-                      <span className="padding-top-xs">&nbsp;{awards.golden_glove.player}</span>
+                      {awards.golden_glove.length &&
+                        awards.golden_glove.map((gg) => (
+                          <Row className="no-margin-lr margin-bottom-xs" key={gg.player}>
+                            {gg.team && <img className="flag-sm flag-md" src={getFlagSrc(gg.team)} alt={gg.team} title={gg.team} />}
+                            {gg.player && <span className="padding-top-xs">&nbsp;{gg.player}</span>}
+                          </Row>
+                        ))}
                     </Col>
                   </Row>
                 </React.Fragment>

@@ -46,7 +46,7 @@
     "awards": {
       "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 9 }],
       "golden_ball": [{ "player": "Almoez Ali", "team": "QAT" }],
-      "golden_glove": { "player": "Saad Al Sheeb", "team": "QAT" },
+      "golden_glove": [{ "player": "Saad Al Sheeb", "team": "QAT" }],
       "fair_play_team": ["JPN"]
     }
   },
@@ -96,7 +96,7 @@
     "awards": {
       "golden_boot": [{ "player": "Ali Mabkhout", "team": "UAE", "goals": 5 }],
       "golden_ball": [{ "player": "Massimo Luongo", "team": "AUS" }],
-      "golden_glove": { "player": "Mathew Ryan", "team": "AUS" },
+      "golden_glove": [{ "player": "Mathew Ryan", "team": "AUS" }],
       "fair_play_team": ["AUS"]
     }
   },
@@ -197,7 +197,7 @@
         { "player": "Yasser Al-Qahtani", "team": "KSA", "goals": 4 }
       ],
       "golden_ball": [{ "player": "Younis Mahmoud", "team": "IRQ-2004-2008" }],
-      "golden_glove": { "player": "Noor Sabri", "team": "IRQ-2004-2008" },
+      "golden_glove": [{ "player": "Noor Sabri", "team": "IRQ-2004-2008" }],
       "fair_play_team": ["JPN"]
     }
   },
@@ -298,7 +298,7 @@
     "awards": {
       "golden_boot": [{ "player": "Lee Dong-Gook", "team": "KOR", "goals": 6 }],
       "golden_ball": [{ "player": "Hiroshi Nanami", "team": "JPN" }],
-      "golden_glove": { "player": "Jiang Jin", "team": "CHN" },
+      "golden_glove": [{ "player": "Jiang Jin", "team": "CHN" }],
       "fair_play_team": ["KSA"]
     }
   },
@@ -348,7 +348,7 @@
     "awards": {
       "golden_boot": [{ "player": "Ali Daei", "team": "IRN", "goals": 8 }],
       "golden_ball": [{ "player": "Khodadad Azizi", "team": "IRN" }],
-      "golden_glove": { "player": "Mohamed Al-Deayea", "team": "KSA" },
+      "golden_glove": [{ "player": "Mohamed Al-Deayea", "team": "KSA" }],
       "fair_play_team": ["IRN"]
     }
   },
@@ -436,7 +436,7 @@
     "awards": {
       "golden_boot": [{ "player": "Lee Tae-Ho", "team": "KOR", "goals": 3 }],
       "golden_ball": [{ "player": "Kim Joo-Sung", "team": "KOR" }],
-      "golden_glove": { "player": "Zhang Huikang", "team": "CHN" }
+      "golden_glove": [{ "player": "Zhang Huikang", "team": "CHN" }]
     }
   },
   {
@@ -479,7 +479,7 @@
         { "player": "Jia Xiuquan", "team": "CHN", "goals": 3 }
       ],
       "golden_ball": [{ "player": "Jia Xiuquan", "team": "CHN" }],
-      "golden_glove": { "player": "Abdullah Al-Deayea", "team": "KSA" },
+      "golden_glove": [{ "player": "Abdullah Al-Deayea", "team": "KSA" }],
       "fair_play_team": ["CHN"]
     }
   },

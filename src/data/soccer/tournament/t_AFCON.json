@@ -42,7 +42,7 @@
       "golden_boot": [{ "player": "Odion Ighalo", "team": "NGA", "goals": 5 }],
       "golden_ball": [{ "player": "Ismaël Bennacer", "team": "ALG" }],
       "best_young_player": { "player": "Krépin Diatta", "team": "SEN" },
-      "golden_glove": { "player": "Raïs M'Bolhi", "team": "ALG" },
+      "golden_glove": [{ "player": "Raïs M'Bolhi", "team": "ALG" }],
       "fair_play_team": ["SEN"]
     }
   },
@@ -144,7 +144,7 @@
         { "player": "Dieumerci Mbokani", "team": "COD", "goals": 3 }
       ],
       "golden_ball": [{ "player": "Christian Atsu", "team": "GHA" }],
-      "golden_glove": { "player": "Sylvain Gbohouo", "team": "CIV" },
+      "golden_glove": [{ "player": "Sylvain Gbohouo", "team": "CIV" }],
       "fair_play_team": ["COD"]
     }
   },
@@ -292,7 +292,7 @@
     "awards": {
       "golden_boot": [{ "player": "Gedo", "team": "EGY", "goals": 5 }],
       "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }],
-      "golden_glove": { "player": "Essam El-Hadary", "team": "EGY" }
+      "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }]
     }
   },
   {
@@ -340,7 +340,7 @@
     "awards": {
       "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
       "golden_ball": [{ "player": "Hosny Abd Rabo", "team": "EGY" }],
-      "golden_glove": { "player": "Essam El-Hadary", "team": "EGY" }
+      "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }]
     }
   },
   {
@@ -729,7 +729,7 @@
     "awards": {
       "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 4 }],
       "golden_ball": [{ "player": "Abedi Pele", "team": "GHA" }],
-      "golden_glove": { "player": "Alain Gouaméné", "team": "CIV" }
+      "golden_glove": [{ "player": "Alain Gouaméné", "team": "CIV" }]
     }
   },
   {
@@ -829,7 +829,7 @@
         { "player": "Abdoulaye Traoré", "team": "CIV", "goals": 2 }
       ],
       "golden_ball": [{ "player": "Aziz Bouderbala", "team": "MAR" }],
-      "golden_glove": { "player": "Joseph-Antoine Bell", "team": "CMR" }
+      "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }]
     }
   },
   {
@@ -924,7 +924,7 @@
     "awards": {
       "golden_boot": [{ "player": "Taher Abouzaid", "team": "EGY", "goals": 4 }],
       "golden_ball": [{ "player": "Théophile Abega", "team": "CMR" }],
-      "golden_glove": { "player": "Joseph-Antoine Bell", "team": "CMR" }
+      "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }]
     }
   },
   {

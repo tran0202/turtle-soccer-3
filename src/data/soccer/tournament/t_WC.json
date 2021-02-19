@@ -69,7 +69,7 @@
         { "player": "Antoine Griezmann", "team": "FRA" }
       ],
       "best_young_player": { "player": "Kylian Mbappé", "team": "FRA" },
-      "golden_glove": { "player": "Thibaut Courtois", "team": "BEL" },
+      "golden_glove": [{ "player": "Thibaut Courtois", "team": "BEL" }],
       "fair_play_team": ["ESP"]
     }
   },
@@ -133,7 +133,7 @@
         { "player": "Arjen Robben", "team": "NED" }
       ],
       "best_young_player": { "player": "Paul Pogba", "team": "FRA" },
-      "golden_glove": { "player": "Manuel Neuer", "team": "GER" },
+      "golden_glove": [{ "player": "Manuel Neuer", "team": "GER" }],
       "fair_play_team": ["COL"]
     }
   },
@@ -210,7 +210,7 @@
         { "player": "David Villa", "team": "ESP" }
       ],
       "best_young_player": { "player": "Thomas Muller", "team": "GER" },
-      "golden_glove": { "player": "Iker Casillas", "team": "ESP" },
+      "golden_glove": [{ "player": "Iker Casillas", "team": "ESP" }],
       "fair_play_team": ["ESP"]
     }
   },
@@ -263,7 +263,7 @@
         { "player": "Andrea Pirlo", "team": "ITA" }
       ],
       "best_young_player": { "player": "Lukas Podolski", "team": "GER" },
-      "golden_glove": { "player": "Gianluigi Buffon", "team": "ITA" },
+      "golden_glove": [{ "player": "Gianluigi Buffon", "team": "ITA" }],
       "fair_play_team": ["BRA", "ESP"]
     }
   },
@@ -319,7 +319,7 @@
         { "player": "Hong Myungbo", "team": "KOR" }
       ],
       "best_young_player": { "player": "Landon Donovan", "team": "USA" },
-      "golden_glove": { "player": "Oliver Kahn", "team": "GER" },
+      "golden_glove": [{ "player": "Oliver Kahn", "team": "GER" }],
       "fair_play_team": ["BEL"]
     }
   },
@@ -379,7 +379,7 @@
         { "player": "Lilian Thuram", "team": "FRA" }
       ],
       "best_young_player": { "player": "Michael Owen", "team": "ENG" },
-      "golden_glove": { "player": "Fabien Barthez", "team": "FRA" },
+      "golden_glove": [{ "player": "Fabien Barthez", "team": "FRA" }],
       "fair_play_team": ["ENG", "FRA"]
     }
   },
@@ -437,7 +437,7 @@
         { "player": "Hristo Stoichkov", "team": "BUL" }
       ],
       "best_young_player": { "player": "Marc Overmars", "team": "NED" },
-      "golden_glove": { "player": "Michel Preud'homme", "team": "BEL" },
+      "golden_glove": [{ "player": "Michel Preud'homme", "team": "BEL" }],
       "fair_play_team": ["BRA"]
     }
   },

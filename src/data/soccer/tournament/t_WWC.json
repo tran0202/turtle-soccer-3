@@ -62,7 +62,7 @@
         { "player": "Rose Lavelle", "team": "USA_WNT" }
       ],
       "best_young_player": { "player": "Giulia Gwinn", "team": "GER_WNT" },
-      "golden_glove": { "player": "Sari van Veenendaal", "team": "NED_WNT" },
+      "golden_glove": [{ "player": "Sari van Veenendaal", "team": "NED_WNT" }],
       "fair_play_team": ["FRA_WNT"]
     }
   },
@@ -119,7 +119,7 @@
         { "player": "Aya Miyama", "team": "JPN_WNT" }
       ],
       "best_young_player": { "player": "Kadeisha Buchanan", "team": "CAN_WNT" },
-      "golden_glove": { "player": "Hope Solo", "team": "USA_WNT" },
+      "golden_glove": [{ "player": "Hope Solo", "team": "USA_WNT" }],
       "fair_play_team": ["FRA_WNT"]
     }
   },
@@ -176,7 +176,7 @@
         { "player": "Hope Solo", "team": "USA_WNT" }
       ],
       "best_young_player": { "player": "Caitlin Foord", "team": "AUS_WNT" },
-      "golden_glove": { "player": "Hope Solo", "team": "USA_WNT" },
+      "golden_glove": [{ "player": "Hope Solo", "team": "USA_WNT" }],
       "fair_play_team": ["JPN_WNT"]
     }
   },
@@ -231,7 +231,7 @@
         { "player": "Birgit Prinz", "team": "GER_WNT" },
         { "player": "Cristiane", "team": "BRA_WNT" }
       ],
-      "golden_glove": { "player": "Nadine Angerer", "team": "GER_WNT" },
+      "golden_glove": [{ "player": "Nadine Angerer", "team": "GER_WNT" }],
       "fair_play_team": ["NOR_WNT"]
     }
   },
@@ -287,7 +287,7 @@
         { "player": "Victoria Svensson", "team": "SWE_WNT" },
         { "player": "Maren Meinert", "team": "GER_WNT" }
       ],
-      "golden_glove": { "player": "Silke Rottenberg", "team": "GER_WNT" },
+      "golden_glove": [{ "player": "Silke Rottenberg", "team": "GER_WNT" }],
       "fair_play_team": ["CHN_WNT"]
     }
   },
@@ -296,11 +296,61 @@
     "year": "1999",
     "name": "FIFA Women's World Cup USA 1999",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "1999.png", "start_date": "1999-06-19", "end_date": "1999-07-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA_WNT"],
+      "logo_filename": "1999.png",
+      "start_date": "1999-06-19",
+      "end_date": "1999-07-10",
+      "color": "#0f246a",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "United States",
+        "filename": "Lilly356.jpg",
+        "text": "Kristine Lilly (left) and Mia Hamm (right) both scored goals in the first two group stage matches for the United States."
+      },
+      {
+        "name": "Rose Bowl, Pasadena",
+        "filename": "Rose_Bowl_aerial.jpg",
+        "text": "The Rose Bowl hosted the final."
+      },
+      {
+        "name": "Foxboro Stadium, Foxborough",
+        "filename": "Foxborostade_crop.png",
+        "text": "The Foxboro Stadium hosted the semi-final Norway vs China PR."
+      },
+      {
+        "name": "Stanford Stadium, Stanford",
+        "filename": "StanfordStadium2004.jpg",
+        "text": "The Stanford Stadium hosted the semi-final United States vs Brazil."
+      }
+    ],
+    "final_standings": { "champions": "USA_WNT", "runners_up": "CHN_WNT", "third_place": "BRA_WNT", "fourth_place": "NOR_WNT" },
+    "statistics": { "total_matches": 32, "total_goals": 123, "attendance": 1194215 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Sissi", "team": "BRA_WNT", "goals": 7, "assists": 3 },
+        { "player": "Sun Wen", "team": "CHN_WNT", "goals": 7, "assists": 3 }
+      ],
+      "bronze_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 4, "assists": 1 }],
+      "golden_ball": [
+        { "player": "Sun Wen", "team": "CHN_WNT" },
+        { "player": "Sissi", "team": "BRA_WNT" },
+        { "player": "Michelle Akers", "team": "USA_WNT" }
+      ],
+      "golden_glove": [
+        { "player": "Gao Hong", "team": "CHN_WNT" },
+        { "player": "Briana Scurry", "team": "USA_WNT" }
+      ],
+      "fair_play_team": ["CHN_WNT"]
+    }
   },
   {
     "id": "WWC1995",

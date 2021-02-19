@@ -43,7 +43,7 @@
       "golden_boot": [{ "player": "Jonathan David", "team": "CAN", "goals": 6 }],
       "golden_ball": [{ "player": "Raúl Jiménez", "team": "MEX" }],
       "best_young_player": { "player": "Christian Pulisic", "team": "USA" },
-      "golden_glove": { "player": "Guillermo Ochoa", "team": "MEX" },
+      "golden_glove": [{ "player": "Guillermo Ochoa", "team": "MEX" }],
       "fair_play_team": ["USA"]
     }
   },
@@ -99,7 +99,7 @@
       ],
       "golden_ball": [{ "player": "Michael Bradley", "team": "USA" }],
       "best_young_player": { "player": "Alphonso Davies", "team": "CAN" },
-      "golden_glove": { "player": "Andre Blake", "team": "JAM" },
+      "golden_glove": [{ "player": "Andre Blake", "team": "JAM" }],
       "fair_play_team": ["USA"]
     }
   },
@@ -150,7 +150,7 @@
       "golden_boot": [{ "player": "Clint Dempsey", "team": "USA", "goals": 7 }],
       "golden_ball": [{ "player": "Andrés Guardado", "team": "MEX" }],
       "best_young_player": { "player": "Jesús Manuel Corona", "team": "MEX" },
-      "golden_glove": { "player": "Brad Guzan", "team": "USA" },
+      "golden_glove": [{ "player": "Brad Guzan", "team": "USA" }],
       "fair_play_team": ["JAM"]
     }
   },
@@ -205,7 +205,7 @@
         { "player": "Chris Wondolowski", "team": "USA", "goals": 5 }
       ],
       "golden_ball": [{ "player": "Landon Donovan", "team": "USA" }],
-      "golden_glove": { "player": "Jaime Penedo", "team": "PAN" },
+      "golden_glove": [{ "player": "Jaime Penedo", "team": "PAN" }],
       "fair_play_team": ["PAN"]
     }
   },
@@ -256,7 +256,7 @@
     "awards": {
       "golden_boot": [{ "player": "Javier Hernández", "team": "MEX", "goals": 7 }],
       "golden_ball": [{ "player": "Javier Hernández", "team": "MEX" }],
-      "golden_glove": { "player": "Noel Valladares", "team": "HON" },
+      "golden_glove": [{ "player": "Noel Valladares", "team": "HON" }],
       "fair_play_team": ["MEX"]
     }
   },
@@ -307,7 +307,7 @@
     "awards": {
       "golden_boot": [{ "player": "Miguel Sabah", "team": "MEX", "goals": 4 }],
       "golden_ball": [{ "player": "Giovani dos Santos", "team": "MEX" }],
-      "golden_glove": { "player": "Keylor Navas", "team": "CRC" },
+      "golden_glove": [{ "player": "Keylor Navas", "team": "CRC" }],
       "fair_play_team": ["USA"]
     }
   },
@@ -358,7 +358,7 @@
     "awards": {
       "golden_boot": [{ "player": "Carlos Pavón", "team": "HON", "goals": 5 }],
       "golden_ball": [{ "player": "Julian de Guzman", "team": "CAN" }],
-      "golden_glove": { "player": "Franck Grandel", "team": "GLP" },
+      "golden_glove": [{ "player": "Franck Grandel", "team": "GLP" }],
       "fair_play_team": ["HON"]
     }
   },
@@ -415,7 +415,7 @@
         { "player": "Wilmer Velasquez", "team": "HON", "goals": 3 }
       ],
       "golden_ball": [{ "player": "Luis Tejada", "team": "PAN" }],
-      "golden_glove": { "player": "Jaime Penedo", "team": "PAN" },
+      "golden_glove": [{ "player": "Jaime Penedo", "team": "PAN" }],
       "fair_play_team": ["HON"]
     }
   },
@@ -464,7 +464,7 @@
         { "player": "Landon Donovan", "team": "USA", "goals": 4 }
       ],
       "golden_ball": [{ "player": "Jesús Arellano", "team": "MEX" }],
-      "golden_glove": { "player": "Oswaldo Sánchez", "team": "MEX" },
+      "golden_glove": [{ "player": "Oswaldo Sánchez", "team": "MEX" }],
       "fair_play_team": ["USA"]
     }
   },
@@ -505,7 +505,7 @@
     "awards": {
       "golden_boot": [{ "player": "Brian McBride", "team": "USA", "goals": 4 }],
       "golden_ball": [{ "player": "Brian McBride", "team": "USA" }],
-      "golden_glove": { "player": "Lars Hirschfeld", "team": "CAN" },
+      "golden_glove": [{ "player": "Lars Hirschfeld", "team": "CAN" }],
       "fair_play_team": ["CRC"]
     }
   },
@@ -553,7 +553,7 @@
       "golden_boot": [{ "player": "Carlo Corazzin", "team": "CAN", "goals": 4 }],
       "golden_ball": [{ "player": "Craig Forrest", "team": "CAN" }],
       "best_young_player": { "player": "Richard Hastings", "team": "CAN" },
-      "golden_glove": { "player": "Craig Forrest", "team": "CAN" },
+      "golden_glove": [{ "player": "Craig Forrest", "team": "CAN" }],
       "fair_play_team": ["CAN"]
     }
   },

@@ -215,6 +215,7 @@ import td_ONC_2008 from '../data/soccer/tournamentData/ONC/td_ONC_2008.json'
 import td_ONC_2012 from '../data/soccer/tournamentData/ONC/td_ONC_2012.json'
 import td_ONC_2016 from '../data/soccer/tournamentData/ONC/td_ONC_2016.json'
 
+import td_WWC_1999 from '../data/soccer/tournamentData/WWC/td_WWC_1999.json'
 import td_WWC_2003 from '../data/soccer/tournamentData/WWC/td_WWC_2003.json'
 import td_WWC_2007 from '../data/soccer/tournamentData/WWC/td_WWC_2007.json'
 import td_WWC_2011 from '../data/soccer/tournamentData/WWC/td_WWC_2011.json'
@@ -225,7 +226,7 @@ import QualificationTournamentWCArray from '../data/soccer/QualificationTourname
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'WWC1999', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'WWC1995', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -248,7 +249,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataWWC = () => {
-  return [].concat([td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
+  return [].concat([td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
 }
 
 export const getQualificationTournamentArray = () => {

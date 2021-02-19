@@ -36,7 +36,7 @@
     "awards": {
       "golden_boot": [{ "player": "Raymond Gunemba", "team": "PNG", "goals": 5 }],
       "golden_ball": [{ "player": "David Muta", "team": "PNG" }],
-      "golden_glove": { "player": "Stefan Marinovic", "team": "NZL" },
+      "golden_glove": [{ "player": "Stefan Marinovic", "team": "NZL" }],
       "fair_play_team": ["NCL"]
     }
   },
@@ -76,7 +76,7 @@
     "awards": {
       "golden_boot": [{ "player": "Jacques Haeko", "team": "NCL", "goals": 6 }],
       "golden_ball": [{ "player": "Nicolas Vallar", "team": "TAH" }],
-      "golden_glove": { "player": "Rocky Nyikeine", "team": "NCL" },
+      "golden_glove": [{ "player": "Rocky Nyikeine", "team": "NCL" }],
       "fair_play_team": ["SOL"]
     }
   },
