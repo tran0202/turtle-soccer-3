@@ -240,11 +240,56 @@
     "year": "2003",
     "name": "FIFA Women's World Cup USA 2003",
     "tournament_type_id": "WWC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "2003_FIFA_Women's_World_Cup.svg", "start_date": "2003-09-20", "end_date": "2003-10-12" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["USA_WNT"],
+      "logo_filename": "2003_FIFA_Women's_World_Cup.svg",
+      "start_date": "2003-09-20",
+      "end_date": "2003-10-12",
+      "color": "#0f246a",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Final",
+        "filename": "FIFA_Womens_World_Cup_2003_-_Germany_vs_Sweden.jpg",
+        "text": "Germany vs Sweden"
+      },
+      {
+        "name": "Third place game",
+        "filename": "Wambach_2003.jpg",
+        "text": "United States vs Canada"
+      },
+      {
+        "name": "Golden Boot & Golden Ball",
+        "filename": "Birgit_Prinz.jpg",
+        "text": "Birgit Prinz provided Germany with 7 goals and 5 assists during the 2003 Women's World Cup."
+      },
+      {
+        "name": "Golden Goal",
+        "filename": "Nia_Künzer_2013_1.jpg",
+        "text": "German defender Nia Künzer scored the extra time golden goal to win the 2003 Women's World Cup."
+      }
+    ],
+    "final_standings": { "champions": "GER_WNT", "runners_up": "SWE_WNT", "third_place": "USA_WNT", "fourth_place": "CAN_WNT" },
+    "statistics": { "total_matches": 32, "total_goals": 107, "attendance": 679666 },
+    "awards": {
+      "golden_boot": [{ "player": "Birgit Prinz", "team": "GER_WNT", "goals": 7, "assists": 5, "minutes": 548 }],
+      "silver_boot": [{ "player": "Maren Meinert", "team": "GER_WNT", "goals": 4, "assists": 7, "minutes": 548 }],
+      "bronze_boot": [{ "player": "Kátia", "team": "BRA_WNT", "goals": 4, "assists": 0, "minutes": 360 }],
+      "golden_ball": [
+        { "player": "Birgit Prinz", "team": "GER_WNT" },
+        { "player": "Victoria Svensson", "team": "SWE_WNT" },
+        { "player": "Maren Meinert", "team": "GER_WNT" }
+      ],
+      "golden_glove": { "player": "Silke Rottenberg", "team": "GER_WNT" },
+      "fair_play_team": ["CHN_WNT"]
+    }
   },
   {
     "id": "WWC1999",
