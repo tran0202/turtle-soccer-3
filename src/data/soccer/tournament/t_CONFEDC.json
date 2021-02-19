@@ -59,11 +59,55 @@
     "year": "2013",
     "name": "FIFA Confederations Cup Brazil 2013",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 3,
-    "details": { "logo_filename": "2013_FIFA_Confederations_Cup.svg", "start_date": "2013-06-15", "end_date": "2013-06-30" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["BRA"],
+      "logo_filename": "2013_FIFA_Confederations_Cup.svg",
+      "start_date": "2013-06-15",
+      "end_date": "2013-06-30",
+      "color": "#477c16",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Confed.Cup2013Champions.jpg",
+        "text": "Brazil won the competition after beating Spain 3–0 in the final."
+      },
+      {
+        "name": "Golden Ball",
+        "filename": "Neymargoldenball.jpg",
+        "text": "Golden Ball winner Neymar"
+      },
+      {
+        "name": "Maracanã",
+        "filename": "Maracanã_stadium.jpg",
+        "text": "The iconic Maracanã Stadium"
+      },
+      {
+        "name": "Belo Horizonte",
+        "filename": "Estadio_Mineirao_placar_eletronico_dez_2012.jpeg",
+        "text": "Internal view of the stadium in Belo Horizonte."
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "ESP", "third_place": "ITA", "fourth_place": "URU" },
+    "statistics": { "total_matches": 16, "total_goals": 68, "attendance": 804659 },
+    "awards": {
+      "golden_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 5, "assists": 1, "minutes": 273 }],
+      "silver_boot": [{ "player": "Fred", "team": "BRA", "goals": 5, "assists": 1, "minutes": 423 }],
+      "bronze_boot": [{ "player": "Neymar", "team": "BRA", "goals": 4 }],
+      "golden_ball": [
+        { "player": "Neymar", "team": "BRA" },
+        { "player": "Andrés Iniesta", "team": "ESP" },
+        { "player": "Paulinho", "team": "BRA" }
+      ],
+      "golden_glove": [{ "player": "Júlio César", "team": "BRA" }],
+      "fair_play_team": ["ESP"]
+    }
   },
   {
     "id": "CONFEDC2009",
