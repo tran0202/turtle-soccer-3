@@ -469,11 +469,34 @@
     "name": "King Fahd Cup Saudi Arabia 1992",
     "short_name": "Saudi Arabia 1992",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
-    "golden_goal_rule": false,
     "points_for_win": 2,
     "tiebreakers": ["team", "head2head", "lot"],
-    "details": { "logo_filename": "Confederations_Cup.png", "start_date": "1992-10-15", "end_date": "1992-10-20" }
+    "details": {
+      "host": ["KSA"],
+      "logo_filename": "Confederations_Cup.png",
+      "start_date": "1992-10-15",
+      "end_date": "1992-10-20",
+      "color": "#9a7633",
+      "team_count": 4,
+      "confed_count": 4,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Riyadh, Saudi Arabia",
+        "filename": "Saudi-desert.gif",
+        "text": "The An Nafud desert in the outskirts of Riyadh with the Jabal Tuwaiq in the background"
+      }
+    ],
+    "final_standings": { "champions": "ARG", "runners_up": "KSA", "third_place": "USA", "fourth_place": "CIV" },
+    "statistics": { "total_matches": 4, "total_goals": 18, "attendance": 196500 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Gabriel Batistuta", "team": "ARG", "goals": 2 },
+        { "player": "Bruce Murray", "team": "USA", "goals": 2 }
+      ],
+      "golden_ball": [{ "player": "Fernando Redondo", "team": "ARG" }]
+    }
   }
 ]
