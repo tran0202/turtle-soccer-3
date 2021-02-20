@@ -389,11 +389,45 @@
     "year": "1997",
     "name": "FIFA Confederations Cup Saudi Arabia 1997",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "cc_1997.png", "start_date": "1997-12-12", "end_date": "1997-12-21" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["KSA"],
+      "logo_filename": "cc_1997.png",
+      "start_date": "1997-12-12",
+      "end_date": "1997-12-21",
+      "color": "#177700",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "King Fahd Stadium, Riyadh",
+        "filename": "King_Fahd_Int._Stadium-_Opening_Arabian_Gulf_Cup_2014.jpg",
+        "text": "The King Fahd Stadium hosted all the tournament matches."
+      },
+      {
+        "name": "Riyadh, Saudi Arabia",
+        "filename": "Riyadh,_Saudi_Arabia_(2048x1367)_(36864830374).jpg",
+        "text": "Riyadh skyline"
+      }
+    ],
+    "final_standings": { "champions": "BRA", "runners_up": "AUS", "third_place": "CZE", "fourth_place": "URU" },
+    "statistics": { "total_matches": 16, "total_goals": 52, "attendance": 333500 },
+    "awards": {
+      "golden_boot": [{ "player": "Romário", "team": "BRA", "goals": 7 }],
+      "silver_boot": [{ "player": "Vladimír Šmicer", "team": "CZE", "goals": 5 }],
+      "bronze_boot": [{ "player": "Ronaldo", "team": "BRA", "goals": 4 }],
+      "golden_ball": [
+        { "player": "Denílson", "team": "BRA" },
+        { "player": "Romário", "team": "BRA" },
+        { "player": "Vladimír Šmicer", "team": "CZE" }
+      ],
+      "fair_play_team": ["RSA"]
+    }
   },
   {
     "id": "CONFEDC1995",
