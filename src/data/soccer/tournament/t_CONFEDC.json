@@ -224,11 +224,55 @@
     "year": "2003",
     "name": "FIFA Confederations Cup France 2003",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "cc_2003.jpg", "start_date": "2003-06-18", "end_date": "2003-06-29" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["FRA"],
+      "logo_filename": "cc_2003.jpg",
+      "start_date": "2003-06-18",
+      "end_date": "2003-06-29",
+      "color": "#0015de",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 3,
+      "city_count": 3
+    },
+    "hero_images": [
+      {
+        "name": "Stade de France, Saint-Denis",
+        "filename": "Finale_Coupe_de_France_2010-2011_(Lille_LOSC_vs_Paris_SG_PSG).jpg",
+        "text": "The Stade de France hosted the final."
+      },
+      {
+        "name": "Saint-Denis, France",
+        "filename": "SAINT-DENIS_-_Canal_St_Denis,_Pont_Tournant_&_Basilique.jpeg",
+        "text": "The Canal Saint-Denis with swing bridge, pedestrian overpass leading to the Stade de France and the Basilique Saint-Denis in the background."
+      },
+      {
+        "name": "Stade de Gerland, Lyon",
+        "filename": "Stade-Gerland-RWC2007.jpeg",
+        "text": "The Stade de Gerland hosted the semi-final Cameroon vs Colombia."
+      },
+      {
+        "name": "Stade Geoffroy-Guichard, Saint-Étienne",
+        "filename": "Stade-GeoffroyGuichard-RWC2007.jpeg",
+        "text": "The Stade Geoffroy-Guichard hosted group matches."
+      }
+    ],
+    "final_standings": { "champions": "FRA", "runners_up": "CMR", "third_place": "TUR", "fourth_place": "COL" },
+    "statistics": { "total_matches": 16, "total_goals": 37, "attendance": 491700 },
+    "awards": {
+      "golden_boot": [{ "player": "Thierry Henry", "team": "FRA", "goals": 4 }],
+      "silver_boot": [{ "player": "Tuncay", "team": "TUR", "goals": 3, "assists": 1 }],
+      "bronze_boot": [{ "player": "Shunsuke Nakamura", "team": "JPN", "goals": 3, "assists": "0", "minutes": 170 }],
+      "golden_ball": [
+        { "player": "Thierry Henry", "team": "FRA" },
+        { "player": "Tuncay", "team": "TUR" },
+        { "player": "Marc-Vivien Foé", "team": "CMR" }
+      ],
+      "fair_play_team": ["JPN"]
+    }
   },
   {
     "id": "CONFEDC2001",
