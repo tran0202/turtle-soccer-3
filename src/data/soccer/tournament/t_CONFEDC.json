@@ -334,11 +334,55 @@
     "year": "1999",
     "name": "FIFA Confederations Cup Mexico 1999",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "cc_1999.jpg", "start_date": "1999-07-24", "end_date": "1999-08-04" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["MEX"],
+      "logo_filename": "cc_1999.jpg",
+      "start_date": "1999-07-24",
+      "end_date": "1999-08-04",
+      "color": "#009865",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 2,
+      "city_count": 2
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Azteca, Mexico City",
+        "filename": "Estadio_Azteca_07a.jpg",
+        "text": "The Estadio Azteca hosted the final."
+      },
+      {
+        "name": "Mexico City, Mexico",
+        "filename": "Montaje.Ciudad_de_México.jpg",
+        "text": "From top and left: Angel of Independence, Mexico City Metropolitan Cathedral, Paseo de la Reforma, Torre Latinoamericana, National Palace, Parque La Mexicana in Santa Fe, Monumento a la Revolución, Chapultepec Castle, Palacio de Bellas Artes and Paseo de la Reforma"
+      },
+      {
+        "name": "Estadio Jalisco, Guadalajara",
+        "filename": "Estadio_jalisco.jpg",
+        "text": "The Estadio Jalisco hosted the semi-final Brazil vs Saudi Arabia."
+      },
+      {
+        "name": "Guadalajara, Mexico",
+        "filename": "Montaje_de_la_ciudad_metropolitana_de_Guadalajara.jpg",
+        "text": "From top and left: Torre Icon 23, Teatro Degollado, Palacio de Gobierno, La Minerva, Templo Expiatorio, Hospicio Cabañas, University of Guadalajara, Puerta de Hierro, Guadalajara Cathedral, historic center; Founder's Monument; Arcos de Guadalajara."
+      }
+    ],
+    "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "KSA" },
+    "statistics": { "total_matches": 16, "total_goals": 55, "attendance": 970000 },
+    "awards": {
+      "golden_boot": [{ "player": "Ronaldinho", "team": "BRA", "goals": 6 }],
+      "silver_boot": [{ "player": "Cuauhtémoc Blanco", "team": "MEX", "goals": 6 }],
+      "bronze_boot": [{ "player": "Marzouk Al-Otaibi", "team": "KSA", "goals": 6 }],
+      "golden_ball": [
+        { "player": "Ronaldinho", "team": "BRA" },
+        { "player": "Cuauhtémoc Blanco", "team": "MEX" },
+        { "player": "Marzouk Al-Otaibi", "team": "KSA" }
+      ],
+      "fair_play_team": ["BRA"]
+    }
   },
   {
     "id": "CONFEDC1997",
