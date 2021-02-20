@@ -435,11 +435,33 @@
     "name": "King Fahd Cup Saudi Arabia 1995",
     "short_name": "Saudi Arabia 1995",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "Confederations_Cup.png", "start_date": "1995-01-06", "end_date": "1995-01-13" }
+    "tiebreakers": ["team", "head2head", "penalty"],
+    "details": {
+      "host": ["KSA"],
+      "logo_filename": "Confederations_Cup.png",
+      "start_date": "1995-01-06",
+      "end_date": "1995-01-13",
+      "color": "#0e4676",
+      "team_count": 6,
+      "confed_count": 5,
+      "venue_count": 1,
+      "city_count": 1
+    },
+    "hero_images": [
+      {
+        "name": "Riyadh, Saudi Arabia",
+        "filename": "Lake_at_Wadi_Hanifah_(5218227168).jpg",
+        "text": "Lake at the 120 km long Wadi Hanifa valley that cuts through Riyadh"
+      }
+    ],
+    "final_standings": { "champions": "DEN", "runners_up": "ARG", "third_place": "MEX", "fourth_place": "NGA" },
+    "statistics": { "total_matches": 8, "total_goals": 19, "attendance": 165000 },
+    "awards": {
+      "golden_boot": [{ "player": "Luis García", "team": "MEX", "goals": 3 }],
+      "golden_ball": [{ "player": "Brian Laudrup", "team": "DEN" }]
+    }
   },
   {
     "id": "CONFEDC1992",
@@ -451,6 +473,7 @@
     "head_to_head_tiebreaker": false,
     "golden_goal_rule": false,
     "points_for_win": 2,
+    "tiebreakers": ["team", "head2head", "lot"],
     "details": { "logo_filename": "Confederations_Cup.png", "start_date": "1992-10-15", "end_date": "1992-10-20" }
   }
 ]

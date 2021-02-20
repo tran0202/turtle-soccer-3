@@ -371,6 +371,16 @@ const createH2hNotes = (h2hMatch, a, b, drawFunction) => {
     b.group_playoff = h2hMatch.group_playoff
     return -1
   } else {
+    // console.log('h2hMatch', h2hMatch)
+    if (h2hMatch.tie_last_match) {
+      a.h2h_notes = `${getTeamName(a.id)} ${show_home_score}-${show_away_score} ${getTeamName(b.id)} >>> Penalties after last game: ${getTeamName(a.id)} ${
+        h2hMatch.home_penalty_score
+      }-${h2hMatch.away_penalty_score} ${getTeamName(b.id)}`
+      b.h2h_notes = `${getTeamName(b.id)} ${show_away_score}-${show_home_score} ${getTeamName(a.id)} >>> Penalties after last game: ${getTeamName(b.id)} ${
+        h2hMatch.away_penalty_score
+      }-${h2hMatch.home_penalty_score} ${getTeamName(a.id)}`
+      return h2hMatch.home_penalty_score > h2hMatch.away_penalty_score ? -1 : 1
+    }
     a.h2h_notes = `${getTeamName(a.id)} ${show_home_score}-${show_away_score} ${getTeamName(b.id)}`
     b.h2h_notes = `${getTeamName(b.id)} ${show_away_score}-${show_home_score} ${getTeamName(a.id)}`
     return drawFunction()
@@ -607,7 +617,6 @@ export const sortGroupRankings = (group, startingIndex, config) => {
           return 1
         } else {
           if (isHead2HeadBeforeGoalDifference) {
-            // console.log('config', config)
             updateDrawPool(group, a, b)
             return compareH2h(a, b, false, () => {
               return compareGoalDifference(a, b, true, () => {
