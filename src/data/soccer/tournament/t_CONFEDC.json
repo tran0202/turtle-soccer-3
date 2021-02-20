@@ -279,11 +279,55 @@
     "year": "2001",
     "name": "FIFA Confederations Cup Korea-Japan 2001",
     "tournament_type_id": "CONFEDC",
-    "active": false,
-    "head_to_head_tiebreaker": false,
     "golden_goal_rule": true,
     "points_for_win": 3,
-    "details": { "logo_filename": "cc_2001.jpg", "start_date": "2001-05-30", "end_date": "2001-06-10" }
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["KOR", "JPN"],
+      "logo_filename": "cc_2001.jpg",
+      "start_date": "2001-05-30",
+      "end_date": "2001-06-10",
+      "color": "#e2952b",
+      "team_count": 8,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "International Stadium Yokohama, Yokohama",
+        "filename": "NISSANSTADIUM20080608.jpeg",
+        "text": "The International Stadium Yokohama hosted the final."
+      },
+      {
+        "name": "Suwon World Cup Stadium, Suwon",
+        "filename": "Suwon_right.jpeg",
+        "text": "The Suwon World Cup Stadium hosted the semi-final France vs Brazil."
+      },
+      {
+        "name": "Niigata Stadium, Niigata",
+        "filename": "Bigswan080628.jpeg",
+        "text": "The Niigata Stadium hosted group B matches."
+      },
+      {
+        "name": "Ulsan Munsu Football Stadium, Ulsan",
+        "filename": "Munsu_20121110_204310_5.jpg",
+        "text": "The Ulsan Munsu Football Stadium hosted group A matches."
+      }
+    ],
+    "final_standings": { "champions": "FRA", "runners_up": "JPN", "third_place": "AUS", "fourth_place": "BRA" },
+    "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 557191 },
+    "awards": {
+      "golden_boot": [{ "player": "Robert Pires", "team": "FRA", "goals": 2 }],
+      "silver_boot": [{ "player": "Éric Carrière", "team": "FRA", "goals": 2 }],
+      "bronze_boot": [{ "player": "Hwang Sun-hong", "team": "KOR", "goals": 2 }],
+      "golden_ball": [
+        { "player": "Robert Pires", "team": "FRA" },
+        { "player": "Patrick Vieira", "team": "FRA" },
+        { "player": "Hidetoshi Nakata", "team": "JPN" }
+      ],
+      "fair_play_team": ["JPN"]
+    }
   },
   {
     "id": "CONFEDC1999",
