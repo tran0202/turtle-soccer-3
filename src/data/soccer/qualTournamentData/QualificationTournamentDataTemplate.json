@@ -5,7 +5,6 @@
       {
         "name": "First Round",
         "type": "knockout2legged",
-        "show_match_year": true,
         "rounds": [
           {
             "name": "First Leg",
@@ -147,7 +146,6 @@
       {
         "name": "Second Round",
         "type": "roundrobin",
-        "show_match_year": true,
         "default": true,
         "advancement": {
           "teams": {
@@ -1190,7 +1188,6 @@
       {
         "name": "Round-robin",
         "type": "roundrobinmatchday",
-        "show_match_year": true,
         "default": true,
         "advancement": {
           "teams": {

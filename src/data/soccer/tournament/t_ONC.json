@@ -6,7 +6,7 @@
     "short_name": "Papua New Guinea 2016",
     "tournament_type_id": "ONC",
     "points_for_win": 3,
-    "tiebreakers": ["team", "head2head", "awaygoals", "fairplay", "lot"],
+    "tiebreakers": ["team", "head2head", "head2headawaygoals", "fairplay", "lot"],
     "no_third_place": true,
     "details": {
       "host": ["PNG"],
@@ -87,6 +87,7 @@
     "short_name": "2008",
     "tournament_type_id": "ONC",
     "points_for_win": 3,
+    "show_match_year": true, 
     "tiebreakers": ["team", "head2head", "lot"],
     "details": {
       "logo_filename": "OFCcup.png",
@@ -310,6 +311,7 @@
     "points_for_win": 3,
     "tiebreakers": ["team", "head2head", "lot"],
     "no_third_place": true,
+    "show_match_year": true,
     "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01", "color": "#192e71", "team_count": 4, "confed_count": 1 },
     "hero_images": [
       {

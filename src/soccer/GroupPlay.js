@@ -7,6 +7,7 @@ import { Collapse, Row, Col, Button } from 'reactstrap'
 const GroupCollapse = (props) => {
   const { group, config } = props
   const matchArray = getMatchArrayByDate(group, true)
+  // console.log('group', group)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')

@@ -1,15 +1,15 @@
 import TournamentArray from '../data/soccer/tournament/Tournament.json'
 import t_WC from '../data/soccer/tournament/t_WC.json'
 import t_WWC from '../data/soccer/tournament/t_WWC.json'
-import t_EURO from '../data/soccer/tournament/t_EURO.json'
 import t_MOFT from '../data/soccer/tournament/t_MOFT.json'
 import t_WOFT from '../data/soccer/tournament/t_WOFT.json'
+import t_CONFEDC from '../data/soccer/tournament/t_CONFEDC.json'
+import t_EURO from '../data/soccer/tournament/t_EURO.json'
 import t_COPA from '../data/soccer/tournament/t_COPA.json'
 import t_GC from '../data/soccer/tournament/t_GC.json'
 import t_AFCON from '../data/soccer/tournament/t_AFCON.json'
 import t_AAC from '../data/soccer/tournament/t_AAC.json'
 import t_ONC from '../data/soccer/tournament/t_ONC.json'
-import t_CONFEDC from '../data/soccer/tournament/t_CONFEDC.json'
 
 import td_WC_1930 from '../data/soccer/tournamentData/WC/td_WC_1930.json'
 import td_WC_1934 from '../data/soccer/tournamentData/WC/td_WC_1934.json'
@@ -42,22 +42,6 @@ import td_WWC_2011 from '../data/soccer/tournamentData/WWC/td_WWC_2011.json'
 import td_WWC_2015 from '../data/soccer/tournamentData/WWC/td_WWC_2015.json'
 import td_WWC_2019 from '../data/soccer/tournamentData/WWC/td_WWC_2019.json'
 
-import td_EURO_1960 from '../data/soccer/tournamentData/EURO/td_EURO_1960.json'
-import td_EURO_1964 from '../data/soccer/tournamentData/EURO/td_EURO_1964.json'
-import td_EURO_1968 from '../data/soccer/tournamentData/EURO/td_EURO_1968.json'
-import td_EURO_1972 from '../data/soccer/tournamentData/EURO/td_EURO_1972.json'
-import td_EURO_1976 from '../data/soccer/tournamentData/EURO/td_EURO_1976.json'
-import td_EURO_1980 from '../data/soccer/tournamentData/EURO/td_EURO_1980.json'
-import td_EURO_1984 from '../data/soccer/tournamentData/EURO/td_EURO_1984.json'
-import td_EURO_1988 from '../data/soccer/tournamentData/EURO/td_EURO_1988.json'
-import td_EURO_1992 from '../data/soccer/tournamentData/EURO/td_EURO_1992.json'
-import td_EURO_1996 from '../data/soccer/tournamentData/EURO/td_EURO_1996.json'
-import td_EURO_2000 from '../data/soccer/tournamentData/EURO/td_EURO_2000.json'
-import td_EURO_2004 from '../data/soccer/tournamentData/EURO/td_EURO_2004.json'
-import td_EURO_2008 from '../data/soccer/tournamentData/EURO/td_EURO_2008.json'
-import td_EURO_2012 from '../data/soccer/tournamentData/EURO/td_EURO_2012.json'
-import td_EURO_2016 from '../data/soccer/tournamentData/EURO/td_EURO_2016.json'
-
 import td_MOFT_1908 from '../data/soccer/tournamentData/MOFT/td_MOFT_1908.json'
 import td_MOFT_1912 from '../data/soccer/tournamentData/MOFT/td_MOFT_1912.json'
 import td_MOFT_1920 from '../data/soccer/tournamentData/MOFT/td_MOFT_1920.json'
@@ -89,6 +73,33 @@ import td_WOFT_2004 from '../data/soccer/tournamentData/WOFT/td_WOFT_2004.json'
 import td_WOFT_2008 from '../data/soccer/tournamentData/WOFT/td_WOFT_2008.json'
 import td_WOFT_2012 from '../data/soccer/tournamentData/WOFT/td_WOFT_2012.json'
 import td_WOFT_2016 from '../data/soccer/tournamentData/WOFT/td_WOFT_2016.json'
+
+import td_CONFEDC_1992 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1992.json'
+import td_CONFEDC_1995 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1995.json'
+import td_CONFEDC_1997 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1997.json'
+import td_CONFEDC_1999 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1999.json'
+import td_CONFEDC_2001 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2001.json'
+import td_CONFEDC_2003 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2003.json'
+import td_CONFEDC_2005 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2005.json'
+import td_CONFEDC_2009 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2009.json'
+import td_CONFEDC_2013 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2013.json'
+import td_CONFEDC_2017 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2017.json'
+
+import td_EURO_1960 from '../data/soccer/tournamentData/EURO/td_EURO_1960.json'
+import td_EURO_1964 from '../data/soccer/tournamentData/EURO/td_EURO_1964.json'
+import td_EURO_1968 from '../data/soccer/tournamentData/EURO/td_EURO_1968.json'
+import td_EURO_1972 from '../data/soccer/tournamentData/EURO/td_EURO_1972.json'
+import td_EURO_1976 from '../data/soccer/tournamentData/EURO/td_EURO_1976.json'
+import td_EURO_1980 from '../data/soccer/tournamentData/EURO/td_EURO_1980.json'
+import td_EURO_1984 from '../data/soccer/tournamentData/EURO/td_EURO_1984.json'
+import td_EURO_1988 from '../data/soccer/tournamentData/EURO/td_EURO_1988.json'
+import td_EURO_1992 from '../data/soccer/tournamentData/EURO/td_EURO_1992.json'
+import td_EURO_1996 from '../data/soccer/tournamentData/EURO/td_EURO_1996.json'
+import td_EURO_2000 from '../data/soccer/tournamentData/EURO/td_EURO_2000.json'
+import td_EURO_2004 from '../data/soccer/tournamentData/EURO/td_EURO_2004.json'
+import td_EURO_2008 from '../data/soccer/tournamentData/EURO/td_EURO_2008.json'
+import td_EURO_2012 from '../data/soccer/tournamentData/EURO/td_EURO_2012.json'
+import td_EURO_2016 from '../data/soccer/tournamentData/EURO/td_EURO_2016.json'
 
 import td_COPA_1916 from '../data/soccer/tournamentData/COPA/td_COPA_1916.json'
 import td_COPA_1917 from '../data/soccer/tournamentData/COPA/td_COPA_1917.json'
@@ -225,57 +236,46 @@ import td_ONC_2008 from '../data/soccer/tournamentData/ONC/td_ONC_2008.json'
 import td_ONC_2012 from '../data/soccer/tournamentData/ONC/td_ONC_2012.json'
 import td_ONC_2016 from '../data/soccer/tournamentData/ONC/td_ONC_2016.json'
 
-import td_CONFEDC_1992 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1992.json'
-import td_CONFEDC_1995 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1995.json'
-import td_CONFEDC_1997 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1997.json'
-import td_CONFEDC_1999 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_1999.json'
-import td_CONFEDC_2001 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2001.json'
-import td_CONFEDC_2003 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2003.json'
-import td_CONFEDC_2005 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2005.json'
-import td_CONFEDC_2009 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2009.json'
-import td_CONFEDC_2013 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2013.json'
-import td_CONFEDC_2017 from '../data/soccer/tournamentData/CONFEDC/td_CONFEDC_2017.json'
-
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
 export const getCurrentTournament = () => {
-  return { tournament: 'UNL2019', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'UNL201819', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_WWC, t_EURO, t_MOFT, t_WOFT, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC, t_CONFEDC)
+  return TournamentArray.concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
 }
 
 export const getTournamentDataArray = () => {
   return [].concat(
     getTournamentDataWC(),
     getTournamentDataWWC(),
-    getTournamentDataEURO(),
     getTournamentDataMOFT(),
     getTournamentDataWOFT(),
+    getTournamentDataCONFEDC(),
+    getTournamentDataEURO(),
     getTournamentDataCOPA(),
     getTournamentDataGC(),
     getTournamentDataAFCON(),
     getTournamentDataAAC(),
     getTournamentDataONC(),
-    getTournamentDataCONFEDC(),
   )
 }
 
-export const getTournamentDataCONFEDC = () => {
-  return [].concat(
-    [td_CONFEDC_1992],[td_CONFEDC_1995],
-    [td_CONFEDC_1997],
-    [td_CONFEDC_1999],
-    [td_CONFEDC_2001],
-    [td_CONFEDC_2003],
-    [td_CONFEDC_2005],
-    [td_CONFEDC_2009],
-    [td_CONFEDC_2013],
-    [td_CONFEDC_2017],
-  )
-}
+// export const getTournamentDataCONFEDC = () => {
+//   return [].concat(
+//     [td_CONFEDC_1992],[td_CONFEDC_1995],
+//     [td_CONFEDC_1997],
+//     [td_CONFEDC_1999],
+//     [td_CONFEDC_2001],
+//     [td_CONFEDC_2003],
+//     [td_CONFEDC_2005],
+//     [td_CONFEDC_2009],
+//     [td_CONFEDC_2013],
+//     [td_CONFEDC_2017],
+//   )
+// }
 
 export const getQualificationTournamentArray = () => {
   return QualificationTournamentWCArray
@@ -315,26 +315,6 @@ export const getTournamentDataWWC = () => {
   return [].concat([td_WWC_1991], [td_WWC_1995], [td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
 }
 
-export const getTournamentDataEURO = () => {
-  return [].concat(
-    [td_EURO_1960],
-    [td_EURO_1964],
-    [td_EURO_1968],
-    [td_EURO_1972],
-    [td_EURO_1976],
-    [td_EURO_1980],
-    [td_EURO_1984],
-    [td_EURO_1988],
-    [td_EURO_1992],
-    [td_EURO_1996],
-    [td_EURO_2000],
-    [td_EURO_2004],
-    [td_EURO_2008],
-    [td_EURO_2012],
-    [td_EURO_2016],
-  )
-}
-
 export const getTournamentDataMOFT = () => {
   return [].concat(
     [td_MOFT_1908],
@@ -366,6 +346,41 @@ export const getTournamentDataMOFT = () => {
 
 export const getTournamentDataWOFT = () => {
   return [].concat([td_WOFT_1996], [td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016])
+}
+
+export const getTournamentDataCONFEDC = () => {
+  return [].concat(
+    [td_CONFEDC_1992],
+    [td_CONFEDC_1995],
+    [td_CONFEDC_1997],
+    [td_CONFEDC_1999],
+    [td_CONFEDC_2001],
+    [td_CONFEDC_2003],
+    [td_CONFEDC_2005],
+    [td_CONFEDC_2009],
+    [td_CONFEDC_2013],
+    [td_CONFEDC_2017],
+  )
+}
+
+export const getTournamentDataEURO = () => {
+  return [].concat(
+    [td_EURO_1960],
+    [td_EURO_1964],
+    [td_EURO_1968],
+    [td_EURO_1972],
+    [td_EURO_1976],
+    [td_EURO_1980],
+    [td_EURO_1984],
+    [td_EURO_1988],
+    [td_EURO_1992],
+    [td_EURO_1996],
+    [td_EURO_2000],
+    [td_EURO_2004],
+    [td_EURO_2008],
+    [td_EURO_2012],
+    [td_EURO_2016],
+  )
 }
 
 export const getTournamentDataCOPA = () => {

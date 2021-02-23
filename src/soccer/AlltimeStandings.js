@@ -48,7 +48,6 @@ const updateSuccessorRankings = (successor_rankings, all_rankings) => {
     } else {
       tmp_rankings.push(fr)
       const successor = successor_rankings.successors.find((s) => s.r === fr.r)
-      // console.log('fr', fr)
       successor.name = getTeamName(fr.parent_id ? fr.parent_id : fr.id)
     }
     previousRank = fr.r
@@ -67,6 +66,7 @@ const collectSuccessorRankings = (successor_rankings, fr, parentTeam) => {
 }
 
 const collectRankings = (tournaments) => {
+  // console.log('tournaments', tournaments)
   let rankingArray = []
   tournaments &&
     tournaments.forEach((t) => {
@@ -108,6 +108,30 @@ const collectRankings = (tournaments) => {
                   })
               })
           }
+        })
+      t.leagues &&
+        t.leagues.forEach((l) => {
+          l.stages &&
+            l.stages.forEach((s) => {
+              if (s.type === 'roundrobinleaguematchday') {
+                s.groups &&
+                  s.groups.forEach((g) => {
+                    g.teams &&
+                      g.teams.forEach((t) => {
+                        if (!_teams.find((t2) => t.id === t2.id)) {
+                          _teams.push(t)
+                        }
+                      })
+                    g.matchdays &&
+                      g.matchdays.forEach((md) => {
+                        md.matches &&
+                          md.matches.forEach((m) => {
+                            _matches.push(m)
+                          })
+                      })
+                  })
+              }
+            })
         })
       rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
       collectProgressRankings(t, rankings, 9)

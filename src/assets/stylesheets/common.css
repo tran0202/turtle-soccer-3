@@ -42,6 +42,10 @@
   font-family: 'Philosopher';
   src: url('fonts/Philosopher-Regular.ttf');
 }
+@font-face {
+  font-family: 'Good Times';
+  src: url('fonts/good times rg.ttf');
+}
 
 @media (min-width: 768px) {
 }

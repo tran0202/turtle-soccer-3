@@ -3,7 +3,7 @@ import Knockout2LeggedSummary from './Knockout2LeggedSummary'
 import { DisplaySchedule, getMatchArrayByDate, calculateAggregateScore } from './Helper'
 
 const Knockout2Legged = (props) => {
-  const { stage } = props
+  const { stage, config } = props
   calculateAggregateScore(stage)
   // console.log('stage', stage)
   return (
@@ -16,7 +16,7 @@ const Knockout2Legged = (props) => {
           return (
             <DisplaySchedule
               round={{ name: r.name, ...getMatchArrayByDate(r, false) }}
-              config={{ showMatchYear: stage.show_match_year, knockoutMatch: isSecondLeg || isPlayoffLeg, secondLegMatch: isSecondLeg }}
+              config={{ showMatchYear: config.show_match_year, knockoutMatch: isSecondLeg || isPlayoffLeg, secondLegMatch: isSecondLeg }}
               key={r.name}
             />
           )

@@ -1,17 +1,52 @@
 import React, { useState } from 'react'
 import RoundRobin from './RoundRobin'
 import RoundRobinMatchDay from './RoundRobinMatchDay'
+import RoundRobinLeagueMatchDay from './RoundRobinLeagueMatchDay'
 import Knockout from './Knockout'
 import Knockout2Legged from './Knockout2Legged'
-import { getTournamentConfig, getDefaultStageTab } from './Helper'
+import { getTournamentConfig, getDefaultStageTab, getDefaultMdTab } from './Helper'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
 import classnames from 'classnames'
 
+const collectLeagueMatchdays = (leagues) => {
+  if (!leagues) return null
+  let matchdays = []
+  leagues.forEach((l) => {
+    l.stages &&
+      l.stages.forEach((s) => {
+        if (s.type === 'roundrobinleaguematchday') {
+          s.groups &&
+            s.groups.forEach((g) => {
+              g.matchdays &&
+                g.matchdays.forEach((md) => {
+                  const _matches = []
+                  md.matches &&
+                    md.matches.forEach((m) => {
+                      m.league_name = l.name
+                      m.group = g.name
+                      _matches.push({ ...m })
+                    })
+                  const _md = matchdays.find((x) => x.name === md.name)
+                  if (_md === undefined) {
+                    matchdays.push({ name: md.name, matches: _matches })
+                  } else {
+                    _md.matches = _md.matches.concat(_matches)
+                  }
+                })
+            })
+        }
+      })
+  })
+  return matchdays
+}
+
 const Matches = (props) => {
   const { tournament } = props
-  const { stages } = tournament
+  const { stages, leagues } = tournament
+  const defaultTab = stages ? getDefaultStageTab(stages) : getDefaultMdTab(leagues)
+  const matchdays = collectLeagueMatchdays(leagues)
   const config = getTournamentConfig(tournament)
-  const [activeTab, setActiveTab] = useState(getDefaultStageTab(stages))
+  const [activeTab, setActiveTab] = useState(defaultTab)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)
   }
@@ -42,10 +77,41 @@ const Matches = (props) => {
               <React.Fragment key={stage.name}>
                 {stage.name && (
                   <TabPane tabId={stage.name.replace(' ', '-')}>
-                    {(stage.type === 'roundrobin' || stage.type === 'allocation') && <RoundRobin stage={stage} />}
-                    {stage.type === 'roundrobinmatchday' && <RoundRobinMatchDay stage={stage} />}
+                    {(stage.type === 'roundrobin' || stage.type === 'allocation') && <RoundRobin stage={stage} config={config} />}
+                    {stage.type === 'roundrobinmatchday' && <RoundRobinMatchDay stage={stage} config={config} />}
                     {stage.type === 'knockout' && <Knockout stage={stage} config={config} />}
-                    {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} />}
+                    {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} config={config} />}
+                  </TabPane>
+                )}
+              </React.Fragment>
+            ))}
+          </TabContent>
+        </React.Fragment>
+      )}
+      {matchdays && matchdays.length > 0 && (
+        <React.Fragment>
+          <Nav tabs className="mt-3">
+            {matchdays.map((md) => (
+              <NavItem key={md.name}>
+                {md.name && (
+                  <NavLink
+                    className={classnames({ active: activeTab === `${md.name.replace(' ', '-')}` })}
+                    onClick={() => {
+                      toggle(`${md.name.replace(' ', '-')}`)
+                    }}
+                  >
+                    {md.name}
+                  </NavLink>
+                )}
+              </NavItem>
+            ))}
+          </Nav>
+          <TabContent activeTab={activeTab}>
+            {matchdays.map((md) => (
+              <React.Fragment key={md.name}>
+                {md.name && (
+                  <TabPane tabId={md.name.replace(' ', '-')}>
+                    <RoundRobinLeagueMatchDay matchday={md} config={config} />
                   </TabPane>
                 )}
               </React.Fragment>

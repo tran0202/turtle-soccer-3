@@ -106,6 +106,7 @@ class TournamentApp extends React.Component {
           previous_tournament: this.getPreviousTournament(t.tournament_type_id, this.props.query.id),
           next_tournament: this.getNextTournament(t.tournament_type_id, this.props.query.id),
           stages: this.getTournamentData().stages,
+          leagues: this.getTournamentData().leagues,
           qualification: { ...this.getQualificationTournament() },
         },
       })

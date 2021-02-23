@@ -1,1 +1,153 @@
-{}
+{
+  "id": "UNL201819",
+  "leagues": [
+    {
+      "name": "League A",
+      "default": true,
+      "default_matchday": "Matchday 1",
+      "standing_count": 0,
+      "stages": [
+        {
+          "name": "Group Stage",
+          "type": "roundrobinleaguematchday",
+          "home_and_away": true,
+          "advancement": {
+            "teams": {
+              "auto": [1],
+              "eliminated": [2, 3],
+              "text": "The top teams in League A would advance to the Nations League Finals. The top teams in League B would be promoted to League A. The top 2 teams in League C would be promoted to League B. The top 2 teams and the best third-placed teams in League D would be promoted to League C."
+            }
+          },
+          "groups": [
+            {
+              "name": "Group 1",
+              "teams": [{ "id": "GER" }, { "id": "FRA" }, { "id": "NED" }],
+              "matchdays": [
+                {
+                  "name": "Matchday 1",
+                  "matches": [
+                    {
+                      "home_team": "GER",
+                      "away_team": "FRA",
+                      "home_score": 0,
+                      "away_score": 0,
+                      "date": "2018-09-06",
+                      "time": "20:45",
+                      "stadium": "Allianz Arena",
+                      "city": "Munich"
+                    }
+                  ]
+                },
+                {
+                  "name": "Matchday 2",
+                  "matches": [
+                    {
+                      "home_team": "FRA",
+                      "away_team": "NED",
+                      "home_score": 2,
+                      "away_score": 1,
+                      "date": "2018-09-09",
+                      "time": "20:45",
+                      "stadium": "Stade de France",
+                      "city": "Saint-Denis"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Group 2",
+              "teams": [{ "id": "SUI" }, { "id": "ISL" }, { "id": "BEL" }],
+              "matchdays": [
+                {
+                  "name": "Matchday 1",
+                  "matches": [
+                    {
+                      "home_team": "SUI",
+                      "away_team": "ISL",
+                      "home_score": 6,
+                      "away_score": 0,
+                      "date": "2018-09-08",
+                      "time": "18:00",
+                      "stadium": "Stade de France",
+                      "city": "Saint-Denis"
+                    }
+                  ]
+                }
+              ]
+            },
+            { "name": "Group 3", "teams": [] },
+            { "name": "Group 4", "teams": [] }
+          ]
+        },
+        { "name": "Knockout Stage", "type": "knockout" }
+      ]
+    },
+    {
+      "name": "League B",
+      "standing_count": 16,
+      "stages": [
+        {
+          "name": "Group Stage",
+          "type": "roundrobinleaguematchday",
+          "home_and_away": true,
+          "advancement": {
+            "teams": {
+              "auto": [1],
+              "eliminated": [2, 3],
+              "text": "The top teams in League A would advance to the Nations League Finals. The top teams in League B would be promoted to League A. The top 2 teams in League C would be promoted to League B. The top 2 teams and the best third-placed teams in League D would be promoted to League C."
+            }
+          },
+          "groups": [
+            {
+              "name": "Group 1",
+              "teams": [{ "id": "CZE" }, { "id": "UKR" }, { "id": "SVK" }],
+              "matchdays": [
+                {
+                  "name": "Matchday 1",
+                  "matches": [
+                    {
+                      "home_team": "CZE",
+                      "away_team": "UKR",
+                      "home_score": 1,
+                      "away_score": 2,
+                      "date": "2018-09-06",
+                      "time": "21:00",
+                      "stadium": "Městský fotbalový stadion",
+                      "city": "Uherské Hradiště"
+                    }
+                  ]
+                }
+              ]
+            },
+            { "name": "Group 2", "teams": [] },
+            { "name": "Group 3", "teams": [] },
+            {
+              "name": "Group 4",
+              "teams": [{ "id": "WAL" }, { "id": "IRL" }, { "id": "DEN" }],
+              "matchdays": [
+                {
+                  "name": "Matchday 1",
+                  "matches": [
+                    {
+                      "home_team": "WAL",
+                      "away_team": "IRL",
+                      "home_score": 4,
+                      "away_score": 1,
+                      "date": "2018-09-06",
+                      "time": "20:45",
+                      "stadium": "Cardiff City Stadium",
+                      "city": "Cardiff"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    { "name": "League C", "standing_count": 32, "stages": [{ "name": "Group Stage", "type": "roundrobinleaguematchday" }] },
+    { "name": "League D", "standing_count": 47, "stages": [{ "name": "Group Stage", "type": "roundrobinleaguematchday" }] }
+  ]
+}

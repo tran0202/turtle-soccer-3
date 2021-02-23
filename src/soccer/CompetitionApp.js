@@ -63,6 +63,7 @@ class CompetitionApp extends React.Component {
     if (ta) {
       ta.forEach((t) => {
         t.stages = this.getTournamentData(t.id).stages
+        t.leagues = this.getTournamentData(t.id).leagues
       })
       this.setState({
         tournaments: ta,

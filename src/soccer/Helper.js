@@ -12,9 +12,11 @@ export const getTournamentConfig = (tournament) => {
     tournament_type_id: tournament.tournament_type_id,
     golden_goal_rule: tournament.golden_goal_rule,
     silver_goal_rule: tournament.silver_goal_rule,
+    tiebreakers_collapsed: tournament.tiebreakers_collapsed,
     tiebreakers: tournament.tiebreakers,
     no_third_place: tournament.no_third_place,
     points_for_win: tournament.points_for_win,
+    show_match_year: tournament.show_match_year,
     active: tournament.active,
     hero_images: tournament.hero_images,
     details: tournament.details,
@@ -22,6 +24,22 @@ export const getTournamentConfig = (tournament) => {
     statistics: tournament.statistics,
     awards: tournament.awards,
   }
+}
+
+const getFormat = (rrStage) => {
+  const { groups, advancement, home_and_away, odd_format } = rrStage
+  const groupCount = groups ? groups.length : 0
+  const teamCount = groups && groups[0] && groups[0].teams ? groups[0].teams.length : 0
+  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement, home_and_away, odd_format }
+}
+
+export const getStageConfig = (tournament, stage) => {
+  if (!stage) return
+  const format = getFormat(stage)
+  // console.log('format', format)
+  return stage.tiebreakers
+    ? { ...getTournamentConfig(tournament), ...format, tiebreakers: stage.tiebreakers }
+    : { ...getTournamentConfig(tournament), ...format }
 }
 
 export const getTournamentTitleFont = (tournamentType) => {
@@ -33,14 +51,20 @@ export const getTournamentTitleFont = (tournamentType) => {
     case 'WWC':
       fontClassName = 'tournament-title-WWC'
       break
+    case 'MOFT':
+      fontClassName = 'h1-ff5 tournament-title-MOFT'
+      break
+    case 'WOFT':
+      fontClassName = 'tournament-title-WOFT'
+      break
+    case 'CONFEDC':
+      fontClassName = 'h1-ff5 tournament-title-CONFEDC'
+      break
     case 'EURO':
       fontClassName = 'tournament-title-EURO'
       break
-    case 'MOFT':
-      fontClassName = 'h1-ff5 tournament-title-OLYMPIC'
-      break
-    case 'WOFT':
-      fontClassName = 'tournament-title-OLYMPIC-2'
+    case 'UNL':
+      fontClassName = 'h1-ff5 tournament-title-UNL'
       break
     case 'COPA':
       fontClassName = 'tournament-title-COPA'
@@ -56,9 +80,6 @@ export const getTournamentTitleFont = (tournamentType) => {
       break
     case 'ONC':
       fontClassName = 'tournament-title-ONC'
-      break
-    case 'CONFEDC':
-      fontClassName = 'h1-ff5 tournament-title-CONFEDC'
       break
     default:
       fontClassName = 'h1-ff5 tournament-title'
@@ -79,7 +100,22 @@ export const getRoundRobinMdStages = (stages) => {
 }
 
 export const getAllRoundRobinStages = (stages) => {
-  return stages ? stages.filter((s) => s.type === 'roundrobin' || s.type === 'roundrobinmatchday') : null
+  return stages ? stages.filter((s) => s.type === 'roundrobin' || s.type === 'roundrobinmatchday' || s.type === 'roundrobinleaguematchday') : null
+}
+
+export const getLeagueRoundRobinMdStages = (leagues) => {
+  if (!leagues) return null
+  const rrLeagues = []
+  leagues.forEach((l) => {
+    if (l.stages) {
+      const rrStages = l.stages.filter((s) => s.type === 'roundrobinleaguematchday')
+      if (rrStages.length > 0) {
+        rrLeagues.push({ ...l, stages: rrStages })
+      }
+    }
+  })
+  // console.log('rrLeagues', rrLeagues)
+  return rrLeagues
 }
 
 export const getKnockoutStages = (stages) => {
@@ -91,6 +127,20 @@ export const getDefaultStageTab = (stages) => {
   const defaultStageIndex = stages.findIndex((s) => s.default)
   const defaultStageName = defaultStageIndex > -1 ? stages[defaultStageIndex].name : stages[0].name
   return defaultStageName ? defaultStageName.replace(' ', '-') : ''
+}
+
+export const getDefaultMdTab = (leagues) => {
+  const temp = 'Matchday-1'
+  if (!leagues || leagues.length === 0) return temp
+  const _l = leagues.find((l) => l.default_matchday)
+  return _l !== undefined ? _l.default_matchday.replace(' ', '-') : temp
+}
+
+export const getDefaultLeagueTab = (leagues) => {
+  const temp = 'League-A'
+  if (!leagues || leagues.length === 0) return temp
+  const _l = leagues.find((l) => l.default)
+  return _l !== undefined ? _l.name.replace(' ', '-') : temp
 }
 
 export const getFlagSrc = (id) => {
@@ -133,7 +183,6 @@ export const getTeamName = (id) => {
 }
 
 export const getShortTeamName = (id) => {
-  // console.log('id', id)
   if (!id) return
   const team = TeamArray.find((t) => t.id === id)
   if (team) {
@@ -267,6 +316,59 @@ export const getDateMatchArrayPair = (matches_array, sorted) => {
     })
   }
   return { dates, matches }
+}
+
+export const collectMdMatches = (group) => {
+  let matches = []
+  group.matchdays &&
+    group.matchdays.forEach((md) => {
+      md.matches &&
+        md.matches.forEach((m) => {
+          matches.push(m)
+        })
+    })
+  group.matches = matches
+}
+
+export const collectMdMatchesPair = (stage) => {
+  const { groups } = stage
+  let all_matches = []
+  let tmp = []
+  let mdMatches = []
+  let matchdays = []
+  groups &&
+    groups.forEach((g) => {
+      g &&
+        g.matchdays &&
+        g.matchdays.forEach((md) => {
+          if (md) {
+            if (!matchdays.find((_md) => _md.name === md.name)) {
+              matchdays.push(md.name)
+            }
+            md.matches &&
+              md.matches.forEach((m) => {
+                if (m) {
+                  m.group = g.name
+                  m.matchday = md.name
+                  all_matches.push(m)
+                }
+              })
+          }
+        })
+    })
+  all_matches.forEach((m) => {
+    if (!tmp[m.matchday]) {
+      tmp[m.matchday] = []
+    }
+    tmp[m.matchday].push(m)
+  })
+  matchdays.forEach((md) => {
+    if (tmp[md]) {
+      mdMatches[md] = { matches: tmp[md] }
+    }
+  })
+  // console.log('mdMatches', mdMatches)
+  return { matchdays, mdMatches }
 }
 
 export const isKnockout2LeggedStageValid = (stage) => {
@@ -690,7 +792,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
   )
 }
 
-const DisplayMatch = (props) => {
+export const DisplayMatch = (props) => {
   const { m, config } = props
   const homeLoseData = {
     knockoutMatch: config.knockoutMatch,

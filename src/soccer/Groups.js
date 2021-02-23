@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import TournamentFormat from './TournamentFormat'
 import GroupStandings from './GroupStandings'
 import GroupMdStandings from './GroupMdStandings'
-import { getTournamentConfig, getDefaultStageTab, getAllRoundRobinStages } from './Helper'
+import GroupLeagueMdStandings from './GroupLeagueMdStandings'
+import { getTournamentConfig, getStageConfig, getDefaultStageTab, getAllRoundRobinStages, getDefaultLeagueTab, collectMdMatches } from './Helper'
 import {
   calculateGroupRankings,
   calculateProgressRankings,
@@ -11,241 +13,8 @@ import {
   isGroupPlayoffTiebreaker,
   isLotGroupPlayoffTiebreaker,
 } from './RankingsHelper'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap'
+import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
 import classnames from 'classnames'
-
-const getFormat = (rrStage) => {
-  const { groups, advancement, home_and_away, odd_format } = rrStage
-  const groupCount = groups ? groups.length : 0
-  const teamCount = groups && groups[0] && groups[0].teams ? groups[0].teams.length : 0
-  return { groupCount, teamCount, totalCount: groupCount * teamCount, advancement, home_and_away, odd_format }
-}
-
-const TournamentFormat = (props) => {
-  const { config, tournamentType } = props
-  // console.log('config', config)
-  return (
-    config.teamCount !== 0 && (
-      <Row className="mt-3 mb-3 text-left tournament-format">
-        <Col xs="9">
-          <Row>
-            <Col xs="12">
-              <p>
-                <strong>Format:&nbsp;</strong>
-                {config.groupCount > 1 && (
-                  <React.Fragment>
-                    {config.id === 'WC1930' && (
-                      <React.Fragment>13 teams were drawn into 4 groups, with Group 1 containing 4 teams and the others containing 3.&nbsp;</React.Fragment>
-                    )}
-                    {config.id === 'WOFT2004' && (
-                      <React.Fragment>
-                        10 teams were drawn into 3 groups, with Group E &amp; F containing 3 teams and Group G containing 4.&nbsp;
-                      </React.Fragment>
-                    )}
-                    {config.id === 'GC1998' && (
-                      <React.Fragment>
-                        10 teams were drawn into 3 groups, with Group A containing 4 teams and Group B &amp; C containing 3.&nbsp;
-                      </React.Fragment>
-                    )}
-                    {config.id === 'GC1963' && (
-                      <React.Fragment>9 teams were drawn into 2 groups, with Group A containing 5 teams and Group B containing 4.&nbsp;</React.Fragment>
-                    )}
-                    {config.id !== 'WC1930' && config.id !== 'WOFT2004' && config.id !== 'GC1998' && config.id !== 'GC1963' && (
-                      <React.Fragment>
-                        {config.totalCount} teams were drawn into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
-                      </React.Fragment>
-                    )}
-                    {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals.)&nbsp;</React.Fragment>}
-                    {config.id === 'AFCON2010' && (
-                      <React.Fragment>
-                        (The withdrawal of Togo in group B after a terrorist attack on their bus reduced the number of participating nations to 15.)&nbsp;
-                      </React.Fragment>
-                    )}
-                    {config.id === 'AFCON1996' && (
-                      <React.Fragment> (Nigeria withdrew from the tournament at the final moment, reducing the field to 15.)&nbsp; </React.Fragment>
-                    )}
-                    {!config.odd_format && (
-                      <React.Fragment>Each group played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.</React.Fragment>
-                    )}
-                    {config.odd_format}
-                  </React.Fragment>
-                )}
-                {config.groupCount === 1 && (
-                  <React.Fragment>
-                    {config.totalCount} teams played a {config.home_and_away ? 'home-and-away ' : ''}round-robin schedule.
-                  </React.Fragment>
-                )}
-                &nbsp;
-                {config.advancement && config.advancement.teams && config.advancement.teams.text
-                  ? config.advancement.teams.text
-                  : 'The top 2 teams would advance to the knockout stage.'}
-                &nbsp;{config.advancement ? config.advancement.extra : ''}
-              </p>
-            </Col>
-            <Col xs="12">
-              <p className="no-margin-bottom">
-                <strong>Tiebreakers:</strong> The ranking of teams was determined as follows:
-              </p>
-              <ul className="no-margin-bottom">
-                {config.tiebreakers &&
-                  config.tiebreakers.map((tb, index) => {
-                    if (tb === 'points') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'pointslot') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Drawing lots</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'goaldifferenceandgoalscored') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Goal difference in all group matches</li>
-                          <li>Goals scored in all group matches</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'team') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Goal difference in all group matches</li>
-                          <li>Goals scored in all group matches</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'pointandgoaldifference') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Goal difference in all group matches</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'goalratio') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Goal ratio in all group matches</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'goalratiogroupplayoff') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Goal ratio in all group matches if the top 2 teams on equal points</li>
-                          <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
-                          <li>Goal ratio in all group matches if the playoff match ends with a draw</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'lotgroupplayoff') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Drawing lots if the top 2 teams on equal points</li>
-                          <li>Playoff match if the 2nd and 3rd placed teams on equal points</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === '1stplaceplayoff') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points ({config.points_for_win} points/W - 1 points/D - 0 points/L)</li>
-                          <li>Playoff match if the top 2 teams on equal points</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'firstroundposition') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Higher finishing position in the first round table</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'head2head') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points in head-to-head matches between tied teams</li>
-                          <li>Goal difference in head-to-head matches between tied teams</li>
-                          <li>Goals scored in head-to-head matches between tied teams</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'head2headpoints') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Points in matches between tied teams</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'head2headresults') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Head-to-head results</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'head2headmatch') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>Winner of heah-to-head match between tied teams</li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'head2headreapply') {
-                      return (
-                        <React.Fragment key={index}>
-                          <li>
-                            If more than two teams were tied, and after applying all head-to-head criteria above, a subset of teams were still tied, all
-                            head-to-head criteria above were reapplied exclusively to this subset of teams.
-                          </li>
-                        </React.Fragment>
-                      )
-                    } else if (tb === 'awaygoals') {
-                      return (
-                        <li key={index}>
-                          Away goals scored in matches between tied teams (if the tie is only between two teams in home-and-away league format)
-                        </li>
-                      )
-                    } else if (tb === 'penalty') {
-                      return <li key={index}>Penalty shoot-out if only 2 teams were tied and they met in the last round of the group stage</li>
-                    } else if (tb === 'fairplaylight') {
-                      return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -3. Yellow and Direct Red -4.</li>
-                    } else if (tb === 'fairplay') {
-                      return <li key={index}>Fair play points: Yellow -1. Indirect Red -3. Direct Red -4. Yellow and Direct Red -5.</li>
-                    } else if (tb === 'coefficient') {
-                      return <li key={index}>Position in the coefficient ranking system.</li>
-                    } else if (tb === 'lot') {
-                      return <li key={index}>Drawing lots</li>
-                    } else {
-                      return null
-                    }
-                  })}
-              </ul>
-            </Col>
-          </Row>
-        </Col>
-        <Col xs="3">
-          {config.details && config.details.mascot_filename && (
-            <img
-              src={`/assets/images/${tournamentType.logo_path}/${config.details.mascot_filename}`}
-              alt={`Mascot ${config.name}`}
-              title={`Mascot ${config.name}`}
-              className="tournament-mascot"
-            />
-          )}
-        </Col>
-      </Row>
-    )
-  )
-}
-
-const collectMdMatches = (group) => {
-  let matches = []
-  group.matchdays &&
-    group.matchdays.forEach((md) => {
-      md.matches &&
-        md.matches.forEach((m) => {
-          matches.push(m)
-        })
-    })
-  group.matches = matches
-}
 
 const calculateStageRankings = (tournament, config, stage) => {
   const { groups } = stage
@@ -268,29 +37,52 @@ const calculateStageRankings = (tournament, config, stage) => {
 const DisplayStage = (props) => {
   const { tournament, tournamentType, stage } = props
   if (!stage) return
-  const format = getFormat(stage)
-  const config = stage.tiebreakers
-    ? { ...getTournamentConfig(tournament), ...format, tiebreakers: stage.tiebreakers }
-    : { ...getTournamentConfig(tournament), ...format }
+  const config = getStageConfig(tournament, stage)
   return (
     <React.Fragment>
-      {format && <TournamentFormat config={config} tournamentType={tournamentType} />}
+      <TournamentFormat config={config} tournamentType={tournamentType} />
       {stage.type === 'roundrobin' && <GroupStandings config={config} stage={stage} />}
       {stage.type === 'roundrobinmatchday' && <GroupMdStandings config={config} stage={stage} />}
+      {stage.type === 'roundrobinleaguematchday' && <GroupLeagueMdStandings config={config} stage={stage} />}
     </React.Fragment>
   )
 }
 
 const Groups = (props) => {
   const { tournament, tournamentType } = props
-  const { stages } = tournament
+  const { stages, leagues } = tournament
   const rrStages = getAllRoundRobinStages(stages)
-  !tournament.calculated &&
-    rrStages.forEach((stage) => {
-      calculateStageRankings(tournament, getTournamentConfig(tournament), stage)
-      tournament.calculated = true
-    })
-  const [activeTab, setActiveTab] = useState(getDefaultStageTab(rrStages))
+  if (!tournament.calculated) {
+    rrStages &&
+      rrStages.forEach((stage) => {
+        calculateStageRankings(tournament, getTournamentConfig(tournament), stage)
+        tournament.calculated = true
+      })
+    leagues &&
+      leagues.forEach((l) => {
+        if (l.stages) {
+          const rrlStages = getAllRoundRobinStages(l.stages)
+          rrlStages &&
+            rrlStages.forEach((s) => {
+              if (s.groups) {
+                s.groups.forEach((g) => {
+                  g.matchdays &&
+                    g.matchdays.forEach((md) => {
+                      if (!g.matches) {
+                        g.matches = []
+                      }
+                      g.matches = g.matches.concat(md.matches)
+                    })
+                })
+                calculateStageRankings(tournament, getTournamentConfig(tournament), s)
+                tournament.calculated = true
+              }
+            })
+        }
+      })
+  }
+  const defaultTab = stages ? getDefaultStageTab(rrStages) : getDefaultLeagueTab(leagues)
+  const [activeTab, setActiveTab] = useState(defaultTab)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)
   }
@@ -323,6 +115,37 @@ const Groups = (props) => {
                 {stage.name && (
                   <TabPane tabId={stage.name.replace(' ', '-')}>
                     <DisplayStage tournament={tournament} tournamentType={tournamentType} stage={stage} />
+                  </TabPane>
+                )}
+              </React.Fragment>
+            ))}
+          </TabContent>
+        </React.Fragment>
+      )}
+      {leagues && leagues.length > 0 && (
+        <React.Fragment>
+          <Nav tabs className="mt-3">
+            {leagues.map((l) => (
+              <NavItem key={l.name}>
+                {l.name && (
+                  <NavLink
+                    className={classnames({ active: activeTab === `${l.name.replace(' ', '-')}` })}
+                    onClick={() => {
+                      toggle(`${l.name.replace(' ', '-')}`)
+                    }}
+                  >
+                    {l.name}
+                  </NavLink>
+                )}
+              </NavItem>
+            ))}
+          </Nav>
+          <TabContent activeTab={activeTab}>
+            {leagues.map((l) => (
+              <React.Fragment key={l.name}>
+                {l.name && l.stages && (
+                  <TabPane tabId={l.name.replace(' ', '-')}>
+                    <DisplayStage tournament={tournament} tournamentType={tournamentType} stage={l.stages[0]} />
                   </TabPane>
                 )}
               </React.Fragment>

@@ -771,14 +771,20 @@
 .tournament-title-WWC {
   font-family: 'Mexcellent 3D', sans-serif;
 }
+.tournament-title-MOFT {
+  font-family: 'London 2012', sans-serif;
+}
+.tournament-title-WOFT {
+  font-family: 'Mexcellent', sans-serif;
+}
+.tournament-title-CONFEDC {
+  font-family: 'Philosopher', sans-serif;
+}
 .tournament-title-EURO {
   font-family: 'Bridge', sans-serif;
 }
-.tournament-title-OLYMPIC {
-  font-family: 'London 2012', sans-serif;
-}
-.tournament-title-OLYMPIC-2 {
-  font-family: 'Mexcellent', sans-serif;
+.tournament-title-UNL {
+  font-family: 'Good Times', sans-serif;
 }
 .tournament-title-COPA {
   font-family: 'Copa America', sans-serif;
@@ -794,9 +800,6 @@
 }
 .tournament-title-ONC {
   font-family: 'Capture it', sans-serif;
-}
-.tournament-title-CONFEDC {
-  font-family: 'Philosopher', sans-serif;
 }
 
 .tournament-format {

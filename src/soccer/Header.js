@@ -1,12 +1,12 @@
 import React from 'react'
-import { getTournamentConfig, getRoundRobinStages, getTournamentTitleFont } from './Helper'
+import { getTournamentConfig, getRoundRobinStages, getLeagueRoundRobinMdStages, getTournamentTitleFont } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const HeaderLinks = (props) => {
   const { tournament, tournamentType, query } = props
   const { page } = query
-  const { id, active, qualification, stages, previous_tournament, next_tournament } = tournament
+  const { id, active, qualification, stages, leagues, previous_tournament, next_tournament } = tournament
   return (
     <Nav className="justify-content-center">
       {qualification.confed_length > 0 && active && (
@@ -24,6 +24,27 @@ const HeaderLinks = (props) => {
             </NavLink>
           </NavItem>
           {getRoundRobinStages(stages).length > 0 && (
+            <NavItem>
+              <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
+                Groups
+              </NavLink>
+            </NavItem>
+          )}
+          <NavItem>
+            <NavLink disabled={page === 'finalstandings'} href={`/soccer/tournament/${id}/finalstandings`}>
+              Final standings
+            </NavLink>
+          </NavItem>
+        </React.Fragment>
+      )}
+      {leagues && (
+        <React.Fragment>
+          <NavItem>
+            <NavLink disabled={page === 'matches'} href={`/soccer/tournament/${id}/matches`}>
+              Matches
+            </NavLink>
+          </NavItem>
+          {getLeagueRoundRobinMdStages(leagues).length > 0 && (
             <NavItem>
               <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
                 Groups
