@@ -1171,6 +1171,12 @@ export const WildCardTooltip = (props) => {
   return <TopTooltip target={target} content={content} />
 }
 
+export const ExcludedFourthPlaceTooltip = (props) => {
+  const { target } = props
+  const content = `Excluded the results against the fourth-placed teams.`
+  return <TopTooltip target={target} content={content} />
+}
+
 export const SuccessorTooltip = (props) => {
   const { target, children_teams, parent_team } = props
   let content = () => {

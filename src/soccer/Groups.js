@@ -71,7 +71,9 @@ const Groups = (props) => {
                       if (!g.matches) {
                         g.matches = []
                       }
-                      g.matches = g.matches.concat(md.matches)
+                      if (md.matches) {
+                        g.matches = g.matches.concat(md.matches)
+                      }
                     })
                 })
                 calculateStageRankings(tournament, getTournamentConfig(tournament), s)

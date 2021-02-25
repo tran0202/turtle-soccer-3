@@ -130,6 +130,16 @@ const collectRankings = (tournaments) => {
                           })
                       })
                   })
+              } else if (s.type === 'knockout') {
+                s.rounds &&
+                  s.rounds.forEach((r) => {
+                    r.matches &&
+                      r.matches.forEach((m) => {
+                        if (!m.home_bye && !m.away_withdrew && !m.postponed && !m.match_void) {
+                          _matches.push(m)
+                        }
+                      })
+                  })
               }
             })
         })
@@ -207,22 +217,26 @@ const collectRankings = (tournaments) => {
 }
 
 const AlltimeStandings = (props) => {
-  const { tournaments } = props
+  const { tournaments, tournamentType } = props
   const ats = tournaments ? collectRankings(tournaments) : []
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>
-      {tournaments && <Rankings rounds={ats} config={{}} />}
-      {tournaments && tournaments.successor_rankings && tournaments.successor_rankings.successors && tournaments.successor_rankings.successors.length > 0 && (
-        <React.Fragment>
-          <Row>
-            <Col>
-              <div className="h2-ff1 margin-top-md">Breakdown of successor teams</div>
-            </Col>
-          </Row>
-          <Rankings rounds={tournaments.successor_rankings.successors} config={{}} />
-        </React.Fragment>
-      )}
+      {tournaments && <Rankings rounds={ats} config={{ show_successors: tournamentType.show_successors }} />}
+      {tournaments &&
+        tournamentType.show_successors &&
+        tournaments.successor_rankings &&
+        tournaments.successor_rankings.successors &&
+        tournaments.successor_rankings.successors.length > 0 && (
+          <React.Fragment>
+            <Row>
+              <Col>
+                <div className="h2-ff1 margin-top-md">Breakdown of successor teams</div>
+              </Col>
+            </Row>
+            <Rankings rounds={tournaments.successor_rankings.successors} config={{}} />
+          </React.Fragment>
+        )}
     </React.Fragment>
   )
 }

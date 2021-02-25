@@ -127,6 +127,12 @@
   margin-bottom: 2rem;
 }
 
+.box-xl .team-row-border-top,
+.group-modal .team-row-border-top {
+  border-top: 1px solid #c7c6c6;
+  border-bottom: 1px solid #e6e7e9;
+}
+
 .box-time {
   font-size: 0.75rem;
   font-weight: 100;

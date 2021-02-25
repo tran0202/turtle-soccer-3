@@ -11,11 +11,24 @@ import {
   SuccessorTooltip,
   Head2HeadTooltip,
   DrawLotTooltip,
+  ExcludedFourthPlaceTooltip,
 } from './Helper'
 import NumberFormat from 'react-number-format'
 
+const hasExcludedRankings = (round) => {
+  if (!round || !round.final_rankings) return
+  let tmp = false
+  round.final_rankings.forEach((fr) => {
+    if (fr.excluded_last_team) {
+      tmp = true
+    }
+  })
+  return tmp
+}
+
 const RankingRowSeparate = (props) => {
   const { round } = props
+  // console.log('round', round)
   const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round').replace('Playoff Second Round', 'Playoff') : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
@@ -34,6 +47,7 @@ const RankingRowSeparate = (props) => {
         <Col xs="12" className="font-italic gray3">
           {round.ranking_type !== 'successorround' && <React.Fragment>{roundName}</React.Fragment>}
           {round.ranking_type === 'successorround' && <div id={`successor_${roundName.replace(' ', '_')}`}>{roundName}</div>}
+          {hasExcludedRankings(round) && <ExcludedFourthPlaceTooltip target="excludedFourthPlaceTooltip" />}
         </Col>
       </Row>
     )
@@ -71,7 +85,7 @@ export const RankingHead = (props) => {
 const RankingRow2 = (props) => {
   const { row, config } = props
   const { ranking_type } = config
-  // console.log('ranking_type', ranking_type)
+  // console.log('config', config)
   return (
     <Row className="no-gutters">
       <Col className="col-box-10">
@@ -84,7 +98,7 @@ const RankingRow2 = (props) => {
       </Col>
       <Col className="col-box-34 text-uppercase text-left">
         &nbsp;&nbsp;{getTeamName(row.id)}
-        {isSuccessor(row.id) && ranking_type === 'alltimeround' && (
+        {config.show_successors && isSuccessor(row.id) && ranking_type === 'alltimeround' && (
           <SuccessorTooltip target={`successorTooltip-${row.id}`} children_teams={row.children_teams} parent_team={getTeamName(row.id)} />
         )}
         {ranking_type === 'successorround' && row.years.length > 1 && (
@@ -128,15 +142,15 @@ const RankingRow2 = (props) => {
 
 export const RankingRow = (props) => {
   const { row, config, index } = props
-  // console.log('row', row)
   const { ranking_type, championship_round } = config
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
   const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : row.length === 3 ? 'rank-col-padding-3' : 'rank-col-padding-4'
   const gold = (ranking_type === 'round' || championship_round) && row.r === 1 ? ' gold' : ''
   const silver = (ranking_type === 'round' || championship_round) && row.r === 2 ? ' silver' : ''
   const bronze = (ranking_type === 'round' || championship_round) && row.r === 3 ? ' bronze' : ''
+  const top_divider = row.top_divider ? ' team-row-border-top' : ' team-row'
   return (
-    <Row className={`no-gutters ranking-tbl team-row text-center${row_striped}${gold}${silver}${bronze}`}>
+    <Row className={`no-gutters ranking-tbl${top_divider} text-center${row_striped}${gold}${silver}${bronze}`}>
       <Col className={`col-box-5 padding-top-md ${rankColPadding}`}>
         {row.r ? row.r : row[0].r}
         {ranking_type === 'successorround' && index === 0 && `a`}

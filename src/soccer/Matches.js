@@ -28,15 +28,21 @@ const collectLeagueMatchdays = (leagues) => {
                     })
                   const _md = matchdays.find((x) => x.name === md.name)
                   if (_md === undefined) {
-                    matchdays.push({ name: md.name, matches: _matches })
+                    matchdays.push({ name: md.name, type: s.type, matches: _matches })
                   } else {
                     _md.matches = _md.matches.concat(_matches)
                   }
                 })
             })
+        } else if (s.type === 'knockout') {
+          const _md = matchdays.find((x) => x.name === s.name)
+          if (_md === undefined) {
+            matchdays.push({ name: s.name, type: s.type, stage: s })
+          }
         }
       })
   })
+  // console.log('matchdays', matchdays)
   return matchdays
 }
 
@@ -111,7 +117,8 @@ const Matches = (props) => {
               <React.Fragment key={md.name}>
                 {md.name && (
                   <TabPane tabId={md.name.replace(' ', '-')}>
-                    <RoundRobinLeagueMatchDay matchday={md} config={config} />
+                    {md.type === 'roundrobinleaguematchday' && <RoundRobinLeagueMatchDay matchday={md} config={config} />}
+                    {md.type === 'knockout' && <Knockout stage={md.stage} config={config} />}
                   </TabPane>
                 )}
               </React.Fragment>

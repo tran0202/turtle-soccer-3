@@ -107,7 +107,7 @@ class CompetitionApp extends React.Component {
             </Col>
           </Row>
           {page === 'about' && <CompetitionAbout tournaments={tournaments} tournamentType={tournamentType} />}
-          {page === 'alltimestandings' && <AlltimeStandings tournaments={tournaments} />}
+          {page === 'alltimestandings' && <AlltimeStandings tournaments={tournaments} tournamentType={tournamentType} />}
         </Container>
       </Page>
     )
