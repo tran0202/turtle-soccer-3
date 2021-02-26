@@ -465,7 +465,6 @@ const initByeRankings = (tournament, stage) => {
 }
 
 const collectLeagueGroupTeams = (tournament, league, stage, group) => {
-  // console.log('tournament', tournament)
   if (!tournament.progress_rankings || !tournament.progress_rankings.teams) return
   if (!group.final_rankings) return
   if (!tournament.final_rankings) {
@@ -501,9 +500,11 @@ const FinalStandings = (props) => {
     leagues.forEach((l, index) => {
       if (l.stages) {
         const rrlStages = getAllRoundRobinStages(l.stages)
+        let groupCount = 0
         if (rrlStages) {
           rrlStages.forEach((s) => {
             if (s.groups) {
+              groupCount = s.groups.length
               s.groups.forEach((g) => {
                 g.matchdays &&
                   g.matchdays.forEach((md) => {
@@ -514,7 +515,6 @@ const FinalStandings = (props) => {
                       g.matches = g.matches.concat(md.matches)
                     }
                   })
-                // console.log('g.final_standings_excluded', g.final_standings_excluded)
                 const _config = g.final_standings_excluded ? { ...config, final_standings_excluded: g.final_standings_excluded } : config
                 g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, _config)
                 createGroupFinalRankings(tournament, g, 6)
@@ -529,7 +529,7 @@ const FinalStandings = (props) => {
         l.final_rankings &&
           l.final_rankings.positions &&
           l.final_rankings.positions.forEach((p) => {
-            sortGroupRankings(p, l.standing_count + (p.position - 1) * 4 + 1, config)
+            sortGroupRankings(p, l.standing_count + (p.position - 1) * groupCount + 1, config)
             p.final_rankings.forEach((pfr, index) => {
               if (l.name === 'League A' && p.position === 1) {
                 tournament_final_rankings.push(pfr)
@@ -550,12 +550,20 @@ const FinalStandings = (props) => {
         const kolStages = getKnockoutStages(l.stages)
         kolStages &&
           kolStages.forEach((kols) => {
+            const relegation1stLeg = kols.rounds.find((r) => r.name === 'Relegation First Leg')
+            if (relegation1stLeg) {
+              // calculateKnockoutRankings(findRoundAdvancedTeams(tournament, final.name), final, config)
+              // createFinalRankings(tournament, final)
+              // console.log('relegation1stLeg', relegation1stLeg)
+            }
+
             const semifinals = kols.rounds.find((r) => r.name === 'Semi-finals')
-            calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
-            eliminateKnockoutTeams(tournament, semifinals)
-            sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
-            advanceThirdPlaceTeams(tournament, semifinals)
-            // console.log('semifinals', semifinals)
+            if (semifinals) {
+              calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
+              eliminateKnockoutTeams(tournament, semifinals)
+              sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
+              advanceThirdPlaceTeams(tournament, semifinals)
+            }
 
             const thirdPlace = kols.rounds.find((r) => r.name === 'Third-place')
             if (thirdPlace) {

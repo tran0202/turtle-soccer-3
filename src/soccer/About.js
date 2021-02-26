@@ -110,7 +110,25 @@ const About = (props) => {
   const { tournament } = props
   const { id, hero_images, details, final_standings, statistics, awards, qualified, tournament_type_id, original_name } = tournament
   if (!details) return null
-  const { host, team_count, confed_count, venue_count, city_count } = details
+  const {
+    host,
+    team_count,
+    confed_count,
+    venue_count,
+    city_count,
+    final_host,
+    start_date,
+    end_date,
+    start_league_date,
+    end_league_date,
+    start_final_date,
+    end_final_date,
+    start_relegation_date,
+    end_relegation_date,
+    final_team_count,
+    final_venue_count,
+    final_city_count,
+  } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
   const champions = fs1 ? fs1 : final_standings ? final_standings.champions : null
   const runners_up = fs2 ? fs2 : final_standings ? final_standings.runners_up : null
@@ -185,27 +203,87 @@ const About = (props) => {
               </Col>
             </Row>
           )}
-          <Row className="margin-top-xs">
-            <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-              Dates
-            </Col>
-            <Col md="6" sm="7">
-              {details.start_date ? moment(details.start_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
-              {details.end_date ? moment(details.end_date).format('MMMM D, YYYY') : ''}
-            </Col>
-          </Row>
+          {final_host && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Final Host
+              </Col>
+              <Col md="6" sm="7">
+                {final_host.map((fh) => (
+                  <Row className="no-margin-lr margin-bottom-xs" key={fh}>
+                    {fh && <img className="flag-sm flag-md" src={getFlagSrc(fh)} alt={fh} title={fh} />}
+                    <span className="padding-top-xs">&nbsp;{getTeamName(fh)}</span>
+                  </Row>
+                ))}
+              </Col>
+            </Row>
+          )}
+          {start_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Dates
+              </Col>
+              <Col md="6" sm="7">
+                {start_date ? moment(start_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_date ? moment(end_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
+          {start_league_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                League Phase
+              </Col>
+              <Col md="6" sm="7">
+                {start_league_date ? moment(start_league_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_league_date ? moment(end_league_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
+          {start_final_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Nations League Finals
+              </Col>
+              <Col md="6" sm="7">
+                {start_final_date ? moment(start_final_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_final_date ? moment(end_final_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
+          {start_relegation_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Relegation play-outs:
+              </Col>
+              <Col md="6" sm="7">
+                {start_relegation_date ? moment(start_relegation_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_relegation_date ? moment(end_relegation_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
           {team_count && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
                 Teams
               </Col>
               <Col md="6" sm="7">
-                {team_count}{' '}
+                {team_count}&nbsp;
                 {confed_count && (
                   <React.Fragment>
                     (from {confed_count} confederation{confed_count !== 1 ? 's' : ''})
                   </React.Fragment>
                 )}
+              </Col>
+            </Row>
+          )}
+          {final_team_count && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Final Teams
+              </Col>
+              <Col md="6" sm="7">
+                {final_team_count}&nbsp;
               </Col>
             </Row>
           )}
@@ -216,6 +294,16 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 {venue_count} (in {city_count} host cit{city_count !== 1 ? 'ies' : 'y'})
+              </Col>
+            </Row>
+          )}
+          {final_venue_count && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Final Venues
+              </Col>
+              <Col md="6" sm="7">
+                {final_venue_count} (in {final_city_count} host cit{final_city_count !== 1 ? 'ies' : 'y'})
               </Col>
             </Row>
           )}

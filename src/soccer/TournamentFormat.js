@@ -68,11 +68,22 @@ const TournamentFormatContent = (props) => {
                         League D. Each league was drawn into 4 groups of 3 or 4 teams.&nbsp;
                       </React.Fragment>
                     )}
-                    {config.id !== 'WC1930' && config.id !== 'WOFT2004' && config.id !== 'GC1998' && config.id !== 'GC1963' && config.id !== 'UNL201819' && (
+                    {config.id === 'UNL202021' && (
                       <React.Fragment>
-                        {config.totalCount} teams were drawn into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
+                        55 UEFA national teams were divided into 4 leagues: 16 teams in League A, B, and C, and 7 teams in League D. Leagues A, B and C was
+                        drawn into 4 groups of 4 teams. League D was drawn into 2 groups, with one containing 4 teams and the other containing 3.&nbsp;
                       </React.Fragment>
                     )}
+                    {config.id !== 'WC1930' &&
+                      config.id !== 'WOFT2004' &&
+                      config.id !== 'GC1998' &&
+                      config.id !== 'GC1963' &&
+                      config.id !== 'UNL201819' &&
+                      config.id !== 'UNL202021' && (
+                        <React.Fragment>
+                          {config.totalCount} teams were drawn into {config.groupCount} groups of {config.teamCount} teams.&nbsp;
+                        </React.Fragment>
+                      )}
                     {config.id === 'WC1950' && <React.Fragment>(13 teams eventually participated after several withdrawals.)&nbsp;</React.Fragment>}
                     {config.id === 'AFCON2010' && (
                       <React.Fragment>

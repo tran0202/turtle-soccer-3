@@ -93,6 +93,7 @@ class Header extends React.Component {
     const { state, query } = this.props
     const { tournament, tournamentType } = state
     const { details } = getTournamentConfig(tournament)
+    const { start_date, end_date, start_league_date, end_league_date, start_final_date, end_final_date } = details
     return (
       <Row className="mt-3 text-center">
         <Col lg={{ size: 2, offset: 1 }} md={{ size: 2 }} sm="3" className="mt-3 mb-2">
@@ -109,7 +110,22 @@ class Header extends React.Component {
           <h1 className={`text-center mt-3 mb-2 ${getTournamentTitleFont(tournamentType)}`} style={{ color: details.color }}>
             {tournament.name}
           </h1>
-          {moment(details.start_date).format('MMMM D, YYYY')} &mdash; {moment(details.end_date).format('MMMM D, YYYY')}
+          {start_date && (
+            <React.Fragment>
+              {moment(start_date).format('MMMM D, YYYY')} &mdash; {moment(end_date).format('MMMM D, YYYY')}
+            </React.Fragment>
+          )}
+          {start_league_date && (
+            <React.Fragment>
+              <b>League:</b> {moment(start_league_date).format('MMMM D, YYYY')} &mdash; {moment(end_league_date).format('MMMM D, YYYY')}
+              &nbsp;&nbsp;<i className="icofont-football-alt"></i>&nbsp;&nbsp;
+            </React.Fragment>
+          )}
+          {start_final_date && (
+            <React.Fragment>
+              <b>Finals:</b> {moment(start_final_date).format('MMMM D, YYYY')} &mdash; {moment(end_final_date).format('MMMM D, YYYY')}
+            </React.Fragment>
+          )}
           <HeaderLinks tournament={tournament} tournamentType={tournamentType} query={query} />
         </Col>
       </Row>
