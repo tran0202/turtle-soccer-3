@@ -46,6 +46,10 @@
   font-family: 'Good Times';
   src: url('fonts/good times rg.ttf');
 }
+@font-face {
+  font-family: 'Champions Bold';
+  src: url('fonts/Champions-Bold.ttf');
+}
 
 @media (min-width: 768px) {
 }
@@ -630,6 +634,10 @@ a:hover.hover-pointer {
 
 .no-display {
   display: none;
+}
+
+.display-block {
+  display: block;
 }
 
 .padding-top-logo {

@@ -1,5 +1,47 @@
 [
   {
+    "id": "FCB",
+    "name": "Barcelona",
+    "team_type_id": "CLUB",
+    "nation_id": "ESP",
+    "parent_team_id": "",
+    "club_code": "FCB",
+    "logo_filename": "FCB.png",
+    "official_name": "FC Barcelona"
+  },
+  {
+    "id": "LIV",
+    "name": "Liverpool",
+    "team_type_id": "CLUB",
+    "nation_id": "ENG",
+    "parent_team_id": "",
+    "club_code": "LIV",
+    "logo_filename": "LIV.png",
+    "official_name": "Liverpool FC"
+  },
+  {
+    "id": "TOT",
+    "name": "Tottenham Hotspur",
+    "short_name": "Tottenham",
+    "team_type_id": "CLUB",
+    "nation_id": "ENG",
+    "parent_team_id": "",
+    "club_code": "TOT",
+    "logo_filename": "TOT.png",
+    "official_name": "Tottenham Hotspur FC"
+  },
+  {
+    "id": "AJA",
+    "name": "Ajax Amsterdam",
+    "short_name": "Ajax",
+    "team_type_id": "CLUB",
+    "nation_id": "NED",
+    "parent_team_id": "",
+    "club_code": "AJA",
+    "logo_filename": "AJA.png",
+    "official_name": "AFC Ajax"
+  },
+  {
     "id": "525",
     "name": "Atletico Madrid",
     "team_type_id": "CLUB",
@@ -8,7 +50,6 @@
     "club_code": "ATM",
     "official_name": "Club Atlético de Madrid"
   },
-  { "id": "526", "name": "Barcelona", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "FCB", "official_name": "FC Barcelona" },
   {
     "id": "527",
     "name": "Bayern Munich",
@@ -65,7 +106,6 @@
     "official_name": "FC Internazionale Milano"
   },
   { "id": "534", "name": "Juventus", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "JUV", "official_name": "Juventus" },
-  { "id": "535", "name": "Liverpool", "team_type_id": "CLUB", "nation_id": "63", "parent_team_id": "", "club_code": "LIV", "official_name": "Liverpool FC" },
   {
     "id": "536",
     "name": "Lokomotiv Moscow",
@@ -143,18 +183,8 @@
     "club_code": "SHK",
     "official_name": "FC Shakhtar Donetsk"
   },
-  {
-    "id": "549",
-    "name": "Tottenham Hotspur",
-    "team_type_id": "CLUB",
-    "nation_id": "63",
-    "parent_team_id": "",
-    "club_code": "TOT",
-    "official_name": "Tottenham Hotspur FC"
-  },
   { "id": "550", "name": "Valencia", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "VAL", "official_name": "Valencia CF" },
   { "id": "551", "name": "AEK Athens", "team_type_id": "CLUB", "nation_id": "79", "parent_team_id": "", "club_code": "AEK", "official_name": "AEK Athens FC" },
-  { "id": "552", "name": "Ajax Amsterdam", "team_type_id": "CLUB", "nation_id": "135", "parent_team_id": "", "club_code": "AJA", "official_name": "AFC Ajax" },
   {
     "id": "553",
     "name": "BATE Borisov",

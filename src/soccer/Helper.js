@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import TeamArray from '../data/soccer/Team.json'
+import { getTeamArray } from './DataHelper'
 import NationArray from '../data/Nation.json'
 import { Row, Col, Tooltip } from 'reactstrap'
 import moment from 'moment'
@@ -65,6 +65,9 @@ export const getTournamentTitleFont = (tournamentType) => {
       break
     case 'UNL':
       fontClassName = 'h1-ff5 tournament-title-UNL'
+      break
+    case 'UCL':
+      fontClassName = 'h1-ff5 tournament-title-UCL'
       break
     case 'COPA':
       fontClassName = 'tournament-title-COPA'
@@ -145,7 +148,7 @@ export const getDefaultLeagueTab = (leagues) => {
 
 export const getFlagSrc = (id) => {
   if (!id) return
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   if (team) {
     const nation = NationArray.find((n) => n.id === team.nation_id)
     if (nation) {
@@ -158,8 +161,41 @@ export const getFlagSrc = (id) => {
   }
 }
 
+export const getNationSmallFlagImg = (id) => {
+  if (!id) return
+  const team = getTeamArray().find((t) => t.id === id)
+  if (team) {
+    const nation = NationArray.find((n) => n.id === team.nation_id)
+    if (nation) {
+      return (
+        <React.Fragment>
+          <img className="flag-xs-2 flag-sm-3 " src={`/assets/images/flags/${nation.flag_filename}`} alt={id} title={id} />
+        </React.Fragment>
+      )
+    } else {
+      console.log('Nation error', nation)
+    }
+  } else {
+    console.log('Team error', team)
+  }
+}
+
+export const getClubLogoImg = (id, config) => {
+  if (!id) return
+  const team = getTeamArray().find((t) => t.id === id)
+  if (team) {
+    return (
+      <React.Fragment>
+        <img className="flag-club-sm flag-club-md " src={`/assets/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />
+      </React.Fragment>
+    )
+  } else {
+    console.log('Team error', team)
+  }
+}
+
 export const getNationOfficialName = (id) => {
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   if (team) {
     const nation = NationArray.find((n) => n.id === team.nation_id)
     if (nation) {
@@ -174,7 +210,7 @@ export const getNationOfficialName = (id) => {
 
 export const getTeamName = (id) => {
   if (!id) return
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   if (team) {
     return team.name
   } else {
@@ -184,7 +220,7 @@ export const getTeamName = (id) => {
 
 export const getShortTeamName = (id) => {
   if (!id) return
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   if (team) {
     if (team.short_name) {
       return team.short_name
@@ -201,13 +237,13 @@ export const getBracketTeamName = (id) => {
 }
 
 export const getParentTeam = (id) => {
-  const team = TeamArray.find((t) => t.id === id)
-  return TeamArray.find((t) => t.id === team.parent_team_id)
+  const team = getTeamArray().find((t) => t.id === id)
+  return getTeamArray().find((t) => t.id === team.parent_team_id)
 }
 
 export const getBracketTeamCode = (id) => {
   if (!id) return
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   if (!team) {
     console.log('Team error', team)
     return
@@ -227,7 +263,7 @@ export const isSharedBronze = (match) => {
 }
 
 export const isSuccessor = (id) => {
-  const team = TeamArray.find((t) => t.id === id)
+  const team = getTeamArray().find((t) => t.id === id)
   return !team.successor ? false : team.successor
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Qualified from './Qualified'
-import { getFlagSrc, getTeamName, isWinner, SharedBronzeTooltip, GoldenBallRejectedTooltip } from './Helper'
+import { getFlagSrc, getNationSmallFlagImg, getClubLogoImg, getTeamName, isWinner, SharedBronzeTooltip, GoldenBallRejectedTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import NumberFormat from 'react-number-format'
@@ -51,6 +51,7 @@ const getGoldenBootDetails = (player) => {
 }
 
 const getTopScorerLabel = (tournament, position) => {
+  // console.log('tournament', tournament)
   if (!tournament.year || !tournament.tournament_type_id || !tournament.awards || !position) return
   if (position === 1) {
     if (!tournament.awards.golden_boot) return
@@ -106,8 +107,34 @@ const getGoldenGloveLabel = (tournament) => {
   return 'Golden Glove'
 }
 
+const getTeamFlagName = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id, config)}
+      {config.team_type_id !== 'CLUB' && <img className="flag-sm flag-md " src={getFlagSrc(id)} alt={id} title={id} />}
+      <span className="padding-top-xs">&nbsp;{getTeamName(id)}</span>
+    </React.Fragment>
+  )
+}
+
+const getPlayerClubNationName = (p, config) => {
+  if (!p) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getClubLogoImg(p.club, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(p.team, config)}
+      {config.team_type_id !== 'CLUB' && p.team && <img className="flag-sm flag-md " src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
+      <span className="padding-top-xs">
+        &nbsp;{p.player} {getGoldenBootDetails(p)}
+      </span>
+    </React.Fragment>
+  )
+}
+
 const About = (props) => {
-  const { tournament } = props
+  const { tournament, tournamentType } = props
   const { id, hero_images, details, final_standings, statistics, awards, qualified, tournament_type_id, original_name } = tournament
   if (!details) return null
   const {
@@ -125,9 +152,15 @@ const About = (props) => {
     end_final_date,
     start_relegation_date,
     end_relegation_date,
+    start_qualifying_date,
+    end_qualifying_date,
+    start_competition_date,
+    end_competition_date,
     final_team_count,
     final_venue_count,
     final_city_count,
+    total_team_count,
+    association_count,
   } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
   const champions = fs1 ? fs1 : final_standings ? final_standings.champions : null
@@ -196,8 +229,7 @@ const About = (props) => {
               <Col md="6" sm="7">
                 {host.map((h) => (
                   <Row className="no-margin-lr margin-bottom-xs" key={h}>
-                    {h && <img className="flag-sm flag-md" src={getFlagSrc(h)} alt={h} title={h} />}
-                    <span className="padding-top-xs">&nbsp;{getTeamName(h)}</span>
+                    {getTeamFlagName(h, tournamentType)}
                   </Row>
                 ))}
               </Col>
@@ -211,8 +243,7 @@ const About = (props) => {
               <Col md="6" sm="7">
                 {final_host.map((fh) => (
                   <Row className="no-margin-lr margin-bottom-xs" key={fh}>
-                    {fh && <img className="flag-sm flag-md" src={getFlagSrc(fh)} alt={fh} title={fh} />}
-                    <span className="padding-top-xs">&nbsp;{getTeamName(fh)}</span>
+                    {getTeamFlagName(fh, tournamentType)}
                   </Row>
                 ))}
               </Col>
@@ -262,6 +293,28 @@ const About = (props) => {
               </Col>
             </Row>
           )}
+          {start_qualifying_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Qualifying Dates:
+              </Col>
+              <Col md="6" sm="7">
+                {start_qualifying_date ? moment(start_qualifying_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_qualifying_date ? moment(end_qualifying_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
+          {start_competition_date && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Competition Dates:
+              </Col>
+              <Col md="6" sm="7">
+                {start_competition_date ? moment(start_competition_date).format('MMMM D, YYYY') : ''} &mdash;&nbsp;
+                {end_competition_date ? moment(end_competition_date).format('MMMM D, YYYY') : ''}
+              </Col>
+            </Row>
+          )}
           {team_count && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
@@ -284,6 +337,21 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 {final_team_count}&nbsp;
+              </Col>
+            </Row>
+          )}
+          {total_team_count && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Total Teams
+              </Col>
+              <Col md="6" sm="7">
+                {total_team_count}&nbsp;
+                {association_count && (
+                  <React.Fragment>
+                    (from {association_count} association{association_count !== 1 ? 's' : ''})
+                  </React.Fragment>
+                )}
               </Col>
             </Row>
           )}
@@ -324,8 +392,7 @@ const About = (props) => {
                 )}
               </Col>
               <Col md="6" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(champions)} alt={champions} title={champions} />
-                <span className="padding-top-xs">&nbsp;{getTeamName(champions)}</span>
+                {getTeamFlagName(champions, tournamentType)}
               </Col>
             </Row>
           )}
@@ -339,8 +406,7 @@ const About = (props) => {
                 )}
               </Col>
               <Col md="6" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(runners_up)} alt={runners_up} title={runners_up} />
-                <span className="padding-top-xs">&nbsp;{getTeamName(runners_up)}</span>
+                {getTeamFlagName(runners_up, tournamentType)}
               </Col>
             </Row>
           )}
@@ -354,20 +420,13 @@ const About = (props) => {
                 )}
               </Col>
               <Col md="6" sm="7">
-                {typeof third_place === 'string' && (
-                  <React.Fragment>
-                    <img className="flag-sm flag-md" src={getFlagSrc(third_place)} alt={third_place} title={third_place} />
-                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place)}</span>
-                  </React.Fragment>
-                )}
+                {typeof third_place === 'string' && <React.Fragment>{getTeamFlagName(third_place, tournamentType)}</React.Fragment>}
                 {typeof third_place === 'object' && (
                   <React.Fragment>
-                    <img className="flag-sm flag-md" src={getFlagSrc(third_place[0])} alt={third_place[0]} title={third_place[0]} />
-                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place[0])}</span>
+                    {getTeamFlagName(third_place[0], tournamentType)}
                     <SharedBronzeTooltip target="sharedTooltip" notes={final_standings.third_place_text} />
                     <br></br>
-                    <img className="flag-sm flag-md" src={getFlagSrc(third_place[1])} alt={third_place[1]} title={third_place[1]} />
-                    <span className="padding-top-xs">&nbsp;{getTeamName(third_place[1])}</span>
+                    {getTeamFlagName(third_place[1], tournamentType)}
                     <SharedBronzeTooltip target="sharedTooltip" notes={final_standings.third_place_text} />
                   </React.Fragment>
                 )}
@@ -380,8 +439,7 @@ const About = (props) => {
                 Fourth-place
               </Col>
               <Col md="6" sm="7">
-                <img className="flag-sm flag-md" src={getFlagSrc(fourth_place)} alt={fourth_place} title={fourth_place} />
-                <span className="padding-top-xs">&nbsp;{getTeamName(fourth_place)}</span>
+                {getTeamFlagName(fourth_place, tournamentType)}
               </Col>
             </Row>
           )}
@@ -439,11 +497,8 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.golden_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
-                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
-                        <span className="padding-top-xs">
-                          &nbsp;{p.player} {getGoldenBootDetails(p)}
-                        </span>
+                      <Row className="no-margin-lr margin-bottom-xs display-block" key={p.player}>
+                        {getPlayerClubNationName(p, tournamentType)}
                       </Row>
                     ))}
                   </Col>
@@ -456,11 +511,8 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.silver_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
-                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
-                        <span className="padding-top-xs">
-                          &nbsp;{p.player} {getGoldenBootDetails(p)}
-                        </span>
+                      <Row className="no-margin-lr margin-bottom-xs display-block" key={p.player}>
+                        {getPlayerClubNationName(p, tournamentType)}
                       </Row>
                     ))}
                   </Col>
@@ -473,11 +525,8 @@ const About = (props) => {
                   </Col>
                   <Col md="6" sm="7">
                     {awards.bronze_boot.map((p) => (
-                      <Row className="no-margin-lr margin-bottom-xs" key={p.player}>
-                        {p.team && <img className="flag-sm flag-md" src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
-                        <span className="padding-top-xs">
-                          &nbsp;{p.player} {getGoldenBootDetails(p)}
-                        </span>
+                      <Row className="no-margin-lr margin-bottom-xs display-block" key={p.player}>
+                        {getPlayerClubNationName(p, tournamentType)}
                       </Row>
                     ))}
                   </Col>
@@ -497,15 +546,7 @@ const About = (props) => {
                         {getGoldenBallLabel(tournament)}
                       </Col>
                       <Col md="6" sm="7">
-                        {awards.golden_ball[0].team && (
-                          <img
-                            className="flag-sm flag-md"
-                            src={getFlagSrc(awards.golden_ball[0].team)}
-                            alt={awards.golden_ball[0].team}
-                            title={awards.golden_ball[0].team}
-                          />
-                        )}
-                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[0].player}</span>
+                        {getPlayerClubNationName(awards.golden_ball[0], tournamentType)}
                         {awards.golden_ball[0].rejected && (
                           <GoldenBallRejectedTooltip target="goldenBallTooltip" notes={awards.golden_ball[0].rejected_notes} />
                         )}
@@ -518,15 +559,7 @@ const About = (props) => {
                         Silver Ball
                       </Col>
                       <Col md="6" sm="7">
-                        {awards.golden_ball[1].team && (
-                          <img
-                            className="flag-sm flag-md"
-                            src={getFlagSrc(awards.golden_ball[1].team)}
-                            alt={awards.golden_ball[1].team}
-                            title={awards.golden_ball[1].team}
-                          />
-                        )}
-                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[1].player}</span>
+                        {getPlayerClubNationName(awards.golden_ball[1], tournamentType)}
                       </Col>
                     </Row>
                   )}
@@ -536,15 +569,7 @@ const About = (props) => {
                         Bronze Ball
                       </Col>
                       <Col md="6" sm="7">
-                        {awards.golden_ball[2].team && (
-                          <img
-                            className="flag-sm flag-md"
-                            src={getFlagSrc(awards.golden_ball[2].team)}
-                            alt={awards.golden_ball[2].team}
-                            title={awards.golden_ball[2].team}
-                          />
-                        )}
-                        <span className="padding-top-xs">&nbsp;{awards.golden_ball[2].player}</span>
+                        {getPlayerClubNationName(awards.golden_ball[2], tournamentType)}
                       </Col>
                     </Row>
                   )}
@@ -561,15 +586,7 @@ const About = (props) => {
                       Best Young Player
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
-                      {awards.best_young_player.team && (
-                        <img
-                          className="flag-sm flag-md"
-                          src={getFlagSrc(awards.best_young_player.team)}
-                          alt={awards.best_young_player.team}
-                          title={awards.best_young_player.team}
-                        />
-                      )}
-                      <span className="padding-top-xs">&nbsp;{awards.best_young_player.player}</span>
+                      {getPlayerClubNationName(awards.best_young_player, tournamentType)}
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -581,13 +598,59 @@ const About = (props) => {
                       {getGoldenGloveLabel(tournament)}
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
-                      {awards.golden_glove.length &&
-                        awards.golden_glove.map((gg) => (
-                          <Row className="no-margin-lr margin-bottom-xs" key={gg.player}>
-                            {gg.team && <img className="flag-sm flag-md" src={getFlagSrc(gg.team)} alt={gg.team} title={gg.team} />}
-                            {gg.player && <span className="padding-top-xs">&nbsp;{gg.player}</span>}
-                          </Row>
-                        ))}
+                      {awards.golden_glove.map((gg) => (
+                        <Row className="no-margin-lr margin-bottom-xs display-block" key={gg.player}>
+                          {getPlayerClubNationName(gg, tournamentType)}
+                        </Row>
+                      ))}
+                    </Col>
+                  </Row>
+                </React.Fragment>
+              )}
+              {awards.best_defender && (
+                <React.Fragment>
+                  <Row className="margin-top-xs mb-3">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
+                      Best Defender
+                    </Col>
+                    <Col md="6" sm="7" className="tournament-award-receiver">
+                      {awards.best_defender.map((bd) => (
+                        <Row className="no-margin-lr margin-bottom-xs display-block" key={bd.player}>
+                          {getPlayerClubNationName(bd, tournamentType)}
+                        </Row>
+                      ))}
+                    </Col>
+                  </Row>
+                </React.Fragment>
+              )}
+              {awards.best_midfielder && (
+                <React.Fragment>
+                  <Row className="margin-top-xs mb-3">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
+                      Best Midfielder
+                    </Col>
+                    <Col md="6" sm="7" className="tournament-award-receiver">
+                      {awards.best_midfielder.map((bm) => (
+                        <Row className="no-margin-lr margin-bottom-xs display-block" key={bm.player}>
+                          {getPlayerClubNationName(bm, tournamentType)}
+                        </Row>
+                      ))}
+                    </Col>
+                  </Row>
+                </React.Fragment>
+              )}
+              {awards.best_forward && (
+                <React.Fragment>
+                  <Row className="margin-top-xs mb-3">
+                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
+                      Best Forward
+                    </Col>
+                    <Col md="6" sm="7" className="tournament-award-receiver">
+                      {awards.best_forward.map((bf) => (
+                        <Row className="no-margin-lr margin-bottom-xs display-block" key={bf.player}>
+                          {getPlayerClubNationName(bf, tournamentType)}
+                        </Row>
+                      ))}
                     </Col>
                   </Row>
                 </React.Fragment>
@@ -600,28 +663,8 @@ const About = (props) => {
                     </Col>
                     <Col md="6" sm="7" className="tournament-award-receiver">
                       {awards.fair_play_team.map((t) => (
-                        <Row className="no-margin-lr margin-bottom-xs" key={t}>
-                          {t && <img className="flag-sm flag-md" src={getFlagSrc(t)} alt={t} title={t} />}
-                          <span className="padding-top-xs">&nbsp;{getTeamName(t)}</span>
-                        </Row>
-                      ))}
-                    </Col>
-                  </Row>
-                </React.Fragment>
-              )}
-              {awards.top_scorer && (
-                <React.Fragment>
-                  <Row className="margin-top-xs">
-                    <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold tournament-award">
-                      Top Scorer{awards.top_scorer.length > 1 ? 's' : ''}
-                    </Col>
-                    <Col md="6" sm="7" className="tournament-award-receiver">
-                      {awards.top_scorer.map((ts) => (
-                        <Row className="no-margin-lr margin-bottom-xs" key={ts.player}>
-                          {ts.team && <img className="flag-sm flag-md" src={getFlagSrc(ts.team)} alt={ts.team} title={ts.team} />}
-                          <span className="padding-top-xs">
-                            &nbsp;{ts.player} {getGoldenBootDetails(ts)}
-                          </span>
+                        <Row className="no-margin-lr margin-bottom-xs display-block" key={t}>
+                          {getTeamFlagName(t, tournamentType)}
                         </Row>
                       ))}
                     </Col>

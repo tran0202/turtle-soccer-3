@@ -69,8 +69,16 @@
   height: 24px;
   border: 1px solid #c7c6c6;
 }
+.flag-club-sm {
+  height: 24px;
+}
 
 @media (min-width: 768px) {
+  .flag-sm-3 {
+    width: 28px;
+    height: 21px;
+    border: 1px solid #c7c6c6;
+  }
   .flag-md {
     width: 48px;
     height: 32px;
@@ -78,6 +86,9 @@
   }
   .flag-md-olympic {
     height: 25px;
+  }
+  .flag-club-md {
+    height: 32px;
   }
 }
 .margin-top-flag {
@@ -791,6 +802,9 @@
 }
 .tournament-title-UNL {
   font-family: 'Good Times', sans-serif;
+}
+.tournament-title-UCL {
+  font-family: 'Champions Bold', sans-serif;
 }
 .tournament-title-COPA {
   font-family: 'Copa America', sans-serif;

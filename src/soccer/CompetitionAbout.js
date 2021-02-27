@@ -1,5 +1,5 @@
 import React from 'react'
-import { getShortTeamName, getFlagSrc, SharedBronzeTooltip, SemifinalistsTooltip } from './Helper'
+import { getShortTeamName, getFlagSrc, getNationSmallFlagImg, getClubLogoImg, SharedBronzeTooltip, SemifinalistsTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 
 const isOlympicTournaments = (id) => {
@@ -8,7 +8,6 @@ const isOlympicTournaments = (id) => {
 
 const ResultHead = (props) => {
   const { config } = props
-  // console.log('config', config)
   const championLabel = !isOlympicTournaments(config.id) ? 'Champions' : 'Gold'
   const runnerupLabel = !isOlympicTournaments(config.id) ? 'Runners-up' : 'Silver'
   const thirdPlaceLabel = !isOlympicTournaments(config.id) ? 'Third-place' : 'Bronze'
@@ -34,8 +33,22 @@ const ResultHead = (props) => {
   )
 }
 
+const ResultCell = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id, config)}
+      {config.team_type_id !== 'CLUB' && <img className="flag-sm flag-md " src={getFlagSrc(id)} alt={id} title={id} />}
+      <br></br>
+      {getShortTeamName(id)}
+    </React.Fragment>
+  )
+}
+
 const ResultRow = (props) => {
   const { row, config, count } = props
+  // console.log('config', config)
   return (
     <React.Fragment>
       {row.era && (
@@ -74,128 +87,34 @@ const ResultRow = (props) => {
             </React.Fragment>
           )}
         </Col>
-        <Col className="text-center score-no-padding-right col-2">
-          {row.final_standings && (
-            <React.Fragment>
-              {row.final_standings.champions && (
-                <img
-                  className="flag-sm flag-md "
-                  src={getFlagSrc(row.final_standings.champions)}
-                  alt={row.final_standings.champions}
-                  title={row.final_standings.champions}
-                />
-              )}
-              <br></br>
-              {getShortTeamName(row.final_standings.champions)}
-            </React.Fragment>
-          )}
-        </Col>
-        <Col className="text-center score-no-padding-right col-2">
-          {row.final_standings && (
-            <React.Fragment>
-              {row.final_standings.runners_up && (
-                <img
-                  className="flag-sm flag-md"
-                  src={getFlagSrc(row.final_standings.runners_up)}
-                  alt={row.final_standings.runners_up}
-                  title={row.final_standings.runners_up}
-                />
-              )}
-              <br></br>
-              {getShortTeamName(row.final_standings.runners_up)}
-            </React.Fragment>
-          )}
-        </Col>
+        <Col className="text-center score-no-padding-right col-2">{row.final_standings && ResultCell(row.final_standings.champions, config)}</Col>
+        <Col className="text-center score-no-padding-right col-2">{row.final_standings && ResultCell(row.final_standings.runners_up, config)}</Col>
         {!row.no_third_place && (
           <React.Fragment>
             <Col className="text-center score-no-padding-right col-2">
               {row.final_standings && (
                 <React.Fragment>
-                  {typeof row.final_standings.third_place === 'string' && (
-                    <React.Fragment>
-                      <img
-                        className="flag-sm flag-md"
-                        src={getFlagSrc(row.final_standings.third_place)}
-                        alt={row.final_standings.third_place}
-                        title={row.final_standings.third_place}
-                      />
-                      <br></br>
-                      {getShortTeamName(row.final_standings.third_place)}
-                    </React.Fragment>
-                  )}
+                  {typeof row.final_standings.third_place === 'string' && ResultCell(row.final_standings.third_place, config)}
                   {typeof row.final_standings.third_place === 'object' && (
                     <React.Fragment>
-                      <img
-                        className="flag-sm flag-md"
-                        src={getFlagSrc(row.final_standings.third_place[0])}
-                        alt={row.final_standings.third_place[0]}
-                        title={row.final_standings.third_place[0]}
-                      />
-                      <br></br>
-                      {getShortTeamName(row.final_standings.third_place[0])}
+                      {ResultCell(row.final_standings.third_place[0], config)}
                       <SharedBronzeTooltip target="sharedTooltip" notes={row.final_standings.third_place_text} />
-                      <img
-                        className="flag-sm flag-md"
-                        src={getFlagSrc(row.final_standings.third_place[1])}
-                        alt={row.final_standings.third_place[1]}
-                        title={row.final_standings.third_place[1]}
-                      />
-                      <br></br>
-                      {getShortTeamName(row.final_standings.third_place[1])}
+                      {ResultCell(row.final_standings.third_place[1], config)}
                       <SharedBronzeTooltip target="sharedTooltip" notes={row.final_standings.third_place_text} />
                     </React.Fragment>
                   )}
                 </React.Fragment>
               )}
             </Col>
-            <Col className="text-center score-no-padding-right col-2">
-              {row.final_standings && (
-                <React.Fragment>
-                  {row.final_standings.fourth_place && (
-                    <React.Fragment>
-                      <img
-                        className="flag-sm flag-md"
-                        src={getFlagSrc(row.final_standings.fourth_place)}
-                        alt={row.final_standings.fourth_place}
-                        title={row.final_standings.fourth_place}
-                      />
-                      <br></br>
-                      {getShortTeamName(row.final_standings.fourth_place)}
-                    </React.Fragment>
-                  )}
-                </React.Fragment>
-              )}
-            </Col>
+            <Col className="text-center score-no-padding-right col-2">{row.final_standings && ResultCell(row.final_standings.fourth_place, config)}</Col>
           </React.Fragment>
         )}
         {row.no_third_place && (
           <Col className="text-center score-no-padding-right col-4">
             {row.final_standings && (
               <Row>
-                <Col className="col-6">
-                  {row.final_standings.semi_finalist1 && (
-                    <img
-                      className="flag-sm flag-md"
-                      src={getFlagSrc(row.final_standings.semi_finalist1)}
-                      alt={row.final_standings.semi_finalist1}
-                      title={row.final_standings.semi_finalist1}
-                    />
-                  )}
-                  <br></br>
-                  {getShortTeamName(row.final_standings.semi_finalist1)}
-                </Col>
-                <Col className="col-6">
-                  {row.final_standings.semi_finalist2 && (
-                    <img
-                      className="flag-sm flag-md"
-                      src={getFlagSrc(row.final_standings.semi_finalist2)}
-                      alt={row.final_standings.semi_finalist2}
-                      title={row.final_standings.semi_finalist2}
-                    />
-                  )}
-                  <br></br>
-                  {getShortTeamName(row.final_standings.semi_finalist2)}
-                </Col>
+                <Col className="col-6">{ResultCell(row.final_standings.semi_finalist1, config)}</Col>
+                <Col className="col-6">{ResultCell(row.final_standings.semi_finalist2, config)}</Col>
               </Row>
             )}
           </Col>

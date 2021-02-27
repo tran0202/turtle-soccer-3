@@ -1,15 +1,5 @@
 [
   {
-    "id": "UCL201819",
-    "name": "2018/19 UEFA Champions League",
-    "tournament_type_id": "UCL",
-    "active": false,
-    "head_to_head_tiebreaker": true,
-    "golden_goal_rule": false,
-    "points_for_win": 3,
-    "details": { "logo_filename": "UCL.svg", "start_date": "2018-06-26", "end_date": "2019-06-01" }
-  },
-  {
     "id": "UEL201819",
     "name": "2018/19 UEFA Europa League",
     "tournament_type_id": "UEL",

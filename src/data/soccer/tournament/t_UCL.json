@@ -1,0 +1,65 @@
+[
+  {
+    "id": "UCL201819",
+    "year": "2018/19",
+    "name": "2018/19 UEFA Champions League",
+    "short_name": "2018/19",
+    "tournament_type_id": "UCL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UCL.svg",
+      "start_qualifying_date": "2018-06-26",
+      "end_qualifying_date": "2018-08-29",
+      "start_competition_date": "2018-09-18",
+      "end_competition_date": "2019-06-01",
+      "color": "#d50a0a",
+      "team_count": 32,
+      "association_count": 54,
+      "total_team_count": 79
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "LFC_Parade_2019_01.jpg",
+        "text": "Liverpool players on an open top bus parading the Champions League trophy through the streets of Liverpool the day after the final."
+      },
+      {
+        "name": "Wanda Metropolitano, Madrid",
+        "filename": "Wanda-Metropolitano.jpg",
+        "text": "The Wanda Metropolitano hosted the final."
+      },
+      {
+        "name": "Program",
+        "filename": "2019_UEFA_Champions_League_Final_programme.jpg",
+        "text": "This is the official match programme for the 2019 UEFA Champions League Final."
+      },
+      {
+        "name": "Manager",
+        "filename": "Klopp.jpg",
+        "text": "Liverpool manager Jürgen Klopp won his first Champions League title in his third final."
+      }
+    ],
+    "final_standings": { "champions": "LIV", "runners_up": "TOT", "semi_finalist1": "AJA", "semi_finalist2": "FCB" },
+    "statistics": { "total_matches": 125, "total_goals": 366, "attendance": 6163044 },
+    "awards": {
+      "golden_boot": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB", "goals": 12 }],
+      "golden_glove": [{ "player": "Alisson", "team": "BRA", "club": "LIV" }],
+      "best_defender": [{ "player": "Virgil van Dijk", "team": "NED", "club": "LIV" }],
+      "best_midfielder": [{ "player": "Frenkie de Jong", "team": "NED", "club": "AJA" }],
+      "best_forward": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB" }]
+    }
+  }
+]

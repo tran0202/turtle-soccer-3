@@ -106,6 +106,21 @@
     ]
   },
   {
+    "id": "UCL",
+    "name": "UEFA Champions League",
+    "color": "rgb(9, 54, 151)",
+    "team_type_id": "CLUB",
+    "confederation_id": "UEFA",
+    "logo_path": "club_logos",
+    "trophy_filename": "Trofeo_UEFA_Champions_League.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The UEFA Champions League (abbreviated as UCL) is an annual club football competition organised by the Union of European Football Associations (UEFA) and contested by top-division European clubs, deciding the competition winners through a group and knockout format. It is one of the most prestigious football tournaments in the world and the most prestigious club competition in European football, played by the national league champions (and, for some nations, one or more runners-up) of their national associations.",
+      "Introduced in 1955 as the European Champion Clubs' Cup, commonly known as European Cup, it was initially a straight knockout tournament open only to the champions of Europe's domestic leagues, with its winner reckoned as the European club champion. The competition took on its current name in 1992, adding a round-robin group stage in 1991 and allowing multiple entrants from certain countries since 1997. It has since been expanded, and while most of Europe's national leagues can still only enter their champion, the strongest leagues now provide up to four teams.",
+      "Real Madrid is the most successful club in the tournament's history, having won it 13 times, including its first five seasons."
+    ]
+  },
+  {
     "id": "COPA",
     "name": "CONMEBOL Copa America",
     "color": "rgb(0, 92, 164)",
@@ -181,15 +196,6 @@
       "The OFC Nations Cup is an international association football tournament held among the OFC member nations. It was held every two years from 1996 to 2004. Before 1996 there were two other tournaments held at irregular intervals, under the name Oceania Nations Cup. No competition was held in 2006, but in the 2008 edition, which also acted as a qualification tournament for the 2009 FIFA Confederations Cup and for a play-off for the 2010 FIFA World Cup, the New Zealand national football team emerged as winners.",
       "Historically, a very large gulf separated New Zealand from the smaller island competitors, and little attention was paid to the tournament by the rest of the football world. In fact, after the first eight editions the trophy had been won only by two teams: Australia and New Zealand. In the 2012 OFC Nations Cup, Tahiti became the first team other than New Zealand to be crowned champions of Oceania."
     ]
-  },
-  {
-    "id": "UCL",
-    "name": "UEFA Champions League",
-    "team_type_id": "CLUB",
-    "confederation_id": "UEFA",
-    "logo_path": "club_logos",
-    "sport_id": "SOC",
-    "order": 2
   },
   {
     "id": "UEL",

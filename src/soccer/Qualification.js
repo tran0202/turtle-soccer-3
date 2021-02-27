@@ -41,7 +41,7 @@ const Qualification = (props) => {
           {qualification.existed && (
             <React.Fragment>
               {cid !== 'QUALIFIED' && <QualificationHeader qTournament={qualification} query={query} tournamentType={tournamentType} />}
-              {qPage === 'about' && <About tournament={qualification} />}
+              {qPage === 'about' && <About tournament={qualification} tournamentType={tournamentType} />}
               {qPage === 'matches' && <Matches tournament={qualification} />}
               {(qPage === 'groups' || qPage === 'standings') && <Groups tournament={qualification} tournamentType={tournamentType} />}
             </React.Fragment>

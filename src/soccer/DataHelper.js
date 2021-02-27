@@ -6,6 +6,7 @@ import t_WOFT from '../data/soccer/tournament/t_WOFT.json'
 import t_CONFEDC from '../data/soccer/tournament/t_CONFEDC.json'
 import t_EURO from '../data/soccer/tournament/t_EURO.json'
 import t_UNL from '../data/soccer/tournament/t_UNL.json'
+import t_UCL from '../data/soccer/tournament/t_UCL.json'
 import t_COPA from '../data/soccer/tournament/t_COPA.json'
 import t_GC from '../data/soccer/tournament/t_GC.json'
 import t_AFCON from '../data/soccer/tournament/t_AFCON.json'
@@ -243,12 +244,19 @@ import td_ONC_2016 from '../data/soccer/tournamentData/ONC/td_ONC_2016.json'
 import QualificationTournamentWCArray from '../data/soccer/QualificationTournamentWC.json'
 import qtd_WC_2022 from '../data/soccer/qualTournamentData/qtd_WC_2022.json'
 
+import TeamArray from '../data/soccer/Team.json'
+import ClubArray from '../data/soccer/Club.json'
+
+export const getTeamArray = () => {
+  return TeamArray.concat(ClubArray)
+}
+
 export const getCurrentTournament = () => {
   return { tournament: 'UCL', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
-  return TournamentArray.concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_UNL, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
+  return TournamentArray.concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_UNL, t_UCL, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
 }
 
 export const getTournamentDataArray = () => {
