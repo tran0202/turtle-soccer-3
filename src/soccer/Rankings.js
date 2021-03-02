@@ -3,6 +3,8 @@ import { Row, Col } from 'reactstrap'
 import { updateFinalRankings, createSemifinalistsPool, isGoalRatioTiebreaker, getRowStriped, isWildCardExtraRow, getWildCardRowStriped } from './RankingsHelper'
 import {
   getFlagSrc,
+  getClubLogoImg,
+  getNationSmallFlagImg,
   getTeamName,
   getNationOfficialName,
   isSuccessor,
@@ -29,7 +31,16 @@ const hasExcludedRankings = (round) => {
 const RankingRowSeparate = (props) => {
   const { round } = props
   // console.log('round', round)
-  const roundName = round.name ? round.name.replace('Fifth-place', 'Consolation Round').replace('Playoff Second Round', 'Playoff') : ''
+  const roundName = round.name
+    ? round.name
+        .replace('Fifth-place', 'Consolation Round')
+        .replace('Playoff Second Round', 'Playoff')
+        .replace('Preliminary Final', 'Preliminary Round')
+        .replace('First Qualifying Second Leg', 'First Qualifying Round')
+        .replace('Second Qualifying Second Leg', 'Second Qualifying Round')
+        .replace('Third Qualifying Second Leg', 'Third Qualifying Round')
+        .replace('Play-off Second Leg', 'Play-off Round')
+    : ''
   return (
     (round.ranking_type === 'round' || round.ranking_type === 'alltimeround' || round.ranking_type === 'successorround') &&
     roundName !== '' &&
@@ -39,6 +50,7 @@ const RankingRowSeparate = (props) => {
     roundName !== 'Third-place' &&
     (roundName !== 'Semi-finals' || (roundName === 'Semi-finals' && round.exception)) &&
     roundName !== 'Consolation Semi-finals' &&
+    roundName !== 'Preliminary Semi-finals' &&
     roundName !== 'Semi-finals Second Leg' &&
     roundName !== 'Playoff First Round' &&
     roundName !== 'Silver medal match' &&
@@ -82,20 +94,26 @@ export const RankingHead = (props) => {
   )
 }
 
+export const getTeamFlag = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id)}
+      {config.team_type_id !== 'CLUB' && (
+        <img className="flag-sm flag-md" src={getFlagSrc(id)} alt={`${id} ${getNationOfficialName(id)}`} title={`${id} ${getNationOfficialName(id)}`} />
+      )}
+    </React.Fragment>
+  )
+}
+
 const RankingRow2 = (props) => {
   const { row, config } = props
   const { ranking_type } = config
   // console.log('config', config)
   return (
     <Row className="no-gutters">
-      <Col className="col-box-10">
-        <img
-          className="flag-sm flag-md"
-          src={getFlagSrc(row.id)}
-          alt={`${row.id} ${getNationOfficialName(row.id)}`}
-          title={`${row.id} ${getNationOfficialName(row.id)}`}
-        />
-      </Col>
+      <Col className="col-box-10">{getTeamFlag(row.id, config)}</Col>
       <Col className="col-box-34 text-uppercase text-left">
         &nbsp;&nbsp;{getTeamName(row.id)}
         {config.show_successors && isSuccessor(row.id) && ranking_type === 'alltimeround' && (

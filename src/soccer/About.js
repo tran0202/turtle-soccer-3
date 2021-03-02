@@ -1,6 +1,6 @@
 import React from 'react'
 import Qualified from './Qualified'
-import { getFlagSrc, getNationSmallFlagImg, getClubLogoImg, getTeamName, isWinner, SharedBronzeTooltip, GoldenBallRejectedTooltip } from './Helper'
+import { getFlagSrc, getNationSmallFlagImg, getClubLogoImg, getTeamFlagName, isWinner, SharedBronzeTooltip, GoldenBallRejectedTooltip } from './Helper'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import NumberFormat from 'react-number-format'
@@ -107,24 +107,12 @@ const getGoldenGloveLabel = (tournament) => {
   return 'Golden Glove'
 }
 
-const getTeamFlagName = (id, config) => {
-  if (!id) return
-  return (
-    <React.Fragment>
-      {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
-      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id, config)}
-      {config.team_type_id !== 'CLUB' && <img className="flag-sm flag-md " src={getFlagSrc(id)} alt={id} title={id} />}
-      <span className="padding-top-xs">&nbsp;{getTeamName(id)}</span>
-    </React.Fragment>
-  )
-}
-
 const getPlayerClubNationName = (p, config) => {
   if (!p) return
   return (
     <React.Fragment>
       {config.team_type_id === 'CLUB' && getClubLogoImg(p.club, config)}
-      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(p.team, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(p.team)}
       {config.team_type_id !== 'CLUB' && p.team && <img className="flag-sm flag-md " src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
       <span className="padding-top-xs">
         &nbsp;{p.player} {getGoldenBootDetails(p)}

@@ -26,6 +26,15 @@ export const getTournamentConfig = (tournament) => {
   }
 }
 
+export const getTournamentTypeConfig = (tournamentType) => {
+  return {
+    team_type_id: tournamentType.team_type_id,
+    confederation_id: tournamentType.confederation_id,
+    logo_path: tournamentType.logo_path,
+    sport_id: tournamentType.sport_id,
+  }
+}
+
 const getFormat = (rrStage) => {
   const { groups, advancement, home_and_away, odd_format } = rrStage
   const groupCount = groups ? groups.length : 0
@@ -117,12 +126,77 @@ export const getLeagueRoundRobinMdStages = (leagues) => {
       }
     }
   })
-  // console.log('rrLeagues', rrLeagues)
   return rrLeagues
 }
 
 export const getKnockoutStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'knockout' || s.type === 'knockout2legged') : null
+}
+
+export const splitPathMatches = (stage, round) => {
+  // console.log('stage', stage)
+  if (!stage.multiple_paths || !round || !round.matches) return []
+  return [
+    { path: 'Champions', matches: round.matches.filter((m) => m.path === 'Champions') },
+    { path: 'League', matches: round.matches.filter((m) => m.path === 'League') },
+  ]
+}
+
+export const splitPathDatesMatches = (round) => {
+  if (!round || !round.dates || !round.matches) return []
+  const _matches = []
+  round.dates.forEach((d) => {
+    round.matches[d].forEach((m) => {
+      _matches.push(m)
+    })
+  })
+  const championMatches = _matches.filter((m) => m.path === 'Champions')
+  const leagueMatches = _matches.filter((m) => m.path === 'League')
+  const _championDates = []
+  const _leagueDates = []
+  const _championMatches = []
+  const _leagueMatches = []
+  championMatches.forEach((m) => {
+    if (_championDates.find((d) => d === m.date) === undefined) {
+      _championDates.push(m.date)
+    }
+    if (!_championMatches[m.date]) {
+      _championMatches[m.date] = []
+    }
+    _championMatches[m.date].push(m)
+  })
+  leagueMatches.forEach((m) => {
+    if (_leagueDates.find((d) => d === m.date) === undefined) {
+      _leagueDates.push(m.date)
+    }
+    if (!_leagueMatches[m.date]) {
+      _leagueMatches[m.date] = []
+    }
+    _leagueMatches[m.date].push(m)
+  })
+  // console.log('championDates', championDates)
+  _championDates.sort((a, b) => {
+    if (a > b) {
+      return 1
+    } else if (a < b) {
+      return -1
+    } else {
+      return 0
+    }
+  })
+  _leagueDates.sort((a, b) => {
+    if (a > b) {
+      return 1
+    } else if (a < b) {
+      return -1
+    } else {
+      return 0
+    }
+  })
+  return [
+    { path: 'Champions', dates: _championDates, matches: _championMatches },
+    { path: 'League', dates: _leagueDates, matches: _leagueMatches },
+  ]
 }
 
 export const getDefaultStageTab = (stages) => {
@@ -169,7 +243,7 @@ export const getNationSmallFlagImg = (id) => {
     if (nation) {
       return (
         <React.Fragment>
-          <img className="flag-xs-2 flag-sm-3 " src={`/assets/images/flags/${nation.flag_filename}`} alt={id} title={id} />
+          <img className="flag-xs-2 flag-sm-3" src={`/assets/images/flags/${nation.flag_filename}`} alt={nation.id} title={nation.id} />
         </React.Fragment>
       )
     } else {
@@ -186,12 +260,33 @@ export const getClubLogoImg = (id, config) => {
   if (team) {
     return (
       <React.Fragment>
-        <img className="flag-club-sm flag-club-md " src={`/assets/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />
+        <img className="flag-club-sm flag-club-md" src={`/assets/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />
       </React.Fragment>
     )
   } else {
     console.log('Team error', team)
   }
+}
+
+export const getTeamFlag = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
+      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id)}
+      {config.team_type_id !== 'CLUB' && <img className="flag-sm flag-md" src={getFlagSrc(id)} alt={id} title={id} />}
+    </React.Fragment>
+  )
+}
+
+export const getTeamFlagName = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {getTeamFlag(id, config)}
+      <span className="padding-top-xs">&nbsp;{getTeamName(id)}</span>
+    </React.Fragment>
+  )
 }
 
 export const getNationOfficialName = (id) => {
@@ -241,12 +336,15 @@ export const getParentTeam = (id) => {
   return getTeamArray().find((t) => t.id === team.parent_team_id)
 }
 
-export const getBracketTeamCode = (id) => {
+export const getBracketTeamCode = (id, config) => {
   if (!id) return
   const team = getTeamArray().find((t) => t.id === id)
   if (!team) {
     console.log('Team error', team)
     return
+  }
+  if (config.team_type_id === 'CLUB') {
+    return team.id
   }
   const nation = NationArray.find((n) => n.id === team.nation_id)
   if (!nation) {
@@ -268,7 +366,6 @@ export const isSuccessor = (id) => {
 }
 
 export const isWinner = (who, match) => {
-  // console.log('match', match)
   if (match) {
     if (who === 'H') {
       if (match.match_void) return match.away_withdrew
@@ -284,7 +381,8 @@ export const isWinner = (who, match) => {
               match.home_extra_score === match.away_extra_score &&
               match.home_penalty_score > match.away_penalty_score) ||
             match.home_replay_score > match.away_replay_score)) ||
-        (match.second_leg && match.home_aggregate_score_2nd_leg > match.away_aggregate_score_2nd_leg)
+        (match.second_leg && match.home_aggregate_score_2nd_leg > match.away_aggregate_score_2nd_leg) ||
+        (match.second_leg && match.aggregate_team_2nd_leg === match.home_team)
       )
     } else {
       if (match.match_void) return match.home_withdrew
@@ -298,7 +396,8 @@ export const isWinner = (who, match) => {
               match.home_extra_score === match.away_extra_score &&
               match.home_penalty_score < match.away_penalty_score) ||
             match.home_replay_score < match.away_replay_score)) ||
-        (match.second_leg && match.home_aggregate_score_2nd_leg < match.away_aggregate_score_2nd_leg)
+        (match.second_leg && match.home_aggregate_score_2nd_leg < match.away_aggregate_score_2nd_leg) ||
+        (match.second_leg && match.aggregate_team_2nd_leg === match.away_team)
       )
     }
   }
@@ -707,7 +806,7 @@ const DisplayExtraTimeText = (props) => {
 }
 
 export const DisplayKnockout2LeggedMatch = (props) => {
-  const { m } = props
+  const { m, config } = props
   // console.log('m', m)
   const homeLoseData = {
     knockoutMatch: true,
@@ -750,9 +849,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
           {getTeamName(m.home_team)}
           {m.home_aggregate_playoff_win && <PlayoffWinTooltip target={`playoffWin_${m.home_team}_${m.away_team}`} notes={m.playoff_notes} />}
         </Col>
-        <Col className="padding-top-sm text-center col-box-10">
-          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
-        </Col>
+        <Col className="padding-top-sm text-center col-box-10">{getTeamFlag(m.home_team, config)}</Col>
         <Col className="score text-center score-no-padding-right col-box-10">
           {m.home_score != null && m.away_score != null && (
             <React.Fragment>
@@ -791,9 +888,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
             </React.Fragment>
           )}
         </Col>
-        <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">
-          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
-        </Col>
+        <Col className="padding-top-sm text-center flag-no-padding-left col-box-10">{getTeamFlag(m.away_team, config)}</Col>
         <Col
           className={`team-name text-uppercase col-box-25${
             isAwayLoseAggregate(awayLoseData) || m.home_walkover || m.home_aggregate_playoff_win || m.home_coin_toss ? ' gray3' : ''
@@ -904,7 +999,7 @@ export const DisplayMatch = (props) => {
           )}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center">
-          {m.home_team && <img className="flag-sm flag-md" src={getFlagSrc(m.home_team)} alt={m.home_team} title={m.home_team} />}
+          {getTeamFlag(m.home_team, config)}
         </Col>
 
         <Col sm="2" xs="2" className={`score text-center score-no-padding-right${m.postponed ? ' withdrew-subscript gray3' : ''}`}>
@@ -958,7 +1053,7 @@ export const DisplayMatch = (props) => {
           {m.extra_140 && <Extra140Tooltip target={`extra140`} />}
         </Col>
         <Col sm="1" xs="1" className="padding-top-sm text-center flag-no-padding-left">
-          {m.away_team && <img className="flag-sm flag-md" src={getFlagSrc(m.away_team)} alt={m.away_team} title={m.away_team} />}
+          {getTeamFlag(m.away_team, config)}
         </Col>
         <Col
           sm="3"
@@ -1020,10 +1115,47 @@ export const DisplayMatch = (props) => {
   )
 }
 
+export const DisplaySchedule2 = (props) => {
+  const { round, config } = props
+  // console.log('round', round)
+  const { showMatchYear } = config
+  const { dates, matches } = round
+  return (
+    <React.Fragment>
+      <Row>
+        <Col>
+          <div className="h3-ff6 margin-top-md">{config.path_name}</div>
+        </Col>
+      </Row>
+      {dates &&
+        dates.map((value) => (
+          <Row key={value}>
+            <Col sm="12" className="h4-ff3 border-bottom-gray2 margin-top-md">
+              {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
+            </Col>
+            {matches[value].map((m, index) => (
+              <DisplayMatch m={m} config={config} key={index} />
+            ))}
+          </Row>
+        ))}
+    </React.Fragment>
+  )
+}
+
 export const DisplaySchedule = (props) => {
   const { round, config } = props
-  const { showMatchYear } = config
-  const { name, dates, matches, consolation_notes } = round
+  const { multiple_paths } = config
+  const { name, dates, consolation_notes } = round
+  const pathDatesMatches = multiple_paths ? splitPathDatesMatches(round) : []
+  dates.sort((a, b) => {
+    if (a > b) {
+      return 1
+    } else if (a < b) {
+      return -1
+    } else {
+      return 0
+    }
+  })
   let groupName =
     name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? name.replace('Third-place', 'Bronze medal match').replace('Final', 'Gold medal match')
@@ -1040,16 +1172,10 @@ export const DisplaySchedule = (props) => {
           </div>
         </Col>
       </Row>
-      {dates &&
-        dates.map((value) => (
-          <Row key={value}>
-            <Col sm="12" className="h4-ff3 border-bottom-gray2 margin-top-md">
-              {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
-            </Col>
-            {matches[value].map((m, index) => (
-              <DisplayMatch m={m} config={config} key={index} />
-            ))}
-          </Row>
+      {!multiple_paths && <DisplaySchedule2 round={round} config={config} />}
+      {multiple_paths &&
+        pathDatesMatches.map((p) => (
+          <DisplaySchedule2 round={{ dates: p.dates, matches: p.matches }} config={{ ...config, path_name: `${p.path} Path` }} key={p.path} />
         ))}
     </React.Fragment>
   )

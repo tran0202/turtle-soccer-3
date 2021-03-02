@@ -1,6 +1,7 @@
 import { getTeamName } from './Helper'
 
 export const findTeam = (teamArray, id) => {
+  // console.log('teamArray', teamArray)
   return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
 
@@ -143,7 +144,6 @@ const accumulateRanking = (team, match, config) => {
   team.gr = isGoalRatioTiebreaker(config) && team.ga !== 0 ? team.gf / team.ga : null
   if (side === 'home') {
     if (match.home_fair_pts) {
-      // console.log('team', team)
       team.fp = (team.fp ? team.fp : 0) + match.home_fair_pts
     }
   } else {
@@ -730,6 +730,18 @@ export const sortGroupRankings = (group, startingIndex, config) => {
         } else if (a.pts > b.pts) {
           return -1
         } else if (a.pts < b.pts) {
+          // if (a.id === 'BAS' && b.id === 'CFR') {
+          //   console.log('a', a)
+          //   console.log('b', b)
+          // }
+          // if (a.id === 'BAS' && b.id === 'FCM') {
+          //   console.log('a', a)
+          //   console.log('b', b)
+          // }
+          // if (a.id === 'SGR' && b.id === 'FCM') {
+          //   console.log('a', a)
+          //   console.log('b', b)
+          // }
           return 1
         } else {
           if (isHead2HeadBeforeGoalDifference) {
@@ -794,8 +806,10 @@ export const sortGroupRankings = (group, startingIndex, config) => {
           }
         }
       })
-      // console.log('startingIndex', startingIndex)
       group.final_rankings.forEach((t, index) => {
+        // console.log('t', t)
+        // console.log('index', index)
+        // console.log('startingIndex', startingIndex)
         if (t) {
           t.r = group.name === 'Semi-finals' || group.name === 'Semi-finals Second Leg' ? startingIndex : index + startingIndex
         }
@@ -1052,20 +1066,6 @@ export const getWildCardRowStriped = (row, config) => {
   return ''
 }
 
-// const mergeArray = (a, b) => {
-//   b.forEach((be) => {
-//     let merging = true
-//     a.forEach((ae) => {
-//       if (ae === be) {
-//         merging = false
-//       }
-//     })
-//     if (merging) {
-//       a.push(be)
-//     }
-//   })
-// }
-
 const adjustRankingCount = (rankingBundle) => {
   if (!rankingBundle || rankingBundle.length === 0) return
   let min = rankingBundle[0].r
@@ -1079,49 +1079,50 @@ const adjustRankingCount = (rankingBundle) => {
 
 export const updateFinalRankings = (round) => {
   if (round.ranking_type !== 'round' && round.ranking_type !== 'alltimeround') return
-  let newFinalRankings = []
-  let previousDrawCount = 0
-  let rankingBundle = []
-  if (round.final_rankings) {
-    round.final_rankings.forEach((r) => {
-      if (r) {
-        if (r.draws) {
-          const retainIds = []
-          r.draws.forEach((d) => {
-            round.final_rankings.forEach((r2) => {
-              if (r2.id && r2.id === d) {
-                retainIds.push(d)
-              }
-            })
-          })
-          r.draws = retainIds
-        }
-        const drawCount = r.draws ? r.draws.length : 0
-        if (drawCount > 0) {
-          rankingBundle.push(r)
-          rankingBundle.sort((a, b) => {
-            if (getTeamName(a.id) > getTeamName(b.id)) {
-              return 1
-            }
-            return -1
-          })
-          adjustRankingCount(rankingBundle)
-        } else {
-          if (previousDrawCount > 0) {
-            newFinalRankings.push(rankingBundle)
-            adjustRankingCount(rankingBundle)
-            rankingBundle = []
-          }
-          newFinalRankings.push(r)
-        }
-        previousDrawCount = drawCount
+  if (!round.final_rankings) return
+  const identicals = []
+  const runningIds = []
+  const newFinalRankings = []
+  round.final_rankings.forEach((fr) => {
+    if (!fr.draws) {
+      identicals.push({ ids: [fr.id], rankings: [fr] })
+      runningIds.push(fr.id)
+    } else {
+      if (runningIds.find((x) => x === fr.id) === undefined) {
+        runningIds.push(fr.id)
+        identicals.push({ ids: [fr.id], rankings: [fr] })
       }
-    })
-    if (rankingBundle.length > 0) {
-      newFinalRankings.push(rankingBundle)
+      fr.draws.forEach((d) => {
+        if (runningIds.find((x) => x === d) === undefined) {
+          runningIds.push(d)
+          identicals.forEach((i) => {
+            const found = i.ids.find((y) => y === fr.id)
+            if (found !== undefined) {
+              i.ids.push(d)
+              const r2 = round.final_rankings.find((fr2) => fr2.id === d)
+              i.rankings.push(r2)
+            }
+          })
+        }
+      })
     }
-    round.final_rankings = newFinalRankings
-  }
+  })
+  identicals.forEach((i) => {
+    i.rankings.sort((a, b) => {
+      if (getTeamName(a.id) > getTeamName(b.id)) {
+        return 1
+      }
+      return -1
+    })
+    adjustRankingCount(i.rankings)
+    if (i.rankings.length === 1) {
+      newFinalRankings.push(i.rankings[0])
+    } else {
+      newFinalRankings.push(i.rankings)
+    }
+  })
+  // console.log('newFinalRankings', newFinalRankings)
+  round.final_rankings = newFinalRankings
 }
 
 export const createSemifinalistsPool = (round) => {

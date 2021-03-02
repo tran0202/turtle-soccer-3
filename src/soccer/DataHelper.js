@@ -252,7 +252,7 @@ export const getTeamArray = () => {
 }
 
 export const getCurrentTournament = () => {
-  return { tournament: 'UCL', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'UCL201819', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {

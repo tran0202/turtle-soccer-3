@@ -7,6 +7,7 @@ import {
   getAllRoundRobinStages,
   getKnockoutStages,
   getTournamentConfig,
+  getTournamentTypeConfig,
   isWinner,
   isSharedBronze,
   calculateAggregateScore,
@@ -114,6 +115,7 @@ const eliminateKnockoutTeams = (tournament, round) => {
   const advanced_teams = findRoundAdvancedTeams(tournament, round.name)
   round.matches &&
     round.matches.forEach((m) => {
+      // console.log('m', m)
       let finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === round.name)
       let nextConsolationRound = findRoundAdvancedTeams(tournament, round.next_consolation_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
@@ -189,6 +191,7 @@ const advanceKnockoutTeams = (tournament, round) => {
       const next_round = findRoundAdvancedTeams(tournament, round.next_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
+      // console.log('m', m)
       if (isWinner('H', m)) {
         if (!next_round) {
           tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [home_ranking] })
@@ -218,10 +221,12 @@ const advance1stLegTeams = (tournament, round) => {
       const next_round = findRoundAdvancedTeams(tournament, round.next_round)
       const home_ranking = findTeam(advanced_teams.final_rankings, m.home_team)
       const away_ranking = findTeam(advanced_teams.final_rankings, m.away_team)
-      if (!next_round) {
-        tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [home_ranking, away_ranking] })
-      } else {
-        next_round.final_rankings.push(home_ranking, away_ranking)
+      if (home_ranking && away_ranking) {
+        if (!next_round) {
+          tournament.advanced_teams.rounds.push({ name: round.next_round, ranking_type: 'round', final_rankings: [home_ranking, away_ranking] })
+        } else {
+          next_round.final_rankings.push(home_ranking, away_ranking)
+        }
       }
     })
 }
@@ -427,40 +432,40 @@ export const findRoundAdvancedTeams = (tournament, name) => {
   return tournament.advanced_teams.rounds.find((r) => r.name === name)
 }
 
-const initKnockoutRankings = (tournament, stage) => {
+const initTournamentRankings = (tournament) => {
   if (tournament.advanced_teams && tournament.final_rankings) return
   if (!tournament.advanced_teams) {
-    tournament.advanced_teams = {}
-    tournament.advanced_teams.rounds = []
-    let finalRankings = []
-    stage.teams &&
-      stage.teams.forEach((t) => {
-        finalRankings.push(getBlankRanking(t.id))
-      })
-    const roundName = stage.rounds && stage.rounds.length > 0 ? stage.rounds[0].name : ''
-    tournament.advanced_teams.rounds.push({ name: roundName, ranking_type: 'round', final_rankings: finalRankings })
+    tournament.advanced_teams = { rounds: [] }
   }
   if (!tournament.final_rankings) {
-    tournament.final_rankings = {}
-    tournament.final_rankings.rounds = []
+    tournament.final_rankings = { rounds: [] }
   }
 }
 
+const initKnockoutRankings = (tournament, stage) => {
+  const roundName = stage.rounds && stage.rounds.length > 0 ? stage.rounds[0].name : stage.name
+  const _round = tournament.advanced_teams.rounds.find((r) => r.name === roundName)
+  if (_round) return
+  let finalRankings = []
+  stage.teams.forEach((t) => {
+    finalRankings.push(getBlankRanking(t.id))
+  })
+  tournament.advanced_teams.rounds.push({ name: roundName, ranking_type: 'round', final_rankings: finalRankings })
+}
+
 const initByeRankings = (tournament, stage) => {
-  if (tournament.advanced_teams && tournament.final_rankings) return
-  if (!tournament.advanced_teams) {
-    tournament.advanced_teams = {}
-    tournament.advanced_teams.rounds = []
-    let finalRankings = []
-    stage.bye_teams &&
-      stage.bye_teams.forEach((t) => {
-        finalRankings.push(getBlankRanking(t.id))
-      })
+  if (!stage.bye_teams) return
+  let finalRankings = []
+  stage.bye_teams.forEach((t) => {
+    finalRankings.push(getBlankRanking(t.id))
+  })
+  const _round = tournament.advanced_teams.rounds.find((r) => r.name === stage.name)
+  if (!_round) {
     tournament.advanced_teams.rounds.push({ name: stage.name, ranking_type: 'round', final_rankings: finalRankings })
-  }
-  if (!tournament.final_rankings) {
-    tournament.final_rankings = {}
-    tournament.final_rankings.rounds = []
+  } else {
+    finalRankings.forEach((fr) => {
+      _round.final_rankings.push(fr)
+    })
   }
 }
 
@@ -492,8 +497,8 @@ const collectLeagueGroupTeams = (tournament, league, stage, group) => {
 }
 
 const FinalStandings = (props) => {
-  const { tournament } = props
-  const config = getTournamentConfig(tournament)
+  const { tournament, tournamentType } = props
+  const config = { ...getTournamentConfig(tournament), ...getTournamentTypeConfig(tournamentType) }
   const { stages, leagues } = tournament
 
   if (leagues) {
@@ -600,8 +605,9 @@ const FinalStandings = (props) => {
   const rrStages = getRoundRobinStages(stages)
   rrStages &&
     rrStages.forEach((groupStage) => {
+      initTournamentRankings(tournament)
+      initByeRankings(tournament, groupStage)
       if (groupStage.bye_teams) {
-        initByeRankings(tournament, groupStage)
         advanceByeTeams(tournament, groupStage)
       }
       if (groupStage.groups) {
@@ -626,16 +632,32 @@ const FinalStandings = (props) => {
   koStages &&
     koStages.forEach((koStage) => {
       if (koStage && koStage.rounds) {
+        initTournamentRankings(tournament)
         initKnockoutRankings(tournament, koStage)
+        // console.log('koStage', koStage)
+        if (koStage.type === 'knockout2legged') {
+          calculateAggregateScore(koStage)
+        }
         const earlyRounds = koStage.rounds.filter(
           (r) =>
             r.name === 'Preliminary round' ||
             r.name === 'First round' ||
             r.name === 'Round of 16' ||
             r.name === 'Quarter-finals' ||
-            r.name === 'Semi-finals First Leg',
+            r.name === 'Semi-finals First Leg' ||
+            r.name === 'Preliminary Semi-finals' ||
+            r.name === 'Preliminary Final' ||
+            r.name === 'First Qualifying First Leg' ||
+            r.name === 'First Qualifying Second Leg' ||
+            r.name === 'Second Qualifying First Leg' ||
+            r.name === 'Second Qualifying Second Leg' ||
+            r.name === 'Third Qualifying First Leg' ||
+            r.name === 'Third Qualifying Second Leg' ||
+            r.name === 'Play-off First Leg' ||
+            r.name === 'Play-off Second Leg',
         )
         earlyRounds.forEach((round) => {
+          initByeRankings(tournament, round)
           calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
           if (round.round_type !== 'firstleg') {
             eliminateKnockoutTeams(tournament, round)

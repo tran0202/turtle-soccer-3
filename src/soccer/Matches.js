@@ -4,7 +4,7 @@ import RoundRobinMatchDay from './RoundRobinMatchDay'
 import RoundRobinLeagueMatchDay from './RoundRobinLeagueMatchDay'
 import Knockout from './Knockout'
 import Knockout2Legged from './Knockout2Legged'
-import { getTournamentConfig, getDefaultStageTab, getDefaultMdTab } from './Helper'
+import { getTournamentConfig, getTournamentTypeConfig, getDefaultStageTab, getDefaultMdTab } from './Helper'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
 import classnames from 'classnames'
 
@@ -47,11 +47,11 @@ const collectLeagueMatchdays = (leagues) => {
 }
 
 const Matches = (props) => {
-  const { tournament } = props
+  const { tournament, tournamentType } = props
   const { stages, leagues } = tournament
   const defaultTab = stages ? getDefaultStageTab(stages) : getDefaultMdTab(leagues)
   const matchdays = collectLeagueMatchdays(leagues)
-  const config = getTournamentConfig(tournament)
+  const config = { ...getTournamentConfig(tournament), ...getTournamentTypeConfig(tournamentType) }
   const [activeTab, setActiveTab] = useState(defaultTab)
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab)

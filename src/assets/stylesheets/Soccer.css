@@ -72,7 +72,6 @@
 .flag-club-sm {
   height: 24px;
 }
-
 @media (min-width: 768px) {
   .flag-sm-3 {
     width: 28px;
@@ -91,6 +90,46 @@
     height: 32px;
   }
 }
+
+.bracket-flag-xxxs {
+  width: 16px;
+  height: 12px;
+  border: 1px solid #c7c6c6;
+}
+.bracket-logo-xxxs {
+  height: 18px;
+}
+@media (min-width: 576px) {
+  .bracket-flag-xxs {
+    width: 16px;
+    height: 12px;
+    border: 1px solid #c7c6c6;
+  }
+  .bracket-logo-xxs {
+    height: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .bracket-flag-xs {
+    width: 20px;
+    height: 15px;
+    border: 1px solid #c7c6c6;
+  }
+  .bracket-logo-xs {
+    height: 24px;
+  }
+}
+@media (min-width: 992px) {
+  .bracket-flag-sm {
+    width: 28px;
+    height: 21px;
+    border: 1px solid #c7c6c6;
+  }
+  .bracket-logo-sm {
+    height: 28px;
+  }
+}
+
 .margin-top-flag {
   margin-top: -6px;
 }

@@ -8,7 +8,7 @@ const Knockout2Legged = (props) => {
   // console.log('stage', stage)
   return (
     <React.Fragment>
-      <Knockout2LeggedSummary stage={stage} />
+      <Knockout2LeggedSummary stage={stage} config={config} />
       {stage.rounds &&
         stage.rounds.map((r) => {
           const isSecondLeg = r.round_type === 'secondleg'
@@ -16,7 +16,14 @@ const Knockout2Legged = (props) => {
           return (
             <DisplaySchedule
               round={{ name: r.name, ...getMatchArrayByDate(r, false) }}
-              config={{ showMatchYear: config.show_match_year, knockoutMatch: isSecondLeg || isPlayoffLeg, secondLegMatch: isSecondLeg }}
+              config={{
+                showMatchYear: config.show_match_year,
+                knockoutMatch: isSecondLeg || isPlayoffLeg,
+                secondLegMatch: isSecondLeg,
+                logo_path: config.logo_path,
+                team_type_id: config.team_type_id,
+                multiple_paths: stage.multiple_paths,
+              }}
               key={r.name}
             />
           )

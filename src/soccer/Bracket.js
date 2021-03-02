@@ -25,6 +25,7 @@ import {
   ReplacementTooltip,
 } from './Helper'
 import { hasReplay } from './RankingsHelper'
+import { getTeamArray } from './DataHelper'
 import { Row, Col, Collapse, Button } from 'reactstrap'
 import moment from 'moment'
 
@@ -61,9 +62,40 @@ const getMatchDate = (match) => {
   )
 }
 
+export const getBracketClubLogoImg = (id, config) => {
+  if (!id) return
+  const team = getTeamArray().find((t) => t.id === id)
+  if (team) {
+    return (
+      <React.Fragment>
+        <img
+          className="bracket-logo-xxxs bracket-logo-xxs bracket-logo-xs bracket-logo-sm"
+          src={`/assets/images/${config.logo_path}/${team.logo_filename}`}
+          alt={id}
+          title={id}
+        />
+      </React.Fragment>
+    )
+  } else {
+    console.log('Team error', team)
+  }
+}
+
+export const getTeamFlag = (id, config) => {
+  if (!id) return
+  return (
+    <React.Fragment>
+      {config.team_type_id === 'CLUB' && getBracketClubLogoImg(id, config)}
+      {config.team_type_id !== 'CLUB' && (
+        <img className="bracket-flag-xxxs bracket-flag-xxs bracket-flag-xs bracket-flag-sm" src={getFlagSrc(id)} alt={id} title={id} />
+      )}
+    </React.Fragment>
+  )
+}
+
 const BracketBox = (props) => {
   const { match, colIndex, lastBox, config } = props
-  // console.log('match', match)
+  // console.log('config', config)
   return (
     <React.Fragment>
       <Row className="no-gutters box-sm bracket-box-height">
@@ -84,13 +116,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
           <Row className="no-gutters h3-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              {match.home_team && <img className="flag-sm-2" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
+              {getTeamFlag(match.home_team, config)}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              {match.home_team && <img className="flag-xs-2" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
+              {getTeamFlag(match.home_team, config)}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              {match.home_team && <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />}
+              {getTeamFlag(match.home_team, config)}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.home_team)}
@@ -133,7 +165,7 @@ const BracketBox = (props) => {
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
-              {getBracketTeamCode(match.home_team)}
+              {getBracketTeamCode(match.home_team, config)}
               {match.walkover && match.home_walkover && (
                 <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w/o)" />
               )}
@@ -153,7 +185,7 @@ const BracketBox = (props) => {
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
-              {getBracketTeamCode(match.home_team)}
+              {getBracketTeamCode(match.home_team, config)}
               {match.walkover && match.home_walkover && (
                 <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w)" />
               )}
@@ -173,9 +205,9 @@ const BracketBox = (props) => {
               {match.extra_140 && <Extra140Tooltip target={`extra140`} />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
-              <img className="flag-xxs" src={getFlagSrc(match.home_team)} alt={match.home_team} title={match.home_team} />
+              {getTeamFlag(match.home_team, config)}
               &nbsp;
-              {getBracketTeamCode(match.home_team)}
+              {getBracketTeamCode(match.home_team, config)}
               {match.walkover && match.home_walkover && (
                 <WalkoverTooltip target={`walkover_${match.home_team}_${match.away_team}`} content={match.walkover} anchor="(w)" />
               )}
@@ -221,13 +253,13 @@ const BracketBox = (props) => {
         <Col sm="12" className="bracket-half-box-height">
           <Row className="no-gutters h4-ff3">
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
-              {match.away_team && <img className="flag-sm-2" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
+              {getTeamFlag(match.away_team, config)}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
-              {match.away_team && <img className="flag-xs-2" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
+              {getTeamFlag(match.away_team, config)}
             </Col>
             <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
-              {match.away_team && <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />}
+              {getTeamFlag(match.away_team, config)}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(match.away_team)}
@@ -268,7 +300,7 @@ const BracketBox = (props) => {
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
-              {getBracketTeamCode(match.away_team)}
+              {getBracketTeamCode(match.away_team, config)}
               {match.walkover && match.away_walkover && (
                 <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w/o)" />
               )}
@@ -287,7 +319,7 @@ const BracketBox = (props) => {
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
-              {getBracketTeamCode(match.away_team)}
+              {getBracketTeamCode(match.away_team, config)}
               {match.walkover && match.away_walkover && (
                 <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w)" />
               )}
@@ -306,9 +338,9 @@ const BracketBox = (props) => {
               {isSharedBronze(match) && <SharedBronzeTooltip target="sharedBronzeTooltip" notes={match.shared_bronze_text} />}
             </Col>
             <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', match) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
-              <img className="flag-xxs" src={getFlagSrc(match.away_team)} alt={match.away_team} title={match.away_team} />
+              {getTeamFlag(match.away_team, config)}
               &nbsp;
-              {getBracketTeamCode(match.away_team)}
+              {getBracketTeamCode(match.away_team, config)}
               {match.walkover && match.away_walkover && (
                 <WalkoverTooltip target={`walkover_${match.away_team}_${match.home_team}`} content={match.walkover} anchor="(w)" />
               )}
@@ -362,7 +394,7 @@ const BracketColInner = (props) => {
           .replace('Silver medal match', 'Silver medal')
           .replace('Playoff First Round', 'P/o 1st round')
           .replace('Playoff Second Round', 'P/o 2nd round')
-      : round.name
+      : round.name.replace('Preliminary Semi-finals', 'Prelim Semi').replace('Preliminary Final', 'Prelim Final')
 
   // console.log('roundName', roundName)
   const roundNameBlock = (

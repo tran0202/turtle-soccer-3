@@ -1,7 +1,7 @@
 import React from 'react'
 import Rankings from './Rankings'
 import { calculateProgressRankings, collectProgressRankings, sortGroupRankings } from './RankingsHelper'
-import { getTournamentConfig, getParentTeam, getTeamName, isSuccessor } from './Helper'
+import { getTournamentConfig, getTournamentTypeConfig, getParentTeam, getTeamName, isSuccessor } from './Helper'
 import { Row, Col } from 'reactstrap'
 
 const updateRankings = (fr1, fr2) => {
@@ -66,7 +66,6 @@ const collectSuccessorRankings = (successor_rankings, fr, parentTeam) => {
 }
 
 const collectRankings = (tournaments) => {
-  // console.log('tournaments', tournaments)
   let rankingArray = []
   tournaments &&
     tournaments.forEach((t) => {
@@ -100,6 +99,7 @@ const collectRankings = (tournaments) => {
               })
             s.rounds &&
               s.rounds.forEach((r) => {
+                r.bye_teams && r.bye_teams.forEach((t) => _teams.push(t))
                 r.matches &&
                   r.matches.forEach((m) => {
                     if (!m.home_bye && !m.away_withdrew && !m.postponed && !m.match_void) {
@@ -209,6 +209,7 @@ const collectRankings = (tournaments) => {
         }
       })
   })
+  // console.log('allRankings', allRankings)
   sortGroupRankings(allRankings, 1, null)
   tournaments.all_rankings = allRankings
   updateSuccessorRankings(allSuccessorRankings, allRankings)
@@ -222,7 +223,7 @@ const AlltimeStandings = (props) => {
   return (
     <React.Fragment>
       <Row className="mt-3"></Row>
-      {tournaments && <Rankings rounds={ats} config={{ show_successors: tournamentType.show_successors }} />}
+      {tournaments && <Rankings rounds={ats} config={{ ...getTournamentTypeConfig(tournamentType), show_successors: tournamentType.show_successors }} />}
       {tournaments &&
         tournamentType.show_successors &&
         tournaments.successor_rankings &&
@@ -234,7 +235,7 @@ const AlltimeStandings = (props) => {
                 <div className="h2-ff1 margin-top-md">Breakdown of successor teams</div>
               </Col>
             </Row>
-            <Rankings rounds={tournaments.successor_rankings.successors} config={{}} />
+            <Rankings rounds={tournaments.successor_rankings.successors} config={getTournamentTypeConfig(tournamentType)} />
           </React.Fragment>
         )}
     </React.Fragment>

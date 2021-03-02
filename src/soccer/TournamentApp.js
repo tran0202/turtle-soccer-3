@@ -141,9 +141,9 @@ class TournamentApp extends React.Component {
             <React.Fragment>
               <Header state={this.state} query={query} />
               {page === 'about' && <About tournament={tournament} tournamentType={tournamentType} />}
-              {page === 'matches' && <Matches tournament={tournament} />}
+              {page === 'matches' && <Matches tournament={tournament} tournamentType={tournamentType} />}
               {page === 'groups' && <Groups tournament={tournament} tournamentType={tournamentType} />}
-              {page === 'finalstandings' && <FinalStandings tournament={tournament} />}
+              {page === 'finalstandings' && <FinalStandings tournament={tournament} tournamentType={tournamentType} />}
               {page === 'qualification' && <Qualification tournament={tournament} tournamentType={tournamentType} query={query} />}
             </React.Fragment>
           )}

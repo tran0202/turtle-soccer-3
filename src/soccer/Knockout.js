@@ -60,6 +60,7 @@ const getBracketStage = (stage) => {
 
 const Knockout = (props) => {
   const { stage, config } = props
+  // console.log('config', config)
   const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
   const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
   const consolationBracketName = stage.rounds && stage.rounds.find((r) => r.name === 'Playoff First Round') !== undefined ? 'Playoff' : 'Consolation'
@@ -67,6 +68,8 @@ const Knockout = (props) => {
     tournamentTypeId: config.tournament_type_id,
     goldenGoal: config.golden_goal_rule,
     silverGoal: config.silver_goal_rule,
+    logo_path: config.logo_path,
+    team_type_id: config.team_type_id,
   }
   const bracketConsolationConfig = {
     consolation_bracket: true,
@@ -75,6 +78,7 @@ const Knockout = (props) => {
   }
   const displayScheduleConfig = {
     knockoutMatch: true,
+    showMatchYear: config.show_match_year,
     ...bracketConfig,
   }
   return (
