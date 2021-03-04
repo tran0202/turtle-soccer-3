@@ -14,6 +14,7 @@ import {
   Head2HeadTooltip,
   DrawLotTooltip,
   ExcludedFourthPlaceTooltip,
+  ExcludedQualfyingRoundsTooltip,
 } from './Helper'
 import NumberFormat from 'react-number-format'
 
@@ -29,7 +30,7 @@ const hasExcludedRankings = (round) => {
 }
 
 const RankingRowSeparate = (props) => {
-  const { round } = props
+  const { round, config } = props
   // console.log('round', round)
   const roundName = round.name
     ? round.name
@@ -60,6 +61,7 @@ const RankingRowSeparate = (props) => {
           {round.ranking_type !== 'successorround' && <React.Fragment>{roundName}</React.Fragment>}
           {round.ranking_type === 'successorround' && <div id={`successor_${roundName.replace(' ', '_')}`}>{roundName}</div>}
           {hasExcludedRankings(round) && <ExcludedFourthPlaceTooltip target="excludedFourthPlaceTooltip" />}
+          {config.tournament_type_id === 'UCL' && roundName === 'Group Stage' && <ExcludedQualfyingRoundsTooltip target="excludedQualfyingRoundsTooltip" />}
         </Col>
       </Row>
     )
@@ -191,7 +193,7 @@ export const RankingRow = (props) => {
 const RankingRound = (props) => {
   const { round } = props
   let { config } = props
-  // console.log('round', round)
+  // console.log('config', config)
   config = round.advancement ? { ...config, advancement: round.advancement } : config
   updateFinalRankings(round)
   if (config.no_third_place && (round.name === 'Semi-finals' || round.name === 'Semi-finals Second Leg')) {
@@ -199,7 +201,7 @@ const RankingRound = (props) => {
   }
   return (
     <React.Fragment>
-      <RankingRowSeparate round={round} />
+      <RankingRowSeparate round={round} config={config} />
       {round.final_rankings &&
         round.final_rankings.map((r, index) => <RankingRow row={r} config={{ ...config, ranking_type: round.ranking_type }} key={index} index={index} />)}
     </React.Fragment>

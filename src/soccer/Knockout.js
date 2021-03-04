@@ -1,62 +1,7 @@
 import React from 'react'
-import { DisplaySchedule, getMatchArrayByDate } from './Helper'
+import { DisplaySchedule, getMatchArrayByDate, getBracketStage, getFinalPathStage, getConsolationPathStage } from './Helper'
 import { hasReplay } from './RankingsHelper'
 import Bracket from './Bracket'
-
-const reorderMatches = (matches) => {
-  matches &&
-    matches.sort((a, b) => {
-      if (a.bracket_order < b.bracket_order) {
-        return -1
-      } else if (a.bracket_order > b.bracket_order) {
-        return 1
-      } else {
-        return 0
-      }
-    })
-  return matches
-}
-
-const getFinalPathStage = (stage) => {
-  if (!stage.rounds) return
-  const newRounds = stage.rounds.filter(
-    (r) =>
-      r.name !== 'Consolation First Round' &&
-      r.name !== 'Consolation Semi-finals' &&
-      r.name !== 'Fifth-place' &&
-      r.name !== 'Playoff First Round' &&
-      r.name !== 'Playoff Second Round',
-  )
-  return { ...stage, rounds: newRounds }
-}
-
-const getConsolationPathStage = (stage) => {
-  if (!stage.rounds) return
-  const newRounds = stage.rounds.filter(
-    (r) =>
-      r.name === 'Consolation First Round' ||
-      r.name === 'Consolation Semi-finals' ||
-      r.name === 'Fifth-place' ||
-      r.name === 'Playoff First Round' ||
-      r.name === 'Playoff Second Round',
-  )
-  return { ...stage, rounds: newRounds }
-}
-
-const getBracketStage = (stage) => {
-  if (!stage) return {}
-  const rounds = []
-  stage.rounds &&
-    stage.rounds.forEach((r) => {
-      const roundMatches = []
-      r.matches &&
-        r.matches.forEach((m) => {
-          roundMatches.push(m)
-        })
-      rounds.push({ ...r, matches: reorderMatches(roundMatches) })
-    })
-  return { ...stage, rounds }
-}
 
 const Knockout = (props) => {
   const { stage, config } = props

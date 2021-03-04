@@ -858,7 +858,7 @@ const excludeRankings = (a, b) => {
   a.pts = a.pts - b.pts
 }
 
-export const createGroupFinalRankings = (tournament, group, matchDay) => {
+export const createGroupFinalRankings = (tournament, group, matchDay, page_excluded) => {
   if (!group.teams) return
   collectGroupRankings(group, matchDay)
   collectH2hRankings(group)
@@ -870,7 +870,8 @@ export const createGroupFinalRankings = (tournament, group, matchDay) => {
     points_for_win: tournament.points_for_win,
   }
   sortGroupRankings(group, 1, config)
-  if (group.final_standings_excluded) {
+  // console.log('group', group)
+  if (group.final_standings_excluded && page_excluded) {
     group.h2h_rankings &&
       group.h2h_rankings.forEach((hr) => {
         if (hr.oppid === group.final_standings_excluded) {
@@ -1024,6 +1025,7 @@ export const isAdvancedThirdPlace = (row, config) => {
 
 export const isEliminated = (row, config) => {
   if (!row) return false
+  if (isTransferred(row, config)) return true
   if (config && config.advancement && config.advancement.teams && config.advancement.teams.eliminated) {
     let flag = false
     config.advancement.teams.eliminated.forEach((e) => (flag = flag || row.r === e))
@@ -1042,12 +1044,23 @@ export const isRelegated = (row, config) => {
   return false
 }
 
+export const isTransferred = (row, config) => {
+  if (!row) return false
+  if (config && config.advancement && config.advancement.teams && config.advancement.teams.transferred) {
+    let flag = false
+    config.advancement.teams.transferred.forEach((a) => (flag = flag || row.r === a))
+    return flag
+  }
+  return false
+}
+
 export const getRowStriped = (row, config) => {
   if (isAdvancedNextRound(row, config)) return ' advanced-next-round-striped'
   if (isAdvancedWildCard(row, config)) return ' advanced-wild-card-striped'
   if (isAdvancedPlayoff(row, config)) return ' advanced-playoff-striped'
   if (isAdvancedThirdPlace(row, config)) return ' advanced-third-place-striped'
   if (isRelegated(row, config)) return ' relegation-striped'
+  if (isTransferred(row, config)) return ' transferred-striped'
   return ''
 }
 
@@ -1121,7 +1134,6 @@ export const updateFinalRankings = (round) => {
       newFinalRankings.push(i.rankings)
     }
   })
-  // console.log('newFinalRankings', newFinalRankings)
   round.final_rankings = newFinalRankings
 }
 

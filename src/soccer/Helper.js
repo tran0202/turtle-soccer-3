@@ -133,6 +133,10 @@ export const getKnockoutStages = (stages) => {
   return stages ? stages.filter((s) => s.type === 'knockout' || s.type === 'knockout2legged') : null
 }
 
+export const getKnockoutMultiple2LeggedStages = (stages) => {
+  return stages ? stages.filter((s) => s.type === 'knockoutmultiple2legged') : null
+}
+
 export const splitPathMatches = (stage, round) => {
   // console.log('stage', stage)
   if (!stage.multiple_paths || !round || !round.matches) return []
@@ -453,6 +457,74 @@ export const getDateMatchArrayPair = (matches_array, sorted) => {
   return { dates, matches }
 }
 
+export const reorderMatches = (matches) => {
+  matches &&
+    matches.sort((a, b) => {
+      if (a.bracket_order < b.bracket_order) {
+        return -1
+      } else if (a.bracket_order > b.bracket_order) {
+        return 1
+      } else {
+        return 0
+      }
+    })
+  return matches
+}
+
+export const getFinalPathStage = (stage) => {
+  if (!stage.rounds) return
+  const newRounds = stage.rounds.filter(
+    (r) =>
+      r.name !== 'Consolation First Round' &&
+      r.name !== 'Consolation Semi-finals' &&
+      r.name !== 'Fifth-place' &&
+      r.name !== 'Playoff First Round' &&
+      r.name !== 'Playoff Second Round',
+  )
+  return { ...stage, rounds: newRounds }
+}
+
+export const getConsolationPathStage = (stage) => {
+  if (!stage.rounds) return
+  const newRounds = stage.rounds.filter(
+    (r) =>
+      r.name === 'Consolation First Round' ||
+      r.name === 'Consolation Semi-finals' ||
+      r.name === 'Fifth-place' ||
+      r.name === 'Playoff First Round' ||
+      r.name === 'Playoff Second Round',
+  )
+  return { ...stage, rounds: newRounds }
+}
+
+export const getBracketStage = (stage) => {
+  if (!stage) return {}
+  const rounds = []
+  stage.rounds &&
+    stage.rounds.forEach((r) => {
+      const roundMatches = []
+      r.matches &&
+        r.matches.forEach((m) => {
+          roundMatches.push(m)
+        })
+      rounds.push({ ...r, matches: reorderMatches(roundMatches) })
+    })
+  return { ...stage, rounds }
+}
+
+export const collectPairMatches = (round) => {
+  if (!round || !round.pairs) return []
+  const matches = []
+  round.pairs.forEach((p) => {
+    p &&
+      p.matches &&
+      p.matches.forEach((m) => {
+        matches.push(m)
+      })
+  })
+  round.matches = matches
+}
+
 export const collectMdMatches = (group) => {
   let matches = []
   group.matchdays &&
@@ -477,7 +549,8 @@ export const collectMdMatchesPair = (stage) => {
         g.matchdays &&
         g.matchdays.forEach((md) => {
           if (md) {
-            if (!matchdays.find((_md) => _md.name === md.name)) {
+            if (matchdays.find((_md) => _md === md.name) === undefined) {
+              // console.log('matchdays', matchdays)
               matchdays.push(md.name)
             }
             md.matches &&
@@ -628,6 +701,99 @@ export const calculateAggregateScore = (stage) => {
       }
       return m2.home_team === m1.away_team && m2.away_team === m1.home_team
     })
+  })
+}
+
+export const calculateAggregateScore2 = (round) => {
+  if (!round || !round.pairs) return
+  round.pairs.forEach((p) => {
+    if (p.matches) {
+      const m1 = p.matches.find((m) => m.match_type === 'firstleg')
+      const m2 = p.matches.find((m) => m.match_type === 'secondleg')
+      if (m1 !== undefined && m2 !== undefined && m2.home_team === m1.away_team && m2.away_team === m1.home_team) {
+        // m1.round_type = firstLeg.round_type
+        // m2.round_type = secondLeg.round_type
+        m1.first_leg = true
+        m2.second_leg = true
+        m1.home_score_2nd_leg = m2.away_score
+        m1.away_score_2nd_leg = m2.home_score
+        m1.home_extra_score_2nd_leg = m2.away_extra_score
+        m1.away_extra_score_2nd_leg = m2.home_extra_score
+        m1.home_penalty_score_2nd_leg = m2.away_penalty_score
+        m1.away_penalty_score_2nd_leg = m2.home_penalty_score
+        if (m1.home_awarded) {
+          m1.home_awarded_1st_leg = m1.home_awarded
+          m1.awarded_text_1st_leg = m1.awarded_text
+        }
+        if (m2.home_awarded) {
+          m1.home_awarded_2nd_leg = m2.home_awarded
+          m1.awarded_text_2nd_leg = m2.awarded_text
+          // console.log('home_awarded', m2.home_awarded)
+          // console.log('awarded_text', m2.awarded_text)
+        }
+        if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
+          m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
+          m1.away_aggregate_score_1st_leg = parseInt(m1.away_score) + parseInt(m2.home_score)
+          if (m2.home_extra_score != null && m2.away_extra_score != null) {
+            m1.home_aggregate_score_1st_leg = m1.home_aggregate_score_1st_leg + parseInt(m2.away_extra_score)
+            m1.away_aggregate_score_1st_leg = m1.away_aggregate_score_1st_leg + parseInt(m2.home_extra_score)
+          }
+          m2.home_aggregate_score_2nd_leg = parseInt(m2.home_score) + parseInt(m1.away_score)
+          m2.away_aggregate_score_2nd_leg = parseInt(m2.away_score) + parseInt(m1.home_score)
+          if (m2.home_extra_score != null && m2.away_extra_score != null) {
+            m2.home_aggregate_score_2nd_leg = m2.home_aggregate_score_2nd_leg + parseInt(m2.home_extra_score)
+            m2.away_aggregate_score_2nd_leg = m2.away_aggregate_score_2nd_leg + parseInt(m2.away_extra_score)
+          }
+        }
+        if (m1.home_aggregate_score_1st_leg === m1.away_aggregate_score_1st_leg) {
+          if (m1.away_score > m2.away_score) {
+            m1.aggregate_team_1st_leg = m2.home_team
+          } else if (m1.away_score < m2.away_score) {
+            m1.aggregate_team_1st_leg = m1.home_team
+          } else if (m2.away_extra_score > 0) {
+            m1.aggregate_team_1st_leg = m2.away_team
+          }
+        }
+        if (m2.home_aggregate_score_2nd_leg === m2.away_aggregate_score_2nd_leg) {
+          if (m1.away_score > m2.away_score) {
+            m2.aggregate_team_2nd_leg = m2.home_team
+          } else if (m1.away_score < m2.away_score) {
+            m2.aggregate_team_2nd_leg = m1.home_team
+          } else if (m2.away_extra_score > 0) {
+            m2.aggregate_team_2nd_leg = m2.away_team
+          }
+        }
+        if (m1.home_coin_toss) {
+          m2.away_coin_toss = true
+        } else if (m1.away_coin_toss) {
+          m2.home_coin_toss = true
+        } else if (m2.home_coin_toss) {
+          m1.away_coin_toss = true
+        } else if (m2.away_coin_toss) {
+          m1.home_coin_toss = true
+        }
+        if (m1.bypass_away_goals) {
+          m2.bypass_away_goals = m1.bypass_away_goals
+        } else if (m2.bypass_away_goals) {
+          m1.bypass_away_goals = m2.bypass_away_goals
+        }
+        if (m1.need_playoff) {
+          // firstLeg.need_playoff = m1.need_playoff
+          // secondLeg.need_playoff = m1.need_playoff
+          m2.need_playoff = m1.need_playoff
+        } else if (m2.need_playoff) {
+          // firstLeg.need_playoff = m2.need_playoff
+          // secondLeg.need_playoff = m2.need_playoff
+          m1.need_playoff = m2.need_playoff
+        }
+        if (m2.away_aggregate_playoff_win) {
+          m1.home_aggregate_playoff_win = m2.away_aggregate_playoff_win
+          m1.playoff_notes = m2.playoff_notes
+        }
+      }
+      // console.log('m2', m2)
+      // console.log('m1', m1)
+    }
   })
 }
 
@@ -965,6 +1131,10 @@ export const DisplayMatch = (props) => {
     <Col sm="12" className="padding-tb-md border-bottom-gray5">
       <Row>
         <Col sm="2" xs="1" className="font-10 margin-top-time-xs">
+          {config.hideDateGroup && (
+            <React.Fragment>{config.showMatchYear ? moment(m.date).format('dddd, MMMM D, YYYY') : moment(m.date).format('dddd, MMMM D')}</React.Fragment>
+          )}
+          <br />
           {m.time}
           {m.group && (
             <React.Fragment>
@@ -1117,8 +1287,7 @@ export const DisplayMatch = (props) => {
 
 export const DisplaySchedule2 = (props) => {
   const { round, config } = props
-  // console.log('round', round)
-  const { showMatchYear } = config
+  const { showMatchYear, hideDateGroup } = config
   const { dates, matches } = round
   return (
     <React.Fragment>
@@ -1130,9 +1299,11 @@ export const DisplaySchedule2 = (props) => {
       {dates &&
         dates.map((value) => (
           <Row key={value}>
-            <Col sm="12" className="h4-ff3 border-bottom-gray2 margin-top-md">
-              {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
-            </Col>
+            {!hideDateGroup && (
+              <Col sm="12" className="h4-ff3 border-bottom-gray2 margin-top-md">
+                {showMatchYear ? moment(value).format('dddd, MMMM D, YYYY') : moment(value).format('dddd, MMMM D')}
+              </Col>
+            )}
             {matches[value].map((m, index) => (
               <DisplayMatch m={m} config={config} key={index} />
             ))}
@@ -1147,6 +1318,7 @@ export const DisplaySchedule = (props) => {
   const { multiple_paths } = config
   const { name, dates, consolation_notes } = round
   const pathDatesMatches = multiple_paths ? splitPathDatesMatches(round) : []
+  // console.log('round', round)
   dates.sort((a, b) => {
     if (a > b) {
       return 1
@@ -1336,6 +1508,12 @@ export const WildCardTooltip = (props) => {
 export const ExcludedFourthPlaceTooltip = (props) => {
   const { target } = props
   const content = `Excluded the results against the fourth-placed teams.`
+  return <TopTooltip target={target} content={content} />
+}
+
+export const ExcludedQualfyingRoundsTooltip = (props) => {
+  const { target } = props
+  const content = `Excluded the results in the qualifying rounds.`
   return <TopTooltip target={target} content={content} />
 }
 

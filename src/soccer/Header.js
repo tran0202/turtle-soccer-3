@@ -1,5 +1,5 @@
 import React from 'react'
-import { getTournamentConfig, getRoundRobinStages, getLeagueRoundRobinMdStages, getTournamentTitleFont } from './Helper'
+import { getTournamentConfig, getRoundRobinStages, getRoundRobinMdStages, getLeagueRoundRobinMdStages, getTournamentTitleFont } from './Helper'
 import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
@@ -23,7 +23,7 @@ const HeaderLinks = (props) => {
               Matches
             </NavLink>
           </NavItem>
-          {getRoundRobinStages(stages).length > 0 && (
+          {(getRoundRobinStages(stages).length > 0 || getRoundRobinMdStages(stages).length > 0) && (
             <NavItem>
               <NavLink disabled={page === 'groups'} href={`/soccer/tournament/${id}/groups`}>
                 Groups

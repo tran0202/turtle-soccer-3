@@ -76,7 +76,7 @@ const collectRankings = (tournaments) => {
       let rankings = { teams: _teams, matches: _matches }
       t.stages &&
         t.stages.forEach((s) => {
-          if (s.type === 'allocation' || s.type === 'roundrobin') {
+          if (s.type === 'allocation' || s.type === 'roundrobin' || s.type === 'roundrobinmatchday') {
             s.bye_teams && s.bye_teams.forEach((t) => _teams.push(t))
             s.groups &&
               s.groups.forEach((g) => {
@@ -90,9 +90,16 @@ const collectRankings = (tournaments) => {
                   g.matches.forEach((m) => {
                     _matches.push(m)
                   })
+                g.matchdays &&
+                  g.matchdays.forEach((md) => {
+                    md.matches &&
+                      md.matches.forEach((m) => {
+                        _matches.push(m)
+                      })
+                  })
               })
           }
-          if (s.type === 'knockout' || s.type === 'knockout2legged') {
+          if (s.type === 'knockout' || s.type === 'knockout2legged' || s.type === 'knockoutmultiple2legged') {
             s.teams &&
               s.teams.forEach((t) => {
                 _teams.push(t)
@@ -105,6 +112,14 @@ const collectRankings = (tournaments) => {
                     if (!m.home_bye && !m.away_withdrew && !m.postponed && !m.match_void) {
                       _matches.push(m)
                     }
+                  })
+                // console.log('r.pairs', r.pairs)
+                r.pairs &&
+                  r.pairs.forEach((p) => {
+                    p.matches &&
+                      p.matches.forEach((m) => {
+                        _matches.push(m)
+                      })
                   })
               })
           }
@@ -144,7 +159,7 @@ const collectRankings = (tournaments) => {
             })
         })
       rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
-      collectProgressRankings(t, rankings, 9)
+      collectProgressRankings(t, rankings, 14)
       rankingArray.push(rankings)
     })
 

@@ -3,7 +3,15 @@ import TournamentFormat from './TournamentFormat'
 import GroupStandings from './GroupStandings'
 import GroupMdStandings from './GroupMdStandings'
 import GroupLeagueMdStandings from './GroupLeagueMdStandings'
-import { getTournamentConfig, getStageConfig, getDefaultStageTab, getAllRoundRobinStages, getDefaultLeagueTab, collectMdMatches } from './Helper'
+import {
+  getTournamentConfig,
+  getTournamentTypeConfig,
+  getStageConfig,
+  getDefaultStageTab,
+  getAllRoundRobinStages,
+  getDefaultLeagueTab,
+  collectMdMatches,
+} from './Helper'
 import {
   calculateGroupRankings,
   calculateProgressRankings,
@@ -28,7 +36,7 @@ const calculateStageRankings = (tournament, config, stage) => {
       let matchDay = group.teams ? (stage.home_and_away ? (group.teams.length - 1) * 2 : group.teams.length - 1) : 3
       matchDay = isGroupPlayoffTiebreaker(tournament) ? 3 : matchDay
       matchDay = isLotGroupPlayoffTiebreaker(tournament) ? 2 : matchDay
-      createGroupFinalRankings(tournament, group, matchDay)
+      createGroupFinalRankings(tournament, group, matchDay, false)
       group.teams && group.matches && calculateProgressRankings(tournament, group.teams, group.matches, config)
     })
   stage.wild_card = groups && hasWildCardAdvancement(stage) ? collectWildCardRankings(stage) : {}
@@ -37,7 +45,7 @@ const calculateStageRankings = (tournament, config, stage) => {
 const DisplayStage = (props) => {
   const { tournament, tournamentType, stage } = props
   if (!stage) return
-  const config = getStageConfig(tournament, stage)
+  const config = { ...getStageConfig(tournament, stage), ...getTournamentTypeConfig(tournamentType) }
   return (
     <React.Fragment>
       <TournamentFormat config={config} tournamentType={tournamentType} />

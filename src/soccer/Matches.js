@@ -4,6 +4,7 @@ import RoundRobinMatchDay from './RoundRobinMatchDay'
 import RoundRobinLeagueMatchDay from './RoundRobinLeagueMatchDay'
 import Knockout from './Knockout'
 import Knockout2Legged from './Knockout2Legged'
+import KnockoutMultiple2Legged from './KnockoutMultiple2Legged'
 import { getTournamentConfig, getTournamentTypeConfig, getDefaultStageTab, getDefaultMdTab } from './Helper'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap'
 import classnames from 'classnames'
@@ -87,6 +88,7 @@ const Matches = (props) => {
                     {stage.type === 'roundrobinmatchday' && <RoundRobinMatchDay stage={stage} config={config} />}
                     {stage.type === 'knockout' && <Knockout stage={stage} config={config} />}
                     {stage.type === 'knockout2legged' && <Knockout2Legged stage={stage} config={config} />}
+                    {stage.type === 'knockoutmultiple2legged' && <KnockoutMultiple2Legged stage={stage} config={config} />}
                   </TabPane>
                 )}
               </React.Fragment>

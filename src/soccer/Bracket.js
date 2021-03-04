@@ -62,6 +62,11 @@ const getMatchDate = (match) => {
   )
 }
 
+const getMatchPairDate = (match) => {
+  if (!match) return
+  return <React.Fragment>{moment(match.date).format('MM/D/YY')}</React.Fragment>
+}
+
 export const getBracketClubLogoImg = (id, config) => {
   if (!id) return
   const team = getTeamArray().find((t) => t.id === id)
@@ -89,6 +94,156 @@ export const getTeamFlag = (id, config) => {
       {config.team_type_id !== 'CLUB' && (
         <img className="bracket-flag-xxxs bracket-flag-xxs bracket-flag-xs bracket-flag-sm" src={getFlagSrc(id)} alt={id} title={id} />
       )}
+    </React.Fragment>
+  )
+}
+
+const BracketPairBox = (props) => {
+  const { pair, colIndex, lastBox, config } = props
+  if (!pair || !pair.matches || pair.matches.length === 0) return null
+  const m1 = pair.matches[0]
+  const m2 = pair.matches.length > 1 ? pair.matches[1] : {}
+  // console.log('m1', m1)
+  // console.log('m2', m2)
+  return (
+    <React.Fragment>
+      <Row className="no-gutters box-sm bracket-box-height">
+        <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
+          <Row className="no-gutters">
+            <Col xs={{ size: 11, offset: 1 }}>
+              <span className="box-time d-block d-lg-none">
+                {getMatchPairDate(m1)}
+                {` | `}
+                {getMatchPairDate(m2)}
+              </span>
+              <span className="box-time d-none d-lg-block">
+                {getMatchPairDate(m1)}
+                {`, `}
+                {m1.city}
+                {m2 && (
+                  <React.Fragment>
+                    {` | `}
+                    {getMatchPairDate(m2)}
+                    {`, `}
+                    {m2.city}
+                  </React.Fragment>
+                )}
+              </span>
+            </Col>
+          </Row>
+        </Col>
+        <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
+          <Row className="no-gutters h3-ff3">
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
+              {getTeamFlag(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+              {getTeamFlag(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
+              {getTeamFlag(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
+              {getBracketTeamName(m1.home_team)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
+              {getBracketTeamName(m1.home_team)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
+              {getBracketTeamCode(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
+              {getBracketTeamCode(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('H', m1) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
+              {getTeamFlag(m1.home_team, config)}
+              &nbsp;
+              {getBracketTeamCode(m1.home_team, config)}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('H', m1) ? '' : 'box-score-light'}`}>
+              {m1.home_score}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('H', m1) ? '' : 'box-score-light'}`}>
+              {m2.away_score}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('H', m1) ? '' : 'box-score-light'}`}>
+              {m1.home_aggregate_score_1st_leg}
+            </Col>
+            {/* {m1.home_extra_score == null && (
+              <Col xs={{ size: 1 }} className={`box-score ${isWinner('H', m1) ? '' : 'box-score-light'}`}>
+                {m1.home_score}
+              </Col>
+            )} */}
+            {/* {match.home_extra_score != null && (
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
+                {parseInt(match.home_score) + parseInt(match.home_extra_score)}
+                {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
+                {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
+                {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
+                {(match.home_awarded || match.home_awarded_score_not_counted) && match.awarded_text && (
+                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
+                )}
+              </Col>
+            )} */}
+          </Row>
+        </Col>
+        <Col sm="12" className="bracket-half-box-height">
+          <Row className="no-gutters h4-ff3">
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
+              {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+              {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
+            </Col>
+            <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
+              {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
+              {getBracketTeamName(m1.away_team)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
+              {getBracketTeamName(m1.away_team)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
+              {getBracketTeamCode(m1.away_team, config)}
+            </Col>
+            <Col xs={{ size: 6 }} className={`box-team-name ${isWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
+              {getBracketTeamCode(m1.away_team, config)}
+            </Col>
+            <Col xs={{ size: 8, offset: 1 }} className={`box-team-name ${isWinner('A', m1) ? '' : 'box-team-name-light'} d-block d-xs-block d-sm-none`}>
+              {getTeamFlag(m1.away_team, config)}
+              &nbsp;
+              {getBracketTeamCode(m1.away_team, config)}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('A', m1) ? '' : 'box-score-light'}`}>
+              {m1.away_score}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('A', m1) ? '' : 'box-score-light'}`}>
+              {m2.home_score}
+            </Col>
+            <Col xs={{ size: 1 }} className={`box-score ${isWinner('A', m1) ? '' : 'box-score-light'}`}>
+              {m2.home_aggregate_score_2nd_leg}
+            </Col>
+            {/* {m1.away_extra_score == null && (
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', m1) ? '' : 'box-score-light'}`}>
+                {m1.away_score}
+                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
+                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
+              </Col>
+            )} */}
+            {/* {match.away_extra_score != null && (
+              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
+                {parseInt(match.away_score) + parseInt(match.away_extra_score)}
+                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
+                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
+              </Col>
+            )} */}
+          </Row>
+        </Col>
+      </Row>
+      {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
+      {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
+      {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
     </React.Fragment>
   )
 }
@@ -384,6 +539,7 @@ const BracketBox = (props) => {
 
 const BracketColInner = (props) => {
   const { round, colIndex, config } = props
+  // console.log('round', round)
   const roundName =
     round.name && (config.tournamentTypeId === 'MOFT' || config.tournamentTypeId === 'WOFT')
       ? round.name
@@ -396,7 +552,6 @@ const BracketColInner = (props) => {
           .replace('Playoff Second Round', 'P/o 2nd round')
       : round.name.replace('Preliminary Semi-finals', 'Prelim Semi').replace('Preliminary Final', 'Prelim Final')
 
-  // console.log('roundName', roundName)
   const roundNameBlock = (
     <React.Fragment>
       {roundName}
@@ -429,6 +584,8 @@ const BracketColInner = (props) => {
       {round.matches.map((m, index) => (
         <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
       ))}
+      {round.pairs &&
+        round.pairs.map((p, index) => <BracketPairBox pair={p} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />)}
     </React.Fragment>
   )
 }
@@ -550,7 +707,6 @@ const BracketHook2 = (props) => {
 
 const attachReplayMatches = (round) => {
   if (!round.matches) return
-  // console.log('attachReplayMatches', round)
   const roundMatches = round.matches.filter((m) => !m.replay)
   const replayMatches = round.matches.filter((m) => m.replay)
   roundMatches.forEach((m) => {
@@ -578,6 +734,7 @@ const attachReplayMatches = (round) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
+  // console.log('stage', stage)
   let silverMedal = stage.rounds ? stage.rounds.find((s) => s.name === 'Silver medal match') : {}
   const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round' && r.name !== 'Silver medal match') : []
   let thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')

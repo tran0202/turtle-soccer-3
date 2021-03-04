@@ -1,336 +1,778 @@
 {
-  "id": "COPA1975",
+  "id": "WC2018",
   "stages": [
     {
       "name": "Group Stage",
       "type": "roundrobin",
-      "home_and_away": true,
-      "eliminateCount": 4,
-      "next_round": "Semi-finals First Leg",
-      "bye_teams": [{ "id": "URU" }],
-      "advancement": {
-        "teams": {
-          "auto": [1],
-          "eliminated": [2, 3],
-          "text": "The winners would advance to the semi-finals. Defending champions Uruguay received a bye into the semi-finals."
-        }
-      },
+      "eliminateCount": 16,
+      "next_round": "Round of 16",
+      "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4] } },
       "groups": [
         {
           "name": "Group A",
-          "teams": [{ "id": "VEN-1954-2006" }, { "id": "BRA" }, { "id": "ARG" }],
+          "teams": [{ "id": "RUS" }, { "id": "URU" }, { "id": "EGY" }, { "id": "KSA" }],
           "matches": [
             {
-              "home_team": "VEN-1954-2006",
-              "away_team": "BRA",
+              "home_team": "RUS",
+              "away_team": "KSA",
+              "home_score": 5,
+              "away_score": 0,
+              "date": "2018-06-14",
+              "time": "18:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow"
+            },
+            {
+              "home_team": "EGY",
+              "away_team": "URU",
               "home_score": 0,
-              "away_score": 4,
-              "date": "1975-07-31",
-              "time": "12:00",
-              "stadium": "Estadio Olímpico",
-              "city": "Caracas"
+              "away_score": 1,
+              "date": "2018-06-15",
+              "time": "17:00",
+              "stadium": "Ekaterinburg Arena",
+              "city": "Ekaterinburg"
             },
             {
-              "home_team": "VEN-1954-2006",
-              "away_team": "ARG",
+              "home_team": "RUS",
+              "away_team": "EGY",
+              "home_score": 3,
+              "away_score": 1,
+              "date": "2018-06-19",
+              "time": "21:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg"
+            },
+            {
+              "home_team": "URU",
+              "away_team": "KSA",
               "home_score": 1,
-              "away_score": 5,
-              "date": "1975-08-03",
-              "time": "12:00",
-              "stadium": "Estadio Olímpico",
-              "city": "Caracas"
+              "away_score": 0,
+              "date": "2018-06-20",
+              "time": "18:00",
+              "stadium": "Rostov Arena",
+              "city": "Rostov-On-Don"
             },
             {
-              "home_team": "BRA",
-              "away_team": "ARG",
+              "home_team": "URU",
+              "away_team": "RUS",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2018-06-25",
+              "time": "18:00",
+              "stadium": "Samara Arena",
+              "city": "Samara"
+            },
+            {
+              "home_team": "KSA",
+              "away_team": "EGY",
               "home_score": 2,
               "away_score": 1,
-              "date": "1975-08-06",
-              "time": "12:00",
-              "stadium": "Mineirão",
-              "city": "Belo Horizonte"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "VEN-1954-2006",
-              "home_score": 11,
-              "away_score": 0,
-              "date": "1975-08-10",
-              "time": "12:00",
-              "stadium": "Cor de León",
-              "city": "Rosario"
-            },
-            {
-              "home_team": "BRA",
-              "away_team": "VEN-1954-2006",
-              "home_score": 6,
-              "away_score": 0,
-              "date": "1975-08-13",
-              "time": "12:00",
-              "stadium": "Mineirão",
-              "city": "Belo Horizonte"
-            },
-            {
-              "home_team": "ARG",
-              "away_team": "BRA",
-              "home_score": 0,
-              "away_score": 1,
-              "date": "1975-08-16",
-              "time": "12:00",
-              "stadium": "Cor de León",
-              "city": "Rosario"
+              "date": "2018-06-25",
+              "time": "17:00",
+              "stadium": "Volgograd Arena",
+              "city": "Volgograd"
             }
           ]
         },
         {
           "name": "Group B",
-          "teams": [{ "id": "CHI" }, { "id": "PER" }, { "id": "BOL" }],
+          "teams": [{ "id": "POR" }, { "id": "ESP" }, { "id": "IRN" }, { "id": "MAR" }],
           "matches": [
             {
-              "home_team": "CHI",
-              "away_team": "PER",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "1975-07-17",
-              "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Santiago"
-            },
-            {
-              "home_team": "BOL",
-              "away_team": "CHI",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "1975-07-20",
-              "time": "12:00",
-              "stadium": "Estadio Jesús Bermúdez",
-              "city": "Oruro"
-            },
-            {
-              "home_team": "BOL",
-              "away_team": "PER",
+              "home_team": "MAR",
+              "away_team": "IRN",
               "home_score": 0,
               "away_score": 1,
-              "date": "1975-07-27",
-              "time": "12:00",
-              "stadium": "Estadio Jesús Bermúdez",
-              "city": "Oruro"
+              "date": "2018-06-15",
+              "time": "18:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg"
             },
             {
-              "home_team": "PER",
-              "away_team": "BOL",
+              "home_team": "POR",
+              "away_team": "ESP",
               "home_score": 3,
-              "away_score": 1,
-              "date": "1975-08-07",
-              "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Lima"
+              "away_score": 3,
+              "date": "2018-06-15",
+              "time": "21:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi"
             },
             {
-              "home_team": "CHI",
-              "away_team": "BOL",
-              "home_score": 4,
+              "home_team": "POR",
+              "away_team": "MAR",
+              "home_score": 1,
               "away_score": 0,
-              "date": "1975-08-13",
-              "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Santiago"
+              "date": "2018-06-20",
+              "time": "15:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow"
             },
             {
-              "home_team": "PER",
-              "away_team": "CHI",
-              "home_score": 3,
+              "home_team": "IRN",
+              "away_team": "ESP",
+              "home_score": 0,
               "away_score": 1,
-              "date": "1975-08-20",
-              "time": "12:00",
-              "stadium": "Estadio Alianza Lima",
-              "city": "Lima"
+              "date": "2018-06-20",
+              "time": "21:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan"
+            },
+            {
+              "home_team": "ESP",
+              "away_team": "MAR",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2018-06-25",
+              "time": "20:00",
+              "stadium": "Kaliningrad Stadium",
+              "city": "Kaliningrad"
+            },
+            {
+              "home_team": "IRN",
+              "away_team": "POR",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2018-06-25",
+              "time": "21:00",
+              "stadium": "Mordovia Arena",
+              "city": "Saransk"
             }
           ]
         },
         {
           "name": "Group C",
-          "teams": [{ "id": "COL" }, { "id": "PAR" }, { "id": "ECU" }],
+          "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "PER" }, { "id": "AUS" }],
           "matches": [
             {
-              "home_team": "COL",
-              "away_team": "PAR",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1975-07-20",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
-            },
-            {
-              "home_team": "ECU",
-              "away_team": "PAR",
+              "home_team": "FRA",
+              "away_team": "AUS",
               "home_score": 2,
-              "away_score": 2,
-              "date": "1975-07-24",
-              "time": "12:00",
-              "stadium": "Estadio Modelo",
-              "city": "Guayaquil"
+              "away_score": 1,
+              "date": "2018-06-16",
+              "time": "13:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan"
             },
             {
-              "home_team": "ECU",
-              "away_team": "COL",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "1975-07-27",
-              "time": "12:00",
-              "stadium": "Estadio Olímpico Atahualpa",
-              "city": "Quito"
-            },
-            {
-              "home_team": "PAR",
-              "away_team": "COL",
+              "home_team": "PER",
+              "away_team": "DEN",
               "home_score": 0,
               "away_score": 1,
-              "date": "1975-07-30",
-              "time": "12:00",
-              "stadium": "Defensores del Chaco",
-              "city": "Asunción"
+              "date": "2018-06-16",
+              "time": "19:00",
+              "stadium": "Mordovia Arena",
+              "city": "Saransk"
             },
             {
-              "home_team": "COL",
-              "away_team": "ECU",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1975-08-07",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
-            },
-            {
-              "home_team": "PAR",
-              "away_team": "ECU",
-              "home_score": 3,
+              "home_team": "DEN",
+              "away_team": "AUS",
+              "home_score": 1,
               "away_score": 1,
-              "date": "1975-08-10",
-              "time": "12:00",
-              "stadium": "Defensores del Chaco",
-              "city": "Asunción"
+              "date": "2018-06-21",
+              "time": "16:00",
+              "stadium": "Samara Arena",
+              "city": "Samara"
+            },
+            {
+              "home_team": "FRA",
+              "away_team": "PER",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2018-06-21",
+              "time": "20:00",
+              "stadium": "Ekaterinburg Arena",
+              "city": "Ekaterinburg"
+            },
+            {
+              "home_team": "AUS",
+              "away_team": "PER",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2018-06-26",
+              "time": "17:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi"
+            },
+            {
+              "home_team": "DEN",
+              "away_team": "FRA",
+              "home_score": 0,
+              "away_score": 0,
+              "date": "2018-06-26",
+              "time": "17:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow"
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "Semi-finals",
-      "type": "knockout2legged",
-      "rounds": [
+        },
         {
-          "name": "Semi-finals First Leg",
-          "round_type": "firstleg",
-          "next_round": "Semi-finals Second Leg",
+          "name": "Group D",
+          "teams": [{ "id": "CRO" }, { "id": "ARG" }, { "id": "NGA" }, { "id": "ISL" }],
           "matches": [
             {
-              "home_team": "COL",
-              "away_team": "URU",
-              "home_score": 3,
+              "home_team": "ARG",
+              "away_team": "ISL",
+              "home_score": 1,
+              "away_score": 1,
+              "date": "2018-06-16",
+              "time": "16:00",
+              "stadium": "Spartak Stadium",
+              "city": "Moscow"
+            },
+            {
+              "home_team": "CRO",
+              "away_team": "NGA",
+              "home_score": 2,
               "away_score": 0,
-              "date": "1975-09-21",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
+              "date": "2018-06-16",
+              "time": "21:00",
+              "stadium": "Kaliningrad Stadium",
+              "city": "Kaliningrad"
+            },
+            {
+              "home_team": "ARG",
+              "away_team": "CRO",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2018-06-21",
+              "time": "21:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "ISL",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2018-06-22",
+              "time": "18:00",
+              "stadium": "Volgograd Arena",
+              "city": "Volgograd"
+            },
+            {
+              "home_team": "NGA",
+              "away_team": "ARG",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-06-26",
+              "time": "21:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg"
+            },
+            {
+              "home_team": "ISL",
+              "away_team": "CRO",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-06-26",
+              "time": "21:00",
+              "stadium": "Rostov Arena",
+              "city": "Rostov-On-Don"
+            }
+          ]
+        },
+        {
+          "name": "Group E",
+          "teams": [{ "id": "BRA" }, { "id": "SUI" }, { "id": "SRB" }, { "id": "CRC" }],
+          "matches": [
+            {
+              "home_team": "CRC",
+              "away_team": "SRB",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2018-06-17",
+              "time": "16:00",
+              "stadium": "Samara Arena",
+              "city": "Samara"
             },
             {
               "home_team": "BRA",
-              "away_team": "PER",
+              "away_team": "SUI",
               "home_score": 1,
-              "away_score": 3,
-              "date": "1975-09-30",
-              "time": "12:00",
-              "stadium": "Mineirão",
-              "city": "Belo Horizonte"
+              "away_score": 1,
+              "date": "2018-06-17",
+              "time": "21:00",
+              "stadium": "Rostov Arena",
+              "city": "Rostov-On-Don"
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "CRC",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2018-06-22",
+              "time": "15:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg"
+            },
+            {
+              "home_team": "SRB",
+              "away_team": "SUI",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-06-22",
+              "time": "20:00",
+              "stadium": "Kaliningrad Stadium",
+              "city": "Kaliningrad"
+            },
+            {
+              "home_team": "SRB",
+              "away_team": "BRA",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2018-06-27",
+              "time": "21:00",
+              "stadium": "Spartak Stadium",
+              "city": "Moscow"
+            },
+            {
+              "home_team": "SUI",
+              "away_team": "CRC",
+              "home_score": 2,
+              "away_score": 2,
+              "date": "2018-06-27",
+              "time": "21:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod"
             }
           ]
         },
         {
-          "name": "Semi-finals Second Leg",
-          "round_type": "secondleg",
-          "eliminateCount": 2,
-          "next_round": "Final First Leg",
+          "name": "Group F",
+          "teams": [{ "id": "GER" }, { "id": "MEX" }, { "id": "SWE" }, { "id": "KOR" }],
           "matches": [
             {
-              "home_team": "URU",
-              "away_team": "COL",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1975-10-01",
-              "time": "12:00",
-              "stadium": "Estadio Centenario",
-              "city": "Montevideo"
+              "home_team": "GER",
+              "away_team": "MEX",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2018-06-17",
+              "time": "18:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow"
             },
             {
-              "home_team": "PER",
-              "away_team": "BRA",
-              "home_score": 0,
+              "home_team": "SWE",
+              "away_team": "KOR",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2018-06-18",
+              "time": "15:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "MEX",
+              "home_score": 1,
               "away_score": 2,
-              "home_coin_toss": true,
-              "bypass_away_goals": true,
-              "date": "1975-10-04",
-              "time": "12:00",
-              "stadium": "Estadio Alianza Lima",
-              "city": "Lima"
+              "date": "2018-06-23",
+              "time": "18:00",
+              "stadium": "Rostov Arena",
+              "city": "Rostov-On-Don"
+            },
+            {
+              "home_team": "GER",
+              "away_team": "SWE",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2018-06-23",
+              "time": "21:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi"
+            },
+            {
+              "home_team": "KOR",
+              "away_team": "GER",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2018-06-27",
+              "time": "17:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan"
+            },
+            {
+              "home_team": "MEX",
+              "away_team": "SWE",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2018-06-27",
+              "time": "19:00",
+              "stadium": "Ekaterinburg Arena",
+              "city": "Ekaterinburg"
+            }
+          ]
+        },
+        {
+          "name": "Group G",
+          "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "TUN" }, { "id": "PAN" }],
+          "matches": [
+            {
+              "home_team": "BEL",
+              "away_team": "PAN",
+              "home_score": 3,
+              "away_score": 0,
+              "date": "2018-06-18",
+              "time": "18:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi"
+            },
+            {
+              "home_team": "TUN",
+              "away_team": "ENG",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-06-18",
+              "time": "21:00",
+              "stadium": "Volgograd Arena",
+              "city": "Volgograd"
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "TUN",
+              "home_score": 5,
+              "away_score": 2,
+              "date": "2018-06-23",
+              "time": "15:00",
+              "stadium": "Spartak Stadium",
+              "city": "Moscow"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "PAN",
+              "home_score": 6,
+              "away_score": 1,
+              "date": "2018-06-24",
+              "time": "15:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod"
+            },
+            {
+              "home_team": "PAN",
+              "away_team": "TUN",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-06-28",
+              "time": "21:00",
+              "stadium": "Mordovia Arena",
+              "city": "Saransk"
+            },
+            {
+              "home_team": "ENG",
+              "away_team": "BEL",
+              "home_score": 0,
+              "away_score": 1,
+              "date": "2018-06-28",
+              "time": "20:00",
+              "stadium": "Kaliningrad Stadium",
+              "city": "Kaliningrad"
+            }
+          ]
+        },
+        {
+          "name": "Group H",
+          "teams": [{ "id": "POL" }, { "id": "COL" }, { "id": "SEN" }, { "id": "JPN" }],
+          "matches": [
+            {
+              "home_team": "COL",
+              "away_team": "JPN",
+              "home_score": 1,
+              "away_score": 2,
+              "away_fair_pts": -1,
+              "date": "2018-06-19",
+              "time": "15:00",
+              "stadium": "Mordovia Arena",
+              "city": "Saransk"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "SEN",
+              "home_score": 1,
+              "away_score": 2,
+              "away_fair_pts": -2,
+              "date": "2018-06-19",
+              "time": "18:00",
+              "stadium": "Spartak Stadium",
+              "city": "Moscow"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "SEN",
+              "home_score": 2,
+              "away_score": 2,
+              "home_fair_pts": -2,
+              "away_fair_pts": -3,
+              "date": "2018-06-24",
+              "time": "20:00",
+              "stadium": "Ekaterinburg Arena",
+              "city": "Ekaterinburg"
+            },
+            {
+              "home_team": "POL",
+              "away_team": "COL",
+              "home_score": 0,
+              "away_score": 3,
+              "date": "2018-06-24",
+              "time": "21:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan"
+            },
+            {
+              "home_team": "JPN",
+              "away_team": "POL",
+              "home_score": 0,
+              "away_score": 1,
+              "home_fair_pts": -1,
+              "date": "2018-06-28",
+              "time": "17:00",
+              "stadium": "Volgograd Arena",
+              "city": "Volgograd"
+            },
+            {
+              "home_team": "SEN",
+              "away_team": "COL",
+              "home_score": 0,
+              "away_score": 1,
+              "home_fair_pts": -1,
+              "date": "2018-06-28",
+              "time": "18:00",
+              "stadium": "Samara Arena",
+              "city": "Samara"
             }
           ]
         }
       ]
     },
     {
-      "name": "Final",
-      "type": "knockout2legged",
+      "name": "Knockout Stage",
+      "type": "knockout",
       "rounds": [
         {
-          "name": "Final First Leg",
-          "round_type": "firstleg",
-          "next_round": "Final Second Leg",
+          "name": "Round of 16",
+          "short_name": "1/8",
+          "eliminateCount": 8,
+          "next_round": "Quarter-finals",
           "matches": [
             {
-              "home_team": "COL",
-              "away_team": "PER",
+              "home_team": "FRA",
+              "away_team": "ARG",
+              "home_score": 4,
+              "away_score": 3,
+              "date": "2018-06-30",
+              "time": "17:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "URU",
+              "away_team": "POR",
+              "home_score": 2,
+              "away_score": 1,
+              "date": "2018-06-30",
+              "time": "21:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "ESP",
+              "away_team": "RUS",
               "home_score": 1,
-              "away_score": 0,
-              "date": "1975-10-16",
-              "time": "12:00",
-              "stadium": "Estadio El Campín",
-              "city": "Bogotá"
-            }
-          ]
-        },
-        {
-          "name": "Final Second Leg",
-          "round_type": "secondleg",
-          "next_round": "Final Playoff",
-          "matches": [
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 3,
+              "away_penalty_score": 4,
+              "date": "2018-07-01",
+              "time": "17:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow",
+              "bracket_order": 5
+            },
             {
-              "home_team": "PER",
-              "away_team": "COL",
+              "home_team": "CRO",
+              "away_team": "DEN",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 3,
+              "away_penalty_score": 2,
+              "date": "2018-07-01",
+              "time": "21:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod",
+              "bracket_order": 6
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "MEX",
               "home_score": 2,
               "away_score": 0,
-              "need_playoff": true,
-              "date": "1975-10-22",
-              "time": "12:00",
-              "stadium": "Estadio Nacional",
-              "city": "Lima"
+              "date": "2018-07-02",
+              "time": "18:00",
+              "stadium": "Samara Arena",
+              "city": "Samara",
+              "bracket_order": 3
+            },
+            {
+              "home_team": "BEL",
+              "away_team": "JPN",
+              "home_score": 3,
+              "away_score": 2,
+              "date": "2018-07-02",
+              "time": "18:00",
+              "stadium": "Rostov Arena",
+              "city": "Rostov-On-Don",
+              "bracket_order": 4
+            },
+            {
+              "home_team": "SWE",
+              "away_team": "SUI",
+              "home_score": 1,
+              "away_score": 0,
+              "date": "2018-07-03",
+              "time": "17:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg",
+              "bracket_order": 7
+            },
+            {
+              "home_team": "COL",
+              "away_team": "ENG",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 0,
+              "away_extra_score": 0,
+              "home_penalty_score": 3,
+              "away_penalty_score": 4,
+              "date": "2018-07-03",
+              "time": "21:00",
+              "stadium": "Spartak Stadium",
+              "city": "Moscow",
+              "bracket_order": 8
             }
           ]
         },
         {
-          "name": "Final Playoff",
-          "round_type": "playoffleg",
+          "name": "Quarter-finals",
+          "short_name": "1/4",
+          "eliminateCount": 4,
+          "next_round": "Semi-finals",
           "matches": [
             {
-              "home_team": "PER",
-              "away_team": "COL",
+              "home_team": "URU",
+              "away_team": "FRA",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2018-07-06",
+              "time": "17:00",
+              "stadium": "Nizhny Novgorod Stadium",
+              "city": "Nizhny Novgorod",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "BRA",
+              "away_team": "BEL",
+              "home_score": 1,
+              "away_score": 2,
+              "date": "2018-07-06",
+              "time": "21:00",
+              "stadium": "Kazan Arena",
+              "city": "Kazan",
+              "bracket_order": 2
+            },
+            {
+              "home_team": "SWE",
+              "away_team": "ENG",
+              "home_score": 0,
+              "away_score": 2,
+              "date": "2018-07-07",
+              "time": "18:00",
+              "stadium": "Samara Arena",
+              "city": "Samara",
+              "bracket_order": 4
+            },
+            {
+              "home_team": "RUS",
+              "away_team": "CRO",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 1,
+              "away_extra_score": 1,
+              "home_penalty_score": 3,
+              "away_penalty_score": 4,
+              "date": "2018-07-07",
+              "time": "21:00",
+              "stadium": "Fisht Stadium",
+              "city": "Sochi",
+              "bracket_order": 3
+            }
+          ]
+        },
+        {
+          "name": "Semi-finals",
+          "short_name": "1/2",
+          "eliminateCount": 2,
+          "next_round": "Final",
+          "matches": [
+            {
+              "home_team": "FRA",
+              "away_team": "BEL",
               "home_score": 1,
               "away_score": 0,
-              "date": "1975-10-28",
-              "time": "12:00",
-              "stadium": "Estadio Olímpico",
-              "city": "Caracas"
+              "date": "2018-07-10",
+              "time": "21:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg",
+              "bracket_order": 1
+            },
+            {
+              "home_team": "CRO",
+              "away_team": "ENG",
+              "home_score": 1,
+              "away_score": 1,
+              "home_extra_score": 1,
+              "away_extra_score": 0,
+              "date": "2018-07-11",
+              "time": "21:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow",
+              "bracket_order": 2
+            }
+          ]
+        },
+        {
+          "name": "Third-place",
+          "short_name": "3rd",
+          "matches": [
+            {
+              "home_team": "BEL",
+              "away_team": "ENG",
+              "home_score": 2,
+              "away_score": 0,
+              "date": "2018-07-14",
+              "time": "17:00",
+              "stadium": "Saint Petersburg Stadium",
+              "city": "St. Petersburg"
+            }
+          ]
+        },
+        {
+          "name": "Final",
+          "short_name": "1st",
+          "matches": [
+            {
+              "home_team": "FRA",
+              "away_team": "CRO",
+              "home_score": 4,
+              "away_score": 2,
+              "date": "2018-07-15",
+              "time": "18:00",
+              "stadium": "Luzhniki Stadium",
+              "city": "Moscow"
             }
           ]
         }

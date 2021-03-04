@@ -4,13 +4,17 @@ import { hasWildCardAdvancement, collectWildCardRankings, getBlankRanking } from
 import {
   getAllocationStages,
   getRoundRobinStages,
+  getRoundRobinMdStages,
   getAllRoundRobinStages,
   getKnockoutStages,
+  getKnockoutMultiple2LeggedStages,
   getTournamentConfig,
   getTournamentTypeConfig,
   isWinner,
   isSharedBronze,
   calculateAggregateScore,
+  calculateAggregateScore2,
+  collectPairMatches,
   getTeamName,
 } from './Helper'
 import {
@@ -35,6 +39,7 @@ const eliminateGroupTeams = (tournament, groupStage, group) => {
   if (!tournament.final_rankings.rounds) {
     tournament.final_rankings.rounds = []
   }
+  // console.log('groupStage', groupStage)
   let tmp = tournament.final_rankings.rounds.find((r) => r.name === groupStage.name)
   if (!tmp) {
     tournament.final_rankings.rounds.unshift({ name: groupStage.name, ranking_type: 'round', final_rankings: [] })
@@ -59,6 +64,7 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
   if (!tournament.advanced_teams.rounds) {
     tournament.advanced_teams.rounds = []
   }
+  // console.log('groupStage', groupStage)
   let tmp = tournament.advanced_teams.rounds.find((r) => r.name === groupStage.next_round)
   if (!tmp) {
     tournament.advanced_teams.rounds.unshift({ name: groupStage.next_round, ranking_type: 'round', final_rankings: [] })
@@ -73,7 +79,6 @@ const advanceGroupTeams = (tournament, groupStage, group) => {
       tmp.final_rankings.push(advancedTeamRanking)
     })
   const advancedThirdPlaceTeams = group.final_rankings.filter((t) => t && isAdvancedThirdPlace(t, groupStage))
-  // console.log('advancedThirdPlaceTeams', advancedThirdPlaceTeams)
   if (advancedThirdPlaceTeams.length > 0) {
     tmp = tournament.advanced_teams.rounds.find((r) => r.name === 'Third-place')
     if (!tmp) {
@@ -496,6 +501,10 @@ const collectLeagueGroupTeams = (tournament, league, stage, group) => {
   })
 }
 
+const isPairComplete = (pair) => {
+  return pair && pair.matches && pair.matches.length === 2 && pair.matches[0].match_type === 'firstleg' && pair.matches[1].match_type === 'secondleg'
+}
+
 const FinalStandings = (props) => {
   const { tournament, tournamentType } = props
   const config = { ...getTournamentConfig(tournament), ...getTournamentTypeConfig(tournamentType) }
@@ -522,7 +531,7 @@ const FinalStandings = (props) => {
                   })
                 const _config = g.final_standings_excluded ? { ...config, final_standings_excluded: g.final_standings_excluded } : config
                 g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, _config)
-                createGroupFinalRankings(tournament, g, 6)
+                createGroupFinalRankings(tournament, g, 6, true)
                 g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
                 collectLeagueGroupTeams(tournament, l, s, g)
               })
@@ -596,7 +605,7 @@ const FinalStandings = (props) => {
       alloStage.groups &&
         alloStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
-          createGroupFinalRankings(tournament, g, 1)
+          createGroupFinalRankings(tournament, g, 1, true)
           g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
           advanceGroupTeams(tournament, alloStage, g)
         })
@@ -613,7 +622,7 @@ const FinalStandings = (props) => {
       if (groupStage.groups) {
         groupStage.groups.forEach((g) => {
           g.teams && g.matches && calculateGroupRankings(g.teams, g.teams, g.matches, config)
-          createGroupFinalRankings(tournament, g, g.teams ? (groupStage.home_and_away ? (g.teams.length - 1) * 2 : g.teams.length - 1) : 3)
+          createGroupFinalRankings(tournament, g, g.teams ? (groupStage.home_and_away ? (g.teams.length - 1) * 2 : g.teams.length - 1) : 3, true)
           g.teams && g.matches && calculateProgressRankings(tournament, g.teams, g.matches, config)
           !groupStage.championship_round && eliminateGroupTeams(tournament, groupStage, g)
           groupStage.championship_round && createFinalRoundRankings(tournament, groupStage, g)
@@ -792,6 +801,102 @@ const FinalStandings = (props) => {
             fr.final_rankings.push(uruguay)
           }
         }
+      }
+    })
+
+  const rrmdStages = getRoundRobinMdStages(stages)
+  rrmdStages &&
+    rrmdStages.forEach((groupStage) => {
+      // console.log('groupStage', groupStage)
+      initTournamentRankings(tournament)
+      initByeRankings(tournament, groupStage)
+      if (groupStage.bye_teams) {
+        advanceByeTeams(tournament, groupStage)
+      }
+      if (groupStage.groups) {
+        groupStage.groups.forEach((g) => {
+          const _matches = []
+          g.matchdays &&
+            g.matchdays.forEach((md) => {
+              md.matches &&
+                md.matches.forEach((m) => {
+                  _matches.push(m)
+                })
+            })
+          g.teams && _matches && calculateGroupRankings(g.teams, g.teams, _matches, config)
+          createGroupFinalRankings(tournament, g, g.teams ? (groupStage.home_and_away ? (g.teams.length - 1) * 2 : g.teams.length - 1) : 3, true)
+          g.teams && _matches && calculateProgressRankings(tournament, g.teams, _matches, config)
+          eliminateGroupTeams(tournament, groupStage, g)
+        })
+        groupStage.groups.forEach((g) => {
+          advanceGroupTeams(tournament, groupStage, g)
+        })
+        sortGroupRankings(findRoundFinalRanking(tournament, groupStage.name), parseInt(groupStage.eliminateCount) + 1, null)
+      }
+    })
+
+  const koMuliple2LeggedStages = getKnockoutMultiple2LeggedStages(stages)
+  koMuliple2LeggedStages &&
+    koMuliple2LeggedStages.forEach((s) => {
+      if (s && s.rounds) {
+        initTournamentRankings(tournament)
+        initKnockoutRankings(tournament, s)
+        s.rounds.forEach((r) => {
+          calculateAggregateScore2(r)
+        })
+        const earlyRounds = s.rounds.filter((r) => r.name === 'Round of 16' || r.name === 'Quarter-finals')
+        earlyRounds.forEach((round) => {
+          initByeRankings(tournament, round)
+          collectPairMatches(round)
+          calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
+          // console.log('round.pairs', round.pairs)
+          round &&
+            round.pairs &&
+            round.pairs.forEach((p) => {
+              // console.log('p', p)
+              if (isPairComplete(p)) {
+                eliminateKnockoutTeams(tournament, { ...round, matches: [p.matches[0]] })
+                advanceKnockoutTeams(tournament, { ...round, matches: [p.matches[0]] })
+              }
+              sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
+            })
+        })
+
+        // const semifinals = koStage.rounds.find((r) => r.name === 'Semi-finals')
+        // if (semifinals) {
+        //   calculateKnockoutRankings(findRoundAdvancedTeams(tournament, semifinals.name), semifinals, config)
+        //   eliminateKnockoutTeams(tournament, semifinals)
+        //   sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
+        //   advanceThirdPlaceTeams(tournament, semifinals)
+
+        //   if (exception) {
+        //     let finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === semifinals.name)
+        //     finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== 'NED_U23MNT')
+        //     let tmp = finalStandingRound.final_rankings.find((fr) => fr.id === 'FRA_U23MNT')
+        //     if (tmp) {
+        //       tmp.r = 5
+        //     }
+        //     finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === 'First round')
+        //     const sweden = finalStandingRound.final_rankings.find((fr) => fr.id === 'SWE_U23MNT')
+        //     finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== 'SWE_U23MNT')
+        //     tmp = finalStandingRound.final_rankings.find((fr) => fr.id === 'FRA-B_U23MNT')
+        //     if (tmp) {
+        //       tmp.r = 6
+        //     }
+        //     const thirdPlaceAdvancedRound = tournament.advanced_teams.rounds.find((r) => r.name === 'Third-place')
+        //     thirdPlaceAdvancedRound.final_rankings.push(sweden)
+        //   }
+        // }
+
+        // if (semifinals) {
+        //   advanceKnockoutTeams(tournament, semifinals)
+        // }
+
+        // const final = koStage.rounds.find((r) => r.name === 'Final')
+        // if (final) {
+        //   calculateKnockoutRankings(findRoundAdvancedTeams(tournament, final.name), final, config)
+        //   createFinalRankings(tournament, final)
+        // }
       }
     })
 

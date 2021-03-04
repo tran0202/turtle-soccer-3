@@ -7,7 +7,7 @@ import { Collapse, Row, Col, Button } from 'reactstrap'
 const GroupCollapse = (props) => {
   const { group, config } = props
   const matchArray = getMatchArrayByDate(group, true)
-  // console.log('group', group)
+  // console.log('config', config)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -30,11 +30,22 @@ const GroupCollapse = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        {!hasGroupPlayoff(group) && <DisplaySchedule round={matchArray} config={{ showMatchYear: config.show_match_year }} />}
+        {!hasGroupPlayoff(group) && (
+          <DisplaySchedule
+            round={matchArray}
+            config={{ showMatchYear: config.show_match_year, logo_path: config.logo_path, team_type_id: config.team_type_id }}
+          />
+        )}
         {hasGroupPlayoff(group) && (
           <React.Fragment>
-            <DisplaySchedule round={matchArray[0]} config={{ showMatchYear: config.show_match_year }} />
-            <DisplaySchedule round={matchArray[1]} config={{ showMatchYear: config.show_match_year }} />
+            <DisplaySchedule
+              round={matchArray[0]}
+              config={{ showMatchYear: config.show_match_year, logo_path: config.logo_path, team_type_id: config.team_type_id }}
+            />
+            <DisplaySchedule
+              round={matchArray[1]}
+              config={{ showMatchYear: config.show_match_year, logo_path: config.logo_path, team_type_id: config.team_type_id }}
+            />
           </React.Fragment>
         )}
         <Row className="mb-5"></Row>

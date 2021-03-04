@@ -450,7 +450,7 @@
     "nation_id": "BLR",
     "parent_team_id": "",
     "club_code": "BBO",
-    "logo_filename": "BBO.png",
+    "logo_filename": "BATE_Borisov_logo.svg",
     "official_name": "FC BATE Borisov"
   },
   {
@@ -623,130 +623,197 @@
     "logo_filename": "ATM.png",
     "official_name": "Club Atlético de Madrid"
   },
-
   {
-    "id": "527",
-    "name": "Bayern Munich",
-    "team_type_id": "CLUB",
-    "nation_id": "76",
-    "parent_team_id": "",
-    "club_code": "BAY",
-    "official_name": "FC Bayern München"
-  },
-  {
-    "id": "529",
-    "name": "CSKA Moscow",
-    "team_type_id": "CLUB",
-    "nation_id": "157",
-    "parent_team_id": "",
-    "club_code": "CSK",
-    "official_name": "PFC CSKA Moskva"
-  },
-  {
-    "id": "531",
-    "name": "Galatasaray",
-    "team_type_id": "CLUB",
-    "nation_id": "195",
-    "parent_team_id": "",
-    "club_code": "GAL",
-    "official_name": "Galatasaray AŞ"
-  },
-  {
-    "id": "532",
-    "name": "1899 Hoffenheim",
-    "team_type_id": "CLUB",
-    "nation_id": "76",
-    "parent_team_id": "",
-    "club_code": "TSG",
-    "official_name": "TSG 1899 Hoffenheim"
-  },
-  {
-    "id": "533",
+    "id": "INT",
     "name": "Inter Milan",
     "team_type_id": "CLUB",
-    "nation_id": "96",
+    "nation_id": "ITA",
     "parent_team_id": "",
     "club_code": "INT",
+    "logo_filename": "INT.png",
     "official_name": "FC Internazionale Milano"
   },
-  { "id": "534", "name": "Juventus", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "JUV", "official_name": "Juventus" },
   {
-    "id": "536",
-    "name": "Lokomotiv Moscow",
-    "team_type_id": "CLUB",
-    "nation_id": "157",
-    "parent_team_id": "",
-    "club_code": "LMO",
-    "official_name": "FC Lokomotiv Moskva"
-  },
-  {
-    "id": "537",
-    "name": "Olympique Lyonnais",
-    "team_type_id": "CLUB",
-    "nation_id": "71",
-    "parent_team_id": "",
-    "club_code": "LYO",
-    "official_name": "Olympique Lyonnais"
-  },
-  {
-    "id": "538",
-    "name": "Manchester City",
-    "team_type_id": "CLUB",
-    "nation_id": "63",
-    "parent_team_id": "",
-    "club_code": "MCI",
-    "official_name": "Manchester City FC"
-  },
-  {
-    "id": "539",
-    "name": "Manchester United",
-    "team_type_id": "CLUB",
-    "nation_id": "63",
-    "parent_team_id": "",
-    "club_code": "MUN",
-    "official_name": "Manchester United FC"
-  },
-  { "id": "541", "name": "Napoli", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "NAP", "official_name": "SSC Napoli" },
-  {
-    "id": "542",
+    "id": "PSG",
     "name": "Paris Saint-Germain",
     "team_type_id": "CLUB",
-    "nation_id": "71",
+    "nation_id": "FRA",
     "parent_team_id": "",
     "club_code": "PSG",
+    "logo_filename": "PSG.png",
     "official_name": "Paris Saint-Germain"
   },
   {
-    "id": "543",
-    "name": "Viktoria Plzen",
+    "id": "NAP",
+    "name": "Napoli",
     "team_type_id": "CLUB",
-    "nation_id": "55",
+    "nation_id": "ITA",
     "parent_team_id": "",
-    "club_code": "VPL",
-    "official_name": "FC Viktoria Plzeň"
+    "club_code": "NAP",
+    "logo_filename": "NAP.png",
+    "official_name": "SSC Napoli"
   },
-  { "id": "544", "name": "Porto", "team_type_id": "CLUB", "nation_id": "152", "parent_team_id": "", "club_code": "POR", "official_name": "FC Porto" },
   {
-    "id": "545",
-    "name": "Real Madrid",
+    "id": "GAL",
+    "name": "Galatasaray",
     "team_type_id": "CLUB",
-    "nation_id": "175",
+    "nation_id": "TUR",
     "parent_team_id": "",
-    "club_code": "MAD",
-    "official_name": "Real Madrid CF"
+    "club_code": "GAL",
+    "logo_filename": "GAL.png",
+    "official_name": "Galatasaray AŞ"
   },
-  { "id": "546", "name": "AS Roma", "team_type_id": "CLUB", "nation_id": "96", "parent_team_id": "", "club_code": "ROM", "official_name": "AS Roma" },
-  { "id": "547", "name": "Schalke 04", "team_type_id": "CLUB", "nation_id": "76", "parent_team_id": "", "club_code": "S04", "official_name": "FC Schalke 04" },
   {
-    "id": "548",
+    "id": "LMO",
+    "name": "Lokomotiv Moscow",
+    "team_type_id": "CLUB",
+    "nation_id": "RUS",
+    "parent_team_id": "",
+    "club_code": "LMO",
+    "logo_filename": "LMO.png",
+    "official_name": "FC Lokomotiv Moskva"
+  },
+  {
+    "id": "S04",
+    "name": "Schalke 04",
+    "team_type_id": "CLUB",
+    "nation_id": "GER",
+    "parent_team_id": "",
+    "club_code": "S04",
+    "logo_filename": "S04.png",
+    "official_name": "FC Schalke 04"
+  },
+  {
+    "id": "PORTO",
+    "name": "Porto",
+    "team_type_id": "CLUB",
+    "nation_id": "POR",
+    "parent_team_id": "",
+    "club_code": "POR",
+    "logo_filename": "POR.png",
+    "official_name": "FC Porto"
+  },
+  {
+    "id": "BAY",
+    "name": "Bayern Munich",
+    "team_type_id": "CLUB",
+    "nation_id": "GER",
+    "parent_team_id": "",
+    "club_code": "BAY",
+    "logo_filename": "BAY.png",
+    "official_name": "FC Bayern München"
+  },
+  {
+    "id": "SHK",
     "name": "Shakhtar Donetsk",
     "team_type_id": "CLUB",
-    "nation_id": "199",
+    "nation_id": "UKR",
     "parent_team_id": "",
     "club_code": "SHK",
+    "logo_filename": "SHK.png",
     "official_name": "FC Shakhtar Donetsk"
   },
-  { "id": "550", "name": "Valencia", "team_type_id": "CLUB", "nation_id": "175", "parent_team_id": "", "club_code": "VAL", "official_name": "Valencia CF" },
+  {
+    "id": "TSG",
+    "name": "1899 Hoffenheim",
+    "team_type_id": "CLUB",
+    "nation_id": "GER",
+    "parent_team_id": "",
+    "club_code": "TSG",
+    "logo_filename": "TSG.png",
+    "official_name": "TSG 1899 Hoffenheim"
+  },
+  {
+    "id": "MCI",
+    "name": "Manchester City",
+    "team_type_id": "CLUB",
+    "nation_id": "ENG",
+    "parent_team_id": "",
+    "club_code": "MCI",
+    "logo_filename": "MCI.png",
+    "official_name": "Manchester City FC"
+  },
+  {
+    "id": "LYO",
+    "name": "Lyon",
+    "team_type_id": "CLUB",
+    "nation_id": "FRA",
+    "parent_team_id": "",
+    "club_code": "LYO",
+    "logo_filename": "LYO.png",
+    "official_name": "Olympique Lyonnais"
+  },
+  {
+    "id": "RMAD",
+    "name": "Real Madrid",
+    "team_type_id": "CLUB",
+    "nation_id": "ESP",
+    "parent_team_id": "",
+    "club_code": "MAD",
+    "logo_filename": "MAD.png",
+    "official_name": "Real Madrid CF"
+  },
+  {
+    "id": "ROM",
+    "name": "AS Roma",
+    "team_type_id": "CLUB",
+    "nation_id": "ITA",
+    "parent_team_id": "",
+    "club_code": "ROM",
+    "logo_filename": "ROM.png",
+    "official_name": "AS Roma"
+  },
+  {
+    "id": "VPL",
+    "name": "Viktoria Plzen",
+    "team_type_id": "CLUB",
+    "nation_id": "CZE",
+    "parent_team_id": "",
+    "club_code": "VPL",
+    "logo_filename": "VPL.png",
+    "official_name": "FC Viktoria Plzeň"
+  },
+  {
+    "id": "CSK",
+    "name": "CSKA Moscow",
+    "team_type_id": "CLUB",
+    "nation_id": "RUS",
+    "parent_team_id": "",
+    "club_code": "CSK",
+    "logo_filename": "CSK.png",
+    "official_name": "PFC CSKA Moskva"
+  },
+  {
+    "id": "MUN",
+    "name": "Manchester United",
+    "team_type_id": "CLUB",
+    "nation_id": "ENG",
+    "parent_team_id": "",
+    "club_code": "MUN",
+    "logo_filename": "MUN.png",
+    "official_name": "Manchester United FC"
+  },
+  {
+    "id": "VAL",
+    "name": "Valencia",
+    "team_type_id": "CLUB",
+    "nation_id": "ESP",
+    "parent_team_id": "",
+    "club_code": "VAL",
+    "logo_filename": "VAL.png",
+    "official_name": "Valencia CF"
+  },
+  {
+    "id": "JUV",
+    "name": "Juventus",
+    "team_type_id": "CLUB",
+    "nation_id": "ITA",
+    "parent_team_id": "",
+    "club_code": "JUV",
+    "logo_filename": "JUV.png",
+    "official_name": "Juventus"
+  },
+
   {
     "id": "604",
     "name": "Akhisar Belediyespor",
