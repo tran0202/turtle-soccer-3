@@ -3,19 +3,6 @@ import KnockoutSingle2LeggedSummary from './KnockoutSingle2LeggedSummary'
 import { DisplaySchedule, getMatchArrayByDate, calculateAggregateScore2, collectPairMatches } from './Helper'
 import { Row, Col } from 'reactstrap'
 
-// const getAllMatches = (round) => {
-//   if (!round || !round.pairs) return []
-//   const matches = []
-//   round.pairs.forEach((p) => {
-//     p &&
-//       p.matches &&
-//       p.matches.forEach((m) => {
-//         matches.push(m)
-//       })
-//   })
-//   return matches
-// }
-
 const KnockoutSingle2Legged = (props) => {
   const { round, config } = props
   calculateAggregateScore2(round)

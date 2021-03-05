@@ -596,6 +596,7 @@
   {
     "id": "DOR",
     "name": "Borussia Dortmund",
+    "short_name": "Borus. Dortmund",
     "team_type_id": "CLUB",
     "nation_id": "GER",
     "parent_team_id": "",
@@ -636,6 +637,7 @@
   {
     "id": "PSG",
     "name": "Paris Saint-Germain",
+    "short_name": "Paris St-Germain",
     "team_type_id": "CLUB",
     "nation_id": "FRA",
     "parent_team_id": "",
@@ -786,6 +788,7 @@
   {
     "id": "MUN",
     "name": "Manchester United",
+    "short_name": "Manchester U",
     "team_type_id": "CLUB",
     "nation_id": "ENG",
     "parent_team_id": "",

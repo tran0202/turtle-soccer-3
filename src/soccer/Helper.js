@@ -178,7 +178,6 @@ export const splitPathDatesMatches = (round) => {
     }
     _leagueMatches[m.date].push(m)
   })
-  // console.log('championDates', championDates)
   _championDates.sort((a, b) => {
     if (a > b) {
       return 1
@@ -399,10 +398,38 @@ export const isWinner = (who, match) => {
             (match.home_score === match.away_score &&
               match.home_extra_score === match.away_extra_score &&
               match.home_penalty_score < match.away_penalty_score) ||
-            match.home_replay_score < match.away_replay_score)) ||
+            match.home_replay_score < match.away_replay_scoreg)) ||
         (match.second_leg && match.home_aggregate_score_2nd_leg < match.away_aggregate_score_2nd_leg) ||
         (match.second_leg && match.aggregate_team_2nd_leg === match.away_team)
       )
+    }
+  }
+}
+
+export const isAggregateWinner = (who, match) => {
+  // console.log('match', match)
+  if (match) {
+    if (who === 'H') {
+      return (
+        match.match_type === 'firstleg' &&
+        (match.home_aggregate_score_1st_leg > match.away_aggregate_score_1st_leg || match.aggregate_team_1st_leg === match.home_team)
+      )
+    } else {
+      return (
+        match.match_type === 'firstleg' &&
+        (match.home_aggregate_score_1st_leg < match.away_aggregate_score_1st_leg || match.aggregate_team_1st_leg === match.away_team)
+      )
+    }
+  }
+}
+
+export const isAwayGoalsWinner = (who, match) => {
+  // console.log('match', match)
+  if (match) {
+    if (who === 'H') {
+      return match.match_type === 'firstleg' && match.aggregate_team_1st_leg === match.home_team
+    } else {
+      return match.match_type === 'firstleg' && match.aggregate_team_1st_leg === match.away_team
     }
   }
 }
@@ -550,7 +577,6 @@ export const collectMdMatchesPair = (stage) => {
         g.matchdays.forEach((md) => {
           if (md) {
             if (matchdays.find((_md) => _md === md.name) === undefined) {
-              // console.log('matchdays', matchdays)
               matchdays.push(md.name)
             }
             md.matches &&
@@ -849,7 +875,6 @@ export const isAwayLoseAggregate = (data) => {
     need_playoff,
     home_withdrew,
   } = data
-  // console.log('knockoutMatch', knockoutMatch)
   if (!knockoutMatch) return false
   if (!secondLegMatch) {
     return (
@@ -1127,8 +1152,10 @@ export const DisplayMatch = (props) => {
     home_withdrew: m.home_withdrew,
     away_withdrew: m.away_withdrew,
   }
+  // console.log('m', m)
+  const borderBottomColor = m.match_type === 'secondleg' ? 'border-bottom-gray2' : 'border-bottom-gray5'
   return (
-    <Col sm="12" className="padding-tb-md border-bottom-gray5">
+    <Col sm="12" className={`padding-tb-md ${borderBottomColor}`}>
       <Row>
         <Col sm="2" xs="1" className="font-10 margin-top-time-xs">
           {config.hideDateGroup && (
@@ -1291,11 +1318,13 @@ export const DisplaySchedule2 = (props) => {
   const { dates, matches } = round
   return (
     <React.Fragment>
-      <Row>
-        <Col>
-          <div className="h3-ff6 margin-top-md">{config.path_name}</div>
-        </Col>
-      </Row>
+      {config.path_name && (
+        <Row>
+          <Col>
+            <div className="h3-ff6 margin-top-md">{config.path_name}</div>
+          </Col>
+        </Row>
+      )}
       {dates &&
         dates.map((value) => (
           <Row key={value}>
@@ -1356,6 +1385,12 @@ export const DisplaySchedule = (props) => {
 export const AetTooltip = (props) => {
   const { target, anchor } = props
   const content = 'After extra time'
+  return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const AwayGoalsTooltip = (props) => {
+  const { target, anchor } = props
+  const content = 'Won on away goals'
   return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

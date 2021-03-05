@@ -159,7 +159,7 @@ const collectRankings = (tournaments) => {
             })
         })
       rankings.teams && rankings.matches && calculateProgressRankings(t, rankings.teams, rankings.matches, config)
-      collectProgressRankings(t, rankings, 14)
+      collectProgressRankings(t, rankings, 18)
       rankingArray.push(rankings)
     })
 

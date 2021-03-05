@@ -15,6 +15,7 @@ const Knockout = (props) => {
     silverGoal: config.silver_goal_rule,
     logo_path: config.logo_path,
     team_type_id: config.team_type_id,
+    showMatchYear: config.show_match_year,
   }
   const bracketConsolationConfig = {
     consolation_bracket: true,

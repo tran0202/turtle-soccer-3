@@ -1,16 +1,13 @@
 import React from 'react'
-import { Row, Col } from 'reactstrap'
+import { DisplaySchedule, getMatchArrayByDate } from './Helper'
 
 const KnockoutSingle = (props) => {
-  const { round } = props
+  const { round, config } = props
+  const matchArray = getMatchArrayByDate(round, true)
   // console.log('stage', stage)
   return (
     <React.Fragment>
-      <Row>
-        <Col>
-          <div className="h2-ff1 margin-top-md">{round.name}</div>
-        </Col>
-      </Row>
+      <DisplaySchedule round={{ name: round.name, ...matchArray }} config={{ ...config, hideDateGroup: true, showMatchYear: true }} />
     </React.Fragment>
   )
 }
