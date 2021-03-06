@@ -37,7 +37,6 @@ export const getBracketStage2 = (stage) => {
 const KnockoutMultiple2Legged = (props) => {
   const { stage, config } = props
   const bracket_stage = getBracketStage2(getFinalPathStage(stage))
-  // console.log('config', config)
   const bracketConfig = {
     tournamentTypeId: config.tournament_type_id,
     goldenGoal: config.golden_goal_rule,
@@ -56,7 +55,7 @@ const KnockoutMultiple2Legged = (props) => {
       <Bracket stage={bracket_stage} config={bracketConfig} />
       {stage.rounds &&
         stage.rounds.map((r) =>
-          r.name !== 'Final' ? (
+          r.two_legged === undefined && r.name !== 'Final' ? (
             <KnockoutSingle2Legged round={r} config={displayScheduleConfig} key={r.name} />
           ) : (
             <KnockoutSingle round={r} config={displayScheduleConfig} key={r.name} />

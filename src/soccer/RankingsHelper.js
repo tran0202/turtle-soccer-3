@@ -1,7 +1,6 @@
 import { getTeamName } from './Helper'
 
 export const findTeam = (teamArray, id) => {
-  // console.log('teamArray', teamArray)
   return teamArray ? teamArray.find((t) => t.id === id) : {}
 }
 
@@ -45,6 +44,55 @@ export const hasReplay = (round) => {
   return round.matches.find((m) => m.replay) !== undefined
 }
 
+const accumulateRanking2 = (team, match, config) => {
+  if (!match || match.home_score === null || match.away_score === null || match.home_extra_score === null || match.away_extra_score === null) return
+  const side = match.home_team === team.id ? 'home' : 'away'
+  const hs = parseInt(match.home_score) + parseInt(match.home_extra_score)
+  const as = parseInt(match.away_score) + parseInt(match.away_extra_score)
+  team.mp++
+  team.md++
+  if (hs > as) {
+    if (side === 'home') {
+      team.w++
+      team.gf += hs
+      team.ga += as
+      team.pts += config.points_for_win
+    } else {
+      team.l++
+      team.gf += as
+      team.ga += hs
+    }
+  } else if (hs === as) {
+    team.d++
+    team.gf += hs
+    team.ga += hs
+    team.pts++
+  } else {
+    if (side === 'home') {
+      team.l++
+      team.gf += hs
+      team.ga += as
+    } else {
+      team.w++
+      team.gf += as
+      team.ga += hs
+      team.pts += config.points_for_win
+    }
+  }
+  team.gd = team.gf - team.ga
+  team.gr = isGoalRatioTiebreaker(config) && team.ga !== 0 ? team.gf / team.ga : null
+  if (side === 'home') {
+    if (match.home_fair_pts) {
+      team.fp = (team.fp ? team.fp : 0) + match.home_fair_pts
+    }
+  } else {
+    if (match.away_fair_pts) {
+      team.fp = (team.fp ? team.fp : 0) + match.away_fair_pts
+    }
+  }
+  team.h2hm.push(match)
+}
+
 const accumulateRanking = (team, match, config) => {
   if (!team) return
   if (
@@ -57,6 +105,9 @@ const accumulateRanking = (team, match, config) => {
     (match.notes && match.notes.awarded)
   )
     return
+  if (match.match_type === 'secondleg' && match.home_extra_score != null && match.away_extra_score != null) {
+    return accumulateRanking2(team, match, config)
+  }
   const side = match.home_team === team.id ? 'home' : 'away'
   team.mp++
   team.md++

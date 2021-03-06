@@ -557,9 +557,10 @@ const initKnockoutRankings = (tournament, stage) => {
   const _round = tournament.advanced_teams.rounds.find((r) => r.name === roundName)
   if (_round) return
   let finalRankings = []
-  stage.teams.forEach((t) => {
-    finalRankings.push(getBlankRanking(t.id))
-  })
+  stage.teams &&
+    stage.teams.forEach((t) => {
+      finalRankings.push(getBlankRanking(t.id))
+    })
   tournament.advanced_teams.rounds.push({ name: roundName, ranking_type: 'round', final_rankings: finalRankings })
 }
 
@@ -964,6 +965,11 @@ const FinalStandings = (props) => {
               }
               sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
             })
+          if (round && round.matches) {
+            eliminateKnockoutTeams(tournament, round)
+            sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
+            advanceKnockoutTeams(tournament, round)
+          }
         })
 
         const semifinals = s.rounds.find((r) => r.name === 'Semi-finals')
@@ -980,9 +986,18 @@ const FinalStandings = (props) => {
               }
               sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
             })
+          if (semifinals && semifinals.matches) {
+            eliminateKnockoutTeams(tournament, semifinals)
+            sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
+            advanceThirdPlaceTeams(tournament, semifinals)
+          }
         }
         if (semifinals) {
-          advanceKnockoutTeams2(tournament, semifinals)
+          if (semifinals.matches) {
+            advanceKnockoutTeams(tournament, semifinals)
+          } else {
+            advanceKnockoutTeams2(tournament, semifinals)
+          }
         }
 
         const final = s.rounds.find((r) => r.name === 'Final')

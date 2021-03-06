@@ -107,8 +107,11 @@ const BracketPairBox = (props) => {
   if (!pair || !pair.matches || pair.matches.length === 0) return null
   const m1 = pair.matches[0]
   const m2 = pair.matches.length > 1 ? pair.matches[1] : {}
-  // console.log('m1', m1)
   // console.log('m2', m2)
+  const m2_away_score =
+    (m2.away_score !== undefined ? m2.away_score : 0) + parseInt(m2.match_type === 'secondleg' && m2.away_extra_score !== undefined ? m2.away_extra_score : 0)
+  const m2_home_score =
+    (m2.home_score !== undefined ? m2.home_score : 0) + parseInt(m2.match_type === 'secondleg' && m2.home_extra_score !== undefined ? m2.home_extra_score : 0)
   return (
     <React.Fragment>
       <Row className="no-gutters box-sm bracket-box-height">
@@ -190,7 +193,7 @@ const BracketPairBox = (props) => {
               {m1.home_score}
             </Col>
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('H', m1) ? '' : 'box-score-light'}`}>
-              {m2.away_score}
+              {m2.away_score !== undefined ? m2_away_score : ''}
             </Col>
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('H', m1) ? '' : 'box-score-light'}`}>
               {m1.home_aggregate_score_1st_leg}
@@ -267,7 +270,7 @@ const BracketPairBox = (props) => {
               {m1.away_score}
             </Col>
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('A', m1) ? '' : 'box-score-light'}`}>
-              {m2.home_score}
+              {m2.home_score !== undefined ? m2_home_score : ''}
             </Col>
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('A', m1) ? '' : 'box-score-light'}`}>
               {m2.home_aggregate_score_2nd_leg}
@@ -791,7 +794,7 @@ const BracketPairs = (props) => {
       {filteredRounds &&
         filteredRounds.map((_r, index) => {
           const r = hasReplay(_r) ? attachReplayMatches(_r) : _r
-          if (r.pairs) {
+          if (r.pairs && r.pairs.length > 0) {
             const hookCount = r.pairs.length % 2 === 0 ? r.pairs.length / 2 : (r.pairs.length - 1) / 2
             if (r.name === 'Third-place') {
               thirdPlace = r
@@ -810,6 +813,39 @@ const BracketPairs = (props) => {
               return (
                 <React.Fragment key={r.name}>
                   <BracketCol round={r} colIndex={index} config={config} />
+                  <BracketHook1 colIndex={index} hookCount={hookCount} />
+                  <BracketHook2 colIndex={index} hookCount={hookCount} />
+                </React.Fragment>
+              )
+            }
+          } else if (r.matches) {
+            r.matches.sort((a, b) => {
+              if (a.bracket_order > b.bracket_order) {
+                return 1
+              } else if (a.bracket_order < b.bracket_order) {
+                return -1
+              } else {
+                return 0
+              }
+            })
+            const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
+            if (r.name === 'Third-place') {
+              thirdPlace = r
+              return null
+            } else if (r.name === 'Final') {
+              return (
+                <BracketFinalCol
+                  round={r}
+                  thirdPlace={thirdPlace}
+                  silverMedal={silverMedal}
+                  config={{ ...config, roundCount: filteredRounds.length, two_legged: false }}
+                  key={r.name}
+                />
+              )
+            } else {
+              return (
+                <React.Fragment key={r.name}>
+                  <BracketCol round={r} colIndex={index} config={{ ...config, two_legged: false }} />
                   <BracketHook1 colIndex={index} hookCount={hookCount} />
                   <BracketHook2 colIndex={index} hookCount={hookCount} />
                 </React.Fragment>

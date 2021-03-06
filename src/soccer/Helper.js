@@ -369,6 +369,7 @@ export const isSuccessor = (id) => {
 }
 
 export const isWinner = (who, match) => {
+  // console.log('match', match)
   if (match) {
     if (who === 'H') {
       if (match.match_void) return match.away_withdrew
@@ -385,6 +386,9 @@ export const isWinner = (who, match) => {
               match.home_penalty_score > match.away_penalty_score) ||
             match.home_replay_score > match.away_replay_score)) ||
         (match.second_leg && match.home_aggregate_score_2nd_leg > match.away_aggregate_score_2nd_leg) ||
+        (match.second_leg &&
+          match.home_aggregate_score_2nd_leg === match.away_aggregate_score_2nd_leg &&
+          match.home_penalty_score > match.away_penalty_score) ||
         (match.second_leg && match.aggregate_team_2nd_leg === match.home_team)
       )
     } else {
@@ -400,6 +404,9 @@ export const isWinner = (who, match) => {
               match.home_penalty_score < match.away_penalty_score) ||
             match.home_replay_score < match.away_replay_scoreg)) ||
         (match.second_leg && match.home_aggregate_score_2nd_leg < match.away_aggregate_score_2nd_leg) ||
+        (match.second_leg &&
+          match.home_aggregate_score_2nd_leg === match.away_aggregate_score_2nd_leg &&
+          match.home_penalty_score < match.away_penalty_score) ||
         (match.second_leg && match.aggregate_team_2nd_leg === match.away_team)
       )
     }
@@ -412,12 +419,16 @@ export const isAggregateWinner = (who, match) => {
     if (who === 'H') {
       return (
         match.match_type === 'firstleg' &&
-        (match.home_aggregate_score_1st_leg > match.away_aggregate_score_1st_leg || match.aggregate_team_1st_leg === match.home_team)
+        (match.home_aggregate_score_1st_leg > match.away_aggregate_score_1st_leg ||
+          match.aggregate_team_1st_leg === match.home_team ||
+          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score > match.away_penalty_score))
       )
     } else {
       return (
         match.match_type === 'firstleg' &&
-        (match.home_aggregate_score_1st_leg < match.away_aggregate_score_1st_leg || match.aggregate_team_1st_leg === match.away_team)
+        (match.home_aggregate_score_1st_leg < match.away_aggregate_score_1st_leg ||
+          match.aggregate_team_1st_leg === match.away_team ||
+          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score < match.away_penalty_score))
       )
     }
   }

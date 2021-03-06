@@ -1,9 +1,72 @@
 [
   {
+    "id": "UCL201920",
+    "year": "2019-20",
+    "name": "2019-20 UEFA Champions League",
+    "short_name": "2019-20",
+    "tournament_type_id": "UCL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UCL.svg",
+      "start_qualifying_date": "2019-06-25",
+      "end_qualifying_date": "2019-08-28",
+      "start_competition_date": "2019-09-17",
+      "end_competition_date": "2020-08-23",
+      "color": "#0f246a",
+      "team_count": 32,
+      "association_count": 54,
+      "total_team_count": 79
+    },
+    "hero_images": [
+      {
+        "name": "Estádio da Luz, Lisbon",
+        "filename": "LuzLissabon.jpg",
+        "text": "The Estádio da Luz in Lisbon hosted the final."
+      },
+      {
+        "name": "Golden Boot",
+        "filename": "Robert_Lewandowski123666.jpg",
+        "text": "Bayern striker Robert Lewandowski was the competition's leading scorer and joint-leading assister with 15 goals and 6 assists en route to the final."
+      },
+      {
+        "name": "Program",
+        "filename": "2020_UEFA_Champions_League_Final_programme.jpg",
+        "text": "This is the official match programme for the 2020 UEFA Champions League Final."
+      },
+      {
+        "name": "Manager",
+        "filename": "Hans-Dieter_Flick,_Germany_national_football_team_(03).jpg",
+        "text": "Bayern Munich manager Hans-Dieter Flick appeared in his second European Cup final, having lost as a player with Bayern in 1987."
+      }
+    ],
+    "final_standings": { "champions": "BAY", "runners_up": "PSG", "semi_finalist1": "LYO", "semi_finalist2": "RBL" },
+    "statistics": { "total_matches": 119, "total_goals": 386, "attendance": 4758398 },
+    "awards": {
+      "golden_boot": [{ "player": "Robert Lewandowski", "team": "POL", "club": "BAY", "goals": 15 }],
+      "golden_glove": [{ "player": "Manuel Neuer", "team": "GER", "club": "BAY" }],
+      "best_defender": [{ "player": "Joshua Kimmich", "team": "GER", "club": "BAY" }],
+      "best_midfielder": [{ "player": "Kevin De Bruyne", "team": "BEL", "club": "MCI" }],
+      "best_forward": [{ "player": "Robert Lewandowski", "team": "POL", "club": "BAY" }]
+    }
+  },
+  {
     "id": "UCL201819",
-    "year": "2018/19",
-    "name": "2018/19 UEFA Champions League",
-    "short_name": "2018/19",
+    "year": "2018-19",
+    "name": "2018-19 UEFA Champions League",
+    "short_name": "2018-19",
     "tournament_type_id": "UCL",
     "points_for_win": 3,
     "show_match_year": true,

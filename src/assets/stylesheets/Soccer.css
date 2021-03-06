@@ -87,6 +87,7 @@
     height: 25px;
   }
   .flag-club-md {
+    max-width: 36px;
     height: 32px;
   }
 }
