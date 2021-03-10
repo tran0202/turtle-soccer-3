@@ -225,7 +225,12 @@
 
 .ranking-row div.row:nth-child(2),
 .ranking-row div.row:nth-child(3),
-.ranking-row div.row:nth-child(4) {
+.ranking-row div.row:nth-child(4),
+.ranking-row div.row:nth-child(5),
+.ranking-row div.row:nth-child(6),
+.ranking-row div.row:nth-child(7),
+.ranking-row div.row:nth-child(8),
+.ranking-row div.row:nth-child(9) {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid #e6e7e9;
@@ -241,6 +246,26 @@
 
 .rank-col-padding-4 {
   padding-top: 155px;
+}
+
+.rank-col-padding-5 {
+  padding-top: 205px;
+}
+
+.rank-col-padding-6 {
+  padding-top: 245px;
+}
+
+.rank-col-padding-7 {
+  padding-top: 300px;
+}
+
+.rank-col-padding-8 {
+  padding-top: 340px;
+}
+
+.rank-col-padding-9 {
+  padding-top: 390px;
 }
 
 .tournament-logo {
@@ -280,6 +305,21 @@
   }
   .rank-col-padding-4 {
     padding-top: 140px;
+  }
+  .rank-col-padding-5 {
+    padding-top: 220px;
+  }
+  .rank-col-padding-6 {
+    padding-top: 290px;
+  }
+  .rank-col-padding-7 {
+    padding-top: 335px;
+  }
+  .rank-col-padding-8 {
+    padding-top: 440px;
+  }
+  .rank-col-padding-9 {
+    padding-top: 450px;
   }
 
   .tournament-logo {
@@ -322,6 +362,21 @@
   }
   .rank-col-padding-4 {
     padding-top: 120px;
+  }
+  .rank-col-padding-5 {
+    padding-top: 180px;
+  }
+  .rank-col-padding-6 {
+    padding-top: 235px;
+  }
+  .rank-col-padding-7 {
+    padding-top: 275px;
+  }
+  .rank-col-padding-8 {
+    padding-top: 350px;
+  }
+  .rank-col-padding-9 {
+    padding-top: 360px;
   }
   .box-team-name,
   .box-score {
@@ -378,6 +433,21 @@
   }
   .rank-col-padding-4 {
     padding-top: 120px;
+  }
+  .rank-col-padding-5 {
+    padding-top: 190px;
+  }
+  .rank-col-padding-6 {
+    padding-top: 240px;
+  }
+  .rank-col-padding-7 {
+    padding-top: 270px;
+  }
+  .rank-col-padding-8 {
+    padding-top: 320px;
+  }
+  .rank-col-padding-9 {
+    padding-top: 320px;
   }
 
   .no-display-xs {
@@ -616,25 +686,39 @@
 
 /* ========== Bracket ========== */
 
+.col-brk-1,
 .col-brk-2,
 .col-brk-3,
 .col-brk-4,
 .col-brk-5,
 .col-brk-10,
+.col-brk-18,
 .col-brk-20,
 .col-brk-22,
+.col-brk-sm-1,
 .col-brk-sm-2,
+.col-brk-sm-18,
 .col-brk-sm-22,
+.col-brk-md-1,
 .col-brk-md-2,
+.col-brk-md-18,
 .col-brk-md-22,
+.col-brk-lg-1,
 .col-brk-lg-2,
+.col-brk-lg-18,
 .col-brk-lg-22,
+.col-brk-xl-1,
 .col-brk-xl-2,
+.col-brk-xl-18,
 .col-brk-xl-22 {
   position: relative;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+}
+.col-brk-1 {
+  flex: 0 0 1%;
+  max-width: 1%;
 }
 .col-brk-2 {
   flex: 0 0 2%;
@@ -656,6 +740,10 @@
   flex: 0 0 10%;
   max-width: 10%;
 }
+.col-brk-18 {
+  flex: 0 0 18%;
+  max-width: 18%;
+}
 .col-brk-20 {
   flex: 0 0 20%;
   max-width: 20%;
@@ -666,9 +754,17 @@
 }
 
 @media (min-width: 576px) {
+  .col-brk-sm-1 {
+    flex: 0 0 1%;
+    max-width: 1%;
+  }
   .col-brk-sm-2 {
     flex: 0 0 2%;
     max-width: 2%;
+  }
+  .col-brk-sm-18 {
+    flex: 0 0 18%;
+    max-width: 18%;
   }
   .col-brk-sm-22 {
     flex: 0 0 22%;
@@ -677,9 +773,17 @@
 }
 
 @media (min-width: 768px) {
+  .col-brk-md-1 {
+    flex: 0 0 1%;
+    max-width: 1%;
+  }
   .col-brk-md-2 {
     flex: 0 0 2%;
     max-width: 2%;
+  }
+  .col-brk-md-18 {
+    flex: 0 0 18%;
+    max-width: 18%;
   }
   .col-brk-md-22 {
     flex: 0 0 22%;
@@ -688,9 +792,17 @@
 }
 
 @media (min-width: 992px) {
+  .col-brk-lg-1 {
+    flex: 0 0 1%;
+    max-width: 1%;
+  }
   .col-brk-lg-2 {
     flex: 0 0 2%;
     max-width: 2%;
+  }
+  .col-brk-lg-18 {
+    flex: 0 0 18%;
+    max-width: 18%;
   }
   .col-brk-lg-22 {
     flex: 0 0 22%;
@@ -699,9 +811,17 @@
 }
 
 @media (min-width: 1200px) {
+  .col-brk-xl-1 {
+    flex: 0 0 1%;
+    max-width: 1%;
+  }
   .col-brk-xl-2 {
     flex: 0 0 2%;
     max-width: 2%;
+  }
+  .col-brk-xl-18 {
+    flex: 0 0 18%;
+    max-width: 18%;
   }
   .col-brk-xl-22 {
     flex: 0 0 22%;
@@ -739,6 +859,12 @@
   border-right: 1px solid #5c6066;
   border-bottom: 1px solid #5c6066;
 }
+.bracket-hook13 {
+  height: 1119px;
+  border-top: 1px solid #5c6066;
+  border-right: 1px solid #5c6066;
+  border-bottom: 1px solid #5c6066;
+}
 .bracket-hook200 {
   height: 218px;
   border-bottom: 1px solid #5c6066;
@@ -757,6 +883,14 @@
 }
 .bracket-hook220 {
   height: 638px;
+  border-bottom: 1px solid #5c6066;
+}
+.bracket-hook221 {
+  height: 1119px;
+  border-bottom: 1px solid #5c6066;
+}
+.bracket-hook230 {
+  height: 1198px;
   border-bottom: 1px solid #5c6066;
 }
 .bracket-gap-height-00 {
@@ -793,22 +927,26 @@
   height: 358px;
 }
 .bracket-hook1-gap-height-21 {
-  height: 280px;
+  height: 560px;
 }
 .bracket-gap-height-30 {
   height: 500px;
 }
-/* .bracket-gap-height-31 {
-  height: 1000px;
+.bracket-gap-height-31 {
+  height: 999px;
 }
+.bracket-hook1-gap-height-30 {
+  height: 638px;
+}
+.bracket-gap-height-40 {
+  height: 1060px;
+}
+/* 
 .bracket-gap-height-32 {
   height: 510px;
 }
 .bracket-gap-height-40 {
   height: 610px;
-}
-.bracket-gap-height-41 {
-  height: 2120px;
 }
 .bracket-gap-height-50 {
   height: 610px;
@@ -845,6 +983,9 @@
 }
 .tournament-title-UCL {
   font-family: 'Champions Bold', sans-serif;
+}
+.tournament-title-UEL {
+  font-family: 'Europa Title', sans-serif;
 }
 .tournament-title-COPA {
   font-family: 'Copa America', sans-serif;

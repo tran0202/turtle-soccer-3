@@ -50,6 +50,14 @@
   font-family: 'Champions Bold';
   src: url('fonts/Champions-Bold.ttf');
 }
+@font-face {
+  font-family: 'Homoarak';
+  src: url('fonts/HOMOARAK.TTF');
+}
+@font-face {
+  font-family: 'Europa Title';
+  src: url('fonts/europatitlebold.ttf');
+}
 
 @media (min-width: 768px) {
 }

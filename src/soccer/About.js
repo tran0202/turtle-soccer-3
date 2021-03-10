@@ -147,7 +147,10 @@ const About = (props) => {
     final_team_count,
     final_venue_count,
     final_city_count,
+    tournament_team_count,
+    transfer_team_count,
     total_team_count,
+    total_transfer_team_count,
     association_count,
   } = details
   const { fs1, fs2, fs3, fs4 } = findFinalStandings(tournament)
@@ -318,6 +321,17 @@ const About = (props) => {
               </Col>
             </Row>
           )}
+          {tournament_team_count && (
+            <Row className="margin-top-xs">
+              <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
+                Tournament Teams
+              </Col>
+              <Col md="6" sm="7">
+                {tournament_team_count}&nbsp;
+                {transfer_team_count && <React.Fragment>+ {transfer_team_count} (transferred from UCL)</React.Fragment>}
+              </Col>
+            </Row>
+          )}
           {final_team_count && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
@@ -335,6 +349,7 @@ const About = (props) => {
               </Col>
               <Col md="6" sm="7">
                 {total_team_count}&nbsp;
+                {total_transfer_team_count && <React.Fragment>+ {total_transfer_team_count} (transferred from UCL)&nbsp;</React.Fragment>}
                 {association_count && (
                   <React.Fragment>
                     (from {association_count} association{association_count !== 1 ? 's' : ''})

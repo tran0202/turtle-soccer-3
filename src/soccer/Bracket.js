@@ -141,19 +141,20 @@ const BracketPairBox = (props) => {
         </Col>
         <Col sm="12" className="bracket-half-box-height border-bottom-gray5">
           <Row className="no-gutters h3-ff3">
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
+            <Col xs={{ size: 2 }} className="d-none d-lg-block">
               {getTeamFlag(m1.home_team, config)}
             </Col>
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+            <Col xs={{ size: 2 }} className="d-none d-md-block d-lg-none">
               {getTeamFlag(m1.home_team, config)}
             </Col>
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
+            <Col xs={{ size: 2 }} className="d-none d-sm-block d-md-none">
               {getTeamFlag(m1.home_team, config)}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(m1.home_team)}
               {isAwayGoalsWinner('H', m1) && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
               {m2.home_extra_score != null && m2.away_extra_score != null && m2.home_extra_score < m2.away_extra_score && getExtraTimeTooltip(m2, config)}
+              {m2.home_penalty_score < m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(m1.home_team)}
@@ -162,11 +163,13 @@ const BracketPairBox = (props) => {
                 m2.away_extra_score != null &&
                 m2.home_extra_score < m2.away_extra_score &&
                 getExtraTimeTooltip(m2, { ...config, shortAnchor: true })}
+              {m2.home_penalty_score < m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(m1.home_team, config)}
               {isAwayGoalsWinner('H', m1) && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
               {m2.home_extra_score != null && m2.away_extra_score != null && m2.home_extra_score < m2.away_extra_score && getExtraTimeTooltip(m2, config)}
+              {m2.home_penalty_score < m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('H', m1) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(m1.home_team, config)}
@@ -175,6 +178,7 @@ const BracketPairBox = (props) => {
                 m2.away_extra_score != null &&
                 m2.home_extra_score < m2.away_extra_score &&
                 getExtraTimeTooltip(m2, { ...config, shortAnchor: true })}
+              {m2.home_penalty_score < m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col
               xs={{ size: 8, offset: 1 }}
@@ -198,39 +202,29 @@ const BracketPairBox = (props) => {
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('H', m1) ? '' : 'box-score-light'}`}>
               {m1.home_aggregate_score_1st_leg}
             </Col>
-            {/* {m1.home_extra_score == null && (
-              <Col xs={{ size: 1 }} className={`box-score ${isWinner('H', m1) ? '' : 'box-score-light'}`}>
-                {m1.home_score}
+            {m1.home_penalty_score_2nd_leg != null && (
+              <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('H', m1) ? '' : 'box-score-light'}`}>
+                {m1.home_penalty_score_2nd_leg != null && <React.Fragment>({m1.home_penalty_score_2nd_leg})</React.Fragment>}
               </Col>
-            )} */}
-            {/* {match.home_extra_score != null && (
-              <Col xs={{ size: 3 }} className={`box-score ${isWinner('H', match) ? '' : 'box-score-light'}`}>
-                {parseInt(match.home_score) + parseInt(match.home_extra_score)}
-                {match.home_penalty_score != null && <React.Fragment>&nbsp;({match.home_penalty_score})</React.Fragment>}
-                {match.home_replay_score != null && <React.Fragment>({match.home_replay_score})</React.Fragment>}
-                {match.void_notes && <MatchVoidedTooltip target="matchVoidedTooltip" anchor="(v)" notes={match.void_notes} />}
-                {(match.home_awarded || match.home_awarded_score_not_counted) && match.awarded_text && (
-                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
-                )}
-              </Col>
-            )} */}
+            )}
           </Row>
         </Col>
         <Col sm="12" className="bracket-half-box-height">
           <Row className="no-gutters h4-ff3">
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-lg-block">
+            <Col xs={{ size: 2 }} className="d-none d-lg-block">
               {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
             </Col>
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-md-block d-lg-none">
+            <Col xs={{ size: 2 }} className="d-none d-md-block d-lg-none">
               {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
             </Col>
-            <Col xs={{ size: 2, offset: 1 }} className="d-none d-sm-block d-md-none">
+            <Col xs={{ size: 2 }} className="d-none d-sm-block d-md-none">
               {m1 && <React.Fragment>{getTeamFlag(m1.away_team, config)}</React.Fragment>}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-xl-block`}>
               {getBracketTeamName(m1.away_team)}
               {isAwayGoalsWinner('A', m1) && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
               {m2.home_extra_score != null && m2.away_extra_score != null && m2.home_extra_score > m2.away_extra_score && getExtraTimeTooltip(m2, config)}
+              {m2.home_penalty_score > m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-lg-block d-xl-none`}>
               {getBracketTeamName(m1.away_team)}
@@ -239,11 +233,13 @@ const BracketPairBox = (props) => {
                 m2.away_extra_score != null &&
                 m2.home_extra_score > m2.away_extra_score &&
                 getExtraTimeTooltip(m2, { ...config, shortAnchor: true })}
+              {m2.home_penalty_score > m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-md-block d-lg-none`}>
               {getBracketTeamCode(m1.away_team, config)}
               {isAwayGoalsWinner('A', m1) && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
               {m2.home_extra_score != null && m2.away_extra_score != null && m2.home_extra_score > m2.away_extra_score && getExtraTimeTooltip(m2, config)}
+              {m2.home_penalty_score > m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col xs={{ size: 6 }} className={`box-team-name ${isAggregateWinner('A', m1) ? '' : 'box-team-name-light'} d-none d-sm-block d-md-none`}>
               {getBracketTeamCode(m1.away_team, config)}
@@ -252,6 +248,7 @@ const BracketPairBox = (props) => {
                 m2.away_extra_score != null &&
                 m2.home_extra_score > m2.away_extra_score &&
                 getExtraTimeTooltip(m2, { ...config, shortAnchor: true })}
+              {m2.home_penalty_score > m2.away_penalty_score && <PenTooltip target="penTooltip1" anchor="(pen.)" />}
             </Col>
             <Col
               xs={{ size: 8, offset: 1 }}
@@ -275,26 +272,18 @@ const BracketPairBox = (props) => {
             <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('A', m1) ? '' : 'box-score-light'}`}>
               {m2.home_aggregate_score_2nd_leg}
             </Col>
-            {/* {m1.away_extra_score == null && (
-              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', m1) ? '' : 'box-score-light'}`}>
-                {m1.away_score}
-                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
-                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
+            {m1.away_penalty_score_2nd_leg != null && (
+              <Col xs={{ size: 1 }} className={`box-score ${isAggregateWinner('A', m1) ? '' : 'box-score-light'}`}>
+                {m1.away_penalty_score_2nd_leg != null && <React.Fragment>({m1.away_penalty_score_2nd_leg})</React.Fragment>}
               </Col>
-            )} */}
-            {/* {match.away_extra_score != null && (
-              <Col xs={{ size: 3 }} className={`box-score ${isWinner('A', match) ? '' : 'box-score-light'}`}>
-                {parseInt(match.away_score) + parseInt(match.away_extra_score)}
-                {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
-                {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
-              </Col>
-            )} */}
+            )}
           </Row>
         </Col>
       </Row>
       {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
       {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
       {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
+      {colIndex === 3 && !lastBox && <Row className="bracket-gap-height-31"></Row>}
     </React.Fragment>
   )
 }
@@ -611,17 +600,21 @@ const BracketColInner = (props) => {
       {roundName === 'P/o 2nd round' && <PlayoffSecondRoundTooltip target="playoffSecondRoundTooltip" />}
     </React.Fragment>
   )
+  const colClassname1 = `${config.column_count === 5 ? 'h3-ff1' : 'h2-ff1'} margin-top-md d-none d-xl-block`
+  const colClassname2 = `${config.column_count === 5 ? 'h4-ff1' : 'h3-ff1'} margin-top-md d-none d-lg-block d-xl-none`
+  const colClassname3 = `${config.column_count === 5 ? 'h6-ff1' : 'h5-ff1'} margin-top-md d-none d-md-block d-lg-none`
 
   return (
     <React.Fragment>
       {colIndex === 0 && <Row className="bracket-gap-height-00"></Row>}
       {colIndex === 1 && <Row className="bracket-gap-height-10"></Row>}
       {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
+      {colIndex === 3 && <Row className="bracket-gap-height-30"></Row>}
       <Row className="no-gutters bracket-col-height">
         <Col xs={{ size: 11, offset: 1 }}>
-          <div className="h2-ff1 margin-top-md d-none d-xl-block">{roundNameBlock}</div>
-          <div className="h3-ff1 margin-top-md d-none d-lg-block d-xl-none">{roundNameBlock}</div>
-          <div className="h5-ff1 margin-top-md d-none d-md-block d-lg-none">{roundNameBlock}</div>
+          <div className={colClassname1}>{roundNameBlock}</div>
+          <div className={colClassname2}>{roundNameBlock}</div>
+          <div className={colClassname3}>{roundNameBlock}</div>
           <div className="h5-ff1 margin-top-md d-block d-md-none">
             {round.short_name}
             {(roundName === 'Consol Semi' || roundName === 'P/o 1st round') && round.consolation_notes && (
@@ -643,8 +636,9 @@ const BracketColInner = (props) => {
 
 const BracketCol = (props) => {
   const { round, colIndex, config } = props
+  const colClassname = config.column_count === 5 ? 'col-brk-18' : 'col-brk-22'
   return (
-    <Col className="col-brk-22">
+    <Col className={colClassname}>
       <BracketColInner round={round} colIndex={colIndex} config={config} />
     </Col>
   )
@@ -652,12 +646,14 @@ const BracketCol = (props) => {
 
 const BracketFinalCol = (props) => {
   const { round, thirdPlace, silverMedal, config } = props
+  const colClassname = config.column_count === 5 ? 'col-brk-18' : 'col-brk-22'
   return (
-    <Col className="col-brk-22">
+    <Col className={colClassname}>
       {config.roundCount === 2 && !thirdPlace && <Row className="bracket-gap-height-10"></Row>}
       {config.roundCount === 3 && thirdPlace && <Row className="bracket-gap-height-10"></Row>}
       {((config.roundCount === 4 && thirdPlace) || (config.roundCount === 3 && !thirdPlace)) && <Row className="bracket-gap-height-20"></Row>}
-      {(config.roundCount === 5 || (config.roundCount === 4 && !thirdPlace)) && <Row className="bracket-gap-height-30"></Row>}
+      {((config.roundCount === 5 && thirdPlace) || (config.roundCount === 4 && !thirdPlace)) && <Row className="bracket-gap-height-30"></Row>}
+      {config.roundCount === 5 && !thirdPlace && <Row className="bracket-gap-height-40"></Row>}
       <BracketColInner round={round} config={config} />
       {thirdPlace && <BracketColInner round={thirdPlace} config={config} />}
       {silverMedal && <BracketColInner round={silverMedal} config={config} />}
@@ -666,9 +662,10 @@ const BracketFinalCol = (props) => {
 }
 
 const BracketHook1 = (props) => {
-  const { colIndex, hookCount } = props
+  const { colIndex, hookCount, config } = props
+  const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
   return (
-    <Col className="col-brk-2">
+    <Col className={colClassname}>
       {Array.from(Array(hookCount), (e, i) => {
         return (
           <React.Fragment key={i}>
@@ -696,6 +693,15 @@ const BracketHook1 = (props) => {
                 <Row className="no-gutters">
                   <Col className="col-sm-12 bracket-hook12"></Col>
                 </Row>
+                {i < hookCount - 1 && <Row className="bracket-hook1-gap-height-21"></Row>}
+              </React.Fragment>
+            )}
+            {colIndex === 3 && (
+              <React.Fragment>
+                {i === 0 && <Row className="bracket-hook1-gap-height-30"></Row>}
+                <Row className="no-gutters">
+                  <Col className="col-sm-12 bracket-hook13"></Col>
+                </Row>
               </React.Fragment>
             )}
           </React.Fragment>
@@ -706,9 +712,11 @@ const BracketHook1 = (props) => {
 }
 
 const BracketHook2 = (props) => {
-  const { colIndex, hookCount } = props
+  const { colIndex, hookCount, config } = props
+  // console.log('config', config)
+  const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
   return (
-    <Col className="col-brk-2">
+    <Col className={colClassname}>
       {Array.from(Array(hookCount), (e, i) => {
         return (
           <React.Fragment key={i}>
@@ -745,6 +753,20 @@ const BracketHook2 = (props) => {
                 {i === 0 && (
                   <Row className="no-gutters">
                     <Col className="col-sm-12 bracket-hook220"></Col>
+                  </Row>
+                )}
+                {i > 0 && (
+                  <Row className="no-gutters">
+                    <Col className="col-sm-12 bracket-hook221"></Col>
+                  </Row>
+                )}
+              </React.Fragment>
+            )}
+            {colIndex === 3 && (
+              <React.Fragment>
+                {i === 0 && (
+                  <Row className="no-gutters">
+                    <Col className="col-sm-12 bracket-hook230"></Col>
                   </Row>
                 )}
               </React.Fragment>
@@ -813,8 +835,8 @@ const BracketPairs = (props) => {
               return (
                 <React.Fragment key={r.name}>
                   <BracketCol round={r} colIndex={index} config={config} />
-                  <BracketHook1 colIndex={index} hookCount={hookCount} />
-                  <BracketHook2 colIndex={index} hookCount={hookCount} />
+                  <BracketHook1 colIndex={index} hookCount={hookCount} config={config} />
+                  <BracketHook2 colIndex={index} hookCount={hookCount} config={config} />
                 </React.Fragment>
               )
             }
@@ -846,8 +868,8 @@ const BracketPairs = (props) => {
               return (
                 <React.Fragment key={r.name}>
                   <BracketCol round={r} colIndex={index} config={{ ...config, two_legged: false }} />
-                  <BracketHook1 colIndex={index} hookCount={hookCount} />
-                  <BracketHook2 colIndex={index} hookCount={hookCount} />
+                  <BracketHook1 colIndex={index} hookCount={hookCount} config={config} />
+                  <BracketHook2 colIndex={index} hookCount={hookCount} config={config} />
                 </React.Fragment>
               )
             }
@@ -888,8 +910,8 @@ const BracketMatches = (props) => {
               return (
                 <React.Fragment key={r.name}>
                   <BracketCol round={r} colIndex={index} config={config} />
-                  <BracketHook1 colIndex={index} hookCount={hookCount} />
-                  <BracketHook2 colIndex={index} hookCount={hookCount} />
+                  <BracketHook1 colIndex={index} hookCount={hookCount} config={config} />
+                  <BracketHook2 colIndex={index} hookCount={hookCount} config={config} />
                 </React.Fragment>
               )
             }
@@ -902,7 +924,6 @@ const BracketMatches = (props) => {
 
 const Bracket = (props) => {
   const { stage, config } = props
-  // console.log('config', config)
   const [collapse, setCollapse] = useState(false)
   const [status, setStatus] = useState('Closed')
   const onEntering = () => setStatus('Opening...')
@@ -910,6 +931,8 @@ const Bracket = (props) => {
   const onExiting = () => setStatus('Closing...')
   const onExited = () => setStatus('Closed')
   const toggle = () => setCollapse(!collapse)
+  if (!stage || !stage.rounds) return
+  const filteredRounds = stage.rounds.filter((r) => r.name !== 'Third-place')
 
   return (
     <React.Fragment>
@@ -926,8 +949,8 @@ const Bracket = (props) => {
         </Col>
       </Row>
       <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-        {!config.two_legged && <BracketMatches stage={stage} config={config} />}
-        {config.two_legged && <BracketPairs stage={stage} config={config} />}
+        {!config.two_legged && <BracketMatches stage={stage} config={{ ...config, column_count: filteredRounds.length }} />}
+        {config.two_legged && <BracketPairs stage={stage} config={{ ...config, column_count: filteredRounds.length }} />}
       </Collapse>
     </React.Fragment>
   )

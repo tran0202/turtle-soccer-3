@@ -18,8 +18,8 @@ const SummaryHead = () => {
 
 const Knockout2LeggedBox = (props) => {
   const { matches, config } = props
-  // console.log('stage', stage)
-  if (!matches) return
+  // console.log('matches', matches)
+  if (!matches || matches.length === 0) return null
   return (
     <React.Fragment>
       <Row>
@@ -49,7 +49,7 @@ const Knockout2LeggedSummary = (props) => {
       {isKnockout2LeggedStageValid(stage) && (
         <React.Fragment>
           {pathMatches.length === 0 && <Knockout2LeggedBox matches={stage.rounds[0].matches} config={config} />}
-          {pathMatches.length === 2 &&
+          {pathMatches.length > 1 &&
             pathMatches.map((p) => <Knockout2LeggedBox matches={p.matches} config={{ ...config, box_name: `${p.path} Path` }} key={p.path} />)}
         </React.Fragment>
       )}

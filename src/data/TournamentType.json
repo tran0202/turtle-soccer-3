@@ -121,6 +121,19 @@
     ]
   },
   {
+    "id": "UEL",
+    "name": "UEFA Europa League",
+    "color": "rgb(21, 97, 30)",
+    "team_type_id": "CLUB",
+    "confederation_id": "UEFA",
+    "logo_path": "club_logos",
+    "trophy_filename": "UEL_Trophy.jpg",
+    "sport_id": "SOC",
+    "description": [
+      "The UEFA Europa League (abbreviated as UEL) is an annual football club competition organised by UEFA since 1971 for eligible European football clubs. Clubs qualify for the competition based on their performance in their national leagues and cup competitions. It is now the second-tier competition of European club football, ranking below the UEFA Champions League and above the UEFA Europa Conference League after being a third-tier competition from 1971 to 1999 before the UEFA Cup Winners' Cup was discontinued. Previously called the UEFA Cup, the competition has been known as the Europa League since the 2009–10 season, following a change in format."
+    ]
+  },
+  {
     "id": "COPA",
     "name": "CONMEBOL Copa America",
     "color": "rgb(0, 92, 164)",
@@ -196,15 +209,6 @@
       "The OFC Nations Cup is an international association football tournament held among the OFC member nations. It was held every two years from 1996 to 2004. Before 1996 there were two other tournaments held at irregular intervals, under the name Oceania Nations Cup. No competition was held in 2006, but in the 2008 edition, which also acted as a qualification tournament for the 2009 FIFA Confederations Cup and for a play-off for the 2010 FIFA World Cup, the New Zealand national football team emerged as winners.",
       "Historically, a very large gulf separated New Zealand from the smaller island competitors, and little attention was paid to the tournament by the rest of the football world. In fact, after the first eight editions the trophy had been won only by two teams: Australia and New Zealand. In the 2012 OFC Nations Cup, Tahiti became the first team other than New Zealand to be crowned champions of Oceania."
     ]
-  },
-  {
-    "id": "UEL",
-    "name": "UEFA Europa League",
-    "team_type_id": "CLUB",
-    "confederation_id": "UEFA",
-    "logo_path": "club_logos",
-    "sport_id": "SOC",
-    "order": 3
   },
   {
     "id": "WCQ",

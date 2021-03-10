@@ -37,6 +37,7 @@ const RankingRowSeparate = (props) => {
         .replace('Fifth-place', 'Consolation Round')
         .replace('Playoff Second Round', 'Playoff')
         .replace('Preliminary Final', 'Preliminary Round')
+        .replace('Preliminary Second Leg', 'Preliminary Round')
         .replace('First Qualifying Second Leg', 'First Qualifying Round')
         .replace('Second Qualifying Second Leg', 'Second Qualifying Round')
         .replace('Third Qualifying Second Leg', 'Third Qualifying Round')
@@ -61,7 +62,9 @@ const RankingRowSeparate = (props) => {
           {round.ranking_type !== 'successorround' && <React.Fragment>{roundName}</React.Fragment>}
           {round.ranking_type === 'successorround' && <div id={`successor_${roundName.replace(' ', '_')}`}>{roundName}</div>}
           {hasExcludedRankings(round) && <ExcludedFourthPlaceTooltip target="excludedFourthPlaceTooltip" />}
-          {config.tournament_type_id === 'UCL' && roundName === 'Group Stage' && <ExcludedQualfyingRoundsTooltip target="excludedQualfyingRoundsTooltip" />}
+          {(config.tournament_type_id === 'UCL' || config.tournament_type_id === 'UEL') && roundName === 'Group Stage' && (
+            <ExcludedQualfyingRoundsTooltip target="excludedQualfyingRoundsTooltip" />
+          )}
         </Col>
       </Row>
     )
@@ -164,7 +167,23 @@ export const RankingRow = (props) => {
   const { row, config, index } = props
   const { ranking_type, championship_round } = config
   const row_striped = ranking_type === 'group' ? getRowStriped(row, config) : ranking_type === 'wildcard' ? getWildCardRowStriped(row, config) : ''
-  const rankColPadding = row.r ? '' : row.length === 2 ? 'rank-col-padding-2' : row.length === 3 ? 'rank-col-padding-3' : 'rank-col-padding-4'
+  const rankColPadding = row.r
+    ? ''
+    : row.length === 2
+    ? 'rank-col-padding-2'
+    : row.length === 3
+    ? 'rank-col-padding-3'
+    : row.length === 4
+    ? 'rank-col-padding-4'
+    : row.length === 5
+    ? 'rank-col-padding-5'
+    : row.length === 6
+    ? 'rank-col-padding-6'
+    : row.length === 7
+    ? 'rank-col-padding-7'
+    : row.length === 8
+    ? 'rank-col-padding-8'
+    : 'rank-col-padding-9'
   const gold = (ranking_type === 'round' || championship_round) && row.r === 1 ? ' gold' : ''
   const silver = (ranking_type === 'round' || championship_round) && row.r === 2 ? ' silver' : ''
   const bronze = (ranking_type === 'round' || championship_round) && row.r === 3 ? ' bronze' : ''

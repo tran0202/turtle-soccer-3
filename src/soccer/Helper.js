@@ -78,6 +78,9 @@ export const getTournamentTitleFont = (tournamentType) => {
     case 'UCL':
       fontClassName = 'h1-ff5 tournament-title-UCL'
       break
+    case 'UEL':
+      fontClassName = 'h1-ff5 tournament-title-UEL'
+      break
     case 'COPA':
       fontClassName = 'tournament-title-COPA'
       break
@@ -143,6 +146,7 @@ export const splitPathMatches = (stage, round) => {
   return [
     { path: 'Champions', matches: round.matches.filter((m) => m.path === 'Champions') },
     { path: 'League', matches: round.matches.filter((m) => m.path === 'League') },
+    { path: 'Main', matches: round.matches.filter((m) => m.path === 'Main') },
   ]
 }
 
@@ -156,10 +160,13 @@ export const splitPathDatesMatches = (round) => {
   })
   const championMatches = _matches.filter((m) => m.path === 'Champions')
   const leagueMatches = _matches.filter((m) => m.path === 'League')
+  const mainMatches = _matches.filter((m) => m.path === 'Main')
   const _championDates = []
   const _leagueDates = []
+  const _mainDates = []
   const _championMatches = []
   const _leagueMatches = []
+  const _mainMatches = []
   championMatches.forEach((m) => {
     if (_championDates.find((d) => d === m.date) === undefined) {
       _championDates.push(m.date)
@@ -177,6 +184,15 @@ export const splitPathDatesMatches = (round) => {
       _leagueMatches[m.date] = []
     }
     _leagueMatches[m.date].push(m)
+  })
+  mainMatches.forEach((m) => {
+    if (_mainDates.find((d) => d === m.date) === undefined) {
+      _mainDates.push(m.date)
+    }
+    if (!_mainMatches[m.date]) {
+      _mainMatches[m.date] = []
+    }
+    _mainMatches[m.date].push(m)
   })
   _championDates.sort((a, b) => {
     if (a > b) {
@@ -196,9 +212,19 @@ export const splitPathDatesMatches = (round) => {
       return 0
     }
   })
+  _mainDates.sort((a, b) => {
+    if (a > b) {
+      return 1
+    } else if (a < b) {
+      return -1
+    } else {
+      return 0
+    }
+  })
   return [
     { path: 'Champions', dates: _championDates, matches: _championMatches },
     { path: 'League', dates: _leagueDates, matches: _leagueMatches },
+    { path: 'Main', dates: _mainDates, matches: _mainMatches },
   ]
 }
 
@@ -421,14 +447,14 @@ export const isAggregateWinner = (who, match) => {
         match.match_type === 'firstleg' &&
         (match.home_aggregate_score_1st_leg > match.away_aggregate_score_1st_leg ||
           match.aggregate_team_1st_leg === match.home_team ||
-          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score > match.away_penalty_score))
+          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score_2nd_leg > match.away_penalty_score_2nd_leg))
       )
     } else {
       return (
         match.match_type === 'firstleg' &&
         (match.home_aggregate_score_1st_leg < match.away_aggregate_score_1st_leg ||
           match.aggregate_team_1st_leg === match.away_team ||
-          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score < match.away_penalty_score))
+          (match.home_aggregate_score_1st_leg === match.away_aggregate_score_1st_leg && match.home_penalty_score_2nd_leg < match.away_penalty_score_2nd_leg))
       )
     }
   }
@@ -1327,9 +1353,11 @@ export const DisplaySchedule2 = (props) => {
   const { round, config } = props
   const { showMatchYear, hideDateGroup } = config
   const { dates, matches } = round
+  // console.log('matches', matches)
+  // if (!matches || matches.length === 0) return null
   return (
     <React.Fragment>
-      {config.path_name && (
+      {dates && dates.length > 0 && config.path_name && (
         <Row>
           <Col>
             <div className="h3-ff6 margin-top-md">{config.path_name}</div>
@@ -1358,7 +1386,6 @@ export const DisplaySchedule = (props) => {
   const { multiple_paths } = config
   const { name, dates, consolation_notes } = round
   const pathDatesMatches = multiple_paths ? splitPathDatesMatches(round) : []
-  // console.log('round', round)
   dates.sort((a, b) => {
     if (a > b) {
       return 1

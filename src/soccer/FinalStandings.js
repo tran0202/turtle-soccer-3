@@ -762,6 +762,8 @@ const FinalStandings = (props) => {
             r.name === 'Semi-finals First Leg' ||
             r.name === 'Preliminary Semi-finals' ||
             r.name === 'Preliminary Final' ||
+            r.name === 'Preliminary First Leg' ||
+            r.name === 'Preliminary Second Leg' ||
             r.name === 'First Qualifying First Leg' ||
             r.name === 'First Qualifying Second Leg' ||
             r.name === 'Second Qualifying First Leg' ||
@@ -950,12 +952,11 @@ const FinalStandings = (props) => {
         s.rounds.forEach((r) => {
           calculateAggregateScore2(r)
         })
-        const earlyRounds = s.rounds.filter((r) => r.name === 'Round of 16' || r.name === 'Quarter-finals')
+        const earlyRounds = s.rounds.filter((r) => r.name === 'Round of 32' || r.name === 'Round of 16' || r.name === 'Quarter-finals')
         earlyRounds.forEach((round) => {
           initByeRankings(tournament, round)
           collectPairMatches(round)
           calculateKnockoutRankings(findRoundAdvancedTeams(tournament, round.name), round, config)
-          // console.log('round.pairs', round.pairs)
           round &&
             round.pairs &&
             round.pairs.forEach((p) => {
@@ -965,7 +966,8 @@ const FinalStandings = (props) => {
               }
               sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
             })
-          if (round && round.matches) {
+          if (round && round.matches && !round.pairs) {
+            // console.log('round.matches', round.matches)
             eliminateKnockoutTeams(tournament, round)
             sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
             advanceKnockoutTeams(tournament, round)
@@ -986,7 +988,7 @@ const FinalStandings = (props) => {
               }
               sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
             })
-          if (semifinals && semifinals.matches) {
+          if (semifinals && semifinals.matches && !semifinals.pairs) {
             eliminateKnockoutTeams(tournament, semifinals)
             sortGroupRankings(findRoundFinalRanking(tournament, semifinals.name), parseInt(semifinals.eliminateCount) + 1, null)
             advanceThirdPlaceTeams(tournament, semifinals)

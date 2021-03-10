@@ -1,0 +1,64 @@
+[
+  {
+    "id": "UEL201819",
+    "year": "2018-19",
+    "name": "2018-19 UEFA Europa League",
+    "short_name": "2018-19",
+    "tournament_type_id": "UEL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UEL.svg",
+      "start_qualifying_date": "2018-06-26",
+      "end_qualifying_date": "2018-08-30",
+      "start_competition_date": "2018-09-20",
+      "end_competition_date": "2019-05-29",
+      "color": "#ee312f",
+      "tournament_team_count": 48,
+      "transfer_team_count": 8,
+      "total_team_count": 158,
+      "total_transfer_team_count": 55,
+      "association_count": 55
+    },
+    "hero_images": [
+      {
+        "name": "Champions",
+        "filename": "Chelsea_vs._Arsenal,_29_May_2019_32.jpg",
+        "text": "Chelsea celebrating their victory following the match."
+      },
+      {
+        "name": "Olympic Stadium, Baku",
+        "filename": "Baku_Olympic_Stadium_panorama_1.jpeg",
+        "text": "The Olympic Stadium in Baku hosted the final."
+      },
+      {
+        "name": "Program",
+        "filename": "2019_UEFA_Europa_League_Final_programme.jpg",
+        "text": "This is the official match programme for the 2019 UEFA Europa League Final."
+      },
+      {
+        "name": "Manager",
+        "filename": "Unai_Emery_2012.jpg",
+        "text": "Arsenal manager Unai Emery appeared in his fourth Europa League final, having won all three prior."
+      }
+    ],
+    "final_standings": { "champions": "CHE", "runners_up": "ARS", "semi_finalist1": "SGE", "semi_finalist2": "VAL" },
+    "statistics": { "total_matches": 205, "total_goals": 565, "attendance": 5038109 },
+    "awards": {
+      "golden_boot": [{ "player": "Olivier Giroud", "team": "FRA", "club": "CHE", "goals": 11 }],
+      "golden_ball": [{ "player": "Eden Hazard", "team": "BEL", "club": "CHE" }]
+    }
+  }
+]

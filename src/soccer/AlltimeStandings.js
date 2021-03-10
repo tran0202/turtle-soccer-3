@@ -110,10 +110,14 @@ const collectRankings = (tournaments) => {
                 r.matches &&
                   r.matches.forEach((m) => {
                     if (!m.home_bye && !m.away_withdrew && !m.postponed && !m.match_void) {
-                      _matches.push(m)
+                      if (r.round_type === 'secondleg') {
+                        // console.log('m', m)
+                        _matches.push({ ...m, match_type: 'secondleg' })
+                      } else {
+                        _matches.push(m)
+                      }
                     }
                   })
-                // console.log('r.pairs', r.pairs)
                 r.pairs &&
                   r.pairs.forEach((p) => {
                     p.matches &&

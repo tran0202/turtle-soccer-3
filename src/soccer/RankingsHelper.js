@@ -95,6 +95,7 @@ const accumulateRanking2 = (team, match, config) => {
 
 const accumulateRanking = (team, match, config) => {
   if (!team) return
+  // console.log('config', config)
   if (
     match.walkover ||
     match.home_bye ||
@@ -105,7 +106,8 @@ const accumulateRanking = (team, match, config) => {
     (match.notes && match.notes.awarded)
   )
     return
-  if (match.match_type === 'secondleg' && match.home_extra_score != null && match.away_extra_score != null) {
+  if ((match.match_type === 'secondleg' || config.match_type === 'secondleg') && match.home_extra_score != null && match.away_extra_score != null) {
+    // console.log('team', team)
     return accumulateRanking2(team, match, config)
   }
   const side = match.home_team === team.id ? 'home' : 'away'
@@ -300,10 +302,11 @@ const calculateKnockoutTeamRanking = (team, match, config) => {
 }
 
 export const calculateKnockoutRankings = (advanced_teams, round, config) => {
+  // console.log('round', round)
   round.matches &&
     round.matches.forEach((m) => {
-      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.home_team), m, config)
-      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.away_team), m, config)
+      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.home_team), m, { ...config, match_type: round.round_type })
+      calculateKnockoutTeamRanking(findTeam(advanced_teams.final_rankings, m.away_team), m, { ...config, match_type: round.round_type })
     })
 }
 
@@ -489,7 +492,6 @@ const createHomeAwayH2hNotes = (a, b, drawFunction) => {
   const a_ranking = a.h2h_rankings.find((hr) => hr.id === a.id && hr.oppid === b.id)
   const b_ranking = b.h2h_rankings.find((hr) => hr.id === b.id && hr.oppid === a.id)
   // console.log('a_ranking', a_ranking)
-  // console.log('b_ranking', b_ranking)
   if (a_ranking === undefined || b_ranking === undefined) return drawFunction()
   if (a_ranking.pts > b_ranking.pts) {
     a.h2h_notes = `Points >>> ${getTeamName(a.id)} ${a_ranking.pts} | ${getTeamName(b.id)} ${b_ranking.pts}`
