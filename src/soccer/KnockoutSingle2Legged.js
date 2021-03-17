@@ -17,6 +17,7 @@ const KnockoutSingle2Legged = (props) => {
       </Row>
       <KnockoutSingle2LeggedSummary round={round} config={config} />
       {round.matches.map((m) => {
+        const isKnockoutMatch = m.match_type === 'secondleg' || m.match_type === 'firstlegonly'
         const isSecondLeg = m.match_type === 'secondleg'
         const ma = getMatchArrayByDate({ matches: [m] }, false)
         return (
@@ -24,7 +25,7 @@ const KnockoutSingle2Legged = (props) => {
             round={ma}
             config={{
               showMatchYear: config.show_match_year,
-              knockoutMatch: isSecondLeg,
+              knockoutMatch: isKnockoutMatch,
               secondLegMatch: isSecondLeg,
               logo_path: config.logo_path,
               team_type_id: config.team_type_id,

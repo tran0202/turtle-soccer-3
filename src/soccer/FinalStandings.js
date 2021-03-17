@@ -611,6 +611,10 @@ const isPairComplete = (pair) => {
   return pair && pair.matches && pair.matches.length === 2 && pair.matches[0].match_type === 'firstleg' && pair.matches[1].match_type === 'secondleg'
 }
 
+const isFirstLegOnly = (pair) => {
+  return pair && pair.matches && pair.matches.length === 1 && pair.matches[0].match_type === 'firstlegonly'
+}
+
 const FinalStandings = (props) => {
   const { tournament, tournamentType } = props
   const config = { ...getTournamentConfig(tournament), ...getTournamentTypeConfig(tournamentType) }
@@ -963,6 +967,10 @@ const FinalStandings = (props) => {
               if (isPairComplete(p)) {
                 eliminateKnockoutTeams2(tournament, { ...round, matches: [p.matches[0]] })
                 advanceKnockoutTeams2(tournament, { ...round, matches: [p.matches[0]] })
+              }
+              if (isFirstLegOnly(p)) {
+                eliminateKnockoutTeams(tournament, { ...round, matches: [p.matches[0]] })
+                advanceKnockoutTeams(tournament, { ...round, matches: [p.matches[0]] })
               }
               sortGroupRankings(findRoundFinalRanking(tournament, round.name), parseInt(round.eliminateCount) + 1, null)
             })

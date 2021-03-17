@@ -1,5 +1,67 @@
 [
   {
+    "id": "UEL201920",
+    "year": "2019-20",
+    "name": "2019-20 UEFA Europa League",
+    "short_name": "2019-20",
+    "tournament_type_id": "UEL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UEL.svg",
+      "start_qualifying_date": "2019-06-27",
+      "end_qualifying_date": "2019-08-29",
+      "start_competition_date": "2019-09-19",
+      "end_competition_date": "2020-08-21",
+      "color": "#15296d",
+      "tournament_team_count": 48,
+      "transfer_team_count": 8,
+      "total_team_count": 158,
+      "total_transfer_team_count": 55,
+      "association_count": 55
+    },
+    "hero_images": [
+      {
+        "name": "RheinEnergieStadion, Cologne",
+        "filename": "FIFA_WM06_Stadion_Koeln.jpg",
+        "text": "The RheinEnergieStadion in Cologne hosted the final. The stadium was renamed to \"Stadion Köln\" for the match."
+      },
+      {
+        "name": "Program",
+        "filename": "2020_UEFA_Europa_League_Final_programme.jpg",
+        "text": "This is the official match programme for the 2020 UEFA Europa League Final."
+      },
+      {
+        "name": "Merkur Spiel-Arena, Düsseldorf",
+        "filename": "ESPRIT_arena_in_Duesseldorf-Stockum,_von_Sueden.jpg",
+        "text": "The Merkur Spiel-Arena hosted the semi-final Inter Milan vs Shakhtar Donetsk."
+      },
+      {
+        "name": "MSV-Arena, Duisburg",
+        "filename": "MSV-Arena_Stehtribüne.jpeg",
+        "text": "The MSV-Arena hosted the quarter-final Wolverhampton Wanderers vs Sevilla."
+      }
+    ],
+    "final_standings": { "champions": "SEV", "runners_up": "INT", "semi_finalist1": "MUN", "semi_finalist2": "SHK" },
+    "statistics": { "total_matches": 197, "total_goals": 548, "attendance": 4069102 },
+    "awards": {
+      "golden_boot": [{ "player": "Bruno Fernandes", "team": "POR", "club": "SLI", "club2": "MUN", "goals": 8 }],
+      "golden_ball": [{ "player": "Romelu Lukaku", "team": "BEL", "club": "INT" }]
+    }
+  },
+  {
     "id": "UEL201819",
     "year": "2018-19",
     "name": "2018-19 UEFA Europa League",

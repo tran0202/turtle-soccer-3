@@ -45,7 +45,7 @@ const collectAggregateMatches = (round) => {
   const am = []
   round.pairs.forEach((p) => {
     if (p.matches) {
-      const m1 = p.matches.find((m) => m.match_type === 'firstleg')
+      const m1 = p.matches.find((m) => m.match_type === 'firstleg' || m.match_type === 'firstlegonly')
       if (m1 !== undefined) {
         am.push(m1)
       }

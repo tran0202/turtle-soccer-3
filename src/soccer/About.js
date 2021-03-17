@@ -111,8 +111,17 @@ const getPlayerClubNationName = (p, config) => {
   if (!p) return
   return (
     <React.Fragment>
-      {config.team_type_id === 'CLUB' && getClubLogoImg(p.club, config)}
-      {config.team_type_id === 'CLUB' && getNationSmallFlagImg(p.team)}
+      {config.team_type_id === 'CLUB' && (
+        <React.Fragment>
+          {!p.club2 && getClubLogoImg(p.club, config)}
+          {p.club2 && (
+            <React.Fragment>
+              [{getClubLogoImg(p.club, config)}/{getClubLogoImg(p.club2, config)}]
+            </React.Fragment>
+          )}
+          {getNationSmallFlagImg(p.team)}
+        </React.Fragment>
+      )}
       {config.team_type_id !== 'CLUB' && p.team && <img className="flag-sm flag-md " src={getFlagSrc(p.team)} alt={p.team} title={p.team} />}
       <span className="padding-top-xs">
         &nbsp;{p.player} {getGoldenBootDetails(p)}

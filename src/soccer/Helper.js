@@ -441,6 +441,9 @@ export const isWinner = (who, match) => {
 
 export const isAggregateWinner = (who, match) => {
   // console.log('match', match)
+  if (match.match_type === 'firstlegonly') {
+    return isWinner(who, match)
+  }
   if (match) {
     if (who === 'H') {
       return (
@@ -912,6 +915,7 @@ export const isAwayLoseAggregate = (data) => {
     need_playoff,
     home_withdrew,
   } = data
+  // console.log('data', data)
   if (!knockoutMatch) return false
   if (!secondLegMatch) {
     return (
@@ -1035,16 +1039,15 @@ const DisplayExtraTimeText = (props) => {
 
 export const DisplayKnockout2LeggedMatch = (props) => {
   const { m, config } = props
-  // console.log('m', m)
   const homeLoseData = {
     knockoutMatch: true,
-    secondLegMatch: true,
+    secondLegMatch: m.match_type !== 'firstlegonly',
     aggregate_team: m.aggregate_team_1st_leg,
     away_team: m.away_team,
-    home_score: null,
-    away_score: null,
-    home_extra_score: null,
-    away_extra_score: null,
+    home_score: m.home_score,
+    away_score: m.away_score,
+    home_extra_score: m.home_extra_score,
+    away_extra_score: m.away_extra_score,
     home_penalty_score: m.home_penalty_score_2nd_leg,
     away_penalty_score: m.away_penalty_score_2nd_leg,
     home_aggregate_score: m.home_aggregate_score_1st_leg,
@@ -1053,13 +1056,13 @@ export const DisplayKnockout2LeggedMatch = (props) => {
   }
   const awayLoseData = {
     knockoutMatch: true,
-    secondLegMatch: true,
+    secondLegMatch: m.match_type !== 'firstlegonly',
     aggregate_team: m.aggregate_team_1st_leg,
     home_team: m.home_team,
-    home_score: null,
-    away_score: null,
-    home_extra_score: null,
-    away_extra_score: null,
+    home_score: m.home_score,
+    away_score: m.away_score,
+    home_extra_score: m.home_extra_score,
+    away_extra_score: m.away_extra_score,
     home_penalty_score: m.home_penalty_score_2nd_leg,
     away_penalty_score: m.away_penalty_score_2nd_leg,
     home_aggregate_score: m.home_aggregate_score_1st_leg,
@@ -1094,7 +1097,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
           )}
         </Col>
         <Col className="score text-center score-no-padding-right col-box-10">
-          {m.home_extra_score_2nd_leg == null && m.away_extra_score_2nd_leg == null && (
+          {m.home_score_2nd_leg != null && m.away_score_2nd_leg != null && m.home_extra_score_2nd_leg == null && m.away_extra_score_2nd_leg == null && (
             <React.Fragment>
               {m.home_score_2nd_leg}-{m.away_score_2nd_leg}
             </React.Fragment>
@@ -1189,8 +1192,9 @@ export const DisplayMatch = (props) => {
     home_withdrew: m.home_withdrew,
     away_withdrew: m.away_withdrew,
   }
-  // console.log('m', m)
-  const borderBottomColor = m.match_type === 'secondleg' ? 'border-bottom-gray2' : 'border-bottom-gray5'
+  // console.log('awayLoseData', awayLoseData)
+  // console.log('isAwayLoseAggregate(awayLoseData)', isAwayLoseAggregate(awayLoseData))
+  const borderBottomColor = m.match_type === 'secondleg' || m.match_type === 'firstlegonly' ? 'border-bottom-gray2' : 'border-bottom-gray5'
   return (
     <Col sm="12" className={`padding-tb-md ${borderBottomColor}`}>
       <Row>

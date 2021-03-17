@@ -50,7 +50,7 @@ const getExtraTimeTooltip = (match, config) => {
       ) : config.shortAnchor ? (
         <AetTooltip target="aetTooltip" anchor="(e)" />
       ) : (
-        <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />
+        <AetTooltip target="aetTooltip" anchor="(aet)" />
       )}
     </React.Fragment>
   )
@@ -573,6 +573,7 @@ const BracketBox = (props) => {
       {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
       {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
       {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
+      {colIndex === 3 && !lastBox && <Row className="bracket-gap-height-31"></Row>}
     </React.Fragment>
   )
 }
