@@ -5,7 +5,7 @@ import Bracket from './Bracket'
 
 const Knockout = (props) => {
   const { stage, config } = props
-  // console.log('config', config)
+  // console.log('stage', stage)
   const final_path_bracket_stage = getBracketStage(getFinalPathStage(stage))
   const consolation_path_bracket_stage = getBracketStage(getConsolationPathStage(stage))
   const consolationBracketName = stage.rounds && stage.rounds.find((r) => r.name === 'Playoff First Round') !== undefined ? 'Playoff' : 'Consolation'
@@ -25,11 +25,12 @@ const Knockout = (props) => {
   const displayScheduleConfig = {
     knockoutMatch: true,
     showMatchYear: config.show_match_year,
+    multiple_paths: stage.multiple_paths,
     ...bracketConfig,
   }
   return (
     <React.Fragment>
-      <Bracket stage={final_path_bracket_stage} config={bracketConfig} />
+      {!stage.hide_bracket && <Bracket stage={final_path_bracket_stage} config={bracketConfig} />}
       {stage.consolation_round && <Bracket stage={consolation_path_bracket_stage} config={bracketConsolationConfig} />}
       {stage.rounds &&
         stage.rounds.map((r) => {

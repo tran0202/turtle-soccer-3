@@ -759,8 +759,8 @@ const FinalStandings = (props) => {
         }
         const earlyRounds = koStage.rounds.filter(
           (r) =>
-            r.name === 'Preliminary round' ||
-            r.name === 'First round' ||
+            r.name === 'Preliminary Round' ||
+            r.name === 'First Round' ||
             r.name === 'Round of 16' ||
             r.name === 'Quarter-finals' ||
             r.name === 'Semi-finals First Leg' ||
@@ -768,12 +768,16 @@ const FinalStandings = (props) => {
             r.name === 'Preliminary Final' ||
             r.name === 'Preliminary First Leg' ||
             r.name === 'Preliminary Second Leg' ||
+            r.name === 'First Qualifying Round' ||
             r.name === 'First Qualifying First Leg' ||
             r.name === 'First Qualifying Second Leg' ||
+            r.name === 'Second Qualifying Round' ||
             r.name === 'Second Qualifying First Leg' ||
             r.name === 'Second Qualifying Second Leg' ||
+            r.name === 'Third Qualifying Round' ||
             r.name === 'Third Qualifying First Leg' ||
             r.name === 'Third Qualifying Second Leg' ||
+            r.name === 'Play-off Round' ||
             r.name === 'Play-off First Leg' ||
             r.name === 'Play-off Second Leg',
         )

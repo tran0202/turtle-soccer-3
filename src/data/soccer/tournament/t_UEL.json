@@ -1,5 +1,53 @@
 [
   {
+    "id": "UEL202021",
+    "year": "2020-21",
+    "name": "2020-21 UEFA Europa League",
+    "short_name": "2020-21",
+    "tournament_type_id": "UEL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UEL.svg",
+      "start_qualifying_date": "2020-08-18",
+      "end_qualifying_date": "2020-10-01",
+      "start_competition_date": "2020-10-22",
+      "end_competition_date": "2021-05-26",
+      "color": "#15611e",
+      "tournament_team_count": 48,
+      "transfer_team_count": 8,
+      "total_team_count": 158,
+      "total_transfer_team_count": 55,
+      "association_count": 55
+    },
+    "hero_images": [
+      {
+        "name": "Stadion Miejski, Gdańsk",
+        "filename": "PGE_Arena_Gdańsk_(6018955265).jpg",
+        "text": "The Stadion Miejski will host the final."
+      }
+    ],
+    "statistics": { "total_matches": 183, "total_goals": 564, "attendance": 98455 },
+    "awards": {
+      "golden_boot": [
+        { "player": "Pizzi", "team": "POR", "club": "SLB", "goals": 7, "minutes": 385 },
+        { "player": "Yusuf Yazıcı", "team": "TUR", "club": "LIL", "goals": 7, "minutes": 625 }
+      ]
+    }
+  },
+  {
     "id": "UEL201920",
     "year": "2019-20",
     "name": "2019-20 UEFA Europa League",

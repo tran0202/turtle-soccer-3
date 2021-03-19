@@ -1357,7 +1357,6 @@ export const DisplaySchedule2 = (props) => {
   const { round, config } = props
   const { showMatchYear, hideDateGroup } = config
   const { dates, matches } = round
-  // console.log('matches', matches)
   // if (!matches || matches.length === 0) return null
   return (
     <React.Fragment>
@@ -1388,6 +1387,7 @@ export const DisplaySchedule2 = (props) => {
 export const DisplaySchedule = (props) => {
   const { round, config } = props
   const { multiple_paths } = config
+  // console.log('multiple_paths', multiple_paths)
   const { name, dates, consolation_notes } = round
   const pathDatesMatches = multiple_paths ? splitPathDatesMatches(round) : []
   dates.sort((a, b) => {

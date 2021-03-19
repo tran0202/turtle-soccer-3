@@ -333,7 +333,7 @@ const About = (props) => {
           {tournament_team_count && (
             <Row className="margin-top-xs">
               <Col lg={{ size: 3, offset: 3 }} md={{ size: 4, offset: 2 }} sm="5" className="font-weight-bold">
-                Tournament Teams
+                Competition Teams
               </Col>
               <Col md="6" sm="7">
                 {tournament_team_count}&nbsp;

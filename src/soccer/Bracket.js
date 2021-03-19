@@ -810,7 +810,7 @@ const BracketPairs = (props) => {
   const { stage, config } = props
   // console.log('stage', stage)
   let silverMedal = stage.rounds ? stage.rounds.find((s) => s.name === 'Silver medal match') : {}
-  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round' && r.name !== 'Silver medal match') : []
+  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary Round' && r.name !== 'Silver medal match') : []
   let thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   return (
     <Row className="no-gutters mb-5">
@@ -885,7 +885,7 @@ const BracketMatches = (props) => {
   const { stage, config } = props
   // console.log('stage', stage)
   let silverMedal = stage.rounds ? stage.rounds.find((s) => s.name === 'Silver medal match') : {}
-  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary round' && r.name !== 'Silver medal match') : []
+  const filteredRounds = stage.rounds ? stage.rounds.filter((r) => r.name !== 'Preliminary Round' && r.name !== 'Silver medal match') : []
   let thirdPlace = filteredRounds.find((s) => s.name === 'Third-place')
   return (
     <Row className="no-gutters mb-5">
@@ -933,7 +933,8 @@ const Bracket = (props) => {
   const onExited = () => setStatus('Closed')
   const toggle = () => setCollapse(!collapse)
   if (!stage || !stage.rounds) return
-  const filteredRounds = stage.rounds.filter((r) => r.name !== 'Third-place')
+  const filteredRounds = stage.rounds.filter((r) => r.name !== 'Third-place' && r.name !== 'Preliminary Round')
+  // console.log('filteredRounds', filteredRounds)
 
   return (
     <React.Fragment>

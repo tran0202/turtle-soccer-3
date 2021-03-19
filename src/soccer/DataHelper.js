@@ -112,6 +112,7 @@ import td_UCL_201920 from '../data/soccer/tournamentData/UCL/td_UCL_201920.json'
 
 import td_UEL_201819 from '../data/soccer/tournamentData/UEL/td_UEL_201819.json'
 import td_UEL_201920 from '../data/soccer/tournamentData/UEL/td_UEL_201920.json'
+import td_UEL_202021 from '../data/soccer/tournamentData/UEL/td_UEL_202021.json'
 
 import td_COPA_1916 from '../data/soccer/tournamentData/COPA/td_COPA_1916.json'
 import td_COPA_1917 from '../data/soccer/tournamentData/COPA/td_COPA_1917.json'
@@ -259,7 +260,7 @@ export const getTeamArray = () => {
 }
 
 export const getCurrentTournament = () => {
-  return { tournament: 'UEL202021', qualificationTournament: 'WC2022_CONMEBOL' }
+  return { tournament: 'UCL202021', qualificationTournament: 'WC2022_CONMEBOL' }
 }
 
 export const getTournamentArray = () => {
@@ -286,7 +287,7 @@ export const getTournamentDataArray = () => {
 }
 
 export const getTournamentDataUEL = () => {
-  return [].concat([td_UEL_201819], [td_UEL_201920])
+  return [].concat([td_UEL_201819], [td_UEL_201920], [td_UEL_202021])
 }
 
 export const getQualificationTournamentArray = () => {
