@@ -1,5 +1,31 @@
 [
   {
+    "id": "COPA2021",
+    "year": "2021",
+    "name": "Copa America Argentina–Colombia 2021",
+    "tournament_type_id": "COPA",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "details": {
+      "host": ["ARG", "COL"],
+      "logo_filename": "2021_Copa_América_logo.svg",
+      "start_date": "2021-06-13",
+      "end_date": "2021-07-10",
+      "color": "#003282",
+      "team_count": 10,
+      "confed_count": 1,
+      "venue_count": 8,
+      "city_count": 8
+    },
+    "hero_images": [
+      {
+        "name": "Estadio Metropolitano, Barranquilla",
+        "filename": "Estadio_Metropolitano_de_Baranquilla_2011.jpg",
+        "text": "The Estadio Metropolitano will host the final."
+      }
+    ]
+  },
+  {
     "id": "COPA2019",
     "year": "2019",
     "name": "Copa America Brazil 2019",

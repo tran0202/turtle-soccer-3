@@ -1,5 +1,31 @@
 [
   {
+    "id": "AFCON2021",
+    "year": "2021",
+    "name": "Africa Cup of Nations Cameroon 2021",
+    "tournament_type_id": "AFCON",
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+    "details": {
+      "host": ["CMR"],
+      "logo_filename": "Africa_Cup_of_Nations.png",
+      "start_date": "2022-01-01",
+      "end_date": "2022-02-01",
+      "color": "#e4022e",
+      "team_count": 24,
+      "confed_count": 1,
+      "venue_count": 6,
+      "city_count": 5
+    },
+    "hero_images": [
+      {
+        "name": "Paul Biya Stadium, Yaoundé",
+        "filename": "Voies_daccès_au_complexe_multisports_Paul_Biya_dOlembé_01.jpg",
+        "text": "The Paul Biya Stadium will host the final."
+      }
+    ]
+  },
+  {
     "id": "AFCON2019",
     "year": "2019",
     "name": "Africa Cup of Nations Egypt 2019",

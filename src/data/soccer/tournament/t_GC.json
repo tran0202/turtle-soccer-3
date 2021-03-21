@@ -1,5 +1,23 @@
 [
   {
+    "id": "GC2021",
+    "year": "2021",
+    "name": "Gold Cup 2021",
+    "short_name": "2021",
+    "tournament_type_id": "GC",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "no_third_place": true,
+    "details": {
+      "logo_filename": "CONCACAF_Gold_Cup_2021.png",
+      "start_date": "2021-07-10",
+      "end_date": "2021-08-01",
+      "color": "#d39534",
+      "team_count": 16,
+      "confed_count": 2
+    }
+  },
+  {
     "id": "GC2019",
     "year": "2019",
     "name": "Gold Cup 2019 United States-Costa Rica-Jamaica",

@@ -1,5 +1,32 @@
 [
   {
+    "id": "AAC2023",
+    "year": "2023",
+    "name": "AFC Asian Cup China 2023",
+    "tournament_type_id": "AAC",
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+    "no_third_place": true,
+    "details": {
+      "host": ["CHN"],
+      "logo_filename": "AFC_Asian_Cup.png",
+      "start_date": "2023-06-16",
+      "end_date": "2023-07-16",
+      "color": "#217553",
+      "team_count": 24,
+      "confed_count": 1,
+      "venue_count": 10,
+      "city_count": 10
+    },
+    "hero_images": [
+      {
+        "name": "TEDA Football Stadium, Tianjin",
+        "filename": "Tianjin_TEDA_Soccer_Stadium.jpg",
+        "text": "The TEDA Football Stadium will host matches of the tournament."
+      }
+    ]
+  },
+  {
     "id": "AAC2019",
     "year": "2019",
     "name": "AFC Asian Cup United Arab Emirates 2019",

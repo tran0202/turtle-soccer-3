@@ -1,5 +1,31 @@
 [
   {
+    "id": "WOFT2020",
+    "year": "2020",
+    "name": "Women's Olympic Football Tournament Tokyo 2020",
+    "tournament_type_id": "WOFT",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["JPN_U23WNT"],
+      "logo_filename": "2020_Summer_Olympics_logo_new.svg",
+      "start_date": "2021-07-21",
+      "end_date": "2021-08-06",
+      "color": "#202b5a",
+      "team_count": 12,
+      "confed_count": 6,
+      "venue_count": 7,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "National Stadium, Tokyo",
+        "filename": "New_national_stadium_tokyo_1.jpg",
+        "text": "The National Stadium will host the final."
+      }
+    ]
+  },
+  {
     "id": "WOFT2016",
     "year": "2016",
     "name": "Women's Olympic Football Tournament Rio 2016",

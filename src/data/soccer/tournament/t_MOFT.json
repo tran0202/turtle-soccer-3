@@ -1,5 +1,31 @@
 [
   {
+    "id": "MOFT2020",
+    "year": "2020",
+    "name": "Men's Olympic Football Tournament Tokyo 2020",
+    "tournament_type_id": "MOFT",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "lot"],
+    "details": {
+      "host": ["JPN_U23MNT"],
+      "logo_filename": "2020_Summer_Olympics_logo_new.svg",
+      "start_date": "2021-07-22",
+      "end_date": "2021-08-07",
+      "color": "#202b5a",
+      "team_count": 16,
+      "confed_count": 6,
+      "venue_count": 6,
+      "city_count": 6
+    },
+    "hero_images": [
+      {
+        "name": "International Stadium, Yokohama",
+        "filename": "Nissan_International_Stadium_Yokohama.jpg",
+        "text": "The International Stadium will host the final."
+      }
+    ]
+  },
+  {
     "id": "MOFT2016",
     "year": "2016",
     "name": "Men's Olympic Football Tournament Rio 2016",

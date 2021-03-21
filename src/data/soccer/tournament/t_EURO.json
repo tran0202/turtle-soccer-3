@@ -1,5 +1,32 @@
 [
   {
+    "id": "EURO2020",
+    "year": "2020",
+    "name": "UEFA Euro 2020",
+    "tournament_type_id": "EURO",
+    "points_for_win": 3,
+    "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplay", "coefficient"],
+    "no_third_place": true,
+    "details": {
+      "host": ["ENG", "GER", "AZE", "RUS", "ITA", "DEN", "ROU", "NED", "IRL", "ESP", "HUN", "SCO"],
+      "logo_filename": "Euro_2020.png",
+      "mascot_filename": "mascot_2020.jpg",
+      "start_date": "2021-06-11",
+      "end_date": "2021-07-11",
+      "color": "#0084a4",
+      "team_count": 24,
+      "venue_count": 12,
+      "city_count": 12
+    },
+    "hero_images": [
+      {
+        "name": "Wembley Stadium, London",
+        "filename": "Wembley-Stadion_2013_16x10.jpg",
+        "text": "The Wembley Stadium will host the final."
+      }
+    ]
+  },
+  {
     "id": "EURO2016",
     "year": "2016",
     "name": "UEFA Euro 2016 France",

@@ -1,5 +1,31 @@
 [
   {
+    "id": "WWC2023",
+    "year": "2023",
+    "name": "FIFA Women's World Cup Australia-New Zealand 2023",
+    "tournament_type_id": "WWC",
+    "points_for_win": 3,
+    "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+    "details": {
+      "host": ["AUS_WNT", "NZL_WNT"],
+      "logo_filename": "Australia–New_Zealand_2023_FIFA_Women's_World_Cup_bid_logo.svg",
+      "start_date": "2023-07-10",
+      "end_date": "2023-08-20",
+      "color": "#45d8b4",
+      "team_count": 32,
+      "confed_count": 6,
+      "venue_count": 13,
+      "city_count": 12
+    },
+    "hero_images": [
+      {
+        "name": "Stadium Australia, Sydney",
+        "filename": "2015_Asian_Cup_Final.jpg",
+        "text": "The Stadium Australia has been proposed to host the final match."
+      }
+    ]
+  },
+  {
     "id": "WWC2019",
     "year": "2019",
     "name": "FIFA Women's World Cup France 2019",
