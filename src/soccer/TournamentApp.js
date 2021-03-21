@@ -125,7 +125,7 @@ class TournamentApp extends React.Component {
   }
 
   componentDidUpdate() {
-    document.title = `${this.state.tournament.name} - Turtle Soccer`
+    document.title = `${this.state.tournament.name} - Turtle Soccer 3`
     window.tournamentStore = this.state
   }
 

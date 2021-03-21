@@ -5,9 +5,9 @@ import { Container } from 'reactstrap'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    document.title = 'Turtle Soccer'
+    document.title = 'Turtle Soccer 3'
   }
-  
+
   render() {
     return (
       <Page>

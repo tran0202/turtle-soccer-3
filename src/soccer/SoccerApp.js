@@ -99,7 +99,7 @@ const GetTabs = (props) => {
 class SoccerApp extends React.Component {
   constructor(props) {
     super(props)
-    document.title = 'Turtle Soccer'
+    document.title = 'Turtle Soccer 3'
     this.tournamentCount = 5
 
     this.state = {

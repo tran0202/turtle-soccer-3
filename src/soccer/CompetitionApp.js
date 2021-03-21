@@ -83,7 +83,7 @@ class CompetitionApp extends React.Component {
   }
 
   componentDidUpdate() {
-    document.title = this.state.tournamentType ? `${this.state.tournamentType.name} - Turtle Soccer` : 'Turtle Soccer'
+    document.title = this.state.tournamentType ? `${this.state.tournamentType.name} - Turtle Soccer 3` : 'Turtle Soccer 3'
     window.competitionStore = this.state
   }
 
