@@ -558,6 +558,9 @@ const BracketBox = (props) => {
                 {match.away_score}
                 {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
                 {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
+                {match.away_awarded && match.awarded_text && (
+                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
+                )}
               </Col>
             )}
             {match.away_extra_score != null && (
@@ -565,6 +568,9 @@ const BracketBox = (props) => {
                 {parseInt(match.away_score) + parseInt(match.away_extra_score)}
                 {match.away_penalty_score != null && <React.Fragment>&nbsp;({match.away_penalty_score})</React.Fragment>}
                 {match.away_replay_score != null && <React.Fragment>({match.away_replay_score})</React.Fragment>}
+                {match.away_awarded && match.awarded_text && (
+                  <AwardedTooltip target={`awarded_${match.home_team}_${match.away_team}`} content={match.awarded_text} />
+                )}
               </Col>
             )}
           </Row>

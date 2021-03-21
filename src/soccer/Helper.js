@@ -699,11 +699,19 @@ export const calculateAggregateScore = (stage) => {
           m1.home_awarded_1st_leg = m1.home_awarded
           m1.awarded_text_1st_leg = m1.awarded_text
         }
+        if (m1.away_awarded) {
+          m1.away_awarded_1st_leg = m1.away_awarded
+          m1.awarded_text_1st_leg = m1.awarded_text
+        }
         if (m2.home_awarded) {
           m1.home_awarded_2nd_leg = m2.home_awarded
           m1.awarded_text_2nd_leg = m2.awarded_text
           // console.log('home_awarded', m2.home_awarded)
           // console.log('awarded_text', m2.awarded_text)
+        }
+        if (m2.away_awarded) {
+          m1.away_awarded_2nd_leg = m2.away_awarded
+          m1.awarded_text_2nd_leg = m2.awarded_text
         }
         if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
           m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
@@ -791,11 +799,19 @@ export const calculateAggregateScore2 = (round) => {
           m1.home_awarded_1st_leg = m1.home_awarded
           m1.awarded_text_1st_leg = m1.awarded_text
         }
+        if (m1.away_awarded) {
+          m1.away_awarded_1st_leg = m1.away_awarded
+          m1.awarded_text_1st_leg = m1.awarded_text
+        }
         if (m2.home_awarded) {
           m1.home_awarded_2nd_leg = m2.home_awarded
           m1.awarded_text_2nd_leg = m2.awarded_text
           // console.log('home_awarded', m2.home_awarded)
           // console.log('awarded_text', m2.awarded_text)
+        }
+        if (m2.away_awarded) {
+          m1.away_awarded_2nd_leg = m2.away_awarded
+          m1.awarded_text_2nd_leg = m2.awarded_text
         }
         if (m1.home_score != null && m1.away_score != null && m2.home_score != null && m2.away_score != null) {
           m1.home_aggregate_score_1st_leg = parseInt(m1.home_score) + parseInt(m2.away_score)
@@ -1090,7 +1106,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
                   {m.home_score}-{m.away_score}
                 </React.Fragment>
               )}
-              {m.home_awarded_1st_leg && m.awarded_text_1st_leg && (
+              {(m.home_awarded_1st_leg || m.away_awarded_1st_leg) && m.awarded_text_1st_leg && (
                 <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text_1st_leg} />
               )}
             </React.Fragment>
@@ -1108,7 +1124,7 @@ export const DisplayKnockout2LeggedMatch = (props) => {
               <AetTooltip target="aetTooltip3" anchor="(a.e.t.)" />
             </React.Fragment>
           )}
-          {m.home_awarded_2nd_leg && m.awarded_text_2nd_leg && (
+          {(m.home_awarded_2nd_leg || m.away_awarded_2nd_leg) && m.awarded_text_2nd_leg && (
             <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text_2nd_leg} />
           )}
         </Col>
@@ -1285,7 +1301,7 @@ export const DisplayMatch = (props) => {
               )}
             </React.Fragment>
           )}
-          {(m.home_awarded || m.home_awarded_score_not_counted) && m.awarded_text && (
+          {(m.home_awarded || m.home_awarded_score_not_counted || m.away_awarded) && m.awarded_text && (
             <AwardedTooltip target={`awarded_${m.home_team}_${m.away_team}`} content={m.awarded_text} />
           )}
           {m.extra_140 && <Extra140Tooltip target={`extra140`} />}

@@ -1,5 +1,48 @@
 [
   {
+    "id": "UCL202021",
+    "year": "2020-21",
+    "name": "2020-21 UEFA Champions League",
+    "short_name": "2020-21",
+    "tournament_type_id": "UCL",
+    "points_for_win": 3,
+    "show_match_year": true,
+    "no_third_place": true,
+    "tiebreakers_collapsed": true,
+    "tiebreakers": [
+      "points",
+      "head2head",
+      "head2headawaygoals",
+      "head2headreapply",
+      "goaldifferenceandgoalscored",
+      "awaygoalswinsawaywins",
+      "fairplaylight",
+      "coefficient"
+    ],
+    "details": {
+      "logo_filename": "UCL.svg",
+      "start_qualifying_date": "2020-08-08",
+      "end_qualifying_date": "2020-09-30",
+      "start_competition_date": "2020-10-20",
+      "end_competition_date": "2021-05-29",
+      "color": "#15611e",
+      "tournament_team_count": 32,
+      "total_team_count": 79,
+      "association_count": 54
+    },
+    "hero_images": [
+      {
+        "name": "Atatürk Olympic Stadium, Istanbul",
+        "filename": "Istanbul_Atatürk_Olympic_Stadium_1.jpg",
+        "text": "The Atatürk Olympic Stadium will host the final."
+      }
+    ],
+    "statistics": { "total_matches": 112, "total_goals": 337, "attendance": 165939 },
+    "awards": {
+      "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR", "goals": 10 }]
+    }
+  },
+  {
     "id": "UCL201920",
     "year": "2019-20",
     "name": "2019-20 UEFA Champions League",

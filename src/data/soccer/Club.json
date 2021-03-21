@@ -605,7 +605,7 @@
   {
     "id": "DOR",
     "name": "Borussia Dortmund",
-    "short_name": "Borus. Dortmund",
+    "short_name": "Borus.Dortmund",
     "team_type_id": "CLUB",
     "nation_id": "GER",
     "parent_team_id": "",
@@ -3434,6 +3434,7 @@
   {
     "id": "ICE",
     "name": "Inter Club d'Escaldes",
+    "short_name": "Inter Escaldes",
     "team_type_id": "CLUB",
     "nation_id": "AND",
     "parent_team_id": "",
