@@ -841,7 +841,7 @@ const FinalStandings = (props) => {
             if (tmp) {
               tmp.r = 5
             }
-            finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === 'First round')
+            finalStandingRound = tournament.final_rankings.rounds.find((r) => r.name === 'First Round')
             const sweden = finalStandingRound.final_rankings.find((fr) => fr.id === 'SWE_U23MNT')
             finalStandingRound.final_rankings = finalStandingRound.final_rankings.filter((fr) => fr.id !== 'SWE_U23MNT')
             tmp = finalStandingRound.final_rankings.find((fr) => fr.id === 'FRA-B_U23MNT')
@@ -1033,7 +1033,7 @@ const FinalStandings = (props) => {
     filteredRounds = filteredRounds.filter((r) => r.name !== 'Quarter-finals')
   }
   if (filteredRounds.find((r) => r.name === 'Consolation First Round')) {
-    filteredRounds = filteredRounds.filter((r) => r.name !== 'First round')
+    filteredRounds = filteredRounds.filter((r) => r.name !== 'First Round')
   }
   return (
     <React.Fragment>

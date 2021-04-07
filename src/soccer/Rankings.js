@@ -212,7 +212,7 @@ export const RankingRow = (props) => {
 const RankingRound = (props) => {
   const { round } = props
   let { config } = props
-  // console.log('config', config)
+  // console.log('round', round)
   config = round.advancement ? { ...config, advancement: round.advancement } : config
   updateFinalRankings(round)
   if (config.no_third_place && (round.name === 'Semi-finals' || round.name === 'Semi-finals Second Leg')) {

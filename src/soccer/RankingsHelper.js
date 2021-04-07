@@ -1133,6 +1133,7 @@ export const getWildCardRowStriped = (row, config) => {
 }
 
 const adjustRankingCount = (rankingBundle) => {
+  // console.log('rankingBundle', rankingBundle)
   if (!rankingBundle || rankingBundle.length === 0) return
   let min = rankingBundle[0].r
   rankingBundle.forEach((r) => {
@@ -1166,7 +1167,9 @@ export const updateFinalRankings = (round) => {
             if (found !== undefined) {
               i.ids.push(d)
               const r2 = round.final_rankings.find((fr2) => fr2.id === d)
-              i.rankings.push(r2)
+              if (r2 !== undefined) {
+                i.rankings.push(r2)
+              }
             }
           })
         }
