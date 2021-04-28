@@ -382,7 +382,7 @@ const drawingLots = (a, b) => {
 const compareFairPoints = (a, b) => {
   // console.log('a', a)
   // console.log('b', b)
-  if (!a.fp || !b.fp) return 0
+  if (!a.fp || !b.fp) return drawingLots(a, b)
   if (a.fp > b.fp) {
     a.fp_notes = `${getTeamName(a.id)} ${a.fp}`
     b.fp_notes = `${getTeamName(b.id)} ${b.fp}`
