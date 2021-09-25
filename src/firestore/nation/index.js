@@ -22,6 +22,7 @@ class FSNationApp extends React.Component {
             <th>name</th>
             <th>official_name</th>
             <th>parent_nation_id</th>
+            <th>confederation_id</th>
             <th>nation_type_id</th>
             <th>flag_filename</th>
             <th>code</th>
@@ -39,6 +40,7 @@ class FSNationApp extends React.Component {
             <td>{doc.name}</td>
             <td>{doc.official_name}</td>
             <td>{doc.parent_nation_id}</td>
+            <td>{doc.confederation_id}</td>
             <td>{doc.nation_type_id}</td>
             <td>
               {doc.flag_filename} <img src={`/assets/images/flags/${doc.flag_filename}`} style={{ height: '20px' }} alt={doc.name} />
