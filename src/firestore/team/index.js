@@ -23,7 +23,10 @@ class FSTeamApp extends React.Component {
             <th>team_type_id</th>
             <th>nation_id</th>
             <th>parent_team_id</th>
+            <th>successor</th>
+            <th>code</th>
             <th>club_code</th>
+            <th>logo_filename</th>
             <th>official_name</th>
             <th>time_stamp</th>
             <th>delete</th>
@@ -38,7 +41,10 @@ class FSTeamApp extends React.Component {
             <td>{doc.team_type_id}</td>
             <td>{doc.nation_id}</td>
             <td>{doc.parent_team_id}</td>
+            <td>{doc.successor ? 'Y' : 'N'}</td>
+            <td>{doc.code}</td>
             <td>{doc.club_code}</td>
+            <td>{doc.logo_filename}</td>
             <td>{doc.official_name}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>

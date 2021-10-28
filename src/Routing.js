@@ -10,8 +10,9 @@ import FSApp from './firestore'
 import FSSportApp from './firestore/Sport'
 import FSGroupTypeApp from './firestore/GroupType'
 import FSGroupApp from './firestore/Group'
-import FSTournamentTypeApp from './firestore/TournamentType'
+import FSCompetitionApp from './firestore/Competition'
 import FSTournamentApp from './firestore/tournament/'
+import FSConfederationApp from './firestore/Confederation'
 import FSNationApp from './firestore/nation/'
 import FSTeamApp from './firestore/team/'
 
@@ -55,8 +56,9 @@ export default function Routing() {
         <Route path="/admin/sport" children={<FSSportApp />} />
         <Route path="/admin/group_type" children={<FSGroupTypeApp />} />
         <Route exact path="/admin/group" children={<FSGroupApp />} />
-        <Route path="/admin/tournament_type" children={<FSTournamentTypeApp />} />
+        <Route path="/admin/competition" children={<FSCompetitionApp />} />
         <Route exact path="/admin/tournament" children={<FSTournamentApp />} />
+        <Route exact path="/admin/confederation" children={<FSConfederationApp />} />
         <Route exact path="/admin/nation" children={<FSNationApp />} />
         <Route exact path="/admin/team" children={<FSTeamApp />} />
       </Switch>

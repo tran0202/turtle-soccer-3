@@ -1,18 +1,18 @@
 import React from 'react'
-import { AppData } from './TournamentType.Data'
+import { AppData } from './Confederation.Data'
 import AdminPage from './AdminPage'
 import Collection from './Collection'
 
-class FSTournamentTypeApp extends React.Component {
+class FSConfederationApp extends React.Component {
   constructor(props) {
     super(props)
-    document.title = 'Turtle Soccer - Tournament Type'
+    document.title = 'Turtle Soccer - Confederation'
   }
 
   render() {
     const param = {
-      name: 'tournament_type',
-      // orderBy: ["confederation_id", "order"],
+      name: 'confederation',
+      orderBy: ['name'],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -20,11 +20,7 @@ class FSTournamentTypeApp extends React.Component {
             <th>#</th>
             <th>id</th>
             <th>name</th>
-            <th>confederation_id</th>
-            <th>team_type_id</th>
-            <th>logo_path</th>
-            <th>sport_id</th>
-            <th>order</th>
+            <th>logo_filename</th>
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
@@ -35,17 +31,13 @@ class FSTournamentTypeApp extends React.Component {
           <React.Fragment>
             <th scope="row">{doc.id}</th>
             <td>{doc.name}</td>
-            <td>{doc.confederation_id}</td>
-            <td>{doc.team_type_id}</td>
-            <td>{doc.logo_path}</td>
-            <td>{doc.sport_id}</td>
-            <td>{doc.order}</td>
+            <td>{doc.logo_filename}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
         )
       },
       setWindowObjects: (store) => {
-        window.tournamentTypeStore = store
+        window.sportStore = store
       },
     }
     return (
@@ -56,4 +48,4 @@ class FSTournamentTypeApp extends React.Component {
   }
 }
 
-export default FSTournamentTypeApp
+export default FSConfederationApp

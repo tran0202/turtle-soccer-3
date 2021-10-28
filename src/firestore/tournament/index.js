@@ -12,24 +12,23 @@ class FSTournamentApp extends React.Component {
   render() {
     const param = {
       name: 'tournament',
-      orderBy: ['tournament_type_id', 'start_date'],
+      // orderBy: ['competition_id', 'start_date'],
+      orderBy: ['competition_id'],
       staticData: AppData(),
       displayHeader: () => {
         return (
           <tr>
             <th>#</th>
             <th>id</th>
+            <th>year</th>
             <th>name</th>
-            <th>tournament_type_id</th>
+            <th>competition_id</th>
+            <th>golden_goal_rule</th>
+            <th>points_for_win</th>
+            <th>logo_filename</th>
             <th>start_date</th>
             <th>end_date</th>
             <th>active</th>
-            <th>third_place_ranking</th>
-            <th>head_to_head_tiebreaker</th>
-            <th>golden_goal_rule</th>
-            <th>logo_filename</th>
-            <th>points_for_win</th>
-            <th>parent_tournament_id</th>
             <th>color</th>
             <th>time_stamp</th>
             <th>delete</th>
@@ -40,17 +39,15 @@ class FSTournamentApp extends React.Component {
         return (
           <React.Fragment>
             <th scope="row">{doc.id}</th>
+            <td>{doc.year}</td>
             <td>{doc.name}</td>
-            <td>{doc.tournament_type_id}</td>
-            <td>{doc.start_date}</td>
-            <td>{doc.end_date}</td>
-            <td>{doc.active ? 'Y' : 'N'}</td>
-            <td>{doc.third_place_ranking ? 'Y' : 'N'}</td>
-            <td>{doc.head_to_head_tiebreaker ? 'Y' : 'N'}</td>
+            <td>{doc.competition_id}</td>
             <td>{doc.golden_goal_rule ? 'Y' : 'N'}</td>
-            <td>{doc.logo_filename}</td>
             <td>{doc.points_for_win}</td>
-            <td>{doc.parent_tournament_id}</td>
+            <td>{doc.details ? doc.details.logo_filename : ''}</td>
+            <td>{doc.details ? doc.details.start_date : ''}</td>
+            <td>{doc.details ? doc.details.end_date : ''}</td>
+            <td>{doc.active ? 'Y' : 'N'}</td>
             <td style={{ backgroundColor: doc.color, color: '#fff' }}>{doc.color}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
