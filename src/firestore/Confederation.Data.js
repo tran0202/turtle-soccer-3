@@ -1,5 +1,5 @@
 export const AppData = {
-  collection: 'sport',
+  collection: 'confederation',
   batches: [
     {
       number: '1',
@@ -9,8 +9,10 @@ export const AppData = {
           data: {
             name: 'Fédération Internationale de Football Association',
             logo_filename: '640px-FIFA_logo_without_slogan.svg.png',
-            description:
-              "FIFA is the highest governing body of association football. FIFA's membership now comprises 211 national associations. These national associations must each also be members of one of the six regional confederations into which the world is divided: Africa, Asia, Europe, North & Central America and the Caribbean, Oceania, and South America.\\n The number of FIFA member associations",
+            descriptions: [
+              "FIFA is the highest governing body of association football. FIFA's membership now comprises 211 national associations. These national associations must each also be members of one of the six regional confederations into which the world is divided: Africa, Asia, Europe, North & Central America and the Caribbean, Oceania, and South America.",
+              'The number of FIFA member associations is higher than the number of UN member states as FIFA has admitted associations from 23 non-sovereign entities as members in their own right, such as the four Home Nations within the United Kingdom and politically disputed territories such as Palestine.',
+            ],
           },
         },
         {
@@ -18,8 +20,10 @@ export const AppData = {
           data: {
             name: 'Asian Football Confederation',
             logo_filename: 'Asian_Football_Confederation_(logo).png',
-            description:
-              'AFC is one of the six confederations within FIFA and is the governing body of association football in Asia and Australia. AFC has 47 member countries, mostly located on the Asian continent.',
+            descriptions: [
+              'The Asian Football Confederation (AFC) is one of the six confederations within FIFA and is the governing body of association football in Asia and Australia. AFC has 47 member countries, mostly located on the Asian continent.',
+              'Australia, formerly in the OFC, joined the Asian Football Confederation in 2006. Guam, a territory of the United States, and the Northern Mariana Islands, one of the two Commonwealths of the United States are also AFC members that are geographically in Oceania. Hong Kong and Macau, although not independent countries (both are Special Administrative Regions of China), are also members of the AFC.',
+            ],
           },
         },
         {
@@ -27,8 +31,10 @@ export const AppData = {
           data: {
             name: 'Confederation of African Football',
             logo_filename: 'Confederation_of_African_Football_logo.png',
-            description:
-              'CAF is the administrative and controlling body for African association football. CAF represents the national football associations of Africa, runs continental, national, and club competitions, and controls the prize money, regulations and media rights to those competitions.',
+            descriptions: [
+              'The Confederation of African Football (CAF) is the administrative and controlling body for African association football. CAF represents the national football associations of Africa, runs continental, national, and club competitions, and controls the prize money, regulations and media rights to those competitions.',
+              'CAF is the biggest of the six continental confederations of FIFA. CAF currently has 56 member associations: 54 are full members, while Zanzibar and Réunion are associate members.',
+            ],
           },
         },
         {
@@ -36,8 +42,10 @@ export const AppData = {
           data: {
             name: 'Confederation of North, Central American and Caribbean Association Football',
             logo_filename: 'Concacaf_logo.png',
-            description:
-              "CONCACAF is one of FIFA's six continental governing bodies for association football. Its 41 member associations represent countries and territories mainly in North America, including the Caribbean and Central America, and due to geopolitical reasons, three nations from The Guianas subregion of South America — Guyana, Suriname, and French Guiana.",
+            descriptions: [
+              "The Confederation of North, Central America and Caribbean Association Football (CONCACAF) is one of FIFA's six continental governing bodies for association football. Its 41 member associations represent countries and territories mainly in North America, including the Caribbean and Central America, and due to geopolitical reasons, three nations from The Guianas subregion of South America — Guyana, Suriname, and French Guiana.",
+              "The CONCACAF's primary functions are to organize competitions for national teams and clubs, and to conduct the World Cup and Women's World Cup qualifying tournaments.",
+            ],
           },
         },
         {
@@ -45,8 +53,10 @@ export const AppData = {
           data: {
             name: 'Confederación Sudamericana de Fútbol',
             logo_filename: 'CONMEBOL_logo_(2017).png',
-            description:
-              "CONMEBOL is the continental governing body of association football in South America, and it is one of FIFA's six continental confederations. CONMEBOL is the oldest continental confederation in the world. CONMEBOL is responsible for the organization and governance of South American football's major international tournaments. With 10 member football associations, it has the fewest members of all the confederations in FIFA.",
+            descriptions: [
+              "The South American Football Confederation (CONMEBOL) is the continental governing body of association football in South America, and it is one of FIFA's six continental confederations. CONMEBOL is the oldest continental confederation in the world. CONMEBOL is responsible for the organization and governance of South American football's major international tournaments. With 10 member football associations, it has the fewest members of all the confederations in FIFA.",
+              'CONMEBOL national teams have won nine FIFA World Cups (Brazil five, Uruguay two, and Argentina two), and CONMEBOL clubs have won 22 Intercontinental Cups and four FIFA Club World Cups. Argentina and Uruguay have won two Olympic gold medals each, and Brazil has won one Olympic gold medal. It is considered one of the strongest confederations in the world.',
+            ],
           },
         },
         {
@@ -54,8 +64,10 @@ export const AppData = {
           data: {
             name: 'Oceania Football Confederation',
             logo_filename: 'Oceania_Football_Confederation_logo.png',
-            description:
-              "OFC is one of the six continental confederations of international association football. The OFC's members consist of New Zealand, Papua New Guinea, and several Pacific Island countries; it promotes the game in Oceania and allows the member nations to qualify for the FIFA World Cup.",
+            descriptions: [
+              "The Oceania Football Confederation (OFC) is one of the six continental confederations of international association football. The OFC's members consist of New Zealand, Papua New Guinea, and several Pacific Island countries; it promotes the game in Oceania and allows the member nations to qualify for the FIFA World Cup.",
+              "OFC is predominantly made up of island nations where association football is not the most popular sport. Consequently, the OFC has little influence in the wider football world. In 2006, the OFC's largest and most successful nation, Australia, left to join the Asian Football Confederation, leaving New Zealand as the largest federation within the OFC.",
+            ],
           },
         },
         {
@@ -63,8 +75,10 @@ export const AppData = {
           data: {
             name: 'Union of European Football Associations',
             logo_filename: 'UEFA-logo-640x360.png',
-            description:
-              "UEFA is the administrative body for football, futsal and beach soccer in Europe. It is one of six continental confederations of world football's governing body FIFA. UEFA consists of 55 national association members.",
+            descriptions: [
+              "The Union of European Football Associations (UEFA) is the administrative body for football, futsal and beach soccer in Europe. It is one of six continental confederations of world football's governing body FIFA. UEFA consists of 55 national association members.",
+              'UEFA represents the national football associations of Europe, runs nation and club competitions including the UEFA European Championship, UEFA Nations League, UEFA Champions League, UEFA Europa League, planned UEFA Europa Conference League, and UEFA Super Cup, and controls the prize money, regulations, and media rights to those competitions.',
+            ],
           },
         },
       ],
