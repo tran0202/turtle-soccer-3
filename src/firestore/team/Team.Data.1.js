@@ -5,13 +5,13 @@ export const AppData = {
       number: '1',
       rows: [
         {
-          id: 'SUI',
+          id: 'SIN',
           data: {
-            name: 'Switzerland',
+            name: 'Singapore',
             team_type_id: 'MNT',
-            nation_id: 'SUI',
+            nation_id: 'SIN',
             parent_team_id: '',
-            code: 'SUI',
+            code: 'SIN',
           },
         },
       ],
@@ -47,37 +47,6 @@ export const AppData = {
             nation_id: 'ARG',
             parent_team_id: '',
             code: 'ARG',
-          },
-        },
-        {
-          id: 'USA_WNT',
-          data: {
-            name: 'United States',
-            short_name: 'United States',
-            team_type_id: 'WNT',
-            nation_id: 'USA',
-            parent_team_id: '',
-            code: 'USA',
-          },
-        },
-        {
-          id: 'BRA_U23MNT',
-          data: {
-            name: 'Brazil',
-            team_type_id: 'U23MNT',
-            nation_id: 'BRA',
-            parent_team_id: '',
-            code: 'BRA',
-          },
-        },
-        {
-          id: 'CAN_U23WNT',
-          data: {
-            name: 'Canada',
-            team_type_id: 'U23WNT',
-            nation_id: 'CAN',
-            parent_team_id: '',
-            code: 'CAN',
           },
         },
         {
@@ -418,38 +387,6 @@ export const AppData = {
           },
         },
         {
-          id: 'HUN_U23MNT',
-          data: {
-            name: 'Hungary',
-            team_type_id: 'U23MNT',
-            nation_id: 'HUN',
-            parent_team_id: '',
-            code: 'HUN',
-          },
-        },
-        {
-          id: 'GBR_U23MNT',
-          data: {
-            name: 'Great Britain',
-            short_name: 'Great Britain',
-            team_type_id: 'U23MNT',
-            nation_id: 'GBR',
-            parent_team_id: '',
-            code: 'GBR',
-          },
-        },
-        {
-          id: 'USA_U23WNT',
-          data: {
-            name: 'United States',
-            short_name: 'United States',
-            team_type_id: 'U23WNT',
-            nation_id: 'USA',
-            parent_team_id: '',
-            code: 'USA',
-          },
-        },
-        {
           id: 'PAR',
           data: {
             name: 'Paraguay',
@@ -487,613 +424,6 @@ export const AppData = {
             nation_id: 'ECU',
             parent_team_id: '',
             code: 'ECU',
-          },
-        },
-        {
-          id: 'NED_WNT',
-          data: {
-            name: 'Netherlands',
-            team_type_id: 'WNT',
-            nation_id: 'NED',
-            parent_team_id: '',
-            code: 'NED',
-          },
-        },
-        {
-          id: 'SWE_WNT',
-          data: {
-            name: 'Sweden',
-            team_type_id: 'WNT',
-            nation_id: 'SWE',
-            parent_team_id: '',
-            code: 'SWE',
-          },
-        },
-        {
-          id: 'ENG_WNT',
-          data: {
-            name: 'England',
-            team_type_id: 'WNT',
-            nation_id: 'ENG',
-            parent_team_id: '',
-            code: 'ENG',
-          },
-        },
-        {
-          id: 'JPN_WNT',
-          data: {
-            name: 'Japan',
-            team_type_id: 'WNT',
-            nation_id: 'JPN',
-            parent_team_id: '',
-            code: 'JPN',
-          },
-        },
-        {
-          id: 'GER_WNT',
-          data: {
-            name: 'Germany',
-            team_type_id: 'WNT',
-            nation_id: 'GER',
-            parent_team_id: '',
-            code: 'GER',
-          },
-        },
-        {
-          id: 'FRA_WNT',
-          data: {
-            name: 'France',
-            team_type_id: 'WNT',
-            nation_id: 'FRA',
-            parent_team_id: '',
-            code: 'FRA',
-          },
-        },
-        {
-          id: 'BRA_WNT',
-          data: {
-            name: 'Brazil',
-            team_type_id: 'WNT',
-            nation_id: 'BRA',
-            parent_team_id: '',
-            code: 'BRA',
-          },
-        },
-        {
-          id: 'NOR_WNT',
-          data: {
-            name: 'Norway',
-            team_type_id: 'WNT',
-            nation_id: 'NOR',
-            parent_team_id: '',
-            code: 'NOR',
-          },
-        },
-        {
-          id: 'CAN_WNT',
-          data: {
-            name: 'Canada',
-            team_type_id: 'WNT',
-            nation_id: 'CAN',
-            parent_team_id: '',
-            code: 'CAN',
-          },
-        },
-        {
-          id: 'CHN_WNT',
-          data: {
-            name: 'China PR',
-            team_type_id: 'WNT',
-            nation_id: 'CHN',
-            parent_team_id: '',
-            code: 'CHN',
-          },
-        },
-        {
-          id: 'ESP_U23MNT',
-          data: {
-            name: 'Spain',
-            team_type_id: 'U23MNT',
-            nation_id: 'ESP',
-            parent_team_id: '',
-            code: 'ESP',
-          },
-        },
-        {
-          id: 'MEX_U23MNT',
-          data: {
-            name: 'Mexico',
-            team_type_id: 'U23MNT',
-            nation_id: 'MEX',
-            parent_team_id: '',
-            code: 'MEX',
-          },
-        },
-        {
-          id: 'JPN_U23MNT',
-          data: {
-            name: 'Japan',
-            team_type_id: 'U23MNT',
-            nation_id: 'JPN',
-            parent_team_id: '',
-            code: 'JPN',
-          },
-        },
-        {
-          id: 'GER_U23MNT',
-          data: {
-            name: 'Germany',
-            team_type_id: 'U23MNT',
-            nation_id: 'GER',
-            parent_team_id: '',
-            code: 'GER',
-          },
-        },
-        {
-          id: 'NGA_U23MNT',
-          data: {
-            name: 'Nigeria',
-            team_type_id: 'U23MNT',
-            nation_id: 'NGA',
-            parent_team_id: '',
-            code: 'NGA',
-          },
-        },
-        {
-          id: 'HON_U23MNT',
-          data: {
-            name: 'Honduras',
-            team_type_id: 'U23MNT',
-            nation_id: 'HON',
-            parent_team_id: '',
-            code: 'HON',
-          },
-        },
-        {
-          id: 'KOR_U23MNT',
-          data: {
-            name: 'Korea Republic',
-            short_name: 'Korea Rep.',
-            team_type_id: 'U23MNT',
-            nation_id: 'KOR',
-            parent_team_id: '',
-            code: 'KOR',
-          },
-        },
-        {
-          id: 'ARG_U23MNT',
-          data: {
-            name: 'Argentina',
-            team_type_id: 'U23MNT',
-            nation_id: 'ARG',
-            parent_team_id: '',
-            code: 'ARG',
-          },
-        },
-        {
-          id: 'BEL_U23MNT',
-          data: {
-            name: 'Belgium',
-            team_type_id: 'U23MNT',
-            nation_id: 'BEL',
-            parent_team_id: '',
-            code: 'BEL',
-          },
-        },
-        {
-          id: 'PAR_U23MNT',
-          data: {
-            name: 'Paraguay',
-            team_type_id: 'U23MNT',
-            nation_id: 'PAR',
-            parent_team_id: '',
-            code: 'PAR',
-          },
-        },
-        {
-          id: 'ITA_U23MNT',
-          data: {
-            name: 'Italy',
-            team_type_id: 'U23MNT',
-            nation_id: 'ITA',
-            parent_team_id: '',
-            code: 'ITA',
-          },
-        },
-        {
-          id: 'IRQ-2004-2008_U23MNT',
-          data: {
-            name: 'Iraq',
-            team_type_id: 'U23MNT',
-            nation_id: 'IRQ-2004-2008',
-            parent_team_id: 'IRQ_U23MNT',
-            code: 'IRQ',
-          },
-        },
-        {
-          id: 'CMR_U23MNT',
-          data: {
-            name: 'Cameroon',
-            team_type_id: 'U23MNT',
-            nation_id: 'CMR',
-            parent_team_id: '',
-            code: 'CMR',
-          },
-        },
-        {
-          id: 'CHI_U23MNT',
-          data: {
-            name: 'Chile',
-            team_type_id: 'U23MNT',
-            nation_id: 'CHI',
-            parent_team_id: '',
-            code: 'CHI',
-          },
-        },
-        {
-          id: 'USA_U23MNT',
-          data: {
-            name: 'United States',
-            short_name: 'United States',
-            team_type_id: 'U23MNT',
-            nation_id: 'USA',
-            parent_team_id: '',
-            code: 'USA',
-          },
-        },
-        {
-          id: 'POR_U23MNT',
-          data: {
-            name: 'Portugal',
-            team_type_id: 'U23MNT',
-            nation_id: 'POR',
-            parent_team_id: '',
-            code: 'POR',
-          },
-        },
-        {
-          id: 'POL_U23MNT',
-          data: {
-            name: 'Poland',
-            team_type_id: 'U23MNT',
-            nation_id: 'POL',
-            parent_team_id: '',
-            code: 'POL',
-          },
-        },
-        {
-          id: 'GHA_U23MNT',
-          data: {
-            name: 'Ghana',
-            team_type_id: 'U23MNT',
-            nation_id: 'GHA',
-            parent_team_id: '',
-            code: 'GHA',
-          },
-        },
-        {
-          id: 'AUS_U23MNT',
-          data: {
-            name: 'Australia',
-            team_type_id: 'U23MNT',
-            nation_id: 'AUS',
-            parent_team_id: '',
-            code: 'AUS',
-          },
-        },
-        {
-          id: 'URS_U23MNT',
-          data: {
-            name: 'Soviet Union',
-            short_name: 'Soviet Union',
-            team_type_id: 'U23MNT',
-            nation_id: 'URS',
-            parent_team_id: 'RUS_U23MNT',
-            code: 'URS',
-          },
-        },
-        {
-          id: 'GER-1949-1990_U23MNT',
-          data: {
-            name: 'Germany FR',
-            short_name: 'Germany',
-            team_type_id: 'U23MNT',
-            nation_id: 'GER-1949-1990',
-            parent_team_id: 'GER_U23MNT',
-            code: 'GER',
-          },
-        },
-        {
-          id: 'FRA_U23MNT',
-          data: {
-            name: 'France',
-            team_type_id: 'U23MNT',
-            nation_id: 'FRA',
-            parent_team_id: '',
-            code: 'FRA',
-          },
-        },
-        {
-          id: 'YUG-1963-1992_U23MNT',
-          data: {
-            name: 'Yugoslavia',
-            team_type_id: 'U23MNT',
-            nation_id: 'YUG-1963-1992',
-            parent_team_id: 'SRB_U23MNT',
-            code: 'YUG',
-          },
-        },
-        {
-          id: 'TCH_U23MNT',
-          data: {
-            name: 'Czechoslovakia',
-            short_name: 'Czechoslovakia',
-            team_type_id: 'U23MNT',
-            nation_id: 'TCH',
-            parent_team_id: 'CZE_U23MNT',
-            code: 'TCH',
-          },
-        },
-        {
-          id: 'GDR_U23MNT',
-          data: {
-            name: 'Germany DR',
-            short_name: 'Germany DR',
-            team_type_id: 'U23MNT',
-            nation_id: 'GDR',
-            parent_team_id: '',
-            code: 'GDR',
-          },
-        },
-        {
-          id: 'BUL-1967-1971_U23MNT',
-          data: {
-            name: 'Bulgaria',
-            team_type_id: 'U23MNT',
-            nation_id: 'BUL-1967-1971',
-            parent_team_id: 'BUL_U23MNT',
-            code: 'BUL',
-          },
-        },
-        {
-          id: 'EGY-1958-1971_U23MNT',
-          data: {
-            name: 'United Arab Republic',
-            short_name: 'United Arab Republic',
-            team_type_id: 'U23MNT',
-            nation_id: 'UAR',
-            parent_team_id: 'EGY_U23MNT',
-            code: 'UAR',
-          },
-        },
-        {
-          id: 'YUG-1945-1963_U23MNT',
-          data: {
-            name: 'Yugoslavia',
-            team_type_id: 'U23MNT',
-            nation_id: 'YUG-1945-1963',
-            parent_team_id: 'SRB_U23MNT',
-            code: 'YUG',
-          },
-        },
-        {
-          id: 'DEN_U23MNT',
-          data: {
-            name: 'Denmark',
-            team_type_id: 'U23MNT',
-            nation_id: 'DEN',
-            parent_team_id: '',
-            code: 'DEN',
-          },
-        },
-        {
-          id: 'BUL-1948-1967_U23MNT',
-          data: {
-            name: 'Bulgaria',
-            team_type_id: 'U23MNT',
-            nation_id: 'BUL-1948-1967',
-            parent_team_id: 'BUL_U23MNT',
-            code: 'BUL',
-          },
-        },
-        {
-          id: 'IND_U23MNT',
-          data: {
-            name: 'India',
-            team_type_id: 'U23MNT',
-            nation_id: 'IND',
-            parent_team_id: '',
-            code: 'IND',
-          },
-        },
-        {
-          id: 'HUN-1949-1956_U23MNT',
-          data: {
-            name: 'Hungary',
-            team_type_id: 'U23MNT',
-            nation_id: 'HUN-1949-1956',
-            parent_team_id: 'HUN_U23MNT',
-            code: 'HUN',
-          },
-        },
-        {
-          id: 'SWE_U23MNT',
-          data: {
-            name: 'Sweden',
-            team_type_id: 'U23MNT',
-            nation_id: 'SWE',
-            parent_team_id: '',
-            code: 'SWE',
-          },
-        },
-        {
-          id: 'ITA-1861-1946_U23MNT',
-          data: {
-            name: 'Italy',
-            team_type_id: 'U23MNT',
-            nation_id: 'ITA-1861-1946',
-            parent_team_id: 'ITA_U23MNT',
-            code: 'ITA',
-          },
-        },
-        {
-          id: 'AUT_U23MNT',
-          data: {
-            name: 'Austria',
-            team_type_id: 'U23MNT',
-            nation_id: 'AUT',
-            parent_team_id: '',
-            code: 'AUT',
-          },
-        },
-        {
-          id: 'NOR_U23MNT',
-          data: {
-            name: 'Norway',
-            team_type_id: 'U23MNT',
-            nation_id: 'NOR',
-            parent_team_id: '',
-            code: 'NOR',
-          },
-        },
-        {
-          id: 'URU_U23MNT',
-          data: {
-            name: 'Uruguay',
-            team_type_id: 'U23MNT',
-            nation_id: 'URU',
-            parent_team_id: '',
-            code: 'URU',
-          },
-        },
-        {
-          id: 'EGY-1922-1953_U23MNT',
-          data: {
-            name: 'Egypt',
-            team_type_id: 'U23MNT',
-            nation_id: 'EGY-1922-1953',
-            parent_team_id: 'EGY_U23MNT',
-            code: 'EGY',
-          },
-        },
-        {
-          id: 'SUI_U23MNT',
-          data: {
-            name: 'Switzerland',
-            team_type_id: 'U23MNT',
-            nation_id: 'SUI',
-            parent_team_id: '',
-            code: 'SUI',
-          },
-        },
-        {
-          id: 'NED_U23MNT',
-          data: {
-            name: 'Netherlands',
-            team_type_id: 'U23MNT',
-            nation_id: 'NED',
-            parent_team_id: '',
-            code: 'NED',
-          },
-        },
-        {
-          id: 'ESP-1875-1931_U23MNT',
-          data: {
-            name: 'Spain',
-            team_type_id: 'U23MNT',
-            nation_id: 'ESP-1875-1931',
-            parent_team_id: 'ESP_U23MNT',
-            code: 'ESP',
-          },
-        },
-        {
-          id: 'FIN-1809-1917_U23MNT',
-          data: {
-            name: 'Finland',
-            team_type_id: 'U23MNT',
-            nation_id: 'FIN-1809-1917',
-            parent_team_id: 'FIN_U23MNT',
-            code: 'FIN',
-          },
-        },
-        {
-          id: 'SWE_U23WNT',
-          data: {
-            name: 'Sweden',
-            team_type_id: 'U23WNT',
-            nation_id: 'SWE',
-            parent_team_id: '',
-            code: 'SWE',
-          },
-        },
-        {
-          id: 'AUS_U23WNT',
-          data: {
-            name: 'Australia',
-            team_type_id: 'U23WNT',
-            nation_id: 'AUS',
-            parent_team_id: '',
-            code: 'AUS',
-          },
-        },
-        {
-          id: 'GER_U23WNT',
-          data: {
-            name: 'Germany',
-            team_type_id: 'U23WNT',
-            nation_id: 'GER',
-            parent_team_id: '',
-            code: 'GER',
-          },
-        },
-        {
-          id: 'BRA_U23WNT',
-          data: {
-            name: 'Brazil',
-            team_type_id: 'U23WNT',
-            nation_id: 'BRA',
-            parent_team_id: '',
-            code: 'BRA',
-          },
-        },
-        {
-          id: 'JPN_U23WNT',
-          data: {
-            name: 'Japan',
-            team_type_id: 'U23WNT',
-            nation_id: 'JPN',
-            parent_team_id: '',
-            code: 'JPN',
-          },
-        },
-        {
-          id: 'FRA_U23WNT',
-          data: {
-            name: 'France',
-            team_type_id: 'U23WNT',
-            nation_id: 'FRA',
-            parent_team_id: '',
-            code: 'FRA',
-          },
-        },
-        {
-          id: 'NOR_U23WNT',
-          data: {
-            name: 'Norway',
-            team_type_id: 'U23WNT',
-            nation_id: 'NOR',
-            parent_team_id: '',
-            code: 'NOR',
-          },
-        },
-        {
-          id: 'CHN_U23WNT',
-          data: {
-            name: 'China PR',
-            team_type_id: 'U23WNT',
-            nation_id: 'CHN',
-            parent_team_id: '',
-            code: 'CHN',
           },
         },
         {
@@ -1763,6 +1093,339 @@ export const AppData = {
             nation_id: 'HUN',
             parent_team_id: '',
             code: 'HUN',
+          },
+        },
+        {
+          id: 'SUI',
+          data: {
+            name: 'Switzerland',
+            team_type_id: 'MNT',
+            nation_id: 'SUI',
+            parent_team_id: '',
+            code: 'SUI',
+          },
+        },
+        {
+          id: 'CAN',
+          data: {
+            name: 'Canada',
+            team_type_id: 'MNT',
+            nation_id: 'CAN',
+            parent_team_id: '',
+            code: 'CAN',
+          },
+        },
+        {
+          id: 'HAI',
+          data: {
+            name: 'Haiti',
+            team_type_id: 'MNT',
+            nation_id: 'HAI',
+            parent_team_id: '',
+            code: 'HAI',
+          },
+        },
+        {
+          id: 'JAM',
+          data: {
+            name: 'Jamaica',
+            team_type_id: 'MNT',
+            nation_id: 'JAM',
+            parent_team_id: '',
+            code: 'JAM',
+          },
+        },
+        {
+          id: 'CRC',
+          data: {
+            name: 'Costa Rica',
+            team_type_id: 'MNT',
+            nation_id: 'CRC',
+            parent_team_id: '',
+            code: 'CRC',
+          },
+        },
+        {
+          id: 'PAN',
+          data: {
+            name: 'Panama',
+            team_type_id: 'MNT',
+            nation_id: 'PAN',
+            parent_team_id: '',
+            code: 'PAN',
+          },
+        },
+        {
+          id: 'HON',
+          data: {
+            name: 'Honduras',
+            team_type_id: 'MNT',
+            nation_id: 'HON',
+            parent_team_id: '',
+            code: 'HON',
+          },
+        },
+        {
+          id: 'GLP',
+          data: {
+            name: 'Guadeloupe',
+            team_type_id: 'MNT',
+            nation_id: 'GLP',
+            parent_team_id: '',
+            code: 'GLP',
+          },
+        },
+        {
+          id: 'COL',
+          data: {
+            name: 'Colombia',
+            team_type_id: 'MNT',
+            nation_id: 'COL',
+            parent_team_id: '',
+            code: 'COL',
+          },
+        },
+        {
+          id: 'PER',
+          data: {
+            name: 'Peru',
+            team_type_id: 'MNT',
+            nation_id: 'PER',
+            parent_team_id: '',
+            code: 'PER',
+          },
+        },
+        {
+          id: 'TRI',
+          data: {
+            name: 'Trinidad and Tobago',
+            short_name: 'Trinidad & Tobago',
+            team_type_id: 'MNT',
+            nation_id: 'TRI',
+            parent_team_id: '',
+            code: 'TRI',
+          },
+        },
+        {
+          id: 'GUA',
+          data: {
+            name: 'Guatemala',
+            team_type_id: 'MNT',
+            nation_id: 'GUA',
+            parent_team_id: '',
+            code: 'GUA',
+          },
+        },
+        {
+          id: 'SLV',
+          data: {
+            name: 'El Salvador',
+            team_type_id: 'MNT',
+            nation_id: 'SLV',
+            parent_team_id: '',
+            code: 'SLV',
+          },
+        },
+        {
+          id: 'HAI-1964-1986',
+          data: {
+            name: 'Haiti',
+            team_type_id: 'MNT',
+            nation_id: 'HAI-1964-1986',
+            parent_team_id: 'HAI',
+            code: 'HAI',
+          },
+        },
+        {
+          id: 'CUB',
+          data: {
+            name: 'Cuba',
+            team_type_id: 'MNT',
+            nation_id: 'CUB',
+            parent_team_id: '',
+            code: 'CUB',
+          },
+        },
+        {
+          id: 'ANT-1959-1986',
+          data: {
+            name: 'Netherlands Antilles',
+            team_type_id: 'MNT',
+            nation_id: 'ANT-1959-1986',
+            parent_team_id: 'CUW',
+            code: 'ANT',
+          },
+        },
+        {
+          id: 'AZE',
+          data: {
+            name: 'Azerbaijan',
+            team_type_id: 'MNT',
+            nation_id: 'AZE',
+            parent_team_id: '',
+            code: 'AZE',
+          },
+        },
+        {
+          id: 'ROU',
+          data: {
+            name: 'Romania',
+            team_type_id: 'MNT',
+            nation_id: 'ROU',
+            parent_team_id: '',
+            code: 'ROU',
+          },
+        },
+        {
+          id: 'SCO',
+          data: {
+            name: 'Scotland',
+            team_type_id: 'MNT',
+            nation_id: 'SCO',
+            parent_team_id: '',
+            code: 'SCO',
+          },
+        },
+        {
+          id: 'NOR',
+          data: {
+            name: 'Norway',
+            team_type_id: 'MNT',
+            nation_id: 'NOR',
+            parent_team_id: '',
+            code: 'NOR',
+          },
+        },
+        {
+          id: 'UKR',
+          data: {
+            name: 'Ukraine',
+            team_type_id: 'MNT',
+            nation_id: 'UKR',
+            parent_team_id: '',
+            code: 'UKR',
+          },
+        },
+        {
+          id: 'YUG-1992-2003',
+          data: {
+            name: 'FR Yugoslavia',
+            team_type_id: 'MNT',
+            nation_id: 'YUG-1992-2003',
+            parent_team_id: 'SRB',
+            code: 'YUG',
+          },
+        },
+        {
+          id: 'VEN-1954-2006',
+          data: {
+            name: 'Venezuela',
+            team_type_id: 'MNT',
+            nation_id: 'VEN-1954-2006',
+            parent_team_id: 'VEN',
+            code: 'VEN',
+          },
+        },
+        {
+          id: 'SRB',
+          data: {
+            name: 'Serbia',
+            team_type_id: 'MNT',
+            nation_id: 'SRB',
+            parent_team_id: '',
+            successor: true,
+            code: 'SRB',
+          },
+        },
+        {
+          id: 'MTQ-2019',
+          data: {
+            name: 'Martinique',
+            team_type_id: 'MNT',
+            nation_id: 'MTQ-2019',
+            parent_team_id: 'MTQ',
+            code: 'MTQ',
+          },
+        },
+        {
+          id: 'GAB',
+          data: {
+            name: 'Gabon',
+            team_type_id: 'MNT',
+            nation_id: 'GAB',
+            parent_team_id: '',
+            code: 'GAB',
+          },
+        },
+        {
+          id: 'CGO',
+          data: {
+            name: 'Congo',
+            team_type_id: 'MNT',
+            nation_id: 'CGO',
+            parent_team_id: '',
+            code: 'CGO',
+          },
+        },
+        {
+          id: 'ANG',
+          data: {
+            name: 'Angola',
+            team_type_id: 'MNT',
+            nation_id: 'ANG',
+            parent_team_id: '',
+            code: 'ANG',
+          },
+        },
+        {
+          id: 'ETH',
+          data: {
+            name: 'Ethiopia',
+            team_type_id: 'MNT',
+            nation_id: 'ETH',
+            parent_team_id: '',
+            code: 'ETH',
+          },
+        },
+        {
+          id: 'ETH-1975-1987',
+          data: {
+            name: 'Ethiopia',
+            team_type_id: 'MNT',
+            nation_id: 'ETH-1975-1987',
+            parent_team_id: 'ETH',
+            code: 'ETH',
+          },
+        },
+        {
+          id: 'IDN',
+          data: {
+            name: 'Indonesia',
+            team_type_id: 'MNT',
+            nation_id: 'IDN',
+            parent_team_id: '',
+            successor: true,
+            code: 'IDN',
+          },
+        },
+        {
+          id: 'MAS',
+          data: {
+            name: 'Malaysia',
+            team_type_id: 'MNT',
+            nation_id: 'MAS',
+            parent_team_id: '',
+            code: 'MAS',
+          },
+        },
+        {
+          id: 'VIE',
+          data: {
+            name: 'Vietnam',
+            team_type_id: 'MNT',
+            nation_id: 'VIE',
+            parent_team_id: '',
+            code: 'VIE',
           },
         },
       ],

@@ -71,7 +71,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Philipp_Lahm_lifts_the_2014_FIFA_World_Cup.jpg',
+                filename: '640px-Philipp_Lahm_lifts_the_2014_FIFA_World_Cup.jpg',
                 text: 'Germany captain Philipp Lahm lifts the World Cup trophy',
               },
             ],
@@ -117,7 +117,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'FIFA_World_Cup_2010_Spain_with_cup.jpg',
+                filename: '640px-FIFA_World_Cup_2010_Spain_with_cup.jpg',
                 text: 'Manager Vicente del Bosque lifting the trophy with the Spanish players',
               },
             ],
@@ -203,12 +203,12 @@ export const AppData = {
             hero_images: [
               {
                 name: 'International Stadium Yokohama',
-                filename: 'NISSANSTADIUM20080608.jpeg',
+                filename: '640px-NISSANSTADIUM20080608.jpeg',
                 text: 'The final was played at International Stadium Yokohama.',
               },
             ],
             final_standings: { champions: 'BRA', runners_up: 'GER', third_place: ['TUR'], fourth_place: 'KOR' },
-            statistics: { total_matches: 64, total_goals: 161, attendance: 2705197 },
+            statistics: { total_matches: 64, total_goals: 161, attendance: 2705198 },
             awards: {
               golden_boot: [{ name: 'Ronaldo', team: 'BRA', goals: 8 }],
               silver_boot: [
@@ -251,7 +251,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade de France, Saint-Denis',
-                filename: 'Euro_2016_stade_de_France_France-Roumanie_(27307532960).jpg',
+                filename: '640px-Euro_2016_stade_de_France_France-Roumanie_(27307532960).jpg',
                 text: 'The Stade de France held the final.',
               },
             ],
@@ -296,7 +296,7 @@ export const AppData = {
               venue_count: 9,
               city_count: 9,
             },
-            hero_images: [{ name: 'Champions', filename: 'Brasil_seleccion_1994.jpg', text: 'The Brazilian squad' }],
+            hero_images: [{ name: 'Champions', filename: '640px-Brasil_seleccion_1994.jpg', text: 'The Brazilian squad' }],
             final_standings: { champions: 'BRA', runners_up: 'ITA', third_place: ['SWE'], fourth_place: 'BUL' },
             statistics: { total_matches: 52, total_goals: 141, attendance: 3597042 },
             awards: {
@@ -343,9 +343,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Final',
-                filename: 'Argetnina_formacion_vs_alemania_final.jpg',
-                text: 'Players of Argentina before the match: Juan Simón, goalkeeper Sergio Goycochea and Diego Maradona',
+                name: 'Stadio Olimpico, Rome',
+                filename: '640px-Stadio_Olimpico_2008.jpeg',
+                text: 'The final was played at the Stadio Olimpico.',
               },
             ],
             final_standings: { champions: 'GER-1949-1990', runners_up: 'ARG', third_place: ['ITA'], fourth_place: 'ENG' },
@@ -392,7 +392,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_celebrando_copa.jpg',
+                filename: '640px-Argentina_celebrando_copa.jpg',
                 text: 'Diego Maradona (with the World Cup) and other players celebrating the title.',
               },
             ],
@@ -439,9 +439,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Camp Nou, Barcelona',
-                filename: 'Camp_Nou_aerial_(cropped).jpg',
-                text: 'The Camp Nou held the opening match',
+                name: 'Santiago Bernabéu, Madrid',
+                filename: '640px-The_Santiago_Bernabeu_Stadium_-_U-g-g-B-o-y.jpg',
+                text: 'The final was played at the Santiago Bernabéu.',
               },
             ],
             final_standings: { champions: 'ITA', runners_up: 'GER-1949-1990', third_place: ['POL'], fourth_place: 'FRA' },
@@ -485,7 +485,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Passarella_world_cup.jpg',
+                filename: '640px-Kempes_versus_Holanda3.jpeg',
                 text: 'Captain Daniel Passarella raising the trophy',
               },
             ],
@@ -530,9 +530,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Second round - Group A',
-                filename: 'Bundesarchiv_Bild_183-N0704-308,_Fußball-WM,_DDR_-_Argentinien_1-1.jpg',
-                text: 'Streich heads East Germany into the lead v. Argentina',
+                name: 'Final',
+                filename: '613px-Beckenbauer_cruyff_alfieri.jpg',
+                text: 'Franz Beckenbauer (left) and Johan Cruyff (right), keyplayers of Germany and Netherlands respectively.',
               },
             ],
             final_standings: { champions: 'GER-1949-1990', runners_up: 'NED', third_place: ['POL'], fourth_place: 'BRA' },
@@ -573,8 +573,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champion',
-                filename: 'Pele_celebrating_1970.jpg',
-                text: 'Pelé celebrating after winning the match. It was the last World Cup for him so he would retire from the national team one year after.',
+                filename: '640px-Pele_celebrating_1970.jpg',
+                text: 'Pelé celebrating after winning the match. It was his last World Cup as he would retire from the national team one year later.',
               },
             ],
             final_standings: { champions: 'BRA', runners_up: 'ITA', third_place: ['GER-1949-1990'], fourth_place: 'URU' },
@@ -615,7 +615,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champion',
-                filename: 'The_Queen_presents_the_1966_World_Cup_to_England_Captain,_Bobby_Moore._(7936243534).jpg',
+                filename: '640px-The_Queen_presents_the_1966_World_Cup_to_England_Captain,_Bobby_Moore._(7936243534).jpg',
                 text: "Elizabeth II presents the Jules Rimet Trophy to England's team captain Bobby Moore.",
               },
             ],
@@ -660,7 +660,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champion',
-                filename: 'lossy-page1-1615px-Seleção_Brasileira_de_Futebol_na_Copa_do_Mundo_de_1962.tiff.jpg',
+                filename: 'lossy-page1-640px-Seleção_Brasileira_de_Futebol_na_Copa_do_Mundo_de_1962.tiff.jpg',
                 text: 'Brazil national football team in the World Cup 1962.',
               },
             ],
@@ -748,9 +748,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Final',
-                filename: 'Les_deux_capitaines_de_la_finale_de_Coupe_du_monde_de_football_1954_(G._Walter,_D._Puskas,_arbitre_Orlandini).jpg',
-                text: 'The captains Fritz Walter and Ferenc Puskás with referee Ling (Liebig football card from 1966)',
+                name: 'Wankdorf Stadium, Bern',
+                filename: 'lossy-page1-605px-ETH-BIB-Bern,_Wankdorf-Stadion,_Fussballspiel-LBS_H1-016067_crop.tif.jpg',
+                text: 'The final was played at the Wankdorf Stadium.',
               },
             ],
             final_standings: { champions: 'GER-1949-1990', runners_up: 'HUN-1949-1956', third_place: ['AUT'], fourth_place: 'URU' },
@@ -791,8 +791,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: 'Gol_ghiggia_vs_brasil.jpg',
-                text: 'Uruguayan forward Alcides Ghiggia celebrates after scoring the 2nd goal',
+                filename: '546px-Gol_ghiggia_vs_brasil.jpg',
+                text: 'Uruguayan forward Alcides Ghiggia celebrates after scoring the 2nd goal.',
               },
             ],
             final_standings: { champions: 'URU', runners_up: 'BRA', third_place: ['SWE'], fourth_place: 'ESP-1945-1977' },
@@ -875,7 +875,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: '1934_FIFA_World_Cup_Final_-_Italy_v_Czechoslovakia_-_Pozzo,_Monzeglio,_Bertolini,_Combi,_Monti_and_Carcano.jpg',
+                filename: '640px-1934_FIFA_World_Cup_Final_-_Italy_v_Czechoslovakia_-_Pozzo,_Monzeglio,_Bertolini,_Combi,_Monti_and_Carcano.jpg',
                 text: 'From left to right: Italian manager Pozzo, Monzeglio, Bertolini, the goalkeeper and captain Combi, Monti (half-hidden) and the assistant manager Carcano (behind) before the start of extra time in the victorius final versus Czechoslovakia',
               },
             ],
@@ -949,7 +949,7 @@ export const AppData = {
               logo_filename: "2019_FIFA_Women's_World_Cup_480x662.png",
               mascot_filename: 'csm_ettie_7ca1be65ec.png',
               start_date: '2019-06-07',
-              end_date: '2015-07-07',
+              end_date: '2019-07-07',
               color: '#103d69',
               team_count: 24,
               confed_count: 6,
@@ -959,7 +959,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'FIFA_Womens_World_Cup_2019_Final_-_US_team_on_podium_(4).jpg',
+                filename: '640px-FIFA_Womens_World_Cup_2019_Final_-_US_team_on_podium_(4).jpg',
                 text: 'The US team receiving their champion medals.',
               },
             ],
@@ -1006,7 +1006,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Champions!_(19185117834).jpg',
+                filename: '640px-Champions!_(19185117834).jpg',
                 text: 'Confetti time',
               },
             ],
@@ -1052,9 +1052,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Opening ceremony',
-                filename: 'FIFA_Womens_World_Cup_2011_Olympiastadion_Berlin.jpg',
-                text: 'Opening ceremony',
+                name: 'Champions',
+                filename: '640px-Selecao_japonesa_agradece_o_apoio_da_torcida_(DSC01105).jpg',
+                text: 'Japan team thank you for your support',
               },
             ],
             final_standings: { champions: 'JPN_WNT', runners_up: 'USA_WNT', third_place: ['SWE_WNT'], fourth_place: 'FRA_WNT' },
@@ -1099,7 +1099,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Hongkou Football Stadium, Shanghai',
-                filename: 'Hongkou_Stadium_in_Shanghai.jpg',
+                filename: '640px-Hongkou_Stadium_in_Shanghai_2.jpg',
                 text: 'The Hongkou Stadium hosted the final.',
               },
             ],
@@ -1144,7 +1144,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: 'FIFA_Womens_World_Cup_2003_-_Germany_vs_Sweden.jpg',
+                filename: '640px-FIFA_Womens_World_Cup_2003_-_Germany_vs_Sweden.jpg',
                 text: 'Germany vs Sweden',
               },
             ],
@@ -1188,9 +1188,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'United States',
-                filename: 'Lilly356.jpg',
-                text: 'Kristine Lilly (left) and Mia Hamm (right) both scored goals in the first two group stage matches for the United States.',
+                name: 'Rose Bowl, Pasadena',
+                filename: '551px-Rose_Bowl_aerial.jpg',
+                text: 'The Rose Bowl hosted the final.',
               },
             ],
             final_standings: { champions: 'USA_WNT', runners_up: 'CHN_WNT', third_place: ['BRA_WNT'], fourth_place: 'NOR_WNT' },
@@ -1239,7 +1239,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Råsunda Stadium, Solna',
-                filename: 'Råsunda_Stadium.jpg',
+                filename: '640px-Rasunda_Stadium.jpg',
                 text: 'The Råsunda Stadium in Solna hosted the final.',
               },
             ],
@@ -1284,7 +1284,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Tianhe Stadium, Guangzhou',
-                filename: 'Tianhe_Stadium.jpg',
+                filename: '640px-Tianhe_Stadium.jpg',
                 text: 'The Tianhe Stadium hosted the final.',
               },
             ],
@@ -1337,7 +1337,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'International Stadium, Yokohama',
-                filename: 'Nissan_International_Stadium_Yokohama.jpg',
+                filename: '640px-Nissan_International_Stadium_Yokohama.jpg',
                 text: 'The International Stadium hosted the final Brazil vs Spain.',
               },
             ],
@@ -1373,7 +1373,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Brazil_mens_football_team_2016_Olympics.jpg',
+                filename: '640px-Brazil_mens_football_team_2016_Olympics.jpg',
                 text: 'The Brazil Olympic football team',
               },
             ],
@@ -1414,7 +1414,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Group A',
-                filename: 'Football_at_the_2012_Summer_Olympics_–_Mens_tournament.jpeg',
+                filename: '640px-Football_at_the_2012_Summer_Olympics_–_Mens_tournament.jpeg',
                 text: 'The match of Great Britain against Senegal in Old Trafford, Manchester',
               },
             ],
@@ -1451,7 +1451,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Gold medal',
-                filename: 'Argentina_Campeones_Beijing.jpg',
+                filename: '640px-Argentina_Campeones_Beijing.jpg',
                 text: 'Argentina celebration',
               },
             ],
@@ -1488,7 +1488,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Semi-final',
-                filename: 'Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg',
+                filename: '640px-Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg',
                 text: 'Argentina Vs Italy 3-0 2004 Olympics Athens',
               },
             ],
@@ -1524,9 +1524,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Olympic Stadium, Sydney',
-                filename: 'Womens-long-jump-final.jpg',
-                text: 'The Olympic Stadium held the gold medal match.',
+                name: 'Sydney Football Stadium',
+                filename: '640px-Allianz_Stadium_-_13_October_2012.jpg',
+                text: 'The Sydney Football Stadium held the bronze medal match.',
               },
             ],
             final_standings: { champions: 'CMR_U23MNT', runners_up: 'ESP_U23MNT', third_place: ['CHI_U23MNT'], fourth_place: 'USA_U23MNT' },
@@ -1561,9 +1561,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Sanford Stadium, Athens',
-                filename: 'Football_game_kickoff_(Georgia_vs_South_Carolina),_Sanford_Stadium,_September_2007.jpg',
-                text: 'The Sanford Stadium held the gold medal match.',
+                name: 'Legion Field, Birmingham',
+                filename: 'Legion_Field_-_with_upper_deck.jpg',
+                text: 'The Legion Field held the quarter-final Argentina vs Spain.',
               },
             ],
             final_standings: { champions: 'NGA_U23MNT', runners_up: 'ARG_U23MNT', third_place: ['BRA_U23MNT'], fourth_place: 'POR_U23MNT' },
@@ -1602,7 +1602,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Camp Nou, Barcelona',
-                filename: 'Camp_Nou_aerial_(cropped).jpg',
+                filename: '640px-Camp_Nou_aerial_(cropped).jpg',
                 text: 'The Camp Nou held the gold medal match.',
               },
             ],
@@ -1716,7 +1716,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Opening Ceremony',
-                filename: 'RIAN_archive_487039_Opening_ceremony_of_the_1980_Olympic_Games.jpg',
+                filename: '607px-RIAN_archive_487039_Opening_ceremony_of_the_1980_Olympic_Games.jpg',
                 text: 'Opening ceremony of the 1980 Olympic Games. Parade of nations. View on the Central Lenin Stadium in Luzhniki.',
               },
             ],
@@ -1751,9 +1751,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Olympic Stadium, Montreal',
-                filename: 'Le_Stade_Olympique_3.jpg',
-                text: 'The Olympic Stadium held the gold medal match',
+                name: 'Soviet Union',
+                filename: '640px-Lequipe_de_football_olympique_dURSS,_troisieme_du_tournoi_1976_a_Montreal.jpg',
+                text: 'The Soviet Union team',
               },
             ],
             final_standings: { champions: 'GDR_U23MNT', runners_up: 'POL_U23MNT', third_place: ['URS_U23MNT'], fourth_place: 'BRA_U23MNT' },
@@ -1787,9 +1787,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Olympiastadion, Munich',
-                filename: '2014_Olympiastadion_Munich.jpg',
-                text: 'The Olympiastadion held the gold medal match',
+                name: 'Germany DR',
+                filename: 'Lequipe_dAllemagne_de_lEst_de_football,_medaillee_de_bronze_aux_JO_de_1972.jpg',
+                text: 'The Germany DR team',
               },
             ],
             final_standings: {
@@ -1831,7 +1831,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Azteca Stadium, Mexico City',
-                filename: 'Estadio_Azteca1706p2.jpg',
+                filename: '640px-Estadio_Azteca1706p2.jpg',
                 text: 'The Azteca Stadium held the gold medal match',
               },
             ],
@@ -1867,7 +1867,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'National Olympic Stadium, Tokyo',
-                filename: 'Yamazaki-nabisco-Cup_final_2004.jpg',
+                filename: '640px-Yamazaki-nabisco-Cup_final_2004.jpg',
                 text: 'The National Olympic Stadium held the gold medal match',
               },
             ],
@@ -1904,9 +1904,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Stadio Flaminio, Rome',
-                filename: 'Stadio_Flaminio_a_Roma.jpg',
-                text: 'The Stadio Flaminio held the gold medal match',
+                name: 'Champions',
+                filename: '640px-Yugoslavia_olimpic_gold_medalist_1960.jpg',
+                text: 'Yugoslavia national association football team at the Stadio Flaminio in Rome, Italy, after the 1960 Summer Olympics football tournament final against Denmark; Yugoslavia eventually won 3-1 and won the gold medal.',
               },
             ],
             final_standings: { champions: 'YUG-1945-1963_U23MNT', runners_up: 'DEN_U23MNT', third_place: ['HUN_U23MNT'], fourth_place: 'ITA_U23MNT' },
@@ -1942,9 +1942,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Bronze medal match',
-                filename: 'India_national_football_team_at1956_Olympics.png',
-                text: 'Indian team at a tussle against Bulgaria in the bronze-medal match.',
+                name: 'Melbourne Cricket Ground',
+                filename: 'VFL_Grand_Final_in_1945_at_the_MCG.jpg',
+                text: 'The Melbourne Cricket Ground held the gold medal match.',
               },
             ],
             final_standings: { champions: 'URS_U23MNT', runners_up: 'YUG-1945-1963_U23MNT', third_place: ['BUL-1948-1967_U23MNT'], fourth_place: 'IND_U23MNT' },
@@ -1983,8 +1983,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Kuusela_Hungary_1952.jpg',
-                text: 'Miss Universe 1952 Armi Kuusela awarding the Hungarian team',
+                filename: '640px-1952_Summer_olympics,_olympic_stadium._The_Hungarian_national_team_after_the_final_(Hungary_-_Yugoslavia_2-0).jpg',
+                text: 'The Hungarian national team after the final (Hungary - Yugoslavia 2:0). Lantos, Bozsik, Czibor, Palotás, Lóránt, Zakariás, Grosics, Kocsis, Hidegkúti, Puskás, Buzánszky.',
               },
             ],
             final_standings: { champions: 'HUN-1949-1956_U23MNT', runners_up: 'YUG-1945-1963_U23MNT', third_place: ['SWE_U23MNT'], fourth_place: 'GER_U23MNT' },
@@ -2097,7 +2097,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay_1928_olympics.jpg',
+                filename: '640px-Uruguay_1928_olympics.jpg',
                 text: 'Uruguay, winner of the tournament',
               },
             ],
@@ -2164,7 +2164,7 @@ export const AppData = {
               start_date: '1920-08-28',
               end_date: '1920-09-05',
               color: '#dc171e',
-              team_count: 14,
+              team_count: 15,
               confed_count: 2,
               venue_count: 4,
               city_count: 3,
@@ -2177,7 +2177,7 @@ export const AppData = {
               },
             ],
             final_standings: { champions: 'BEL_U23MNT', runners_up: 'ESP-1875-1931_U23MNT', third_place: ['NED_U23MNT'], fourth_place: 'ITA-1861-1946_U23MNT' },
-            statistics: { total_matches: 17, total_goals: 70 },
+            statistics: { total_matches: 17, total_goals: 70, attendance: 150600 },
             awards: {
               golden_boot: [{ name: 'Herbert Karlsson', team: 'SWE_U23MNT', goals: 7 }],
             },
@@ -2210,7 +2210,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Football_at_the_1912_Summer_Olympics_-_UK_squad.jpeg',
+                filename: '640px-Football_at_the_1912_Summer_Olympics_-_UK_squad.jpeg',
                 text: 'Great Britain, Gold Medal',
               },
             ],
@@ -2248,7 +2248,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'London_1908_English_Amateur_Football_National_Team.jpg',
+                filename: '640px-London_1908_English_Amateur_Football_National_Team.jpg',
                 text: 'Great Britain won the Gold Medal after beating Denmark at the final',
               },
             ],
@@ -2305,7 +2305,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'San Siro, Milan',
-                filename: 'Stadio_Meazza.jpg',
+                filename: '640px-Stadio_Meazza.jpg',
                 text: 'The San Siro will host the final.',
               },
             ],
@@ -2313,16 +2313,16 @@ export const AppData = {
             statistics: { total_matches: 164, total_goals: 376, attendance: 196706 },
             awards: {
               golden_boot: [
-                { player: 'Romelu Lukaku', team: 'BEL', goals: 6 },
-                { player: 'Erling Haaland', team: 'NOR', goals: 6 },
-                { player: 'Ferran Torres', team: 'ESP', goals: 6 },
+                { name: 'Romelu Lukaku', team: 'BEL', goals: 6 },
+                { name: 'Erling Haaland', team: 'NOR', goals: 6 },
+                { name: 'Ferran Torres', team: 'ESP', goals: 6 },
               ],
               final_top_scorer: [
-                { player: 'Karim Benzema', team: 'FRA', goals: 2 },
-                { player: 'Kylian Mbappé', team: 'FRA', goals: 2 },
-                { player: 'Ferran Torres', team: 'ESP', goals: 2 },
+                { name: 'Karim Benzema', team: 'FRA', goals: 2 },
+                { name: 'Kylian Mbappé', team: 'FRA', goals: 2 },
+                { name: 'Ferran Torres', team: 'ESP', goals: 2 },
               ],
-              final_best_player: [{ player: 'Sergio Busquets', team: 'ESP' }],
+              final_best_player: [{ name: 'Sergio Busquets', team: 'ESP' }],
             },
           },
         },
@@ -2364,7 +2364,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estádio do Dragão, Porto',
-                filename: 'Estádio_do_Dragão_Aerial.jpg',
+                filename: '640px-Estadio_do_Dragao_Aerial.jpg',
                 text: 'The Estádio do Dragão hosted the final.',
               },
             ],
@@ -2409,14 +2409,14 @@ export const AppData = {
               start_competition_date: '2020-10-20',
               end_competition_date: '2021-05-29',
               color: '#15611e',
-              tournament_team_count: 32,
+              competition_team_count: 32,
               total_team_count: 79,
               association_count: 54,
             },
             hero_images: [
               {
                 name: 'Estádio do Dragão, Porto',
-                filename: 'Porto_Estádio_do_Dragão_2.jpg',
+                filename: '640px-Porto_Estádio_do_Dragão_2.jpg',
                 text: 'The Estádio do Dragão in Porto hosted the final.',
               },
             ],
@@ -2458,14 +2458,14 @@ export const AppData = {
               start_competition_date: '2019-09-17',
               end_competition_date: '2020-08-23',
               color: '#0f246a',
-              tournament_team_count: 32,
+              competition_team_count: 32,
               total_team_count: 79,
               association_count: 54,
             },
             hero_images: [
               {
                 name: 'Estádio da Luz, Lisbon',
-                filename: 'LuzLissabon.jpg',
+                filename: '640px-LuzLissabon.jpg',
                 text: 'The Estádio da Luz in Lisbon hosted the final.',
               },
             ],
@@ -2511,14 +2511,14 @@ export const AppData = {
               start_competition_date: '2018-09-18',
               end_competition_date: '2019-06-01',
               color: '#d50a0a',
-              tournament_team_count: 32,
+              competition_team_count: 32,
               total_team_count: 79,
               association_count: 54,
             },
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'LFC_Parade_2019_01.jpg',
+                filename: '640px-LFC_Parade_2019_01.jpg',
                 text: 'Liverpool players on an open top bus parading the Champions League trophy through the streets of Liverpool the day after the final.',
               },
             ],
@@ -2564,7 +2564,7 @@ export const AppData = {
               start_competition_date: '2020-10-22',
               end_competition_date: '2021-05-26',
               color: '#15611e',
-              tournament_team_count: 48,
+              competition_team_count: 48,
               transfer_team_count: 8,
               total_team_count: 158,
               total_transfer_team_count: 55,
@@ -2573,7 +2573,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stadion Miejski, Gdańsk',
-                filename: 'PGE_Arena_Gdańsk_(6018955265).jpg',
+                filename: '640px-PGE_Arena_Gdansk_(6018955265).jpg',
                 text: 'The Stadion Miejski will host the final.',
               },
             ],
@@ -2586,6 +2586,7 @@ export const AppData = {
                 { name: 'Borja Mayoral', team: 'ESP', club: 'ROM', goals: 7, minutes: 659 },
                 { name: 'Gerard Moreno', team: 'ESP', club: 'VIL', goals: 7, minutes: 879 },
               ],
+              golden_ball: [{ name: 'Gerard Moreno', team: 'ESP', club: 'VIL' }],
             },
           },
         },
@@ -2620,7 +2621,7 @@ export const AppData = {
               start_competition_date: '2019-09-19',
               end_competition_date: '2020-08-21',
               color: '#15296d',
-              tournament_team_count: 48,
+              competition_team_count: 48,
               transfer_team_count: 8,
               total_team_count: 158,
               total_transfer_team_count: 55,
@@ -2629,7 +2630,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'RheinEnergieStadion, Cologne',
-                filename: 'FIFA_WM06_Stadion_Koeln.jpg',
+                filename: '640px-FIFA_WM06_Stadion_Koeln.jpg',
                 text: 'The RheinEnergieStadion in Cologne hosted the final. The stadium was renamed to "Stadion Köln" for the match.',
               },
             ],
@@ -2672,7 +2673,7 @@ export const AppData = {
               start_competition_date: '2018-09-20',
               end_competition_date: '2019-05-29',
               color: '#ee312f',
-              tournament_team_count: 48,
+              competition_team_count: 48,
               transfer_team_count: 8,
               total_team_count: 158,
               total_transfer_team_count: 55,
@@ -2681,7 +2682,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Chelsea_vs._Arsenal,_29_May_2019_32.jpg',
+                filename: '640px-Chelsea_vs._Arsenal,_29_May_2019_32.jpg',
                 text: 'Chelsea celebrating their victory following the match.',
               },
             ],

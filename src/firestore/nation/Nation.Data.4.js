@@ -351,7 +351,7 @@ export const AppData = {
             parent_nation_id: '',
             confederation_id: 'CONMEBOL',
             nation_type_id: 'NATN',
-            flag_filename: '640px-Flag_of_Venezuela.svg.png',
+            flag_filename: 'Flag_of_Venezuela_(state).png',
             start_date: '2006-03-12',
             end_date: '',
           },

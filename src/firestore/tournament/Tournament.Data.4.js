@@ -29,7 +29,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Qatar_-_Japan,_AFC_Asian_Cup_2019_56.jpg',
+                filename: '640px-Qatar_-_Japan,_AFC_Asian_Cup_2019_56.jpg',
                 text: 'Qatar',
               },
             ],
@@ -67,7 +67,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: '2015_Asian_Cup_Final.jpg',
+                filename: '640px-2015_Asian_Cup_Final.jpg',
                 text: '2015 AFC Asian Cup Final',
               },
             ],
@@ -105,7 +105,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Khalifa International Stadium, Doha',
-                filename: 'Khalifa_Stadium,_Doha,_Brazil_vs_Argentina_(2010).jpg',
+                filename: '640px-Khalifa_Stadium,_Doha,_Brazil_vs_Argentina_(2010).jpg',
                 text: 'The Khalifa International Stadium hosted the final.',
               },
             ],
@@ -142,7 +142,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Group A',
-                filename: 'Asian_Cup_2007-Australia-Oman.jpg',
+                filename: '640px-Asian_Cup_2007-Australia-Oman.jpg',
                 text: 'Players from Oman and Australia line up during the national anthems.',
               },
             ],
@@ -185,7 +185,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Workers Stadium, Beijing',
-                filename: 'Workers_Stadium.jpg',
+                filename: '640px-Workers_stadium_internal_field.jpeg',
                 text: 'The Workers Stadium hosted the final.',
               },
             ],
@@ -224,7 +224,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Sports City Stadium, Beirut',
-                filename: 'Camille_Chamoun_Sports_City_Stadium_2018_-_Beirut_derby_(Nejmeh_fans).png',
+                filename: '640px-Camille_Chamoun_Sports_City_Stadium_2018_-_Beirut_derby_(Nejmeh_fans).png',
                 text: 'The Sports City Stadium hosted the final.',
               },
             ],
@@ -262,7 +262,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Sheikh Zayed Stadium, Abu Dhabi',
-                filename: 'Gulf_Cup_(36).jpg',
+                filename: '640px-Gulf_Cup_(36).jpg',
                 text: 'The Sheikh Zayed Stadium hosted the final.',
               },
             ],
@@ -301,7 +301,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Hiroshima Big Arch, Hiroshima',
-                filename: 'Bigarch050423.jpg',
+                filename: '640px-Bigarch050423.jpg',
                 text: 'The Hiroshima Big Arch hosted the final.',
               },
             ],
@@ -338,7 +338,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Qatar SC Stadium, Doha',
-                filename: 'Interior_view_of_Suheim_Bin_Hamad_Stadium_in_2020.jpg',
+                filename: '640px-Interior_view_of_Suheim_Bin_Hamad_Stadium_in_2020.jpg',
                 text: 'Qatar SC Stadium, Doha',
               },
             ],
@@ -377,7 +377,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'National Stadium, Kallang',
-                filename: 'National_stadium_kallang_sg_z.JPG',
+                filename: '640px-NationalStadium.jpg',
                 text: 'The National Stadium hosted all the matches.',
               },
             ],
@@ -420,7 +420,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Sabah Al-Salem Stadium, Kuwait City',
-                filename: 'ArabiStagium.jpg',
+                filename: '640px-ArabiStagium.jpg',
                 text: 'The Sabah Al-Salem Stadium hosted all the matches.',
               },
             ],
@@ -459,7 +459,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Aryamehr Stadium, Tehran',
-                filename: 'Azadi_Stadium_ACL_2018.jpg',
+                filename: '640px-Azadi_Stadium_ACL_2018.jpg',
                 text: 'The Aryamehr Stadium hosted the final.',
               },
             ],
@@ -500,7 +500,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'National Stadium, Bangkok',
-                filename: 'Suphachalasai_3116.JPG',
+                filename: '640px-Suphachalasai_3116.jpeg',
                 text: 'The National Stadium hosted all the matches.',
               },
             ],
@@ -537,7 +537,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Amjadieh Stadium, Tehran',
-                filename: 'Amjadieh_Stadium.jpg',
+                filename: '640px-Amjadieh_Stadium.jpg',
                 text: 'The Amjadieh Stadium hosted all the matches.',
               },
             ],
@@ -577,7 +577,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Flickr_-_Government_Press_Office_(GPO)_-_The_Asian_Cup.jpg',
+                filename: '640px-Flickr_-_Government_Press_Office_(GPO)_-_The_Asian_Cup.jpg',
                 text: 'The Israeli soccer team holds the Asian Cup after its victory over South Korea at Ramat Gan stadium.',
               },
             ],
@@ -616,7 +616,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Hyochang Stadium, Seoul',
-                filename: 'Hyochang_Stadium.jpeg',
+                filename: '640px-Hyochang_Stadium.jpeg',
                 text: 'The Hyochang Stadium hosted a group match.',
               },
             ],
@@ -652,7 +652,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Government Stadium, Hong Kong',
-                filename: 'Hong_Kong_Stadium-1.jpg',
+                filename: '640px-Hong_Kong_Stadium-1.jpg',
                 text: 'The Government Stadium hosted all matches.',
               },
             ],
@@ -772,7 +772,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Westpac Stadium, Wellington',
-                filename: 'Westpac_Trust_stadium_viewed_from_Wadestown.jpg',
+                filename: '640px-All_Whites_v_Peru_11_November_2017.jpg',
                 text: 'Westpac Stadium, Wellington',
               },
             ],
@@ -808,7 +808,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Sydney Football Stadium, Sydney',
-                filename: 'Allianz_Stadium_-_13_October_2012.jpg',
+                filename: '640px-Allianz_Stadium_-_13_October_2012.jpg',
                 text: 'The Sydney Football Stadium hosted the 2nd-leg final.',
               },
             ],
@@ -848,7 +848,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Ericsson Stadium, Auckland',
-                filename: 'EricssonStadium00.jpg',
+                filename: '640px-EricssonStadium00.jpg',
                 text: 'The Ericsson Stadium hosted the final.',
               },
             ],
@@ -889,7 +889,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Papeete, Tahiti',
-                filename: 'FP-papeete-hafen-1.jpg',
+                filename: '640px-FP-papeete-hafen-1.jpg',
                 text: "Papeete's city center and marina",
               },
             ],
@@ -928,7 +928,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Lang Park, Brisbane',
-                filename: 'Suncorp_Stadium,_Milton_Road_facade,_Brisbane_05.jpg',
+                filename: '640px-Suncorp_Stadium_22_April_2012_(cropped).jpg',
                 text: 'The Lang Park hosted all the matches of the tournament.',
               },
             ],
@@ -956,9 +956,9 @@ export const AppData = {
             details: { logo_filename: 'OFCcup.png', start_date: '1995-11-10', end_date: '1996-11-01', color: '#192e71', team_count: 4 },
             hero_images: [
               {
-                name: 'Bruce Stadium, Canberra',
-                filename: 'BruceStadium19032005.jpeg',
-                text: 'The Bruce Stadium hosted the 2nd-leg of the final.',
+                name: 'Queen Elizabeth II Park, Christchurch',
+                filename: 'QEII2.jpeg',
+                text: 'The Queen Elizabeth II Park hosted the 1st-leg of the semi-final New Zealand vs Australia.',
               },
             ],
             final_standings: { champions: 'AUS', runners_up: 'TAH', semi_finalist1: 'NZL', semi_finalist2: 'SOL' },
@@ -993,7 +993,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Nouméa, New Caledonia',
-                filename: 'Noumea_centre_1402561139_375c811796_o.jpg',
+                filename: '640px-Noumea_centre_1402561139_375c811796_o.jpg',
                 text: 'City centre and Nouméa Cathedral',
               },
             ],
@@ -1031,9 +1031,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Newmarket Park, Auckland',
-                filename: 'Southwestern_Entrance_To_Newmarket_Park.jpg',
-                text: 'Newmarket Park, Auckland',
+                name: 'Auckland, New Zealand',
+                filename: 'Auckland,_Albert_Park.jpg',
+                text: 'Albert Park in Auckland',
               },
             ],
             final_standings: { champions: 'NZL', runners_up: 'TAH-1794-1984', third_place: ['NCL-1973-2008'], fourth_place: 'VAN-1953-1980' },
@@ -1075,8 +1075,8 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Germany',
-                filename: 'Chile_-_Germany_(3).jpg',
+                name: 'Champions',
+                filename: '640px-Chile_-_Germany_(3).jpg',
                 text: 'Germany lineup',
               },
             ],
@@ -1120,7 +1120,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Confed.Cup2013Champions.jpg',
+                filename: '640px-Confed.Cup2013Champions.jpg',
                 text: 'Brazil won the competition after beating Spain 3–0 in the final.',
               },
             ],
@@ -1164,7 +1164,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Ellis Park Stadium, Johannesburg',
-                filename: 'Ellis_Park_Stadium.jpg',
+                filename: '640px-Ellis_Park_Stadium.jpg',
                 text: 'The Ellis Park Stadium hosted the final.',
               },
             ],
@@ -1209,7 +1209,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: 'Confed-Cup_Finale.jpeg',
+                filename: '640px-Confed-Cup_Finale.jpeg',
                 text: 'Brazil vs Argentina',
               },
             ],
@@ -1254,7 +1254,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade de France, Saint-Denis',
-                filename: 'Finale_Coupe_de_France_2010-2011_(Lille_LOSC_vs_Paris_SG_PSG).jpg',
+                filename: '640px-Finale_Coupe_de_France_2010-2011_(Lille_LOSC_vs_Paris_SG_PSG).jpg',
                 text: 'The Stade de France hosted the final.',
               },
             ],
@@ -1297,9 +1297,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'International Stadium Yokohama, Yokohama',
-                filename: 'NISSANSTADIUM20080608.jpeg',
-                text: 'The International Stadium Yokohama hosted the final.',
+                name: 'Niigata Stadium, Niigata',
+                filename: '640px-Bigswan080628.jpeg',
+                text: 'The Niigata Stadium hosted group B matches.',
               },
             ],
             final_standings: { champions: 'FRA', runners_up: 'JPN', third_place: ['AUS'], fourth_place: 'BRA' },
@@ -1341,9 +1341,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Estadio Azteca, Mexico City',
-                filename: 'Estadio_Azteca_07a.jpg',
-                text: 'The Estadio Azteca hosted the final.',
+                name: 'Estadio Jalisco, Guadalajara',
+                filename: '640px-Estadio_jalisco.jpg',
+                text: 'The Estadio Jalisco hosted the semi-final Brazil vs Saudi Arabia.',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'BRA', third_place: ['USA'], fourth_place: 'KSA' },
@@ -1386,7 +1386,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'King Fahd Stadium, Riyadh',
-                filename: 'King_Fahd_Int._Stadium-_Opening_Arabian_Gulf_Cup_2014.jpg',
+                filename: '640px-King_Fahd_Int._Stadium-_Opening_Arabian_Gulf_Cup_2014.jpg',
                 text: 'The King Fahd Stadium hosted all the tournament matches.',
               },
             ],
@@ -1430,9 +1430,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Riyadh, Saudi Arabia',
-                filename: 'Lake_at_Wadi_Hanifah_(5218227168).jpg',
-                text: 'Lake at the 120 km long Wadi Hanifa valley that cuts through Riyadh',
+                name: 'King Fahd Stadium, Riyadh',
+                filename: '640px-King_Fahd_International_Stadium_(66723825).jpeg',
+                text: 'The King Fahd Stadium hosted all the tournament matches.',
               },
             ],
             final_standings: { champions: 'DEN', runners_up: 'ARG', third_place: ['MEX'], fourth_place: 'NGA' },
@@ -1468,9 +1468,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Riyadh, Saudi Arabia',
-                filename: 'Saudi-desert.gif',
-                text: 'The An Nafud desert in the outskirts of Riyadh with the Jabal Tuwaiq in the background',
+                name: 'King Fahd Stadium, Riyadh',
+                filename: '640px-King_fahad_staduim.jpg',
+                text: 'The King Fahd Stadium hosted all the tournament matches.',
               },
             ],
             final_standings: { champions: 'ARG', runners_up: 'KSA', third_place: ['USA'], fourth_place: 'CIV' },
@@ -1490,17 +1490,18 @@ export const AppData = {
       number: '13',
       rows: [
         {
-          id: 'UNL202021',
+          id: 'UCL202021',
           data: {
             year: '2020-21',
             short_year: '2020-21',
-            name: '2020-21 UEFA Nations League',
+            name: '2020-21 UEFA Champions League',
             short_name: '2020-21',
-            competition_id: 'UNL',
+            competition_id: 'UCL',
             active: false,
             golden_goal_rule: false,
             points_for_win: 3,
             show_match_year: true,
+            no_third_place: true,
             tiebreakers_collapsed: true,
             tiebreakers: [
               'points',
@@ -1513,41 +1514,31 @@ export const AppData = {
               'coefficient',
             ],
             details: {
-              logo_filename: 'UEFA_Nations_League_480x705.png',
-              start_league_date: '2020-09-03',
-              end_league_date: '2020-11-18',
-              start_final_date: '2021-10-06',
-              end_final_date: '2021-10-10',
-              start_relegation_date: '2022-03-24',
-              end_relegation_date: '2022-03-29',
-              color: '#103d69',
-              team_count: 55,
-              final_host: ['ITA'],
-              final_team_count: 4,
-              final_venue_count: 2,
-              final_city_count: 2,
+              logo_filename: 'UCL_375x363.png',
+              start_qualifying_date: '2020-08-08',
+              end_qualifying_date: '2020-09-30',
+              start_competition_date: '2020-10-20',
+              end_competition_date: '2021-05-29',
+              color: '#15611e',
+              competition_team_count: 32,
+              total_team_count: 79,
+              association_count: 54,
             },
             hero_images: [
               {
-                name: 'San Siro, Milan',
-                filename: 'Stadio_Meazza.jpg',
-                text: 'The San Siro will host the final.',
+                name: 'Estádio do Dragão, Porto',
+                filename: 'Porto_Estádio_do_Dragão_2.jpg',
+                text: 'The Estádio do Dragão in Porto hosted the final.',
               },
             ],
-            final_standings: { champions: 'FRA', runners_up: 'ESP', third_place: ['ITA'], fourth_place: 'BEL' },
-            statistics: { total_matches: 164, total_goals: 376, attendance: 196706 },
+            final_standings: { champions: 'CHE', runners_up: 'MCI', semi_finalist1: 'PSG', semi_finalist2: 'RMA' },
+            statistics: { total_matches: 125, total_goals: 366, attendance: 180049 },
             awards: {
-              golden_boot: [
-                { player: 'Romelu Lukaku', team: 'BEL', goals: 6 },
-                { player: 'Erling Haaland', team: 'NOR', goals: 6 },
-                { player: 'Ferran Torres', team: 'ESP', goals: 6 },
-              ],
-              final_top_scorer: [
-                { player: 'Karim Benzema', team: 'FRA', goals: 2 },
-                { player: 'Kylian Mbappé', team: 'FRA', goals: 2 },
-                { player: 'Ferran Torres', team: 'ESP', goals: 2 },
-              ],
-              final_best_player: [{ player: 'Sergio Busquets', team: 'ESP' }],
+              golden_boot: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR', goals: 10 }],
+              golden_glove: [{ name: 'Édouard Mendy', team: 'SEN', club: 'CHE' }],
+              best_defender: [{ name: 'Rúben Dias', team: 'POR', club: 'MCI' }],
+              best_midfielder: [{ name: "N'Golo Kanté", team: 'FRA', club: 'CHE' }],
+              best_forward: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR' }],
             },
           },
         },

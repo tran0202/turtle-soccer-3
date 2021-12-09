@@ -31,7 +31,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Allegiant Stadium, Paradise',
-                filename: 'Allegiantstadiumjune2020.jpg',
+                filename: '640px-Allegiantstadiumjune2020.jpg',
                 text: 'The Allegiant Stadium in Paradise hosted the final United States vs Mexico.',
               },
             ],
@@ -72,9 +72,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Golden Ball',
-                filename: 'Raúl_Jiménez.jpg',
-                text: 'Forward Raúl Jiménez scored five goals for Mexico in the tournament.',
+                name: 'Soldier Field, Chicago',
+                filename: '640px-UsavsHonduras.jpeg',
+                text: 'The Soldier Field in Chicago hosted the final.',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'USA', semi_finalist1: 'HAI', semi_finalist2: 'JAM' },
@@ -160,7 +160,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'United States vs Cuba',
-                filename: 'USMNT_players_lineup_vs_Cuba_2015_Gold_Cup_Baltimore.jpg',
+                filename: '640px-USMNT_players_lineup_vs_Cuba_2015_Gold_Cup_Baltimore.jpg',
                 text: 'USMNT Gold Cup Baltimore',
               },
             ],
@@ -202,7 +202,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: 'Gold_Cup_2013_final_in_Chicago_(cropped).jpeg',
+                filename: '640px-Gold_Cup_2013_final_in_Chicago_(cropped).jpeg',
                 text: 'USA vs Panama, Gold Cup 2013 final at Soldier Field in Chicago, July 28, 2013',
               },
             ],
@@ -246,9 +246,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Golden Boot',
-                filename: 'Chicharito.jpeg',
-                text: 'Mexico\'s Javier Hernández, commonly known as "Chicharito", earned the Golden Boot and MVP award, with seven goals in the tournament.',
+                name: 'RFK Stadium, Washington, D.C.',
+                filename: '640px-Rfkstadium.png',
+                text: 'The RFK Stadium hosted 2 quarter-finals.',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'USA', semi_finalist1: 'HON', semi_finalist2: 'PAN' },
@@ -288,7 +288,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Semi-final',
-                filename: 'MexicovsCostaRica.jpeg',
+                filename: '640px-MexicovsCostaRica.jpeg',
                 text: 'Mexico vs Costa Rica',
               },
             ],
@@ -328,9 +328,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Soldier Field, Chicago',
-                filename: 'UsavsHonduras.jpeg',
-                text: 'The Soldier Field hosted the final',
+                name: 'The Home Depot Center, Carson',
+                filename: '640px-HomeDepotCenter1.jpg',
+                text: 'The Home Depot Center hosted group B matches.',
               },
             ],
             final_standings: { champions: 'USA', runners_up: 'MEX', semi_finalist1: 'CAN', semi_finalist2: 'GLP' },
@@ -370,7 +370,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Giants Stadium, East Rutherford',
-                filename: 'NY_Red_Bulls_vs_LA_Galaxy.jpg',
+                filename: '640px-NY_Red_Bulls_vs_LA_Galaxy.jpg',
                 text: 'The Giants Stadium hosted the final',
               },
             ],
@@ -415,7 +415,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Azteca, Mexico City',
-                filename: 'Estadio_Azteca_07a.jpg',
+                filename: '640px-Estadio_Azteca_07a.jpg',
                 text: 'The Estadio Azteca hosted the final',
               },
             ],
@@ -457,7 +457,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Rose Bowl, Pasadena',
-                filename: 'Rose_Bowl,_panorama.jpg',
+                filename: '640px-Rose_Bowl,_panorama.jpg',
                 text: 'The Rose Bowl hosted the final',
               },
             ],
@@ -496,9 +496,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Los Angeles Memorial Coliseum, Los Angeles',
-                filename: 'Usctrojans.jpg',
-                text: 'The Los Angeles Memorial Coliseum hosted the final',
+                name: 'Qualcomm Stadium, San Diego',
+                filename: '640px-Qualcomm_Stadium.jpg',
+                text: 'The Qualcomm Stadium hosted the semi-final Colombia vs Peru.',
               },
             ],
             final_standings: { champions: 'CAN', runners_up: 'COL', semi_finalist1: 'PER', semi_finalist2: 'TRI' },
@@ -537,7 +537,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Los Angeles Memorial Coliseum, Los Angeles',
-                filename: '11-11-06-LA-Coliseum-USC-UO.jpg',
+                filename: '640px-L.A._Memorial_Coliseum_Entrance.jpeg',
                 text: 'The Los Angeles Memorial Coliseum hosted the final',
               },
             ],
@@ -576,9 +576,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Los Angeles Memorial Coliseum, Los Angeles',
-                filename: '11-11-06-LA-Coliseum-USC-UO.jpg',
-                text: 'The Los Angeles Memorial Coliseum hosted the final',
+                name: 'Anaheim Stadium, Anaheim',
+                filename: '544px-Anaheim_Stadium_1986.jpg',
+                text: 'The Anaheim Stadium hosted group C matches.',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'BRA', third_place: ['USA'], fourth_place: 'GUA' },
@@ -613,9 +613,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Estadio Azteca, Mexico City',
-                filename: 'Estadio_Azteca_07a.jpg',
-                text: 'The Estadio Azteca hosted the final',
+                name: 'Cotton Bowl, Dallas',
+                filename: '640px-Image_of_TX_OU_Red_River_Shootout_in_Cotton_Bowl_seen_from_fair_grounds_-_original.jpg',
+                text: 'The Cotton Bowl hosted group A matches.',
               },
             ],
             final_standings: {
@@ -657,8 +657,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Memorial Coliseum, Los Angeles',
-                filename: '11-11-06-LA-Coliseum-USC-UO.jpg',
-                text: 'The Memorial Coliseum hosted the final',
+                filename: '640px-11-11-06-LA-Coliseum-USC-UO.jpg',
+                text: 'The Memorial Coliseum hosted the final.',
               },
             ],
             final_standings: { champions: 'USA', runners_up: 'HON', third_place: ['MEX'], fourth_place: 'CRC' },
@@ -692,9 +692,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Estadio Mateo Flores, Guatemala City',
-                filename: 'Tribuna_Mateo_Flores.jpg',
-                text: 'Estadio Mateo Flores, Guatemala City',
+                name: 'National Stadium, Port of Spain',
+                filename: '640px-HCStadium2013.jpg',
+                text: 'National Stadium, Port of Spain, Trinidad and Tobago',
               },
             ],
             final_standings: { champions: 'CRC', runners_up: 'USA', third_place: ['TRI'], fourth_place: 'GUA' },
@@ -735,9 +735,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Varsity Stadium, Toronto, Canada',
-                filename: 'Varsity_Centre.jpeg',
-                text: 'Varsity Stadium, Toronto, Canada',
+                name: 'Estadio Cuscatlán, San Salvador, El Salvador',
+                filename: '640px-Monumental_Estadio_Cuscatlan.jpg',
+                text: 'Estadio Cuscatlán, San Salvador, El Salvador',
               },
             ],
             final_standings: { champions: 'CAN', runners_up: 'HON', third_place: ['CRC'], fourth_place: 'SLV' },
@@ -773,7 +773,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Tiburcio Carías Andino, Tegucigalpa',
-                filename: 'Estadio_Carías.jpg',
+                filename: '640px-Estadio_Carias.jpg',
                 text: 'The national stadium of Honduras in Tegucigalpa (Estadio Nacional de Tegucigalpa) also known as Estadio Tiburcio Carías Andino.',
               },
             ],
@@ -809,9 +809,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Estadio Azteca, Mexico City',
-                filename: 'Estadio_Azteca_07a.jpg',
-                text: 'Estadio Azteca, Mexico City',
+                name: 'Estadio Universitario, Monterrey',
+                filename: '640px-Estadio_Universitario_UANL.jpg',
+                text: 'Estadio Universitario, Monterrey',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'HAI-1964-1986', third_place: ['SLV'], fourth_place: 'CAN' },
@@ -847,8 +847,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Sylvio Cator, Port-au-Prince',
-                filename:
-                  'US_Navy_100117-N-4275C-190_Haitian_citizens_seek_refuge_at_the_Stade_Sylvio_Cator,_the_national_soccer_stadium,_in_Port-au-Prince,_Haiti.jpg',
+                filename: '640px-Stade_Sylvio_Cator_after_earthquake_2010.jpg',
                 text: 'The Stade Sylvio Cator hosted all of the tournament matches.',
               },
             ],
@@ -884,9 +883,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: "Queen's Park Oval, Port of Spain",
-                filename: 'Port_of_Spain.jpeg',
-                text: "Queen's Park Oval, Port of Spain, Trinidad and Tobago",
+                name: 'Arima Velodrome, Arima',
+                filename: '640px-TnT_Arima_Velodrome_1.jpg',
+                text: 'Arima Velodrome, Arima',
               },
             ],
             final_standings: { champions: 'MEX', runners_up: 'HAI-1964-1986', third_place: ['CRC'], fourth_place: 'CUB' },
@@ -918,18 +917,18 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Costa Rica',
-                filename: 'Costa_Rican_Football_Federation_logo.svg',
-                text: 'Costa Rica',
+                name: 'Estadio Nacional, San José, Costa Rica',
+                filename: '640px-Estadio_nacional_costarica.jpg',
+                text: 'Estadio Nacional, San José, Costa Rica',
               },
             ],
             final_standings: { champions: 'CRC', runners_up: 'GUA', third_place: ['ANT-1959-1986'], fourth_place: 'MEX' },
             statistics: { total_matches: 15, total_goals: 43 },
             awards: {
-              golden_boot: [
+              golden_boot: [{ name: 'Victor Manuel Ruiz', team: 'CRC', goals: 4 }],
+              silver_boot: [
                 { name: 'Nelson Melgar', team: 'GUA', goals: 3 },
                 { name: 'Marco Fión', team: 'GUA', goals: 3 },
-                { name: 'Victor Manuel Ruiz', team: 'CRC', goals: 3 },
               ],
             },
           },
@@ -960,7 +959,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Tiburcio Carías Andino, Tegucigalpa',
-                filename: 'Estadio_Carías.jpg',
+                filename: '640px-Estadio_Carias.jpg',
                 text: 'The national stadium of Honduras in Tegucigalpa (Estadio Nacional de Tegucigalpa) also known as Estadio Tiburcio Carías Andino.',
               },
             ],
@@ -998,7 +997,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Mateo Flores, Guatemala City',
-                filename: 'Cremas-calentando.jpg',
+                filename: '640px-Estadio_Mateo_Flores_Guatemala.jpeg',
                 text: 'Estadio Mateo Flores, Guatemala City',
               },
             ],
@@ -1035,7 +1034,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Nacional Flor Blanca, San Salvador',
-                filename: 'ESTADIO_Magico_Gonzales.jpeg',
+                filename: '640px-ESTADIO_Magico_Gonzales.jpeg',
                 text: 'Estadio Nacional Flor Blanca, San Salvador',
               },
             ],
@@ -1116,7 +1115,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Cameroon_celebrating_winning_2017_Africa_Cup_of_Nations_(cropped).jpg',
+                filename: '640px-Cameroon_celebrating_winning_2017_Africa_Cup_of_Nations_(cropped).jpg',
                 text: 'Cameroon celebrating winning 2017 Africa Cup of Nation',
               },
             ],
@@ -1154,7 +1153,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Acon_final_2015_(16331506630).jpg',
+                filename: '640px-Acon_final_2015_(16331506630).jpg',
                 text: 'Ivory Coast celebrating winning 2015 Africa Cup of Nation',
               },
             ],
@@ -1199,7 +1198,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'A_la_coupe_dAfrique_des_Nations.jpg',
+                filename: '640px-A_la_coupe_dAfrique_des_Nations.jpg',
                 text: 'Nigeria celebrating winning 2013 Africa Cup of Nation',
               },
             ],
@@ -1239,7 +1238,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio de Bata, Bata',
-                filename: 'Estadio_de_Bata_(15896737884).jpg',
+                filename: '640px-Estadio_de_Bata_(15896737884).jpg',
                 text: 'The Estadio de Bata hosted the semi-final Zambia vs Ghana',
               },
             ],
@@ -1285,7 +1284,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Sign',
-                filename: 'Sign_for_African_Nations_Cup.jpg',
+                filename: '640px-Sign_for_African_Nations_Cup.jpg',
                 text: 'Countdown to the Africa Cup soccer tournament to be hosted in Angola at the end of the year.',
               },
             ],
@@ -1319,11 +1318,7 @@ export const AppData = {
               city_count: 4,
             },
             hero_images: [
-              {
-                name: 'Ohene Djan Stadium, Accra',
-                filename: 'Ohene_Djan_stadium,_Accra.jpg',
-                text: 'The Ohene Djan Stadium hosted the final.',
-              },
+              { name: 'Tamale Stadium, Tamale', filename: 'Stadium_tamale2.jpg', text: 'The Tamale Stadium hosted the quarter-final Tunisia vs Cameroon.' },
             ],
             final_standings: { champions: 'EGY', runners_up: 'CMR', third_place: ['GHA'], fourth_place: 'CIV' },
             statistics: { total_matches: 32, total_goals: 99, attendance: 714000 },
@@ -1393,7 +1388,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Olympique de Radès, Radès',
-                filename: 'Tunisia_-_Netherlands_(Stade_de_Radès).jpg',
+                filename: '640px-Tunisia_-_Netherlands_(Stade_de_Rades).jpg',
                 text: 'The Stade Olympique de Radès hosted the final.',
               },
             ],
@@ -1404,7 +1399,7 @@ export const AppData = {
                 { name: 'Frédéric Kanouté', team: 'MLI', goals: 4 },
                 { name: 'Patrick Mboma', team: 'CMR', goals: 4 },
                 { name: 'Jay-Jay Okocha', team: 'NGA', goals: 4 },
-                { name: 'Francileudo dos Santos', team: 'TUN', goals: 4 },
+                { name: 'Francileudo Santos', team: 'TUN', goals: 4 },
               ],
               golden_ball: [{ name: 'Jay-Jay Okocha', team: 'NGA' }],
             },
@@ -1433,9 +1428,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Stade du 26 Mars, Bamako',
-                filename: 'Stade_de_26-mars.png',
-                text: 'The Stade du 26 Mars hosted the final.',
+                name: 'Stade Modibo Kéïta, Bamako',
+                filename: '640px-Stade_modibo_keita.jpg',
+                text: 'The Stade Modibo Kéïta hosted the semi-final Nigeria vs Senegal.',
               },
             ],
             final_standings: { champions: 'CMR', runners_up: 'SEN', third_place: ['NGA'], fourth_place: 'MLI' },
@@ -1474,9 +1469,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'National Stadium, Lagos, Nigeria',
-                filename: 'A_side_view_of_the_National_Stadium.jpg',
-                text: 'The National Stadium hosted the final.',
+                name: 'Accra Sports Stadium, Accra, Ghana',
+                filename: '40px-Ohene_Djan_stadium,_Accra.jpg',
+                text: 'The Accra Sports Stadium hosted the semi-final Cameroon vs Tunisia.',
               },
             ],
             final_standings: { champions: 'CMR', runners_up: 'NGA', third_place: ['RSA'], fourth_place: 'TUN' },
@@ -1510,9 +1505,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Stade du 4 Août, Ouagadougou',
-                filename: 'Stade_du_4-Août,_Burkina_Faso,_2009.jpg',
-                text: 'The Stade du 4 Août hosted the final.',
+                name: 'Stade Municipal, Bobo-Dioulasso',
+                filename: '640px-Stadiumbobodioulasso1.jpg',
+                text: 'The Stade Municipal hosted the semi-final Burkina Faso vs Egypt.',
               },
             ],
             final_standings: { champions: 'EGY', runners_up: 'RSA', third_place: ['COD-1997-2003'], fourth_place: 'BFA' },
@@ -1549,16 +1544,16 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'FNB Stadium, Johannesburg',
-                filename: 'FNB-Stadion.jpg',
-                text: 'The FNB Stadium hosted the final.',
+                name: 'Kings Park Stadium, Durban',
+                filename: '640px-Kings_Park_Stadium,_Durban.jpg',
+                text: 'The Kings Park Stadium hosted the semi-final Zambia vs Tunisia.',
               },
             ],
             final_standings: { champions: 'RSA', runners_up: 'TUN', third_place: ['ZAM'], fourth_place: 'GHA' },
             statistics: { total_matches: 29, total_goals: 78, attendance: 640880 },
             awards: {
               golden_boot: [{ name: 'Kalusha Bwalya', team: 'ZAM', goals: 5 }],
-              golden_ball: [{ name: 'Kalusha Bwalyay', team: 'ZAM' }],
+              golden_ball: [{ name: 'Kalusha Bwalya', team: 'ZAM' }],
             },
           },
         },
@@ -1587,7 +1582,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade El Menzah, Tunis',
-                filename: 'Stade_Olympique_dEl_Menzah.jpg',
+                filename: '640px-Stade_Olympique_dEl_Menzah.jpg',
                 text: 'The Stade El Menzah hosted the final.',
               },
             ],
@@ -1624,7 +1619,7 @@ export const AppData = {
             hero_images: [
               {
                 name: "Stade de l'Amitié, Dakar",
-                filename: 'Senegal_1_-_Cameroon_0_-_Stade_Léopold_Sédar_Senghor.jpg',
+                filename: '640px-Senegal_1_-_Cameroon_0_-_Stade_Leopold_Sedar_Senghor.jpg',
                 text: "The Stade de l'Amitié hosted the final.",
               },
             ],
@@ -1659,9 +1654,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Stade 5 Juillet 1962, Algiers',
-                filename: 'Olimpiai_Komplexum,_szemben_az_1962._július_5.-e_Stadion._Fortepan_100571.jpg',
-                text: 'The Stade 5 Juillet 1962 hosted the final.',
+                name: 'Stade 19 Mai 1956, Annaba',
+                filename: '640px-Stade_19_Mai_1956_(Annaba).jpg',
+                text: 'The Stade 19 Mai 1956 hosted the semi-final Zambia vs Nigeria.',
               },
             ],
             final_standings: { champions: 'ALG', runners_up: 'NGA', third_place: ['ZAM'], fourth_place: 'SEN' },
@@ -1696,7 +1691,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Mohamed V, Casablanca',
-                filename: 'Raja_de_Casablanca_vs_Mouloudia_dOujda,_November_02_2008-04.jpg',
+                filename: '640px-Raja_de_Casablanca_vs_Mouloudia_dOujda,_November_02_2008-04.jpg',
                 text: 'The Stade Mohamed V hosted the final.',
               },
             ],
@@ -1773,7 +1768,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Félix Houphouët-Boigny, Abidjan',
-                filename: 'StadeFHB.jpg',
+                filename: '640px-StadeFHB.jpg',
                 text: 'The Stade Félix Houphouët-Boigny hosted the final.',
               },
             ],
@@ -1847,9 +1842,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Surulere Stadium, Lagos',
-                filename: 'A_side_view_of_the_National_Stadium.jpg',
-                text: 'The Surulere Stadium hosted the final.',
+                name: 'Sango, Ibadan, Nigeria',
+                filename: '640px-Nigerias_Oyo_state,_Ibadan_has_beautiful_place_by_kingknx.jpg',
+                text: 'Sango, Ibadan, Nigeria',
               },
             ],
             final_standings: { champions: 'NGA', runners_up: 'ALG', third_place: ['MAR'], fourth_place: 'EGY' },
@@ -1887,9 +1882,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Accra Sports Stadium, Accra',
-                filename: 'Ohene_Djan_stadium,_Accra.jpg',
-                text: 'The Accra Sports Stadium hosted the final.',
+                name: 'Baba Yara Stadium, Kumasi',
+                filename: '640px-Kumasi924.jpeg',
+                text: 'The Baba Yara Stadium hosted the semi-final Uganda vs Nigeria.',
               },
             ],
             final_standings: { champions: 'GHA', runners_up: 'UGA', third_place: ['NGA'], fourth_place: 'TUN' },
@@ -1966,7 +1961,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Cairo International Stadium, Cairo',
-                filename: 'Cairo_International_Stadium.jpg',
+                filename: '640px-Cairo_International_Stadium.jpg',
                 text: 'The Cairo International Stadium hosted the final.',
               },
             ],
@@ -2003,7 +1998,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Omnisports, Yaoundé',
-                filename: 'Ahmadou_Ahidjo_stadium.jpg',
+                filename: '640px-Ahmadou_Ahidjo_stadium-2.jpg',
                 text: 'The Stade Omnisports hosted the final.',
               },
             ],
@@ -2077,7 +2072,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Hailé Sélassié Stadium, Addis Ababa',
-                filename: 'ET_Addis_asv2018-01_img02_Stadium.jpg',
+                filename: '640px-ET_Addis_asv2018-01_img02_Stadium.jpg',
                 text: 'The Hailé Sélassié Stadium hosted the final',
               },
             ],
@@ -2114,7 +2109,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stade Chedli Zouiten, Tunis',
-                filename: 'Tunis_-_Stade_Municipal_Géo_André.jpg',
+                filename: '637px-Tunis_-_Stade_Municipal_Geo_Andre.jpg',
                 text: 'The Stade Chedli Zouite hosted the final',
               },
             ],
@@ -2154,9 +2149,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Accra Sports Stadium, Accra',
-                filename: 'Ohene_Djan_stadium,_Accra.jpg',
-                text: 'The Accra Sports Stadium hosted the final',
+                name: 'Kumasi Sports Stadium, Kumasi',
+                filename: '640px-Baba_Yara_Sports_Stadium_in_Kumasi.jpg',
+                text: 'The Kumasi Sports Stadium hosted group B matches.',
               },
             ],
             final_standings: { champions: 'GHA-1964-1966', runners_up: 'SDN-1956-1970', third_place: ['UAR'], fourth_place: 'ETH-1941-1974' },
@@ -2191,9 +2186,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Hailé Sélassié Stadium, Addis Ababa',
-                filename: 'ET_Addis_asv2018-01_img02_Stadium.jpg',
-                text: 'The Hailé Sélassié Stadium hosted all the matches.',
+                name: 'Addis Ababa, Ethiopia',
+                filename: '640px-Holy_Trinity_Cathedral_Church.jpg',
+                text: 'Addis Ababa, Ethiopia',
               },
             ],
             final_standings: { champions: 'ETH-1941-1974', runners_up: 'UAR', third_place: ['TUN'], fourth_place: 'UGA-1914-1962' },
@@ -2232,7 +2227,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Prince Farouk Stadium, Cairo',
-                filename: 'Mokhtar_El_tetsh_stadium.jpg',
+                filename: '471px-Mokhtar_El_tetsh_stadium.jpg',
                 text: 'The Prince Farouk Stadium hosted all the matches.',
               },
             ],
@@ -2269,7 +2264,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Khartoum, Sudan',
-                filename: 'University_of_Khartoum_001.jpeg',
+                filename: '640px-University_of_Khartoum_001.jpeg',
                 text: 'The University of Khartoum',
               },
             ],

@@ -29,9 +29,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'International Stadium, Yokohama',
-                filename: 'Nissan_International_Stadium_Yokohama.jpg',
-                text: 'The International Stadium hosted the final Sweden vs Canada.',
+                name: 'Kashima Stadium, Kashima',
+                filename: '640px-Kashima_Stadium_1.jpeg',
+                text: 'The Kashima Stadium hosted the semi-final United States vs Canada.',
               },
             ],
             final_standings: { champions: 'CAN_U23WNT', runners_up: 'SWE_U23WNT', third_place: ['USA_U23WNT'], fourth_place: 'AUS_U23WNT' },
@@ -65,9 +65,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Semi-final',
-                filename: 'Alemanha_x_Canadá_-_Futebol_feminino_-_Olimpíada_Rio_2016_(28592213900).jpg',
-                text: 'Germany vs Canada',
+                name: 'Final',
+                filename: '640px-Vitoria_da_Alemanha.jpg',
+                text: 'Germany vs Sweden',
               },
             ],
             final_standings: { champions: 'GER_U23WNT', runners_up: 'SWE_U23WNT', third_place: ['CAN_U23WNT'], fourth_place: 'BRA_U23WNT' },
@@ -103,9 +103,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Great Britain',
-                filename: 'Team_GB_during_anthem.jpg',
-                text: 'Team GB during anthem before a match between Team GB and New Zealand at the Olympics.',
+                name: 'Gold Medals',
+                filename: '640px-Association_football_at_the_2012_Summer_Olympics_007.jpg',
+                text: 'The United States team',
               },
             ],
             final_standings: { champions: 'USA_U23WNT', runners_up: 'JPN_U23WNT', third_place: ['CAN_U23WNT'], fourth_place: 'FRA_U23WNT' },
@@ -141,7 +141,7 @@ export const AppData = {
             hero_images: [
               {
                 name: "Workers' Stadium, Beijing",
-                filename: 'Beijing_Workers_Stadium,_August_19,_2008.jpg',
+                filename: '640px-Beijing_Workers_Stadium,_August_19,_2008.jpg',
                 text: "The Workers' Stadium held the gold medal match",
               },
             ],
@@ -178,7 +178,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Karaiskakis Stadium, Athens',
-                filename: 'Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg',
+                filename: '640px-Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg',
                 text: 'The Karaiskakis Stadium held the gold medal match',
               },
             ],
@@ -217,9 +217,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Sydney Football Stadium',
-                filename: 'Allianz_Stadium_-_13_October_2012.jpg',
-                text: 'The Sydney Football Stadium held the gold medal match',
+                name: 'Melbourne Cricket Ground',
+                filename: 'MCG_stadium.jpg',
+                text: 'The Melbourne Cricket Ground held group F matches.',
               },
             ],
             final_standings: { champions: 'NOR_U23WNT', runners_up: 'USA_U23WNT', third_place: ['GER_U23WNT'], fourth_place: 'BRA_U23WNT' },
@@ -254,9 +254,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Sanford Stadium, Athens, Georgia',
-                filename: 'Football_game_kickoff_(Georgia_vs_South_Carolina),_Sanford_Stadium,_September_2007.jpg',
-                text: 'The Sanford Stadium held the gold medal match',
+                name: 'Robert F. Kennedy Stadium, Washington, D.C.',
+                filename: '640px-RFK_Stadium_aerial_photo,_1988.jpeg',
+                text: 'The Robert F. Kennedy Stadium held group F matches.',
               },
             ],
             final_standings: { champions: 'USA_U23WNT', runners_up: 'CHN_U23WNT', third_place: ['NOR_U23WNT'], fourth_place: 'BRA_U23WNT' },
@@ -302,7 +302,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Sergio_Mattarella_meets_Italy_national_football_team_and_Matteo_Berrettini_(12_July_2021)_01.jpg',
+                filename: '640px-Sergio_Mattarella_meets_Italy_national_football_team_and_Matteo_Berrettini_(12_July_2021)_01.jpg',
                 text: 'Meeting with the Italian national team, winner of the UEFA Euro 2020 European football championships and the tennis player Matteo Berrettini, finalist at the Wimbledon Tournament.',
               },
             ],
@@ -342,7 +342,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Final',
-                filename: 'Ricardo_Quaresma_performing_a_bicycle_kick_against_France_at_Euro_2016_final.jpg',
+                filename: '640px-Ricardo_Quaresma_performing_a_bicycle_kick_against_France_at_Euro_2016_final.jpg',
                 text: 'Ricardo Quaresma takes a shot at goal during the match.',
               },
             ],
@@ -422,7 +422,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Celebracion_Eurocopa_1.jpg',
+                filename: '640px-Celebracion_Eurocopa_1.jpg',
                 text: 'The Spanish football team touring Madrid as champions',
               },
             ],
@@ -459,9 +459,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Opening Ceremony',
-                filename: 'Euro2004OpeningCeremony.jpg',
-                text: 'Opening ceremony at the Estádio do Dragão in Porto',
+                name: 'Champions',
+                filename: 'Griechische_Nationalmannschaft_bei_der_Siegerehrung.jpg',
+                text: 'Greek players celebrating after the trophy presentation',
               },
             ],
             final_standings: { champions: 'GRE', runners_up: 'POR', semi_finalist1: 'CZE', semi_finalist2: 'NED' },
@@ -538,7 +538,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Group A',
-                filename: 'Scotland-holland_euro_96.jpg',
+                filename: '640px-Scotland-holland_euro_96.jpg',
                 text: 'A Group A game Scotland vs Netherlands at Villa Park',
               },
             ],
@@ -576,7 +576,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Ullevi, Gothenburg',
-                filename: 'Nyaullevi.jpg',
+                filename: '640px-Nyaullevi.jpg',
                 text: 'The Ullevi held the final.',
               },
             ],
@@ -617,9 +617,10 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Munich Olympic Stadium',
-                filename: 'Olympiastadion_Muenchen.jpg',
-                text: 'Munich Olympic stadium, view from Olympic Tower. The Munich Olympic stadium held the final.',
+                name: 'Champions',
+                filename:
+                  '640px-EK_voetbal_in_West_Duitsland;_Nederland_tegen_Ierland_1_Van_Basten,_Rijkaard,_R._Koeman,_E._Koeman,_Gullit_en_Van_Breukelen.jpg',
+                text: 'Lineup of the Netherlands at the EURO 1988',
               },
             ],
             final_standings: { champions: 'NED', runners_up: 'URS', semi_finalist1: 'GER-1949-1990', semi_finalist2: 'ITA' },
@@ -653,8 +654,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Parc des Princes, Paris',
-                filename: 'PSG-Nantes_Parc_des_Princes_06.jpg',
-                text: 'The Parc des Princes held the final',
+                filename: '640px-Paris-Parc-des-Princes.jpg',
+                text: 'The final was played at the Parc des Princes.',
               },
             ],
             final_standings: { champions: 'FRA', runners_up: 'ESP', semi_finalist1: 'DEN', semi_finalist2: 'POR' },
@@ -687,7 +688,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Stadio Olimpico, Rome',
-                filename: 'Stadio_Olimpico_2008.jpeg',
+                filename: '640px-Stadio_Olimpico_2008.jpeg',
                 text: 'The Stadio Olimpico held the final',
               },
             ],
@@ -720,7 +721,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Red Star Stadium, Belgrade',
-                filename: 'Fk_Red_Star_stadium.jpg',
+                filename: '640px-Fk_Red_Star_stadium.jpg',
                 text: 'The Red Star Stadium, aka Marakana, held the final.',
               },
             ],
@@ -751,9 +752,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Heysel Stadium, Brussels',
-                filename: 'Stade_Roi_Baudouin.jpeg',
-                text: 'The Heysel Stadium held the final.',
+                name: 'Quarter-final',
+                filename: '640px-Italy_v_Belgium_(Milan_1972)_Causio_v_Dockx.jpg',
+                text: 'San Siro Stadium, Milan (Italy), 1972 European Championship 1st leg quarter final Italy v Belgium. The Italian Franco Causio tussles with the Belgian Jean Dockx; on background, the other Italian Gianfranco Bedin.',
               },
             ],
             final_standings: { champions: 'GER-1949-1990', runners_up: 'URS', third_place: ['BEL'], fourth_place: 'HUN' },
@@ -784,7 +785,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'UEFA_Euro_1968_Final_-_Italy.jpg',
+                filename: '640px-UEFA_Euro_1968_Final_-_Italy.jpg',
                 text: 'The Italian line-up on the pitch prior to the start of the final replay',
               },
             ],
@@ -816,9 +817,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Santiago Bernabéu, Madrid',
-                filename: 'The_Santiago_Bernabeu_Stadium_-_U-g-g-B-o-y.jpg',
-                text: 'The Santiago Bernabéu held the final',
+                name: 'Qualification',
+                filename: '640px-Nederland_tegen_Zwitserland_3-1,_het_Zwitsers_en_het_Nederlands_elftal,_Bestanddeelnr_914-5008.jpg',
+                text: 'Netherlands v Switzerland, 11 November 1962',
               },
             ],
             final_standings: { champions: 'ESP-1945-1977', runners_up: 'URS', third_place: ['HUN'], fourth_place: 'DEN' },
@@ -856,7 +857,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Parc des Princes, Paris',
-                filename: 'Paris-Parc-des-Princes.jpg',
+                filename: '640px-1932_Le_parc_des_princes.png',
                 text: 'The Parc des Princes held the final',
               },
             ],
@@ -902,9 +903,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Golden Ball - Golden Boot',
-                filename: 'Rus-Arg_2017_(16).jpg',
-                text: 'Lionel Messi scored four goals for Argentina en route to the final.',
+                name: 'Maracanã Stadium, Rio de Janeiro',
+                filename: '623px-Estadio_Maracana_1.jpg',
+                text: 'The Maracanã Stadium in Rio de Janeiro hosted the final.',
               },
             ],
             final_standings: { champions: 'ARG', runners_up: 'BRA', third_place: ['COL'], fourth_place: 'PER' },
@@ -945,7 +946,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: '2019_Final_da_Copa_América_2019_-_48226557731.jpg',
+                filename: '640px-2019_Final_da_Copa_America_2019_-_48226557731.jpg',
                 text: 'Brazil',
               },
             ],
@@ -987,9 +988,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'MetLife Stadium, East Rutherford',
-                filename: 'Copa_America_game_between_Columbia_vs_Peru_at_the_MetLife_Stadium.jpg',
-                text: 'The MetLife Stadium hosted the final.',
+                name: 'Semi-final',
+                filename: '640px-USA_vs_Argentina_(Moments_before_kickoff).jpg',
+                text: 'Moments before kickoff',
               },
             ],
             final_standings: { champions: 'CHI', runners_up: 'ARG', third_place: ['COL'], fourth_place: 'USA' },
@@ -1027,7 +1028,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Chile_Vs_Uruguay_(19090559799).jpg',
+                filename: '640px-Chile_Vs_Uruguay_(19090559799).jpg',
                 text: 'Chile national football team line-up for game against Uruguay at 2015 Copa America',
               },
             ],
@@ -1070,8 +1071,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay_players_with_CA_trophy.jpg',
-                text: 'Uruguayan players celebrating their 15th Copa America title.',
+                filename: '640px-Uruguay_players_celebrating_CA_triumph.jpg',
+                text: 'Uruguay players celebrating after winning the 2011 Copa America final against Paraguay.',
               },
             ],
             final_standings: { champions: 'URU', runners_up: 'PAR', third_place: ['PER'], fourth_place: 'VEN' },
@@ -1111,7 +1112,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio José Pachencho Romero, Maracaibo',
-                filename: 'Brazil_vs._Uruguay_Semifinals_Copa_América_2007_-_2.jpg',
+                filename: '640px-Brazil_vs._Uruguay_Semifinals_Copa_America_2007_-_2.jpg',
                 text: 'The Estadio José Pachencho Romero hosted the final match.',
               },
             ],
@@ -1120,6 +1121,7 @@ export const AppData = {
             awards: {
               golden_boot: [{ name: 'Robinho', team: 'BRA', goals: 6 }],
               golden_ball: [{ name: 'Robinho', team: 'BRA' }],
+              best_young_player: [{ name: 'Lionel Messi', team: 'ARG' }],
             },
           },
         },
@@ -1148,7 +1150,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Celebration',
-                filename: 'Copa_America-2004-02.jpg',
+                filename: '640px-Copa_America-2004-02.jpg',
                 text: 'Final celebration',
               },
             ],
@@ -1185,7 +1187,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio El Campín, Bogotá',
-                filename: 'Elcampin1.jpg',
+                filename: '640px-Elcampin1.jpg',
                 text: 'The Estadio El Campín hosted the final match.',
               },
             ],
@@ -1222,7 +1224,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Defensores del Chaco, Asunción',
-                filename: 'Defensores_del_Chaco.jpeg',
+                filename: '640px-Defensores_del_Chaco.jpeg',
                 text: 'The Estadio Defensores del Chaco hosted the final match.',
               },
             ],
@@ -1261,7 +1263,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Hernando Siles, La Paz',
-                filename: 'Hernando_Siles_Stadium_-_La_Paz.jpg',
+                filename: '640px-Hernando_Siles_Stadium_-_La_Paz.jpg',
                 text: 'The Hernando Siles hosted the final match.',
               },
             ],
@@ -1299,7 +1301,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Centenario, Montevideo',
-                filename: 'Estadio_Centenario_(vista_aérea).jpg',
+                filename: '640px-Estadio_Centenario_(vista_aerea).jpg',
                 text: 'The Estadio Centenario hosted the final match.',
               },
             ],
@@ -1340,7 +1342,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_podio_copa_america.jpg',
+                filename: '640px-Argentina_podio_copa_america.jpg',
                 text: 'Argentine players at the podium.',
               },
             ],
@@ -1378,7 +1380,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_seleccion_1991.jpg',
+                filename: '640px-Argentina_seleccion_1991.jpg',
                 text: 'The Argentina squad that won the cup',
               },
             ],
@@ -1416,7 +1418,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estádio do Maracanã, Rio de Janeiro',
-                filename: 'Maracanã_Stadium_in_Rio_de_Janeiro.jpg',
+                filename: '640px-Maracana_Stadium_in_Rio_de_Janeiro.jpg',
                 text: 'The Estádio do Maracanã hosted the final round.',
               },
             ],
@@ -1454,8 +1456,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay_copa_1987.jpg',
-                text: 'Players of Uruguay holding the trophy, as covered on El Gráfico',
+                filename: '640px-Uruguay_festejo_copa_america.jpg',
+                text: 'Players celebrating the Copa América.',
               },
             ],
             final_standings: { champions: 'URU', runners_up: 'CHI', third_place: ['COL'], fourth_place: 'ARG' },
@@ -1489,9 +1491,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Group B - Argentina vs Ecuador',
-                filename: 'Argentina_v_ecuador_copa_america.jpg',
-                text: 'Jorge Rinaldi (right) and Víctor Ramos, trying to take advantage of Ecuadorian defenders, in Buenos Aires.',
+                name: 'Group B - Argentina vs Brazil',
+                filename: 'Gareca_erra_gol_vs_brasil.jpg',
+                text: 'Gareca fails to score.',
               },
             ],
             final_standings: { champions: 'URU', runners_up: 'BRA', semi_finalist1: 'PAR', semi_finalist2: 'PER' },
@@ -1530,7 +1532,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Defensores del Chaco, Asunción',
-                filename: 'Defensores_del_Chaco_6-10-2016_2.jpg',
+                filename: '640px-Defensores_del_Chaco_6-10-2016_2.jpg',
                 text: 'The Defensores del Chaco hosted one of the finals match',
               },
             ],
@@ -1569,7 +1571,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio El Campín, Bogotá',
-                filename: 'Estadio_El_Campin_Seleccion_Colombia-Caminos.jpg',
+                filename: '640px-Estadio_El_Campin_Seleccion_Colombia-Caminos.jpg',
                 text: 'The Estadio El Campín hosted one of the finals match',
               },
             ],
@@ -1724,9 +1726,9 @@ export const AppData = {
             },
             hero_images: [
               {
-                name: 'Brazil',
-                filename: 'Bra_par1959ca.jpg',
-                text: 'Brazil national football team (Brazil - Paraguay, Buenos Aires, Copa Averica 1959)',
+                name: 'Champions',
+                filename: '619px-Argentina_equipo_vs_brasil_1959.jpg',
+                text: 'Team of Argentina vs Brazil, (standing): Lombardo, Griffa, Mouriño, Negri, Muru. Martínez; (down): Nardiello, Pizzutti, Sosa, Callá, Belén.',
               },
             ],
             final_standings: { champions: 'ARG', runners_up: 'BRA', third_place: ['PAR'], fourth_place: 'PER' },
@@ -1763,7 +1765,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_Copa_América_1957.jpg',
+                filename: 'Argentina_Copa_America_1957.jpg',
                 text: 'Argentina national team –nicknamed Los Carasucias– that won the 1957 South American championship in Lima, winning 5 of 6 matches. Players are, f.l.t.r (standing): Juan Carlos Giménez, Guillermo Stábile (coach), Rogelio Domínguez, Pedro Dellacha, Néstor Rossi, Federico Vairo, Ángel Schandlein; (bent): Orestes Corbatta, Humberto Maschio, Antonio Angelillo, Enrique Sívori, Osvaldo Cruz.',
               },
             ],
@@ -1842,7 +1844,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Nacional de Chile, Santiago',
-                filename: 'Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg',
+                filename: '640px-Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg',
                 text: 'The Estadio Nacional de Chile hosted all of the tournament matches.',
               },
             ],
@@ -1880,7 +1882,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Nacional de Lima, Lima',
-                filename: 'Inside_Estadio_Nacional_(Lima,_Peru).jpg',
+                filename: '640px-Inside_Estadio_Nacional_(Lima,_Peru).jpg',
                 text: 'The Estadio Nacional de Lima hosted all of the tournament matches.',
               },
             ],
@@ -1918,7 +1920,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estádio São Januário, Rio de Janeiro',
-                filename: 'Sao_janu_sociais.jpg',
+                filename: '640px-Sao_janu_sociais.jpg',
                 text: 'The Estádio São Januário hosted the tournament matches.',
               },
             ],
@@ -1956,7 +1958,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_1947.jpg',
+                filename: '640px-Argentina_1947.jpg',
                 text: 'Argentina won its 9th title',
               },
             ],
@@ -1994,7 +1996,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_1946_sudamericano.jpg',
+                filename: '640px-Argentina_1946_sudamericano.jpg',
                 text: 'The Argentina team that beat Brazil 2-0 in the final',
               },
             ],
@@ -2032,8 +2034,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_martino_andas.jpg',
-                text: 'Argentine player Rinaldo Martino being carried by the fans after the 1–0 win v. Uruguay. He scored the only goal.',
+                filename: 'Argentina_1945.jpeg',
+                text: 'Line-up of Argentina national football team during the 1945 Southamerican Championship. Standing: Sosa, Salomón, Colombo, Palma, Ricardo and Perucca. Crouching: Muñoz, Méndez, Ferraro, Martino and Loustau.',
               },
             ],
             final_standings: { champions: 'ARG', runners_up: 'BRA', third_place: ['CHI'], fourth_place: 'URU' },
@@ -2073,7 +2075,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay_1942.jpg',
+                filename: '640px-Uruguay_1942.jpg',
                 text: 'The Uruguayan squad',
               },
             ],
@@ -2114,7 +2116,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_1941.jpg',
+                filename: '640px-Argentina_1941.jpg',
                 text: 'The Argentina squad that won its 6th South American title',
               },
             ],
@@ -2190,7 +2192,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_equipo_vs_brasil_1937.jpg',
+                filename: '640px-Argentina_equipo_vs_brasil_1937.jpg',
                 text: 'Players for the rematch (or playoff) at Estadio Gasómetro. As Minella, Iribarren and Scopelli were injured, they were replaced by Lazzatti, Fazio and Cherro. (down): the attacking line: Guaita, Varallo, Zozaya, Scopelli, E. García.',
               },
             ],
@@ -2228,7 +2230,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estadio Nacional, Lima',
-                filename: 'Estadio_ingles_lima.jpg',
+                filename: '640px-Estadio_ingles_lima.jpg',
                 text: 'The Estadio Nacional hosted all of the tournament matches.',
               },
             ],
@@ -2304,7 +2306,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_equipo_vs_bolivia_1927.jpg',
+                filename: '640px-Argentina_equipo_vs_bolivia_1927.jpg',
                 text: 'Team of Argentina vs Bolivia, (up): Juan Evaristo, Ludovico Bidoglio, Octavio Diaz, Humberto Recanatini, José Fossa, Luis Monti; (down): Alfredo Carricaberry, Pedro Ochoa, Manuel "Nolo" Ferreira, Manuel Seoane, Segundo Luna.',
               },
             ],
@@ -2348,7 +2350,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay1926.jpeg',
+                filename: '640px-Uruguay1926.jpeg',
                 text: 'Uruguay squad, winners',
               },
             ],
@@ -2386,7 +2388,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_equipo_vs_paraguay_1925.jpg',
+                filename: '640px-Argentina_equipo_vs_paraguay_1925.jpg',
                 text: 'The Argentina squad (here pictured in the first match v Paraguay) won its second title',
               },
             ],
@@ -2503,7 +2505,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Brasil_1922.jpg',
+                filename: '640px-Brasil_1922.jpg',
                 text: 'The Brazilian squad',
               },
             ],
@@ -2541,8 +2543,8 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Argentina_equipo_1921.jpg',
-                text: 'Team of Argentina that played in the South American Championship. Players are (up): Américo Tesoriere, Miguel Delavalle, Emilio Solari, Alfredo López, Florindo Bearzotti, Adolfo Celli; (down): Pedro Calomino, Julio Libonatti, Gabino Sosa, Raúl Echeverría, Jaime Chavín.',
+                filename: 'Argentina_team_v_uruguay_1921.jpg',
+                text: 'The Argentina team that beat Uruguay in the last game',
               },
             ],
             final_standings: { champions: 'ARG', runners_up: 'BRA', third_place: ['URU'], fourth_place: 'PAR' },
@@ -2569,7 +2571,7 @@ export const AppData = {
               host: ['CHI'],
               logo_filename: 'CONMEBOL_logo_(2017).png',
               start_date: '1920-09-11',
-              end_date: '1920-10-03',
+              end_date: '1920-09-26',
               color: '#4b6ebf',
               team_count: 4,
               confed_count: 1,
@@ -2579,7 +2581,7 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Champions',
-                filename: 'Uruguay_campeón_1920.jpg',
+                filename: 'Uruguay_campeon_1920.jpg',
                 text: "Uruguay's winning squad",
               },
             ],
@@ -2609,6 +2611,7 @@ export const AppData = {
             details: {
               host: ['BRA'],
               logo_filename: 'CONMEBOL_logo_(2017).png',
+              mascot_filename: 'Copa_america_poster1919.jpg',
               start_date: '1919-05-11',
               end_date: '1919-05-29',
               color: '#008400',
