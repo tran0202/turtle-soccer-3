@@ -5,6 +5,30 @@ export const AppData = {
       number: '1',
       rows: [
         {
+          id: 'UECL',
+          data: {
+            name: 'UEFA Europa Conference League',
+            color: 'rgb(21, 97, 30)',
+            team_type_id: 'CLUB',
+            confederation_id: 'UEFA',
+            logo_path: 'club_logos',
+            trophy_filename: 'conference-league-trophy_small.png',
+            team_count: 32,
+            current_champions: {},
+            most_successful_teams: [{}],
+            descriptions: [
+              'The UEFA Europa Conference League (abbreviated as UECL), colloquially referred to as the UEFA Conference League, is an annual football club competition organised by the Union of European Football Associations (UEFA) for eligible European football clubs. Clubs qualify for the competition based on their performance in their national leagues and cup competitions. It is the third tier of European club football, after the Champions League and the Europa League.',
+              'Introduced for the 2021–22 season, the league will serve as the bottom level of the existing UEFA Europa League competition, which was reduced from 48 to 32 teams in the group stage. The competition will primarily be contested by teams from lower-ranked UEFA member associations. No teams qualify directly to the group stage, with 10 teams eliminated in the Europa League play-offs and the rest coming from the Europa Conference League qualifiers. The winners of the competition are awarded a position in the Europa League the following season, unless they qualify for the Champions League.',
+            ],
+            order: 5,
+          },
+        },
+      ],
+    },
+    {
+      number: '2',
+      rows: [
+        {
           id: 'WC',
           data: {
             name: 'FIFA World Cup',
@@ -300,7 +324,7 @@ export const AppData = {
       ],
     },
     {
-      number: '2',
+      number: '3',
       rows: [
         {
           id: 'WCQ',

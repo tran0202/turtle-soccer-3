@@ -2,7 +2,7 @@ export const AppData = {
   collection: 'team',
   batches: [
     {
-      number: '7',
+      number: '9',
       rows: [
         {
           id: 'DOR',
@@ -44,7 +44,7 @@ export const AppData = {
       ],
     },
     {
-      number: '8',
+      number: '10',
       rows: [
         {
           id: 'CHE',

@@ -1487,64 +1487,6 @@ export const AppData = {
       ],
     },
     {
-      number: '13',
-      rows: [
-        {
-          id: 'UCL202021',
-          data: {
-            year: '2020-21',
-            short_year: '2020-21',
-            name: '2020-21 UEFA Champions League',
-            short_name: '2020-21',
-            competition_id: 'UCL',
-            active: false,
-            golden_goal_rule: false,
-            points_for_win: 3,
-            show_match_year: true,
-            no_third_place: true,
-            tiebreakers_collapsed: true,
-            tiebreakers: [
-              'points',
-              'head2head',
-              'head2headawaygoals',
-              'head2headreapply',
-              'goaldifferenceandgoalscored',
-              'awaygoalswinsawaywins',
-              'fairplaylight',
-              'coefficient',
-            ],
-            details: {
-              logo_filename: 'UCL_375x363.png',
-              start_qualifying_date: '2020-08-08',
-              end_qualifying_date: '2020-09-30',
-              start_competition_date: '2020-10-20',
-              end_competition_date: '2021-05-29',
-              color: '#15611e',
-              competition_team_count: 32,
-              total_team_count: 79,
-              association_count: 54,
-            },
-            hero_images: [
-              {
-                name: 'Estádio do Dragão, Porto',
-                filename: 'Porto_Estádio_do_Dragão_2.jpg',
-                text: 'The Estádio do Dragão in Porto hosted the final.',
-              },
-            ],
-            final_standings: { champions: 'CHE', runners_up: 'MCI', semi_finalist1: 'PSG', semi_finalist2: 'RMA' },
-            statistics: { total_matches: 125, total_goals: 366, attendance: 180049 },
-            awards: {
-              golden_boot: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR', goals: 10 }],
-              golden_glove: [{ name: 'Édouard Mendy', team: 'SEN', club: 'CHE' }],
-              best_defender: [{ name: 'Rúben Dias', team: 'POR', club: 'MCI' }],
-              best_midfielder: [{ name: "N'Golo Kanté", team: 'FRA', club: 'CHE' }],
-              best_forward: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR' }],
-            },
-          },
-        },
-      ],
-    },
-    {
       number: '100',
       rows: [
         {

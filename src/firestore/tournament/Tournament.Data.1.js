@@ -2,6 +2,49 @@ export const AppData = {
   collection: 'tournament',
   batches: [
     {
+      number: '13',
+      rows: [
+        {
+          id: 'WC2022',
+          data: {
+            year: '2022',
+            name: 'FIFA World Cup Qatar 2022',
+            competition_id: 'WC',
+            active: true,
+            golden_goal_rule: false,
+            points_for_win: 3,
+            tiebreakers: ['team', 'head2head', 'fairplay', 'lot'],
+            details: {
+              host: ['QAT'],
+              logo_filename: '2022_FIFA_World_Cup_480x574.png',
+              mascot_filename: '',
+              start_date: '2022-11-21',
+              end_date: '2022-12-18',
+              color: '#8a1538',
+              team_count: 32,
+              confed_count: 5,
+              venue_count: 8,
+              city_count: 5,
+            },
+            hero_images: [
+              { name: 'Lusail Iconic Stadium', filename: 'Lusail_Iconic_Stadium_final_render.jpg', text: 'The Lusail Iconic Stadium will host the final.' },
+            ],
+            final_standings: {},
+            statistics: {},
+            awards: {
+              golden_boot: [],
+              silver_boot: [],
+              bronze_boot: [],
+              golden_ball: [],
+              best_young_player: [],
+              golden_glove: [],
+              fair_play_team: [],
+            },
+          },
+        },
+      ],
+    },
+    {
       number: '1',
       rows: [
         {
@@ -2416,14 +2459,18 @@ export const AppData = {
             hero_images: [
               {
                 name: 'Estádio do Dragão, Porto',
-                filename: '640px-Porto_Estádio_do_Dragão_2.jpg',
+                filename: 'Porto_Estádio_do_Dragão_2.jpg',
                 text: 'The Estádio do Dragão in Porto hosted the final.',
               },
             ],
             final_standings: { champions: 'CHE', runners_up: 'MCI', semi_finalist1: 'PSG', semi_finalist2: 'RMA' },
-            statistics: { total_matches: 124, total_goals: 366, attendance: 180049 },
+            statistics: { total_matches: 125, total_goals: 366, attendance: 180049 },
             awards: {
               golden_boot: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR', goals: 10 }],
+              golden_glove: [{ name: 'Édouard Mendy', team: 'SEN', club: 'CHE' }],
+              best_defender: [{ name: 'Rúben Dias', team: 'POR', club: 'MCI' }],
+              best_midfielder: [{ name: "N'Golo Kanté", team: 'FRA', club: 'CHE' }],
+              best_forward: [{ name: 'Erling Haaland', team: 'NOR', club: 'DOR' }],
             },
           },
         },
@@ -2691,6 +2738,47 @@ export const AppData = {
             awards: {
               golden_boot: [{ name: 'Olivier Giroud', team: 'FRA', club: 'CHE', goals: 11 }],
               golden_ball: [{ name: 'Eden Hazard', team: 'BEL', club: 'CHE' }],
+            },
+          },
+        },
+        {
+          id: 'UECL202122',
+          data: {
+            year: '2021-22',
+            short_year: '2021-22',
+            name: '2021-22 UEFA Europa Conference League',
+            short_name: '2021-22',
+            competition_id: 'UECL',
+            active: true,
+            golden_goal_rule: false,
+            points_for_win: 3,
+            show_match_year: true,
+            tiebreakers_collapsed: true,
+            tiebreakers: ['points', 'head2head', 'head2headreapply', 'goaldifferenceandgoalscored', 'awaygoalswinsawaywins', 'fairplaylight', 'coefficient'],
+            details: {
+              logo_filename: 'UEFA_Europa_Conference_League_375x574.png',
+              start_qualifying_date: '2021-07-06',
+              end_qualifying_date: '2021-08-26',
+              start_competition_date: '2021-09-14',
+              end_competition_date: '2022-05-25',
+              color: '#15611e',
+              competition_team_count: 32,
+              transfer_team_count: 8,
+              total_team_count: 136,
+              total_transfer_team_count: 45,
+              association_count: 54,
+            },
+            hero_images: [
+              {
+                name: 'Arena Kombëtare, Tirana',
+                filename: '640px-Arena_Kombetare,_Tirane.jpg',
+                text: 'The Arena Kombëtare in Tirana will host the final.',
+              },
+            ],
+            final_standings: { champions: '', runners_up: '', semi_finalist1: '', semi_finalist2: '' },
+            statistics: { total_matches: 95, total_goals: 260, attendance: 897343 },
+            awards: {
+              golden_boot: [{ name: 'Tammy Abraham', team: 'ENG', club: 'ROM', goals: 6 }],
             },
           },
         },
