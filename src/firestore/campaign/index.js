@@ -1,18 +1,18 @@
 import React from 'react'
-import { AppData } from './GroupType.Data'
-import AdminPage from './AdminPage'
-import Collection from './Collection'
+import { AppData } from './Campaign.Data'
+import AdminPage from '../AdminPage'
+import Collection from '../Collection'
 
-class FSGroupTypeApp extends React.Component {
+class FSCampaignApp extends React.Component {
   constructor(props) {
     super(props)
-    document.title = 'Turtle Soccer - Group Type'
+    document.title = 'Turtle Soccer - Campaign'
   }
 
   render() {
     const param = {
-      name: 'group_type',
-      orderBy: ['name'],
+      name: 'campaign',
+      // orderBy: ['name'],
       staticData: AppData,
       displayHeader: () => {
         return (
@@ -37,7 +37,7 @@ class FSGroupTypeApp extends React.Component {
         )
       },
       setWindowObjects: (store) => {
-        window.groupTypeStore = store
+        window.CampaignStore = store
       },
     }
     return (
@@ -48,4 +48,4 @@ class FSGroupTypeApp extends React.Component {
   }
 }
 
-export default FSGroupTypeApp
+export default FSCampaignApp

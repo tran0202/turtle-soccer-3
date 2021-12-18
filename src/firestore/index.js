@@ -25,9 +25,6 @@ class FSApp extends React.Component {
                   <a href="/admin/sport">sport</a>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <a href="/admin/group_type">group_type</a>
-                </ListGroupItem>
-                <ListGroupItem>
                   <a href="/admin/group">group</a>
                 </ListGroupItem> */}
                 <ListGroupItem>
@@ -38,6 +35,9 @@ class FSApp extends React.Component {
                 </ListGroupItem>
                 <ListGroupItem>
                   <a href="/admin/tournament">tournament</a>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <a href="/admin/campaign">campaign</a>
                 </ListGroupItem>
                 <ListGroupItem>
                   <a href="/admin/nation">nation</a>

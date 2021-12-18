@@ -889,7 +889,7 @@ export const AppData = {
           },
         },
         {
-          id: 'COD-1971-1997',
+          id: 'ZAI',
           data: {
             name: 'Zaire',
             official_name: '',
