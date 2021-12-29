@@ -37,7 +37,7 @@ class FSConfederationApp extends React.Component {
         )
       },
       setWindowObjects: (store) => {
-        window.sportStore = store
+        window.confederationStore = store
       },
     }
     return (

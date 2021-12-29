@@ -47,7 +47,7 @@ class FSCompetitionApp extends React.Component {
         )
       },
       setWindowObjects: (store) => {
-        window.tournamentTypeStore = store
+        window.competitionStore = store
       },
     }
     return (

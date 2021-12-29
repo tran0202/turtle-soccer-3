@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppData } from './Campaign.Data'
+import { PrepData as AppData } from './Campaign.PrepData'
 import AdminPage from '../AdminPage'
 import Collection from '../Collection'
 
@@ -13,7 +13,7 @@ class FSCampaignApp extends React.Component {
     const param = {
       name: 'campaign',
       // orderBy: ['name'],
-      staticData: AppData,
+      staticData: AppData(),
       displayHeader: () => {
         return (
           <tr>
@@ -21,6 +21,7 @@ class FSCampaignApp extends React.Component {
             <th>id</th>
             <th>name</th>
             <th>description</th>
+            <th>order</th>
             <th>time_stamp</th>
             <th>delete</th>
           </tr>
@@ -32,12 +33,13 @@ class FSCampaignApp extends React.Component {
             <th scope="row">{doc.id}</th>
             <td>{doc.name}</td>
             <td>{doc.description}</td>
+            <td>{doc.order}</td>
             <td>{doc.time_stamp}</td>
           </React.Fragment>
         )
       },
       setWindowObjects: (store) => {
-        window.CampaignStore = store
+        window.campaignStore = store
       },
     }
     return (
