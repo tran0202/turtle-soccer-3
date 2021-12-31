@@ -21,8 +21,8 @@ export const AppData = {
                     teams: [{ id: 'RUS' }, { id: 'URU' }, { id: 'EGY' }, { id: 'KSA' }],
                     matches: [
                       {
-                        home_team: 'RUS',
-                        away_team: 'KSA',
+                        home_team: { id: 'RUS' },
+                        away_team: { id: 'KSA' },
                         home_score: 5,
                         away_score: 0,
                         date: '2018-06-14',
@@ -36,6 +36,135 @@ export const AppData = {
               },
               { name: 'Knockout Stage' },
             ],
+          },
+        },
+        {
+          id: 'WC2022_ALLQ',
+          data: {
+            name: 'Overall Qualification',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 Overall Qualification',
+            order: 1,
+            details: {
+              logo_filename: '640px-FIFA_logo_without_slogan.svg.png',
+              start_date: '2019-06-06',
+              end_date: '2022-06-14',
+              color: '#cc0000',
+              team_count: 207,
+              confed_count: 6,
+            },
+            statistics: { total_matches: 765, total_goals: 2197, attendance: 6789008 },
+            awards: {
+              golden_boot: [{ name: 'Ali Mabkhout', team: { id: 'UAE' }, goals: 14 }],
+            },
+          },
+        },
+        {
+          id: 'WC2022_AFCQ',
+          data: {
+            name: 'AFC Asian Qualifiers',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 AFC Asian Qualifiers',
+            order: 2,
+            details: {
+              logo_filename: 'AFC_Asian_Qualifiers.png',
+              start_date: '2019-06-06',
+              end_date: '2022-06-01',
+              color: '#e5cf1d',
+              team_count: 46,
+              confed_count: 1,
+            },
+            statistics: { total_matches: 204, total_goals: 626, attendance: 1940722 },
+            awards: {
+              golden_boot: [{ name: 'Ali Mabkhout', team: { id: 'UAE' }, goals: 14 }],
+            },
+          },
+        },
+        {
+          id: 'WC2022_CAFQ',
+          data: {
+            name: 'CAF Qualification',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 CAF Qualification',
+            order: 3,
+            details: {
+              logo_filename: 'Confederation_of_African_Football_logo.png',
+              start_date: '2019-09-04',
+              end_date: '2022-03-01',
+              color: '#000000',
+              team_count: 54,
+              confed_count: 1,
+            },
+            statistics: { total_matches: 148, total_goals: 345, attendance: 769510 },
+            awards: {
+              golden_boot: [{ name: 'Islam Slimani', team: { id: 'ALG' }, goals: 7 }],
+            },
+          },
+        },
+        {
+          id: 'WC2022_CONCACAFQ',
+          data: {
+            name: 'CONCACAF Qualifiers',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 CONCACAF Qualifiers',
+            order: 4,
+            details: {
+              logo_filename: 'CONCACAF_qualifiers_-_Road_to_Qatar_-_Logo_480x494.png',
+              start_date: '2021-03-24',
+              end_date: '2022-03-30',
+              color: '#cc0000',
+              team_count: 34,
+              confed_count: 1,
+            },
+            statistics: { total_matches: 94, total_goals: 295, attendance: 698674 },
+            awards: {
+              golden_boot: [{ name: 'Cyle Larin', team: { id: 'CAN' }, goals: 11 }],
+            },
+          },
+        },
+        {
+          id: 'WC2022_CONMEBOLQ',
+          data: {
+            name: 'CONMEBOL Qualification',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 CONMEBOL Qualification',
+            order: 5,
+            details: {
+              logo_filename: 'CONMEBOL_logo_(2017).png',
+              start_date: '2020-10-08',
+              end_date: '2022-03-29',
+              color: '#cc0000',
+              team_count: 10,
+              confed_count: 1,
+            },
+            statistics: { total_matches: 69, total_goals: 168, attendance: 689954 },
+            awards: {
+              golden_boot: [{ name: 'Marcelo Moreno', team: { id: 'BOL' }, goals: 9 }],
+            },
+          },
+        },
+        {
+          id: 'WC2022_UEFAQ',
+          data: {
+            name: 'European Qualifiers',
+            tournament_id: 'WC2022',
+            description: 'World Cup 2022 European Qualifiers',
+            order: 7,
+            details: {
+              logo_filename: 'UEFA_Euro_2016_qualifying.png',
+              start_date: '2021-03-24',
+              end_date: '2022-03-29',
+              color: '#cc0000',
+              team_count: 55,
+              confed_count: 1,
+            },
+            statistics: { total_matches: 250, total_goals: 763, attendance: 2690148 },
+            awards: {
+              golden_boot: [
+                { name: 'Harry Kane', team: { id: 'ENG' }, goals: 12 },
+                { name: 'Memphis Depay', team: { id: 'NED' }, goals: 12 },
+              ],
+            },
           },
         },
       ],
@@ -60,7 +189,7 @@ export const AppData = {
             },
             statistics: { total_matches: 765, total_goals: 2197, attendance: 6789008 },
             awards: {
-              golden_boot: [{ name: 'Ali Mabkhout', team: 'UAE', goals: 14 }],
+              golden_boot: [{ name: 'Ali Mabkhout', team: { id: 'UAE' }, goals: 14 }],
             },
           },
         },
@@ -81,7 +210,7 @@ export const AppData = {
             },
             statistics: { total_matches: 204, total_goals: 626, attendance: 1940722 },
             awards: {
-              golden_boot: [{ name: 'Ali Mabkhout', team: 'UAE', goals: 14 }],
+              golden_boot: [{ name: 'Ali Mabkhout', team: { id: 'UAE' }, goals: 14 }],
             },
           },
         },
@@ -102,7 +231,7 @@ export const AppData = {
             },
             statistics: { total_matches: 148, total_goals: 345, attendance: 769510 },
             awards: {
-              golden_boot: [{ name: 'Islam Slimani', team: 'ALG', goals: 7 }],
+              golden_boot: [{ name: 'Islam Slimani', team: { id: 'ALG' }, goals: 7 }],
             },
           },
         },
@@ -123,7 +252,7 @@ export const AppData = {
             },
             statistics: { total_matches: 94, total_goals: 295, attendance: 698674 },
             awards: {
-              golden_boot: [{ name: 'Cyle Larin', team: 'CAN', goals: 11 }],
+              golden_boot: [{ name: 'Cyle Larin', team: { id: 'CAN' }, goals: 11 }],
             },
           },
         },
@@ -144,7 +273,7 @@ export const AppData = {
             },
             statistics: { total_matches: 69, total_goals: 168, attendance: 689954 },
             awards: {
-              golden_boot: [{ name: 'Marcelo Moreno', team: 'BOL', goals: 9 }],
+              golden_boot: [{ name: 'Marcelo Moreno', team: { id: 'BOL' }, goals: 9 }],
             },
           },
         },
@@ -156,7 +285,7 @@ export const AppData = {
             description: 'World Cup 2022 OFC Qualification',
             order: 6,
             details: {
-              host: ['QAT'],
+              host: [{ id: 'QAT' }],
               logo_filename: 'Oceania_Football_Confederation_logo.png',
               start_date: '2022-03-13',
               end_date: '2022-03-30',
@@ -184,8 +313,8 @@ export const AppData = {
             statistics: { total_matches: 250, total_goals: 763, attendance: 2690148 },
             awards: {
               golden_boot: [
-                { name: 'Harry Kane', team: 'ENG', goals: 12 },
-                { name: 'Memphis Depay', team: 'NED', goals: 12 },
+                { name: 'Harry Kane', team: { id: 'ENG' }, goals: 12 },
+                { name: 'Memphis Depay', team: { id: 'NED' }, goals: 12 },
               ],
             },
           },
@@ -198,7 +327,7 @@ export const AppData = {
             description: 'World Cup 2022 Inter-confederation play-offs',
             order: 8,
             details: {
-              host: ['QAT'],
+              host: [{ id: 'QAT' }],
               logo_filename: '640px-FIFA_logo_without_slogan.svg.png',
               start_date: '2022-06-13',
               end_date: '2022-06-14',
