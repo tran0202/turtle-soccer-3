@@ -232,10 +232,57 @@ export const AppData = {
         {
           id: 'COPA1953',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'COPA1953',
             description: 'Copa America 1953',
             order: 9,
+            stages: [
+              {
+                name: 'Final Round',
+                type: 'roundrobin',
+                eliminate_count: 2,
+                next_round: 'Final Playoff',
+                advancement: {
+                  auto: [1, 2],
+                  eliminated: [3, 4, 5, 6, 7],
+                  text: "The winner would've won the Copa America. As Paraguay and Brazil finished tied on points in the final round, a playoff match was played between Paraguay and Brazil to determine the champion. Paraguay eventually won the Final Playoff.",
+                },
+                groups: [
+                  {
+                    name: 'Final Round',
+                    teams: [{ id: 'BOL' }, { id: 'PER' }, { id: 'PAR' }, { id: 'CHI' }, { id: 'URU' }, { id: 'ECU' }, { id: 'BRA' }],
+                    matches: [
+                      {
+                        home_team: { id: 'PER' },
+                        away_team: { id: 'PAR' },
+                        home_score: 2,
+                        away_score: 2,
+                        home_awarded: true,
+                        awarded_text:
+                          'Match was awarded (2 pts) to Peru due to unsportsmanlike behaviour of Paraguay by making one extra change. Scores remained unchanged.',
+                        date: '1953-03-08',
+                        time: '15:00',
+                        stadium: 'Estadio Nacional',
+                        city: 'Lima',
+                      },
+                      {
+                        home_team: { id: 'CHI' },
+                        away_team: { id: 'BOL' },
+                        home_score: 2,
+                        away_score: 2,
+                        home_awarded: true,
+                        awarded_text:
+                          'Match was suspended after 66th min, and awarded (2 pts) to Chile due to unsportsmanlike behaviour of Bolivia. Scores remained unchanged.',
+                        date: '1953-03-28',
+                        time: '12:00',
+                        stadium: 'Estadio Nacional',
+                        city: 'Lima',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -277,10 +324,39 @@ export const AppData = {
         {
           id: 'COPA1942',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'COPA1942',
             description: 'Copa America 1942',
             order: 9,
+            stages: [
+              {
+                name: 'Final Round',
+                type: 'roundrobin',
+                championship_round: true,
+                advancement: { text: 'The winner would win the Copa America.' },
+                groups: [
+                  {
+                    name: 'Final Round',
+                    teams: [{ id: 'URU' }, { id: 'CHI' }, { id: 'ARG' }, { id: 'PAR' }, { id: 'BRA' }, { id: 'PER' }, { id: 'ECU' }],
+                    matches: [
+                      {
+                        home_team: { id: 'ARG' },
+                        away_team: { id: 'CHI' },
+                        home_score: 0,
+                        away_score: 0,
+                        home_awarded: true,
+                        awarded_text:
+                          'Chile left the pitch on the 43rd minute in protest of the dreadful referee performance. Argentina was awarded a victory (2 pts) but with no goals.',
+                        date: '1942-01-31',
+                        time: '12:00',
+                        stadium: 'Estadio Centenario',
+                        city: 'Montevideo',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -453,10 +529,47 @@ export const AppData = {
         {
           id: 'GC2017',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'GC2017',
             description: 'Gold Cup 2017 Final Tournament',
             order: 9,
+            stages: [
+              {
+                name: 'Group Stage',
+                type: 'roundrobin',
+                eliminate_count: 8,
+                next_round: 'Quarter-finals',
+                advancement: {
+                  auto: [1, 2],
+                  wild_card: { pos: 3, count: 2 },
+                  eliminated: [4],
+                  text: 'The top 2 teams and the 2 best third-placed teams would advance to the Quarter-finals.',
+                },
+                groups: [
+                  {
+                    name: 'Group A',
+                    teams: [{ id: 'GUF' }, { id: 'CAN' }, { id: 'HON' }, { id: 'CRC' }],
+                    matches: [
+                      {
+                        home_team: { id: 'HON' },
+                        away_team: { id: 'GUF' },
+                        home_score: 0,
+                        away_score: 0,
+                        home_awarded_score: 3,
+                        away_awarded_score: 0,
+                        awarded_match: true,
+                        awarded_text:
+                          'Awarded: CONCACAF awarded Honduras a 3–0 win as a result of French Guiana fielding the ineligible player Florent Malouda, after the match had finished 0–0. Malouda had previously represented France and did not meet eligibility rules.',
+                        date: '2017-07-11',
+                        time: '22:00',
+                        stadium: 'BBVA Stadium',
+                        city: 'Houston',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -719,10 +832,78 @@ export const AppData = {
         {
           id: 'AFCON2010',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'AFCON2010',
             description: 'Africa Cup of Nations 2010 Final Tournament',
             order: 9,
+            stages: [
+              {
+                name: 'Group Stage',
+                type: 'roundrobin',
+                eliminate_count: 8,
+                next_round: 'Quarter-finals',
+                advancement: { auto: [1, 2], eliminated: [3, 4], text: 'The top 2 teams would advance to the Quarter-finals.' },
+                groups: [
+                  {
+                    name: 'Group B',
+                    teams: [{ id: 'CIV' }, { id: 'BFA' }, { id: 'GHA' }, { id: 'TOG' }],
+                    matches: [
+                      {
+                        home_team: { id: 'GHA' },
+                        away_team: { id: 'TOG' },
+                        cancelled_match: true,
+                        cancelled_text: 'Togo withdrew from the tournament after a terrorist attack on their bus',
+                        away_withdrew: true,
+                        date: '2010-01-11',
+                        time: '19:30',
+                        stadium: 'Estádio do Chiazi',
+                        city: 'Cabinda',
+                      },
+                      {
+                        home_team: { id: 'BFA' },
+                        away_team: { id: 'TOG' },
+                        cancelled_match: true,
+                        cancelled_text: 'Togo withdrew from the tournament after a terrorist attack on their bus',
+                        away_withdrew: true,
+                        date: '2010-01-15',
+                        time: '17:00',
+                        stadium: 'Estádio do Chiazi',
+                        city: 'Cabinda',
+                      },
+                      {
+                        home_team: { id: 'CIV' },
+                        away_team: { id: 'TOG' },
+                        cancelled_match: true,
+                        cancelled_text: 'Togo withdrew from the tournament after a terrorist attack on their bus',
+                        away_withdrew: true,
+                        date: '2010-01-19',
+                        time: '17:00',
+                        stadium: 'Estádio do Chiazi',
+                        city: 'Cabinda',
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                name: 'Knockout Stage',
+                type: 'knockout',
+                rounds: [
+                  {
+                    name: 'Quarter-finals',
+                    short_name: '1/4',
+                    eliminate_count: 4,
+                    next_round: 'Semi-finals',
+                    matches: [],
+                  },
+                  {
+                    name: 'Final',
+                    short_name: '1st',
+                    matches: [],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -863,10 +1044,57 @@ export const AppData = {
         {
           id: 'AFCON1978',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'AFCON1978',
             description: 'Africa Cup of Nations 1978 Final Tournament',
             order: 9,
+            stages: [
+              { name: 'Group Stage' },
+              {
+                name: 'Knockout Stage',
+                type: 'knockout',
+                hide_bracket: true,
+                rounds: [
+                  {
+                    name: 'Third-place',
+                    short_name: '3rd',
+                    matches: [
+                      {
+                        home_team: { id: 'NGA' },
+                        away_team: { id: 'TUN' },
+                        home_score: 1,
+                        away_score: 1,
+                        home_awarded_score: 2,
+                        away_awarded_score: 0,
+                        awarded_match: true,
+                        awarded_text:
+                          'Awarded: The match was abandoned after Tunisia walked off in the 42nd minute with the score tied at 1-1 to protest the officiating. Nigeria were awarded a 2-0 win.',
+                        date: '1978-03-16',
+                        time: '12:00',
+                        stadium: 'Accra Sports Stadium',
+                        city: 'Accra',
+                      },
+                    ],
+                  },
+                  {
+                    name: 'Final',
+                    short_name: '1st',
+                    matches: [
+                      {
+                        home_team: { id: 'UGA' },
+                        away_team: { id: 'GHA' },
+                        home_score: 0,
+                        away_score: 2,
+                        date: '1978-03-16',
+                        time: '15:00',
+                        stadium: 'Accra Sports Stadium',
+                        city: 'Accra',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -881,10 +1109,45 @@ export const AppData = {
         {
           id: 'AFCON1974',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'AFCON1974',
             description: 'Africa Cup of Nations 1974 Final Tournament',
             order: 9,
+            stages: [
+              {
+                name: 'Knockout Stage',
+                type: 'knockout',
+                rounds: [
+                  {
+                    name: 'Final',
+                    short_name: '1st',
+                    matches: [
+                      {
+                        home_team: { id: 'ZAI' },
+                        away_team: { id: 'ZAM' },
+                        home_score: 1,
+                        away_score: 1,
+                        home_extra_score: 1,
+                        away_extra_score: 1,
+                        date: '1974-03-12',
+                        time: '12:00',
+                        stadium: 'Cairo International Stadium',
+                        city: 'Cairo',
+                        replay_home_team: { id: 'ZAI' },
+                        replay_away_team: { id: 'ZAM' },
+                        replay_home_score: 2,
+                        replay_away_score: 0,
+                        replay_date: '1974-03-14',
+                        replay_time: '12:00',
+                        replay_stadium: 'Cairo International Stadium',
+                        replay_city: 'Cairo',
+                        replay_match: true,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
         {
@@ -953,10 +1216,39 @@ export const AppData = {
         {
           id: 'AFCON1957',
           data: {
-            name: 'Tournamnt',
+            name: 'Tournament',
             tournament_id: 'AFCON1957',
             description: 'Africa Cup of Nations 1957 Final Tournament',
             order: 9,
+            stages: [
+              {
+                name: 'Final tournament',
+                type: 'knockout',
+                rounds: [
+                  {
+                    name: 'Semi-finals',
+                    short_name: '1/2',
+                    eliminate_count: 2,
+                    next_round: 'Final',
+                    teams: [{ id: 'SDN-1956-1970' }, { id: 'EGY-1953-1958' }, { id: 'ETH-1941-1974' }, { id: 'RSA-1928-1994' }],
+                    matches: [
+                      {
+                        home_team: { id: 'ETH-1941-1974' },
+                        away_team: { id: 'RSA-1928-1994' },
+                        walkover_match: true,
+                        home_walkover: true,
+                        walkover_text: 'Walkover: South Africa was disqualified due to apartheid. Ethiopia therefore had a bye to the final.',
+                        date: '1957-02-10',
+                        time: '15:00',
+                        stadium: 'Municipal Stadium',
+                        city: 'Khartoum',
+                        bracket_order: 2,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         },
       ],
