@@ -49,7 +49,7 @@ class Collection extends React.Component {
           .set({ ...row.data, time_stamp: ts })
         return true
       })
-      GetCollection({ name, callback: this.getData })
+      // GetCollection({ name, callback: this.getData })
       this.setState({ batchNumber: 0 })
     }
   }
@@ -63,7 +63,7 @@ class Collection extends React.Component {
       const newState = docs.filter((doc) => {
         return doc.id !== id
       })
-      GetCollection({ name, callback: this.getData })
+      // GetCollection({ name, callback: this.getData })
       this.setState({ docs: newState })
     }
   }
@@ -146,9 +146,9 @@ class Collection extends React.Component {
               </h1>
             </Col>
           </Row>
-          <Row>
+          {/* <Row>
             <Col sm="12">{this.displayTable()}</Col>
-          </Row>
+          </Row> */}
         </Container>
         <Container className="mt-5 mb-5">
           <Row>
