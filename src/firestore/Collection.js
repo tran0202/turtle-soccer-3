@@ -16,6 +16,7 @@ class Collection extends React.Component {
       batchNumber: 0,
       batchData: null,
       staticStore: null,
+      submitted: false,
     }
   }
 
@@ -72,9 +73,9 @@ class Collection extends React.Component {
     event.preventDefault()
     if (this.refs.batch.value && parseInt(this.refs.batch.value) > 0) {
       const batch = this.findUploadBatch(parseInt(this.refs.batch.value))
-      this.setState({ batchData: batch })
+      this.setState({ batchData: batch, submitted: false })
     } else {
-      this.setState({ batchData: null })
+      this.setState({ batchData: null, submitted: false })
     }
   }
 
@@ -82,7 +83,7 @@ class Collection extends React.Component {
     event.preventDefault()
     const { docs } = this.state
     if (this.refs.batch.value && parseInt(this.refs.batch.value) > 0) {
-      this.setState({ docs, batchNumber: parseInt(this.refs.batch.value) })
+      this.setState({ docs, batchNumber: parseInt(this.refs.batch.value), submitted: true })
     }
   }
 
@@ -175,6 +176,7 @@ class Collection extends React.Component {
                       Add
                     </Button>
                   </Col>
+                  <Col sm={{ size: 9, offset: 3 }}>{this.state.submitted && <b>Submitted</b>}</Col>
                 </FormGroup>
               </Form>
             </Col>
