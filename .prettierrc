@@ -1,8 +1,11 @@
 {
-  "printWidth": 160,
-  "semi": false,
-  "singleQuote": true,
-  "tabWidth": 2,
-  "trailingComma": "all",
-  "useTabs": false
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "eslintIntegration": true,
+    "printWidth": 160,
+    "semi": false,
+    "singleQuote": true,
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "useTabs": false
 }
