@@ -32,9 +32,9 @@
   # Header
   --------------------------------------------------------------*/
 #header {
-    height: 114px;
+    height: 134px;
     transition: all 0.5s;
-    padding: 10px 0;
+    padding: 20px 0;
     background: #fff;
     z-index: 997;
 }

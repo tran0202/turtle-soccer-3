@@ -14,16 +14,22 @@ class App extends React.Component {
                 <Container>
                     <section id="hero">
                         <div className="hero-container">
-                            <div id="heroCarousel" className="carousel slide carousel-fade" data-ride="carousel">
-                                <ol className="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-                                <div className="carousel-inner" role="listbox">
-                                    <div
-                                        className="carousel-item active"
-                                        style={{
-                                            backgroundImage: "url('/images/slide/5Y3W3OAVMMZF2YS23KVNUEEFGU.webp')",
-                                        }}
-                                    >
+                            <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                                <div className="carousel-indicators">
+                                    <button
+                                        type="button"
+                                        data-bs-target="#heroCarousel"
+                                        data-bs-slide-to="0"
+                                        className="active"
+                                        aria-current="true"
+                                        aria-label="Slide 1"
+                                    ></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+                                <div className="carousel-inner">
+                                    <div className="carousel-item active">
+                                        <img src="/images/slide/5Y3W3OAVMMZF2YS23KVNUEEFGU.webp" className="d-block w-100" alt="Slide 1" />
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">
@@ -38,13 +44,8 @@ class App extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div
-                                        className="carousel-item"
-                                        style={{
-                                            backgroundImage: "url('/images/slide/eaf8e81e8a2b64d30b58ef5172451b8266946e3fb5d49.webp')",
-                                        }}
-                                    >
+                                    <div className="carousel-item">
+                                        <img src="/images/slide/eaf8e81e8a2b64d30b58ef5172451b8266946e3fb5d49.webp" className="d-block w-100" alt="Slide 2." />
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">
@@ -60,13 +61,8 @@ class App extends React.Component {
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div
-                                        className="carousel-item"
-                                        style={{
-                                            backgroundImage: "url('/images/slide/Copa America Argentina AFP.jpg')",
-                                        }}
-                                    >
+                                    <div className="carousel-item">
+                                        <img src="/images/slide/Copa America Argentina AFP.jpg" className="d-block w-100" alt="Slide 3" />
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">
@@ -84,15 +80,14 @@ class App extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-
-                                <a className="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                                <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
                                     <span className="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
-                                    <span className="sr-only">Previous</span>
-                                </a>
-                                <a className="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
                                     <span className="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
-                                    <span className="sr-only">Next</span>
-                                </a>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                     </section>
