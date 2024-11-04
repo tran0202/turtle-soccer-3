@@ -10,6 +10,6 @@
 // )
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Routing from './Routing'
+import Routing from './core/Routing'
 
 ReactDOM.render(<Routing />, document.getElementById('root'))

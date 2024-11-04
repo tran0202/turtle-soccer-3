@@ -162,6 +162,9 @@ a:hover {
 .font-custom1:hover {
     font-size: 40px;
 }
+.font-custom2 {
+    font-size: 1.5rem;
+}
 
 .h1-ff1,
 .h1-ff2,
@@ -363,6 +366,9 @@ a:hover {
     border-right: none;
 }
 
+.margin-bottom-xs-4 {
+    margin-bottom: 4px;
+}
 .margin-top-xs {
     margin-top: 5px;
 }
