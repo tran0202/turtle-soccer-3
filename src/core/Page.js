@@ -28,6 +28,11 @@ class Page extends React.Component {
                                     </ul>
                                     <ul>
                                         <li>
+                                            <a href="/qualification">Qualification</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
                                             <a href="/rankings">Rankings</a>
                                         </li>
                                     </ul>

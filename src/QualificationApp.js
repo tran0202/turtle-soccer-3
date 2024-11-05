@@ -3,17 +3,17 @@ import { Container, Row, Col } from 'reactstrap'
 import Page from './core/Page'
 import Table from './ranking/Table'
 
-class RankingsApp extends React.Component {
+class QualificationApp extends React.Component {
     constructor(props) {
         super(props)
-        document.title = 'Rankings - Turtle Soccer'
+        document.title = 'Qualification - Turtle Soccer'
     }
 
     render() {
         return (
             <Page>
                 <Container>
-                    <h1 className="h1-ff5 text-center mt-3 mb-3">Rankings: Men's National Teams</h1>
+                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026 Qualification</h1>
                     <Row className="mt-3 mb-3 text-start rankings-page-box">
                         <Col sm="12" md="12">
                             <section className="rankings section-bg">
@@ -29,4 +29,4 @@ class RankingsApp extends React.Component {
     }
 }
 
-export default RankingsApp
+export default QualificationApp
