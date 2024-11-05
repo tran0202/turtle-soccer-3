@@ -16,8 +16,8 @@ class Rows extends React.Component {
                                 <div className="box-sm">
                                     <Row className="no-gutters">
                                         <Col className="col-box-4"></Col>
-                                        <Col className="col-box-24">{r.rank}</Col>
-                                        <Col className="col-box-24">{getTeamFlagName2(r, config)}</Col>
+                                        <Col className="col-box-14">{r.rank}</Col>
+                                        <Col className="col-box-34">{getTeamFlagName2(r, config)}</Col>
                                         <Col className="col-box-24">
                                             <NumericFormat displayType="text" value={r.points} decimalScale={2} fixedDecimalScale />
                                         </Col>

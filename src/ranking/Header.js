@@ -18,8 +18,8 @@ class Header extends React.Component {
                 <Col>
                     <Row className="no-gutters">
                         <Col className="col-box-4"></Col>
-                        <Col className="col-box-24 padding-top-sm">Rank</Col>
-                        <Col className="col-box-24 padding-top-sm">Team</Col>
+                        <Col className="col-box-14 padding-top-sm">Rank</Col>
+                        <Col className="col-box-34 padding-top-sm">Team</Col>
                         <Col className="col-box-24 padding-top-sm">Points</Col>
                         <Col className="col-box-24">
                             <UncontrolledDropdown group>

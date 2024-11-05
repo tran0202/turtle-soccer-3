@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import { getRandomMensTeamArray } from './core/TeamHelper'
 import Page from './core/Page'
 import Table from './ranking/Table'
 
@@ -7,6 +8,25 @@ class RankingsApp extends React.Component {
     constructor(props) {
         super(props)
         document.title = 'Rankings - Turtle Soccer'
+
+        this.state = { allRankings: [], rankings: [], config: { team_type_id: 'MNT' } }
+    }
+
+    getData = () => {
+        const allRankings = getRandomMensTeamArray()
+        this.setState({ allRankings, rankings: allRankings })
+    }
+
+    setData = (rankings) => {
+        this.setState({ rankings })
+    }
+
+    componentDidMount() {
+        this.getData()
+    }
+
+    componentDidUpdate() {
+        window.rankingsStore = this.state
     }
 
     render() {
@@ -18,7 +38,7 @@ class RankingsApp extends React.Component {
                         <Col sm="12" md="12">
                             <section className="rankings section-bg">
                                 <div className="container">
-                                    <Table />
+                                    <Table state={this.state} func={this.setData} />
                                 </div>
                             </section>
                         </Col>

@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
+import { getRandomMensTeamArray } from './core/TeamHelper'
 import Page from './core/Page'
 import Table from './ranking/Table'
 
-const Format = (props) => {
-    const { config, details } = props
-    // const init_tiebreakers_collapsed = config.tiebreakers_collapsed !== true ? true : false
-    // const init_tiebreakers_status = config.tiebreakers_collapsed !== true ? 'Opened' : 'Closed'
-    const [collapse, setCollapse] = useState(true)
-    const [status, setStatus] = useState('Opened')
+const SectionCollapse = (props) => {
+    const { title, children } = props
+    const [collapse, setCollapse] = useState(false)
+    const [status, setStatus] = useState('Closed')
     const onEntering = () => setStatus('Opening...')
     const onEntered = () => setStatus('Opened')
     const onExiting = () => setStatus('Closing...')
@@ -17,10 +16,10 @@ const Format = (props) => {
 
     return (
         <React.Fragment>
-            <Row className="mt-3 text-center">
+            <Row className="mt-3 text-start padding-top-lg">
                 <Col sm="12">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse">
-                        Format &amp; Tiebreakers&nbsp;
+                    <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse-md">
+                        {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
                         {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
@@ -29,7 +28,13 @@ const Format = (props) => {
                 </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
-                Something
+                <Row className="mb-3 text-start">
+                    <Col sm="12" md="12">
+                        <section className="rankings section-bg">
+                            <div className="container">{children}</div>
+                        </section>
+                    </Col>
+                </Row>
             </Collapse>
         </React.Fragment>
     )
@@ -39,6 +44,25 @@ class QualificationApp extends React.Component {
     constructor(props) {
         super(props)
         document.title = 'Qualification - Turtle Soccer'
+
+        this.state = { allRankings: [], rankings: [], config: { team_type_id: 'MNT' } }
+    }
+
+    getData = () => {
+        const allRankings = getRandomMensTeamArray()
+        this.setState({ allRankings, rankings: allRankings })
+    }
+
+    setData = (rankings) => {
+        this.setState({ rankings })
+    }
+
+    componentDidMount() {
+        this.getData()
+    }
+
+    componentDidUpdate() {
+        window.rankingsStore = this.state
     }
 
     render() {
@@ -46,16 +70,14 @@ class QualificationApp extends React.Component {
             <Page>
                 <Container>
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026 Qualification</h1>
-                    <Format />
-                    <Row className="mt-3 mb-3 text-start rankings-page-box">
-                        <Col sm="12" md="12">
-                            <section className="rankings section-bg">
-                                <div className="container">
-                                    <Table />
-                                </div>
-                            </section>
-                        </Col>
-                    </Row>
+
+                    <SectionCollapse title="World Rankings">
+                        <Table state={this.state} func={this.setData} />
+                    </SectionCollapse>
+
+                    <SectionCollapse title="Qualified Teams">Qualified Teams</SectionCollapse>
+
+                    <SectionCollapse title="AFC Qualification">AFC Qualification</SectionCollapse>
                 </Container>
             </Page>
         )
