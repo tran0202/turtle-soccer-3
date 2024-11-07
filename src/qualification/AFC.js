@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
-import { getActiveFIFATeamArray, getRandomMensTeamArray, getRandomHostTeamArray, getConfederationTeamArrays, getTournament } from './core/TeamHelper'
-import Page from './core/Page'
-import RankingsTable from './rankings/RankingsTable'
-import QualifiedTable from './qualified/QualifiedTable'
-import AFC from './qualification/AFC'
+import { getActiveFIFATeamArray, getRandomMensTeamArray, getRandomHostTeamArray, getConfederationTeamArrays, getTournament } from '../core/TeamHelper'
+import Page from '../core/Page'
+import RankingsTable from '../rankings/RankingsTable'
+import QualifiedTable from '../qualified/QualifiedTable'
 
 const SectionCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -42,27 +41,27 @@ const SectionCollapse = (props) => {
     )
 }
 
-class QualificationApp extends React.Component {
+class AFCQualification extends React.Component {
     constructor(props) {
         super(props)
         document.title = 'Qualification - Turtle Soccer'
 
-        this.state = { allRankings: [], rankings: [], confRankings: [], allTeams: [], qualifiedTeams: [], tournament: {}, config: { team_type_id: 'MNT' } }
+        // this.state = { allRankings: [], rankings: [], confRankings: [], allTeams: [], qualifiedTeams: [], tournament: {}, config: { team_type_id: 'MNT' } }
     }
 
     getData = () => {
-        const tournament = getTournament()
-        const teamArray = getActiveFIFATeamArray()
-        const allRankings = getRandomMensTeamArray(teamArray)
-        const confRankings = getConfederationTeamArrays(allRankings)
-        this.setState({
-            allRankings,
-            rankings: allRankings,
-            confRankings,
-            allTeams: teamArray,
-            qualifiedTeams: getRandomHostTeamArray(teamArray, tournament),
-            tournament,
-        })
+        // const tournament = getTournament()
+        // const teamArray = getActiveFIFATeamArray()
+        // const allRankings = getRandomMensTeamArray(teamArray)
+        // const confRankings = getConfederationTeamArrays(allRankings)
+        // this.setState({
+        //     allRankings,
+        //     rankings: allRankings,
+        //     confRankings,
+        //     allTeams: teamArray,
+        //     qualifiedTeams: getRandomHostTeamArray(teamArray, tournament),
+        //     tournament,
+        // })
     }
 
     setData = (rankings) => {
@@ -74,30 +73,20 @@ class QualificationApp extends React.Component {
     }
 
     componentDidUpdate() {
-        window.qualificationStore = this.state
+        // window.qualificationStore = this.state
     }
 
     render() {
         return (
             <Page>
                 <Container>
-                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026 Qualification</h1>
+                    <h1 className="h1-ff5 text-center mt-3 mb-3">AFC Qualification</h1>
 
-                    <SectionCollapse title="World Rankings">
-                        <RankingsTable state={this.state} func={this.setData} />
-                    </SectionCollapse>
-
-                    <SectionCollapse title="Qualified Teams" initialStatus="Opened">
-                        <QualifiedTable state={this.state} />
-                    </SectionCollapse>
-
-                    <SectionCollapse title="AFC Qualification">
-                        <AFC />
-                    </SectionCollapse>
+                    <SectionCollapse title="AFC Rankings">AFC RAnkings</SectionCollapse>
                 </Container>
             </Page>
         )
     }
 }
 
-export default QualificationApp
+export default AFCQualification

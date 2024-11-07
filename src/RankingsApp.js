@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
-import { getRandomMensTeamArray } from './core/TeamHelper'
+import { getActiveFIFATeamArray, getRandomMensTeamArray } from './core/TeamHelper'
 import Page from './core/Page'
-import Table from './ranking/Table'
+import RankingsTable from './rankings/RankingsTable'
 
 class RankingsApp extends React.Component {
     constructor(props) {
@@ -13,7 +13,8 @@ class RankingsApp extends React.Component {
     }
 
     getData = () => {
-        const allRankings = getRandomMensTeamArray()
+        const teamArray = getActiveFIFATeamArray()
+        const allRankings = getRandomMensTeamArray(teamArray)
         this.setState({ allRankings, rankings: allRankings })
     }
 
@@ -38,7 +39,7 @@ class RankingsApp extends React.Component {
                         <Col sm="12" md="12">
                             <section className="rankings section-bg">
                                 <div className="container">
-                                    <Table state={this.state} func={this.setData} />
+                                    <RankingsTable state={this.state} func={this.setData} />
                                 </div>
                             </section>
                         </Col>

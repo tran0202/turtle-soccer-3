@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Button, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
 
-class Header extends React.Component {
+class RankingsHeader extends React.Component {
     filterTeam(conf) {
         const { state, func } = this.props
         const { allRankings } = state
@@ -87,4 +87,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header
+export default RankingsHeader

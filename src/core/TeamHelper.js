@@ -1,21 +1,29 @@
 import React from 'react'
+import Tournament from '../data/Tournament.json'
 import ConfederationArray from '../data/Confederations.json'
 import NationArray from '../data/Nations.json'
 import MensTeamArray from '../data/teams/Mens.json'
-import { getTeamArray, setNationDetails, setNationConfig } from './DataHelper'
+import { getTeamArray } from './DataHelper'
 import randomInteger from 'random-int'
 
-export const getActiveFIFATeamArray = (teamArray) => {
+export const getTournament = () => {
+    return Tournament
+}
+
+export const setFIFAMember = () => {
     NationArray.forEach((n) => {
-        setNationDetails(n)
-        setNationConfig(n)
+        n.fifa_member = !n.not_fifa_member ? true : false
     })
+}
+
+export const getActiveFIFATeamArray = () => {
+    setFIFAMember()
     const result = []
-    teamArray.forEach((t) => {
-        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.details.end_date === '' && n.config.fifa_member)
-        t.nation = foundNation
+    MensTeamArray.forEach((t) => {
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member)
         if (t.parent_team_id === '' && foundNation) {
-            const foundConf = ConfederationArray.find((c) => foundNation.config.confederation_id === c.id)
+            t.nation = foundNation
+            const foundConf = ConfederationArray.find((c) => foundNation.confederation_id === c.id)
             if (foundConf) {
                 t.confederation = foundConf
             }
@@ -25,10 +33,10 @@ export const getActiveFIFATeamArray = (teamArray) => {
     return result
 }
 
-export const getRandomMensTeamArray = () => {
+export const getRandomMensTeamArray = (teamArray) => {
     const result = [],
         pool = []
-    getActiveFIFATeamArray(MensTeamArray).forEach((t) => {
+    teamArray.forEach((t) => {
         const randomPoint = randomInteger(0, 200000) / 100
         const found = pool.find((t) => t.points === randomPoint)
         if (!found) {
@@ -59,6 +67,50 @@ export const getRandomMensTeamArray = () => {
     return result
 }
 
+export const getConfederationTeamArrays = (teamArray) => {
+    const result = []
+    ConfederationArray.forEach((c) => {
+        if (c.id !== 'FIFA') {
+            const confTeams = teamArray.filter((t) => t.confederation && t.confederation.id === c.id)
+            confTeams.forEach((t, index) => (t.confRank = index + 1))
+            result.push({ id: c.id, teams: confTeams })
+        }
+    })
+    return result
+}
+
+export const getConfederation = (id) => {
+    const result = ConfederationArray.find((c) => c.id === id)
+    return result ? result : {}
+}
+
+export const randomHostIndex = (count, confederation_id) => {
+    if (!confederation_id) return
+    let result = []
+    const conf = getConfederation(confederation_id)
+    while (result.length !== count) {
+        const randomIndex = randomInteger(0, conf.member_count - 1)
+        const found = result.find((i) => i + 1 === randomIndex + 1)
+        if (!found) {
+            result.push(randomIndex)
+        }
+    }
+    return result
+}
+
+export const getRandomHostTeamArray = (teamArray, tournament) => {
+    if (!teamArray || !tournament) return
+    const result = []
+    const confederation_id = tournament.details.host.confederation_id
+    const teams = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
+    const host_count = tournament.details.host.teams.length
+    randomHostIndex(host_count, confederation_id).forEach((i) => {
+        const team = { ...teams[i], qualificationMethod: 'Hosts', qualificationDate: '2023-02-14' }
+        result.push(team)
+    })
+    return result
+}
+
 export const getConfederationLogo = (t, config) => {
     if (!t || !t.confederation) return
     return (
@@ -80,9 +132,9 @@ export const getTeamFlag2 = (t, config) => {
             {config.team_type_id !== 'CLUB' && (
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
-                    src={'/images/flags/' + t.nation.details.flag_filename}
-                    alt={`${t.id} ${t.nation.details.official_name}`}
-                    title={`${t.id} ${t.nation.details.official_name}`}
+                    src={'/images/flags/' + t.nation.flag_filename}
+                    alt={`${t.id} ${t.nation.official_name}`}
+                    title={`${t.id} ${t.nation.official_name}`}
                 />
             )}
         </React.Fragment>
