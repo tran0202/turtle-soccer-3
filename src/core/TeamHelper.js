@@ -52,13 +52,15 @@ export const getRandomMensTeamArray = (teamArray) => {
     let firstInPool = true
     pool.forEach((t) => {
         firstInPool = true
+        let tieRank = 0
         t.teams.forEach((t2) => {
             rank = rank + 1
             if (firstInPool) {
-                result.push({ rank, ...t2, points: t.points })
+                tieRank = rank
+                result.push({ rank, tieRank, ...t2, points: t.points })
                 firstInPool = false
             } else {
-                result.push({ rank: '--', ...t2, points: t.points })
+                result.push({ rank: '--', tieRank, ...t2, points: t.points })
             }
         })
     })
@@ -109,6 +111,34 @@ export const getRandomHostTeamArray = (teamArray, tournament) => {
         result.push(team)
     })
     return result
+}
+
+export const getQualificationPots = (tournament) => {
+    const qualArray = tournament.qualification
+    qualArray.forEach((q) => {
+        q.allPots = []
+        q.rounds.forEach((r) => {
+            r.pots.forEach((p) => {
+                q.allPots.push({ round: r.name, ...p })
+            })
+        })
+    })
+}
+
+export const getDrawingPosition = (rankingArray, tournament) => {
+    getQualificationPots(tournament)
+    rankingArray.forEach((t) => {
+        const foundConf = tournament.qualification.find((q) => t.confederation.id === q.id)
+        if (foundConf) {
+            const foundPot = foundConf.allPots.find((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+            const foundIndex = foundConf.allPots.findIndex((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+            if (foundPot) {
+                t.qualRound = foundPot.round
+                t.qualPot = foundPot.name
+                t.qualStriped = foundIndex % 2 === 0 ? true : false
+            }
+        }
+    })
 }
 
 export const getConfederationLogo = (t, config) => {

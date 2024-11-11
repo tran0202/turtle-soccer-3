@@ -1,12 +1,19 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
-import { getActiveFIFATeamArray, getRandomMensTeamArray, getRandomHostTeamArray, getConfederationTeamArrays, getTournament } from './core/TeamHelper'
+import {
+    getActiveFIFATeamArray,
+    getRandomMensTeamArray,
+    getRandomHostTeamArray,
+    getConfederationTeamArrays,
+    getTournament,
+    getDrawingPosition,
+} from './core/TeamHelper'
 import Page from './core/Page'
 import RankingsTable from './rankings/RankingsTable'
 import QualifiedTable from './qualified/QualifiedTable'
-import AFC from './qualification/AFC'
+import QualificationConfederation from './qualification/QualificationConfederation'
 
-const SectionCollapse = (props) => {
+export const SectionCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -20,7 +27,7 @@ const SectionCollapse = (props) => {
         <React.Fragment>
             <Row className="text-start padding-top-lg">
                 <Col sm="12">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff3 btn-collapse-md">
+                    <Button outline color="primary" onClick={toggle} className="h2-ff8 btn-collapse-md">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
@@ -55,6 +62,7 @@ class QualificationApp extends React.Component {
         const teamArray = getActiveFIFATeamArray()
         const allRankings = getRandomMensTeamArray(teamArray)
         const confRankings = getConfederationTeamArrays(allRankings)
+        getDrawingPosition(allRankings, tournament)
         this.setState({
             allRankings,
             rankings: allRankings,
@@ -78,6 +86,8 @@ class QualificationApp extends React.Component {
     }
 
     render() {
+        const { tournament } = this.state
+        const { qualification } = tournament
         return (
             <Page>
                 <Container>
@@ -87,13 +97,18 @@ class QualificationApp extends React.Component {
                         <RankingsTable state={this.state} func={this.setData} />
                     </SectionCollapse>
 
-                    <SectionCollapse title="Qualified Teams" initialStatus="Opened">
+                    <SectionCollapse title="Qualified Teams">
                         <QualifiedTable state={this.state} />
                     </SectionCollapse>
 
-                    <SectionCollapse title="AFC Qualification">
-                        <AFC />
-                    </SectionCollapse>
+                    {qualification &&
+                        qualification.map((q) => {
+                            return (
+                                <SectionCollapse key={q.id} title={`${q.id} Qualification`} initialStatus="Opened">
+                                    <QualificationConfederation state={this.state} confederation={q.id} />
+                                </SectionCollapse>
+                            )
+                        })}
                 </Container>
             </Page>
         )
