@@ -12,10 +12,11 @@ class QualifiedTable extends React.Component {
                 <Row className="mt-5 box-xl">
                     <Col xs={{ size: 10, offset: 1 }}>
                         <QualifiedHeader />
-                        {qualifiedTeams.map((r, index) => {
-                            r.rank = index + 1
-                            return <QualifiedRow key={r.id} rank={index} row={r} config={config} />
-                        })}
+                        {qualifiedTeams &&
+                            qualifiedTeams.map((r, index) => {
+                                r.rank = index + 1
+                                return <QualifiedRow key={r.id} rank={index} row={r} config={config} />
+                            })}
                     </Col>
                 </Row>
             </React.Fragment>

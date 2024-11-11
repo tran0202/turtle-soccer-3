@@ -2,7 +2,7 @@ import React from 'react'
 import Tournament from '../data/Tournament.json'
 import ConfederationArray from '../data/Confederations.json'
 import NationArray from '../data/Nations.json'
-import MensTeamArray from '../data/teams/Mens.json'
+import MensTeamArray from '../data/Mens.json'
 import { getTeamArray } from './DataHelper'
 import randomInteger from 'random-int'
 
@@ -64,8 +64,10 @@ export const getRandomMensTeamArray = (teamArray) => {
             }
         })
     })
-    result[result.length - 1].rank = ''
-    result[result.length - 1].points = 0
+    if (result.length > 0) {
+        result[result.length - 1].rank = ''
+        result[result.length - 1].points = 0
+    }
     return result
 }
 
@@ -101,20 +103,22 @@ export const randomHostIndex = (count, confederation_id) => {
 }
 
 export const getRandomHostTeamArray = (teamArray, tournament) => {
-    if (!teamArray || !tournament) return
+    if (!teamArray || !tournament || !tournament.details) return
     const result = []
     const confederation_id = tournament.details.host.confederation_id
     const teams = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
     const host_count = tournament.details.host.teams.length
-    randomHostIndex(host_count, confederation_id).forEach((i) => {
-        const team = { ...teams[i], qualificationMethod: 'Hosts', qualificationDate: '2023-02-14' }
-        result.push(team)
-    })
+    teams.length >= host_count &&
+        randomHostIndex(host_count, confederation_id).forEach((i) => {
+            const team = { ...teams[i], qualificationMethod: 'Hosts', qualificationDate: '2023-02-14' }
+            result.push(team)
+        })
     return result
 }
 
 export const getQualificationPots = (tournament) => {
     const qualArray = tournament.qualification
+    if (!qualArray) return
     qualArray.forEach((q) => {
         q.allPots = []
         q.rounds.forEach((r) => {
@@ -126,6 +130,7 @@ export const getQualificationPots = (tournament) => {
 }
 
 export const getDrawingPosition = (rankingArray, tournament) => {
+    if (!rankingArray || !tournament || !tournament.qualification) return
     getQualificationPots(tournament)
     rankingArray.forEach((t) => {
         const foundConf = tournament.qualification.find((q) => t.confederation.id === q.id)
@@ -156,7 +161,7 @@ export const getConfederationLogo = (t, config) => {
 }
 
 export const getTeamFlag2 = (t, config) => {
-    if (!t) return
+    if (!t || !t.nation) return
     return (
         <React.Fragment>
             {config.team_type_id !== 'CLUB' && (
@@ -181,7 +186,7 @@ export const getTeamFlagName2 = (t, config) => {
     )
 }
 
-// Version 1
+// ----------------------------- Version 1 ----------------------------------
 
 export const getFlagSrc = (id) => {
     if (!id) return

@@ -258,7 +258,7 @@
 // import qtd_WC_2022 from '../data/qualTournamentData/qtd_WC_2022.json'
 
 // import Competitions from '../data/Competitions.json'
-import MensTeamArray from '../data/teams/Mens.json'
+import MensTeamArray from '../data/Mens.json'
 // import ClubArray from '../data/Clubs.json'
 
 export const getTeamArray = () => {

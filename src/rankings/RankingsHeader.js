@@ -6,13 +6,16 @@ class RankingsHeader extends React.Component {
         const { state, func } = this.props
         const { allRankings } = state
         let result = allRankings
-        if (conf !== 'All') {
+        if (conf !== 'FIFA') {
             result = allRankings.filter((t) => t.confederation.id === conf)
         }
         func(result)
     }
 
     render() {
+        const { state } = this.props
+        const { config } = state
+        const { confederations } = config
         return (
             <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
                 <Col>
@@ -28,14 +31,19 @@ class RankingsHeader extends React.Component {
                                 </Button>
                                 <DropdownToggle caret color="primary" />
                                 <DropdownMenu>
-                                    <DropdownItem onClick={() => this.filterTeam('All')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/640px-Flag_of_FIFA.svg.png'}
-                                            alt={`FIFA`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('AFC')}>
+                                    {confederations &&
+                                        confederations.map((c) => {
+                                            return (
+                                                <DropdownItem key={c.id} onClick={() => this.filterTeam(c.id)}>
+                                                    <img
+                                                        className="conf-logo-sm margin-bottom-xs-4"
+                                                        src={`/images/confederation_logos/${c.logo_filename}`}
+                                                        alt={c.id}
+                                                    />
+                                                </DropdownItem>
+                                            )
+                                        })}
+                                    {/* <DropdownItem onClick={() => this.filterTeam('AFC')}>
                                         <img
                                             className="conf-logo-sm margin-bottom-xs-4"
                                             src={'/images/confederation_logos/640px-Asian_Football_Confederation_(logo).svg.png'}
@@ -76,7 +84,7 @@ class RankingsHeader extends React.Component {
                                             src={'/images/confederation_logos/640px-UEFA_logo.svg.png'}
                                             alt={`UEFA`}
                                         />
-                                    </DropdownItem>
+                                    </DropdownItem> */}
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Col>

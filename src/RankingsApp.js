@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
+import ConfederationArray from './data/Confederations.json'
 import { getActiveFIFATeamArray, getRandomMensTeamArray } from './core/TeamHelper'
 import Page from './core/Page'
 import RankingsTable from './rankings/RankingsTable'
@@ -9,13 +10,13 @@ class RankingsApp extends React.Component {
         super(props)
         document.title = 'Rankings - Turtle Soccer'
 
-        this.state = { allRankings: [], rankings: [], config: { team_type_id: 'MNT' } }
+        this.state = { allRankings: [], rankings: [], config: { team_type_id: 'MNT', confederations: [] } }
     }
 
     getData = () => {
         const teamArray = getActiveFIFATeamArray()
         const allRankings = getRandomMensTeamArray(teamArray)
-        this.setState({ allRankings, rankings: allRankings })
+        this.setState({ allRankings, rankings: allRankings, config: { ...this.state.config, confederations: ConfederationArray } })
     }
 
     setData = (rankings) => {

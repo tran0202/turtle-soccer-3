@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
+import ConfederationArray from './data/Confederations.json'
 import {
     getActiveFIFATeamArray,
     getRandomMensTeamArray,
@@ -54,7 +55,15 @@ class QualificationApp extends React.Component {
         super(props)
         document.title = 'Qualification - Turtle Soccer'
 
-        this.state = { allRankings: [], rankings: [], confRankings: [], allTeams: [], qualifiedTeams: [], tournament: {}, config: { team_type_id: 'MNT' } }
+        this.state = {
+            allRankings: [],
+            rankings: [],
+            confRankings: [],
+            allTeams: [],
+            qualifiedTeams: [],
+            tournament: {},
+            config: { team_type_id: 'MNT', confederations: ConfederationArray },
+        }
     }
 
     getData = () => {
