@@ -17,27 +17,33 @@
         "city_count": 16
     },
     "hero_images": [{ "name": "Ras Abu Aboud Stadium", "filename": "CG_rendering_of_Ras_Abu_Aboud_Stadium_crop.jpg", "text": "Ras Abu Aboud Stadium" }],
-    "qualification": [
+    "qualifications": [
         {
             "id": "AFC",
-            "rounds": [
+            "draws": [
+                { "id": "1", "date": "2023-07-27" },
+                { "id": "2", "date": "2024-06-27" }
+            ],
+            "stages": [
                 {
-                    "name": "Second",
+                    "name": "First Round",
+                    "draw_id": "1",
+                    "rankingFrom": 27,
+                    "rankingTo": 46,
+                    "pots": [
+                        { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
+                        { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
+                    ]
+                },
+                {
+                    "name": "Second Round",
+                    "draw_id": "1",
                     "rankingFrom": 1,
                     "rankingTo": 26,
                     "pots": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 9 },
                         { "name": 2, "rankingFrom": 10, "rankingTo": 18 },
                         { "name": 3, "rankingFrom": 19, "rankingTo": 26 }
-                    ]
-                },
-                {
-                    "name": "First",
-                    "rankingFrom": 27,
-                    "rankingTo": 46,
-                    "pots": [
-                        { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
-                        { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
                     ]
                 }
             ]

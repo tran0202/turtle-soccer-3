@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlagName2 } from '../core/TeamHelper'
 
-class QualificationRankingRow extends React.Component {
+class DrawRankingRow extends React.Component {
     render() {
         const { ranking, config } = this.props
         return (
@@ -27,4 +27,4 @@ class QualificationRankingRow extends React.Component {
     }
 }
 
-export default QualificationRankingRow
+export default DrawRankingRow

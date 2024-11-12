@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 
-class QualificationRankingsHeader extends React.Component {
+class DrawRankingsHeader extends React.Component {
     render() {
         return (
             <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
@@ -19,4 +19,4 @@ class QualificationRankingsHeader extends React.Component {
     }
 }
 
-export default QualificationRankingsHeader
+export default DrawRankingsHeader

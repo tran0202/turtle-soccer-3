@@ -33,6 +33,43 @@ export const getActiveFIFATeamArray = () => {
     return result
 }
 
+export const getQualificationDrawRankings = (teamArray, tournament) => {
+    if (!tournament) return
+    const result = []
+    tournament.qualifications.forEach((q) => {
+        const draws = []
+        const stages = []
+        q.draws.forEach((d) => {
+            const allRankings = getRandomMensTeamArray(teamArray)
+            const confRankings = getConfederationRankings(allRankings, q.id)
+            draws.push({ ...d, rankings: confRankings })
+        })
+        q.stages.forEach((s) => {
+            const stageDraw = draws.find((d) => d.id === s.draw_id)
+            const rankings = getPotRankings(stageDraw.rankings, s.pots, s.name)
+            stages.push({ ...s, rankings })
+        })
+        result.push({ id: q.id, draws, stages })
+    })
+    return result
+}
+
+export const getPotRankings = (rankingArray, pots, stageName) => {
+    if (!rankingArray || !pots) return
+    const result = []
+    rankingArray.forEach((t) => {
+        const foundPot = pots.find((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+        const foundIndex = pots.findIndex((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+        if (foundPot) {
+            t.qualRound = stageName
+            t.qualPot = foundPot.name
+            t.qualStriped = foundIndex % 2 === 0 ? true : false
+            result.push(t)
+        }
+    })
+    return result
+}
+
 export const getRandomMensTeamArray = (teamArray) => {
     const result = [],
         pool = []
@@ -71,14 +108,12 @@ export const getRandomMensTeamArray = (teamArray) => {
     return result
 }
 
-export const getConfederationTeamArrays = (teamArray) => {
+export const getConfederationRankings = (teamArray, confederation_id) => {
     const result = []
-    ConfederationArray.forEach((c) => {
-        if (c.id !== 'FIFA') {
-            const confTeams = teamArray.filter((t) => t.confederation && t.confederation.id === c.id)
-            confTeams.forEach((t, index) => (t.confRank = index + 1))
-            result.push({ id: c.id, teams: confTeams })
-        }
+    const confRankings = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
+    confRankings.forEach((t, index) => {
+        t.confRank = index + 1
+        result.push(t)
     })
     return result
 }
@@ -114,36 +149,6 @@ export const getRandomHostTeamArray = (teamArray, tournament) => {
             result.push(team)
         })
     return result
-}
-
-export const getQualificationPots = (tournament) => {
-    const qualArray = tournament.qualification
-    if (!qualArray) return
-    qualArray.forEach((q) => {
-        q.allPots = []
-        q.rounds.forEach((r) => {
-            r.pots.forEach((p) => {
-                q.allPots.push({ round: r.name, ...p })
-            })
-        })
-    })
-}
-
-export const getDrawingPosition = (rankingArray, tournament) => {
-    if (!rankingArray || !tournament || !tournament.qualification) return
-    getQualificationPots(tournament)
-    rankingArray.forEach((t) => {
-        const foundConf = tournament.qualification.find((q) => t.confederation.id === q.id)
-        if (foundConf) {
-            const foundPot = foundConf.allPots.find((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
-            const foundIndex = foundConf.allPots.findIndex((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
-            if (foundPot) {
-                t.qualRound = foundPot.round
-                t.qualPot = foundPot.name
-                t.qualStriped = foundIndex % 2 === 0 ? true : false
-            }
-        }
-    })
 }
 
 export const getConfederationLogo = (t, config) => {

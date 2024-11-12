@@ -1,23 +1,16 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import QualificationRankingsTable from './QualificationRankingsTable'
+import DrawRankingsTable from './DrawRankingsTable'
 
 const DrawPlacement = (props) => {
-    const { qual } = props
+    const { stage } = props
     return (
         <Row>
             <Col xs="12">
                 <ul className="no-margin-bottom">
-                    {qual &&
-                        qual.rounds.map((r) => {
-                            return (
-                                <li key={r.name}>
-                                    {r.name} Round:{' '}
-                                    {r.pots.map((p, index) => {
-                                        return 'Pot ' + p.name + ' (ranked ' + p.rankingFrom + '-' + p.rankingTo + (r.pots.length !== index + 1 ? ') || ' : ')')
-                                    })}
-                                </li>
-                            )
+                    {stage &&
+                        stage.pots.map((p) => {
+                            return <li key={p.name}>{'Pot ' + p.name + ' (ranked ' + p.rankingFrom + '-' + p.rankingTo + ')'}</li>
                         })}
                 </ul>
             </Col>
@@ -26,7 +19,7 @@ const DrawPlacement = (props) => {
 }
 
 const SectionCollapse = (props) => {
-    const { title, initialStatus, qual, children } = props
+    const { title, initialStatus, stage, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')
@@ -39,8 +32,8 @@ const SectionCollapse = (props) => {
         <React.Fragment>
             <Row className="text-start padding-top-md">
                 <Col sm="1"></Col>
-                <Col sm="4" md="4">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff3">
+                <Col sm="2" md="2">
+                    <Button outline color="primary" onClick={toggle} className="h3-ff3">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
@@ -48,8 +41,8 @@ const SectionCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
-                <Col sm="7">
-                    <DrawPlacement qual={qual} />
+                <Col sm="9">
+                    <DrawPlacement stage={stage} />
                 </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
@@ -66,19 +59,17 @@ const SectionCollapse = (props) => {
     )
 }
 
-class QualificationConfederation extends React.Component {
+class DrawRankings extends React.Component {
     render() {
-        const { state, confederation } = this.props
-        const { tournament } = state
-        const { qualification } = tournament
-        if (!qualification) return
-        const qual = qualification.find((q) => q.id === confederation)
+        const { state, stage } = this.props
         return (
-            <SectionCollapse title={`${confederation} Rankings for Draw`} initialStatus="Opened" qual={qual}>
-                <QualificationRankingsTable state={state} />
-            </SectionCollapse>
+            <React.Fragment>
+                <SectionCollapse title="Ranking" initialStatus="Opened" stage={stage}>
+                    <DrawRankingsTable state={state} stage={stage} />
+                </SectionCollapse>
+            </React.Fragment>
         )
     }
 }
 
-export default QualificationConfederation
+export default DrawRankings

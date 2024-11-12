@@ -1,18 +1,10 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
 import ConfederationArray from './data/Confederations.json'
-import {
-    getActiveFIFATeamArray,
-    getRandomMensTeamArray,
-    getRandomHostTeamArray,
-    getConfederationTeamArrays,
-    getTournament,
-    getDrawingPosition,
-} from './core/TeamHelper'
+import { getActiveFIFATeamArray, getQualificationDrawRankings, getRandomHostTeamArray, getTournament } from './core/TeamHelper'
 import Page from './core/Page'
-import RankingsTable from './rankings/RankingsTable'
 import QualifiedTable from './qualified/QualifiedTable'
-import QualificationConfederation from './qualification/QualificationConfederation'
+import ConfederationQualification from './qualification/ConfederationQualification'
 
 export const SectionCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -56,11 +48,8 @@ class QualificationApp extends React.Component {
         document.title = 'Qualification - Turtle Soccer'
 
         this.state = {
-            allRankings: [],
-            rankings: [],
-            confRankings: [],
-            allTeams: [],
             qualifiedTeams: [],
+            qualifications: [],
             tournament: {},
             config: { team_type_id: 'MNT', confederations: ConfederationArray },
         }
@@ -69,15 +58,10 @@ class QualificationApp extends React.Component {
     getData = () => {
         const tournament = getTournament()
         const teamArray = getActiveFIFATeamArray()
-        const allRankings = getRandomMensTeamArray(teamArray)
-        const confRankings = getConfederationTeamArrays(allRankings)
-        getDrawingPosition(allRankings, tournament)
+        const qualifications = getQualificationDrawRankings(teamArray, tournament)
         this.setState({
-            allRankings,
-            rankings: allRankings,
-            confRankings,
-            allTeams: teamArray,
             qualifiedTeams: getRandomHostTeamArray(teamArray, tournament),
+            qualifications,
             tournament,
         })
     }
@@ -96,25 +80,21 @@ class QualificationApp extends React.Component {
 
     render() {
         const { tournament } = this.state
-        const { qualification } = tournament
+        const { qualifications } = tournament
         return (
             <Page>
                 <Container>
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026 Qualification</h1>
 
-                    <SectionCollapse title="World Rankings">
-                        <RankingsTable state={this.state} func={this.setData} />
-                    </SectionCollapse>
-
                     <SectionCollapse title="Qualified Teams">
                         <QualifiedTable state={this.state} />
                     </SectionCollapse>
 
-                    {qualification &&
-                        qualification.map((q) => {
+                    {qualifications &&
+                        qualifications.map((q) => {
                             return (
                                 <SectionCollapse key={q.id} title={`${q.id} Qualification`} initialStatus="Opened">
-                                    <QualificationConfederation state={this.state} confederation={q.id} />
+                                    <ConfederationQualification state={this.state} confederation_id={q.id} />
                                 </SectionCollapse>
                             )
                         })}
