@@ -66,6 +66,7 @@ class QualificationApp extends React.Component {
             qualifiedTeams,
             qualifications,
             tournament,
+            config: { ...this.state.config, teams: teamArray },
         })
     }
 

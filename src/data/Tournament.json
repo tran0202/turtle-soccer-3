@@ -29,8 +29,8 @@
                     "name": "First Round",
                     "type": "pair2leg",
                     "draw_id": "1",
-                    "rankingFrom": 27,
-                    "rankingTo": 46,
+                    "draw_note": "20 teams (ranked 27–46) were divided into Pot 1 and Pot 2 and played home-and-away over two legs. One team from each pot were drawn into one tie. The ten winners advanced to the second round.",
+                    "result_note": "Bolded team winners advanced to the second round",
                     "pots": [
                         { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
                         { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
@@ -43,8 +43,6 @@
                 {
                     "name": "Second Round",
                     "draw_id": "1",
-                    "rankingFrom": 1,
-                    "rankingTo": 26,
                     "pots": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 9 },
                         { "name": 2, "rankingFrom": 10, "rankingTo": 18 },

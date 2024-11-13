@@ -43,48 +43,6 @@ class RankingsHeader extends React.Component {
                                                 </DropdownItem>
                                             )
                                         })}
-                                    {/* <DropdownItem onClick={() => this.filterTeam('AFC')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/640px-Asian_Football_Confederation_(logo).svg.png'}
-                                            alt={`AFC`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('CAF')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/516px-Confederation_of_African_Football_logo.svg.png'}
-                                            alt={`CAF`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('CONCACAF')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/552px-Concacaf_logo.svg.png'}
-                                            alt={`CONCACAF`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('CONMEBOL')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/555px-CONMEBOL_logo_(2017).svg.png'}
-                                            alt={`CONMEBOL`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('OFC')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/640px-Oceania_Football_Confederation_logo.svg.png'}
-                                            alt={`OFC`}
-                                        />
-                                    </DropdownItem>
-                                    <DropdownItem onClick={() => this.filterTeam('UEFA')}>
-                                        <img
-                                            className="conf-logo-sm margin-bottom-xs-4"
-                                            src={'/images/confederation_logos/640px-UEFA_logo.svg.png'}
-                                            alt={`UEFA`}
-                                        />
-                                    </DropdownItem> */}
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Col>

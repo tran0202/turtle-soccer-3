@@ -1,7 +1,44 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import DrawRankingsHeader from './DrawRankingsHeader'
-import DrawRankingsRow from './DrawRankingsRow'
+import { getTeamFlagName } from '../core/TeamHelper'
+
+const DrawRankingsHeader = (props) => {
+    const { name } = props
+    return (
+        <React.Fragment>
+            <Row className="no-gutters ranking-tbl-header team-row padding-tb-sm text-start">
+                <Col className="col-box-5"></Col>
+                <Col className="col-box-75">Pot {name}</Col>
+            </Row>
+            <Row className="no-gutters ranking-tbl-header-light team-row padding-tb-xs text-start">
+                <Col className="col-box-5"></Col>
+                <Col className="col-box-14">Rank</Col>
+                <Col className="col-box-75">Team (World Rank)</Col>
+            </Row>
+        </React.Fragment>
+    )
+}
+
+const DrawRankingsRow = (props) => {
+    const { ranking, config } = props
+    return (
+        <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
+            <Col>
+                <div className="col-12">
+                    <div className={`box-sm ${ranking.qualStriped ? 'ltblue-striped' : ''}`}>
+                        <Row className="no-gutters">
+                            <Col className="col-box-5"></Col>
+                            <Col className="col-box-14">{ranking.confRank}</Col>
+                            <Col className="col-box-75">
+                                {getTeamFlagName(ranking, config)} ({ranking.rank})
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
+            </Col>
+        </Row>
+    )
+}
 
 class DrawRankingsTable extends React.Component {
     render() {

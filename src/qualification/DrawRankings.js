@@ -8,6 +8,7 @@ const DrawPlacement = (props) => {
         <Row>
             <Col xs="12">
                 <ul className="no-margin-bottom">
+                    {stage.draw_note && <li>{stage.draw_note}</li>}
                     {stage &&
                         stage.pots.map((p) => {
                             return <li key={p.name}>{'Pot ' + p.name + ' (ranked ' + p.rankingFrom + '-' + p.rankingTo + ')'}</li>
@@ -62,7 +63,7 @@ class DrawRankings extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Draw Ranking" initialStatus="Opened" stage={stage}>
+                <SectionCollapse title="Draw Ranking" stage={stage}>
                     <DrawRankingsTable state={state} stage={stage} />
                 </SectionCollapse>
             </React.Fragment>

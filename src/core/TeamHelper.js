@@ -6,6 +6,32 @@ import MensTeamArray from '../data/Mens.json'
 import { getTeamArray } from './DataHelper'
 import randomInteger from 'random-int'
 
+export const getTeamName = (id, config) => {
+    if (!id || !config || !config.teams) return
+    const team = config.teams.find((t) => t.id === id)
+    if (team) {
+        return team.name
+    } else {
+        console.log('Team error', team)
+    }
+}
+
+export const getBoldText = (text, replace) => {
+    if (!text) return
+    if (text.includes(replace)) {
+        return (
+            <React.Fragment>
+                <React.Fragment>
+                    <span className="font-bold">{replace}</span>
+                </React.Fragment>
+                {text.replace(replace, '')}
+            </React.Fragment>
+        )
+    } else {
+        return <React.Fragment>{text}</React.Fragment>
+    }
+}
+
 export const getConfederationLogo = (t, config) => {
     if (!t || !t.confederation) return
     return (
@@ -254,8 +280,8 @@ export const createPairs = (stage) => {
             stage.groups.push({
                 name: team1.id + '-' + team2.id,
                 teams: [
-                    { id: team1.id, pos: 1 },
-                    { id: team2.id, pos: 2 },
+                    { ...team1, pos: 1 },
+                    { ...team2, pos: 2 },
                 ],
             })
         }
@@ -270,9 +296,36 @@ export const createMatches = (stage) => {
             md.matches.forEach((m) => {
                 const home_team = g.teams.find((t) => t.pos === m.home_pos)
                 const away_team = g.teams.find((t) => t.pos === m.away_pos)
-                g.matches.push({ matchday: md.name, date: md.date, home_team: home_team.id, away_team: away_team.id })
+                const new_match = { matchday: md.name, date: md.date, home_team: home_team.id, away_team: away_team.id }
+                getRandomScore(new_match)
+                g.matches.push(new_match)
             })
         })
+    })
+}
+
+export const getRandomScore = (match) => {
+    match.home_score = randomInteger(0, 10)
+    match.away_score = randomInteger(0, 10)
+}
+
+export const isWinMatch = (match) => {}
+
+export const isWinPair = (matches) => {
+    if (!matches || matches.length !== 2) return
+    const agg_home_score = matches[0].home_score + matches[1].away_score
+    const agg_away_score = matches[0].away_score + matches[1].home_score
+    return agg_home_score > agg_away_score
+}
+
+export const calculatePairAggregateScore = (stage) => {
+    if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        if (g.matches && g.matches.length === 2) {
+            g.agg_home_score = g.matches[0].home_score + g.matches[1].away_score
+            g.agg_away_score = g.matches[0].away_score + g.matches[1].home_score
+            g.agg_winner = isWinPair(g.matches) ? 'home' : 'away'
+        }
     })
 }
 
@@ -286,6 +339,7 @@ export const createStages = (qualArray) => {
             }
             if (s.type && s.type.includes('pair2leg')) {
                 createMatches(s)
+                calculatePairAggregateScore(s)
             }
         })
     })
@@ -383,15 +437,15 @@ export const getNationOfficialName = (id) => {
     }
 }
 
-export const getTeamName = (id) => {
-    if (!id) return
-    const team = getTeamArray().find((t) => t.id === id)
-    if (team) {
-        return team.name
-    } else {
-        console.log('Team error', team)
-    }
-}
+// export const getTeamName = (id) => {
+//     if (!id) return
+//     const team = getTeamArray().find((t) => t.id === id)
+//     if (team) {
+//         return team.name
+//     } else {
+//         console.log('Team error', team)
+//     }
+// }
 
 export const getShortTeamName = (id) => {
     if (!id) return

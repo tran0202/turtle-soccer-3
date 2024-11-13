@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-// import DrawRankingsTable from './DrawRankingsTable'
+import { getBoldText } from '../core/TeamHelper'
+import ResultsPairTable from './ResultsPairTable'
 
 const SectionCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
@@ -24,7 +25,7 @@ const SectionCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
-                <Col sm="9">{/* <DrawPlacement stage={stage} /> */}</Col>
+                <Col sm="9">{getBoldText(stage.result_note, 'Bolded')}</Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
@@ -44,8 +45,8 @@ class Results extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Draw Ranking" initialStatus="Opened" stage={stage}>
-                    {/* <DrawRankingsTable state={state} stage={stage} /> */}Results
+                <SectionCollapse title="Results" initialStatus="Opened" stage={stage}>
+                    {stage.type && stage.type.includes('pair') && <ResultsPairTable state={state} stage={stage} />}
                 </SectionCollapse>
             </React.Fragment>
         )
