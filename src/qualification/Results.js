@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawRankings from './DrawRankings'
-import Results from './Results'
+// import DrawRankingsTable from './DrawRankingsTable'
 
 const SectionCollapse = (props) => {
-    const { title, initialStatus, children } = props
+    const { title, initialStatus, stage, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')
@@ -16,8 +15,8 @@ const SectionCollapse = (props) => {
     return (
         <React.Fragment>
             <Row className="text-start padding-top-md">
-                <Col sm="12" md="12">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff5">
+                <Col sm="3" md="3">
+                    <Button outline color="primary" onClick={toggle} className="h3-ff3">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
@@ -25,6 +24,7 @@ const SectionCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
+                <Col sm="9">{/* <DrawPlacement stage={stage} /> */}</Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
@@ -39,27 +39,17 @@ const SectionCollapse = (props) => {
     )
 }
 
-class ConfederationQualification extends React.Component {
+class Results extends React.Component {
     render() {
-        const { state, confederation_id } = this.props
-        const { qualifications } = state
-        if (!qualifications) return
-        const qual = qualifications.find((q) => q.id === confederation_id)
+        const { state, stage } = this.props
         return (
             <React.Fragment>
-                {qual &&
-                    qual.stages &&
-                    qual.stages.map((s) => {
-                        return (
-                            <SectionCollapse key={confederation_id + s.name} title={s.name} initialStatus="Opened">
-                                <DrawRankings state={state} stage={s} />
-                                <Results state={state} stage={s} />
-                            </SectionCollapse>
-                        )
-                    })}
+                <SectionCollapse title="Draw Ranking" initialStatus="Opened" stage={stage}>
+                    {/* <DrawRankingsTable state={state} stage={stage} /> */}Results
+                </SectionCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default ConfederationQualification
+export default Results

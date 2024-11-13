@@ -251,25 +251,41 @@ export const createPairs = (stage) => {
         if (team1 && team2) {
             team1.alreadyDrawn = true
             team2.alreadyDrawn = true
-            stage.groups.push({ name: team1.id + '-' + team2.id, teams: [{ id: team1.id }, { id: team2.id }] })
+            stage.groups.push({
+                name: team1.id + '-' + team2.id,
+                teams: [
+                    { id: team1.id, pos: 1 },
+                    { id: team2.id, pos: 2 },
+                ],
+            })
         }
     }
 }
 
-export const create2leg = (stage) => {
+export const createMatches = (stage) => {
     if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        g.matches = []
+        stage.matchdays.forEach((md) => {
+            md.matches.forEach((m) => {
+                const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                g.matches.push({ matchday: md.name, date: md.date, home_team: home_team.id, away_team: away_team.id })
+            })
+        })
+    })
 }
 
 export const createStages = (qualArray) => {
+    if (!qualArray) return
     qualArray.forEach((q) => {
         q.stages.forEach((s) => {
             if (s.type && s.type.includes('pair')) {
                 s.groups = []
                 createPairs(s)
             }
-            if (s.type && s.type.includes('2leg')) {
-                s.matchups = []
-                create2leg(s)
+            if (s.type && s.type.includes('pair2leg')) {
+                createMatches(s)
             }
         })
     })
