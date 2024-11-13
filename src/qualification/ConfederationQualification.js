@@ -15,8 +15,7 @@ const SectionCollapse = (props) => {
     return (
         <React.Fragment>
             <Row className="text-start padding-top-md">
-                <Col sm="1"></Col>
-                <Col sm="11" md="11">
+                <Col sm="12" md="12">
                     <Button outline color="primary" onClick={toggle} className="h2-ff5">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
@@ -28,8 +27,7 @@ const SectionCollapse = (props) => {
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
-                    <Col sm="1"></Col>
-                    <Col sm="11" md="11">
+                    <Col sm="12" md="12">
                         <section className="section-bg">
                             <div className="container">{children}</div>
                         </section>

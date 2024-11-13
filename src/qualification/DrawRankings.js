@@ -31,8 +31,7 @@ const SectionCollapse = (props) => {
     return (
         <React.Fragment>
             <Row className="text-start padding-top-md">
-                <Col sm="1"></Col>
-                <Col sm="2" md="2">
+                <Col sm="3" md="3">
                     <Button outline color="primary" onClick={toggle} className="h3-ff3">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
@@ -47,8 +46,7 @@ const SectionCollapse = (props) => {
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
-                    <Col sm="1"></Col>
-                    <Col sm="11" md="11">
+                    <Col sm="12" md="12">
                         <section className="section-bg">
                             <div className="container">{children}</div>
                         </section>
@@ -64,7 +62,7 @@ class DrawRankings extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Ranking" initialStatus="Opened" stage={stage}>
+                <SectionCollapse title="Draw Ranking" initialStatus="Opened" stage={stage}>
                     <DrawRankingsTable state={state} stage={stage} />
                 </SectionCollapse>
             </React.Fragment>

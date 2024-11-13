@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import { getTeamFlagName2 } from '../core/TeamHelper'
+import { getTeamFlagName } from '../core/TeamHelper'
 
 class DrawRankingRow extends React.Component {
     render() {
@@ -11,13 +11,11 @@ class DrawRankingRow extends React.Component {
                     <div className="col-12">
                         <div className={`box-sm ${ranking.qualStriped ? 'ltblue-striped' : ''}`}>
                             <Row className="no-gutters">
-                                <Col className="col-box-4"></Col>
+                                <Col className="col-box-5"></Col>
                                 <Col className="col-box-14">{ranking.confRank}</Col>
-                                <Col className="col-box-34">
-                                    {getTeamFlagName2(ranking, config)} ({ranking.rank})
+                                <Col className="col-box-75">
+                                    {getTeamFlagName(ranking, config)} ({ranking.rank})
                                 </Col>
-                                <Col className="col-box-24">{ranking.qualRound}</Col>
-                                <Col className="col-box-24">{ranking.qualPot}</Col>
                             </Row>
                         </div>
                     </div>

@@ -27,6 +27,7 @@
             "stages": [
                 {
                     "name": "First Round",
+                    "type": "pair2leg",
                     "draw_id": "1",
                     "rankingFrom": 27,
                     "rankingTo": 46,

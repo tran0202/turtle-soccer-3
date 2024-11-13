@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
-import { getConfederationLogo, getTeamFlagName2 } from '../core/TeamHelper'
+import { getConfederationLogo, getTeamFlagName } from '../core/TeamHelper'
 
 class RankingRow extends React.Component {
     render() {
@@ -14,7 +14,7 @@ class RankingRow extends React.Component {
                             <Row className="no-gutters">
                                 <Col className="col-box-4"></Col>
                                 <Col className="col-box-14">{ranking.rank}</Col>
-                                <Col className="col-box-34">{getTeamFlagName2(ranking, config)}</Col>
+                                <Col className="col-box-34">{getTeamFlagName(ranking, config)}</Col>
                                 <Col className="col-box-24">
                                     <NumericFormat displayType="text" value={ranking.points} decimalScale={2} fixedDecimalScale />
                                 </Col>

@@ -3,18 +3,19 @@ import { Row, Col } from 'reactstrap'
 
 class DrawRankingsHeader extends React.Component {
     render() {
+        const { name } = this.props
         return (
-            <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
-                <Col>
-                    <Row className="no-gutters">
-                        <Col className="col-box-4"></Col>
-                        <Col className="col-box-14 padding-top-sm">Rank</Col>
-                        <Col className="col-box-34 padding-top-sm">Team (Overall Rank)</Col>
-                        <Col className="col-box-24 padding-top-sm">Round</Col>
-                        <Col className="col-box-24 padding-top-sm">Pot</Col>
-                    </Row>
-                </Col>
-            </Row>
+            <React.Fragment>
+                <Row className="no-gutters ranking-tbl-header team-row padding-tb-sm text-start">
+                    <Col className="col-box-5"></Col>
+                    <Col className="col-box-75">Pot {name}</Col>
+                </Row>
+                <Row className="no-gutters ranking-tbl-header-light team-row padding-tb-xs text-start">
+                    <Col className="col-box-5"></Col>
+                    <Col className="col-box-14">Rank</Col>
+                    <Col className="col-box-75">Team (Overall Rank)</Col>
+                </Row>
+            </React.Fragment>
         )
     }
 }
