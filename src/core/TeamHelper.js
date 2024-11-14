@@ -288,20 +288,14 @@ export const createPairs = (stage) => {
     }
 }
 
-export const createMatches = (stage) => {
-    if (!stage || !stage.groups) return
-    stage.groups.forEach((g) => {
-        g.matches = []
-        stage.matchdays.forEach((md) => {
-            md.matches.forEach((m) => {
-                const home_team = g.teams.find((t) => t.pos === m.home_pos)
-                const away_team = g.teams.find((t) => t.pos === m.away_pos)
-                const new_match = { matchday: md.name, date: md.date, home_team: home_team.id, away_team: away_team.id }
-                getRandomScore(new_match)
-                g.matches.push(new_match)
-            })
-        })
-    })
+export const getRandomPenaltyScore = (match) => {
+    match.home_penalty_score = randomInteger(0, 5)
+    match.away_penalty_score = randomInteger(0, 5)
+}
+
+export const getRandomExtraScore = (match) => {
+    match.home_extra_score = randomInteger(0, 3)
+    match.away_extra_score = randomInteger(0, 3)
 }
 
 export const getRandomScore = (match) => {
@@ -309,22 +303,72 @@ export const getRandomScore = (match) => {
     match.away_score = randomInteger(0, 10)
 }
 
+export const createPairMatches = (stage) => {
+    if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        g.matches = []
+        stage.matchdays.forEach((md, index) => {
+            md.matches.forEach((m) => {
+                const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                const new_match = { matchday: md.name, date: md.date, home_team: home_team.id, away_team: away_team.id }
+                getRandomScore(new_match)
+                if (index === 1) {
+                    const match1 = g.matches[0]
+                    if (match1.home_score === new_match.home_score && match1.away_score === new_match.away_score) {
+                        getRandomExtraScore(new_match)
+                        if (new_match.home_extra_score === new_match.away_extra_score) {
+                            getRandomPenaltyScore(new_match)
+                            while (new_match.home_penalty_score === new_match.away_penalty_score) {
+                                getRandomPenaltyScore(new_match)
+                            }
+                        }
+                    }
+                }
+                g.matches.push(new_match)
+            })
+        })
+    })
+}
+
 export const isWinMatch = (match) => {}
 
-export const isWinPair = (matches) => {
-    if (!matches || matches.length !== 2) return
-    const agg_home_score = matches[0].home_score + matches[1].away_score
-    const agg_away_score = matches[0].away_score + matches[1].home_score
-    return agg_home_score > agg_away_score
+export const isHomeWinPair = (group) => {
+    if (!group || !group.matches || group.matches.length !== 2) return
+    const result = false
+    const match1_home_score = group.matches[0].home_score
+    const match1_away_score = group.matches[0].away_score
+    const match2_home_score = group.matches[1].home_score
+    const match2_away_score = group.matches[1].away_score
+    const match2_home_extra_score = group.matches[1].home_extra_score ? group.matches[1].home_extra_score : 0
+    const match2_away_extra_score = group.matches[1].away_extra_score ? group.matches[1].away_extra_score : 0
+    const match2_home_penalty_score = group.matches[1].home_penalty_score ? group.matches[1].home_penalty_score : 0
+    const match2_away_penalty_score = group.matches[1].away_penalty_score ? group.matches[1].away_penalty_score : 0
+    const agg_home_score = match1_home_score + match2_away_score + match2_away_extra_score
+    const agg_away_score = match1_away_score + match2_home_score + match2_home_extra_score
+    if (agg_home_score > agg_away_score) return true
+    else if (agg_home_score === agg_away_score) {
+        if (match2_away_score > match1_away_score) {
+            group.away_goal_winner = 'home'
+            return true
+        } else if (match2_away_score === match1_away_score) {
+            if (match2_away_penalty_score > match2_home_penalty_score) return true
+        } else {
+            group.away_goal_winner = 'away'
+        }
+    }
+    return result
 }
 
 export const calculatePairAggregateScore = (stage) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
         if (g.matches && g.matches.length === 2) {
-            g.agg_home_score = g.matches[0].home_score + g.matches[1].away_score
-            g.agg_away_score = g.matches[0].away_score + g.matches[1].home_score
-            g.agg_winner = isWinPair(g.matches) ? 'home' : 'away'
+            const home_extra_score = g.matches[1].away_extra_score ? g.matches[1].away_extra_score : 0
+            const away_extra_score = g.matches[1].home_extra_score ? g.matches[1].home_extra_score : 0
+            g.agg_home_score = g.matches[0].home_score + g.matches[1].away_score + home_extra_score
+            g.agg_away_score = g.matches[0].away_score + g.matches[1].home_score + away_extra_score
+            g.agg_winner = isHomeWinPair(g) ? 'home' : 'away'
         }
     })
 }
@@ -338,7 +382,7 @@ export const createStages = (qualArray) => {
                 createPairs(s)
             }
             if (s.type && s.type.includes('pair2leg')) {
-                createMatches(s)
+                createPairMatches(s)
                 calculatePairAggregateScore(s)
             }
         })
