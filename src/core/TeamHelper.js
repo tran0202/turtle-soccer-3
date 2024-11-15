@@ -244,28 +244,23 @@ export const createDrawRankings = (teamArray, tournament) => {
     return result
 }
 
-export const createDrawPotTable = (qualArray) => {
-    if (!qualArray) return
-    qualArray.forEach((q) => {
-        q.stages &&
-            q.stages.forEach((s) => {
-                s.drawPotRows = []
-                let dpr = []
-                s.pots &&
-                    s.pots.forEach((p, index) => {
-                        if (index % 3 !== 2) {
-                            dpr.push(p)
-                            if (index === s.pots.length - 1) {
-                                s.drawPotRows.push(dpr)
-                            }
-                        } else {
-                            dpr.push(p)
-                            s.drawPotRows.push(dpr)
-                            dpr = []
-                        }
-                    })
-            })
-    })
+export const createDrawPotTable = (stage) => {
+    if (!stage) return
+    stage.drawPotRows = []
+    let dpr = []
+    stage.pots &&
+        stage.pots.forEach((p, index) => {
+            if (index % 3 !== 2) {
+                dpr.push(p)
+                if (index === stage.pots.length - 1) {
+                    stage.drawPotRows.push(dpr)
+                }
+            } else {
+                dpr.push(p)
+                stage.drawPotRows.push(dpr)
+                dpr = []
+            }
+        })
 }
 
 export const createPairs = (stage) => {
@@ -386,22 +381,101 @@ export const calculatePairAggregateScore = (stage) => {
             const away_extra_score = g.matches[1].home_extra_score ? g.matches[1].home_extra_score : 0
             g.agg_home_score = g.matches[0].home_score + g.matches[1].away_score + home_extra_score
             g.agg_away_score = g.matches[0].away_score + g.matches[1].home_score + away_extra_score
-            g.agg_winner = isHomeWinPair(g) ? 'home' : 'away'
+            const ihwp = isHomeWinPair(g)
+            g.agg_winner = ihwp ? 'home' : 'away'
+            const winTeam = g.teams.find((t) => t.id === (ihwp ? g.matches[0].home_team : g.matches[0].away_team))
+            if (winTeam) winTeam.advanced = true
         }
     })
 }
 
-export const createStages = (qualArray) => {
+export const createStage = (stage) => {
+    if (!stage) return
+    if (stage.type && stage.type.includes('pair2leg')) {
+        stage.groups = []
+        createPairs(stage)
+        createPairMatches(stage)
+        calculatePairAggregateScore(stage)
+    }
+}
+
+export const finishPairStage = (stage, next_stage) => {
+    if (!stage || !next_stage) return
+    const advanced_teams = []
+    stage.groups.forEach((g) => {
+        g.teams.forEach((t) => {
+            if (t.advanced) {
+                delete t.alreadyDrawn
+                delete t.advanced
+                advanced_teams.push(t)
+            }
+        })
+    })
+    next_stage.entering_teams = advanced_teams
+}
+
+export const finishStage = (stage, nextStage) => {
+    if (!stage) return
+    if (stage.type && stage.type.includes('pair2leg')) {
+        finishPairStage(stage, nextStage)
+    }
+}
+
+export const prepareGroupStage = (stage) => {
+    if (!stage || !stage.entering_placement) return
+    stage.entering_placement.forEach((p) => {
+        const foundPot = stage.pots.find((p2) => p2.name === p.name)
+        console.log('foundPot:', foundPot)
+        const newPot = {}
+        newPot.rankings = []
+        for (var i = 0; i < p.count; i++) {
+            const notDrawnTeams = stage.entering_teams.filter((t) => !t.alreadyDrawn)
+            console.log('notDrawnTeams:', notDrawnTeams)
+            notDrawnTeams.forEach((t, index) => {
+                t.tempIndex = index
+            })
+            const randomIndex = randomInteger(0, notDrawnTeams.length - 1)
+            const team = notDrawnTeams.find((t) => t.tempIndex === randomIndex)
+            console.log('team:', team)
+            if (team) {
+                team.alreadyDrawn = true
+                if (!foundPot) {
+                    newPot.name = p.name
+                    newPot.rankings.push(team)
+                } else {
+                    foundPot.rankings.push(team)
+                }
+            }
+        }
+        if (!foundPot) {
+            newPot.rankings.sort((a, b) => {
+                return a.rank > b.rank ? 1 : -1
+            })
+            stage.pots.push(newPot)
+        }
+    })
+}
+
+export const prepareStage = (stage) => {
+    if (!stage) return
+    if (stage.type && stage.type.includes('roundrobin2leg')) {
+        prepareGroupStage(stage)
+    }
+}
+
+export const processStages = (qualArray) => {
     if (!qualArray) return
     qualArray.forEach((q) => {
         q.stages.forEach((s) => {
-            if (s.type && s.type.includes('pair')) {
-                s.groups = []
-                createPairs(s)
-            }
             if (s.type && s.type.includes('pair2leg')) {
-                createPairMatches(s)
-                calculatePairAggregateScore(s)
+                createDrawPotTable(s)
+                createStage(s)
+                const nextStage = q.stages.find((s2) => s2.name === s.next_stage)
+                finishStage(s, nextStage)
+            }
+            if (s.type && s.type.includes('roundrobin2leg')) {
+                prepareStage(s)
+                createDrawPotTable(s)
             }
         })
     })
