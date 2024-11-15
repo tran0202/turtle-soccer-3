@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawRankings from './DrawRankings'
-import Results from './Results'
-import Matches from './Matches'
+import MatchesPair from './MatchesPair'
 
 const SectionCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -17,8 +15,8 @@ const SectionCollapse = (props) => {
     return (
         <React.Fragment>
             <Row className="text-start padding-top-md">
-                <Col sm="12" md="12">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff5">
+                <Col sm="3" md="3">
+                    <Button outline color="primary" onClick={toggle} className="h3-ff3">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
@@ -38,30 +36,17 @@ const SectionCollapse = (props) => {
     )
 }
 
-class ConfederationQualification extends React.Component {
+class Matches extends React.Component {
     render() {
-        const { state, confederation_id } = this.props
-        const { qualifications } = state
-        if (!qualifications) return
-        const qual = qualifications.find((q) => q.id === confederation_id)
+        const { state, stage } = this.props
         return (
             <React.Fragment>
-                {qual &&
-                    qual.stages &&
-                    qual.stages.map((s) => {
-                        return (
-                            <SectionCollapse key={confederation_id + s.name} title={s.name} initialStatus="Opened">
-                                <DrawRankings state={state} stage={s} />
-                                <Row className="border-bottom-gray4 margin-left-xs margin-top-md" />
-                                <Results state={state} stage={s} />
-                                <Row className="border-bottom-gray4 margin-left-xs margin-top-md" />
-                                <Matches state={state} stage={s} />
-                            </SectionCollapse>
-                        )
-                    })}
+                <SectionCollapse title="Matches" stage={stage}>
+                    {stage.type && stage.type.includes('pair') && <MatchesPair state={state} stage={stage} />}
+                </SectionCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default ConfederationQualification
+export default Matches

@@ -32,9 +32,7 @@ export const SectionCollapse = (props) => {
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
                     <Col sm="12" md="12">
-                        <section className="section-bg">
-                            <div className="container">{children}</div>
-                        </section>
+                        <div className="container">{children}</div>
                     </Col>
                 </Row>
             </Collapse>

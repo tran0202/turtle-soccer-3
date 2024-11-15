@@ -62,6 +62,24 @@ export const getTeamFlag = (t, config) => {
     )
 }
 
+export const getTeamFlagId = (id, config) => {
+    if (!id || !config) return
+    const team = config.teams.find((t) => t.id === id)
+    if (!team) return
+    return (
+        <React.Fragment>
+            {config.team_type_id !== 'CLUB' && (
+                <img
+                    className="flag-sm flag-md margin-bottom-xs-4"
+                    src={'/images/flags/' + team.nation.flag_filename}
+                    alt={`${id} ${team.nation.official_name}`}
+                    title={`${id} ${team.nation.official_name}`}
+                />
+            )}
+        </React.Fragment>
+    )
+}
+
 export const getTeamFlagName = (t, config) => {
     if (!t) return
     return (
@@ -299,8 +317,8 @@ export const getRandomExtraScore = (match) => {
 }
 
 export const getRandomScore = (match) => {
-    match.home_score = randomInteger(0, 10)
-    match.away_score = randomInteger(0, 10)
+    match.home_score = randomInteger(0, 7)
+    match.away_score = randomInteger(0, 7)
 }
 
 export const createPairMatches = (stage) => {

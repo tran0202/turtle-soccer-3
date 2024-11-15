@@ -7,11 +7,11 @@ const ResultsPairHeader = () => {
     return (
         <Row className="ranking-tbl-header team-row padding-tb-md text-center">
             <Col className="col-box-25"></Col>
-            <Col className="col-box-8"></Col>
+            <Col className="col-box-6"></Col>
             <Col className="text-center score-no-padding-right col-box-10">1st Leg</Col>
             <Col className="text-center score-no-padding-right col-box-10">2nd Leg</Col>
             <Col className="text-center score-no-padding-right col-box-14">Aggregate</Col>
-            <Col className="col-box-8"></Col>
+            <Col className="col-box-6"></Col>
             <Col className="col-box-25"></Col>
         </Row>
     )
@@ -34,7 +34,7 @@ const ResultsPairRow = (props) => {
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
             <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{getTeamName(team1.id, config)}</Col>
-            <Col className="col-box-8">{getTeamFlag(team1, config)}</Col>
+            <Col className="col-box-6">{getTeamFlag(team1, config)}</Col>
             <Col className="text-center score-no-padding-right col-box-10">
                 {match1HomeScore} - {match1AwayScore}
             </Col>
@@ -52,7 +52,7 @@ const ResultsPairRow = (props) => {
                     </Row>
                 )}
             </Col>
-            <Col className="col-box-8">{getTeamFlag(team2, config)}</Col>
+            <Col className="col-box-6">{getTeamFlag(team2, config)}</Col>
             <Col className={`col-box-25 ${pairAwayHighlight}`}>{getTeamName(team2.id, config)}</Col>
         </Row>
     )

@@ -38,11 +38,9 @@ class RankingsApp extends React.Component {
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Rankings: Men's National Teams</h1>
                     <Row className="mt-3 mb-3 text-start rankings-page-box">
                         <Col sm="12" md="12">
-                            <section className="rankings section-bg">
-                                <div className="container">
-                                    <RankingsTable state={this.state} func={this.setData} />
-                                </div>
-                            </section>
+                            <div className="container">
+                                <RankingsTable state={this.state} func={this.setData} />
+                            </div>
                         </Col>
                     </Row>
                 </Container>
