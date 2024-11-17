@@ -78,7 +78,7 @@ class MatchesPair extends React.Component {
         return (
             <React.Fragment>
                 <Row className="mt-5 box-white">
-                    <Col xs={{ size: 11, offset: 1 }}>
+                    <Col xs={{ size: 10, offset: 1 }}>
                         {groups &&
                             groups.map((g, index) => {
                                 return <MatchesPairRow key={g.name} group={g} config={state.config} />

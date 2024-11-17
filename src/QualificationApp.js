@@ -58,7 +58,7 @@ class QualificationApp extends React.Component {
         const teamArray = getActiveFIFATeamArray()
         const qualifiedTeams = getRandomHostTeamArray(teamArray, tournament)
         const qualifications = createDrawRankings(teamArray, tournament)
-        processStages(qualifications)
+        processStages(qualifications, tournament)
         this.setState({
             qualifiedTeams,
             qualifications,

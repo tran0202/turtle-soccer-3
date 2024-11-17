@@ -1,10 +1,11 @@
 import React from 'react'
+import randomInteger from 'random-int'
 import Tournament from '../data/Tournament.json'
 import ConfederationArray from '../data/Confederations.json'
 import NationArray from '../data/Nations.json'
 import MensTeamArray from '../data/Mens.json'
 import { getTeamArray } from './DataHelper'
-import randomInteger from 'random-int'
+import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamName = (id, config) => {
     if (!id || !config || !config.teams) return
@@ -344,8 +345,8 @@ export const getRandomExtraScore = (match) => {
 }
 
 export const getRandomScore = (match) => {
-    match.home_score = randomInteger(0, 8)
-    match.away_score = randomInteger(0, 8)
+    match.home_score = randomInteger(0, 5)
+    match.away_score = randomInteger(0, 5)
 }
 
 export const createPairMatches = (stage) => {
@@ -441,7 +442,7 @@ export const calculatePairAggregateScore = (stage) => {
     })
 }
 
-export const createStage = (stage) => {
+export const createStage = (stage, tournament) => {
     if (!stage) return
     if (stage.type && stage.type.includes('pair2leg')) {
         stage.groups = []
@@ -452,6 +453,7 @@ export const createStage = (stage) => {
     if (stage.type && stage.type.includes('roundrobin2leg')) {
         createGroups(stage)
         createGroupMatches(stage)
+        calculateGroupRankings(stage, tournament)
     }
 }
 
@@ -516,7 +518,7 @@ export const prepareStage = (stage) => {
     }
 }
 
-export const processStages = (qualArray) => {
+export const processStages = (qualArray, tournament) => {
     if (!qualArray) return
     qualArray.forEach((q) => {
         q.stages.forEach((s) => {
@@ -529,7 +531,7 @@ export const processStages = (qualArray) => {
             if (s.type && s.type.includes('roundrobin2leg')) {
                 prepareStage(s)
                 createDrawPotTable(s)
-                createStage(s)
+                createStage(s, tournament)
             }
         })
     })

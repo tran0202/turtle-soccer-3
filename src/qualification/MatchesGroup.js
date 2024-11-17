@@ -42,10 +42,9 @@ const MatchDayHeader = (props) => {
     const { matchday } = props
     return (
         <Row className="matchday-header text-start margin-top-md">
-            <Col className="col-11 border-bottom-gray4">
+            <Col className="col-12 border-bottom-gray4">
                 {matchday.name} | {moment(matchday.date).format('MMMM D, YYYY')}
             </Col>
-            <Col className="col-1"></Col>
         </Row>
     )
 }
@@ -60,17 +59,19 @@ const MatchDayRow = (props) => {
                 matches.map((m, index) => {
                     const homeTeamName = getTeamName(m.home_team, config)
                     const awayTeamName = getTeamName(m.away_team, config)
+                    const homeTeamFlag = getTeamFlagId(m.home_team, config)
+                    const awayTeamFlag = getTeamFlagId(m.away_team, config)
                     const matchHomeScore = m.home_score
                     const matchAwayScore = m.away_score
                     return (
-                        <React.Fragment key={m.matchday}>
+                        <React.Fragment key={index}>
                             <Row className="no-gutters ranking-tbl padding-tb-md">
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
-                                <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
+                                <Col className="col-box-6">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
                                     {matchHomeScore} - {matchAwayScore}
                                 </Col>
-                                <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
+                                <Col className="col-box-6">{awayTeamFlag}</Col>
                                 <Col className="col-box-25">{awayTeamName}</Col>
                             </Row>
                         </React.Fragment>
@@ -84,13 +85,12 @@ class MatchesGroup extends React.Component {
     render() {
         const { group, config } = this.props
         return (
-            <SectionCollapse title="Matches" initialStatus="Opened">
+            <SectionCollapse title="Matches">
                 {group.matchdays &&
                     group.matchdays.map((md) => {
                         return (
-                            <Row>
-                                <Col className="col-1"></Col>
-                                <Col className="col-11">
+                            <Row key={md.name}>
+                                <Col className="col-12">
                                     <MatchDayHeader matchday={md} />
                                     <MatchDayRow matchday={md} config={config} />
                                 </Col>

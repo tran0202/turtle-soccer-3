@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import { getTeamName, getTeamFlag } from '../core/TeamHelper'
+import { getTeamFlag } from '../core/TeamHelper'
 import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
 
 const ResultsPairHeader = () => {
@@ -34,7 +34,7 @@ const ResultsPairRow = (props) => {
     const pairAwayHighlight = group.agg_winner === 'home' ? 'gray3' : 'weight-medium'
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
-            <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{getTeamName(team1.id, config)}</Col>
+            <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{team1.name}</Col>
             <Col className="col-box-6">{getTeamFlag(team1, config)}</Col>
             <Col className="text-center score-no-padding-right col-box-10">
                 {match1HomeScore} - {match1AwayScore}
@@ -54,7 +54,7 @@ const ResultsPairRow = (props) => {
                 )}
             </Col>
             <Col className="col-box-6">{getTeamFlag(team2, config)}</Col>
-            <Col className={`col-box-25 ${pairAwayHighlight}`}>{getTeamName(team2.id, config)}</Col>
+            <Col className={`col-box-25 ${pairAwayHighlight}`}>{team2.name}</Col>
         </Row>
     )
 }
@@ -66,7 +66,7 @@ class ResultsPairTable extends React.Component {
         return (
             <React.Fragment>
                 <Row className="mt-5 box-xl">
-                    <Col xs={{ size: 12 }}>
+                    <Col xs={{ size: 10, offset: 1 }}>
                         <ResultsPairHeader />
                         {groups &&
                             groups.map((g, index) => {

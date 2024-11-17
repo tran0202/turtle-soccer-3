@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import { getBoldText } from '../core/TeamHelper'
 import MatchesGroup from './MatchesGroup'
+import GroupRankingsTable from './GroupRankingsTable'
 
 const SectionCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
@@ -48,11 +49,12 @@ class Groups extends React.Component {
                         stage.groups.map((g) => {
                             return (
                                 <Row key={g.name} className="mt-5 box-xl">
-                                    <Col>
+                                    <Col xs={{ size: 10, offset: 1 }}>
                                         <Row className="no-gutters group-header padding-tb-sm text-start">
                                             <Col className="col-box-5"></Col>
                                             <Col className="col-box-75">Group {g.name}</Col>
                                         </Row>
+                                        <GroupRankingsTable group={g} config={state.config} />
                                         <MatchesGroup group={g} config={state.config} />
                                     </Col>
                                 </Row>
