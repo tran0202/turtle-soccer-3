@@ -21,6 +21,7 @@ const ResultsPairRow = (props) => {
     const { group, config } = props
     const team1 = group.teams.find((t) => t.pos === 1)
     const team2 = group.teams.find((t) => t.pos === 2)
+    if (!team1 || !team2) return
     const match1HomeScore = group.matches[0].home_score
     const match1AwayScore = group.matches[0].away_score
     const match2HomeExtraScore = group.matches[1].home_extra_score ? group.matches[1].home_extra_score : 0

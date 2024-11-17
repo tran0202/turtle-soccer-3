@@ -450,6 +450,16 @@
     background-color: rgb(204, 153, 102);
 }
 
+.group-header {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+}
+.matchday-header {
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-family: 'Courgette', sans-serif;
+}
 .ranking-tbl,
 .competition-tbl,
 .team-name,
@@ -1382,6 +1392,14 @@
 
 .btn-collapse-md {
     width: 30%;
+}
+
+.btn-collapse-green {
+    border: 1px solid green;
+}
+
+.btn-collapse-orange {
+    border: 1px solid orange;
 }
 
 .successor-tooltip {

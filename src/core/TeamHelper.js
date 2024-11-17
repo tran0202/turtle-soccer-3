@@ -237,7 +237,7 @@ export const createDrawRankings = (teamArray, tournament) => {
                 })
                 p.rankings = rankings
             })
-            stages.push({ ...s, rankings: stageRankings })
+            stages.push(s)
         })
         result.push({ id: q.id, draws, stages })
     })
@@ -301,6 +301,38 @@ export const createPairs = (stage) => {
     }
 }
 
+export const createGroups = (stage) => {
+    if (!stage) return
+    stage.pots.forEach((p) => {
+        p.rankings.forEach((t) => {
+            t.alreadyDrawn = false
+        })
+    })
+    stage.groups = []
+    const team_count = stage.pots.length
+    const group_count = stage.pots[0].rankings.length
+
+    for (var i = 0; i < group_count; i++) {
+        const new_group = { name: String.fromCharCode(65 + i), teams: [] }
+        stage.groups.push(new_group)
+    }
+    for (var j = 0; j < team_count; j++) {
+        for (var k = 0; k < group_count; k++) {
+            const notDrawnTeams = stage.pots[team_count - 1 - j].rankings.filter((t) => !t.alreadyDrawn)
+            notDrawnTeams.forEach((t, index) => {
+                t.tempIndex = index
+            })
+            const randomIndex = randomInteger(0, notDrawnTeams.length - 1)
+            const team = notDrawnTeams.find((t) => t.tempIndex === randomIndex)
+            if (team) {
+                team.alreadyDrawn = true
+                const new_team = { ...team, pos: team_count - j }
+                stage.groups[k].teams.unshift(new_team)
+            }
+        }
+    }
+}
+
 export const getRandomPenaltyScore = (match) => {
     match.home_penalty_score = randomInteger(0, 5)
     match.away_penalty_score = randomInteger(0, 5)
@@ -312,8 +344,8 @@ export const getRandomExtraScore = (match) => {
 }
 
 export const getRandomScore = (match) => {
-    match.home_score = randomInteger(0, 7)
-    match.away_score = randomInteger(0, 7)
+    match.home_score = randomInteger(0, 8)
+    match.away_score = randomInteger(0, 8)
 }
 
 export const createPairMatches = (stage) => {
@@ -340,6 +372,26 @@ export const createPairMatches = (stage) => {
                 }
                 g.matches.push(new_match)
             })
+        })
+    })
+}
+
+export const createGroupMatches = (stage) => {
+    if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        g.matchdays = []
+        stage.matchdays.forEach((md, index) => {
+            const new_matchday = { name: md.name, date: md.date }
+            const matches = []
+            md.matches.forEach((m) => {
+                const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
+                getRandomScore(new_match)
+                matches.push(new_match)
+            })
+            new_matchday.matches = matches
+            g.matchdays.push(new_matchday)
         })
     })
 }
@@ -397,6 +449,10 @@ export const createStage = (stage) => {
         createPairMatches(stage)
         calculatePairAggregateScore(stage)
     }
+    if (stage.type && stage.type.includes('roundrobin2leg')) {
+        createGroups(stage)
+        createGroupMatches(stage)
+    }
 }
 
 export const finishPairStage = (stage, next_stage) => {
@@ -425,18 +481,15 @@ export const prepareGroupStage = (stage) => {
     if (!stage || !stage.entering_placement) return
     stage.entering_placement.forEach((p) => {
         const foundPot = stage.pots.find((p2) => p2.name === p.name)
-        console.log('foundPot:', foundPot)
         const newPot = {}
         newPot.rankings = []
         for (var i = 0; i < p.count; i++) {
             const notDrawnTeams = stage.entering_teams.filter((t) => !t.alreadyDrawn)
-            console.log('notDrawnTeams:', notDrawnTeams)
             notDrawnTeams.forEach((t, index) => {
                 t.tempIndex = index
             })
             const randomIndex = randomInteger(0, notDrawnTeams.length - 1)
             const team = notDrawnTeams.find((t) => t.tempIndex === randomIndex)
-            console.log('team:', team)
             if (team) {
                 team.alreadyDrawn = true
                 if (!foundPot) {
@@ -476,6 +529,7 @@ export const processStages = (qualArray) => {
             if (s.type && s.type.includes('roundrobin2leg')) {
                 prepareStage(s)
                 createDrawPotTable(s)
+                createStage(s)
             }
         })
     })

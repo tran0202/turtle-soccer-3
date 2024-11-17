@@ -46,15 +46,66 @@
                     "type": "roundrobin2leg",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams were drawn into nine groups of four to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the 3rd round. 26 teams (ranked 1–26) received byes to this round and were divided into Pot 1, Pot 2 and Pot 3. 10 winners from 1st round go into Pot 4. After 9 teams of Pot 4 were drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
+                    "entering_placement": [
+                        { "name": 4, "count": 9 },
+                        { "name": 3, "count": 1 }
+                    ],
                     "pots": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 9 },
                         { "name": 2, "rankingFrom": 10, "rankingTo": 18 },
                         { "name": 3, "rankingFrom": 19, "rankingTo": 26 }
                     ],
-                    "entering_placement": [
-                        { "name": 4, "count": 9 },
-                        { "name": 3, "count": 1 }
-                    ]
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2023-11-16",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2023-11-21",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 3 },
+                                { "home_pos": 2, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2024-03-21",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2024-03-26",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2024-06-06",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "date": "2024-06-11",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Third Round"
                 }
             ]
         }

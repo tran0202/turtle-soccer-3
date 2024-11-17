@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import { getBoldText } from '../core/TeamHelper'
-import ResultsPairTable from './ResultsPairTable'
+import MatchesGroup from './MatchesGroup'
 
 const SectionCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
@@ -38,17 +38,30 @@ const SectionCollapse = (props) => {
     )
 }
 
-class Results extends React.Component {
+class Groups extends React.Component {
     render() {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Results" stage={stage}>
-                    {stage.type && stage.type.includes('pair') && <ResultsPairTable state={state} stage={stage} />}
+                <SectionCollapse title="Groups" initialStatus="Opened" stage={stage}>
+                    {stage.groups &&
+                        stage.groups.map((g) => {
+                            return (
+                                <Row key={g.name} className="mt-5 box-xl">
+                                    <Col>
+                                        <Row className="no-gutters group-header padding-tb-sm text-start">
+                                            <Col className="col-box-5"></Col>
+                                            <Col className="col-box-75">Group {g.name}</Col>
+                                        </Row>
+                                        <MatchesGroup group={g} config={state.config} />
+                                    </Col>
+                                </Row>
+                            )
+                        })}
                 </SectionCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default Results
+export default Groups
