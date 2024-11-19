@@ -10,7 +10,13 @@ export const AetTooltip = (props) => {
 
 export const AwayGoalsTooltip = (props) => {
     const { target, anchor } = props
-    const content = 'Won on away goals'
+    const content = 'Won on away goal'
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const TiebreakTooltip = (props) => {
+    const { target, anchor, rule } = props
+    const content = 'Won tiebreak by ' + rule
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

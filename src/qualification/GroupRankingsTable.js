@@ -1,47 +1,47 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlag } from '../core/TeamHelper'
+import { TiebreakTooltip } from '../core/TooltipHelper'
 
 const RankingsHeader = () => {
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-center">
-            <Col className="col-box-5"></Col>
-            <Col className="col-box-95">
-                <Row className="no-gutters">
-                    <Col className="col-box-10"></Col>
-                    <Col className="col-box-34"></Col>
-                    <Col className="col-box-7">MP</Col>
-                    <Col className="col-box-7">W</Col>
-                    <Col className="col-box-7">D</Col>
-                    <Col className="col-box-7">L</Col>
-                    <Col className="col-box-7">GF</Col>
-                    <Col className="col-box-7">GA</Col>
-                    <Col className="col-box-7">+/-</Col>
-                    <Col className="col-box-7">Pts</Col>
-                </Row>
-            </Col>
+            <Col className="col-box-4"></Col>
+            <Col className="col-box-6"></Col>
+            <Col className="col-box-27"></Col>
+            <Col className="col-box-7">MP</Col>
+            <Col className="col-box-7">W</Col>
+            <Col className="col-box-7">D</Col>
+            <Col className="col-box-7">L</Col>
+            <Col className="col-box-7">GF</Col>
+            <Col className="col-box-7">GA</Col>
+            <Col className="col-box-7">+/-</Col>
+            <Col className="col-box-14">Pts</Col>
         </Row>
     )
 }
 
 const RakingsRow = (props) => {
     const { ranking, config } = props
+    const advanced_striped = ranking.advanced_striped ? 'advanced-next-round-striped' : ''
     return (
-        <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
-            <Col className="col-box-5"></Col>
-            <Col className="col-box-95">
-                <Row className="no-gutters">
-                    <Col className="col-box-10">{getTeamFlag(ranking.team, config)}</Col>
-                    <Col className="col-box-34">{ranking.team.name}</Col>
-                    <Col className="col-box-7">{ranking.mp}</Col>
-                    <Col className="col-box-7">{ranking.w}</Col>
-                    <Col className="col-box-7">{ranking.d}</Col>
-                    <Col className="col-box-7">{ranking.l}</Col>
-                    <Col className="col-box-7">{ranking.gf}</Col>
-                    <Col className="col-box-7">{ranking.ga}</Col>
-                    <Col className="col-box-7">{ranking.gd}</Col>
-                    <Col className="col-box-7">{ranking.pts}</Col>
-                </Row>
+        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${advanced_striped}`}>
+            <Col className="col-box-4">{ranking.rank}</Col>
+            <Col className="col-box-6">{getTeamFlag(ranking.team, config)}</Col>
+            <Col className="col-box-27">{ranking.team.name}</Col>
+            <Col className="col-box-7 text-center">{ranking.mp}</Col>
+            <Col className="col-box-7 text-center">{ranking.w}</Col>
+            <Col className="col-box-7 text-center">{ranking.d}</Col>
+            <Col className="col-box-7 text-center">{ranking.l}</Col>
+            <Col className="col-box-7 text-center">{ranking.gf}</Col>
+            <Col className="col-box-7 text-center">{ranking.ga}</Col>
+            <Col className="col-box-7 text-center">{ranking.gd}</Col>
+            <Col className="col-box-14 text-center">
+                {ranking.pts} {ranking.h2h_point_win && <TiebreakTooltip target="pointTooltip" anchor="(p)" rule={`points (${ranking.h2h_point_win_note})`} />}
+                {ranking.h2h_gd_win && <TiebreakTooltip target="gdTooltip" anchor="(gd)" rule={`goal differential (${ranking.h2h_gd_win_note})`} />}
+                {ranking.away_goal_win && <TiebreakTooltip target="awayGoalTooltip" anchor="(a)" rule={`away goal (${ranking.away_goal_win_note})`} />}
+                {ranking.fair_play_win && <TiebreakTooltip target="fairPlayTooltip" anchor="(fp)" rule={`fair play point (${ranking.fair_play_win_note})`} />}
+                {ranking.draw_lot_win && <TiebreakTooltip target="drawLotTooltip" anchor="(dl)" rule="drawing lot" />}
             </Col>
         </Row>
     )

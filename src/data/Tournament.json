@@ -30,7 +30,7 @@
                     "type": "pair2leg",
                     "draw_id": "1",
                     "draw_note": "20 teams (ranked 27–46) were divided into Pot 1 and Pot 2 and played home-and-away over two legs. One team from each pot were drawn into one tie. The ten winners advanced to the second round.",
-                    "result_note": "Bolded team winners advanced to the second round",
+                    "advanced_note": "Bolded team winners advanced to the second round",
                     "pots": [
                         { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
                         { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
@@ -46,6 +46,7 @@
                     "type": "roundrobin2leg",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams were drawn into nine groups of four to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the 3rd round. 26 teams (ranked 1–26) received byes to this round and were divided into Pot 1, Pot 2 and Pot 3. 10 winners from 1st round go into Pot 4. After 9 teams of Pot 4 were drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
+                    "advanced_note": "Winners and runners-up advanced to the third round",
                     "entering_placement": [
                         { "name": 4, "count": 9 },
                         { "name": 3, "count": 1 }

@@ -345,8 +345,8 @@ export const getRandomExtraScore = (match) => {
 }
 
 export const getRandomScore = (match) => {
-    match.home_score = randomInteger(0, 5)
-    match.away_score = randomInteger(0, 5)
+    match.home_score = randomInteger(0, 3)
+    match.away_score = randomInteger(0, 3)
 }
 
 export const createPairMatches = (stage) => {
@@ -395,6 +395,7 @@ export const createGroupMatches = (stage) => {
             g.matchdays.push(new_matchday)
         })
     })
+    overwriteGroup(stage.groups[0])
 }
 
 export const isWinMatch = (match) => {}
@@ -535,6 +536,142 @@ export const processStages = (qualArray, tournament) => {
             }
         })
     })
+}
+
+export const overwriteGroup = (group) => {
+    // // For draw pool - h2h win points
+    // group.matchdays[0].matches[0].home_score = 4
+    // group.matchdays[0].matches[0].away_score = 0
+    // group.matchdays[0].matches[1].home_score = 3
+    // group.matchdays[0].matches[1].away_score = 0
+    // group.matchdays[1].matches[0].home_score = 0
+    // group.matchdays[1].matches[0].away_score = 2
+    // group.matchdays[1].matches[1].home_score = 2
+    // group.matchdays[1].matches[1].away_score = 0
+    // group.matchdays[2].matches[0].home_score = 2
+    // group.matchdays[2].matches[0].away_score = 1
+    // group.matchdays[2].matches[1].home_score = 0
+    // group.matchdays[2].matches[1].away_score = 4
+    // group.matchdays[3].matches[0].home_score = 4
+    // group.matchdays[3].matches[0].away_score = 0
+    // group.matchdays[3].matches[1].home_score = 1
+    // group.matchdays[3].matches[1].away_score = 2
+    // group.matchdays[4].matches[0].home_score = 0
+    // group.matchdays[4].matches[0].away_score = 4
+    // group.matchdays[4].matches[1].home_score = 0
+    // group.matchdays[4].matches[1].away_score = 3
+    // group.matchdays[5].matches[0].home_score = 0
+    // group.matchdays[5].matches[0].away_score = 2
+    // group.matchdays[5].matches[1].home_score = 2
+    // group.matchdays[5].matches[1].away_score = 0
+    // // For draw pool - h2h win goal difference
+    // group.matchdays[0].matches[0].home_score = 4
+    // group.matchdays[0].matches[0].away_score = 0
+    // group.matchdays[0].matches[1].home_score = 3
+    // group.matchdays[0].matches[1].away_score = 4
+    // group.matchdays[1].matches[0].home_score = 0
+    // group.matchdays[1].matches[0].away_score = 2
+    // group.matchdays[1].matches[1].home_score = 2
+    // group.matchdays[1].matches[1].away_score = 0
+    // group.matchdays[2].matches[0].home_score = 2
+    // group.matchdays[2].matches[0].away_score = 1
+    // group.matchdays[2].matches[1].home_score = 0
+    // group.matchdays[2].matches[1].away_score = 2
+    // group.matchdays[3].matches[0].home_score = 4
+    // group.matchdays[3].matches[0].away_score = 0
+    // group.matchdays[3].matches[1].home_score = 1
+    // group.matchdays[3].matches[1].away_score = 2
+    // group.matchdays[4].matches[0].home_score = 0
+    // group.matchdays[4].matches[0].away_score = 4
+    // group.matchdays[4].matches[1].home_score = 1
+    // group.matchdays[4].matches[1].away_score = 0
+    // group.matchdays[5].matches[0].home_score = 1
+    // group.matchdays[5].matches[0].away_score = 0
+    // group.matchdays[5].matches[1].home_score = 2
+    // group.matchdays[5].matches[1].away_score = 0
+    // // For draw pool - h2h win away goal
+    // group.matchdays[0].matches[0].home_score = 4
+    // group.matchdays[0].matches[0].away_score = 0
+    // group.matchdays[0].matches[1].home_score = 2
+    // group.matchdays[0].matches[1].away_score = 5
+    // group.matchdays[1].matches[0].home_score = 0
+    // group.matchdays[1].matches[0].away_score = 2
+    // group.matchdays[1].matches[1].home_score = 1
+    // group.matchdays[1].matches[1].away_score = 0
+    // group.matchdays[2].matches[0].home_score = 2
+    // group.matchdays[2].matches[0].away_score = 1
+    // group.matchdays[2].matches[1].home_score = 0
+    // group.matchdays[2].matches[1].away_score = 2
+    // group.matchdays[3].matches[0].home_score = 4
+    // group.matchdays[3].matches[0].away_score = 0
+    // group.matchdays[3].matches[1].home_score = 1
+    // group.matchdays[3].matches[1].away_score = 2
+    // group.matchdays[4].matches[0].home_score = 0
+    // group.matchdays[4].matches[0].away_score = 4
+    // group.matchdays[4].matches[1].home_score = 1
+    // group.matchdays[4].matches[1].away_score = 0
+    // group.matchdays[5].matches[0].home_score = 2
+    // group.matchdays[5].matches[0].away_score = 1
+    // group.matchdays[5].matches[1].home_score = 2
+    // group.matchdays[5].matches[1].away_score = 0
+    // // For draw pool - h2h draw - fair play points
+    // group.matchdays[0].matches[0].home_score = 1
+    // group.matchdays[0].matches[0].away_score = 2
+    // group.matchdays[0].matches[0].away_fair_pts = -1
+    // group.matchdays[0].matches[1].home_score = 1
+    // group.matchdays[0].matches[1].away_score = 2
+    // group.matchdays[0].matches[1].away_fair_pts = -2
+    // group.matchdays[1].matches[0].home_score = 0
+    // group.matchdays[1].matches[0].away_score = 1
+    // group.matchdays[1].matches[0].home_fair_pts = -1
+    // group.matchdays[1].matches[1].home_score = 0
+    // group.matchdays[1].matches[1].away_score = 1
+    // group.matchdays[1].matches[1].home_fair_pts = -1
+    // group.matchdays[2].matches[0].home_score = 3
+    // group.matchdays[2].matches[0].away_score = 0
+    // group.matchdays[2].matches[1].home_score = 2
+    // group.matchdays[2].matches[1].away_score = 2
+    // group.matchdays[2].matches[1].home_fair_pts = -2
+    // group.matchdays[2].matches[1].away_fair_pts = -3
+    // group.matchdays[3].matches[0].home_score = 2
+    // group.matchdays[3].matches[0].away_score = 2
+    // group.matchdays[3].matches[1].home_score = 0
+    // group.matchdays[3].matches[1].away_score = 3
+    // group.matchdays[4].matches[0].home_score = 2
+    // group.matchdays[4].matches[0].away_score = 1
+    // group.matchdays[4].matches[1].home_score = 2
+    // group.matchdays[4].matches[1].away_score = 1
+    // group.matchdays[5].matches[0].home_score = 1
+    // group.matchdays[5].matches[0].away_score = 0
+    // group.matchdays[5].matches[1].home_score = 1
+    // group.matchdays[5].matches[1].away_score = 0
+    // // For draw pool - h2h draw - drawing lots
+    // group.matchdays[0].matches[0].home_score = 1
+    // group.matchdays[0].matches[0].away_score = 1
+    // group.matchdays[0].matches[1].home_score = 1
+    // group.matchdays[0].matches[1].away_score = 1
+    // group.matchdays[1].matches[0].home_score = 1
+    // group.matchdays[1].matches[0].away_score = 1
+    // group.matchdays[1].matches[0].home_fair_pts = -2
+    // group.matchdays[1].matches[0].away_fair_pts = -2
+    // group.matchdays[1].matches[1].home_score = 0
+    // group.matchdays[1].matches[1].away_score = 1
+    // group.matchdays[2].matches[0].home_score = 0
+    // group.matchdays[2].matches[0].away_score = 0
+    // group.matchdays[2].matches[1].home_score = 0
+    // group.matchdays[2].matches[1].away_score = 0
+    // group.matchdays[3].matches[0].home_score = 0
+    // group.matchdays[3].matches[0].away_score = 0
+    // group.matchdays[3].matches[1].home_score = 0
+    // group.matchdays[3].matches[1].away_score = 0
+    // group.matchdays[4].matches[0].home_score = 1
+    // group.matchdays[4].matches[0].away_score = 1
+    // group.matchdays[4].matches[1].home_score = 1
+    // group.matchdays[4].matches[1].away_score = 1
+    // group.matchdays[5].matches[0].home_score = 1
+    // group.matchdays[5].matches[0].away_score = 0
+    // group.matchdays[5].matches[1].home_score = 1
+    // group.matchdays[5].matches[1].away_score = 1
 }
 
 // ----------------------------- Version 1 ----------------------------------
