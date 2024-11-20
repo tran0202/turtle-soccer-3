@@ -232,7 +232,7 @@ export const flattenDrawPools = (group) => {
             rank++
             t.rank = rank
             if (rank <= 2) {
-                t.advanced_striped = true
+                t.advanced = true
             }
             group.rankings.push(t)
         })

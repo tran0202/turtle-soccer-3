@@ -26,8 +26,15 @@ const SectionCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
-                <Col sm="4" className="advanced-next-round-striped padding-top-sm">
-                    {stage.advanced_note}
+                <Col sm="5">
+                    <Row>
+                        <Col className="advanced-next-round-striped">{stage.advanced_note}</Col>
+                    </Row>
+                    {stage.next_round_note && (
+                        <Row>
+                            <Col className="advanced-wild-card-striped">{stage.next_round_note}</Col>
+                        </Row>
+                    )}
                 </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
@@ -46,7 +53,7 @@ class Groups extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Groups" initialStatus="Opened" stage={stage}>
+                <SectionCollapse title="Groups" stage={stage}>
                     {stage.groups &&
                         stage.groups.map((g) => {
                             return (

@@ -10,6 +10,7 @@ const DrawPlacement = (props) => {
                 <ul className="no-margin-bottom">
                     {stage.draw_note && <li>{stage.draw_note}</li>}
                     {stage &&
+                        stage.pots &&
                         stage.pots.map((p) => {
                             return p.rankingFrom ? <li key={p.name}>{'Pot ' + p.name + ' (ranked ' + p.rankingFrom + '-' + p.rankingTo + ')'}</li> : ''
                         })}
