@@ -134,7 +134,6 @@ export const sortRankings = (rankings, h2h_matches) => {
     if (!rankings) return
     for (var i = 0; i < rankings.length - 1; i++) {
         for (var j = i + 1; j < rankings.length; j++) {
-            // console.log('rankings[i].fp:', rankings[i].fp)
             // Point
             if (rankings[i].pts < rankings[j].pts) {
                 const temp = rankings[i]
@@ -223,16 +222,24 @@ export const sortGroupRankings = (group, tournament) => {
     sortRankings(group.draw_pools)
 }
 
-export const flattenDrawPools = (group) => {
-    if (!group) return
+export const flattenDrawPools = (group, advancement) => {
+    // console.log('advancement:', advancement)
+    if (!group || !advancement || advancement.length === 0) return
     group.rankings = []
     let rank = 0
     group.draw_pools.forEach((p) => {
         p.teams.forEach((t) => {
             rank++
             t.rank = rank
-            if (rank <= 2) {
-                t.advanced = true
+            const foundAdvancement = advancement.find((a) => a.pos === rank)
+            if (foundAdvancement) {
+                if (foundAdvancement.will === 'qualify') {
+                    t.qualified = true
+                } else if (foundAdvancement.will === 'advance') {
+                    t.advanced = true
+                } else if (foundAdvancement.will === 'next_round') {
+                    t.next_rounded = true
+                }
             }
             group.rankings.push(t)
         })
@@ -256,6 +263,6 @@ export const calculateGroupRankings = (stage, tournament) => {
             g.rankings.push(ranking)
         })
         sortGroupRankings(g, tournament)
-        flattenDrawPools(g)
+        flattenDrawPools(g, stage.advancement)
     })
 }

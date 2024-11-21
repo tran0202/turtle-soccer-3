@@ -23,9 +23,11 @@ const RankingsHeader = () => {
 
 const RakingsRow = (props) => {
     const { ranking, config } = props
+    const qualified_striped = ranking.qualified ? 'advanced-next-round-striped' : ''
     const advanced_striped = ranking.advanced ? 'advanced-next-round-striped' : ''
+    const next_round_striped = ranking.next_rounded ? 'advanced-wild-card-striped' : ''
     return (
-        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${advanced_striped}`}>
+        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}`}>
             <Col className="col-box-4">{ranking.rank}</Col>
             <Col className="col-box-6">{getTeamFlag(ranking.team, config)}</Col>
             <Col className="col-box-27">{ranking.team.name}</Col>

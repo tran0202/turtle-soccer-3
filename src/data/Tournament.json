@@ -30,7 +30,6 @@
                     "type": "pair2leg",
                     "draw_id": "1",
                     "draw_note": "20 teams (ranked 27–46) are divided into Pot 1 and Pot 2 and play home-and-away over two legs. One team from each pot are drawn into one tie. 10 winners will advance to the second round.",
-                    "advanced_note": "Bolded team winners advance to the second round",
                     "pots": [
                         { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
                         { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
@@ -39,14 +38,14 @@
                         { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
                         { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
                     ],
-                    "next_stage": "Second Round"
+                    "next_stage": "Second Round",
+                    "advanced_note": "Bolded team winners advance to the second round"
                 },
                 {
                     "name": "Second Round",
                     "type": "roundrobin2legdraw1",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (ranked 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
-                    "advanced_note": "Winners and runners-up advance to the third round",
                     "entering_placement": [
                         { "name": 4, "count": 9 },
                         { "name": 3, "count": 1 }
@@ -106,15 +105,18 @@
                             ]
                         }
                     ],
-                    "next_stage": "Third Round"
+                    "next_stage": "Third Round",
+                    "advanced_note": "Winners and runners-up advance to the third round",
+                    "advancement": [
+                        { "pos": 1, "will": "advance" },
+                        { "pos": 2, "will": "advance" }
+                    ]
                 },
                 {
                     "name": "Third Round",
                     "type": "roundrobin2legdraw2",
                     "draw_id": "2",
                     "draw_note": "18 teams advance from the second round are drawn into 3 groups of 6 to play against each other on a home-and-away basis. The top 2 teams will qualify directly for the World Cup 2026. The third and fourth-placed teams will advance to the fourth round. Each group A, B and C will contain one team from each of 6 pots. The draw started from Pot 6 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
-                    "advanced_note": "Winners and runners-up qualify for the World Cup 2026",
-                    "next_round_note": "The third and fourth-placed teams advance to the fourth round",
                     "entering_placement": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 3 },
                         { "name": 2, "rankingFrom": 4, "rankingTo": 6 },
@@ -126,54 +128,104 @@
                     "matchdays": [
                         {
                             "name": "Matchday 1",
-                            "date": "2023-11-16",
+                            "date": "2024-09-05",
                             "matches": [
-                                { "home_pos": 1, "away_pos": 4 },
-                                { "home_pos": 3, "away_pos": 2 }
+                                { "home_pos": 3, "away_pos": 6 },
+                                { "home_pos": 1, "away_pos": 5 },
+                                { "home_pos": 2, "away_pos": 4 }
                             ]
                         },
                         {
                             "name": "Matchday 2",
-                            "date": "2023-11-21",
+                            "date": "2024-09-10",
                             "matches": [
-                                { "home_pos": 4, "away_pos": 3 },
-                                { "home_pos": 2, "away_pos": 1 }
+                                { "home_pos": 6, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 1 }
                             ]
                         },
                         {
                             "name": "Matchday 3",
-                            "date": "2024-03-21",
+                            "date": "2024-10-10",
                             "matches": [
-                                { "home_pos": 1, "away_pos": 3 },
-                                { "home_pos": 4, "away_pos": 2 }
+                                { "home_pos": 3, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 5 },
+                                { "home_pos": 4, "away_pos": 6 }
                             ]
                         },
                         {
                             "name": "Matchday 4",
-                            "date": "2024-03-26",
+                            "date": "2024-10-15",
                             "matches": [
-                                { "home_pos": 2, "away_pos": 4 },
-                                { "home_pos": 3, "away_pos": 1 }
+                                { "home_pos": 3, "away_pos": 4 },
+                                { "home_pos": 5, "away_pos": 6 },
+                                { "home_pos": 1, "away_pos": 2 }
                             ]
                         },
                         {
                             "name": "Matchday 5",
-                            "date": "2024-06-06",
+                            "date": "2024-11-14",
                             "matches": [
-                                { "home_pos": 4, "away_pos": 1 },
-                                { "home_pos": 2, "away_pos": 3 }
+                                { "home_pos": 6, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 5 }
                             ]
                         },
                         {
                             "name": "Matchday 6",
-                            "date": "2024-06-11",
+                            "date": "2024-11-19",
                             "matches": [
-                                { "home_pos": 1, "away_pos": 2 },
-                                { "home_pos": 3, "away_pos": 4 }
+                                { "home_pos": 6, "away_pos": 3 },
+                                { "home_pos": 5, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 7",
+                            "date": "2025-03-20",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 4 },
+                                { "home_pos": 2, "away_pos": 6 },
+                                { "home_pos": 3, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 8",
+                            "date": "2025-03-25",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 3 },
+                                { "home_pos": 5, "away_pos": 2 },
+                                { "home_pos": 6, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 9",
+                            "date": "2025-06-05",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 3 },
+                                { "home_pos": 6, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 10",
+                            "date": "2025-06-10",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 6 },
+                                { "home_pos": 3, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 4 }
                             ]
                         }
                     ],
-                    "next_stage": "Fourth Round"
+                    "next_stage": "Fourth Round",
+                    "advanced_note": "Winners and runners-up qualify for the World Cup 2026",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "qualify" },
+                        { "pos": 3, "will": "next_round" },
+                        { "pos": 4, "will": "next_round" }
+                    ],
+                    "next_round_note": "The third and fourth-placed teams advance to the fourth round"
                 }
             ]
         }

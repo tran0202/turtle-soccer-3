@@ -53,7 +53,7 @@ class Groups extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Groups" stage={stage}>
+                <SectionCollapse title="Groups" stage={stage} initialStatus="Opened">
                     {stage.groups &&
                         stage.groups.map((g) => {
                             return (

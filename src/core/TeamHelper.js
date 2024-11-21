@@ -462,6 +462,11 @@ export const createStage = (stage, tournament) => {
         createGroupMatches(stage)
         calculateGroupRankings(stage, tournament)
     }
+    if (stage.type && stage.type.includes('roundrobin2legdraw2')) {
+        createGroups(stage)
+        createGroupMatches(stage)
+        calculateGroupRankings(stage, tournament)
+    }
 }
 
 export const finishPairStage = (stage, next_stage) => {
