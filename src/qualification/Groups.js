@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import { getBoldText } from '../core/TeamHelper'
 import MatchesGroup from './MatchesGroup'
 import GroupRankingsTable from './GroupRankingsTable'
 

@@ -226,6 +226,121 @@
                         { "pos": 4, "will": "next_round" }
                     ],
                     "next_round_note": "The third and fourth-placed teams advance to the fourth round"
+                },
+                {
+                    "name": "Fourth Round",
+                    "type": "roundrobin",
+                    "draw_id": "2",
+                    "draw_note": "",
+                    "entering_placement": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 3 },
+                        { "name": 2, "rankingFrom": 4, "rankingTo": 6 },
+                        { "name": 3, "rankingFrom": 7, "rankingTo": 9 },
+                        { "name": 4, "rankingFrom": 10, "rankingTo": 12 },
+                        { "name": 5, "rankingFrom": 13, "rankingTo": 15 },
+                        { "name": 6, "rankingFrom": 16, "rankingTo": 18 }
+                    ],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2024-09-05",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 6 },
+                                { "home_pos": 1, "away_pos": 5 },
+                                { "home_pos": 2, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2024-09-10",
+                            "matches": [
+                                { "home_pos": 6, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2024-10-10",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 5 },
+                                { "home_pos": 4, "away_pos": 6 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2024-10-15",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 4 },
+                                { "home_pos": 5, "away_pos": 6 },
+                                { "home_pos": 1, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2024-11-14",
+                            "matches": [
+                                { "home_pos": 6, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "date": "2024-11-19",
+                            "matches": [
+                                { "home_pos": 6, "away_pos": 3 },
+                                { "home_pos": 5, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 7",
+                            "date": "2025-03-20",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 4 },
+                                { "home_pos": 2, "away_pos": 6 },
+                                { "home_pos": 3, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 8",
+                            "date": "2025-03-25",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 3 },
+                                { "home_pos": 5, "away_pos": 2 },
+                                { "home_pos": 6, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 9",
+                            "date": "2025-06-05",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 3 },
+                                { "home_pos": 6, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 10",
+                            "date": "2025-06-10",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 6 },
+                                { "home_pos": 3, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 4 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Fifth Round",
+                    "advanced_note": "",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "qualify" },
+                        { "pos": 3, "will": "next_round" },
+                        { "pos": 4, "will": "next_round" }
+                    ],
+                    "next_round_note": ""
                 }
             ]
         }

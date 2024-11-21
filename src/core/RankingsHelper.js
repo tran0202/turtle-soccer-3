@@ -231,10 +231,18 @@ export const flattenDrawPools = (group, advancement) => {
         p.teams.forEach((t) => {
             rank++
             t.rank = rank
+            const qualified_date = group.matchdays[group.matchdays.length - 1].date
             const foundAdvancement = advancement.find((a) => a.pos === rank)
             if (foundAdvancement) {
                 if (foundAdvancement.will === 'qualify') {
                     t.qualified = true
+                    if (rank === 1) {
+                        t.qualified_position = 'winners'
+                        t.qualified_date = qualified_date
+                    } else if (rank === 2) {
+                        t.qualified_position = 'runners-up'
+                        t.qualified_date = qualified_date
+                    }
                 } else if (foundAdvancement.will === 'advance') {
                     t.advanced = true
                 } else if (foundAdvancement.will === 'next_round') {

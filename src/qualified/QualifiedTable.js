@@ -1,16 +1,16 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
-import { getTeamFlagName } from '../core/TeamHelper'
+import { getTeamFlagName, getConfederationLogo } from '../core/TeamHelper'
 
 const QualifiedHeader = () => {
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-sm">
-            <Col className="col-box-4"></Col>
-            <Col className="col-box-14">No.</Col>
+            <Col className="col-box-4">No.</Col>
             <Col className="col-box-34">Team</Col>
-            <Col className="col-box-24">Method of Qualification</Col>
-            <Col className="col-box-24">Date of Qualification</Col>
+            <Col className="col-box-8">Conf.</Col>
+            <Col className="col-box-34">Method of Qualification</Col>
+            <Col className="col-box-20">Date of Qualification</Col>
         </Row>
     )
 }
@@ -19,11 +19,11 @@ const QualifiedRow = (props) => {
     const { row, config } = props
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
-            <Col className="col-box-4"></Col>
-            <Col className="col-box-14">{row.rank}</Col>
+            <Col className="col-box-4">{row.rank}</Col>
             <Col className="col-box-34">{getTeamFlagName(row, config)}</Col>
-            <Col className="col-box-24">{row.qualificationMethod}</Col>
-            <Col className="col-box-24">{moment(row.qualificationDate).format('MMMM D, YYYY')}</Col>
+            <Col className="col-box-8">{getConfederationLogo(row)}</Col>
+            <Col className="col-box-34">{row.qualification_method}</Col>
+            <Col className="col-box-20">{moment(row.qualification_date).format('MMMM D, YYYY')}</Col>
         </Row>
     )
 }

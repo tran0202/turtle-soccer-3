@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button } from 'reactstrap'
 import ConfederationArray from './data/Confederations.json'
-import { getActiveFIFATeamArray, createDrawRankings, getRandomHostTeamArray, getTournament, processStages } from './core/TeamHelper'
+import { getActiveFIFATeamArray, createConfDrawRankings, getRandomHostTeamArray, getTournament, processStages } from './core/TeamHelper'
 import Page from './core/Page'
 import QualifiedTable from './qualified/QualifiedTable'
 import ConfederationQualification from './qualification/ConfederationQualification'
@@ -57,8 +57,8 @@ class QualificationApp extends React.Component {
         const tournament = getTournament()
         const teamArray = getActiveFIFATeamArray()
         const qualifiedTeams = getRandomHostTeamArray(teamArray, tournament)
-        const qualifications = createDrawRankings(teamArray, tournament)
-        processStages(qualifications, tournament)
+        const qualifications = createConfDrawRankings(teamArray, tournament)
+        processStages(qualifications, qualifiedTeams, tournament)
         this.setState({
             qualifiedTeams,
             qualifications,

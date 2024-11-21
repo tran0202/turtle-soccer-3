@@ -145,7 +145,7 @@ export const getRandomHostTeamArray = (teamArray, tournament) => {
     const host_count = tournament.details.host.teams.length
     teams.length >= host_count &&
         randomHostIndex(host_count, confederation_id).forEach((i) => {
-            const team = { ...teams[i], qualificationMethod: 'Hosts', qualificationDate: '2023-02-14' }
+            const team = { ...teams[i], qualification_method: 'Hosts', qualification_date: '2023-02-14' }
             result.push(team)
         })
     return result
@@ -216,7 +216,7 @@ export const getPotInfo = (rankingArray, pots, stageName) => {
     return result
 }
 
-export const createDrawRankings = (teamArray, tournament) => {
+export const createConfDrawRankings = (teamArray, tournament) => {
     if (!tournament) return
     const result = []
     tournament.qualifications.forEach((q) => {
@@ -457,12 +457,7 @@ export const createStage = (stage, tournament) => {
         createPairMatches(stage)
         calculatePairAggregateScore(stage)
     }
-    if (stage.type && stage.type.includes('roundrobin2legdraw1')) {
-        createGroups(stage)
-        createGroupMatches(stage)
-        calculateGroupRankings(stage, tournament)
-    }
-    if (stage.type && stage.type.includes('roundrobin2legdraw2')) {
+    if (stage.type && stage.type.includes('roundrobin2leg')) {
         createGroups(stage)
         createGroupMatches(stage)
         calculateGroupRankings(stage, tournament)
@@ -486,15 +481,22 @@ export const finishPairStage = (stage, next_stage) => {
 
 export const finishGroupStage = (stage, next_stage) => {
     if (!stage || !next_stage) return
+    const qualified_teams = []
     const advanced_teams = []
+    const next_rounded_teams = []
     stage.groups.forEach((g) => {
         g.rankings.forEach((r) => {
-            if (r.advanced) {
+            if (r.qualified) {
+                qualified_teams.push(r.team)
+            } else if (r.advanced) {
                 advanced_teams.push(r.team)
+                next_stage.entering_teams = advanced_teams
+            } else if (r.next_rounded) {
+                next_rounded_teams.push(r.team)
+                next_stage.entering_teams = next_rounded_teams
             }
         })
     })
-    next_stage.entering_teams = advanced_teams
 }
 
 export const finishStage = (stage, nextStage) => {
@@ -502,7 +504,7 @@ export const finishStage = (stage, nextStage) => {
     if (stage.type && stage.type.includes('pair2leg')) {
         finishPairStage(stage, nextStage)
     }
-    if (stage.type && stage.type.includes('roundrobin2legdraw1')) {
+    if (stage.type && stage.type.includes('roundrobin2leg')) {
         finishGroupStage(stage, nextStage)
     }
 }
@@ -585,9 +587,26 @@ export const prepareStage = (stage) => {
     }
 }
 
-export const processStages = (qualArray, tournament) => {
-    if (!qualArray) return
-    qualArray.forEach((q) => {
+export const qualifyStage = (qualification, stage, qualifiedTeams) => {
+    if (!qualification || !stage || !qualifiedTeams) return
+    const { groups } = stage
+    groups.forEach((g) => {
+        const winners = g.rankings.find((t) => t.qualified_position === 'winners')
+        if (winners) {
+            const qualification_method = qualification.id + ' ' + stage.name + ' Group ' + g.name + ' winners'
+            qualifiedTeams.push({ ...winners.team, qualification_method, qualification_date: winners.qualified_date })
+        }
+        const runners_up = g.rankings.find((t) => t.qualified_position === 'runners-up')
+        if (runners_up) {
+            const qualification_method = qualification.id + ' ' + stage.name + ' Group ' + g.name + ' runners-up'
+            qualifiedTeams.push({ ...runners_up.team, qualification_method, qualification_date: runners_up.qualified_date })
+        }
+    })
+}
+
+export const processStages = (qualifications, qualifiedTeams, tournament) => {
+    if (!qualifications) return
+    qualifications.forEach((q) => {
         q.stages.forEach((s) => {
             if (s.type && s.type.includes('pair2leg')) {
                 createDrawPotTable(s)
@@ -601,6 +620,9 @@ export const processStages = (qualArray, tournament) => {
                 createStage(s, tournament)
                 const nextStage = q.stages.find((s2) => s2.name === s.next_stage)
                 finishStage(s, nextStage)
+            }
+            if (s.type && s.type.includes('roundrobin2legdraw2')) {
+                qualifyStage(q, s, qualifiedTeams)
             }
         })
     })
