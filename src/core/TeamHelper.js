@@ -194,57 +194,8 @@ export const getConfederationRankings = (teamArray, confederation_id) => {
     const confRankings = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
     confRankings.forEach((t, index) => {
         t.confRank = index + 1
-        t.drawRank = index + 1
+        t.draw_rank = index + 1
         result.push(t)
-    })
-    return result
-}
-
-export const getPotInfo = (rankingArray, pots, stageName) => {
-    if (!rankingArray || !pots) return
-    const result = []
-    rankingArray.forEach((t) => {
-        const foundPot = pots.find((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
-        const foundIndex = pots.findIndex((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
-        if (foundPot) {
-            t.drawRound = stageName
-            t.drawPot = foundPot.name
-            t.draw_striped = foundIndex % 2 === 0 ? true : false
-            result.push(t)
-        }
-    })
-    return result
-}
-
-export const createConfDrawRankings = (teamArray, tournament) => {
-    if (!tournament) return
-    const result = []
-    tournament.qualifications.forEach((q) => {
-        const draws = []
-        const stages = []
-        q.draws.forEach((d) => {
-            const allRankings = getRandomMensTeamArray(teamArray)
-            const confRankings = getConfederationRankings(allRankings, q.id)
-            draws.push({ ...d, rankings: confRankings })
-        })
-        q.stages.forEach((s) => {
-            const stageDraw = draws.find((d) => d.id === s.draw_id)
-            s.draw = stageDraw
-            if (s.pots) {
-                const stageRankings = getPotInfo(stageDraw.rankings, s.pots, s.name)
-                s.pots.forEach((p) => {
-                    const rankings = []
-                    stageRankings.forEach((t) => {
-                        if (t.drawPot === p.name) {
-                            rankings.push(t)
-                        }
-                    })
-                    p.rankings = rankings
-                })
-            }
-            stages.push(s)
-        })
-        result.push({ id: q.id, draws, stages })
     })
     return result
 }
@@ -462,6 +413,11 @@ export const createStage = (stage, tournament) => {
         createGroupMatches(stage)
         calculateGroupRankings(stage, tournament)
     }
+    if (stage.type && stage.type.includes('roundrobin1leg')) {
+        createGroups(stage)
+        createGroupMatches(stage)
+        calculateGroupRankings(stage, tournament)
+    }
 }
 
 export const finishPairStage = (stage, next_stage) => {
@@ -492,7 +448,10 @@ export const finishGroupStage = (stage, next_stage) => {
                 advanced_teams.push(r.team)
                 next_stage.entering_teams = advanced_teams
             } else if (r.next_rounded) {
-                next_rounded_teams.push(r.team)
+                const new_team = { ...r.team }
+                delete new_team.draw_rank
+                delete new_team.draw_striped
+                next_rounded_teams.push(new_team)
                 next_stage.entering_teams = next_rounded_teams
             }
         })
@@ -505,6 +464,9 @@ export const finishStage = (stage, nextStage) => {
         finishPairStage(stage, nextStage)
     }
     if (stage.type && stage.type.includes('roundrobin2leg')) {
+        finishGroupStage(stage, nextStage)
+    }
+    if (stage.type && stage.type.includes('roundrobin1leg')) {
         finishGroupStage(stage, nextStage)
     }
 }
@@ -552,7 +514,7 @@ export const prepareGroupStage2 = (stage) => {
     stage.entering_teams.forEach((t) => {
         const foundTeam = stage.draw.rankings.find((t2) => t2.id === t.id)
         if (foundTeam) {
-            stageTeams.push(foundTeam)
+            stageTeams.push({ ...foundTeam })
         }
     })
     stageTeams.sort((a, b) => {
@@ -561,12 +523,12 @@ export const prepareGroupStage2 = (stage) => {
         return tempARank > tempBRank ? 1 : -1
     })
     stageTeams.forEach((t, index) => {
-        t.drawRank = index + 1
+        t.draw_rank = index + 1
     })
     stage.entering_teams = stageTeams
     const pots = []
     stage.entering_placement.forEach((p, index) => {
-        const foundTeams = stageTeams.filter((t) => p.rankingFrom <= t.drawRank && t.drawRank <= p.rankingTo)
+        const foundTeams = stageTeams.filter((t) => p.rankingFrom <= t.draw_rank && t.draw_rank <= p.rankingTo)
         if (foundTeams) {
             if (index % 2 === 0) {
                 foundTeams.forEach((t) => (t.draw_striped = true))
@@ -583,6 +545,9 @@ export const prepareStage = (stage) => {
         prepareGroupStage(stage)
     }
     if (stage.type && stage.type.includes('roundrobin2legdraw2')) {
+        prepareGroupStage2(stage)
+    }
+    if (stage.type && stage.type.includes('roundrobin1leg')) {
         prepareGroupStage2(stage)
     }
 }
@@ -604,28 +569,96 @@ export const qualifyStage = (qualification, stage, qualifiedTeams) => {
     })
 }
 
-export const processStages = (qualifications, qualifiedTeams, tournament) => {
-    if (!qualifications) return
-    qualifications.forEach((q) => {
-        q.stages.forEach((s) => {
-            if (s.type && s.type.includes('pair2leg')) {
-                createDrawPotTable(s)
-                createStage(s, tournament)
-                const nextStage = q.stages.find((s2) => s2.name === s.next_stage)
-                finishStage(s, nextStage)
-            }
-            if (s.type && s.type.includes('roundrobin2leg')) {
-                prepareStage(s)
-                createDrawPotTable(s)
-                createStage(s, tournament)
-                const nextStage = q.stages.find((s2) => s2.name === s.next_stage)
-                finishStage(s, nextStage)
-            }
-            if (s.type && s.type.includes('roundrobin2legdraw2')) {
-                qualifyStage(q, s, qualifiedTeams)
-            }
-        })
+export const processStages = (qualification, qualifiedTeams, tournament) => {
+    if (!qualification) return
+    qualification.stages.forEach((s) => {
+        if (s.type && s.type.includes('pair2leg')) {
+            createDrawPotTable(s)
+            createStage(s, tournament)
+            const nextStage = qualification.stages.find((s2) => s2.name === s.next_stage)
+            finishStage(s, nextStage)
+        }
+        if (s.type && s.type.includes('roundrobin2leg')) {
+            prepareStage(s)
+            createDrawPotTable(s)
+            createStage(s, tournament)
+            const nextStage = qualification.stages.find((s2) => s2.name === s.next_stage)
+            finishStage(s, nextStage)
+        }
+        if (s.type && s.type.includes('roundrobin2legdraw2')) {
+            qualifyStage(qualification, s, qualifiedTeams)
+        }
+        if (s.type && s.type.includes('roundrobin1leg')) {
+            prepareStage(s)
+            createDrawPotTable(s)
+            createStage(s, tournament)
+            const nextStage = qualification.stages.find((s2) => s2.name === s.next_stage)
+            finishStage(s, nextStage)
+        }
+        if (s.type && s.type.includes('roundrobin1leg')) {
+            qualifyStage(qualification, s, qualifiedTeams)
+        }
     })
+}
+
+export const getPotInfo = (rankingArray, pots) => {
+    if (!rankingArray || !pots) return
+    const result = []
+    rankingArray.forEach((t) => {
+        const foundPot = pots.find((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+        const foundIndex = pots.findIndex((p) => p.rankingFrom <= t.confRank && t.confRank <= p.rankingTo)
+        if (foundPot) {
+            const draw_striped = foundIndex % 2 === 0 ? true : false
+            result.push({ ...t, draw_pot: foundPot.name, draw_striped })
+        }
+    })
+    return result
+}
+
+export const createInitialStages = (qualification, draws) => {
+    if (!qualification) return
+    const stages = []
+    qualification.stages.forEach((s) => {
+        const stageDraw = draws.find((d) => d.id === s.draw_id)
+        s.draw = stageDraw
+        if (s.pots) {
+            const stageRankings = getPotInfo(s.draw.rankings, s.pots)
+            s.pots.forEach((p) => {
+                const rankings = []
+                stageRankings.forEach((t) => {
+                    if (t.draw_pot === p.name) {
+                        rankings.push(t)
+                    }
+                })
+                p.rankings = rankings
+            })
+        }
+        stages.push(s)
+    })
+    return stages
+}
+
+export const createDraws = (qualification, teamArray) => {
+    if (!qualification) return
+    const draws = []
+    qualification.draws.forEach((d) => {
+        const allRankings = getRandomMensTeamArray(teamArray)
+        const confRankings = getConfederationRankings(allRankings, qualification.id)
+        draws.push({ ...d, rankings: confRankings })
+    })
+    return draws
+}
+
+export const processQualifications = (teamArray, qualifiedTeams, tournament) => {
+    if (!tournament || !tournament.qualifications) return
+    const qualifications = []
+    tournament.qualifications.forEach((q) => {
+        const draws = createDraws(q, teamArray)
+        const stages = createInitialStages(q, draws)
+        processStages(q, qualifiedTeams, tournament)
+        qualifications.push({ id: q.id, draws, stages })
+    })
+    return qualifications
 }
 
 export const overwriteGroup = (group) => {

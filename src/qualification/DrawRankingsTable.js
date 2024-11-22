@@ -28,7 +28,7 @@ const DrawRankingsRow = (props) => {
                     <div className={`box-sm ${ranking.draw_striped ? 'ltblue-striped' : ''}`}>
                         <Row className="no-gutters">
                             <Col className="col-box-5"></Col>
-                            <Col className="col-box-14">{ranking.drawRank}</Col>
+                            <Col className="col-box-14">{ranking.draw_rank}</Col>
                             <Col className="col-box-75">
                                 {getTeamFlagName(ranking, config)} ({ranking.rank})
                             </Col>

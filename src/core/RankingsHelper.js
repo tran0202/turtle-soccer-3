@@ -139,9 +139,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
                 rankings[j] = { ...temp }
-                rankings[i].h2h_point_win = true
-                rankings[j].h2h_point_win = false
-                rankings[i].h2h_point_win_note = rankings[i].pts + '/' + rankings[j].pts
+                if (h2h_matches) {
+                    rankings[i].h2h_point_win = true
+                    rankings[j].h2h_point_win = false
+                    rankings[i].h2h_point_win_note = rankings[i].pts + '/' + rankings[j].pts
+                }
             }
 
             // Goal differential
@@ -149,9 +151,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
                 rankings[j] = { ...temp }
-                rankings[i].h2h_gd_win = true
-                rankings[j].h2h_gd_win = false
-                rankings[i].h2h_gd_win_note = rankings[i].gd + '/' + rankings[j].gd
+                if (h2h_matches) {
+                    rankings[i].h2h_gd_win = true
+                    rankings[j].h2h_gd_win = false
+                    rankings[i].h2h_gd_win_note = rankings[i].gd + '/' + rankings[j].gd
+                }
             }
 
             // Goal forward
@@ -159,9 +163,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
                 rankings[j] = { ...temp }
-                rankings[i].h2h_gf_win = true
-                rankings[j].h2h_gf_win = false
-                rankings[i].h2h_gf_win_note = rankings[i].gf + '/' + rankings[j].gf
+                if (h2h_matches) {
+                    rankings[i].h2h_gf_win = true
+                    rankings[j].h2h_gf_win = false
+                    rankings[i].h2h_gf_win_note = rankings[i].gf + '/' + rankings[j].gf
+                }
             }
 
             // Away goal
@@ -173,9 +179,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                     const temp = rankings[i]
                     rankings[i] = { ...rankings[j] }
                     rankings[j] = { ...temp }
-                    rankings[i].away_goal_win = true
-                    rankings[j].away_goal_win = false
-                    rankings[i].away_goal_win_note = match1.away_score + '/' + match2.away_score
+                    if (h2h_matches) {
+                        rankings[i].away_goal_win = true
+                        rankings[j].away_goal_win = false
+                        rankings[i].away_goal_win_note = match1.away_score + '/' + match2.away_score
+                    }
                 }
             }
             // Fair play points
@@ -188,9 +196,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
                 rankings[j] = { ...temp }
-                rankings[i].fair_play_win = true
-                rankings[j].fair_play_win = false
-                rankings[i].fair_play_win_note = rankings[i].fp + '/' + rankings[j].fp
+                if (h2h_matches) {
+                    rankings[i].fair_play_win = true
+                    rankings[j].fair_play_win = false
+                    rankings[i].fair_play_win_note = rankings[i].fp + '/' + rankings[j].fp
+                }
             }
 
             // Drawing lots
@@ -208,9 +218,11 @@ export const sortRankings = (rankings, h2h_matches) => {
                     rankings[j] = { ...temp }
                     console.log('Draw Lot Win Move Up')
                 }
-                rankings[i].draw_lot_win = true
-                rankings[j].draw_lot_win = false
-                rankings[i].draw_lot_win_note = rankings[i].id + '/' + rankings[j].id
+                if (h2h_matches) {
+                    rankings[i].draw_lot_win = true
+                    rankings[j].draw_lot_win = false
+                    rankings[i].draw_lot_win_note = rankings[i].id + '/' + rankings[j].id
+                }
             }
         }
     }
@@ -223,7 +235,6 @@ export const sortGroupRankings = (group, tournament) => {
 }
 
 export const flattenDrawPools = (group, advancement) => {
-    // console.log('advancement:', advancement)
     if (!group || !advancement || advancement.length === 0) return
     group.rankings = []
     let rank = 0

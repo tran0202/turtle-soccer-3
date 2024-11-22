@@ -66,6 +66,11 @@ class ConfederationQualification extends React.Component {
                                         <Groups state={state} stage={s} />
                                     </React.Fragment>
                                 )}
+                                {s.type && s.type.includes('roundrobin1leg') && (
+                                    <React.Fragment>
+                                        <Groups state={state} stage={s} />
+                                    </React.Fragment>
+                                )}
                             </SectionCollapse>
                         )
                     })}
