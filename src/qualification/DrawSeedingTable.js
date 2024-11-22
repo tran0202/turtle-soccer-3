@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlagName } from '../core/TeamHelper'
 
-const DrawRankingsHeader = (props) => {
+const DrawSeedingHeader = (props) => {
     const { name } = props
     return (
         <React.Fragment>
@@ -12,14 +12,14 @@ const DrawRankingsHeader = (props) => {
             </Row>
             <Row className="no-gutters ranking-tbl-header-light team-row padding-tb-xs text-start">
                 <Col className="col-box-5"></Col>
-                <Col className="col-box-14">Rank</Col>
+                <Col className="col-box-14">No.</Col>
                 <Col className="col-box-75">Team (World Rank)</Col>
             </Row>
         </React.Fragment>
     )
 }
 
-const DrawRankingsRow = (props) => {
+const DrawSeedingRow = (props) => {
     const { ranking, config } = props
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
@@ -28,7 +28,7 @@ const DrawRankingsRow = (props) => {
                     <div className={`box-sm ${ranking.draw_striped ? 'ltblue-striped' : ''}`}>
                         <Row className="no-gutters">
                             <Col className="col-box-5"></Col>
-                            <Col className="col-box-14">{ranking.draw_rank}</Col>
+                            <Col className="col-box-14">{ranking.draw_seed}</Col>
                             <Col className="col-box-75">
                                 {getTeamFlagName(ranking, config)} ({ranking.rank})
                             </Col>
@@ -40,7 +40,7 @@ const DrawRankingsRow = (props) => {
     )
 }
 
-class DrawRankingsTable extends React.Component {
+class DrawSeedingTable extends React.Component {
     render() {
         const { state, stage } = this.props
         const { drawPotRows } = stage
@@ -51,8 +51,8 @@ class DrawRankingsTable extends React.Component {
                         <Row key={index} className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
                             {dpr.map((col) => (
                                 <Col key={col.name}>
-                                    <DrawRankingsHeader name={col.name} />
-                                    {col.rankings && col.rankings.map((r) => <DrawRankingsRow key={r.id} ranking={r} config={state.config} />)}
+                                    <DrawSeedingHeader name={col.name} />
+                                    {col.rankings && col.rankings.map((r) => <DrawSeedingRow key={r.id} ranking={r} config={state.config} />)}
                                 </Col>
                             ))}
                         </Row>
@@ -62,4 +62,4 @@ class DrawRankingsTable extends React.Component {
     }
 }
 
-export default DrawRankingsTable
+export default DrawSeedingTable

@@ -49,7 +49,7 @@ class QualificationApp extends React.Component {
             qualifiedTeams: [],
             qualifications: [],
             tournament: {},
-            config: { team_type_id: 'MNT', confederations: ConfederationArray },
+            config: {},
         }
     }
 
@@ -62,7 +62,7 @@ class QualificationApp extends React.Component {
             qualifiedTeams,
             qualifications,
             tournament,
-            config: { ...this.state.config, teams: teamArray },
+            config: { team_type_id: 'MNT', confederations: ConfederationArray, teams: teamArray },
         })
     }
 

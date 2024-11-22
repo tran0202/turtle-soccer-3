@@ -29,7 +29,7 @@
                     "name": "First Round",
                     "type": "pair2leg",
                     "draw_id": "1",
-                    "draw_note": "20 teams (ranked 27–46) are divided into Pot 1 and Pot 2 and play home-and-away over two legs. One team from each pot are drawn into one tie. 10 winners will advance to the second round.",
+                    "draw_note": "20 teams (seed numbers 27–46) are divided into Pot 1 and Pot 2 and play home-and-away over two legs. One team from each pot are drawn into one tie. 10 winners will advance to the second round.",
                     "pots": [
                         { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
                         { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
@@ -45,7 +45,7 @@
                     "name": "Second Round",
                     "type": "roundrobin2legdraw1",
                     "draw_id": "1",
-                    "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (ranked 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
+                    "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (seed numbers 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
                     "entering_placement": [
                         { "name": 4, "count": 9 },
                         { "name": 3, "count": 1 }
@@ -264,37 +264,45 @@
                 },
                 {
                     "name": "Fifth Round",
-                    "type": "pair2leg",
+                    "type": "pair2legnopot",
+                    "draw_id": "2",
                     "draw_note": "",
                     "entering_placement": [
-                        { "name": 1, "rankingFrom": 1, "rankingTo": 2 },
-                        { "name": 2, "rankingFrom": 3, "rankingTo": 4 },
-                        { "name": 3, "rankingFrom": 5, "rankingTo": 6 }
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 1 },
+                        { "name": 2, "rankingFrom": 2, "rankingTo": 2 }
                     ],
                     "matchdays": [
-                        {
-                            "name": "Matchday 1",
-                            "date": "2025-10-08",
-                            "matches": [{ "home_pos": 2, "away_pos": 3 }]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "date": "2025-10-15",
-                            "matches": [{ "home_pos": 1, "away_pos": 3 }]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "date": "2025-10-22",
-                            "matches": [{ "home_pos": 1, "away_pos": 2 }]
-                        }
+                        { "name": "First leg", "date": "2025-11-13", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "Second leg", "date": "2025-11-18", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
                     ],
                     "next_stage": "Inter-confederation play-offs",
-                    "advanced_note": "",
+                    "advanced_note": "Bolded team winners advance to the inter-confederation play-offs",
                     "advancement": [
                         { "pos": 1, "will": "qualify" },
                         { "pos": 2, "will": "next_round" }
                     ],
                     "next_round_note": ""
+                }
+            ]
+        },
+        {
+            "id": "FIFA",
+            "draws": [{ "id": "1", "date": "2025-12-18" }],
+            "stages": [
+                {
+                    "name": "Inter-confederation play-offs",
+                    "type": "knockout",
+                    "draw_id": "1",
+                    "draw_note": "",
+                    "pots": [
+                        { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
+                        { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
+                    ],
+                    "matchdays": [
+                        { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                    ],
+                    "advanced_note": ""
                 }
             ]
         }

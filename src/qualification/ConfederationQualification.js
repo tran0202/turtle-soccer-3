@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawRankings from './DrawRankings'
+import DrawSeeding from './DrawSeeding'
 import Results from './Results'
 import Matches from './Matches'
 import Groups from './Groups'
@@ -52,8 +52,12 @@ class ConfederationQualification extends React.Component {
                     qual.stages.map((s) => {
                         return (
                             <SectionCollapse key={confederation_id + s.name} title={s.name} initialStatus="Opened">
-                                <DrawRankings state={state} stage={s} />
-                                <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
+                                {s.type && !s.type.includes('pair2legnopot') && !s.type.includes('knockout') && (
+                                    <React.Fragment>
+                                        <DrawSeeding state={state} stage={s} />
+                                        <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
+                                    </React.Fragment>
+                                )}
                                 {s.type && s.type.includes('pair2leg') && (
                                     <React.Fragment>
                                         <Results state={state} stage={s} />

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawRankingsTable from './DrawRankingsTable'
+import DrawSeedingTable from './DrawSeedingTable'
 
 const DrawPlacement = (props) => {
     const { stage } = props
@@ -12,7 +12,7 @@ const DrawPlacement = (props) => {
                     {stage &&
                         stage.pots &&
                         stage.pots.map((p) => {
-                            return p.rankingFrom ? <li key={p.name}>{'Pot ' + p.name + ' (ranked ' + p.rankingFrom + '-' + p.rankingTo + ')'}</li> : ''
+                            return p.rankingFrom ? <li key={p.name}>{'Pot ' + p.name + ' (seed numbers ' + p.rankingFrom + '-' + p.rankingTo + ')'}</li> : ''
                         })}
                 </ul>
             </Col>
@@ -57,17 +57,17 @@ const SectionCollapse = (props) => {
     )
 }
 
-class DrawRankings extends React.Component {
+class DrawSeeding extends React.Component {
     render() {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Draw Rankings" stage={stage}>
-                    <DrawRankingsTable state={state} stage={stage} />
+                <SectionCollapse title="Draw Seeding" stage={stage}>
+                    <DrawSeedingTable state={state} stage={stage} />
                 </SectionCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default DrawRankings
+export default DrawSeeding
