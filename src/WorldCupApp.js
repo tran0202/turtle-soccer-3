@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Container, Collapse, Row, Col, Button } from 'reactstrap'
+import { Container, Collapse, Row, Col, Button, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import classnames from 'classnames'
 import ConfederationArray from './data/Confederations.json'
 import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processQualifications } from './core/TeamHelper'
 import Page from './core/Page'
@@ -20,7 +21,7 @@ export const SectionCollapse = (props) => {
         <React.Fragment>
             <Row className="text-start padding-top-lg">
                 <Col sm="12">
-                    <Button outline color="primary" onClick={toggle} className="h2-ff8 btn-collapse-md">
+                    <Button outline color="primary" onClick={toggle} className="h2-ff8 btn-collapse">
                         {title}&nbsp;
                         {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
@@ -40,10 +41,52 @@ export const SectionCollapse = (props) => {
     )
 }
 
-class QualificationApp extends React.Component {
+const Qualifications = (props) => {
+    const { state, qualifications } = props
+    const [activeTab, setActiveTab] = useState('AFC')
+    const toggle = (tab) => {
+        if (activeTab !== tab) setActiveTab(tab)
+    }
+
+    return (
+        <React.Fragment>
+            <Nav tabs className="mt-3">
+                {qualifications &&
+                    qualifications.map((q) => (
+                        <NavItem key={q.id}>
+                            {q.id && (
+                                <NavLink
+                                    className={classnames({ active: activeTab === `${q.id.replace(/ /g, '-')}` })}
+                                    onClick={() => {
+                                        toggle(`${q.id.replace(/ /g, '-')}`)
+                                    }}
+                                >
+                                    {q.id}
+                                </NavLink>
+                            )}
+                        </NavItem>
+                    ))}
+            </Nav>
+            <TabContent activeTab={activeTab}>
+                {qualifications &&
+                    qualifications.map((q) => (
+                        <React.Fragment key={q.id}>
+                            {q.id && (
+                                <TabPane tabId={q.id.replace(/ /g, '-')}>
+                                    <ConfederationQualification state={state} confederation_id={q.id} />
+                                </TabPane>
+                            )}
+                        </React.Fragment>
+                    ))}
+            </TabContent>
+        </React.Fragment>
+    )
+}
+
+class WorldCupApp extends React.Component {
     constructor(props) {
         super(props)
-        document.title = 'Qualification - Turtle Soccer'
+        document.title = 'World Cup - Turtle Soccer'
 
         this.state = {
             qualifiedTeams: [],
@@ -84,24 +127,19 @@ class QualificationApp extends React.Component {
         return (
             <Page>
                 <Container>
-                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026 Qualification</h1>
+                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026</h1>
 
                     <SectionCollapse title="Qualified Teams">
                         <QualifiedTable state={this.state} />
                     </SectionCollapse>
 
-                    {qualifications &&
-                        qualifications.map((q) => {
-                            return (
-                                <SectionCollapse key={q.id} title={`${q.id} Qualification`} initialStatus="Opened">
-                                    <ConfederationQualification state={this.state} confederation_id={q.id} />
-                                </SectionCollapse>
-                            )
-                        })}
+                    <SectionCollapse title="Confederation Qualifications" initialStatus="Opened">
+                        <Qualifications state={this.state} qualifications={qualifications} />
+                    </SectionCollapse>
                 </Container>
             </Page>
         )
     }
 }
 
-export default QualificationApp
+export default WorldCupApp

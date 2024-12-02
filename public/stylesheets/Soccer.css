@@ -1446,8 +1446,10 @@
 .nav-tabs .nav-link.active {
     color: #007bff;
     cursor: default;
+    font-weight: bold;
 }
 
 .nav-tabs .nav-link {
     color: #1988ff;
+    font-size: 1.5rem;
 }

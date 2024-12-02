@@ -286,7 +286,7 @@
             ]
         },
         {
-            "id": "FIFA",
+            "id": "Inter-confederation play-offs",
             "draws": [{ "id": "1", "date": "2025-12-18" }],
             "stages": [
                 {
@@ -294,10 +294,6 @@
                     "type": "knockout",
                     "draw_id": "1",
                     "draw_note": "",
-                    "pots": [
-                        { "name": 1, "rankingFrom": 27, "rankingTo": 36 },
-                        { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
-                    ],
                     "matchdays": [
                         { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
                         { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
