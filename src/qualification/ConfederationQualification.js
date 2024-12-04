@@ -5,6 +5,7 @@ import Results from './Results'
 import Matches from './Matches'
 import Groups from './Groups'
 import Brackets from './Brackets'
+import PartialAdvancement from './PartialAdvancement'
 
 const ConfederationQualificationCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -65,14 +66,14 @@ class ConfederationQualification extends React.Component {
                                         <Matches state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('roundrobin2leg') && (
+                                {s.type && s.type.includes('roundrobin') && (
                                     <React.Fragment>
                                         <Groups state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('roundrobin1leg') && (
+                                {s.partial_advancement && (
                                     <React.Fragment>
-                                        <Groups state={state} stage={s} />
+                                        <PartialAdvancement state={state} stage={s} />
                                     </React.Fragment>
                                 )}
                             </ConfederationQualificationCollapse>

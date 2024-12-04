@@ -3,12 +3,15 @@ import { Row, Col } from 'reactstrap'
 import { getTeamFlag } from '../core/TeamHelper'
 import { TiebreakTooltip } from '../core/TooltipHelper'
 
-const RankingsHeader = () => {
+const RankingsHeader = (props) => {
+    const { config } = props
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-center">
             <Col className="col-box-4"></Col>
+            {config.added_group && <Col className="col-box-4">Gr</Col>}
             <Col className="col-box-6"></Col>
-            <Col className="col-box-27"></Col>
+            {config.added_group && <Col className="col-box-23"></Col>}
+            {!config.added_group && <Col className="col-box-27"></Col>}
             <Col className="col-box-7">MP</Col>
             <Col className="col-box-7">W</Col>
             <Col className="col-box-7">D</Col>
@@ -21,7 +24,7 @@ const RankingsHeader = () => {
     )
 }
 
-const RakingsRow = (props) => {
+const RankingsRow = (props) => {
     const { ranking, config } = props
     const qualified_striped = ranking.qualified ? 'advanced-next-round-striped' : ''
     const advanced_striped = ranking.advanced ? 'advanced-next-round-striped' : ''
@@ -29,8 +32,10 @@ const RakingsRow = (props) => {
     return (
         <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}`}>
             <Col className="col-box-4">{ranking.rank}</Col>
+            {config.added_group && <Col className="col-box-4">{ranking.group_name}</Col>}
             <Col className="col-box-6">{getTeamFlag(ranking.team, config)}</Col>
-            <Col className="col-box-27">{ranking.team.name}</Col>
+            {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
+            {!config.added_group && <Col className="col-box-27">{ranking.team.name}</Col>}
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
             <Col className="col-box-7 text-center">{ranking.w}</Col>
             <Col className="col-box-7 text-center">{ranking.d}</Col>
@@ -52,14 +57,13 @@ const RakingsRow = (props) => {
 class GroupRankingsTable extends React.Component {
     render() {
         const { group, config } = this.props
-        // const { groups } = stage
         return (
             <React.Fragment>
-                <RankingsHeader />
+                <RankingsHeader config={config} />
 
                 {group.rankings &&
                     group.rankings.map((r, index) => {
-                        return <RakingsRow key={r.id} ranking={r} config={config} />
+                        return <RankingsRow key={r.id} ranking={r} config={config} />
                     })}
             </React.Fragment>
         )

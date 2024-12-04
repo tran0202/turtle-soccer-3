@@ -8,12 +8,12 @@ const DrawSeedingHeader = (props) => {
         <React.Fragment>
             <Row className="no-gutters ranking-tbl-header team-row padding-tb-sm text-start">
                 <Col className="col-box-5"></Col>
-                <Col className="col-box-75">Pot {name}</Col>
+                <Col className="col-box-82">Pot {name}</Col>
             </Row>
             <Row className="no-gutters ranking-tbl-header-light team-row padding-tb-xs text-start">
                 <Col className="col-box-5"></Col>
-                <Col className="col-box-14">No.</Col>
-                <Col className="col-box-75">Team (World Rank)</Col>
+                <Col className="col-box-10">No.</Col>
+                <Col className="col-box-82">Team (World Rank)</Col>
             </Row>
         </React.Fragment>
     )
@@ -28,8 +28,8 @@ const DrawSeedingRow = (props) => {
                     <div className={`box-sm ${ranking.draw_striped ? 'ltblue-striped' : ''}`}>
                         <Row className="no-gutters">
                             <Col className="col-box-5"></Col>
-                            <Col className="col-box-14">{ranking.draw_seed}</Col>
-                            <Col className="col-box-75">
+                            <Col className="col-box-10">{ranking.draw_seed}</Col>
+                            <Col className="col-box-82">
                                 {getTeamFlagName(ranking, config)} ({ranking.rank})
                             </Col>
                         </Row>

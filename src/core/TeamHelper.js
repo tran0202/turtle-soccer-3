@@ -227,7 +227,7 @@ export const getConfederationRankings = (teamArray, confederation_id) => {
 
 // Pre-existing Pots being made based on pre-determined rankings.
 export const createPots = (qualification, draws) => {
-    if (!qualification) return
+    if (!qualification || !qualification.stages) return
     const stages = []
     qualification.stages.forEach((s) => {
         const stageDraw = draws.find((d) => d.id === s.draw_id)
@@ -264,7 +264,7 @@ export const getPotInfo = (rankingArray, pots) => {
 }
 
 export const processStages = (qualification, qualifiedTeams, tournament) => {
-    if (!qualification) return
+    if (!qualification || !qualification.stages) return
     qualification.stages.forEach((s) => {
         preparePots(s)
         createDrawPotTable(s)
@@ -648,6 +648,10 @@ export const qualifyStage = (qualification, stage, qualifiedTeams) => {
                 }
             }
         })
+
+    qualifiedTeams.sort((a, b) => {
+        return a.qualification_date > b.qualification_date ? 1 : -1
+    })
 }
 
 export const overwriteGroup = (group) => {

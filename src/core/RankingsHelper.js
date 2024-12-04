@@ -1,6 +1,31 @@
 /* eslint-disable no-loop-func */
 import randomInteger from 'random-int'
 
+export const calculateGroupRankings = (stage, tournament) => {
+    if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        g.rankings = []
+        const allMatches = []
+        g.matchdays.forEach((md) => {
+            md.matches.forEach((m) => {
+                allMatches.push(m)
+            })
+        })
+        g.teams.forEach((t) => {
+            const ranking = getBlankRanking(t.id)
+            ranking.team = t
+            accumulateRanking(ranking, allMatches, tournament)
+            g.rankings.push(ranking)
+        })
+        sortGroupRankings(g, tournament)
+        flattenDrawPools(g)
+        processPartialAdvancement(stage)
+    })
+    stage.groups.forEach((g) => {
+        setAdvancement(g, stage.advancement)
+    })
+}
+
 export const getBlankRanking = (teamId) => {
     return { id: teamId, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 }
 }
@@ -55,26 +80,10 @@ export const accumulateRanking = (ranking, matches, tournament) => {
     })
 }
 
-export const collectH2HMatches = (pool, matchdays) => {
-    if (!pool || !matchdays) return
-    if (pool.teams.length > 1) {
-        pool.h2h_matches = []
-        for (var i = 0; i < pool.teams.length - 1; i++) {
-            for (var j = i + 1; j < pool.teams.length; j++) {
-                // eslint-disable-next-line no-loop-func
-                matchdays.forEach((md) => {
-                    md.matches.forEach((m) => {
-                        if (
-                            (m.home_team === pool.teams[i].id && m.away_team === pool.teams[j].id) ||
-                            (m.home_team === pool.teams[j].id && m.away_team === pool.teams[i].id)
-                        ) {
-                            pool.h2h_matches.push(m)
-                        }
-                    })
-                })
-            }
-        }
-    }
+export const sortGroupRankings = (group, tournament) => {
+    if (!group) return
+    createDrawPools(group, tournament)
+    sortRankings(group.draw_pools)
 }
 
 export const createDrawPools = (group, tournament) => {
@@ -130,6 +139,28 @@ export const createDrawPools = (group, tournament) => {
     })
 }
 
+export const collectH2HMatches = (pool, matchdays) => {
+    if (!pool || !matchdays) return
+    if (pool.teams.length > 1) {
+        pool.h2h_matches = []
+        for (var i = 0; i < pool.teams.length - 1; i++) {
+            for (var j = i + 1; j < pool.teams.length; j++) {
+                // eslint-disable-next-line no-loop-func
+                matchdays.forEach((md) => {
+                    md.matches.forEach((m) => {
+                        if (
+                            (m.home_team === pool.teams[i].id && m.away_team === pool.teams[j].id) ||
+                            (m.home_team === pool.teams[j].id && m.away_team === pool.teams[i].id)
+                        ) {
+                            pool.h2h_matches.push(m)
+                        }
+                    })
+                })
+            }
+        }
+    }
+}
+
 export const sortRankings = (rankings, h2h_matches) => {
     if (!rankings) return
     for (var i = 0; i < rankings.length - 1; i++) {
@@ -175,7 +206,7 @@ export const sortRankings = (rankings, h2h_matches) => {
                 // eslint-disable-next-line no-loop-func
                 const match1 = h2h_matches && h2h_matches.find((m) => m.home_team === rankings[i].team.id)
                 const match2 = h2h_matches && h2h_matches.find((m) => m.home_team === rankings[j].team.id)
-                if (match1.away_score > match2.away_score) {
+                if (match1 && match2 && match1.away_score > match2.away_score) {
                     const temp = rankings[i]
                     rankings[i] = { ...rankings[j] }
                     rankings[j] = { ...temp }
@@ -228,29 +259,67 @@ export const sortRankings = (rankings, h2h_matches) => {
     }
 }
 
-export const sortGroupRankings = (group, tournament) => {
+export const flattenDrawPools = (group) => {
     if (!group) return
-    createDrawPools(group, tournament)
-    sortRankings(group.draw_pools)
-}
-
-export const flattenDrawPools = (group, advancement) => {
-    if (!group || !advancement || advancement.length === 0) return
     group.rankings = []
     let rank = 0
     group.draw_pools.forEach((p) => {
         p.teams.forEach((t) => {
             rank++
             t.rank = rank
-            const qualified_date = group.matchdays[group.matchdays.length - 1].date
-            const foundAdvancement = advancement.find((a) => a.pos === rank)
-            if (foundAdvancement) {
+            group.rankings.push(t)
+        })
+    })
+}
+
+export const processPartialAdvancement = (stage) => {
+    if (!stage || !stage.advancement) return
+    const partial = stage.advancement.some((a) => a.count)
+    if (partial) {
+        stage.partial_advancement = true
+        const pa = stage.advancement.filter((a) => a.count)
+        pa.forEach((a) => {
+            const rankings = []
+            stage.groups.forEach((g) => {
+                const foundTeam = g.rankings && g.rankings.find((t) => t.rank === a.pos)
+                if (foundTeam) {
+                    rankings.push({ ...foundTeam, group_name: g.name })
+                }
+            })
+            sortRankings(rankings)
+            rankings.forEach((t, index) => {
+                t.rank = index + 1
+                if (index < a.count) {
+                    t.next_rounded = true
+                } else {
+                    delete t.next_rounded
+                }
+            })
+            a.rankings = rankings
+        })
+    }
+}
+
+export const setAdvancement = (group, advancement) => {
+    if (!group || !advancement || advancement.length === 0) return
+    group.rankings.forEach((t) => {
+        const qualified_date = group.matchdays[group.matchdays.length - 1].date
+        const foundAdvancement = advancement.find((a) => a.pos === t.rank)
+        if (foundAdvancement) {
+            let passed = !foundAdvancement.rankings
+            if (foundAdvancement.rankings) {
+                const foundPartial = foundAdvancement.rankings.find((t2) => t2.id === t.id && t2.next_rounded)
+                if (foundPartial) {
+                    passed = true
+                }
+            }
+            if (passed) {
                 if (foundAdvancement.will === 'qualify') {
                     t.qualified = true
-                    if (rank === 1) {
+                    if (t.rank === 1) {
                         t.qualified_position = 'winners'
                         t.qualified_date = qualified_date
-                    } else if (rank === 2) {
+                    } else if (t.rank === 2) {
                         t.qualified_position = 'runners-up'
                         t.qualified_date = qualified_date
                     }
@@ -259,29 +328,14 @@ export const flattenDrawPools = (group, advancement) => {
                 } else if (foundAdvancement.will === 'next_round') {
                     t.next_rounded = true
                 }
+            } else {
+                delete t.next_rounded
             }
-            group.rankings.push(t)
-        })
+        }
     })
 }
 
-export const calculateGroupRankings = (stage, tournament) => {
-    if (!stage || !stage.groups) return
-    stage.groups.forEach((g) => {
-        g.rankings = []
-        const allMatches = []
-        g.matchdays.forEach((md) => {
-            md.matches.forEach((m) => {
-                allMatches.push(m)
-            })
-        })
-        g.teams.forEach((t) => {
-            const ranking = getBlankRanking(t.id)
-            ranking.team = t
-            accumulateRanking(ranking, allMatches, tournament)
-            g.rankings.push(ranking)
-        })
-        sortGroupRankings(g, tournament)
-        flattenDrawPools(g, stage.advancement)
-    })
+export const getPartialAdvancementRankings = (stage) => {
+    if (!stage) return
+    return stage.advancement.filter((a) => a.count)
 }
