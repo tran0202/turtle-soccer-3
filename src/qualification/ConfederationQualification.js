@@ -4,8 +4,9 @@ import DrawSeeding from './DrawSeeding'
 import Results from './Results'
 import Matches from './Matches'
 import Groups from './Groups'
+import Brackets from './Brackets'
 
-const SectionCollapse = (props) => {
+const ConfederationQualificationCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -41,18 +42,17 @@ const SectionCollapse = (props) => {
 
 class ConfederationQualification extends React.Component {
     render() {
-        const { state, confederation_id } = this.props
-        const { qualifications } = state
-        if (!qualifications) return
-        const qual = qualifications.find((q) => q.id === confederation_id)
+        const { state, qualification } = this.props
+        const qualification_id = qualification ? qualification.id : ''
+        const isPlayoff = qualification_id.includes('play-off')
         return (
             <React.Fragment>
-                {qual &&
-                    qual.stages &&
-                    qual.stages.map((s) => {
-                        return (
-                            <SectionCollapse key={confederation_id + s.name} title={s.name} initialStatus="Opened">
-                                {s.type && !s.type.includes('pair2legnopot') && !s.type.includes('knockout') && (
+                {qualification &&
+                    qualification.stages &&
+                    qualification.stages.map((s) => {
+                        return !isPlayoff ? (
+                            <ConfederationQualificationCollapse key={qualification_id + s.name} title={s.name} initialStatus="Opened">
+                                {s.type && !s.type.includes('_noshowpot') && !s.type.includes('knockout') && (
                                     <React.Fragment>
                                         <DrawSeeding state={state} stage={s} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
@@ -75,7 +75,12 @@ class ConfederationQualification extends React.Component {
                                         <Groups state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                            </SectionCollapse>
+                            </ConfederationQualificationCollapse>
+                        ) : (
+                            <React.Fragment key={qualification_id + s.name}>
+                                <Brackets state={state} stage={s} />
+                                <Matches state={state} stage={s} />
+                            </React.Fragment>
                         )
                     })}
             </React.Fragment>

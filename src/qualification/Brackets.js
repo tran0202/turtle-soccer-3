@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import MatchesGroup from './MatchesGroup'
-import GroupRankingsTable from './GroupRankingsTable'
 
-const GroupsCollapse = (props) => {
-    const { title, initialStatus, stage, children } = props
+const BracketsCollapse = (props) => {
+    const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')
@@ -25,16 +23,6 @@ const GroupsCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
-                <Col sm="5">
-                    <Row>
-                        <Col className="advanced-next-round-striped">{stage.advanced_note}</Col>
-                    </Row>
-                    {stage.next_round_note && (
-                        <Row>
-                            <Col className="advanced-wild-card-striped">{stage.next_round_note}</Col>
-                        </Row>
-                    )}
-                </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start padding-left-sm">
@@ -47,31 +35,17 @@ const GroupsCollapse = (props) => {
     )
 }
 
-class Groups extends React.Component {
+class Brackets extends React.Component {
     render() {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <GroupsCollapse title="Groups" stage={stage}>
-                    {stage.groups &&
-                        stage.groups.map((g) => {
-                            return (
-                                <Row key={g.name} className="mt-5 box-xl">
-                                    <Col xs={{ size: 10, offset: 1 }}>
-                                        <Row className="no-gutters group-header padding-tb-sm text-start">
-                                            <Col className="col-box-5"></Col>
-                                            <Col className="col-box-75">Group {g.name}</Col>
-                                        </Row>
-                                        <GroupRankingsTable group={g} config={state.config} />
-                                        <MatchesGroup group={g} config={state.config} />
-                                    </Col>
-                                </Row>
-                            )
-                        })}
-                </GroupsCollapse>
+                <BracketsCollapse title="Brackets" stage={stage}>
+                    Brackets
+                </BracketsCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default Groups
+export default Brackets

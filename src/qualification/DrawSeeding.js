@@ -20,7 +20,7 @@ const DrawPlacement = (props) => {
     )
 }
 
-const SectionCollapse = (props) => {
+const DrawSeedingCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -62,9 +62,9 @@ class DrawSeeding extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Draw Seeding" stage={stage}>
+                <DrawSeedingCollapse title="Draw Seeding" stage={stage}>
                     <DrawSeedingTable state={state} stage={stage} />
-                </SectionCollapse>
+                </DrawSeedingCollapse>
             </React.Fragment>
         )
     }

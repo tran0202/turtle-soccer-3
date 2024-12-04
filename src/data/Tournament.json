@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "Second Round",
-                    "type": "roundrobin2legdraw1",
+                    "type": "roundrobin2leg_oddpot",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (seed numbers 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
                     "entering_placement": [
@@ -114,7 +114,7 @@
                 },
                 {
                     "name": "Third Round",
-                    "type": "roundrobin2legdraw2",
+                    "type": "roundrobin2leg_evenpot",
                     "draw_id": "2",
                     "draw_note": "18 teams advance from the second round are drawn into 3 groups of 6 to play against each other on a home-and-away basis. The top 2 teams will qualify directly for the World Cup 2026. The third and fourth-placed teams will advance to the fourth round. Each group A, B and C will contain one team from each of 6 pots. The draw started from Pot 6 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
                     "entering_placement": [
@@ -229,7 +229,7 @@
                 },
                 {
                     "name": "Fourth Round",
-                    "type": "roundrobin1leg",
+                    "type": "roundrobin1leg_evenpot",
                     "draw_id": "2",
                     "draw_note": "6 teams advance from the third round are drawn into 2 groups of 3 to play round-robin matches. The 2 winners of each group will qualify for the World Cup 2026. The 2 runners-up will advance to the fifth round. Each group A and B will contain one team from each of 3 pots. The draw started from Pot 3 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
                     "entering_placement": [
@@ -264,7 +264,7 @@
                 },
                 {
                     "name": "Fifth Round",
-                    "type": "pair2legnopot",
+                    "type": "pair2leg_noshowpot",
                     "draw_id": "2",
                     "draw_note": "",
                     "entering_placement": [
@@ -277,10 +277,7 @@
                     ],
                     "next_stage": "Inter-confederation play-offs",
                     "advanced_note": "Bolded team winners advance to the inter-confederation play-offs",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round" }
-                    ],
+                    "advancement": [{ "pos": 1, "will": "next_round" }],
                     "next_round_note": ""
                 }
             ]

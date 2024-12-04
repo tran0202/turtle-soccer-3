@@ -3,7 +3,7 @@ import { Collapse, Row, Col, Button } from 'reactstrap'
 import { getBoldText } from '../core/TeamHelper'
 import ResultsPairTable from './ResultsPairTable'
 
-const SectionCollapse = (props) => {
+const ResultsCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -43,9 +43,9 @@ class Results extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Results" stage={stage}>
+                <ResultsCollapse title="Results" stage={stage}>
                     {stage.type && stage.type.includes('pair') && <ResultsPairTable state={state} stage={stage} />}
-                </SectionCollapse>
+                </ResultsCollapse>
             </React.Fragment>
         )
     }

@@ -3,7 +3,7 @@ import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
 
-const SectionCollapse = (props) => {
+const MatchesGroupCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -85,7 +85,7 @@ class MatchesGroup extends React.Component {
     render() {
         const { group, config } = this.props
         return (
-            <SectionCollapse title="Matches">
+            <MatchesGroupCollapse title="Matches">
                 {group.matchdays &&
                     group.matchdays.map((md) => {
                         return (
@@ -97,7 +97,7 @@ class MatchesGroup extends React.Component {
                             </Row>
                         )
                     })}
-            </SectionCollapse>
+            </MatchesGroupCollapse>
         )
     }
 }

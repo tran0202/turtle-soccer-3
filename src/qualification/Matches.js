@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import MatchesPair from './MatchesPair'
 
-const SectionCollapse = (props) => {
+const MatchesCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -41,9 +41,9 @@ class Matches extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <SectionCollapse title="Matches" stage={stage}>
+                <MatchesCollapse title="Matches" stage={stage}>
                     {stage.type && stage.type.includes('pair') && <MatchesPair state={state} stage={stage} />}
-                </SectionCollapse>
+                </MatchesCollapse>
             </React.Fragment>
         )
     }

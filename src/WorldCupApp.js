@@ -7,7 +7,7 @@ import Page from './core/Page'
 import QualifiedTable from './qualified/QualifiedTable'
 import ConfederationQualification from './qualification/ConfederationQualification'
 
-export const SectionCollapse = (props) => {
+export const WorldCupCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -73,7 +73,7 @@ const Qualifications = (props) => {
                         <React.Fragment key={q.id}>
                             {q.id && (
                                 <TabPane tabId={q.id.replace(/ /g, '-')}>
-                                    <ConfederationQualification state={state} confederation_id={q.id} />
+                                    <ConfederationQualification state={state} qualification={q} />
                                 </TabPane>
                             )}
                         </React.Fragment>
@@ -129,13 +129,13 @@ class WorldCupApp extends React.Component {
                 <Container>
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026</h1>
 
-                    <SectionCollapse title="Qualified Teams">
+                    <WorldCupCollapse title="Qualified Teams">
                         <QualifiedTable state={this.state} />
-                    </SectionCollapse>
+                    </WorldCupCollapse>
 
-                    <SectionCollapse title="Confederation Qualifications" initialStatus="Opened">
+                    <WorldCupCollapse title="Confederation Qualifications" initialStatus="Opened">
                         <Qualifications state={this.state} qualifications={qualifications} />
-                    </SectionCollapse>
+                    </WorldCupCollapse>
                 </Container>
             </Page>
         )
