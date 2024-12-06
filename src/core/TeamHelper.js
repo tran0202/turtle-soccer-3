@@ -17,6 +17,17 @@ export const getTeamName = (id, config) => {
     }
 }
 
+export const getShortTeamName = (id, config) => {
+    if (!id || !config || !config.teams) return
+    const team = config.teams.find((t) => t.id === id)
+    if (team) {
+        if (team.short_name) return team.short_name
+        else return team.name
+    } else {
+        console.log('Team error', team)
+    }
+}
+
 export const getBoldText = (text, replace) => {
     if (!text) return
     if (text.includes(replace)) {
@@ -72,6 +83,24 @@ export const getTeamFlagId = (id, config) => {
             {config.team_type_id !== 'CLUB' && (
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
+                    src={'/images/flags/' + team.nation.flag_filename}
+                    alt={`${id} ${team.nation.official_name}`}
+                    title={`${id} ${team.nation.official_name}`}
+                />
+            )}
+        </React.Fragment>
+    )
+}
+
+export const getBracketTeamFlagId = (id, config) => {
+    if (!id || !config) return
+    const team = config.teams.find((t) => t.id === id)
+    if (!team) return
+    return (
+        <React.Fragment>
+            {config.team_type_id !== 'CLUB' && (
+                <img
+                    className="bracket-flag-sm margin-bottom-xs-4"
                     src={'/images/flags/' + team.nation.flag_filename}
                     alt={`${id} ${team.nation.official_name}`}
                     title={`${id} ${team.nation.official_name}`}
@@ -388,6 +417,10 @@ export const createStage = (stage, tournament) => {
         createGroupMatches(stage)
         calculateGroupRankings(stage, tournament)
     }
+    if (stage.type.includes('knockout')) {
+        populateFirstRound(stage)
+        processRounds(stage)
+    }
 }
 
 export const createPairs = (stage) => {
@@ -526,6 +559,18 @@ export const getRandomScore = (match) => {
     match.away_score = randomInteger(0, 3)
 }
 
+export const getKnockoutScore = (match) => {
+    if (!match) return
+    getRandomScore(match)
+    if (match.home_score !== match.away_score) return
+    getRandomExtraScore(match)
+    if (match.home_extra_score !== match.away_extra_score) return
+    getRandomPenaltyScore(match)
+    while (match.home_penalty_score === match.away_penalty_score) {
+        getRandomPenaltyScore(match)
+    }
+}
+
 export const calculatePairAggregateScore = (stage) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
@@ -542,11 +587,8 @@ export const calculatePairAggregateScore = (stage) => {
     })
 }
 
-export const isWinMatch = (match) => {}
-
 export const isHomeWinPair = (group) => {
     if (!group || !group.matches || group.matches.length !== 2) return
-    const result = false
     const match1_home_score = group.matches[0].home_score
     const match1_away_score = group.matches[0].away_score
     const match2_home_score = group.matches[1].home_score
@@ -568,7 +610,84 @@ export const isHomeWinPair = (group) => {
             group.away_goal_winner = 'away'
         }
     }
-    return result
+    return false
+}
+
+export const isHomeWinMatch = (match) => {
+    if (!match) return
+    if (match.home_score > match.away_score) return true
+    if (match.home_score === match.away_score) {
+        if (match.home_extra_score > match.away_extra_score) return true
+        if (match.home_extra_score === match.away_extra_score) {
+            if (match.home_penalty_score > match.away_penalty_score) return true
+        }
+    }
+    return false
+}
+
+export const populateFirstRound = (stage) => {
+    if (!stage || !stage.rounds) return
+    stage.entering_teams &&
+        stage.entering_teams.sort((a, b) => {
+            return a.rank > b.rank ? 1 : -1
+        })
+    stage.entering_teams.forEach((t, index) => {
+        t.entering_pos = index + 1
+    })
+    const firstRound = stage.rounds[0]
+    if (firstRound) {
+        firstRound.entering_teams = stage.entering_teams
+    }
+}
+
+export const processRounds = (stage) => {
+    if (!stage || !stage.rounds) return
+    stage.rounds.forEach((r) => {
+        r.matches.forEach((m) => {
+            populateMatches(m, r)
+            getKnockoutScore(m)
+        })
+        finishRound(r, stage)
+    })
+}
+
+export const populateMatches = (match, round) => {
+    if (!match || !round || !round.entering_teams) return
+    const homeTeam = round.entering_teams.find((t) => t.entering_pos === match.home_team)
+    if (homeTeam) {
+        match.home_team = homeTeam.id
+    }
+    const awayTeam = round.entering_teams.find((t) => t.entering_pos === match.away_team)
+    if (awayTeam) {
+        match.away_team = awayTeam.id
+    }
+}
+
+export const finishRound = (round, stage) => {
+    if (!round) return
+    const winners = []
+    round.matches.forEach((m) => {
+        if (isHomeWinMatch(m)) {
+            const foundTeam = stage.entering_teams.find((t) => t.id === m.home_team)
+            if (foundTeam) {
+                foundTeam.entering_pos = m.id
+                winners.push(foundTeam)
+            }
+        } else {
+            const foundTeam = stage.entering_teams.find((t) => t.id === m.away_team)
+            if (foundTeam) {
+                foundTeam.entering_pos = m.id
+                winners.push(foundTeam)
+            }
+        }
+    })
+    const nextRound = stage.rounds.find((r) => r.name === round.next_round)
+    if (nextRound) {
+        nextRound.entering_teams = winners
+    }
+    if (!round.next_round) {
+        stage.winners = winners
+    }
 }
 
 export const getNextStage = (stage, qualification, tournament) => {
@@ -590,6 +709,9 @@ export const finishStage = (stage, nextStage) => {
     if (stage.type.includes('roundrobin')) {
         finishGroupStage(stage, nextStage)
     }
+    if (stage.type.includes('knockout')) {
+        finishKnockoutStage(stage, nextStage)
+    }
 }
 
 export const finishPairStage = (stage, next_stage) => {
@@ -604,7 +726,13 @@ export const finishPairStage = (stage, next_stage) => {
             }
         })
     })
-    next_stage.entering_teams = advanced_teams
+    if (!next_stage.entering_teams) {
+        next_stage.entering_teams = advanced_teams
+    } else {
+        advanced_teams.forEach((t) => {
+            next_stage.entering_teams.push(t)
+        })
+    }
 }
 
 export const finishGroupStage = (stage, next_stage) => {
@@ -618,15 +746,44 @@ export const finishGroupStage = (stage, next_stage) => {
                 qualified_teams.push(r.team)
             } else if (r.advanced) {
                 advanced_teams.push(r.team)
-                next_stage.entering_teams = advanced_teams
             } else if (r.next_rounded) {
                 const new_team = { ...r.team }
                 delete new_team.draw_seed
                 delete new_team.draw_striped
                 next_rounded_teams.push(new_team)
-                next_stage.entering_teams = next_rounded_teams
             }
         })
+    })
+    if (advanced_teams.length > 0) {
+        if (!next_stage.entering_teams) {
+            next_stage.entering_teams = advanced_teams
+        } else {
+            advanced_teams.forEach((t) => {
+                next_stage.entering_teams.push(t)
+            })
+        }
+    }
+    if (next_rounded_teams.length > 0) {
+        if (!next_stage.entering_teams) {
+            next_stage.entering_teams = next_rounded_teams
+        } else {
+            next_rounded_teams.forEach((t) => {
+                next_stage.entering_teams.push(t)
+            })
+        }
+    }
+}
+
+export const finishKnockoutStage = (stage, next_stage) => {
+    if (!stage || !stage.winners || !next_stage) return
+    stage.winners.forEach((t) => {
+        if (!next_stage.entering_teams) {
+            next_stage.entering_teams = stage.winners
+        } else {
+            stage.winners.forEach((t) => {
+                next_stage.entering_teams.push(t)
+            })
+        }
     })
 }
 
@@ -892,19 +1049,19 @@ export const getNationOfficialName = (id) => {
 //     }
 // }
 
-export const getShortTeamName = (id) => {
-    if (!id) return
-    const team = getTeamArray().find((t) => t.id === id)
-    if (team) {
-        if (team.short_name) {
-            return team.short_name
-        } else {
-            return team.name
-        }
-    } else {
-        console.log('Team error', team)
-    }
-}
+// export const getShortTeamName = (id) => {
+//     if (!id) return
+//     const team = getTeamArray().find((t) => t.id === id)
+//     if (team) {
+//         if (team.short_name) {
+//             return team.short_name
+//         } else {
+//             return team.name
+//         }
+//     } else {
+//         console.log('Team error', team)
+//     }
+// }
 
 export const getBracketTeamName = (id) => {
     return getShortTeamName(id)

@@ -126,7 +126,7 @@ class WorldCupApp extends React.Component {
         const { qualifications } = tournament
         return (
             <Page>
-                <Container>
+                <Container className="container-xxxl">
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026</h1>
 
                     <WorldCupCollapse title="Qualified Teams">

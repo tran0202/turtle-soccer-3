@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
+import moment from 'moment'
+import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
+import { AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -35,14 +38,298 @@ const BracketsCollapse = (props) => {
     )
 }
 
+const BracketFinalCol = (props) => {
+    const { round, config } = props
+    const { column_count } = config
+    const colClassname = column_count === 5 ? 'col-brk-18' : 'col-brk-22'
+    return (
+        <Col className={colClassname}>
+            {column_count === 2 && <Row className="bracket-gap-height-10"></Row>}
+            {column_count === 3 && <Row className="bracket-gap-height-20"></Row>}
+            {column_count === 4 && <Row className="bracket-gap-height-30"></Row>}
+            {column_count === 5 && <Row className="bracket-gap-height-40"></Row>}
+            <BracketColInner round={round} config={config} />
+        </Col>
+    )
+}
+
+const BracketHook1 = (props) => {
+    const { colIndex, hookCount, config } = props
+    console.log('hookCount:', hookCount)
+    const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
+    return (
+        <Col className={colClassname}>
+            {Array.from(Array(hookCount), (e, i) => {
+                return (
+                    <React.Fragment key={i}>
+                        {colIndex === 0 && (
+                            <React.Fragment>
+                                {i === 0 && <Row className="bracket-hook1-gap-height-00 no-margin-lr"></Row>}
+                                <Row className="no-gutters no-margin-lr">
+                                    <Col className="col-sm-12 bracket-hook10"></Col>
+                                </Row>
+                                {i < hookCount - 1 && <Row className="bracket-hook1-gap-height-01"></Row>}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 1 && (
+                            <React.Fragment>
+                                {i === 0 && <Row className="bracket-hook1-gap-height-10 no-margin-lr"></Row>}
+                                <Row className="no-gutters no-margin-lr">
+                                    <Col className="col-sm-12 bracket-hook11"></Col>
+                                </Row>
+                                {i < hookCount - 1 && <Row className="bracket-hook1-gap-height-11"></Row>}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 2 && (
+                            <React.Fragment>
+                                {i === 0 && <Row className="bracket-hook1-gap-height-20 no-margin-lr"></Row>}
+                                <Row className="no-gutters no-margin-lr">
+                                    <Col className="col-sm-12 bracket-hook12"></Col>
+                                </Row>
+                                {i < hookCount - 1 && <Row className="bracket-hook1-gap-height-21"></Row>}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 3 && (
+                            <React.Fragment>
+                                {i === 0 && <Row className="bracket-hook1-gap-height-30 no-margin-lr"></Row>}
+                                <Row className="no-gutters no-margin-lr">
+                                    <Col className="col-sm-12 bracket-hook13"></Col>
+                                </Row>
+                            </React.Fragment>
+                        )}
+                    </React.Fragment>
+                )
+            })}
+        </Col>
+    )
+}
+
+const BracketHook2 = (props) => {
+    const { colIndex, hookCount, config } = props
+    const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
+    return (
+        <Col className={colClassname}>
+            {Array.from(Array(hookCount), (e, i) => {
+                return (
+                    <React.Fragment key={i}>
+                        {colIndex === 0 && (
+                            <React.Fragment>
+                                {i === 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook200"></Col>
+                                    </Row>
+                                )}
+                                {i > 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook201"></Col>
+                                    </Row>
+                                )}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 1 && (
+                            <React.Fragment>
+                                {i === 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook210"></Col>
+                                    </Row>
+                                )}
+                                {i > 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook211"></Col>
+                                    </Row>
+                                )}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 2 && (
+                            <React.Fragment>
+                                {i === 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook220"></Col>
+                                    </Row>
+                                )}
+                                {i > 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook221"></Col>
+                                    </Row>
+                                )}
+                            </React.Fragment>
+                        )}
+                        {colIndex === 3 && (
+                            <React.Fragment>
+                                {i === 0 && (
+                                    <Row className="no-gutters no-margin-lr">
+                                        <Col className="col-sm-12 bracket-hook230"></Col>
+                                    </Row>
+                                )}
+                            </React.Fragment>
+                        )}
+                    </React.Fragment>
+                )
+            })}
+        </Col>
+    )
+}
+
+const BracketBox = (props) => {
+    const { match, colIndex, lastBox, config } = props
+    const homeTeamName = getShortTeamName(match.home_team, config)
+    const awayTeamName = getShortTeamName(match.away_team, config)
+    const homeTeamFlag = getBracketTeamFlagId(match.home_team, config)
+    const awayTeamFlag = getBracketTeamFlagId(match.away_team, config)
+    const homeExtraScore = match.home_extra_score ? match.home_extra_score : 0
+    const awayExtraScore = match.away_extra_score ? match.away_extra_score : 0
+    const homeScore = match.home_score + homeExtraScore
+    const awayScore = match.away_score + awayExtraScore
+    const homePenaltyScore = match.home_penalty_score ? match.home_penalty_score : 0
+    const awayPenaltyScore = match.away_penalty_score ? match.away_penalty_score : 0
+    const homeHighlight = isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
+    const awayHighlight = !isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
+    return (
+        <React.Fragment>
+            <Row className="no-gutters box-sm bracket-box-height">
+                <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
+                    <Row className="no-gutters">
+                        <Col xs={{ size: 11, offset: 1 }}>
+                            <span className="box-time d-none d-lg-block">
+                                <React.Fragment>{moment(match.date).format('MMMM D, YYYY')}</React.Fragment>
+                            </span>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm="12" className="bracket-half-box-height no-padding-lr border-bottom-gray5">
+                    <Row className="no-gutters h3-ff3">
+                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                            {homeTeamFlag}
+                        </Col>
+                        <Col xs={{ size: 7 }} className={`no-padding-lr ${homeHighlight}`}>
+                            {homeTeamName}
+                            {homeExtraScore > awayExtraScore && (
+                                <React.Fragment>
+                                    {' '}
+                                    <AetTooltip target="aetTooltip" anchor="(aet)" />
+                                </React.Fragment>
+                            )}
+                            {homePenaltyScore > awayPenaltyScore && (
+                                <React.Fragment>
+                                    {' '}
+                                    <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
+                                </React.Fragment>
+                            )}
+                        </Col>
+                        <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
+                            {homeScore}
+                            {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
+                                <React.Fragment>
+                                    {' ('}
+                                    {homePenaltyScore}
+                                    {')'}
+                                </React.Fragment>
+                            )}
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm="12" className="bracket-half-box-height no-padding-lr">
+                    <Row className="no-gutters h4-ff3">
+                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                            {awayTeamFlag}
+                        </Col>
+                        <Col xs={{ size: 7 }} className={`no-padding-lr ${awayHighlight}`}>
+                            {awayTeamName}
+                            {awayExtraScore > homeExtraScore && (
+                                <React.Fragment>
+                                    {' '}
+                                    <AetTooltip target="aetTooltip" anchor="(aet)" />
+                                </React.Fragment>
+                            )}
+                            {awayPenaltyScore > homePenaltyScore && (
+                                <React.Fragment>
+                                    {' '}
+                                    <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
+                                </React.Fragment>
+                            )}
+                        </Col>
+                        <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
+                            {awayScore}
+                            {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
+                                <React.Fragment>
+                                    {' ('}
+                                    {awayPenaltyScore}
+                                    {')'}
+                                </React.Fragment>
+                            )}
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
+            {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
+            {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
+            {colIndex === 3 && !lastBox && <Row className="bracket-gap-height-31"></Row>}
+        </React.Fragment>
+    )
+}
+
+const BracketColInner = (props) => {
+    const { round, colIndex, config } = props
+    return (
+        <React.Fragment>
+            {colIndex === 0 && <Row className="bracket-gap-height-00"></Row>}
+            {colIndex === 1 && <Row className="bracket-gap-height-10"></Row>}
+            {colIndex === 2 && <Row className="bracket-gap-height-20"></Row>}
+            {colIndex === 3 && <Row className="bracket-gap-height-30"></Row>}
+            <Row className="no-margin-lr">
+                <Col>
+                    <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
+                    {round.matches.map((m, index) => (
+                        <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
+                    ))}
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+}
+
+const BracketCol = (props) => {
+    const { round, colIndex, config } = props
+    return (
+        <Col className="col-brk-22">
+            <BracketColInner round={round} colIndex={colIndex} config={config} />
+        </Col>
+    )
+}
+
+const BracketTable = (props) => {
+    const { state, stage } = props
+    return (
+        <Row className="no-gutters">
+            {stage.rounds &&
+                stage.rounds.map((r, index) => {
+                    const roundConfig = { ...state.config, column_count: stage.rounds.length }
+                    const hookCount = stage.rounds.length % 2 === 0 ? stage.rounds.length / 2 : (stage.rounds.length - 1) / 2
+                    if (r.name === 'Final') {
+                        return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
+                    } else if (r.name !== 'Third-place') {
+                        return (
+                            <React.Fragment key={r.name}>
+                                <BracketCol round={r} colIndex={index} config={roundConfig} />
+                                <BracketHook1 colIndex={index} hookCount={hookCount} config={roundConfig} />
+                                <BracketHook2 colIndex={index} hookCount={hookCount} config={roundConfig} />
+                            </React.Fragment>
+                        )
+                    }
+                    return null
+                })}
+        </Row>
+    )
+}
+
 class Brackets extends React.Component {
     render() {
-        const { stage } = this.props
-        // const { state, stage } = this.props
+        const { state, stage } = this.props
         return (
             <React.Fragment>
-                <BracketsCollapse title="Brackets" stage={stage}>
-                    Brackets
+                <BracketsCollapse title="Brackets" stage={stage} initialStatus="Opened">
+                    <BracketTable state={state} stage={stage} />
                 </BracketsCollapse>
             </React.Fragment>
         )

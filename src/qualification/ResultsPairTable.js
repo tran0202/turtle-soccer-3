@@ -30,8 +30,8 @@ const ResultsPairRow = (props) => {
     const match2AwayScore = group.matches[1].away_score + match2AwayExtraScore
     const match2HomePenaltyScore = group.matches[1].home_penalty_score
     const match2AwayPenaltyScore = group.matches[1].away_penalty_score
-    const pairHomeHighlight = group.agg_winner === 'home' ? 'weight-medium' : 'gray3'
-    const pairAwayHighlight = group.agg_winner === 'home' ? 'gray3' : 'weight-medium'
+    const pairHomeHighlight = group.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
+    const pairAwayHighlight = group.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
             <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{team1.name}</Col>
@@ -48,7 +48,7 @@ const ResultsPairRow = (props) => {
                     <Row>
                         <Col className="text-center">
                             {'>>> '}
-                            {match2AwayPenaltyScore} - {match2HomePenaltyScore} <PenaltyTooltip target="aetTooltip" anchor="(pen)" />
+                            {match2AwayPenaltyScore} - {match2HomePenaltyScore} <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
                         </Col>
                     </Row>
                 )}

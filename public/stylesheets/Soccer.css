@@ -231,6 +231,10 @@
     }
 }
 
+.container-xxxl {
+    max-width: 1420px;
+}
+
 .bracket-flag-xxxs {
     width: 13px;
     height: 9px;
@@ -466,6 +470,17 @@
 .score {
     font-size: 1.5rem;
     font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+}
+.team-name-win {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+}
+.team-name-lose {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #858585;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -1182,8 +1197,8 @@
 .col-brk-xl-22 {
     position: relative;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 .col-brk-1 {
     flex: 0 0 1%;

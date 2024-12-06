@@ -76,6 +76,12 @@ class ConfederationQualification extends React.Component {
                                         <PartialAdvancement state={state} stage={s} />
                                     </React.Fragment>
                                 )}
+                                {s.type && s.type.includes('knockout') && (
+                                    <React.Fragment>
+                                        <Brackets state={state} stage={s} />
+                                        <Matches state={state} stage={s} />
+                                    </React.Fragment>
+                                )}
                             </ConfederationQualificationCollapse>
                         ) : (
                             <React.Fragment key={qualification_id + s.name}>

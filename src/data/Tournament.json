@@ -404,11 +404,23 @@
                     "type": "knockout",
                     "draw_id": "1",
                     "draw_note": "",
-                    "matchdays": [
-                        { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
-                        { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                    "rounds": [
+                        {
+                            "name": "Semi-finals",
+                            "short_name": "1/2",
+                            "next_round": "Final",
+                            "matches": [
+                                { "id": "SF1", "home_team": 1, "away_team": 4, "date": "2025-11-10", "bracket_order": 1 },
+                                { "id": "SF2", "home_team": 2, "away_team": 3, "date": "2025-11-10", "bracket_order": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Final",
+                            "short_name": "1st",
+                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-11-18" }]
+                        }
                     ],
-                    "advanced_note": ""
+                    "next_stage": "Inter-confederation play-offs"
                 }
             ]
         },

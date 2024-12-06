@@ -13,8 +13,8 @@ const MatchesPairRow = (props) => {
             {matches &&
                 matches.map((m, index) => {
                     const bottomLine = index % 2 === 0 ? 'border-bottom-gray5' : ''
-                    const pairHomeHighlight = index % 2 === 0 ? '' : group.agg_winner === 'home' ? 'weight-medium' : 'gray3'
-                    const pairAwayHighlight = index % 2 === 0 ? '' : group.agg_winner === 'home' ? 'gray3' : 'weight-medium'
+                    const pairHomeHighlight = index % 2 === 0 ? '' : group.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
+                    const pairAwayHighlight = index % 2 === 0 ? '' : group.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
                     const homeTeamName = getTeamName(m.home_team, config)
                     const awayTeamName = getTeamName(m.away_team, config)
                     const matchHomeExtraScore = m.home_extra_score ? m.home_extra_score : 0
