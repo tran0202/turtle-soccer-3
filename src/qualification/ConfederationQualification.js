@@ -19,7 +19,7 @@ const ConfederationQualificationCollapse = (props) => {
 
     return (
         <React.Fragment>
-            <Row className="text-start padding-top-md padding-left-sm">
+            <Row className="text-center padding-top-md padding-left-sm">
                 <Col sm="12" md="12">
                     <Button outline color="primary" onClick={toggle} className="h2-ff5 green btn-collapse-green">
                         {title}&nbsp;

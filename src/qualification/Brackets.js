@@ -55,7 +55,6 @@ const BracketFinalCol = (props) => {
 
 const BracketHook1 = (props) => {
     const { colIndex, hookCount, config } = props
-    console.log('hookCount:', hookCount)
     const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
     return (
         <Col className={colClassname}>

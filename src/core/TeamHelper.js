@@ -644,14 +644,15 @@ export const processRounds = (stage) => {
     if (!stage || !stage.rounds) return
     stage.rounds.forEach((r) => {
         r.matches.forEach((m) => {
-            populateMatches(m, r)
+            populateMatch(m, r)
             getKnockoutScore(m)
         })
+        createMatchdays(r)
         finishRound(r, stage)
     })
 }
 
-export const populateMatches = (match, round) => {
+export const populateMatch = (match, round) => {
     if (!match || !round || !round.entering_teams) return
     const homeTeam = round.entering_teams.find((t) => t.entering_pos === match.home_team)
     if (homeTeam) {
@@ -661,6 +662,20 @@ export const populateMatches = (match, round) => {
     if (awayTeam) {
         match.away_team = awayTeam.id
     }
+}
+
+export const createMatchdays = (round) => {
+    if (!round || !round.matches) return
+    const matchdays = []
+    round.matches.forEach((m) => {
+        const foundMatchday = matchdays.find((md) => (md.date = m.date))
+        if (!foundMatchday) {
+            matchdays.push({ date: m.date, matches: [m] })
+        } else {
+            foundMatchday.matches.push(m)
+        }
+    })
+    round.matchdays = matchdays
 }
 
 export const finishRound = (round, stage) => {

@@ -48,7 +48,7 @@ const MatchesPairRow = (props) => {
                                 <Col className={`col-box-25 text-end ${pairAwayHighlight}`}>{homeTeamName}</Col>
                                 <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
-                                    {matchHomeScore} - {matchAwayScore}
+                                    {matchHomeScore} - {matchAwayScore}{' '}
                                     {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                 </Col>
                                 <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
