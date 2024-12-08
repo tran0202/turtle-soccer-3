@@ -27,7 +27,7 @@
             "stages": [
                 {
                     "name": "First Round",
-                    "type": "pair2leg",
+                    "type": "pair2leg_drawpair",
                     "draw_id": "1",
                     "draw_note": "20 teams (seed numbers 27–46) are divided into Pot 1 and Pot 2 and play home-and-away over two legs. One team from each pot are drawn into one tie. 10 winners will advance to the second round.",
                     "pots": [
@@ -421,6 +421,42 @@
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs"
+                }
+            ]
+        },
+        {
+            "id": "CONCACAF",
+            "draws": [{ "id": "1", "date": "2023-12-01" }],
+            "stages": [
+                {
+                    "name": "First Round",
+                    "type": "pair2leg_predetpair",
+                    "draw_id": "1",
+                    "draw_note": "4 teams (seed numbers 29-32) are divided into 2 matchups and play home-and-away over two legs. Seed 29 faces seed 32 and seed 30 faces seed 31. 2 winners will advance to the second round.",
+                    "pots": [
+                        { "name": "High seed", "rankingFrom": 29, "rankingTo": 30 },
+                        { "name": "Low seed", "rankingFrom": 31, "rankingTo": 32 }
+                    ],
+                    "groups": [
+                        {
+                            "teams": [
+                                { "conf_rank": 29, "pos": 1 },
+                                { "conf_rank": 32, "pos": 2 }
+                            ]
+                        },
+                        {
+                            "teams": [
+                                { "conf_rank": 30, "pos": 1 },
+                                { "conf_rank": 31, "pos": 2 }
+                            ]
+                        }
+                    ],
+                    "matchdays": [
+                        { "name": "First leg", "date": "2024-03-22", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "Second leg", "date": "2024-03-26", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                    ],
+                    "next_stage": "Second Round",
+                    "advanced_note": "Bolded team winners advance to the second round"
                 }
             ]
         },

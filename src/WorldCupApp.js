@@ -43,7 +43,7 @@ export const WorldCupCollapse = (props) => {
 
 const Qualifications = (props) => {
     const { state, qualifications } = props
-    const [activeTab, setActiveTab] = useState('CAF')
+    const [activeTab, setActiveTab] = useState('CONCACAF')
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
     }

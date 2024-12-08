@@ -211,10 +211,10 @@ export const getRandomMensTeamArray = (teamArray) => {
             }
         })
     })
-    if (result.length > 0) {
-        result[result.length - 1].rank = ''
-        result[result.length - 1].points = 0
-    }
+    // if (result.length > 0) {
+    //     result[result.length - 1].rank = ''
+    //     result[result.length - 1].points = 0
+    // }
     return result
 }
 
@@ -222,7 +222,7 @@ export const processQualifications = (teamArray, qualifiedTeams, tournament) => 
     if (!tournament || !tournament.qualifications) return
     const qualifications = []
     tournament.qualifications.forEach((q) => {
-        const draws = createDraws(q, teamArray)
+        const draws = createDraws(q, teamArray, qualifiedTeams)
         const stages = createPots(q, draws)
         processStages(q, qualifiedTeams, tournament)
         qualifications.push({ id: q.id, draws, stages })
@@ -230,26 +230,32 @@ export const processQualifications = (teamArray, qualifiedTeams, tournament) => 
     return qualifications
 }
 
-export const createDraws = (qualification, teamArray) => {
+export const createDraws = (qualification, teamArray, qualifiedTeams) => {
     if (!qualification) return
     const draws = []
     qualification.draws &&
         qualification.draws.forEach((d) => {
             const allRankings = getRandomMensTeamArray(teamArray)
-            const confRankings = qualification.id !== 'FIFA' ? getConfederationRankings(allRankings, qualification.id) : allRankings
+            const confRankings =
+                qualification.id !== 'Inter-confederation play-offs' ? getConfederationRankings(allRankings, qualification.id, qualifiedTeams) : allRankings
             draws.push({ ...d, rankings: confRankings })
             d.rankings = confRankings
         })
     return draws
 }
 
-export const getConfederationRankings = (teamArray, confederation_id) => {
+export const getConfederationRankings = (teamArray, confederation_id, qualifiedTeams) => {
     const result = []
     const confRankings = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
-    confRankings.forEach((t, index) => {
-        t.conf_rank = index + 1
-        t.draw_seed = index + 1
-        result.push(t)
+
+    let count = 0
+    confRankings.forEach((t) => {
+        if (!qualifiedTeams.find((t2) => t2.id === t.id)) {
+            count++
+            t.conf_rank = count
+            t.draw_seed = count
+            result.push(t)
+        }
     })
     return result
 }
@@ -407,8 +413,13 @@ export const createDrawPotTable = (stage) => {
 export const createStage = (stage, tournament) => {
     if (!stage || !stage.type) return
     if (stage.type.includes('pair2leg')) {
-        stage.groups = []
-        createPairs(stage)
+        if (stage.type.includes('drawpair') || stage.type.includes('noshowpot')) {
+            stage.groups = []
+            createPairs(stage)
+        }
+        if (stage.type.includes('predetpair')) {
+            createPreDeterminedPairs(stage)
+        }
         createPairMatches(stage)
         calculatePairAggregateScore(stage)
     }
@@ -459,6 +470,23 @@ export const createPairs = (stage) => {
             })
         }
     }
+}
+
+export const createPreDeterminedPairs = (stage) => {
+    if (!stage || !stage.groups) return
+    stage.groups.forEach((g) => {
+        const newTeams = []
+        g.teams.forEach((t) => {
+            const foundTeam = stage.draw.rankings.find((t2) => t2.conf_rank === t.conf_rank)
+            if (foundTeam) {
+                newTeams.push({ ...foundTeam, pos: t.pos })
+            }
+        })
+        g.teams = newTeams
+    })
+    stage.groups.forEach((g) => {
+        if (g.teams) g.name = g.teams[0].id + '-' + g.teams[1].id
+    })
 }
 
 export const createGroups = (stage) => {
