@@ -327,7 +327,7 @@ class Brackets extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <BracketsCollapse title="Brackets" stage={stage} initialStatus="Opened">
+                <BracketsCollapse title="Brackets" stage={stage}>
                     <BracketTable state={state} stage={stage} />
                 </BracketsCollapse>
             </React.Fragment>

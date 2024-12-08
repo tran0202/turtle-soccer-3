@@ -6,17 +6,19 @@ export const calculateGroupRankings = (stage, tournament) => {
     stage.groups.forEach((g) => {
         g.rankings = []
         const allMatches = []
-        g.matchdays.forEach((md) => {
-            md.matches.forEach((m) => {
-                allMatches.push(m)
+        g.matchdays &&
+            g.matchdays.forEach((md) => {
+                md.matches.forEach((m) => {
+                    allMatches.push(m)
+                })
             })
-        })
-        g.teams.forEach((t) => {
-            const ranking = getBlankRanking(t.id)
-            ranking.team = t
-            accumulateRanking(ranking, allMatches, tournament)
-            g.rankings.push(ranking)
-        })
+        g.teams &&
+            g.teams.forEach((t) => {
+                const ranking = getBlankRanking(t.id)
+                ranking.team = t
+                accumulateRanking(ranking, allMatches, tournament)
+                g.rankings.push(ranking)
+            })
         sortGroupRankings(g, tournament)
         flattenDrawPools(g)
         processPartialAdvancement(stage)

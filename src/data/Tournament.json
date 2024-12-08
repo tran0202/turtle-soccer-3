@@ -599,7 +599,11 @@
                 }
             ]
         },
-        { "id": "CONMEBOL" },
+        {
+            "id": "CONMEBOL",
+            "draws": [{ "id": "1", "date": "2023-07-01" }],
+            "stages": [{ "name": "Round-robin", "type": "roundrobin_nopot", "draw_id": "1", "entrants_note": "All 10 CONMEBOL teams enter qualification." }]
+        },
         {
             "id": "Inter-confederation play-offs",
             "draws": [{ "id": "1", "date": "2025-12-18" }],

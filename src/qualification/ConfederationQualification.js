@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import DrawSeeding from './DrawSeeding'
+import Entrants from './Entrants'
 import Results from './Results'
 import Matches from './Matches'
 import Groups from './Groups'
@@ -53,9 +54,15 @@ class ConfederationQualification extends React.Component {
                     qualification.stages.map((s) => {
                         return !isPlayoff ? (
                             <ConfederationQualificationCollapse key={qualification_id + s.name} title={s.name} initialStatus="Opened">
-                                {s.type && !s.type.includes('_noshowpot') && !s.type.includes('knockout') && (
+                                {s.type && !s.type.includes('_noshowpot') && !s.type.includes('knockout') && !s.type.includes('_nopot') && (
                                     <React.Fragment>
                                         <DrawSeeding state={state} stage={s} />
+                                        <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
+                                    </React.Fragment>
+                                )}
+                                {s.type && s.type.includes('_nopot') && (
+                                    <React.Fragment>
+                                        <Entrants state={state} stage={s} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                     </React.Fragment>
                                 )}

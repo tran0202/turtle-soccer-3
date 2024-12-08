@@ -325,13 +325,13 @@ export const preparePots = (stage) => {
 // 10 teams from 1st round go to Pot 4. 9 of them will be drawn to groups. The last (10th) team moves to Pot 3.
 // type = roundrobin_oddpot
 export const prepareOddPot = (stage) => {
-    if (!stage || !stage.entering_placement || !stage.entering_teams) return
+    if (!stage || !stage.entering_placement || !stage.entrants) return
     stage.entering_placement.forEach((p) => {
         const foundPot = stage.pots.find((p2) => p2.name === p.name)
         const newPot = {}
         newPot.rankings = []
         for (var i = 0; i < p.count; i++) {
-            const notDrawnTeams = stage.entering_teams.filter((t) => !t.already_drawn)
+            const notDrawnTeams = stage.entrants.filter((t) => !t.already_drawn)
             notDrawnTeams.forEach((t, index) => {
                 t.temp_index = index
             })
@@ -360,10 +360,10 @@ export const prepareOddPot = (stage) => {
 // 18 teams advanced from 2nd round, drawn into 3 groups of 6.
 // type = roundrobin_evenpot
 export const prepareEvenPot = (stage) => {
-    if (!stage || !stage.entering_placement || !stage.entering_teams || !stage.draw) return
-    // console.log('stage.entering_teams:', stage.entering_teams)
+    if (!stage || !stage.entering_placement || !stage.entrants || !stage.draw) return
+    // console.log('stage.entrants:', stage.entrants)
     const stageTeams = []
-    stage.entering_teams.forEach((t) => {
+    stage.entrants.forEach((t) => {
         const foundTeam = stage.draw.rankings.find((t2) => t2.id === t.id)
         if (foundTeam) {
             stageTeams.push({ ...foundTeam })
@@ -377,7 +377,7 @@ export const prepareEvenPot = (stage) => {
     stageTeams.forEach((t, index) => {
         t.draw_seed = index + 1
     })
-    stage.entering_teams = stageTeams
+    stage.entrants = stageTeams
     const pots = []
     stage.entering_placement.forEach((p, index) => {
         const foundTeams = stageTeams.filter((t) => p.rankingFrom <= t.draw_seed && t.draw_seed <= p.rankingTo)
@@ -424,7 +424,11 @@ export const createStage = (stage, tournament) => {
         calculatePairAggregateScore(stage)
     }
     if (stage.type.includes('roundrobin')) {
-        createGroups(stage)
+        if (!stage.type.includes('_nopot')) {
+            createGroups(stage)
+        } else {
+            createSingleGroup(stage)
+        }
         createGroupMatches(stage)
         calculateGroupRankings(stage, tournament)
     }
@@ -521,6 +525,12 @@ export const createGroups = (stage) => {
     }
 }
 
+export const createSingleGroup = (stage) => {
+    if (!stage || !stage.draw) return
+    stage.groups = []
+    stage.groups.push({ name: 'A', teams: stage.draw.rankings })
+}
+
 export const createPairMatches = (stage) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
@@ -553,21 +563,22 @@ export const createGroupMatches = (stage) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
         g.matchdays = []
-        stage.matchdays.forEach((md, index) => {
-            const new_matchday = { name: md.name, date: md.date }
-            const matches = []
-            md.matches.forEach((m) => {
-                const home_team = g.teams.find((t) => t.pos === m.home_pos)
-                const away_team = g.teams.find((t) => t.pos === m.away_pos)
-                if (home_team && away_team) {
-                    const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
-                    getRandomScore(new_match)
-                    matches.push(new_match)
-                }
+        stage.matchdays &&
+            stage.matchdays.forEach((md, index) => {
+                const new_matchday = { name: md.name, date: md.date }
+                const matches = []
+                md.matches.forEach((m) => {
+                    const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                    const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                    if (home_team && away_team) {
+                        const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
+                        getRandomScore(new_match)
+                        matches.push(new_match)
+                    }
+                })
+                new_matchday.matches = matches
+                g.matchdays.push(new_matchday)
             })
-            new_matchday.matches = matches
-            g.matchdays.push(new_matchday)
-        })
     })
     overwriteGroup(stage.groups[0])
 }
@@ -655,16 +666,16 @@ export const isHomeWinMatch = (match) => {
 
 export const populateFirstRound = (stage) => {
     if (!stage || !stage.rounds) return
-    stage.entering_teams &&
-        stage.entering_teams.sort((a, b) => {
+    stage.entrants &&
+        stage.entrants.sort((a, b) => {
             return a.rank > b.rank ? 1 : -1
         })
-    stage.entering_teams.forEach((t, index) => {
+    stage.entrants.forEach((t, index) => {
         t.entering_pos = index + 1
     })
     const firstRound = stage.rounds[0]
     if (firstRound) {
-        firstRound.entering_teams = stage.entering_teams
+        firstRound.entrants = stage.entrants
     }
 }
 
@@ -681,12 +692,12 @@ export const processRounds = (stage) => {
 }
 
 export const populateMatch = (match, round) => {
-    if (!match || !round || !round.entering_teams) return
-    const homeTeam = round.entering_teams.find((t) => t.entering_pos === match.home_team)
+    if (!match || !round || !round.entrants) return
+    const homeTeam = round.entrants.find((t) => t.entering_pos === match.home_team)
     if (homeTeam) {
         match.home_team = homeTeam.id
     }
-    const awayTeam = round.entering_teams.find((t) => t.entering_pos === match.away_team)
+    const awayTeam = round.entrants.find((t) => t.entering_pos === match.away_team)
     if (awayTeam) {
         match.away_team = awayTeam.id
     }
@@ -711,13 +722,13 @@ export const finishRound = (round, stage) => {
     const winners = []
     round.matches.forEach((m) => {
         if (isHomeWinMatch(m)) {
-            const foundTeam = stage.entering_teams.find((t) => t.id === m.home_team)
+            const foundTeam = stage.entrants.find((t) => t.id === m.home_team)
             if (foundTeam) {
                 foundTeam.entering_pos = m.id
                 winners.push(foundTeam)
             }
         } else {
-            const foundTeam = stage.entering_teams.find((t) => t.id === m.away_team)
+            const foundTeam = stage.entrants.find((t) => t.id === m.away_team)
             if (foundTeam) {
                 foundTeam.entering_pos = m.id
                 winners.push(foundTeam)
@@ -726,7 +737,7 @@ export const finishRound = (round, stage) => {
     })
     const nextRound = stage.rounds.find((r) => r.name === round.next_round)
     if (nextRound) {
-        nextRound.entering_teams = winners
+        nextRound.entrants = winners
     }
     if (!round.next_round) {
         stage.winners = winners
@@ -769,11 +780,11 @@ export const finishPairStage = (stage, next_stage) => {
             }
         })
     })
-    if (!next_stage.entering_teams) {
-        next_stage.entering_teams = advanced_teams
+    if (!next_stage.entrants) {
+        next_stage.entrants = advanced_teams
     } else {
         advanced_teams.forEach((t) => {
-            next_stage.entering_teams.push(t)
+            next_stage.entrants.push(t)
         })
     }
 }
@@ -798,20 +809,20 @@ export const finishGroupStage = (stage, next_stage) => {
         })
     })
     if (advanced_teams.length > 0) {
-        if (!next_stage.entering_teams) {
-            next_stage.entering_teams = advanced_teams
+        if (!next_stage.entrants) {
+            next_stage.entrants = advanced_teams
         } else {
             advanced_teams.forEach((t) => {
-                next_stage.entering_teams.push(t)
+                next_stage.entrants.push(t)
             })
         }
     }
     if (next_rounded_teams.length > 0) {
-        if (!next_stage.entering_teams) {
-            next_stage.entering_teams = next_rounded_teams
+        if (!next_stage.entrants) {
+            next_stage.entrants = next_rounded_teams
         } else {
             next_rounded_teams.forEach((t) => {
-                next_stage.entering_teams.push(t)
+                next_stage.entrants.push(t)
             })
         }
     }
@@ -820,11 +831,11 @@ export const finishGroupStage = (stage, next_stage) => {
 export const finishKnockoutStage = (stage, next_stage) => {
     if (!stage || !stage.winners || !next_stage) return
     stage.winners.forEach((t) => {
-        if (!next_stage.entering_teams) {
-            next_stage.entering_teams = stage.winners
+        if (!next_stage.entrants) {
+            next_stage.entrants = stage.winners
         } else {
             stage.winners.forEach((t) => {
-                next_stage.entering_teams.push(t)
+                next_stage.entrants.push(t)
             })
         }
     })
