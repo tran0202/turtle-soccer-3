@@ -323,7 +323,7 @@ export const preparePots = (stage) => {
 
 // Some Pots already existed. New Pots being made from entering teams.
 // 10 teams from 1st round go to Pot 4. 9 of them will be drawn to groups. The last (10th) team moves to Pot 3.
-// type = roundrobin2leg_oddpot
+// type = roundrobin_oddpot
 export const prepareOddPot = (stage) => {
     if (!stage || !stage.entering_placement || !stage.entering_teams) return
     stage.entering_placement.forEach((p) => {
@@ -358,7 +358,7 @@ export const prepareOddPot = (stage) => {
 
 // New Pots being made solely from entering teams
 // 18 teams advanced from 2nd round, drawn into 3 groups of 6.
-// type = roundrobin2leg_evenpot
+// type = roundrobin_evenpot
 export const prepareEvenPot = (stage) => {
     if (!stage || !stage.entering_placement || !stage.entering_teams || !stage.draw) return
     // console.log('stage.entering_teams:', stage.entering_teams)

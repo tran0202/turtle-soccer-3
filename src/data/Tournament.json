@@ -43,7 +43,7 @@
                 },
                 {
                     "name": "Second Round",
-                    "type": "roundrobin2leg_oddpot",
+                    "type": "roundrobin_oddpot",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (seed numbers 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
                     "entering_placement": [
@@ -114,7 +114,7 @@
                 },
                 {
                     "name": "Third Round",
-                    "type": "roundrobin2leg_evenpot",
+                    "type": "roundrobin_evenpot",
                     "draw_id": "2",
                     "draw_note": "18 teams advance from the second round are drawn into 3 groups of 6 to play against each other on a home-and-away basis. The top 2 teams will qualify directly for World Cup 2026. The third and fourth-placed teams will advance to the fourth round. Each group A, B and C will contain one team from each of 6 pots. The draw started from Pot 6 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
                     "entering_placement": [
@@ -229,7 +229,7 @@
                 },
                 {
                     "name": "Fourth Round",
-                    "type": "roundrobin1leg_evenpot",
+                    "type": "roundrobin_evenpot",
                     "draw_id": "2",
                     "draw_note": "6 teams advance from the third round are drawn into 2 groups of 3 to play round-robin matches. The 2 winners of each group will qualify for World Cup 2026. The 2 runners-up will advance to the fifth round. Each group A and B will contain one team from each of 3 pots. The draw started from Pot 3 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
                     "entering_placement": [
@@ -288,7 +288,7 @@
             "stages": [
                 {
                     "name": "First Round",
-                    "type": "roundrobin2leg_evenpot",
+                    "type": "roundrobin_evenpot",
                     "draw_id": "1",
                     "draw_note": "54 teams are drawn into 9 groups of 6 to play home-and-away round-robin matches. The 9 winners will qualify directly for World Cup 2026. The 4 best runners-up will advance to the second round.",
                     "pots": [
@@ -457,9 +457,149 @@
                     ],
                     "next_stage": "Second Round",
                     "advanced_note": "Bolded team winners advance to the second round"
+                },
+                {
+                    "name": "Second Round",
+                    "type": "roundrobin_oddpot",
+                    "draw_id": "1",
+                    "draw_note": "Total of 30 teams are drawn into 6 groups of 5 to play round-robin matches, 2 home and 2 away. The 6 winners and 6 runners-up will advance to the third round. 28 teams (seed numbers 1–28) receive byes to this round and are divided into Pot 1 to Pot 5. 2 winners from first round are placed in Pot 5.",
+                    "entering_placement": [{ "name": 5, "count": 2 }],
+                    "pots": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 6 },
+                        { "name": 2, "rankingFrom": 7, "rankingTo": 12 },
+                        { "name": 3, "rankingFrom": 13, "rankingTo": 18 },
+                        { "name": 4, "rankingFrom": 19, "rankingTo": 24 },
+                        { "name": 5, "rankingFrom": 25, "rankingTo": 28 }
+                    ],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2024-06-05",
+                            "matches": [{ "home_pos": 2, "away_pos": 4 }]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2024-06-06",
+                            "matches": [{ "home_pos": 1, "away_pos": 3 }]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2024-06-08",
+                            "matches": [{ "home_pos": 5, "away_pos": 2 }]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2024-06-09",
+                            "matches": [{ "home_pos": 4, "away_pos": 1 }]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2024-06-11",
+                            "matches": [{ "home_pos": 3, "away_pos": 5 }]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "date": "2025-06-04",
+                            "matches": [{ "home_pos": 4, "away_pos": 5 }]
+                        },
+                        {
+                            "name": "Matchday 7",
+                            "date": "2025-06-06",
+                            "matches": [{ "home_pos": 2, "away_pos": 3 }]
+                        },
+                        {
+                            "name": "Matchday 8",
+                            "date": "2025-06-07",
+                            "matches": [{ "home_pos": 5, "away_pos": 1 }]
+                        },
+                        {
+                            "name": "Matchday 9",
+                            "date": "2025-06-10",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 4 },
+                                { "home_pos": 1, "away_pos": 2 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Third Round",
+                    "advanced_note": "Winners and runners-up advance to the third round",
+                    "advancement": [
+                        { "pos": 1, "will": "advance" },
+                        { "pos": 2, "will": "advance" }
+                    ]
+                },
+                {
+                    "name": "Third Round",
+                    "type": "roundrobin_evenpot",
+                    "draw_id": "1",
+                    "draw_note": "12 teams advance from the second round are drawn into 3 groups of 4 to play double round-robin home-and-away matches. The 3 winners will qualify for World Cup 2026. The 2 best runners-up will advance to the inter-confederation play-offs.",
+                    "entering_placement": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 3 },
+                        { "name": 2, "rankingFrom": 4, "rankingTo": 6 },
+                        { "name": 3, "rankingFrom": 7, "rankingTo": 9 },
+                        { "name": 4, "rankingFrom": 10, "rankingTo": 12 }
+                    ],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2025-09-01",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2025-09-09",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2025-10-06",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2025-10-14",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 4 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2025-11-10",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 3 },
+                                { "home_pos": 4, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "date": "2025-11-18",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Inter-confederation play-offs",
+                    "advanced_note": "Winners qualify for World Cup 2026",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "next_round", "count": 2, "name": "Runners-up" }
+                    ],
+                    "next_round_note": "The 2 best runners-up advance to the inter-confederation play-offs"
                 }
             ]
         },
+        { "id": "CONMEBOL" },
         {
             "id": "Inter-confederation play-offs",
             "draws": [{ "id": "1", "date": "2025-12-18" }],
