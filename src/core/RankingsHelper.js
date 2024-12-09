@@ -320,11 +320,18 @@ export const setAdvancement = (group, advancement) => {
                     t.qualified = true
                     if (t.rank === 1) {
                         t.qualified_position = 'winners'
-                        t.qualified_date = qualified_date
                     } else if (t.rank === 2) {
                         t.qualified_position = 'runners-up'
-                        t.qualified_date = qualified_date
+                    } else if (t.rank === 3) {
+                        t.qualified_position = '3rd place'
+                    } else if (t.rank === 4) {
+                        t.qualified_position = '4th place'
+                    } else if (t.rank === 5) {
+                        t.qualified_position = '5th place'
+                    } else if (t.rank === 6) {
+                        t.qualified_position = '6th place'
                     }
+                    t.qualified_date = qualified_date
                 } else if (foundAdvancement.will === 'advance') {
                     t.advanced = true
                 } else if (foundAdvancement.will === 'next_round') {

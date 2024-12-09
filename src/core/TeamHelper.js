@@ -529,6 +529,7 @@ export const createSingleGroup = (stage) => {
     if (!stage || !stage.draw) return
     stage.groups = []
     stage.groups.push({ name: 'A', teams: stage.draw.rankings })
+    stage.groups[0].teams.forEach((t, index) => (t.pos = index + 1))
 }
 
 export const createPairMatches = (stage) => {
@@ -564,7 +565,7 @@ export const createGroupMatches = (stage) => {
     stage.groups.forEach((g) => {
         g.matchdays = []
         stage.matchdays &&
-            stage.matchdays.forEach((md, index) => {
+            stage.matchdays.forEach((md) => {
                 const new_matchday = { name: md.name, date: md.date }
                 const matches = []
                 md.matches.forEach((m) => {
@@ -847,15 +848,36 @@ export const qualifyStage = (qualification, stage, qualifiedTeams) => {
     groups &&
         groups.forEach((g) => {
             if (g.rankings) {
+                const stageName = !stage.type.includes('_nopot') ? ' ' + stage.name + ' Group ' + g.name : ''
                 const winners = g.rankings.find((t) => t.qualified_position === 'winners')
                 if (winners) {
-                    const qualification_method = qualification.id + ' ' + stage.name + ' Group ' + g.name + ' winners'
+                    const qualification_method = qualification.id + stageName + ' winners'
                     qualifiedTeams.push({ ...winners.team, qualification_method, qualification_date: winners.qualified_date })
                 }
                 const runners_up = g.rankings.find((t) => t.qualified_position === 'runners-up')
                 if (runners_up) {
-                    const qualification_method = qualification.id + ' ' + stage.name + ' Group ' + g.name + ' runners-up'
+                    const qualification_method = qualification.id + stageName + ' runners-up'
                     qualifiedTeams.push({ ...runners_up.team, qualification_method, qualification_date: runners_up.qualified_date })
+                }
+                const third = g.rankings.find((t) => t.qualified_position === '3rd place')
+                if (third) {
+                    const qualification_method = qualification.id + stageName + ' 3rd place'
+                    qualifiedTeams.push({ ...third.team, qualification_method, qualification_date: third.qualified_date })
+                }
+                const fourth = g.rankings.find((t) => t.qualified_position === '4th place')
+                if (fourth) {
+                    const qualification_method = qualification.id + stageName + ' 4th place'
+                    qualifiedTeams.push({ ...fourth.team, qualification_method, qualification_date: fourth.qualified_date })
+                }
+                const fifth = g.rankings.find((t) => t.qualified_position === '5th place')
+                if (fourth) {
+                    const qualification_method = qualification.id + stageName + ' 5th place'
+                    qualifiedTeams.push({ ...fifth.team, qualification_method, qualification_date: fifth.qualified_date })
+                }
+                const sixth = g.rankings.find((t) => t.qualified_position === '6th place')
+                if (fourth) {
+                    const qualification_method = qualification.id + stageName + ' 6th place'
+                    qualifiedTeams.push({ ...sixth.team, qualification_method, qualification_date: sixth.qualified_date })
                 }
             }
         })

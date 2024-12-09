@@ -50,18 +50,21 @@ const GroupsCollapse = (props) => {
 class Groups extends React.Component {
     render() {
         const { state, stage } = this.props
+        const title = stage.type && !stage.type.includes('_nopot') ? 'Groups' : 'Standings'
         return (
             <React.Fragment>
-                <GroupsCollapse title="Groups" stage={stage}>
+                <GroupsCollapse title={title} stage={stage} initialStatus="Opened">
                     {stage.groups &&
                         stage.groups.map((g) => {
                             return (
                                 <Row key={g.name} className="mt-5 box-xl">
                                     <Col xs={{ size: 10, offset: 1 }}>
-                                        <Row className="no-gutters group-header padding-tb-sm text-start">
-                                            <Col className="col-box-5"></Col>
-                                            <Col className="col-box-75">Group {g.name}</Col>
-                                        </Row>
+                                        {!stage.type.includes('_nopot') && (
+                                            <Row className="no-gutters group-header padding-tb-sm text-start">
+                                                <Col className="col-box-5"></Col>
+                                                <Col className="col-box-75">Group {g.name}</Col>
+                                            </Row>
+                                        )}
                                         <GroupRankingsTable group={g} config={state.config} />
                                         <MatchesGroup group={g} config={state.config} />
                                     </Col>

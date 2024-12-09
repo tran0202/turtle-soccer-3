@@ -602,7 +602,226 @@
         {
             "id": "CONMEBOL",
             "draws": [{ "id": "1", "date": "2023-07-01" }],
-            "stages": [{ "name": "Round-robin", "type": "roundrobin_nopot", "draw_id": "1", "entrants_note": "All 10 CONMEBOL teams enter qualification." }]
+            "stages": [
+                {
+                    "name": "Round-robin",
+                    "type": "roundrobin_nopot",
+                    "draw_id": "1",
+                    "entrants_note": "All 10 CONMEBOL teams enter qualification. The top 6 teams will qualify for World Cup 2026. The 7th team will advance to the inter-confederation play-offs.",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2023-09-07",
+                            "matches": [
+                                { "home_pos": 8, "away_pos": 5 },
+                                { "home_pos": 4, "away_pos": 9 },
+                                { "home_pos": 1, "away_pos": 7 },
+                                { "home_pos": 3, "away_pos": 6 },
+                                { "home_pos": 2, "away_pos": 10 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2023-09-12",
+                            "matches": [
+                                { "home_pos": 10, "away_pos": 1 },
+                                { "home_pos": 7, "away_pos": 3 },
+                                { "home_pos": 9, "away_pos": 8 },
+                                { "home_pos": 6, "away_pos": 4 },
+                                { "home_pos": 5, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2023-10-12",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 3 },
+                                { "home_pos": 10, "away_pos": 7 },
+                                { "home_pos": 1, "away_pos": 8 },
+                                { "home_pos": 6, "away_pos": 5 },
+                                { "home_pos": 2, "away_pos": 9 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2023-10-17",
+                            "matches": [
+                                { "home_pos": 9, "away_pos": 6 },
+                                { "home_pos": 8, "away_pos": 10 },
+                                { "home_pos": 7, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 1 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2023-11-16",
+                            "matches": [
+                                { "home_pos": 10, "away_pos": 5 },
+                                { "home_pos": 9, "away_pos": 7 },
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 },
+                                { "home_pos": 6, "away_pos": 8 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "date": "2023-11-21",
+                            "matches": [
+                                { "home_pos": 8, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 10 },
+                                { "home_pos": 7, "away_pos": 6 },
+                                { "home_pos": 2, "away_pos": 1 },
+                                { "home_pos": 5, "away_pos": 9 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 7",
+                            "date": "2024-09-05",
+                            "matches": [
+                                { "home_pos": 10, "away_pos": 9 },
+                                { "home_pos": 1, "away_pos": 6 },
+                                { "home_pos": 3, "away_pos": 8 },
+                                { "home_pos": 2, "away_pos": 7 },
+                                { "home_pos": 5, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 8",
+                            "date": "2024-09-10",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 6, "away_pos": 10 },
+                                { "home_pos": 7, "away_pos": 5 },
+                                { "home_pos": 9, "away_pos": 3 },
+                                { "home_pos": 8, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 9",
+                            "date": "2024-10-10",
+                            "matches": [
+                                { "home_pos": 10, "away_pos": 4 },
+                                { "home_pos": 7, "away_pos": 8 },
+                                { "home_pos": 9, "away_pos": 1 },
+                                { "home_pos": 6, "away_pos": 2 },
+                                { "home_pos": 5, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 10",
+                            "date": "2024-10-15",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 6 },
+                                { "home_pos": 8, "away_pos": 9 },
+                                { "home_pos": 3, "away_pos": 7 },
+                                { "home_pos": 1, "away_pos": 10 },
+                                { "home_pos": 2, "away_pos": 5 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 11",
+                            "date": "2024-11-14",
+                            "matches": [
+                                { "home_pos": 9, "away_pos": 2 },
+                                { "home_pos": 8, "away_pos": 1 },
+                                { "home_pos": 7, "away_pos": 10 },
+                                { "home_pos": 3, "away_pos": 4 },
+                                { "home_pos": 5, "away_pos": 6 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 12",
+                            "date": "2024-11-19",
+                            "matches": [
+                                { "home_pos": 10, "away_pos": 8 },
+                                { "home_pos": 4, "away_pos": 7 },
+                                { "home_pos": 1, "away_pos": 5 },
+                                { "home_pos": 6, "away_pos": 9 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 13",
+                            "date": "2025-03-17",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 1 },
+                                { "home_pos": 5, "away_pos": 10 },
+                                { "home_pos": 2, "away_pos": 4 },
+                                { "home_pos": 8, "away_pos": 6 },
+                                { "home_pos": 7, "away_pos": 9 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 14",
+                            "date": "2025-03-25",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 8 },
+                                { "home_pos": 9, "away_pos": 5 },
+                                { "home_pos": 10, "away_pos": 3 },
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 6, "away_pos": 7 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 15",
+                            "date": "2025-06-02",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 5 },
+                                { "home_pos": 9, "away_pos": 10 },
+                                { "home_pos": 8, "away_pos": 3 },
+                                { "home_pos": 6, "away_pos": 1 },
+                                { "home_pos": 7, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 16",
+                            "date": "2025-06-10",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 9 },
+                                { "home_pos": 5, "away_pos": 7 },
+                                { "home_pos": 2, "away_pos": 8 },
+                                { "home_pos": 10, "away_pos": 6 },
+                                { "home_pos": 1, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 17",
+                            "date": "2025-09-01",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 5 },
+                                { "home_pos": 4, "away_pos": 10 },
+                                { "home_pos": 2, "away_pos": 6 },
+                                { "home_pos": 8, "away_pos": 7 },
+                                { "home_pos": 1, "away_pos": 9 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 18",
+                            "date": "2025-09-09",
+                            "matches": [
+                                { "home_pos": 5, "away_pos": 8 },
+                                { "home_pos": 9, "away_pos": 4 },
+                                { "home_pos": 10, "away_pos": 2 },
+                                { "home_pos": 6, "away_pos": 3 },
+                                { "home_pos": 7, "away_pos": 1 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Inter-confederation play-offs",
+                    "advanced_note": "The top 6 teams qualify for World Cup 2026",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "qualify" },
+                        { "pos": 3, "will": "qualify" },
+                        { "pos": 4, "will": "qualify" },
+                        { "pos": 5, "will": "qualify" },
+                        { "pos": 6, "will": "qualify" },
+                        { "pos": 7, "will": "next_round" }
+                    ],
+                    "next_round_note": "The 4 best runners-up advance to the inter-confederation play-offs"
+                }
+            ]
         },
         {
             "id": "Inter-confederation play-offs",
