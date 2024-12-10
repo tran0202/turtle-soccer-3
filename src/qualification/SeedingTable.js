@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlagName } from '../core/TeamHelper'
 
-const DrawSeedingHeader = (props) => {
+const SeedingHeader = (props) => {
     const { name } = props
     return (
         <React.Fragment>
@@ -19,7 +19,7 @@ const DrawSeedingHeader = (props) => {
     )
 }
 
-const DrawSeedingRow = (props) => {
+const SeedingRow = (props) => {
     const { ranking, config } = props
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
@@ -40,7 +40,7 @@ const DrawSeedingRow = (props) => {
     )
 }
 
-class DrawSeedingTable extends React.Component {
+class SeedingTable extends React.Component {
     render() {
         const { state, stage } = this.props
         const { drawPotRows } = stage
@@ -51,8 +51,8 @@ class DrawSeedingTable extends React.Component {
                         <Row key={index} className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
                             {dpr.map((col) => (
                                 <Col key={col.name}>
-                                    <DrawSeedingHeader name={col.name} />
-                                    {col.rankings && col.rankings.map((r) => <DrawSeedingRow key={r.id} ranking={r} config={state.config} />)}
+                                    <SeedingHeader name={col.name} />
+                                    {col.rankings && col.rankings.map((r) => <SeedingRow key={r.id} ranking={r} config={state.config} />)}
                                 </Col>
                             ))}
                         </Row>
@@ -62,4 +62,4 @@ class DrawSeedingTable extends React.Component {
     }
 }
 
-export default DrawSeedingTable
+export default SeedingTable

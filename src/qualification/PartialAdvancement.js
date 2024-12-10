@@ -51,7 +51,7 @@ class PartialAdvancement extends React.Component {
         const pa = getPartialAdvancementRankings(stage)
         return (
             <React.Fragment>
-                <PartialAdvancementCollapse title="Rankings of Runners-up" stage={stage}>
+                <PartialAdvancementCollapse title="Rankings of Runners-up" stage={stage} initialStatus="Closed">
                     {pa &&
                         pa.map((g) => {
                             return (

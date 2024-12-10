@@ -32,8 +32,9 @@ const MatchesKnockoutRow = (props) => {
                                     const matchAwayExtraScore = m.away_extra_score ? m.away_extra_score : 0
                                     const matchHomeScore = m.home_score + matchHomeExtraScore
                                     const matchAwayScore = m.away_score + matchAwayExtraScore
-                                    const borderBottom = m.home_extra_score !== undefined ? '' : 'border-bottom-gray5'
                                     const teamWon = isHomeWinMatch(m) ? homeTeamName : awayTeamName
+                                    const teamLose = isHomeWinMatch(m) ? awayTeamName : homeTeamName
+                                    const teamNextRoundLine = config.is_stage_qualify ? teamLose : teamWon
                                     const teamWonLine = (
                                         <React.Fragment>
                                             {' >>> '} <b>{teamWon}</b> won
@@ -56,9 +57,19 @@ const MatchesKnockoutRow = (props) => {
                                         ) : (
                                             ''
                                         )
+                                    const qualifyLine = (
+                                        <React.Fragment>
+                                            {' >>> '} <b>{teamWon}</b> qualify for World Cup {config.year}
+                                        </React.Fragment>
+                                    )
+                                    const nextRoundLine = (
+                                        <React.Fragment>
+                                            {' >>> '} <b>{teamNextRoundLine}</b> advance to the {config.next_stage}
+                                        </React.Fragment>
+                                    )
                                     return (
                                         <React.Fragment key={m.id}>
-                                            <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${borderBottom}`}>
+                                            <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
                                                 <Col className="col-box-14"></Col>
                                                 <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{homeTeamName}</Col>
                                                 <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
@@ -70,7 +81,7 @@ const MatchesKnockoutRow = (props) => {
                                                 <Col className={`col-box-25 ${pairAwayHighlight}`}>{awayTeamName}</Col>
                                             </Row>
                                             {m.home_extra_score !== undefined && (
-                                                <Row className="no-gutters aggregate-line team-row padding-tb-sm border-bottom-gray5">
+                                                <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                                                     <Col xs={{ size: 7, offset: 5 }}>
                                                         {teamWonLine}
                                                         {extraTimeLine}
@@ -78,6 +89,18 @@ const MatchesKnockoutRow = (props) => {
                                                     </Col>
                                                 </Row>
                                             )}
+                                            {round.final && config.is_stage_qualify && (
+                                                <Row className="no-gutters aggregate-line team-row padding-tb-sm">
+                                                    <Col xs={{ size: 7, offset: 5 }}>{qualifyLine}</Col>
+                                                </Row>
+                                            )}
+                                            {round.final && (
+                                                <Row className="no-gutters aggregate-line team-row padding-tb-sm">
+                                                    <Col xs={{ size: 7, offset: 5 }}>{nextRoundLine}</Col>
+                                                </Row>
+                                            )}
+
+                                            <Row className="border-bottom-gray5 margin-left-sm margin-top-sm" />
                                         </React.Fragment>
                                     )
                                 })}
@@ -92,13 +115,15 @@ class MatchesKnockout extends React.Component {
     render() {
         const { state, stage } = this.props
         const { rounds } = stage
+        const is_stage_qualify = !stage.advancement ? false : stage.advancement[0].will === 'qualify'
+        const config = { ...state.config, year: state.tournament.year, is_stage_qualify, next_stage: stage.next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-3 box-white">
                     <Col xs={{ size: 12 }}>
                         {rounds &&
                             rounds.map((r) => {
-                                return <MatchesKnockoutRow key={r.name} round={r} config={state.config} />
+                                return <MatchesKnockoutRow key={r.name} round={r} config={config} />
                             })}
                     </Col>
                 </Row>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawSeedingTable from './DrawSeedingTable'
+import SeedingTable from './SeedingTable'
 
 const DrawPlacement = (props) => {
     const { stage } = props
@@ -20,7 +20,7 @@ const DrawPlacement = (props) => {
     )
 }
 
-const DrawSeedingCollapse = (props) => {
+const SeedingCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -57,17 +57,17 @@ const DrawSeedingCollapse = (props) => {
     )
 }
 
-class DrawSeeding extends React.Component {
+class Seeding extends React.Component {
     render() {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <DrawSeedingCollapse title="Draw Seeding" stage={stage}>
-                    <DrawSeedingTable state={state} stage={stage} />
-                </DrawSeedingCollapse>
+                <SeedingCollapse title="Seeding" stage={stage} initialStatus="Closed">
+                    <SeedingTable state={state} stage={stage} />
+                </SeedingCollapse>
             </React.Fragment>
         )
     }
 }
 
-export default DrawSeeding
+export default Seeding

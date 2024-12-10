@@ -42,7 +42,7 @@ class Matches extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <MatchesCollapse title="Matches" stage={stage} initialStatus="Opened">
+                <MatchesCollapse title="Matches" stage={stage} initialStatus="Closed">
                     {stage.type && stage.type.includes('pair') && <MatchesPair state={state} stage={stage} />}
                     {stage.type && stage.type.includes('knockout') && <MatchesKnockout state={state} stage={stage} />}
                 </MatchesCollapse>

@@ -5,7 +5,7 @@ import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/
 import { AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
-    const { title, initialStatus, children } = props
+    const { title, stage, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')
@@ -25,6 +25,11 @@ const BracketsCollapse = (props) => {
                         {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
+                </Col>
+                <Col sm="9">
+                    <Row>
+                        <Col>{stage.draw_note}</Col>
+                    </Row>
                 </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
@@ -305,7 +310,7 @@ const BracketTable = (props) => {
                 stage.rounds.map((r, index) => {
                     const roundConfig = { ...state.config, column_count: stage.rounds.length }
                     const hookCount = stage.rounds.length % 2 === 0 ? stage.rounds.length / 2 : (stage.rounds.length - 1) / 2
-                    if (r.name === 'Final') {
+                    if (r.final) {
                         return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
                     } else if (r.name !== 'Third-place') {
                         return (
@@ -327,7 +332,7 @@ class Brackets extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <BracketsCollapse title="Brackets" stage={stage}>
+                <BracketsCollapse title="Brackets" stage={stage} initialStatus="Closed">
                     <BracketTable state={state} stage={stage} />
                 </BracketsCollapse>
             </React.Fragment>

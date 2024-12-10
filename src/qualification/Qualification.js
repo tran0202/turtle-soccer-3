@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import DrawSeeding from './DrawSeeding'
+import Seeding from './Seeding'
 import Entrants from './Entrants'
 import Results from './Results'
 import Matches from './Matches'
@@ -8,7 +8,7 @@ import Groups from './Groups'
 import Brackets from './Brackets'
 import PartialAdvancement from './PartialAdvancement'
 
-const ConfederationQualificationCollapse = (props) => {
+const QualificationCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -42,38 +42,40 @@ const ConfederationQualificationCollapse = (props) => {
     )
 }
 
-class ConfederationQualification extends React.Component {
+class Qualification extends React.Component {
     render() {
         const { state, qualification } = this.props
         const qualification_id = qualification ? qualification.id : ''
         const isPlayoff = qualification_id.includes('play-off')
+        const showSeeding = (s) => !s.type.includes('_noshowpot') && !s.type.includes('knockout') && !s.type.includes('_nopot')
+        const showEntrants = (s) => (s.type.includes('_nopot') || s.type.includes('knockout')) && !s.type.includes('_predetpair')
         return (
             <React.Fragment>
                 {qualification &&
                     qualification.stages &&
                     qualification.stages.map((s) => {
                         return !isPlayoff ? (
-                            <ConfederationQualificationCollapse key={qualification_id + s.name} title={s.name} initialStatus="Opened">
-                                {s.type && !s.type.includes('_noshowpot') && !s.type.includes('knockout') && !s.type.includes('_nopot') && (
+                            <QualificationCollapse key={qualification_id + s.name} title={s.name} initialStatus="Opened">
+                                {s.type && showSeeding(s) && (
                                     <React.Fragment>
-                                        <DrawSeeding state={state} stage={s} />
+                                        <Seeding state={state} stage={s} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('_nopot') && (
+                                {s.type && showEntrants(s) && (
                                     <React.Fragment>
                                         <Entrants state={state} stage={s} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('pair2leg') && (
+                                {s.type && s.type.includes('pair_') && (
                                     <React.Fragment>
                                         <Results state={state} stage={s} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                         <Matches state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('roundrobin') && (
+                                {s.type && s.type.includes('roundrobin_') && (
                                     <React.Fragment>
                                         <Groups state={state} stage={s} />
                                     </React.Fragment>
@@ -83,13 +85,13 @@ class ConfederationQualification extends React.Component {
                                         <PartialAdvancement state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                                {s.type && s.type.includes('knockout') && (
+                                {s.type && s.type.includes('knockout_') && (
                                     <React.Fragment>
                                         <Brackets state={state} stage={s} />
                                         <Matches state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                            </ConfederationQualificationCollapse>
+                            </QualificationCollapse>
                         ) : (
                             <React.Fragment key={qualification_id + s.name}>
                                 <Brackets state={state} stage={s} />
@@ -102,4 +104,4 @@ class ConfederationQualification extends React.Component {
     }
 }
 
-export default ConfederationQualification
+export default Qualification

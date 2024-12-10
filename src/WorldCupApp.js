@@ -5,7 +5,7 @@ import ConfederationArray from './data/Confederations.json'
 import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processQualifications } from './core/TeamHelper'
 import Page from './core/Page'
 import QualifiedTable from './qualified/QualifiedTable'
-import ConfederationQualification from './qualification/ConfederationQualification'
+import Qualification from './qualification/Qualification'
 
 export const WorldCupCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -41,9 +41,9 @@ export const WorldCupCollapse = (props) => {
     )
 }
 
-const Qualifications = (props) => {
+const ConfederationQualifications = (props) => {
     const { state, qualifications } = props
-    const [activeTab, setActiveTab] = useState('CONMEBOL')
+    const [activeTab, setActiveTab] = useState('OFC')
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
     }
@@ -73,7 +73,7 @@ const Qualifications = (props) => {
                         <React.Fragment key={q.id}>
                             {q.id && (
                                 <TabPane tabId={q.id.replace(/ /g, '-')}>
-                                    <ConfederationQualification state={state} qualification={q} />
+                                    <Qualification state={state} qualification={q} />
                                 </TabPane>
                             )}
                         </React.Fragment>
@@ -129,12 +129,12 @@ class WorldCupApp extends React.Component {
                 <Container className="container-xxxl">
                     <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026</h1>
 
-                    <WorldCupCollapse title="Qualified Teams">
+                    <WorldCupCollapse title="Qualified Teams" initialStatus="Closed">
                         <QualifiedTable state={this.state} />
                     </WorldCupCollapse>
 
                     <WorldCupCollapse title="Confederation Qualifications" initialStatus="Opened">
-                        <Qualifications state={this.state} qualifications={qualifications} />
+                        <ConfederationQualifications state={this.state} qualifications={qualifications} />
                     </WorldCupCollapse>
                 </Container>
             </Page>

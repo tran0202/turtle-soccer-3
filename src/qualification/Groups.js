@@ -53,7 +53,7 @@ class Groups extends React.Component {
         const title = stage.type && !stage.type.includes('_nopot') ? 'Groups' : 'Standings'
         return (
             <React.Fragment>
-                <GroupsCollapse title={title} stage={stage} initialStatus="Opened">
+                <GroupsCollapse title={title} stage={stage} initialStatus="Closed">
                     {stage.groups &&
                         stage.groups.map((g) => {
                             return (

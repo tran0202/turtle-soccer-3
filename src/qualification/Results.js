@@ -43,7 +43,7 @@ class Results extends React.Component {
         const { state, stage } = this.props
         return (
             <React.Fragment>
-                <ResultsCollapse title="Results" stage={stage}>
+                <ResultsCollapse title="Results" stage={stage} initialStatus="Closed">
                     {stage.type && stage.type.includes('pair') && <ResultsPairTable state={state} stage={stage} />}
                 </ResultsCollapse>
             </React.Fragment>

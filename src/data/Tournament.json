@@ -27,7 +27,7 @@
             "stages": [
                 {
                     "name": "First Round",
-                    "type": "pair2leg_drawpair",
+                    "type": "pair_drawpair",
                     "draw_id": "1",
                     "draw_note": "20 teams (seed numbers 27–46) are divided into Pot 1 and Pot 2 and play home-and-away over two legs. One team from each pot are drawn into one tie. 10 winners will advance to the second round.",
                     "pots": [
@@ -46,7 +46,7 @@
                     "type": "roundrobin_oddpot",
                     "draw_id": "1",
                     "draw_note": "Total of 36 teams are drawn into 9 groups of 4 to play home-and-away round-robin matches. The 9 winners and 9 runners-up will advance to the third round. 26 teams (seed numbers 1–26) receive byes to this round and are divided into Pot 1, Pot 2 and Pot 3. 10 winners from first round are placed in Pot 4. After 9 teams of Pot 4 are drawn into groups, the last team in Pot 4 will be moved to Pot 3.",
-                    "entering_placement": [
+                    "entrants_placement": [
                         { "name": 4, "count": 9 },
                         { "name": 3, "count": 1 }
                     ],
@@ -55,6 +55,7 @@
                         { "name": 2, "rankingFrom": 10, "rankingTo": 18 },
                         { "name": 3, "rankingFrom": 19, "rankingTo": 26 }
                     ],
+                    "group_count": 9,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -117,7 +118,7 @@
                     "type": "roundrobin_evenpot",
                     "draw_id": "2",
                     "draw_note": "18 teams advance from the second round are drawn into 3 groups of 6 to play against each other on a home-and-away basis. The top 2 teams will qualify directly for World Cup 2026. The third and fourth-placed teams will advance to the fourth round. Each group A, B and C will contain one team from each of 6 pots. The draw started from Pot 6 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
-                    "entering_placement": [
+                    "entrants_placement": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 3 },
                         { "name": 2, "rankingFrom": 4, "rankingTo": 6 },
                         { "name": 3, "rankingFrom": 7, "rankingTo": 9 },
@@ -125,6 +126,7 @@
                         { "name": 5, "rankingFrom": 13, "rankingTo": 15 },
                         { "name": 6, "rankingFrom": 16, "rankingTo": 18 }
                     ],
+                    "group_count": 3,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -232,11 +234,12 @@
                     "type": "roundrobin_evenpot",
                     "draw_id": "2",
                     "draw_note": "6 teams advance from the third round are drawn into 2 groups of 3 to play round-robin matches. The 2 winners of each group will qualify for World Cup 2026. The 2 runners-up will advance to the fifth round. Each group A and B will contain one team from each of 3 pots. The draw started from Pot 3 to Pot 1. Each team being drawn will be placed in the corresponding position with the pot in the groups.",
-                    "entering_placement": [
+                    "entrants_placement": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 2 },
                         { "name": 2, "rankingFrom": 3, "rankingTo": 4 },
                         { "name": 3, "rankingFrom": 5, "rankingTo": 6 }
                     ],
+                    "group_count": 2,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -264,10 +267,10 @@
                 },
                 {
                     "name": "Fifth Round",
-                    "type": "pair2leg_noshowpot",
+                    "type": "pair_noshowpot",
                     "draw_id": "2",
                     "draw_note": "",
-                    "entering_placement": [
+                    "entrants_placement": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 1 },
                         { "name": 2, "rankingFrom": 2, "rankingTo": 2 }
                     ],
@@ -299,6 +302,7 @@
                         { "name": 5, "rankingFrom": 37, "rankingTo": 45 },
                         { "name": 6, "rankingFrom": 46, "rankingTo": 54 }
                     ],
+                    "group_count": 9,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -401,9 +405,9 @@
                 },
                 {
                     "name": "Second Round",
-                    "type": "knockout",
+                    "type": "knockout_",
                     "draw_id": "1",
-                    "draw_note": "",
+                    "entrants_note": "The 4 best runners-up advancing from the first round will play in a play-off. The winner will advance to the inter-confederation play-offs. The highest-ranked faces the lowest-ranked. The 2nd-ranked faces the 3rd-ranked.",
                     "rounds": [
                         {
                             "name": "Semi-finals",
@@ -417,6 +421,7 @@
                         {
                             "name": "Final",
                             "short_name": "1st",
+                            "final": true,
                             "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-11-18" }]
                         }
                     ],
@@ -430,7 +435,7 @@
             "stages": [
                 {
                     "name": "First Round",
-                    "type": "pair2leg_predetpair",
+                    "type": "pair_predetpair",
                     "draw_id": "1",
                     "draw_note": "4 teams (seed numbers 29-32) are divided into 2 matchups and play home-and-away over two legs. Seed 29 faces seed 32 and seed 30 faces seed 31. 2 winners will advance to the second round.",
                     "pots": [
@@ -463,7 +468,7 @@
                     "type": "roundrobin_oddpot",
                     "draw_id": "1",
                     "draw_note": "Total of 30 teams are drawn into 6 groups of 5 to play round-robin matches, 2 home and 2 away. The 6 winners and 6 runners-up will advance to the third round. 28 teams (seed numbers 1–28) receive byes to this round and are divided into Pot 1 to Pot 5. 2 winners from first round are placed in Pot 5.",
-                    "entering_placement": [{ "name": 5, "count": 2 }],
+                    "entrants_placement": [{ "name": 5, "count": 2 }],
                     "pots": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 6 },
                         { "name": 2, "rankingFrom": 7, "rankingTo": 12 },
@@ -471,6 +476,7 @@
                         { "name": 4, "rankingFrom": 19, "rankingTo": 24 },
                         { "name": 5, "rankingFrom": 25, "rankingTo": 28 }
                     ],
+                    "group_count": 6,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -533,12 +539,13 @@
                     "type": "roundrobin_evenpot",
                     "draw_id": "1",
                     "draw_note": "12 teams advance from the second round are drawn into 3 groups of 4 to play double round-robin home-and-away matches. The 3 winners will qualify for World Cup 2026. The 2 best runners-up will advance to the inter-confederation play-offs.",
-                    "entering_placement": [
+                    "entrants_placement": [
                         { "name": 1, "rankingFrom": 1, "rankingTo": 3 },
                         { "name": 2, "rankingFrom": 4, "rankingTo": 6 },
                         { "name": 3, "rankingFrom": 7, "rankingTo": 9 },
                         { "name": 4, "rankingFrom": 10, "rankingTo": 12 }
                     ],
+                    "group_count": 3,
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -819,7 +826,111 @@
                         { "pos": 6, "will": "qualify" },
                         { "pos": 7, "will": "next_round" }
                     ],
-                    "next_round_note": "The 4 best runners-up advance to the inter-confederation play-offs"
+                    "next_round_note": "The 7th team advance to the inter-confederation play-offs"
+                }
+            ]
+        },
+        {
+            "id": "OFC",
+            "draws": [{ "id": "1", "date": "2024-07-18" }],
+            "stages": [
+                {
+                    "name": "First Round",
+                    "type": "knockout_",
+                    "draw_id": "1",
+                    "entrants_note": "4 lowest-ranked teams (seed numbers 8-11) will play in a play-off. Seed 8 faces seed 11 and seed 9 faces seed 10. 2 winners advance to the final. The winners in the final will advance to the second round.",
+                    "entrants_placement": [{ "name": 1, "rankingFrom": 8, "rankingTo": 11 }],
+                    "rounds": [
+                        {
+                            "name": "Matchday 1",
+                            "short_name": "M1",
+                            "next_round": "Matchday 2",
+                            "matches": [
+                                { "id": "MD11", "home_team": 1, "away_team": 4, "date": "2024-09-06", "bracket_order": 1 },
+                                { "id": "MD12", "home_team": 2, "away_team": 3, "date": "2024-09-06", "bracket_order": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "short_name": "M2",
+                            "final": true,
+                            "matches": [{ "id": "MD2", "home_team": "MD11", "away_team": "MD12", "date": "2024-09-09" }]
+                        }
+                    ],
+                    "next_stage": "Second Round"
+                },
+                {
+                    "name": "Second Round",
+                    "type": "roundrobin_oddpot",
+                    "draw_id": "1",
+                    "draw_note": "8 teams are drawn into 2 groups of 4 to play round-robin matches. Group winners and group runners-up will advance to the third round. Pot 2 contains seeds 1-2. Pot 2 contain seeds 3-6. Pot 3 contains seed 7 and the winner from the 1st round. Each group will draw 1 team from Pot 1, 2 teams from Pot 2 and 1 team from Pot 3.",
+                    "entrants_placement": [{ "name": 3, "count": 1 }],
+                    "pots": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 2 },
+                        { "name": 2, "rankingFrom": 3, "rankingTo": 6 },
+                        { "name": 3, "rankingFrom": 7, "rankingTo": 7 }
+                    ],
+                    "group_count": 2,
+                    "matchdays": [
+                        {
+                            "name": "Matchday 3",
+                            "date": "2024-10-10",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 4 },
+                                { "home_pos": 3, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "date": "2024-11-14",
+                            "matches": [
+                                { "home_pos": 3, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "date": "2024-11-17",
+                            "matches": [
+                                { "home_pos": 2, "away_pos": 1 },
+                                { "home_pos": 4, "away_pos": 3 }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Third Round",
+                    "advanced_note": "Winners and runners-up advance to the third round",
+                    "advancement": [
+                        { "pos": 1, "will": "advance" },
+                        { "pos": 2, "will": "advance" }
+                    ]
+                },
+                {
+                    "name": "Third Round",
+                    "type": "knockout_predetpair",
+                    "draw_id": "1",
+                    "draw_note": "The 4 teams advancing from the second round will play in a play-off. Winner group A faces runner-up group B. Winner group B faces runner-up group A. The winner will qualify for World Cup 2026. The runner-up will advance to the inter-confederation play-offs.",
+                    "rounds": [
+                        {
+                            "name": "Semi-finals",
+                            "short_name": "1/2",
+                            "next_round": "Final",
+                            "matches": [
+                                { "id": "SF1", "home_team": "A1", "away_team": "B2", "date": "2025-03-21", "bracket_order": 1 },
+                                { "id": "SF2", "home_team": "B1", "away_team": "A2", "date": "2025-03-21", "bracket_order": 2 }
+                            ]
+                        },
+                        {
+                            "name": "Final",
+                            "short_name": "1st",
+                            "final": true,
+                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-03-24" }]
+                        }
+                    ],
+                    "next_stage": "Inter-confederation play-offs",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "next_round" }
+                    ]
                 }
             ]
         },
@@ -829,7 +940,7 @@
             "stages": [
                 {
                     "name": "Inter-confederation play-offs",
-                    "type": "knockout",
+                    "type": "knockout_",
                     "draw_id": "1",
                     "draw_note": "",
                     "matchdays": [
