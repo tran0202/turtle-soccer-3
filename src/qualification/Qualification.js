@@ -47,8 +47,8 @@ class Qualification extends React.Component {
         const { state, qualification } = this.props
         const qualification_id = qualification ? qualification.id : ''
         const isPlayoff = qualification_id.includes('play-off')
-        const showSeeding = (s) => !s.type.includes('_noshowpot') && !s.type.includes('knockout') && !s.type.includes('_nopot')
-        const showEntrants = (s) => (s.type.includes('_nopot') || s.type.includes('knockout')) && !s.type.includes('_predetpair')
+        const showSeeding = (s) => !s.type.includes('_noshowpot') && !s.type.includes('knockout_') && !s.type.includes('_nopot')
+        const showEntrants = (s) => s.type.includes('_nopot') || s.type.includes('knockout_')
         return (
             <React.Fragment>
                 {qualification &&
@@ -88,13 +88,17 @@ class Qualification extends React.Component {
                                 {s.type && s.type.includes('knockout_') && (
                                     <React.Fragment>
                                         <Brackets state={state} stage={s} />
+                                        <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                         <Matches state={state} stage={s} />
                                     </React.Fragment>
                                 )}
                             </QualificationCollapse>
                         ) : (
                             <React.Fragment key={qualification_id + s.name}>
+                                <Entrants state={state} stage={s} />
+                                <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                 <Brackets state={state} stage={s} />
+                                <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                 <Matches state={state} stage={s} />
                             </React.Fragment>
                         )

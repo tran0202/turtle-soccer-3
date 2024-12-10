@@ -906,7 +906,7 @@
                 },
                 {
                     "name": "Third Round",
-                    "type": "knockout_predetpair",
+                    "type": "knockout_lastroundrank",
                     "draw_id": "1",
                     "draw_note": "The 4 teams advancing from the second round will play in a play-off. Winner group A faces runner-up group B. Winner group B faces runner-up group A. The winner will qualify for World Cup 2026. The runner-up will advance to the inter-confederation play-offs.",
                     "rounds": [
@@ -934,6 +934,7 @@
                 }
             ]
         },
+        { "id": "UEFA", "draws": [{ "id": "1", "date": "2024-11-28" }] },
         {
             "id": "Inter-confederation play-offs",
             "draws": [{ "id": "1", "date": "2025-12-18" }],
@@ -942,7 +943,7 @@
                     "name": "Inter-confederation play-offs",
                     "type": "knockout_",
                     "draw_id": "1",
-                    "draw_note": "",
+                    "entrants_note": "6 teams advancing from the confederation qualifications will play in a play-off. One each from AFC, CAF, CONMEBOL & OFC and two teams from CONCACAF. The 4 lowest-ranked teams will face each other in 2 knockout matches. 3 vs 6. 4 vs 5. The 2 highest-ranked teams will face these 2 winners. 1 vs the winner of 4-5. 2 vs the winner of 3-6. The 2 final winners will qualify for World Cup 2026.",
                     "matchdays": [
                         { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
                         { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }

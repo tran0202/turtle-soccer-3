@@ -685,11 +685,14 @@ export const populateFirstRound = (stage) => {
     stage.entrants &&
         stage.entrants.forEach((t, index) => {
             if (!t.entrant_pos) {
-                t.entrant_pos = index + 1
+                t.pos = index + 1
             }
         })
     const firstRound = stage.rounds[0]
     if (firstRound) {
+        stage.entrants.sort((a, b) => {
+            return a.pos > b.pos ? 1 : -1
+        })
         firstRound.entrants = stage.entrants
     }
 }
@@ -708,11 +711,11 @@ export const processRounds = (stage) => {
 
 export const populateMatch = (match, round) => {
     if (!match || !round || !round.entrants) return
-    const homeTeam = round.entrants.find((t) => t.entrant_pos === match.home_team)
+    const homeTeam = round.entrants.find((t) => t.pos === match.home_team)
     if (homeTeam) {
         match.home_team = homeTeam.id
     }
-    const awayTeam = round.entrants.find((t) => t.entrant_pos === match.away_team)
+    const awayTeam = round.entrants.find((t) => t.pos === match.away_team)
     if (awayTeam) {
         match.away_team = awayTeam.id
     }
@@ -740,7 +743,7 @@ export const finishRound = (round, stage) => {
         if (isHomeWinMatch(m)) {
             const winTeam = stage.entrants.find((t) => t.id === m.home_team)
             if (winTeam) {
-                winTeam.entrant_pos = m.id
+                winTeam.pos = m.id
                 if (round.final) {
                     winTeam.qualified_date = m.date
                 }
@@ -753,7 +756,7 @@ export const finishRound = (round, stage) => {
         } else {
             const winTeam = stage.entrants.find((t) => t.id === m.away_team)
             if (winTeam) {
-                winTeam.entrant_pos = m.id
+                winTeam.pos = m.id
                 if (round.final) {
                     winTeam.qualified_date = m.date
                 }
@@ -830,7 +833,7 @@ export const finishGroupStage = (stage, next_stage) => {
             if (r.qualified) {
                 qualified_teams.push(r.team)
             } else if (r.advanced) {
-                advanced_teams.push({ ...r.team, entrant_pos: g.name + r.rank })
+                advanced_teams.push({ ...r.team, entrant_pos: g.name + r.rank, pos: g.name + r.rank })
             } else if (r.next_rounded) {
                 const new_team = { ...r.team }
                 delete new_team.draw_seed

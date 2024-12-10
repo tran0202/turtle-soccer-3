@@ -56,7 +56,7 @@ class Entrants extends React.Component {
         return (
             <React.Fragment>
                 <EntrantsCollapse title="Entrants" stage={stage} initialStatus="Closed">
-                    {!stage.type.includes('_predetpair') && <EntrantsTable state={state} stage={stage} />}
+                    <EntrantsTable state={state} stage={stage} />
                 </EntrantsCollapse>
             </React.Fragment>
         )

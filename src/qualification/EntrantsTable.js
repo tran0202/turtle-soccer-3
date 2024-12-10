@@ -23,7 +23,7 @@ const EntrantsRow = (props) => {
                     <div className={`box-sm`}>
                         <Row className="no-gutters">
                             <Col className="col-box-5"></Col>
-                            <Col className="col-box-10">{team.conf_rank}</Col>
+                            <Col className="col-box-10">{config.last_round_rank ? team.entrant_pos : team.conf_rank}</Col>
                             <Col className="col-box-82">
                                 {getTeamFlagName(team, config)} ({team.rank})
                             </Col>
@@ -39,10 +39,11 @@ class EntrantsTable extends React.Component {
     render() {
         const { state, stage } = this.props
         const { entrants } = stage
+        const config = { ...state.config, last_round_rank: stage.type.includes('_lastroundrank') }
         return (
             <React.Fragment>
                 <EntrantsHeader />
-                {entrants && entrants.map((t) => <EntrantsRow key={t.id} team={t} config={state.config} />)}
+                {entrants && entrants.map((t) => <EntrantsRow key={t.id} team={t} config={config} />)}
             </React.Fragment>
         )
     }
