@@ -337,6 +337,9 @@ a:hover {
 .border-bottom-gray3 {
     border-bottom: 1px solid #858585;
 }
+.border-bottom-double-gray3 {
+    border-bottom: 3px double #858585;
+}
 .border-gray4 {
     border: 1px solid #b3b2b2;
 }

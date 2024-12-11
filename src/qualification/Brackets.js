@@ -367,7 +367,7 @@ const BracketPath = (props) => {
                 return (
                     <React.Fragment>
                         <Row>
-                            <Col sm="12" className="h2-ff6 border-bottom-gray2 margin-top-md">
+                            <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
                                 {p.name}
                             </Col>
                         </Row>
