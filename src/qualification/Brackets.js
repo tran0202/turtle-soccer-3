@@ -273,6 +273,33 @@ const BracketBox = (props) => {
     )
 }
 
+const BracketBoxBye = (props) => {
+    const { match, colIndex, lastBox, config } = props
+    const byeTeam = match.away_team === 'BYE' ? match.home_team : match.away_team
+    const byeTeamName = getShortTeamName(byeTeam, config)
+    const byeTeamFlag = getBracketTeamFlagId(byeTeam, config)
+    return (
+        <React.Fragment>
+            <Row className="no-gutters box-sm bracket-box-height">
+                <Col sm="12" className="no-padding-lr">
+                    <Row className="no-gutters h3-ff3 padding-top-lg">
+                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                            {byeTeamFlag}
+                        </Col>
+                        <Col xs={{ size: 9 }} className={`no-padding-lr team-name-win`}>
+                            {byeTeamName} <span className="blue">(bye)</span>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
+            {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
+            {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
+            {colIndex === 3 && !lastBox && <Row className="bracket-gap-height-31"></Row>}
+        </React.Fragment>
+    )
+}
+
 const BracketColInner = (props) => {
     const { round, colIndex, config } = props
     return (
@@ -284,9 +311,14 @@ const BracketColInner = (props) => {
             <Row className="no-margin-lr">
                 <Col>
                     <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
-                    {round.matches.map((m, index) => (
-                        <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
-                    ))}
+                    {round.matches.map((m, index) => {
+                        const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
+                        return !bye ? (
+                            <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
+                        ) : (
+                            <BracketBoxBye match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
+                        )
+                    })}
                 </Col>
             </Row>
         </React.Fragment>
@@ -327,13 +359,34 @@ const BracketTable = (props) => {
     )
 }
 
+const BracketPath = (props) => {
+    const { state, stage } = props
+    return (
+        <React.Fragment>
+            {stage.paths.map((p) => {
+                return (
+                    <React.Fragment>
+                        <Row>
+                            <Col sm="12" className="h2-ff6 border-bottom-gray2 margin-top-md">
+                                {p.name}
+                            </Col>
+                        </Row>
+                        <BracketTable state={state} stage={p} />
+                    </React.Fragment>
+                )
+            })}
+        </React.Fragment>
+    )
+}
+
 class Brackets extends React.Component {
     render() {
         const { state, stage } = this.props
         return (
             <React.Fragment>
                 <BracketsCollapse title="Brackets" stage={stage} initialStatus="Closed">
-                    <BracketTable state={state} stage={stage} />
+                    {stage.rounds && <BracketTable state={state} stage={stage} />}
+                    {stage.paths && <BracketPath state={state} stage={stage} />}
                 </BracketsCollapse>
             </React.Fragment>
         )

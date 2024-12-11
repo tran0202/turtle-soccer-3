@@ -211,10 +211,6 @@ export const getRandomMensTeamArray = (teamArray) => {
             }
         })
     })
-    // if (result.length > 0) {
-    //     result[result.length - 1].rank = ''
-    //     result[result.length - 1].points = 0
-    // }
     return result
 }
 
@@ -433,8 +429,8 @@ export const createStage = (stage, tournament) => {
         calculateGroupRankings(stage, tournament)
     }
     if (stage.type.includes('knockout_')) {
-        populateFirstRound(stage)
-        processRounds(stage)
+        populateFirstPathRound(stage)
+        processPathRounds(stage)
     }
 }
 
@@ -660,6 +656,8 @@ export const isHomeWinPair = (group) => {
 
 export const isHomeWinMatch = (match) => {
     if (!match) return
+    if (match.away_team === 'BYE') return true
+    if (match.home_team === 'BYE') return false
     if (match.home_score > match.away_score) return true
     if (match.home_score === match.away_score) {
         if (match.home_extra_score > match.away_extra_score) return true
@@ -668,6 +666,16 @@ export const isHomeWinMatch = (match) => {
         }
     }
     return false
+}
+
+export const populateFirstPathRound = (stage) => {
+    if (!stage) return
+    if (stage.rounds) {
+        populateFirstRound(stage)
+    }
+    if (stage.paths) {
+        populateFirstPath(stage)
+    }
 }
 
 export const populateFirstRound = (stage) => {
@@ -705,31 +713,66 @@ export const populateFirstRound = (stage) => {
         stage.entrants.sort((a, b) => {
             return a.pos > b.pos ? 1 : -1
         })
-    const firstRound = stage.rounds[0]
-    if (firstRound) {
-        firstRound.entrants = stage.entrants
+}
+
+export const populateFirstPath = (stage) => {
+    if (!stage || !stage.paths) return
+    if (stage.name === 'Inter-confederation play-offs') {
+        const newEntrants = []
+        stage.entrants.forEach((t) => {
+            const foundTeam = stage.draw.rankings.find((t2) => t2.id === t.id)
+            if (foundTeam) {
+                const newTeam = { ...t, rank: foundTeam.rank }
+                delete newTeam.entrant_pos
+                newEntrants.push(newTeam)
+            }
+        })
+        stage.entrants = newEntrants
+    }
+    stage.entrants &&
+        stage.entrants.sort((a, b) => {
+            return a.rank > b.rank ? 1 : -1
+        })
+    stage.entrants &&
+        stage.entrants.forEach((t, index) => {
+            if (!t.entrant_pos) {
+                t.pos = index + 1
+                t.entrant_pos = index + 1
+            }
+        })
+}
+
+export const processPathRounds = (stage) => {
+    if (!stage) return
+    if (stage.rounds) {
+        processRounds(stage, stage)
+    }
+    if (stage.paths) {
+        stage.paths.forEach((p) => {
+            processRounds(p, stage)
+        })
     }
 }
 
-export const processRounds = (stage) => {
-    if (!stage || !stage.rounds) return
-    stage.rounds.forEach((r) => {
+export const processRounds = (path, stage) => {
+    if (!stage || !path || !path.rounds) return
+    path.rounds.forEach((r) => {
         r.matches.forEach((m) => {
-            populateMatch(m, r)
+            populateMatch(m, stage.entrants)
             getKnockoutScore(m)
         })
         createMatchdays(r)
-        finishRound(r, stage)
+        finishRound(r, path, stage)
     })
 }
 
-export const populateMatch = (match, round) => {
-    if (!match || !round || !round.entrants) return
-    const homeTeam = round.entrants.find((t) => t.pos === match.home_team)
+export const populateMatch = (match, entrants) => {
+    if (!match || !entrants) return
+    const homeTeam = entrants.find((t) => t.pos === match.home_team)
     if (homeTeam) {
         match.home_team = homeTeam.id
     }
-    const awayTeam = round.entrants.find((t) => t.pos === match.away_team)
+    const awayTeam = entrants.find((t) => t.pos === match.away_team)
     if (awayTeam) {
         match.away_team = awayTeam.id
     }
@@ -749,7 +792,7 @@ export const createMatchdays = (round) => {
     round.matchdays = matchdays
 }
 
-export const finishRound = (round, stage) => {
+export const finishRound = (round, path, stage) => {
     if (!round || !stage || !stage.entrants) return
     const winners = []
     const losers = []
@@ -782,13 +825,25 @@ export const finishRound = (round, stage) => {
             }
         }
     })
-    const nextRound = stage.rounds.find((r) => r.name === round.next_round)
+    const nextRound = path.rounds.find((r) => r.name === round.next_round)
     if (nextRound) {
         nextRound.entrants = winners
     }
     if (!round.next_round) {
-        stage.winners = winners
-        stage.losers = losers
+        if (!stage.winners) {
+            stage.winners = winners
+        } else {
+            winners.forEach((t) => {
+                stage.winners.push(t)
+            })
+        }
+        if (!stage.losers) {
+            stage.losers = losers
+        } else {
+            losers.forEach((t) => {
+                stage.losers.push(t)
+            })
+        }
     }
 }
 
@@ -940,23 +995,24 @@ export const qualifyGroupStage = (qualification, stage, qualifiedTeams) => {
         })
 
     qualifiedTeams.sort((a, b) => {
-        return a.qualification_date > b.qualification_date ? 1 : -1
+        return a.qualification_date >= b.qualification_date ? 1 : -1
     })
 }
 
 export const qualifyKnockoutStage = (qualification, stage, qualifiedTeams, next_stage) => {
     if (!qualification || !stage || !qualifiedTeams) return
     if (stage.advancement && stage.advancement[0].will === 'qualify') {
-        const qualification_method = qualification.id + ' ' + stage.name + ' winners'
+        const qualification_method =
+            qualification.id === 'Inter-confederation play-offs' ? qualification.id + ' winners' : qualification.id + ' ' + stage.name + ' winners'
         stage.winners &&
             stage.winners.forEach((t) => {
                 qualifiedTeams.push({ ...t, qualification_method, qualification_date: t.qualified_date })
             })
     }
     qualifiedTeams.sort((a, b) => {
-        return a.qualification_date > b.qualification_date ? 1 : -1
+        return a.qualification_date >= b.qualification_date ? 1 : -1
     })
-    if (stage.advancement && stage.advancement[1].will === 'next_round' && stage.losers) {
+    if (stage.advancement && stage.advancement[1] && stage.advancement[1].will === 'next_round' && stage.losers) {
         if (!next_stage.entrants) {
             next_stage.entrants = stage.losers
         } else {
