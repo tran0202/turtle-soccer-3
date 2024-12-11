@@ -16,6 +16,7 @@ const EntrantsHeader = () => {
 
 const EntrantsRow = (props) => {
     const { team, config } = props
+    const tableRank = config.last_round_rank || config.inter_confederation_playoff ? team.entrant_pos : team.conf_rank
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
             <Col>
@@ -23,7 +24,7 @@ const EntrantsRow = (props) => {
                     <div className={`box-sm`}>
                         <Row className="no-gutters">
                             <Col className="col-box-5"></Col>
-                            <Col className="col-box-10">{config.last_round_rank ? team.entrant_pos : team.conf_rank}</Col>
+                            <Col className="col-box-10">{tableRank}</Col>
                             <Col className="col-box-82">
                                 {getTeamFlagName(team, config)} ({team.rank})
                             </Col>
@@ -39,7 +40,11 @@ class EntrantsTable extends React.Component {
     render() {
         const { state, stage } = this.props
         const { entrants } = stage
-        const config = { ...state.config, last_round_rank: stage.type.includes('_lastroundrank') }
+        const config = {
+            ...state.config,
+            last_round_rank: stage.type.includes('_lastroundrank'),
+            inter_confederation_playoff: stage.name === 'Inter-confederation play-offs',
+        }
         return (
             <React.Fragment>
                 <EntrantsHeader />

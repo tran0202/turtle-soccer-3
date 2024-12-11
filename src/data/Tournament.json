@@ -414,8 +414,8 @@
                             "short_name": "1/2",
                             "next_round": "Final",
                             "matches": [
-                                { "id": "SF1", "home_team": 1, "away_team": 4, "date": "2025-11-10", "bracket_order": 1 },
-                                { "id": "SF2", "home_team": 2, "away_team": 3, "date": "2025-11-10", "bracket_order": 2 }
+                                { "id": "SF1", "home_team": 1, "away_team": 4, "date": "2025-11-10" },
+                                { "id": "SF2", "home_team": 2, "away_team": 3, "date": "2025-11-10" }
                             ]
                         },
                         {
@@ -846,8 +846,8 @@
                             "short_name": "M1",
                             "next_round": "Matchday 2",
                             "matches": [
-                                { "id": "MD11", "home_team": 1, "away_team": 4, "date": "2024-09-06", "bracket_order": 1 },
-                                { "id": "MD12", "home_team": 2, "away_team": 3, "date": "2024-09-06", "bracket_order": 2 }
+                                { "id": "MD11", "home_team": 1, "away_team": 4, "date": "2024-09-06" },
+                                { "id": "MD12", "home_team": 2, "away_team": 3, "date": "2024-09-06" }
                             ]
                         },
                         {
@@ -915,8 +915,8 @@
                             "short_name": "1/2",
                             "next_round": "Final",
                             "matches": [
-                                { "id": "SF1", "home_team": "A1", "away_team": "B2", "date": "2025-03-21", "bracket_order": 1 },
-                                { "id": "SF2", "home_team": "B1", "away_team": "A2", "date": "2025-03-21", "bracket_order": 2 }
+                                { "id": "SF1", "home_team": "A1", "away_team": "B2", "date": "2025-03-21" },
+                                { "id": "SF2", "home_team": "B1", "away_team": "A2", "date": "2025-03-21" }
                             ]
                         },
                         {
@@ -944,9 +944,27 @@
                     "type": "knockout_",
                     "draw_id": "1",
                     "entrants_note": "6 teams advancing from the confederation qualifications will play in a play-off. One each from AFC, CAF, CONMEBOL & OFC and two teams from CONCACAF. The 4 lowest-ranked teams will face each other in 2 knockout matches. 3 vs 6. 4 vs 5. The 2 highest-ranked teams will face these 2 winners. 1 vs the winner of 4-5. 2 vs the winner of 3-6. The 2 final winners will qualify for World Cup 2026.",
-                    "matchdays": [
-                        { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
-                        { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                    "rounds": [
+                        {
+                            "name": "Semi-finals",
+                            "short_name": "1/2",
+                            "next_round": "Finals",
+                            "matches": [
+                                { "id": "SF1", "home_team": 1, "away_team": "BYE", "date": "2025-11-25" },
+                                { "id": "SF4", "home_team": 4, "away_team": 5, "date": "2025-11-25" },
+                                { "id": "SF2", "home_team": 2, "away_team": "BYE", "date": "2025-11-25" },
+                                { "id": "SF3", "home_team": 3, "away_team": 6, "date": "2025-11-25" }
+                            ]
+                        },
+                        {
+                            "name": "Finals",
+                            "short_name": "1st",
+                            "final": true,
+                            "matches": [
+                                { "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28" },
+                                { "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28" }
+                            ]
+                        }
                     ],
                     "advanced_note": ""
                 }
