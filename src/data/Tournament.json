@@ -425,7 +425,8 @@
                             "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-11-18" }]
                         }
                     ],
-                    "next_stage": "Inter-confederation play-offs"
+                    "next_stage": "Inter-confederation play-offs",
+                    "advancement": [{ "pos": 1, "will": "next_round" }]
                 }
             ]
         },
@@ -908,7 +909,7 @@
                     "name": "Third Round",
                     "type": "knockout_lastroundrank",
                     "draw_id": "1",
-                    "draw_note": "The 4 teams advancing from the second round will play in a play-off. Winner group A faces runner-up group B. Winner group B faces runner-up group A. The winner will qualify for World Cup 2026. The runner-up will advance to the inter-confederation play-offs.",
+                    "entrants_note": "The 4 teams advancing from the second round will play in a play-off. Winner group A faces runner-up group B. Winner group B faces runner-up group A. The winner will qualify for World Cup 2026. The runner-up will advance to the inter-confederation play-offs.",
                     "rounds": [
                         {
                             "name": "Semi-finals",
@@ -936,7 +937,10 @@
         },
         {
             "id": "UEFA",
-            "draws": [{ "id": "1", "date": "2024-11-28" }],
+            "draws": [
+                { "id": "1", "date": "2024-11-28" },
+                { "id": "2", "date": "2025-11-19" }
+            ],
             "banned": [{ "id": "RUS" }],
             "stages": [
                 {
@@ -1792,47 +1796,93 @@
                 },
                 {
                     "name": "Second Round",
-                    "type": "knockout_",
-                    "draw_id": "1",
-                    "entrants_note": "12 runners-up from the first round and 4 best Nations League group winners will play in 4 paths of 2 rounds of single-match play-offs. The 4 path winners will qualify for World Cup 2026.",
+                    "type": "knockout_outsidepot",
+                    "draw_id": "2",
+                    "draw_note": "12 runners-up from the first round and 4 best Nations League group winners will play in 4 paths of 2 rounds of single-match play-offs. The 4 path winners will qualify for World Cup 2026. Pots 1-3 contains 12 runners-up based on their rankings. Pot 4 contains the Nations League teams.",
+                    "entrants_placement": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 4 },
+                        { "name": 2, "rankingFrom": 5, "rankingTo": 8 },
+                        { "name": 3, "rankingFrom": 9, "rankingTo": 12 }
+                    ],
+                    "outside_entrants": { "name": "UNL", "count": 4 },
                     "paths": [
                         {
-                            "name": "Path 1",
+                            "name": "Path A",
                             "rounds": [
                                 {
                                     "name": "Semi-finals",
                                     "short_name": "1/2",
                                     "next_round": "Final",
                                     "matches": [
-                                        { "id": "SF1", "home_team": 1, "away_team": "BYE", "date": "2025-11-25" },
-                                        { "id": "SF4", "home_team": 4, "away_team": 5, "date": "2025-11-25" }
+                                        { "id": "SF1", "home_team": "P11", "away_team": "P41", "date": "2026-03-26" },
+                                        { "id": "SF2", "home_team": "P21", "away_team": "P31", "date": "2026-03-26" }
                                     ]
                                 },
                                 {
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28" }]
+                                    "matches": [{ "id": "FA", "home_team": "SF1", "away_team": "SF2", "date": "2026-03-31" }]
                                 }
                             ]
                         },
                         {
-                            "name": "Path 2",
+                            "name": "Path B",
                             "rounds": [
                                 {
                                     "name": "Semi-finals",
                                     "short_name": "1/2",
                                     "next_round": "Final",
                                     "matches": [
-                                        { "id": "SF2", "home_team": 2, "away_team": "BYE", "date": "2025-11-25" },
-                                        { "id": "SF3", "home_team": 3, "away_team": 6, "date": "2025-11-25" }
+                                        { "id": "SF3", "home_team": "P12", "away_team": "P42", "date": "2026-03-26" },
+                                        { "id": "SF4", "home_team": "P22", "away_team": "P32", "date": "2026-03-26" }
                                     ]
                                 },
                                 {
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28" }]
+                                    "matches": [{ "id": "FB", "home_team": "SF3", "away_team": "SF4", "date": "2026-03-31" }]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Path C",
+                            "rounds": [
+                                {
+                                    "name": "Semi-finals",
+                                    "short_name": "1/2",
+                                    "next_round": "Final",
+                                    "matches": [
+                                        { "id": "SF5", "home_team": "P13", "away_team": "P43", "date": "2026-03-26" },
+                                        { "id": "SF6", "home_team": "P23", "away_team": "P33", "date": "2026-03-26" }
+                                    ]
+                                },
+                                {
+                                    "name": "Final",
+                                    "short_name": "1st",
+                                    "final": true,
+                                    "matches": [{ "id": "FC", "home_team": "SF5", "away_team": "SF6", "date": "2026-03-31" }]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Path D",
+                            "rounds": [
+                                {
+                                    "name": "Semi-finals",
+                                    "short_name": "1/2",
+                                    "next_round": "Final",
+                                    "matches": [
+                                        { "id": "SF7", "home_team": "P14", "away_team": "P44", "date": "2026-03-26" },
+                                        { "id": "SF8", "home_team": "P24", "away_team": "P34", "date": "2026-03-26" }
+                                    ]
+                                },
+                                {
+                                    "name": "Final",
+                                    "short_name": "1st",
+                                    "final": true,
+                                    "matches": [{ "id": "FD", "home_team": "SF7", "away_team": "SF8", "date": "2026-03-31" }]
                                 }
                             ]
                         }

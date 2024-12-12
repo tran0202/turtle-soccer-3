@@ -26,11 +26,6 @@ const BracketsCollapse = (props) => {
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
                     </Button>
                 </Col>
-                <Col sm="9">
-                    <Row>
-                        <Col>{stage.draw_note}</Col>
-                    </Row>
-                </Col>
             </Row>
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start padding-left-sm">

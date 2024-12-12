@@ -47,8 +47,13 @@ class Qualification extends React.Component {
         const { state, qualification } = this.props
         const qualification_id = qualification ? qualification.id : ''
         const isPlayoff = qualification_id.includes('play-off')
-        const showSeeding = (s) => !s.type.includes('_noshowpot') && !s.type.includes('knockout_') && !s.type.includes('_nopot')
-        const showEntrants = (s) => s.type.includes('_nopot') || s.type.includes('knockout_')
+        const showSeeding = (s) =>
+            s.type.includes('_drawpair') ||
+            s.type.includes('_predetpair') ||
+            s.type.includes('_oddpot') ||
+            s.type.includes('_evenpot') ||
+            s.type.includes('_outsidepot')
+        const showEntrants = (s) => s.type.includes('_nopot') || s.type === 'knockout_' || s.type === 'knockout_lastroundrank'
         return (
             <React.Fragment>
                 {qualification &&

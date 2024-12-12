@@ -96,7 +96,7 @@ const MatchesKnockoutRow = (props) => {
                                                         <Col xs={{ size: 7, offset: 5 }}>{qualifyLine}</Col>
                                                     </Row>
                                                 )}
-                                                {round.final && !config.is_playoff && (
+                                                {round.final && config.is_stage_next_round && (
                                                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                                                         <Col xs={{ size: 7, offset: 5 }}>{nextRoundLine}</Col>
                                                     </Row>
@@ -151,9 +151,13 @@ class MatchesKnockout extends React.Component {
     render() {
         const { state, stage } = this.props
         const { rounds, paths } = stage
-        const is_stage_qualify = !stage.advancement ? false : stage.advancement[0].will === 'qualify'
-        const is_playoff = stage.name === 'Inter-confederation play-offs'
-        const config = { ...state.config, year: state.tournament.year, is_stage_qualify, is_playoff, next_stage: stage.next_stage }
+        const is_stage_qualify = stage.advancement && stage.advancement[0].will === 'qualify'
+        const is_stage_next_round = !stage.advancement
+            ? false
+            : stage.advancement.length === 1
+            ? stage.advancement[0].will === 'next_round'
+            : stage.advancement[1].will === 'next_round'
+        const config = { ...state.config, year: state.tournament.year, is_stage_qualify, is_stage_next_round, next_stage: stage.next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-3 box-white">

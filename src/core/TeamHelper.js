@@ -318,6 +318,9 @@ export const preparePots = (stage) => {
     if (stage.type.includes('_evenpot') || stage.type.includes('_noshowpot')) {
         prepareEvenPot(stage)
     }
+    if (stage.type.includes('_outsidepot')) {
+        prepareOutsidePot(stage)
+    }
 }
 
 // Some Pots already existed. New Pots being made from entering teams.
@@ -388,6 +391,22 @@ export const prepareEvenPot = (stage) => {
         }
     })
     stage.pots = pots
+}
+
+export const prepareOutsidePot = (stage) => {
+    if (!stage) return
+    prepareEvenPot(stage)
+    const temp = []
+    stage.draw.rankings.forEach((t) => {
+        if (!stage.last_stage_winners.find((t2) => t2.id === t.id) && !stage.entrants.find((t3) => t3.id === t.id)) {
+            temp.push(t)
+        }
+    })
+    const outside = []
+    for (var i = 0; i < stage.outside_entrants.count; i++) {
+        outside.push({ ...temp[i], draw_seed: stage.outside_entrants.name + (i + 1) })
+    }
+    stage.pots.push({ name: stage.outside_entrants.name, rankings: outside })
 }
 
 export const createDrawPotTable = (stage) => {
@@ -687,7 +706,11 @@ export const populateFirstPathRound = (stage) => {
         populateFirstRound(stage)
     }
     if (stage.paths) {
-        populateFirstPath(stage)
+        if (!stage.type.includes('_outsidepot')) {
+            populateFirstPath(stage)
+        } else {
+            populateFirstPathOutside(stage)
+        }
     }
 }
 
@@ -753,6 +776,30 @@ export const populateFirstPath = (stage) => {
                 t.entrant_pos = index + 1
             }
         })
+}
+
+export const populateFirstPathOutside = (stage) => {
+    if (!stage || !stage.pots) return
+    stage.pots.forEach((p) => {
+        p.rankings.forEach((t) => (t.already_drawn = false))
+        let count = 1
+        while (!p.rankings.every((t) => t.already_drawn)) {
+            const potNotDrawn = p.rankings.filter((t) => !t.already_drawn)
+            potNotDrawn.forEach((t, index) => {
+                t.temp_index = index
+            })
+            const randomIndex = randomInteger(0, potNotDrawn.length - 1)
+            const team = potNotDrawn.find((t) => t.temp_index === randomIndex)
+            if (team) {
+                team.already_drawn = true
+                team.pos = 'P' + (p.name === stage.outside_entrants.name ? '4' : p.name) + count
+                count++
+            }
+        }
+    })
+    stage.pots[stage.pots.length - 1].rankings.forEach((t) => {
+        stage.entrants.push(t)
+    })
 }
 
 export const processPathRounds = (stage) => {
@@ -946,7 +993,7 @@ export const finishGroupStage = (stage, next_stage) => {
 
 export const finishKnockoutStage = (stage, next_stage) => {
     if (!stage || !stage.winners || !next_stage) return
-    if (!stage.advancement && stage.winners) {
+    if (stage.winners && stage.advancement && stage.advancement[0].will === 'next_round') {
         if (!next_stage.entrants) {
             next_stage.entrants = stage.winners
         } else {
@@ -960,16 +1007,17 @@ export const finishKnockoutStage = (stage, next_stage) => {
 export const qualifyStage = (qualification, stage, qualifiedTeams, next_stage) => {
     if (!stage || !stage.type) return
     if (stage.type.includes('roundrobin_')) {
-        qualifyGroupStage(qualification, stage, qualifiedTeams)
+        qualifyGroupStage(qualification, stage, qualifiedTeams, next_stage)
     }
     if (stage.type.includes('knockout_')) {
         qualifyKnockoutStage(qualification, stage, qualifiedTeams, next_stage)
     }
 }
 
-export const qualifyGroupStage = (qualification, stage, qualifiedTeams) => {
+export const qualifyGroupStage = (qualification, stage, qualifiedTeams, next_stage) => {
     if (!qualification || !stage || !qualifiedTeams) return
     const { groups } = stage
+    const last_stage_winners = []
     groups &&
         groups.forEach((g) => {
             if (g.rankings) {
@@ -978,6 +1026,7 @@ export const qualifyGroupStage = (qualification, stage, qualifiedTeams) => {
                 if (winners) {
                     const qualification_method = qualification.id + stageName + ' winners'
                     qualifiedTeams.push({ ...winners.team, qualification_method, qualification_date: winners.qualified_date })
+                    last_stage_winners.push(winners)
                 }
                 const runners_up = g.rankings.find((t) => t.qualified_position === 'runners-up')
                 if (runners_up) {
@@ -1006,7 +1055,7 @@ export const qualifyGroupStage = (qualification, stage, qualifiedTeams) => {
                 }
             }
         })
-
+    next_stage.last_stage_winners = last_stage_winners
     qualifiedTeams.sort((a, b) => {
         return a.qualification_date >= b.qualification_date ? 1 : -1
     })
