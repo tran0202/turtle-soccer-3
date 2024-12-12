@@ -12,8 +12,6 @@ export const getTeamName = (id, config) => {
     const team = config.teams.find((t) => t.id === id)
     if (team) {
         return team.name
-    } else {
-        console.log('Team error', team)
     }
 }
 
@@ -232,25 +230,30 @@ export const createDraws = (qualification, teamArray, qualifiedTeams) => {
     qualification.draws &&
         qualification.draws.forEach((d) => {
             const allRankings = getRandomMensTeamArray(teamArray)
+            const bannedTeams = qualification.banned
             const confRankings =
-                qualification.id !== 'Inter-confederation play-offs' ? getConfederationRankings(allRankings, qualification.id, qualifiedTeams) : allRankings
+                qualification.id !== 'Inter-confederation play-offs'
+                    ? getConfederationRankings(allRankings, qualification.id, qualifiedTeams, bannedTeams)
+                    : allRankings
             draws.push({ ...d, rankings: confRankings })
             d.rankings = confRankings
         })
     return draws
 }
 
-export const getConfederationRankings = (teamArray, confederation_id, qualifiedTeams) => {
+export const getConfederationRankings = (teamArray, confederation_id, qualifiedTeams, bannedTeams) => {
     const result = []
     const confRankings = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
 
     let count = 0
     confRankings.forEach((t) => {
         if (!qualifiedTeams.find((t2) => t2.id === t.id)) {
-            count++
-            t.conf_rank = count
-            t.draw_seed = count
-            result.push(t)
+            if (!bannedTeams || (bannedTeams && !bannedTeams.find((t3) => t3.id === t.id))) {
+                count++
+                t.conf_rank = count
+                t.draw_seed = count
+                result.push(t)
+            }
         }
     })
     return result
@@ -496,14 +499,24 @@ export const createGroups = (stage) => {
             t.already_drawn = false
         })
     })
-    stage.groups = []
-    for (var n = 0; n < stage.group_count; n++) {
-        const new_group = { name: String.fromCharCode(65 + n), teams: [] }
-        stage.groups.push(new_group)
+    if (!stage.groups) {
+        stage.groups = []
+        for (var n = 0; n < stage.group_count; n++) {
+            const new_group = { name: String.fromCharCode(65 + n), teams: [] }
+            stage.groups.push(new_group)
+        }
+    } else {
+        stage.groups.forEach((g) => {
+            g.teams = []
+        })
     }
     let pos = 0
+    const isUEFA = stage.pots[0].rankings.length === 12
     for (var m = 0; m < stage.pots.length; m++) {
         let group_index = 0
+        if (isUEFA && m === 4) {
+            group_index = 6
+        }
         while (stage.pots[m].rankings.some((t) => !t.already_drawn)) {
             const notDrawnTeams = stage.pots[m].rankings.filter((t) => !t.already_drawn)
             notDrawnTeams.forEach((t, index) => {
@@ -514,7 +527,7 @@ export const createGroups = (stage) => {
             if (team) {
                 team.already_drawn = true
                 const new_team = { ...team, pos: pos + 1 }
-                stage.groups[group_index].teams.unshift(new_team)
+                stage.groups[group_index].teams.push(new_team)
             }
             group_index++
             if (group_index === stage.group_count) {
@@ -564,23 +577,23 @@ export const createPairMatches = (stage) => {
 export const createGroupMatches = (stage) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
+        const startingMatchdays = stage.matchdays ? stage.matchdays : g.matchdays ? g.matchdays : []
         g.matchdays = []
-        stage.matchdays &&
-            stage.matchdays.forEach((md) => {
-                const new_matchday = { name: md.name, date: md.date }
-                const matches = []
-                md.matches.forEach((m) => {
-                    const home_team = g.teams.find((t) => t.pos === m.home_pos)
-                    const away_team = g.teams.find((t) => t.pos === m.away_pos)
-                    if (home_team && away_team) {
-                        const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
-                        getRandomScore(new_match)
-                        matches.push(new_match)
-                    }
-                })
-                new_matchday.matches = matches
-                g.matchdays.push(new_matchday)
+        startingMatchdays.forEach((md) => {
+            const new_matchday = { name: md.name, date: md.date }
+            const matches = []
+            md.matches.forEach((m) => {
+                const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                if (home_team && away_team) {
+                    const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
+                    getRandomScore(new_match)
+                    matches.push(new_match)
+                }
             })
+            new_matchday.matches = matches
+            g.matchdays.push(new_matchday)
+        })
     })
     overwriteGroup(stage.groups[0])
 }

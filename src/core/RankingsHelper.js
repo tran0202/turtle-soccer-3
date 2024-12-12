@@ -303,7 +303,7 @@ export const processPartialAdvancement = (stage) => {
 }
 
 export const setAdvancement = (group, advancement) => {
-    if (!group || !advancement || advancement.length === 0) return
+    if (!group || !group.matchdays || group.matchdays.length === 0 || !advancement || advancement.length === 0) return
     group.rankings.forEach((t) => {
         const qualified_date = group.matchdays[group.matchdays.length - 1].date
         const foundAdvancement = advancement.find((a) => a.pos === t.rank)

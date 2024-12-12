@@ -934,7 +934,913 @@
                 }
             ]
         },
-        { "id": "UEFA", "draws": [{ "id": "1", "date": "2024-11-28" }] },
+        {
+            "id": "UEFA",
+            "draws": [{ "id": "1", "date": "2024-11-28" }],
+            "banned": [{ "id": "RUS" }],
+            "stages": [
+                {
+                    "name": "First Round",
+                    "type": "roundrobin_evenpot",
+                    "draw_id": "1",
+                    "draw_note": "All UEFA teams except Russia (54) are drawn into 6 groups of 4 (Groups A-F) and 6 groups of 5 (Groups G-L) to play home-and-away matches against each other. 12 group winners will qualify for World Cup 2026. 12 group runners-up and 4 best Nations League group winners will advance to the second round. Pots 1-4 contains 12 teams and Pot 5 contains 6 teams.",
+                    "pots": [
+                        { "name": 1, "rankingFrom": 1, "rankingTo": 12 },
+                        { "name": 2, "rankingFrom": 13, "rankingTo": 24 },
+                        { "name": 3, "rankingFrom": 25, "rankingTo": 36 },
+                        { "name": 4, "rankingFrom": 37, "rankingTo": 48 },
+                        { "name": 5, "rankingFrom": 49, "rankingTo": 54 }
+                    ],
+                    "group_count": 12,
+                    "groups": [
+                        {
+                            "name": "A",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "B",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "C",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "D",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "E",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "F",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 3 },
+                                        { "home_pos": 2, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 3 },
+                                        { "home_pos": 4, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 1 },
+                                        { "home_pos": 2, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "G",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "H",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "I",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "J",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "K",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "L",
+                            "matchdays": [
+                                {
+                                    "name": "Matchday 1",
+                                    "date": "2025-03-21",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 2",
+                                    "date": "2025-03-24",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 3",
+                                    "date": "2025-06-06",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 3 },
+                                        { "home_pos": 5, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 4",
+                                    "date": "2025-06-09",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 2 },
+                                        { "home_pos": 1, "away_pos": 4 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 5",
+                                    "date": "2025-09-04",
+                                    "matches": [
+                                        { "home_pos": 4, "away_pos": 2 },
+                                        { "home_pos": 3, "away_pos": 5 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 6",
+                                    "date": "2025-09-07",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 1 },
+                                        { "home_pos": 4, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 7",
+                                    "date": "2025-10-09",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 4 },
+                                        { "home_pos": 5, "away_pos": 3 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 8",
+                                    "date": "2025-10-12",
+                                    "matches": [
+                                        { "home_pos": 1, "away_pos": 5 },
+                                        { "home_pos": 3, "away_pos": 2 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 9",
+                                    "date": "2025-11-13",
+                                    "matches": [
+                                        { "home_pos": 2, "away_pos": 5 },
+                                        { "home_pos": 4, "away_pos": 1 }
+                                    ]
+                                },
+                                {
+                                    "name": "Matchday 10",
+                                    "date": "2025-11-16",
+                                    "matches": [
+                                        { "home_pos": 5, "away_pos": 4 },
+                                        { "home_pos": 1, "away_pos": 3 }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "next_stage": "Second Round",
+                    "advanced_note": "Winners qualify for World Cup 2026",
+                    "advancement": [
+                        { "pos": 1, "will": "qualify" },
+                        { "pos": 2, "will": "next_round" }
+                    ],
+                    "next_round_note": "Runners-up advance to the second round"
+                },
+                {
+                    "name": "Second Round",
+                    "type": "knockout_",
+                    "draw_id": "1",
+                    "entrants_note": "12 runners-up from the first round and 4 best Nations League group winners will play in 4 paths of 2 rounds of single-match play-offs. The 4 path winners will qualify for World Cup 2026.",
+                    "paths": [
+                        {
+                            "name": "Path 1",
+                            "rounds": [
+                                {
+                                    "name": "Semi-finals",
+                                    "short_name": "1/2",
+                                    "next_round": "Final",
+                                    "matches": [
+                                        { "id": "SF1", "home_team": 1, "away_team": "BYE", "date": "2025-11-25" },
+                                        { "id": "SF4", "home_team": 4, "away_team": 5, "date": "2025-11-25" }
+                                    ]
+                                },
+                                {
+                                    "name": "Final",
+                                    "short_name": "1st",
+                                    "final": true,
+                                    "matches": [{ "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28" }]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Path 2",
+                            "rounds": [
+                                {
+                                    "name": "Semi-finals",
+                                    "short_name": "1/2",
+                                    "next_round": "Final",
+                                    "matches": [
+                                        { "id": "SF2", "home_team": 2, "away_team": "BYE", "date": "2025-11-25" },
+                                        { "id": "SF3", "home_team": 3, "away_team": 6, "date": "2025-11-25" }
+                                    ]
+                                },
+                                {
+                                    "name": "Final",
+                                    "short_name": "1st",
+                                    "final": true,
+                                    "matches": [{ "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28" }]
+                                }
+                            ]
+                        }
+                    ],
+                    "advancement": [{ "pos": 1, "will": "qualify" }]
+                }
+            ]
+        },
         {
             "id": "Inter-confederation play-offs",
             "draws": [{ "id": "1", "date": "2025-12-18" }],

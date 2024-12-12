@@ -365,7 +365,7 @@ const BracketPath = (props) => {
         <React.Fragment>
             {stage.paths.map((p) => {
                 return (
-                    <React.Fragment>
+                    <React.Fragment key={p.name}>
                         <Row>
                             <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
                                 {p.name}
