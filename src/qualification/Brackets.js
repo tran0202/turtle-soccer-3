@@ -5,7 +5,7 @@ import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/
 import { AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
-    const { title, stage, initialStatus, children } = props
+    const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')

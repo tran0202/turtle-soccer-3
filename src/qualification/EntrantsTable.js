@@ -43,7 +43,7 @@ class EntrantsTable extends React.Component {
         const config = {
             ...state.config,
             last_round_rank: stage.type.includes('_lastroundrank'),
-            inter_confederation_playoff: stage.name === 'Inter-confederation play-offs',
+            inter_confederation_playoff: stage.inter_confederation_playoff,
         }
         return (
             <React.Fragment>

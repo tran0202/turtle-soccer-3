@@ -20,6 +20,7 @@
     "qualifications": [
         {
             "id": "AFC",
+            "confederation_id": "AFC",
             "draws": [
                 { "id": "1", "date": "2023-07-27" },
                 { "id": "2", "date": "2024-06-27" }
@@ -287,6 +288,7 @@
         },
         {
             "id": "CAF",
+            "confederation_id": "CAF",
             "draws": [{ "id": "1", "date": "2023-06-30" }],
             "stages": [
                 {
@@ -432,6 +434,7 @@
         },
         {
             "id": "CONCACAF",
+            "confederation_id": "CONCACAF",
             "draws": [{ "id": "1", "date": "2023-12-01" }],
             "stages": [
                 {
@@ -609,6 +612,7 @@
         },
         {
             "id": "CONMEBOL",
+            "confederation_id": "CONMEBOL",
             "draws": [{ "id": "1", "date": "2023-07-01" }],
             "stages": [
                 {
@@ -833,6 +837,7 @@
         },
         {
             "id": "OFC",
+            "confederation_id": "OFC",
             "draws": [{ "id": "1", "date": "2024-07-18" }],
             "stages": [
                 {
@@ -858,7 +863,8 @@
                             "matches": [{ "id": "MD2", "home_team": "MD11", "away_team": "MD12", "date": "2024-09-09" }]
                         }
                     ],
-                    "next_stage": "Second Round"
+                    "next_stage": "Second Round",
+                    "advancement": [{ "pos": 1, "will": "next_round" }]
                 },
                 {
                     "name": "Second Round",
@@ -937,6 +943,7 @@
         },
         {
             "id": "UEFA",
+            "confederation_id": "UEFA",
             "draws": [
                 { "id": "1", "date": "2024-11-28" },
                 { "id": "2", "date": "2025-11-19" }
@@ -1893,11 +1900,13 @@
         },
         {
             "id": "Inter-confederation play-offs",
+            "confederation_id": "FIFA",
             "draws": [{ "id": "1", "date": "2025-12-18" }],
             "stages": [
                 {
                     "name": "Inter-confederation play-offs",
                     "type": "knockout_",
+                    "inter_confederation_playoff": true,
                     "draw_id": "1",
                     "entrants_note": "6 teams advancing from the confederation qualifications will play in a play-off. One each from AFC, CAF, CONMEBOL & OFC and two teams from CONCACAF. The 4 lowest-ranked teams will face each other in 2 knockout matches. 3 vs 6. 4 vs 5. The 2 highest-ranked teams will face these 2 winners. 1 vs the winner of 4-5. 2 vs the winner of 3-6. The 2 final winners will qualify for World Cup 2026.",
                     "paths": [
@@ -1943,6 +1952,457 @@
                         }
                     ],
                     "advancement": [{ "pos": 1, "will": "qualify" }]
+                }
+            ]
+        }
+    ],
+    "confederation_id": "FIFA",
+    "draws": [{ "id": "1", "date": "2026-04-01" }],
+    "final": true,
+    "stages": [
+        {
+            "name": "Group Stage",
+            "type": "roundrobin_evenpot",
+            "draw_id": "1",
+            "draw_note": "48 teams are drawn into 12 groups of 4 to play round-robin matches. The 12 winners, 12 runners-up and 8 best third-placed teams will advance to the knockout stage.",
+            "pots": [
+                { "name": 1, "rankingFrom": 1, "rankingTo": 12 },
+                { "name": 2, "rankingFrom": 13, "rankingTo": 24 },
+                { "name": 3, "rankingFrom": 25, "rankingTo": 36 },
+                { "name": 4, "rankingFrom": 37, "rankingTo": 48 }
+            ],
+            "group_count": 12,
+            "groups": [
+                {
+                    "name": "A",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-11",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-18",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-24",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "B",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-12",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-18",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-24",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "C",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-13",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-19",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-24",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "D",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-12",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-19",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-25",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "E",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-14",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-20",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-25",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "F",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-14",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-20",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-25",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "G",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-15",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-21",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-26",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "H",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-15",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-21",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-26",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "I",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-16",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-22",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-26",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "J",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-16",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-22",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-27",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "K",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-17",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-23",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-27",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "L",
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "date": "2026-06-17",
+                            "matches": [
+                                { "home_pos": 1, "away_pos": 2 },
+                                { "home_pos": 3, "away_pos": 4 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "date": "2026-06-23",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 2 },
+                                { "home_pos": 1, "away_pos": 3 }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "date": "2026-06-27",
+                            "matches": [
+                                { "home_pos": 4, "away_pos": 1 },
+                                { "home_pos": 2, "away_pos": 3 }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "next_stage": "Knockout Stage",
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round", "count": 8, "name": "Third-placed teams" }
+            ],
+            "next_round_note": "8 best third-placed teams advance to the knockout stage"
+        },
+        {
+            "name": "Knockout Stage",
+            "type": "knockout_final",
+            "draw_id": "1",
+            "entrants_note": "32 teams advancing from the first round will play in a knockout stage.",
+            "rounds": [
+                {
+                    "name": "Round of 32",
+                    "short_name": "32",
+                    "next_round": "Round of 16",
+                    "matches": [
+                        { "id": "M74", "home_team": "E1", "away_team": "ABCDF3", "date": "2026-06-29" },
+                        { "id": "M77", "home_team": "I1", "away_team": "CDFGH3", "date": "2026-06-30" },
+                        { "id": "M73", "home_team": "A2", "away_team": "B2", "date": "2026-06-28" },
+                        { "id": "M75", "home_team": "F1", "away_team": "C2", "date": "2026-06-29" },
+                        { "id": "M83", "home_team": "K2", "away_team": "L2", "date": "2026-07-02" },
+                        { "id": "M84", "home_team": "H1", "away_team": "J2", "date": "2026-07-02" },
+                        { "id": "M81", "home_team": "D1", "away_team": "BEFIJ3", "date": "2026-07-01" },
+                        { "id": "M82", "home_team": "G1", "away_team": "AEHIJ3", "date": "2026-07-02" },
+                        { "id": "M76", "home_team": "C1", "away_team": "F2", "date": "2026-06-29" },
+                        { "id": "M78", "home_team": "E2", "away_team": "I2", "date": "2026-06-30" },
+                        { "id": "M79", "home_team": "A1", "away_team": "CEFHI3", "date": "2026-06-30" },
+                        { "id": "M80", "home_team": "L1", "away_team": "EHIJK3", "date": "2026-07-01" },
+                        { "id": "M86", "home_team": "J1", "away_team": "H2", "date": "2026-07-03" },
+                        { "id": "M88", "home_team": "D2", "away_team": "G2", "date": "2026-07-03" },
+                        { "id": "M85", "home_team": "B1", "away_team": "EFGIJ3", "date": "2026-07-02" },
+                        { "id": "M87", "home_team": "K1", "away_team": "DEIJL3", "date": "2026-07-03" }
+                    ]
+                },
+                {
+                    "name": "Round of 16",
+                    "short_name": "16",
+                    "next_round": "Quarter-finals",
+                    "matches": [
+                        { "id": "M89", "home_team": "M74", "away_team": "M77", "date": "2026-07-04" },
+                        { "id": "M90", "home_team": "M73", "away_team": "M75", "date": "2026-07-04" },
+                        { "id": "M93", "home_team": "M83", "away_team": "M84", "date": "2026-07-06" },
+                        { "id": "M94", "home_team": "M81", "away_team": "M82", "date": "2026-07-06" },
+                        { "id": "M91", "home_team": "M76", "away_team": "M78", "date": "2026-07-05" },
+                        { "id": "M92", "home_team": "M79", "away_team": "M80", "date": "2026-07-05" },
+                        { "id": "M95", "home_team": "M86", "away_team": "M88", "date": "2026-07-07" },
+                        { "id": "M96", "home_team": "M85", "away_team": "M87", "date": "2026-07-07" }
+                    ]
+                },
+                {
+                    "name": "Quarter-finals",
+                    "short_name": "1/4",
+                    "next_round": "Semi-finals",
+                    "matches": [
+                        { "id": "M97", "home_team": "M89", "away_team": "M90", "date": "2026-07-09" },
+                        { "id": "M98", "home_team": "M93", "away_team": "M94", "date": "2026-07-10" },
+                        { "id": "M99", "home_team": "M91", "away_team": "M92", "date": "2026-07-11" },
+                        { "id": "M100", "home_team": "M95", "away_team": "M96", "date": "2026-07-11" }
+                    ]
+                },
+                {
+                    "name": "Semi-finals",
+                    "short_name": "1/2",
+                    "next_round": "Final",
+                    "matches": [
+                        { "id": "M101", "home_team": "M97", "away_team": "M98", "date": "2026-07-14" },
+                        { "id": "M102", "home_team": "M99", "away_team": "M100", "date": "2026-07-15" }
+                    ]
+                },
+                {
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "matches": [
+                        { "id": "T", "home_team": "LM101", "away_team": "LM102", "date": "2026-07-18" },
+                        { "id": "F", "home_team": "WM101", "away_team": "WM102", "date": "2026-07-19" }
+                    ]
                 }
             ]
         }

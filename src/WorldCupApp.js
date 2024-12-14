@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
 import ConfederationArray from './data/Confederations.json'
-import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processQualifications } from './core/TeamHelper'
+import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processSoccerTournament } from './core/TeamHelper'
 import Page from './core/Page'
 import QualifiedTable from './qualified/QualifiedTable'
-import Qualification from './qualification/Qualification'
+import Tournament from './qualification/Tournament'
 
 export const WorldCupCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -73,7 +73,7 @@ const ConfederationQualifications = (props) => {
                         <React.Fragment key={q.id}>
                             {q.id && (
                                 <TabPane tabId={q.id.replace(/ /g, '-')}>
-                                    <Qualification state={state} qualification={q} />
+                                    <Tournament state={state} tournament={q} />
                                 </TabPane>
                             )}
                         </React.Fragment>
@@ -97,14 +97,14 @@ class WorldCupApp extends React.Component {
     }
 
     getData = () => {
-        const tournament = getTournament()
+        const config = getTournament()
         const teamArray = getActiveFIFATeamArray()
-        const qualifiedTeams = getRandomHostTeamArray(teamArray, tournament)
-        const qualifications = processQualifications(teamArray, qualifiedTeams, tournament)
+        const qualifiedTeams = getRandomHostTeamArray(teamArray, config)
+        const qualifications = processSoccerTournament(teamArray, qualifiedTeams, config)
         this.setState({
             qualifiedTeams,
             qualifications,
-            tournament,
+            tournament: config,
             config: { team_type_id: 'MNT', confederations: ConfederationArray, teams: teamArray },
         })
     }
@@ -133,8 +133,12 @@ class WorldCupApp extends React.Component {
                         <QualifiedTable state={this.state} />
                     </WorldCupCollapse>
 
-                    <WorldCupCollapse title="Confederation Qualifications" initialStatus="Opened">
+                    <WorldCupCollapse title="Confederation Qualifications" initialStatus="Closed">
                         <ConfederationQualifications state={this.state} qualifications={qualifications} />
+                    </WorldCupCollapse>
+
+                    <WorldCupCollapse title="Final" initialStatus="Opened">
+                        <Tournament state={this.state} tournament={tournament} />
                     </WorldCupCollapse>
                 </Container>
             </Page>

@@ -8,7 +8,7 @@ import Groups from './Groups'
 import Brackets from './Brackets'
 import PartialAdvancement from './PartialAdvancement'
 
-const QualificationCollapse = (props) => {
+const TournamentCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -42,11 +42,11 @@ const QualificationCollapse = (props) => {
     )
 }
 
-class Qualification extends React.Component {
+class Tournament extends React.Component {
     render() {
-        const { state, qualification } = this.props
-        const qualification_id = qualification ? qualification.id : ''
-        const isPlayoff = qualification_id.includes('play-off')
+        const { state, tournament } = this.props
+        const tournament_id = tournament && tournament.id ? tournament.id : ''
+        const isPlayoff = tournament_id.includes('play-off')
         const showSeeding = (s) =>
             s.type.includes('_drawpair') ||
             s.type.includes('_predetpair') ||
@@ -56,11 +56,11 @@ class Qualification extends React.Component {
         const showEntrants = (s) => s.type.includes('_nopot') || s.type === 'knockout_' || s.type === 'knockout_lastroundrank'
         return (
             <React.Fragment>
-                {qualification &&
-                    qualification.stages &&
-                    qualification.stages.map((s) => {
+                {tournament &&
+                    tournament.stages &&
+                    tournament.stages.map((s) => {
                         return !isPlayoff ? (
-                            <QualificationCollapse key={qualification_id + s.name} title={s.name} initialStatus="Opened">
+                            <TournamentCollapse key={tournament_id + s.name} title={s.name} initialStatus="Opened">
                                 {s.type && showSeeding(s) && (
                                     <React.Fragment>
                                         <Seeding state={state} stage={s} />
@@ -97,9 +97,9 @@ class Qualification extends React.Component {
                                         <Matches state={state} stage={s} />
                                     </React.Fragment>
                                 )}
-                            </QualificationCollapse>
+                            </TournamentCollapse>
                         ) : (
-                            <React.Fragment key={qualification_id + s.name}>
+                            <React.Fragment key={tournament_id + s.name}>
                                 <Entrants state={state} stage={s} />
                                 <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                 <Brackets state={state} stage={s} />
@@ -113,4 +113,4 @@ class Qualification extends React.Component {
     }
 }
 
-export default Qualification
+export default Tournament

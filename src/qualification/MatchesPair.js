@@ -24,7 +24,7 @@ const MatchesPairRow = (props) => {
                     const teamWon = group.agg_winner === 'home' ? awayTeamName : homeTeamName
                     const aggregateLine = (
                         <React.Fragment>
-                            Aggregate: {group.agg_away_score} - {group.agg_home_score} {' >>> '} <b>{teamWon}</b> advanced
+                            Aggregate: {group.agg_away_score} - {group.agg_home_score} {' >>> '} <b>{teamWon}</b> advanced to the {config.next_stage}
                         </React.Fragment>
                     )
                     const awayGoalLine = group.away_goal_winner !== undefined ? <span className="blue"> on away goals</span> : ''
@@ -74,14 +74,15 @@ const MatchesPairRow = (props) => {
 class MatchesPair extends React.Component {
     render() {
         const { state, stage } = this.props
-        const { groups } = stage
+        const { groups, next_stage } = stage
+        const config = { ...state.config, next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-5 box-white">
                     <Col xs={{ size: 10, offset: 1 }}>
                         {groups &&
                             groups.map((g, index) => {
-                                return <MatchesPairRow key={g.name} group={g} config={state.config} />
+                                return <MatchesPairRow key={g.name} group={g} config={config} />
                             })}
                     </Col>
                 </Row>

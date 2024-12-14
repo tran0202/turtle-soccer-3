@@ -1,7 +1,7 @@
 /* eslint-disable no-loop-func */
 import randomInteger from 'random-int'
 
-export const calculateGroupRankings = (stage, tournament) => {
+export const calculateGroupRankings = (stage, config) => {
     if (!stage || !stage.groups) return
     stage.groups.forEach((g) => {
         g.rankings = []
@@ -16,10 +16,10 @@ export const calculateGroupRankings = (stage, tournament) => {
             g.teams.forEach((t) => {
                 const ranking = getBlankRanking(t.id)
                 ranking.team = t
-                accumulateRanking(ranking, allMatches, tournament)
+                accumulateRanking(ranking, allMatches, config)
                 g.rankings.push(ranking)
             })
-        sortGroupRankings(g, tournament)
+        sortGroupRankings(g, config)
         flattenDrawPools(g)
         processPartialAdvancement(stage)
     })
@@ -32,14 +32,14 @@ export const getBlankRanking = (teamId) => {
     return { id: teamId, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 }
 }
 
-export const accumulateRanking = (ranking, matches, tournament) => {
+export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches) return
     matches.forEach((m) => {
         if (ranking.id === m.home_team) {
             ranking.mp++
             if (m.home_score > m.away_score) {
                 ranking.w++
-                ranking.pts += parseInt(tournament.points_for_win)
+                ranking.pts += parseInt(config.points_for_win)
             } else if (m.home_score === m.away_score) {
                 ranking.d++
                 ranking.pts++
@@ -66,7 +66,7 @@ export const accumulateRanking = (ranking, matches, tournament) => {
                 ranking.pts++
             } else {
                 ranking.w++
-                ranking.pts += parseInt(tournament.points_for_win)
+                ranking.pts += parseInt(config.points_for_win)
             }
             ranking.gf += parseInt(m.away_score)
             ranking.ga += parseInt(m.home_score)
@@ -82,13 +82,13 @@ export const accumulateRanking = (ranking, matches, tournament) => {
     })
 }
 
-export const sortGroupRankings = (group, tournament) => {
+export const sortGroupRankings = (group, config) => {
     if (!group) return
-    createDrawPools(group, tournament)
+    createDrawPools(group, config)
     sortRankings(group.draw_pools)
 }
 
-export const createDrawPools = (group, tournament) => {
+export const createDrawPools = (group, config) => {
     if (!group) return
     group.draw_pools = []
     group.rankings.forEach((r) => {
@@ -109,7 +109,7 @@ export const createDrawPools = (group, tournament) => {
             p.teams.forEach((t) => {
                 const ranking = getBlankRanking(t.id)
                 ranking.team = t.team
-                accumulateRanking(ranking, p.h2h_matches, tournament)
+                accumulateRanking(ranking, p.h2h_matches, config)
                 // 3. Transfer the total fair play points to h2h teams
                 ranking.fp = t.fp
                 p.h2h_rankings.push(ranking)
