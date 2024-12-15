@@ -33,7 +33,7 @@ export const WorldCupCollapse = (props) => {
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start">
                     <Col sm="12" md="12">
-                        <div className="container">{children}</div>
+                        {children}
                     </Col>
                 </Row>
             </Collapse>

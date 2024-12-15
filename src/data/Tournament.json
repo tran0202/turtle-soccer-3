@@ -424,7 +424,7 @@
                             "name": "Final",
                             "short_name": "1st",
                             "final": true,
-                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-11-18" }]
+                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-11-18", "final": true }]
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
@@ -860,7 +860,7 @@
                             "name": "Matchday 2",
                             "short_name": "M2",
                             "final": true,
-                            "matches": [{ "id": "MD2", "home_team": "MD11", "away_team": "MD12", "date": "2024-09-09" }]
+                            "matches": [{ "id": "MD2", "home_team": "MD11", "away_team": "MD12", "date": "2024-09-09", "final": true }]
                         }
                     ],
                     "next_stage": "Second Round",
@@ -930,7 +930,7 @@
                             "name": "Final",
                             "short_name": "1st",
                             "final": true,
-                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-03-24" }]
+                            "matches": [{ "id": "F", "home_team": "SF1", "away_team": "SF2", "date": "2025-03-24", "final": true }]
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
@@ -1829,7 +1829,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "FA", "home_team": "SF1", "away_team": "SF2", "date": "2026-03-31" }]
+                                    "matches": [{ "id": "FA", "home_team": "SF1", "away_team": "SF2", "date": "2026-03-31", "final": true }]
                                 }
                             ]
                         },
@@ -1849,7 +1849,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "FB", "home_team": "SF3", "away_team": "SF4", "date": "2026-03-31" }]
+                                    "matches": [{ "id": "FB", "home_team": "SF3", "away_team": "SF4", "date": "2026-03-31", "final": true }]
                                 }
                             ]
                         },
@@ -1869,7 +1869,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "FC", "home_team": "SF5", "away_team": "SF6", "date": "2026-03-31" }]
+                                    "matches": [{ "id": "FC", "home_team": "SF5", "away_team": "SF6", "date": "2026-03-31", "final": true }]
                                 }
                             ]
                         },
@@ -1889,7 +1889,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "FD", "home_team": "SF7", "away_team": "SF8", "date": "2026-03-31" }]
+                                    "matches": [{ "id": "FD", "home_team": "SF7", "away_team": "SF8", "date": "2026-03-31", "final": true }]
                                 }
                             ]
                         }
@@ -1926,7 +1926,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28" }]
+                                    "matches": [{ "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28", "final": true }]
                                 }
                             ]
                         },
@@ -1946,7 +1946,7 @@
                                     "name": "Final",
                                     "short_name": "1st",
                                     "final": true,
-                                    "matches": [{ "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28" }]
+                                    "matches": [{ "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28", "final": true }]
                                 }
                             ]
                         }
@@ -2399,12 +2399,15 @@
                     "name": "Final",
                     "short_name": "1st",
                     "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
-                        { "id": "T", "home_team": "LM101", "away_team": "LM102", "date": "2026-07-18" },
-                        { "id": "F", "home_team": "WM101", "away_team": "WM102", "date": "2026-07-19" }
+                        { "id": "F", "home_team": "WM101", "away_team": "WM102", "date": "2026-07-19", "final": true },
+                        { "id": "T", "home_team": "LM101", "away_team": "LM102", "date": "2026-07-18", "third_place": true }
                     ]
                 }
-            ]
+            ],
+            "third_place_groups": true
         }
     ]
 }

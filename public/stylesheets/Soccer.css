@@ -232,7 +232,7 @@
 }
 
 .container-xxxl {
-    max-width: 1420px;
+    max-width: 1720px;
 }
 
 .bracket-flag-xxxs {
@@ -1172,27 +1172,32 @@
 .col-brk-5,
 .col-brk-10,
 .col-brk-14,
+.col-brk-16,
 .col-brk-18,
 .col-brk-20,
 .col-brk-22,
 .col-brk-sm-1,
 .col-brk-sm-2,
 .col-brk-sm-14,
+.col-brk-sm-16,
 .col-brk-sm-18,
 .col-brk-sm-22,
 .col-brk-md-1,
 .col-brk-md-2,
 .col-brk-md-14,
+.col-brk-md-16,
 .col-brk-md-18,
 .col-brk-md-22,
 .col-brk-lg-1,
 .col-brk-lg-2,
 .col-brk-lg-14,
+.col-brk-lg-16,
 .col-brk-lg-18,
 .col-brk-lg-22,
 .col-brk-xl-1,
 .col-brk-xl-2,
 .col-brk-xl-14,
+.col-brk-xl-16,
 .col-brk-xl-18,
 .col-brk-xl-22 {
     position: relative;
@@ -1228,9 +1233,13 @@
     flex: 0 0 14%;
     max-width: 14%;
 }
-.col-brk-18 {
-    flex: 0 0 18%;
-    max-width: 18%;
+.col-brk-16 {
+    flex: 0 0 14%;
+    max-width: 14%;
+}
+.col-brk-16 {
+    flex: 0 0 16%;
+    max-width: 16%;
 }
 .col-brk-20 {
     flex: 0 0 20%;
@@ -1256,6 +1265,10 @@
     .col-brk-sm-14 {
         flex: 0 0 14%;
         max-width: 14%;
+    }
+    .col-brk-sm-16 {
+        flex: 0 0 16%;
+        max-width: 16%;
     }
     .col-brk-sm-18 {
         flex: 0 0 18%;
@@ -1283,6 +1296,10 @@
         flex: 0 0 14%;
         max-width: 14%;
     }
+    .col-brk-md-16 {
+        flex: 0 0 16%;
+        max-width: 16%;
+    }
     .col-brk-md-18 {
         flex: 0 0 18%;
         max-width: 18%;
@@ -1309,6 +1326,10 @@
         flex: 0 0 14%;
         max-width: 14%;
     }
+    .col-brk-lg-16 {
+        flex: 0 0 16%;
+        max-width: 16%;
+    }
     .col-brk-lg-18 {
         flex: 0 0 18%;
         max-width: 18%;
@@ -1334,6 +1355,10 @@
     .col-brk-xl-14 {
         flex: 0 0 14%;
         max-width: 14%;
+    }
+    .col-brk-xl-16 {
+        flex: 0 0 16%;
+        max-width: 16%;
     }
     .col-brk-xl-18 {
         flex: 0 0 18%;

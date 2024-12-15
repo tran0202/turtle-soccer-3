@@ -30,7 +30,7 @@ const BracketsCollapse = (props) => {
             <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
                 <Row className="mb-3 text-start padding-left-sm">
                     <Col sm="12" md="12">
-                        <div className="container">{children}</div>
+                        {children}
                     </Col>
                 </Row>
             </Collapse>
@@ -41,21 +41,26 @@ const BracketsCollapse = (props) => {
 const BracketFinalCol = (props) => {
     const { round, config } = props
     const { column_count } = config
-    const colClassname = column_count === 5 ? 'col-brk-18' : 'col-brk-22'
+    const colClassname = column_count === 5 ? 'col-brk-16' : 'col-brk-22'
+    const final = round.matches.find((m) => m.final)
+    const thirdPlace = round.matches.find((m) => m.third_place)
+    const finalRound = !round.third_place ? round : { ...round, matches: [final] }
+    const thirdPlaceRound = !round.third_place ? round : { ...round, name: 'Third-place', matches: [thirdPlace] }
     return (
         <Col className={colClassname}>
             {column_count === 2 && <Row className="bracket-gap-height-10"></Row>}
             {column_count === 3 && <Row className="bracket-gap-height-20"></Row>}
             {column_count === 4 && <Row className="bracket-gap-height-30"></Row>}
             {column_count === 5 && <Row className="bracket-gap-height-40"></Row>}
-            <BracketColInner round={round} config={config} />
+            <BracketColInner round={finalRound} config={config} />
+            {round.third_place && <BracketColInner round={thirdPlaceRound} config={config} />}
         </Col>
     )
 }
 
 const BracketHook1 = (props) => {
     const { colIndex, hookCount, config } = props
-    const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
+    const colClassname = config.column_count === 5 ? 'col-brk-2' : 'col-brk-2'
     return (
         <Col className={colClassname}>
             {Array.from(Array(hookCount), (e, i) => {
@@ -105,7 +110,7 @@ const BracketHook1 = (props) => {
 
 const BracketHook2 = (props) => {
     const { colIndex, hookCount, config } = props
-    const colClassname = config.column_count === 5 ? 'col-brk-1' : 'col-brk-2'
+    const colClassname = config.column_count === 5 ? 'col-brk-2' : 'col-brk-2'
     return (
         <Col className={colClassname}>
             {Array.from(Array(hookCount), (e, i) => {
@@ -306,14 +311,16 @@ const BracketColInner = (props) => {
             <Row className="no-margin-lr">
                 <Col>
                     <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
-                    {round.matches.map((m, index) => {
-                        const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
-                        return !bye ? (
-                            <BracketBox match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
-                        ) : (
-                            <BracketBoxBye match={m} colIndex={colIndex} lastBox={index === round.matches.length - 1} config={config} key={index} />
-                        )
-                    })}
+                    {round.matches &&
+                        round.matches.map((m, index) => {
+                            const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
+                            const lastBox = round.matches ? index === round.matches.length - 1 : false
+                            return !bye ? (
+                                <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                            ) : (
+                                <BracketBoxBye match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                            )
+                        })}
                 </Col>
             </Row>
         </React.Fragment>
@@ -322,8 +329,9 @@ const BracketColInner = (props) => {
 
 const BracketCol = (props) => {
     const { round, colIndex, config } = props
+    const colWidth = config.column_count > 4 ? 'col-brk-16' : 'col-brk-22'
     return (
-        <Col className="col-brk-22">
+        <Col className={colWidth}>
             <BracketColInner round={round} colIndex={colIndex} config={config} />
         </Col>
     )
@@ -336,7 +344,7 @@ const BracketTable = (props) => {
             {stage.rounds &&
                 stage.rounds.map((r, index) => {
                     const roundConfig = { ...state.config, column_count: stage.rounds.length }
-                    const hookCount = stage.rounds.length % 2 === 0 ? stage.rounds.length / 2 : (stage.rounds.length - 1) / 2
+                    const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
                     if (r.final) {
                         return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
                     } else if (r.name !== 'Third-place') {
