@@ -1,12 +1,37 @@
 import React from 'react'
 import randomInteger from 'random-int'
+import Confederations from '../data/Confederations.json'
+import Competitions from '../data/Competitions.json'
 import Tournament from '../data/Tournament.json'
-import ConfederationArray from '../data/Confederations.json'
 import NationArray from '../data/Nations.json'
 import MensTeamArray from '../data/Mens.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
-import { getTeamArray } from './DataHelper'
 import { calculateGroupRankings } from './RankingsHelper'
+
+export const getTeamArray = () => {
+    return [].concat(MensTeamArray, [])
+}
+
+// this includes FIFA
+export const getConfederations = () => {
+    return Confederations
+}
+
+export const getRegionalConfederations = () => {
+    return getConfederations().filter((c) => c.id !== 'FIFA')
+}
+
+export const getCompetitions = () => {
+    return Competitions
+}
+
+export const getConfederationCompetitions = () => {
+    const confederations = getConfederations()
+    confederations.forEach((c) => {
+        c.competitions = getCompetitions().filter((c2) => c2.confederation_id === c.id)
+    })
+    return confederations
+}
 
 export const getTeamName = (id, config) => {
     if (!id || !config || !config.teams) return
@@ -136,7 +161,7 @@ export const getActiveFIFATeamArray = () => {
         const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member)
         if (t.parent_team_id === '' && foundNation) {
             t.nation = foundNation
-            const foundConf = ConfederationArray.find((c) => foundNation.confederation_id === c.id)
+            const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
             if (foundConf) {
                 t.confederation = foundConf
             }
@@ -147,7 +172,7 @@ export const getActiveFIFATeamArray = () => {
 }
 
 export const getConfederation = (id) => {
-    const result = ConfederationArray.find((c) => c.id === id)
+    const result = getConfederations().find((c) => c.id === id)
     return result ? result : {}
 }
 

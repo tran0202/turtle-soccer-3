@@ -28,8 +28,12 @@ class App extends React.Component {
                                     <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active">
-                                        <img src="/images/slide/5Y3W3OAVMMZF2YS23KVNUEEFGU.webp" className="d-block w-100" alt="Slide 1" />
+                                    <div
+                                        className="carousel-item active"
+                                        style={{
+                                            backgroundImage: "url('/images/slide/5Y3W3OAVMMZF2YS23KVNUEEFGU.webp')",
+                                        }}
+                                    >
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">
@@ -38,14 +42,18 @@ class App extends React.Component {
                                                 <p className="animated fadeInUp">
                                                     It's known as football for the rest of the world. In America, we call it Soccer!
                                                 </p>
-                                                <a href="/competitions" className="btn-get-started animated fadeInUp scrollto">
-                                                    Competitions
+                                                <a href="/rankings" className="btn-get-started animated fadeInUp scrollto">
+                                                    World Rankings
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="/images/slide/eaf8e81e8a2b64d30b58ef5172451b8266946e3fb5d49.webp" className="d-block w-100" alt="Slide 2." />
+                                    <div
+                                        className="carousel-item"
+                                        style={{
+                                            backgroundImage: "url('/images/slide/eaf8e81e8a2b64d30b58ef5172451b8266946e3fb5d49.webp')",
+                                        }}
+                                    >
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">
@@ -55,14 +63,18 @@ class App extends React.Component {
                                                     Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
                                                     consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
                                                 </p>
-                                                <a href="/confederations" className="btn-get-started animated fadeInUp scrollto">
-                                                    Confederations
+                                                <a href="/worldcup" className="btn-get-started animated fadeInUp scrollto">
+                                                    World Cup
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="carousel-item">
-                                        <img src="/images/slide/Copa America Argentina AFP.jpg" className="d-block w-100" alt="Slide 3" />
+                                    <div
+                                        className="carousel-item"
+                                        style={{
+                                            backgroundImage: "url('/images/slide/Copa America Argentina AFP.jpg')",
+                                        }}
+                                    >
                                         <div className="carousel-container">
                                             <div className="carousel-content container">
                                                 <h2 className="animated fadeInDown h2-ff8">

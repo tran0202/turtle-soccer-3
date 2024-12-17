@@ -1,7 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
-import ConfederationArray from './data/Confederations.json'
-import { getActiveFIFATeamArray, getRandomMensTeamArray } from './core/TeamHelper'
+import { getActiveFIFATeamArray, getRandomMensTeamArray, getConfederations } from './core/TeamHelper'
 import Page from './core/Page'
 import RankingsTable from './rankings/RankingsTable'
 
@@ -16,7 +15,7 @@ class RankingsApp extends React.Component {
     getData = () => {
         const teamArray = getActiveFIFATeamArray()
         const allRankings = getRandomMensTeamArray(teamArray)
-        this.setState({ allRankings, rankings: allRankings, config: { ...this.state.config, confederations: ConfederationArray } })
+        this.setState({ allRankings, rankings: allRankings, config: { ...this.state.config, confederations: getConfederations() } })
     }
 
     setData = (rankings) => {
@@ -35,7 +34,7 @@ class RankingsApp extends React.Component {
         return (
             <Page>
                 <Container>
-                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Rankings: Men's National Teams</h1>
+                    <h1 className="h1-ff5 text-center mt-3 mb-3">*** Men's National Teams World Rankings ***</h1>
                     <Row className="mt-3 mb-3 text-start rankings-page-box">
                         <Col sm="12" md="12">
                             <div className="container">

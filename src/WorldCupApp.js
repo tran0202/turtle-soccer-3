@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import ConfederationArray from './data/Confederations.json'
-import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processSoccerTournament } from './core/TeamHelper'
+import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processSoccerTournament, getConfederations } from './core/TeamHelper'
 import Page from './core/Page'
 import QualifiedTable from './qualified/QualifiedTable'
 import Tournament from './qualification/Tournament'
@@ -105,7 +104,7 @@ class WorldCupApp extends React.Component {
             qualifiedTeams,
             qualifications,
             tournament: config,
-            config: { team_type_id: 'MNT', confederations: ConfederationArray, teams: teamArray },
+            config: { team_type_id: 'MNT', confederations: getConfederations(), teams: teamArray },
         })
     }
 

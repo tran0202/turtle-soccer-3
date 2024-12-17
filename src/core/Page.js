@@ -36,6 +36,11 @@ class Page extends React.Component {
                                             <a href="/rankings">Rankings</a>
                                         </li>
                                     </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="/organization">Organization</a>
+                                        </li>
+                                    </ul>
                                 </nav>
                             </Col>
                         </Row>
