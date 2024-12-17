@@ -16,11 +16,11 @@ const QualifiedHeader = () => {
 }
 
 const QualifiedRow = (props) => {
-    const { row, config } = props
+    const { row } = props
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
             <Col className="col-box-4">{row.rank}</Col>
-            <Col className="col-box-34">{getTeamFlagName(row, config)}</Col>
+            <Col className="col-box-34">{getTeamFlagName(row)}</Col>
             <Col className="col-box-8">{getConfederationLogo(row)}</Col>
             <Col className="col-box-34">{row.qualification_method}</Col>
             <Col className="col-box-20">{moment(row.qualification_date).format('MMMM D, YYYY')}</Col>

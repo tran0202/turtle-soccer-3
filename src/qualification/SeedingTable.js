@@ -20,7 +20,7 @@ const SeedingHeader = (props) => {
 }
 
 const SeedingRow = (props) => {
-    const { ranking, config } = props
+    const { ranking } = props
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
             <Col>
@@ -30,7 +30,7 @@ const SeedingRow = (props) => {
                             <Col className="col-box-5"></Col>
                             <Col className="col-box-10">{ranking.draw_seed}</Col>
                             <Col className="col-box-82">
-                                {getTeamFlagName(ranking, config)} ({ranking.rank})
+                                {getTeamFlagName(ranking)} ({ranking.rank})
                             </Col>
                         </Row>
                     </div>

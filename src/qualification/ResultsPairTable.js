@@ -18,7 +18,7 @@ const ResultsPairHeader = () => {
 }
 
 const ResultsPairRow = (props) => {
-    const { group, config } = props
+    const { group } = props
     const team1 = group.teams.find((t) => t.pos === 1)
     const team2 = group.teams.find((t) => t.pos === 2)
     if (!team1 || !team2 || !group.matches) return
@@ -35,7 +35,7 @@ const ResultsPairRow = (props) => {
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
             <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{team1.name}</Col>
-            <Col className="col-box-6">{getTeamFlag(team1, config)}</Col>
+            <Col className="col-box-6">{getTeamFlag(team1)}</Col>
             <Col className="text-center score-no-padding-right col-box-10">
                 {match1HomeScore} - {match1AwayScore}
             </Col>
@@ -53,7 +53,7 @@ const ResultsPairRow = (props) => {
                     </Row>
                 )}
             </Col>
-            <Col className="col-box-6">{getTeamFlag(team2, config)}</Col>
+            <Col className="col-box-6">{getTeamFlag(team2)}</Col>
             <Col className={`col-box-25 ${pairAwayHighlight}`}>{team2.name}</Col>
         </Row>
     )

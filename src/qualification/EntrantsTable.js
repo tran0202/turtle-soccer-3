@@ -26,7 +26,7 @@ const EntrantsRow = (props) => {
                             <Col className="col-box-5"></Col>
                             <Col className="col-box-10">{tableRank}</Col>
                             <Col className="col-box-82">
-                                {getTeamFlagName(team, config)} ({team.rank})
+                                {getTeamFlagName(team)} ({team.rank})
                             </Col>
                         </Row>
                     </div>

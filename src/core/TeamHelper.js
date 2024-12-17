@@ -12,6 +12,29 @@ export const getTeamArray = () => {
     return [].concat(MensTeamArray, [])
 }
 
+export const setFIFAMember = () => {
+    NationArray.forEach((n) => {
+        n.fifa_member = !n.not_fifa_member ? true : false
+    })
+}
+
+export const getActiveFIFATeamArray = () => {
+    setFIFAMember()
+    const result = []
+    MensTeamArray.forEach((t) => {
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member)
+        if (t.parent_team_id === '' && foundNation) {
+            t.nation = foundNation
+            const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
+            if (foundConf) {
+                t.confederation = foundConf
+            }
+            result.push(t)
+        }
+    })
+    return result
+}
+
 // this includes FIFA
 export const getConfederations = () => {
     return Confederations
@@ -23,6 +46,34 @@ export const getRegionalConfederations = () => {
 
 export const getCompetitions = () => {
     return Competitions
+}
+
+export const getConfederationOrganization = () => {
+    const confederations = getConfederationCompetitions()
+    confederations.forEach((c) => {
+        const teams = getActiveFIFATeamArray()
+        c.teams = teams.filter((t) => t.confederation.id === c.id)
+        if (c.id === 'FIFA') c.teams = teams
+
+        c.teams.sort((a, b) => {
+            return a.name > b.name ? 1 : -1
+        })
+
+        c.pots = []
+        let pot_index = 0
+        c.teams.forEach((t, index) => {
+            t.index = index + 1
+            if (!c.pots[pot_index]) {
+                c.pots.push({ id: pot_index + 1, teams: [t] })
+            } else {
+                c.pots[pot_index].teams.push(t)
+            }
+            if (c.teams.length > 11 && index + 1 === (pot_index + 1) * Math.ceil(c.teams.length / 4)) {
+                pot_index++
+            }
+        })
+    })
+    return confederations
 }
 
 export const getConfederationCompetitions = () => {
@@ -86,7 +137,7 @@ export const getTeamFlag = (t, config) => {
     if (!t || !t.nation) return
     return (
         <React.Fragment>
-            {config.team_type_id !== 'CLUB' && (
+            {(t.team_type_id !== 'CLUB' || config.team_type_id !== 'CLUB') && (
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
                     src={'/images/flags/' + t.nation.flag_filename}
@@ -134,11 +185,11 @@ export const getBracketTeamFlagId = (id, config) => {
     )
 }
 
-export const getTeamFlagName = (t, config) => {
+export const getTeamFlagName = (t) => {
     if (!t) return
     return (
         <React.Fragment>
-            {getTeamFlag(t, config)}
+            {getTeamFlag(t)}
             <span className="padding-top-xs">&nbsp;{t.name}</span>
         </React.Fragment>
     )
@@ -146,29 +197,6 @@ export const getTeamFlagName = (t, config) => {
 
 export const getTournament = () => {
     return Tournament
-}
-
-export const setFIFAMember = () => {
-    NationArray.forEach((n) => {
-        n.fifa_member = !n.not_fifa_member ? true : false
-    })
-}
-
-export const getActiveFIFATeamArray = () => {
-    setFIFAMember()
-    const result = []
-    MensTeamArray.forEach((t) => {
-        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member)
-        if (t.parent_team_id === '' && foundNation) {
-            t.nation = foundNation
-            const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
-            if (foundConf) {
-                t.confederation = foundConf
-            }
-            result.push(t)
-        }
-    })
-    return result
 }
 
 export const getConfederation = (id) => {
@@ -181,12 +209,13 @@ export const randomHostIndex = (count, confederation_id) => {
     let result = []
     const conf = getConfederation(confederation_id)
     while (result.length !== count) {
-        const randomIndex = randomInteger(0, conf.member_count - 1)
+        const randomIndex = randomInteger(0, conf.fifa_member_count - 1)
         const found = result.find((i) => i + 1 === randomIndex + 1)
         if (!found) {
             result.push(randomIndex)
         }
     }
+    console.log('result:', result)
     return result
 }
 
@@ -195,6 +224,7 @@ export const getRandomHostTeamArray = (teamArray, config) => {
     const result = []
     const confederation_id = config.details.host.confederation_id
     const teams = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
+    console.log('teams:', teams)
     const host_count = config.details.host.teams.length
     teams.length >= host_count &&
         randomHostIndex(host_count, confederation_id).forEach((i) => {

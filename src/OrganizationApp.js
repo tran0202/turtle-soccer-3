@@ -1,12 +1,45 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import { getConfederationCompetitions, getRegionalConfederations } from './core/TeamHelper'
+import { getConfederationOrganization, getRegionalConfederations, getTeamFlagName } from './core/TeamHelper'
 import Page from './core/Page'
+
+const TeamHeader = () => {
+    return (
+        <Row className="no-gutters ranking-tbl-header team-row padding-tb-xs text-start">
+            <Col>
+                <Row className="no-gutters">
+                    <Col className="col-box-4"></Col>
+                    <Col className="col-box-10">No.</Col>
+                    <Col className="col-box-80">Team</Col>
+                </Row>
+            </Col>
+        </Row>
+    )
+}
+
+const TeamRow = (props) => {
+    const { team } = props
+    return (
+        <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
+            <Col>
+                <div className="col-12">
+                    <div className="box-sm">
+                        <Row className="no-gutters">
+                            <Col className="col-box-4"></Col>
+                            <Col className="col-box-10">{team.index}</Col>
+                            <Col className="col-box-80">{getTeamFlagName(team)}</Col>
+                        </Row>
+                    </div>
+                </div>
+            </Col>
+        </Row>
+    )
+}
 
 const Confederation = (props) => {
     const { confederation } = props
-    // console.log('confederation.competitions:', confederation.competitions)
+    const isFIFA = confederation.id === 'FIFA'
     return (
         <React.Fragment>
             <Row>
@@ -26,7 +59,7 @@ const Confederation = (props) => {
             </Row>
             <Row>
                 <Col>
-                    <h4 className="mt-4">Competitions</h4>
+                    <h4 className="mt-4 mb-3">Competitions</h4>
                 </Col>
             </Row>
             <Row>
@@ -55,6 +88,27 @@ const Confederation = (props) => {
                         )
                     })}
             </Row>
+            {!isFIFA && (
+                <React.Fragment>
+                    <Row>
+                        <Col>
+                            <h4 className="mt-4">National Teams</h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        {confederation.pots.map((p, index) => {
+                            return (
+                                <Col key={index}>
+                                    <TeamHeader />
+                                    {p.teams.map((t) => (
+                                        <TeamRow team={t} />
+                                    ))}
+                                </Col>
+                            )
+                        })}
+                    </Row>
+                </React.Fragment>
+            )}
         </React.Fragment>
     )
 }
@@ -109,7 +163,7 @@ class OrganizationApp extends React.Component {
     }
 
     getData = () => {
-        this.setState({ confederations: getConfederationCompetitions() })
+        this.setState({ confederations: getConfederationOrganization() })
     }
 
     setData = () => {
