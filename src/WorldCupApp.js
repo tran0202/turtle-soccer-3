@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import { getActiveFIFATeamArray, getRandomHostTeamArray, getTournament, processSoccerTournament, getConfederations } from './core/TeamHelper'
+import { getActiveTeams, getRandomHostTeamArray, getTournament, processSoccerTournament, getConfederations } from './core/TeamHelper'
 import Page from './core/Page'
-import QualifiedTable from './qualified/QualifiedTable'
-import Tournament from './qualification/Tournament'
+import QualifiedTable from './tournament/QualifiedTable'
+import Tournament from './tournament/Tournament'
 
 export const WorldCupCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -97,7 +97,7 @@ class WorldCupApp extends React.Component {
 
     getData = () => {
         const config = getTournament()
-        const teamArray = getActiveFIFATeamArray()
+        const teamArray = getActiveTeams()
         const qualifiedTeams = getRandomHostTeamArray(teamArray, config)
         const qualifications = processSoccerTournament(teamArray, qualifiedTeams, config)
         this.setState({

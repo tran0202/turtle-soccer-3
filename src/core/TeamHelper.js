@@ -18,7 +18,7 @@ export const setFIFAMember = () => {
     })
 }
 
-export const getActiveFIFATeamArray = () => {
+export const getActiveTeams = () => {
     setFIFAMember()
     const result = []
     MensTeamArray.forEach((t) => {
@@ -51,7 +51,7 @@ export const getCompetitions = () => {
 export const getConfederationOrganization = () => {
     const confederations = getConfederationCompetitions()
     confederations.forEach((c) => {
-        const teams = getActiveFIFATeamArray()
+        const teams = getActiveTeams()
         c.teams = teams.filter((t) => t.confederation.id === c.id)
         if (c.id === 'FIFA') c.teams = teams
 
@@ -133,11 +133,11 @@ export const getConfederationLogo = (t, config) => {
     )
 }
 
-export const getTeamFlag = (t, config) => {
+export const getTeamFlag = (t) => {
     if (!t || !t.nation) return
     return (
         <React.Fragment>
-            {(t.team_type_id !== 'CLUB' || config.team_type_id !== 'CLUB') && (
+            {t.team_type_id !== 'CLUB' && (
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
                     src={'/images/flags/' + t.nation.flag_filename}
@@ -215,7 +215,6 @@ export const randomHostIndex = (count, confederation_id) => {
             result.push(randomIndex)
         }
     }
-    console.log('result:', result)
     return result
 }
 
@@ -224,7 +223,6 @@ export const getRandomHostTeamArray = (teamArray, config) => {
     const result = []
     const confederation_id = config.details.host.confederation_id
     const teams = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
-    console.log('teams:', teams)
     const host_count = config.details.host.teams.length
     teams.length >= host_count &&
         randomHostIndex(host_count, confederation_id).forEach((i) => {
@@ -234,7 +232,7 @@ export const getRandomHostTeamArray = (teamArray, config) => {
     return result
 }
 
-export const getRandomMensTeamArray = (teamArray) => {
+export const getRandomRankings = (teamArray) => {
     const result = [],
         pool = []
     teamArray.forEach((t) => {
@@ -297,7 +295,7 @@ export const createDraws = (tournament, teamArray, qualifiedTeams) => {
     const draws = []
     tournament.draws &&
         tournament.draws.forEach((d) => {
-            const allRankings = getRandomMensTeamArray(teamArray)
+            const allRankings = getRandomRankings(teamArray)
             const bannedTeams = tournament.banned
             const confRankings =
                 tournament.confederation_id !== 'FIFA'

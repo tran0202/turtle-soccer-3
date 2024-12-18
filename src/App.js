@@ -42,8 +42,8 @@ class App extends React.Component {
                                                 <p className="animated fadeInUp">
                                                     It's known as football for the rest of the world. In America, we call it Soccer!
                                                 </p>
-                                                <a href="/rankings" className="btn-get-started animated fadeInUp scrollto">
-                                                    World Rankings
+                                                <a href="/worldcup" className="btn-get-started animated fadeInUp scrollto">
+                                                    World Cup
                                                 </a>
                                             </div>
                                         </div>
@@ -63,8 +63,8 @@ class App extends React.Component {
                                                     Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
                                                     consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
                                                 </p>
-                                                <a href="/worldcup" className="btn-get-started animated fadeInUp scrollto">
-                                                    World Cup
+                                                <a href="/rankings" className="btn-get-started animated fadeInUp scrollto">
+                                                    World Rankings
                                                 </a>
                                             </div>
                                         </div>
@@ -85,8 +85,8 @@ class App extends React.Component {
                                                     Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti
                                                     vel. Minus et tempore modi architecto.
                                                 </p>
-                                                <a href="/associations" className="btn-get-started animated fadeInUp scrollto">
-                                                    Associations
+                                                <a href="/organization" className="btn-get-started animated fadeInUp scrollto">
+                                                    Organization
                                                 </a>
                                             </div>
                                         </div>

@@ -33,7 +33,7 @@ const RankingsRow = (props) => {
         <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}`}>
             <Col className="col-box-4">{ranking.rank}</Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name}</Col>}
-            <Col className="col-box-6">{getTeamFlag(ranking.team, config)}</Col>
+            <Col className="col-box-6">{getTeamFlag(ranking.team)}</Col>
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
             {!config.added_group && <Col className="col-box-27">{ranking.team.name}</Col>}
             <Col className="col-box-7 text-center">{ranking.mp}</Col>

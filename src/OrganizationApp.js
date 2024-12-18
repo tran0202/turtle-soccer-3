@@ -101,7 +101,7 @@ const Confederation = (props) => {
                                 <Col key={index}>
                                     <TeamHeader />
                                     {p.teams.map((t) => (
-                                        <TeamRow team={t} />
+                                        <TeamRow team={t} key={t.id} />
                                     ))}
                                 </Col>
                             )
