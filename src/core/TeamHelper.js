@@ -4,13 +4,13 @@ import Confederations from '../data/Confederations.json'
 import Competitions from '../data/Competitions.json'
 import Tournament from '../data/Tournament.json'
 import NationArray from '../data/Nations.json'
-import MensTeamArray from '../data/Mens.json'
+import TeamArray from '../data/Teams.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
 import { getTournamentArray } from './DataHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamArray = () => {
-    return [].concat(MensTeamArray, [])
+    return [].concat(TeamArray, [])
 }
 
 export const setFIFAMember = () => {
@@ -19,11 +19,28 @@ export const setFIFAMember = () => {
     })
 }
 
-export const getActiveTeams = () => {
+export const getTeams = (team_type_id) => {
     setFIFAMember()
     const result = []
-    MensTeamArray.forEach((t) => {
-        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member)
+    getTeamArray().forEach((t) => {
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.fifa_member && t.team_type_id === team_type_id)
+        if (foundNation) {
+            t.nation = foundNation
+            const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
+            if (foundConf) {
+                t.confederation = foundConf
+            }
+            result.push(t)
+        }
+    })
+    return result
+}
+
+export const getActiveTeams = (team_type_id) => {
+    setFIFAMember()
+    const result = []
+    getTeamArray().forEach((t) => {
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && n.fifa_member && t.team_type_id === team_type_id)
         if (t.parent_team_id === '' && foundNation) {
             t.nation = foundNation
             const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
@@ -64,7 +81,8 @@ export const getCompetition = (competition_id) => {
 export const getConfederationOrganization = () => {
     const confederations = getConfederationCompetitions()
     confederations.forEach((c) => {
-        const teams = getActiveTeams()
+        const teamTypeId = 'MNT'
+        const teams = getActiveTeams(teamTypeId)
         c.teams = teams.filter((t) => t.confederation.id === c.id)
         if (c.id === 'FIFA') c.teams = teams
 
@@ -132,7 +150,7 @@ export const getBoldText = (text, replace) => {
     }
 }
 
-export const getConfederationLogo = (t, config) => {
+export const getConfederationLogo = (t) => {
     if (!t || !t.confederation) return
     return (
         <React.Fragment>

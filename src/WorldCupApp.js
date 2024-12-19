@@ -96,8 +96,9 @@ class WorldCupApp extends React.Component {
     }
 
     getData = () => {
+        const teamTypeId = 'MNT'
         const config = getTournament()
-        const teamArray = getActiveTeams()
+        const teamArray = getActiveTeams(teamTypeId)
         const qualifiedTeams = getRandomHostTeamArray(teamArray, config)
         const qualifications = processSoccerTournament(teamArray, qualifiedTeams, config)
         this.setState({

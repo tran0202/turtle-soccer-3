@@ -1,8 +1,7 @@
 import React from 'react'
-import { Container, Row, Col, Button, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
-import { NumericFormat } from 'react-number-format'
+import { Container, Row, Col } from 'reactstrap'
 import { getTournamentTitleFont } from './core/Helper'
-import { getActiveTeams, getRandomRankings, getFlagSrc, getCompetition } from './core/TeamHelper'
+import { getTeams, getTeamFlagId, getCompetition, getShortTeamName } from './core/TeamHelper'
 import Page from './core/Page'
 
 const TeamCell = (props) => {
@@ -12,9 +11,9 @@ const TeamCell = (props) => {
         <React.Fragment>
             {/* {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
       {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id)} */}
-            {config.team_type_id !== 'CLUB' && <img className="flag-sm flag-md " src={getFlagSrc(id)} alt={id} title={id} />}
+            {getTeamFlagId(id, config)}
             <br></br>
-            {/* {getShortTeamName(id)} */}
+            {getShortTeamName(id, config)}
         </React.Fragment>
     )
 }
@@ -22,11 +21,12 @@ const TeamCell = (props) => {
 const TournamentsRow = (props) => {
     const { tournament, config } = props
     const { short_name, id, index, details, name, final_standings } = tournament
+    const row_highlight = index % 2 === 0 ? 'ltblue-striped' : ''
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
             <Col>
                 <div className="col-12">
-                    <div className="box-sm">
+                    <div className={`box-sm ${row_highlight}`}>
                         <Row className="no-gutters">
                             <Col className="col-box-4"></Col>
                             <Col className="col-box-6 text-center padding-top-lg">{index}</Col>
@@ -63,8 +63,17 @@ const TournamentsRow = (props) => {
                                     </React.Fragment>
                                 )}
                             </Col>
-                            <Col className="col-box-10 text-center padding-tb-sm">
+                            <Col className="col-box-20 text-center padding-tb-md">
                                 {final_standings && <TeamCell id={final_standings.champions} config={config} />}
+                            </Col>
+                            <Col className="col-box-20 text-center padding-tb-md">
+                                {final_standings && <TeamCell id={final_standings.runners_up} config={config} />}
+                            </Col>
+                            <Col className="col-box-20 text-center padding-tb-md">
+                                {final_standings && <TeamCell id={final_standings.third_place} config={config} />}
+                            </Col>
+                            <Col className="col-box-20 text-center padding-tb-md">
+                                {final_standings && <TeamCell id={final_standings.fourth_place} config={config} />}
                             </Col>
                         </Row>
                     </div>
@@ -75,9 +84,6 @@ const TournamentsRow = (props) => {
 }
 
 const TournamentsHeader = (props) => {
-    // const { state, func } = props
-    // const { config } = state
-    // const { confederations } = config
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
             <Col>
@@ -112,11 +118,12 @@ class CompetitionApp extends React.Component {
         super(props)
         document.title = 'Competition - Turtle Soccer'
 
-        this.state = { competition: { tournaments: [] } }
+        this.state = { competition: { tournaments: [] }, config: {} }
     }
 
     getData = () => {
-        this.setState({ competition: getCompetition(this.props.query.id) })
+        const competition = getCompetition(this.props.query.id)
+        this.setState({ competition, config: { team_type_id: competition.team_type_id, teams: getTeams(competition.team_type_id) } })
     }
 
     setData = () => {
@@ -134,8 +141,8 @@ class CompetitionApp extends React.Component {
     }
 
     render() {
-        const { competition } = this.state
-        const config = { logo_path: competition.logo_path }
+        const { competition, config } = this.state
+        const tournamentConfig = { ...config, logo_path: competition.logo_path }
         return (
             <Page>
                 <Container>
@@ -166,7 +173,7 @@ class CompetitionApp extends React.Component {
                     </Row>
                     <Row>
                         <Col>
-                            <TournamentsTable tournaments={competition.tournaments} config={config} />
+                            <TournamentsTable tournaments={competition.tournaments} config={tournamentConfig} />
                         </Col>
                     </Row>
                 </Container>

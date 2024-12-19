@@ -99,9 +99,10 @@ class RankingsApp extends React.Component {
     }
 
     getData = () => {
-        const teamArray = getActiveTeams()
+        const teamTypeId = 'MNT'
+        const teamArray = getActiveTeams(teamTypeId)
         const allRankings = getRandomRankings(teamArray)
-        this.setState({ rankings: allRankings, config: { confederations: getConfederations(), all_rankings: allRankings } })
+        this.setState({ rankings: allRankings, config: { confederations: getConfederations(), all_rankings: allRankings, team_type_id: teamTypeId } })
     }
 
     setData = (rankings) => {
