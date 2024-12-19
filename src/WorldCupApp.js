@@ -108,8 +108,8 @@ class WorldCupApp extends React.Component {
         })
     }
 
-    setData = (rankings) => {
-        this.setState({ rankings })
+    setData = () => {
+        this.setState()
     }
 
     componentDidMount() {

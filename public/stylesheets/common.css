@@ -70,6 +70,7 @@ code {
 }
 a {
     color: #0040ff;
+    text-decoration: none;
 }
 a:hover {
     color: #2acaea;

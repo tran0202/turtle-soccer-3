@@ -70,17 +70,21 @@ const Confederation = (props) => {
                                 <Col className="competition-box">
                                     <Row>
                                         <Col>
-                                            <img
-                                                src={`/images/${c.logo_path}/${c.trophy_filename}`}
-                                                alt={`${c.name} trophy`}
-                                                title={`${c.name} trophy`}
-                                                className="conf-logo"
-                                            />
+                                            <a href={`/competition/${c.id}`}>
+                                                <img
+                                                    src={`/images/${c.logo_path}/${c.trophy_filename}`}
+                                                    alt={`${c.name} trophy`}
+                                                    title={`${c.name} trophy`}
+                                                    className="conf-logo"
+                                                />
+                                            </a>
                                         </Col>
                                     </Row>
                                     <Row>
                                         <Col>
-                                            <h4 className="h5-ff5 text-center mt-4">{c.name}</h4>
+                                            <a href={`/competition/${c.id}`}>
+                                                <h4 className="h5-ff5 text-center mt-4">{c.name}</h4>
+                                            </a>
                                         </Col>
                                     </Row>
                                 </Col>

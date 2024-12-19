@@ -1,17 +1,21 @@
-// import t_WC from '../data/tournaments/t_WC.json'
-// import t_WWC from '../data/tournaments/t_WWC.json'
-// import t_MOFT from '../data/tournaments/t_MOFT.json'
-// import t_WOFT from '../data/tournaments/t_WOFT.json'
-// import t_CONFEDC from '../data/tournaments/t_CONFEDC.json'
-// import t_EURO from '../data/tournaments/t_EURO.json'
-// import t_UNL from '../data/tournaments/t_UNL.json'
-// import t_UCL from '../data/tournaments/t_UCL.json'
-// import t_UEL from '../data/tournaments/t_UEL.json'
-// import t_COPA from '../data/tournaments/t_COPA.json'
-// import t_GC from '../data/tournaments/t_GC.json'
-// import t_AFCON from '../data/tournaments/t_AFCON.json'
-// import t_AAC from '../data/tournaments/t_AAC.json'
-// import t_ONC from '../data/tournaments/t_ONC.json'
+import t_WC from '../data/tournaments/t_WC.json'
+import t_WWC from '../data/tournaments/t_WWC.json'
+import t_MOFT from '../data/tournaments/t_MOFT.json'
+import t_WOFT from '../data/tournaments/t_WOFT.json'
+import t_CONFEDC from '../data/tournaments/t_CONFEDC.json'
+import t_EURO from '../data/tournaments/t_EURO.json'
+import t_UNL from '../data/tournaments/t_UNL.json'
+import t_UCL from '../data/tournaments/t_UCL.json'
+import t_UEL from '../data/tournaments/t_UEL.json'
+import t_COPA from '../data/tournaments/t_COPA.json'
+import t_GC from '../data/tournaments/t_GC.json'
+import t_AFCON from '../data/tournaments/t_AFCON.json'
+import t_AAC from '../data/tournaments/t_AAC.json'
+import t_ONC from '../data/tournaments/t_ONC.json'
+
+export const getTournamentArray = () => {
+    return [].concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_UNL, t_UCL, t_UEL, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
+}
 
 // import td_WC_1930 from '../data/tournamentData/WC/td_WC_1930.json'
 // import td_WC_1934 from '../data/tournamentData/WC/td_WC_1934.json'
@@ -262,10 +266,6 @@
 
 // export const getCurrentTournament = () => {
 //   return { tournament: 'UCL202122', qualificationTournament: 'WC2022_CONMEBOL' }
-// }
-
-// export const getTournamentArray = () => {
-//   return [].concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_UNL, t_UCL, t_UEL, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
 // }
 
 // export const getTournamentDataArray = () => {
@@ -564,15 +564,16 @@
 //   )
 // }
 
-export const setConfederationDetails = (conf) => {
-    conf.details = {
-        descriptions: conf.descriptions || [],
-        logo_filename: conf.logo_filename || '',
-        name: conf.name || '',
+export const setConfederationDetails = (confederation) => {
+    const name = confederation.name || ''
+    confederation.details = {
+        descriptions: confederation.descriptions || [],
+        logo_filename: confederation.logo_filename || '',
+        name: name,
     }
-    delete conf.descriptions
-    delete conf.logo_filename
-    delete conf.name
+    delete confederation.descriptions
+    delete confederation.logo_filename
+    delete confederation.name
     // console.log('conf', conf)
 }
 

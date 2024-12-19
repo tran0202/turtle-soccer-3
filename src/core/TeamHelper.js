@@ -6,6 +6,7 @@ import Tournament from '../data/Tournament.json'
 import NationArray from '../data/Nations.json'
 import MensTeamArray from '../data/Mens.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
+import { getTournamentArray } from './DataHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamArray = () => {
@@ -46,6 +47,18 @@ export const getRegionalConfederations = () => {
 
 export const getCompetitions = () => {
     return Competitions
+}
+
+export const getCompetition = (competition_id) => {
+    const competition = getCompetitions().find((c) => c.id === competition_id)
+    if (competition) {
+        const tournaments = getTournamentArray().filter((t) => t.competition_id === competition_id)
+        tournaments.forEach((t, index) => {
+            t.index = tournaments.length - index
+        })
+        competition.tournaments = tournaments
+    }
+    return competition
 }
 
 export const getConfederationOrganization = () => {
@@ -193,6 +206,21 @@ export const getTeamFlagName = (t) => {
             <span className="padding-top-xs">&nbsp;{t.name}</span>
         </React.Fragment>
     )
+}
+
+export const getFlagSrc = (id) => {
+    if (!id) return
+    const team = getTeamArray().find((t) => t.id === id)
+    if (team) {
+        const nation = NationArray.find((n) => n.id === team.nation_id)
+        if (nation) {
+            return '/images/flags/' + nation.flag_filename
+        } else {
+            console.log('Nation error', nation)
+        }
+    } else {
+        console.log('Team error', team)
+    }
 }
 
 export const getTournament = () => {
@@ -1359,21 +1387,6 @@ export const overwriteGroup = (group) => {
 }
 
 // ----------------------------- Version 1 ----------------------------------
-
-export const getFlagSrc = (id) => {
-    if (!id) return
-    const team = getTeamArray().find((t) => t.id === id)
-    if (team) {
-        const nation = NationArray.find((n) => n.id === team.nation_id)
-        if (nation) {
-            return '/images/flags/' + nation.details.flag_filename
-        } else {
-            console.log('Nation error', nation)
-        }
-    } else {
-        console.log('Team error', team)
-    }
-}
 
 export const getNationSmallFlagImg = (id) => {
     if (!id) return
