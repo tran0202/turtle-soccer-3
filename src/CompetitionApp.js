@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { getTournamentTitleFont } from './core/Helper'
 import { getTeams, getTeamFlagId, getCompetition, getShortTeamName } from './core/TeamHelper'
+import { SharedBronzeTooltip } from './core/TooltipHelper'
 import Page from './core/Page'
 
 const TeamCell = (props) => {
@@ -18,9 +19,27 @@ const TeamCell = (props) => {
     )
 }
 
+const BronzeCell = (props) => {
+    const { id, config } = props
+    if (config.shared_bronze) {
+        return id.map((i) => {
+            return (
+                <React.Fragment>
+                    <TeamCell id={i} config={config} />
+                    <SharedBronzeTooltip target="sharedTooltip" notes={config.third_place_text} />
+                    <br />
+                </React.Fragment>
+            )
+        })
+    } else {
+        return <TeamCell id={id} config={config} />
+    }
+}
+
 const TournamentsRow = (props) => {
     const { tournament, config } = props
     const { short_name, id, index, details, name, final_standings } = tournament
+    const tournamentConfig = { ...config, shared_bronze: tournament.shared_bronze, third_place_text: final_standings.third_place_text }
     const row_highlight = index % 2 === 0 ? 'ltblue-striped' : ''
     return (
         <Row className="no-gutters ranking-tbl team-row padding-tb-xs text-start">
@@ -29,8 +48,8 @@ const TournamentsRow = (props) => {
                     <div className={`box-sm ${row_highlight}`}>
                         <Row className="no-gutters">
                             <Col className="col-box-4"></Col>
-                            <Col className="col-box-6 text-center padding-top-lg">{index}</Col>
-                            <Col className="col-box-10 text-center padding-tb-sm">
+                            <Col className="col-box-4 text-center padding-top-lg">{index}</Col>
+                            <Col className="col-box-20 text-center padding-tb-sm">
                                 {!short_name && (
                                     <React.Fragment>
                                         {tournament.details.logo_filename && (
@@ -63,16 +82,16 @@ const TournamentsRow = (props) => {
                                     </React.Fragment>
                                 )}
                             </Col>
-                            <Col className="col-box-20 text-center padding-tb-md">
+                            <Col className="col-box-18 text-center padding-tb-md">
                                 {final_standings && <TeamCell id={final_standings.champions} config={config} />}
                             </Col>
-                            <Col className="col-box-20 text-center padding-tb-md">
+                            <Col className="col-box-18 text-center padding-tb-md">
                                 {final_standings && <TeamCell id={final_standings.runners_up} config={config} />}
                             </Col>
-                            <Col className="col-box-20 text-center padding-tb-md">
-                                {final_standings && <TeamCell id={final_standings.third_place} config={config} />}
+                            <Col className="col-box-18 text-center padding-tb-md">
+                                {final_standings && <BronzeCell id={final_standings.third_place} config={tournamentConfig} />}
                             </Col>
-                            <Col className="col-box-20 text-center padding-tb-md">
+                            <Col className="col-box-18 text-center padding-tb-md">
                                 {final_standings && <TeamCell id={final_standings.fourth_place} config={config} />}
                             </Col>
                         </Row>
@@ -84,17 +103,21 @@ const TournamentsRow = (props) => {
 }
 
 const TournamentsHeader = (props) => {
+    const { config } = props
+    const header1 = config.is_olympic ? 'Gold Medalists' : 'Champions'
+    const header2 = config.is_olympic ? 'Silver Medalists' : 'Runners-up'
+    const header3 = config.is_olympic ? 'Bronze Medalists' : 'Third-place'
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-start">
             <Col>
                 <Row className="no-gutters">
                     <Col className="col-box-4"></Col>
-                    <Col className="col-box-6 text-center padding-top-sm">No.</Col>
-                    <Col className="col-box-10 text-center padding-top-sm">Edition</Col>
-                    <Col className="col-box-20 text-center padding-top-sm">Champions</Col>
-                    <Col className="col-box-20 text-center padding-top-sm">Runners-up</Col>
-                    <Col className="col-box-20 text-center padding-top-sm">Third-place</Col>
-                    <Col className="col-box-20 text-center padding-top-sm">Fourth-place</Col>
+                    <Col className="col-box-4 text-center padding-top-sm">No.</Col>
+                    <Col className="col-box-20 text-center padding-top-sm">Edition</Col>
+                    <Col className="col-box-18 text-center padding-top-sm">{header1}</Col>
+                    <Col className="col-box-18 text-center padding-top-sm">{header2}</Col>
+                    <Col className="col-box-18 text-center padding-top-sm">{header3}</Col>
+                    <Col className="col-box-18 text-center padding-top-sm">Fourth-place</Col>
                 </Row>
             </Col>
         </Row>
@@ -105,7 +128,7 @@ const TournamentsTable = (props) => {
     const { tournaments, config } = props
     return (
         <React.Fragment>
-            <TournamentsHeader />
+            <TournamentsHeader config={config} />
             {tournaments.map((t) => (
                 <TournamentsRow key={t.id} tournament={t} config={config} />
             ))}
@@ -123,7 +146,8 @@ class CompetitionApp extends React.Component {
 
     getData = () => {
         const competition = getCompetition(this.props.query.id)
-        this.setState({ competition, config: { team_type_id: competition.team_type_id, teams: getTeams(competition.team_type_id) } })
+        const is_olympic = competition.team_type_id.includes('U23')
+        this.setState({ competition, config: { team_type_id: competition.team_type_id, is_olympic, teams: getTeams(competition.team_type_id) } })
     }
 
     setData = () => {
@@ -142,7 +166,7 @@ class CompetitionApp extends React.Component {
 
     render() {
         const { competition, config } = this.state
-        const tournamentConfig = { ...config, logo_path: competition.logo_path }
+        const competitionConfig = { ...config, logo_path: competition.logo_path }
         return (
             <Page>
                 <Container>
@@ -173,7 +197,7 @@ class CompetitionApp extends React.Component {
                     </Row>
                     <Row>
                         <Col>
-                            <TournamentsTable tournaments={competition.tournaments} config={tournamentConfig} />
+                            <TournamentsTable tournaments={competition.tournaments} config={competitionConfig} />
                         </Col>
                     </Row>
                 </Container>
