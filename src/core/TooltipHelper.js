@@ -133,9 +133,13 @@ export const ConsolationTooltip = (props) => {
 }
 
 export const SemifinalistsTooltip = (props) => {
-    const { target } = props
-    const content = `No third-place match was played. Semi-finalists are listed in alphabetical order.`
-    return <TopTooltip target={target} content={content} />
+    const { target, notes } = props
+    return <TopTooltip target={target} content={notes} />
+}
+
+export const ShortNameTooltip = (props) => {
+    const { target, content, anchor } = props
+    return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const Extra140Tooltip = (props) => {

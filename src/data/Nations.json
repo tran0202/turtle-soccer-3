@@ -474,7 +474,7 @@
         "parent_nation_id": "CAM",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Flag_of_the_Khmer_Republic.svg",
+        "flag_filename": "640px-Flag_of_the_Khmer_Republic.svg.png",
         "start_date": "1970-01-01",
         "end_date": "1975-01-01"
     },
@@ -496,7 +496,7 @@
         "parent_nation_id": "CMR",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Cameroon_1961_1975.png",
+        "flag_filename": "640px-Flag_of_Cameroon_(1961–1975).svg.png",
         "code": "CMR",
         "start_date": "1961-10-01",
         "end_date": "1975-05-20"
@@ -608,7 +608,7 @@
         "parent_nation_id": "TPE",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Republic_of_China.png",
+        "flag_filename": "640px-Flag_of_the_Republic_of_China.svg.png",
         "code": "ROC",
         "start_date": "1960-01-01",
         "end_date": "1979-01-01"
@@ -689,7 +689,7 @@
         "parent_nation_id": "CGO",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Congo_1970_1991.png",
+        "flag_filename": "640px-Flag_of_the_People's_Republic_of_the_Congo.svg.png",
         "code": "CGO",
         "start_date": "1970-01-02",
         "end_date": "1991-06-09"
@@ -735,7 +735,7 @@
         "parent_nation_id": "COD",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Congo_DR_1997_2003.png",
+        "flag_filename": "640px-Flag_of_the_Democratic_Republic_of_the_Congo_(1997–2003).svg.png",
         "code": "COD",
         "start_date": "1997-05-17",
         "end_date": "2003-01-01"
@@ -759,7 +759,7 @@
         "parent_nation_id": "COD",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Congo_Kinshasa_1966_1971.png",
+        "flag_filename": "640px-Flag_of_the_Democratic_Republic_of_the_Congo_(1966–1971).svg.png",
         "code": "COD",
         "start_date": "1966-06-01",
         "end_date": "1971-10-27"
@@ -861,7 +861,7 @@
         "parent_nation_id": "CUW",
         "confederation_id": "CONCACAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Netherlands_Antilles_1959_1986.png",
+        "flag_filename": "640px-Flag_of_the_Netherlands_Antilles_(1959–1986).svg.png",
         "code": "ANT",
         "start_date": "1959-01-01",
         "end_date": "1986-01-01"
@@ -879,14 +879,25 @@
     },
     {
         "id": "CZE",
-        "name": "Czech Republic",
+        "name": "Czechia",
         "official_name": "",
         "parent_nation_id": "",
         "confederation_id": "UEFA",
         "nation_type_id": "NATN",
         "flag_filename": "640px-Flag_of_the_Czech_Republic.svg.png",
-        "start_date": "1993-01-01",
+        "start_date": "2022-10-01",
         "end_date": ""
+    },
+    {
+        "id": "CZE-1993-2022",
+        "name": "Czech Republic",
+        "official_name": "",
+        "parent_nation_id": "CZE",
+        "confederation_id": "UEFA",
+        "nation_type_id": "NATN",
+        "flag_filename": "640px-Flag_of_the_Czech_Republic.svg.png",
+        "start_date": "1993-01-01",
+        "end_date": "2022-10-01"
     },
     {
         "id": "TCH",
@@ -1017,7 +1028,7 @@
         "parent_nation_id": "EGY",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Republic_of_Egypt.png",
+        "flag_filename": "640px-Flag_of_Egypt_(1952–1958).svg.png",
         "code": "EGY",
         "start_date": "1953-06-18",
         "end_date": "1958-02-22"
@@ -1153,7 +1164,7 @@
         "parent_nation_id": "ETH",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Ethiopia_1941_1974.png",
+        "flag_filename": "640px-Flag_of_Ethiopia_(1897–1974).svg.png",
         "code": "ETH",
         "start_date": "1941-01-01",
         "end_date": "1974-09-12"
@@ -1360,7 +1371,7 @@
         "parent_nation_id": "GHA",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Ghana_1964_1966.png",
+        "flag_filename": "640px-Flag_of_Ghana_(1964–1966).svg.png",
         "code": "GHA",
         "start_date": "1964-01-01",
         "end_date": "1966-02-24"
@@ -1417,7 +1428,7 @@
         "confederation_id": "CONCACAF",
         "not_fifa_member": true,
         "nation_type_id": "TER",
-        "flag_filename": "Guadeloupe.png",
+        "flag_filename": "Unofficial_flag_of_Guadeloupe_(local).svg",
         "start_date": "",
         "end_date": ""
     },
@@ -1494,7 +1505,7 @@
         "parent_nation_id": "HAI",
         "confederation_id": "CONCACAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Haiti_1964_1986.png",
+        "flag_filename": "640px-Flag_of_Haiti_(1964–1986).svg.png",
         "code": "HAI",
         "start_date": "1964-01-01",
         "end_date": "1986-02-26"
@@ -1528,7 +1539,7 @@
         "parent_nation_id": "HKG",
         "confederation_id": "AFC",
         "nation_type_id": "TER",
-        "flag_filename": "Hong_Kong_1959_1997.png",
+        "flag_filename": "640px-Flag_of_Hong_Kong_(1959–1997).svg.png",
         "code": "HKG",
         "start_date": "1959-01-01",
         "end_date": "1997-01-01"
@@ -1540,7 +1551,7 @@
         "parent_nation_id": "HKG",
         "confederation_id": "AFC",
         "nation_type_id": "TER",
-        "flag_filename": "Hong_Kong_1955_1959.png",
+        "flag_filename": "640px-Flag_of_Hong_Kong_(1955–1959).svg.png",
         "code": "HKG",
         "start_date": "1955-01-01",
         "end_date": "1959-01-01"
@@ -1724,7 +1735,7 @@
         "parent_nation_id": "IRQ",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Iraq_1963_1991.png",
+        "flag_filename": "640px-Flag_of_Iraq_(1963–1991).svg.png",
         "code": "IRQ",
         "start_date": "1963-10-31",
         "end_date": "1991-04-01"
@@ -1992,7 +2003,7 @@
         "parent_nation_id": "LBY",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Libya_1977_2011.png",
+        "flag_filename": "640px-Flag_of_Libya_(1977–2011).svg.png",
         "code": "LBY",
         "start_date": "1977-11-11",
         "end_date": "2011-02-17"
@@ -2280,7 +2291,7 @@
         "parent_nation_id": "MYA",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Burma.png",
+        "flag_filename": "640px-Flag_of_Burma_(1948–1974).svg.png",
         "start_date": "1948-01-04",
         "end_date": "1974-01-03"
     },
@@ -2335,7 +2346,7 @@
         "parent_nation_id": "NCL",
         "confederation_id": "OFC",
         "nation_type_id": "TER",
-        "flag_filename": "Flag_of_France.svg",
+        "flag_filename": "640px-Flag_of_France.svg.png",
         "code": "NCL",
         "start_date": "1973-01-01",
         "end_date": "2008-01-01"
@@ -3182,7 +3193,7 @@
         "parent_nation_id": "SDN",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Sudan_1956_1970.png",
+        "flag_filename": "640px-Flag_of_Sudan_(1956–1970).svg.png",
         "code": "SDN",
         "start_date": "1956-01-01",
         "end_date": "1970-05-20"
@@ -3249,7 +3260,7 @@
         "parent_nation_id": "TAH",
         "confederation_id": "OFC",
         "nation_type_id": "NATN",
-        "flag_filename": "French_Polynesia_1794_1984.png",
+        "flag_filename": "640px-Flag_of_France.svg.png",
         "code": "TAH",
         "start_date": "1794-02-15",
         "end_date": "1984-12-04"
@@ -3344,14 +3355,25 @@
     },
     {
         "id": "TUR",
-        "name": "Turkey",
+        "name": "Türkiye",
         "official_name": "",
         "parent_nation_id": "",
         "confederation_id": "UEFA",
         "nation_type_id": "NATN",
         "flag_filename": "640px-Flag_of_Turkey.svg.png",
-        "start_date": "",
+        "start_date": "2024-01-01",
         "end_date": ""
+    },
+    {
+        "id": "TUR-2024",
+        "name": "Turkey",
+        "official_name": "",
+        "parent_nation_id": "TUR",
+        "confederation_id": "UEFA",
+        "nation_type_id": "NATN",
+        "flag_filename": "640px-Flag_of_Turkey.svg.png",
+        "start_date": "",
+        "end_date": "2024-01-01"
     },
     {
         "id": "TKM",
@@ -3404,7 +3426,7 @@
         "parent_nation_id": "UGA",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Uganda_1914_1962.png",
+        "flag_filename": "640px-Flag_of_the_Uganda_Protectorate.svg.png",
         "code": "UGA",
         "start_date": "1914-01-01",
         "end_date": "1962-10-09"
@@ -3505,7 +3527,7 @@
         "parent_nation_id": "VAN",
         "confederation_id": "OFC",
         "nation_type_id": "NATN",
-        "flag_filename": "New_Hebrides.png",
+        "flag_filename": "640px-Flag_of_the_British_New_Hebrides_(1952–1980).svg.png",
         "code": "HEB",
         "start_date": "1953-01-01",
         "end_date": "1980-07-30"
@@ -3563,7 +3585,7 @@
         "parent_nation_id": "VIE",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "South_Vietnam.png",
+        "flag_filename": "640px-Flag_of_South_Vietnam.svg.png",
         "code": "VSO",
         "start_date": "",
         "end_date": ""

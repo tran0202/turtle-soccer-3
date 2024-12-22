@@ -5,12 +5,13 @@ import Competitions from '../data/Competitions.json'
 import Tournament from '../data/Tournament.json'
 import NationArray from '../data/Nations.json'
 import TeamArray from '../data/Teams.json'
+import ClubArray from '../data/Clubs.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
 import { getTournamentArray } from './DataHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamArray = () => {
-    return [].concat(TeamArray, [])
+    return [].concat(TeamArray, ClubArray)
 }
 
 export const setFIFAMember = () => {
@@ -19,11 +20,11 @@ export const setFIFAMember = () => {
     })
 }
 
-export const getTeams = (team_type_id) => {
+export const getTeams = (team_type_id, all_member) => {
     setFIFAMember()
     const result = []
     getTeamArray().forEach((t) => {
-        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.fifa_member && t.team_type_id === team_type_id)
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && (all_member || n.fifa_member) && t.team_type_id === team_type_id)
         if (foundNation) {
             t.nation = foundNation
             const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
@@ -190,9 +191,20 @@ export const getTeamFlagId = (id, config) => {
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
                     src={'/images/flags/' + team.nation.flag_filename}
-                    alt={`${id} ${team.nation.official_name}`}
-                    title={`${id} ${team.nation.official_name}`}
+                    alt={`${id} ${team.nation.name} ${team.nation.official_name}`}
+                    title={`${id} ${team.nation.name} ${team.nation.official_name}`}
                 />
+            )}
+            {config.team_type_id === 'CLUB' && (
+                <React.Fragment>
+                    <img className="flag-club-sm flag-club-md" src={`/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />{' '}
+                    <img
+                        className="flag-xs-2 flag-sm-2"
+                        src={`/images/flags/${team.nation.flag_filename}`}
+                        alt={`${team.nation_id} ${team.nation.name} ${team.nation.official_name}`}
+                        title={`${team.nation_id} ${team.nation.name} ${team.nation.official_name}`}
+                    />
+                </React.Fragment>
             )}
         </React.Fragment>
     )
@@ -1405,67 +1417,6 @@ export const overwriteGroup = (group) => {
 }
 
 // ----------------------------- Version 1 ----------------------------------
-
-export const getNationSmallFlagImg = (id) => {
-    if (!id) return
-    const team = getTeamArray().find((t) => t.id === id)
-    if (team) {
-        const nation = NationArray.find((n) => n.id === team.nation_id)
-        if (nation) {
-            return (
-                <React.Fragment>
-                    <img className="flag-xs-2 flag-sm-2" src={`/images/flags/${nation.flag_filename}`} alt={nation.id} title={nation.id} />
-                </React.Fragment>
-            )
-        } else {
-            console.log('Nation error', nation)
-        }
-    } else {
-        console.log('Team error', team)
-    }
-}
-
-export const getClubLogoImg = (id, config) => {
-    if (!id) return
-    const team = getTeamArray().find((t) => t.id === id)
-    if (team) {
-        return (
-            <React.Fragment>
-                <img className="flag-club-sm flag-club-md" src={`/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />
-            </React.Fragment>
-        )
-    } else {
-        console.log('Team error', team)
-    }
-}
-
-// export const getTeamFlag = (id, config) => {
-//     if (!id) return
-//     return (
-//         <React.Fragment>
-//             {config.team_type_id === 'CLUB' && getClubLogoImg(id, config)}
-//             {config.team_type_id === 'CLUB' && getNationSmallFlagImg(id)}
-//             {config.team_type_id !== 'CLUB' && (
-//                 <img
-//                     className="flag-sm flag-md margin-bottom-xs-4"
-//                     src={getFlagSrc(id)}
-//                     alt={`${id} ${getNationOfficialName(id)}`}
-//                     title={`${id} ${getNationOfficialName(id)}`}
-//                 />
-//             )}
-//         </React.Fragment>
-//     )
-// }
-
-// export const getTeamFlagName = (id, config) => {
-//     if (!id) return
-//     return (
-//         <React.Fragment>
-//             {getTeamFlag(id, config)}
-//             <span className="padding-top-xs">&nbsp;{getTeamName(id)}</span>
-//         </React.Fragment>
-//     )
-// }
 
 export const getNationOfficialName = (id) => {
     const team = getTeamArray().find((t) => t.id === id)
