@@ -54,6 +54,23 @@ export const getActiveTeams = (team_type_id) => {
     return result
 }
 
+export const getNonFIFATeams = (team_type_id) => {
+    setFIFAMember()
+    const result = []
+    getTeamArray().forEach((t) => {
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && n.end_date === '' && !n.fifa_member && t.team_type_id === team_type_id)
+        if (t.parent_team_id === '' && foundNation) {
+            t.nation = foundNation
+            const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
+            if (foundConf) {
+                t.confederation = foundConf
+            }
+            result.push(t)
+        }
+    })
+    return result
+}
+
 // this includes FIFA
 export const getConfederations = () => {
     return Confederations
@@ -103,6 +120,14 @@ export const getConfederationOrganization = () => {
             if (c.teams.length > 11 && index + 1 === (pot_index + 1) * Math.ceil(c.teams.length / 4)) {
                 pot_index++
             }
+        })
+        const nonFIFATeams = getNonFIFATeams(teamTypeId)
+        c.non_fifa_teams = nonFIFATeams.filter((t) => t.confederation.id === c.id)
+        c.non_fifa_teams.sort((a, b) => {
+            return a.name > b.name ? 1 : -1
+        })
+        c.non_fifa_teams.forEach((t, index) => {
+            t.index = index + 1
         })
     })
     return confederations

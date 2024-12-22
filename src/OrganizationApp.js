@@ -113,6 +113,23 @@ const Confederation = (props) => {
                     </Row>
                 </React.Fragment>
             )}
+            {!isFIFA && confederation.non_fifa_teams.length > 0 && (
+                <React.Fragment>
+                    <Row>
+                        <Col>
+                            <h4 className="mt-4">Non-FIFA Teams</h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <TeamHeader />
+                            {confederation.non_fifa_teams.map((t) => (
+                                <TeamRow team={t} key={t.id} />
+                            ))}
+                        </Col>
+                    </Row>
+                </React.Fragment>
+            )}
         </React.Fragment>
     )
 }
