@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Container, Collapse, Row, Col, Button, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import { getActiveTeams, getRandomHostTeamArray, getTournament, processSoccerTournament, getConfederations } from './core/TeamHelper'
+import { getActiveTeams, getRandomHostTeamArray, getImagine, processSoccerTournament, getConfederations } from './core/TeamHelper'
 import Page from './core/Page'
-import QualifiedTable from './tournament/QualifiedTable'
-import Tournament from './tournament/Tournament'
+import QualifiedTable from './imagine/QualifiedTable'
+import Tournament from './imagine/Tournament'
 
-export const WorldCupCollapse = (props) => {
+export const ImagineCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -82,7 +82,7 @@ const ConfederationQualifications = (props) => {
     )
 }
 
-class WorldCupApp extends React.Component {
+class ImagineApp extends React.Component {
     constructor(props) {
         super(props)
         document.title = 'World Cup - Turtle Soccer'
@@ -97,7 +97,7 @@ class WorldCupApp extends React.Component {
 
     getData = () => {
         const teamTypeId = 'MNT'
-        const config = getTournament()
+        const config = getImagine()
         const teamArray = getActiveTeams(teamTypeId)
         const qualifiedTeams = getRandomHostTeamArray(teamArray, config)
         const qualifications = processSoccerTournament(teamArray, qualifiedTeams, config)
@@ -127,23 +127,23 @@ class WorldCupApp extends React.Component {
         return (
             <Page>
                 <Container className="container-xxxl">
-                    <h1 className="h1-ff5 text-center mt-3 mb-3">World Cup 2026</h1>
+                    <h1 className="h1-ff5 text-center mt-3 mb-3">Imaginary World Cup 2026</h1>
 
-                    <WorldCupCollapse title="Qualified Teams" initialStatus="Closed">
+                    <ImagineCollapse title="Qualified Teams" initialStatus="Closed">
                         <QualifiedTable state={this.state} />
-                    </WorldCupCollapse>
+                    </ImagineCollapse>
 
-                    <WorldCupCollapse title="Confederation Qualifications" initialStatus="Closed">
+                    <ImagineCollapse title="Confederation Qualifications" initialStatus="Closed">
                         <ConfederationQualifications state={this.state} qualifications={qualifications} />
-                    </WorldCupCollapse>
+                    </ImagineCollapse>
 
-                    <WorldCupCollapse title="Final" initialStatus="Opened">
+                    <ImagineCollapse title="Final" initialStatus="Opened">
                         <Tournament state={this.state} tournament={tournament} />
-                    </WorldCupCollapse>
+                    </ImagineCollapse>
                 </Container>
             </Page>
         )
     }
 }
 
-export default WorldCupApp
+export default ImagineApp

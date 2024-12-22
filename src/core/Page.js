@@ -28,7 +28,7 @@ class Page extends React.Component {
                                     </ul>
                                     <ul>
                                         <li>
-                                            <a href="/worldcup">World Cup</a>
+                                            <a href="/imagine">Imagine</a>
                                         </li>
                                     </ul>
                                     <ul>

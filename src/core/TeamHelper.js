@@ -2,12 +2,12 @@ import React from 'react'
 import randomInteger from 'random-int'
 import Confederations from '../data/Confederations.json'
 import Competitions from '../data/Competitions.json'
-import Tournament from '../data/Tournament.json'
+import Imagine from '../data/Imagine.json'
 import NationArray from '../data/Nations.json'
 import TeamArray from '../data/Teams.json'
 import ClubArray from '../data/Clubs.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
-import { getTournamentArray } from './DataHelper'
+import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamArray = () => {
@@ -278,8 +278,8 @@ export const getFlagSrc = (id) => {
     }
 }
 
-export const getTournament = () => {
-    return Tournament
+export const getImagine = () => {
+    return Imagine
 }
 
 export const getConfederation = (id) => {
