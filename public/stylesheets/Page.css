@@ -288,21 +288,38 @@
   --------------------------------------------------------------*/
 #hero {
     width: 100%;
-    height: calc(60vh - 114px);
+    height: calc(50vh - 114px);
     padding: 0;
     overflow: hidden;
 }
 
-#hero .carousel-item {
+#hero-md {
     width: 100%;
-    height: calc(60vh - 114px);
+    height: calc(27vh - 114px);
+    padding: 0;
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%;
+    height: calc(50vh - 114px);
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
-#hero .carousel-item::before {
+.carousel-item-md {
+    width: 50%;
+    height: calc(27vh - 114px);
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.carousel-item::before,
+.carousel-item-md::before {
     content: '';
     /* background-color: rgba(13, 30, 45, 0.6); */
     position: absolute;
@@ -315,7 +332,7 @@
     overflow: hidden;
 }
 
-#hero .carousel-container {
+.carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,29 +344,32 @@
     overflow: hidden;
 }
 
-#hero .carousel-content {
+.carousel-content {
     text-align: left;
     padding-left: 70px;
 }
 
 @media (max-width: 992px) {
     #hero,
-    #hero .carousel-item {
+    .carousel-item,
+    .carousel-item-md {
         height: calc(100vh - 70px);
     }
-    #hero .carousel-content.container {
+    .carousel-content.container {
         padding: 0 50px;
     }
 }
 
-#hero h2 {
+#hero h2,
+#hero-md h2 {
     color: #fff;
     margin-bottom: 30px;
     font-size: 48px;
     font-weight: 900;
 }
 
-#hero p {
+#hero p,
+#hero-md p {
     width: 80%;
     -webkit-animation-delay: 0.4s;
     animation-delay: 0.4s;
@@ -357,39 +377,45 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-#hero .carousel-inner .carousel-item {
+.carousel-inner .carousel-item,
+.carousel-inner .carousel-item-md {
     transition-property: opacity;
     background-position: center top;
 }
 
-#hero .carousel-inner .carousel-item,
-#hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
+.carousel-inner .carousel-item,
+.carousel-inner .carousel-item-md,
+.carousel-inner .active.carousel-item-left,
+.carousel-inner .active.carousel-item-right {
     opacity: 0;
 }
 
-#hero .carousel-inner .active,
-#hero .carousel-inner .carousel-item-next.carousel-item-left,
-#hero .carousel-inner .carousel-item-prev.carousel-item-right {
+.carousel-inner .active,
+.carousel-inner .carousel-item-next.carousel-item-left,
+.carousel-inner .carousel-item-prev.carousel-item-right {
     opacity: 1;
     transition: 0.5s;
 }
 
-#hero .carousel-inner .carousel-item-next,
-#hero .carousel-inner .carousel-item-prev,
-#hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev,
+.carousel-inner .active.carousel-item-left,
+.carousel-inner .active.carousel-item-right {
     left: 0;
     transform: translate3d(0, 0, 0);
 }
 
-#hero .carousel-control-prev,
-#hero .carousel-control-next {
+.carousel-control-next-md {
+    right: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
     width: 10%;
 }
 
-#hero .carousel-control-next-icon,
-#hero .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     background: none;
     font-size: 48px;
     line-height: 1;
@@ -397,11 +423,15 @@
     height: auto;
 }
 
-#hero .carousel-indicators li {
+.carousel-indicators-md {
+    right: auto;
+}
+
+.carousel-indicators li {
     cursor: pointer;
 }
 
-#hero .btn-get-started {
+.btn-get-started {
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     font-size: 14px;
@@ -419,7 +449,7 @@
     background: #428bca;
 }
 
-#hero .btn-get-started:hover {
+.btn-get-started:hover {
     background: #1c5c93;
 }
 
@@ -433,8 +463,8 @@
     #hero p {
         width: 70%;
     }
-    #hero .carousel-control-prev,
-    #hero .carousel-control-next {
+    .carousel-control-prev,
+    .carousel-control-next {
         width: 5%;
     }
 }

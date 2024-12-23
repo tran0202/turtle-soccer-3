@@ -1,15 +1,50 @@
-import React from 'react'
-import { Container, Row, Col, Button, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap'
+import React, { useState } from 'react'
+import { Container, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import classnames from 'classnames'
 import { getTournament, getTournamentData } from './core/TeamHelper'
 import Page from './core/Page'
 import Header from './tournament/Header'
+import Awards from './tournament/Awards'
+
+const TournamentTabs = (props) => {
+    const { tournament, config } = props
+    const [activeTab, setActiveTab] = useState('Awards')
+    const toggle = (tab) => {
+        if (activeTab !== tab) setActiveTab(tab)
+    }
+
+    return (
+        <React.Fragment>
+            <Nav tabs className="mt-4 mb-4">
+                <NavItem>
+                    <NavLink
+                        className={classnames({ active: activeTab === 'Awards' })}
+                        onClick={() => {
+                            toggle('Awards')
+                        }}
+                    >
+                        Awards
+                    </NavLink>
+                </NavItem>
+            </Nav>
+            <TabContent activeTab={activeTab}>
+                <TabPane tabId="Awards">
+                    <Awards tournament={tournament} config={config} />
+                </TabPane>
+            </TabContent>
+        </React.Fragment>
+    )
+}
 
 class TournamentApp extends React.Component {
     constructor(props) {
         super(props)
         document.title = 'Tournament - Turtle Soccer'
 
-        this.state = { tournament: {}, config: { details: {}, competition: { tournaments: [] }, previous_tournament: {}, next_tournament: {} } }
+        this.state = {
+            tournament: {},
+            config: { details: {}, hero_images: [], competition: { tournaments: [] }, previous_tournament: {}, next_tournament: {} },
+        }
     }
 
     getPreviousTournament = (tournaments, current_id) => {
@@ -51,14 +86,7 @@ class TournamentApp extends React.Component {
             <Page>
                 <Container>
                     <Header tournament={this.state.tournament} config={this.state.config} />
-                    {/* <h1 className="h1-ff5 text-center mt-3 mb-3">*** Tournament ***</h1> */}
-                    {/* <Row className="mt-3 mb-3 text-start rankings-page-box">
-                        <Col sm="12" md="12">
-                            <div className="container">
-                                <RankingsTable state={this.state} func={this.setData} />
-                            </div>
-                        </Col>
-                    </Row> */}
+                    <TournamentTabs tournament={this.state.tournament} config={this.state.config} />
                 </Container>
             </Page>
         )
