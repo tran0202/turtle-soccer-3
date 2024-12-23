@@ -310,7 +310,7 @@
 }
 
 .carousel-item-md {
-    width: 50%;
+    width: 100%;
     height: calc(27vh - 114px);
     background-size: cover;
     background-position: top right;

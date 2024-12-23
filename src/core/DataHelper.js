@@ -35,6 +35,7 @@ import td_WC_2010 from '../data/tournamentData/WC/td_WC_2010.json'
 import td_WC_2014 from '../data/tournamentData/WC/td_WC_2014.json'
 import td_WC_2018 from '../data/tournamentData/WC/td_WC_2018.json'
 import td_WC_2022 from '../data/tournamentData/WC/td_WC_2022.json'
+import td_WC_2026 from '../data/tournamentData/WC/td_WC_2026.json'
 
 import td_WWC_1991 from '../data/tournamentData/WWC/td_WWC_1991.json'
 import td_WWC_1995 from '../data/tournamentData/WWC/td_WWC_1995.json'
@@ -337,6 +338,7 @@ export const getTournamentDataWC = () => {
         [td_WC_2014],
         [td_WC_2018],
         [td_WC_2022],
+        [td_WC_2026],
     )
 }
 

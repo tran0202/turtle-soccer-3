@@ -92,6 +92,7 @@ export const getCompetition = (competition_id) => {
             t.index = tournaments.length - index
         })
         competition.tournaments = tournaments
+        competition.teams = getActiveTeams(competition.team_type_id)
     }
     return competition
 }

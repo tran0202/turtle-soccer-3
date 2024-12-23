@@ -1,5 +1,26 @@
 [
     {
+        "id": "WC2026",
+        "year": "2026",
+        "name": "FIFA World Cup Canada - Mexico - United States 2026",
+        "competition_id": "WC",
+        "active": true,
+        "points_for_win": 3,
+        "details": {
+            "host": ["CAN", "MEX", "USA"],
+            "logo_filename": "2026_FIFA_World_Cup_emblem.svg",
+            "start_date": "2026-06-11",
+            "end_date": "2026-07-19",
+            "color": "#8a1538",
+            "team_count": 48,
+            "confed_count": 6,
+            "venue_count": 16,
+            "city_count": 16
+        },
+        "hero_images": [],
+        "final_standings": {}
+    },
+    {
         "id": "WC2022",
         "year": "2022",
         "name": "FIFA World Cup Qatar 2022",
