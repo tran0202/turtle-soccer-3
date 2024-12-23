@@ -34,6 +34,7 @@ import td_WC_2006 from '../data/tournamentData/WC/td_WC_2006.json'
 import td_WC_2010 from '../data/tournamentData/WC/td_WC_2010.json'
 import td_WC_2014 from '../data/tournamentData/WC/td_WC_2014.json'
 import td_WC_2018 from '../data/tournamentData/WC/td_WC_2018.json'
+import td_WC_2022 from '../data/tournamentData/WC/td_WC_2022.json'
 
 import td_WWC_1991 from '../data/tournamentData/WWC/td_WWC_1991.json'
 import td_WWC_1995 from '../data/tournamentData/WWC/td_WWC_1995.json'
@@ -43,6 +44,7 @@ import td_WWC_2007 from '../data/tournamentData/WWC/td_WWC_2007.json'
 import td_WWC_2011 from '../data/tournamentData/WWC/td_WWC_2011.json'
 import td_WWC_2015 from '../data/tournamentData/WWC/td_WWC_2015.json'
 import td_WWC_2019 from '../data/tournamentData/WWC/td_WWC_2019.json'
+import td_WWC_2023 from '../data/tournamentData/WWC/td_WWC_2023.json'
 
 import td_MOFT_1908 from '../data/tournamentData/MOFT/td_MOFT_1908.json'
 import td_MOFT_1912 from '../data/tournamentData/MOFT/td_MOFT_1912.json'
@@ -69,6 +71,7 @@ import td_MOFT_2008 from '../data/tournamentData/MOFT/td_MOFT_2008.json'
 import td_MOFT_2012 from '../data/tournamentData/MOFT/td_MOFT_2012.json'
 import td_MOFT_2016 from '../data/tournamentData/MOFT/td_MOFT_2016.json'
 import td_MOFT_2020 from '../data/tournamentData/MOFT/td_MOFT_2020.json'
+import td_MOFT_2024 from '../data/tournamentData/MOFT/td_MOFT_2024.json'
 
 import td_WOFT_1996 from '../data/tournamentData/WOFT/td_WOFT_1996.json'
 import td_WOFT_2000 from '../data/tournamentData/WOFT/td_WOFT_2000.json'
@@ -77,6 +80,7 @@ import td_WOFT_2008 from '../data/tournamentData/WOFT/td_WOFT_2008.json'
 import td_WOFT_2012 from '../data/tournamentData/WOFT/td_WOFT_2012.json'
 import td_WOFT_2016 from '../data/tournamentData/WOFT/td_WOFT_2016.json'
 import td_WOFT_2020 from '../data/tournamentData/WOFT/td_WOFT_2020.json'
+import td_WOFT_2024 from '../data/tournamentData/WOFT/td_WOFT_2024.json'
 
 import td_CONFEDC_1992 from '../data/tournamentData/CONFEDC/td_CONFEDC_1992.json'
 import td_CONFEDC_1995 from '../data/tournamentData/CONFEDC/td_CONFEDC_1995.json'
@@ -105,17 +109,25 @@ import td_EURO_2008 from '../data/tournamentData/EURO/td_EURO_2008.json'
 import td_EURO_2012 from '../data/tournamentData/EURO/td_EURO_2012.json'
 import td_EURO_2016 from '../data/tournamentData/EURO/td_EURO_2016.json'
 import td_EURO_2020 from '../data/tournamentData/EURO/td_EURO_2020.json'
+import td_EURO_2024 from '../data/tournamentData/EURO/td_EURO_2024.json'
 
 import td_UNL_201819 from '../data/tournamentData/UNL/td_UNL_201819.json'
 import td_UNL_202021 from '../data/tournamentData/UNL/td_UNL_202021.json'
+import td_UNL_202223 from '../data/tournamentData/UNL/td_UNL_202223.json'
 
 import td_UCL_201819 from '../data/tournamentData/UCL/td_UCL_201819.json'
 import td_UCL_201920 from '../data/tournamentData/UCL/td_UCL_201920.json'
 import td_UCL_202021 from '../data/tournamentData/UCL/td_UCL_202021.json'
+import td_UCL_202122 from '../data/tournamentData/UCL/td_UCL_202122.json'
+import td_UCL_202223 from '../data/tournamentData/UCL/td_UCL_202223.json'
+import td_UCL_202324 from '../data/tournamentData/UCL/td_UCL_202324.json'
 
 import td_UEL_201819 from '../data/tournamentData/UEL/td_UEL_201819.json'
 import td_UEL_201920 from '../data/tournamentData/UEL/td_UEL_201920.json'
 import td_UEL_202021 from '../data/tournamentData/UEL/td_UEL_202021.json'
+import td_UEL_202122 from '../data/tournamentData/UEL/td_UEL_202122.json'
+import td_UEL_202223 from '../data/tournamentData/UEL/td_UEL_202223.json'
+import td_UEL_202324 from '../data/tournamentData/UEL/td_UEL_202324.json'
 
 import td_COPA_1916 from '../data/tournamentData/COPA/td_COPA_1916.json'
 import td_COPA_1917 from '../data/tournamentData/COPA/td_COPA_1917.json'
@@ -164,6 +176,7 @@ import td_COPA_2015 from '../data/tournamentData/COPA/td_COPA_2015.json'
 import td_COPA_2016 from '../data/tournamentData/COPA/td_COPA_2016.json'
 import td_COPA_2019 from '../data/tournamentData/COPA/td_COPA_2019.json'
 import td_COPA_2021 from '../data/tournamentData/COPA/td_COPA_2021.json'
+import td_COPA_2024 from '../data/tournamentData/COPA/td_COPA_2024.json'
 
 import td_GC_1963 from '../data/tournamentData/GC/td_GC_1963.json'
 import td_GC_1965 from '../data/tournamentData/GC/td_GC_1965.json'
@@ -191,6 +204,7 @@ import td_GC_2015 from '../data/tournamentData/GC/td_GC_2015.json'
 import td_GC_2017 from '../data/tournamentData/GC/td_GC_2017.json'
 import td_GC_2019 from '../data/tournamentData/GC/td_GC_2019.json'
 import td_GC_2021 from '../data/tournamentData/GC/td_GC_2021.json'
+import td_GC_2023 from '../data/tournamentData/GC/td_GC_2023.json'
 
 import td_AFCON_1957 from '../data/tournamentData/AFCON/td_AFCON_1957.json'
 import td_AFCON_1959 from '../data/tournamentData/AFCON/td_AFCON_1959.json'
@@ -224,6 +238,8 @@ import td_AFCON_2013 from '../data/tournamentData/AFCON/td_AFCON_2013.json'
 import td_AFCON_2015 from '../data/tournamentData/AFCON/td_AFCON_2015.json'
 import td_AFCON_2017 from '../data/tournamentData/AFCON/td_AFCON_2017.json'
 import td_AFCON_2019 from '../data/tournamentData/AFCON/td_AFCON_2019.json'
+import td_AFCON_2021 from '../data/tournamentData/AFCON/td_AFCON_2021.json'
+import td_AFCON_2023 from '../data/tournamentData/AFCON/td_AFCON_2023.json'
 
 import td_ACC_1956 from '../data/tournamentData/AAC/td_AAC_1956.json'
 import td_ACC_1960 from '../data/tournamentData/AAC/td_AAC_1960.json'
@@ -242,6 +258,7 @@ import td_ACC_2007 from '../data/tournamentData/AAC/td_AAC_2007.json'
 import td_ACC_2011 from '../data/tournamentData/AAC/td_AAC_2011.json'
 import td_ACC_2015 from '../data/tournamentData/AAC/td_AAC_2015.json'
 import td_ACC_2019 from '../data/tournamentData/AAC/td_AAC_2019.json'
+import td_ACC_2023 from '../data/tournamentData/AAC/td_AAC_2023.json'
 
 import td_ONC_1973 from '../data/tournamentData/ONC/td_ONC_1973.json'
 import td_ONC_1980 from '../data/tournamentData/ONC/td_ONC_1980.json'
@@ -253,6 +270,7 @@ import td_ONC_2004 from '../data/tournamentData/ONC/td_ONC_2004.json'
 import td_ONC_2008 from '../data/tournamentData/ONC/td_ONC_2008.json'
 import td_ONC_2012 from '../data/tournamentData/ONC/td_ONC_2012.json'
 import td_ONC_2016 from '../data/tournamentData/ONC/td_ONC_2016.json'
+import td_ONC_2024 from '../data/tournamentData/ONC/td_ONC_2024.json'
 
 export const getTournamentArray = () => {
     return [].concat(t_WC, t_WWC, t_MOFT, t_WOFT, t_CONFEDC, t_EURO, t_UNL, t_UCL, t_UEL, t_COPA, t_GC, t_AFCON, t_AAC, t_ONC)
@@ -318,11 +336,12 @@ export const getTournamentDataWC = () => {
         [td_WC_2010],
         [td_WC_2014],
         [td_WC_2018],
+        [td_WC_2022],
     )
 }
 
 export const getTournamentDataWWC = () => {
-    return [].concat([td_WWC_1991], [td_WWC_1995], [td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019])
+    return [].concat([td_WWC_1991], [td_WWC_1995], [td_WWC_1999], [td_WWC_2003], [td_WWC_2007], [td_WWC_2011], [td_WWC_2015], [td_WWC_2019], [td_WWC_2023])
 }
 
 export const getTournamentDataMOFT = () => {
@@ -352,11 +371,12 @@ export const getTournamentDataMOFT = () => {
         [td_MOFT_2012],
         [td_MOFT_2016],
         [td_MOFT_2020],
+        [td_MOFT_2024],
     )
 }
 
 export const getTournamentDataWOFT = () => {
-    return [].concat([td_WOFT_1996], [td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016], [td_WOFT_2020])
+    return [].concat([td_WOFT_1996], [td_WOFT_2000], [td_WOFT_2004], [td_WOFT_2008], [td_WOFT_2012], [td_WOFT_2016], [td_WOFT_2020], [td_WOFT_2024])
 }
 
 export const getTournamentDataCONFEDC = () => {
@@ -392,19 +412,20 @@ export const getTournamentDataEURO = () => {
         [td_EURO_2012],
         [td_EURO_2016],
         [td_EURO_2020],
+        [td_EURO_2024],
     )
 }
 
 export const getTournamentDataUNL = () => {
-    return [].concat([td_UNL_201819], [td_UNL_202021])
+    return [].concat([td_UNL_201819], [td_UNL_202021], [td_UNL_202223])
 }
 
 export const getTournamentDataUCL = () => {
-    return [].concat([td_UCL_201819], [td_UCL_201920], [td_UCL_202021])
+    return [].concat([td_UCL_201819], [td_UCL_201920], [td_UCL_202021], [td_UCL_202122], [td_UCL_202223], [td_UCL_202324])
 }
 
 export const getTournamentDataUEL = () => {
-    return [].concat([td_UEL_201819], [td_UEL_201920], [td_UEL_202021])
+    return [].concat([td_UEL_201819], [td_UEL_201920], [td_UEL_202021], [td_UEL_202122], [td_UEL_202223], [td_UEL_202324])
 }
 
 export const getTournamentDataCOPA = () => {
@@ -456,6 +477,7 @@ export const getTournamentDataCOPA = () => {
         [td_COPA_2016],
         [td_COPA_2019],
         [td_COPA_2021],
+        [td_COPA_2024],
     )
 }
 
@@ -487,6 +509,7 @@ export const getTournamentDataGC = () => {
         [td_GC_2017],
         [td_GC_2019],
         [td_GC_2021],
+        [td_GC_2023],
     )
 }
 
@@ -524,6 +547,8 @@ export const getTournamentDataAFCON = () => {
         [td_AFCON_2015],
         [td_AFCON_2017],
         [td_AFCON_2019],
+        [td_AFCON_2021],
+        [td_AFCON_2023],
     )
 }
 
@@ -546,6 +571,7 @@ export const getTournamentDataAAC = () => {
         [td_ACC_2011],
         [td_ACC_2015],
         [td_ACC_2019],
+        [td_ACC_2023],
     )
 }
 
@@ -561,6 +587,7 @@ export const getTournamentDataONC = () => {
         [td_ONC_2008],
         [td_ONC_2012],
         [td_ONC_2016],
+        [td_ONC_2024],
     )
 }
 

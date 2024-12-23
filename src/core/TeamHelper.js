@@ -282,6 +282,20 @@ export const getImagine = () => {
     return Imagine
 }
 
+export const getTournament = (id) => {
+    const tournament = getTournamentArray().find((t) => t.id === id)
+    tournament.competition = getCompetition(tournament.competition_id)
+    tournament.competition.tournaments.sort((a, b) => {
+        return a > b ? 1 : -1
+    })
+    return tournament
+}
+
+export const getTournamentData = (id) => {
+    const result = getTournamentDataArray().find((t) => t.id === id)
+    return result
+}
+
 export const getConfederation = (id) => {
     const result = getConfederations().find((c) => c.id === id)
     return result ? result : {}
