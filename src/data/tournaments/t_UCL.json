@@ -21,16 +21,38 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "575px-UEFA_members_Champions_League_stages.png",
             "start_qualifying_date": "2023-06-27",
             "end_qualifying_date": "2023-08-30",
             "start_competition_date": "2023-09-19",
             "end_competition_date": "2024-06-01",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 78,
             "association_count": 53
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Harry Kane",
+                "filename": "Harry_Kane_2023.jpg",
+                "text": "Bayern Munich's Harry Kane was one of the tournament's top scorers with 8 goals."
+            },
+            {
+                "name": "Kylian Mbappé",
+                "filename": "2022_FIFA_World_Cup_France_4–1_Australia_-_(8).jpg",
+                "text": "Paris Saint-Germain's Kylian Mbappé was one of the tournament's top scorers with 8 goals."
+            },
+            {
+                "name": "Vinícius Júnior",
+                "filename": "Vinicius_Jr_2021.jpg",
+                "text": "Real Madrid forward Vinícius Júnior was named the Champions League Player of the Season."
+            },
+            {
+                "name": "Jude Bellingham",
+                "filename": "Jude_Bellingham_Laureus_2024_(cropped2).jpg",
+                "text": "Midfielder Jude Bellingham was named the Young Player of the Season."
+            }
+        ],
         "final_standings": {
             "champions": "RMA",
             "runners_up": "DOR",
@@ -69,16 +91,38 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "640px-Champions_League_2023_Graffiti_01.jpg",
             "start_qualifying_date": "2022-06-21",
             "end_qualifying_date": "2022-08-24",
             "start_competition_date": "2022-09-06",
             "end_competition_date": "2023-06-10",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 78,
             "association_count": 53
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Erling Haaland",
+                "filename": "Erling_Haaland_2023_(cropped-v2).jpg",
+                "text": "Manchester City forward Erling Haaland was the tournament's top scorer with 12 goals."
+            },
+            {
+                "name": "Rodri",
+                "filename": "Yokohama_F._Marinos_-_Manchester_City_(3-5)_-_53075487835_(Rodri)_(cropped).jpg",
+                "text": "Manchester City midfielder Rodri was named the Champions League Player of the Season."
+            },
+            {
+                "name": "Khvicha Kvaratskhelia (GEO)",
+                "filename": "Khvicha_Kvaratskhelia_cropped.jpg",
+                "text": "Napoli forward Khvicha Kvaratskhelia (right) was named the Young Player of the Season."
+            },
+            {
+                "name": "AC Milan",
+                "filename": "FC_Salzburg_vs._AC_Mailand_(UEFA_Championsleague_2022-09-06)_31.jpg",
+                "text": "FC Salzburg vs. AC Milan (UEFA Championsleague 2022-09-06)"
+            }
+        ],
         "final_standings": {
             "champions": "MCI",
             "runners_up": "INT",
@@ -114,16 +158,38 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "640px-Champions_League_Ball_2021-22.jpg",
             "start_qualifying_date": "2021-06-22",
             "end_qualifying_date": "2021-08-25",
             "start_competition_date": "2021-09-14",
             "end_competition_date": "2022-05-28",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 80,
             "association_count": 54
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Karim Benzema",
+                "filename": "Karim_Benzema_wearing_Real_Madrid_home_kit_2021-2022.jpg",
+                "text": "Real Madrid forward Karim Benzema finished the tournament as the top scorer with 15 goals, and was named the inaugural Champions League Player of the Season."
+            },
+            {
+                "name": "Vinícius Júnior",
+                "filename": "Vinicius_Jr_2021.jpg",
+                "text": "Real Madrid forward Vinícius Júnior was named the inaugural Champions League Young Player of the Season."
+            },
+            {
+                "name": "Saint Denis",
+                "filename": "Réplique_Trophée_Ligue_Champions_UEFA_Place_Victor_Hugo_-_Saint-Denis_(FR93)_-_2022-05-28_-_1.jpg",
+                "text": "Réplique du trophée de la Ligue des Champions de l'UEFA, place Victor Hugo, Saint-Denis en Seine-Saint-Denis."
+            },
+            {
+                "name": "Final",
+                "filename": "Liverpool_vs_Real_Madrid_2022-05-28.svg",
+                "text": "2022 UEFA Champions League Final line-ups"
+            }
+        ],
         "final_standings": {
             "champions": "RMA",
             "runners_up": "LIV",
@@ -159,12 +225,13 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "347px-Manchester_City_vs_Chelsea_2021-05-29.svg.png",
             "start_qualifying_date": "2020-08-08",
             "end_qualifying_date": "2020-09-30",
             "start_competition_date": "2020-10-20",
             "end_competition_date": "2021-05-29",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 79,
             "association_count": 54
         },
@@ -178,6 +245,16 @@
                 "name": "Program",
                 "filename": "2021_UEFA_Champions_League_Final_programme.png",
                 "text": "This is the official match programme for the 2021 UEFA Champions League Final."
+            },
+            {
+                "name": "Covid-19",
+                "filename": "FC_Krasnodar_vs_Chelsea_supporters_2020-10-30_(cropped).jpg",
+                "text": "Krasnodar players on Matchday 2 group stage with limited capacity in the stands."
+            },
+            {
+                "name": "Final",
+                "filename": "Manchester_City_vs_Chelsea_2021-05-29.svg",
+                "text": "2021 UEFA Champions League Final lineups"
             }
         ],
         "final_standings": {
@@ -217,12 +294,13 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "347px-Paris_Saint-Germain_vs_Bayern_Munich_2020-08-23.svg.png",
             "start_qualifying_date": "2019-06-25",
             "end_qualifying_date": "2019-08-28",
             "start_competition_date": "2019-09-17",
             "end_competition_date": "2020-08-23",
             "color": "#0f246a",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 79,
             "association_count": 54
         },
@@ -285,12 +363,13 @@
         ],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "320px-Plaza_del_Callao_with_decoration_related_to_the_2019_Champions_League_final.jpg",
             "start_qualifying_date": "2018-06-26",
             "end_qualifying_date": "2018-08-29",
             "start_competition_date": "2018-09-18",
             "end_competition_date": "2019-06-01",
             "color": "#d50a0a",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "total_team_count": 79,
             "association_count": 54
         },

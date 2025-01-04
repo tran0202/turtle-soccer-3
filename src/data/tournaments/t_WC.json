@@ -7,39 +7,80 @@
         "active": true,
         "points_for_win": 3,
         "details": {
+            "slogan": "WE ARE 26",
             "host": ["CAN", "MEX", "USA"],
             "logo_filename": "2026_FIFA_World_Cup_emblem.svg",
+            "mascot": "",
+            "mascot_filename": "640px-2026_world_cup_qualification_map.svg.png",
+            "mascot_height": "180px",
             "start_date": "2026-06-11",
             "end_date": "2026-07-19",
-            "color": "#8a1538",
+            "color": "#0f246a",
             "team_count": 48,
             "confed_count": 6,
             "venue_count": 16,
             "city_count": 16
         },
-        "hero_images": [],
-        "final_standings": {}
+        "hero_images": [
+            {
+                "name": "MetLife Stadium",
+                "filename": "640px-Metlife_stadium_(Aerial_view).jpg",
+                "text": "The final will be played at MetLife Stadium."
+            }
+        ],
+        "final_standings": {},
+        "statistics": {}
     },
     {
         "id": "WC2022",
         "year": "2022",
         "name": "FIFA World Cup Qatar 2022",
         "competition_id": "WC",
-        "active": true,
         "points_for_win": 3,
         "details": {
+            "slogan": "Now is All",
             "host": ["QAT"],
             "logo_filename": "2022_FIFA_World_Cup.svg",
+            "mascot": "La'eeb",
+            "mascot_filename": "Laeeb.webp",
+            "mascot_height": "190px",
             "start_date": "2022-11-21",
             "end_date": "2022-12-18",
             "color": "#8a1538",
             "team_count": 32,
-            "confed_count": "5 or 6",
+            "confed_count": 5,
             "venue_count": 8,
             "city_count": 5
         },
-        "hero_images": [{ "name": "Ras Abu Aboud Stadium", "filename": "CG_rendering_of_Ras_Abu_Aboud_Stadium_crop.jpg", "text": "Ras Abu Aboud Stadium" }],
-        "final_standings": { "champions": "ARG", "runners_up": "FRA", "third_place": "CRO", "fourth_place": "MAR" }
+        "hero_images": [
+            {
+                "name": "Kylian Mbappé",
+                "filename": "316px-2022_FIFA_World_Cup_France_4–1_Australia_-_(7)_(cropped).jpg",
+                "text": "France forward Kylian Mbappé won the Golden Boot award after scoring eight goals in the tournament, the most since Ronaldo in 2002."
+            },
+            {
+                "name": "Lionel Messi",
+                "filename": "321px-Lionel-Messi-Argentina-2022-FIFA-World-Cup.jpg",
+                "text": "Argentina captain and forward Lionel Messi won the Golden Ball award, becoming the first player to win it twice."
+            },
+            { "name": "Group A", "filename": "640px-2022_FIFA_World_Cup_Qatar_0–2_Ecuador_-_(3).jpg", "text": "Qatar vs Ecuador" },
+            { "name": "Group B", "filename": "640px-2022_FIFA_World_Cup_England_6–2_Iran_-_(12).jpg", "text": "England vs Iran" }
+        ],
+        "final_standings": { "champions": "ARG", "runners_up": "FRA", "third_place": "CRO", "fourth_place": "MAR" },
+        "statistics": { "total_matches": 64, "total_goals": 172, "attendance": 3404252 },
+        "awards": {
+            "golden_boot": [{ "player": "Kylian Mbappé", "team": "FRA", "goals": 8, "assists": 2 }],
+            "silver_boot": [{ "player": "Lionel Messi", "team": "ARG", "goals": 7, "assists": 3 }],
+            "bronze_boot": [{ "player": "Olivier Giroud", "team": "FRA", "goals": 4, "assists": 0, "minutes": 420 }],
+            "golden_ball": [
+                { "player": "Lionel Messi", "team": "ARG" },
+                { "player": "Kylian Mbappé", "team": "FRA" },
+                { "player": "Luka Modrić", "team": "CRO" }
+            ],
+            "best_young_player": { "player": "Enzo Fernández", "team": "ARG" },
+            "golden_glove": [{ "player": "Emiliano Martínez", "team": "ARG" }],
+            "fair_play_team": ["ENG"]
+        }
     },
     {
         "id": "WC2018",
@@ -49,9 +90,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
+            "slogan": "Play with an open heart",
             "host": ["RUS"],
             "logo_filename": "2018_FIFA_World_Cup.svg",
+            "mascot": "Zabivaka",
             "mascot_filename": "Zabivaka_(mascot).jpg",
+            "mascot_height": "190px",
             "start_date": "2018-06-14",
             "end_date": "2018-07-15",
             "color": "#930c10",
@@ -107,9 +151,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
+            "slogan": "All in One Rhythm",
             "host": ["BRA"],
             "logo_filename": "2014_FIFA_World_Cup.svg",
+            "mascot": "Fuleco",
             "mascot_filename": "Fuleco.png",
+            "mascot_height": "190px",
             "start_date": "2014-06-12",
             "end_date": "2014-07-13",
             "color": "#15611e",
@@ -175,9 +222,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
+            "slogan": "It's time. Celebrate Africa's Humanity",
             "host": ["RSA"],
             "logo_filename": "2010_FIFA_World_Cup.svg",
+            "mascot": "Zakumi",
             "mascot_filename": "Zakumi.svg",
+            "mascot_height": "190px",
             "start_date": "2010-06-11",
             "end_date": "2010-07-11",
             "color": "#237832",
@@ -252,9 +302,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
+            "slogan": "A time to make friends",
             "host": ["GER"],
             "logo_filename": "2006_FIFA_World_Cup.svg",
+            "mascot": "Goleo VI and Pille",
             "mascot_filename": "2006-goleo-vi-and-pille.png",
+            "mascot_height": "190px",
             "start_date": "2006-06-09",
             "end_date": "2006-07-09",
             "color": "#1d1d1b",
@@ -308,6 +361,7 @@
         "details": {
             "host": ["KOR", "JPN"],
             "logo_filename": "2002_FIFA_World_Cup_logo.svg",
+            "mascot": "Ato, Kaz and Nik",
             "mascot_filename": "2002-ato-kaz-and-nik.png",
             "start_date": "2002-05-31",
             "end_date": "2002-06-30",
@@ -368,6 +422,7 @@
         "details": {
             "host": ["FRA"],
             "logo_filename": "1998_FIFA_World_Cup.svg",
+            "mascot": "Footix",
             "mascot_filename": "1998-footix.png",
             "start_date": "1998-06-10",
             "end_date": "1998-07-12",
@@ -400,7 +455,7 @@
             }
         ],
         "final_standings": { "champions": "FRA", "runners_up": "BRA", "third_place": "CRO", "fourth_place": "NED" },
-        "statistics": { "total_matches": 64, "total_goals": 171, "attendance": 2784687 },
+        "statistics": { "total_matches": 64, "total_goals": 171, "attendance": 2785100 },
         "awards": {
             "golden_boot": [{ "player": "Davor Šuker", "team": "CRO", "goals": 6 }],
             "silver_boot": [
@@ -425,9 +480,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
+            "slogan": "Making Soccer History",
             "host": ["USA"],
             "logo_filename": "1994_FIFA_World_Cup.svg",
+            "mascot": "Striker",
             "mascot_filename": "1994-striker.png",
+            "mascot_height": "190px",
             "start_date": "1994-06-17",
             "end_date": "1994-07-17",
             "color": "#0f246a",
@@ -485,6 +543,7 @@
         "details": {
             "host": ["ITA"],
             "logo_filename": "1990_FIFA_World_Cup.svg",
+            "mascot": "Ciao",
             "mascot_filename": "1990-ciao.png",
             "start_date": "1990-06-08",
             "end_date": "1990-07-08",
@@ -544,6 +603,7 @@
         "details": {
             "host": ["MEX"],
             "logo_filename": "1986_FIFA_World_Cup.svg",
+            "mascot": "Pique",
             "mascot_filename": "1986-pique.png",
             "start_date": "1986-05-31",
             "end_date": "1986-06-29",
@@ -613,6 +673,7 @@
         "details": {
             "host": ["ESP"],
             "logo_filename": "1982_FIFA_World_Cup.svg",
+            "mascot": "Naranjito",
             "mascot_filename": "1982-naranjito.png",
             "start_date": "1982-06-13",
             "end_date": "1982-07-11",
@@ -637,6 +698,11 @@
                 "name": "Tango España",
                 "filename": "Adidas_Tango_España.jpg",
                 "text": "Adidas Tango España, official match ball of Spain '82"
+            },
+            {
+                "name": "Romania Stamps",
+                "filename": "1982-romania-wm-spain-1.jpeg",
+                "text": "Set of stamps of Romania of the 1982 FIFA World Cup in Spain"
             }
         ],
         "final_standings": { "champions": "ITA", "runners_up": "GER-1949-1990", "third_place": "POL", "fourth_place": "FRA" },
@@ -664,6 +730,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "460px-Logo_Mundial_78.svg.png",
+            "mascot": "Gauchito",
             "mascot_filename": "1978-gauchito.png",
             "start_date": "1978-06-01",
             "end_date": "1978-06-25",
@@ -726,6 +793,7 @@
         "details": {
             "host": ["GER-1949-1990"],
             "logo_filename": "FIFA_World_Cup_1974_-_emblem.svg",
+            "mascot": "Tip and Tap",
             "mascot_filename": "1974-tip-and-tap.png",
             "start_date": "1974-06-13",
             "end_date": "1974-07-07",
@@ -784,6 +852,7 @@
         "details": {
             "host": ["MEX"],
             "logo_filename": "340px-1970_FIFA_World_Cup.svg.png",
+            "mascot": "Juanito",
             "mascot_filename": "1970-juanito.png",
             "start_date": "1970-05-31",
             "end_date": "1970-06-21",
@@ -808,6 +877,11 @@
                 "name": "Estadio Jalisco, Guadalajara",
                 "filename": "Estadio_jalisco.jpg",
                 "text": "The Estadio Jalisco held the semi-final Brazil vs Uruguay."
+            },
+            {
+                "name": "Brazil vs Romania",
+                "filename": "Brasil_vs_Rumania_1970.jpg",
+                "text": "Fontana (yellow 15) and Everaldo (yellow 16) of Brazil playing against Nicolae Lupescu (white 3) and Alexandru Neagu (white 16) of Romania."
             }
         ],
         "final_standings": { "champions": "BRA", "runners_up": "ITA", "third_place": "GER-1949-1990", "fourth_place": "URU" },
@@ -831,6 +905,7 @@
         "details": {
             "host": ["ENG"],
             "logo_filename": "1966_FIFA_World_Cup.png",
+            "mascot": "Willie",
             "mascot_filename": "1966-world-cup-willie.png",
             "start_date": "1966-07-11",
             "end_date": "1966-07-30",
@@ -887,6 +962,9 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "1962_FIFA_World_Cup.jpg",
+            "mascot": "San and Tiago",
+            "mascot_filename": "SanTiago.webp",
+            "mascot_height": "220px",
             "start_date": "1962-05-30",
             "end_date": "1962-06-17",
             "color": "#fa300f",
@@ -910,6 +988,11 @@
                 "name": "Estadio Nacional de Chile, Santiago",
                 "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
                 "text": "The Estadio Nacional de Chile held the opening match and the final"
+            },
+            {
+                "name": "Garrincha",
+                "filename": "Garrincha_(Brasil)_-_El_Gráfico_2233.jpg",
+                "text": "Garrincha (Brazil)"
             }
         ],
         "final_standings": { "champions": "BRA", "runners_up": "TCH", "third_place": "CHI", "fourth_place": "YUG-1945-1963" },
@@ -938,6 +1021,8 @@
         "details": {
             "host": ["SWE"],
             "logo_filename": "1958_FIFA_World_Cup.jpg",
+            "mascot": "Gunnar",
+            "mascot_filename": "Gunnar.webp",
             "start_date": "1958-06-08",
             "end_date": "1958-06-29",
             "color": "#1d5f9a",
@@ -991,6 +1076,7 @@
         "details": {
             "host": ["SUI"],
             "logo_filename": "1954_FIFA_World_Cup.jpg",
+            "mascot_filename": "WM54_Spielorte.png",
             "start_date": "1954-06-16",
             "end_date": "1954-07-04",
             "color": "#dc171e",
@@ -1000,6 +1086,11 @@
             "city_count": 6
         },
         "hero_images": [
+            {
+                "name": "Champions - Germany",
+                "filename": "Léquipe_dAllemagne_championne_du_monde_de_football_en_1954.jpg",
+                "text": "L'équipe d'Allemagne championne du monde de football en 1954"
+            },
             {
                 "name": "Final",
                 "filename": "Les_deux_capitaines_de_la_finale_de_Coupe_du_monde_de_football_1954_(G._Walter,_D._Puskas,_arbitre_Orlandini).jpg",
@@ -1038,6 +1129,7 @@
         "details": {
             "host": ["BRA"],
             "logo_filename": "309px-Poster_-_World_Cup_1950.jpg",
+            "mascot_filename": "Ingresso_Copa_do_Mundo_FIFA_1950_-_Brasil_x_Uruguai.jpg",
             "start_date": "1950-06-24",
             "end_date": "1950-07-16",
             "color": "#15611e",
@@ -1047,6 +1139,11 @@
             "city_count": 6
         },
         "hero_images": [
+            {
+                "name": "Team of Uruguay",
+                "filename": "Urug1950.jpg",
+                "text": "World champions. Standing: Obdulio Varela, Juan López Fontana (coach), Eusebio Tejera, Vazquez (staff), Abate (assistant coach), Schubert Gambetta, Matiás González, Roque Máspoli, Víctor Andrade, Juan Kirschberg (physiotherapist); lower row: Alvarez (staff), Alcides Ghiggia, Julio Pérez, Oscar Míguez, Juan Schiaffino, Rubén Morán, Figoli (staff)"
+            },
             {
                 "name": "Final",
                 "filename": "Gol_ghiggia_vs_brasil.jpg",
@@ -1086,6 +1183,7 @@
         "details": {
             "host": ["FRA"],
             "logo_filename": "317px-1938_fifa_worldcup_poster.jpg",
+            "mascot_filename": "640px-Albert_Lebrun_presents_1938_FIFA_Cup_to_Giuseppe_Meazza_1974_stamp_of_Nicaragua.jpg",
             "start_date": "1938-06-04",
             "end_date": "1938-06-19",
             "color": "#103d69",
@@ -1095,6 +1193,11 @@
             "city_count": 9
         },
         "hero_images": [
+            {
+                "name": "Champions - Italy",
+                "filename": "Léquipe_dItalie_championne_du_monde_de_football,_le_19_juin_1938_à_Paris.jpg",
+                "text": "L'équipe d'Italie championne du monde de football, le 19 juin 1938 à Paris."
+            },
             {
                 "name": "Stade Olympique de Colombes",
                 "filename": "Stade_de_Colombes_1924.jpg",
@@ -1132,6 +1235,7 @@
         "details": {
             "host": ["ITA-1861-1946"],
             "logo_filename": "317px-1934_fifa_worldcup_poster.jpg",
+            "mascot_filename": "325px-1934_fifa_worldcup_poster_02.jpg",
             "start_date": "1934-05-27",
             "end_date": "1934-06-10",
             "color": "#3d8e2b",
@@ -1145,6 +1249,11 @@
                 "name": "Champions",
                 "filename": "1934_FIFA_World_Cup_Final_-_Italy_v_Czechoslovakia_-_Pozzo,_Monzeglio,_Bertolini,_Combi,_Monti_and_Carcano.jpg",
                 "text": "From left to right: Italian manager Pozzo, Monzeglio, Bertolini, the goalkeeper and captain Combi, Monti (half-hidden) and the assistant manager Carcano (behind) before the start of extra time in the victorius final versus Czechoslovakia"
+            },
+            {
+                "name": "Round of 16",
+                "filename": "Calcio_Italia_vs_Cecoslovacchia_WC_1934.jpg",
+                "text": "Italian national soccer team players pose for a group picture, 27 May 1934 in Rome, before their World Cup round of 16 match against United States. Italy won the match beating USA 7-1. (From 2nd L : Luis Monti, Mario Pizziolo, Angelo Schiavio, Raimundo Orsi, Giovanni Ferrari, Virginio Rosetta, Giuseppe Meazza - with flag -, Giampiero Combi, Anfilogino Guarisi, Luigi Allemandi, Luigi Bertolini)"
             },
             {
                 "name": "Stadio Nazionale PNF, Rome",
@@ -1178,6 +1287,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "317px-Uruguay_1930_World_Cup.jpg",
+            "mascot_filename": "640px-Uruguay_1930_FIFA_World_Cup.svg.png",
             "start_date": "1930-07-13",
             "end_date": "1930-07-30",
             "color": "#259bc2",
@@ -1187,6 +1297,11 @@
             "city_count": 1
         },
         "hero_images": [
+            {
+                "name": "Champions",
+                "filename": "Uruguay_national_football_team_1930.jpg",
+                "text": "Uruguay national football team 1930 world cup winners"
+            },
             {
                 "name": "Final",
                 "filename": "Uruguay_goal_v_argentina_1930.jpg",

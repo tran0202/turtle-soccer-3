@@ -9,6 +9,8 @@
         "details": {
             "host": ["CIV"],
             "logo_filename": "2023_Africa_Cup_of_Nations_logo.svg",
+            "mascot": "Akwaba",
+            "mascot_filename": "_Akwaba,_Africa_Cup_of_Nations_Egypt_2023_Mascot,_July_2023_.jpeg",
             "start_date": "2024-01-13",
             "end_date": "2024-02-11",
             "color": "#e4022e",
@@ -16,7 +18,28 @@
             "venue_count": 6,
             "city_count": 5
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Champions",
+                "filename": "Trophée_de_la_Coupe_01.jpg",
+                "text": "2024 Ivory Coast's Africa Cup of Nations celebrations"
+            },
+            {
+                "name": "Final",
+                "filename": "NGA-CIV_ANCF_2024-02-11.png",
+                "text": "Line-up Ivory Coast vs Nigeria"
+            },
+            {
+                "name": "CIV vs GNB",
+                "filename": "Joueur_ivoirien_et_guinéen_18.jpg",
+                "text": "Ivory Coast v Guinea-Bissau, 13 January 2024"
+            },
+            {
+                "name": "Guinea",
+                "filename": "0K8A8977_(53466457062).jpg",
+                "text": "Cameroon v Guinea, 15 January 2024"
+            }
+        ],
         "final_standings": { "champions": "CIV", "runners_up": "NGA", "third_place": "RSA", "fourth_place": "COD" },
         "statistics": { "total_matches": 52, "total_goals": 119, "attendance": 1109593 },
         "awards": {
@@ -37,6 +60,8 @@
         "details": {
             "host": ["CMR"],
             "logo_filename": "2021_Africa_Cup_of_Nations_logo.png",
+            "mascot": "Mola",
+            "mascot_filename": "320px-Tara_2_ok.jpg",
             "start_date": "2022-01-09",
             "end_date": "2022-02-06",
             "color": "#e4022e",
@@ -46,9 +71,24 @@
         },
         "hero_images": [
             {
-                "name": "Paul Biya Stadium, Yaoundé",
-                "filename": "Voies_daccès_au_complexe_multisports_Paul_Biya_dOlembé_01.jpg",
-                "text": "The Paul Biya Stadium will host the final."
+                "name": "Champions",
+                "filename": "Célébration_Sénégal_(33).jpg",
+                "text": "Senegal are champions of AFCON 2021"
+            },
+            {
+                "name": "Finalist",
+                "filename": "Finales_CAN_2021_(140).jpg",
+                "text": "Egypt line-up in the final."
+            },
+            {
+                "name": "Cameroun",
+                "filename": "Cameroun.jpg",
+                "text": "Cameroon vs. Burkina Faso, 9 January 2022"
+            },
+            {
+                "name": "Opening Ceremony",
+                "filename": "Cérémonie_douverture_CAN_Cameroun_2021.jpg",
+                "text": "Atmosphere before the start of the AFCON launch ceremonies"
             }
         ],
         "final_standings": { "champions": "SEN", "runners_up": "EGY", "third_place": "CMR", "fourth_place": "BFA" },
@@ -121,6 +161,7 @@
         "details": {
             "host": ["GAB"],
             "logo_filename": "2017_Africa_Cup_of_Nations_logo.png",
+            "mascot": "Samba",
             "mascot_filename": "12472337_1013610275372599_3491603779303180603_n.png",
             "start_date": "2017-01-14",
             "end_date": "2017-02-05",
@@ -165,7 +206,9 @@
         "details": {
             "host": ["EQG"],
             "logo_filename": "2015_Africa_Cup_of_Nations_logo.png",
-            "mascot_filename": "2021640_mascot_pnglarge_jpeg8f784e2506d7c8ba43738faf6eb50334.jpeg",
+            "mascot": "Chuku Chuku",
+            "mascot_filename": "Chuku_Chuku.webp",
+            "mascot_height": "220px",
             "start_date": "2015-01-17",
             "end_date": "2015-02-08",
             "color": "#2470b5",
@@ -221,7 +264,9 @@
         "details": {
             "host": ["RSA"],
             "logo_filename": "2013_Africa_Cup_of_Nations.png",
+            "mascot": "Takuma",
             "mascot_filename": "11750_401983089894620_2026646383_n.png",
+            "mascot_height": "220px",
             "start_date": "2013-01-19",
             "end_date": "2013-02-10",
             "color": "#0d8a5f",
@@ -289,6 +334,16 @@
                 "name": "Nuevo Estadio de Malabo, Malabo",
                 "filename": "Estadio_de_Malabo_Equatorial_Guinea.jpeg",
                 "text": "The Nuevo Estadio de Malabo hosted the quarter-final Ivory Coast vs Equatorial Guinea"
+            },
+            {
+                "name": "Final",
+                "filename": "ZAM-CIV-2012-02-12.svg",
+                "text": "Line-up Zambia vs Ivory Coast"
+            },
+            {
+                "name": "Third-place",
+                "filename": "GHA-MLI-2012-02-11.svg",
+                "text": "Line-up Ghana vs Mali"
             }
         ],
         "final_standings": { "champions": "ZAM", "runners_up": "CIV", "third_place": "MLI", "fourth_place": "GHA" },
@@ -317,7 +372,7 @@
         "details": {
             "host": ["ANG"],
             "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",
-            "mascot_filename": "Palanquinha.svg",
+            "mascot_filename": "Palanquinha.webp",
             "start_date": "2010-01-10",
             "end_date": "2010-01-31",
             "color": "#fa2200",
@@ -365,6 +420,9 @@
         "details": {
             "host": ["GHA"],
             "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg",
+            "mascot": "Agro-Hene",
+            "mascot_filename": "Unnamed_AFCON_2008_Mascot.webp",
+            "mascot_height": "220px",
             "start_date": "2008-01-20",
             "end_date": "2008-02-10",
             "color": "#237832",
@@ -412,7 +470,8 @@
         "details": {
             "host": ["EGY"],
             "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",
-            "mascot_filename": "Croconile.jpg",
+            "mascot": "Croconile",
+            "mascot_filename": "Croconile.webp",
             "start_date": "2006-01-20",
             "end_date": "2006-02-10",
             "color": "#ca0b0f",
@@ -459,12 +518,14 @@
         "details": {
             "host": ["TUN"],
             "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg",
+            "mascot": "Nçayir",
+            "mascot_filename": "Afcon_2004_mascot.png",
             "start_date": "2004-01-24",
             "end_date": "2004-02-14",
             "color": "#0089cc",
             "team_count": 16,
             "venue_count": 6,
-            "city_count": 6
+            "city_count": 5
         },
         "hero_images": [
             {
@@ -489,7 +550,7 @@
             }
         ],
         "final_standings": { "champions": "TUN", "runners_up": "MAR", "third_place": "NGA", "fourth_place": "MLI" },
-        "statistics": { "total_matches": 32, "total_goals": 88, "attendance": 553500 },
+        "statistics": { "total_matches": 32, "total_goals": 88, "attendance": 617500 },
         "awards": {
             "golden_boot": [
                 { "player": "Frédéric Kanouté", "team": "MLI", "goals": 4 },
@@ -510,6 +571,8 @@
         "details": {
             "host": ["MLI"],
             "logo_filename": "Mali_CAN2002.png",
+            "mascot": "Hippopotamus",
+            "mascot_filename": "Hippopotamus.webp",
             "start_date": "2002-01-19",
             "end_date": "2002-02-10",
             "color": "#29398c",
@@ -561,6 +624,9 @@
         "details": {
             "host": ["GHA", "NGA"],
             "logo_filename": "GhanaNigeria2000logo.png",
+            "mascot": "Green Eagle and Black Star",
+            "mascot_filename": "Green_Eagle_and_Black_Star.webp",
+            "mascot_height": "220px",
             "start_date": "2000-01-22",
             "end_date": "2000-02-13",
             "color": "#008040",
@@ -607,6 +673,9 @@
         "details": {
             "host": ["BFA"],
             "logo_filename": "Af98logo.png",
+            "mascot": "Foto",
+            "mascot_filename": "Foto.webp",
+            "mascot_height": "220px",
             "start_date": "1998-02-07",
             "end_date": "1998-02-28",
             "color": "#fa2200",
@@ -637,7 +706,7 @@
             }
         ],
         "final_standings": { "champions": "EGY", "runners_up": "RSA", "third_place": "COD-1997-2003", "fourth_place": "BFA" },
-        "statistics": { "total_matches": 32, "total_goals": 93, "attendance": 412800 },
+        "statistics": { "total_matches": 32, "total_goals": 93, "attendance": 388800 },
         "awards": {
             "golden_boot": [
                 { "player": "Hossam Hassan", "team": "EGY", "goals": 7 },
@@ -656,6 +725,9 @@
         "details": {
             "host": ["RSA"],
             "logo_filename": "CAN_1996_logo.jpg",
+            "mascot": "Leopard",
+            "mascot_filename": "Leopard.webp",
+            "mascot_height": "220px",
             "start_date": "1996-01-13",
             "end_date": "1996-02-03",
             "color": "#178338",
@@ -703,6 +775,8 @@
         "details": {
             "host": ["TUN"],
             "logo_filename": "1994_African_Cup_of_Nations_logo.jpg",
+            "mascot": "Eagle",
+            "mascot_filename": "Eagle.webp",
             "start_date": "1994-03-26",
             "end_date": "1994-04-10",
             "color": "#fa2200",
@@ -733,7 +807,7 @@
             }
         ],
         "final_standings": { "champions": "NGA", "runners_up": "ZAM", "third_place": "CIV", "fourth_place": "MLI" },
-        "statistics": { "total_matches": 20, "total_goals": 44, "attendance": 273000 },
+        "statistics": { "total_matches": 20, "total_goals": 44, "attendance": 267400 },
         "awards": {
             "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 5 }],
             "golden_ball": [{ "player": "Rashidi Yekini", "team": "NGA" }]
@@ -750,6 +824,8 @@
         "details": {
             "host": ["SEN"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot": "Diambar",
+            "mascot_filename": "Diambar.webp",
             "start_date": "1992-01-12",
             "end_date": "1992-01-26",
             "color": "#24a45f",
@@ -772,10 +848,15 @@
                 "name": "Ziguinchor, Senegal",
                 "filename": "Ziguinchor6.JPG",
                 "text": "Downtown of Ziguinchor"
+            },
+            {
+                "name": "Participating nations",
+                "filename": "African_Cup_of_Nations_1992.png",
+                "text": "Countries positions in the African Cup of Nations 1992"
             }
         ],
         "final_standings": { "champions": "CIV", "runners_up": "GHA", "third_place": "NGA", "fourth_place": "CMR" },
-        "statistics": { "total_matches": 20, "total_goals": 34 },
+        "statistics": { "total_matches": 20, "total_goals": 34, "attendance": 385500 },
         "awards": {
             "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 4 }],
             "golden_ball": [{ "player": "Abedi Pele", "team": "GHA" }],
@@ -792,6 +873,7 @@
         "details": {
             "host": ["ALG"],
             "logo_filename": "CAN_Algerie_1990_logo.png",
+            "mascot_filename": "477px-African_Cup_of_Nations_1990.jpg",
             "start_date": "1990-03-02",
             "end_date": "1990-03-16",
             "color": "#c80724",
@@ -822,7 +904,7 @@
             }
         ],
         "final_standings": { "champions": "ALG", "runners_up": "NGA", "third_place": "ZAM", "fourth_place": "SEN" },
-        "statistics": { "total_matches": 16, "total_goals": 30, "attendance": 768000 },
+        "statistics": { "total_matches": 16, "total_goals": 30, "attendance": 600032 },
         "awards": {
             "golden_boot": [{ "player": "Djamel Menad", "team": "ALG", "goals": 4 }],
             "golden_ball": [{ "player": "Rabah Madjer", "team": "ALG" }]
@@ -838,6 +920,7 @@
         "details": {
             "host": ["MAR"],
             "logo_filename": "CAN_1988_(logo).png",
+            "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1988-03-13",
             "end_date": "1988-03-27",
             "color": "#f55535",
@@ -890,6 +973,7 @@
         "details": {
             "host": ["EGY"],
             "logo_filename": "CAN_1986_(logo).png",
+            "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1986-03-07",
             "end_date": "1986-03-21",
             "color": "#ca0b0f",
@@ -936,6 +1020,7 @@
         "details": {
             "host": ["CIV"],
             "logo_filename": "CAN_1984_(logo).png",
+            "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1984-03-04",
             "end_date": "1984-03-18",
             "color": "#e98611",
@@ -984,6 +1069,7 @@
         "details": {
             "host": ["LBY-1977-2011"],
             "logo_filename": "CAN_1982_(logo).png",
+            "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1982-03-05",
             "end_date": "1982-03-19",
             "color": "#01004b",
@@ -1031,6 +1117,7 @@
         "details": {
             "host": ["NGA"],
             "logo_filename": "1980_Afcon_(logo).png",
+            "mascot_filename": "1980_Afcon_teams.png",
             "start_date": "1980-03-08",
             "end_date": "1980-03-22",
             "color": "#568629",
@@ -1048,6 +1135,11 @@
                 "name": "Lagos, Nigeria",
                 "filename": "2014_Victoria_Island_Lagos_Nigeria_15006436297.jpg",
                 "text": "Victoria Island, Lagos, Nigeria"
+            },
+            {
+                "name": "Liberty Stadium",
+                "filename": "Ibadan_stadium,_Ibadan2.jpg",
+                "text": "Obafemi Awolowo Stadium, formerly known as Liberty Stadium"
             },
             {
                 "name": "Sango, Ibadan, Nigeria",
@@ -1076,6 +1168,7 @@
         "details": {
             "host": ["GHA"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1978-03-05",
             "end_date": "1978-03-16",
             "color": "#fa2200",
@@ -1127,6 +1220,7 @@
         "details": {
             "host": ["ETH-1975-1987"],
             "logo_filename": "1976_Afcon_-_logo.png",
+            "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1976-02-29",
             "end_date": "1976-03-14",
             "color": "#078930",
@@ -1149,6 +1243,11 @@
                 "name": "Dire Dawa, Ethiopia",
                 "filename": "ET-Dire_Dawa,_Ethiopia_(13).jpeg",
                 "text": "Dire Dawa, Ethiopia"
+            },
+            {
+                "name": "Dire Dawa Station",
+                "filename": "Dire_Dawa_Station_(cropped).jpg",
+                "text": "Station of the Djibouti-Ethiopia Railway in Dire Dawa"
             }
         ],
         "final_standings": { "champions": "MAR", "runners_up": "GUI", "third_place": "NGA", "fourth_place": "EGY" },
@@ -1169,6 +1268,7 @@
         "details": {
             "host": ["EGY"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1974-03-01",
             "end_date": "1974-03-14",
             "color": "#ca0b0f",
@@ -1216,6 +1316,7 @@
         "details": {
             "host": ["CMR-1961-1975"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1972-02-23",
             "end_date": "1972-03-05",
             "color": "#24a45f",
@@ -1246,7 +1347,7 @@
             }
         ],
         "final_standings": { "champions": "CGO-1970-1991", "runners_up": "MLI", "third_place": "CMR-1961-1975", "fourth_place": "ZAI" },
-        "statistics": { "total_matches": 16, "total_goals": 53 },
+        "statistics": { "total_matches": 16, "total_goals": 53, "attendance": 425000 },
         "awards": {
             "golden_boot": [{ "player": "Fantamady Keita", "team": "MLI", "goals": 5 }],
             "golden_ball": [{ "player": "François M'Pelé", "team": "CGO-1970-1991" }]
@@ -1263,6 +1364,7 @@
         "details": {
             "host": ["SDN-1956-1970"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1970-02-06",
             "end_date": "1970-02-16",
             "color": "#fa2200",
@@ -1282,13 +1384,18 @@
                 "text": "Khartoum at night"
             },
             {
+                "name": "University of Khartoum",
+                "filename": "University_of_Khartoum_001.jpeg",
+                "text": "The main gate of the University of Khartoum, Khartoum, Sudan"
+            },
+            {
                 "name": "Wad Medani, Sudan",
                 "filename": "Wad_Medani_Blue_Nile.jpg",
                 "text": "Tourist boats on the Blue Nile at Wad Medani"
             }
         ],
         "final_standings": { "champions": "SDN-1956-1970", "runners_up": "GHA", "third_place": "UAR", "fourth_place": "CIV" },
-        "statistics": { "total_matches": 16, "total_goals": 51 },
+        "statistics": { "total_matches": 16, "total_goals": 51, "attendance": 146858 },
         "awards": {
             "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 8 }],
             "golden_ball": [{ "player": "Laurent Pokou", "team": "CIV" }]
@@ -1305,6 +1412,7 @@
         "details": {
             "host": ["ETH-1941-1974"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "1968_Afcon_teams.png",
             "start_date": "1968-01-12",
             "end_date": "1968-01-21",
             "color": "#0e9061",
@@ -1327,10 +1435,15 @@
                 "name": "Asmara, Eritrea",
                 "filename": "Asmara_Montage.png",
                 "text": "Clockwise from top: Cityscape, Sunset view over Asmara, Church of Our Lady of the Rosary, Fiat Tagliero Building sign, 23d ISCOE East Africa conference in Asmara 2019"
+            },
+            {
+                "name": "Teatro d'Opera",
+                "filename": "Asmara,_teatro_dopera,_02.jpeg",
+                "text": "Teatro d'Opera, the opera house of Asmara"
             }
         ],
         "final_standings": { "champions": "COD-1966-1971", "runners_up": "GHA", "third_place": "CIV", "fourth_place": "ETH-1941-1974" },
-        "statistics": { "total_matches": 16, "total_goals": 52 },
+        "statistics": { "total_matches": 16, "total_goals": 52, "attendance": 209000 },
         "awards": {
             "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 6 }],
             "golden_ball": [{ "player": "Kazadi Mwamba", "team": "COD-1966-1971" }]
@@ -1347,6 +1460,7 @@
         "details": {
             "host": ["TUN"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_1965.png",
             "start_date": "1965-11-12",
             "end_date": "1965-11-21",
             "color": "#fa2200",
@@ -1398,6 +1512,7 @@
         "details": {
             "host": ["GHA-1964-1966"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1963-11-24",
             "end_date": "1963-12-01",
             "color": "#fcd20f",
@@ -1445,6 +1560,7 @@
         "details": {
             "host": ["ETH-1941-1974"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_1962.png",
             "start_date": "1962-01-14",
             "end_date": "1962-01-21",
             "color": "#0e9061",
@@ -1454,6 +1570,11 @@
         },
         "hero_images": [
             {
+                "name": "Addis Ababa Stadium",
+                "filename": "Addis_Ababa_Stadium.jpg",
+                "text": "Addis Ababa Stadium"
+            },
+            {
                 "name": "Hailé Sélassié Stadium, Addis Ababa",
                 "filename": "ET_Addis_asv2018-01_img02_Stadium.jpg",
                 "text": "The Hailé Sélassié Stadium hosted all the matches."
@@ -1462,6 +1583,11 @@
                 "name": "Addis Ababa, Ethiopia",
                 "filename": "Holy_trinty_cathedral_church.jpg",
                 "text": "Addis Ababa, Ethiopia"
+            },
+            {
+                "name": "Addis Ababa Skyline",
+                "filename": "Addis_in_night.jpg",
+                "text": "Skyline of Addis Ababa's Meskel Square"
             }
         ],
         "final_standings": { "champions": "ETH-1941-1974", "runners_up": "UAR", "third_place": "TUN", "fourth_place": "UGA-1914-1962" },
@@ -1485,6 +1611,7 @@
         "details": {
             "host": ["UAR"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_1959.png",
             "start_date": "1959-05-22",
             "end_date": "1959-05-29",
             "color": "#ca0b0f",
@@ -1494,6 +1621,11 @@
         },
         "hero_images": [
             {
+                "name": "Essam Baheeg",
+                "filename": "Essam_Baheeg_2.jpg",
+                "text": "Essam Baheeg scored the two winning goals for Egypt in the final"
+            },
+            {
                 "name": "Prince Farouk Stadium, Cairo",
                 "filename": "Mokhtar_El_tetsh_stadium.jpg",
                 "text": "The Prince Farouk Stadium hosted all the matches."
@@ -1502,10 +1634,15 @@
                 "name": "Cairo, Egypt",
                 "filename": "Muizz_Street_-_Egypt.jpg",
                 "text": "Cairo, Egypt"
+            },
+            {
+                "name": "Cairo, Egypt",
+                "filename": "Cairo_From_Tower_(cropped).jpg",
+                "text": "The Nile, 6th October Bridge and Downtown from Cairo Tower on Gezira Island"
             }
         ],
         "final_standings": { "champions": "UAR", "runners_up": "SDN-1956-1970", "third_place": "ETH-1941-1974" },
-        "statistics": { "total_matches": 3, "total_goals": 8 },
+        "statistics": { "total_matches": 3, "total_goals": 8, "attendance": 80000 },
         "awards": {
             "golden_boot": [{ "player": "Mahmoud El-Gohary", "team": "UAR", "goals": 3 }],
             "golden_ball": [{ "player": "Mahmoud El-Gohary", "team": "UAR" }]
@@ -1522,6 +1659,7 @@
         "details": {
             "host": ["SDN-1956-1970"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
+            "mascot_filename": "African_Cup_of_Nations_1957.png",
             "start_date": "1957-02-10",
             "end_date": "1957-02-16",
             "color": "#fa2200",
@@ -1531,13 +1669,28 @@
         },
         "hero_images": [
             {
-                "name": "Khartoum, Sudan",
-                "filename": "University_of_Khartoum_001.jpeg",
-                "text": "The University of Khartoum"
+                "name": "Champions",
+                "filename": "Hanafy_Bastan_1957.jpg",
+                "text": "Egypt's captain Hanafy Bastan carrying the African Cup of Nations trophy in 1957"
+            },
+            {
+                "name": "Ad-Diba",
+                "filename": "Ad-Diba.jpg",
+                "text": "Ad-Diba, top scorer"
+            },
+            {
+                "name": "Khartoum Mosque",
+                "filename": "Khartoum_Mosque.jpg",
+                "text": "Khartoum Mosque"
+            },
+            {
+                "name": "El Mek Nimr Bridge",
+                "filename": "Elmek_Nimir_Bridge.jpg",
+                "text": "El Mek Nimr Bridge"
             }
         ],
         "final_standings": { "champions": "EGY-1953-1958", "runners_up": "ETH-1941-1974", "third_place": "SDN-1956-1970" },
-        "statistics": { "total_matches": 2, "total_goals": 7 },
+        "statistics": { "total_matches": 2, "total_goals": 7, "attendance": 60000 },
         "awards": {
             "golden_boot": [{ "player": "Ad-Diba", "team": "EGY-1953-1958", "goals": 5 }],
             "golden_ball": [{ "player": "Ad-Diba", "team": "EGY-1953-1958" }]

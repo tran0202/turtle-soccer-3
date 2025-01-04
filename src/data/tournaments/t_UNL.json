@@ -19,6 +19,8 @@
         ],
         "details": {
             "logo_filename": "2023_UEFA_Nations_League_Finals_logo.png",
+            "mascot_filename": "2022–23_UEFA_Nations_League_map.svg",
+            "mascot_height": "150px",
             "start_league_date": "2022-06-01",
             "end_league_date": "2022-09-27",
             "start_final_date": "2023-06-14",
@@ -32,9 +34,30 @@
             "final_venue_count": 2,
             "final_city_count": 2
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "FRA vs AUT",
+                "filename": "Match_Football_France_x_Autriche_Stade_France_-_Saint-Denis_(FR93)_-_2022-09-22_-_1.jpg",
+                "text": "France vs Austria, 22 September 2022"
+            },
+            {
+                "name": "Hungary",
+                "filename": "Hun_squad.jpg",
+                "text": "Hungary vs Germany, 11 June 2022"
+            },
+            {
+                "name": "Sweden",
+                "filename": "Sweden-Slovenia_Nations_League_2022-09-27_61.jpg",
+                "text": "Sweden-Slovenia Nations League 2022-09-27"
+            },
+            {
+                "name": "Final",
+                "filename": "CRO-ESP_2023-06-18.svg",
+                "text": "Croatia vs Spain, 2023 UEFA Nations League final"
+            }
+        ],
         "final_standings": { "champions": "ESP", "runners_up": "CRO", "third_place": "ITA", "fourth_place": "NED" },
-        "statistics": { "total_matches": 162, "total_goals": 425, "attendance": 3225868 },
+        "statistics": { "total_matches": 162, "total_goals": 425, "attendance": 3225868, "final_matches": 4, "final_goals": 14, "final_attendance": 126319 },
         "awards": {
             "golden_boot": [
                 { "player": "Erling Haaland", "team": "NOR", "goals": 6 },
@@ -80,6 +103,8 @@
         ],
         "details": {
             "logo_filename": "UEFA_Nations_League.svg",
+            "mascot_filename": "640px-Pre-show_of_the_Nations_League_finals_2021_in_Milan,_Italy.jpg",
+            "mascot_height": "150px",
             "start_league_date": "2020-09-03",
             "end_league_date": "2020-11-18",
             "start_final_date": "2021-10-06",
@@ -116,7 +141,7 @@
             }
         ],
         "final_standings": { "champions": "FRA", "runners_up": "ESP", "third_place": "ITA", "fourth_place": "BEL" },
-        "statistics": { "total_matches": 164, "total_goals": 376, "attendance": 196706 },
+        "statistics": { "total_matches": 168, "total_goals": 382, "attendance": 222505, "final_matches": 4, "final_goals": 14, "final_attendance": 94168 },
         "awards": {
             "golden_boot": [
                 { "player": "Romelu Lukaku", "team": "BEL", "goals": 6 },
@@ -151,6 +176,8 @@
         ],
         "details": {
             "logo_filename": "2019_UEFA_Nations_League_Finals.svg",
+            "mascot_filename": "2018–19_UEFA_Nations_League_map.svg",
+            "mascot_height": "150px",
             "start_league_date": "2018-09-06",
             "end_league_date": "2018-11-20",
             "start_final_date": "2019-06-05",

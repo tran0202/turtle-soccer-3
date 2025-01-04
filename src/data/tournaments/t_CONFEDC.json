@@ -9,6 +9,7 @@
         "details": {
             "host": ["RUS"],
             "logo_filename": "2017_FIFA_Confederations_Cup.svg",
+            "mascot_filename": "477px-RR5216-0111R.png",
             "start_date": "2017-06-17",
             "end_date": "2017-07-02",
             "color": "#930c10",
@@ -64,6 +65,7 @@
         "details": {
             "host": ["BRA"],
             "logo_filename": "2013_FIFA_Confederations_Cup.svg",
+            "mascot_filename": "480px-Adidas_Cafusa.jpg",
             "start_date": "2013-06-15",
             "end_date": "2013-06-30",
             "color": "#477c16",
@@ -119,6 +121,7 @@
         "details": {
             "host": ["RSA"],
             "logo_filename": "2009_FIFA_Confederations_Cup.svg",
+            "mascot_filename": "2009FIFACCup_Map.png",
             "start_date": "2009-06-14",
             "end_date": "2009-06-28",
             "color": "#0c733b",
@@ -174,6 +177,7 @@
         "details": {
             "host": ["GER"],
             "logo_filename": "2005_FIFA_Confederations_Cup.jpg",
+            "mascot_filename": "Germany_CC.png",
             "start_date": "2005-06-15",
             "end_date": "2005-06-29",
             "color": "#281e1d",
@@ -230,6 +234,7 @@
         "details": {
             "host": ["FRA"],
             "logo_filename": "2003_FIFA_Confederations_Cup.jpg",
+            "mascot_filename": "188px-Confed_trophy.png",
             "start_date": "2003-06-18",
             "end_date": "2003-06-29",
             "color": "#0015de",
@@ -285,6 +290,7 @@
         "details": {
             "host": ["KOR", "JPN"],
             "logo_filename": "2001_FIFA_Confederations_Cup.jpg",
+            "mascot_filename": "FIFA_Confederations_Cup_(Cup).svg",
             "start_date": "2001-05-30",
             "end_date": "2001-06-10",
             "color": "#e2952b",
@@ -340,6 +346,7 @@
         "details": {
             "host": ["MEX"],
             "logo_filename": "1999_FIFA_Confederations_Cup.jpg",
+            "mascot_filename": "Confederations_Cup.webp",
             "start_date": "1999-07-24",
             "end_date": "1999-08-04",
             "color": "#009865",
@@ -395,6 +402,8 @@
         "details": {
             "host": ["KSA"],
             "logo_filename": "1997_FIFA_Confederations_Cup.png",
+            "mascot": "Hashi",
+            "mascot_filename": "Hashi.webp",
             "start_date": "1997-12-12",
             "end_date": "1997-12-21",
             "color": "#177700",
@@ -413,6 +422,16 @@
                 "name": "Riyadh, Saudi Arabia",
                 "filename": "Riyadh,_Saudi_Arabia_(2048x1367)_(36864830374).jpg",
                 "text": "Riyadh skyline"
+            },
+            {
+                "name": "Team map",
+                "filename": "1997_confed_cup.png",
+                "text": "1997 FIFA Confederations Cup participating teams"
+            },
+            {
+                "name": "BRA vs AUS",
+                "filename": "1997-BRA-AUS_1997-FIN-CC.svg",
+                "text": "Line-ups in Confederations Cup 1997 (Brazil vs Australia)"
             }
         ],
         "final_standings": { "champions": "BRA", "runners_up": "AUS", "third_place": "CZE-1993-2022", "fourth_place": "URU" },
@@ -440,7 +459,8 @@
         "tiebreakers": ["team", "head2head", "penalty"],
         "details": {
             "host": ["KSA"],
-            "logo_filename": "Confederations_Cup.webp",
+            "logo_filename": "297px-Copa_Rey_Fahd_Icon.png",
+            "mascot_filename": "347px-1995-DEN-ARG_1995-FIN-CC.svg.png",
             "start_date": "1995-01-06",
             "end_date": "1995-01-13",
             "color": "#0e4676",
@@ -459,6 +479,16 @@
                 "name": "Riyadh, Saudi Arabia",
                 "filename": "Lake_at_Wadi_Hanifah_(5218227168).jpg",
                 "text": "Lake at the 120 km long Wadi Hanifa valley that cuts through Riyadh"
+            },
+            {
+                "name": "Riyadh Skyline",
+                "filename": "Riyadh_Skyline.jpg",
+                "text": "Riyadh Skyline is growing"
+            },
+            {
+                "name": "Team map",
+                "filename": "1995_confed_cup.png",
+                "text": "1995 FIFA Confederations Cup participating teams"
             }
         ],
         "final_standings": { "champions": "DEN", "runners_up": "ARG", "third_place": "MEX", "fourth_place": "NGA" },
@@ -478,7 +508,8 @@
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
             "host": ["KSA"],
-            "logo_filename": "Confederations_Cup.webp",
+            "logo_filename": "297px-Copa_Rey_Fahd_Icon.png",
+            "mascot_filename": "347px-1992-ARG-ARS_1992-FIN-CC.svg.png",
             "start_date": "1992-10-15",
             "end_date": "1992-10-20",
             "color": "#9a7633",
@@ -497,6 +528,16 @@
                 "name": "Riyadh, Saudi Arabia",
                 "filename": "Saudi-desert.gif",
                 "text": "The An Nafud desert in the outskirts of Riyadh with the Jabal Tuwaiq in the background"
+            },
+            {
+                "name": "King Abdullah Financial District",
+                "filename": "KAFD_seen_from_North_east_side_of_Riyadh_City.jpg",
+                "text": "KAFD seen from North east side of Riyadh City"
+            },
+            {
+                "name": "Team map",
+                "filename": "1992_confed_cup.png",
+                "text": "1992 FIFA Confederations Cup participating teams"
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "KSA", "third_place": "USA", "fourth_place": "CIV" },

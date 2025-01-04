@@ -21,18 +21,41 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "PD-Shape_Europa_League_Trophy.svg",
+            "mascot_height": "230px",
             "start_qualifying_date": "2023-08-08",
             "end_qualifying_date": "2023-08-31",
             "start_competition_date": "2023-09-21",
             "end_competition_date": "2024-05-22",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "transfer_team_count": 8,
             "total_team_count": 21,
             "total_transfer_team_count": 36,
             "association_count": 32
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Aviva Stadium, Dublin",
+                "filename": "Dublin_aviva_stadium.jpg",
+                "text": "Aviva Stadium hosted the final Atalanta vs Bayer Leverkusen"
+            },
+            {
+                "name": "Samuel Beckett Bridge",
+                "filename": "Samuel_Beckett_Bridge_At_Sunset_Dublin_Ireland_(97037639)_(cropped).jpeg",
+                "text": "Samuel Beckett Bridge in Dublin"
+            },
+            {
+                "name": "Convention Centre",
+                "filename": "Dublin_The_Convention_Centre_01.jpeg",
+                "text": "The Convention Centre in the Dublin Docklands, Dublin, Ireland"
+            },
+            {
+                "name": "Trinity College",
+                "filename": "GoergeSalmonTrinityCollegeDublin.jpg",
+                "text": "Trinity College in Dublin"
+            }
+        ],
         "final_standings": {
             "champions": "ATT",
             "runners_up": "B04",
@@ -68,18 +91,41 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "259px-Coppauefa.png",
+            "mascot_height": "230px",
             "start_qualifying_date": "2022-08-04",
             "end_qualifying_date": "2022-08-25",
             "start_competition_date": "2022-09-08",
             "end_competition_date": "2023-05-31",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "transfer_team_count": 8,
             "total_team_count": 21,
             "total_transfer_team_count": 36,
             "association_count": 33
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Puskás Aréna, Budapest",
+                "filename": "Puskás_Aréna_01.jpg",
+                "text": "Puskás Aréna hosted the final Sevilla vs AS Roma"
+            },
+            {
+                "name": "Hungarian Parliament",
+                "filename": "20190503_Hungarian_Parliament_Building_1814_2263_DxO.jpg",
+                "text": "View of Hungarian Parliament Building from Fisherman's Bastion"
+            },
+            {
+                "name": "Buda Castle and the Chain Bridge",
+                "filename": "_Arany_Palota__Budapest_-_panoramio.jpg",
+                "text": "\"Arany Palota\" Budapest"
+            },
+            {
+                "name": "Heroes' Square",
+                "filename": "Heroes_Square_Budapest_2010_quartersize.jpg",
+                "text": "Heroes' Square"
+            }
+        ],
         "final_standings": {
             "champions": "SEV",
             "runners_up": "ROM",
@@ -118,18 +164,41 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "347px-Eintracht_Frankfurt_vs_Rangers_2022-05-18.svg.png",
+            "mascot_height": "230px",
             "start_qualifying_date": "2021-08-03",
             "end_qualifying_date": "2021-08-26",
             "start_competition_date": "2021-09-15",
             "end_competition_date": "2022-05-18",
             "color": "#15611e",
-            "tournament_team_count": 32,
+            "competition_team_count": 32,
             "transfer_team_count": 8,
             "total_team_count": 21,
             "total_transfer_team_count": 37,
             "association_count": 33
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Zenit Saint Petersburg vs. Real Betis",
+                "filename": "Guardado_Barrios_FC_Zenit_vs_Real_Betis,_17_February_2022,_UEFA_Europa_League_03.jpg",
+                "text": "FC Zenit Saint Petersburg vs. Real Betis, 17 February 2022"
+            },
+            {
+                "name": "Spartak Moscow vs. Leicester City",
+                "filename": "Spartak_Moscow_vs._Leicester_City,_2021-10-20_115_6.jpg",
+                "text": "Spartak Moscow vs. Leicester City, Europa League group stage, 20 October 2020"
+            },
+            {
+                "name": "Final",
+                "filename": "Eintracht_Frankfurt_vs_Rangers_2022-05-18.svg",
+                "text": "2022 UEFA Europa League Final"
+            },
+            {
+                "name": "Stanislav Lobotka",
+                "filename": "Stanislav_Lobotka_2021.jpg",
+                "text": "Stanislav Lobotka with SCC Napoli in an UEFA Europa League game against FC Spartak Moscow"
+            }
+        ],
         "final_standings": {
             "champions": "SGE",
             "runners_up": "RFC",
@@ -165,12 +234,14 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "347px-Villarreal_vs_Manchester_United_2021-05-26.svg.png",
+            "mascot_height": "230px",
             "start_qualifying_date": "2020-08-18",
             "end_qualifying_date": "2020-10-01",
             "start_competition_date": "2020-10-22",
             "end_competition_date": "2021-05-26",
             "color": "#15611e",
-            "tournament_team_count": 48,
+            "competition_team_count": 48,
             "transfer_team_count": 8,
             "total_team_count": 158,
             "total_transfer_team_count": 55,
@@ -186,6 +257,16 @@
                 "name": "Program",
                 "filename": "2021_UEFA_Europa_League_Final_programme.jpg",
                 "text": "This is the official match programme for the 2021 UEFA Europa League Final."
+            },
+            {
+                "name": "Final",
+                "filename": "Villarreal_vs_Manchester_United_2021-05-26.svg",
+                "text": "Line-ups of the 2021 UEFA Europa League Final"
+            },
+            {
+                "name": "Dynamo Kyiv",
+                "filename": "Матч_«Динамо»_-_«Брюгге»_1-1._18_февраля_2021_года_—_1196131.jpg",
+                "text": "2021-02-18 Dynamo Kyiv vs Brugge"
             }
         ],
         "final_standings": {
@@ -227,12 +308,14 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "347px-Sevilla_vs_Internazionale_2020-08-21.svg.png",
+            "mascot_height": "230px",
             "start_qualifying_date": "2019-06-27",
             "end_qualifying_date": "2019-08-29",
             "start_competition_date": "2019-09-19",
             "end_competition_date": "2020-08-21",
             "color": "#15296d",
-            "tournament_team_count": 48,
+            "competition_team_count": 48,
             "transfer_team_count": 8,
             "total_team_count": 158,
             "total_transfer_team_count": 55,
@@ -294,12 +377,14 @@
         ],
         "details": {
             "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "640px-Stamp_of_Azerbaijan_-_2019_-_Colnect_867733_-_UEFA_Europa_League_Final_Baku.jpeg",
+            "mascot_height": "150px",
             "start_qualifying_date": "2018-06-26",
             "end_qualifying_date": "2018-08-30",
             "start_competition_date": "2018-09-20",
             "end_competition_date": "2019-05-29",
             "color": "#ee312f",
-            "tournament_team_count": 48,
+            "competition_team_count": 48,
             "transfer_team_count": 8,
             "total_team_count": 158,
             "total_transfer_team_count": 55,

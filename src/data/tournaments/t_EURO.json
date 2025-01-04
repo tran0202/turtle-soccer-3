@@ -9,9 +9,12 @@
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferencegoalscoredwins", "penalty", "fairplaylight", "coefficient"],
         "no_third_place": true,
         "details": {
+            "slogan": "United by Football",
             "host": ["GER"],
             "logo_filename": "UEFA_Euro_2024_Logo.svg",
-            "mascot_filename": "",
+            "mascot": "Albärt",
+            "mascot_filename": "Albärt_(Euro_2024).webp",
+            "mascot_height": "190px",
             "start_date": "2024-06-14",
             "end_date": "2024-07-14",
             "color": "#0084a4",
@@ -19,7 +22,28 @@
             "venue_count": 10,
             "city_count": 10
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Olympiastadion, Berlin",
+                "filename": "Olympiastadion_Berlin_Sep-2015.jpg",
+                "text": "The Olympiastadion hosted the final Spain vs England"
+            },
+            {
+                "name": "Westfalenstadion, Dortmund",
+                "filename": "Signal_iduna_park_stadium_dortmund_4.jpg",
+                "text": "Westfalenstadion hosted the semi-final Netherlands vs England."
+            },
+            {
+                "name": "Allianz Arena, Munich",
+                "filename": "Allianz_Arena_2008-02-09.jpg",
+                "text": "Allianz Arena hosted the semi-final Spain vs France"
+            },
+            {
+                "name": "Merkur Spiel-Arena, Düsseldorf",
+                "filename": "Merkur-Spiel-Arena.jpg",
+                "text": "Merkur Spiel-Arena hosted the quarter-final England vs Switzerland"
+            }
+        ],
         "final_standings": {
             "champions": "ESP",
             "runners_up": "ENG",
@@ -53,9 +77,12 @@
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferencegoalscoredwins", "penalty", "fairplaylight", "coefficient"],
         "no_third_place": true,
         "details": {
+            "slogan": "Live It. For Real.",
             "host": ["AZE", "DEN", "ENG", "GER", "HUN", "ITA", "NED", "ROU", "RUS", "SCO", "ESP"],
             "logo_filename": "UEFA_Euro_2020_Logo.svg",
-            "mascot_filename": "mascot_2020.jpg",
+            "mascot": "Skillzy",
+            "mascot_filename": "Skillzy_Euro_2020.webp",
+            "mascot_height": "90px",
             "start_date": "2021-06-11",
             "end_date": "2021-07-11",
             "color": "#0084a4",
@@ -110,15 +137,18 @@
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplay", "coefficient"],
         "no_third_place": true,
         "details": {
+            "slogan": "Le Rendez-Vous",
             "host": ["FRA"],
             "logo_filename": "UEFA_Euro_2016_Logo.svg",
-            "mascot_filename": "mascot_2016.jpg",
+            "mascot": "Super Victor",
+            "mascot_filename": "Super_Victor_Euro_2016.webp",
+            "mascot_height": "190px",
             "start_date": "2016-06-10",
             "end_date": "2016-07-10",
             "color": "#e12631",
             "team_count": 24,
             "venue_count": 10,
-            "city_count": 10
+            "city_count": 9
         },
         "hero_images": [
             {
@@ -163,9 +193,12 @@
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Creating History Together",
             "host": ["POL", "UKR"],
             "logo_filename": "UEFA_Euro_2012_logo_(artistic_version).svg",
-            "mascot_filename": "mascot_2012.jpg",
+            "mascot": "Slavek and Slavko",
+            "mascot_filename": "Slavek_and_Slavko_wallpaper.webp",
+            "mascot_height": "190px",
             "start_date": "2012-06-08",
             "end_date": "2012-07-01",
             "color": "#1797ce",
@@ -230,9 +263,12 @@
         "tiebreakers": ["points", "penalty", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Expect Emotions",
             "host": ["AUT", "SUI"],
             "logo_filename": "UEFA_Euro_2008_logo.svg",
-            "mascot_filename": "mascot_2008.jpg",
+            "mascot": "Trix and Flix",
+            "mascot_filename": "Trix_and_Flix.webp",
+            "mascot_height": "190px",
             "start_date": "2008-06-07",
             "end_date": "2008-06-29",
             "color": "#ff0000",
@@ -287,9 +323,12 @@
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Welcome to 2004!",
             "host": ["POR"],
             "logo_filename": "UEFA_Euro_2004_logo.svg",
-            "mascot_filename": "mascots_-_uefa_euro_2004_kinas.jpeg",
+            "mascot": "Kinas",
+            "mascot_filename": "Kinas.webp",
+            "mascot_height": "190px",
             "start_date": "2004-06-12",
             "end_date": "2004-07-04",
             "color": "#f37121",
@@ -353,9 +392,12 @@
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Football without frontiers",
             "host": ["BEL", "NED"],
             "logo_filename": "UEFA_Euro_2000_logo.svg",
-            "mascot_filename": "mascot_2000_benelucky.jpg",
+            "mascot": "Benelucky",
+            "mascot_filename": "Benelucky.webp",
+            "mascot_height": "190px",
             "start_date": "2000-06-10",
             "end_date": "2000-07-02",
             "color": "#ee312f",
@@ -411,9 +453,12 @@
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Football Comes Home",
             "host": ["ENG"],
             "logo_filename": "UEFA_Euro_1996_logo.svg",
-            "mascot_filename": "mascot_1996_goaliath.jpg",
+            "mascot": "Goaliath",
+            "mascot_filename": "Goaliath_(Euro_1996).webp",
+            "mascot_height": "190px",
             "start_date": "1996-06-08",
             "end_date": "1996-06-30",
             "color": "#2e5e9c",
@@ -466,9 +511,12 @@
         "tiebreakers": ["team", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "Small is Beautiful",
             "host": ["SWE"],
             "logo_filename": "UEFA_Euro_1992_logo.svg",
-            "mascot_filename": "mascot_1992.jpg",
+            "mascot": "Rabbit",
+            "mascot_filename": "Rabbit_Euro_1992.webp",
+            "mascot_height": "190px",
             "start_date": "1992-06-10",
             "end_date": "1992-06-26",
             "color": "#00aeef",
@@ -527,7 +575,8 @@
         "details": {
             "host": ["GER-1949-1990"],
             "logo_filename": "UEFA_Euro_1988_logo.svg",
-            "mascot_filename": "mascot_1988_berni.jpg",
+            "mascot": "Berni",
+            "mascot_filename": "Berni_Euro_1988.webp",
             "start_date": "1988-06-10",
             "end_date": "1988-06-25",
             "color": "#000000",
@@ -584,7 +633,9 @@
         "details": {
             "host": ["FRA"],
             "logo_filename": "UEFA_Euro_1984_logo.svg",
-            "mascot_filename": "mascot_1984_peno.jpg",
+            "mascot": "Péno",
+            "mascot_filename": "Péno_(Euro_1984).webp",
+            "mascot_height": "220px",
             "start_date": "1984-06-12",
             "end_date": "1984-06-27",
             "color": "#0077c0",
@@ -635,7 +686,9 @@
         "details": {
             "host": ["ITA"],
             "logo_filename": "UEFA_Euro_1980_official_logo.svg",
-            "mascot_filename": "mascot_euro_80_pinocchio.jpeg",
+            "mascot": "Pinocchio",
+            "mascot_filename": "Pinocchio_(Euro_1980).webp",
+            "mascot_height": "220px",
             "start_date": "1980-06-11",
             "end_date": "1980-06-22",
             "color": "#00ab4e",
@@ -677,13 +730,14 @@
     {
         "id": "EURO1976",
         "year": "1976",
-        "name": "UEFA Euro 1976 SFR Yugoslavia",
+        "name": "UEFA Euro 1976 Yugoslavia",
         "short_name": "Yugoslavia",
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
             "host": ["YUG-1963-1992"],
             "logo_filename": "UEFA_Euro_1976_official_logo.svg",
+            "mascot_filename": "576px-Euro_1976.png",
             "start_date": "1976-06-16",
             "end_date": "1976-06-20",
             "color": "#0066b3",
@@ -701,6 +755,11 @@
                 "name": "Stadion Maksimir, Zagreb",
                 "filename": "Maksimirski_stadion_Zagreb.jpg",
                 "text": "The Stadion Maksimir held the semi-final Czechoslovakia vs Netherlands."
+            },
+            {
+                "name": "Final",
+                "filename": "CZE-GER_1976-06-20.svg",
+                "text": "Line-ups for the UEFA Euro 1976 Final between West-Germany and Czechoslovakia at Crvena Zvezda Stadium, Belgrade on 20 June 1976"
             },
             {
                 "name": "Euro 1976",
@@ -722,6 +781,7 @@
         "details": {
             "host": ["BEL"],
             "logo_filename": "UEFA_Euro_1972_logo.svg",
+            "mascot_filename": "576px-Euro_1972.png",
             "start_date": "1972-06-14",
             "end_date": "1972-06-18",
             "color": "#dc4128",
@@ -770,6 +830,7 @@
         "details": {
             "host": ["ITA"],
             "logo_filename": "UEFA_Euro_1968_logo.svg",
+            "mascot_filename": "576px-Euro_1968.png",
             "start_date": "1968-06-05",
             "end_date": "1968-06-10",
             "color": "#00a766",
@@ -814,6 +875,7 @@
         "details": {
             "host": ["ESP-1945-1977"],
             "logo_filename": "UEFA_Euro_1964_logo.svg",
+            "mascot_filename": "576px-Euro_1964.png",
             "start_date": "1964-06-17",
             "end_date": "1964-06-21",
             "color": "#d82c20",
@@ -826,6 +888,11 @@
                 "name": "Qualification",
                 "filename": "640px-Nederland_tegen_Zwitserland_3-1,_het_Zwitsers_en_het_Nederlands_elftal,_Bestanddeelnr_914-5008.jpg",
                 "text": "Netherlands v Switzerland, 11 November 1962"
+            },
+            {
+                "name": "Pereda (ESP)",
+                "filename": "Pereda.gif",
+                "text": "Pereda, one of the top scorer"
             },
             {
                 "name": "Santiago Bernabéu, Madrid",
@@ -859,6 +926,7 @@
         "details": {
             "host": ["FRA"],
             "logo_filename": "UEFA_Euro_1960_logo.svg",
+            "mascot_filename": "576px-Euro_1960.png",
             "start_date": "1960-07-06",
             "end_date": "1960-07-10",
             "color": "#0077c0",
@@ -876,6 +944,16 @@
                 "name": "Stade Vélodrome, Marseille",
                 "filename": "Le_Stade_vélodrome_de_Marseille,_le_13_juin_1937.jpg",
                 "text": "The Stade Vélodrome held the semi-final Czechoslovakia vs Soviet Union."
+            },
+            {
+                "name": "Final",
+                "filename": "URS-YUG_1960-07-10.svg",
+                "text": "Yugoslavia vs Soviet Union."
+            },
+            {
+                "name": "Coin",
+                "filename": "RR5109-0022R_100-летие_Российского_футбола.gif",
+                "text": "Coin"
             }
         ],
         "final_standings": { "champions": "URS", "runners_up": "YUG-1945-1963", "third_place": "TCH", "fourth_place": "FRA" },

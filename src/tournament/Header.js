@@ -44,6 +44,8 @@ class Header extends React.Component {
             end_league_date,
             start_final_date,
             end_final_date,
+            start_relegation_date,
+            end_relegation_date,
             start_qualifying_date,
             end_qualifying_date,
             start_competition_date,
@@ -68,12 +70,20 @@ class Header extends React.Component {
                     {start_league_date && (
                         <React.Fragment>
                             <b>League:</b> {moment(start_league_date).format('MMMM D, YYYY')} &mdash; {moment(end_league_date).format('MMMM D, YYYY')}
-                            &nbsp;&nbsp;<i className="icofont-football-alt"></i>&nbsp;&nbsp;
                         </React.Fragment>
                     )}
                     {start_final_date && (
                         <React.Fragment>
+                            &nbsp;&nbsp;<i className="icofont-football-alt"></i>&nbsp;&nbsp;
                             <b>Finals:</b> {moment(start_final_date).format('MMMM D, YYYY')} &mdash; {moment(end_final_date).format('MMMM D, YYYY')}
+                        </React.Fragment>
+                    )}
+                    {start_relegation_date && (
+                        <React.Fragment>
+                            <br />
+                            &nbsp;&nbsp;<i className="icofont-football-alt"></i>&nbsp;&nbsp;
+                            <b>Relegation Play-outs:</b> {moment(start_relegation_date).format('MMMM D, YYYY')} &mdash;{' '}
+                            {moment(end_relegation_date).format('MMMM D, YYYY')}
                         </React.Fragment>
                     )}
                     {start_qualifying_date && (

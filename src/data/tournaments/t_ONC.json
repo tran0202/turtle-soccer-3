@@ -11,6 +11,7 @@
         "details": {
             "host": ["FIJ", "VAN"],
             "logo_filename": "OFC_Men's_Nations_Cup.jpg",
+            "mascot_filename": "574px-2024_OFC_Nations_Cup_map.png",
             "start_date": "2024-06-15",
             "end_date": "2024-06-30",
             "color": "#e1151e",
@@ -18,7 +19,28 @@
             "venue_count": 2,
             "city_count": 2
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "VFF Freshwater Stadium, Port Vila",
+                "filename": "Freshwater_Stadium.jpg",
+                "text": "VFF Freshwater Stadium hosted the final New Zealand vs Vanuatu"
+            },
+            {
+                "name": "Port Vila, Vanuatu",
+                "filename": "Port_Vila_aerial.jpg",
+                "text": "En route Port Vila to Auckland"
+            },
+            {
+                "name": "HFC Bank Stadium, Suva",
+                "filename": "ANZ_Stadium_Fiji.jpg",
+                "text": "HFC Bank Stadium hosted Group B matches"
+            },
+            {
+                "name": "Suva, Fiji",
+                "filename": "Suva,_Fiji_76.jpg",
+                "text": "Suva, Fiji"
+            }
+        ],
         "final_standings": { "champions": "NZL", "runners_up": "VAN", "third_place": "TAH", "fourth_place": "FIJ" },
         "statistics": { "total_matches": 13, "total_goals": 46, "attendance": 41400 },
         "awards": {
@@ -40,6 +62,7 @@
         "details": {
             "host": ["PNG"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2016-05-28",
             "end_date": "2016-06-11",
             "color": "#e1151e",
@@ -57,6 +80,16 @@
                 "name": "Port Moresby, Papua New Guinea",
                 "filename": "POM_Downtown.jpg",
                 "text": "Downtown"
+            },
+            {
+                "name": "Port Moresby, Papua New Guinea",
+                "filename": "Port_Moresby_Town2_Mschlauch.jpg",
+                "text": "Overlooking Port Moresby \"Town\" from Touaguba Hill"
+            },
+            {
+                "name": "Jacksons International Airport",
+                "filename": "Port_Moresby_Intl_Airport_2008.jpg",
+                "text": "Jacksons International Airport, Port Moresby, Papua New Guinea. 2008"
             }
         ],
         "final_standings": {
@@ -86,6 +119,7 @@
         "details": {
             "host": ["SOL"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2012-06-01",
             "end_date": "2012-06-10",
             "color": "#086349",
@@ -95,14 +129,24 @@
         },
         "hero_images": [
             {
-                "name": "Lawson Tama Stadium, Honiaray",
+                "name": "Lawson Tama Stadium, Honiara",
                 "filename": "Lawson_Tama_Stadium.jpg",
                 "text": "The national stadium of Solomon Islands, during the Olympics Torch Relay"
+            },
+            {
+                "name": "Lawson Tama Stadium, Honiara",
+                "filename": "13._Film_still_from_Lawson_Tama_stadium_(45886258781).jpg",
+                "text": "Lawson Tama Stadium, Honiara"
             },
             {
                 "name": "Honiara, Solomon Islands",
                 "filename": "Honiara_View.jpg",
                 "text": "Honiara, Solomon Islands"
+            },
+            {
+                "name": "Guadalcanal American Memorial",
+                "filename": "Guadalcanal_American_Memorial.jpg",
+                "text": "Guadalcanal American Memorial"
             }
         ],
         "final_standings": { "champions": "TAH", "runners_up": "NCL", "third_place": "NZL", "fourth_place": "SOL" },
@@ -125,6 +169,7 @@
         "tiebreakers": ["team"],
         "details": {
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2007-10-17",
             "end_date": "2008-11-19",
             "color": "#192e71",
@@ -160,7 +205,7 @@
             }
         ],
         "final_standings": { "champions": "NZL", "runners_up": "NCL-1973-2008", "third_place": "FIJ", "fourth_place": "VAN" },
-        "statistics": { "total_matches": 12, "total_goals": 39 },
+        "statistics": { "total_matches": 12, "total_goals": 39, "attendance": 44989 },
         "awards": {
             "golden_boot": [{ "player": "Shane Smeltz", "team": "NZL", "goals": 8 }]
         }
@@ -176,6 +221,7 @@
         "details": {
             "host": ["AUS"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2004-05-29",
             "end_date": "2004-10-12",
             "color": "#178338",
@@ -206,7 +252,7 @@
             }
         ],
         "final_standings": { "champions": "AUS", "runners_up": "SOL", "third_place": "NZL", "fourth_place": "FIJ" },
-        "statistics": { "total_matches": 17, "total_goals": 69 },
+        "statistics": { "total_matches": 17, "total_goals": 69, "attendance": 71561 },
         "awards": {
             "golden_boot": [
                 { "player": "Tim Cahill", "team": "AUS", "goals": 6 },
@@ -224,14 +270,14 @@
         "tiebreakers": ["team"],
         "details": {
             "host": ["NZL"],
-            "logo_filename": "OFCcup.png",
-            "mascot_filename": "OFC3-copy-2002.jpeg",
+            "logo_filename": "OFC3-copy-2002.jpeg",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2002-07-05",
             "end_date": "2002-07-14",
             "color": "#1d368a",
             "team_count": 8,
             "venue_count": 2,
-            "city_count": 2
+            "city_count": 1
         },
         "hero_images": [
             {
@@ -256,7 +302,7 @@
             }
         ],
         "final_standings": { "champions": "NZL", "runners_up": "AUS", "third_place": "TAH", "fourth_place": "VAN" },
-        "statistics": { "total_matches": 16, "total_goals": 64 },
+        "statistics": { "total_matches": 16, "total_goals": 64, "attendance": 16700 },
         "awards": {
             "golden_boot": [
                 { "player": "Bobby Despotovski", "team": "AUS", "goals": 5 },
@@ -277,6 +323,7 @@
         "details": {
             "host": ["TAH"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2000-06-19",
             "end_date": "2000-06-28",
             "color": "#fe0000",
@@ -289,10 +336,25 @@
                 "name": "Papeete, Tahiti",
                 "filename": "FP-papeete-hafen-1.jpg",
                 "text": "Papeete's city center and marina"
+            },
+            {
+                "name": "Marina Taina",
+                "filename": "Papeete_-_Marina_Taina.jpeg",
+                "text": "Marina Taina"
+            },
+            {
+                "name": "Cathedrale Notre-Dame",
+                "filename": "Cathedrale_Notre-Dame_de_Papeete_-_panoramio.jpg",
+                "text": "Cathedrale Notre-Dame de Papeete"
+            },
+            {
+                "name": "Palais présidentiel",
+                "filename": "Palais_présidentiel_Papeete.jpg",
+                "text": "Palais présidentiel Papeete"
             }
         ],
         "final_standings": { "champions": "AUS", "runners_up": "NZL", "third_place": "SOL", "fourth_place": "VAN" },
-        "statistics": { "total_matches": 10, "total_goals": 48 },
+        "statistics": { "total_matches": 10, "total_goals": 48, "attendance": 5500 },
         "awards": {
             "golden_boot": [
                 { "player": "Craig Foster", "team": "AUS", "goals": 5 },
@@ -311,6 +373,7 @@
         "details": {
             "host": ["AUS"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1998-09-25",
             "end_date": "1998-10-04",
             "color": "#178338",
@@ -333,10 +396,15 @@
                 "name": "Brisbane, Australia",
                 "filename": "Skylines_of_Brisbane_in_winter_misty_morning_seen_from_Kangaroo_Point,_Queensland_04.jpg",
                 "text": "Brisbane, Australia"
+            },
+            {
+                "name": "Brisbane, Australia",
+                "filename": "Brisbane_CBD_from_Southbank_in_July_2024.jpg",
+                "text": "Brisbane central business district"
             }
         ],
         "final_standings": { "champions": "NZL", "runners_up": "AUS", "third_place": "FIJ", "fourth_place": "TAH" },
-        "statistics": { "total_matches": 10, "total_goals": 52 },
+        "statistics": { "total_matches": 10, "total_goals": 52, "attendance": 20200 },
         "awards": {
             "golden_boot": [{ "player": "Damian Mori", "team": "AUS", "goals": 10 }]
         }
@@ -351,7 +419,14 @@
         "tiebreakers": ["team"],
         "no_third_place": true,
         "show_match_year": true,
-        "details": { "logo_filename": "OFCcup.png", "start_date": "1995-11-10", "end_date": "1996-11-01", "color": "#192e71", "team_count": 4 },
+        "details": {
+            "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
+            "start_date": "1995-11-10",
+            "end_date": "1996-11-01",
+            "color": "#192e71",
+            "team_count": 4
+        },
         "hero_images": [
             {
                 "name": "Bruce Stadium, Canberra",
@@ -386,7 +461,7 @@
             "semi_finalist2": "SOL",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
-        "statistics": { "total_matches": 6, "total_goals": 18 },
+        "statistics": { "total_matches": 6, "total_goals": 18, "attendance": 46858 },
         "awards": {
             "golden_boot": [{ "player": "Kris Trajanovski", "team": "AUS", "goals": 7 }]
         }
@@ -402,6 +477,7 @@
         "details": {
             "host": ["NCL-1973-2008"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1980-02-24",
             "end_date": "1980-03-01",
             "color": "#009543",
@@ -411,9 +487,24 @@
         },
         "hero_images": [
             {
+                "name": "Stade de Magenta, Noumea",
+                "filename": "Le_stade_Numa-Daly_-_Flickr_-_uphillblok.jpg",
+                "text": "Stade de Magenta hosted all matches of the tournament"
+            },
+            {
                 "name": "Nouméa, New Caledonia",
                 "filename": "Noumea_centre_1402561139_375c811796_o.jpg",
                 "text": "City centre and Nouméa Cathedral"
+            },
+            {
+                "name": "Nouméa, New Caledonia",
+                "filename": "NC-noumea-kathedr-03.jpg",
+                "text": "Kathedrale Aussenansicht"
+            },
+            {
+                "name": "Nouméa, New Caledonia",
+                "filename": "Nouméa_Phare_Amédée.jpeg",
+                "text": "Nouméa Phare Amédée"
             }
         ],
         "final_standings": { "champions": "AUS", "runners_up": "TAH-1794-1984", "third_place": "NCL-1973-2008", "fourth_place": "FIJ" },
@@ -436,6 +527,7 @@
         "details": {
             "host": ["NZL"],
             "logo_filename": "OFCcup.png",
+            "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1973-02-17",
             "end_date": "1973-02-24",
             "color": "#1d368a",
@@ -453,10 +545,20 @@
                 "name": "Auckland, New Zealand",
                 "filename": "Auckland,_Albert_Park.jpg",
                 "text": "Albert Park in Auckland"
+            },
+            {
+                "name": "Auckland CBD and Sky Tower",
+                "filename": "Auckland_skyline_-_May_2024_(2).jpg",
+                "text": "A few snaps around the North Island, NZ. Locations include Waiheke, Auckland city, Devonport, Whangamata, Mt Eden"
+            },
+            {
+                "name": "Auckland Town Hall",
+                "filename": "00_0399_Auckland_City_Hall,_New_Zealand.jpg",
+                "text": "Auckland City Hall. The neo-classical building with the striking tower (45 meters) was built on Queen Street between 1909 and 1911. With approximately 1.4 million inhabitants, Auckland is the largest city in New Zealand."
             }
         ],
         "final_standings": { "champions": "NZL", "runners_up": "TAH-1794-1984", "third_place": "NCL-1973-2008", "fourth_place": "VAN-1953-1980" },
-        "statistics": { "total_matches": 12, "total_goals": 37 },
+        "statistics": { "total_matches": 12, "total_goals": 38 },
         "awards": {
             "golden_boot": [
                 { "player": "Segin Wayewol (NCL)", "team": "NCL-1973-2008", "goals": 3 },

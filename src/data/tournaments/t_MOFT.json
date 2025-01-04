@@ -10,16 +10,37 @@
         "details": {
             "host": ["FRA_U23MNT"],
             "logo_filename": "2024_Summer_Olympics_logo.svg",
-            "mascot_filename": "",
-            "start_date": "2024-07-26",
-            "end_date": "2024-08-11",
+            "mascot_filename": "Football_–_Paris_2024.svg",
+            "start_date": "2024-07-24",
+            "end_date": "2024-08-09",
             "color": "#202b5a",
             "team_count": 16,
             "confed_count": 6,
             "venue_count": 7,
             "city_count": 7
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Parc des Princes, Paris",
+                "filename": "Paris_Le_Parc_des_Princes.jpg",
+                "text": "The Parc des Princes hosted the gold medal match France vs Spain."
+            },
+            {
+                "name": "Stade de la Beaujoire, Nantes",
+                "filename": "Match_Football_FC_Nantes_x_RC_Lens_Stade_Beaujoire_-_Nantes_(FR44)_-_2022-09-18_-_34.jpg",
+                "text": "The Stade de la Beaujoire hosted the bronze medal match Egypt vs Morocco."
+            },
+            {
+                "name": "Stade de Marseille, Marseille",
+                "filename": "Stade_Vélodrome_en_novembre_2021_(1).jpg",
+                "text": "The Stade de Marseille hosted the semi-final Spain vs Morocco."
+            },
+            {
+                "name": "Stade de Lyon, Décines-Charpieu",
+                "filename": "OL-Angers_Groupama_Stadium_01.jpg",
+                "text": "The Stade de Lyon hosted the semi-final France vs Egypt."
+            }
+        ],
         "final_standings": { "champions": "ESP_U23MNT", "runners_up": "FRA_U23MNT", "third_place": "MAR_U23MNT", "fourth_place": "EGY_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 96, "attendance": 821961 },
         "awards": {
@@ -272,9 +293,14 @@
         },
         "hero_images": [
             {
+                "name": "Carlos Tevez (ARG)",
+                "filename": "Carlos_Tevez_with_Argentina_at_the_Boleyn_Ground_in_November_2014.jpg",
+                "text": "Carlos Tevez, key player and top scorer (8 goals)"
+            },
+            {
                 "name": "Semi-final",
                 "filename": "Argentina_Vs_Italy_3-0_2004_Olympics_Athens.jpg",
-                "text": "Argentina Vs Italy 3-0 2004 Olympics Athens"
+                "text": "Argentina vs Italy 3-0 2004 Olympics Athens"
             },
             {
                 "name": "Pankritio Stadium, Heraklion",
@@ -306,7 +332,7 @@
             "host": ["AUS_U23MNT"],
             "logo_filename": "2000_Summer_Olympics_logo.svg",
             "mascot_filename": "Football,_Sydney_2000.png",
-            "start_date": "2000-09-15",
+            "start_date": "2000-09-13",
             "end_date": "2000-09-30",
             "color": "#15296d",
             "team_count": 16,
@@ -404,7 +430,7 @@
         "details": {
             "host": ["ESP_U23MNT"],
             "logo_filename": "1992_Summer_Olympics_logo.svg",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1992-07-24",
             "end_date": "1992-08-08",
             "color": "#da010c",
@@ -451,7 +477,7 @@
         "details": {
             "host": ["KOR_U23MNT"],
             "logo_filename": "1988_Summer_Olympics_logo.svg",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1988-09-17",
             "end_date": "1988-10-01",
             "color": "#e62b27",
@@ -499,7 +525,7 @@
         "details": {
             "host": ["USA_U23MNT"],
             "logo_filename": "1984_Summer_Olympics_logo.svg",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1984-07-29",
             "end_date": "1984-08-11",
             "color": "#e12631",
@@ -597,7 +623,7 @@
         "details": {
             "host": ["CAN_U23MNT"],
             "logo_filename": "1976_Summer_Olympics_logo.svg",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1976-07-18",
             "end_date": "1976-07-31",
             "color": "#f72337",
@@ -629,7 +655,7 @@
             }
         ],
         "final_standings": { "champions": "GDR_U23MNT", "runners_up": "POL_U23MNT", "third_place": "URS_U23MNT", "fourth_place": "BRA_U23MNT" },
-        "statistics": { "total_matches": 23, "total_goals": 66, "attendance": 580156 },
+        "statistics": { "total_matches": 23, "total_goals": 66, "attendance": 597574 },
         "awards": {
             "golden_boot": [{ "player": "Andrzej Szarmach", "team": "POL_U23MNT", "goals": 6 }]
         }
@@ -644,7 +670,7 @@
         "details": {
             "host": ["GER-1949-1990_U23MNT"],
             "logo_filename": "1972_Summer_Olympics_logo.svg",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "480px-Football_pictogram_black_(1972_Summer_Olympics_style).svg.png",
             "start_date": "1972-08-27",
             "end_date": "1972-09-10",
             "color": "#1d1d1b",
@@ -687,7 +713,7 @@
             "third_place": ["GDR_U23MNT", "URS_U23MNT"],
             "third_place_text": "Tied 2–2 at the end of extra time. Both teams were awarded bronze medals."
         },
-        "statistics": { "total_matches": 38, "total_goals": 135 },
+        "statistics": { "total_matches": 38, "total_goals": 135, "attendance": 795433 },
         "awards": {
             "golden_boot": [{ "player": "Kazimierz Deyna", "team": "POL_U23MNT", "goals": 9 }]
         }
@@ -703,7 +729,7 @@
             "host": ["MEX_U23MNT"],
             "logo_filename": "1968_Mexico_emblem.svg",
             "logo_height": "50px",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1968-10-13",
             "end_date": "1968-10-26",
             "color": "#24a45f",
@@ -750,7 +776,7 @@
         "details": {
             "host": ["JPN_U23MNT"],
             "logo_filename": "Tokyo_1964_Summer_Olympics_logo.svg",
-            "mascot_filename": "1964_Olympics_football_stamp_of_Japan.jpg",
+            "mascot_filename": "480px-1964_Olympics_football_stamp_of_Japan.jpg",
             "start_date": "1964-10-11",
             "end_date": "1964-10-23",
             "color": "#619ae0",
@@ -798,7 +824,7 @@
         "details": {
             "host": ["ITA_U23MNT"],
             "logo_filename": "1960_Summer_Olympics_logo.png",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1960-08-26",
             "end_date": "1960-09-10",
             "color": "#3d8e2b",
@@ -851,7 +877,7 @@
         "details": {
             "host": ["AUS_U23MNT"],
             "logo_filename": "1956_Summer_Olympics_logo.svg",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1956-11-24",
             "end_date": "1956-12-08",
             "color": "#15296d",
@@ -865,6 +891,11 @@
                 "name": "Bronze medal match",
                 "filename": "India_national_football_team_at1956_Olympics.png",
                 "text": "Indian team at a tussle against Bulgaria in the bronze-medal match."
+            },
+            {
+                "name": "Germany",
+                "filename": "Rudi_Hoffmann_und_Max_Schwall.jpg",
+                "text": "German players Rudi Hoffmann (left) and Max Schwall (right)"
             },
             {
                 "name": "Melbourne Cricket Ground",
@@ -959,7 +990,7 @@
         "details": {
             "host": ["GBR_U23MNT"],
             "logo_filename": "1948_Summer_Olympics_logos.svg",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1948-07-26",
             "end_date": "1948-08-13",
             "color": "#15296d",
@@ -1009,7 +1040,7 @@
         "details": {
             "host": ["GER-1935-1945_U23MNT"],
             "logo_filename": "1936_Summer_Olympics_logo.svg",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1936-08-03",
             "end_date": "1936-08-15",
             "color": "#1d1d1b",
@@ -1041,7 +1072,7 @@
             }
         ],
         "final_standings": { "champions": "ITA-1861-1946_U23MNT", "runners_up": "AUT_U23MNT", "third_place": "NOR_U23MNT", "fourth_place": "POL_U23MNT" },
-        "statistics": { "total_matches": 16, "total_goals": 78 },
+        "statistics": { "total_matches": 16, "total_goals": 78, "attendance": 507469 },
         "awards": {
             "golden_boot": [{ "player": "Annibale Frossi", "team": "ITA-1861-1946_U23MNT", "goals": 7 }]
         }
@@ -1057,7 +1088,7 @@
         "details": {
             "host": ["NED_U23MNT"],
             "logo_filename": "1928_Olympics_poster.jpg",
-            "mascot_filename": "1928_Summer_Olympics_stamp_of_the_Netherlands_football.jpg",
+            "mascot_filename": "394px-1928_Summer_Olympics_stamp_of_the_Netherlands_football.jpg",
             "start_date": "1928-05-27",
             "end_date": "1928-06-13",
             "color": "#f93127",
@@ -1094,7 +1125,7 @@
             "third_place": "ITA-1861-1946_U23MNT",
             "fourth_place": "EGY-1922-1953_U23MNT"
         },
-        "statistics": { "total_matches": 19, "total_goals": 116 },
+        "statistics": { "total_matches": 22, "total_goals": 128 },
         "awards": {
             "golden_boot": [{ "player": "Domingo Tarasconi", "team": "ARG_U23MNT", "goals": 11 }]
         }
@@ -1110,7 +1141,7 @@
         "details": {
             "host": ["FRA_U23MNT"],
             "logo_filename": "1924_Summer_Olympics_logo.svg",
-            "mascot_filename": "Football_pictogram_1948.svg",
+            "mascot_filename": "Football_pictogram.svg",
             "start_date": "1924-05-25",
             "end_date": "1924-06-09",
             "color": "#103d69",
@@ -1147,7 +1178,7 @@
             }
         ],
         "final_standings": { "champions": "URU_U23MNT", "runners_up": "SUI_U23MNT", "third_place": "SWE_U23MNT", "fourth_place": "NED_U23MNT" },
-        "statistics": { "total_matches": 16, "total_goals": 66, "attendance": 210424 },
+        "statistics": { "total_matches": 24, "total_goals": 96, "attendance": 210424 },
         "awards": {
             "golden_boot": [{ "player": "Pedro Petrone", "team": "URU_U23MNT", "goals": 7 }]
         }
@@ -1163,7 +1194,7 @@
         "details": {
             "host": ["BEL_U23MNT"],
             "logo_filename": "1920_olympics_poster.jpg",
-            "mascot_filename": "Olympic_rings_without_rims.svg",
+            "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1920-08-28",
             "end_date": "1920-09-05",
             "color": "#dc171e",
@@ -1216,11 +1247,12 @@
         "details": {
             "host": ["SWE_U23MNT"],
             "logo_filename": "355px-1912_Summer_Olympics_poster.jpg",
-            "mascot_filename": "Football_at_the_1912_Summer_Olympics.jpeg",
+            "mascot_filename": "640px-Football_at_the_1912_Summer_Olympics.jpeg",
+            "mascot_height": "220px",
             "start_date": "1912-06-29",
             "end_date": "1912-07-04",
             "color": "#1d5f9a",
-            "team_count": 11,
+            "team_count": 12,
             "confed_count": 1,
             "venue_count": 3,
             "city_count": 1
@@ -1264,7 +1296,7 @@
         "details": {
             "host": ["GBR_U23MNT"],
             "logo_filename": "320px-Olympic_games_1908_London.jpg",
-            "mascot_filename": "London_1908_Football_Challenge_Cup.jpg",
+            "mascot_filename": "300px-London_1908_Football_Challenge_Cup.jpg",
             "start_date": "1908-10-19",
             "end_date": "1908-10-24",
             "color": "#15296d",

@@ -2,26 +2,44 @@
     {
         "id": "AAC2023",
         "year": "2023",
-        "name": "AFC Asian Cup China 2023",
+        "name": "AFC Asian Cup Qatar 2023",
         "competition_id": "AAC",
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["CHN"],
+            "host": ["QAT"],
             "logo_filename": "2023_AFC_Asian_Cup_logo.svg",
-            "start_date": "2023-06-16",
-            "end_date": "2023-07-16",
+            "mascot": "Saboog, Tmbki, Freha, Zkriti and Traeneh",
+            "mascot_filename": "Lineup_nohenna.webp",
+            "mascot_height": "130px",
+            "start_date": "2024-01-12",
+            "end_date": "2024-02-10",
             "color": "#217553",
             "team_count": 24,
-            "venue_count": 10,
-            "city_count": 10
+            "venue_count": 9,
+            "city_count": 5
         },
         "hero_images": [
             {
-                "name": "TEDA Football Stadium, Tianjin",
-                "filename": "Tianjin_TEDA_Soccer_Stadium.jpg",
-                "text": "The TEDA Football Stadium will host matches of the tournament."
+                "name": "Opening Ceremony",
+                "filename": "AFC_Asian_Cup_opening_ceremony_in_Qatar_(17).jpg",
+                "text": "The opening ceremony for the 2023 AFC Asian Cup was held at Lusail Stadium in Lusail, Qatar, on Jan. 12, 2024."
+            },
+            {
+                "name": "QAT vs JOR",
+                "filename": "JOR-QAT_2024-02-10.svg",
+                "text": "2023 AFC Asian Cup final line-ups"
+            },
+            {
+                "name": "Lusail Stadium, Lusail",
+                "filename": "Aerial_view_of_Lusail_Stadium_in_2022.png",
+                "text": "The Lusail Stadium hosted the final Jordan vs Qatar"
+            },
+            {
+                "name": "Al Thumama Stadium, Doha",
+                "filename": "Al_Thumama_Stadium_(2).jpg",
+                "text": "The Al Thumama Stadium hosted the semi-final Iran vs Qatar"
             }
         ],
         "final_standings": {
@@ -30,7 +48,8 @@
             "semi_finalist1": "IRN",
             "semi_finalist2": "KOR",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are ranked on goal difference in the semi-finals."
-        }
+        },
+        "statistics": { "total_matches": 51, "total_goals": 132, "attendance": 1507790 }
     },
     {
         "id": "AAC2019",
@@ -43,7 +62,8 @@
         "details": {
             "host": ["UAE"],
             "logo_filename": "2019_AFC_Asian_Cup_logo.svg",
-            "mascot_filename": "mascot_UAE_2019_Athletic-Pride.jpg",
+            "mascot": "Mansour and Jarrah",
+            "mascot_filename": "UAE_2019_mascots.webp",
             "start_date": "2019-01-05",
             "end_date": "2019-02-01",
             "color": "#ff0000",
@@ -58,19 +78,19 @@
                 "text": "Qatar"
             },
             {
-                "name": "Qatar",
-                "filename": "Qatar_-_Japan,_AFC_Asian_Cup_2019_05.jpg",
-                "text": "Qatar's starting lineup for the final"
-            },
-            {
                 "name": "Japan",
                 "filename": "IRN-JPN_20190128_02.jpg",
                 "text": "Japan's starting lineup for the semi-final match against Iran"
             },
             {
-                "name": "Golden Boot",
-                "filename": "Qatar_v_Japan_–_AFC_Asian_Cup_2019_final_32.jpg",
-                "text": "Almoez Ali won the top scorer award as well as the MVP award as the best player of the tournament."
+                "name": "Semi-final",
+                "filename": "QAT-UAE_20190129_Asian_Cup_10.jpg",
+                "text": "Player lineup prior to the Qatar v UAE kickoff"
+            },
+            {
+                "name": "Group E",
+                "filename": "Qatar_v_Lebanon,_9_January_2019.jpg",
+                "text": "Lebanon's Felix Michel Melki challenging Qatar's Akram Afif"
             }
         ],
         "final_standings": {
@@ -98,7 +118,8 @@
         "details": {
             "host": ["AUS"],
             "logo_filename": "2015_AFC_Asian_Cup_logo.svg",
-            "mascot_filename": "mascot_Australia_2015.jpg",
+            "mascot": "Nutmeg the Wombat",
+            "mascot_filename": "Australia_2015_mascot.webp",
             "start_date": "2015-01-09",
             "end_date": "2015-01-31",
             "color": "#00008b",
@@ -147,6 +168,9 @@
         "details": {
             "host": ["QAT"],
             "logo_filename": "2011_AFC_Asian_Cup_full_logo.svg",
+            "mascot": "Saboog, Tmbki, Freha, Zkriti and Traeneh",
+            "mascot_filename": "Qatar_2011_mascots.webp",
+            "mascot_height": "220px",
             "start_date": "2011-01-07",
             "end_date": "2011-01-29",
             "color": "#79003c",
@@ -171,9 +195,9 @@
                 "text": "The Jassim Bin Hamad Stadium hosted the quarter-final Australia vs Iraq."
             },
             {
-                "name": "Qatar SC Stadium, Doha",
-                "filename": "Interior_view_of_Suheim_Bin_Hamad_Stadium_in_2020.jpg",
-                "text": "The Qatar SC Stadium hosted the quarter-final Iran vs Korea Republic"
+                "name": "AUS vs JPN",
+                "filename": "AUS-JPN_2011-01-29.svg",
+                "text": "Football Formation and Line-up for match Australia-Japan of the 2011 AFC Asian Cup on 2010-01-29"
             }
         ],
         "final_standings": { "champions": "JPN", "runners_up": "AUS", "third_place": "KOR", "fourth_place": "UZB" },
@@ -194,6 +218,9 @@
         "details": {
             "host": ["IDN", "MAS", "THA", "VIE"],
             "logo_filename": "2007_Asian_Cup_Logo.svg",
+            "mascot": "Indo, Malay, Thai, and Viet",
+            "mascot_filename": "AFC_Asia_Cup_2007_mascots.webp",
+            "mascot_height": "180px",
             "start_date": "2007-07-07",
             "end_date": "2007-07-29",
             "color": "#105f49",
@@ -247,6 +274,9 @@
         "details": {
             "host": ["CHN"],
             "logo_filename": "2004_AFC_Asian_Cup_full_logo.svg",
+            "mascot": "Bei Bei",
+            "mascot_filename": "Afc_China_2004_mascot.webp",
+            "mascot_height": "220px",
             "start_date": "2004-07-17",
             "end_date": "2004-08-07",
             "color": "#ee2c29",
@@ -255,11 +285,6 @@
             "city_count": 4
         },
         "hero_images": [
-            {
-                "name": "Workers Stadium, Beijing",
-                "filename": "Workers_Stadium.jpg",
-                "text": "The Workers Stadium hosted the final."
-            },
             {
                 "name": "Workers Stadium, Beijing",
                 "filename": "640px-Workers_stadium_internal_field.jpeg",
@@ -303,6 +328,8 @@
         "details": {
             "host": ["LBN"],
             "logo_filename": "2000_AFC_Asian_Cup_logo.svg",
+            "mascot": "Nour",
+            "mascot_filename": "Lebanon_2000_mascot.webp",
             "start_date": "2000-10-12",
             "end_date": "2000-10-29",
             "color": "#149552",
@@ -353,6 +380,9 @@
         "details": {
             "host": ["UAE"],
             "logo_filename": "1996_AFC_Asian_Cup_logo.svg",
+            "mascot": "Dana",
+            "mascot_filename": "DrPEXHI.webp",
+            "mascot_height": "220px",
             "start_date": "1996-12-04",
             "end_date": "1996-12-21",
             "color": "#ff0000",
@@ -402,6 +432,7 @@
         "details": {
             "host": ["JPN"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "640px-AFC_Asian_Cup_at_Fed_Square.jpg",
             "start_date": "1992-10-29",
             "end_date": "1992-11-08",
             "color": "#fa2200",
@@ -449,6 +480,7 @@
         "details": {
             "host": ["QAT"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "osm-intl,9,25.4,51.44,220x275.png",
             "start_date": "1988-12-02",
             "end_date": "1988-12-18",
             "color": "#671637",
@@ -458,14 +490,24 @@
         },
         "hero_images": [
             {
-                "name": "Qatar SC Stadium, Doha",
-                "filename": "Interior_view_of_Suheim_Bin_Hamad_Stadium_in_2020.jpg",
-                "text": "Qatar SC Stadium, Doha"
+                "name": "Amiri Diwan",
+                "filename": "Entrance_of_Amiri_Diwan_of_Qatar.jpg",
+                "text": "Entrance of Amiri Diwan (Presidential Office) of Qatar"
             },
             {
                 "name": "Doha, Qatar",
                 "filename": "Doha_skyline_in_the_morning_(12544910974)_(cropped).jpg",
                 "text": "Doha skyline in the morning"
+            },
+            {
+                "name": "Souq Waqif",
+                "filename": "Souq_Waqif,_Doha,_Catar,_2013-08-05,_DD_84.jpeg",
+                "text": "Souq Waqif, Doha, Qatar"
+            },
+            {
+                "name": "National Museum of Qatar",
+                "filename": "Nationalmuseum_Katar.jpg",
+                "text": "National Museum of Qatar in Doha"
             }
         ],
         "final_standings": { "champions": "KSA", "runners_up": "KOR", "third_place": "IRN", "fourth_place": "CHN" },
@@ -488,6 +530,7 @@
         "details": {
             "host": ["SIN"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "Majed_Abdullah_in_Asia_Cup_1984.jpg",
             "start_date": "1984-12-01",
             "end_date": "1984-12-16",
             "color": "#f93127",
@@ -510,6 +553,11 @@
                 "name": "Kallang, Singapore",
                 "filename": "Condos_and_the_Singapore_Flyer_by_the_Kallang_River.jpg",
                 "text": "A cluster of condos near the East Coast Expressway, Singapore. On the right is the \"Singapore Flyer\", a giant observation wheel that features brilliant engineering breakthroughs and is set to be Asia's most visible iconic visitor attraction."
+            },
+            {
+                "name": "Kallang, Singapore",
+                "filename": "Tanjong_Rhu_Suspension_Bridge.jpg",
+                "text": "Singapore's first suspension footbridge was built in 1998. The bridge spans the Geylang River and allows residents of Tanjong Rhu to cross over to the Singapore Indoor Stadium."
             }
         ],
         "final_standings": { "champions": "KSA", "runners_up": "CHN", "third_place": "KUW", "fourth_place": "IRN" },
@@ -536,6 +584,7 @@
         "details": {
             "host": ["KUW"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "640px-AFC_Asian_Cup_at_Fed_Square.jpg",
             "start_date": "1980-09-15",
             "end_date": "1980-09-30",
             "color": "#4fb24a",
@@ -550,9 +599,19 @@
                 "text": "The Sabah Al-Salem Stadium hosted all the matches."
             },
             {
+                "name": "Sabah Al-Salem Stadium, Kuwait City",
+                "filename": "AEARA.jpg",
+                "text": "The stadium from the outside"
+            },
+            {
                 "name": "Kuwait City, Kuwait",
                 "filename": "Kuwait_montage.png",
                 "text": "Kuwait City, Kuwait"
+            },
+            {
+                "name": "Kuwait City Skyline",
+                "filename": "Kuwait_City_Skyline_1.jpg",
+                "text": "View to the Skyline, Kuwait City, Kuwait"
             }
         ],
         "final_standings": { "champions": "KUW", "runners_up": "KOR", "third_place": "IRN", "fourth_place": "PRK" },
@@ -575,6 +634,7 @@
         "details": {
             "host": ["IRN-1964-1980"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "640px-AFC_Asian_Cup_at_Fed_Square.jpg",
             "start_date": "1976-06-03",
             "end_date": "1976-06-13",
             "color": "#089748",
@@ -626,6 +686,7 @@
         "details": {
             "host": ["THA"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "640px-AFC_Asian_Cup_at_Fed_Square.jpg",
             "start_date": "1972-05-07",
             "end_date": "1972-05-19",
             "color": "#2251a2",
@@ -643,6 +704,16 @@
                 "name": "Bangkok, Thailand",
                 "filename": "Bangkok_montage_3.jpg",
                 "text": "Clockwise from top: Si Lom–Sathon business district, the Giant Swing, Victory Monument, Rama VIII Bridge, Wat Arun, and the Grand Palace"
+            },
+            {
+                "name": "Bangkok, Thailand",
+                "filename": "Bangkok_Montage_2024.jpg",
+                "text": "From top, left to right: Sathon business district, Wat Benchamabophit, Grand Palace, Giant Swing, Democracy Monument, and Wat Arun"
+            },
+            {
+                "name": "Wat Arun, Bangkok",
+                "filename": "0000140_-_Wat_Arun_Ratchawararam_005.jpg",
+                "text": "Wat Arun, Bangkok, is among the best-known Thailand's landmarks"
             }
         ],
         "final_standings": { "champions": "IRN-1964-1980", "runners_up": "KOR", "third_place": "THA", "fourth_place": "CAM-1970-1975" },
@@ -663,6 +734,7 @@
         "details": {
             "host": ["IRN-1964-1980"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "600px-ZaneRooz13470304_(page_3_crop_02).jpg",
             "start_date": "1968-05-10",
             "end_date": "1968-05-19",
             "color": "#089748",
@@ -680,6 +752,16 @@
                 "name": "Tehran, Iran",
                 "filename": "Azadi_Tower_(29358497718)_(cropped).jpg",
                 "text": "The Azadi Tower"
+            },
+            {
+                "name": "Tehran Skyline",
+                "filename": "North_of_Tehran_Skyline_view.jpg",
+                "text": "Tehran skyline and the Alborz"
+            },
+            {
+                "name": "City Theater of Tehran",
+                "filename": "City_Theater_of_Tehran_2019_6_(cropped).jpg",
+                "text": "City Theater of Tehran"
             }
         ],
         "final_standings": { "champions": "IRN-1964-1980", "runners_up": "BUR-1948-1974", "third_place": "ISR", "fourth_place": "TPE-1960-1979" },
@@ -703,6 +785,7 @@
         "details": {
             "host": ["ISR"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "Israel_Commemorative_Cancel_1964_Asian_Soccer_Cup_Final.jpg",
             "start_date": "1964-05-26",
             "end_date": "1964-06-03",
             "color": "#15296d",
@@ -752,6 +835,7 @@
         "details": {
             "host": ["KOR"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "1960_AFC_Asian_Cup_qualification.png",
             "start_date": "1960-10-14",
             "end_date": "1960-10-23",
             "color": "#fa2200",
@@ -769,6 +853,16 @@
                 "name": "Seoul, Korea Republic",
                 "filename": "Seoul,_the_capital_of_South_Korea_(cropped).jpg",
                 "text": "Seoul, Korea Republic"
+            },
+            {
+                "name": "Seoul Skyline",
+                "filename": "Seoul_(175734251)_(cropped).jpg",
+                "text": "Skyline of Seoul at night"
+            },
+            {
+                "name": "Seongsan Bridge",
+                "filename": "Seoul_at_night_(cropped).jpg",
+                "text": "Seongsan Bridge over the Han River"
             }
         ],
         "final_standings": { "champions": "KOR", "runners_up": "ISR", "third_place": "TPE-1960-1979", "fourth_place": "VSO" },
@@ -788,6 +882,7 @@
         "details": {
             "host": ["HKG-1955-1959"],
             "logo_filename": "AFC_Asian_Cup.png",
+            "mascot_filename": "1956_AFC_Asian_Cup_qualification.png",
             "start_date": "1956-09-01",
             "end_date": "1956-09-15",
             "color": "#fa300f",
@@ -797,14 +892,24 @@
         },
         "hero_images": [
             {
+                "name": "Champions",
+                "filename": "HKStadium_KOR_1956AsianCup.jpg",
+                "text": "South Korea national football team celebrate after winning 1956 AFC Asian Cup at Hong Kong Stadium"
+            },
+            {
                 "name": "Government Stadium, Hong Kong",
                 "filename": "Hong_Kong_Stadium-1.jpg",
                 "text": "The Government Stadium hosted all matches."
             },
             {
-                "name": "Hong Kong",
+                "name": "Hong Kong Skyline",
                 "filename": "Hong_Kong_Island_Skyline_201108.jpg",
                 "text": "Hong Kong Skyline"
+            },
+            {
+                "name": "Hong Kong",
+                "filename": "Hong_Kong_Island_Panorama_(2).jpg",
+                "text": "Hong Kong Island Panorama"
             }
         ],
         "final_standings": { "champions": "KOR", "runners_up": "ISR", "third_place": "HKG-1955-1959", "fourth_place": "VSO" },

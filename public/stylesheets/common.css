@@ -568,6 +568,14 @@ a:hover {
     padding-right: 40px;
 }
 
+.padding-top-xl {
+    padding-top: 80px;
+}
+
+.padding-top-xxl {
+    padding-top: 120px;
+}
+
 .no-padding-top {
     padding-top: 0;
 }

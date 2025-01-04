@@ -10,16 +10,37 @@
         "details": {
             "host": ["FRA_U23WNT"],
             "logo_filename": "2024_Summer_Olympics_logo.svg",
-            "mascot_filename": "",
-            "start_date": "2024-07-26",
-            "end_date": "2024-08-11",
+            "mascot_filename": "Football_–_Paris_2024.svg",
+            "start_date": "2024-07-25",
+            "end_date": "2024-08-10",
             "color": "#202b5a",
             "team_count": 12,
             "confed_count": 6,
             "venue_count": 7,
             "city_count": 7
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Parc des Princes, Paris",
+                "filename": "Paris_Le_Parc_des_Princes.jpg",
+                "text": "The Parc des Princes hosted the gold medal match Brazil vs United States."
+            },
+            {
+                "name": "Stade de Lyon, Décines-Charpieu",
+                "filename": "OL-Angers_Groupama_Stadium_01.jpg",
+                "text": "The Stade de Lyon hosted the bronze medal match Spain vs Germany."
+            },
+            {
+                "name": "Stade de Marseille, Marseille",
+                "filename": "Stade_Vélodrome_en_novembre_2021_(1).jpg",
+                "text": "The Stade de Marseille hosted the semi-final Spain vs Brazil."
+            },
+            {
+                "name": "Stade de la Beaujoire, Nantes",
+                "filename": "Match_Football_FC_Nantes_x_RC_Lens_Stade_Beaujoire_-_Nantes_(FR44)_-_2022-09-18_-_34.jpg",
+                "text": "The Stade de la Beaujoire hosted the quarter-final France vs Brazil."
+            }
+        ],
         "final_standings": { "champions": "USA_U23WNT", "runners_up": "BRA_U23WNT", "third_place": "GER_U23WNT", "fourth_place": "ESP_U23WNT" },
         "statistics": { "total_matches": 26, "total_goals": 76, "attendance": 398699 },
         "awards": {
@@ -304,6 +325,11 @@
             "city_count": 3
         },
         "hero_images": [
+            {
+                "name": "Unni Lehn (SWE)",
+                "filename": "Unni_lehn.jpg",
+                "text": "Fotballspilleren Unni Lehn"
+            },
             {
                 "name": "Sydney Football Stadium",
                 "filename": "Allianz_Stadium_-_13_October_2012.jpg",

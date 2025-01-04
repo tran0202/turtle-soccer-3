@@ -165,9 +165,10 @@
 }
 
 .tournament-mascot {
-    width: 100%;
+    padding: 5px;
     border: 1px solid #c7c6c6;
     border-radius: 0.25rem;
+    height: 245px;
 }
 
 /* ========== Associations ========== */

@@ -9,22 +9,40 @@
         "details": {
             "host": ["AUS_WNT", "NZL_WNT"],
             "logo_filename": "Logo_of_the_2023_FIFA_Women's_World_Cup.svg",
-            "start_date": "2023-07-10",
+            "mascot": "Tazuni",
+            "mascot_filename": "Tazuni.png.webp",
+            "start_date": "2023-07-20",
             "end_date": "2023-08-20",
             "color": "#45d8b4",
             "team_count": 32,
             "confed_count": 6,
-            "venue_count": 13,
-            "city_count": 12
+            "venue_count": 10,
+            "city_count": 9
         },
         "hero_images": [
             {
-                "name": "Stadium Australia, Sydney",
-                "filename": "2015_Asian_Cup_Final.jpg",
-                "text": "The Stadium Australia has been proposed to host the final match."
+                "name": "Champions",
+                "filename": "2023FWWC_Final_(celebration).jpg",
+                "text": "Spanish team celebrating with the 2023 FIFA Women's World Cup trophy at the Stadium Australia in Sydney, New South Wales."
+            },
+            {
+                "name": "Final",
+                "filename": "2023FWWC_Final_(stadium).jpg",
+                "text": "Spain vs England - 2023 FIFA Women's World Cup Final at Stadium Australia"
+            },
+            {
+                "name": "Golden Ball",
+                "filename": "Aitana_Bonmatí_20190421_(cropped).jpg",
+                "text": "Spanish midfielder Aitana Bonmatí won the Golden Ball award"
+            },
+            {
+                "name": "Golden Glove",
+                "filename": "Mary_Earps_Man_Utd.jpg",
+                "text": "England's Mary Earps won the Golden Glove award"
             }
         ],
-        "final_standings": { "champions": "ESP_WNT", "runners_up": "ENG_WNT", "third_place": "SWE_WNT", "fourth_place": "AUS_WNT" }
+        "final_standings": { "champions": "ESP_WNT", "runners_up": "ENG_WNT", "third_place": "SWE_WNT", "fourth_place": "AUS_WNT" },
+        "statistics": { "total_matches": 64, "total_goals": 164, "attendance": 1978274 }
     },
     {
         "id": "WWC2019",
@@ -36,7 +54,8 @@
         "details": {
             "host": ["FRA_WNT"],
             "logo_filename": "2019_FIFA_Women's_World_Cup.svg",
-            "mascot_filename": "csm_ettie_7ca1be65ec.png",
+            "mascot": "Ettie",
+            "mascot_filename": "Ettie.png.webp",
             "start_date": "2019-06-07",
             "end_date": "2019-07-07",
             "color": "#103d69",
@@ -103,7 +122,8 @@
         "details": {
             "host": ["CAN_WNT"],
             "logo_filename": "2015_FIFA_Women's_World_Cup.svg",
-            "mascot_filename": "mascot_2015.jpg",
+            "mascot": "Shuéme",
+            "mascot_filename": "Shuéme.webp",
             "start_date": "2015-06-06",
             "end_date": "2015-07-05",
             "color": "#f72337",
@@ -160,7 +180,8 @@
         "details": {
             "host": ["GER_WNT"],
             "logo_filename": "2011_FIFA_Women's_World_Cup.svg",
-            "mascot_filename": "Karla_Kick.jpg",
+            "mascot": "Karla Kick",
+            "mascot_filename": "Karla_Kick.webp",
             "start_date": "2011-06-26",
             "end_date": "2011-07-17",
             "color": "#1d1d1b",
@@ -217,6 +238,8 @@
         "details": {
             "host": ["CHN_WNT"],
             "logo_filename": "2007_FIFA_Women's_World_Cup.svg",
+            "mascot": "Hua Mulan",
+            "mascot_filename": "Hua_Mulan.webp",
             "start_date": "2007-09-10",
             "end_date": "2007-09-30",
             "color": "#fa2200",
@@ -273,6 +296,7 @@
         "details": {
             "host": ["USA_WNT"],
             "logo_filename": "2003_FIFA_Women's_World_Cup.svg",
+            "mascot_filename": "268px-FIFA_Women_World_Cup_Trophy_(Ank_Kumar,_Infosys_Limited)_03.jpg",
             "start_date": "2003-09-20",
             "end_date": "2003-10-12",
             "color": "#0f246a",
@@ -329,6 +353,8 @@
         "details": {
             "host": ["USA_WNT"],
             "logo_filename": "1999_FIFA_Women's_World_Cup.gif",
+            "mascot": "Nutmeg",
+            "mascot_filename": "Nutmeg.webp",
             "start_date": "1999-06-19",
             "end_date": "1999-07-10",
             "color": "#0f246a",
@@ -360,7 +386,7 @@
             }
         ],
         "final_standings": { "champions": "USA_WNT", "runners_up": "CHN_WNT", "third_place": "BRA_WNT", "fourth_place": "NOR_WNT" },
-        "statistics": { "total_matches": 32, "total_goals": 123, "attendance": 1194215 },
+        "statistics": { "total_matches": 32, "total_goals": 123, "attendance": 1214221 },
         "awards": {
             "golden_boot": [
                 { "player": "Sissi", "team": "BRA_WNT", "goals": 7, "assists": 3 },
@@ -389,6 +415,8 @@
         "details": {
             "host": ["SWE_WNT"],
             "logo_filename": "1995_FIFA_Women's_World_Cup.png",
+            "mascot": "Fiffi",
+            "mascot_filename": "Fiffi.webp",
             "start_date": "1995-06-05",
             "end_date": "1995-06-18",
             "color": "#1d5f9a",
@@ -444,6 +472,8 @@
         "details": {
             "host": ["CHN_WNT"],
             "logo_filename": "1991_FIFA_Women's_World_Cup.png",
+            "mascot": "Lingling",
+            "mascot_filename": "Lingling.webp",
             "start_date": "1991-11-16",
             "end_date": "1991-11-30",
             "color": "#fa2200",

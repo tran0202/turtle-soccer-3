@@ -7,8 +7,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
+            "slogan": "Rocking the Continent",
             "host": ["USA"],
             "logo_filename": "2024_Copa_América_logo.svg",
+            "mascot": "Capitán",
+            "mascot_filename": "GAyYWdJWgAAgQN7.jpeg",
+            "mascot_height": "190px",
             "start_date": "2024-06-20",
             "end_date": "2024-07-14",
             "color": "#003282",
@@ -17,7 +21,28 @@
             "venue_count": 14,
             "city_count": 14
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Final",
+                "filename": "ARG-COL_2024-07-14.svg",
+                "text": "Argentina vs Colombia"
+            },
+            {
+                "name": "ARG vs PER",
+                "filename": "Argentina_2-0_Perú_-_Copa_América_2024_-_Himnos_nacionales.jpg",
+                "text": "Argentina vs Peru, 29 June 2024"
+            },
+            {
+                "name": "PER vs CHI",
+                "filename": "Peru_-_Chile_en_Arlington,_Texas.jpg",
+                "text": "Peru - Chile en Arlington, Texas"
+            },
+            {
+                "name": "ARG vs ECU",
+                "filename": "Argentina_1-1_Ecuador_-_Copa_América_2024_-_Valencia_se_prepara_para_patear_un_penal.jpg",
+                "text": "Argentina vs Ecuador"
+            }
+        ],
         "final_standings": { "champions": "ARG", "runners_up": "COL", "third_place": "URU", "fourth_place": "CAN" },
         "statistics": { "total_matches": 32, "total_goals": 70, "attendance": 1571878 },
         "awards": {
@@ -36,8 +61,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
+            "slogan": "Rocking the Continent",
             "host": ["BRA"],
             "logo_filename": "2021_Copa_América_logo.svg",
+            "mascot": "Pibe",
+            "mascot_filename": "AFP__20210628__9DF9TP__v1__HighRes__Fbl2021CopaAmericaUruPar.jpg",
+            "mascot_height": "190px",
             "start_date": "2021-06-13",
             "end_date": "2021-07-10",
             "color": "#003282",
@@ -88,9 +117,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
+            "slogan": "Rocking the Continent",
             "host": ["BRA"],
             "logo_filename": "2019_Copa_América_logo.svg",
-            "mascot_filename": "14_06_2019_Abertura_da_Copa_América_Brasil_2019_(48064369632)_(cropped).jpg",
+            "mascot": "Zizito",
+            "mascot_filename": "337px-14_06_2019_Abertura_da_Copa_América_Brasil_2019_(48064369632)_(cropped).jpg",
+            "mascot_height": "190px",
             "start_date": "2019-06-14",
             "end_date": "2019-07-07",
             "color": "#6d923d",
@@ -144,7 +176,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "Copa_América_Centenario.svg",
-            "mascot_filename": "Copa_america_centenario_clean.jpg",
+            "mascot_filename": "288px-Copa_america_centenario_clean.jpg",
             "start_date": "2016-06-03",
             "end_date": "2016-06-26",
             "color": "#b61f24",
@@ -197,9 +229,12 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2headresults", "penalty", "lot"],
         "details": {
+            "slogan": "The Heart of Football",
             "host": ["CHI"],
             "logo_filename": "2015_Copa_América.svg",
-            "mascot_filename": "Jefa_de_Estado_recibe_invitación_para_la_Copa_América_2015_(17380237702)_(cropped).jpg",
+            "mascot": "Zincha",
+            "mascot_filename": "2015-copa-america-mascot-600x400.png",
+            "mascot_height": "190px",
             "start_date": "2015-06-11",
             "end_date": "2015-07-04",
             "color": "#003375",
@@ -258,6 +293,9 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "2011_Copa_América_logo.svg",
+            "mascot": "Tangolero",
+            "mascot_filename": "2011-copa-america-mascot-600x400.png",
+            "mascot_height": "220px",
             "start_date": "2011-07-01",
             "end_date": "2011-07-24",
             "color": "#0589bc",
@@ -313,7 +351,9 @@
         "details": {
             "host": ["VEN"],
             "logo_filename": "2007_Copa_América_logo.svg",
-            "mascot_filename": "Guaky_on_his_tour_of_((Venezuela))._2007.jpg",
+            "mascot": "Guaky",
+            "mascot_filename": "2007-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "2007-06-26",
             "end_date": "2007-07-15",
             "color": "#003399",
@@ -362,6 +402,9 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "2004_Copa_América_logo.svg",
+            "mascot": "Chasqui",
+            "mascot_filename": "2004-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "2004-07-06",
             "end_date": "2004-07-25",
             "color": "#e2001a",
@@ -409,6 +452,9 @@
         "details": {
             "host": ["COL"],
             "logo_filename": "Copa_América_2001_official_logo.png",
+            "mascot": "Ameriko",
+            "mascot_filename": "2001-copa-america-mascot-600x400.png",
+            "mascot_height": "220px",
             "start_date": "2001-07-11",
             "end_date": "2001-07-29",
             "color": "#433c80",
@@ -456,6 +502,9 @@
         "details": {
             "host": ["PAR"],
             "logo_filename": "1999_Copa_América_logo.svg",
+            "mascot": "Tagua",
+            "mascot_filename": "1999-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "1999-06-29",
             "end_date": "1999-07-18",
             "color": "#0066a6",
@@ -506,6 +555,9 @@
         "details": {
             "host": ["BOL"],
             "logo_filename": "1997_Copa_América_logo.svg",
+            "mascot": "Tatu",
+            "mascot_filename": "1997-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "1997-06-11",
             "end_date": "1997-06-29",
             "color": "#00a651",
@@ -537,7 +589,7 @@
             }
         ],
         "final_standings": { "champions": "BRA", "runners_up": "BOL", "third_place": "MEX", "fourth_place": "PER" },
-        "statistics": { "total_matches": 26, "total_goals": 67 },
+        "statistics": { "total_matches": 26, "total_goals": 67, "attendance": 456020 },
         "awards": {
             "golden_boot": [{ "player": "Luis Hernández", "team": "MEX", "goals": 6 }],
             "golden_ball": [{ "player": "Ronaldo", "team": "BRA" }]
@@ -553,7 +605,10 @@
         "tiebreakers": ["team", "head2headmatch", "lot"],
         "details": {
             "host": ["URU"],
-            "logo_filename": "Copa_América_1995.svg",
+            "logo_filename": "1995-copa-america-logo-300x200.png",
+            "mascot": "Torito",
+            "mascot_filename": "1995-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "1995-07-05",
             "end_date": "1995-07-23",
             "color": "#005ca4",
@@ -585,7 +640,7 @@
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "BRA", "third_place": "COL", "fourth_place": "USA" },
-        "statistics": { "total_matches": 26, "total_goals": 69 },
+        "statistics": { "total_matches": 26, "total_goals": 69, "attendance": 450600 },
         "awards": {
             "golden_boot": [
                 { "player": "Gabriel Batistuta", "team": "ARG", "goals": 4 },
@@ -605,6 +660,9 @@
         "details": {
             "host": ["ECU"],
             "logo_filename": "1993_Copa_América_logo.jpg",
+            "mascot": "Choclito",
+            "mascot_filename": "1993-copa-america-mascot-600x400.png",
+            "mascot_height": "220px",
             "start_date": "1993-06-15",
             "end_date": "1993-07-04",
             "color": "#21216b",
@@ -636,7 +694,7 @@
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "MEX", "third_place": "COL", "fourth_place": "ECU" },
-        "statistics": { "total_matches": 26, "total_goals": 64 },
+        "statistics": { "total_matches": 26, "total_goals": 64, "attendance": 633040 },
         "awards": {
             "golden_boot": [{ "player": "José Luis Dolgetta", "team": "VEN-1954-2006", "goals": 4 }],
             "golden_ball": [{ "player": "Sergio Goycochea", "team": "ARG" }]
@@ -652,7 +710,10 @@
         "tiebreakers": ["team", "head2headmatch", "lot"],
         "details": {
             "host": ["CHI"],
-            "logo_filename": "1991_Copa_América_logo.png",
+            "logo_filename": "1991_Copa_América_logo.png",
+            "mascot": "Guaso",
+            "mascot_filename": "1991-copa-america-mascot-600x400.png",
+            "mascot_height": "220px",
             "start_date": "1991-07-06",
             "end_date": "1991-07-21",
             "color": "#4b6ebf",
@@ -684,7 +745,7 @@
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "COL" },
-        "statistics": { "total_matches": 26, "total_goals": 73 },
+        "statistics": { "total_matches": 26, "total_goals": 73, "attendance": 815483 },
         "awards": {
             "golden_boot": [{ "player": "Gabriel Batistuta", "team": "ARG", "goals": 6 }],
             "golden_ball": [{ "player": "Leonardo Rodríguez", "team": "ARG" }]
@@ -700,6 +761,9 @@
         "details": {
             "host": ["BRA"],
             "logo_filename": "1989_Copa_América_logo.png",
+            "mascot": "Tico",
+            "mascot_filename": "1989-copa-america-mascot-600x400.png",
+            "mascot_height": "220px",
             "start_date": "1989-07-01",
             "end_date": "1989-07-16",
             "color": "#008400",
@@ -731,7 +795,7 @@
             }
         ],
         "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "PAR" },
-        "statistics": { "total_matches": 26, "total_goals": 55 },
+        "statistics": { "total_matches": 26, "total_goals": 55, "attendance": 968976 },
         "awards": {
             "golden_boot": [{ "player": "Bebeto", "team": "BRA", "goals": 6 }],
             "golden_ball": [{ "player": "Rubén Sosa", "team": "URU" }]
@@ -747,6 +811,9 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "1987_Copa_América_logo.svg",
+            "mascot": "Gardelito",
+            "mascot_filename": "1987-copa-america-mascot-600x400.jpg",
+            "mascot_height": "220px",
             "start_date": "1987-06-27",
             "end_date": "1987-07-12",
             "color": "#005ca4",
@@ -800,6 +867,7 @@
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",
+            "mascot_filename": "358px-Elgrafico_extra_argentina_brasil.jpg",
             "start_date": "1983-08-10",
             "end_date": "1983-11-04",
             "color": "#005ca4",
@@ -861,6 +929,7 @@
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1979-07-18",
             "end_date": "1979-12-12",
             "color": "#005ca4",
@@ -882,6 +951,11 @@
                 "name": "José Amalfitani, Buenos Aires",
                 "filename": "Argentina_A_vs_Inglaterra_A_02.jpeg",
                 "text": "The José Amalfitani hosted one of the finals match"
+            },
+            {
+                "name": "Maracaná, Rio de Janeiro",
+                "filename": "Maracana_2022.jpg",
+                "text": "The Maracaná hosted one of the semi-finals match"
             }
         ],
         "final_standings": {
@@ -911,6 +985,7 @@
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",
+            "mascot_filename": "Marcos_Calderon_1975_Copa_America.png",
             "start_date": "1975-07-17",
             "end_date": "1975-10-28",
             "color": "#005ca4",
@@ -918,6 +993,11 @@
             "confed_count": 1
         },
         "hero_images": [
+            {
+                "name": "Leopoldo Luque (ARG)",
+                "filename": "Leopoldo_Luque_1978.jpg",
+                "text": "Leopoldo Luque, one of the two top scorers"
+            },
             {
                 "name": "Estadio El Campín, Bogotá",
                 "filename": "Estadio_El_Campin_Seleccion_Colombia-Caminos.jpg",
@@ -962,6 +1042,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1967-01-13",
             "end_date": "1967-02-02",
             "color": "#259bc2",
@@ -972,9 +1053,24 @@
         },
         "hero_images": [
             {
+                "name": "URU vs ARG",
+                "filename": "Argentina_vs_uruguay_1967.jpg",
+                "text": "Uruguay vs Argentina, the final match of the round"
+            },
+            {
+                "name": "Luis Artime (ARG)",
+                "filename": "Luis_artime_argentina.jpg",
+                "text": "Luis Artime, top scorer"
+            },
+            {
                 "name": "Estadio Centenario, Montevideo",
                 "filename": "Stad_de_centario_uruguay1930_montevideo.jpg",
                 "text": "The Estadio Centenario hosted all of the tournament matches."
+            },
+            {
+                "name": "Montevideo Skyline",
+                "filename": "The_City_(198895997).jpeg",
+                "text": "Montevideo Skyline"
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
@@ -995,6 +1091,7 @@
         "details": {
             "host": ["BOL"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1963-03-10",
             "end_date": "1963-03-31",
             "color": "#00a651",
@@ -1013,6 +1110,11 @@
                 "name": "Estadio Hernando Siles, La Paz",
                 "filename": "Hernando_Siles_Stadium_-_La_Paz.jpg",
                 "text": "The Estadio Hernando Siles hosted the tournament matches."
+            },
+            {
+                "name": "La Paz Skyline",
+                "filename": "La_Paz_Skyline.jpg",
+                "text": "View of La Paz from El Alto with the Illimani mountain in the background"
             },
             {
                 "name": "Estadio Félix Capriles, Cochabamba",
@@ -1038,6 +1140,7 @@
         "details": {
             "host": ["ECU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1959-12-05",
             "end_date": "1959-12-25",
             "color": "#21216b",
@@ -1048,9 +1151,24 @@
         },
         "hero_images": [
             {
+                "name": "José Sanfilippo (ARG)",
+                "filename": "Sanfilippo_argentina.jpg",
+                "text": "José Sanfilippo, top scorer"
+            },
+            {
                 "name": "Estadio Modelo, Guayaquil",
                 "filename": "Estadio_modelo_ecuador.jpg",
                 "text": "The Estadio Modelo hosted all of the tournament matches."
+            },
+            {
+                "name": "Guayaquil Skyline",
+                "filename": "Guayaquil_panoramica.jpg",
+                "text": "Skyline of Guayaquil"
+            },
+            {
+                "name": "Malecón 2000",
+                "filename": "Vista_del_Malecón_2000.jpg",
+                "text": "Vista del Malecón 2000 en Guayaquil, Ecuador."
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "ECU" },
@@ -1071,6 +1189,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "355px-Sánchez_y_Pelé,_Estadio,_1959-04-30_(831).jpg",
             "start_date": "1959-03-07",
             "end_date": "1959-04-04",
             "color": "#0589bc",
@@ -1124,6 +1243,7 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1957-03-07",
             "end_date": "1957-04-06",
             "color": "#e2001a",
@@ -1175,6 +1295,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1956-01-21",
             "end_date": "1956-02-15",
             "color": "#259bc2",
@@ -1188,6 +1309,21 @@
                 "name": "Estadio Centenario, Montevideo",
                 "filename": "Stad_de_centario_uruguay1930_montevideo.jpg",
                 "text": "The Estadio Centenario hosted all of the tournament matches."
+            },
+            {
+                "name": "Legislative Palace",
+                "filename": "PALACIO_LEGISLATIVO_01.jpeg",
+                "text": "Legislative Palace"
+            },
+            {
+                "name": "Solís Theatre",
+                "filename": "2016_fachada_columnas_Teatro_Solís_de_Montevideo.jpg",
+                "text": "Solís Theatre"
+            },
+            {
+                "name": "Obelisk of Montevideo",
+                "filename": "Obelisco_a_los_constituyentes.jpg",
+                "text": "The \"Obelisk of Montevideo\" located at the intesection of Artigas Boulevard and 18 de Julio Avenue. Its official name is Obelisco a los consituyentes de 1830."
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "CHI", "third_place": "ARG", "fourth_place": "BRA" },
@@ -1208,6 +1344,7 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1955-02-27",
             "end_date": "1955-03-30",
             "color": "#fa300f",
@@ -1218,9 +1355,24 @@
         },
         "hero_images": [
             {
+                "name": "Rodolfo Micheli (ARG)",
+                "filename": "Rodolfo_micheli_argentina.jpg",
+                "text": "Rodolfo Micheli, top scorer"
+            },
+            {
                 "name": "Estadio Nacional de Chile, Santiago",
                 "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
                 "text": "The Estadio Nacional de Chile hosted all of the tournament matches."
+            },
+            {
+                "name": "Santiago Skyline",
+                "filename": "Santiago_de_Chile,_Desde_Cerro_San_Cristóbal_(cropped_panorama).jpg",
+                "text": "Skyline of Santiago, with Sanhattan and Gran Torre Santiago, from San Cristóbal Hill"
+            },
+            {
+                "name": "La Moneda Palace",
+                "filename": "Palacio_de_La_Moneda_-_miguelreflex.jpg",
+                "text": "La Moneda Palace"
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "CHI", "third_place": "PER", "fourth_place": "URU" },
@@ -1241,6 +1393,7 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1953-02-22",
             "end_date": "1953-04-01",
             "color": "#e2001a",
@@ -1254,6 +1407,21 @@
                 "name": "Estadio Nacional de Lima, Lima",
                 "filename": "Inside_Estadio_Nacional_(Lima,_Peru).jpg",
                 "text": "The Estadio Nacional de Lima hosted all of the tournament matches."
+            },
+            {
+                "name": "San Isidro skyline",
+                "filename": "Sanisidroskyscrapers.jpg",
+                "text": "Skyscrapers in the central business district of Lima, Peru."
+            },
+            {
+                "name": "Archbishop's Palace and Metropolitan Cathedral",
+                "filename": "Basílica_Catedral_Metropolitana_de_Lima_(cropped).jpg",
+                "text": "Archbishop's Palace and Metropolitan Cathedral"
+            },
+            {
+                "name": "Plaza Mayor",
+                "filename": "Urban_View_of_Lima,_Peru_09_(Night_City).jpg",
+                "text": "Fountain of Plaza Mayor"
             }
         ],
         "final_standings": { "champions": "PAR", "runners_up": "BRA", "third_place": "URU", "fourth_place": "CHI" },
@@ -1274,6 +1442,7 @@
         "details": {
             "host": ["BRA"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1949-04-03",
             "end_date": "1949-05-11",
             "color": "#008400",
@@ -1322,6 +1491,7 @@
         "details": {
             "host": ["ECU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1947-11-30",
             "end_date": "1947-12-31",
             "color": "#21216b",
@@ -1335,6 +1505,21 @@
                 "name": "Champions",
                 "filename": "Argentina_1947.jpg",
                 "text": "Argentina won its 9th title"
+            },
+            {
+                "name": "Nicolás Falero (URU)",
+                "filename": "Falero_en_centralespanol.jpg",
+                "text": "Nicolás Falero, top scorer"
+            },
+            {
+                "name": "Estadio George Capwell",
+                "filename": "ESTADIO_CAPWELL_1.jpg",
+                "text": "George L. Capwell Stadium"
+            },
+            {
+                "name": "Lighthouse",
+                "filename": "Faro_de_Guayaquil.jpg",
+                "text": "Lighthouse on Santa Ana Hill"
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "PAR", "third_place": "URU", "fourth_place": "CHI" },
@@ -1355,6 +1540,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1946-01-12",
             "end_date": "1946-02-10",
             "color": "#0589bc",
@@ -1403,6 +1589,7 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1945-01-14",
             "end_date": "1945-02-28",
             "color": "#003375",
@@ -1421,6 +1608,11 @@
                 "name": "Champions",
                 "filename": "Argentina_martino_andas.jpg",
                 "text": "Argentine player Rinaldo Martino being carried by the fans after the 1–0 win v. Uruguay. He scored the only goal."
+            },
+            {
+                "name": "Norberto Méndez (ARG)",
+                "filename": "Tucho_mendez.jpg",
+                "text": "Norberto \"Tucho\" Méndez, a notable football player for Racing Club and Argentina national team"
             },
             {
                 "name": "Estadio Nacional de Chile, Santiago",
@@ -1449,6 +1641,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1942-01-10",
             "end_date": "1942-02-07",
             "color": "#259bc2",
@@ -1500,6 +1693,7 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1941-02-02",
             "end_date": "1941-03-04",
             "color": "#fa300f",
@@ -1515,9 +1709,19 @@
                 "text": "The Argentina squad that won its 6th South American title"
             },
             {
+                "name": "Juan Marvezzi (ARG)",
+                "filename": "Juan_marvezzi_futbolista.jpg",
+                "text": "Juan Marvezzi, top scorer with 5 goals"
+            },
+            {
                 "name": "Estadio Nacional de Chile, Santiago",
                 "filename": "Estadio_Nacional_de_Chile_-_vista_desde_Av._Grecia.jpg",
                 "text": "The Estadio Nacional de Chile hosted all of the tournament matches."
+            },
+            {
+                "name": "National Library of Chile",
+                "filename": "Biblioteca_Nacional_de_Chile,_2012-09-08.jpg",
+                "text": "National Library of Chile"
             }
         ],
         "final_standings": { "champions": "ARG", "runners_up": "URU", "third_place": "CHI", "fourth_place": "PER" },
@@ -1538,6 +1742,7 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1939-01-15",
             "end_date": "1939-02-12",
             "color": "#e2001a",
@@ -1551,6 +1756,16 @@
                 "name": "Champions",
                 "filename": "Peru_1939.jpg",
                 "text": "The Peruvian team that won its first title"
+            },
+            {
+                "name": "Teodoro Fernández (PER)",
+                "filename": "Lolofernandez_elgrafico.jpg",
+                "text": "Teodoro Fernández, top scorer"
+            },
+            {
+                "name": "Chile",
+                "filename": "Chile_en_el_Sudamericano_1939,_Estadio,_1945-01-12_(87).jpg",
+                "text": "Chile en 1939"
             },
             {
                 "name": "Estadio Nacional, Lima",
@@ -1576,6 +1791,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1936-12-27",
             "end_date": "1937-02-01",
             "color": "#0589bc",
@@ -1624,6 +1840,7 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1935-01-06",
             "end_date": "1935-01-27",
             "color": "#e2001a",
@@ -1634,9 +1851,24 @@
         },
         "hero_images": [
             {
+                "name": "Herminio Masantonio (ARG)",
+                "filename": "Herminio_Masantonio.jpg",
+                "text": "Herminio Masantonio, top scorer"
+            },
+            {
                 "name": "Estadio Nacional, Lima",
                 "filename": "Estadio_ingles_lima.jpg",
                 "text": "The Estadio Nacional hosted all of the tournament matches."
+            },
+            {
+                "name": "Miraflores skyline",
+                "filename": "Ciudad_De_Lima.jpg",
+                "text": "Miraflores skyline"
+            },
+            {
+                "name": "Park of the Reserve",
+                "filename": "Parque_de_La_Reserva,_Lima_-_Peru_-_panoramio_(7).jpg",
+                "text": "Park of the Reserve"
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PER", "fourth_place": "CHI" },
@@ -1657,6 +1889,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1929-11-01",
             "end_date": "1929-11-17",
             "color": "#0589bc",
@@ -1705,6 +1938,7 @@
         "details": {
             "host": ["PER"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "345px-Trofeo_Sudamericano_1927.jpeg",
             "start_date": "1927-10-30",
             "end_date": "1927-11-27",
             "color": "#e2001a",
@@ -1759,6 +1993,7 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "342px-Copa_América,_Los_Sports,_1926-10-08_(187).jpg",
             "start_date": "1926-10-12",
             "end_date": "1926-11-03",
             "color": "#4b6ebf",
@@ -1772,6 +2007,21 @@
                 "name": "Champions",
                 "filename": "Uruguay1926.jpeg",
                 "text": "Uruguay squad, winners"
+            },
+            {
+                "name": "David Arellano (CHI)",
+                "filename": "David_Arellano,_Los_Sports,_1926-11-12_(192).jpg",
+                "text": "David Arellano, top scorer"
+            },
+            {
+                "name": "Estadio Sport de Ñuñoa, Santiago",
+                "filename": "Campos_de_Sports_de_Ñuñoa_en_1926,_Estadio,_1945-01-12_(87).jpg",
+                "text": "Campos de Sports de Ñuñoa en 1925"
+            },
+            {
+                "name": "San Cristóbal Hill, Santiago",
+                "filename": "Chile_-_Santiago_24_-_Virgin_Mary_statue_on_Cerro_San_Cristóbal_(6977789601).jpg",
+                "text": "Chile - Santiago 24 - Virgin Mary statue on Cerro San Cristóbal"
             }
         ],
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
@@ -1792,6 +2042,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1925-11-29",
             "end_date": "1925-12-25",
             "color": "#0589bc",
@@ -1805,6 +2056,11 @@
                 "name": "Champions",
                 "filename": "Argentina_equipo_vs_paraguay_1925.jpg",
                 "text": "The Argentina squad (here pictured in the first match v Paraguay) won its second title"
+            },
+            {
+                "name": "Manuel Seoane (ARG)",
+                "filename": "Seoane_color_1923.jpg",
+                "text": "Manuel Seoane, top scorer"
             },
             {
                 "name": "Sportivo Barracas Stadium, Buenos Aires",
@@ -1835,6 +2091,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1924-10-12",
             "end_date": "1924-11-02",
             "color": "#259bc2",
@@ -1848,6 +2105,16 @@
                 "name": "Champions",
                 "filename": "Uruguay1924_olympic.jpg",
                 "text": "The Uruguayan side had previously won the Olympics championship in Paris"
+            },
+            {
+                "name": "Pedro Petrone (URU)",
+                "filename": "Pedro_petrone_footballer.jpg",
+                "text": "Pedro Petrone, top scorer"
+            },
+            {
+                "name": "Argentina",
+                "filename": "Argentina_en_el_Sudamericano_1924,_Los_Sports,_1924-11-07_(87).jpg",
+                "text": "Argentina"
             },
             {
                 "name": "Estadio Gran Parque Central, Montevideo",
@@ -1873,6 +2140,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1923-10-29",
             "end_date": "1923-12-02",
             "color": "#259bc2",
@@ -1886,6 +2154,16 @@
                 "name": "Champions",
                 "filename": "Uruguay_1923.jpg",
                 "text": "The Uruguayan squad won its 4th title"
+            },
+            {
+                "name": "Vicente \"Chueco\" Aguirre (ARG)",
+                "filename": "Chueco_Aguirre.jpg",
+                "text": "Vicente Aguirre, 1 of the top 2 scorers"
+            },
+            {
+                "name": "Pedro Petrone (URU)",
+                "filename": "Pedro_Petrone_(1928).jpg",
+                "text": "Pedro Petrone in 1928"
             },
             {
                 "name": "Estadio Gran Parque Central, Montevideo",
@@ -1914,8 +2192,9 @@
         "details": {
             "host": ["BRA"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1922-09-17",
-            "end_date": "1922-10-22",
+            "end_date": "1922-11-06",
             "color": "#6d923d",
             "team_count": 5,
             "confed_count": 1,
@@ -1927,6 +2206,16 @@
                 "name": "Champions",
                 "filename": "Brasil_1922.jpg",
                 "text": "The Brazilian squad"
+            },
+            {
+                "name": "Juan Francia (ARG)",
+                "filename": "Juan_francia_ffcc_cropped.jpg",
+                "text": "Juan Francia, top scorer"
+            },
+            {
+                "name": "Chile",
+                "filename": "Chile_en_el_Sudamericano_1922,_Estadio,_1945-01-12_(87).jpg",
+                "text": "Chile en 1922"
             },
             {
                 "name": "Estadio das Laranjeiras, Rio de Janeiro",
@@ -1952,6 +2241,7 @@
         "details": {
             "host": ["ARG"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1921-10-02",
             "end_date": "1921-10-30",
             "color": "#0589bc",
@@ -2000,6 +2290,7 @@
         "details": {
             "host": ["CHI"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1920-09-11",
             "end_date": "1920-09-26",
             "color": "#4b6ebf",
@@ -2013,6 +2304,16 @@
                 "name": "Champions",
                 "filename": "Uruguay_campeon_1920.jpg",
                 "text": "Uruguay's winning squad"
+            },
+            {
+                "name": "José Pérez (URU)",
+                "filename": "Jose_perez_uruguay.jpg",
+                "text": "José Pérez, 1 of the 2 top scorers"
+            },
+            {
+                "name": "Ángel Romano (URU)",
+                "filename": "Angel_romano_uruguay.jpg",
+                "text": "Ángel Romano, 1 of the 2 top scorers"
             },
             {
                 "name": "Estadio Valparaíso Sporting Club, Viña del Mar",
@@ -2040,8 +2341,8 @@
         "tiebreakers": ["team", "pointtiedtopstandings"],
         "details": {
             "host": ["BRA"],
-            "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
-            "mascot_filename": "Copa_america_poster1919.jpg",
+            "logo_filename": "Copa_america_poster1919.jpg",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1919-05-11",
             "end_date": "1919-05-29",
             "color": "#008400",
@@ -2093,6 +2394,7 @@
         "details": {
             "host": ["URU"],
             "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1917-09-30",
             "end_date": "1917-10-14",
             "color": "#259bc2",
@@ -2106,6 +2408,11 @@
                 "name": "Champions",
                 "filename": "Uruguay_Copa_America_1917.jpg",
                 "text": "The Uruguay national football team before playing a match in the Campeonato Sudamericano. Uruguay won that tournament. From left to right (Up): J. Pacheco, J. Vanzzino, C. Saporiti, G. Rodríguez, M. Varela, A. Foglino. (Down): J. Perez, H. Scarone, A. Romano, C. Scarone, P. Somma."
+            },
+            {
+                "name": "Ángel Romano (URU)",
+                "filename": "Angel_romano_uruguay.jpg",
+                "text": "Ángel Romano, top scorer"
             },
             {
                 "name": "Brazil",
@@ -2135,8 +2442,8 @@
         "tiebreakers": ["team"],
         "details": {
             "host": ["ARG"],
-            "logo_filename": "555px-CONMEBOL_logo_(2017).svg.png",
-            "mascot_filename": "Sudamericano_de_football_1916_brazilian_art.jpg",
+            "logo_filename": "350px-Sudamericano_de_football_1916_brazilian_art.jpg",
+            "mascot_filename": "305px-Copa_Atlansia_Trofeo.png",
             "start_date": "1916-07-02",
             "end_date": "1916-07-17",
             "color": "#63b7e8",

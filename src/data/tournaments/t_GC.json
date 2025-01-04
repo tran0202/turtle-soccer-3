@@ -2,15 +2,18 @@
     {
         "id": "GC2023",
         "year": "2023",
-        "name": "Gold Cup 2023 United States",
-        "short_name": "2023 United States",
+        "name": "Gold Cup 2023 Canada-United States",
+        "short_name": "2023 Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "slogan": "This Is Ours",
+            "host": ["CAN", "USA"],
             "logo_filename": "Concacaf_Gold_Cup_2021.svg",
+            "mascot_filename": "595px-CONCACAF_Gold_Cup_2023_Qualifiers_Map.png",
+            "mascot_height": "220px",
             "start_date": "2023-06-24",
             "end_date": "2023-07-16",
             "color": "#d39534",
@@ -19,7 +22,28 @@
             "venue_count": 15,
             "city_count": 14
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "SoFi Stadium, Inglewood",
+                "filename": "SoFi_Stadium_2023.jpg",
+                "text": "SoFi Stadium hosted the final Mexico vs Panama"
+            },
+            {
+                "name": "Allegiant Stadium, Paradise",
+                "filename": "Las_Vegas_(5152659900-Cropped).jpg",
+                "text": "Allegiant Stadium hosted the semi-final Jamaica vs Mexico"
+            },
+            {
+                "name": "Snapdragon Stadium, San Diego",
+                "filename": "Snapdragon_Stadium_interior-Night_panorama_view_1.jpg",
+                "text": "Snapdragon Stadium hosted the semi-final United States vs Panama"
+            },
+            {
+                "name": "TQL Stadium, Cincinnati",
+                "filename": "FC_Cincinnati_vs._D.C._United_at_TQL_Stadium_(20210801140432).jpg",
+                "text": "TQL Stadium hosted 2 quarter-finals including United States vs Canada"
+            }
+        ],
         "final_standings": {
             "champions": "MEX",
             "runners_up": "PAN",
@@ -45,8 +69,11 @@
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
+            "slogan": "This Is Ours",
             "host": ["USA"],
             "logo_filename": "Concacaf_Gold_Cup_2021.svg",
+            "mascot_filename": "347px-USA-MEX_2021-08-01.svg.png",
+            "mascot_height": "220px",
             "start_date": "2021-07-10",
             "end_date": "2021-08-01",
             "color": "#d39534",
@@ -96,15 +123,17 @@
     {
         "id": "GC2019",
         "year": "2019",
-        "name": "Gold Cup 2019 United States-Costa Rica-Jamaica",
-        "short_name": "2019 United States-Costa Rica-Jamaica",
+        "name": "Gold Cup 2019 Costa Rica-Jamaica-United States",
+        "short_name": "2019 Costa Rica-Jamaica-United States",
         "competition_id": "GC",
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA", "CRC", "JAM"],
+            "host": ["CRC", "JAM", "USA"],
             "logo_filename": "2019_CONCACAF_Gold_Cup.svg",
+            "mascot_filename": "Seleccionados_en_la_Copa_Oro_de_la_CONCACAF_2019.png",
+            "mascot_height": "200px",
             "start_date": "2019-06-15",
             "end_date": "2019-07-07",
             "color": "#e6bf7a",
@@ -159,6 +188,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2017_CONCACAF_Gold_Cup.svg",
+            "mascot_filename": "347px-CRC-USA_2017-07-22.svg.png",
             "start_date": "2017-07-07",
             "end_date": "2017-07-26",
             "color": "#eb1821",
@@ -196,7 +226,7 @@
             "semi_finalist2": "MEX",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
-        "statistics": { "total_matches": 25, "total_goals": 55, "attendance": 875667 },
+        "statistics": { "total_matches": 25, "total_goals": 58, "attendance": 875667 },
         "awards": {
             "golden_boot": [
                 { "player": "Alphonso Davies", "team": "CAN", "goals": 3 },
@@ -212,14 +242,15 @@
     {
         "id": "GC2015",
         "year": "2015",
-        "name": "Gold Cup 2015 United States-Canada",
-        "short_name": "United States-Canada",
+        "name": "Gold Cup 2015 Canada-United States",
+        "short_name": "Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
         "tiebreakers": ["team", "head2headpoints", "lot"],
         "details": {
-            "host": ["USA", "CAN"],
+            "host": ["CAN", "USA"],
             "logo_filename": "CONCACAF_Gold_Cup_2015.svg",
+            "mascot_filename": "577px-2015_CONCACAF_Gold_Cup_Results.png",
             "start_date": "2015-07-07",
             "end_date": "2015-07-26",
             "color": "#f72337",
@@ -235,11 +266,6 @@
                 "text": "USMNT Gold Cup Baltimore"
             },
             {
-                "name": "Cuba",
-                "filename": "CubaUSACGC2015_(2).jpg",
-                "text": "CONCACAF Quarter-Finals (USA vs Cuba) - Baltimore, MD (July 2015) Cuba national football team"
-            },
-            {
                 "name": "Panama",
                 "filename": "Panamá_celebra_su_victoria_en_penaltis.jpg",
                 "text": "Panama national team during their celebration against Trinidad & Tobago in 2015 Gold Cup."
@@ -248,6 +274,11 @@
                 "name": "Chris Wondolowski, United States",
                 "filename": "Chris_Wondolowski2.jpg",
                 "text": "Chris Wondolowski warming up for the Gold Cup game against Panama on 13JUL2015 at Sporting Park, Kansas City, Kansas."
+            },
+            {
+                "name": "Final",
+                "filename": "JAM-MEX-2015-07-26.svg",
+                "text": "Line-up Jamaica vs Mexico"
             }
         ],
         "final_standings": { "champions": "MEX", "runners_up": "JAM", "third_place": "PAN", "fourth_place": "USA" },
@@ -272,6 +303,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2013_CONCACAF_Gold_Cup.svg",
+            "mascot_filename": "347px-Copa_Oro_2013_Partido_11_Estados_Unidos_-_Cuba.svg.png",
             "start_date": "2013-07-07",
             "end_date": "2013-07-28",
             "color": "#0f246a",
@@ -333,6 +365,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2011-concacaf-gold-cup.png",
+            "mascot_filename": "347px-CRC-CUB_2011-06-05.svg.png",
             "start_date": "2011-06-05",
             "end_date": "2011-06-25",
             "color": "#e6bf7a",
@@ -390,6 +423,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2009_CONCACAF_Gold_Cup_logo.svg",
+            "mascot_filename": "2009GoldCup.png",
             "start_date": "2009-07-03",
             "end_date": "2009-07-26",
             "color": "#eb1821",
@@ -410,14 +444,14 @@
                 "text": "Usa vs Honduras"
             },
             {
-                "name": "Panama",
-                "filename": "Panamanationalteam.jpeg",
-                "text": "Panama national football team lined up for the national anthem at the 2009 CONCACAF Gold Cup, 12 July 2009."
-            },
-            {
                 "name": "Giants Stadium, East Rutherford",
                 "filename": "NY_Red_Bulls_vs_LA_Galaxy.jpg",
-                "text": "The Giants Stadium hosted the final"
+                "text": "Giants Stadium hosted the final"
+            },
+            {
+                "name": "Soldier Field, Chicago",
+                "filename": "Soldier_Field_S.jpg",
+                "text": "Soldier Field hosted the 2 semi-finals including Honduras vs United States"
             }
         ],
         "final_standings": {
@@ -447,6 +481,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2007_CONCACAF_Gold_Cup_logo.svg",
+            "mascot_filename": "GoldCup2007.png",
             "start_date": "2007-06-06",
             "end_date": "2007-06-24",
             "color": "#0f246a",
@@ -504,6 +539,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2005_CONCACAF_Gold_Cup_logo.svg",
+            "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "2005-07-06",
             "end_date": "2005-07-24",
             "color": "#e6bf7a",
@@ -558,15 +594,16 @@
     {
         "id": "GC2003",
         "year": "2003",
-        "name": "Gold Cup 2003 United States-Mexico",
-        "short_name": "United States-Mexico",
+        "name": "Gold Cup 2003 Mexico-United States",
+        "short_name": "Mexico-United States",
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["USA", "MEX"],
+            "host": ["MEX", "USA"],
             "logo_filename": "2003_CONCACAF_Gold_Cup_logo.svg",
+            "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "2003-07-12",
             "end_date": "2003-07-27",
             "color": "#24a45f",
@@ -580,6 +617,11 @@
                 "name": "Estadio Azteca, Mexico City",
                 "filename": "Estadio_Azteca_07a.jpg",
                 "text": "The Estadio Azteca hosted the final"
+            },
+            {
+                "name": "Mexico City Skyline",
+                "filename": "Sobrevuelos_CDMX_HJ2A4913_(25514321687)_(cropped).jpg",
+                "text": "Skyline of Mexico City with the Torre Latinoamericana"
             },
             {
                 "name": "Orange Bowl, Miami",
@@ -616,6 +658,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2002_CONCACAF_Gold_Cup_logo.png",
+            "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "2002-01-18",
             "end_date": "2002-02-02",
             "color": "#eb1821",
@@ -631,9 +674,19 @@
                 "text": "The Rose Bowl hosted the final"
             },
             {
+                "name": "Pasadena, California",
+                "filename": "Pasadena_City_Hall_David_Wakely_(cropped).jpg",
+                "text": "Pasadena City Hall"
+            },
+            {
                 "name": "Orange Bowl, Miami",
                 "filename": "Orange_Bowl.jpg",
                 "text": "The Orange Bowl hosted 2 quarter-finals"
+            },
+            {
+                "name": "Miami, Florida",
+                "filename": "Miami_(49471683943).jpg",
+                "text": "Downtown Miami"
             }
         ],
         "final_standings": { "champions": "USA", "runners_up": "CRC", "third_place": "CAN", "fourth_place": "KOR" },
@@ -658,6 +711,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "2000_CONCACAF_Gold_Cup.png",
+            "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "2000-02-12",
             "end_date": "2000-02-27",
             "color": "#0f246a",
@@ -671,6 +725,11 @@
                 "name": "Los Angeles Memorial Coliseum, Los Angeles",
                 "filename": "Usctrojans.jpg",
                 "text": "The Los Angeles Memorial Coliseum hosted the final"
+            },
+            {
+                "name": "Los Angeles Skyline",
+                "filename": "Los_Angeles_with_Mount_Baldy.jpg",
+                "text": "February shot of downtown Los Angeles sunset with Mount Baldy in the background after a large snow storm."
             },
             {
                 "name": "Qualcomm Stadium, San Diego",
@@ -711,6 +770,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "gc_1998.png",
+            "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "1998-02-01",
             "end_date": "1998-02-15",
             "color": "#e6bf7a",
@@ -724,6 +784,11 @@
                 "name": "Los Angeles Memorial Coliseum, Los Angeles",
                 "filename": "640px-L.A._Memorial_Coliseum_Entrance.jpeg",
                 "text": "The Los Angeles Memorial Coliseum hosted the final"
+            },
+            {
+                "name": "Hollywood Sign",
+                "filename": "Hollywood_Sign_(Zuschnitt).jpg",
+                "text": "Hollywood Sign in Los Angeles, California"
             },
             {
                 "name": "Orange Bowl, Miami",
@@ -758,6 +823,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "1996_CONCACAF_Gold_Cup.png",
+            "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "1996-01-10",
             "end_date": "1996-01-21",
             "color": "#eb1821",
@@ -781,6 +847,11 @@
                 "name": "Anaheim Stadium, Anaheim",
                 "filename": "Anaheim_Stadium_1986.jpg",
                 "text": "The Anaheim Stadium hosted group C matches"
+            },
+            {
+                "name": "Anaheim, California",
+                "filename": "Sleeping_beauty_castle_dlr_2019.jpg",
+                "text": "Sleeping Beauty Castle at Disneyland"
             }
         ],
         "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "GUA" },
@@ -793,15 +864,16 @@
     {
         "id": "GC1993",
         "year": "1993",
-        "name": "Gold Cup 1993 United States-Mexico",
-        "short_name": "United States-Mexico",
+        "name": "Gold Cup 1993 Mexico-United States",
+        "short_name": "Mexico-United States",
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["USA", "MEX"],
+            "host": ["MEX", "USA"],
             "logo_filename": "1993_CONCACAF_Gold_Cup.jpg",
+            "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "1993-07-10",
             "end_date": "1993-07-25",
             "color": "#24a45f",
@@ -817,9 +889,19 @@
                 "text": "The Estadio Azteca hosted the final"
             },
             {
+                "name": "Paseo de la Reforma",
+                "filename": "CDMX_-_Paseo_de_la_Reforma.jpg",
+                "text": "Paseo de la Reforma seen from Chapultepec Castle"
+            },
+            {
                 "name": "Cotton Bowl, Dallas",
                 "filename": "Image_of_TX_OU_Red_River_Shootout_in_Cotton_Bowl_seen_from_fair_grounds_-_original.jpg",
                 "text": "The Cotton Bowl hosted group A matches"
+            },
+            {
+                "name": "Dallas, Texas",
+                "filename": "Dallasdowntown2023.jpg",
+                "text": "Dallas Downtown 2023"
             }
         ],
         "shared_bronze": true,
@@ -829,7 +911,7 @@
             "third_place": ["CRC", "JAM"],
             "third_place_text": "Tied 1-1 at the end of extra time. Both teams shared the third place."
         },
-        "statistics": { "total_matches": 16, "total_goals": 60, "attendance": 709348 },
+        "statistics": { "total_matches": 16, "total_goals": 60, "attendance": 831788 },
         "awards": {
             "golden_boot": [{ "player": "Zaguinho", "team": "MEX", "goals": 11 }],
             "golden_ball": [{ "player": "Ramón Ramírez", "team": "MEX" }]
@@ -846,6 +928,7 @@
         "details": {
             "host": ["USA"],
             "logo_filename": "1991_CONCACAF_Gold_Cup_logo.jpg",
+            "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "1991-06-28",
             "end_date": "1991-07-07",
             "color": "#0f246a",
@@ -861,9 +944,19 @@
                 "text": "The Memorial Coliseum hosted the final."
             },
             {
+                "name": "Echo Park",
+                "filename": "Echo_Park_Lake.jpg",
+                "text": "Pond in Echo Park — southeastern view of park, looking to Downtown Los Angeles skyline"
+            },
+            {
                 "name": "Rose Bowl, Pasadena",
                 "filename": "Rose_Bowl,_panorama.jpg",
                 "text": "The Rose Bowl hosted group B matches"
+            },
+            {
+                "name": "Pasadena, California",
+                "filename": "PasadenaCivicAud.1_(cropped).jpeg",
+                "text": "Pasadena Civic Auditorium, Pasadena Civic Center District"
             }
         ],
         "final_standings": { "champions": "USA", "runners_up": "HON", "third_place": "MEX", "fourth_place": "CRC" },
@@ -884,6 +977,8 @@
         "tiebreakers": ["team"],
         "details": {
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
+            "mascot_height": "180px",
             "start_date": "1989-03-19",
             "end_date": "1989-11-19",
             "color": "#d5ba81",
@@ -937,6 +1032,7 @@
         "tiebreakers": ["team"],
         "details": {
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
             "start_date": "1985-02-24",
             "end_date": "1985-09-14",
             "color": "#d5ba81",
@@ -992,6 +1088,8 @@
         "details": {
             "host": ["HON"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "640px-CONCACAF-Map.png",
+            "mascot_height": "180px",
             "start_date": "1981-11-01",
             "end_date": "1981-11-22",
             "color": "#1d5f9a",
@@ -1005,10 +1103,25 @@
                 "name": "Estadio Tiburcio Carías Andino, Tegucigalpa",
                 "filename": "Estadio_Carías.jpg",
                 "text": "The national stadium of Honduras in Tegucigalpa (Estadio Nacional de Tegucigalpa) also known as Estadio Tiburcio Carías Andino."
+            },
+            {
+                "name": "Estadio Chelato Uclés, Tegucigalpa",
+                "filename": "Estadio_Chelato_Uclés.jpg",
+                "text": "Estadio Chelato Uclés"
+            },
+            {
+                "name": "National Stadium",
+                "filename": "National_Stadium_entrance_(Honduras).jpg",
+                "text": "The stadium entrance in 2021"
+            },
+            {
+                "name": "Tegucigalpa, Honduras",
+                "filename": "Tegucigalpa,_Honduras_Long_Exposure_from_Humuya_Inn.jpg",
+                "text": "Distant view from the Hotel Humuya, located in the capital of Honduras, Tegucigalpa"
             }
         ],
         "final_standings": { "champions": "HON", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
-        "statistics": { "total_matches": 15, "total_goals": 28 },
+        "statistics": { "total_matches": 15, "total_goals": 28, "attendance": 470484 },
         "awards": {
             "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }]
         }
@@ -1024,6 +1137,7 @@
         "details": {
             "host": ["MEX"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "Mapa_da_CONCACAF.png",
             "start_date": "1977-10-08",
             "end_date": "1977-10-23",
             "color": "#24a45f",
@@ -1039,13 +1153,23 @@
                 "text": "Estadio Azteca, Mexico City"
             },
             {
+                "name": "Mexico City",
+                "filename": "MX_MM_PANORÁMICAS_DESFILE_ZÓCALO.jpg",
+                "text": "Cathedral and National Palace in the Zócalo"
+            },
+            {
                 "name": "Estadio Universitario, Monterrey",
                 "filename": "Estadio_Universitario_UANL.jpg",
                 "text": "Estadio Universitario, Monterrey"
+            },
+            {
+                "name": "San Nicólas de los Garza",
+                "filename": "Panorama_Parque_Niños_Heroes_San_Nicolas.jpg",
+                "text": "San Nicólas de los Garza"
             }
         ],
         "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "SLV", "fourth_place": "CAN" },
-        "statistics": { "total_matches": 15, "total_goals": 55 },
+        "statistics": { "total_matches": 15, "total_goals": 55, "attendance": 790097 },
         "awards": {
             "golden_boot": [{ "player": "Víctor Rangel", "team": "MEX", "goals": 6 }]
         }
@@ -1061,6 +1185,8 @@
         "details": {
             "host": ["HAI-1964-1986"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
+            "mascot_height": "180px",
             "start_date": "1973-11-29",
             "end_date": "1973-12-18",
             "color": "#01209f",
@@ -1079,10 +1205,20 @@
                 "name": "Port-au-Prince, Haiti",
                 "filename": "Port-au-Prince_Montage.jpg",
                 "text": "Port-au-Prince, Haiti"
+            },
+            {
+                "name": "Port-au-Prince, Haiti",
+                "filename": "View_of_Port-au_Prince_from_Hotel_Montana2.jpg",
+                "text": "City and bay views from the terrace of the Hôtel Montana in Pétion-Ville"
+            },
+            {
+                "name": "Artisan",
+                "filename": "Port_au_Prince..jpeg",
+                "text": "Artisan in Port-au-Prince"
             }
         ],
         "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON" },
-        "statistics": { "total_matches": 15, "total_goals": 43 },
+        "statistics": { "total_matches": 15, "total_goals": 43, "attendance": 223442 },
         "awards": {
             "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
         }
@@ -1098,6 +1234,7 @@
         "details": {
             "host": ["TRI"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
             "start_date": "1971-11-20",
             "end_date": "1971-12-05",
             "color": "#fa2200",
@@ -1142,6 +1279,8 @@
         "details": {
             "host": ["CRC"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "640px-CONCACAF-Map.png",
+            "mascot_height": "180px",
             "start_date": "1969-11-23",
             "end_date": "1969-12-07",
             "color": "#2251a2",
@@ -1155,6 +1294,21 @@
                 "name": "Estadio Nacional, San José, Costa Rica",
                 "filename": "640px-Estadio_nacional_costarica.jpg",
                 "text": "Estadio Nacional, San José, Costa Rica"
+            },
+            {
+                "name": "San José, Costa Rica Skyline",
+                "filename": "San_Jose_Costa_Rica_Skyline,_December_2023.png",
+                "text": "San José, Costa Rica Skyline"
+            },
+            {
+                "name": "La Sabana Metropolitan Park",
+                "filename": "La_Sabana-Costa_Rica_2.jpeg",
+                "text": "La Sabana Metropolitan Park — large urban park in San José, Costa Rica"
+            },
+            {
+                "name": "National Museum",
+                "filename": "Cuartel_Bellavista_este.jpg",
+                "text": "Southeastern face of the National Museum"
             }
         ],
         "final_standings": { "champions": "CRC", "runners_up": "GUA", "third_place": "ANT-1959-1986", "fourth_place": "MEX" },
@@ -1178,6 +1332,7 @@
         "details": {
             "host": ["HON"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "Mapa_da_CONCACAF.png",
             "start_date": "1967-03-05",
             "end_date": "1967-03-19",
             "color": "#1d5f9a",
@@ -1196,6 +1351,16 @@
                 "name": "Tegucigalpa, Honduras",
                 "filename": "Tegucigalpa-INE_Building.jpg",
                 "text": "Tegucigalpa, Honduras"
+            },
+            {
+                "name": "Tegucigalpa, Honduras",
+                "filename": "Tegucigalpa_Skyline_Summer.jpg",
+                "text": "Honduran capital city during summer. Teguciglapa has experiencied a huge growth during the last decades, several new buildings and skycrapers has been built."
+            },
+            {
+                "name": "Los Dolores Church",
+                "filename": "Iglesia_Los_Dolores_Tegucigalpa.jpg",
+                "text": "Los Dolores Church, built in 1735"
             }
         ],
         "final_standings": { "champions": "GUA", "runners_up": "MEX", "third_place": "HON", "fourth_place": "TRI" },
@@ -1218,6 +1383,8 @@
         "details": {
             "host": ["GUA"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
+            "mascot_height": "180px",
             "start_date": "1965-03-28",
             "end_date": "1965-04-11",
             "color": "#5795de",
@@ -1239,6 +1406,11 @@
                 "name": "Guatemala City",
                 "filename": "Guatemala_City_-_Guatemala.jpg",
                 "text": "Guatemala City is the biggest and most populated city in central america."
+            },
+            {
+                "name": "Guatemala City Skyline",
+                "filename": "18_Aerial_view_-_Zona_14_-_Guatemala_City.jpg",
+                "text": "Guatemala City is the city with the largest number of buildings in Central America, the largest and most populous city in the region."
             }
         ],
         "final_standings": { "champions": "MEX", "runners_up": "GUA", "third_place": "CRC", "fourth_place": "SLV" },
@@ -1258,6 +1430,7 @@
         "details": {
             "host": ["SLV"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
+            "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
             "start_date": "1963-03-23",
             "end_date": "1963-04-07",
             "color": "#2470b4",

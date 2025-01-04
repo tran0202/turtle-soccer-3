@@ -92,7 +92,7 @@ export const getCompetition = (competition_id) => {
             t.index = tournaments.length - index
         })
         competition.tournaments = tournaments
-        competition.teams = getActiveTeams(competition.team_type_id)
+        competition.teams = getTeams(competition.team_type_id, competition.all_members)
     }
     return competition
 }
@@ -223,7 +223,7 @@ export const getTeamFlagId = (id, config) => {
             )}
             {config.team_type_id === 'CLUB' && (
                 <React.Fragment>
-                    <img className="flag-club-sm flag-club-md" src={`/images/${config.logo_path}/${team.logo_filename}`} alt={id} title={id} />{' '}
+                    <img className="flag-club-sm flag-club-md" src={`/images/club_logos/${team.logo_filename}`} alt={id} title={id} />{' '}
                     <img
                         className="flag-xs-2 flag-sm-2"
                         src={`/images/flags/${team.nation.flag_filename}`}

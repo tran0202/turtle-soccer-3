@@ -295,7 +295,7 @@
 
 #hero-md {
     width: 100%;
-    height: calc(27vh - 114px);
+    height: calc(31vh - 114px);
     padding: 0;
     overflow: hidden;
 }
@@ -311,7 +311,7 @@
 
 .carousel-item-md {
     width: 100%;
-    height: calc(27vh - 114px);
+    height: calc(31vh - 114px);
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
