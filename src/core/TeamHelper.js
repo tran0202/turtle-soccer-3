@@ -1472,30 +1472,6 @@ export const getNationOfficialName = (id) => {
     }
 }
 
-// export const getTeamName = (id) => {
-//     if (!id) return
-//     const team = getTeamArray().find((t) => t.id === id)
-//     if (team) {
-//         return team.name
-//     } else {
-//         console.log('Team error', team)
-//     }
-// }
-
-// export const getShortTeamName = (id) => {
-//     if (!id) return
-//     const team = getTeamArray().find((t) => t.id === id)
-//     if (team) {
-//         if (team.short_name) {
-//             return team.short_name
-//         } else {
-//             return team.name
-//         }
-//     } else {
-//         console.log('Team error', team)
-//     }
-// }
-
 export const getBracketTeamName = (id) => {
     return getShortTeamName(id)
 }

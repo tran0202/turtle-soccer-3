@@ -1,7 +1,62 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
-import { getTeamFlagId, getShortTeamName } from '../core/TeamHelper'
+import { getTeamFlagId, getTeamName } from '../core/TeamHelper'
+import { SharedBronzeTooltip } from '../core/TooltipHelper'
+
+const HeroCarousel = (props) => {
+    const { images, id } = props
+    return (
+        <React.Fragment>
+            {images && (
+                <div id="hero-md" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div className="carousel-indicators">
+                        {images.map((i, index) => (
+                            <button
+                                key={index}
+                                type="button"
+                                data-bs-target="#hero-md"
+                                data-bs-slide-to={index}
+                                className={`${index === 0 ? 'active' : ''}`}
+                                // eslint-disable-next-line jsx-a11y/aria-proptypes
+                                aria-current={`${index === 0 ? 'true' : ''}`}
+                                aria-label={`Slide ${index + 1}`}
+                            />
+                        ))}
+                    </div>
+                    <div className="carousel-inner">
+                        {images.map((i, index) => (
+                            <div
+                                key={index}
+                                className={`carousel-item${index === 0 ? ' carousel-item-md active' : ' carousel-item-md'}`}
+                                style={{
+                                    backgroundImage: `url('/images/tournaments/${id}/${i.filename}')`,
+                                    backgroundSize: 'contain',
+                                    backgroundColor: '#b3b2b2',
+                                }}
+                            >
+                                <div className="carousel-container">
+                                    <div className="carousel-content container">
+                                        <h2 className="animated fadeInDown h2-ff8">{i.name}</h2>
+                                        <p className="animated fadeInUp">{i.text}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <button className="carousel-control-prev" type="button" data-bs-target="#hero-md" data-bs-slide="prev">
+                        <span className="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
+                        <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button className="carousel-control-next" type="button" data-bs-target="#hero-md" data-bs-slide="next">
+                        <span className="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
+                        <span className="visually-hidden">Next</span>
+                    </button>
+                </div>
+            )}
+        </React.Fragment>
+    )
+}
 
 const TournamentDetails = (props) => {
     const { config } = props
@@ -46,7 +101,7 @@ const TournamentDetails = (props) => {
                                         <React.Fragment key={index}>
                                             {index !== 0 && index < host.length - 1 ? ', ' : ''}
                                             {index !== 0 && index === host.length - 1 ? ' and ' : ''}
-                                            <b>{getShortTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
+                                            <b>{getTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
                                         </React.Fragment>
                                     )
                                 })}
@@ -128,7 +183,7 @@ const TournamentDetails = (props) => {
                                         <React.Fragment key={index}>
                                             {index !== 0 && index < final_host.length - 1 ? ', ' : ''}
                                             {index !== 0 && index === final_host.length - 1 ? ' and ' : ''}
-                                            <b>{getShortTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
+                                            <b>{getTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
                                         </React.Fragment>
                                     )
                                 })}
@@ -218,56 +273,93 @@ const TournamentDetails = (props) => {
     )
 }
 
-const HeroCarousel = (props) => {
-    const { images, id } = props
+const FinalStandingRow = (props) => {
+    const { id, label, config } = props
+    const { competition } = config
     return (
         <React.Fragment>
-            {images && (
-                <div id="hero-md" className="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div className="carousel-indicators">
-                        {images.map((i, index) => (
-                            <button
-                                key={index}
-                                type="button"
-                                data-bs-target="#hero-md"
-                                data-bs-slide-to={index}
-                                className={`${index === 0 ? 'active' : ''}`}
-                                // eslint-disable-next-line jsx-a11y/aria-proptypes
-                                aria-current={`${index === 0 ? 'true' : ''}`}
-                                aria-label={`Slide ${index + 1}`}
-                            />
-                        ))}
-                    </div>
-                    <div className="carousel-inner">
-                        {images.map((i, index) => (
-                            <div
-                                key={index}
-                                className={`carousel-item${index === 0 ? ' carousel-item-md active' : ' carousel-item-md'}`}
-                                style={{
-                                    backgroundImage: `url('/images/tournaments/${id}/${i.filename}')`,
-                                    backgroundSize: 'contain',
-                                    backgroundColor: '#b3b2b2',
-                                }}
-                            >
-                                <div className="carousel-container">
-                                    <div className="carousel-content container">
-                                        <h2 className="animated fadeInDown h2-ff8">{i.name}</h2>
-                                        <p className="animated fadeInUp">{i.text}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#hero-md" data-bs-slide="prev">
-                        <span className="carousel-control-prev-icon icofont-rounded-left" aria-hidden="true"></span>
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#hero-md" data-bs-slide="next">
-                        <span className="carousel-control-next-icon icofont-rounded-right" aria-hidden="true"></span>
-                        <span className="visually-hidden">Next</span>
-                    </button>
-                </div>
-            )}
+            <Row className="margin-tb-sm margin-lr-sm">
+                <Col className="box-sm">
+                    <Row className="team-name">
+                        <Col xs={{ size: 4 }} className="padding-tb-sm padding-left-lg">
+                            <b>{label}</b>
+                        </Col>
+                        <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                            {getTeamFlagId(id, competition)} {getTeamName(id, competition)}
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+}
+
+const BronzeRow = (props) => {
+    const { id, label, config } = props
+    const { competition, final_standings, shared_bronze } = config
+    const { third_place_text } = final_standings
+    return (
+        <React.Fragment>
+            <Row className="margin-tb-sm margin-lr-sm">
+                <Col className="box-sm">
+                    <Row className="team-name">
+                        <Col xs={{ size: 4 }} className="padding-tb-sm padding-left-lg">
+                            <b>{label}</b>
+                        </Col>
+                        <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                            {!shared_bronze && (
+                                <React.Fragment>
+                                    {getTeamFlagId(id, competition)} {getTeamName(id, competition)}
+                                </React.Fragment>
+                            )}
+                            {shared_bronze &&
+                                id.map((i) => {
+                                    return (
+                                        <React.Fragment key={i}>
+                                            {getTeamFlagId(i, competition)} {getTeamName(i, competition)}
+                                            <SharedBronzeTooltip target={`sharedTooltip${i}`} notes={third_place_text} />
+                                            <br />
+                                        </React.Fragment>
+                                    )
+                                })}
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+}
+
+const FinalStandings = (props) => {
+    const { config } = props
+    const { final_standings, competition, shared_bronze } = config
+    const { champions, runners_up, third_place, fourth_place } = final_standings
+    const is_olympic = competition.team_type_id.includes('U23')
+    const is_semi_finalist1 = final_standings.semi_finalist1 ? true : false
+    const is_semi_finalist2 = final_standings.semi_finalist2 ? true : false
+    const is_fourth_place = final_standings.fourth_place ? true : false
+    const championLabel = is_olympic ? 'Gold Medal' : 'Champions'
+    const runnnersupLabel = is_olympic ? 'Silver Medal' : 'Runners-up'
+    const thirdPlaceLabel = is_olympic ? 'Bronze Medal' : 'Third-place'
+    return (
+        <React.Fragment>
+            <Row>
+                <Col className="award-header">Final Standings</Col>
+            </Row>
+            <FinalStandingRow id={champions} label={championLabel} config={config} />
+            <FinalStandingRow id={runners_up} label={runnnersupLabel} config={config} />
+            {!is_semi_finalist1 && <BronzeRow id={third_place} label={thirdPlaceLabel} config={config} />}
+            {!shared_bronze && !is_semi_finalist2 && is_fourth_place && <FinalStandingRow id={fourth_place} label="Fourth-place" config={config} />}
+        </React.Fragment>
+    )
+}
+
+const TournamentAwards = (props) => {
+    return (
+        <React.Fragment>
+            <Row>
+                <Col className="award-header">Tournament Awards</Col>
+            </Row>
         </React.Fragment>
     )
 }
@@ -284,6 +376,14 @@ class Awards extends React.Component {
                     </Col>
                     <Col className="competition-box">
                         <TournamentDetails tournament={tournament} config={config} />
+                    </Col>
+                </Row>
+                <Row className="mt-4 mb-4">
+                    <Col xs={{ size: 5 }} className="award-box">
+                        <FinalStandings tournament={tournament} config={config} />
+                    </Col>
+                    <Col className="award-box">
+                        <TournamentAwards tournament={tournament} config={config} />
                     </Col>
                 </Row>
             </React.Fragment>

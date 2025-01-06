@@ -9,6 +9,21 @@
     text-align: center;
 }
 
+.award-box {
+    box-shadow: 0px 0 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.award-header {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
 /* ========== Tournaments ========== */
 
 .tournaments {
@@ -49,12 +64,12 @@
 
 .tournament-logo {
     width: auto;
-    height: 90px;
+    height: 120px;
     max-width: 100%;
 }
 .tournament-logo-sm {
     width: auto;
-    height: 70px;
+    height: 90px;
     max-width: 100%;
 }
 
@@ -152,7 +167,7 @@
 
 .tournament-top-height-100 {
     width: auto;
-    height: 100px;
+    height: 150px;
     max-width: 100%;
 }
 

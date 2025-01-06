@@ -161,7 +161,7 @@
                 "text": "The Iraq Olympic football team"
             }
         ],
-        "final_standings": { "champions": "BRA_U23MNT", "runners_up": "GER_U23MNT", "third_place": "NGA_U23MNT", "fourth_place": "HON_U23MNT" },
+        "final_standings": { "champions": "BRA_U23MNT", "runners_up": "GER_U23MNT", "third_place": "NGA_U23MNT", "fourth_place": "HON-1949-2022_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 104, "attendance": 1008426 },
         "awards": {
             "golden_boot": [
@@ -711,7 +711,7 @@
             "champions": "POL_U23MNT",
             "runners_up": "HUN_U23MNT",
             "third_place": ["GDR_U23MNT", "URS_U23MNT"],
-            "third_place_text": "Tied 2–2 at the end of extra time. Both teams were awarded bronze medals."
+            "third_place_text": "Tied 2–2 at the end of extra time. Both teams shared the bronze medals."
         },
         "statistics": { "total_matches": 38, "total_goals": 135, "attendance": 795433 },
         "awards": {
@@ -807,7 +807,12 @@
                 "text": "The Mitsuzawa Soccer Stadium held group A matches"
             }
         ],
-        "final_standings": { "champions": "HUN_U23MNT", "runners_up": "TCH_U23MNT", "third_place": "GER_U23MNT", "fourth_place": "EGY-1958-1971_U23MNT" },
+        "final_standings": {
+            "champions": "HUN_U23MNT",
+            "runners_up": "TCH_U23MNT",
+            "third_place": "GER-1956-1968_U23MNT",
+            "fourth_place": "EGY-1958-1971_U23MNT"
+        },
         "statistics": { "total_matches": 29, "total_goals": 123 },
         "awards": {
             "golden_boot": [{ "player": "Ferenc Bene", "team": "HUN_U23MNT", "goals": 12 }]

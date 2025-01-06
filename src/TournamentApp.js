@@ -43,7 +43,15 @@ class TournamentApp extends React.Component {
 
         this.state = {
             tournament: {},
-            config: { details: { host: [] }, hero_images: [], competition: { tournaments: [] }, previous_tournament: {}, next_tournament: {}, statistics: {} },
+            config: {
+                details: { host: [] },
+                hero_images: [],
+                competition: { tournaments: [], team_type_id: '' },
+                previous_tournament: {},
+                next_tournament: {},
+                statistics: {},
+                final_standings: {},
+            },
         }
     }
 

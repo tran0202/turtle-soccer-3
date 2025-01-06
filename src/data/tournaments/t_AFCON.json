@@ -1510,7 +1510,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["GHA-1964-1966"],
+            "host": ["GHA"],
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1963-11-24",
@@ -1542,7 +1542,7 @@
                 "text": "Komfo Anokye Teaching Hospital"
             }
         ],
-        "final_standings": { "champions": "GHA-1964-1966", "runners_up": "SDN-1956-1970", "third_place": "UAR", "fourth_place": "ETH-1941-1974" },
+        "final_standings": { "champions": "GHA", "runners_up": "SDN-1956-1970", "third_place": "UAR", "fourth_place": "ETH-1941-1974" },
         "statistics": { "total_matches": 8, "total_goals": 33 },
         "awards": {
             "golden_boot": [{ "player": "Hassan El-Shazly", "team": "UAR", "goals": 6 }],

@@ -53,12 +53,12 @@ class Header extends React.Component {
         } = details
         return (
             <Row className="mt-3 text-center">
-                <Col lg={{ size: 2, offset: 1 }} md={{ size: 2 }} sm="3" className="mt-3 mb-2">
+                <Col lg={{ size: 3 }} md={{ size: 3 }} sm="3" className="mt-3 mb-2 text-end">
                     <a href={`/tournament/${tournament.id}`}>
                         <img className="tournament-top-height-100" src={`/images/${competition.logo_path}/${logo_filename}`} alt={name} title={name} />
                     </a>
                 </Col>
-                <Col lg="9" md="10" sm="9">
+                <Col lg="9" md="9" sm="9">
                     <h1 className={`text-center mt-3 mb-2 ${getTournamentTitleFont(competition)}`} style={{ color: color }}>
                         {name}
                     </h1>

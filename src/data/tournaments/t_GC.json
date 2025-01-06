@@ -337,7 +337,7 @@
         "final_standings": {
             "champions": "USA",
             "runners_up": "PAN",
-            "semi_finalist1": "HON",
+            "semi_finalist1": "HON-1949-2022",
             "semi_finalist2": "MEX",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
@@ -399,7 +399,7 @@
         "final_standings": {
             "champions": "MEX",
             "runners_up": "USA",
-            "semi_finalist1": "HON",
+            "semi_finalist1": "HON-1949-2022",
             "semi_finalist2": "PAN",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
@@ -407,7 +407,7 @@
         "awards": {
             "golden_boot": [{ "player": "Javier Hernández", "team": "MEX", "goals": 7 }],
             "golden_ball": [{ "player": "Javier Hernández", "team": "MEX" }],
-            "golden_glove": [{ "player": "Noel Valladares", "team": "HON" }],
+            "golden_glove": [{ "player": "Noel Valladares", "team": "HON-1949-2022" }],
             "fair_play_team": ["MEX"]
         }
     },
@@ -458,7 +458,7 @@
             "champions": "MEX",
             "runners_up": "USA",
             "semi_finalist1": "CRC",
-            "semi_finalist2": "HON",
+            "semi_finalist2": "HON-1949-2022",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
         "statistics": { "total_matches": 25, "total_goals": 66, "attendance": 860046 },
@@ -521,10 +521,10 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 64, "attendance": 921464 },
         "awards": {
-            "golden_boot": [{ "player": "Carlos Pavón", "team": "HON", "goals": 5 }],
+            "golden_boot": [{ "player": "Carlos Pavón", "team": "HON-1949-2022", "goals": 5 }],
             "golden_ball": [{ "player": "Julian de Guzman", "team": "CAN" }],
             "golden_glove": [{ "player": "Franck Grandel", "team": "GLP" }],
-            "fair_play_team": ["HON"]
+            "fair_play_team": ["HON-1949-2022"]
         }
     },
     {
@@ -574,7 +574,7 @@
             "champions": "USA",
             "runners_up": "PAN",
             "semi_finalist1": "COL",
-            "semi_finalist2": "HON",
+            "semi_finalist2": "HON-1949-2022",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
         "statistics": { "total_matches": 25, "total_goals": 73, "attendance": 340018 },
@@ -584,11 +584,11 @@
                 { "player": "Landon Donovan", "team": "USA", "goals": 3 },
                 { "player": "Carlos Ruiz", "team": "GUA", "goals": 3 },
                 { "player": "Luis Tejada", "team": "PAN", "goals": 3 },
-                { "player": "Wilmer Velasquez", "team": "HON", "goals": 3 }
+                { "player": "Wilmer Velasquez", "team": "HON-1949-2022", "goals": 3 }
             ],
             "golden_ball": [{ "player": "Luis Tejada", "team": "PAN" }],
             "golden_glove": [{ "player": "Jaime Penedo", "team": "PAN" }],
-            "fair_play_team": ["HON"]
+            "fair_play_team": ["HON-1949-2022"]
         }
     },
     {
@@ -959,7 +959,7 @@
                 "text": "Pasadena Civic Auditorium, Pasadena Civic Center District"
             }
         ],
-        "final_standings": { "champions": "USA", "runners_up": "HON", "third_place": "MEX", "fourth_place": "CRC" },
+        "final_standings": { "champions": "USA", "runners_up": "HON-1949-2022", "third_place": "MEX", "fourth_place": "CRC" },
         "statistics": { "total_matches": 16, "total_goals": 50, "attendance": 397124 },
         "awards": {
             "golden_boot": [{ "player": "Benjamín Galindo", "team": "MEX", "goals": 4 }],
@@ -1071,10 +1071,10 @@
                 "text": "Alajuela, Costa Rica"
             }
         ],
-        "final_standings": { "champions": "CAN", "runners_up": "HON", "third_place": "CRC", "fourth_place": "SLV" },
+        "final_standings": { "champions": "CAN", "runners_up": "HON-1949-2022", "third_place": "CRC", "fourth_place": "SLV" },
         "statistics": { "total_matches": 24, "total_goals": 54 },
         "awards": {
-            "golden_boot": [{ "player": "Roberto Figueroa", "team": "HON", "goals": 5 }]
+            "golden_boot": [{ "player": "Roberto Figueroa", "team": "HON-1949-2022", "goals": 5 }]
         }
     },
     {
@@ -1086,7 +1086,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["HON"],
+            "host": ["HON-1949-2022"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF-Map.png",
             "mascot_height": "180px",
@@ -1120,7 +1120,7 @@
                 "text": "Distant view from the Hotel Humuya, located in the capital of Honduras, Tegucigalpa"
             }
         ],
-        "final_standings": { "champions": "HON", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
+        "final_standings": { "champions": "HON-1949-2022", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
         "statistics": { "total_matches": 15, "total_goals": 28, "attendance": 470484 },
         "awards": {
             "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }]
@@ -1217,7 +1217,7 @@
                 "text": "Artisan in Port-au-Prince"
             }
         ],
-        "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON" },
+        "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON-1949-2022" },
         "statistics": { "total_matches": 15, "total_goals": 43, "attendance": 223442 },
         "awards": {
             "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
@@ -1330,7 +1330,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["HON"],
+            "host": ["HON-1949-2022"],
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "Mapa_da_CONCACAF.png",
             "start_date": "1967-03-05",
@@ -1363,7 +1363,7 @@
                 "text": "Los Dolores Church, built in 1735"
             }
         ],
-        "final_standings": { "champions": "GUA", "runners_up": "MEX", "third_place": "HON", "fourth_place": "TRI" },
+        "final_standings": { "champions": "GUA", "runners_up": "MEX", "third_place": "HON-1949-2022", "fourth_place": "TRI" },
         "statistics": { "total_matches": 15, "total_goals": 35 },
         "awards": {
             "golden_boot": [
@@ -1461,7 +1461,7 @@
                 "text": "Santa Ana, El Salvador"
             }
         ],
-        "final_standings": { "champions": "CRC", "runners_up": "SLV", "third_place": "ANT-1959-1986", "fourth_place": "HON" },
+        "final_standings": { "champions": "CRC", "runners_up": "SLV", "third_place": "ANT-1959-1986", "fourth_place": "HON-1949-2022" },
         "statistics": { "total_matches": 22, "total_goals": 76 },
         "awards": {
             "golden_boot": [{ "player": "Eduardo Hernández", "team": "SLV", "goals": 6 }]

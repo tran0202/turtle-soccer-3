@@ -30,6 +30,8 @@ class App extends React.Component {
                                 className="carousel-item active"
                                 style={{
                                     backgroundImage: "url('/images/slide/5Y3W3OAVMMZF2YS23KVNUEEFGU.webp')",
+                                    backgroundSize: 'contain',
+                                    backgroundColor: '#b3b2b2',
                                 }}
                             >
                                 <div className="carousel-container">
@@ -48,6 +50,8 @@ class App extends React.Component {
                                 className="carousel-item"
                                 style={{
                                     backgroundImage: "url('/images/slide/eaf8e81e8a2b64d30b58ef5172451b8266946e3fb5d49.webp')",
+                                    backgroundSize: 'contain',
+                                    backgroundColor: '#b3b2b2',
                                 }}
                             >
                                 <div className="carousel-container">
@@ -69,6 +73,8 @@ class App extends React.Component {
                                 className="carousel-item"
                                 style={{
                                     backgroundImage: "url('/images/slide/Copa America Argentina AFP.jpg')",
+                                    backgroundSize: 'contain',
+                                    backgroundColor: '#b3b2b2',
                                 }}
                             >
                                 <div className="carousel-container">

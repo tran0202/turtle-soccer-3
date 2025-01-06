@@ -1029,7 +1029,7 @@
         "parent_nation_id": "EGY",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "640px-Flag_of_Egypt_(1952–1958).svg.png",
+        "flag_filename": "640px-Flag_of_Egypt_(1922-1958).svg.png",
         "code": "EGY",
         "start_date": "1953-06-18",
         "end_date": "1958-02-22"
@@ -1296,12 +1296,12 @@
     },
     {
         "id": "GER-1956-1968",
-        "name": "Germany",
+        "name": "United Team of Germany",
         "official_name": "Germany",
         "parent_nation_id": "GER",
         "confederation_id": "UEFA",
         "nation_type_id": "NATN",
-        "flag_filename": "German_Olympic_1956_1968.png",
+        "flag_filename": "640px-German_Olympic_flag_(1959-1968).svg.png",
         "code": "GER",
         "start_date": "1956-01-01",
         "end_date": "1968-01-01"
@@ -1519,6 +1519,17 @@
         "confederation_id": "CONCACAF",
         "nation_type_id": "NATN",
         "flag_filename": "640px-Flag_of_Honduras.svg.png",
+        "start_date": "",
+        "end_date": ""
+    },
+    {
+        "id": "HON-1949-2022",
+        "name": "Honduras",
+        "official_name": "",
+        "parent_nation_id": "HON",
+        "confederation_id": "CONCACAF",
+        "nation_type_id": "NATN",
+        "flag_filename": "640px-Flag_of_Honduras_(1949–2022).svg.png",
         "start_date": "",
         "end_date": ""
     },

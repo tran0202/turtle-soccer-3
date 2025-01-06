@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { getTournamentTitleFont } from './core/Helper'
-import { getTeams, getTeamFlagId, getCompetition, getShortTeamName } from './core/TeamHelper'
+import { getTeams, getTeamFlagId, getCompetition, getTeamName } from './core/TeamHelper'
 import { SharedBronzeTooltip, SemifinalistsTooltip, ShortNameTooltip } from './core/TooltipHelper'
 import Page from './core/Page'
 
@@ -12,7 +12,7 @@ const TeamCell = (props) => {
         <React.Fragment>
             {getTeamFlagId(id, config)}
             <br></br>
-            {getShortTeamName(id, config)}
+            {getTeamName(id, config)}
         </React.Fragment>
     )
 }
@@ -113,16 +113,16 @@ const TournamentsRow = (props) => {
                                         </React.Fragment>
                                     )}
                                 </Col>
-                                <Col className="col-box-18 text-center padding-tb-md">
+                                <Col className="col-box-18 text-center padding-tb-md-2">
                                     {final_standings && <TeamCell id={final_standings.champions} config={config} />}
                                 </Col>
-                                <Col className="col-box-18 text-center padding-tb-md">
+                                <Col className="col-box-18 text-center padding-tb-md-2">
                                     {final_standings && <TeamCell id={final_standings.runners_up} config={config} />}
                                 </Col>
-                                <Col className="col-box-18 text-center padding-tb-md">
+                                <Col className="col-box-18 text-center padding-tb-md-2">
                                     {final_standings && <BronzeCell id={thirdPlace} config={tournamentConfig} />}
                                 </Col>
-                                <Col className="col-box-18 text-center padding-tb-md">
+                                <Col className="col-box-18 text-center padding-tb-md-2">
                                     {final_standings && <FourthCell id={fourthPlace} config={tournamentConfig} />}
                                 </Col>
                             </Row>
