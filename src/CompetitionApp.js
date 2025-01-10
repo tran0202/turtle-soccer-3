@@ -141,7 +141,7 @@ const TournamentsHeader = (props) => {
     const header3 = config.is_olympic ? (
         'Bronze Medalists'
     ) : config.all_third_place_game ? (
-        'Third-place'
+        'Third place'
     ) : config.all_semi_finalist ? (
         <React.Fragment>
             Semi-finalist 1
@@ -149,13 +149,13 @@ const TournamentsHeader = (props) => {
         </React.Fragment>
     ) : (
         <React.Fragment>
-            Third-place
+            Third place
             <br />/ Semi-finalist 1
         </React.Fragment>
     )
     const header4 =
         config.is_olympic || config.all_third_place_game ? (
-            'Fourth-place'
+            'Fourth place'
         ) : config.all_semi_finalist ? (
             <React.Fragment>
                 Semi-finalist 2
@@ -163,7 +163,7 @@ const TournamentsHeader = (props) => {
             </React.Fragment>
         ) : (
             <React.Fragment>
-                Fourth-place
+                Fourth place
                 <br />/ Semi-finalist 2
             </React.Fragment>
         )

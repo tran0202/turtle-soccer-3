@@ -142,6 +142,14 @@ export const getConfederationCompetitions = () => {
     return confederations
 }
 
+export const getCapLastName = (name) => {
+    if (!name) return
+    const nameSplit = name.split(' ')
+    const lastName = nameSplit[nameSplit.length - 1]
+    const lastNameUpperCase = lastName.toUpperCase()
+    return name.replace(lastName, lastNameUpperCase)
+}
+
 export const getTeamName = (id, config) => {
     if (!id || !config || !config.teams) return
     const team = config.teams.find((t) => t.id === id)
@@ -236,6 +244,32 @@ export const getTeamFlagId = (id, config) => {
     )
 }
 
+export const getPlayerFlagId = (club_id, club_id2, nation_id, config) => {
+    if (!club_id || !nation_id || !config) return
+    const nation = config.nations.find((t) => t.id === nation_id)
+    if (!nation) return
+    const club = config.teams.find((t) => t.id === club_id)
+    if (!club) return
+    const club2 = config.teams.find((t) => t.id === club_id2)
+    return (
+        <React.Fragment>
+            {!club2 && <img className="flag-club-sm flag-club-md" src={`/images/club_logos/${club.logo_filename}`} alt={club_id} title={club_id} />}
+            {club2 && (
+                <React.Fragment>
+                    [<img className="flag-club-sm flag-club-md" src={`/images/club_logos/${club.logo_filename}`} alt={club_id} title={club_id} />/
+                    <img className="flag-club-sm flag-club-md" src={`/images/club_logos/${club2.logo_filename}`} alt={club_id2} title={club_id2} />]
+                </React.Fragment>
+            )}{' '}
+            <img
+                className="flag-xs-2 flag-sm-2"
+                src={`/images/flags/${nation.flag_filename}`}
+                alt={`${nation_id} ${nation.name} ${nation.official_name}`}
+                title={`${nation_id} ${nation.name} ${nation.official_name}`}
+            />
+        </React.Fragment>
+    )
+}
+
 export const getBracketTeamFlagId = (id, config) => {
     if (!id || !config) return
     const team = config.teams.find((t) => t.id === id)
@@ -289,6 +323,7 @@ export const getTournament = (id) => {
     tournament.competition.tournaments.sort((a, b) => {
         return a > b ? 1 : -1
     })
+    tournament.competition.nations = NationArray
     return tournament
 }
 

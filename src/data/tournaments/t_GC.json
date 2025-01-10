@@ -53,10 +53,11 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 105, "attendance": 1014571 },
         "awards": {
-            "golden_boot": [{ "player": "Jesús Ferreira", "team": "USA", "goals": 7 }],
             "golden_ball": [{ "player": "Adalberto Carrasquilla", "team": "PAN" }],
+            "golden_boot": [{ "player": "Jesús Ferreira", "team": "USA", "goals": 7, "minutes": 371 }],
             "golden_glove": [{ "player": "Guillermo Ochoa", "team": "MEX" }],
-            "fair_play_team": ["USA"]
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -113,11 +114,12 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 89, "attendance": 636770 },
         "awards": {
-            "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 4 }],
             "golden_ball": [{ "player": "Héctor Herrera", "team": "MEX" }],
-            "best_young_player": { "player": "Tajon Buchanan", "team": "CAN" },
+            "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 4 }],
             "golden_glove": [{ "player": "Matt Turner", "team": "USA" }],
-            "fair_play_team": ["USA"]
+            "best_young_player": { "player": "Tajon Buchanan", "team": "CAN" },
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -169,11 +171,12 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 96, "attendance": 1043168 },
         "awards": {
-            "golden_boot": [{ "player": "Jonathan David", "team": "CAN", "goals": 6 }],
             "golden_ball": [{ "player": "Raúl Jiménez", "team": "MEX" }],
-            "best_young_player": { "player": "Christian Pulisic", "team": "USA" },
+            "golden_boot": [{ "player": "Jonathan David", "team": "CAN", "goals": 6, "assists": 2, "minutes": 306 }],
             "golden_glove": [{ "player": "Guillermo Ochoa", "team": "MEX" }],
-            "fair_play_team": ["USA"]
+            "best_young_player": { "player": "Christian Pulisic", "team": "USA" },
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -228,15 +231,16 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 58, "attendance": 875667 },
         "awards": {
+            "golden_ball": [{ "player": "Michael Bradley", "team": "USA" }],
             "golden_boot": [
                 { "player": "Alphonso Davies", "team": "CAN", "goals": 3 },
                 { "player": "Kévin Parsemain", "team": "MTQ-2019", "goals": 3 },
                 { "player": "Jordan Morris", "team": "USA", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Michael Bradley", "team": "USA" }],
-            "best_young_player": { "player": "Alphonso Davies", "team": "CAN" },
             "golden_glove": [{ "player": "Andre Blake", "team": "JAM" }],
-            "fair_play_team": ["USA"]
+            "best_young_player": { "player": "Alphonso Davies", "team": "CAN" },
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -284,11 +288,12 @@
         "final_standings": { "champions": "MEX", "runners_up": "JAM", "third_place": "PAN", "fourth_place": "USA" },
         "statistics": { "total_matches": 26, "total_goals": 62, "attendance": 1090396 },
         "awards": {
-            "golden_boot": [{ "player": "Clint Dempsey", "team": "USA", "goals": 7 }],
             "golden_ball": [{ "player": "Andrés Guardado", "team": "MEX" }],
-            "best_young_player": { "player": "Jesús Manuel Corona", "team": "MEX" },
+            "golden_boot": [{ "player": "Clint Dempsey", "team": "USA", "goals": 7 }],
             "golden_glove": [{ "player": "Brad Guzan", "team": "USA" }],
-            "fair_play_team": ["JAM"]
+            "best_young_player": { "player": "Jesús Corona", "team": "MEX" },
+            "fair_play_team": ["JAM"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -343,14 +348,15 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 67, "attendance": 907208 },
         "awards": {
+            "golden_ball": [{ "player": "Landon Donovan", "team": "USA" }],
             "golden_boot": [
                 { "player": "Gabriel Torres", "team": "PAN", "goals": 5 },
                 { "player": "Landon Donovan", "team": "USA", "goals": 5 },
                 { "player": "Chris Wondolowski", "team": "USA", "goals": 5 }
             ],
-            "golden_ball": [{ "player": "Landon Donovan", "team": "USA" }],
             "golden_glove": [{ "player": "Jaime Penedo", "team": "PAN" }],
-            "fair_play_team": ["PAN"]
+            "fair_play_team": ["PAN"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -405,10 +411,11 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 80, "attendance": 1140602 },
         "awards": {
-            "golden_boot": [{ "player": "Javier Hernández", "team": "MEX", "goals": 7 }],
             "golden_ball": [{ "player": "Javier Hernández", "team": "MEX" }],
+            "golden_boot": [{ "player": "Javier Hernández", "team": "MEX", "goals": 7 }],
             "golden_glove": [{ "player": "Noel Valladares", "team": "HON-1949-2022" }],
-            "fair_play_team": ["MEX"]
+            "fair_play_team": ["MEX"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -463,10 +470,11 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 66, "attendance": 860046 },
         "awards": {
-            "golden_boot": [{ "player": "Miguel Sabah", "team": "MEX", "goals": 4 }],
             "golden_ball": [{ "player": "Giovani dos Santos", "team": "MEX" }],
+            "golden_boot": [{ "player": "Miguel Sabah", "team": "MEX", "goals": 4 }],
             "golden_glove": [{ "player": "Keylor Navas", "team": "CRC" }],
-            "fair_play_team": ["USA"]
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -521,10 +529,11 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 64, "attendance": 921464 },
         "awards": {
-            "golden_boot": [{ "player": "Carlos Pavón", "team": "HON-1949-2022", "goals": 5 }],
             "golden_ball": [{ "player": "Julian de Guzman", "team": "CAN" }],
+            "golden_boot": [{ "player": "Carlos Pavón", "team": "HON-1949-2022", "goals": 5 }],
             "golden_glove": [{ "player": "Franck Grandel", "team": "GLP" }],
-            "fair_play_team": ["HON-1949-2022"]
+            "fair_play_team": ["HON-1949-2022"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -579,16 +588,11 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 73, "attendance": 340018 },
         "awards": {
-            "golden_boot": [
-                { "player": "DaMarcus Beasley", "team": "USA", "goals": 3 },
-                { "player": "Landon Donovan", "team": "USA", "goals": 3 },
-                { "player": "Carlos Ruiz", "team": "GUA", "goals": 3 },
-                { "player": "Luis Tejada", "team": "PAN", "goals": 3 },
-                { "player": "Wilmer Velasquez", "team": "HON-1949-2022", "goals": 3 }
-            ],
             "golden_ball": [{ "player": "Luis Tejada", "team": "PAN" }],
+            "golden_boot": [{ "player": "DaMarcus Beasley", "team": "USA", "goals": 3 }],
             "golden_glove": [{ "player": "Jaime Penedo", "team": "PAN" }],
-            "fair_play_team": ["HON-1949-2022"]
+            "fair_play_team": ["HON-1949-2022"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -637,13 +641,14 @@
         "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "CRC" },
         "statistics": { "total_matches": 20, "total_goals": 50 },
         "awards": {
+            "golden_ball": [{ "player": "Jesús Arellano", "team": "MEX" }],
             "golden_boot": [
                 { "player": "Walter Centeno", "team": "CRC", "goals": 4 },
                 { "player": "Landon Donovan", "team": "USA", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Jesús Arellano", "team": "MEX" }],
             "golden_glove": [{ "player": "Oswaldo Sánchez", "team": "MEX" }],
-            "fair_play_team": ["USA"]
+            "fair_play_team": ["USA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -692,10 +697,11 @@
         "final_standings": { "champions": "USA", "runners_up": "CRC", "third_place": "CAN", "fourth_place": "KOR" },
         "statistics": { "total_matches": 20, "total_goals": 39 },
         "awards": {
-            "golden_boot": [{ "player": "Brian McBride", "team": "USA", "goals": 4 }],
             "golden_ball": [{ "player": "Brian McBride", "team": "USA" }],
+            "golden_boot": [{ "player": "Brian McBride", "team": "USA", "goals": 4 }],
             "golden_glove": [{ "player": "Lars Hirschfeld", "team": "CAN" }],
-            "fair_play_team": ["CRC"]
+            "fair_play_team": ["CRC"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -751,11 +757,10 @@
         },
         "statistics": { "total_matches": 19, "total_goals": 55, "attendance": 695087 },
         "awards": {
-            "golden_boot": [{ "player": "Carlo Corazzin", "team": "CAN", "goals": 4 }],
             "golden_ball": [{ "player": "Craig Forrest", "team": "CAN" }],
+            "golden_boot": [{ "player": "Carlo Corazzin", "team": "CAN", "goals": 4 }],
             "best_young_player": { "player": "Richard Hastings", "team": "CAN" },
-            "golden_glove": [{ "player": "Craig Forrest", "team": "CAN" }],
-            "fair_play_team": ["CAN"]
+            "award_category_highlighted": ["ball", "young"]
         }
     },
     {
@@ -804,11 +809,9 @@
         "final_standings": { "champions": "MEX", "runners_up": "USA", "third_place": "BRA", "fourth_place": "JAM" },
         "statistics": { "total_matches": 16, "total_goals": 44 },
         "awards": {
-            "golden_boot": [
-                { "player": "Paulo Wanchope", "team": "CRC", "goals": 4 },
-                { "player": "Luis Hernández", "team": "MEX", "goals": 4 }
-            ],
-            "golden_ball": [{ "player": "Kasey Keller", "team": "USA" }]
+            "golden_ball": [{ "player": "Kasey Keller", "team": "USA" }],
+            "golden_boot": [{ "player": "Luis Hernández", "team": "MEX", "goals": 4 }],
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -857,8 +860,9 @@
         "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "GUA" },
         "statistics": { "total_matches": 13, "total_goals": 42, "attendance": 487439 },
         "awards": {
+            "golden_ball": [{ "player": "Raúl Lara", "team": "MEX" }],
             "golden_boot": [{ "player": "Eric Wynalda", "team": "USA", "goals": 4 }],
-            "golden_ball": [{ "player": "Raúl Lara", "team": "MEX" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -913,8 +917,9 @@
         },
         "statistics": { "total_matches": 16, "total_goals": 60, "attendance": 831788 },
         "awards": {
-            "golden_boot": [{ "player": "Zaguinho", "team": "MEX", "goals": 11 }],
-            "golden_ball": [{ "player": "Ramón Ramírez", "team": "MEX" }]
+            "golden_ball": [{ "player": "Ramón Ramírez", "team": "MEX" }],
+            "golden_boot": [{ "player": "Zague", "team": "MEX", "goals": 11 }],
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -962,8 +967,9 @@
         "final_standings": { "champions": "USA", "runners_up": "HON-1949-2022", "third_place": "MEX", "fourth_place": "CRC" },
         "statistics": { "total_matches": 16, "total_goals": 50, "attendance": 397124 },
         "awards": {
+            "golden_ball": [{ "player": "Tony Meola", "team": "USA" }],
             "golden_boot": [{ "player": "Benjamín Galindo", "team": "MEX", "goals": 4 }],
-            "golden_ball": [{ "player": "Tony Meola", "team": "USA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1019,7 +1025,9 @@
                 { "player": "Leonson Lewis", "team": "TRI", "goals": 2 },
                 { "player": "Kerry Jamerson", "team": "TRI", "goals": 2 },
                 { "player": "Philibert Jones", "team": "TRI", "goals": 2 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1074,7 +1082,9 @@
         "final_standings": { "champions": "CAN", "runners_up": "HON-1949-2022", "third_place": "CRC", "fourth_place": "SLV" },
         "statistics": { "total_matches": 24, "total_goals": 54 },
         "awards": {
-            "golden_boot": [{ "player": "Roberto Figueroa", "team": "HON-1949-2022", "goals": 5 }]
+            "golden_boot": [{ "player": "José Roberto Figueroa", "team": "HON-1949-2022", "goals": 5 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1123,7 +1133,9 @@
         "final_standings": { "champions": "HON-1949-2022", "runners_up": "SLV", "third_place": "MEX", "fourth_place": "CAN" },
         "statistics": { "total_matches": 15, "total_goals": 28, "attendance": 470484 },
         "awards": {
-            "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }]
+            "golden_boot": [{ "player": "Hugo Sánchez", "team": "MEX", "goals": 3 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1171,7 +1183,9 @@
         "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "SLV", "fourth_place": "CAN" },
         "statistics": { "total_matches": 15, "total_goals": 55, "attendance": 790097 },
         "awards": {
-            "golden_boot": [{ "player": "Víctor Rangel", "team": "MEX", "goals": 6 }]
+            "golden_boot": [{ "player": "Víctor Rangel", "team": "MEX", "goals": 6 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1220,7 +1234,9 @@
         "final_standings": { "champions": "HAI-1964-1986", "runners_up": "TRI", "third_place": "MEX", "fourth_place": "HON-1949-2022" },
         "statistics": { "total_matches": 15, "total_goals": 43, "attendance": 223442 },
         "awards": {
-            "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }]
+            "golden_boot": [{ "player": "Steve David", "team": "TRI", "goals": 7 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1266,7 +1282,8 @@
             }
         ],
         "final_standings": { "champions": "MEX", "runners_up": "HAI-1964-1986", "third_place": "CRC", "fourth_place": "CUB" },
-        "statistics": { "total_matches": 15, "total_goals": 37 }
+        "statistics": { "total_matches": 15, "total_goals": 37 },
+        "awards": {}
     },
     {
         "id": "GC1969",
@@ -1314,11 +1331,9 @@
         "final_standings": { "champions": "CRC", "runners_up": "GUA", "third_place": "ANT-1959-1986", "fourth_place": "MEX" },
         "statistics": { "total_matches": 15, "total_goals": 43 },
         "awards": {
-            "golden_boot": [{ "player": "Victor Manuel Ruiz", "team": "CRC", "goals": 4 }],
-            "silver_boot": [
-                { "player": "Nelson Melgar", "team": "GUA", "goals": 3 },
-                { "player": "Marco Fión", "team": "GUA", "goals": 3 }
-            ]
+            "golden_boot": [{ "player": "Víctor Ruiz", "team": "CRC", "goals": 4 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1366,10 +1381,9 @@
         "final_standings": { "champions": "GUA", "runners_up": "MEX", "third_place": "HON-1949-2022", "fourth_place": "TRI" },
         "statistics": { "total_matches": 15, "total_goals": 35 },
         "awards": {
-            "golden_boot": [
-                { "player": "Luis Estrada", "team": "MEX", "goals": 4 },
-                { "player": "Manuel Recinos", "team": "GUA", "goals": 4 }
-            ]
+            "golden_boot": [{ "player": "Manuel Recinos", "team": "GUA", "goals": 4 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1416,7 +1430,9 @@
         "final_standings": { "champions": "MEX", "runners_up": "GUA", "third_place": "CRC", "fourth_place": "SLV" },
         "statistics": { "total_matches": 15, "total_goals": 49 },
         "awards": {
-            "golden_boot": [{ "player": "Ernesto Cisneros", "team": "MEX", "goals": 5 }]
+            "golden_boot": [{ "player": "Ernesto Cisneros", "team": "MEX", "goals": 5 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -1464,7 +1480,9 @@
         "final_standings": { "champions": "CRC", "runners_up": "SLV", "third_place": "ANT-1959-1986", "fourth_place": "HON-1949-2022" },
         "statistics": { "total_matches": 22, "total_goals": 76 },
         "awards": {
-            "golden_boot": [{ "player": "Eduardo Hernández", "team": "SLV", "goals": 6 }]
+            "golden_boot": [{ "player": "Eduardo Hernández", "team": "SLV", "goals": 6 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     }
 ]

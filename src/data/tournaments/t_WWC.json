@@ -42,7 +42,21 @@
             }
         ],
         "final_standings": { "champions": "ESP_WNT", "runners_up": "ENG_WNT", "third_place": "SWE_WNT", "fourth_place": "AUS_WNT" },
-        "statistics": { "total_matches": 64, "total_goals": 164, "attendance": 1978274 }
+        "statistics": { "total_matches": 64, "total_goals": 164, "attendance": 1978274 },
+        "awards": {
+            "golden_ball": [
+                { "player": "Aitana Bonmatí", "team": "ESP_WNT" },
+                { "player": "Jennifer Hermoso", "team": "ESP_WNT" },
+                { "player": "Amanda Ilestedt", "team": "SWE_WNT" }
+            ],
+            "golden_boot": [{ "player": "Hinata Miyazawa", "team": "JPN_WNT", "goals": 5, "assists": 1 }],
+            "silver_boot": [{ "player": "Kadidiatou Diani", "team": "FRA_WNT", "goals": 4, "assists": 3 }],
+            "bronze_boot": [{ "player": "Alexandra Popp", "team": "GER_WNT", "goals": 4, "assists": "0" }],
+            "golden_glove": [{ "player": "Mary Earps", "team": "ENG_WNT" }],
+            "best_young_player": { "player": "Salma Paralluelo", "team": "ESP_WNT" },
+            "fair_play_team": ["JPN_WNT"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
+        }
     },
     {
         "id": "WWC2019",
@@ -99,17 +113,18 @@
         "final_standings": { "champions": "USA_WNT", "runners_up": "NED_WNT", "third_place": "SWE_WNT", "fourth_place": "ENG_WNT" },
         "statistics": { "total_matches": 52, "total_goals": 146, "attendance": 1131312 },
         "awards": {
-            "golden_boot": [{ "player": "Megan Rapinoe", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 428 }],
-            "silver_boot": [{ "player": "Alex Morgan", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 490 }],
-            "bronze_boot": [{ "player": "Ellen White", "team": "ENG_WNT", "goals": 6, "assists": 0, "minutes": 514 }],
             "golden_ball": [
                 { "player": "Megan Rapinoe", "team": "USA_WNT" },
                 { "player": "Lucy Bronze", "team": "ENG_WNT" },
                 { "player": "Rose Lavelle", "team": "USA_WNT" }
             ],
-            "best_young_player": { "player": "Giulia Gwinn", "team": "GER_WNT" },
+            "golden_boot": [{ "player": "Megan Rapinoe", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 428 }],
+            "silver_boot": [{ "player": "Alex Morgan", "team": "USA_WNT", "goals": 6, "assists": 3, "minutes": 490 }],
+            "bronze_boot": [{ "player": "Ellen White", "team": "ENG_WNT", "goals": 6, "assists": "0", "minutes": 514 }],
             "golden_glove": [{ "player": "Sari van Veenendaal", "team": "NED_WNT" }],
-            "fair_play_team": ["FRA_WNT"]
+            "best_young_player": { "player": "Giulia Gwinn", "team": "GER_WNT" },
+            "fair_play_team": ["FRA_WNT"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -157,17 +172,18 @@
         "final_standings": { "champions": "USA_WNT", "runners_up": "JPN_WNT", "third_place": "ENG_WNT", "fourth_place": "GER_WNT" },
         "statistics": { "total_matches": 52, "total_goals": 146, "attendance": 1353506 },
         "awards": {
-            "golden_boot": [{ "player": "Célia Šašić", "team": "GER_WNT", "goals": 6, "assists": 1, "minutes": 553 }],
-            "silver_boot": [{ "player": "Carli Lloyd", "team": "USA_WNT", "goals": 6, "assists": 1, "minutes": 630 }],
-            "bronze_boot": [{ "player": "Anja Mittag", "team": "GER_WNT", "goals": 5, "assists": 2, "minutes": 474 }],
             "golden_ball": [
                 { "player": "Carli Lloyd", "team": "USA_WNT" },
                 { "player": "Amandine Henry", "team": "FRA_WNT" },
                 { "player": "Aya Miyama", "team": "JPN_WNT" }
             ],
-            "best_young_player": { "player": "Kadeisha Buchanan", "team": "CAN_WNT" },
+            "golden_boot": [{ "player": "Célia Šašić", "team": "GER_WNT", "goals": 6, "assists": 1, "minutes": 553 }],
+            "silver_boot": [{ "player": "Carli Lloyd", "team": "USA_WNT", "goals": 6, "assists": 1, "minutes": 630 }],
+            "bronze_boot": [{ "player": "Anja Mittag", "team": "GER_WNT", "goals": 5, "assists": 2, "minutes": 474 }],
             "golden_glove": [{ "player": "Hope Solo", "team": "USA_WNT" }],
-            "fair_play_team": ["FRA_WNT"]
+            "best_young_player": { "player": "Kadeisha Buchanan", "team": "CAN_WNT" },
+            "fair_play_team": ["FRA_WNT"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -215,17 +231,18 @@
         "final_standings": { "champions": "JPN_WNT", "runners_up": "USA_WNT", "third_place": "SWE_WNT", "fourth_place": "FRA_WNT" },
         "statistics": { "total_matches": 32, "total_goals": 86, "attendance": 845711 },
         "awards": {
-            "golden_boot": [{ "player": "Homare Sawa", "team": "JPN_WNT", "goals": 5, "assists": 1 }],
-            "silver_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 4, "assists": 2 }],
-            "bronze_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 4, "assists": 1 }],
             "golden_ball": [
                 { "player": "Homare Sawa", "team": "JPN_WNT" },
                 { "player": "Abby Wambach", "team": "USA_WNT" },
                 { "player": "Hope Solo", "team": "USA_WNT" }
             ],
-            "best_young_player": { "player": "Caitlin Foord", "team": "AUS_WNT" },
+            "golden_boot": [{ "player": "Homare Sawa", "team": "JPN_WNT", "goals": 5, "assists": 1 }],
+            "silver_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 4, "assists": 2 }],
+            "bronze_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 4, "assists": 1 }],
             "golden_glove": [{ "player": "Hope Solo", "team": "USA_WNT" }],
-            "fair_play_team": ["JPN_WNT"]
+            "best_young_player": { "player": "Caitlin Foord", "team": "AUS_WNT" },
+            "fair_play_team": ["JPN_WNT"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -273,16 +290,19 @@
         "final_standings": { "champions": "GER_WNT", "runners_up": "BRA_WNT", "third_place": "USA_WNT", "fourth_place": "NOR_WNT" },
         "statistics": { "total_matches": 32, "total_goals": 111, "attendance": 1190971 },
         "awards": {
-            "golden_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 7, "assists": 5 }],
-            "silver_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 6, "assists": 2 }],
-            "bronze_boot": [{ "player": "Ragnhild Gulbrandsen", "team": "NOR_WNT", "goals": 6, "assists": 0 }],
             "golden_ball": [
                 { "player": "Marta", "team": "BRA_WNT" },
                 { "player": "Birgit Prinz", "team": "GER_WNT" },
                 { "player": "Cristiane", "team": "BRA_WNT" }
             ],
+            "golden_boot": [{ "player": "Marta", "team": "BRA_WNT", "goals": 7, "assists": 5 }],
+            "silver_boot": [{ "player": "Abby Wambach", "team": "USA_WNT", "goals": 6, "assists": 1 }],
+            "bronze_boot": [{ "player": "Ragnhild Gulbrandsen", "team": "NOR_WNT", "goals": 6, "assists": "0" }],
             "golden_glove": [{ "player": "Nadine Angerer", "team": "GER_WNT" }],
-            "fair_play_team": ["NOR_WNT"]
+            "fair_play_team": ["NOR_WNT"],
+            "award_category_highlighted": ["ball", "glove"],
+            "boot_label": "shoe",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -330,16 +350,19 @@
         "final_standings": { "champions": "GER_WNT", "runners_up": "SWE_WNT", "third_place": "USA_WNT", "fourth_place": "CAN_WNT" },
         "statistics": { "total_matches": 32, "total_goals": 107, "attendance": 679666 },
         "awards": {
-            "golden_boot": [{ "player": "Birgit Prinz", "team": "GER_WNT", "goals": 7, "assists": 5, "minutes": 548 }],
-            "silver_boot": [{ "player": "Maren Meinert", "team": "GER_WNT", "goals": 4, "assists": 7, "minutes": 548 }],
-            "bronze_boot": [{ "player": "Kátia", "team": "BRA_WNT", "goals": 4, "assists": 0, "minutes": 360 }],
             "golden_ball": [
                 { "player": "Birgit Prinz", "team": "GER_WNT" },
                 { "player": "Victoria Svensson", "team": "SWE_WNT" },
                 { "player": "Maren Meinert", "team": "GER_WNT" }
             ],
+            "golden_boot": [{ "player": "Birgit Prinz", "team": "GER_WNT", "goals": 7, "assists": 5, "minutes": 548 }],
+            "silver_boot": [{ "player": "Maren Meinert", "team": "GER_WNT", "goals": 4, "assists": 7, "minutes": 548 }],
+            "bronze_boot": [{ "player": "Kátia", "team": "BRA_WNT", "goals": 4, "assists": "0", "minutes": 360 }],
             "golden_glove": [{ "player": "Silke Rottenberg", "team": "GER_WNT" }],
-            "fair_play_team": ["CHN_WNT"]
+            "fair_play_team": ["CHN_WNT"],
+            "award_category_highlighted": ["ball", "glove"],
+            "boot_label": "shoe",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -388,21 +411,24 @@
         "final_standings": { "champions": "USA_WNT", "runners_up": "CHN_WNT", "third_place": "BRA_WNT", "fourth_place": "NOR_WNT" },
         "statistics": { "total_matches": 32, "total_goals": 123, "attendance": 1214221 },
         "awards": {
-            "golden_boot": [
-                { "player": "Sissi", "team": "BRA_WNT", "goals": 7, "assists": 3 },
-                { "player": "Sun Wen", "team": "CHN_WNT", "goals": 7, "assists": 3 }
-            ],
-            "bronze_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 4, "assists": 1 }],
             "golden_ball": [
                 { "player": "Sun Wen", "team": "CHN_WNT" },
                 { "player": "Sissi", "team": "BRA_WNT" },
                 { "player": "Michelle Akers", "team": "USA_WNT" }
             ],
+            "golden_boot": [
+                { "player": "Sissi", "team": "BRA_WNT", "goals": 7, "assists": 3 },
+                { "player": "Sun Wen", "team": "CHN_WNT", "goals": 7, "assists": 3 }
+            ],
+            "bronze_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 4, "assists": 1 }],
             "golden_glove": [
                 { "player": "Gao Hong", "team": "CHN_WNT" },
                 { "player": "Briana Scurry", "team": "USA_WNT" }
             ],
-            "fair_play_team": ["CHN_WNT"]
+            "fair_play_team": ["CHN_WNT"],
+            "award_category_highlighted": ["ball", "glove"],
+            "boot_label": "shoe",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -450,15 +476,17 @@
         "final_standings": { "champions": "NOR_WNT", "runners_up": "GER_WNT", "third_place": "USA_WNT", "fourth_place": "CHN_WNT" },
         "statistics": { "total_matches": 26, "total_goals": 99, "attendance": 112213 },
         "awards": {
-            "golden_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 6, "assists": 0 }],
-            "silver_boot": [{ "player": "Hege Riise", "team": "NOR_WNT", "goals": 5, "assists": 5 }],
-            "bronze_boot": [{ "player": "Shi Guihongs", "team": "CHN_WNT", "goals": 3, "assists": 2 }],
             "golden_ball": [
                 { "player": "Hege Riise", "team": "NOR_WNT" },
                 { "player": "Gro Espeseth", "team": "NOR_WNT" },
                 { "player": "Ann Kristin Aarønes", "team": "NOR_WNT" }
             ],
-            "fair_play_team": ["SWE_WNT"]
+            "golden_boot": [{ "player": "Ann Kristin Aarønes", "team": "NOR_WNT", "goals": 6, "assists": "0" }],
+            "silver_boot": [{ "player": "Hege Riise", "team": "NOR_WNT", "goals": 5, "assists": 5 }],
+            "bronze_boot": [{ "player": "Shi Guihong", "team": "CHN_WNT", "goals": 3, "assists": 2 }],
+            "fair_play_team": ["SWE_WNT"],
+            "award_category_highlighted": ["ball", "fair"],
+            "boot_label": "shoe"
         }
     },
     {
@@ -507,18 +535,20 @@
         "final_standings": { "champions": "USA_WNT", "runners_up": "NOR_WNT", "third_place": "SWE_WNT", "fourth_place": "GER_WNT" },
         "statistics": { "total_matches": 26, "total_goals": 99, "attendance": 510000 },
         "awards": {
+            "golden_ball": [
+                { "player": "Carin Jennings", "team": "USA_WNT" },
+                { "player": "Michelle Akers-Stahl", "team": "USA_WNT" },
+                { "player": "Linda Medalen", "team": "NOR_WNT" }
+            ],
             "golden_boot": [{ "player": "Michelle Akers-Stahl", "team": "USA_WNT", "goals": 10 }],
             "silver_boot": [{ "player": "Heidi Mohr", "team": "GER_WNT", "goals": 7 }],
             "bronze_boot": [
                 { "player": "Linda Medalen", "team": "NOR_WNT", "goals": 6 },
                 { "player": "Carin Jennings", "team": "USA_WNT", "goals": 6 }
             ],
-            "golden_ball": [
-                { "player": "Carin Jennings", "team": "USA_WNT" },
-                { "player": "Michelle Akers-Stahl", "team": "USA_WNT" },
-                { "player": "Linda Medalen", "team": "NOR_WNT" }
-            ],
-            "fair_play_team": ["GER_WNT"]
+            "fair_play_team": ["GER_WNT"],
+            "award_category_highlighted": ["ball", "fair"],
+            "boot_label": "shoe"
         }
     }
 ]

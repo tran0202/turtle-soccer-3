@@ -63,7 +63,8 @@
                 { "player": "Erling Haaland", "team": "NOR", "goals": 6 },
                 { "player": "Aleksandar Mitrović", "team": "SRB", "goals": 6 }
             ],
-            "final_top_scorer": [
+            "final_best_player": [{ "player": "Rodri", "team": "ESP" }],
+            "final_top_scorer1": [
                 { "player": "Andrej Kramarić", "team": "CRO", "goals": 1 },
                 { "player": "Luka Modrić", "team": "CRO", "goals": 1 },
                 { "player": "Mario Pašalić", "team": "CRO", "goals": 1 },
@@ -79,7 +80,8 @@
                 { "player": "Joselu", "team": "ESP", "goals": 1 },
                 { "player": "Yeremy Pino", "team": "ESP", "goals": 1 }
             ],
-            "final_best_player": [{ "player": "Rodri", "team": "ESP" }]
+            "award_category_highlighted": ["boot", "final_boot"],
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -148,12 +150,12 @@
                 { "player": "Erling Haaland", "team": "NOR", "goals": 6 },
                 { "player": "Ferran Torres", "team": "ESP", "goals": 6 }
             ],
-            "final_top_scorer": [
-                { "player": "Karim Benzema", "team": "FRA", "goals": 2 },
-                { "player": "Kylian Mbappé", "team": "FRA", "goals": 2 },
-                { "player": "Ferran Torres", "team": "ESP", "goals": 2 }
-            ],
-            "final_best_player": [{ "player": "Sergio Busquets", "team": "ESP" }]
+            "final_best_player": [{ "player": "Sergio Busquets", "team": "ESP" }],
+            "final_top_scorer1": [{ "player": "Kylian Mbappé", "team": "FRA", "goals": 2, "assists": 2, "minutes": 180 }],
+            "final_top_scorer2": [{ "player": "Karim Benzema", "team": "FRA", "goals": 2, "assists": "0", "minutes": 179 }],
+            "final_top_scorer3": [{ "player": "Ferran Torres", "team": "ESP", "goals": 2, "assists": "0", "minutes": 133 }],
+            "award_category_highlighted": ["boot", "final_boot"],
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -215,9 +217,13 @@
         "statistics": { "total_matches": 142, "total_goals": 342, "attendance": 2467041, "final_matches": 4, "final_goals": 9, "final_attendance": 127067 },
         "awards": {
             "golden_boot": [{ "player": "Aleksandar Mitrović", "team": "SRB", "goals": 6 }],
-            "final_top_scorer": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 3 }],
             "final_best_player": [{ "player": "Bernardo Silva", "team": "POR" }],
-            "final_best_young_player": [{ "player": "Frenkie de Jong", "team": "NED" }]
+            "final_top_scorer1": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 3, "assists": "0", "minutes": 191 }],
+            "final_top_scorer2": [{ "player": "Gonçalo Guedes", "team": "POR", "goals": 1, "assists": 1, "minutes": 101 }],
+            "final_top_scorer3": [{ "player": "Marcus Rashford", "team": "ENG", "goals": 1, "assists": "0", "minutes": 49 }],
+            "final_best_young_player": [{ "player": "Frenkie de Jong", "team": "NED" }],
+            "award_category_highlighted": ["boot", "final_boot"],
+            "boot_label": "Top Scorer"
         }
     }
 ]

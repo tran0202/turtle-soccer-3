@@ -143,7 +143,7 @@ const MatchesKnockoutRowFinal = (props) => {
                 <React.Fragment>
                     <Row>
                         <Col>
-                            <div className="h2-ff1 margin-top-md">Third-place</div>
+                            <div className="h2-ff1 margin-top-md">Third place</div>
                         </Col>
                     </Row>
                     <Row>

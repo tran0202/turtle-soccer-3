@@ -44,7 +44,8 @@
         "final_standings": { "champions": "USA_U23WNT", "runners_up": "BRA_U23WNT", "third_place": "GER_U23WNT", "fourth_place": "ESP_U23WNT" },
         "statistics": { "total_matches": 26, "total_goals": 76, "attendance": 398699 },
         "awards": {
-            "golden_boot": [{ "player": "Marie-Antoinette Katoto", "team": "FRA_U23MNT", "goals": 5 }]
+            "golden_boot": [{ "player": "Marie-Antoinette Katoto", "team": "FRA_U23WNT", "goals": 5 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -92,7 +93,8 @@
         "final_standings": { "champions": "CAN_U23WNT", "runners_up": "SWE_U23WNT", "third_place": "USA_U23WNT", "fourth_place": "AUS_U23WNT" },
         "statistics": { "total_matches": 26, "total_goals": 101, "attendance": 13913 },
         "awards": {
-            "golden_boot": [{ "player": "Vivianne Miedema", "team": "NED_U23WNT", "goals": 10 }]
+            "golden_boot": [{ "player": "Vivianne Miedema", "team": "NED_U23WNT", "goals": 10 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -150,7 +152,8 @@
         "statistics": { "total_matches": 26, "total_goals": 66, "attendance": 635885 },
         "awards": {
             "golden_boot": [{ "player": "Melanie Behringer", "team": "GER_U23WNT", "goals": 5 }],
-            "fair_play_team": ["SWE_U23WNT"]
+            "fair_play_team": ["SWE_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -203,7 +206,8 @@
         "statistics": { "total_matches": 26, "total_goals": 71, "attendance": 660986 },
         "awards": {
             "golden_boot": [{ "player": "Christine Sinclair", "team": "CAN_U23WNT", "goals": 6 }],
-            "fair_play_team": ["USA_U23WNT"]
+            "fair_play_team": ["USA_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -251,7 +255,8 @@
         "statistics": { "total_matches": 26, "total_goals": 66, "attendance": 740014 },
         "awards": {
             "golden_boot": [{ "player": "Cristiane", "team": "BRA_U23WNT", "goals": 5 }],
-            "fair_play_team": ["CHN_U23WNT"]
+            "fair_play_team": ["CHN_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -302,7 +307,8 @@
                 { "player": "Cristiane", "team": "BRA_U23WNT", "goals": 5 },
                 { "player": "Birgit Prinz", "team": "GER_U23WNT", "goals": 5 }
             ],
-            "fair_play_team": ["JPN_U23WNT", "SWE_U23WNT"]
+            "fair_play_team": ["JPN_U23WNT", "SWE_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -350,7 +356,8 @@
         "statistics": { "total_matches": 16, "total_goals": 42, "attendance": 326215 },
         "awards": {
             "golden_boot": [{ "player": "Sun Wen", "team": "CHN_U23WNT", "goals": 4 }],
-            "fair_play_team": ["GER_U23WNT"]
+            "fair_play_team": ["GER_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -403,7 +410,8 @@
                 { "player": "Linda Medalen", "team": "NOR_U23WNT", "goals": 4 },
                 { "player": "Pretinha", "team": "BRA_U23WNT", "goals": 4 }
             ],
-            "fair_play_team": ["USA_U23WNT"]
+            "fair_play_team": ["USA_U23WNT"],
+            "award_category_highlighted": ["boot"]
         }
     }
 ]

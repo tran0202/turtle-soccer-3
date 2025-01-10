@@ -53,6 +53,7 @@
         },
         "statistics": { "total_matches": 51, "total_goals": 117, "attendance": 2681288 },
         "awards": {
+            "golden_ball": [{ "player": "Rodri", "team": "ESP" }],
             "golden_boot": [
                 { "player": "Harry Kane", "team": "ENG", "goals": 3 },
                 { "player": "Georges Mikautadze", "team": "GEO", "goals": 3 },
@@ -61,8 +62,8 @@
                 { "player": "Ivan Schranz", "team": "SVK", "goals": 3 },
                 { "player": "Dani Olmo", "team": "ESP", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Rodri", "team": "ESP" }],
-            "best_young_player": { "player": "Lamine Yamal", "team": "ESP" }
+            "best_young_player": { "player": "Lamine Yamal", "team": "ESP" },
+            "award_category_highlighted": ["ball", "young"]
         }
     },
     {
@@ -126,11 +127,12 @@
         },
         "statistics": { "total_matches": 51, "total_goals": 142, "attendance": 1099278 },
         "awards": {
-            "golden_boot": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 5, "assists": 1, "minutes": 360 }],
-            "silver_boot": [{ "player": "Patrik Schick", "team": "CZE-1993-2022", "goals": 5, "assists": 0, "minutes": 404 }],
-            "bronze_boot": [{ "player": "Karim Benzema", "team": "FRA", "goals": 4, "assists": 0, "minutes": 349 }],
             "golden_ball": [{ "player": "Gianluigi Donnarumma", "team": "ITA" }],
-            "best_young_player": { "player": "Pedri", "team": "ESP" }
+            "golden_boot": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 5, "assists": 1, "minutes": 360 }],
+            "silver_boot": [{ "player": "Patrik Schick", "team": "CZE-1993-2022", "goals": 5, "assists": "0", "minutes": 404 }],
+            "bronze_boot": [{ "player": "Karim Benzema", "team": "FRA", "goals": 4, "assists": "0", "minutes": 349 }],
+            "best_young_player": { "player": "Pedri", "team": "ESP" },
+            "award_category_highlighted": ["ball", "young"]
         }
     },
     {
@@ -182,11 +184,12 @@
         },
         "statistics": { "total_matches": 51, "total_goals": 108, "attendance": 2427303 },
         "awards": {
-            "golden_boot": [{ "player": "Antoine Griezmann", "team": "FRA", "goals": 6, "assists": 2 }],
-            "silver_boot": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 3, "assists": 3 }],
-            "bronze_boot": [{ "player": "Olivier Giroud", "team": "FRA", "goals": 3, "assists": 2 }],
             "golden_ball": [{ "player": "Antoine Griezmann", "team": "FRA" }],
-            "best_young_player": { "player": "Renato Sanches", "team": "POR" }
+            "golden_boot": [{ "player": "Antoine Griezmann", "team": "FRA", "goals": 6, "assists": 2, "minutes": 555 }],
+            "silver_boot": [{ "player": "Cristiano Ronaldo", "team": "POR", "goals": 3, "assists": 3, "minutes": 625 }],
+            "bronze_boot": [{ "player": "Olivier Giroud", "team": "FRA", "goals": 3, "assists": 2, "minutes": 456 }],
+            "best_young_player": { "player": "Renato Sanches", "team": "POR" },
+            "award_category_highlighted": ["ball", "young"]
         }
     },
     {
@@ -252,10 +255,11 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 76, "attendance": 1440896 },
         "awards": {
+            "golden_ball": [{ "player": "Andrés Iniesta", "team": "ESP" }],
             "golden_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 3, "assists": 1, "minutes": 189 }],
             "silver_boot": [{ "player": "Mario Gomez", "team": "GER", "goals": 3, "assists": 1, "minutes": 282 }],
-            "bronze_boot": [{ "player": "Alan Dzagoev", "team": "RUS", "goals": 3, "minutes": 253 }],
-            "golden_ball": [{ "player": "Andrés Iniesta", "team": "ESP" }]
+            "bronze_boot": [{ "player": "Alan Dzagoev", "team": "RUS", "goals": 3, "assists": "0", "minutes": 253 }],
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -314,8 +318,9 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 77, "attendance": 1143990 },
         "awards": {
+            "golden_ball": [{ "player": "Xavi", "team": "ESP" }],
             "golden_boot": [{ "player": "David Villa", "team": "ESP", "goals": 4 }],
-            "golden_ball": [{ "player": "Xavi", "team": "ESP" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -382,8 +387,9 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 77, "attendance": 1160802 },
         "awards": {
+            "golden_ball": [{ "player": "Theodoros Zagorakis", "team": "GRE" }],
             "golden_boot": [{ "player": "Milan Baroš", "team": "CZE-1993-2022", "goals": 5 }],
-            "golden_ball": [{ "player": "Theodoros Zagorakis", "team": "GRE" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -441,11 +447,12 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 85, "attendance": 1122833 },
         "awards": {
+            "golden_ball": [{ "player": "Zinedine Zidane", "team": "FRA" }],
             "golden_boot": [
                 { "player": "Savo Milošević", "team": "YUG-1992-2003", "goals": 5 },
                 { "player": "Patrick Kluivert", "team": "NED", "goals": 5 }
             ],
-            "golden_ball": [{ "player": "Zinedine Zidane", "team": "FRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -502,8 +509,9 @@
         },
         "statistics": { "total_matches": 31, "total_goals": 64, "attendance": 1275857 },
         "awards": {
+            "golden_ball": [{ "player": "Matthias Sammer", "team": "GER" }],
             "golden_boot": [{ "player": "Alan Shearer", "team": "ENG", "goals": 5 }],
-            "golden_ball": [{ "player": "Matthias Sammer", "team": "GER" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -565,7 +573,8 @@
                 { "player": "Tomas Brolin", "team": "SWE", "goals": 3 },
                 { "player": "Henrik Larsen", "team": "DEN", "goals": 3 },
                 { "player": "Karl-Heinz Riedle", "team": "GER", "goals": 3 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -624,7 +633,7 @@
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
         "statistics": { "total_matches": 15, "total_goals": 34, "attendance": 849844 },
-        "awards": { "golden_boot": [{ "player": "Marco van Basten", "team": "NED", "goals": 5 }] }
+        "awards": { "golden_boot": [{ "player": "Marco van Basten", "team": "NED", "goals": 5 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1984",
@@ -678,7 +687,7 @@
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
         "statistics": { "total_matches": 15, "total_goals": 41, "attendance": 599669 },
-        "awards": { "golden_boot": [{ "player": "Michel Platini", "team": "FRA", "goals": 9 }] }
+        "awards": { "golden_boot": [{ "player": "Michel Platini", "team": "FRA", "goals": 9 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1980",
@@ -730,7 +739,7 @@
         ],
         "final_standings": { "champions": "GER-1949-1990", "runners_up": "BEL", "third_place": "TCH", "fourth_place": "ITA" },
         "statistics": { "total_matches": 14, "total_goals": 27, "attendance": 345463 },
-        "awards": { "golden_boot": [{ "player": "Klaus Allofs", "team": "GER-1949-1990", "goals": 3 }] }
+        "awards": { "golden_boot": [{ "player": "Klaus Allofs", "team": "GER-1949-1990", "goals": 3 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1976",
@@ -774,7 +783,7 @@
         ],
         "final_standings": { "champions": "TCH", "runners_up": "GER-1949-1990", "third_place": "NED", "fourth_place": "YUG-1963-1992" },
         "statistics": { "total_matches": 4, "total_goals": 19, "attendance": 106087 },
-        "awards": { "golden_boot": [{ "player": "Dieter Müller", "team": "GER-1949-1990", "goals": 4 }] }
+        "awards": { "golden_boot": [{ "player": "Dieter Müller", "team": "GER-1949-1990", "goals": 4 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1972",
@@ -823,7 +832,7 @@
         ],
         "final_standings": { "champions": "GER-1949-1990", "runners_up": "URS", "third_place": "BEL", "fourth_place": "HUN" },
         "statistics": { "total_matches": 4, "total_goals": 10, "attendance": 121880 },
-        "awards": { "golden_boot": [{ "player": "Gerd Müller", "team": "GER-1949-1990", "goals": 4 }] }
+        "awards": { "golden_boot": [{ "player": "Gerd Müller", "team": "GER-1949-1990", "goals": 4 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1968",
@@ -867,7 +876,7 @@
         ],
         "final_standings": { "champions": "ITA", "runners_up": "YUG-1963-1992", "third_place": "ENG", "fourth_place": "URS" },
         "statistics": { "total_matches": 5, "total_goals": 7, "attendance": 260916 },
-        "awards": { "golden_boot": [{ "player": "Dragan Džajić", "team": "YUG-1963-1992", "goals": 2 }] }
+        "awards": { "golden_boot": [{ "player": "Dragan Džajić", "team": "YUG-1963-1992", "goals": 2 }], "award_category_highlighted": ["boot"] }
     },
     {
         "id": "EURO1964",
@@ -916,8 +925,9 @@
             "golden_boot": [
                 { "player": "Ferenc Bene", "team": "HUN", "goals": 2 },
                 { "player": "Dezső Novák", "team": "HUN", "goals": 2 },
-                { "player": "Jesús María Pereda", "team": "ESP-1945-1977", "goals": 2 }
-            ]
+                { "player": "Chus Pereda", "team": "ESP-1945-1977", "goals": 2 }
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -970,7 +980,8 @@
                 { "player": "Viktor Ponedelnik", "team": "URS", "goals": 2 },
                 { "player": "Milan Galić", "team": "YUG-1945-1963", "goals": 2 },
                 { "player": "Dražan Jerković", "team": "YUG-1945-1963", "goals": 2 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     }
 ]

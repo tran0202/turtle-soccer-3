@@ -66,7 +66,10 @@
                 { "player": "Kylian Mbappé", "team": "FRA", "club": "PSG", "goals": 8 }
             ],
             "golden_ball": [{ "player": "Vinícius Júnior", "team": "BRA", "club": "RMA" }],
-            "best_young_player": [{ "player": "Jude Bellingham", "team": "ENG", "club": "RMA" }]
+            "best_young_player": { "player": "Jude Bellingham", "team": "ENG", "club": "RMA" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -133,7 +136,10 @@
         "awards": {
             "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "MCI", "goals": 12 }],
             "golden_ball": [{ "player": "Rodri", "team": "ESP", "club": "MCI" }],
-            "best_young_player": [{ "player": "Khvicha Kvaratskhelia", "team": "GEO", "club": "NAP" }]
+            "best_young_player": { "player": "Khvicha Kvaratskhelia", "team": "GEO", "club": "NAP" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -198,9 +204,12 @@
         },
         "statistics": { "total_matches": 125, "total_goals": 380, "attendance": 4402255 },
         "awards": {
-            "golden_boot": [{ "player": "Karim Benzema", "team": "FRA", "club": "RMA", "goals": 15 }],
             "golden_ball": [{ "player": "Karim Benzema", "team": "FRA", "club": "RMA" }],
-            "best_young_player": [{ "player": "Vinícius Júnior", "team": "BRA", "club": "RMA" }]
+            "golden_boot": [{ "player": "Karim Benzema", "team": "FRA", "club": "RMA", "goals": 15 }],
+            "best_young_player": { "player": "Vinícius Júnior", "team": "BRA", "club": "RMA" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -269,7 +278,10 @@
             "golden_glove": [{ "player": "Édouard Mendy", "team": "SEN", "club": "CHE" }],
             "best_defender": [{ "player": "Rúben Dias", "team": "POR", "club": "MCI" }],
             "best_midfielder": [{ "player": "N'Golo Kanté", "team": "FRA", "club": "CHE" }],
-            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR" }]
+            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR" }],
+            "award_category_highlighted": ["boot", "defender", "forward"],
+            "boot_label": "Top Scorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -338,7 +350,10 @@
             "golden_glove": [{ "player": "Manuel Neuer", "team": "GER", "club": "BAY" }],
             "best_defender": [{ "player": "Joshua Kimmich", "team": "GER", "club": "BAY" }],
             "best_midfielder": [{ "player": "Kevin De Bruyne", "team": "BEL", "club": "MCI" }],
-            "best_forward": [{ "player": "Robert Lewandowski", "team": "POL", "club": "BAY" }]
+            "best_forward": [{ "player": "Robert Lewandowski", "team": "POL", "club": "BAY" }],
+            "award_category_highlighted": ["boot", "defender", "forward"],
+            "boot_label": "Top Scorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -407,7 +422,10 @@
             "golden_glove": [{ "player": "Alisson", "team": "BRA", "club": "LIV" }],
             "best_defender": [{ "player": "Virgil van Dijk", "team": "NED", "club": "LIV" }],
             "best_midfielder": [{ "player": "Frenkie de Jong", "team": "NED", "club": "AJA" }],
-            "best_forward": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB" }]
+            "best_forward": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB" }],
+            "award_category_highlighted": ["boot", "defender", "forward"],
+            "boot_label": "Top Scorer",
+            "glove_label": "BestGoalkeeper"
         }
     }
 ]

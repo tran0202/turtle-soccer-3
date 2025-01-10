@@ -45,7 +45,7 @@ const BracketFinalCol = (props) => {
     const final = round.matches.find((m) => m.final)
     const thirdPlace = round.matches.find((m) => m.third_place)
     const finalRound = !round.third_place ? round : { ...round, matches: [final] }
-    const thirdPlaceRound = !round.third_place ? round : { ...round, name: 'Third-place', matches: [thirdPlace] }
+    const thirdPlaceRound = !round.third_place ? round : { ...round, name: 'Third place', matches: [thirdPlace] }
     return (
         <Col className={colClassname}>
             {column_count === 2 && <Row className="bracket-gap-height-10"></Row>}

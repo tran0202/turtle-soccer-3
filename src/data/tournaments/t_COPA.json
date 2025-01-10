@@ -46,10 +46,11 @@
         "final_standings": { "champions": "ARG", "runners_up": "COL", "third_place": "URU", "fourth_place": "CAN" },
         "statistics": { "total_matches": 32, "total_goals": 70, "attendance": 1571878 },
         "awards": {
-            "golden_boot": [{ "player": "Lautaro Martínez", "team": "ARG", "goals": 5 }],
             "golden_ball": [{ "player": "James Rodríguez", "team": "COL" }],
+            "golden_boot": [{ "player": "Lautaro Martínez", "team": "ARG", "goals": 5 }],
             "golden_glove": [{ "player": "Emiliano Martínez", "team": "ARG" }],
-            "fair_play_team": ["COL"]
+            "fair_play_team": ["COL"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -100,13 +101,14 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "COL", "fourth_place": "PER" },
         "statistics": { "total_matches": 28, "total_goals": 65, "attendance": 7800 },
         "awards": {
+            "golden_ball": [{ "player": "Lionel Messi", "team": "ARG" }],
             "golden_boot": [
                 { "player": "Lionel Messi", "team": "ARG", "goals": 4 },
                 { "player": "Luis Díaz", "team": "COL", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Lionel Messi", "team": "ARG" }],
             "golden_glove": [{ "player": "Emiliano Martínez", "team": "ARG" }],
-            "fair_play_team": ["BRA"]
+            "fair_play_team": ["BRA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -157,13 +159,14 @@
         "final_standings": { "champions": "BRA", "runners_up": "PER", "third_place": "ARG", "fourth_place": "CHI" },
         "statistics": { "total_matches": 26, "total_goals": 60, "attendance": 867245 },
         "awards": {
+            "golden_ball": [{ "player": "Dani Alves", "team": "BRA" }],
             "golden_boot": [
                 { "player": "Everton", "team": "BRA", "goals": 3 },
                 { "player": "Paolo Guerrero", "team": "PER", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Dani Alves", "team": "BRA" }],
             "golden_glove": [{ "player": "Alisson", "team": "BRA" }],
-            "fair_play_team": ["BRA"]
+            "fair_play_team": ["BRA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -215,10 +218,11 @@
         "final_standings": { "champions": "CHI", "runners_up": "ARG", "third_place": "COL", "fourth_place": "USA" },
         "statistics": { "total_matches": 32, "total_goals": 91, "attendance": 1483855 },
         "awards": {
-            "golden_boot": [{ "player": "Eduardo Vargas", "team": "CHI", "goals": 6 }],
             "golden_ball": [{ "player": "Alexis Sánchez", "team": "CHI" }],
+            "golden_boot": [{ "player": "Eduardo Vargas", "team": "CHI", "goals": 6 }],
             "golden_glove": [{ "player": "Claudio Bravo", "team": "CHI" }],
-            "fair_play_team": ["ARG"]
+            "fair_play_team": ["ARG"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -273,14 +277,15 @@
         "final_standings": { "champions": "CHI", "runners_up": "ARG", "third_place": "PER", "fourth_place": "PAR" },
         "statistics": { "total_matches": 26, "total_goals": 59, "attendance": 655902 },
         "awards": {
+            "golden_ball": [{ "player": "Lionel Messi", "team": "ARG", "rejected": true, "rejected_notes": "Messi was to receive the award but rejected it." }],
             "golden_boot": [
                 { "player": "Eduardo Vargas", "team": "CHI", "goals": 4 },
                 { "player": "Paolo Guerrero", "team": "PER", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Lionel Messi", "team": "ARG", "rejected": true, "rejected_notes": "Messi was to receive the award but rejected it." }],
-            "best_young_player": { "player": "Jeison Murillo", "team": "COL" },
             "golden_glove": [{ "player": "Claudio Bravo", "team": "CHI" }],
-            "fair_play_team": ["PER"]
+            "best_young_player": { "player": "Jeison Murillo", "team": "COL" },
+            "fair_play_team": ["PER"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -334,11 +339,12 @@
         "final_standings": { "champions": "URU", "runners_up": "PAR", "third_place": "PER", "fourth_place": "VEN" },
         "statistics": { "total_matches": 26, "total_goals": 54, "attendance": 882621 },
         "awards": {
-            "golden_boot": [{ "player": "Paolo Guerrero", "team": "PER", "goals": 5 }],
             "golden_ball": [{ "player": "Luis Suárez", "team": "URU" }],
-            "best_young_player": { "player": "Sebastián Coates", "team": "URU" },
+            "golden_boot": [{ "player": "Paolo Guerrero", "team": "PER", "goals": 5 }],
             "golden_glove": [{ "player": "Justo Villar", "team": "PAR" }],
-            "fair_play_team": ["URU"]
+            "best_young_player": { "player": "Sebastián Coates", "team": "URU" },
+            "fair_play_team": ["URU"],
+            "award_category_highlighted": ["ball", "glove", "fair"]
         }
     },
     {
@@ -387,9 +393,10 @@
         "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "MEX", "fourth_place": "URU" },
         "statistics": { "total_matches": 26, "total_goals": 86, "attendance": 1050230 },
         "awards": {
-            "golden_boot": [{ "player": "Robinho", "team": "BRA", "goals": 6 }],
             "golden_ball": [{ "player": "Robinho", "team": "BRA" }],
-            "best_young_player": { "player": "Lionel Messi", "team": "ARG" }
+            "golden_boot": [{ "player": "Robinho", "team": "BRA", "goals": 6 }],
+            "best_young_player": { "player": "Lionel Messi", "team": "ARG" },
+            "award_category_highlighted": ["ball", "young"]
         }
     },
     {
@@ -438,8 +445,9 @@
         "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "URU", "fourth_place": "COL" },
         "statistics": { "total_matches": 26, "total_goals": 78 },
         "awards": {
+            "golden_ball": [{ "player": "Adriano", "team": "BRA" }],
             "golden_boot": [{ "player": "Adriano", "team": "BRA", "goals": 7 }],
-            "golden_ball": [{ "player": "Adriano", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -488,8 +496,9 @@
         "final_standings": { "champions": "COL", "runners_up": "MEX", "third_place": "HON-1949-2022", "fourth_place": "URU" },
         "statistics": { "total_matches": 26, "total_goals": 60 },
         "awards": {
+            "golden_ball": [{ "player": "Amado Guevara", "team": "HON-1949-2022" }],
             "golden_boot": [{ "player": "Víctor Aristizábal", "team": "COL", "goals": 6 }],
-            "golden_ball": [{ "player": "Amado Guevara", "team": "HON-1949-2022" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -538,11 +547,12 @@
         "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "MEX", "fourth_place": "CHI" },
         "statistics": { "total_matches": 26, "total_goals": 74 },
         "awards": {
+            "golden_ball": [{ "player": "Rivaldo", "team": "BRA" }],
             "golden_boot": [
                 { "player": "Ronaldo", "team": "BRA", "goals": 5 },
                 { "player": "Rivaldo", "team": "BRA", "goals": 5 }
             ],
-            "golden_ball": [{ "player": "Rivaldo", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -591,8 +601,9 @@
         "final_standings": { "champions": "BRA", "runners_up": "BOL", "third_place": "MEX", "fourth_place": "PER" },
         "statistics": { "total_matches": 26, "total_goals": 67, "attendance": 456020 },
         "awards": {
+            "golden_ball": [{ "player": "Ronaldo", "team": "BRA" }],
             "golden_boot": [{ "player": "Luis Hernández", "team": "MEX", "goals": 6 }],
-            "golden_ball": [{ "player": "Ronaldo", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -642,11 +653,12 @@
         "final_standings": { "champions": "URU", "runners_up": "BRA", "third_place": "COL", "fourth_place": "USA" },
         "statistics": { "total_matches": 26, "total_goals": 69, "attendance": 450600 },
         "awards": {
+            "golden_ball": [{ "player": "Enzo Francescoli", "team": "URU" }],
             "golden_boot": [
                 { "player": "Gabriel Batistuta", "team": "ARG", "goals": 4 },
                 { "player": "Luis García", "team": "MEX", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Enzo Francescoli", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -696,8 +708,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "MEX", "third_place": "COL", "fourth_place": "ECU" },
         "statistics": { "total_matches": 26, "total_goals": 64, "attendance": 633040 },
         "awards": {
+            "golden_ball": [{ "player": "Sergio Goycochea", "team": "ARG" }],
             "golden_boot": [{ "player": "José Luis Dolgetta", "team": "VEN-1954-2006", "goals": 4 }],
-            "golden_ball": [{ "player": "Sergio Goycochea", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -747,8 +760,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "COL" },
         "statistics": { "total_matches": 26, "total_goals": 73, "attendance": 815483 },
         "awards": {
+            "golden_ball": [{ "player": "Leonardo Rodríguez", "team": "ARG" }],
             "golden_boot": [{ "player": "Gabriel Batistuta", "team": "ARG", "goals": 6 }],
-            "golden_ball": [{ "player": "Leonardo Rodríguez", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -797,8 +811,9 @@
         "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "PAR" },
         "statistics": { "total_matches": 26, "total_goals": 55, "attendance": 968976 },
         "awards": {
+            "golden_ball": [{ "player": "Rubén Sosa", "team": "URU" }],
             "golden_boot": [{ "player": "Bebeto", "team": "BRA", "goals": 6 }],
-            "golden_ball": [{ "player": "Rubén Sosa", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -852,8 +867,9 @@
         "final_standings": { "champions": "URU", "runners_up": "CHI", "third_place": "COL", "fourth_place": "ARG" },
         "statistics": { "total_matches": 13, "total_goals": 33, "attendance": 263000 },
         "awards": {
+            "golden_ball": [{ "player": "Carlos Valderrama", "team": "COL" }],
             "golden_boot": [{ "player": "Arnoldo Iguarán", "team": "COL", "goals": 4 }],
-            "golden_ball": [{ "player": "Carlos Valderrama", "team": "COL" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -910,12 +926,13 @@
         },
         "statistics": { "total_matches": 24, "total_goals": 55, "attendance": 1119738 },
         "awards": {
+            "golden_ball": [{ "player": "Enzo Francéscoli", "team": "URU" }],
             "golden_boot": [
                 { "player": "Jorge Burruchaga", "team": "ARG", "goals": 3 },
                 { "player": "Roberto Dinamite", "team": "BRA", "goals": 3 },
                 { "player": "Carlos Aguilera", "team": "URU", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Enzo Francéscoli", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -967,11 +984,12 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 63, "attendance": 1144000 },
         "awards": {
+            "golden_ball": [{ "player": "Carlos Caszely", "team": "CHI" }],
             "golden_boot": [
                 { "player": "Jorge Peredo", "team": "CHI", "goals": 4 },
                 { "player": "Eugenio Morel", "team": "PAR", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Carlos Caszely", "team": "CHI" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1023,11 +1041,12 @@
         },
         "statistics": { "total_matches": 25, "total_goals": 79, "attendance": 1053000 },
         "awards": {
+            "golden_ball": [{ "player": "Teófilo Cubillas", "team": "PER" }],
             "golden_boot": [
                 { "player": "Leopoldo Luque", "team": "ARG", "goals": 4 },
                 { "player": "Ernesto Díaz", "team": "COL", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Teófilo Cubillas", "team": "PER" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1076,8 +1095,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
         "statistics": { "total_matches": 15, "total_goals": 49 },
         "awards": {
+            "golden_ball": [{ "player": "Pedro Rocha", "team": "URU" }],
             "golden_boot": [{ "player": "Luis Artime", "team": "ARG", "goals": 5 }],
-            "golden_ball": [{ "player": "Pedro Rocha", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1125,8 +1145,9 @@
         "final_standings": { "champions": "BOL", "runners_up": "PAR", "third_place": "ARG", "fourth_place": "BRA" },
         "statistics": { "total_matches": 21, "total_goals": 91 },
         "awards": {
+            "golden_ball": [{ "player": "Ramiro Blacut", "team": "BOL" }],
             "golden_boot": [{ "player": "Carlos Alberto Raffo", "team": "ECU", "goals": 6 }],
-            "golden_ball": [{ "player": "Ramiro Blacut", "team": "BOL" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1174,8 +1195,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "ECU" },
         "statistics": { "total_matches": 10, "total_goals": 40 },
         "awards": {
+            "golden_ball": [{ "player": "Alcides Silveira", "team": "URU" }],
             "golden_boot": [{ "player": "José Sanfilippo", "team": "ARG", "goals": 6 }],
-            "golden_ball": [{ "player": "Alcides Silveira", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1228,8 +1250,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR", "fourth_place": "PER" },
         "statistics": { "total_matches": 21, "total_goals": 86 },
         "awards": {
-            "golden_boot": [{ "player": "Pele", "team": "BRA", "goals": 8 }],
-            "golden_ball": [{ "player": "Pele", "team": "BRA" }]
+            "golden_ball": [{ "player": "Pelé", "team": "BRA" }],
+            "golden_boot": [{ "player": "Pelé", "team": "BRA", "goals": 8 }],
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1277,11 +1300,12 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PER" },
         "statistics": { "total_matches": 21, "total_goals": 101 },
         "awards": {
+            "golden_ball": [{ "player": "Omar Sívori", "team": "ARG" }],
             "golden_boot": [
                 { "player": "Humberto Maschio", "team": "ARG", "goals": 9 },
                 { "player": "Javier Ambrois", "team": "URU", "goals": 9 }
             ],
-            "golden_ball": [{ "player": "Omar Sívori", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1329,8 +1353,9 @@
         "final_standings": { "champions": "URU", "runners_up": "CHI", "third_place": "ARG", "fourth_place": "BRA" },
         "statistics": { "total_matches": 15, "total_goals": 38, "attendance": 568000 },
         "awards": {
+            "golden_ball": [{ "player": "Óscar Míguez", "team": "URU" }],
             "golden_boot": [{ "player": "Enrique Hormazábal", "team": "CHI", "goals": 4 }],
-            "golden_ball": [{ "player": "Óscar Míguez", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1378,8 +1403,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "CHI", "third_place": "PER", "fourth_place": "URU" },
         "statistics": { "total_matches": 15, "total_goals": 73 },
         "awards": {
+            "golden_ball": [{ "player": "Enrique Hormazábal", "team": "CHI" }],
             "golden_boot": [{ "player": "Rodolfo Micheli", "team": "ARG", "goals": 8 }],
-            "golden_ball": [{ "player": "Enrique Hormazábal", "team": "CHI" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1427,8 +1453,9 @@
         "final_standings": { "champions": "PAR", "runners_up": "BRA", "third_place": "URU", "fourth_place": "CHI" },
         "statistics": { "total_matches": 22, "total_goals": 67 },
         "awards": {
+            "golden_ball": [{ "player": "Heriberto Herrera", "team": "PAR" }],
             "golden_boot": [{ "player": "Francisco Molina", "team": "CHI", "goals": 7 }],
-            "golden_ball": [{ "player": "Heriberto Herrera", "team": "PAR" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1476,8 +1503,9 @@
         "final_standings": { "champions": "BRA", "runners_up": "PAR", "third_place": "PER", "fourth_place": "BOL" },
         "statistics": { "total_matches": 29, "total_goals": 135 },
         "awards": {
-            "golden_boot": [{ "player": "Jair da Rosa Pinto", "team": "BRA", "goals": 9 }],
-            "golden_ball": [{ "player": "Ademir", "team": "BRA" }]
+            "golden_ball": [{ "player": "Ademir", "team": "BRA" }],
+            "golden_boot": [{ "player": "Jair", "team": "BRA", "goals": 9 }],
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1525,8 +1553,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "PAR", "third_place": "URU", "fourth_place": "CHI" },
         "statistics": { "total_matches": 28, "total_goals": 102 },
         "awards": {
+            "golden_ball": [{ "player": "José Manuel Moreno", "team": "ARG" }],
             "golden_boot": [{ "player": "Nicolás Falero", "team": "URU", "goals": 8 }],
-            "golden_ball": [{ "player": "José Manuel Moreno", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1574,8 +1603,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR", "fourth_place": "URU" },
         "statistics": { "total_matches": 15, "total_goals": 61 },
         "awards": {
+            "golden_ball": [{ "player": "Adolfo Pedernera", "team": "ARG" }],
             "golden_boot": [{ "player": "José María Medina", "team": "URU", "goals": 7 }],
-            "golden_ball": [{ "player": "Adolfo Pedernera", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1623,11 +1653,12 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "CHI", "fourth_place": "URU" },
         "statistics": { "total_matches": 21, "total_goals": 89 },
         "awards": {
+            "golden_ball": [{ "player": "Domingos da Guia", "team": "BRA" }],
             "golden_boot": [
                 { "player": "Norberto Méndez", "team": "ARG", "goals": 6 },
-                { "player": "Heleno de Freitasz", "team": "BRA", "goals": 6 }
+                { "player": "Heleno de Freitas", "team": "BRA", "goals": 6 }
             ],
-            "golden_ball": [{ "player": "Domingos da Guia", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1675,11 +1706,12 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "PAR" },
         "statistics": { "total_matches": 21, "total_goals": 81 },
         "awards": {
+            "golden_ball": [{ "player": "Obdulio Varela", "team": "URU" }],
             "golden_boot": [
                 { "player": "Herminio Masantonio", "team": "ARG", "goals": 7 },
                 { "player": "José Manuel Moreno", "team": "ARG", "goals": 7 }
             ],
-            "golden_ball": [{ "player": "Obdulio Varela", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1727,8 +1759,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "URU", "third_place": "CHI", "fourth_place": "PER" },
         "statistics": { "total_matches": 10, "total_goals": 32 },
         "awards": {
+            "golden_ball": [{ "player": "Sergio Livingstone", "team": "CHI" }],
             "golden_boot": [{ "player": "Juan Marvezzi", "team": "ARG", "goals": 5 }],
-            "golden_ball": [{ "player": "Sergio Livingstone", "team": "CHI" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1776,8 +1809,9 @@
         "final_standings": { "champions": "PER", "runners_up": "URU", "third_place": "PAR", "fourth_place": "CHI" },
         "statistics": { "total_matches": 10, "total_goals": 47 },
         "awards": {
+            "golden_ball": [{ "player": "Teodoro Fernández", "team": "PER" }],
             "golden_boot": [{ "player": "Teodoro Fernández", "team": "PER", "goals": 7 }],
-            "golden_ball": [{ "player": "Teodoro Fernández", "team": "PER" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1825,8 +1859,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PAR" },
         "statistics": { "total_matches": 16, "total_goals": 69 },
         "awards": {
+            "golden_ball": [{ "player": "Vicente de la Mata", "team": "ARG" }],
             "golden_boot": [{ "player": "Raúl Toro Julio", "team": "CHI", "goals": 7 }],
-            "golden_ball": [{ "player": "Vicente de la Mata", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1874,8 +1909,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PER", "fourth_place": "CHI" },
         "statistics": { "total_matches": 6, "total_goals": 18 },
         "awards": {
+            "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }],
             "golden_boot": [{ "player": "Herminio Masantonio", "team": "ARG", "goals": 4 }],
-            "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1923,8 +1959,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "PAR", "third_place": "URU", "fourth_place": "PER" },
         "statistics": { "total_matches": 6, "total_goals": 23 },
         "awards": {
+            "golden_ball": [{ "player": "Manuel Ferreira", "team": "ARG" }],
             "golden_boot": [{ "player": "Aurelio González", "team": "PAR", "goals": 5 }],
-            "golden_ball": [{ "player": "Manuel Ferreira", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -1972,6 +2009,7 @@
         "final_standings": { "champions": "ARG", "runners_up": "URU", "third_place": "PER", "fourth_place": "BOL" },
         "statistics": { "total_matches": 6, "total_goals": 37 },
         "awards": {
+            "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }],
             "golden_boot": [
                 { "player": "Alfredo Carricaberry", "team": "ARG", "goals": 3 },
                 { "player": "Segundo Luna", "team": "ARG", "goals": 3 },
@@ -1979,7 +2017,7 @@
                 { "player": "Pedro Petrone", "team": "URU", "goals": 3 },
                 { "player": "Héctor Scarone", "team": "URU", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2027,8 +2065,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "CHI", "fourth_place": "PAR" },
         "statistics": { "total_matches": 10, "total_goals": 55 },
         "awards": {
+            "golden_ball": [{ "player": "José Leandro Andrade", "team": "URU" }],
             "golden_boot": [{ "player": "David Arellano", "team": "CHI", "goals": 7 }],
-            "golden_ball": [{ "player": "José Leandro Andrade", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2076,8 +2115,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "PAR" },
         "statistics": { "total_matches": 6, "total_goals": 26 },
         "awards": {
+            "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }],
             "golden_boot": [{ "player": "Manuel Seoane", "team": "ARG", "goals": 6 }],
-            "golden_ball": [{ "player": "Manuel Seoane", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2125,8 +2165,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PAR", "fourth_place": "CHI" },
         "statistics": { "total_matches": 6, "total_goals": 15 },
         "awards": {
+            "golden_ball": [{ "player": "Pedro Petrone", "team": "URU" }],
             "golden_boot": [{ "player": "Pedro Petrone", "team": "URU", "goals": 4 }],
-            "golden_ball": [{ "player": "Pedro Petrone", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2174,11 +2215,12 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "PAR", "fourth_place": "BRA" },
         "statistics": { "total_matches": 6, "total_goals": 18 },
         "awards": {
+            "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }],
             "golden_boot": [
                 { "player": "Vicente Aguirre", "team": "ARG", "goals": 3 },
                 { "player": "Pedro Petrone", "team": "URU", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "José Nasazzi", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2226,8 +2268,9 @@
         "final_standings": { "champions": "BRA", "runners_up": "PAR", "third_place": "URU", "fourth_place": "ARG" },
         "statistics": { "total_matches": 11, "total_goals": 22 },
         "awards": {
+            "golden_ball": [{ "player": "Agostinho Fortes Filho", "team": "BRA" }],
             "golden_boot": [{ "player": "Julio Francia", "team": "ARG", "goals": 4 }],
-            "golden_ball": [{ "player": "Agostinho Fortes Filho", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2275,8 +2318,9 @@
         "final_standings": { "champions": "ARG", "runners_up": "BRA", "third_place": "URU", "fourth_place": "PAR" },
         "statistics": { "total_matches": 6, "total_goals": 14 },
         "awards": {
+            "golden_ball": [{ "player": "Américo Tesoriere", "team": "ARG" }],
             "golden_boot": [{ "player": "Julio Libonatti", "team": "ARG", "goals": 3 }],
-            "golden_ball": [{ "player": "Américo Tesoriere", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2324,11 +2368,12 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
         "statistics": { "total_matches": 6, "total_goals": 16 },
         "awards": {
+            "golden_ball": [{ "player": "José Piendibene", "team": "URU" }],
             "golden_boot": [
                 { "player": "José Pérez", "team": "URU", "goals": 3 },
                 { "player": "Ángel Romano", "team": "URU", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "José Piendibene", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2376,11 +2421,12 @@
         "final_standings": { "champions": "BRA", "runners_up": "URU", "third_place": "ARG", "fourth_place": "CHI" },
         "statistics": { "total_matches": 7, "total_goals": 27 },
         "awards": {
+            "golden_ball": [{ "player": "Arthur Friedenreich", "team": "BRA" }],
             "golden_boot": [
                 { "player": "Arthur Friedenreich", "team": "BRA", "goals": 4 },
                 { "player": "Neco", "team": "BRA", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Arthur Friedenreich", "team": "BRA" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2428,8 +2474,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
         "statistics": { "total_matches": 6, "total_goals": 21 },
         "awards": {
+            "golden_ball": [{ "player": "Héctor Scarone", "team": "URU" }],
             "golden_boot": [{ "player": "Ángel Romano", "team": "URU", "goals": 4 }],
-            "golden_ball": [{ "player": "Héctor Scarone", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -2477,8 +2524,9 @@
         "final_standings": { "champions": "URU", "runners_up": "ARG", "third_place": "BRA", "fourth_place": "CHI" },
         "statistics": { "total_matches": 6, "total_goals": 18 },
         "awards": {
+            "golden_ball": [{ "player": "Isabelino Gradín", "team": "URU" }],
             "golden_boot": [{ "player": "Isabelino Gradín", "team": "URU", "goals": 3 }],
-            "golden_ball": [{ "player": "Isabelino Gradín", "team": "URU" }]
+            "award_category_highlighted": ["ball"]
         }
     }
 ]

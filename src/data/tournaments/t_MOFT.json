@@ -44,7 +44,8 @@
         "final_standings": { "champions": "ESP_U23MNT", "runners_up": "FRA_U23MNT", "third_place": "MAR_U23MNT", "fourth_place": "EGY_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 96, "attendance": 821961 },
         "awards": {
-            "golden_boot": [{ "player": "Soufiane Rahimi", "team": "MAR_U23MNT", "goals": 8 }]
+            "golden_boot": [{ "player": "Soufiane Rahimi", "team": "MAR_U23MNT", "goals": 8 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -92,7 +93,8 @@
         "final_standings": { "champions": "BRA_U23MNT", "runners_up": "ESP_U23MNT", "third_place": "MEX_U23MNT", "fourth_place": "JPN_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 93, "attendance": 14291 },
         "awards": {
-            "golden_boot": [{ "player": "Richarlison", "team": "BRA_U23MNT", "goals": 5 }]
+            "golden_boot": [{ "player": "Richarlison", "team": "BRA_U23MNT", "goals": 5 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -168,7 +170,8 @@
                 { "player": "Serge Gnabry", "team": "GER_U23MNT", "goals": 6 },
                 { "player": "Nils Petersen", "team": "GER_U23MNT", "goals": 6 }
             ],
-            "fair_play_team": ["DEN_U23MNT"]
+            "fair_play_team": ["DEN_U23MNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -216,7 +219,8 @@
         "statistics": { "total_matches": 32, "total_goals": 76, "attendance": 1525134 },
         "awards": {
             "golden_boot": [{ "player": "Leandro Damião", "team": "BRA_U23MNT", "goals": 6 }],
-            "fair_play_team": ["JPN_U23MNT"]
+            "fair_play_team": ["JPN_U23MNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -269,7 +273,8 @@
         "statistics": { "total_matches": 32, "total_goals": 75, "attendance": 1404254 },
         "awards": {
             "golden_boot": [{ "player": "Giuseppe Rossi", "team": "ITA_U23MNT", "goals": 4 }],
-            "fair_play_team": ["CIV_U23MNT"]
+            "fair_play_team": ["CIV_U23MNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -317,7 +322,8 @@
         "statistics": { "total_matches": 32, "total_goals": 101, "attendance": 401415 },
         "awards": {
             "golden_boot": [{ "player": "Carlos Tevez", "team": "ARG_U23MNT", "goals": 8 }],
-            "fair_play_team": ["ARG_U23MNT", "IRQ-2004-2008_U23MNT"]
+            "fair_play_team": ["ARG_U23MNT", "IRQ-2004-2008_U23MNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -366,7 +372,8 @@
         "statistics": { "total_matches": 32, "total_goals": 103, "attendance": 1034500 },
         "awards": {
             "golden_boot": [{ "player": "Iván Zamorano", "team": "CHI_U23MNT", "goals": 6 }],
-            "fair_play_team": ["BRA_U23MNT"]
+            "fair_play_team": ["BRA_U23MNT"],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -417,7 +424,8 @@
             "golden_boot": [
                 { "player": "Bebeto", "team": "BRA_U23MNT", "goals": 6 },
                 { "player": "Hernán Crespo", "team": "ARG_U23MNT", "goals": 6 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -464,7 +472,8 @@
         "final_standings": { "champions": "ESP_U23MNT", "runners_up": "POL_U23MNT", "third_place": "GHA_U23MNT", "fourth_place": "AUS_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 87, "attendance": 466300 },
         "awards": {
-            "golden_boot": [{ "player": "Andrzej Juskowiak", "team": "POL_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Andrzej Juskowiak", "team": "POL_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -511,7 +520,8 @@
         "final_standings": { "champions": "URS_U23MNT", "runners_up": "BRA_U23MNT", "third_place": "GER-1949-1990_U23MNT", "fourth_place": "ITA_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 95, "attendance": 729000 },
         "awards": {
-            "golden_boot": [{ "player": "Romario", "team": "BRA_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Romário", "team": "BRA_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -563,7 +573,8 @@
                 { "player": "Borislav Cvetković", "team": "YUG-1963-1992_U23MNT", "goals": 5 },
                 { "player": "Stjepan Deverić", "team": "YUG-1963-1992_U23MNT", "goals": 5 },
                 { "player": "Daniel Xuereb", "team": "FRA_U23MNT", "goals": 5 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -610,7 +621,8 @@
         "final_standings": { "champions": "TCH_U23MNT", "runners_up": "GDR_U23MNT", "third_place": "URS_U23MNT", "fourth_place": "YUG-1963-1992_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 82, "attendance": 1821624 },
         "awards": {
-            "golden_boot": [{ "player": "Sergey Andreyev", "team": "URS_U23MNT", "goals": 5 }]
+            "golden_boot": [{ "player": "Sergey Andreyev", "team": "URS_U23MNT", "goals": 5 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -657,7 +669,8 @@
         "final_standings": { "champions": "GDR_U23MNT", "runners_up": "POL_U23MNT", "third_place": "URS_U23MNT", "fourth_place": "BRA_U23MNT" },
         "statistics": { "total_matches": 23, "total_goals": 66, "attendance": 597574 },
         "awards": {
-            "golden_boot": [{ "player": "Andrzej Szarmach", "team": "POL_U23MNT", "goals": 6 }]
+            "golden_boot": [{ "player": "Andrzej Szarmach", "team": "POL_U23MNT", "goals": 6 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -715,7 +728,8 @@
         },
         "statistics": { "total_matches": 38, "total_goals": 135, "attendance": 795433 },
         "awards": {
-            "golden_boot": [{ "player": "Kazimierz Deyna", "team": "POL_U23MNT", "goals": 9 }]
+            "golden_boot": [{ "player": "Kazimierz Deyna", "team": "POL_U23MNT", "goals": 9 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -763,7 +777,8 @@
         "final_standings": { "champions": "HUN_U23MNT", "runners_up": "BUL-1967-1971_U23MNT", "third_place": "JPN_U23MNT", "fourth_place": "MEX_U23MNT" },
         "statistics": { "total_matches": 32, "total_goals": 116 },
         "awards": {
-            "golden_boot": [{ "player": "Kunishige Kamamoto", "team": "JPN_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Kunishige Kamamoto", "team": "JPN_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -815,7 +830,8 @@
         },
         "statistics": { "total_matches": 29, "total_goals": 123 },
         "awards": {
-            "golden_boot": [{ "player": "Ferenc Bene", "team": "HUN_U23MNT", "goals": 12 }]
+            "golden_boot": [{ "player": "Ferenc Bene", "team": "HUN_U23MNT", "goals": 12 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -868,7 +884,8 @@
         "final_standings": { "champions": "YUG-1945-1963_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "HUN_U23MNT", "fourth_place": "ITA_U23MNT" },
         "statistics": { "total_matches": 28, "total_goals": 120 },
         "awards": {
-            "golden_boot": [{ "player": "Milan Galić", "team": "YUG-1945-1963_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Milan Galić", "team": "YUG-1945-1963_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -925,7 +942,8 @@
                 { "player": "Neville D'Souza", "team": "IND_U23MNT", "goals": 4 },
                 { "player": "Todor Veselinović", "team": "YUG-1945-1963_U23MNT", "goals": 4 },
                 { "player": "Dimitar Milanov", "team": "BUL-1948-1967_U23MNT", "goals": 4 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -982,7 +1000,8 @@
         },
         "statistics": { "total_matches": 26, "total_goals": 135 },
         "awards": {
-            "golden_boot": [{ "player": "Branko Zebec", "team": "YUG-1945-1963_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Branko Zebec", "team": "YUG-1945-1963_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1032,7 +1051,8 @@
             "golden_boot": [
                 { "player": "John Hansen", "team": "DEN_U23MNT", "goals": 7 },
                 { "player": "Gunnar Nordahl", "team": "SWE_U23MNT", "goals": 7 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1079,7 +1099,8 @@
         "final_standings": { "champions": "ITA-1861-1946_U23MNT", "runners_up": "AUT_U23MNT", "third_place": "NOR_U23MNT", "fourth_place": "POL_U23MNT" },
         "statistics": { "total_matches": 16, "total_goals": 78, "attendance": 507469 },
         "awards": {
-            "golden_boot": [{ "player": "Annibale Frossi", "team": "ITA-1861-1946_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Annibale Frossi", "team": "ITA-1861-1946_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1132,7 +1153,8 @@
         },
         "statistics": { "total_matches": 22, "total_goals": 128 },
         "awards": {
-            "golden_boot": [{ "player": "Domingo Tarasconi", "team": "ARG_U23MNT", "goals": 11 }]
+            "golden_boot": [{ "player": "Domingo Tarasconi", "team": "ARG_U23MNT", "goals": 11 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1185,7 +1207,8 @@
         "final_standings": { "champions": "URU_U23MNT", "runners_up": "SUI_U23MNT", "third_place": "SWE_U23MNT", "fourth_place": "NED_U23MNT" },
         "statistics": { "total_matches": 24, "total_goals": 96, "attendance": 210424 },
         "awards": {
-            "golden_boot": [{ "player": "Pedro Petrone", "team": "URU_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Pedro Petrone", "team": "URU_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1238,7 +1261,8 @@
         },
         "statistics": { "total_matches": 17, "total_goals": 70, "attendance": 150600 },
         "awards": {
-            "golden_boot": [{ "player": "Herbert Karlsson", "team": "SWE_U23MNT", "goals": 7 }]
+            "golden_boot": [{ "player": "Herbert Karlsson", "team": "SWE_U23MNT", "goals": 7 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1287,7 +1311,8 @@
         "final_standings": { "champions": "GBR_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "NED_U23MNT", "fourth_place": "FIN-1809-1917_U23MNT" },
         "statistics": { "total_matches": 17, "total_goals": 94 },
         "awards": {
-            "golden_boot": [{ "player": "Gottfried Fuchs", "team": "GER-1866-1918_U23MNT", "goals": 10 }]
+            "golden_boot": [{ "player": "Gottfried Fuchs", "team": "GER-1866-1918_U23MNT", "goals": 10 }],
+            "award_category_highlighted": ["boot"]
         }
     },
     {
@@ -1335,7 +1360,8 @@
         "final_standings": { "champions": "GBR_U23MNT", "runners_up": "DEN_U23MNT", "third_place": "NED_U23MNT", "fourth_place": "SWE_U23MNT" },
         "statistics": { "total_matches": 6, "total_goals": 48 },
         "awards": {
-            "golden_boot": [{ "player": "Sophus Nielsen", "team": "DEN_U23MNT", "goals": 11 }]
+            "golden_boot": [{ "player": "Sophus Nielsen", "team": "DEN_U23MNT", "goals": 11 }],
+            "award_category_highlighted": ["boot"]
         }
     }
 ]

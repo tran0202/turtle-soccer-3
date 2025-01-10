@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
-import { getTeamFlagId, getTeamName } from '../core/TeamHelper'
-import { SharedBronzeTooltip } from '../core/TooltipHelper'
+import { getTeamFlagId, getPlayerFlagId, getTeamName, getCapLastName } from '../core/TeamHelper'
+import { SharedBronzeTooltip, GoldenBallRejectedTooltip } from '../core/TooltipHelper'
 
 const HeroCarousel = (props) => {
     const { images, id } = props
@@ -276,15 +276,20 @@ const TournamentDetails = (props) => {
 const FinalStandingRow = (props) => {
     const { id, label, config } = props
     const { competition } = config
+    const championIcon = label.includes('Champions') || label.includes('Gold')
+    const runnersupIcon = label.includes('Runners-up') || label.includes('Silver')
+    const fourthIcon = label.includes('Fourth')
     return (
         <React.Fragment>
             <Row className="margin-tb-sm margin-lr-sm">
                 <Col className="box-sm">
                     <Row className="team-name">
-                        <Col xs={{ size: 4 }} className="padding-tb-sm padding-left-lg">
-                            <b>{label}</b>
+                        <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
+                            {championIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/1st-place.png'} alt={`1st`} title={`1st`} />}
+                            {runnersupIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/2nd-place.png'} alt={`1st`} title={`1st`} />}
+                            {fourthIcon && <span className="padding-left-md-2"> </span>} <b>{label}</b>
                         </Col>
-                        <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                        <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-md">
                             {getTeamFlagId(id, competition)} {getTeamName(id, competition)}
                         </Col>
                     </Row>
@@ -298,15 +303,17 @@ const BronzeRow = (props) => {
     const { id, label, config } = props
     const { competition, final_standings, shared_bronze } = config
     const { third_place_text } = final_standings
+    const thirdIcon = label.includes('Third') || label.includes('Bronze')
     return (
         <React.Fragment>
             <Row className="margin-tb-sm margin-lr-sm">
                 <Col className="box-sm">
                     <Row className="team-name">
-                        <Col xs={{ size: 4 }} className="padding-tb-sm padding-left-lg">
+                        <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
+                            {thirdIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`1st`} title={`1st`} />}{' '}
                             <b>{label}</b>
                         </Col>
-                        <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                        <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-lg">
                             {!shared_bronze && (
                                 <React.Fragment>
                                     {getTeamFlagId(id, competition)} {getTeamName(id, competition)}
@@ -340,7 +347,7 @@ const FinalStandings = (props) => {
     const is_fourth_place = final_standings.fourth_place ? true : false
     const championLabel = is_olympic ? 'Gold Medal' : 'Champions'
     const runnnersupLabel = is_olympic ? 'Silver Medal' : 'Runners-up'
-    const thirdPlaceLabel = is_olympic ? 'Bronze Medal' : 'Third-place'
+    const thirdPlaceLabel = is_olympic ? 'Bronze Medal' : 'Third place'
     return (
         <React.Fragment>
             <Row>
@@ -349,17 +356,299 @@ const FinalStandings = (props) => {
             <FinalStandingRow id={champions} label={championLabel} config={config} />
             <FinalStandingRow id={runners_up} label={runnnersupLabel} config={config} />
             {!is_semi_finalist1 && <BronzeRow id={third_place} label={thirdPlaceLabel} config={config} />}
-            {!shared_bronze && !is_semi_finalist2 && is_fourth_place && <FinalStandingRow id={fourth_place} label="Fourth-place" config={config} />}
+            {!shared_bronze && !is_semi_finalist2 && is_fourth_place && <FinalStandingRow id={fourth_place} label="Fourth place" config={config} />}
+        </React.Fragment>
+    )
+}
+
+const FairPlayBlock = (props) => {
+    const { id, label, config, highlighted } = props
+    const { competition } = config
+    return (
+        <React.Fragment>
+            {id.map((i, index) => (
+                <Row key={index} className="margin-tb-sm margin-lr-sm">
+                    <Col className={`box-sm ${highlighted ? 'ltblue-striped' : ''}`}>
+                        <Row className="team-name">
+                            <Col xs={{ size: 4 }} className="padding-tb-sm padding-left-lg">
+                                {index === 0 && <span className="weight-medium padding-tb-xs padding-lr-sm">{label}</span>}
+                            </Col>
+                            <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                                {getTeamFlagId(i, competition)} {getTeamName(i, competition)}
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            ))}
+        </React.Fragment>
+    )
+}
+
+const AwardRow = (props) => {
+    const { index, label, award, highlighted, config } = props
+    const { competition, awards } = config
+    const { ball_label, boot_label, glove_label } = awards
+    const { player, team, club, club2, goals, assists, minutes, rejected, rejected_notes } = award
+    const isClubCompetition = competition.team_type_id === 'CLUB'
+    const labelHighlighted =
+        label.includes('Gold') || label.includes('BestPlayer') || label.includes('Scorer1')
+            ? 'gold'
+            : label.includes('Silver') || label.includes('Scorer2')
+            ? 'silver'
+            : label.includes('Bronze') || label.includes('Scorer3')
+            ? 'bronze'
+            : ''
+    let convertedLabel = label
+    if (ball_label) {
+        convertedLabel = label.includes('Ball') ? ball_label : label
+    }
+    if (boot_label && label.includes('Boot')) {
+        if (boot_label === 'Top goalscorer') {
+            convertedLabel = label.includes('Gold') ? 'TopGoalscorer' : label.includes('Silver') ? 'Runner-up' : label.includes('Bronze') ? 'Third place' : ''
+            if (label.includes('Boots')) {
+                convertedLabel = label.includes('Gold')
+                    ? 'TopGoalscorers'
+                    : label.includes('Silver')
+                    ? 'Runners-up'
+                    : label.includes('Bronze')
+                    ? 'Third places'
+                    : ''
+            }
+        }
+        if (boot_label === 'Top Scorer') {
+            convertedLabel = label.includes('Gold') ? 'Top Scorer' : ''
+            if (label.includes('Boots')) {
+                convertedLabel = label.includes('Gold') ? 'Top Scorers' : ''
+            }
+        }
+        if (boot_label === 'shoe') {
+            convertedLabel = label.includes('Gold') ? 'Golden Shoe' : label.includes('Silver') ? 'Silver Shoe' : label.includes('Bronze') ? 'Bronze Shoe' : ''
+            if (label.includes('Boots')) {
+                convertedLabel = label.includes('Gold')
+                    ? 'Golden Shoes'
+                    : label.includes('Silver')
+                    ? 'Silver Shoes'
+                    : label.includes('Bronze')
+                    ? 'Bronze Shoes'
+                    : ''
+            }
+        }
+    }
+    if (glove_label && label.includes('Glove')) {
+        convertedLabel = glove_label
+        if (label.includes('Gloves')) {
+            convertedLabel = convertedLabel.concat('s')
+        }
+    }
+    return (
+        <React.Fragment>
+            <Row className="margin-tb-sm margin-lr-sm">
+                <Col className={`box-sm ${highlighted ? 'ltblue-striped' : ''}`}>
+                    <Row className="team-name">
+                        <Col xs={{ size: 4 }} className="padding-top-sm-2 padding-bottom-sm padding-left-lg">
+                            {index === 0 && (
+                                <React.Fragment>
+                                    <span className={`weight-medium padding-tb-xs padding-lr-sm ${labelHighlighted}`}>
+                                        {convertedLabel}
+                                        {(label.includes('Ball') || label.includes('BestPlayer')) && <i className="icofont-soccer"></i>}
+                                        {(label.includes('Boot') || label.includes('Scorer')) && <i className="icofont-kick"></i>}
+                                        {label.includes('Glove') && <i className="icofont-goal-keeper"></i>}
+                                    </span>
+                                </React.Fragment>
+                            )}
+                        </Col>
+                        <Col xs={{ size: 8 }} className="padding-tb-sm padding-lr-lg">
+                            {isClubCompetition ? getPlayerFlagId(club, club2, team, competition) : getTeamFlagId(team, competition)} {getCapLastName(player)}{' '}
+                            {goals && (
+                                <React.Fragment>
+                                    ({goals} goals
+                                    {assists && (
+                                        <React.Fragment>
+                                            , {assists} {assists === 1 ? 'assist' : 'assists'}
+                                        </React.Fragment>
+                                    )}
+                                    {minutes && <React.Fragment>, {minutes} minutes</React.Fragment>})
+                                </React.Fragment>
+                            )}
+                            {rejected && <GoldenBallRejectedTooltip target="goldenBallTooltip" notes={rejected_notes} />}
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+}
+
+const AwardBlock = (props) => {
+    const { id, label, config, highlighted } = props
+    return (
+        <React.Fragment>
+            {id.map((i, index) => (
+                <AwardRow key={index} index={index} label={label} award={i} highlighted={highlighted} config={config} />
+            ))}
+        </React.Fragment>
+    )
+}
+
+const BestDefenderCategory = (props) => {
+    const { best_defender, highlighted, config } = props
+    const best_defender_label = best_defender && best_defender.length > 1 ? 'Best Defenders' : 'Best Defender'
+    return (
+        <React.Fragment>
+            {best_defender && <AwardBlock id={best_defender} label={best_defender_label} highlighted={highlighted} config={config} />}
+        </React.Fragment>
+    )
+}
+
+const BestMidfielderCategory = (props) => {
+    const { best_midfielder, highlighted, config } = props
+    const best_midfielder_label = best_midfielder && best_midfielder.length > 1 ? 'Best Midfielders' : 'Best Midfielder'
+    return (
+        <React.Fragment>
+            {best_midfielder && <AwardBlock id={best_midfielder} label={best_midfielder_label} highlighted={highlighted} config={config} />}
+        </React.Fragment>
+    )
+}
+
+const BestForwardCategory = (props) => {
+    const { best_forward, highlighted, config } = props
+    const best_forward_label = best_forward && best_forward.length > 1 ? 'Best Forwards' : 'Best Forward'
+    return (
+        <React.Fragment>{best_forward && <AwardBlock id={best_forward} label={best_forward_label} highlighted={highlighted} config={config} />}</React.Fragment>
+    )
+}
+
+const FinalBestPlayerCategory = (props) => {
+    const { final_best_player, highlighted, config } = props
+    const final_best_player_label = final_best_player && final_best_player.length > 1 ? 'FinalBestPlayers' : 'FinalBestPlayer'
+    return (
+        <React.Fragment>
+            {final_best_player && <AwardBlock id={final_best_player} label={final_best_player_label} highlighted={highlighted} config={config} />}
+        </React.Fragment>
+    )
+}
+
+const FinalTopScorerCategory = (props) => {
+    const { final_top_scorer1, final_top_scorer2, final_top_scorer3, highlighted, config } = props
+    const final_top_scorer1_label = final_top_scorer1 && final_top_scorer1.length > 1 ? 'FinalTopScorers1' : 'FinalTopScorer1'
+    const final_top_scorer2_label = final_top_scorer2 && final_top_scorer2.length > 1 ? 'FinalTopScorers2' : 'FinalTopScorer2'
+    const final_top_scorer3_label = final_top_scorer3 && final_top_scorer3.length > 1 ? 'FinalTopScorers3' : 'FinalTopScorer3'
+    return (
+        <React.Fragment>
+            {final_top_scorer1 && <AwardBlock id={final_top_scorer1} label={final_top_scorer1_label} highlighted={highlighted} config={config} />}
+            {final_top_scorer2 && <AwardBlock id={final_top_scorer2} label={final_top_scorer2_label} highlighted={highlighted} config={config} />}
+            {final_top_scorer3 && <AwardBlock id={final_top_scorer3} label={final_top_scorer3_label} highlighted={highlighted} config={config} />}
+        </React.Fragment>
+    )
+}
+
+const FinalBestYoungPlayerCategory = (props) => {
+    const { final_best_young_player, highlighted, config } = props
+    const final_best_young_player_label = final_best_young_player && final_best_young_player.length > 1 ? 'FinalYoungPlayers' : 'FinalYoungPlayer'
+    return (
+        <React.Fragment>
+            {final_best_young_player && (
+                <AwardBlock id={final_best_young_player} label={final_best_young_player_label} highlighted={highlighted} config={config} />
+            )}
+        </React.Fragment>
+    )
+}
+
+const GloveCategory = (props) => {
+    const { golden_glove, highlighted, config } = props
+    const golden_glove_label = golden_glove && golden_glove.length > 1 ? 'Golden Gloves' : 'Golden Glove'
+    return (
+        <React.Fragment>{golden_glove && <AwardBlock id={golden_glove} label={golden_glove_label} highlighted={highlighted} config={config} />}</React.Fragment>
+    )
+}
+
+const BootCategory = (props) => {
+    const { golden_boot, silver_boot, bronze_boot, highlighted, config } = props
+    const golden_boot_label = golden_boot && golden_boot.length > 1 ? 'Golden Boots' : 'Golden Boot'
+    const silver_boot_label = silver_boot && silver_boot.length > 1 ? 'Silver Boots' : 'Silver Boot'
+    const bronze_boot_label = bronze_boot && bronze_boot.length > 1 ? 'Bronze Boots' : 'Bronze Boot'
+    return (
+        <React.Fragment>
+            {golden_boot && <AwardBlock id={golden_boot} label={golden_boot_label} highlighted={highlighted} config={config} />}
+            {silver_boot && <AwardBlock id={silver_boot} label={silver_boot_label} highlighted={highlighted} config={config} />}
+            {bronze_boot && <AwardBlock id={bronze_boot} label={bronze_boot_label} highlighted={highlighted} config={config} />}
+        </React.Fragment>
+    )
+}
+
+const BallCategory = (props) => {
+    const { golden_ball, highlighted, config } = props
+    return (
+        <React.Fragment>
+            {golden_ball && golden_ball.length > 0 && (
+                <AwardRow index={0} award={golden_ball[0]} label="Golden Ball" highlighted={highlighted} config={config} />
+            )}
+            {golden_ball && golden_ball.length > 1 && (
+                <AwardRow index={0} award={golden_ball[1]} label="Silver Ball" highlighted={highlighted} config={config} />
+            )}
+            {golden_ball && golden_ball.length > 2 && (
+                <AwardRow index={0} award={golden_ball[2]} label="Bronze Ball" highlighted={highlighted} config={config} />
+            )}
         </React.Fragment>
     )
 }
 
 const TournamentAwards = (props) => {
+    const { config } = props
+    const { awards } = config
+    const {
+        golden_boot,
+        silver_boot,
+        bronze_boot,
+        golden_ball,
+        best_young_player,
+        golden_glove,
+        fair_play_team,
+        final_best_player,
+        final_top_scorer1,
+        final_top_scorer2,
+        final_top_scorer3,
+        final_best_young_player,
+        best_defender,
+        best_midfielder,
+        best_forward,
+        award_category_highlighted,
+    } = awards
+    const is_ball_highlighted = award_category_highlighted && award_category_highlighted.includes('ball')
+    const is_boot_highlighted = award_category_highlighted && award_category_highlighted.includes('boot')
+    const is_glove_highlighted = award_category_highlighted && award_category_highlighted.includes('glove')
+    const is_young_highlighted = award_category_highlighted && award_category_highlighted.includes('young')
+    const is_fair_highlighted = award_category_highlighted && award_category_highlighted.includes('fair')
+    const is_final_ball_highlighted = award_category_highlighted && award_category_highlighted.includes('final_ball')
+    const is_final_boot_highlighted = award_category_highlighted && award_category_highlighted.includes('final_boot')
+    const is_final_young_highlighted = award_category_highlighted && award_category_highlighted.includes('final_young')
+    const is_best_defender_highlighted = award_category_highlighted && award_category_highlighted.includes('defender')
+    const is_best_midfielder_highlighted = award_category_highlighted && award_category_highlighted.includes('midfielder')
+    const is_best_forward_highlighted = award_category_highlighted && award_category_highlighted.includes('forward')
     return (
         <React.Fragment>
             <Row>
                 <Col className="award-header">Tournament Awards</Col>
             </Row>
+            <BallCategory golden_ball={golden_ball} highlighted={is_ball_highlighted} config={config} />
+            <BootCategory golden_boot={golden_boot} silver_boot={silver_boot} bronze_boot={bronze_boot} highlighted={is_boot_highlighted} config={config} />
+            {golden_glove && <GloveCategory golden_glove={golden_glove} highlighted={is_glove_highlighted} config={config} />}
+            {best_young_player && <AwardRow index={0} award={best_young_player} label="BestYoungPlayer" highlighted={is_young_highlighted} config={config} />}
+            {fair_play_team && <FairPlayBlock id={fair_play_team} label="Fair Play" highlighted={is_fair_highlighted} config={config} />}
+            {final_best_player && <FinalBestPlayerCategory final_best_player={final_best_player} highlighted={is_final_ball_highlighted} config={config} />}
+            <FinalTopScorerCategory
+                final_top_scorer1={final_top_scorer1}
+                final_top_scorer2={final_top_scorer2}
+                final_top_scorer3={final_top_scorer3}
+                highlighted={is_final_boot_highlighted}
+                config={config}
+            />
+            {final_best_young_player && (
+                <FinalBestYoungPlayerCategory final_best_young_player={final_best_young_player} highlighted={is_final_young_highlighted} config={config} />
+            )}
+            {best_defender && <BestDefenderCategory best_defender={best_defender} highlighted={is_best_defender_highlighted} config={config} />}
+            {best_midfielder && <BestMidfielderCategory best_midfielder={best_midfielder} highlighted={is_best_midfielder_highlighted} config={config} />}
+            {best_forward && <BestForwardCategory best_forward={best_forward} highlighted={is_best_forward_highlighted} config={config} />}
         </React.Fragment>
     )
 }
@@ -375,12 +664,12 @@ class Awards extends React.Component {
                         <HeroCarousel images={hero_images} id={id} />
                     </Col>
                     <Col className="competition-box">
-                        <TournamentDetails tournament={tournament} config={config} />
+                        <TournamentDetails config={config} />
                     </Col>
                 </Row>
                 <Row className="mt-4 mb-4">
                     <Col xs={{ size: 5 }} className="award-box">
-                        <FinalStandings tournament={tournament} config={config} />
+                        <FinalStandings config={config} />
                     </Col>
                     <Col className="award-box">
                         <TournamentAwards tournament={tournament} config={config} />

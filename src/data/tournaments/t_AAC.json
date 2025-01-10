@@ -49,7 +49,17 @@
             "semi_finalist2": "KOR",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are ranked on goal difference in the semi-finals."
         },
-        "statistics": { "total_matches": 51, "total_goals": 132, "attendance": 1507790 }
+        "statistics": { "total_matches": 51, "total_goals": 132, "attendance": 1507790 },
+        "awards": {
+            "golden_ball": [{ "player": "Akram Afif", "team": "QAT" }],
+            "golden_boot": [{ "player": "Akram Afif", "team": "QAT", "goals": 8 }],
+            "golden_glove": [{ "player": "Meshaal Barsham", "team": "QAT" }],
+            "fair_play_team": ["QAT"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
+        }
     },
     {
         "id": "AAC2019",
@@ -102,10 +112,14 @@
         },
         "statistics": { "total_matches": 51, "total_goals": 130, "attendance": 644307 },
         "awards": {
-            "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 9 }],
             "golden_ball": [{ "player": "Almoez Ali", "team": "QAT" }],
-            "golden_glove": [{ "player": "Saad Al Sheeb", "team": "QAT" }],
-            "fair_play_team": ["JPN"]
+            "golden_boot": [{ "player": "Almoez Ali", "team": "QAT", "goals": 9 }],
+            "golden_glove": [{ "player": "Saad Al-Sheeb", "team": "QAT" }],
+            "fair_play_team": ["JPN"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -152,10 +166,14 @@
         "final_standings": { "champions": "AUS", "runners_up": "KOR", "third_place": "UAE", "fourth_place": "IRQ" },
         "statistics": { "total_matches": 32, "total_goals": 85, "attendance": 705705 },
         "awards": {
-            "golden_boot": [{ "player": "Ali Mabkhout", "team": "UAE", "goals": 5 }],
             "golden_ball": [{ "player": "Massimo Luongo", "team": "AUS" }],
+            "golden_boot": [{ "player": "Ali Mabkhout", "team": "UAE", "goals": 5 }],
             "golden_glove": [{ "player": "Mathew Ryan", "team": "AUS" }],
-            "fair_play_team": ["AUS"]
+            "fair_play_team": ["AUS"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -203,9 +221,12 @@
         "final_standings": { "champions": "JPN", "runners_up": "AUS", "third_place": "KOR", "fourth_place": "UZB" },
         "statistics": { "total_matches": 32, "total_goals": 90, "attendance": 405361 },
         "awards": {
-            "golden_boot": [{ "player": "Koo Ja-cheol", "team": "KOR", "goals": 5 }],
             "golden_ball": [{ "player": "Keisuke Honda", "team": "JPN" }],
-            "fair_play_team": ["KOR"]
+            "golden_boot": [{ "player": "Koo Ja-cheol", "team": "KOR", "goals": 5 }],
+            "fair_play_team": ["KOR"],
+            "award_category_highlighted": ["ball", "fair"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -253,15 +274,18 @@
         "final_standings": { "champions": "IRQ-2004-2008", "runners_up": "KSA", "third_place": "KOR", "fourth_place": "JPN" },
         "statistics": { "total_matches": 32, "total_goals": 84, "attendance": 724222 },
         "awards": {
+            "golden_ball": [{ "player": "Younis Mahmoud", "team": "IRQ-2004-2008" }],
             "golden_boot": [
                 { "player": "Younis Mahmoud", "team": "IRQ-2004-2008", "goals": 4 },
                 { "player": "Naohiro Takahara", "team": "JPN", "goals": 4 },
                 { "player": "Yasser Al-Qahtani", "team": "KSA", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Younis Mahmoud", "team": "IRQ-2004-2008" }],
             "golden_glove": [{ "player": "Noor Sabri", "team": "IRQ-2004-2008" }],
-            "best_defender": [{ "player": "Bassim Abbas", "team": "IRQ-2004-2008" }],
-            "fair_play_team": ["JPN"]
+            "fair_play_team": ["JPN"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -309,12 +333,15 @@
         "final_standings": { "champions": "JPN", "runners_up": "CHN", "third_place": "IRN", "fourth_place": "BHR" },
         "statistics": { "total_matches": 32, "total_goals": 96, "attendance": 937650 },
         "awards": {
+            "golden_ball": [{ "player": "Shunsuke Nakamura", "team": "JPN" }],
             "golden_boot": [
                 { "player": "A'ala Hubail", "team": "BHR", "goals": 5 },
                 { "player": "Ali Karimi", "team": "IRN", "goals": 5 }
             ],
-            "golden_ball": [{ "player": "Shunsuke Nakamura", "team": "JPN" }],
-            "fair_play_team": ["CHN"]
+            "fair_play_team": ["CHN"],
+            "award_category_highlighted": ["ball", "fair"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -362,11 +389,14 @@
         "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "KOR", "fourth_place": "CHN" },
         "statistics": { "total_matches": 26, "total_goals": 77, "attendance": 276488 },
         "awards": {
-            "golden_boot": [{ "player": "Lee Dong-Gook", "team": "KOR", "goals": 6 }],
             "golden_ball": [{ "player": "Hiroshi Nanami", "team": "JPN" }],
+            "golden_boot": [{ "player": "Lee Dong-Gook", "team": "KOR", "goals": 6 }],
             "golden_glove": [{ "player": "Jiang Jin", "team": "CHN" }],
-            "best_defender": [{ "player": "Ryuzo Morioka", "team": "JPN" }],
-            "fair_play_team": ["KSA"]
+            "fair_play_team": ["KSA"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -415,10 +445,14 @@
         "final_standings": { "champions": "KSA", "runners_up": "UAE", "third_place": "IRN", "fourth_place": "KUW" },
         "statistics": { "total_matches": 26, "total_goals": 80, "attendance": 448000 },
         "awards": {
-            "golden_boot": [{ "player": "Ali Daei", "team": "IRN", "goals": 8 }],
             "golden_ball": [{ "player": "Khodadad Azizi", "team": "IRN" }],
+            "golden_boot": [{ "player": "Ali Daei", "team": "IRN", "goals": 8 }],
             "golden_glove": [{ "player": "Mohamed Al-Deayea", "team": "KSA" }],
-            "fair_play_team": ["IRN"]
+            "fair_play_team": ["IRN"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -465,8 +499,11 @@
         "final_standings": { "champions": "JPN", "runners_up": "KSA", "third_place": "CHN", "fourth_place": "UAE" },
         "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 316496 },
         "awards": {
+            "golden_ball": [{ "player": "Kazuyoshi Miura", "team": "JPN" }],
             "golden_boot": [{ "player": "Fahad Al-Bishi", "team": "KSA", "goals": 3 }],
-            "golden_ball": [{ "player": "Kazuyoshi Miura", "team": "JPN" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -513,10 +550,13 @@
         "final_standings": { "champions": "KSA", "runners_up": "KOR", "third_place": "IRN", "fourth_place": "CHN" },
         "statistics": { "total_matches": 24, "total_goals": 40 },
         "awards": {
-            "golden_boot": [{ "player": "Lee Tae-Ho", "team": "KOR", "goals": 3 }],
             "golden_ball": [{ "player": "Kim Joo-Sung", "team": "KOR" }],
+            "golden_boot": [{ "player": "Lee Tae-Ho", "team": "KOR", "goals": 3 }],
             "golden_glove": [{ "player": "Zhang Huikang", "team": "CHN" }],
-            "best_forward": [{ "player": "Lee Tae-ho", "team": "KOR" }]
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -563,14 +603,18 @@
         "final_standings": { "champions": "KSA", "runners_up": "CHN", "third_place": "KUW", "fourth_place": "IRN" },
         "statistics": { "total_matches": 24, "total_goals": 44 },
         "awards": {
+            "golden_ball": [{ "player": "Jia Xiuquan", "team": "CHN" }],
             "golden_boot": [
                 { "player": "Shahrokh Bayani", "team": "IRN", "goals": 3 },
                 { "player": "Nasser Mohammadkhani", "team": "IRN", "goals": 3 },
                 { "player": "Jia Xiuquan", "team": "CHN", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Jia Xiuquan", "team": "CHN" }],
             "golden_glove": [{ "player": "Abdullah Al-Deayea", "team": "KSA" }],
-            "fair_play_team": ["CHN"]
+            "fair_play_team": ["CHN"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -620,7 +664,9 @@
             "golden_boot": [
                 { "player": "Behtash Fariba", "team": "IRN", "goals": 7 },
                 { "player": "Choi Soon-ho", "team": "KOR", "goals": 7 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -667,12 +713,15 @@
         "final_standings": { "champions": "IRN-1964-1980", "runners_up": "KUW", "third_place": "CHN", "fourth_place": "IRQ-1963-1991" },
         "statistics": { "total_matches": 10, "total_goals": 25 },
         "awards": {
+            "golden_ball": [{ "player": "Ali Parvin", "team": "IRN-1964-1980" }],
             "golden_boot": [
-                { "player": "Fathi Kamel", "team": "KUW", "goals": 3 },
+                { "player": "Fathi Kameel", "team": "KUW", "goals": 3 },
                 { "player": "Gholam Hossein Mazloumi", "team": "IRN-1964-1980", "goals": 3 },
                 { "player": "Nasser Nouraei", "team": "IRN-1964-1980", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Ali Parvin", "team": "IRN-1964-1980" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -719,8 +768,11 @@
         "final_standings": { "champions": "IRN-1964-1980", "runners_up": "KOR", "third_place": "THA", "fourth_place": "CAM-1970-1975" },
         "statistics": { "total_matches": 13, "total_goals": 38 },
         "awards": {
+            "golden_ball": [{ "player": "Ebrahim Ashtiani", "team": "IRN-1964-1980" }],
             "golden_boot": [{ "player": "Hossein Kalani", "team": "IRN-1964-1980", "goals": 5 }],
-            "golden_ball": [{ "player": "Ebrahim Ashtiani", "team": "IRN-1964-1980" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Most Valuable",
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -771,7 +823,9 @@
                 { "player": "Homayoun Behzadi", "team": "IRN-1964-1980", "goals": 4 },
                 { "player": "Moshe Romano", "team": "ISR", "goals": 4 },
                 { "player": "Giora Spiegel", "team": "ISR", "goals": 4 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -821,7 +875,9 @@
             "golden_boot": [
                 { "player": "Inder Singh", "team": "IND", "goals": 2 },
                 { "player": "Mordechai Spiegler", "team": "ISR", "goals": 2 }
-            ]
+            ],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -868,7 +924,9 @@
         "final_standings": { "champions": "KOR", "runners_up": "ISR", "third_place": "TPE-1960-1979", "fourth_place": "VSO" },
         "statistics": { "total_matches": 6, "total_goals": 19 },
         "awards": {
-            "golden_boot": [{ "player": "Cho Yoon-ok", "team": "KOR", "goals": 4 }]
+            "golden_boot": [{ "player": "Cho Yoon-ok", "team": "KOR", "goals": 4 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     },
     {
@@ -915,7 +973,9 @@
         "final_standings": { "champions": "KOR", "runners_up": "ISR", "third_place": "HKG-1955-1959", "fourth_place": "VSO" },
         "statistics": { "total_matches": 6, "total_goals": 27, "attendance": 136000 },
         "awards": {
-            "golden_boot": [{ "player": "Nahum Stelmach", "team": "ISR", "goals": 4 }]
+            "golden_boot": [{ "player": "Nahum Stelmach", "team": "ISR", "goals": 4 }],
+            "award_category_highlighted": ["boot"],
+            "boot_label": "Top goalscorer"
         }
     }
 ]

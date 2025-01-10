@@ -515,7 +515,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "SLB",
-        "logo_filename": "SLB.png",
+        "logo_filename": "SL_Benfica_logo.svg",
         "official_name": "SL Benfica"
     },
     {
@@ -663,7 +663,7 @@
         "nation_id": "ITA",
         "parent_team_id": "",
         "club_code": "NAP",
-        "logo_filename": "NAP.png",
+        "logo_filename": "480px-SSC_Napoli_2024_(deep_blue_navy).svg.png",
         "official_name": "SSC Napoli"
     },
     {
@@ -2506,7 +2506,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "SLI",
-        "logo_filename": "SLI.png",
+        "logo_filename": "Sporting_Clube_de_Portugal_(Logo).svg",
         "official_name": "Sporting Clube de Portugal"
     },
     {
@@ -3766,5 +3766,15 @@
         "club_code": "WHU",
         "logo_filename": "West_Ham_United_FC_logo.svg.png",
         "official_name": "West Ham United Football Club"
+    },
+    {
+        "id": "USG",
+        "name": "Union Saint-Gilloise",
+        "team_type_id": "CLUB",
+        "nation_id": "BEL",
+        "parent_team_id": "",
+        "club_code": "USG",
+        "logo_filename": "Royale_Union_Saint-Gilloise_logo.png",
+        "official_name": "Royale Union Saint-Gilloise"
     }
 ]

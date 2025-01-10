@@ -43,11 +43,14 @@
         "final_standings": { "champions": "CIV", "runners_up": "NGA", "third_place": "RSA", "fourth_place": "COD" },
         "statistics": { "total_matches": 52, "total_goals": 119, "attendance": 1109593 },
         "awards": {
-            "golden_boot": [{ "player": "Emilio Nsue", "team": "EQG", "goals": 5 }],
             "golden_ball": [{ "player": "William Troost-Ekong", "team": "NGA" }],
-            "best_young_player": { "player": "Simon Adingra", "team": "CIV" },
+            "golden_boot": [{ "player": "Emilio Nsue", "team": "EQG", "goals": 5 }],
             "golden_glove": [{ "player": "Ronwen Williams", "team": "RSA" }],
-            "fair_play_team": ["RSA"]
+            "best_young_player": { "player": "Simon Adingra", "team": "CIV" },
+            "fair_play_team": ["RSA"],
+            "award_category_highlighted": ["ball", "glove", "fair"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -94,11 +97,14 @@
         "final_standings": { "champions": "SEN", "runners_up": "EGY", "third_place": "CMR", "fourth_place": "BFA" },
         "statistics": { "total_matches": 52, "total_goals": 100 },
         "awards": {
-            "golden_boot": [{ "player": "Vincent Aboubakar", "team": "CMR", "goals": 8 }],
             "golden_ball": [{ "player": "Sadio Mané", "team": "SEN" }],
-            "best_young_player": { "player": "Issa Kaboré", "team": "BFA" },
+            "golden_boot": [{ "player": "Vincent Aboubakar", "team": "CMR", "goals": 8 }],
             "golden_glove": [{ "player": "Édouard Mendy", "team": "SEN" }],
-            "fair_play_team": ["SEN"]
+            "best_young_player": { "player": "Issa Kaboré", "team": "BFA" },
+            "fair_play_team": ["SEN"],
+            "award_category_highlighted": ["ball", "glove", "fair"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -144,11 +150,14 @@
         "final_standings": { "champions": "ALG", "runners_up": "SEN", "third_place": "NGA", "fourth_place": "TUN" },
         "statistics": { "total_matches": 52, "total_goals": 102, "attendance": 943053 },
         "awards": {
-            "golden_boot": [{ "player": "Odion Ighalo", "team": "NGA", "goals": 5 }],
             "golden_ball": [{ "player": "Ismaël Bennacer", "team": "ALG" }],
-            "best_young_player": { "player": "Krépin Diatta", "team": "SEN" },
+            "golden_boot": [{ "player": "Odion Ighalo", "team": "NGA", "goals": 5 }],
             "golden_glove": [{ "player": "Raïs M'Bolhi", "team": "ALG" }],
-            "fair_play_team": ["SEN"]
+            "best_young_player": { "player": "Krépin Diatta", "team": "SEN" },
+            "fair_play_team": ["SEN"],
+            "award_category_highlighted": ["ball", "glove", "fair"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -191,9 +200,11 @@
         "final_standings": { "champions": "CMR", "runners_up": "EGY", "third_place": "BFA", "fourth_place": "GHA" },
         "statistics": { "total_matches": 32, "total_goals": 66 },
         "awards": {
-            "golden_boot": [{ "player": "Junior Kabananga", "team": "COD", "goals": 3 }],
             "golden_ball": [{ "player": "Christian Bassogog", "team": "CMR" }],
-            "fair_play_team": ["EGY"]
+            "golden_boot": [{ "player": "Junior Kabananga", "team": "COD", "goals": 3 }],
+            "fair_play_team": ["EGY"],
+            "award_category_highlighted": ["ball", "fair"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -242,6 +253,7 @@
         "final_standings": { "champions": "CIV", "runners_up": "GHA", "third_place": "COD", "fourth_place": "EQG" },
         "statistics": { "total_matches": 32, "total_goals": 68, "attendance": 617374 },
         "awards": {
+            "golden_ball": [{ "player": "Christian Atsu", "team": "GHA" }],
             "golden_boot": [
                 { "player": "André Ayew", "team": "GHA", "goals": 3 },
                 { "player": "Ahmed Akaïchi", "team": "TUN", "goals": 3 },
@@ -249,9 +261,11 @@
                 { "player": "Thievy Bifouma", "team": "CGO", "goals": 3 },
                 { "player": "Dieumerci Mbokani", "team": "COD", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Christian Atsu", "team": "GHA" }],
             "golden_glove": [{ "player": "Sylvain Gbohouo", "team": "CIV" }],
-            "fair_play_team": ["COD"]
+            "fair_play_team": ["COD"],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -299,11 +313,13 @@
         "final_standings": { "champions": "NGA", "runners_up": "BFA", "third_place": "MLI", "fourth_place": "GHA" },
         "statistics": { "total_matches": 32, "total_goals": 69, "attendance": 729000 },
         "awards": {
+            "golden_ball": [{ "player": "Jonathan Pitroipa", "team": "BFA" }],
             "golden_boot": [
                 { "player": "Emmanuel Emenike", "team": "NGA", "goals": 4 },
                 { "player": "Mubarak Wakaso", "team": "GHA", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Jonathan Pitroipa", "team": "BFA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -349,6 +365,7 @@
         "final_standings": { "champions": "ZAM", "runners_up": "CIV", "third_place": "MLI", "fourth_place": "GHA" },
         "statistics": { "total_matches": 32, "total_goals": 76, "attendance": 456332 },
         "awards": {
+            "golden_ball": [{ "player": "Christopher Katongo", "team": "ZAM" }],
             "golden_boot": [
                 { "player": "Emmanuel Mayuka", "team": "ZAM", "goals": 3 },
                 { "player": "Manucho", "team": "ANG", "goals": 3 },
@@ -358,8 +375,9 @@
                 { "player": "Houssine Kharja", "team": "MAR", "goals": 3 },
                 { "player": "Christopher Katongo", "team": "ZAM", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Christopher Katongo", "team": "ZAM" }],
-            "fair_play_team": ["CIV"]
+            "fair_play_team": ["CIV"],
+            "award_category_highlighted": ["ball", "fair"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -405,9 +423,12 @@
         "final_standings": { "champions": "EGY", "runners_up": "GHA", "third_place": "NGA", "fourth_place": "ALG" },
         "statistics": { "total_matches": 29, "total_goals": 71, "attendance": 543500 },
         "awards": {
-            "golden_boot": [{ "player": "Gedo", "team": "EGY", "goals": 5 }],
             "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }],
-            "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }]
+            "golden_boot": [{ "player": "Gedo Mohamed Nagy", "team": "EGY", "goals": 5 }],
+            "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -455,9 +476,12 @@
         "final_standings": { "champions": "EGY", "runners_up": "CMR", "third_place": "GHA", "fourth_place": "CIV" },
         "statistics": { "total_matches": 32, "total_goals": 99, "attendance": 714000 },
         "awards": {
-            "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
             "golden_ball": [{ "player": "Hosny Abd Rabo", "team": "EGY" }],
-            "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }]
+            "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
+            "golden_glove": [{ "player": "Essam El-Hadary", "team": "EGY" }],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -504,8 +528,10 @@
         "final_standings": { "champions": "EGY", "runners_up": "CIV", "third_place": "NGA", "fourth_place": "SEN" },
         "statistics": { "total_matches": 32, "total_goals": 73, "attendance": 714054 },
         "awards": {
+            "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }],
             "golden_boot": [{ "player": "Samuel Eto'o", "team": "CMR", "goals": 5 }],
-            "golden_ball": [{ "player": "Ahmed Hassan", "team": "EGY" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -552,13 +578,15 @@
         "final_standings": { "champions": "TUN", "runners_up": "MAR", "third_place": "NGA", "fourth_place": "MLI" },
         "statistics": { "total_matches": 32, "total_goals": 88, "attendance": 617500 },
         "awards": {
+            "golden_ball": [{ "player": "Jay-Jay Okocha", "team": "NGA" }],
             "golden_boot": [
                 { "player": "Frédéric Kanouté", "team": "MLI", "goals": 4 },
                 { "player": "Patrick Mboma", "team": "CMR", "goals": 4 },
                 { "player": "Jay-Jay Okocha", "team": "NGA", "goals": 4 },
                 { "player": "Francileudo Santos", "team": "TUN", "goals": 4 }
             ],
-            "golden_ball": [{ "player": "Jay-Jay Okocha", "team": "NGA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -605,12 +633,14 @@
         "final_standings": { "champions": "CMR", "runners_up": "SEN", "third_place": "NGA", "fourth_place": "MLI" },
         "statistics": { "total_matches": 32, "total_goals": 48, "attendance": 570000 },
         "awards": {
+            "golden_ball": [{ "player": "Rigobert Song", "team": "CMR" }],
             "golden_boot": [
                 { "player": "Julius Aghahowa", "team": "NGA", "goals": 3 },
                 { "player": "Patrick Mboma", "team": "CMR", "goals": 3 },
                 { "player": "Salomon Olembé", "team": "CMR", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Rigobert Song", "team": "CMR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -659,8 +689,10 @@
         "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "RSA", "fourth_place": "TUN" },
         "statistics": { "total_matches": 32, "total_goals": 73, "attendance": 677500 },
         "awards": {
+            "golden_ball": [{ "player": "Lauren", "team": "CMR" }],
             "golden_boot": [{ "player": "Shaun Bartlett", "team": "RSA", "goals": 5 }],
-            "golden_ball": [{ "player": "Lauren", "team": "CMR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -708,11 +740,13 @@
         "final_standings": { "champions": "EGY", "runners_up": "RSA", "third_place": "COD-1997-2003", "fourth_place": "BFA" },
         "statistics": { "total_matches": 32, "total_goals": 93, "attendance": 388800 },
         "awards": {
+            "golden_ball": [{ "player": "Benni McCarthy", "team": "RSA" }],
             "golden_boot": [
                 { "player": "Hossam Hassan", "team": "EGY", "goals": 7 },
                 { "player": "Benni McCarthy", "team": "RSA", "goals": 7 }
             ],
-            "golden_ball": [{ "player": "Benni McCarthy", "team": "RSA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -760,8 +794,10 @@
         "final_standings": { "champions": "RSA", "runners_up": "TUN", "third_place": "ZAM", "fourth_place": "GHA" },
         "statistics": { "total_matches": 29, "total_goals": 78, "attendance": 640880 },
         "awards": {
+            "golden_ball": [{ "player": "Kalusha Bwalya", "team": "ZAM" }],
             "golden_boot": [{ "player": "Kalusha Bwalya", "team": "ZAM", "goals": 5 }],
-            "golden_ball": [{ "player": "Kalusha Bwalya", "team": "ZAM" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -809,8 +845,10 @@
         "final_standings": { "champions": "NGA", "runners_up": "ZAM", "third_place": "CIV", "fourth_place": "MLI" },
         "statistics": { "total_matches": 20, "total_goals": 44, "attendance": 267400 },
         "awards": {
+            "golden_ball": [{ "player": "Rashidi Yekini", "team": "NGA" }],
             "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 5 }],
-            "golden_ball": [{ "player": "Rashidi Yekini", "team": "NGA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -858,9 +896,12 @@
         "final_standings": { "champions": "CIV", "runners_up": "GHA", "third_place": "NGA", "fourth_place": "CMR" },
         "statistics": { "total_matches": 20, "total_goals": 34, "attendance": 385500 },
         "awards": {
-            "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 4 }],
             "golden_ball": [{ "player": "Abedi Pele", "team": "GHA" }],
-            "golden_glove": [{ "player": "Alain Gouaméné", "team": "CIV" }]
+            "golden_boot": [{ "player": "Rashidi Yekini", "team": "NGA", "goals": 4 }],
+            "golden_glove": [{ "player": "Alain Gouaméné", "team": "CIV" }],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -906,8 +947,10 @@
         "final_standings": { "champions": "ALG", "runners_up": "NGA", "third_place": "ZAM", "fourth_place": "SEN" },
         "statistics": { "total_matches": 16, "total_goals": 30, "attendance": 600032 },
         "awards": {
+            "golden_ball": [{ "player": "Rabah Madjer", "team": "ALG" }],
             "golden_boot": [{ "player": "Djamel Menad", "team": "ALG", "goals": 4 }],
-            "golden_ball": [{ "player": "Rabah Madjer", "team": "ALG" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -953,14 +996,17 @@
         "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "ALG", "fourth_place": "MAR" },
         "statistics": { "total_matches": 16, "total_goals": 23 },
         "awards": {
+            "golden_ball": [{ "player": "Roger Milla", "team": "CMR" }],
             "golden_boot": [
                 { "player": "Lakhdar Belloumi", "team": "ALG", "goals": 2 },
                 { "player": "Roger Milla", "team": "CMR", "goals": 2 },
                 { "player": "Gamal Abdelhamid", "team": "EGY", "goals": 2 },
                 { "player": "Abdoulaye Traoré", "team": "CIV", "goals": 2 }
             ],
-            "golden_ball": [{ "player": "Aziz Bouderbala", "team": "MAR" }],
-            "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }]
+            "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -1006,8 +1052,10 @@
         "final_standings": { "champions": "EGY", "runners_up": "CMR", "third_place": "CIV", "fourth_place": "MAR" },
         "statistics": { "total_matches": 16, "total_goals": 31 },
         "awards": {
+            "golden_ball": [{ "player": "Roger Milla", "team": "CMR" }],
             "golden_boot": [{ "player": "Roger Milla", "team": "CMR", "goals": 4 }],
-            "golden_ball": [{ "player": "Roger Milla", "team": "CMR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1053,9 +1101,12 @@
         "final_standings": { "champions": "CMR", "runners_up": "NGA", "third_place": "ALG", "fourth_place": "EGY" },
         "statistics": { "total_matches": 16, "total_goals": 39 },
         "awards": {
-            "golden_boot": [{ "player": "Taher Abouzaid", "team": "EGY", "goals": 4 }],
             "golden_ball": [{ "player": "Théophile Abega", "team": "CMR" }],
-            "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }]
+            "golden_boot": [{ "player": "Taher Abouzaid", "team": "EGY", "goals": 4 }],
+            "golden_glove": [{ "player": "Joseph-Antoine Bell", "team": "CMR" }],
+            "award_category_highlighted": ["ball", "glove"],
+            "ball_label": "Best Player",
+            "glove_label": "BestGoalkeeper"
         }
     },
     {
@@ -1102,8 +1153,10 @@
         "final_standings": { "champions": "GHA", "runners_up": "LBY-1977-2011", "third_place": "ZAM", "fourth_place": "ALG" },
         "statistics": { "total_matches": 16, "total_goals": 32 },
         "awards": {
+            "golden_ball": [{ "player": "Fawzi Al-Issawi", "team": "LBY-1977-2011" }],
             "golden_boot": [{ "player": "George Alhassan", "team": "GHA", "goals": 4 }],
-            "golden_ball": [{ "player": "Fawzi Al-Issawi", "team": "LBY-1977-2011" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1150,11 +1203,13 @@
         "final_standings": { "champions": "NGA", "runners_up": "ALG", "third_place": "MAR", "fourth_place": "EGY" },
         "statistics": { "total_matches": 16, "total_goals": 33 },
         "awards": {
+            "golden_ball": [{ "player": "Christian Chukwu", "team": "NGA" }],
             "golden_boot": [
                 { "player": "Khaled Labied", "team": "MAR", "goals": 3 },
                 { "player": "Segun Odegbami", "team": "NGA", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Christian Chukwu", "team": "NGA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1201,12 +1256,14 @@
         "final_standings": { "champions": "GHA", "runners_up": "UGA", "third_place": "NGA", "fourth_place": "TUN" },
         "statistics": { "total_matches": 16, "total_goals": 38 },
         "awards": {
+            "golden_ball": [{ "player": "Karim Abdul Razak", "team": "GHA" }],
             "golden_boot": [
                 { "player": "Opoku Afriyie", "team": "GHA", "goals": 3 },
                 { "player": "Segun Odegbami", "team": "NGA", "goals": 3 },
                 { "player": "Phillip Omondi", "team": "UGA", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Karim Abdul Razak", "team": "GHA" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1253,8 +1310,10 @@
         "final_standings": { "champions": "MAR", "runners_up": "GUI", "third_place": "NGA", "fourth_place": "EGY" },
         "statistics": { "total_matches": 18, "total_goals": 54 },
         "awards": {
+            "golden_ball": [{ "player": "Ahmed Faras", "team": "MAR" }],
             "golden_boot": [{ "player": "Mamadou Aliou Keïta", "team": "GUI", "goals": 4 }],
-            "golden_ball": [{ "player": "Ahmed Faras", "team": "MAR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1301,8 +1360,10 @@
         "final_standings": { "champions": "ZAI", "runners_up": "ZAM", "third_place": "EGY", "fourth_place": "CGO-1970-1991" },
         "statistics": { "total_matches": 17, "total_goals": 54 },
         "awards": {
+            "golden_ball": [{ "player": "Ndaye Mulamba", "team": "ZAI" }],
             "golden_boot": [{ "player": "Ndaye Mulamba", "team": "ZAI", "goals": 9 }],
-            "golden_ball": [{ "player": "Ndaye Mulamba", "team": "ZAI" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1349,8 +1410,10 @@
         "final_standings": { "champions": "CGO-1970-1991", "runners_up": "MLI", "third_place": "CMR-1961-1975", "fourth_place": "ZAI" },
         "statistics": { "total_matches": 16, "total_goals": 53, "attendance": 425000 },
         "awards": {
+            "golden_ball": [{ "player": "François M'Pelé", "team": "CGO-1970-1991" }],
             "golden_boot": [{ "player": "Fantamady Keita", "team": "MLI", "goals": 5 }],
-            "golden_ball": [{ "player": "François M'Pelé", "team": "CGO-1970-1991" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1397,8 +1460,10 @@
         "final_standings": { "champions": "SDN-1956-1970", "runners_up": "GHA", "third_place": "UAR", "fourth_place": "CIV" },
         "statistics": { "total_matches": 16, "total_goals": 51, "attendance": 146858 },
         "awards": {
+            "golden_ball": [{ "player": "Laurent Pokou", "team": "CIV" }],
             "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 8 }],
-            "golden_ball": [{ "player": "Laurent Pokou", "team": "CIV" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1445,8 +1510,10 @@
         "final_standings": { "champions": "COD-1966-1971", "runners_up": "GHA", "third_place": "CIV", "fourth_place": "ETH-1941-1974" },
         "statistics": { "total_matches": 16, "total_goals": 52, "attendance": 209000 },
         "awards": {
+            "golden_ball": [{ "player": "Kazadi Mwamba", "team": "COD-1966-1971" }],
             "golden_boot": [{ "player": "Laurent Pokou", "team": "CIV", "goals": 6 }],
-            "golden_ball": [{ "player": "Kazadi Mwamba", "team": "COD-1966-1971" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1493,12 +1560,14 @@
         "final_standings": { "champions": "GHA-1964-1966", "runners_up": "TUN", "third_place": "CIV", "fourth_place": "SEN" },
         "statistics": { "total_matches": 8, "total_goals": 31 },
         "awards": {
+            "golden_ball": [{ "player": "Osei Kofi", "team": "GHA-1964-1966" }],
             "golden_boot": [
                 { "player": "Ben Acheampong", "team": "GHA-1964-1966", "goals": 3 },
                 { "player": "Osei Kofi", "team": "GHA-1964-1966", "goals": 3 },
                 { "player": "Eustache Manglé", "team": "CIV", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Osei Kofi", "team": "GHA-1964-1966" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1545,8 +1614,10 @@
         "final_standings": { "champions": "GHA", "runners_up": "SDN-1956-1970", "third_place": "UAR", "fourth_place": "ETH-1941-1974" },
         "statistics": { "total_matches": 8, "total_goals": 33 },
         "awards": {
+            "golden_ball": [{ "player": "Hassan El-Shazly", "team": "UAR" }],
             "golden_boot": [{ "player": "Hassan El-Shazly", "team": "UAR", "goals": 6 }],
-            "golden_ball": [{ "player": "Hassan El-Shazly", "team": "UAR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1593,11 +1664,13 @@
         "final_standings": { "champions": "ETH-1941-1974", "runners_up": "UAR", "third_place": "TUN", "fourth_place": "UGA-1914-1962" },
         "statistics": { "total_matches": 4, "total_goals": 18 },
         "awards": {
+            "golden_ball": [{ "player": "Mengistu Worku", "team": "ETH-1941-1974" }],
             "golden_boot": [
                 { "player": "Badawi Abdel Fattah", "team": "UAR", "goals": 3 },
-                { "player": "Mengistu Worku", "team": "ETH-1941-1974", "goals": 3 }
+                { "player": "Luciano Vassallo", "team": "ETH-1941-1974", "goals": 3 }
             ],
-            "golden_ball": [{ "player": "Mengistu Worku", "team": "ETH-1941-1974" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1644,8 +1717,10 @@
         "final_standings": { "champions": "UAR", "runners_up": "SDN-1956-1970", "third_place": "ETH-1941-1974" },
         "statistics": { "total_matches": 3, "total_goals": 8, "attendance": 80000 },
         "awards": {
+            "golden_ball": [{ "player": "Mahmoud El-Gohary", "team": "UAR" }],
             "golden_boot": [{ "player": "Mahmoud El-Gohary", "team": "UAR", "goals": 3 }],
-            "golden_ball": [{ "player": "Mahmoud El-Gohary", "team": "UAR" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     },
     {
@@ -1692,8 +1767,10 @@
         "final_standings": { "champions": "EGY-1953-1958", "runners_up": "ETH-1941-1974", "third_place": "SDN-1956-1970" },
         "statistics": { "total_matches": 2, "total_goals": 7, "attendance": 60000 },
         "awards": {
+            "golden_ball": [{ "player": "Ad-Diba", "team": "EGY-1953-1958" }],
             "golden_boot": [{ "player": "Ad-Diba", "team": "EGY-1953-1958", "goals": 5 }],
-            "golden_ball": [{ "player": "Ad-Diba", "team": "EGY-1953-1958" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Best Player"
         }
     }
 ]

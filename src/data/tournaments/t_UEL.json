@@ -64,9 +64,12 @@
         },
         "statistics": { "total_matches": 141, "total_goals": 439, "attendance": 4370262 },
         "awards": {
-            "golden_boot": [{ "player": "Pierre-Emerick Aubameyang", "team": "GAB", "club": "OLM", "goals": 10 }],
             "golden_ball": [{ "player": "Pierre-Emerick Aubameyang", "team": "GAB", "club": "OLM" }],
-            "best_young_player": [{ "player": "Florian Wirtz", "team": "GER", "club": "B04" }]
+            "golden_boot": [{ "player": "Pierre-Emerick Aubameyang", "team": "GAB", "club": "OLM", "goals": 10 }],
+            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "B04" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -134,12 +137,15 @@
         },
         "statistics": { "total_matches": 141, "total_goals": 381, "attendance": 4067872 },
         "awards": {
-            "golden_boot": [
-                { "player": "Victor Boniface", "team": "NGA", "club": "UNI", "goals": 6 },
-                { "player": "Marcus Rashford", "team": "ENG", "club": "MUN", "goals": 6 }
-            ],
             "golden_ball": [{ "player": "Jesús Navas", "team": "ESP", "club": "SEV" }],
-            "best_young_player": [{ "player": "Florian Wirtz", "team": "GER", "club": "B04" }]
+            "golden_boot": [
+                { "player": "Marcus Rashford", "team": "ENG", "club": "MUN", "goals": 6, "minutes": 560 },
+                { "player": "Victor Boniface", "team": "NGA", "club": "USG", "goals": 6, "minutes": 777 }
+            ],
+            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "B04" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -207,9 +213,12 @@
         },
         "statistics": { "total_matches": 139, "total_goals": 367, "attendance": 3435542 },
         "awards": {
-            "golden_boot": [{ "player": "James Tavernier", "team": "ENG", "club": "RFC", "goals": 7 }],
             "golden_ball": [{ "player": "Filip Kostić", "team": "SRB", "club": "SGE" }],
-            "best_young_player": [{ "player": "Ansgar Knauff", "team": "GER", "club": "SGE" }]
+            "golden_boot": [{ "player": "James Tavernier", "team": "ENG", "club": "RFC", "goals": 7 }],
+            "best_young_player": { "player": "Ansgar Knauff", "team": "GER", "club": "SGE" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -277,13 +286,16 @@
         },
         "statistics": { "total_matches": 204, "total_goals": 618, "attendance": 108617 },
         "awards": {
+            "golden_ball": [{ "player": "Gerard Moreno", "team": "ESP", "club": "VIL" }],
             "golden_boot": [
                 { "player": "Pizzi", "team": "POR", "club": "SLB", "goals": 7, "minutes": 385 },
                 { "player": "Yusuf Yazıcı", "team": "TUR-2024", "club": "LIL", "goals": 7, "minutes": 625 },
                 { "player": "Borja Mayoral", "team": "ESP", "club": "ROM", "goals": 7, "minutes": 659 },
                 { "player": "Gerard Moreno", "team": "ESP", "club": "VIL", "goals": 7, "minutes": 879 }
             ],
-            "golden_ball": [{ "player": "Gerard Moreno", "team": "ESP", "club": "VIL" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -351,8 +363,11 @@
         },
         "statistics": { "total_matches": 197, "total_goals": 548, "attendance": 4069102 },
         "awards": {
+            "golden_ball": [{ "player": "Romelu Lukaku", "team": "BEL", "club": "INT" }],
             "golden_boot": [{ "player": "Bruno Fernandes", "team": "POR", "club": "SLI", "club2": "MUN", "goals": 8 }],
-            "golden_ball": [{ "player": "Romelu Lukaku", "team": "BEL", "club": "INT" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     },
     {
@@ -420,8 +435,11 @@
         },
         "statistics": { "total_matches": 205, "total_goals": 565, "attendance": 5038109 },
         "awards": {
+            "golden_ball": [{ "player": "Eden Hazard", "team": "BEL", "club": "CHE" }],
             "golden_boot": [{ "player": "Olivier Giroud", "team": "FRA", "club": "CHE", "goals": 11 }],
-            "golden_ball": [{ "player": "Eden Hazard", "team": "BEL", "club": "CHE" }]
+            "award_category_highlighted": ["ball"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
         }
     }
 ]

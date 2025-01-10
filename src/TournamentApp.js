@@ -51,6 +51,16 @@ class TournamentApp extends React.Component {
                 next_tournament: {},
                 statistics: {},
                 final_standings: {},
+                awards: {
+                    golden_boot: [],
+                    silver_boot: [],
+                    bronze_boot: [],
+                    golden_ball: [],
+                    best_young_player: {},
+                    golden_glove: [],
+                    fair_play_team: [],
+                    award_category_highlighted: [],
+                },
             },
         }
     }

@@ -43,16 +43,19 @@
         "final_standings": { "champions": "GER", "runners_up": "CHI", "third_place": "POR", "fourth_place": "MEX" },
         "statistics": { "total_matches": 16, "total_goals": 43, "attendance": 628304 },
         "awards": {
-            "golden_boot": [{ "player": "Timo Werner", "team": "GER", "goals": 3, "assists": 2 }],
-            "silver_boot": [{ "player": "Leon Goretzka", "team": "GER", "goals": 3, "assists": 0 }],
-            "bronze_boot": [{ "player": "Lars Stindl", "team": "GER", "goals": 3, "assists": 0 }],
             "golden_ball": [
                 { "player": "Julian Draxler", "team": "GER" },
                 { "player": "Alexis Sánchez", "team": "CHI" },
                 { "player": "Leon Goretzka", "team": "GER" }
             ],
+            "golden_boot": [{ "player": "Timo Werner", "team": "GER", "goals": 3, "assists": 2 }],
+            "silver_boot": [
+                { "player": "Leon Goretzka", "team": "GER", "goals": 3, "assists": "0" },
+                { "player": "Lars Stindl", "team": "GER", "goals": 3, "assists": "0" }
+            ],
             "golden_glove": [{ "player": "Claudio Bravo", "team": "CHI" }],
-            "fair_play_team": ["GER"]
+            "fair_play_team": ["GER"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -99,16 +102,17 @@
         "final_standings": { "champions": "BRA", "runners_up": "ESP", "third_place": "ITA", "fourth_place": "URU" },
         "statistics": { "total_matches": 16, "total_goals": 68, "attendance": 804659 },
         "awards": {
-            "golden_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 5, "assists": 1, "minutes": 273 }],
-            "silver_boot": [{ "player": "Fred", "team": "BRA", "goals": 5, "assists": 1, "minutes": 423 }],
-            "bronze_boot": [{ "player": "Neymar", "team": "BRA", "goals": 4 }],
             "golden_ball": [
                 { "player": "Neymar", "team": "BRA" },
                 { "player": "Andrés Iniesta", "team": "ESP" },
                 { "player": "Paulinho", "team": "BRA" }
             ],
+            "golden_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 5, "assists": 1, "minutes": 273 }],
+            "silver_boot": [{ "player": "Fred", "team": "BRA", "goals": 5, "assists": 1, "minutes": 423 }],
+            "bronze_boot": [{ "player": "Neymar", "team": "BRA", "goals": 4 }],
             "golden_glove": [{ "player": "Júlio César", "team": "BRA" }],
-            "fair_play_team": ["ESP"]
+            "fair_play_team": ["ESP"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -155,16 +159,17 @@
         "final_standings": { "champions": "BRA", "runners_up": "USA", "third_place": "ESP", "fourth_place": "RSA" },
         "statistics": { "total_matches": 16, "total_goals": 44, "attendance": 584894 },
         "awards": {
+            "golden_ball": [
+                { "player": "Kaká", "team": "BRA" },
+                { "player": "Luís Fabiano", "team": "BRA" },
+                { "player": "Clint Dempsey", "team": "USA" }
+            ],
             "golden_boot": [{ "player": "Luís Fabiano", "team": "BRA", "goals": 5 }],
             "silver_boot": [{ "player": "Fernando Torres", "team": "ESP", "goals": 3 }],
             "bronze_boot": [{ "player": "David Villa", "team": "ESP", "goals": 3 }],
-            "golden_ball": [
-                { "player": "Kaká", "team": "BRA" },
-                { "player": "Luís Fabiano", "team": "ESP" },
-                { "player": "Clint Dempsey", "team": "USA" }
-            ],
             "golden_glove": [{ "player": "Tim Howard", "team": "USA" }],
-            "fair_play_team": ["BRA"]
+            "fair_play_team": ["BRA"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -211,16 +216,17 @@
         "final_standings": { "champions": "BRA", "runners_up": "ARG", "third_place": "GER", "fourth_place": "MEX" },
         "statistics": { "total_matches": 16, "total_goals": 56, "attendance": 603106 },
         "awards": {
-            "golden_boot": [{ "player": "Adriano", "team": "BRA", "goals": 5 }],
-            "silver_boot": [{ "player": "Michael Ballack", "team": "GER", "goals": 4 }],
-            "bronze_boot": [{ "player": "John Aloisi", "team": "AUS", "goals": 4 }],
             "golden_ball": [
-                { "player": "Adriano", "team": "BRA" },
-                { "player": "Riquelme", "team": "ARG" },
+                { "player": "Adriano Ribeiro", "team": "BRA" },
+                { "player": "Juan Riquelme", "team": "ARG" },
                 { "player": "Ronaldinho", "team": "BRA" }
             ],
+            "golden_boot": [{ "player": "Adriano Ribeiro", "team": "BRA", "goals": 5 }],
+            "silver_boot": [{ "player": "Michael Ballack", "team": "GER", "goals": 4 }],
+            "bronze_boot": [{ "player": "John Aloisi", "team": "AUS", "goals": 4 }],
             "golden_glove": [{ "player": "Oswaldo Sánchez", "team": "MEX" }],
-            "fair_play_team": ["GRE"]
+            "fair_play_team": ["GRE"],
+            "award_category_highlighted": ["ball", "glove"]
         }
     },
     {
@@ -268,15 +274,16 @@
         "final_standings": { "champions": "FRA", "runners_up": "CMR", "third_place": "TUR-2024", "fourth_place": "COL" },
         "statistics": { "total_matches": 16, "total_goals": 37, "attendance": 491700 },
         "awards": {
-            "golden_boot": [{ "player": "Thierry Henry", "team": "FRA", "goals": 4 }],
-            "silver_boot": [{ "player": "Tuncay", "team": "TUR-2024", "goals": 3, "assists": 1 }],
-            "bronze_boot": [{ "player": "Shunsuke Nakamura", "team": "JPN", "goals": 3, "assists": "0", "minutes": 170 }],
             "golden_ball": [
                 { "player": "Thierry Henry", "team": "FRA" },
-                { "player": "Tuncay", "team": "TUR-2024" },
+                { "player": "Tuncay Şanlı", "team": "TUR-2024" },
                 { "player": "Marc-Vivien Foé", "team": "CMR" }
             ],
-            "fair_play_team": ["JPN"]
+            "golden_boot": [{ "player": "Thierry Henry", "team": "FRA", "goals": 4 }],
+            "silver_boot": [{ "player": "Tuncay Şanlı", "team": "TUR-2024", "goals": 3, "assists": 1 }],
+            "bronze_boot": [{ "player": "Shunsuke Nakamura", "team": "JPN", "goals": 3, "assists": "0", "minutes": 170 }],
+            "fair_play_team": ["JPN"],
+            "award_category_highlighted": ["ball", "fair"]
         }
     },
     {
@@ -324,15 +331,16 @@
         "final_standings": { "champions": "FRA", "runners_up": "JPN", "third_place": "AUS", "fourth_place": "BRA" },
         "statistics": { "total_matches": 16, "total_goals": 31, "attendance": 557191 },
         "awards": {
-            "golden_boot": [{ "player": "Robert Pires", "team": "FRA", "goals": 2 }],
-            "silver_boot": [{ "player": "Éric Carrière", "team": "FRA", "goals": 2 }],
-            "bronze_boot": [{ "player": "Hwang Sun-hong", "team": "KOR", "goals": 2 }],
             "golden_ball": [
                 { "player": "Robert Pires", "team": "FRA" },
                 { "player": "Patrick Vieira", "team": "FRA" },
                 { "player": "Hidetoshi Nakata", "team": "JPN" }
             ],
-            "fair_play_team": ["JPN"]
+            "golden_boot": [{ "player": "Robert Pires", "team": "FRA", "goals": 2 }],
+            "silver_boot": [{ "player": "Éric Carrière", "team": "FRA", "goals": 2 }],
+            "bronze_boot": [{ "player": "Hwang Sun-hong", "team": "KOR", "goals": 2 }],
+            "fair_play_team": ["JPN"],
+            "award_category_highlighted": ["ball", "fair"]
         }
     },
     {
@@ -380,15 +388,16 @@
         "final_standings": { "champions": "MEX", "runners_up": "BRA", "third_place": "USA", "fourth_place": "KSA" },
         "statistics": { "total_matches": 16, "total_goals": 55, "attendance": 970000 },
         "awards": {
-            "golden_boot": [{ "player": "Ronaldinho", "team": "BRA", "goals": 6 }],
-            "silver_boot": [{ "player": "Cuauhtémoc Blanco", "team": "MEX", "goals": 6 }],
-            "bronze_boot": [{ "player": "Marzouk Al-Otaibi", "team": "KSA", "goals": 6 }],
             "golden_ball": [
                 { "player": "Ronaldinho", "team": "BRA" },
                 { "player": "Cuauhtémoc Blanco", "team": "MEX" },
                 { "player": "Marzouk Al-Otaibi", "team": "KSA" }
             ],
-            "fair_play_team": ["BRA"]
+            "golden_boot": [{ "player": "Ronaldinho", "team": "BRA", "goals": 6, "assists": 2 }],
+            "silver_boot": [{ "player": "Cuauhtémoc Blanco", "team": "MEX", "goals": 6, "assists": "0", "minutes": 465 }],
+            "bronze_boot": [{ "player": "Marzouk Al-Otaibi", "team": "KSA", "goals": 6, "assists": "0", "minutes": 315 }],
+            "fair_play_team": ["BRA", "NZL"],
+            "award_category_highlighted": ["ball", "fair"]
         }
     },
     {
@@ -437,15 +446,16 @@
         "final_standings": { "champions": "BRA", "runners_up": "AUS", "third_place": "CZE-1993-2022", "fourth_place": "URU" },
         "statistics": { "total_matches": 16, "total_goals": 52, "attendance": 333500 },
         "awards": {
-            "golden_boot": [{ "player": "Romário", "team": "BRA", "goals": 7 }],
-            "silver_boot": [{ "player": "Vladimír Šmicer", "team": "CZE-1993-2022", "goals": 5 }],
-            "bronze_boot": [{ "player": "Ronaldo", "team": "BRA", "goals": 4 }],
             "golden_ball": [
                 { "player": "Denílson", "team": "BRA" },
                 { "player": "Romário", "team": "BRA" },
                 { "player": "Vladimír Šmicer", "team": "CZE-1993-2022" }
             ],
-            "fair_play_team": ["RSA"]
+            "golden_boot": [{ "player": "Romário", "team": "BRA", "goals": 7 }],
+            "silver_boot": [{ "player": "Vladimír Šmicer", "team": "CZE-1993-2022", "goals": 5 }],
+            "bronze_boot": [{ "player": "Ronaldo", "team": "BRA", "goals": 4 }],
+            "fair_play_team": ["RSA"],
+            "award_category_highlighted": ["ball", "fair"]
         }
     },
     {
@@ -494,8 +504,9 @@
         "final_standings": { "champions": "DEN", "runners_up": "ARG", "third_place": "MEX", "fourth_place": "NGA" },
         "statistics": { "total_matches": 8, "total_goals": 19, "attendance": 165000 },
         "awards": {
+            "golden_ball": [{ "player": "Brian Laudrup", "team": "DEN" }],
             "golden_boot": [{ "player": "Luis García", "team": "MEX", "goals": 3 }],
-            "golden_ball": [{ "player": "Brian Laudrup", "team": "DEN" }]
+            "award_category_highlighted": ["ball"]
         }
     },
     {
@@ -543,11 +554,12 @@
         "final_standings": { "champions": "ARG", "runners_up": "KSA", "third_place": "USA", "fourth_place": "CIV" },
         "statistics": { "total_matches": 4, "total_goals": 18, "attendance": 196500 },
         "awards": {
+            "golden_ball": [{ "player": "Fernando Redondo", "team": "ARG" }],
             "golden_boot": [
                 { "player": "Gabriel Batistuta", "team": "ARG", "goals": 2 },
                 { "player": "Bruce Murray", "team": "USA", "goals": 2 }
             ],
-            "golden_ball": [{ "player": "Fernando Redondo", "team": "ARG" }]
+            "award_category_highlighted": ["ball"]
         }
     }
 ]
