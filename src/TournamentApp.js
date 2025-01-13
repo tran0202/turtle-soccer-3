@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { Container, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import classnames from 'classnames'
-import { getTournament, getTournamentData } from './core/TeamHelper'
+import { getTournament } from './core/TournamentHelper'
 import Page from './core/Page'
 import Header from './tournament/Header'
 import Awards from './tournament/Awards'
+import RoundRobin from './tournament/RoundRobin'
 
 const TournamentTabs = (props) => {
     const { tournament, config } = props
-    const [activeTab, setActiveTab] = useState('Awards')
+    const { stages } = tournament
+    const [activeTab, setActiveTab] = useState('Group Stage')
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
     }
@@ -16,6 +18,20 @@ const TournamentTabs = (props) => {
     return (
         <React.Fragment>
             <Nav tabs className="mt-4 mb-4">
+                {stages &&
+                    stages.map((s) => {
+                        return (
+                            <NavLink
+                                key={s.name}
+                                className={classnames({ active: activeTab === s.name })}
+                                onClick={() => {
+                                    toggle(s.name)
+                                }}
+                            >
+                                {s.name}
+                            </NavLink>
+                        )
+                    })}
                 <NavItem>
                     <NavLink
                         className={classnames({ active: activeTab === 'Awards' })}
@@ -28,6 +44,14 @@ const TournamentTabs = (props) => {
                 </NavItem>
             </Nav>
             <TabContent activeTab={activeTab}>
+                {stages &&
+                    stages.map((s) => {
+                        return (
+                            <TabPane key={s.name} tabId={s.name}>
+                                {s.type === 'roundrobin' && <RoundRobin stage={s} config={config} />}
+                            </TabPane>
+                        )
+                    })}
                 <TabPane tabId="Awards">
                     <Awards tournament={tournament} config={config} />
                 </TabPane>
@@ -39,7 +63,6 @@ const TournamentTabs = (props) => {
 class TournamentApp extends React.Component {
     constructor(props) {
         super(props)
-        document.title = 'Tournament - Turtle Soccer'
 
         this.state = {
             tournament: {},
@@ -65,30 +88,13 @@ class TournamentApp extends React.Component {
         }
     }
 
-    getPreviousTournament = (tournaments, current_id) => {
-        const current_tournament_index = tournaments.findIndex((t) => t.id === current_id)
-        return current_tournament_index !== -1 && current_tournament_index !== 0
-            ? { id: tournaments[current_tournament_index - 1].id, year: tournaments[current_tournament_index - 1].year }
-            : {}
-    }
-
-    getNextTournament = (tournaments, current_id) => {
-        const current_tournament_index = tournaments.findIndex((t) => t.id === current_id)
-        return current_tournament_index !== -1 && current_tournament_index !== tournaments.length - 1
-            ? { id: tournaments[current_tournament_index + 1].id, year: tournaments[current_tournament_index + 1].year }
-            : {}
-    }
-
     getData = () => {
         const id = this.props.query.id
-        const tournament = getTournament(id)
-        tournament.previous_tournament = this.getPreviousTournament(tournament.competition.tournaments, id)
-        tournament.next_tournament = this.getNextTournament(tournament.competition.tournaments, id)
-        this.setState({ tournament: getTournamentData(id), config: tournament })
+        this.setState(getTournament(id))
     }
 
-    setData = (rankings) => {
-        this.setState({ rankings })
+    setData = () => {
+        this.setState()
     }
 
     componentDidMount() {
@@ -96,6 +102,8 @@ class TournamentApp extends React.Component {
     }
 
     componentDidUpdate() {
+        const { config } = this.state
+        document.title = config.name + ' Tournament - Turtle Soccer'
         window.tournamentStore = this.state
     }
 

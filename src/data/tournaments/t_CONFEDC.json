@@ -7,7 +7,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["RUS"],
+            "host": { "teams": ["RUS"], "qualification_date": "2010-12-02" },
             "logo_filename": "2017_FIFA_Confederations_Cup.svg",
             "mascot_filename": "477px-RR5216-0111R.png",
             "start_date": "2017-06-17",
@@ -66,7 +66,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["BRA"],
+            "host": { "teams": ["BRA"], "qualification_date": "2007-10-30" },
             "logo_filename": "2013_FIFA_Confederations_Cup.svg",
             "mascot_filename": "480px-Adidas_Cafusa.jpg",
             "start_date": "2013-06-15",
@@ -123,7 +123,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["RSA"],
+            "host": { "teams": ["RSA"], "qualification_date": "2004-05-15" },
             "logo_filename": "2009_FIFA_Confederations_Cup.svg",
             "mascot_filename": "2009FIFACCup_Map.png",
             "start_date": "2009-06-14",
@@ -180,7 +180,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GER"],
+            "host": { "teams": ["GER"], "qualification_date": "2000-07-07" },
             "logo_filename": "2005_FIFA_Confederations_Cup.jpg",
             "mascot_filename": "Germany_CC.png",
             "start_date": "2005-06-15",
@@ -238,7 +238,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"], "qualification_date": "2002-09-24" },
             "logo_filename": "2003_FIFA_Confederations_Cup.jpg",
             "mascot_filename": "188px-Confed_trophy.png",
             "start_date": "2003-06-18",
@@ -295,7 +295,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["KOR", "JPN"],
+            "host": { "teams": ["KOR", "JPN"], "qualification_date": "1996-05-31" },
             "logo_filename": "2001_FIFA_Confederations_Cup.jpg",
             "mascot_filename": "FIFA_Confederations_Cup_(Cup).svg",
             "start_date": "2001-05-30",
@@ -352,7 +352,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["MEX"],
+            "host": { "teams": ["MEX"] },
             "logo_filename": "1999_FIFA_Confederations_Cup.jpg",
             "mascot_filename": "Confederations_Cup.webp",
             "start_date": "1999-07-24",
@@ -409,7 +409,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["KSA"],
+            "host": { "teams": ["KSA"] },
             "logo_filename": "1997_FIFA_Confederations_Cup.png",
             "mascot": "Hashi",
             "mascot_filename": "Hashi.webp",
@@ -468,7 +468,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "penalty"],
         "details": {
-            "host": ["KSA"],
+            "host": { "teams": ["KSA"] },
             "logo_filename": "297px-Copa_Rey_Fahd_Icon.png",
             "mascot_filename": "347px-1995-DEN-ARG_1995-FIN-CC.svg.png",
             "start_date": "1995-01-06",
@@ -518,7 +518,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["KSA"],
+            "host": { "teams": ["KSA"] },
             "logo_filename": "297px-Copa_Rey_Fahd_Icon.png",
             "mascot_filename": "347px-1992-ARG-ARS_1992-FIN-CC.svg.png",
             "start_date": "1992-10-15",

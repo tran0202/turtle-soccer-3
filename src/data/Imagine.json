@@ -6,7 +6,10 @@
     "active": true,
     "points_for_win": 3,
     "details": {
-        "host": { "confederation_id": "CONCACAF", "teams": ["CAN", "MEX", "USA"] },
+        "host": {
+            "confederations": [{ "id": "CONCACAF", "count": 3 }],
+            "qualification_date": "2023-02-14"
+        },
         "logo_filename": "2026_FIFA_World_Cup.svg",
         "start_date": "2026-06-11",
         "end_date": "2026-07-19",

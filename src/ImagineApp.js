@@ -85,7 +85,7 @@ const ConfederationQualifications = (props) => {
 class ImagineApp extends React.Component {
     constructor(props) {
         super(props)
-        document.title = 'World Cup - Turtle Soccer'
+        document.title = 'Imaginary World Cup - Turtle Soccer'
 
         this.state = {
             qualifiedTeams: [],
@@ -118,7 +118,7 @@ class ImagineApp extends React.Component {
     }
 
     componentDidUpdate() {
-        window.qualificationStore = this.state
+        window.imagineStore = this.state
     }
 
     render() {

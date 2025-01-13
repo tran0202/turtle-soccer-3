@@ -10,7 +10,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "United by Football",
-            "host": ["GER"],
+            "host": { "teams": ["GER"], "qualification_date": "2018-09-27" },
             "logo_filename": "UEFA_Euro_2024_Logo.svg",
             "mascot": "Albärt",
             "mascot_filename": "Albärt_(Euro_2024).webp",
@@ -79,7 +79,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Live It. For Real.",
-            "host": ["AZE", "DEN", "ENG", "GER", "HUN", "ITA", "NED", "ROU", "RUS", "SCO", "ESP"],
+            "host": { "teams": ["AZE", "DEN", "ENG", "GER", "HUN", "ITA", "NED", "ROU", "RUS", "SCO", "ESP"] },
             "logo_filename": "UEFA_Euro_2020_Logo.svg",
             "mascot": "Skillzy",
             "mascot_filename": "Skillzy_Euro_2020.webp",
@@ -145,7 +145,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Le Rendez-Vous",
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"], "qualification_date": "2010-05-28" },
             "logo_filename": "UEFA_Euro_2016_Logo.svg",
             "mascot": "Super Victor",
             "mascot_filename": "Super_Victor_Euro_2016.webp",
@@ -202,7 +202,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Creating History Together",
-            "host": ["POL", "UKR"],
+            "host": { "teams": ["POL", "UKR"], "qualification_date": "2007-04-18" },
             "logo_filename": "UEFA_Euro_2012_logo_(artistic_version).svg",
             "mascot": "Slavek and Slavko",
             "mascot_filename": "Slavek_and_Slavko_wallpaper.webp",
@@ -273,7 +273,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Expect Emotions",
-            "host": ["AUT", "SUI"],
+            "host": { "teams": ["AUT", "SUI"], "qualification_date": "2002-12-12" },
             "logo_filename": "UEFA_Euro_2008_logo.svg",
             "mascot": "Trix and Flix",
             "mascot_filename": "Trix_and_Flix.webp",
@@ -334,7 +334,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Welcome to 2004!",
-            "host": ["POR"],
+            "host": { "teams": ["POR"], "qualification_date": "1999-10-12" },
             "logo_filename": "UEFA_Euro_2004_logo.svg",
             "mascot": "Kinas",
             "mascot_filename": "Kinas.webp",
@@ -404,7 +404,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Football without frontiers",
-            "host": ["BEL", "NED"],
+            "host": { "teams": ["BEL", "NED"], "qualification_date": "1995-07-14" },
             "logo_filename": "UEFA_Euro_2000_logo.svg",
             "mascot": "Benelucky",
             "mascot_filename": "Benelucky.webp",
@@ -466,7 +466,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Football Comes Home",
-            "host": ["ENG"],
+            "host": { "teams": ["ENG"], "qualification_date": "1992-05-05" },
             "logo_filename": "UEFA_Euro_1996_logo.svg",
             "mascot": "Goaliath",
             "mascot_filename": "Goaliath_(Euro_1996).webp",
@@ -525,7 +525,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "Small is Beautiful",
-            "host": ["SWE"],
+            "host": { "teams": ["SWE"], "qualification_date": "1988-12-16" },
             "logo_filename": "UEFA_Euro_1992_logo.svg",
             "mascot": "Rabbit",
             "mascot_filename": "Rabbit_Euro_1992.webp",
@@ -587,7 +587,7 @@
         "tiebreakers": ["team", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["GER-1949-1990"],
+            "host": { "teams": ["GER-1949-1990"], "qualification_date": "1985-03-14" },
             "logo_filename": "UEFA_Euro_1988_logo.svg",
             "mascot": "Berni",
             "mascot_filename": "Berni_Euro_1988.webp",
@@ -645,7 +645,7 @@
         "tiebreakers": ["team", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"], "qualification_date": "1981-12-10" },
             "logo_filename": "UEFA_Euro_1984_logo.svg",
             "mascot": "Péno",
             "mascot_filename": "Péno_(Euro_1984).webp",
@@ -698,7 +698,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["ITA"],
+            "host": { "teams": ["ITA"], "qualification_date": "1977-11-12" },
             "logo_filename": "UEFA_Euro_1980_official_logo.svg",
             "mascot": "Pinocchio",
             "mascot_filename": "Pinocchio_(Euro_1980).webp",
@@ -749,7 +749,7 @@
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
-            "host": ["YUG-1963-1992"],
+            "host": { "teams": ["YUG-1963-1992"] },
             "logo_filename": "UEFA_Euro_1976_official_logo.svg",
             "mascot_filename": "576px-Euro_1976.png",
             "start_date": "1976-06-16",
@@ -793,7 +793,7 @@
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
-            "host": ["BEL"],
+            "host": { "teams": ["BEL"] },
             "logo_filename": "UEFA_Euro_1972_logo.svg",
             "mascot_filename": "576px-Euro_1972.png",
             "start_date": "1972-06-14",
@@ -842,7 +842,7 @@
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
-            "host": ["ITA"],
+            "host": { "teams": ["ITA"] },
             "logo_filename": "UEFA_Euro_1968_logo.svg",
             "mascot_filename": "576px-Euro_1968.png",
             "start_date": "1968-06-05",
@@ -887,7 +887,7 @@
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
-            "host": ["ESP-1945-1977"],
+            "host": { "teams": ["ESP-1945-1977"] },
             "logo_filename": "UEFA_Euro_1964_logo.svg",
             "mascot_filename": "576px-Euro_1964.png",
             "start_date": "1964-06-17",
@@ -939,7 +939,7 @@
         "competition_id": "EURO",
         "points_for_win": 2,
         "details": {
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"] },
             "logo_filename": "UEFA_Euro_1960_logo.svg",
             "mascot_filename": "576px-Euro_1960.png",
             "start_date": "1960-07-06",

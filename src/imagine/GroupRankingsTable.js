@@ -62,7 +62,7 @@ class GroupRankingsTable extends React.Component {
                 <RankingsHeader config={config} />
 
                 {group.rankings &&
-                    group.rankings.map((r, index) => {
+                    group.rankings.map((r) => {
                         return <RankingsRow key={r.id} ranking={r} config={config} />
                     })}
             </React.Fragment>

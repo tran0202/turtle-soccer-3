@@ -8,7 +8,7 @@
         "show_match_year": true,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["FRA_U23MNT"],
+            "host": { "teams": ["FRA_U23MNT"] },
             "logo_filename": "2024_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_–_Paris_2024.svg",
             "start_date": "2024-07-24",
@@ -57,7 +57,7 @@
         "show_match_year": true,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["JPN_U23MNT"],
+            "host": { "teams": ["JPN_U23MNT"] },
             "logo_filename": "2020_Summer_Olympics_logo_new.svg",
             "mascot_filename": "Football,_Tokyo_2020.svg",
             "start_date": "2021-07-22",
@@ -105,7 +105,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["BRA_U23MNT"],
+            "host": { "teams": ["BRA_U23MNT"], "qualification_date": "2009-10-02" },
             "logo_filename": "2016_Summer_Olympics_logo.svg",
             "mascot_filename": "Football,_Rio_2016.png",
             "start_date": "2016-08-04",
@@ -182,7 +182,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GBR_U23MNT"],
+            "host": { "teams": ["GBR_U23MNT"] },
             "logo_filename": "2012_Summer_Olympics_logo.svg",
             "mascot_filename": "Football,_London_2012.png",
             "start_date": "2012-07-26",
@@ -231,7 +231,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["CHN_U23MNT"],
+            "host": { "teams": ["CHN_U23MNT"] },
             "logo_filename": "2008_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_at_the_2008_Summer_Olympics.jpg",
             "start_date": "2008-08-07",
@@ -285,7 +285,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GRE_U23MNT"],
+            "host": { "teams": ["GRE_U23MNT"] },
             "logo_filename": "Athens_2004_logo.svg",
             "mascot_filename": "Football,_Athens_2004.png",
             "start_date": "2004-08-11",
@@ -335,7 +335,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["AUS_U23MNT"],
+            "host": { "teams": ["AUS_U23MNT"] },
             "logo_filename": "2000_Summer_Olympics_logo.svg",
             "mascot_filename": "Football,_Sydney_2000.png",
             "start_date": "2000-09-13",
@@ -385,7 +385,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["USA_U23MNT"],
+            "host": { "teams": ["USA_U23MNT"] },
             "logo_filename": "1996_Summer_Olympics_logo.svg",
             "mascot_filename": "Football,_Atlanta_1996.png",
             "start_date": "1996-07-20",
@@ -436,7 +436,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["ESP_U23MNT"],
+            "host": { "teams": ["ESP_U23MNT"] },
             "logo_filename": "1992_Summer_Olympics_logo.svg",
             "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1992-07-24",
@@ -484,7 +484,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["KOR_U23MNT"],
+            "host": { "teams": ["KOR_U23MNT"] },
             "logo_filename": "1988_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_pictogram.svg",
             "start_date": "1988-09-17",
@@ -533,7 +533,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["USA_U23MNT"],
+            "host": { "teams": ["USA_U23MNT"] },
             "logo_filename": "1984_Summer_Olympics_logo.svg",
             "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1984-07-29",
@@ -585,7 +585,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["URS_U23MNT"],
+            "host": { "teams": ["URS_U23MNT"] },
             "logo_filename": "Emblem_of_the_1980_Summer_Olympics.svg",
             "mascot_filename": "Misha1980.jpeg",
             "start_date": "1980-07-20",
@@ -633,7 +633,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["CAN_U23MNT"],
+            "host": { "teams": ["CAN_U23MNT"] },
             "logo_filename": "1976_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_pictogram.svg",
             "start_date": "1976-07-18",
@@ -681,7 +681,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GER-1949-1990_U23MNT"],
+            "host": { "teams": ["GER-1949-1990_U23MNT"] },
             "logo_filename": "1972_Summer_Olympics_logo.svg",
             "mascot_filename": "480px-Football_pictogram_black_(1972_Summer_Olympics_style).svg.png",
             "start_date": "1972-08-27",
@@ -740,7 +740,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["MEX_U23MNT"],
+            "host": { "teams": ["MEX_U23MNT"] },
             "logo_filename": "1968_Mexico_emblem.svg",
             "logo_height": "50px",
             "mascot_filename": "Football_pictogram.svg",
@@ -789,7 +789,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["JPN_U23MNT"],
+            "host": { "teams": ["JPN_U23MNT"] },
             "logo_filename": "Tokyo_1964_Summer_Olympics_logo.svg",
             "mascot_filename": "480px-1964_Olympics_football_stamp_of_Japan.jpg",
             "start_date": "1964-10-11",
@@ -843,7 +843,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["ITA_U23MNT"],
+            "host": { "teams": ["ITA_U23MNT"] },
             "logo_filename": "1960_Summer_Olympics_logo.png",
             "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1960-08-26",
@@ -897,7 +897,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["AUS_U23MNT"],
+            "host": { "teams": ["AUS_U23MNT"] },
             "logo_filename": "1956_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_pictogram.svg",
             "start_date": "1956-11-24",
@@ -954,7 +954,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["FIN_U23MNT"],
+            "host": { "teams": ["FIN_U23MNT"] },
             "logo_filename": "1952_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_at_the_1952_Summer_Olympics_Finnish_stamp.jpg",
             "start_date": "1952-07-15",
@@ -1012,7 +1012,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GBR_U23MNT"],
+            "host": { "teams": ["GBR_U23MNT"] },
             "logo_filename": "1948_Summer_Olympics_logos.svg",
             "mascot_filename": "Football_pictogram.svg",
             "start_date": "1948-07-26",
@@ -1063,7 +1063,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GER-1935-1945_U23MNT"],
+            "host": { "teams": ["GER-1935-1945_U23MNT"] },
             "logo_filename": "1936_Summer_Olympics_logo.svg",
             "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1936-08-03",
@@ -1112,7 +1112,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["NED_U23MNT"],
+            "host": { "teams": ["NED_U23MNT"] },
             "logo_filename": "1928_Olympics_poster.jpg",
             "mascot_filename": "394px-1928_Summer_Olympics_stamp_of_the_Netherlands_football.jpg",
             "start_date": "1928-05-27",
@@ -1166,7 +1166,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["FRA_U23MNT"],
+            "host": { "teams": ["FRA_U23MNT"] },
             "logo_filename": "1924_Summer_Olympics_logo.svg",
             "mascot_filename": "Football_pictogram.svg",
             "start_date": "1924-05-25",
@@ -1220,7 +1220,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["BEL_U23MNT"],
+            "host": { "teams": ["BEL_U23MNT"] },
             "logo_filename": "1920_olympics_poster.jpg",
             "mascot_filename": "640px-Olympic_flag.svg.png",
             "start_date": "1920-08-28",
@@ -1274,7 +1274,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["SWE_U23MNT"],
+            "host": { "teams": ["SWE_U23MNT"] },
             "logo_filename": "355px-1912_Summer_Olympics_poster.jpg",
             "mascot_filename": "640px-Football_at_the_1912_Summer_Olympics.jpeg",
             "mascot_height": "220px",
@@ -1324,7 +1324,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["GBR_U23MNT"],
+            "host": { "teams": ["GBR_U23MNT"] },
             "logo_filename": "320px-Olympic_games_1908_London.jpg",
             "mascot_filename": "300px-London_1908_Football_Challenge_Cup.jpg",
             "start_date": "1908-10-19",

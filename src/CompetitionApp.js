@@ -1,7 +1,8 @@
 import React from 'react'
 import { Container, Row, Col } from 'reactstrap'
 import { getTournamentTitleFont } from './core/Helper'
-import { getTeams, getTeamFlagId, getCompetition, getTeamName } from './core/TeamHelper'
+import { getTeams, getTeamFlagId, getTeamName } from './core/TeamHelper'
+import { getCompetition } from './core/TournamentHelper'
 import { SharedBronzeTooltip, SemifinalistsTooltip, ShortNameTooltip } from './core/TooltipHelper'
 import Page from './core/Page'
 

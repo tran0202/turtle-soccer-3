@@ -83,6 +83,7 @@ const TournamentDetails = (props) => {
     } = details
     const { total_matches, total_goals, attendance, final_matches, final_goals, final_attendance } = statistics
     const { logo_path } = competition
+    const adjustedHost = !host ? null : Array.isArray(host) ? host : host.teams
     return (
         <React.Fragment>
             <Row>
@@ -93,14 +94,14 @@ const TournamentDetails = (props) => {
                                 <i>"{slogan}"</i>
                             </li>
                         )}
-                        {host && (
+                        {adjustedHost && (
                             <li>
                                 Hosted by{' '}
-                                {host.map((h, index) => {
+                                {adjustedHost.map((h, index) => {
                                     return (
                                         <React.Fragment key={index}>
-                                            {index !== 0 && index < host.length - 1 ? ', ' : ''}
-                                            {index !== 0 && index === host.length - 1 ? ' and ' : ''}
+                                            {index !== 0 && index < adjustedHost.length - 1 ? ', ' : ''}
+                                            {index !== 0 && index === adjustedHost.length - 1 ? ' and ' : ''}
                                             <b>{getTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
                                         </React.Fragment>
                                     )
@@ -490,44 +491,6 @@ const AwardBlock = (props) => {
     )
 }
 
-const BestDefenderCategory = (props) => {
-    const { best_defender, highlighted, config } = props
-    const best_defender_label = best_defender && best_defender.length > 1 ? 'Best Defenders' : 'Best Defender'
-    return (
-        <React.Fragment>
-            {best_defender && <AwardBlock id={best_defender} label={best_defender_label} highlighted={highlighted} config={config} />}
-        </React.Fragment>
-    )
-}
-
-const BestMidfielderCategory = (props) => {
-    const { best_midfielder, highlighted, config } = props
-    const best_midfielder_label = best_midfielder && best_midfielder.length > 1 ? 'Best Midfielders' : 'Best Midfielder'
-    return (
-        <React.Fragment>
-            {best_midfielder && <AwardBlock id={best_midfielder} label={best_midfielder_label} highlighted={highlighted} config={config} />}
-        </React.Fragment>
-    )
-}
-
-const BestForwardCategory = (props) => {
-    const { best_forward, highlighted, config } = props
-    const best_forward_label = best_forward && best_forward.length > 1 ? 'Best Forwards' : 'Best Forward'
-    return (
-        <React.Fragment>{best_forward && <AwardBlock id={best_forward} label={best_forward_label} highlighted={highlighted} config={config} />}</React.Fragment>
-    )
-}
-
-const FinalBestPlayerCategory = (props) => {
-    const { final_best_player, highlighted, config } = props
-    const final_best_player_label = final_best_player && final_best_player.length > 1 ? 'FinalBestPlayers' : 'FinalBestPlayer'
-    return (
-        <React.Fragment>
-            {final_best_player && <AwardBlock id={final_best_player} label={final_best_player_label} highlighted={highlighted} config={config} />}
-        </React.Fragment>
-    )
-}
-
 const FinalTopScorerCategory = (props) => {
     const { final_top_scorer1, final_top_scorer2, final_top_scorer3, highlighted, config } = props
     const final_top_scorer1_label = final_top_scorer1 && final_top_scorer1.length > 1 ? 'FinalTopScorers1' : 'FinalTopScorer1'
@@ -542,24 +505,10 @@ const FinalTopScorerCategory = (props) => {
     )
 }
 
-const FinalBestYoungPlayerCategory = (props) => {
-    const { final_best_young_player, highlighted, config } = props
-    const final_best_young_player_label = final_best_young_player && final_best_young_player.length > 1 ? 'FinalYoungPlayers' : 'FinalYoungPlayer'
-    return (
-        <React.Fragment>
-            {final_best_young_player && (
-                <AwardBlock id={final_best_young_player} label={final_best_young_player_label} highlighted={highlighted} config={config} />
-            )}
-        </React.Fragment>
-    )
-}
-
-const GloveCategory = (props) => {
-    const { golden_glove, highlighted, config } = props
-    const golden_glove_label = golden_glove && golden_glove.length > 1 ? 'Golden Gloves' : 'Golden Glove'
-    return (
-        <React.Fragment>{golden_glove && <AwardBlock id={golden_glove} label={golden_glove_label} highlighted={highlighted} config={config} />}</React.Fragment>
-    )
+const Category = (props) => {
+    const { cat, label, labels, highlighted, config } = props
+    const cat_label = cat && cat.length > 1 ? labels : label
+    return <React.Fragment>{cat && <AwardBlock id={cat} label={cat_label} highlighted={highlighted} config={config} />}</React.Fragment>
 }
 
 const BootCategory = (props) => {
@@ -632,10 +581,12 @@ const TournamentAwards = (props) => {
             </Row>
             <BallCategory golden_ball={golden_ball} highlighted={is_ball_highlighted} config={config} />
             <BootCategory golden_boot={golden_boot} silver_boot={silver_boot} bronze_boot={bronze_boot} highlighted={is_boot_highlighted} config={config} />
-            {golden_glove && <GloveCategory golden_glove={golden_glove} highlighted={is_glove_highlighted} config={config} />}
+            {golden_glove && <Category cat={golden_glove} label="'Golden Glove" labels="'Golden Gloves" highlighted={is_glove_highlighted} config={config} />}
             {best_young_player && <AwardRow index={0} award={best_young_player} label="BestYoungPlayer" highlighted={is_young_highlighted} config={config} />}
             {fair_play_team && <FairPlayBlock id={fair_play_team} label="Fair Play" highlighted={is_fair_highlighted} config={config} />}
-            {final_best_player && <FinalBestPlayerCategory final_best_player={final_best_player} highlighted={is_final_ball_highlighted} config={config} />}
+            {final_best_player && (
+                <Category cat={final_best_player} label="FinalBestPlayer" labels="FinalBestPlayers" highlighted={is_final_ball_highlighted} config={config} />
+            )}
             <FinalTopScorerCategory
                 final_top_scorer1={final_top_scorer1}
                 final_top_scorer2={final_top_scorer2}
@@ -644,11 +595,29 @@ const TournamentAwards = (props) => {
                 config={config}
             />
             {final_best_young_player && (
-                <FinalBestYoungPlayerCategory final_best_young_player={final_best_young_player} highlighted={is_final_young_highlighted} config={config} />
+                <Category
+                    cat={final_best_young_player}
+                    label="FinalYoungPlayer"
+                    labels="FinalYoungPlayers"
+                    highlighted={is_final_young_highlighted}
+                    config={config}
+                />
             )}
-            {best_defender && <BestDefenderCategory best_defender={best_defender} highlighted={is_best_defender_highlighted} config={config} />}
-            {best_midfielder && <BestMidfielderCategory best_midfielder={best_midfielder} highlighted={is_best_midfielder_highlighted} config={config} />}
-            {best_forward && <BestForwardCategory best_forward={best_forward} highlighted={is_best_forward_highlighted} config={config} />}
+            {best_defender && (
+                <Category cat={best_defender} label="Best Defender" labels="Best Defenders" highlighted={is_best_defender_highlighted} config={config} />
+            )}
+            {best_midfielder && (
+                <Category
+                    cat={best_midfielder}
+                    label="Best Midfielder"
+                    labels="Best Midfielders"
+                    highlighted={is_best_midfielder_highlighted}
+                    config={config}
+                />
+            )}
+            {best_forward && (
+                <Category cat={best_forward} label="Best Forward" labels="Best Forwards" highlighted={is_best_forward_highlighted} config={config} />
+            )}
         </React.Fragment>
     )
 }

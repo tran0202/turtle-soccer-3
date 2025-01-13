@@ -6,6 +6,8 @@
             "type": "roundrobin",
             "eliminate_count": 16,
             "next_round": "Round of 16",
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "next_round_note": "8 best third-placed teams advance to the knockout stage",
             "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4] } },
             "groups": [
                 {

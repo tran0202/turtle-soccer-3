@@ -1,13 +1,13 @@
 import React from 'react'
 import randomInteger from 'random-int'
 import Confederations from '../data/Confederations.json'
-import Competitions from '../data/Competitions.json'
 import Imagine from '../data/Imagine.json'
 import NationArray from '../data/Nations.json'
 import TeamArray from '../data/Teams.json'
 import ClubArray from '../data/Clubs.json'
 import ThirdPlaceCombination from '../data/ThirdPlaceCombination.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
+import { getCompetitions, getCompetition } from './TournamentHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 export const getTeamArray = () => {
@@ -20,11 +20,11 @@ export const setFIFAMember = () => {
     })
 }
 
-export const getTeams = (team_type_id, all_member) => {
+export const getTeams = (team_type_id, all_members) => {
     setFIFAMember()
     const result = []
     getTeamArray().forEach((t) => {
-        const foundNation = NationArray.find((n) => t.nation_id === n.id && (all_member || n.fifa_member) && t.team_type_id === team_type_id)
+        const foundNation = NationArray.find((n) => t.nation_id === n.id && (all_members || n.fifa_member) && t.team_type_id === team_type_id)
         if (foundNation) {
             t.nation = foundNation
             const foundConf = getConfederations().find((c) => foundNation.confederation_id === c.id)
@@ -71,6 +71,25 @@ export const getNonFIFATeams = (team_type_id) => {
     return result
 }
 
+export const getHostTeamArray = (config) => {
+    if (!config || !config.details || !config.competition) return
+    const { details, competition } = config
+    const { host } = details
+    if (!host) return
+    const { teams } = competition
+    const adjustedHost = Array.isArray(host) ? host : host.teams
+    const result = []
+    adjustedHost.forEach((h_id) => {
+        const host_id = typeof h_id === 'string' ? h_id : h_id.id
+        const qualification_date = typeof h_id === 'string' ? host.qualification_date : h_id.qualification_date
+        const team = teams.find((t) => t.id === host_id)
+        if (team) {
+            result.push({ ...team, qualification_method: adjustedHost.length > 1 ? 'Co-hosts' : 'Host', qualification_date })
+        }
+    })
+    return result
+}
+
 // this includes FIFA
 export const getConfederations = () => {
     return Confederations
@@ -78,23 +97,6 @@ export const getConfederations = () => {
 
 export const getRegionalConfederations = () => {
     return getConfederations().filter((c) => c.id !== 'FIFA')
-}
-
-export const getCompetitions = () => {
-    return Competitions
-}
-
-export const getCompetition = (competition_id) => {
-    const competition = getCompetitions().find((c) => c.id === competition_id)
-    if (competition) {
-        const tournaments = getTournamentArray().filter((t) => t.competition_id === competition_id)
-        tournaments.forEach((t, index) => {
-            t.index = tournaments.length - index
-        })
-        competition.tournaments = tournaments
-        competition.teams = getTeams(competition.team_type_id, competition.all_members)
-    }
-    return competition
 }
 
 export const getConfederationOrganization = () => {
@@ -354,14 +356,23 @@ export const randomHostIndex = (count, confederation_id) => {
 export const getRandomHostTeamArray = (teamArray, config) => {
     if (!teamArray || !config || !config.details) return
     const result = []
-    const confederation_id = config.details.host.confederation_id
-    const teams = teamArray.filter((t) => t.confederation && t.confederation.id === confederation_id)
-    const host_count = config.details.host.teams.length
-    teams.length >= host_count &&
-        randomHostIndex(host_count, confederation_id).forEach((i) => {
-            const team = { ...teams[i], qualification_method: 'Hosts', qualification_date: '2023-02-14' }
-            result.push(team)
-        })
+    let total_host_count = 0
+    config.details.host.confederations.forEach((c) => {
+        total_host_count = total_host_count + c.count
+    })
+    config.details.host.confederations.forEach((c) => {
+        const teams = teamArray.filter((t) => t.confederation && t.confederation.id === c.id)
+        const host_count = c.count
+        teams.length >= host_count &&
+            randomHostIndex(host_count, c.id).forEach((i) => {
+                const team = {
+                    ...teams[i],
+                    qualification_method: total_host_count > 1 ? 'Co-hosts' : 'Host',
+                    qualification_date: config.details.host.qualification_date,
+                }
+                result.push(team)
+            })
+    })
     return result
 }
 

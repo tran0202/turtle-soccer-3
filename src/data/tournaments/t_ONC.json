@@ -9,7 +9,7 @@
         "tiebreakers": ["team", "head2head", "head2headawaygoals", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["FIJ", "VAN"],
+            "host": { "teams": [{ "id": "FIJ", "qualification_date": "2024-01-24" }, "VAN"], "qualification_date": "2023-12-01" },
             "logo_filename": "OFC_Men's_Nations_Cup.jpg",
             "mascot_filename": "574px-2024_OFC_Nations_Cup_map.png",
             "start_date": "2024-06-15",
@@ -68,7 +68,7 @@
         "tiebreakers": ["team", "head2head", "head2headawaygoals", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["PNG"],
+            "host": { "teams": ["PNG"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2016-05-28",
@@ -125,7 +125,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["SOL"],
+            "host": { "teams": ["SOL"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2012-06-01",
@@ -229,7 +229,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["AUS"],
+            "host": { "teams": ["AUS"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2004-05-29",
@@ -280,7 +280,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["NZL"],
+            "host": { "teams": ["NZL"] },
             "logo_filename": "OFC3-copy-2002.jpeg",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2002-07-05",
@@ -333,7 +333,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["TAH"],
+            "host": { "teams": ["TAH"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "2000-06-19",
@@ -384,7 +384,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["AUS"],
+            "host": { "teams": ["AUS"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1998-09-25",
@@ -490,7 +490,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["NCL-1973-2008"],
+            "host": { "teams": ["NCL-1973-2008"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1980-02-24",
@@ -541,7 +541,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["NZL"],
+            "host": { "teams": ["NZL"] },
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
             "start_date": "1973-02-17",

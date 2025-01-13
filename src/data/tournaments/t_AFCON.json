@@ -7,7 +7,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["CIV"],
+            "host": { "teams": ["CIV"], "qualification_date": "2019-01-30" },
             "logo_filename": "2023_Africa_Cup_of_Nations_logo.svg",
             "mascot": "Akwaba",
             "mascot_filename": "_Akwaba,_Africa_Cup_of_Nations_Egypt_2023_Mascot,_July_2023_.jpeg",
@@ -61,7 +61,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["CMR"],
+            "host": { "teams": ["CMR"], "qualification_date": "2019-01-08" },
             "logo_filename": "2021_Africa_Cup_of_Nations_logo.png",
             "mascot": "Mola",
             "mascot_filename": "320px-Tara_2_ok.jpg",
@@ -115,7 +115,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["EGY"],
+            "host": { "teams": ["EGY"], "qualification_date": "2018-10-16" },
             "logo_filename": "2019_Africa_Cup_of_Nations_logo.svg",
             "mascot_filename": "_Tut,_Africa_Cup_of_Nations_Egypt_2019_Mascot,_May_2019_.jpeg",
             "start_date": "2019-06-21",
@@ -168,7 +168,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["GAB"],
+            "host": { "teams": ["GAB"], "qualification_date": "2015-04-08" },
             "logo_filename": "2017_Africa_Cup_of_Nations_logo.png",
             "mascot": "Samba",
             "mascot_filename": "12472337_1013610275372599_3491603779303180603_n.png",
@@ -215,7 +215,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["EQG"],
+            "host": { "teams": ["EQG"], "qualification_date": "2014-11-14" },
             "logo_filename": "2015_Africa_Cup_of_Nations_logo.png",
             "mascot": "Chuku Chuku",
             "mascot_filename": "Chuku_Chuku.webp",
@@ -276,7 +276,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
         "details": {
-            "host": ["RSA"],
+            "host": { "teams": ["RSA"], "qualification_date": "2011-09-28" },
             "logo_filename": "2013_Africa_Cup_of_Nations.png",
             "mascot": "Takuma",
             "mascot_filename": "11750_401983089894620_2026646383_n.png",
@@ -330,7 +330,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
         "details": {
-            "host": ["GAB", "EQG"],
+            "host": { "teams": ["GAB", "EQG"], "qualification_date": "2007-07-29" },
             "logo_filename": "2012_Africa_Cup_of_Nations_logo.png",
             "mascot_filename": "high_1297629038.jpg",
             "start_date": "2012-01-21",
@@ -388,7 +388,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
         "details": {
-            "host": ["ANG"],
+            "host": { "teams": ["ANG"], "qualification_date": "2006-09-04" },
             "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",
             "mascot_filename": "Palanquinha.webp",
             "start_date": "2010-01-10",
@@ -439,7 +439,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["GHA"],
+            "host": { "teams": ["GHA"], "qualification_date": "2004-07-08" },
             "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg",
             "mascot": "Agro-Hene",
             "mascot_filename": "Unnamed_AFCON_2008_Mascot.webp",
@@ -492,7 +492,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["EGY"],
+            "host": { "teams": ["EGY"], "qualification_date": "2002-10-24" },
             "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",
             "mascot": "Croconile",
             "mascot_filename": "Croconile.webp",
@@ -542,7 +542,7 @@
         "points_for_win": 3,
         "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
         "details": {
-            "host": ["TUN"],
+            "host": { "teams": ["TUN"], "qualification_date": "2000-09-04" },
             "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg",
             "mascot": "Nçayir",
             "mascot_filename": "Afcon_2004_mascot.png",
@@ -597,7 +597,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["MLI"],
+            "host": { "teams": ["MLI"], "qualification_date": "1998-02-05" },
             "logo_filename": "Mali_CAN2002.png",
             "mascot": "Hippopotamus",
             "mascot_filename": "Hippopotamus.webp",
@@ -652,7 +652,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["GHA", "NGA"],
+            "host": { "teams": ["GHA", "NGA"], "qualification_date": "1999-03-15" },
             "logo_filename": "GhanaNigeria2000logo.png",
             "mascot": "Green Eagle and Black Star",
             "mascot_filename": "Green_Eagle_and_Black_Star.webp",
@@ -703,7 +703,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["BFA"],
+            "host": { "teams": ["BFA"] },
             "logo_filename": "Af98logo.png",
             "mascot": "Foto",
             "mascot_filename": "Foto.webp",
@@ -757,7 +757,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["RSA"],
+            "host": { "teams": ["RSA"] },
             "logo_filename": "CAN_1996_logo.jpg",
             "mascot": "Leopard",
             "mascot_filename": "Leopard.webp",
@@ -809,7 +809,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["TUN"],
+            "host": { "teams": ["TUN"] },
             "logo_filename": "1994_African_Cup_of_Nations_logo.jpg",
             "mascot": "Eagle",
             "mascot_filename": "Eagle.webp",
@@ -860,7 +860,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["SEN"],
+            "host": { "teams": ["SEN"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot": "Diambar",
             "mascot_filename": "Diambar.webp",
@@ -912,7 +912,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["ALG"],
+            "host": { "teams": ["ALG"] },
             "logo_filename": "CAN_Algerie_1990_logo.png",
             "mascot_filename": "477px-African_Cup_of_Nations_1990.jpg",
             "start_date": "1990-03-02",
@@ -961,7 +961,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["MAR"],
+            "host": { "teams": ["MAR"] },
             "logo_filename": "CAN_1988_(logo).png",
             "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1988-03-13",
@@ -1017,7 +1017,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["EGY"],
+            "host": { "teams": ["EGY"] },
             "logo_filename": "CAN_1986_(logo).png",
             "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1986-03-07",
@@ -1066,7 +1066,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["CIV"],
+            "host": { "teams": ["CIV"] },
             "logo_filename": "CAN_1984_(logo).png",
             "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1984-03-04",
@@ -1118,7 +1118,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["LBY-1977-2011"],
+            "host": { "teams": ["LBY-1977-2011"] },
             "logo_filename": "CAN_1982_(logo).png",
             "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1982-03-05",
@@ -1168,7 +1168,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["NGA"],
+            "host": { "teams": ["NGA"] },
             "logo_filename": "1980_Afcon_(logo).png",
             "mascot_filename": "1980_Afcon_teams.png",
             "start_date": "1980-03-08",
@@ -1221,7 +1221,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["GHA"],
+            "host": { "teams": ["GHA"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1978-03-05",
@@ -1275,7 +1275,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["ETH-1975-1987"],
+            "host": { "teams": ["ETH-1975-1987"] },
             "logo_filename": "1976_Afcon_-_logo.png",
             "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1976-02-29",
@@ -1325,7 +1325,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["EGY"],
+            "host": { "teams": ["EGY"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1974-03-01",
@@ -1375,7 +1375,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["CMR-1961-1975"],
+            "host": { "teams": ["CMR-1961-1975"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "Finales_CAN_2021_(137).jpg",
             "start_date": "1972-02-23",
@@ -1425,7 +1425,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["SDN-1956-1970"],
+            "host": { "teams": ["SDN-1956-1970"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "Coppa_Africa.svg.png",
             "start_date": "1970-02-06",
@@ -1475,7 +1475,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["ETH-1941-1974"],
+            "host": { "teams": ["ETH-1941-1974"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "1968_Afcon_teams.png",
             "start_date": "1968-01-12",
@@ -1525,7 +1525,7 @@
         "points_for_win": 2,
         "tiebreakers": ["pointslot"],
         "details": {
-            "host": ["TUN"],
+            "host": { "teams": ["TUN"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_1965.png",
             "start_date": "1965-11-12",
@@ -1579,7 +1579,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["GHA"],
+            "host": { "teams": ["GHA"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_(ACN).svg.png",
             "start_date": "1963-11-24",
@@ -1629,7 +1629,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["ETH-1941-1974"],
+            "host": { "teams": ["ETH-1941-1974"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_1962.png",
             "start_date": "1962-01-14",
@@ -1682,7 +1682,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["UAR"],
+            "host": { "teams": ["UAR"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_1959.png",
             "start_date": "1959-05-22",
@@ -1732,7 +1732,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["SDN-1956-1970"],
+            "host": { "teams": ["SDN-1956-1970"], "qualification_date": "1956-07-08" },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
             "mascot_filename": "African_Cup_of_Nations_1957.png",
             "start_date": "1957-02-10",

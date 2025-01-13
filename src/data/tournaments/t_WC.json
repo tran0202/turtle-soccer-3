@@ -8,7 +8,7 @@
         "points_for_win": 3,
         "details": {
             "slogan": "WE ARE 26",
-            "host": ["CAN", "MEX", "USA"],
+            "host": { "teams": ["CAN", "MEX", "USA"] },
             "logo_filename": "2026_FIFA_World_Cup_emblem.svg",
             "mascot": "",
             "mascot_filename": "640px-2026_world_cup_qualification_map.svg.png",
@@ -40,7 +40,7 @@
         "points_for_win": 3,
         "details": {
             "slogan": "Now is All",
-            "host": ["QAT"],
+            "host": { "teams": ["QAT"], "qualification_date": "2010-12-02" },
             "logo_filename": "2022_FIFA_World_Cup.svg",
             "mascot": "La'eeb",
             "mascot_filename": "Laeeb.webp",
@@ -93,7 +93,7 @@
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
             "slogan": "Play with an open heart",
-            "host": ["RUS"],
+            "host": { "teams": ["RUS"], "qualification_date": "2010-12-02" },
             "logo_filename": "2018_FIFA_World_Cup.svg",
             "mascot": "Zabivaka",
             "mascot_filename": "Zabivaka_(mascot).jpg",
@@ -155,7 +155,7 @@
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
             "slogan": "All in One Rhythm",
-            "host": ["BRA"],
+            "host": { "teams": ["BRA"], "qualification_date": "2007-10-30" },
             "logo_filename": "2014_FIFA_World_Cup.svg",
             "mascot": "Fuleco",
             "mascot_filename": "Fuleco.png",
@@ -227,7 +227,7 @@
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
             "slogan": "It's time. Celebrate Africa's Humanity",
-            "host": ["RSA"],
+            "host": { "teams": ["RSA"], "qualification_date": "2004-05-15" },
             "logo_filename": "2010_FIFA_World_Cup.svg",
             "mascot": "Zakumi",
             "mascot_filename": "Zakumi.svg",
@@ -308,7 +308,7 @@
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
             "slogan": "A time to make friends",
-            "host": ["GER"],
+            "host": { "teams": ["GER"], "qualification_date": "2000-07-06" },
             "logo_filename": "2006_FIFA_World_Cup.svg",
             "mascot": "Goleo VI and Pille",
             "mascot_filename": "2006-goleo-vi-and-pille.png",
@@ -367,7 +367,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["KOR", "JPN"],
+            "host": { "teams": ["KOR", "JPN"], "qualification_date": "1996-05-31" },
             "logo_filename": "2002_FIFA_World_Cup_logo.svg",
             "mascot": "Ato, Kaz and Nik",
             "mascot_filename": "2002-ato-kaz-and-nik.png",
@@ -431,7 +431,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"], "qualification_date": "1992-07-02" },
             "logo_filename": "1998_FIFA_World_Cup.svg",
             "mascot": "Footix",
             "mascot_filename": "1998-footix.png",
@@ -495,7 +495,7 @@
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
             "slogan": "Making Soccer History",
-            "host": ["USA"],
+            "host": { "teams": ["USA"], "qualification_date": "1988-07-04" },
             "logo_filename": "1994_FIFA_World_Cup.svg",
             "mascot": "Striker",
             "mascot_filename": "1994-striker.png",
@@ -558,7 +558,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["ITA"],
+            "host": { "teams": ["ITA"], "qualification_date": "1984-05-19" },
             "logo_filename": "1990_FIFA_World_Cup.svg",
             "mascot": "Ciao",
             "mascot_filename": "1990-ciao.png",
@@ -620,7 +620,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["MEX"],
+            "host": { "teams": ["MEX"], "qualification_date": "1983-05-20" },
             "logo_filename": "1986_FIFA_World_Cup.svg",
             "mascot": "Pique",
             "mascot_filename": "1986-pique.png",
@@ -692,7 +692,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["ESP"],
+            "host": { "teams": ["ESP"], "qualification_date": "1966-07-06" },
             "logo_filename": "1982_FIFA_World_Cup.svg",
             "mascot": "Naranjito",
             "mascot_filename": "1982-naranjito.png",
@@ -751,7 +751,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["ARG"],
+            "host": { "teams": ["ARG"], "qualification_date": "1966-07-06" },
             "logo_filename": "460px-Logo_Mundial_78.svg.png",
             "mascot": "Gauchito",
             "mascot_filename": "1978-gauchito.png",
@@ -816,7 +816,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["GER-1949-1990"],
+            "host": { "teams": ["GER-1949-1990"], "qualification_date": "1966-07-06" },
             "logo_filename": "FIFA_World_Cup_1974_-_emblem.svg",
             "mascot": "Tip and Tap",
             "mascot_filename": "1974-tip-and-tap.png",
@@ -877,7 +877,7 @@
         "points_for_win": 2,
         "tiebreakers": ["pointandgoaldifference", "lot"],
         "details": {
-            "host": ["MEX"],
+            "host": { "teams": ["MEX"], "qualification_date": "1964-10-08" },
             "logo_filename": "340px-1970_FIFA_World_Cup.svg.png",
             "mascot": "Juanito",
             "mascot_filename": "1970-juanito.png",
@@ -932,7 +932,7 @@
         "points_for_win": 2,
         "tiebreakers": ["goalratio", "lot"],
         "details": {
-            "host": ["ENG"],
+            "host": { "teams": ["ENG"], "qualification_date": "1960-08-22" },
             "logo_filename": "1966_FIFA_World_Cup.png",
             "mascot": "Willie",
             "mascot_filename": "1966-world-cup-willie.png",
@@ -991,7 +991,7 @@
         "points_for_win": 2,
         "tiebreakers": ["goalratio", "lot"],
         "details": {
-            "host": ["CHI"],
+            "host": { "teams": ["CHI"], "qualification_date": "1956-06-11" },
             "logo_filename": "1962_FIFA_World_Cup.jpg",
             "mascot": "San and Tiago",
             "mascot_filename": "SanTiago.webp",
@@ -1051,7 +1051,7 @@
         "points_for_win": 2,
         "tiebreakers": ["goalratiogroupplayoff", "lot"],
         "details": {
-            "host": ["SWE"],
+            "host": { "teams": ["SWE"], "qualification_date": "1950-06-23" },
             "logo_filename": "1958_FIFA_World_Cup.jpg",
             "mascot": "Gunnar",
             "mascot_filename": "Gunnar.webp",
@@ -1107,7 +1107,7 @@
         "points_for_win": 2,
         "tiebreakers": ["lotgroupplayoff"],
         "details": {
-            "host": ["SUI"],
+            "host": { "teams": ["SUI"], "qualification_date": "1946-07-22" },
             "logo_filename": "1954_FIFA_World_Cup.jpg",
             "mascot_filename": "WM54_Spielorte.png",
             "start_date": "1954-06-16",
@@ -1162,7 +1162,7 @@
         "points_for_win": 2,
         "tiebreakers": ["1stplaceplayoff"],
         "details": {
-            "host": ["BRA"],
+            "host": { "teams": ["BRA"], "qualification_date": "1946-01-01" },
             "logo_filename": "309px-Poster_-_World_Cup_1950.jpg",
             "mascot_filename": "Ingresso_Copa_do_Mundo_FIFA_1950_-_Brasil_x_Uruguai.jpg",
             "start_date": "1950-06-24",
@@ -1218,7 +1218,7 @@
         "competition_id": "WC",
         "points_for_win": 2,
         "details": {
-            "host": ["FRA"],
+            "host": { "teams": ["FRA"], "qualification_date": "1936-08-13" },
             "logo_filename": "317px-1938_fifa_worldcup_poster.jpg",
             "mascot_filename": "640px-Albert_Lebrun_presents_1938_FIFA_Cup_to_Giuseppe_Meazza_1974_stamp_of_Nicaragua.jpg",
             "start_date": "1938-06-04",
@@ -1272,7 +1272,7 @@
         "competition_id": "WC",
         "points_for_win": 2,
         "details": {
-            "host": ["ITA-1861-1946"],
+            "host": { "teams": ["ITA-1861-1946"], "qualification_date": "1932-10-09" },
             "logo_filename": "317px-1934_fifa_worldcup_poster.jpg",
             "mascot_filename": "325px-1934_fifa_worldcup_poster_02.jpg",
             "start_date": "1934-05-27",
@@ -1326,7 +1326,7 @@
         "points_for_win": 2,
         "tiebreakers": ["points"],
         "details": {
-            "host": ["URU"],
+            "host": { "teams": ["URU"] },
             "logo_filename": "317px-Uruguay_1930_World_Cup.jpg",
             "mascot_filename": "640px-Uruguay_1930_FIFA_World_Cup.svg.png",
             "start_date": "1930-07-13",

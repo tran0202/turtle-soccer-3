@@ -10,7 +10,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
-            "host": ["CAN", "USA"],
+            "host": { "teams": ["CAN", "USA"], "qualification_date": "2023-03-24" },
             "logo_filename": "Concacaf_Gold_Cup_2021.svg",
             "mascot_filename": "595px-CONCACAF_Gold_Cup_2023_Qualifiers_Map.png",
             "mascot_height": "220px",
@@ -71,7 +71,7 @@
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
-            "host": ["USA"],
+            "host": { "teams": ["USA"], "qualification_date": "2019-11-15" },
             "logo_filename": "Concacaf_Gold_Cup_2021.svg",
             "mascot_filename": "347px-USA-MEX_2021-08-01.svg.png",
             "mascot_height": "220px",
@@ -132,7 +132,7 @@
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["CRC", "JAM", "USA"],
+            "host": { "teams": ["CRC", "JAM", "USA"], "qualification_date": "2018-03-07" },
             "logo_filename": "2019_CONCACAF_Gold_Cup.svg",
             "mascot_filename": "Seleccionados_en_la_Copa_Oro_de_la_CONCACAF_2019.png",
             "mascot_height": "200px",
@@ -189,7 +189,7 @@
         "tiebreakers": ["team", "head2headpoints", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2017_CONCACAF_Gold_Cup.svg",
             "mascot_filename": "347px-CRC-USA_2017-07-22.svg.png",
             "start_date": "2017-07-07",
@@ -252,7 +252,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2headpoints", "lot"],
         "details": {
-            "host": ["CAN", "USA"],
+            "host": { "teams": ["CAN", "USA"] },
             "logo_filename": "CONCACAF_Gold_Cup_2015.svg",
             "mascot_filename": "577px-2015_CONCACAF_Gold_Cup_Results.png",
             "start_date": "2015-07-07",
@@ -306,7 +306,7 @@
         "tiebreakers": ["team", "head2headpoints", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2013_CONCACAF_Gold_Cup.svg",
             "mascot_filename": "347px-Copa_Oro_2013_Partido_11_Estados_Unidos_-_Cuba.svg.png",
             "start_date": "2013-07-07",
@@ -369,7 +369,7 @@
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2011-concacaf-gold-cup.png",
             "mascot_filename": "347px-CRC-CUB_2011-06-05.svg.png",
             "start_date": "2011-06-05",
@@ -428,7 +428,7 @@
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2009_CONCACAF_Gold_Cup_logo.svg",
             "mascot_filename": "2009GoldCup.png",
             "start_date": "2009-07-03",
@@ -487,7 +487,7 @@
         "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2007_CONCACAF_Gold_Cup_logo.svg",
             "mascot_filename": "GoldCup2007.png",
             "start_date": "2007-06-06",
@@ -546,7 +546,7 @@
         "tiebreakers": ["team"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2005_CONCACAF_Gold_Cup_logo.svg",
             "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "2005-07-06",
@@ -605,7 +605,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["MEX", "USA"],
+            "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "2003_CONCACAF_Gold_Cup_logo.svg",
             "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "2003-07-12",
@@ -661,7 +661,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "lot"],
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2002_CONCACAF_Gold_Cup_logo.png",
             "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "2002-01-18",
@@ -715,7 +715,7 @@
         "tiebreakers": ["team", "lot"],
         "no_third_place": true,
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "2000_CONCACAF_Gold_Cup.png",
             "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "2000-02-12",
@@ -773,7 +773,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "gc_1998.png",
             "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "1998-02-01",
@@ -824,7 +824,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "1996_CONCACAF_Gold_Cup.png",
             "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "1996-01-10",
@@ -875,7 +875,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["MEX", "USA"],
+            "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "1993_CONCACAF_Gold_Cup.jpg",
             "mascot_filename": "CONCACAF_-_Gold_Cup.svg",
             "start_date": "1993-07-10",
@@ -931,7 +931,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["USA"],
+            "host": { "teams": ["USA"] },
             "logo_filename": "1991_CONCACAF_Gold_Cup_logo.jpg",
             "mascot_filename": "Copa_Oro_de_la_Concacaf.png",
             "start_date": "1991-06-28",
@@ -1096,7 +1096,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["HON-1949-2022"],
+            "host": { "teams": ["HON-1949-2022"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF-Map.png",
             "mascot_height": "180px",
@@ -1147,7 +1147,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["MEX"],
+            "host": { "teams": ["MEX"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "Mapa_da_CONCACAF.png",
             "start_date": "1977-10-08",
@@ -1197,7 +1197,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["HAI-1964-1986"],
+            "host": { "teams": ["HAI-1964-1986"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
             "mascot_height": "180px",
@@ -1248,7 +1248,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["TRI"],
+            "host": { "teams": ["TRI"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
             "start_date": "1971-11-20",
@@ -1294,7 +1294,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["CRC"],
+            "host": { "teams": ["CRC"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF-Map.png",
             "mascot_height": "180px",
@@ -1345,7 +1345,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["HON-1949-2022"],
+            "host": { "teams": ["HON-1949-2022"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "Mapa_da_CONCACAF.png",
             "start_date": "1967-03-05",
@@ -1395,7 +1395,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["GUA"],
+            "host": { "teams": ["GUA"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
             "mascot_height": "180px",
@@ -1444,7 +1444,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team"],
         "details": {
-            "host": ["SLV"],
+            "host": { "teams": ["SLV"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
             "start_date": "1963-03-23",

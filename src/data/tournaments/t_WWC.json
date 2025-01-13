@@ -7,7 +7,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["AUS_WNT", "NZL_WNT"],
+            "host": { "teams": ["AUS_WNT", "NZL_WNT"], "qualification_date": "2020-06-25" },
             "logo_filename": "Logo_of_the_2023_FIFA_Women's_World_Cup.svg",
             "mascot": "Tazuni",
             "mascot_filename": "Tazuni.png.webp",
@@ -66,7 +66,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["FRA_WNT"],
+            "host": { "teams": ["FRA_WNT"], "qualification_date": "2015-03-19" },
             "logo_filename": "2019_FIFA_Women's_World_Cup.svg",
             "mascot": "Ettie",
             "mascot_filename": "Ettie.png.webp",
@@ -135,7 +135,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["CAN_WNT"],
+            "host": { "teams": ["CAN_WNT"], "qualification_date": "2011-03-03" },
             "logo_filename": "2015_FIFA_Women's_World_Cup.svg",
             "mascot": "Shuéme",
             "mascot_filename": "Shuéme.webp",
@@ -194,7 +194,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["GER_WNT"],
+            "host": { "teams": ["GER_WNT"], "qualification_date": "2007-10-03" },
             "logo_filename": "2011_FIFA_Women's_World_Cup.svg",
             "mascot": "Karla Kick",
             "mascot_filename": "Karla_Kick.webp",
@@ -253,7 +253,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "fairplay", "lot"],
         "details": {
-            "host": ["CHN_WNT"],
+            "host": { "teams": ["CHN_WNT"], "qualification_date": "2000-10-26" },
             "logo_filename": "2007_FIFA_Women's_World_Cup.svg",
             "mascot": "Hua Mulan",
             "mascot_filename": "Hua_Mulan.webp",
@@ -314,7 +314,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["USA_WNT"],
+            "host": { "teams": ["USA_WNT"], "qualification_date": "2003-05-26" },
             "logo_filename": "2003_FIFA_Women's_World_Cup.svg",
             "mascot_filename": "268px-FIFA_Women_World_Cup_Trophy_(Ank_Kumar,_Infosys_Limited)_03.jpg",
             "start_date": "2003-09-20",
@@ -374,7 +374,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["USA_WNT"],
+            "host": { "teams": ["USA_WNT"], "qualification_date": "1996-05-31" },
             "logo_filename": "1999_FIFA_Women's_World_Cup.gif",
             "mascot": "Nutmeg",
             "mascot_filename": "Nutmeg.webp",
@@ -439,7 +439,7 @@
         "points_for_win": 3,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["SWE_WNT"],
+            "host": { "teams": ["SWE_WNT"] },
             "logo_filename": "1995_FIFA_Women's_World_Cup.png",
             "mascot": "Fiffi",
             "mascot_filename": "Fiffi.webp",
@@ -498,7 +498,7 @@
         "points_for_win": 2,
         "tiebreakers": ["team", "head2head", "lot"],
         "details": {
-            "host": ["CHN_WNT"],
+            "host": { "teams": ["CHN_WNT"] },
             "logo_filename": "1991_FIFA_Women's_World_Cup.png",
             "mascot": "Lingling",
             "mascot_filename": "Lingling.webp",
