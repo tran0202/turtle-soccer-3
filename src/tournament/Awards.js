@@ -98,11 +98,12 @@ const TournamentDetails = (props) => {
                             <li>
                                 Hosted by{' '}
                                 {adjustedHost.map((h, index) => {
+                                    const h_id = typeof h === 'string' ? h : h.id
                                     return (
                                         <React.Fragment key={index}>
                                             {index !== 0 && index < adjustedHost.length - 1 ? ', ' : ''}
                                             {index !== 0 && index === adjustedHost.length - 1 ? ' and ' : ''}
-                                            <b>{getTeamName(h, competition)}</b> {getTeamFlagId(h, competition)}
+                                            <b>{getTeamName(h_id, competition)}</b> {getTeamFlagId(h_id, competition)}
                                         </React.Fragment>
                                     )
                                 })}

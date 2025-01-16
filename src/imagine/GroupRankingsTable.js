@@ -32,7 +32,7 @@ const RankingsRow = (props) => {
     return (
         <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}`}>
             <Col className="col-box-4">{ranking.rank}</Col>
-            {config.added_group && <Col className="col-box-4">{ranking.group_name}</Col>}
+            {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
             <Col className="col-box-6">{getTeamFlag(ranking.team)}</Col>
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
             {!config.added_group && <Col className="col-box-27">{ranking.team.name}</Col>}
@@ -42,13 +42,25 @@ const RankingsRow = (props) => {
             <Col className="col-box-7 text-center">{ranking.l}</Col>
             <Col className="col-box-7 text-center">{ranking.gf}</Col>
             <Col className="col-box-7 text-center">{ranking.ga}</Col>
-            <Col className="col-box-7 text-center">{ranking.gd}</Col>
+            <Col className="col-box-7 text-center">
+                {ranking.gd > 0 ? '+' : ''}
+                {ranking.gd}
+            </Col>
             <Col className="col-box-14 text-center">
-                {ranking.pts} {ranking.h2h_point_win && <TiebreakTooltip target="pointTooltip" anchor="(p)" rule={`points (${ranking.h2h_point_win_note})`} />}
-                {ranking.h2h_gd_win && <TiebreakTooltip target="gdTooltip" anchor="(gd)" rule={`goal differential (${ranking.h2h_gd_win_note})`} />}
-                {ranking.away_goal_win && <TiebreakTooltip target="awayGoalTooltip" anchor="(a)" rule={`away goal (${ranking.away_goal_win_note})`} />}
-                {ranking.fair_play_win && <TiebreakTooltip target="fairPlayTooltip" anchor="(fp)" rule={`fair play point (${ranking.fair_play_win_note})`} />}
-                {ranking.draw_lot_win && <TiebreakTooltip target="drawLotTooltip" anchor="(dl)" rule="drawing lot" />}
+                {ranking.pts}{' '}
+                {ranking.h2h_point_win && (
+                    <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points (${ranking.h2h_point_win_note})`} />
+                )}
+                {ranking.h2h_gd_win && (
+                    <TiebreakTooltip target={`${ranking.id}gdTooltip`} anchor="(gd)" rule={`goal differential (${ranking.h2h_gd_win_note})`} />
+                )}
+                {ranking.away_goal_win && (
+                    <TiebreakTooltip target={`${ranking.id}awayGoalTooltip`} anchor="(a)" rule={`away goals (${ranking.away_goal_win_note})`} />
+                )}
+                {ranking.fair_play_win && (
+                    <TiebreakTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" rule={`fair play points (${ranking.fair_play_win_note})`} />
+                )}
+                {ranking.draw_lot_win && <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor="(dl)" rule="drawing lot" />}
             </Col>
         </Row>
     )

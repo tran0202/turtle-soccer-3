@@ -46,23 +46,39 @@ const PartialAdvancementCollapse = (props) => {
 
 class PartialAdvancement extends React.Component {
     render() {
-        const { state, stage } = this.props
-        const config = { ...state.config, added_group: true }
+        const { state, stage, config } = this.props
+        const isImagine = state ? true : false
+        const new_config = isImagine ? { ...state.config, added_group: true } : { ...config, added_group: true }
         const pa = getPartialAdvancementRankings(stage)
         return (
             <React.Fragment>
-                <PartialAdvancementCollapse title="Rankings of Runners-up" stage={stage} initialStatus="Closed">
-                    {pa &&
-                        pa.map((g) => {
-                            return (
-                                <Row key={g.name} className="mt-5 box-xl">
-                                    <Col xs={{ size: 10, offset: 1 }}>
-                                        <GroupRankingsTable group={g} config={config} />
-                                    </Col>
-                                </Row>
-                            )
-                        })}
-                </PartialAdvancementCollapse>
+                {pa &&
+                    pa.map((g) => {
+                        return (
+                            <React.Fragment key={g.name}>
+                                {isImagine && (
+                                    <PartialAdvancementCollapse title={`Rankings of ${g.name}`} stage={stage} initialStatus="Closed">
+                                        <Row className="mt-5 box-xl">
+                                            <Col xs={{ size: 10, offset: 1 }}>
+                                                <GroupRankingsTable group={g} config={new_config} />
+                                            </Col>
+                                        </Row>
+                                    </PartialAdvancementCollapse>
+                                )}
+                                {!isImagine && (
+                                    <Row className="mt-5 box-xl">
+                                        <Col xs={{ size: 10, offset: 1 }}>
+                                            <Row className="no-gutters group-header padding-tb-sm text-start">
+                                                <Col className="col-box-5"></Col>
+                                                <Col className="col-box-75">Rankings of {g.name}</Col>
+                                            </Row>
+                                            <GroupRankingsTable group={g} config={new_config} />
+                                        </Col>
+                                    </Row>
+                                )}
+                            </React.Fragment>
+                        )
+                    })}
             </React.Fragment>
         )
     }

@@ -3,544 +3,660 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
             "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "next_round_note": "8 best third-placed teams advance to the knockout stage",
-            "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4] } },
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" }
+            ],
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "RUS" }, { "id": "URU" }, { "id": "EGY" }, { "id": "KSA" }],
-                    "matches": [
+                    "teams": [{ "id": "QAT" }, { "id": "ECU" }, { "id": "SEN" }, { "id": "NED" }],
+                    "matchdays": [
                         {
-                            "home_team": "RUS",
-                            "away_team": "KSA",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "2018-06-14",
-                            "time": "18:00",
-                            "stadium": "Luzhniki Stadium",
-                            "city": "Moscow"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "QAT",
+                                    "away_team": "ECU",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-11-20",
+                                    "time": "19:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                },
+                                {
+                                    "home_team": "SEN",
+                                    "away_team": "NED",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-11-21",
+                                    "time": "19:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "EGY",
-                            "away_team": "URU",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-15",
-                            "time": "17:00",
-                            "stadium": "Ekaterinburg Arena",
-                            "city": "Ekaterinburg"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "QAT",
+                                    "away_team": "SEN",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2022-11-25",
+                                    "time": "16:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "NED",
+                                    "away_team": "ECU",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-11-25",
+                                    "time": "19:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "RUS",
-                            "away_team": "EGY",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2018-06-19",
-                            "time": "21:00",
-                            "stadium": "Saint Petersburg Stadium",
-                            "city": "St. Petersburg"
-                        },
-                        {
-                            "home_team": "URU",
-                            "away_team": "KSA",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2018-06-20",
-                            "time": "18:00",
-                            "stadium": "Rostov Arena",
-                            "city": "Rostov-On-Don"
-                        },
-                        {
-                            "home_team": "URU",
-                            "away_team": "RUS",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2018-06-25",
-                            "time": "18:00",
-                            "stadium": "Samara Arena",
-                            "city": "Samara"
-                        },
-                        {
-                            "home_team": "KSA",
-                            "away_team": "EGY",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2018-06-25",
-                            "time": "17:00",
-                            "stadium": "Volgograd Arena",
-                            "city": "Volgograd"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "ECU",
+                                    "away_team": "SEN",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-29",
+                                    "time": "18:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "NED",
+                                    "away_team": "QAT",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-11-29",
+                                    "time": "18:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "POR" }, { "id": "ESP" }, { "id": "IRN" }, { "id": "MAR" }],
-                    "matches": [
+                    "teams": [{ "id": "ENG" }, { "id": "IRN" }, { "id": "USA" }, { "id": "WAL" }],
+                    "matchdays": [
                         {
-                            "home_team": "MAR",
-                            "away_team": "IRN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-15",
-                            "time": "18:00",
-                            "stadium": "Saint Petersburg Stadium",
-                            "city": "St. Petersburg"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ENG",
+                                    "away_team": "IRN",
+                                    "home_score": 6,
+                                    "away_score": 2,
+                                    "date": "2022-11-21",
+                                    "time": "16:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "WAL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-11-21",
+                                    "time": "22:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "POR",
-                            "away_team": "ESP",
-                            "home_score": 3,
-                            "away_score": 3,
-                            "date": "2018-06-15",
-                            "time": "21:00",
-                            "stadium": "Fisht Stadium",
-                            "city": "Sochi"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "WAL",
+                                    "away_team": "IRN",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-11-25",
+                                    "time": "13:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "ENG",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-11-25",
+                                    "time": "22:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "POR",
-                            "away_team": "MAR",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2018-06-20",
-                            "time": "15:00",
-                            "stadium": "Luzhniki Stadium",
-                            "city": "Moscow"
-                        },
-                        {
-                            "home_team": "IRN",
-                            "away_team": "ESP",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-20",
-                            "time": "21:00",
-                            "stadium": "Kazan Arena",
-                            "city": "Kazan"
-                        },
-                        {
-                            "home_team": "ESP",
-                            "away_team": "MAR",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2018-06-25",
-                            "time": "20:00",
-                            "stadium": "Kaliningrad Stadium",
-                            "city": "Kaliningrad"
-                        },
-                        {
-                            "home_team": "IRN",
-                            "away_team": "POR",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2018-06-25",
-                            "time": "21:00",
-                            "stadium": "Mordovia Arena",
-                            "city": "Saransk"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "WAL",
+                                    "away_team": "ENG",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2022-11-29",
+                                    "time": "22:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "IRN",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-11-29",
+                                    "time": "22:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "PER" }, { "id": "AUS" }],
-                    "matches": [
+                    "teams": [{ "id": "ARG" }, { "id": "KSA" }, { "id": "MEX" }, { "id": "POL" }],
+                    "matchdays": [
                         {
-                            "home_team": "FRA",
-                            "away_team": "AUS",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2018-06-16",
-                            "time": "13:00",
-                            "stadium": "Kazan Arena",
-                            "city": "Kazan"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "KSA",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-22",
+                                    "time": "13:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "POL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-11-22",
+                                    "time": "19:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PER",
-                            "away_team": "DEN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-16",
-                            "time": "19:00",
-                            "stadium": "Mordovia Arena",
-                            "city": "Saransk"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "POL",
+                                    "away_team": "KSA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-11-26",
+                                    "time": "16:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "MEX",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-11-26",
+                                    "time": "22:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "DEN",
-                            "away_team": "AUS",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2018-06-21",
-                            "time": "16:00",
-                            "stadium": "Samara Arena",
-                            "city": "Samara"
-                        },
-                        {
-                            "home_team": "FRA",
-                            "away_team": "PER",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2018-06-21",
-                            "time": "20:00",
-                            "stadium": "Ekaterinburg Arena",
-                            "city": "Ekaterinburg"
-                        },
-                        {
-                            "home_team": "DEN",
-                            "away_team": "FRA",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2018-06-26",
-                            "time": "17:00",
-                            "stadium": "Luzhniki Stadium",
-                            "city": "Moscow"
-                        },
-                        {
-                            "home_team": "AUS",
-                            "away_team": "PER",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2018-06-26",
-                            "time": "17:00",
-                            "stadium": "Fisht Stadium",
-                            "city": "Sochi"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "POL",
+                                    "away_team": "ARG",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-11-30",
+                                    "time": "22:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "KSA",
+                                    "away_team": "MEX",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-30",
+                                    "time": "22:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CRO" }, { "id": "ARG" }, { "id": "NGA" }, { "id": "ISL" }],
-                    "matches": [
+                    "teams": [{ "id": "FRA" }, { "id": "AUS" }, { "id": "DEN" }, { "id": "TUN" }],
+                    "matchdays": [
                         {
-                            "home_team": "ARG",
-                            "away_team": "ISL",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2018-06-16",
-                            "time": "16:00",
-                            "stadium": "Spartak Stadium",
-                            "city": "Moscow"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "DEN",
+                                    "away_team": "TUN",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-11-22",
+                                    "time": "16:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "FRA",
+                                    "away_team": "AUS",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2022-11-22",
+                                    "time": "22:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRO",
-                            "away_team": "NGA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2018-06-16",
-                            "time": "21:00",
-                            "stadium": "Kaliningrad Stadium",
-                            "city": "Kaliningrad"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "TUN",
+                                    "away_team": "AUS",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-11-26",
+                                    "time": "13:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "FRA",
+                                    "away_team": "DEN",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-11-26",
+                                    "time": "19:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "ARG",
-                            "away_team": "CRO",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2018-06-21",
-                            "time": "21:00",
-                            "stadium": "Nizhny Novgorod Stadium",
-                            "city": "Nizhny Novgorod"
-                        },
-                        {
-                            "home_team": "NGA",
-                            "away_team": "ISL",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2018-06-22",
-                            "time": "18:00",
-                            "stadium": "Volgograd Arena",
-                            "city": "Volgograd"
-                        },
-                        {
-                            "home_team": "NGA",
-                            "away_team": "ARG",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-26",
-                            "time": "21:00",
-                            "stadium": "Saint Petersburg Stadium",
-                            "city": "St. Petersburg"
-                        },
-                        {
-                            "home_team": "ISL",
-                            "away_team": "CRO",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-26",
-                            "time": "21:00",
-                            "stadium": "Rostov Arena",
-                            "city": "Rostov-On-Don"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "AUS",
+                                    "away_team": "DEN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-11-30",
+                                    "time": "18:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "TUN",
+                                    "away_team": "FRA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-11-30",
+                                    "time": "18:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "BRA" }, { "id": "SUI" }, { "id": "SRB" }, { "id": "CRC" }],
-                    "matches": [
+                    "teams": [{ "id": "ESP" }, { "id": "CRC" }, { "id": "GER" }, { "id": "JPN" }],
+                    "matchdays": [
                         {
-                            "home_team": "CRC",
-                            "away_team": "SRB",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-17",
-                            "time": "16:00",
-                            "stadium": "Samara Arena",
-                            "city": "Samara"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "GER",
+                                    "away_team": "JPN",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-23",
+                                    "time": "16:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "ESP",
+                                    "away_team": "CRC",
+                                    "home_score": 7,
+                                    "away_score": 0,
+                                    "date": "2022-11-23",
+                                    "time": "19:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "SUI",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2018-06-17",
-                            "time": "21:00",
-                            "stadium": "Rostov Arena",
-                            "city": "Rostov-On-Don"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-11-27",
+                                    "time": "13:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "ESP",
+                                    "away_team": "GER",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-11-27",
+                                    "time": "22:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "CRC",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2018-06-22",
-                            "time": "15:00",
-                            "stadium": "Saint Petersburg Stadium",
-                            "city": "St. Petersburg"
-                        },
-                        {
-                            "home_team": "SRB",
-                            "away_team": "SUI",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-22",
-                            "time": "20:00",
-                            "stadium": "Kaliningrad Stadium",
-                            "city": "Kaliningrad"
-                        },
-                        {
-                            "home_team": "SRB",
-                            "away_team": "BRA",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2018-06-27",
-                            "time": "21:00",
-                            "stadium": "Spartak Stadium",
-                            "city": "Moscow"
-                        },
-                        {
-                            "home_team": "SUI",
-                            "away_team": "CRC",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2018-06-27",
-                            "time": "21:00",
-                            "stadium": "Nizhny Novgorod Stadium",
-                            "city": "Nizhny Novgorod"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "ESP",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-12-01",
+                                    "time": "22:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "GER",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2022-12-01",
+                                    "time": "22:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "GER" }, { "id": "MEX" }, { "id": "SWE" }, { "id": "KOR" }],
-                    "matches": [
+                    "teams": [{ "id": "BEL" }, { "id": "CAN" }, { "id": "MAR" }, { "id": "CRO" }],
+                    "matchdays": [
                         {
-                            "home_team": "GER",
-                            "away_team": "MEX",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-17",
-                            "time": "18:00",
-                            "stadium": "Luzhniki Stadium",
-                            "city": "Moscow"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "MAR",
+                                    "away_team": "CRO",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-11-23",
+                                    "time": "13:00",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                },
+                                {
+                                    "home_team": "BEL",
+                                    "away_team": "CAN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-11-23",
+                                    "time": "22:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SWE",
-                            "away_team": "KOR",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2018-06-18",
-                            "time": "15:00",
-                            "stadium": "Nizhny Novgorod Stadium",
-                            "city": "Nizhny Novgorod"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "BEL",
+                                    "away_team": "MAR",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-11-27",
+                                    "time": "16:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "CRO",
+                                    "away_team": "CAN",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2022-11-27",
+                                    "time": "19:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "KOR",
-                            "away_team": "MEX",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-23",
-                            "time": "18:00",
-                            "stadium": "Rostov Arena",
-                            "city": "Rostov-On-Don"
-                        },
-                        {
-                            "home_team": "GER",
-                            "away_team": "SWE",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2018-06-23",
-                            "time": "21:00",
-                            "stadium": "Fisht Stadium",
-                            "city": "Sochi"
-                        },
-                        {
-                            "home_team": "KOR",
-                            "away_team": "GER",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2018-06-27",
-                            "time": "17:00",
-                            "stadium": "Kazan Arena",
-                            "city": "Kazan"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "SWE",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2018-06-27",
-                            "time": "19:00",
-                            "stadium": "Ekaterinburg Arena",
-                            "city": "Ekaterinburg"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "CRO",
+                                    "away_team": "BEL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-12-01",
+                                    "time": "18:00",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "MAR",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-12-01",
+                                    "time": "18:00",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "TUN" }, { "id": "PAN" }],
-                    "matches": [
+                    "teams": [{ "id": "BRA" }, { "id": "SRB" }, { "id": "SUI" }, { "id": "CMR" }],
+                    "matchdays": [
                         {
-                            "home_team": "BEL",
-                            "away_team": "PAN",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2018-06-18",
-                            "time": "18:00",
-                            "stadium": "Fisht Stadium",
-                            "city": "Sochi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "SUI",
+                                    "away_team": "CMR",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-11-24",
+                                    "time": "13:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "SRB",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-11-24",
+                                    "time": "22:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TUN",
-                            "away_team": "ENG",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-18",
-                            "time": "21:00",
-                            "stadium": "Volgograd Arena",
-                            "city": "Volgograd"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CMR",
+                                    "away_team": "SRB",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2022-11-28",
+                                    "time": "13:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "SUI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-11-28",
+                                    "time": "19:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BEL",
-                            "away_team": "TUN",
-                            "home_score": 5,
-                            "away_score": 2,
-                            "date": "2018-06-23",
-                            "time": "15:00",
-                            "stadium": "Spartak Stadium",
-                            "city": "Moscow"
-                        },
-                        {
-                            "home_team": "ENG",
-                            "away_team": "PAN",
-                            "home_score": 6,
-                            "away_score": 1,
-                            "date": "2018-06-24",
-                            "time": "15:00",
-                            "stadium": "Nizhny Novgorod Stadium",
-                            "city": "Nizhny Novgorod"
-                        },
-                        {
-                            "home_team": "PAN",
-                            "away_team": "TUN",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2018-06-28",
-                            "time": "21:00",
-                            "stadium": "Mordovia Arena",
-                            "city": "Saransk"
-                        },
-                        {
-                            "home_team": "ENG",
-                            "away_team": "BEL",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2018-06-28",
-                            "time": "20:00",
-                            "stadium": "Kaliningrad Stadium",
-                            "city": "Kaliningrad"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "SRB",
+                                    "away_team": "SUI",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2022-12-02",
+                                    "time": "22:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "CMR",
+                                    "away_team": "BRA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-12-02",
+                                    "time": "22:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "POL" }, { "id": "COL" }, { "id": "SEN" }, { "id": "JPN" }],
-                    "matches": [
+                    "teams": [{ "id": "POR" }, { "id": "GHA" }, { "id": "URU" }, { "id": "KOR" }],
+                    "matchdays": [
                         {
-                            "home_team": "COL",
-                            "away_team": "JPN",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "away_fair_pts": -1,
-                            "date": "2018-06-19",
-                            "time": "15:00",
-                            "stadium": "Mordovia Arena",
-                            "city": "Saransk"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "URU",
+                                    "away_team": "KOR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-11-24",
+                                    "time": "16:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "POR",
+                                    "away_team": "GHA",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2022-11-24",
+                                    "time": "19:00",
+                                    "stadium": "Stadium 974",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "POL",
-                            "away_team": "SEN",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "away_fair_pts": -2,
-                            "date": "2018-06-19",
-                            "time": "18:00",
-                            "stadium": "Spartak Stadium",
-                            "city": "Moscow"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "GHA",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2022-11-28",
+                                    "time": "16:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "POR",
+                                    "away_team": "URU",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-11-28",
+                                    "time": "22:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JPN",
-                            "away_team": "SEN",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "home_fair_pts": -2,
-                            "away_fair_pts": -3,
-                            "date": "2018-06-24",
-                            "time": "20:00",
-                            "stadium": "Ekaterinburg Arena",
-                            "city": "Ekaterinburg"
-                        },
-                        {
-                            "home_team": "POL",
-                            "away_team": "COL",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2018-06-24",
-                            "time": "21:00",
-                            "stadium": "Kazan Arena",
-                            "city": "Kazan"
-                        },
-                        {
-                            "home_team": "JPN",
-                            "away_team": "POL",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -1,
-                            "date": "2018-06-28",
-                            "time": "17:00",
-                            "stadium": "Volgograd Arena",
-                            "city": "Volgograd"
-                        },
-                        {
-                            "home_team": "SEN",
-                            "away_team": "COL",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -1,
-                            "date": "2018-06-28",
-                            "time": "18:00",
-                            "stadium": "Samara Arena",
-                            "city": "Samara"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GHA",
+                                    "away_team": "URU",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-12-02",
+                                    "time": "18:00",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "POR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-12-02",
+                                    "time": "18:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         }
                     ]
                 }

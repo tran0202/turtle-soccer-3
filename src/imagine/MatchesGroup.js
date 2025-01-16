@@ -43,7 +43,8 @@ const MatchDayHeader = (props) => {
     return (
         <Row className="matchday-header text-start margin-top-md">
             <Col className="col-12 border-bottom-gray4">
-                {matchday.name} | {moment(matchday.date).format('MMMM D, YYYY')}
+                {matchday.name}
+                {/*  | {moment(matchday.date).format('MMMM D, YYYY')} */}
             </Col>
         </Row>
     )
@@ -52,7 +53,6 @@ const MatchDayHeader = (props) => {
 const MatchDayRow = (props) => {
     const { matchday, config } = props
     const { matches } = matchday
-
     return (
         <React.Fragment>
             {matches &&
@@ -66,6 +66,13 @@ const MatchDayRow = (props) => {
                     return (
                         <React.Fragment key={index}>
                             <Row className="no-gutters ranking-tbl padding-tb-md">
+                                <Col className="col-box-23 font-14">
+                                    {moment(m.date).format('MMMM D, YYYY')}
+                                    {m.time ? ' @' : ''} {m.time}
+                                    <br />
+                                    {m.stadium}
+                                    {m.city ? ',' : ''} {m.city}
+                                </Col>
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
                                 <Col className="col-box-6">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
@@ -74,6 +81,7 @@ const MatchDayRow = (props) => {
                                 <Col className="col-box-6">{awayTeamFlag}</Col>
                                 <Col className="col-box-25">{awayTeamName}</Col>
                             </Row>
+                            {index !== matches.length - 1 && <Row className="border-bottom-gray5 margin-left-sm margin-top-md" />}
                         </React.Fragment>
                     )
                 })}
@@ -85,7 +93,7 @@ class MatchesGroup extends React.Component {
     render() {
         const { group, config } = this.props
         return (
-            <MatchesGroupCollapse title="Matches" initialStatus="Closed">
+            <MatchesGroupCollapse title="Matches" initialStatus="Opened">
                 {group.matchdays &&
                     group.matchdays.map((md) => {
                         return (

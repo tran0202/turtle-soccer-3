@@ -48,7 +48,7 @@ const TournamentTabs = (props) => {
                     stages.map((s) => {
                         return (
                             <TabPane key={s.name} tabId={s.name}>
-                                {s.type === 'roundrobin' && <RoundRobin stage={s} config={config} />}
+                                {s.type === 'roundrobin_final' && <RoundRobin stage={s} config={config} />}
                             </TabPane>
                         )
                     })}

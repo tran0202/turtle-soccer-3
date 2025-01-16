@@ -153,8 +153,9 @@ export const getCapLastName = (name) => {
 }
 
 export const getTeamName = (id, config) => {
-    if (!id || !config || !config.teams) return
-    const team = config.teams.find((t) => t.id === id)
+    if (!id || !config) return
+    const teams = config.competition ? config.competition.teams : config.teams
+    const team = teams.find((t) => t.id === id)
     if (team) {
         return team.name
     }
@@ -219,7 +220,8 @@ export const getTeamFlag = (t) => {
 
 export const getTeamFlagId = (id, config) => {
     if (!id || !config) return
-    const team = config.teams.find((t) => t.id === id)
+    const teams = config.competition ? config.competition.teams : config.teams
+    const team = teams.find((t) => t.id === id)
     if (!team) return
     return (
         <React.Fragment>

@@ -3,6 +3,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import GroupRankingsTable from '../imagine/GroupRankingsTable'
 import MatchesGroup from '../imagine/MatchesGroup'
+import PartialAdvancement from '../imagine/PartialAdvancement'
 
 class RoundRobin extends React.Component {
     render() {
@@ -37,6 +38,11 @@ class RoundRobin extends React.Component {
                             </Row>
                         )
                     })}
+                {stage.partial_advancement && (
+                    <React.Fragment>
+                        <PartialAdvancement stage={stage} config={config} />
+                    </React.Fragment>
+                )}
             </React.Fragment>
         )
     }

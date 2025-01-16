@@ -404,7 +404,7 @@
                     "advanced_note": "Winners qualify for World Cup 2026",
                     "advancement": [
                         { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round", "count": 4, "name": "Runners-up" }
+                        { "pos": 2, "will": "next_round", "count": 4, "name": "runners-up" }
                     ],
                     "next_round_note": "The 4 best runners-up advance to the second round"
                 },
@@ -607,7 +607,7 @@
                     "advanced_note": "Winners qualify for World Cup 2026",
                     "advancement": [
                         { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round", "count": 2, "name": "Runners-up" }
+                        { "pos": 2, "will": "next_round", "count": 2, "name": "runners-up" }
                     ],
                     "next_round_note": "The 2 best runners-up advance to the inter-confederation play-offs"
                 }
@@ -2330,7 +2330,7 @@
             "advancement": [
                 { "pos": 1, "will": "advance" },
                 { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 8, "name": "Third-placed teams" }
+                { "pos": 3, "will": "next_round", "count": 8, "name": "third-placed teams" }
             ],
             "next_round_note": "8 best third-placed teams advance to the knockout stage"
         },

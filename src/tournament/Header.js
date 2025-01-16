@@ -4,11 +4,12 @@ import { Row, Col, Nav, NavItem, NavLink } from 'reactstrap'
 import moment from 'moment'
 
 const HeaderLinks = (props) => {
-    const { config } = props
-    const { competition, previous_tournament, next_tournament } = config
+    const { tournament, config } = props
+    const { competition } = config
+    const { previous_tournament, next_tournament } = tournament
     return (
         <Nav className="justify-content-center">
-            {previous_tournament.year && (
+            {previous_tournament && previous_tournament.year && (
                 <NavItem>
                     <NavLink href={`/tournament/${previous_tournament.id}`}>
                         <i className="icofont-long-arrow-left"></i>
@@ -19,7 +20,7 @@ const HeaderLinks = (props) => {
             <NavItem>
                 <NavLink href={`/competition/${competition.id}`}>More {competition.name}</NavLink>
             </NavItem>
-            {next_tournament.year && (
+            {next_tournament && next_tournament.year && (
                 <NavItem>
                     <NavLink href={`/tournament/${next_tournament.id}`}>
                         {next_tournament.year}
@@ -99,7 +100,7 @@ class Header extends React.Component {
                             {moment(end_competition_date).format('MMMM D, YYYY')}
                         </React.Fragment>
                     )}
-                    <HeaderLinks config={config} />
+                    <HeaderLinks tournament={tournament} config={config} />
                 </Col>
             </Row>
         )

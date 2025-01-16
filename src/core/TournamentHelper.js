@@ -2,6 +2,7 @@ import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { getTeams, getHostTeamArray } from './TeamHelper'
+import { calculateGroupRankings } from './RankingsHelper'
 
 // ----------------------------- Competition ----------------------------------
 
@@ -18,6 +19,7 @@ export const getCompetition = (competition_id) => {
         })
         competition.tournaments = tournaments
         competition.teams = getTeams(competition.team_type_id, competition.all_members)
+        competition.nations = NationArray
     }
     return competition
 }
@@ -37,12 +39,11 @@ export const getTournament = (id) => {
     tournament.competition.tournaments.sort((a, b) => {
         return a > b ? 1 : -1
     })
-    tournament.competition.nations = NationArray
-
-    tournament.previous_tournament = getPreviousTournament(tournament.competition.tournaments, id)
-    tournament.next_tournament = getNextTournament(tournament.competition.tournaments, id)
 
     const tournamentData = getTournamentData(id)
+    tournamentData.previous_tournament = getPreviousTournament(tournament.competition.tournaments, id)
+    tournamentData.next_tournament = getNextTournament(tournament.competition.tournaments, id)
+
     processSoccerTournament(tournamentData, tournament)
 
     return { tournament: tournamentData, config: tournament }
@@ -50,7 +51,6 @@ export const getTournament = (id) => {
 
 export const processSoccerTournament = (tournament, config) => {
     if (!tournament || !config) return
-    const teamArray = config.competition.teams
     const qualifiedTeams = getHostTeamArray(config)
     tournament.qualifiedTeams = qualifiedTeams
     // const qualifications = []
@@ -58,36 +58,36 @@ export const processSoccerTournament = (tournament, config) => {
     //     const result = processTournament(q, teamArray, qualifiedTeams, config)
     //     qualifications.push({ id: q.id, draws: result.draws, stages: result.stages })
     // })
-    processFinal(teamArray, qualifiedTeams, config)
+    processFinal(tournament, config)
     // return qualifications
 }
 
-export const processFinal = (teamArray, qualifiedTeams, config) => {
-    if (!config) return
-    processTournament(config, teamArray, qualifiedTeams, config)
+export const processFinal = (tournament, config) => {
+    if (!tournament || !config) return
+    processTournament(tournament, config)
 }
 
-export const processTournament = (tournament, teamArray, qualifiedTeams, config) => {
-    if (!tournament) return
+export const processTournament = (tournament, config) => {
+    if (!tournament || !config) return
     // const draws = createDraws(tournament, teamArray, qualifiedTeams)
     // const stages = createPots(tournament, draws)
-    processStages(tournament, qualifiedTeams, config)
+    processStages(tournament, config)
     // return { draws, stages }
 }
 
-export const processStages = (tournament, qualifiedTeams, config) => {
-    if (!tournament || !tournament.stages) return
+export const processStages = (tournament, config) => {
+    if (!tournament || !tournament.stages || !config) return
     tournament.stages.forEach((s) => {
         // preparePots(s)
         // createDrawPotTable(s)
-        createStage(s, config)
+        processStage(s, config)
         // const nextStage = getNextStage(s, tournament, config)
         // finishStage(s, nextStage)
         // qualifyStage(tournament, s, qualifiedTeams, nextStage)
     })
 }
 
-export const createStage = (stage, config) => {
+export const processStage = (stage, config) => {
     if (!stage || !stage.type) return
     // if (stage.type.includes('pair')) {
     //     if (stage.type.includes('_drawpair') || stage.type.includes('_noshowpot')) {
@@ -101,18 +101,35 @@ export const createStage = (stage, config) => {
     //     calculatePairAggregateScore(stage)
     // }
     if (stage.type.includes('roundrobin_')) {
-        // if (!stage.type.includes('_nopot')) {
-        //     createGroups(stage)
-        // } else {
-        //     createSingleGroup(stage)
-        // }
-        createGroupMatches(stage)
-        // calculateGroupRankings(stage, config)
+        if (stage.type.includes('_final')) {
+            processGroups(stage, config)
+        } else if (stage.type.includes('_nopot')) {
+            // createSingleGroup(stage)
+        } else {
+            // createGroups(stage)
+        }
+        // createGroupMatches(stage)
+        calculateGroupRankings(stage, config)
     }
     // if (stage.type.includes('knockout_')) {
     //     initEntrants(stage)
     //     processPathRounds(stage)
     // }
+}
+
+export const processGroups = (stage, config) => {
+    if (!stage || !stage.groups || !config || !config.competition) return
+    stage.groups.forEach((g) => {
+        const new_teams = []
+        g.teams &&
+            g.teams.forEach((t) => {
+                const team = config.competition.teams.find((t2) => t2.id === t.id)
+                if (team) {
+                    new_teams.push(team)
+                }
+            })
+        g.teams = new_teams
+    })
 }
 
 export const createGroupMatches = (stage) => {
@@ -121,19 +138,19 @@ export const createGroupMatches = (stage) => {
         const startingMatchdays = stage.matchdays ? stage.matchdays : g.matchdays ? g.matchdays : []
         g.matchdays = []
         startingMatchdays.forEach((md) => {
-            // const new_matchday = { name: md.name, date: md.date }
-            // const matches = []
-            // md.matches.forEach((m) => {
-            //     const home_team = g.teams.find((t) => t.pos === m.home_pos)
-            //     const away_team = g.teams.find((t) => t.pos === m.away_pos)
-            //     if (home_team && away_team) {
-            //         const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
-            //         getRandomScore(new_match)
-            //         matches.push(new_match)
-            //     }
-            // })
-            // new_matchday.matches = matches
-            // g.matchdays.push(new_matchday)
+            const new_matchday = { name: md.name, date: md.date }
+            const matches = []
+            md.matches.forEach((m) => {
+                const home_team = g.teams.find((t) => t.pos === m.home_pos)
+                const away_team = g.teams.find((t) => t.pos === m.away_pos)
+                if (home_team && away_team) {
+                    const new_match = { date: md.date, home_team: home_team.id, away_team: away_team.id }
+                    // getRandomScore(new_match)
+                    matches.push(new_match)
+                }
+            })
+            new_matchday.matches = matches
+            g.matchdays.push(new_matchday)
         })
     })
     // overwriteGroup(stage.groups[0])

@@ -168,6 +168,25 @@ export const sortRankings = (rankings, h2h_matches) => {
     for (var i = 0; i < rankings.length - 1; i++) {
         for (var j = i + 1; j < rankings.length; j++) {
             // Point
+            if (rankings[i].pts > rankings[j].pts) {
+                if (h2h_matches) {
+                    rankings[i].h2h_point_win = true
+                    rankings[j].h2h_point_win = false
+                    rankings[i].h2h_point_win_note =
+                        'With the win ' +
+                        rankings[i].gf +
+                        '-' +
+                        rankings[i].ga +
+                        ' >>> ' +
+                        rankings[i].team.name +
+                        ' ' +
+                        rankings[i].pts +
+                        ' / ' +
+                        rankings[j].team.name +
+                        ' ' +
+                        rankings[j].pts
+                }
+            }
             if (rankings[i].pts < rankings[j].pts) {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
@@ -175,7 +194,19 @@ export const sortRankings = (rankings, h2h_matches) => {
                 if (h2h_matches) {
                     rankings[i].h2h_point_win = true
                     rankings[j].h2h_point_win = false
-                    rankings[i].h2h_point_win_note = rankings[i].pts + '/' + rankings[j].pts
+                    rankings[i].h2h_point_win_note =
+                        'With the win ' +
+                        rankings[i].gf +
+                        '-' +
+                        rankings[i].ga +
+                        ' >>> ' +
+                        rankings[i].team.name +
+                        ' ' +
+                        rankings[i].pts +
+                        ' / ' +
+                        rankings[j].team.name +
+                        ' ' +
+                        rankings[j].pts
                 }
             }
 
@@ -232,7 +263,7 @@ export const sortRankings = (rankings, h2h_matches) => {
                 if (h2h_matches) {
                     rankings[i].fair_play_win = true
                     rankings[j].fair_play_win = false
-                    rankings[i].fair_play_win_note = rankings[i].fp + '/' + rankings[j].fp
+                    rankings[i].fair_play_win_note = rankings[i].team.name + ' ' + rankings[i].fp + ' / ' + rankings[j].team.name + ' ' + rankings[j].fp
                 }
             }
 
