@@ -10,7 +10,8 @@ import RoundRobin from './tournament/RoundRobin'
 const TournamentTabs = (props) => {
     const { tournament, config } = props
     const { stages } = tournament
-    const [activeTab, setActiveTab] = useState('Group Stage')
+    const first_final_stage = stages && stages.length > 0 ? stages[0].name : 'Group Stage'
+    const [activeTab, setActiveTab] = useState(first_final_stage)
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
     }
@@ -112,7 +113,7 @@ class TournamentApp extends React.Component {
             <Page>
                 <Container>
                     <Header tournament={this.state.tournament} config={this.state.config} />
-                    <TournamentTabs tournament={this.state.tournament} config={this.state.config} />
+                    {this.state.tournament.stages && <TournamentTabs tournament={this.state.tournament} config={this.state.config} />}
                 </Container>
             </Page>
         )

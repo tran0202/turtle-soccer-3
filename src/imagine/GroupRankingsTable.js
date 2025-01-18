@@ -1,7 +1,9 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
+import { NumericFormat } from 'react-number-format'
 import { getTeamFlag } from '../core/TeamHelper'
-import { TiebreakTooltip } from '../core/TooltipHelper'
+import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
+import { TiebreakTooltip, PlayoffWinTooltip } from '../core/TooltipHelper'
 
 const RankingsHeader = (props) => {
     const { config } = props
@@ -18,7 +20,8 @@ const RankingsHeader = (props) => {
             <Col className="col-box-7">L</Col>
             <Col className="col-box-7">GF</Col>
             <Col className="col-box-7">GA</Col>
-            <Col className="col-box-7">+/-</Col>
+            {!isGoalRatioTiebreaker(config) && <Col className="col-box-7">+/-</Col>}
+            {isGoalRatioTiebreaker(config) && <Col className="col-box-7">GR</Col>}
             <Col className="col-box-14">Pts</Col>
         </Row>
     )
@@ -42,10 +45,18 @@ const RankingsRow = (props) => {
             <Col className="col-box-7 text-center">{ranking.l}</Col>
             <Col className="col-box-7 text-center">{ranking.gf}</Col>
             <Col className="col-box-7 text-center">{ranking.ga}</Col>
-            <Col className="col-box-7 text-center">
-                {ranking.gd > 0 ? '+' : ''}
-                {ranking.gd}
-            </Col>
+            {!isGoalRatioTiebreaker(config) && (
+                <Col className="col-box-7 text-center">
+                    {ranking.gd > 0 ? '+' : ''}
+                    {ranking.gd}
+                </Col>
+            )}
+            {isGoalRatioTiebreaker(config) && (
+                <Col className="col-box-7 text-center">
+                    {ranking.gr !== null && <NumericFormat displayType="text" value={ranking.gr} decimalScale={3} fixedDecimalScale />}
+                    {ranking.gr === null && <span>&mdash;</span>}
+                </Col>
+            )}
             <Col className="col-box-14 text-center">
                 {ranking.pts}{' '}
                 {ranking.h2h_point_win && (
@@ -60,7 +71,10 @@ const RankingsRow = (props) => {
                 {ranking.fair_play_win && (
                     <TiebreakTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" rule={`fair play points (${ranking.fair_play_win_note})`} />
                 )}
-                {ranking.draw_lot_win && <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor="(dl)" rule="drawing lot" />}
+                {ranking.draw_lot_win && (
+                    <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor="(dl)" rule={`drawing lots. ${ranking.draw_lot_win_note}`} />
+                )}
+                {ranking.playoff_win && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} notes={ranking.playoff_win_note} />}
             </Col>
         </Row>
     )

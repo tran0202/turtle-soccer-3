@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
+import { AetTooltip } from '../core/TooltipHelper'
 
 const MatchesGroupCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -61,8 +62,10 @@ const MatchDayRow = (props) => {
                     const awayTeamName = getTeamName(m.away_team, config)
                     const homeTeamFlag = getTeamFlagId(m.home_team, config)
                     const awayTeamFlag = getTeamFlagId(m.away_team, config)
-                    const matchHomeScore = m.home_score
-                    const matchAwayScore = m.away_score
+                    const matchHomeExtraScore = m.home_extra_score ? m.home_extra_score : 0
+                    const matchAwayExtraScore = m.away_extra_score ? m.away_extra_score : 0
+                    const matchHomeScore = m.home_score + matchHomeExtraScore
+                    const matchAwayScore = m.away_score + matchAwayExtraScore
                     return (
                         <React.Fragment key={index}>
                             <Row className="no-gutters ranking-tbl padding-tb-md">
@@ -76,7 +79,8 @@ const MatchDayRow = (props) => {
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
                                 <Col className="col-box-6">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
-                                    {matchHomeScore} - {matchAwayScore}
+                                    {matchHomeScore} - {matchAwayScore}{' '}
+                                    {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                 </Col>
                                 <Col className="col-box-6">{awayTeamFlag}</Col>
                                 <Col className="col-box-25">{awayTeamName}</Col>
