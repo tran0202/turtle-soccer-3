@@ -125,7 +125,7 @@ export const processGroups = (stage, config) => {
             g.teams.forEach((t) => {
                 const team = config.competition.teams.find((t2) => t2.id === t.id)
                 if (team) {
-                    if (t.win_lot) {
+                    if (t.win_lot || t.withdrew || t.point_deduction) {
                         new_teams.push({ ...team, ...t })
                     } else {
                         new_teams.push(team)

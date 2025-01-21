@@ -6,7 +6,7 @@
             "type": "roundrobin_final",
             "eliminate_count": 12,
             "next_round": "Second Group Stage",
-            "advanced_note": "Winners and runners-up advance to the second round",
+            "advanced_note": "Winners and runners-up advance to the second group stage",
             "advancement": [
                 { "pos": 1, "will": "advance" },
                 { "pos": 2, "will": "advance" }

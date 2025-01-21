@@ -56,6 +56,12 @@ export const ByeTooltip = (props) => {
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const PointDeductionTooltip = (props) => {
+    const { target, anchor, notes } = props
+    const content = `Point Deduction${notes ? `: ${notes}` : ''}`
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const WithdrewTooltip = (props) => {
     const { target, anchor } = props
     const content = 'Withdrew'

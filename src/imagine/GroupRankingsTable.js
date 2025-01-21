@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
 import { getTeamFlag } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
-import { TiebreakTooltip, PlayoffWinTooltip } from '../core/TooltipHelper'
+import { TiebreakTooltip, PlayoffWinTooltip, WithdrewTooltip, PointDeductionTooltip } from '../core/TooltipHelper'
 
 const RankingsHeader = (props) => {
     const { config } = props
@@ -32,23 +32,36 @@ const RankingsRow = (props) => {
     const qualified_striped = ranking.qualified ? 'advanced-next-round-striped' : ''
     const advanced_striped = ranking.advanced ? 'advanced-next-round-striped' : ''
     const next_round_striped = ranking.next_rounded ? 'advanced-wild-card-striped' : ''
+    const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
+    const rank = !ranking.team.withdrew ? ranking.rank : ''
+    const w = !ranking.team.withdrew ? ranking.w : <span>&mdash;</span>
+    const d = !ranking.team.withdrew ? ranking.d : <span>&mdash;</span>
+    const l = !ranking.team.withdrew ? ranking.l : <span>&mdash;</span>
+    const gf = !ranking.team.withdrew ? ranking.gf : <span>&mdash;</span>
+    const ga = !ranking.team.withdrew ? ranking.ga : <span>&mdash;</span>
+    const gd = !ranking.team.withdrew ? ranking.gd : <span>&mdash;</span>
+    const pts = !ranking.team.withdrew ? ranking.pts : <span>&mdash;</span>
     return (
-        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}`}>
-            <Col className="col-box-4">{ranking.rank}</Col>
+        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}${withdrew_striped}`}>
+            <Col className="col-box-4">{rank}</Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
             <Col className="col-box-6">{getTeamFlag(ranking.team)}</Col>
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
-            {!config.added_group && <Col className="col-box-27">{ranking.team.name}</Col>}
+            {!config.added_group && (
+                <Col className="col-box-27">
+                    {ranking.team.name} {ranking.team.withdrew ? <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" /> : ''}
+                </Col>
+            )}
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
-            <Col className="col-box-7 text-center">{ranking.w}</Col>
-            <Col className="col-box-7 text-center">{ranking.d}</Col>
-            <Col className="col-box-7 text-center">{ranking.l}</Col>
-            <Col className="col-box-7 text-center">{ranking.gf}</Col>
-            <Col className="col-box-7 text-center">{ranking.ga}</Col>
+            <Col className="col-box-7 text-center">{w}</Col>
+            <Col className="col-box-7 text-center">{d}</Col>
+            <Col className="col-box-7 text-center">{l}</Col>
+            <Col className="col-box-7 text-center">{gf}</Col>
+            <Col className="col-box-7 text-center">{ga}</Col>
             {!isGoalRatioTiebreaker(config) && (
                 <Col className="col-box-7 text-center">
-                    {ranking.gd > 0 ? '+' : ''}
-                    {ranking.gd}
+                    {gd > 0 ? '+' : ''}
+                    {gd}
                 </Col>
             )}
             {isGoalRatioTiebreaker(config) && (
@@ -58,7 +71,7 @@ const RankingsRow = (props) => {
                 </Col>
             )}
             <Col className="col-box-14 text-center">
-                {ranking.pts}{' '}
+                {pts}{' '}
                 {ranking.h2h_point_win && (
                     <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points (${ranking.h2h_point_win_note})`} />
                 )}
@@ -75,6 +88,9 @@ const RankingsRow = (props) => {
                     <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor="(dl)" rule={`drawing lots. ${ranking.draw_lot_win_note}`} />
                 )}
                 {ranking.playoff_win && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} notes={ranking.playoff_win_note} />}
+                {ranking.team.point_deduction && (
+                    <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} notes={ranking.team.point_deduction_note} />
+                )}
             </Col>
         </Row>
     )

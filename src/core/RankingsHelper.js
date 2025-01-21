@@ -14,7 +14,7 @@ export const calculateGroupRankings = (stage, config) => {
             })
         g.teams &&
             g.teams.forEach((t) => {
-                const ranking = getBlankRanking(t.id)
+                const ranking = getBlankRanking(t)
                 ranking.team = t
                 accumulateRanking(ranking, allMatches, config)
                 g.rankings.push(ranking)
@@ -28,8 +28,8 @@ export const calculateGroupRankings = (stage, config) => {
     })
 }
 
-export const getBlankRanking = (teamId) => {
-    return { id: teamId, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0 }
+export const getBlankRanking = (team) => {
+    return { id: team.id, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: team.withdrew ? -1 : 0 }
 }
 
 export const accumulateRanking = (ranking, matches, config) => {
@@ -49,6 +49,12 @@ export const accumulateRanking = (ranking, matches, config) => {
                 }
                 ranking.gf += parseInt(m.home_score)
                 ranking.ga += parseInt(m.away_score)
+                if (m.home_extra_score) {
+                    ranking.gf += parseInt(m.home_extra_score)
+                }
+                if (m.away_extra_score) {
+                    ranking.ga += parseInt(m.away_extra_score)
+                }
                 ranking.gd = ranking.gf - ranking.ga
                 ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
                 if (m.home_fair_pts) {
@@ -72,6 +78,12 @@ export const accumulateRanking = (ranking, matches, config) => {
                 }
                 ranking.gf += parseInt(m.away_score)
                 ranking.ga += parseInt(m.home_score)
+                if (m.away_extra_score) {
+                    ranking.gf += parseInt(m.away_extra_score)
+                }
+                if (m.home_extra_score) {
+                    ranking.ga += parseInt(m.home_extra_score)
+                }
                 ranking.gd = ranking.gf - ranking.ga
                 ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
                 if (m.away_fair_pts) {
@@ -84,6 +96,9 @@ export const accumulateRanking = (ranking, matches, config) => {
             }
         }
     })
+    if (ranking.team.point_deduction) {
+        ranking.pts -= ranking.team.point_deduction
+    }
 }
 
 export const sortGroupRankings = (group, config) => {
@@ -105,7 +120,7 @@ export const createDrawPools = (group, config) => {
     })
     group.draw_pools.forEach((p) => {
         if (isGroupPlayoffTiebreaker(config)) {
-            const hasPlayoff = group.matchdays.find((md) => md.name === 'Play-off')
+            const hasPlayoff = group.matchdays && group.matchdays.find((md) => md.name === 'Play-off')
             if (hasPlayoff) {
                 const playoff = hasPlayoff.matches[0]
                 if (p.rankings[0].id === playoff.home_team) {
@@ -146,7 +161,7 @@ export const createDrawPools = (group, config) => {
             // 2. Accumulate the rankings
             p.h2h_rankings = []
             p.rankings.forEach((t) => {
-                const ranking = getBlankRanking(t.id)
+                const ranking = getBlankRanking(t)
                 ranking.team = t.team
                 accumulateRanking(ranking, p.h2h_matches, config)
                 // 3. Transfer the total fair play points to h2h teams
@@ -182,16 +197,16 @@ export const createDrawPools = (group, config) => {
 
 export const collectH2HMatches = (pool, matchdays) => {
     if (!pool || !matchdays) return
-    if (pool.teams.length > 1) {
+    if (pool.rankings.length > 1) {
         pool.h2h_matches = []
-        for (var i = 0; i < pool.teams.length - 1; i++) {
-            for (var j = i + 1; j < pool.teams.length; j++) {
+        for (var i = 0; i < pool.rankings.length - 1; i++) {
+            for (var j = i + 1; j < pool.rankings.length; j++) {
                 // eslint-disable-next-line no-loop-func
                 matchdays.forEach((md) => {
                     md.matches.forEach((m) => {
                         if (
-                            (m.home_team === pool.teams[i].id && m.away_team === pool.teams[j].id) ||
-                            (m.home_team === pool.teams[j].id && m.away_team === pool.teams[i].id)
+                            (m.home_team === pool.rankings[i].id && m.away_team === pool.rankings[j].id) ||
+                            (m.home_team === pool.rankings[j].id && m.away_team === pool.rankings[i].id)
                         ) {
                             pool.h2h_matches.push(m)
                         }
@@ -212,15 +227,18 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     rankings[i].h2h_point_win = true
                     rankings[j].h2h_point_win = false
                     rankings[i].h2h_point_win_note =
-                        'With the win ' +
+                        rankings[i].team.name +
+                        ' ' +
                         rankings[i].gf +
                         '-' +
                         rankings[i].ga +
+                        ' ' +
+                        rankings[j].team.name +
                         ' >>> ' +
                         rankings[i].team.name +
                         ' ' +
                         rankings[i].pts +
-                        ' / ' +
+                        ' | ' +
                         rankings[j].team.name +
                         ' ' +
                         rankings[j].pts
@@ -234,15 +252,18 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     rankings[i].h2h_point_win = true
                     rankings[j].h2h_point_win = false
                     rankings[i].h2h_point_win_note =
-                        'With the win ' +
+                        rankings[i].team.name +
+                        ' ' +
                         rankings[i].gf +
                         '-' +
                         rankings[i].ga +
+                        ' ' +
+                        rankings[j].team.name +
                         ' >>> ' +
                         rankings[i].team.name +
                         ' ' +
                         rankings[i].pts +
-                        ' / ' +
+                        ' | ' +
                         rankings[j].team.name +
                         ' ' +
                         rankings[j].pts
@@ -264,7 +285,7 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     if (h2h_matches) {
                         rankings[i].h2h_gd_win = true
                         rankings[j].h2h_gd_win = false
-                        rankings[i].h2h_gd_win_note = rankings[i].gd + '/' + rankings[j].gd
+                        rankings[i].h2h_gd_win_note = rankings[i].gd + '|' + rankings[j].gd
                     }
                 }
             }
@@ -292,7 +313,7 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     if (h2h_matches) {
                         rankings[i].h2h_gf_win = true
                         rankings[j].h2h_gf_win = false
-                        rankings[i].h2h_gf_win_note = rankings[i].gf + '/' + rankings[j].gf
+                        rankings[i].h2h_gf_win_note = rankings[i].gf + '|' + rankings[j].gf
                     }
                 }
             }
@@ -308,7 +329,7 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     if (h2h_matches) {
                         rankings[i].away_goal_win = true
                         rankings[j].away_goal_win = false
-                        rankings[i].away_goal_win_note = match1.away_score + '/' + match2.away_score
+                        rankings[i].away_goal_win_note = match1.away_score + '|' + match2.away_score
                     }
                 }
             }
@@ -325,7 +346,7 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                 if (h2h_matches) {
                     rankings[i].fair_play_win = true
                     rankings[j].fair_play_win = false
-                    rankings[i].fair_play_win_note = rankings[i].team.name + ' ' + rankings[i].fp + ' / ' + rankings[j].team.name + ' ' + rankings[j].fp
+                    rankings[i].fair_play_win_note = rankings[i].team.name + ' ' + rankings[i].fp + ' | ' + rankings[j].team.name + ' ' + rankings[j].fp
                 }
             }
 
@@ -341,7 +362,7 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                     rankings[i] = { ...rankings[j] }
                     rankings[j] = { ...temp }
                 }
-                if (h2h_matches) {
+                if (h2h_matches && rankings[i].team.win_lot) {
                     rankings[i].draw_lot_win = true
                     rankings[j].draw_lot_win = false
                     rankings[i].draw_lot_win_note = rankings[i].team.win_lot_note
@@ -373,7 +394,11 @@ export const processPartialAdvancement = (stage) => {
         pa.forEach((a) => {
             const rankings = []
             stage.groups.forEach((g) => {
-                const foundTeam = g.rankings && g.rankings.find((t) => t.rank === a.pos)
+                let customGroup = true
+                if (a.groups) {
+                    customGroup = a.groups.find((g2) => g2 === g.name)
+                }
+                const foundTeam = g.rankings && g.rankings.find((t) => customGroup && t.rank === a.pos)
                 if (foundTeam) {
                     rankings.push({ ...foundTeam, group_name: g.name })
                 }
@@ -396,7 +421,8 @@ export const setAdvancement = (group, advancement) => {
     if (!group || !group.matchdays || group.matchdays.length === 0 || !advancement || advancement.length === 0) return
     group.rankings.forEach((t) => {
         const qualified_date = group.matchdays[group.matchdays.length - 1].date
-        const foundAdvancement = advancement.find((a) => a.pos === t.rank)
+        const groupAdvancement = group.advancement ? group.advancement : advancement
+        const foundAdvancement = groupAdvancement.find((a) => a.pos === t.rank)
         if (foundAdvancement) {
             let passed = !foundAdvancement.rankings
             if (foundAdvancement.rankings) {

@@ -315,7 +315,7 @@ const BronzeRow = (props) => {
                             {thirdIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`1st`} title={`1st`} />}{' '}
                             <b>{label}</b>
                         </Col>
-                        <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-lg">
+                        <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-md">
                             {!shared_bronze && (
                                 <React.Fragment>
                                     {getTeamFlagId(id, competition)} {getTeamName(id, competition)}
