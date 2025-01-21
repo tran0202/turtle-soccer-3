@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
 import { getTeamFlag } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
-import { TiebreakTooltip, PlayoffWinTooltip, WithdrewTooltip, PointDeductionTooltip } from '../core/TooltipHelper'
+import { TiebreakTooltip, PlayoffWinTooltip, WithdrewTooltip, PointDeductionTooltip, TieLastMatchTooltip } from '../core/TooltipHelper'
 
 const RankingsHeader = (props) => {
     const { config } = props
@@ -91,6 +91,7 @@ const RankingsRow = (props) => {
                 {ranking.team.point_deduction && (
                     <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} notes={ranking.team.point_deduction_note} />
                 )}
+                {ranking.tie_last_match_win && <TieLastMatchTooltip target={`${ranking.id}tieLastMatchTooltip`} notes={ranking.tie_last_match_win_note} />}
             </Col>
         </Row>
     )

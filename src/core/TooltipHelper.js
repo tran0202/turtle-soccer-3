@@ -148,6 +148,12 @@ export const ShortNameTooltip = (props) => {
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const TieLastMatchTooltip = (props) => {
+    const { target, notes } = props
+    const content = notes
+    return <TopTooltip target={target} content={content} />
+}
+
 export const Extra140Tooltip = (props) => {
     const { target } = props
     const content = `After 120 minutes expired with the score tied at 1-1, both captains and the referee agreed to play a second extra time of 2x10 minutes, meaning this match lasted 140 minutes.`

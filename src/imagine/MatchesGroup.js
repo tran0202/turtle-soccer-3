@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
-import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
+import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
 import { AetTooltip } from '../core/TooltipHelper'
 
 const MatchesGroupCollapse = (props) => {
@@ -66,6 +66,7 @@ const MatchDayRow = (props) => {
                     const matchAwayExtraScore = m.away_extra_score ? m.away_extra_score : 0
                     const matchHomeScore = m.home_score + matchHomeExtraScore
                     const matchAwayScore = m.away_score + matchAwayExtraScore
+                    const teamWon = isHomeWinMatch(m) ? homeTeamName : awayTeamName
                     return (
                         <React.Fragment key={index}>
                             <Row className="no-gutters ranking-tbl padding-tb-md">
@@ -85,6 +86,18 @@ const MatchDayRow = (props) => {
                                 <Col className="col-box-6">{awayTeamFlag}</Col>
                                 <Col className="col-box-25">{awayTeamName}</Col>
                             </Row>
+                            {m.tie_last_match && (
+                                <Row className="no-gutters aggregate-line padding-tb-sm">
+                                    <Col xs={{ size: 7, offset: 5 }}>
+                                        {'>>> '}
+                                        <b>{teamWon}</b> won on penalties{' '}
+                                        <b>
+                                            {m.home_penalty_score}-{m.away_penalty_score}
+                                        </b>{' '}
+                                        (No extra time was played)
+                                    </Col>
+                                </Row>
+                            )}
                             {index !== matches.length - 1 && <Row className="border-bottom-gray5 margin-left-sm margin-top-md" />}
                         </React.Fragment>
                     )

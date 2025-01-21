@@ -189,6 +189,8 @@ export const createDrawPools = (group, config) => {
                     fair_play_win_note: p.h2h_rankings[i].fair_play_win_note,
                     draw_lot_win: p.h2h_rankings[i].draw_lot_win,
                     draw_lot_win_note: p.h2h_rankings[i].draw_lot_win_note,
+                    tie_last_match_win: p.h2h_rankings[i].tie_last_match_win,
+                    tie_last_match_win_note: p.h2h_rankings[i].tie_last_match_win_note,
                 }
             }
         }
@@ -350,22 +352,31 @@ export const sortRankings = (rankings, h2h_matches, config) => {
                 }
             }
 
-            // Drawing lots
+            // Drawing lots or Tie last match
             if (
                 rankings[i].pts === rankings[j].pts &&
                 rankings[i].gd === rankings[j].gd &&
                 rankings[i].gf === rankings[j].gf &&
                 (!rankings[i].fp || (rankings[i].fp && rankings[i].fp === rankings[j].fp))
             ) {
-                if (rankings[j].team.win_lot) {
+                if (h2h_matches && h2h_matches[0].tie_last_match) {
                     const temp = rankings[i]
                     rankings[i] = { ...rankings[j] }
                     rankings[j] = { ...temp }
-                }
-                if (h2h_matches && rankings[i].team.win_lot) {
-                    rankings[i].draw_lot_win = true
-                    rankings[j].draw_lot_win = false
-                    rankings[i].draw_lot_win_note = rankings[i].team.win_lot_note
+                    rankings[i].tie_last_match_win = true
+                    rankings[j].tie_last_match_win = false
+                    rankings[i].tie_last_match_win_note = h2h_matches[0].tie_last_match_note
+                } else {
+                    if (rankings[j].team.win_lot) {
+                        const temp = rankings[i]
+                        rankings[i] = { ...rankings[j] }
+                        rankings[j] = { ...temp }
+                    }
+                    if (h2h_matches && rankings[i].team.win_lot) {
+                        rankings[i].draw_lot_win = true
+                        rankings[j].draw_lot_win = false
+                        rankings[i].draw_lot_win_note = rankings[i].team.win_lot_note
+                    }
                 }
             }
         }
