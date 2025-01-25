@@ -6,6 +6,7 @@
         "competition_id": "WC",
         "active": true,
         "points_for_win": 3,
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "WE ARE 26",
             "host": { "teams": ["CAN", "MEX", "USA"] },
@@ -38,6 +39,7 @@
         "name": "FIFA World Cup Qatar 2022",
         "competition_id": "WC",
         "points_for_win": 3,
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "Now is All",
             "host": { "teams": ["QAT"], "qualification_date": "2010-12-02" },
@@ -90,7 +92,7 @@
         "name": "FIFA World Cup Russia 2018",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "Play with an open heart",
             "host": { "teams": ["RUS"], "qualification_date": "2010-12-02" },
@@ -152,7 +154,7 @@
         "name": "FIFA World Cup Brazil 2014",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "slogan": "All in One Rhythm",
             "host": { "teams": ["BRA"], "qualification_date": "2007-10-30" },
@@ -224,7 +226,7 @@
         "name": "FIFA World Cup South Africa 2010",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "slogan": "It's time. Celebrate Africa's Humanity",
             "host": { "teams": ["RSA"], "qualification_date": "2004-05-15" },
@@ -305,7 +307,7 @@
         "name": "FIFA World Cup Germany 2006",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "slogan": "A time to make friends",
             "host": { "teams": ["GER"], "qualification_date": "2000-07-06" },
@@ -365,7 +367,7 @@
         "competition_id": "WC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["KOR", "JPN"], "qualification_date": "1996-05-31" },
             "logo_filename": "2002_FIFA_World_Cup_logo.svg",
@@ -429,7 +431,7 @@
         "competition_id": "WC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["FRA"], "qualification_date": "1992-07-02" },
             "logo_filename": "1998_FIFA_World_Cup.svg",
@@ -492,7 +494,7 @@
         "name": "FIFA World Cup USA 1994",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "slogan": "Making Soccer History",
             "host": { "teams": ["USA"], "qualification_date": "1988-07-04" },
@@ -556,7 +558,7 @@
         "name": "FIFA World Cup Italy 1990",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["ITA"], "qualification_date": "1984-05-19" },
             "logo_filename": "1990_FIFA_World_Cup.svg",
@@ -618,7 +620,7 @@
         "name": "FIFA World Cup Mexico 1986",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["MEX"], "qualification_date": "1983-05-20" },
             "logo_filename": "1986_FIFA_World_Cup.svg",
@@ -690,7 +692,7 @@
         "name": "FIFA World Cup Spain 1982",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["ESP"], "qualification_date": "1966-07-06" },
             "logo_filename": "1982_FIFA_World_Cup.svg",
@@ -749,7 +751,7 @@
         "name": "FIFA World Cup Argentina 1978",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["ARG"], "qualification_date": "1966-07-06" },
             "logo_filename": "460px-Logo_Mundial_78.svg.png",
@@ -814,7 +816,7 @@
         "short_name": "Germany 1974",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["GER-1949-1990"], "qualification_date": "1966-07-06" },
             "logo_filename": "FIFA_World_Cup_1974_-_emblem.svg",
@@ -875,7 +877,7 @@
         "name": "FIFA World Cup Mexico 1970",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["pointandgoaldifference", "lot"],
+        "tiebreakers": ["point", "goaldifference", "lot"],
         "details": {
             "host": { "teams": ["MEX"], "qualification_date": "1964-10-08" },
             "logo_filename": "340px-1970_FIFA_World_Cup.svg.png",
@@ -930,7 +932,7 @@
         "short_name": "England 1966",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["goalratio", "lot"],
+        "tiebreakers": ["point", "goalratio", "lot"],
         "details": {
             "host": { "teams": ["ENG"], "qualification_date": "1960-08-22" },
             "logo_filename": "1966_FIFA_World_Cup.png",
@@ -989,7 +991,7 @@
         "short_name": "Chile 1962",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["goalratio", "lot"],
+        "tiebreakers": ["point", "goalratio", "lot"],
         "details": {
             "host": { "teams": ["CHI"], "qualification_date": "1956-06-11" },
             "logo_filename": "1962_FIFA_World_Cup.jpg",
@@ -1049,7 +1051,7 @@
         "short_name": "Sweden 1958",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["goalratiogroupplayoff", "lot"],
+        "tiebreakers": ["point", "groupplayoff", "goalratio", "lot"],
         "details": {
             "host": { "teams": ["SWE"], "qualification_date": "1950-06-23" },
             "logo_filename": "1958_FIFA_World_Cup.jpg",
@@ -1105,7 +1107,7 @@
         "short_name": "Switzerland 1954",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["lotgroupplayoff"],
+        "tiebreakers": ["point", "groupplayoff", "goaldifference", "lot"],
         "details": {
             "host": { "teams": ["SUI"], "qualification_date": "1946-07-22" },
             "logo_filename": "1954_FIFA_World_Cup.jpg",
@@ -1160,7 +1162,7 @@
         "short_name": "Brazil 1950",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["1stplaceplayoff"],
+        "tiebreakers": ["point", "goaldifference"],
         "details": {
             "host": { "teams": ["BRA"], "qualification_date": "1946-01-01" },
             "logo_filename": "309px-Poster_-_World_Cup_1950.jpg",
@@ -1324,7 +1326,7 @@
         "short_name": "Uruguay 1930",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["points"],
+        "tiebreakers": ["point"],
         "details": {
             "host": { "teams": ["URU"] },
             "logo_filename": "317px-Uruguay_1930_World_Cup.jpg",

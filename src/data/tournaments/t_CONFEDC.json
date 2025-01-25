@@ -5,7 +5,7 @@
         "name": "FIFA Confederations Cup Russia 2017",
         "competition_id": "CONFEDC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["RUS"], "qualification_date": "2010-12-02" },
             "logo_filename": "2017_FIFA_Confederations_Cup.svg",
@@ -64,7 +64,7 @@
         "name": "FIFA Confederations Cup Brazil 2013",
         "competition_id": "CONFEDC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["BRA"], "qualification_date": "2007-10-30" },
             "logo_filename": "2013_FIFA_Confederations_Cup.svg",
@@ -121,7 +121,7 @@
         "name": "FIFA Confederations Cup South Africa 2009",
         "competition_id": "CONFEDC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["RSA"], "qualification_date": "2004-05-15" },
             "logo_filename": "2009_FIFA_Confederations_Cup.svg",
@@ -178,7 +178,7 @@
         "name": "FIFA Confederations Cup Germany 2005",
         "competition_id": "CONFEDC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["GER"], "qualification_date": "2000-07-07" },
             "logo_filename": "2005_FIFA_Confederations_Cup.jpg",
@@ -236,7 +236,7 @@
         "competition_id": "CONFEDC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["FRA"], "qualification_date": "2002-09-24" },
             "logo_filename": "2003_FIFA_Confederations_Cup.jpg",
@@ -293,7 +293,7 @@
         "competition_id": "CONFEDC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["KOR", "JPN"], "qualification_date": "1996-05-31" },
             "logo_filename": "2001_FIFA_Confederations_Cup.jpg",
@@ -350,7 +350,7 @@
         "competition_id": "CONFEDC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["MEX"] },
             "logo_filename": "1999_FIFA_Confederations_Cup.jpg",
@@ -407,7 +407,7 @@
         "competition_id": "CONFEDC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["KSA"] },
             "logo_filename": "1997_FIFA_Confederations_Cup.png",
@@ -466,7 +466,7 @@
         "competition_id": "CONFEDC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "penalty"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "tielastmatch"],
         "details": {
             "host": { "teams": ["KSA"] },
             "logo_filename": "297px-Copa_Rey_Fahd_Icon.png",

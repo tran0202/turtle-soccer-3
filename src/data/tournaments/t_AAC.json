@@ -5,7 +5,7 @@
         "name": "AFC Asian Cup Qatar 2023",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["QAT"], "qualification_date": "2021-06-07" },

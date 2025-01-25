@@ -105,7 +105,8 @@
                                     "time": "19:00",
                                     "stadium": "Malmö Stadion",
                                     "city": "Malmö",
-                                    "group_playoff": true
+                                    "group_playoff": true,
+                                    "group_playoff_note": "Northern Ireland defeated Czechoslovakia 2-1 (a.e.t)"
                                 }
                             ]
                         }
@@ -283,7 +284,8 @@
                                     "time": "19:00",
                                     "stadium": "Råsunda Stadium",
                                     "city": "Solna",
-                                    "group_playoff": true
+                                    "group_playoff": true,
+                                    "group_playoff_note": "Wales defeated Hungary 2-1"
                                 }
                             ]
                         }
@@ -380,7 +382,8 @@
                                     "time": "19:00",
                                     "stadium": "Ullevi",
                                     "city": "Gothenburg",
-                                    "group_playoff": true
+                                    "group_playoff": true,
+                                    "group_playoff_note": "Soviet Union defeated England 1-0"
                                 }
                             ]
                         }

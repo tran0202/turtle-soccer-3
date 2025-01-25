@@ -3,422 +3,500 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "wild_card": { "pos": 3, "count": 4 },
-                    "eliminated": [4],
-                    "text": "The top 2 teams and the best 4 third-placed teams would advance to the Round of 16."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round", "count": 4, "name": "third-placed teams" }
+            ],
+            "next_round_note": "4 best third-placed teams advance to the knockout stage",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "UAE" }, { "id": "BHR" }, { "id": "THA" }, { "id": "IND" }],
-                    "matches": [
+                    "teams": [{ "id": "QAT" }, { "id": "CHN" }, { "id": "TJK" }, { "id": "LBN" }],
+                    "matchdays": [
                         {
-                            "home_team": "UAE",
-                            "away_team": "BHR",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-01-05",
-                            "time": "20:00",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "QAT",
+                                    "away_team": "LBN",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-01-12",
+                                    "time": "19:00",
+                                    "stadium": "Lusail Stadium",
+                                    "city": "Lusail"
+                                },
+                                {
+                                    "home_team": "CHN",
+                                    "away_team": "TJK",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-01-13",
+                                    "time": "17:30",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "THA",
-                            "away_team": "IND",
-                            "home_score": 1,
-                            "away_score": 4,
-                            "date": "2019-01-06",
-                            "time": "17:30",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "LBN",
+                                    "away_team": "CHN",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-01-17",
+                                    "time": "14:30",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "TJK",
+                                    "away_team": "QAT",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-01-17",
+                                    "time": "17:30",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BHR",
-                            "away_team": "THA",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-01-10",
-                            "time": "15:00",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "IND",
-                            "away_team": "UAE",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-01-10",
-                            "time": "20:00",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "UAE",
-                            "away_team": "THA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-01-14",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "IND",
-                            "away_team": "BHR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-01-14",
-                            "time": "20:00",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "QAT",
+                                    "away_team": "CHN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-01-22",
+                                    "time": "18:00",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "TJK",
+                                    "away_team": "LBN",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-01-22",
+                                    "time": "18:00",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "AUS" }, { "id": "JOR" }, { "id": "SYR" }, { "id": "PLE" }],
-                    "matches": [
+                    "teams": [{ "id": "AUS" }, { "id": "UZB" }, { "id": "SYR" }, { "id": "IND" }],
+                    "matchdays": [
                         {
-                            "home_team": "AUS",
-                            "away_team": "JOR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-01-06",
-                            "time": "15:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "AUS",
+                                    "away_team": "IND",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-01-13",
+                                    "time": "14:30",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "UZB",
+                                    "away_team": "SYR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-01-13",
+                                    "time": "20:30",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SYR",
-                            "away_team": "PLE",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-06",
-                            "time": "20:00",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "SYR",
+                                    "away_team": "AUS",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-01-18",
+                                    "time": "14:30",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "IND",
+                                    "away_team": "UZB",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-01-18",
+                                    "time": "17:30",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JOR",
-                            "away_team": "SYR",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-01-10",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "PLE",
-                            "away_team": "AUS",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-11",
-                            "time": "15:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "AUS",
-                            "away_team": "SYR",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-01-15",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "PLE",
-                            "away_team": "JOR",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-15",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "AUS",
+                                    "away_team": "UZB",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-01-23",
+                                    "time": "14:30",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "SYR",
+                                    "away_team": "IND",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-01-23",
+                                    "time": "14:30",
+                                    "stadium": "Al Bayt Stadium",
+                                    "city": "Al Khor"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "CHN" }, { "id": "KGZ" }, { "id": "KOR" }, { "id": "PHI" }],
-                    "matches": [
+                    "teams": [{ "id": "PLE" }, { "id": "IRN" }, { "id": "UAE" }, { "id": "HKG" }],
+                    "matchdays": [
                         {
-                            "home_team": "CHN",
-                            "away_team": "KGZ",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "away_fair_pts": -1,
-                            "date": "2019-01-07",
-                            "time": "15:00",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "UAE",
+                                    "away_team": "HKG",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-01-14",
+                                    "time": "17:30",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "IRN",
+                                    "away_team": "PLE",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2024-01-14",
+                                    "time": "20:30",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "KOR",
-                            "away_team": "PHI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-01-07",
-                            "time": "17:30",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PLE",
+                                    "away_team": "UAE",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-01-18",
+                                    "time": "20:30",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "HKG",
+                                    "away_team": "IRN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-01-19",
+                                    "time": "20:30",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PHI",
-                            "away_team": "CHN",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-11",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "KGZ",
-                            "away_team": "KOR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -1,
-                            "date": "2019-01-11",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "KOR",
-                            "away_team": "CHN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-01-16",
-                            "time": "17:30",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "KGZ",
-                            "away_team": "PHI",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-16",
-                            "time": "17:30",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "IRN",
+                                    "away_team": "UAE",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-01-23",
+                                    "time": "18:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "HKG",
+                                    "away_team": "PLE",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-01-23",
+                                    "time": "18:00",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "IRN" }, { "id": "YEM" }, { "id": "IRQ" }, { "id": "VIE" }],
-                    "matches": [
+                    "teams": [{ "id": "JPN" }, { "id": "IDN" }, { "id": "IRQ" }, { "id": "VIE" }],
+                    "matchdays": [
                         {
-                            "home_team": "IRN",
-                            "away_team": "YEM",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "2019-01-07",
-                            "time": "20:00",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "VIE",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2024-01-14",
+                                    "time": "14:30",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "IDN",
+                                    "away_team": "IRQ",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-01-15",
+                                    "time": "17:30",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "IRQ",
-                            "away_team": "VIE",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "away_fair_pts": -2,
-                            "date": "2019-01-08",
-                            "time": "17:30",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "IRQ",
+                                    "away_team": "JPN",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-01-19",
+                                    "time": "14:30",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "VIE",
+                                    "away_team": "IDN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-01-19",
+                                    "time": "17:30",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VIE",
-                            "away_team": "IRN",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "home_fair_pts": -2,
-                            "date": "2019-01-12",
-                            "time": "15:00",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "YEM",
-                            "away_team": "IRQ",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-12",
-                            "time": "17:30",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
-                        },
-                        {
-                            "home_team": "VIE",
-                            "away_team": "YEM",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "home_fair_pts": -1,
-                            "date": "2019-01-16",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "IRN",
-                            "away_team": "IRQ",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-16",
-                            "time": "20:00",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "IDN",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-01-24",
+                                    "time": "14:30",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "IRQ",
+                                    "away_team": "VIE",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2024-01-24",
+                                    "time": "14:30",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "KSA" }, { "id": "PRK" }, { "id": "QAT" }, { "id": "LBN" }],
-                    "matches": [
+                    "teams": [{ "id": "KOR" }, { "id": "MAS" }, { "id": "JOR" }, { "id": "BHR" }],
+                    "matchdays": [
                         {
-                            "home_team": "KSA",
-                            "away_team": "PRK",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-01-08",
-                            "time": "20:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "BHR",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-01-15",
+                                    "time": "14:30",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "MAS",
+                                    "away_team": "JOR",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2024-01-15",
+                                    "time": "20:30",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "QAT",
-                            "away_team": "LBN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "away_fair_pts": -2,
-                            "date": "2019-01-09",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "JOR",
+                                    "away_team": "KOR",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-01-20",
+                                    "time": "14:30",
+                                    "stadium": "Al Thumama Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "BHR",
+                                    "away_team": "MAS",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-01-20",
+                                    "time": "17:30",
+                                    "stadium": "Jassim bin Hamad Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "LBN",
-                            "away_team": "KSA",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-12",
-                            "time": "20:00",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "PRK",
-                            "away_team": "QAT",
-                            "home_score": 0,
-                            "away_score": 6,
-                            "date": "2019-01-13",
-                            "time": "15:00",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "KSA",
-                            "away_team": "QAT",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-01-17",
-                            "time": "20:00",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "LBN",
-                            "away_team": "PRK",
-                            "home_score": 4,
-                            "away_score": 1,
-                            "home_fair_pts": -2,
-                            "date": "2019-01-17",
-                            "time": "20:00",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "MAS",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2024-01-25",
+                                    "time": "14:30",
+                                    "stadium": "Al Janoub Stadium",
+                                    "city": "Al Wakrah"
+                                },
+                                {
+                                    "home_team": "JOR",
+                                    "away_team": "BHR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-01-25",
+                                    "time": "14:30",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "JPN" }, { "id": "TKM" }, { "id": "UZB" }, { "id": "OMA" }],
-                    "matches": [
+                    "teams": [{ "id": "KSA" }, { "id": "THA" }, { "id": "KGZ" }, { "id": "OMA" }],
+                    "matchdays": [
                         {
-                            "home_team": "JPN",
-                            "away_team": "TKM",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-01-09",
-                            "time": "15:00",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "THA",
+                                    "away_team": "KGZ",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-01-16",
+                                    "time": "17:30",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "KSA",
+                                    "away_team": "OMA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-01-16",
+                                    "time": "20:30",
+                                    "stadium": "Khalifa International Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "UZB",
-                            "away_team": "OMA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-01-09",
-                            "time": "17:30",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "OMA",
+                                    "away_team": "THA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-01-21",
+                                    "time": "17:30",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                },
+                                {
+                                    "home_team": "KGZ",
+                                    "away_team": "KSA",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-01-21",
+                                    "time": "20:30",
+                                    "stadium": "Ahmad bin Ali Stadium",
+                                    "city": "Al Rayyan"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "OMA",
-                            "away_team": "JPN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-13",
-                            "time": "17:30",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "TKM",
-                            "away_team": "UZB",
-                            "home_score": 0,
-                            "away_score": 4,
-                            "date": "2019-01-13",
-                            "time": "20:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "OMA",
-                            "away_team": "TKM",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-17",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "JPN",
-                            "away_team": "UZB",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-01-17",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KSA",
+                                    "away_team": "THA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-01-25",
+                                    "time": "18:00",
+                                    "stadium": "Education City Stadium",
+                                    "city": "Al Rayyan"
+                                },
+                                {
+                                    "home_team": "KGZ",
+                                    "away_team": "OMA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-01-25",
+                                    "time": "18:00",
+                                    "stadium": "Abdullah bin Khalifa Stadium",
+                                    "city": "Doha"
+                                }
+                            ]
                         }
                     ]
                 }

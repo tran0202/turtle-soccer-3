@@ -1,5 +1,5 @@
 /* eslint-disable no-loop-func */
-import { isHomeWinMatch, getTeamName } from './TeamHelper'
+import { isHomeWinMatch } from './TeamHelper'
 
 export const calculateGroupRankings = (stage, config) => {
     if (!stage || !stage.groups) return
@@ -19,9 +19,11 @@ export const calculateGroupRankings = (stage, config) => {
                 accumulateRanking(ranking, allMatches, config)
                 g.rankings.push(ranking)
             })
-        sortGroupRankings(g, config)
-        flattenDrawPools(g)
-        processPartialAdvancement(stage)
+        collectH2HMatches(g)
+        createPools(g, config)
+        sortPools(g, config)
+        flattenPools(g)
+        processPartialAdvancement(stage, config)
     })
     stage.groups.forEach((g) => {
         setAdvancement(g, stage.advancement)
@@ -94,6 +96,49 @@ export const accumulateRanking = (ranking, matches, config) => {
                     }
                 }
             }
+        } else {
+            if (ranking.id === m.home_team) {
+                if (isHomeWinMatch(m)) {
+                    ranking.playoff = true
+                    ranking.playoff_win = true
+                    ranking.playoff_win_note = m.group_playoff_note
+                } else {
+                    ranking.playoff = true
+                    ranking.playoff_win = false
+                }
+            }
+            if (ranking.id === m.away_team) {
+                if (isHomeWinMatch(m)) {
+                    ranking.playoff = true
+                    ranking.playoff_win = false
+                } else {
+                    ranking.playoff = true
+                    ranking.playoff_win = true
+                    ranking.playoff_win_note = m.group_playoff_note
+                }
+            }
+        }
+        if (m.tie_last_match) {
+            if (ranking.id === m.home_team) {
+                if (isHomeWinMatch(m)) {
+                    ranking.tie_last_match = true
+                    ranking.tie_last_match_win = true
+                    ranking.tie_last_match_win_note = m.tie_last_match_note
+                } else {
+                    ranking.tie_last_match = true
+                    ranking.tie_last_match_win = false
+                }
+            }
+            if (ranking.id === m.away_team) {
+                if (isHomeWinMatch(m)) {
+                    ranking.tie_last_match = true
+                    ranking.tie_last_match_win = false
+                } else {
+                    ranking.tie_last_match = true
+                    ranking.tie_last_match_win = true
+                    ranking.tie_last_match_win_note = m.tie_last_match_note
+                }
+            }
         }
     })
     if (ranking.team.point_deduction) {
@@ -101,63 +146,44 @@ export const accumulateRanking = (ranking, matches, config) => {
     }
 }
 
-export const sortGroupRankings = (group, config) => {
-    if (!group) return
-    createDrawPools(group, config)
-    sortRankings(group.draw_pools, null, config)
+export const collectH2HMatches = (group) => {
+    if (!group || !group.rankings || !group.matchdays) return
+    group.rankings.forEach((r) => {
+        r.h2h_matches = []
+        group.matchdays.forEach((md) => {
+            md.matches.forEach((m) => {
+                if (m.home_team === r.id || m.away_team === r.id) {
+                    r.h2h_matches.push(m)
+                }
+            })
+        })
+    })
 }
 
-export const createDrawPools = (group, config) => {
-    if (!group) return
-    group.draw_pools = []
+export const createPools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.pools = []
+    const isH2h = isH2HTiebreaker(config)
     group.rankings.forEach((r) => {
-        const foundPool = group.draw_pools.find((p) => p.pts === r.pts && p.gd === r.gd && p.gf === r.gf)
+        const foundPool = group.pools.find((p) => p.pts === r.pts && (isH2h || p.gd === r.gd) && (isH2h || p.gf === r.gf))
         if (foundPool) {
             foundPool.rankings.push(r)
         } else {
-            group.draw_pools.push({ pts: r.pts, gd: r.gd, gf: r.gf, rankings: [r] })
-        }
-    })
-    group.draw_pools.forEach((p) => {
-        if (isGroupPlayoffTiebreaker(config)) {
-            const hasPlayoff = group.matchdays && group.matchdays.find((md) => md.name === 'Play-off')
-            if (hasPlayoff) {
-                const playoff = hasPlayoff.matches[0]
-                if (p.rankings[0].id === playoff.home_team) {
-                    const playoff_win = isHomeWinMatch(playoff)
-                    p.rankings[0].playoff_win = playoff_win
-                    if (playoff_win) {
-                        p.rankings[0].playoff_win_note =
-                            getTeamName(playoff.home_team, config) +
-                            ' defeated ' +
-                            getTeamName(playoff.away_team, config) +
-                            ' ' +
-                            (playoff.home_extra_score ? playoff.home_score + playoff.home_extra_score : playoff.home_score) +
-                            '-' +
-                            (playoff.away_extra_score ? playoff.away_score + playoff.away_extra_score : playoff.away_score) +
-                            (playoff.home_extra_score !== undefined ? ' (a.e.t.)' : '')
-                    }
-                } else if (p.rankings[0].id === playoff.away_team) {
-                    const playoff_win = !isHomeWinMatch(playoff)
-                    p.rankings[0].playoff_win = playoff_win
-                    if (playoff_win) {
-                        p.rankings[0].playoff_win_note =
-                            getTeamName(playoff.away_team, config) +
-                            ' defeated ' +
-                            getTeamName(playoff.home_team, config) +
-                            ' ' +
-                            (playoff.away_extra_score ? playoff.away_score + playoff.away_extra_score : playoff.away_score) +
-                            '-' +
-                            (playoff.home_extra_score ? playoff.home_score + playoff.home_extra_score : playoff.home_score) +
-                            (playoff.home_extra_score !== undefined ? ' (a.e.t.)' : '')
-                    }
-                }
+            if (isH2h) {
+                group.pools.push({ pts: r.pts, rankings: [r] })
+            } else {
+                group.pools.push({ pts: r.pts, gd: r.gd, gr: r.gr, gf: r.gf, rankings: [r] })
             }
         }
-        // If the pool has more than 1 team:
-        else if (p.rankings.length > 1) {
+    })
+}
+
+export const sortPools = (group, config) => {
+    if (!group || !group.pools || group.pools.length === 0 || !group.matchdays || !config) return
+    group.pools.forEach((p) => {
+        if (p.rankings && p.rankings.length > 1) {
             // 1. Collect the h2h matches
-            collectH2HMatches(p, group.matchdays)
+            collectPoolH2HMatches(p, group.matchdays)
             // 2. Accumulate the rankings
             p.h2h_rankings = []
             p.rankings.forEach((t) => {
@@ -169,225 +195,236 @@ export const createDrawPools = (group, config) => {
                 p.h2h_rankings.push(ranking)
             })
             // 4. Sort the rankings
-            sortRankings(p.h2h_rankings, p.h2h_matches, {})
+            const result = sortRankings(p.h2h_rankings, { ...config, sort: 'h2h' })
             // 5. Update the pool
-            for (var i = 0; i < p.rankings.length; i++) {
-                p.rankings[i] = {
-                    ...p.rankings[i],
-                    id: p.h2h_rankings[i].id,
-                    team: p.h2h_rankings[i].team,
-                    fp: p.h2h_rankings[i].fp,
-                    h2h_point_win: p.h2h_rankings[i].h2h_point_win,
-                    h2h_point_win_note: p.h2h_rankings[i].h2h_point_win_note,
-                    h2h_gd_win: p.h2h_rankings[i].h2h_gd_win,
-                    h2h_gd_win_note: p.h2h_rankings[i].h2h_gd_win_note,
-                    h2h_gf_win: p.h2h_rankings[i].h2h_gf_win,
-                    h2h_gf_win_note: p.h2h_rankings[i].h2h_gf_win_note,
-                    away_goal_win: p.h2h_rankings[i].away_goal_win,
-                    away_goal_win_note: p.h2h_rankings[i].away_goal_win_note,
-                    fair_play_win: p.h2h_rankings[i].fair_play_win,
-                    fair_play_win_note: p.h2h_rankings[i].fair_play_win_note,
-                    draw_lot_win: p.h2h_rankings[i].draw_lot_win,
-                    draw_lot_win_note: p.h2h_rankings[i].draw_lot_win_note,
-                    tie_last_match_win: p.h2h_rankings[i].tie_last_match_win,
-                    tie_last_match_win_note: p.h2h_rankings[i].tie_last_match_win_note,
+            const pool_rankings = []
+            p.h2h_rankings.forEach((hr) => {
+                const foundRanking = p.rankings.find((r) => r.id === hr.id)
+                if (foundRanking) {
+                    pool_rankings.push({ ...hr, ...foundRanking })
                 }
+            })
+            p.rankings = pool_rankings
+            if (result && result.h2htie) {
+                sortRankings(p.rankings, { ...config, sort: 'h2htie' })
             }
         }
     })
+    sortRankings(group.pools, { ...config, sort: 'pool' })
 }
 
-export const collectH2HMatches = (pool, matchdays) => {
-    if (!pool || !matchdays) return
-    if (pool.rankings.length > 1) {
-        pool.h2h_matches = []
-        for (var i = 0; i < pool.rankings.length - 1; i++) {
-            for (var j = i + 1; j < pool.rankings.length; j++) {
-                // eslint-disable-next-line no-loop-func
-                matchdays.forEach((md) => {
-                    md.matches.forEach((m) => {
-                        if (
-                            (m.home_team === pool.rankings[i].id && m.away_team === pool.rankings[j].id) ||
-                            (m.home_team === pool.rankings[j].id && m.away_team === pool.rankings[i].id)
-                        ) {
-                            pool.h2h_matches.push(m)
-                        }
-                    })
+export const collectPoolH2HMatches = (pool, matchdays) => {
+    if (!pool || !pool.rankings || pool.rankings.length <= 1 || !matchdays) return
+    pool.h2h_matches = []
+    for (var i = 0; i < pool.rankings.length - 1; i++) {
+        for (var j = i + 1; j < pool.rankings.length; j++) {
+            matchdays.forEach((md) => {
+                md.matches.forEach((m) => {
+                    if (
+                        (m.home_team === pool.rankings[i].id && m.away_team === pool.rankings[j].id) ||
+                        (m.home_team === pool.rankings[j].id && m.away_team === pool.rankings[i].id)
+                    ) {
+                        pool.h2h_matches.push(m)
+                    }
                 })
-            }
+            })
         }
     }
 }
 
-export const sortRankings = (rankings, h2h_matches, config) => {
-    if (!rankings) return
+export const sortRankings = (rankings, config) => {
+    if (!rankings || !config) return
+    if (isPointTiebreaker(config)) {
+        return comparePoints(rankings, config)
+    }
+}
+
+export const comparePoints = (rankings, config) => {
+    if (!rankings || rankings.length <= 1 || !config) return
+    let h2htie = false
     for (var i = 0; i < rankings.length - 1; i++) {
         for (var j = i + 1; j < rankings.length; j++) {
-            // Point
-            if (rankings[i].pts > rankings[j].pts) {
-                if (h2h_matches) {
-                    rankings[i].h2h_point_win = true
-                    rankings[j].h2h_point_win = false
-                    rankings[i].h2h_point_win_note =
-                        rankings[i].team.name +
-                        ' ' +
-                        rankings[i].gf +
-                        '-' +
-                        rankings[i].ga +
-                        ' ' +
-                        rankings[j].team.name +
-                        ' >>> ' +
-                        rankings[i].team.name +
-                        ' ' +
-                        rankings[i].pts +
-                        ' | ' +
-                        rankings[j].team.name +
-                        ' ' +
-                        rankings[j].pts
-                }
-            }
             if (rankings[i].pts < rankings[j].pts) {
                 const temp = rankings[i]
                 rankings[i] = { ...rankings[j] }
                 rankings[j] = { ...temp }
-                if (h2h_matches) {
-                    rankings[i].h2h_point_win = true
-                    rankings[j].h2h_point_win = false
-                    rankings[i].h2h_point_win_note =
-                        rankings[i].team.name +
-                        ' ' +
-                        rankings[i].gf +
-                        '-' +
-                        rankings[i].ga +
-                        ' ' +
-                        rankings[j].team.name +
-                        ' >>> ' +
-                        rankings[i].team.name +
-                        ' ' +
-                        rankings[i].pts +
-                        ' | ' +
-                        rankings[j].team.name +
-                        ' ' +
-                        rankings[j].pts
-                }
-            }
-
-            // Goal differential
-            if (rankings[i].pts === rankings[j].pts) {
+            } else if (rankings[i].pts === rankings[j].pts) {
                 if (isGroupPlayoffTiebreaker(config)) {
-                    if (rankings[j].rankings[0].playoff_win) {
-                        const temp = rankings[i]
-                        rankings[i] = { ...rankings[j] }
-                        rankings[j] = { ...temp }
-                    }
-                } else if (rankings[i].gd < rankings[j].gd) {
-                    const temp = rankings[i]
-                    rankings[i] = { ...rankings[j] }
-                    rankings[j] = { ...temp }
-                    if (h2h_matches) {
-                        rankings[i].h2h_gd_win = true
-                        rankings[j].h2h_gd_win = false
-                        rankings[i].h2h_gd_win_note = rankings[i].gd + '|' + rankings[j].gd
-                    }
+                    const result = compareGroupPlayoff(rankings[i], rankings[j], config)
+                    rankings[i] = result.ranking1
+                    rankings[j] = result.ranking2
+                } else if (isGoalDifferenceTiebreaker(config)) {
+                    const result = compareGoalDifference(rankings[i], rankings[j], config)
+                    rankings[i] = result.ranking1
+                    rankings[j] = result.ranking2
+                    h2htie = result.h2htie
+                } else if (isGoalRatioTiebreaker(config)) {
+                    const result = compareGoalRatio(rankings[i], rankings[j], config)
+                    rankings[i] = result.ranking1
+                    rankings[j] = result.ranking2
                 }
             }
-
-            // Goal forward
-            if (rankings[i].pts === rankings[j].pts && rankings[i].gd === rankings[j].gd) {
-                if (isPointGoalDifferenceTiebreaker(config)) {
-                    if (rankings[j].rankings[0].team.win_lot) {
-                        const temp = rankings[i]
-                        rankings[i] = { ...rankings[j] }
-                        rankings[j] = { ...temp }
-                        rankings[i].rankings[0].draw_lot_win = true
-                        rankings[j].rankings[0].draw_lot_win = false
-                        rankings[i].rankings[0].draw_lot_win_note = rankings[i].rankings[0].team.win_lot_note
-                    }
-                    if (rankings[i].rankings[0].team.win_lot) {
-                        rankings[i].rankings[0].draw_lot_win = true
-                        rankings[j].rankings[0].draw_lot_win = false
-                        rankings[i].rankings[0].draw_lot_win_note = rankings[i].rankings[0].team.win_lot_note
-                    }
-                } else if (rankings[i].gf < rankings[j].gf) {
-                    const temp = rankings[i]
-                    rankings[i] = { ...rankings[j] }
-                    rankings[j] = { ...temp }
-                    if (h2h_matches) {
-                        rankings[i].h2h_gf_win = true
-                        rankings[j].h2h_gf_win = false
-                        rankings[i].h2h_gf_win_note = rankings[i].gf + '|' + rankings[j].gf
-                    }
-                }
-            }
-
-            // Away goal
-            if (rankings[i].pts === rankings[j].pts && rankings[i].gd === rankings[j].gd && rankings[i].gf === rankings[j].gf) {
-                const match1 = h2h_matches && h2h_matches.find((m) => m.home_team === rankings[i].team.id)
-                const match2 = h2h_matches && h2h_matches.find((m) => m.home_team === rankings[j].team.id)
-                if (match1 && match2 && match1.away_score > match2.away_score) {
-                    const temp = rankings[i]
-                    rankings[i] = { ...rankings[j] }
-                    rankings[j] = { ...temp }
-                    if (h2h_matches) {
-                        rankings[i].away_goal_win = true
-                        rankings[j].away_goal_win = false
-                        rankings[i].away_goal_win_note = match1.away_score + '|' + match2.away_score
-                    }
-                }
-            }
-            // Fair play points
-            if (
-                rankings[i].pts === rankings[j].pts &&
-                rankings[i].gd === rankings[j].gd &&
-                rankings[i].gf === rankings[j].gf &&
-                rankings[i].fp < rankings[j].fp
-            ) {
-                const temp = rankings[i]
-                rankings[i] = { ...rankings[j] }
-                rankings[j] = { ...temp }
-                if (h2h_matches) {
-                    rankings[i].fair_play_win = true
-                    rankings[j].fair_play_win = false
-                    rankings[i].fair_play_win_note = rankings[i].team.name + ' ' + rankings[i].fp + ' | ' + rankings[j].team.name + ' ' + rankings[j].fp
-                }
-            }
-
-            // Drawing lots or Tie last match
-            if (
-                rankings[i].pts === rankings[j].pts &&
-                rankings[i].gd === rankings[j].gd &&
-                rankings[i].gf === rankings[j].gf &&
-                (!rankings[i].fp || (rankings[i].fp && rankings[i].fp === rankings[j].fp))
-            ) {
-                if (h2h_matches && h2h_matches[0].tie_last_match) {
-                    const temp = rankings[i]
-                    rankings[i] = { ...rankings[j] }
-                    rankings[j] = { ...temp }
-                    rankings[i].tie_last_match_win = true
-                    rankings[j].tie_last_match_win = false
-                    rankings[i].tie_last_match_win_note = h2h_matches[0].tie_last_match_note
-                } else {
-                    if (rankings[j].team.win_lot) {
-                        const temp = rankings[i]
-                        rankings[i] = { ...rankings[j] }
-                        rankings[j] = { ...temp }
-                    }
-                    if (h2h_matches && rankings[i].team.win_lot) {
-                        rankings[i].draw_lot_win = true
-                        rankings[j].draw_lot_win = false
-                        rankings[i].draw_lot_win_note = rankings[i].team.win_lot_note
-                    }
-                }
+            if (config.sort === 'h2h' && rankings[i].pts !== rankings[j].pts) {
+                rankings[i].h2h_point_win = true
+                rankings[j].h2h_point_win = false
+                rankings[i].h2h_point_win_note =
+                    rankings[i].team.name +
+                    ' ' +
+                    rankings[i].gf +
+                    '-' +
+                    rankings[i].ga +
+                    ' ' +
+                    rankings[j].team.name +
+                    ' >>> ' +
+                    rankings[i].team.name +
+                    ' ' +
+                    rankings[i].pts +
+                    ' | ' +
+                    rankings[j].team.name +
+                    ' ' +
+                    rankings[j].pts
             }
         }
     }
+    return { h2htie }
 }
 
-export const flattenDrawPools = (group) => {
+export const compareGroupPlayoff = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    const playoff =
+        config.sort === 'h2h' || config.sort === 'partial' ? ranking1.playoff && ranking2.playoff : ranking1.rankings[0].playoff && ranking2.rankings[0].playoff
+    const playoff_win = config.sort === 'h2h' || config.sort === 'partial' ? ranking2.playoff_win : ranking2.rankings[0].playoff_win
+    if (playoff) {
+        if (playoff_win) {
+            const temp = ranking1
+            ranking1 = { ...ranking2 }
+            ranking2 = { ...temp }
+        }
+    } else if (isGoalDifferenceTiebreaker(config)) {
+        const result = compareGoalDifference(ranking1, ranking2, config)
+        ranking1 = result.ranking1
+        ranking2 = result.ranking2
+    } else if (isGoalRatioTiebreaker(config)) {
+        const result = compareGoalRatio(ranking1, ranking2, config)
+        ranking1 = result.ranking1
+        ranking2 = result.ranking2
+    }
+    return { ranking1, ranking2 }
+}
+
+export const compareGoalDifference = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    let h2htie = false
+    if (ranking1.gd < ranking2.gd) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
+    } else if (ranking1.gd === ranking2.gd) {
+        if (isGoalForTiebreaker(config)) {
+            const result = compareGoalFor(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+            h2htie = result.h2htie
+        } else if (isLotTiebreaker(config)) {
+            const result = drawingLots(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+        }
+    }
+    return { ranking1, ranking2, h2htie }
+}
+
+export const compareGoalRatio = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    if (ranking1.gr < ranking2.gr) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
+    }
+    return { ranking1, ranking2 }
+}
+
+export const compareGoalFor = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    let h2htie = false
+    if (ranking1.gf < ranking2.gf) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
+    } else if (ranking1.gf === ranking2.gf) {
+        if (isH2HTiebreaker(config)) {
+            h2htie = true
+        } else if (isFairPlayTiebreaker(config)) {
+            const result = compareFairPlay(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+        } else if (isTieLastMatchTiebreaker(config)) {
+            const result = compareTieLastMatch(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+        } else if (isLotTiebreaker(config)) {
+            const result = drawingLots(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+        }
+    }
+    return { ranking1, ranking2, h2htie }
+}
+
+export const compareFairPlay = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    if (ranking1.fp < ranking2.fp) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
+        ranking1.fair_play_win = true
+        ranking2.fair_play_win = false
+        ranking1.fair_play_win_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
+    }
+    return { ranking1, ranking2 }
+}
+
+export const compareTieLastMatch = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    if (ranking1.tie_last_match && ranking2.tie_last_match) {
+        if (ranking2.tie_last_match_win) {
+            const temp = ranking1
+            ranking1 = { ...ranking2 }
+            ranking2 = { ...temp }
+        }
+    }
+    return { ranking1, ranking2 }
+}
+
+export const drawingLots = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    const winlot1 = config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking1.team.win_lot : ranking1.rankings[0].team.win_lot
+    const winlot2 = config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking2.team.win_lot : ranking2.rankings[0].team.win_lot
+    if (winlot1 || winlot2) {
+        if (winlot2) {
+            const temp = ranking1
+            ranking1 = { ...ranking2 }
+            ranking2 = { ...temp }
+        }
+        if (config.sort === 'h2h') {
+            ranking1.draw_lot_win = true
+            ranking2.draw_lot_win = false
+            ranking1.draw_lot_win_note = ranking1.team.win_lot_note
+        }
+        if (config.sort === 'pool') {
+            ranking1.rankings[0].draw_lot_win = true
+            ranking2.rankings[0].draw_lot_win = false
+            ranking1.rankings[0].draw_lot_win_note = ranking1.rankings[0].team.win_lot_note
+        }
+    }
+    return { ranking1, ranking2 }
+}
+
+export const flattenPools = (group) => {
     if (!group) return
     group.rankings = []
     let rank = 0
-    group.draw_pools.forEach((p) => {
+    group.pools.forEach((p) => {
         p.rankings.forEach((t) => {
             rank++
             t.rank = rank
@@ -396,7 +433,7 @@ export const flattenDrawPools = (group) => {
     })
 }
 
-export const processPartialAdvancement = (stage) => {
+export const processPartialAdvancement = (stage, config) => {
     if (!stage || !stage.advancement) return
     const partial = stage.advancement.some((a) => a.count)
     if (partial) {
@@ -414,7 +451,7 @@ export const processPartialAdvancement = (stage) => {
                     rankings.push({ ...foundTeam, group_name: g.name })
                 }
             })
-            sortRankings(rankings, null, {})
+            sortRankings(rankings, { ...config, sort: 'partial' })
             rankings.forEach((t, index) => {
                 t.rank = index + 1
                 if (index < a.count) {
@@ -476,20 +513,69 @@ export const getPartialAdvancementRankings = (stage) => {
     return stage.advancement.filter((a) => a.count)
 }
 
+export const isPointTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'point') != null
+}
+
+export const isH2HTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'head2head') != null
+}
+
+export const isGoalDifferenceTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'goaldifference') != null
+}
+
 export const isGoalRatioTiebreaker = (config) => {
     const { tiebreakers } = config
     if (!tiebreakers) return false
-    return tiebreakers.find((tb) => tb.indexOf('goalratio') !== -1) != null
+    return tiebreakers.find((tb) => tb === 'goalratio') != null
 }
 
 export const isGroupPlayoffTiebreaker = (config) => {
     const { tiebreakers } = config
     if (!tiebreakers) return false
-    return tiebreakers.find((tb) => tb.indexOf('groupplayoff') !== -1) != null
+    return tiebreakers.find((tb) => tb === 'groupplayoff') != null
 }
 
-export const isPointGoalDifferenceTiebreaker = (config) => {
+export const isGoalForTiebreaker = (config) => {
     const { tiebreakers } = config
     if (!tiebreakers) return false
-    return tiebreakers.find((tb) => tb.indexOf('pointandgoaldifference') !== -1) != null
+    return tiebreakers.find((tb) => tb === 'goalfor') != null
 }
+
+export const isFairPlayTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'fairplay') != null
+}
+
+export const isTieLastMatchTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'tielastmatch') != null
+}
+
+export const isLotTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'lot') != null
+}
+
+// export const isOnlyPointGoalDifferenceTiebreaker = (config) => {
+//     return isPointTiebreaker(config) && isGoalDifferenceTiebreaker(config) && !isGoalForTiebreaker(config)
+// }
+
+// export const isHead2HeadBeforeGoalDifference = (config) => {
+//     const { tiebreakers } = config
+//     if (!tiebreakers) return false
+//     return (
+//         tiebreakers.findIndex((tb) => tb === 'head2head') <
+//         tiebreakers.findIndex((tb) => tb === 'goaldifferenceandgoalscored' || tb === 'goaldifferencegoalscoredwins')
+//     )
+// }
