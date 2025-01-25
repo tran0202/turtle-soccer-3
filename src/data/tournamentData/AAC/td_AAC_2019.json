@@ -98,341 +98,416 @@
                 {
                     "name": "Group B",
                     "teams": [{ "id": "AUS" }, { "id": "JOR" }, { "id": "SYR" }, { "id": "PLE" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "AUS",
-                            "away_team": "JOR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-01-06",
-                            "time": "15:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "AUS",
+                                    "away_team": "JOR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2019-01-06",
+                                    "time": "15:00",
+                                    "stadium": "Hazza bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                },
+                                {
+                                    "home_team": "SYR",
+                                    "away_team": "PLE",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2019-01-06",
+                                    "time": "20:00",
+                                    "stadium": "Sharjah Stadium",
+                                    "city": "Sharjah"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SYR",
-                            "away_team": "PLE",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-06",
-                            "time": "20:00",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "JOR",
+                                    "away_team": "SYR",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2019-01-10",
+                                    "time": "17:30",
+                                    "stadium": "Khalifa bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                },
+                                {
+                                    "home_team": "PLE",
+                                    "away_team": "AUS",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2019-01-11",
+                                    "time": "15:00",
+                                    "stadium": "Rashid Stadium",
+                                    "city": "Dubai"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JOR",
-                            "away_team": "SYR",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-01-10",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "PLE",
-                            "away_team": "AUS",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-11",
-                            "time": "15:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "AUS",
-                            "away_team": "SYR",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-01-15",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "PLE",
-                            "away_team": "JOR",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-15",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "AUS",
+                                    "away_team": "SYR",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2019-01-15",
+                                    "time": "17:30",
+                                    "stadium": "Khalifa bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                },
+                                {
+                                    "home_team": "PLE",
+                                    "away_team": "JOR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2019-01-15",
+                                    "time": "17:30",
+                                    "stadium": "Mohammed bin Zayed Stadium",
+                                    "city": "Abu Dhabi"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "CHN" }, { "id": "KGZ" }, { "id": "KOR" }, { "id": "PHI" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CHN",
-                            "away_team": "KGZ",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "away_fair_pts": -1,
-                            "date": "2019-01-07",
-                            "time": "15:00",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CHN",
+                                    "away_team": "KGZ",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "away_fair_pts": -1,
+                                    "date": "2019-01-07",
+                                    "time": "15:00",
+                                    "stadium": "Khalifa bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                },
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "PHI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2019-01-07",
+                                    "time": "17:30",
+                                    "stadium": "Al Maktoum Stadium",
+                                    "city": "Dubai"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "KOR",
-                            "away_team": "PHI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-01-07",
-                            "time": "17:30",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PHI",
+                                    "away_team": "CHN",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2019-01-11",
+                                    "time": "17:30",
+                                    "stadium": "Mohammed bin Zayed Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "KGZ",
+                                    "away_team": "KOR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_fair_pts": -1,
+                                    "date": "2019-01-11",
+                                    "time": "20:00",
+                                    "stadium": "Hazza bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PHI",
-                            "away_team": "CHN",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-11",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "KGZ",
-                            "away_team": "KOR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -1,
-                            "date": "2019-01-11",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "KOR",
-                            "away_team": "CHN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-01-16",
-                            "time": "17:30",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "KGZ",
-                            "away_team": "PHI",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-16",
-                            "time": "17:30",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "CHN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2019-01-16",
+                                    "time": "17:30",
+                                    "stadium": "Al Nahyan Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "KGZ",
+                                    "away_team": "PHI",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "home_fair_pts": -3,
+                                    "date": "2019-01-16",
+                                    "time": "17:30",
+                                    "stadium": "Rashid Stadium",
+                                    "city": "Dubai"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
                     "teams": [{ "id": "IRN" }, { "id": "YEM" }, { "id": "IRQ" }, { "id": "VIE" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "IRN",
-                            "away_team": "YEM",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "2019-01-07",
-                            "time": "20:00",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "IRN",
+                                    "away_team": "YEM",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2019-01-07",
+                                    "time": "20:00",
+                                    "stadium": "Mohammed bin Zayed Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "IRQ",
+                                    "away_team": "VIE",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "away_fair_pts": -2,
+                                    "date": "2019-01-08",
+                                    "time": "17:30",
+                                    "stadium": "Zayed Sports City Stadium",
+                                    "city": "Abu Dhabi"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "IRQ",
-                            "away_team": "VIE",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "away_fair_pts": -2,
-                            "date": "2019-01-08",
-                            "time": "17:30",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "VIE",
+                                    "away_team": "IRN",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "home_fair_pts": -2,
+                                    "date": "2019-01-12",
+                                    "time": "15:00",
+                                    "stadium": "Al Nahyan Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "YEM",
+                                    "away_team": "IRQ",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2019-01-12",
+                                    "time": "17:30",
+                                    "stadium": "Sharjah Stadium",
+                                    "city": "Sharjah"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VIE",
-                            "away_team": "IRN",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "home_fair_pts": -2,
-                            "date": "2019-01-12",
-                            "time": "15:00",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "YEM",
-                            "away_team": "IRQ",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-01-12",
-                            "time": "17:30",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
-                        },
-                        {
-                            "home_team": "VIE",
-                            "away_team": "YEM",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "home_fair_pts": -1,
-                            "date": "2019-01-16",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "IRN",
-                            "away_team": "IRQ",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-01-16",
-                            "time": "20:00",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "VIE",
+                                    "away_team": "YEM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "home_fair_pts": -1,
+                                    "date": "2019-01-16",
+                                    "time": "20:00",
+                                    "stadium": "Hazza bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                },
+                                {
+                                    "home_team": "IRN",
+                                    "away_team": "IRQ",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2019-01-16",
+                                    "time": "20:00",
+                                    "stadium": "Al Maktoum Stadium",
+                                    "city": "Dubai"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group E",
                     "teams": [{ "id": "KSA" }, { "id": "PRK" }, { "id": "QAT" }, { "id": "LBN" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "KSA",
-                            "away_team": "PRK",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-01-08",
-                            "time": "20:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "KSA",
+                                    "away_team": "PRK",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2019-01-08",
+                                    "time": "20:00",
+                                    "stadium": "Rashid Stadium",
+                                    "city": "Dubai"
+                                },
+                                {
+                                    "home_team": "QAT",
+                                    "away_team": "LBN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "away_fair_pts": -2,
+                                    "date": "2019-01-09",
+                                    "time": "20:00",
+                                    "stadium": "Hazza bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "QAT",
-                            "away_team": "LBN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "away_fair_pts": -2,
-                            "date": "2019-01-09",
-                            "time": "20:00",
-                            "stadium": "Hazza bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "LBN",
+                                    "away_team": "KSA",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "home_fair_pts": -3,
+                                    "date": "2019-01-12",
+                                    "time": "20:00",
+                                    "stadium": "Al Maktoum Stadium",
+                                    "city": "Dubai"
+                                },
+                                {
+                                    "home_team": "PRK",
+                                    "away_team": "QAT",
+                                    "home_score": 0,
+                                    "away_score": 6,
+                                    "date": "2019-01-13",
+                                    "time": "15:00",
+                                    "stadium": "Khalifa bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "LBN",
-                            "away_team": "KSA",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-12",
-                            "time": "20:00",
-                            "stadium": "Al Maktoum Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "PRK",
-                            "away_team": "QAT",
-                            "home_score": 0,
-                            "away_score": 6,
-                            "date": "2019-01-13",
-                            "time": "15:00",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
-                        },
-                        {
-                            "home_team": "KSA",
-                            "away_team": "QAT",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-01-17",
-                            "time": "20:00",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "LBN",
-                            "away_team": "PRK",
-                            "home_score": 4,
-                            "away_score": 1,
-                            "home_fair_pts": -2,
-                            "date": "2019-01-17",
-                            "time": "20:00",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KSA",
+                                    "away_team": "QAT",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2019-01-17",
+                                    "time": "20:00",
+                                    "stadium": "Zayed Sports City Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "LBN",
+                                    "away_team": "PRK",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "home_fair_pts": -2,
+                                    "date": "2019-01-17",
+                                    "time": "20:00",
+                                    "stadium": "Sharjah Stadium",
+                                    "city": "Sharjah"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group F",
                     "teams": [{ "id": "JPN" }, { "id": "TKM" }, { "id": "UZB" }, { "id": "OMA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "JPN",
-                            "away_team": "TKM",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-01-09",
-                            "time": "15:00",
-                            "stadium": "Al Nahyan Stadium",
-                            "city": "Abu Dhabi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "TKM",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2019-01-09",
+                                    "time": "15:00",
+                                    "stadium": "Al Nahyan Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "UZB",
+                                    "away_team": "OMA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2019-01-09",
+                                    "time": "17:30",
+                                    "stadium": "Sharjah Stadium",
+                                    "city": "Sharjah"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "UZB",
-                            "away_team": "OMA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-01-09",
-                            "time": "17:30",
-                            "stadium": "Sharjah Stadium",
-                            "city": "Sharjah"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "OMA",
+                                    "away_team": "JPN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_fair_pts": -3,
+                                    "date": "2019-01-13",
+                                    "time": "17:30",
+                                    "stadium": "Zayed Sports City Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "TKM",
+                                    "away_team": "UZB",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2019-01-13",
+                                    "time": "20:00",
+                                    "stadium": "Rashid Stadium",
+                                    "city": "Dubai"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "OMA",
-                            "away_team": "JPN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-13",
-                            "time": "17:30",
-                            "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "TKM",
-                            "away_team": "UZB",
-                            "home_score": 0,
-                            "away_score": 4,
-                            "date": "2019-01-13",
-                            "time": "20:00",
-                            "stadium": "Rashid Stadium",
-                            "city": "Dubai"
-                        },
-                        {
-                            "home_team": "OMA",
-                            "away_team": "TKM",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "home_fair_pts": -3,
-                            "date": "2019-01-17",
-                            "time": "17:30",
-                            "stadium": "Mohammed bin Zayed Stadium",
-                            "city": "Abu Dhabi"
-                        },
-                        {
-                            "home_team": "JPN",
-                            "away_team": "UZB",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-01-17",
-                            "time": "17:30",
-                            "stadium": "Khalifa bin Zayed Stadium",
-                            "city": "Al Ain"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "OMA",
+                                    "away_team": "TKM",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "home_fair_pts": -3,
+                                    "date": "2019-01-17",
+                                    "time": "17:30",
+                                    "stadium": "Mohammed bin Zayed Stadium",
+                                    "city": "Abu Dhabi"
+                                },
+                                {
+                                    "home_team": "JPN",
+                                    "away_team": "UZB",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2019-01-17",
+                                    "time": "17:30",
+                                    "stadium": "Khalifa bin Zayed Stadium",
+                                    "city": "Al Ain"
+                                }
+                            ]
                         }
                     ]
                 }

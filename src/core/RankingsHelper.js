@@ -352,7 +352,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
         ranking1 = { ...ranking2 }
         ranking2 = { ...temp }
     } else if (ranking1.gf === ranking2.gf) {
-        if (isH2HTiebreaker(config)) {
+        if (isH2HTiebreaker(config) && config.sort === 'h2h') {
             h2htie = true
         } else if (isFairPlayTiebreaker(config)) {
             const result = compareFairPlay(ranking1, ranking2, config)
@@ -377,10 +377,10 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
         const temp = ranking1
         ranking1 = { ...ranking2 }
         ranking2 = { ...temp }
-        ranking1.fair_play_win = true
-        ranking2.fair_play_win = false
-        ranking1.fair_play_win_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
     }
+    ranking1.fair_play_win = true
+    ranking2.fair_play_win = false
+    ranking1.fair_play_win_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
     return { ranking1, ranking2 }
 }
 
@@ -451,8 +451,15 @@ export const processPartialAdvancement = (stage, config) => {
                     rankings.push({ ...foundTeam, group_name: g.name })
                 }
             })
-            sortRankings(rankings, { ...config, sort: 'partial' })
-            rankings.forEach((t, index) => {
+            stage.partial = {}
+            stage.partial.rankings = rankings
+            createPools(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers })
+            stage.partial.pools.forEach((p) => {
+                sortRankings(p.rankings, { ...config, sort: 'partial' })
+            })
+            sortRankings(stage.partial.pools, { ...config, sort: 'partial' })
+            flattenPools(stage.partial)
+            stage.partial.rankings.forEach((t, index) => {
                 t.rank = index + 1
                 if (index < a.count) {
                     t.next_rounded = true
@@ -460,7 +467,7 @@ export const processPartialAdvancement = (stage, config) => {
                     delete t.next_rounded
                 }
             })
-            a.rankings = rankings
+            a.rankings = stage.partial.rankings
         })
     }
 }

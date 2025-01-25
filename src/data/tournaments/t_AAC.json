@@ -67,7 +67,8 @@
         "name": "AFC Asian Cup United Arab Emirates 2019",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "partial_tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["UAE"], "qualification_date": "2015-03-09" },
