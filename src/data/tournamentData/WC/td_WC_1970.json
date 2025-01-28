@@ -16,12 +16,14 @@
                     "name": "Group 1",
                     "teams": [
                         {
-                            "id": "MEX"
+                            "id": "MEX",
+                            "draw_lot_win": false,
+                            "draw_lot_note": "Mexico took 2nd place after finished level on points and goal difference with Soviet Union."
                         },
                         {
                             "id": "URS",
-                            "win_lot": true,
-                            "win_lot_note": "Soviet Union took 1st place after finished level (points and goal difference) with Mexico."
+                            "draw_lot_win": true,
+                            "draw_lot_note": "Soviet Union took 1st place after finished level on points and goal difference with Mexico."
                         },
                         { "id": "BEL" },
                         { "id": "SLV" }

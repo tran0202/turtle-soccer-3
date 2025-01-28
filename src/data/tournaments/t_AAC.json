@@ -129,7 +129,7 @@
         "name": "AFC Asian Cup Australia 2015",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["AUS"], "qualification_date": "2011-01-05" },
             "logo_filename": "2015_AFC_Asian_Cup_logo.svg",
@@ -183,7 +183,7 @@
         "name": "AFC Asian Cup Qatar 2011",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "fairplaylight", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["QAT"], "qualification_date": "2007-07-29" },
             "logo_filename": "2011_AFC_Asian_Cup_full_logo.svg",
@@ -236,7 +236,7 @@
         "name": "AFC Asian Cup Indonesia-Malaysia-Thailand-Vietnam 2007",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["IDN", "MAS", "THA", "VIE"], "qualification_date": "2004-08-07" },
             "logo_filename": "2007_Asian_Cup_Logo.svg",
@@ -295,7 +295,7 @@
         "name": "AFC Asian Cup China 2004",
         "competition_id": "AAC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["CHN"], "qualification_date": "2000-10-28" },
             "logo_filename": "2004_AFC_Asian_Cup_full_logo.svg",
@@ -352,7 +352,7 @@
         "competition_id": "AAC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["LBN"], "qualification_date": "1996-12-20" },
             "logo_filename": "2000_AFC_Asian_Cup_logo.svg",
@@ -407,7 +407,7 @@
         "competition_id": "AAC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["UAE"], "qualification_date": "1993-04-29" },
             "logo_filename": "1996_AFC_Asian_Cup_logo.svg",
@@ -463,7 +463,7 @@
         "short_name": "Japan 1992",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["JPN"] },
             "logo_filename": "AFC_Asian_Cup.png",
@@ -514,7 +514,7 @@
         "short_name": "Qatar 1988",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["QAT"] },
             "logo_filename": "AFC_Asian_Cup.png",
@@ -567,7 +567,7 @@
         "short_name": "Singapore 1984",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["SIN"] },
             "logo_filename": "AFC_Asian_Cup.png",
@@ -625,7 +625,7 @@
         "short_name": "Kuwait 1980",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["KUW"] },
             "logo_filename": "AFC_Asian_Cup.png",
@@ -677,7 +677,7 @@
         "short_name": "Iran 1976",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["IRN-1964-1980"] },
             "logo_filename": "AFC_Asian_Cup.png",
@@ -732,7 +732,7 @@
         "short_name": "Thailand 1972",
         "competition_id": "AAC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["THA"], "qualification_date": "1971-05-30" },
             "logo_filename": "AFC_Asian_Cup.png",

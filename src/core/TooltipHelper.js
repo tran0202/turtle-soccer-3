@@ -16,7 +16,7 @@ export const AwayGoalsTooltip = (props) => {
 
 export const TiebreakTooltip = (props) => {
     const { target, anchor, rule } = props
-    const content = 'Won tiebreak by ' + rule
+    const content = 'Tiebreak by ' + rule
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
@@ -149,6 +149,12 @@ export const ShortNameTooltip = (props) => {
 }
 
 export const TieLastMatchTooltip = (props) => {
+    const { target, notes } = props
+    const content = notes
+    return <TopTooltip target={target} content={content} />
+}
+
+export const TieH2HTooltip = (props) => {
     const { target, notes } = props
     const content = notes
     return <TopTooltip target={target} content={content} />

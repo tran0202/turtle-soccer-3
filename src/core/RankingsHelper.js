@@ -37,106 +37,90 @@ export const getBlankRanking = (team) => {
 export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches) return
     matches.forEach((m) => {
-        if (!m.group_playoff) {
-            if (ranking.id === m.home_team) {
-                ranking.mp++
-                if (m.home_score > m.away_score) {
-                    ranking.w++
-                    ranking.pts += parseInt(config.points_for_win)
-                } else if (m.home_score === m.away_score) {
-                    ranking.d++
-                    ranking.pts++
-                } else {
-                    ranking.l++
-                }
-                ranking.gf += parseInt(m.home_score)
-                ranking.ga += parseInt(m.away_score)
-                if (m.home_extra_score) {
-                    ranking.gf += parseInt(m.home_extra_score)
-                }
-                if (m.away_extra_score) {
-                    ranking.ga += parseInt(m.away_extra_score)
-                }
-                ranking.gd = ranking.gf - ranking.ga
-                ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
-                if (m.home_fair_pts) {
-                    if (ranking.fp) {
-                        ranking.fp += parseInt(m.home_fair_pts)
+        if (!m.match_cancelled) {
+            if (!m.group_playoff) {
+                if (ranking.id === m.home_team) {
+                    ranking.mp++
+                    if (m.home_score > m.away_score) {
+                        ranking.w++
+                        ranking.pts += parseInt(config.points_for_win)
+                    } else if (m.home_score === m.away_score) {
+                        ranking.d++
+                        ranking.pts++
                     } else {
-                        ranking.fp = parseInt(m.home_fair_pts)
+                        ranking.l++
+                    }
+                    ranking.gf += parseInt(m.home_score)
+                    ranking.ga += parseInt(m.away_score)
+                    if (m.home_extra_score) {
+                        ranking.gf += parseInt(m.home_extra_score)
+                    }
+                    if (m.away_extra_score) {
+                        ranking.ga += parseInt(m.away_extra_score)
+                    }
+                    ranking.gd = ranking.gf - ranking.ga
+                    ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
+                    if (m.home_fair_pts) {
+                        if (ranking.fp) {
+                            ranking.fp += parseInt(m.home_fair_pts)
+                        } else {
+                            ranking.fp = parseInt(m.home_fair_pts)
+                        }
                     }
                 }
-            }
-            if (ranking.id === m.away_team) {
-                ranking.mp++
-                if (m.home_score > m.away_score) {
-                    ranking.l++
-                } else if (m.home_score === m.away_score) {
-                    ranking.d++
-                    ranking.pts++
-                } else {
-                    ranking.w++
-                    ranking.pts += parseInt(config.points_for_win)
-                }
-                ranking.gf += parseInt(m.away_score)
-                ranking.ga += parseInt(m.home_score)
-                if (m.away_extra_score) {
-                    ranking.gf += parseInt(m.away_extra_score)
-                }
-                if (m.home_extra_score) {
-                    ranking.ga += parseInt(m.home_extra_score)
-                }
-                ranking.gd = ranking.gf - ranking.ga
-                ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
-                if (m.away_fair_pts) {
-                    if (ranking.fp) {
-                        ranking.fp += parseInt(m.away_fair_pts)
+                if (ranking.id === m.away_team) {
+                    ranking.mp++
+                    if (m.home_score > m.away_score) {
+                        ranking.l++
+                    } else if (m.home_score === m.away_score) {
+                        ranking.d++
+                        ranking.pts++
                     } else {
-                        ranking.fp = parseInt(m.away_fair_pts)
+                        ranking.w++
+                        ranking.pts += parseInt(config.points_for_win)
+                    }
+                    ranking.gf += parseInt(m.away_score)
+                    ranking.ga += parseInt(m.home_score)
+                    if (m.away_extra_score) {
+                        ranking.gf += parseInt(m.away_extra_score)
+                    }
+                    if (m.home_extra_score) {
+                        ranking.ga += parseInt(m.home_extra_score)
+                    }
+                    ranking.gd = ranking.gf - ranking.ga
+                    ranking.gr = isGoalRatioTiebreaker(config) && ranking.ga !== 0 ? ranking.gf / ranking.ga : null
+                    if (m.away_fair_pts) {
+                        if (ranking.fp) {
+                            ranking.fp += parseInt(m.away_fair_pts)
+                        } else {
+                            ranking.fp = parseInt(m.away_fair_pts)
+                        }
                     }
                 }
-            }
-        } else {
-            if (ranking.id === m.home_team) {
-                if (isHomeWinMatch(m)) {
+            } else {
+                // WC1958
+                if (ranking.id === m.home_team) {
                     ranking.playoff = true
-                    ranking.playoff_win = true
-                    ranking.playoff_win_note = m.group_playoff_note
-                } else {
+                    ranking.playoff_win = isHomeWinMatch(m)
+                    ranking.playoff_note = m.group_playoff_note
+                }
+                if (ranking.id === m.away_team) {
                     ranking.playoff = true
-                    ranking.playoff_win = false
+                    ranking.playoff_win = !isHomeWinMatch(m)
+                    ranking.playoff_note = m.group_playoff_note
                 }
             }
-            if (ranking.id === m.away_team) {
-                if (isHomeWinMatch(m)) {
-                    ranking.playoff = true
-                    ranking.playoff_win = false
-                } else {
-                    ranking.playoff = true
-                    ranking.playoff_win = true
-                    ranking.playoff_win_note = m.group_playoff_note
+            // CONFEDC1995
+            if (m.tie_last_match) {
+                if (ranking.id === m.home_team) {
+                    ranking.tie_last_match = true
+                    ranking.tie_last_match_win = isHomeWinMatch(m)
+                    ranking.tie_last_match_note = m.tie_last_match_note
                 }
-            }
-        }
-        if (m.tie_last_match) {
-            if (ranking.id === m.home_team) {
-                if (isHomeWinMatch(m)) {
+                if (ranking.id === m.away_team) {
                     ranking.tie_last_match = true
-                    ranking.tie_last_match_win = true
-                    ranking.tie_last_match_win_note = m.tie_last_match_note
-                } else {
-                    ranking.tie_last_match = true
-                    ranking.tie_last_match_win = false
-                }
-            }
-            if (ranking.id === m.away_team) {
-                if (isHomeWinMatch(m)) {
-                    ranking.tie_last_match = true
-                    ranking.tie_last_match_win = false
-                } else {
-                    ranking.tie_last_match = true
-                    ranking.tie_last_match_win = true
-                    ranking.tie_last_match_win_note = m.tie_last_match_note
+                    ranking.tie_last_match_win = !isHomeWinMatch(m)
+                    ranking.tie_last_match_note = m.tie_last_match_note
                 }
             }
         }
@@ -264,10 +248,10 @@ export const comparePoints = (rankings, config) => {
                     rankings[j] = result.ranking2
                 }
             }
+            // WC1994
             if (config.sort === 'h2h' && rankings[i].pts !== rankings[j].pts) {
-                rankings[i].h2h_point_win = true
-                rankings[j].h2h_point_win = false
-                rankings[i].h2h_point_win_note =
+                rankings[i].h2h_point = true
+                rankings[i].h2h_point_note =
                     rankings[i].team.name +
                     ' ' +
                     rankings[i].gf +
@@ -283,10 +267,61 @@ export const comparePoints = (rankings, config) => {
                     rankings[j].team.name +
                     ' ' +
                     rankings[j].pts
+                rankings[j].h2h_point = true
+                rankings[j].h2h_point_note =
+                    rankings[j].team.name +
+                    ' ' +
+                    rankings[j].gf +
+                    '-' +
+                    rankings[j].ga +
+                    ' ' +
+                    rankings[i].team.name +
+                    ' >>> ' +
+                    rankings[j].team.name +
+                    ' ' +
+                    rankings[j].pts +
+                    ' | ' +
+                    rankings[i].team.name +
+                    ' ' +
+                    rankings[i].pts
             }
         }
     }
+    // AFCON2010
+    updatePool3Notes(rankings, config)
     return { h2htie }
+}
+
+export const updatePool3Notes = (rankings, config) => {
+    if (!rankings || rankings.length !== 3 || !config) return
+    if (config.sort === 'h2h') {
+        const note =
+            'All 3 teams ' +
+            rankings[0].team.name +
+            ' | ' +
+            rankings[1].team.name +
+            ' | ' +
+            rankings[2].team.name +
+            ' tied on head-to-head points ' +
+            rankings[0].pts +
+            ' and goal difference ' +
+            rankings[0].gd +
+            ' . Tiebreak by head-to-head goals scored: ' +
+            rankings[0].team.name +
+            ' ' +
+            rankings[0].gf +
+            ' | ' +
+            rankings[1].team.name +
+            ' ' +
+            rankings[1].gf +
+            ' | ' +
+            rankings[2].team.name +
+            ' ' +
+            rankings[2].gf
+        rankings[0].tie_h2h_note = note
+        rankings[1].tie_h2h_note = note
+        rankings[2].tie_h2h_note = note
+    }
 }
 
 export const compareGroupPlayoff = (ranking1, ranking2, config) => {
@@ -331,6 +366,29 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
             ranking2 = result.ranking2
         }
     }
+    // AFCON2023
+    if (config.sort === 'h2htie' && ranking1.gd !== ranking2.gd) {
+        ranking1.tie_h2h = true
+        ranking1.tie_h2h_note =
+            'Tied on heah-to-head points. Tiebreak by overall goal difference: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gd +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gd
+        ranking2.tie_h2h = true
+        ranking2.tie_h2h_note =
+            'Tied on heah-to-head points. Tiebreak by overall goal difference: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gd +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gd
+    }
     return { ranking1, ranking2, h2htie }
 }
 
@@ -368,6 +426,52 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
             ranking2 = result.ranking2
         }
     }
+    // AFCON2010
+    if (config.sort === 'h2h' && ranking1.gf !== ranking2.gf) {
+        ranking1.tie_h2h = true
+        ranking1.tie_h2h_note =
+            'Tied on heah-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gf +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gf
+        ranking2.tie_h2h = true
+        ranking2.tie_h2h_note =
+            'Tied on heah-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gf +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gf
+    }
+    // AFCON2023
+    if (config.sort === 'h2htie' && ranking1.gf !== ranking2.gf) {
+        ranking1.tie_h2h = true
+        ranking1.tie_h2h_note =
+            'Tied on heah-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gf +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gf
+        ranking2.tie_h2h = true
+        ranking2.tie_h2h_note =
+            'Tied on heah-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gf +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gf
+    }
     return { ranking1, ranking2, h2htie }
 }
 
@@ -378,43 +482,49 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
         ranking1 = { ...ranking2 }
         ranking2 = { ...temp }
     }
-    ranking1.fair_play_win = true
-    ranking2.fair_play_win = false
-    ranking1.fair_play_win_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
+    // WC2018
+    ranking1.fair_play = true
+    ranking1.fair_play_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
+    ranking2.fair_play = true
+    ranking2.fair_play_note = ranking2.team.name + ' ' + ranking2.fp + ' | ' + ranking1.team.name + ' ' + ranking1.fp
     return { ranking1, ranking2 }
 }
 
 export const compareTieLastMatch = (ranking1, ranking2, config) => {
     if (!ranking1 || !ranking2 || !config) return
-    if (ranking1.tie_last_match && ranking2.tie_last_match) {
-        if (ranking2.tie_last_match_win) {
-            const temp = ranking1
-            ranking1 = { ...ranking2 }
-            ranking2 = { ...temp }
-        }
+    if (ranking2.tie_last_match_win) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
     }
     return { ranking1, ranking2 }
 }
 
 export const drawingLots = (ranking1, ranking2, config) => {
     if (!ranking1 || !ranking2 || !config) return
-    const winlot1 = config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking1.team.win_lot : ranking1.rankings[0].team.win_lot
-    const winlot2 = config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking2.team.win_lot : ranking2.rankings[0].team.win_lot
+    const winlot1 =
+        config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking1.team.draw_lot_win : ranking1.rankings[0].team.draw_lot_win
+    const winlot2 =
+        config.sort === 'h2h' || config.sort === 'h2htie' || config.sort === 'partial' ? ranking2.team.draw_lot_win : ranking2.rankings[0].team.draw_lot_win
     if (winlot1 || winlot2) {
         if (winlot2) {
             const temp = ranking1
             ranking1 = { ...ranking2 }
             ranking2 = { ...temp }
         }
-        if (config.sort === 'h2h') {
-            ranking1.draw_lot_win = true
-            ranking2.draw_lot_win = false
-            ranking1.draw_lot_win_note = ranking1.team.win_lot_note
+        // WC1990 || AFCON2015
+        if (config.sort === 'h2h' || config.sort === 'h2htie') {
+            ranking1.draw_lot = true
+            ranking1.draw_lot_note = ranking1.team.draw_lot_note
+            ranking2.draw_lot = true
+            ranking2.draw_lot_note = ranking2.team.draw_lot_note
         }
+        // WC1970
         if (config.sort === 'pool') {
-            ranking1.rankings[0].draw_lot_win = true
-            ranking2.rankings[0].draw_lot_win = false
-            ranking1.rankings[0].draw_lot_win_note = ranking1.rankings[0].team.win_lot_note
+            ranking1.rankings[0].draw_lot = true
+            ranking1.rankings[0].draw_lot_note = ranking1.rankings[0].team.draw_lot_note
+            ranking2.rankings[0].draw_lot = true
+            ranking2.rankings[0].draw_lot_note = ranking2.rankings[0].team.draw_lot_note
         }
     }
     return { ranking1, ranking2 }

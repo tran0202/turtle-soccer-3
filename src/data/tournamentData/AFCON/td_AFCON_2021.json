@@ -3,411 +3,500 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "wild_card": { "pos": 3, "count": 4 },
-                    "eliminated": [4],
-                    "text": "The top 2 teams and the best 4 third-placed teams would advance to the Round of 16."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round", "count": 4, "name": "third-placed teams" }
+            ],
+            "next_round_note": "4 best third-placed teams advance to the knockout stage",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "EGY" }, { "id": "ZIM" }, { "id": "COD" }, { "id": "UGA" }],
-                    "matches": [
+                    "teams": [{ "id": "CMR" }, { "id": "BFA" }, { "id": "ETH" }, { "id": "CPV" }],
+                    "matchdays": [
                         {
-                            "home_team": "EGY",
-                            "away_team": "ZIM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-21",
-                            "time": "22:00",
-                            "stadium": "Cairo International Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CMR",
+                                    "away_team": "BFA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-01-09",
+                                    "time": "17:00",
+                                    "stadium": "Olembe Stadium",
+                                    "city": "Yaoundé"
+                                },
+                                {
+                                    "home_team": "ETH",
+                                    "away_team": "CPV",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-09",
+                                    "time": "20:00",
+                                    "stadium": "Olembe Stadium",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "COD",
-                            "away_team": "UGA",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-06-22",
-                            "time": "16:30",
-                            "stadium": "Cairo International Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CMR",
+                                    "away_team": "ETH",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2022-01-13",
+                                    "time": "17:00",
+                                    "stadium": "Olembe Stadium",
+                                    "city": "Yaoundé"
+                                },
+                                {
+                                    "home_team": "CPV",
+                                    "away_team": "BFA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-13",
+                                    "time": "20:00",
+                                    "stadium": "Olembe Stadium",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "UGA",
-                            "away_team": "ZIM",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-06-26",
-                            "time": "19:00",
-                            "stadium": "Cairo International Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "EGY",
-                            "away_team": "COD",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-26",
-                            "time": "22:00",
-                            "stadium": "Cairo International Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "UGA",
-                            "away_team": "EGY",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-06-30",
-                            "time": "21:00",
-                            "stadium": "Cairo International Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "ZIM",
-                            "away_team": "COD",
-                            "home_score": 0,
-                            "away_score": 4,
-                            "date": "2019-06-30",
-                            "time": "21:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "CPV",
+                                    "away_team": "CMR",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-01-17",
+                                    "time": "17:00",
+                                    "stadium": "Alassane Ouattara Stadium",
+                                    "city": "Abidjan"
+                                },
+                                {
+                                    "home_team": "BFA",
+                                    "away_team": "ETH",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-01-17",
+                                    "time": "17:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "NGA" }, { "id": "BDI" }, { "id": "GUI" }, { "id": "MAD" }],
-                    "matches": [
+                    "teams": [{ "id": "SEN" }, { "id": "ZIM" }, { "id": "MWI" }, { "id": "GUI" }],
+                    "matchdays": [
                         {
-                            "home_team": "NGA",
-                            "away_team": "BDI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-22",
-                            "time": "19:00",
-                            "stadium": "Alexandria Stadium",
-                            "city": "Alexandria"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "SEN",
+                                    "away_team": "ZIM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-10",
+                                    "time": "14:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                },
+                                {
+                                    "home_team": "GUI",
+                                    "away_team": "MWI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-10",
+                                    "time": "17:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUI",
-                            "away_team": "MAD",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2019-06-22",
-                            "time": "22:00",
-                            "stadium": "Alexandria Stadium",
-                            "city": "Alexandria"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "SEN",
+                                    "away_team": "GUI",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-01-14",
+                                    "time": "14:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                },
+                                {
+                                    "home_team": "MWI",
+                                    "away_team": "ZIM",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-01-14",
+                                    "time": "17:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "NGA",
-                            "away_team": "GUI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-26",
-                            "time": "16:30",
-                            "stadium": "Alexandria Stadium",
-                            "city": "Alexandria"
-                        },
-                        {
-                            "home_team": "MAD",
-                            "away_team": "BDI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-27",
-                            "time": "16:30",
-                            "stadium": "Alexandria Stadium",
-                            "city": "Alexandria"
-                        },
-                        {
-                            "home_team": "MAD",
-                            "away_team": "NGA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-30",
-                            "time": "18:00",
-                            "stadium": "Alexandria Stadium",
-                            "city": "Alexandria"
-                        },
-                        {
-                            "home_team": "BDI",
-                            "away_team": "GUI",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-06-30",
-                            "time": "18:00",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "MWI",
+                                    "away_team": "SEN",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-01-18",
+                                    "time": "17:00",
+                                    "stadium": "Kouekong Stadium",
+                                    "city": "Bafoussam"
+                                },
+                                {
+                                    "home_team": "ZIM",
+                                    "away_team": "GUI",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-01-18",
+                                    "time": "17:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "SEN" }, { "id": "TAN" }, { "id": "ALG" }, { "id": "KEN" }],
-                    "matches": [
+                    "teams": [{ "id": "MAR" }, { "id": "GHA" }, { "id": "COM" }, { "id": "GAB" }],
+                    "matchdays": [
                         {
-                            "home_team": "SEN",
-                            "away_team": "TAN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-23",
-                            "time": "19:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "MAR",
+                                    "away_team": "GHA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-10",
+                                    "time": "17:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                },
+                                {
+                                    "home_team": "COM",
+                                    "away_team": "GAB",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-10",
+                                    "time": "20:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "ALG",
-                            "away_team": "KEN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-23",
-                            "time": "22:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MAR",
+                                    "away_team": "COM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-01-14",
+                                    "time": "17:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                },
+                                {
+                                    "home_team": "GAB",
+                                    "away_team": "GHA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-01-14",
+                                    "time": "20:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SEN",
-                            "away_team": "ALG",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-06-27",
-                            "time": "19:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "KEN",
-                            "away_team": "TAN",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-06-27",
-                            "time": "22:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "KEN",
-                            "away_team": "SEN",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-07-01",
-                            "time": "21:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "TAN",
-                            "away_team": "ALG",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-07-01",
-                            "time": "21:00",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GAB",
+                                    "away_team": "MAR",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2022-01-18",
+                                    "time": "20:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                },
+                                {
+                                    "home_team": "GHA",
+                                    "away_team": "COM",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2022-01-18",
+                                    "time": "20:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "MAR" }, { "id": "NAM" }, { "id": "CIV" }, { "id": "RSA" }],
-                    "matches": [
+                    "teams": [{ "id": "NGA" }, { "id": "EGY" }, { "id": "GNB" }, { "id": "SDN" }],
+                    "matchdays": [
                         {
-                            "home_team": "MAR",
-                            "away_team": "NAM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-23",
-                            "time": "16:30",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "NGA",
+                                    "away_team": "EGY",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-11",
+                                    "time": "17:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                },
+                                {
+                                    "home_team": "SDN",
+                                    "away_team": "GNB",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-01-11",
+                                    "time": "20:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CIV",
-                            "away_team": "RSA",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-24",
-                            "time": "16:30",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "NGA",
+                                    "away_team": "SDN",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2022-01-15",
+                                    "time": "17:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                },
+                                {
+                                    "home_team": "GNB",
+                                    "away_team": "EGY",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-15",
+                                    "time": "20:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MAR",
-                            "away_team": "CIV",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-28",
-                            "time": "19:00",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "RSA",
-                            "away_team": "NAM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2019-06-28",
-                            "time": "22:00",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "RSA",
-                            "away_team": "MAR",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-07-01",
-                            "time": "18:00",
-                            "stadium": "Al Salam Stadium",
-                            "city": "Cairo"
-                        },
-                        {
-                            "home_team": "NAM",
-                            "away_team": "CIV",
-                            "home_score": 1,
-                            "away_score": 4,
-                            "date": "2019-07-01",
-                            "time": "18:00",
-                            "stadium": "30 June Stadium",
-                            "city": "Cairo"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GNB",
+                                    "away_team": "NGA",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-01-19",
+                                    "time": "20:00",
+                                    "stadium": "Roumdé Adjia Stadium",
+                                    "city": "Garoua"
+                                },
+                                {
+                                    "home_team": "EGY",
+                                    "away_team": "SDN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-19",
+                                    "time": "20:00",
+                                    "stadium": "Stade Ahmadou Ahidjo",
+                                    "city": "Yaoundé"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "TUN" }, { "id": "ANG" }, { "id": "MLI" }, { "id": "MTN" }],
-                    "matches": [
+                    "teams": [{ "id": "ALG" }, { "id": "SLE" }, { "id": "EQG" }, { "id": "CIV" }],
+                    "matchdays": [
                         {
-                            "home_team": "TUN",
-                            "away_team": "ANG",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-06-24",
-                            "time": "19:00",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ALG",
+                                    "away_team": "SLE",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-01-11",
+                                    "time": "14:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                },
+                                {
+                                    "home_team": "EQG",
+                                    "away_team": "CIV",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-12",
+                                    "time": "20:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MLI",
-                            "away_team": "MTN",
-                            "home_score": 4,
-                            "away_score": 1,
-                            "date": "2019-06-24",
-                            "time": "22:00",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CIV",
+                                    "away_team": "SLE",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2022-01-16",
+                                    "time": "17:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                },
+                                {
+                                    "home_team": "ALG",
+                                    "away_team": "EQG",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-16",
+                                    "time": "20:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TUN",
-                            "away_team": "MLI",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-06-28",
-                            "time": "16:30",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
-                        },
-                        {
-                            "home_team": "MTN",
-                            "away_team": "ANG",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-06-29",
-                            "time": "16:30",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
-                        },
-                        {
-                            "home_team": "MTN",
-                            "away_team": "TUN",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-07-02",
-                            "time": "21:00",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
-                        },
-                        {
-                            "home_team": "ANG",
-                            "away_team": "MLI",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-07-02",
-                            "time": "21:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "CIV",
+                                    "away_team": "ALG",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2022-01-20",
+                                    "time": "17:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                },
+                                {
+                                    "home_team": "SLE",
+                                    "away_team": "EQG",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-20",
+                                    "time": "17:00",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "CMR" }, { "id": "GNB" }, { "id": "GHA" }, { "id": "BEN" }],
-                    "matches": [
+                    "teams": [{ "id": "TUN" }, { "id": "MLI" }, { "id": "MTN" }, { "id": "GAM" }],
+                    "matchdays": [
                         {
-                            "home_team": "CMR",
-                            "away_team": "GNB",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-25",
-                            "time": "19:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "TUN",
+                                    "away_team": "MLI",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-12",
+                                    "time": "14:00",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                },
+                                {
+                                    "home_team": "MTN",
+                                    "away_team": "GAM",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-01-12",
+                                    "time": "17:45",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GHA",
-                            "away_team": "BEN",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2019-06-25",
-                            "time": "22:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "GAM",
+                                    "away_team": "MLI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-01-16",
+                                    "time": "14:00",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                },
+                                {
+                                    "home_team": "TUN",
+                                    "away_team": "MTN",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2022-01-16",
+                                    "time": "17:00",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CMR",
-                            "away_team": "GHA",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-06-29",
-                            "time": "19:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
-                        },
-                        {
-                            "home_team": "BEN",
-                            "away_team": "GNB",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-06-29",
-                            "time": "22:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
-                        },
-                        {
-                            "home_team": "BEN",
-                            "away_team": "CMR",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-07-02",
-                            "time": "18:00",
-                            "stadium": "Ismailia Stadium",
-                            "city": "Ismailia"
-                        },
-                        {
-                            "home_team": "GNB",
-                            "away_team": "GHA",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-07-02",
-                            "time": "18:00",
-                            "stadium": "Suez Stadium",
-                            "city": "Suez"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GAM",
+                                    "away_team": "TUN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-01-20",
+                                    "time": "20:00",
+                                    "stadium": "Limbe Stadium",
+                                    "city": "Limbe"
+                                },
+                                {
+                                    "home_team": "MLI",
+                                    "away_team": "MTN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-01-20",
+                                    "time": "20:00",
+                                    "stadium": "Japoma Stadium",
+                                    "city": "Douala"
+                                }
+                            ]
                         }
                     ]
                 }

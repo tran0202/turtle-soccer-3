@@ -433,10 +433,14 @@
                         { "id": "ENG" },
                         {
                             "id": "IRL",
-                            "win_lot": true,
-                            "win_lot_note": "Republic of Ireland took 2nd place after finished identical records (points, goal difference and goal forward) with Netherlands."
+                            "draw_lot_win": true,
+                            "draw_lot_note": "Republic of Ireland took 2nd place after finished identical records (points, goal difference and goal forward) with Netherlands."
                         },
-                        { "id": "NED" },
+                        {
+                            "id": "NED",
+                            "draw_lot_win": false,
+                            "draw_lot_note": "Netherlands took 3rd place after finished identical records (points, goal difference and goal forward) with Republic of Ireland."
+                        },
                         { "id": "EGY" }
                     ],
                     "matchdays": [

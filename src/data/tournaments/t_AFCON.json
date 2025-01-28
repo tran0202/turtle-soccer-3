@@ -5,7 +5,7 @@
         "name": "Africa Cup of Nations Ivory Coast 2023",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["CIV"], "qualification_date": "2019-01-30" },
             "logo_filename": "2023_Africa_Cup_of_Nations_logo.svg",
@@ -59,7 +59,7 @@
         "name": "Africa Cup of Nations Cameroon 2021",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["CMR"], "qualification_date": "2019-01-08" },
             "logo_filename": "2021_Africa_Cup_of_Nations_logo.png",
@@ -113,7 +113,7 @@
         "name": "Africa Cup of Nations Egypt 2019",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["EGY"], "qualification_date": "2018-10-16" },
             "logo_filename": "2019_Africa_Cup_of_Nations_logo.svg",
@@ -166,7 +166,7 @@
         "name": "Africa Cup of Nations Gabon 2017",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["GAB"], "qualification_date": "2015-04-08" },
             "logo_filename": "2017_Africa_Cup_of_Nations_logo.png",
@@ -213,7 +213,7 @@
         "name": "Africa Cup of Nations Equatorial Guinea 2015",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["EQG"], "qualification_date": "2014-11-14" },
             "logo_filename": "2015_Africa_Cup_of_Nations_logo.png",
@@ -274,7 +274,7 @@
         "name": "Africa Cup of Nations South Africa 2013",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["RSA"], "qualification_date": "2011-09-28" },
             "logo_filename": "2013_Africa_Cup_of_Nations.png",
@@ -328,7 +328,7 @@
         "name": "Africa Cup of Nations Gabon-Equatorial Guinea 2012",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["GAB", "EQG"], "qualification_date": "2007-07-29" },
             "logo_filename": "2012_Africa_Cup_of_Nations_logo.png",
@@ -386,7 +386,7 @@
         "name": "Africa Cup of Nations Angola 2010",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["ANG"], "qualification_date": "2006-09-04" },
             "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",

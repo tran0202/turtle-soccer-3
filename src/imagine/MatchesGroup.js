@@ -80,7 +80,12 @@ const MatchDayRow = (props) => {
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
                                 <Col className="col-box-6">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
-                                    {matchHomeScore} - {matchAwayScore}{' '}
+                                    {!m.match_cancelled && (
+                                        <React.Fragment>
+                                            {matchHomeScore} - {matchAwayScore}{' '}
+                                        </React.Fragment>
+                                    )}
+                                    {m.match_cancelled && <React.Fragment>Cancelled</React.Fragment>}
                                     {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                 </Col>
                                 <Col className="col-box-6">{awayTeamFlag}</Col>
