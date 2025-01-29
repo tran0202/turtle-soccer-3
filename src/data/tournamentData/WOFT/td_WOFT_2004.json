@@ -118,12 +118,12 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "GRE_U23WNT" }, { "id": "USA_U23WNT" }, { "id": "BRA_U23WNT" }, { "id": "AUS_U23WNT" }],
                     "advancement": [
                         { "pos": 1, "will": "advance" },
                         { "pos": 2, "will": "advance" },
                         { "pos": 3, "will": "advance" }
                     ],
+                    "teams": [{ "id": "GRE_U23WNT" }, { "id": "USA_U23WNT" }, { "id": "BRA_U23WNT" }, { "id": "AUS_U23WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

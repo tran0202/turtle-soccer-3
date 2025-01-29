@@ -3,152 +3,230 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advancement": { "teams": { "auto": [1, 2], "eliminated": [3], "text": "The top 2 teams would advance to the Quarter-finals." } },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" }
+            ],
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [{ "id": "COL" }, { "id": "JAM" }, { "id": "HON-1949-2022" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "COL",
-                            "away_team": "JAM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2000-02-12",
-                            "time": "21:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "COL",
+                                    "away_team": "JAM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2000-02-12",
+                                    "time": "21:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JAM",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2000-02-14",
-                            "time": "19:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2000-02-14",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "COL",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2000-02-16",
-                            "time": "19:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "COL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2000-02-16",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "USA" }, { "id": "HAI" }, { "id": "PER" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "USA",
-                            "away_team": "HAI",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2000-02-12",
-                            "time": "19:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "HAI",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2000-02-12",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HAI",
-                            "away_team": "PER",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2000-02-14",
-                            "time": "21:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "HAI",
+                                    "away_team": "PER",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2000-02-14",
+                                    "time": "21:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PER",
-                            "away_team": "USA",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2000-02-16",
-                            "time": "21:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "PER",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2000-02-16",
+                                    "time": "21:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "MEX" }, { "id": "TRI" }, { "id": "GUA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "MEX",
-                            "away_team": "TRI",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2000-02-13",
-                            "time": "14:00",
-                            "stadium": "Qualcomm Stadium",
-                            "city": "San Diego"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "TRI",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2000-02-13",
+                                    "time": "14:00",
+                                    "stadium": "Qualcomm Stadium",
+                                    "city": "San Diego"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TRI",
-                            "away_team": "GUA",
-                            "home_score": 4,
-                            "away_score": 2,
-                            "date": "2000-02-15",
-                            "time": "21:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "GUA",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2000-02-15",
+                                    "time": "21:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUA",
-                            "away_team": "MEX",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2000-02-17",
-                            "time": "19:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "MEX",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2000-02-17",
+                                    "time": "19:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CRC" }, { "id": "CAN" }, { "id": "KOR" }],
-                    "matches": [
+                    "teams": [
                         {
-                            "home_team": "CRC",
-                            "away_team": "CAN",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2000-02-13",
-                            "time": "12:00",
-                            "stadium": "Qualcomm Stadium",
-                            "city": "San Diego"
+                            "id": "KOR",
+                            "draw_lot_win": false,
+                            "draw_lot_label": "coin toss",
+                            "draw_lot_note": "Korea Republic took 3rd place after finished identical records (points, goal difference and goal forward) with Canada."
                         },
                         {
-                            "home_team": "CAN",
-                            "away_team": "KOR",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2000-02-15",
-                            "time": "19:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "id": "CAN",
+                            "draw_lot_win": true,
+                            "draw_lot_label": "coin toss",
+                            "draw_lot_note": "Canada took 2nd place after finished identical records (points, goal difference and goal forward) with Korea Republic."
+                        },
+                        { "id": "CRC" }
+                    ],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "CAN",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2000-02-13",
+                                    "time": "12:00",
+                                    "stadium": "Qualcomm Stadium",
+                                    "city": "San Diego"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "KOR",
-                            "away_team": "CRC",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2000-02-17",
-                            "time": "21:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "KOR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2000-02-15",
+                                    "time": "19:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "CRC",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2000-02-17",
+                                    "time": "21:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         }
                     ]
                 }

@@ -6,7 +6,7 @@
         "short_name": "2023 Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
@@ -67,7 +67,7 @@
         "short_name": "2021 United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
@@ -129,7 +129,7 @@
         "short_name": "2019 Costa Rica-Jamaica-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["CRC", "JAM", "USA"], "qualification_date": "2018-03-07" },
@@ -186,7 +186,7 @@
         "short_name": "2017 United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headpoints", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -250,7 +250,7 @@
         "short_name": "Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headpoints", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["CAN", "USA"] },
             "logo_filename": "CONCACAF_Gold_Cup_2015.svg",
@@ -303,7 +303,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headpoints", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -366,7 +366,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -425,7 +425,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -484,7 +484,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -543,7 +543,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -603,7 +603,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "2003_CONCACAF_Gold_Cup_logo.svg",
@@ -659,7 +659,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "2002_CONCACAF_Gold_Cup_logo.png",
@@ -712,7 +712,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -771,7 +771,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "gc_1998.png",
@@ -822,7 +822,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "1996_CONCACAF_Gold_Cup.png",
@@ -872,8 +872,8 @@
         "short_name": "Mexico-United States",
         "competition_id": "GC",
         "golden_goal_rule": true,
-        "points_for_win": 3,
-        "tiebreakers": ["team"],
+        "points_for_win": 2,
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "1993_CONCACAF_Gold_Cup.jpg",

@@ -3,123 +3,166 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advancement": {
-                "teams": {
-                    "auto": [1],
-                    "wild_card": { "pos": 2, "count": 1 },
-                    "eliminated": [3],
-                    "text": "The top teams and the best 2nd-placed teams would advance to the Semi-finals."
-                }
-            },
+            "advanced_note": "Winners advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "next_round", "count": 1, "name": "second-placed teams" }
+            ],
+            "next_round_note": "Best second-placed team advance to the knockout stage",
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [{ "id": "MEX" }, { "id": "VIN" }, { "id": "GUA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "MEX",
-                            "away_team": "VIN",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "1996-01-11",
-                            "time": "12:00",
-                            "stadium": "Jack Murphy Stadium",
-                            "city": "San Diego"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "VIN",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "1996-01-11",
+                                    "time": "12:00",
+                                    "stadium": "Jack Murphy Stadium",
+                                    "city": "San Diego"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "GUA",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1996-01-14",
-                            "time": "12:00",
-                            "stadium": "Jack Murphy Stadium",
-                            "city": "San Diego"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "GUA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1996-01-14",
+                                    "time": "12:00",
+                                    "stadium": "Jack Murphy Stadium",
+                                    "city": "San Diego"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VIN",
-                            "away_team": "GUA",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "1996-01-16",
-                            "time": "15:00",
-                            "stadium": "Anaheim Stadium",
-                            "city": "Anaheim"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "VIN",
+                                    "away_team": "GUA",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "1996-01-16",
+                                    "time": "15:00",
+                                    "stadium": "Anaheim Stadium",
+                                    "city": "Anaheim"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "CAN" }, { "id": "HON-1949-2022" }, { "id": "BRA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CAN",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "1996-01-10",
-                            "time": "15:00",
-                            "stadium": "Anaheim Stadium",
-                            "city": "Anaheim"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "1996-01-10",
+                                    "time": "15:00",
+                                    "stadium": "Anaheim Stadium",
+                                    "city": "Anaheim"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "CAN",
-                            "home_score": 4,
-                            "away_score": 1,
-                            "date": "1996-01-12",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "CAN",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "1996-01-12",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "1996-01-14",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "1996-01-14",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "TRI" }, { "id": "SLV" }, { "id": "USA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "TRI",
-                            "away_team": "SLV",
-                            "home_score": 2,
-                            "away_score": 3,
-                            "date": "1996-01-10",
-                            "time": "12:00",
-                            "stadium": "Anaheim Stadium",
-                            "city": "Anaheim"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "SLV",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "1996-01-10",
+                                    "time": "12:00",
+                                    "stadium": "Anaheim Stadium",
+                                    "city": "Anaheim"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "TRI",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "1996-01-13",
-                            "time": "12:00",
-                            "stadium": "Anaheim Stadium",
-                            "city": "Anaheim"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "TRI",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "1996-01-13",
+                                    "time": "12:00",
+                                    "stadium": "Anaheim Stadium",
+                                    "city": "Anaheim"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "SLV",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1996-01-16",
-                            "time": "12:00",
-                            "stadium": "Anaheim Stadium",
-                            "city": "Anaheim"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "SLV",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1996-01-16",
+                                    "time": "12:00",
+                                    "stadium": "Anaheim Stadium",
+                                    "city": "Anaheim"
+                                }
+                            ]
                         }
                     ]
                 }

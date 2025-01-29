@@ -41,6 +41,8 @@ const RankingsRow = (props) => {
     const ga = !ranking.team.withdrew ? ranking.ga : <span>&mdash;</span>
     const gd = !ranking.team.withdrew ? ranking.gd : <span>&mdash;</span>
     const pts = !ranking.team.withdrew ? ranking.pts : <span>&mdash;</span>
+    const drawLotAnchor = ranking.team.draw_lot_label ? '(ct)' : '(dl)'
+    const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
         <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}${withdrew_striped}`}>
             <Col className="col-box-4">{rank}</Col>
@@ -85,7 +87,7 @@ const RankingsRow = (props) => {
                     <TiebreakTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" rule={`fair play points: ${ranking.fair_play_note}`} />
                 )}
                 {!config.no_h2h_tooltip && ranking.draw_lot && (
-                    <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor="(dl)" rule={`drawing lots. ${ranking.draw_lot_note}`} />
+                    <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
                 )}
                 {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} notes={ranking.playoff_note} />}
                 {ranking.team.point_deduction && (

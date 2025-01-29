@@ -441,7 +441,7 @@
         "parent_nation_id": "BFA",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Upper_Volta.png",
+        "flag_filename": "640px-Flag_of_Upper_Volta.svg.png",
         "code": "UPV",
         "start_date": "",
         "end_date": "1984-08-04"
@@ -701,7 +701,7 @@
         "parent_nation_id": "CGO",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Flag_of_the_Republic_of_the_Congo.svg",
+        "flag_filename": "640px-Flag_of_the_Republic_of_the_Congo.svg.png",
         "code": "CGO",
         "start_date": "1959-09-15",
         "end_date": "1970-01-02"
@@ -724,7 +724,7 @@
         "parent_nation_id": "COD",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Congo_DR_2003_2006.png",
+        "flag_filename": "640px-Flag_of_the_Democratic_Republic_of_the_Congo_(2003–2006).svg.png",
         "code": "COD",
         "start_date": "2003-01-01",
         "end_date": "2006-02-18"
@@ -772,7 +772,7 @@
         "parent_nation_id": "COD",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Congo_Leopoldville_1964_1966.png",
+        "flag_filename": "640px-Flag_of_the_Republic_of_the_Congo_(Léopoldville)_(1963–1966).svg.png",
         "code": "COD",
         "start_date": "1964-08-01",
         "end_date": "1966-06-01"
@@ -2140,8 +2140,19 @@
         "not_fifa_member": true,
         "nation_type_id": "TER",
         "flag_filename": "640px-Flag-of-Martinique.svg.png",
-        "start_date": "2019-05-10",
+        "start_date": "2023-02-02",
         "end_date": ""
+    },
+    {
+        "id": "MTQ-2019-2023",
+        "name": "Martinique",
+        "official_name": "",
+        "parent_nation_id": "MTQ",
+        "confederation_id": "CONCACAF",
+        "nation_type_id": "TER",
+        "flag_filename": "640px-Flag_of_the_Territorial_Collectivity_of_Martinique.svg.png",
+        "start_date": "2019-05-10",
+        "end_date": "2023-02-02"
     },
     {
         "id": "MTQ-2019",

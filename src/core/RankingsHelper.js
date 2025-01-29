@@ -179,7 +179,7 @@ export const sortPools = (group, config) => {
                 p.h2h_rankings.push(ranking)
             })
             // 4. Sort the rankings
-            const result = sortRankings(p.h2h_rankings, { ...config, sort: 'h2h' })
+            const result = sortRankings(p.h2h_rankings, { ...config, sort: 'h2h', three_way_tied: group.three_way_tied })
             // 5. Update the pool
             const pool_rankings = []
             p.h2h_rankings.forEach((hr) => {
@@ -246,6 +246,10 @@ export const comparePoints = (rankings, config) => {
                     const result = compareGoalRatio(rankings[i], rankings[j], config)
                     rankings[i] = result.ranking1
                     rankings[j] = result.ranking2
+                } else if (isLotTiebreaker(config)) {
+                    const result = drawingLots(rankings[i], rankings[j], config)
+                    rankings[i] = result.ranking1
+                    rankings[j] = result.ranking2
                 }
             }
             // WC1994
@@ -287,40 +291,68 @@ export const comparePoints = (rankings, config) => {
             }
         }
     }
-    // AFCON2010
-    updatePool3Notes(rankings, config)
+    updatePool3WayTieNotes(rankings, config)
     return { h2htie }
 }
 
-export const updatePool3Notes = (rankings, config) => {
+export const updatePool3WayTieNotes = (rankings, config) => {
     if (!rankings || rankings.length !== 3 || !config) return
-    if (config.sort === 'h2h') {
-        const note =
-            'All 3 teams ' +
-            rankings[0].team.name +
-            ' | ' +
-            rankings[1].team.name +
-            ' | ' +
-            rankings[2].team.name +
-            ' tied on head-to-head points ' +
-            rankings[0].pts +
-            ' and goal difference ' +
-            rankings[0].gd +
-            ' . Tiebreak by head-to-head goals scored: ' +
-            rankings[0].team.name +
-            ' ' +
-            rankings[0].gf +
-            ' | ' +
-            rankings[1].team.name +
-            ' ' +
-            rankings[1].gf +
-            ' | ' +
-            rankings[2].team.name +
-            ' ' +
-            rankings[2].gf
-        rankings[0].tie_h2h_note = note
-        rankings[1].tie_h2h_note = note
-        rankings[2].tie_h2h_note = note
+    if (config.three_way_tied) {
+        // AFCON2010
+        if (rankings[0].tie_h2h_p_gd) {
+            const note =
+                'All 3 teams ' +
+                rankings[0].team.name +
+                ' | ' +
+                rankings[1].team.name +
+                ' | ' +
+                rankings[2].team.name +
+                ' tied on head-to-head points ' +
+                rankings[0].pts +
+                ' and goal difference ' +
+                rankings[0].gd +
+                '. Tiebreak by head-to-head goals scored: ' +
+                rankings[0].team.name +
+                ' ' +
+                rankings[0].gf +
+                ' | ' +
+                rankings[1].team.name +
+                ' ' +
+                rankings[1].gf +
+                ' | ' +
+                rankings[2].team.name +
+                ' ' +
+                rankings[2].gf
+            rankings[0].tie_h2h_note = note
+            rankings[1].tie_h2h_note = note
+            rankings[2].tie_h2h_note = note
+        } else {
+            // AFCON2006
+            const note =
+                'All 3 teams ' +
+                rankings[0].team.name +
+                ' | ' +
+                rankings[1].team.name +
+                ' | ' +
+                rankings[2].team.name +
+                ' tied on head-to-head points ' +
+                rankings[0].pts +
+                '. Tiebreak by head-to-head goal difference: ' +
+                rankings[0].team.name +
+                ' ' +
+                rankings[0].gd +
+                ' | ' +
+                rankings[1].team.name +
+                ' ' +
+                rankings[1].gd +
+                ' | ' +
+                rankings[2].team.name +
+                ' ' +
+                rankings[2].gd
+            rankings[0].tie_h2h_note = note
+            rankings[1].tie_h2h_note = note
+            rankings[2].tie_h2h_note = note
+        }
     }
 }
 
@@ -365,6 +397,29 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
             ranking1 = result.ranking1
             ranking2 = result.ranking2
         }
+    }
+    // AFCON2006
+    if (config.sort === 'h2h' && ranking1.gd !== ranking2.gd) {
+        ranking1.tie_h2h = true
+        ranking1.tie_h2h_note =
+            'Tied on heah-to-head points. Tiebreak by head-to-head goal difference: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gd +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gd
+        ranking2.tie_h2h = true
+        ranking2.tie_h2h_note =
+            'Tied on heah-to-head points. Tiebreak by head-to-head goal difference: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gd +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gd
     }
     // AFCON2023
     if (config.sort === 'h2htie' && ranking1.gd !== ranking2.gd) {
@@ -429,6 +484,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
     // AFCON2010
     if (config.sort === 'h2h' && ranking1.gf !== ranking2.gf) {
         ranking1.tie_h2h = true
+        ranking1.tie_h2h_p_gd = true
         ranking1.tie_h2h_note =
             'Tied on heah-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
             ranking1.team.name +
@@ -452,6 +508,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
     // AFCON2023
     if (config.sort === 'h2htie' && ranking1.gf !== ranking2.gf) {
         ranking1.tie_h2h = true
+        ranking1.tie_h2h_p_gd = true
         ranking1.tie_h2h_note =
             'Tied on heah-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
             ranking1.team.name +
@@ -512,7 +569,8 @@ export const drawingLots = (ranking1, ranking2, config) => {
             ranking1 = { ...ranking2 }
             ranking2 = { ...temp }
         }
-        // WC1990 || AFCON2015
+        // h2h: WC1990 || AFCON1988
+        // h2htie: AFCON2015
         if (config.sort === 'h2h' || config.sort === 'h2htie') {
             ranking1.draw_lot = true
             ranking1.draw_lot_note = ranking1.team.draw_lot_note

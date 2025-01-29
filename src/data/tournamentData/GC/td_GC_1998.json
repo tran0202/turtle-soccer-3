@@ -3,153 +3,196 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advancement": {
-                "teams": {
-                    "auto": [1],
-                    "eliminated": [2, 3],
-                    "text": "The top teams in each group and the 2nd-place team in Group A would advance to the Semi-finals."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [{ "pos": 1, "will": "advance" }],
             "groups": [
                 {
                     "name": "Group A",
+                    "advancement": [
+                        { "pos": 1, "will": "advance" },
+                        { "pos": 2, "will": "advance" }
+                    ],
                     "teams": [{ "id": "SLV" }, { "id": "GUA" }, { "id": "BRA" }, { "id": "JAM" }],
-                    "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4] } },
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "SLV",
-                            "away_team": "GUA",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1998-02-01",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "GUA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1998-02-01",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                },
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "JAM",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1998-02-03",
+                                    "time": "12:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "JAM",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1998-02-03",
-                            "time": "12:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "GUA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1998-02-05",
+                                    "time": "12:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                },
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "BRA",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "1998-02-08",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "GUA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1998-02-05",
-                            "time": "12:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
-                        },
-                        {
-                            "home_team": "SLV",
-                            "away_team": "BRA",
-                            "home_score": 0,
-                            "away_score": 4,
-                            "date": "1998-02-08",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "JAM",
-                            "home_score": 2,
-                            "away_score": 3,
-                            "date": "1998-02-08",
-                            "time": "15:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
-                        },
-                        {
-                            "home_team": "JAM",
-                            "away_team": "SLV",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1998-02-09",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "JAM",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "1998-02-08",
+                                    "time": "15:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                },
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "SLV",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1998-02-09",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "HON-1949-2022" }, { "id": "TRI" }, { "id": "MEX" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "TRI",
-                            "home_score": 1,
-                            "away_score": 3,
-                            "date": "1998-02-01",
-                            "time": "12:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "TRI",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "1998-02-01",
+                                    "time": "12:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "TRI",
-                            "home_score": 4,
-                            "away_score": 2,
-                            "date": "1998-02-04",
-                            "time": "12:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "TRI",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "1998-02-04",
+                                    "time": "12:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1998-02-07",
-                            "time": "12:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1998-02-07",
+                                    "time": "12:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "USA" }, { "id": "CUB" }, { "id": "CRC" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "USA",
-                            "away_team": "CUB",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "1998-02-01",
-                            "time": "15:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "CUB",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "1998-02-01",
+                                    "time": "15:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "CUB",
-                            "home_score": 7,
-                            "away_score": 2,
-                            "date": "1998-02-04",
-                            "time": "15:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "CUB",
+                                    "home_score": 7,
+                                    "away_score": 2,
+                                    "date": "1998-02-04",
+                                    "time": "15:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "CRC",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1998-02-07",
-                            "time": "15:00",
-                            "stadium": "Oakland Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "CRC",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1998-02-07",
+                                    "time": "15:00",
+                                    "stadium": "Oakland Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         }
                     ]
                 }

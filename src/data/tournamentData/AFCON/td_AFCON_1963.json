@@ -3,87 +3,115 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Final",
-            "advancement": {
-                "teams": {
-                    "auto": [1],
-                    "third_place": [2],
-                    "eliminated": [3],
-                    "text": "The winners would advance to the final. The runners-up would advance to the third-place match."
-                }
-            },
+            "advanced_note": "Winners advance to the final",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "next_round" }
+            ],
+            "next_round_note": "Runners-up advance to the third-place match",
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [{ "id": "GHA" }, { "id": "TUN" }, { "id": "ETH-1941-1974" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "GHA",
-                            "away_team": "TUN",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1963-11-24",
-                            "time": "12:00",
-                            "stadium": "Accra Sports Stadium",
-                            "city": "Accra"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "GHA",
+                                    "away_team": "TUN",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1963-11-24",
+                                    "time": "12:00",
+                                    "stadium": "Accra Sports Stadium",
+                                    "city": "Accra"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GHA",
-                            "away_team": "ETH-1941-1974",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1963-11-26",
-                            "time": "12:00",
-                            "stadium": "Accra Sports Stadium",
-                            "city": "Accra"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "GHA",
+                                    "away_team": "ETH-1941-1974",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1963-11-26",
+                                    "time": "12:00",
+                                    "stadium": "Accra Sports Stadium",
+                                    "city": "Accra"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "ETH-1941-1974",
-                            "away_team": "TUN",
-                            "home_score": 4,
-                            "away_score": 2,
-                            "date": "1963-11-28",
-                            "time": "12:00",
-                            "stadium": "Accra Sports Stadium",
-                            "city": "Accra"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "ETH-1941-1974",
+                                    "away_team": "TUN",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "1963-11-28",
+                                    "time": "12:00",
+                                    "stadium": "Accra Sports Stadium",
+                                    "city": "Accra"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "UAR" }, { "id": "NGA" }, { "id": "SDN-1956-1970" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "UAR",
-                            "away_team": "NGA",
-                            "home_score": 6,
-                            "away_score": 3,
-                            "date": "1963-11-24",
-                            "time": "12:00",
-                            "stadium": "Kumasi Sports Stadium",
-                            "city": "Kumasi"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "UAR",
+                                    "away_team": "NGA",
+                                    "home_score": 6,
+                                    "away_score": 3,
+                                    "date": "1963-11-24",
+                                    "time": "12:00",
+                                    "stadium": "Kumasi Sports Stadium",
+                                    "city": "Kumasi"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "UAR",
-                            "away_team": "SDN-1956-1970",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "1963-11-26",
-                            "time": "12:00",
-                            "stadium": "Kumasi Sports Stadium",
-                            "city": "Kumasi"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "UAR",
+                                    "away_team": "SDN-1956-1970",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "1963-11-26",
+                                    "time": "12:00",
+                                    "stadium": "Kumasi Sports Stadium",
+                                    "city": "Kumasi"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SDN-1956-1970",
-                            "away_team": "NGA",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "1963-11-28",
-                            "time": "12:00",
-                            "stadium": "Kumasi Sports Stadium",
-                            "city": "Kumasi"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "SDN-1956-1970",
+                                    "away_team": "NGA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "1963-11-28",
+                                    "time": "12:00",
+                                    "stadium": "Kumasi Sports Stadium",
+                                    "city": "Kumasi"
+                                }
+                            ]
                         }
                     ]
                 }

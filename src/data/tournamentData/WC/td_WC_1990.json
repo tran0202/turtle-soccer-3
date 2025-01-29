@@ -20,7 +20,7 @@
                         { "id": "ITA" },
                         {
                             "id": "AUT",
-                            "win_lot": true
+                            "draw_lot_win": true
                         },
                         { "id": "USA" },
                         { "id": "TCH" }
@@ -105,7 +105,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ARG", "win_lot": true }, { "id": "CMR" }, { "id": "URS" }, { "id": "ROU" }],
+                    "teams": [{ "id": "ARG", "draw_lot_win": true }, { "id": "CMR" }, { "id": "URS" }, { "id": "ROU" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

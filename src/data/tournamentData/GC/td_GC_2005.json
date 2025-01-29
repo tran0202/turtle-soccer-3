@@ -3,213 +3,257 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "wild_card": { "pos": 3, "count": 2 },
-                    "eliminated": [4],
-                    "text": "The top 2 teams and the 2 best third-placed teams would advance to the Quarter-finals."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round", "count": 2, "name": "third-placed teams" }
+            ],
+            "next_round_note": "2 best third-placed teams advance to the knockout stage",
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [{ "id": "COL" }, { "id": "PAN" }, { "id": "TRI" }, { "id": "HON-1949-2022" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "COL",
-                            "away_team": "PAN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2005-07-06",
-                            "time": "12:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "COL",
+                                    "away_team": "PAN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2005-07-06",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                },
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2005-07-06",
+                                    "time": "21:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TRI",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2005-07-06",
-                            "time": "15:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "TRI",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2005-07-10",
+                                    "time": "21:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "COL",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2005-07-10",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PAN",
-                            "away_team": "TRI",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2005-07-09",
-                            "time": "12:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "COL",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2005-07-09",
-                            "time": "15:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
-                        },
-                        {
-                            "home_team": "COL",
-                            "away_team": "TRI",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2005-07-11",
-                            "time": "12:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "PAN",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2005-07-11",
-                            "time": "15:00",
-                            "stadium": "Orange Bowl",
-                            "city": "Miami"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "COL",
+                                    "away_team": "TRI",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2005-07-12",
+                                    "time": "17:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "PAN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2005-07-12",
+                                    "time": "19:00",
+                                    "stadium": "Orange Bowl",
+                                    "city": "Miami"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "CAN" }, { "id": "CRC" }, { "id": "CUB" }, { "id": "USA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CAN",
-                            "away_team": "CRC",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2005-07-07",
-                            "time": "12:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2005-07-07",
+                                    "time": "17:30",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                },
+                                {
+                                    "home_team": "CUB",
+                                    "away_team": "USA",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2005-07-07",
+                                    "time": "19:30",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CUB",
-                            "away_team": "USA",
-                            "home_score": 1,
-                            "away_score": 4,
-                            "date": "2005-07-07",
-                            "time": "15:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "CUB",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2005-07-09",
+                                    "time": "11:30",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                },
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "CAN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2005-07-09",
+                                    "time": "13:30",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "CUB",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2005-07-09",
-                            "time": "12:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
-                        },
-                        {
-                            "home_team": "USA",
-                            "away_team": "CAN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2005-07-09",
-                            "time": "15:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
-                        },
-                        {
-                            "home_team": "USA",
-                            "away_team": "CRC",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2005-07-11",
-                            "time": "12:00",
-                            "stadium": "Gillette Stadium",
-                            "city": "Foxboro"
-                        },
-                        {
-                            "home_team": "CAN",
-                            "away_team": "CUB",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2005-07-11",
-                            "time": "15:00",
-                            "stadium": "Gillette Stadium",
-                            "city": "Foxboro"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2005-07-12",
+                                    "time": "19:00",
+                                    "stadium": "Gillette Stadium",
+                                    "city": "Foxboro"
+                                },
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "CUB",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2005-07-12",
+                                    "time": "21:00",
+                                    "stadium": "Gillette Stadium",
+                                    "city": "Foxboro"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "RSA" }, { "id": "MEX" }, { "id": "GUA" }, { "id": "JAM" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "RSA",
-                            "away_team": "MEX",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2005-07-07",
-                            "time": "12:00",
-                            "stadium": "The Home Depot Center",
-                            "city": "Carson"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "RSA",
+                                    "away_team": "MEX",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2005-07-08",
+                                    "time": "19:00",
+                                    "stadium": "The Home Depot Center",
+                                    "city": "Carson"
+                                },
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "JAM",
+                                    "home_score": 3,
+                                    "away_score": 4,
+                                    "date": "2005-07-08",
+                                    "time": "21:00",
+                                    "stadium": "The Home Depot Center",
+                                    "city": "Carson"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUA",
-                            "away_team": "JAM",
-                            "home_score": 3,
-                            "away_score": 4,
-                            "date": "2005-07-07",
-                            "time": "15:00",
-                            "stadium": "The Home Depot Center",
-                            "city": "Carson"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "GUA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2005-07-10",
+                                    "time": "12:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                },
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "RSA",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2005-07-10",
+                                    "time": "14:00",
+                                    "stadium": "Los Angeles Memorial Coliseum",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "GUA",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2005-07-09",
-                            "time": "12:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
-                        },
-                        {
-                            "home_team": "JAM",
-                            "away_team": "RSA",
-                            "home_score": 3,
-                            "away_score": 3,
-                            "date": "2005-07-09",
-                            "time": "15:00",
-                            "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "RSA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2005-07-11",
-                            "time": "12:00",
-                            "stadium": "Reliant Stadium",
-                            "city": "Houston"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "JAM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2005-07-11",
-                            "time": "15:00",
-                            "stadium": "Reliant Stadium",
-                            "city": "Houston"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "RSA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2005-07-13",
+                                    "time": "19:00",
+                                    "stadium": "Reliant Stadium",
+                                    "city": "Houston"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "JAM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2005-07-13",
+                                    "time": "21:00",
+                                    "stadium": "Reliant Stadium",
+                                    "city": "Houston"
+                                }
+                            ]
                         }
                     ]
                 }

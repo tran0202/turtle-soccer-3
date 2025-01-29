@@ -3,213 +3,257 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "wild_card": { "pos": 3, "count": 2 },
-                    "eliminated": [4],
-                    "text": "The top 2 teams and the 2 best third-placed teams would advance to the Quarter-finals."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round", "count": 2, "name": "third-placed teams" }
+            ],
+            "next_round_note": "2 best third-placed teams advance to the knockout stage",
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [{ "id": "CAN" }, { "id": "JAM" }, { "id": "CRC" }, { "id": "SLV" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CAN",
-                            "away_team": "JAM",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2009-07-03",
-                            "time": "17:00",
-                            "stadium": "The Home Depot Center",
-                            "city": "Carson"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "JAM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2009-07-03",
+                                    "time": "17:00",
+                                    "stadium": "The Home Depot Center",
+                                    "city": "Carson"
+                                },
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "SLV",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2009-07-03",
+                                    "time": "19:00",
+                                    "stadium": "The Home Depot Center",
+                                    "city": "Carson"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "SLV",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2009-07-03",
-                            "time": "19:00",
-                            "stadium": "The Home Depot Center",
-                            "city": "Carson"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2009-07-07",
+                                    "time": "19:00",
+                                    "stadium": "Columbus Crew Stadium",
+                                    "city": "Columbus"
+                                },
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "CAN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2009-07-07",
+                                    "time": "21:00",
+                                    "stadium": "Columbus Crew Stadium",
+                                    "city": "Columbus"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JAM",
-                            "away_team": "CRC",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2009-07-07",
-                            "time": "19:00",
-                            "stadium": "Columbus Crew Stadium",
-                            "city": "Columbus"
-                        },
-                        {
-                            "home_team": "SLV",
-                            "away_team": "CAN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2009-07-07",
-                            "time": "21:00",
-                            "stadium": "Columbus Crew Stadium",
-                            "city": "Columbus"
-                        },
-                        {
-                            "home_team": "CRC",
-                            "away_team": "CAN",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2009-07-10",
-                            "time": "19:00",
-                            "stadium": "FIU Stadium",
-                            "city": "Miami"
-                        },
-                        {
-                            "home_team": "SLV",
-                            "away_team": "JAM",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2009-07-10",
-                            "time": "21:00",
-                            "stadium": "FIU Stadium",
-                            "city": "Miami"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "CAN",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2009-07-10",
+                                    "time": "19:00",
+                                    "stadium": "FIU Stadium",
+                                    "city": "Miami"
+                                },
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "JAM",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2009-07-10",
+                                    "time": "21:00",
+                                    "stadium": "FIU Stadium",
+                                    "city": "Miami"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "HON-1949-2022" }, { "id": "HAI" }, { "id": "GRN" }, { "id": "USA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "HAI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2009-07-04",
-                            "time": "16:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "HAI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2009-07-04",
+                                    "time": "16:00",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                },
+                                {
+                                    "home_team": "GRN",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2009-07-04",
+                                    "time": "18:00",
+                                    "stadium": "Qwest Field",
+                                    "city": "Seattle"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GRN",
-                            "away_team": "USA",
-                            "home_score": 0,
-                            "away_score": 4,
-                            "date": "2009-07-04",
-                            "time": "18:00",
-                            "stadium": "Qwest Field",
-                            "city": "Seattle"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "HAI",
+                                    "away_team": "GRN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2009-07-08",
+                                    "time": "19:00",
+                                    "stadium": "Robert F. Kennedy Memorial Stadium",
+                                    "city": "Washington"
+                                },
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2009-07-08",
+                                    "time": "21:00",
+                                    "stadium": "Robert F. Kennedy Memorial Stadium",
+                                    "city": "Washington"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HAI",
-                            "away_team": "GRN",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2009-07-08",
-                            "time": "19:00",
-                            "stadium": "Robert F. Kennedy Memorial Stadium",
-                            "city": "Washington"
-                        },
-                        {
-                            "home_team": "USA",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2009-07-08",
-                            "time": "21:00",
-                            "stadium": "Robert F. Kennedy Memorial Stadium",
-                            "city": "Washington"
-                        },
-                        {
-                            "home_team": "USA",
-                            "away_team": "HAI",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2009-07-11",
-                            "time": "19:00",
-                            "stadium": "Gillette Stadium",
-                            "city": "Foxborough"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "GRN",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2009-07-11",
-                            "time": "21:00",
-                            "stadium": "Gillette Stadium",
-                            "city": "Foxborough"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "HAI",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2009-07-11",
+                                    "time": "19:00",
+                                    "stadium": "Gillette Stadium",
+                                    "city": "Foxborough"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "GRN",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2009-07-11",
+                                    "time": "21:00",
+                                    "stadium": "Gillette Stadium",
+                                    "city": "Foxborough"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "PAN" }, { "id": "GLP" }, { "id": "NCA" }, { "id": "MEX" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "PAN",
-                            "away_team": "GLP",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2009-07-05",
-                            "time": "14:00",
-                            "stadium": "Oakland–Alameda County Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "GLP",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2009-07-05",
+                                    "time": "14:00",
+                                    "stadium": "Oakland–Alameda County Coliseum",
+                                    "city": "Oakland"
+                                },
+                                {
+                                    "home_team": "NCA",
+                                    "away_team": "MEX",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2009-07-05",
+                                    "time": "16:00",
+                                    "stadium": "Oakland–Alameda County Coliseum",
+                                    "city": "Oakland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "NCA",
-                            "away_team": "MEX",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2009-07-05",
-                            "time": "16:00",
-                            "stadium": "Oakland–Alameda County Coliseum",
-                            "city": "Oakland"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "GLP",
+                                    "away_team": "NCA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2009-07-09",
+                                    "time": "19:00",
+                                    "stadium": "Reliant Stadium",
+                                    "city": "Houston"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "PAN",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2009-07-09",
+                                    "time": "21:00",
+                                    "stadium": "Reliant Stadium",
+                                    "city": "Houston"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GLP",
-                            "away_team": "NCA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2009-07-09",
-                            "time": "19:00",
-                            "stadium": "Reliant Stadium",
-                            "city": "Houston"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "PAN",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2009-07-09",
-                            "time": "21:00",
-                            "stadium": "Reliant Stadium",
-                            "city": "Houston"
-                        },
-                        {
-                            "home_team": "PAN",
-                            "away_team": "NCA",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2009-07-12",
-                            "time": "14:00",
-                            "stadium": "University of Phoenix Stadium",
-                            "city": "Glendale"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "GLP",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2009-07-12",
-                            "time": "16:00",
-                            "stadium": "University of Phoenix Stadium",
-                            "city": "Glendale"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "NCA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2009-07-12",
+                                    "time": "14:00",
+                                    "stadium": "University of Phoenix Stadium",
+                                    "city": "Glendale"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "GLP",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2009-07-12",
+                                    "time": "16:00",
+                                    "stadium": "University of Phoenix Stadium",
+                                    "city": "Glendale"
+                                }
+                            ]
                         }
                     ]
                 }

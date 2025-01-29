@@ -3,272 +3,336 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the quarter-finals." } },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" }
+            ],
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "CAN" }, { "id": "MTQ" }, { "id": "MEX" }, { "id": "CUB" }],
-                    "matches": [
+                    "teams": [{ "id": "CAN" }, { "id": "MTQ-2019-2023" }, { "id": "MEX" }, { "id": "CUB" }],
+                    "matchdays": [
                         {
-                            "home_team": "CAN",
-                            "away_team": "MTQ",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-06-15",
-                            "time": "19:30",
-                            "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "MTQ-2019-2023",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2019-06-15",
+                                    "time": "19:30",
+                                    "stadium": "Rose Bowl",
+                                    "city": "Pasadena"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "CUB",
+                                    "home_score": 7,
+                                    "away_score": 0,
+                                    "date": "2019-06-15",
+                                    "time": "22:00",
+                                    "stadium": "Rose Bowl",
+                                    "city": "Pasadena"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "CUB",
-                            "home_score": 7,
-                            "away_score": 0,
-                            "date": "2019-06-15",
-                            "time": "22:00",
-                            "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CUB",
+                                    "away_team": "MTQ-2019-2023",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2019-06-19",
+                                    "time": "20:00",
+                                    "stadium": "Broncos Stadium at Mile High",
+                                    "city": "Denver"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "CAN",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2019-06-19",
+                                    "time": "22:30",
+                                    "stadium": "Broncos Stadium at Mile High",
+                                    "city": "Denver"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CUB",
-                            "away_team": "MTQ",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2019-06-19",
-                            "time": "20:00",
-                            "stadium": "Broncos Stadium at Mile High",
-                            "city": "Denver"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "CAN",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2019-06-19",
-                            "time": "22:30",
-                            "stadium": "Broncos Stadium at Mile High",
-                            "city": "Denver"
-                        },
-                        {
-                            "home_team": "CAN",
-                            "away_team": "CUB",
-                            "home_score": 7,
-                            "away_score": 0,
-                            "date": "2019-06-23",
-                            "time": "18:00",
-                            "stadium": "Bank of America Stadium",
-                            "city": "Charlotte"
-                        },
-                        {
-                            "home_team": "MTQ",
-                            "away_team": "MEX",
-                            "home_score": 2,
-                            "away_score": 3,
-                            "date": "2019-06-23",
-                            "time": "20:30",
-                            "stadium": "Bank of America Stadium",
-                            "city": "Charlotte"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "CUB",
+                                    "home_score": 7,
+                                    "away_score": 0,
+                                    "date": "2019-06-23",
+                                    "time": "18:00",
+                                    "stadium": "Bank of America Stadium",
+                                    "city": "Charlotte"
+                                },
+                                {
+                                    "home_team": "MTQ-2019-2023",
+                                    "away_team": "MEX",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2019-06-23",
+                                    "time": "20:30",
+                                    "stadium": "Bank of America Stadium",
+                                    "city": "Charlotte"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
                     "teams": [{ "id": "HAI" }, { "id": "BER" }, { "id": "CRC" }, { "id": "NCA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "HAI",
-                            "away_team": "BER",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-06-16",
-                            "time": "18:00",
-                            "stadium": "Estadio Nacional de Costa Rica",
-                            "city": "San José"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "HAI",
+                                    "away_team": "BER",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2019-06-16",
+                                    "time": "18:00",
+                                    "stadium": "Estadio Nacional de Costa Rica",
+                                    "city": "San José"
+                                },
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "NCA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2019-06-16",
+                                    "time": "20:30",
+                                    "stadium": "Estadio Nacional de Costa Rica",
+                                    "city": "San José"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "NCA",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-06-16",
-                            "time": "20:30",
-                            "stadium": "Estadio Nacional de Costa Rica",
-                            "city": "San José"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "NCA",
+                                    "away_team": "HAI",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2019-06-20",
+                                    "time": "19:00",
+                                    "stadium": "Toyota Stadium",
+                                    "city": "Frisco"
+                                },
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "BER",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2019-06-20",
+                                    "time": "21:30",
+                                    "stadium": "Toyota Stadium",
+                                    "city": "Frisco"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "NCA",
-                            "away_team": "HAI",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2019-06-20",
-                            "time": "19:00",
-                            "stadium": "Toyota Stadium",
-                            "city": "Frisco"
-                        },
-                        {
-                            "home_team": "CRC",
-                            "away_team": "BER",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-06-20",
-                            "time": "21:30",
-                            "stadium": "Toyota Stadium",
-                            "city": "Frisco"
-                        },
-                        {
-                            "home_team": "BER",
-                            "away_team": "NCA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-24",
-                            "time": "18:30",
-                            "stadium": "Red Bull Arena",
-                            "city": "Harrison"
-                        },
-                        {
-                            "home_team": "HAI",
-                            "away_team": "CRC",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2019-06-24",
-                            "time": "21:00",
-                            "stadium": "Red Bull Arena",
-                            "city": "Harrison"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "BER",
+                                    "away_team": "NCA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2019-06-24",
+                                    "time": "18:30",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Harrison"
+                                },
+                                {
+                                    "home_team": "HAI",
+                                    "away_team": "CRC",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2019-06-24",
+                                    "time": "21:00",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Harrison"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group C",
                     "teams": [{ "id": "CUW" }, { "id": "SLV" }, { "id": "JAM" }, { "id": "HON-1949-2022" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CUW",
-                            "away_team": "SLV",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-06-17",
-                            "time": "19:00",
-                            "stadium": "Independence Park",
-                            "city": "Kingston"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CUW",
+                                    "away_team": "SLV",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2019-06-17",
+                                    "time": "19:00",
+                                    "stadium": "Independence Park",
+                                    "city": "Kingston"
+                                },
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2019-06-17",
+                                    "time": "21:30",
+                                    "stadium": "Independence Park",
+                                    "city": "Kingston"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "JAM",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2019-06-17",
-                            "time": "21:30",
-                            "stadium": "Independence Park",
-                            "city": "Kingston"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "JAM",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2019-06-21",
+                                    "time": "19:00",
+                                    "stadium": "BBVA Stadium",
+                                    "city": "Houston"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "CUW",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2019-06-21",
+                                    "time": "21:30",
+                                    "stadium": "BBVA Stadium",
+                                    "city": "Houston"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SLV",
-                            "away_team": "JAM",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2019-06-21",
-                            "time": "19:00",
-                            "stadium": "BBVA Stadium",
-                            "city": "Houston"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "CUW",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-06-21",
-                            "time": "21:30",
-                            "stadium": "BBVA Stadium",
-                            "city": "Houston"
-                        },
-                        {
-                            "home_team": "JAM",
-                            "away_team": "CUW",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-06-25",
-                            "time": "20:00",
-                            "stadium": "Banc of California Stadium",
-                            "city": "Los Angeles"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "SLV",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-06-25",
-                            "time": "22:30",
-                            "stadium": "Banc of California Stadium",
-                            "city": "Los Angeles"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "CUW",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2019-06-25",
+                                    "time": "20:00",
+                                    "stadium": "Banc of California Stadium",
+                                    "city": "Los Angeles"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "SLV",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2019-06-25",
+                                    "time": "22:30",
+                                    "stadium": "Banc of California Stadium",
+                                    "city": "Los Angeles"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group D",
                     "teams": [{ "id": "PAN" }, { "id": "TRI" }, { "id": "USA" }, { "id": "GUY" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "PAN",
-                            "away_team": "TRI",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2019-06-18",
-                            "time": "19:30",
-                            "stadium": "Allianz Field",
-                            "city": "Saint Paul"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "TRI",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2019-06-18",
+                                    "time": "19:30",
+                                    "stadium": "Allianz Field",
+                                    "city": "Saint Paul"
+                                },
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "GUY",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2019-06-18",
+                                    "time": "22:00",
+                                    "stadium": "Allianz Field",
+                                    "city": "Saint Paul"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "GUY",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2019-06-18",
-                            "time": "22:00",
-                            "stadium": "Allianz Field",
-                            "city": "Saint Paul"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "GUY",
+                                    "away_team": "PAN",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2019-06-22",
+                                    "time": "17:30",
+                                    "stadium": "FirstEnergy Stadium",
+                                    "city": "Cleveland"
+                                },
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "TRI",
+                                    "home_score": 6,
+                                    "away_score": 0,
+                                    "date": "2019-06-22",
+                                    "time": "20:00",
+                                    "stadium": "FirstEnergy Stadium",
+                                    "city": "Cleveland"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUY",
-                            "away_team": "PAN",
-                            "home_score": 2,
-                            "away_score": 4,
-                            "date": "2019-06-22",
-                            "time": "17:30",
-                            "stadium": "FirstEnergy Stadium",
-                            "city": "Cleveland"
-                        },
-                        {
-                            "home_team": "USA",
-                            "away_team": "TRI",
-                            "home_score": 6,
-                            "away_score": 0,
-                            "date": "2019-06-22",
-                            "time": "20:00",
-                            "stadium": "FirstEnergy Stadium",
-                            "city": "Cleveland"
-                        },
-                        {
-                            "home_team": "TRI",
-                            "away_team": "GUY",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2019-06-26",
-                            "time": "18:30",
-                            "stadium": "Children's Mercy Park",
-                            "city": "Kansas City"
-                        },
-                        {
-                            "home_team": "PAN",
-                            "away_team": "USA",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2019-06-26",
-                            "time": "21:00",
-                            "stadium": "Children's Mercy Park",
-                            "city": "Kansas City"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "GUY",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2019-06-26",
+                                    "time": "18:30",
+                                    "stadium": "Children's Mercy Park",
+                                    "city": "Kansas City"
+                                },
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2019-06-26",
+                                    "time": "21:00",
+                                    "stadium": "Children's Mercy Park",
+                                    "city": "Kansas City"
+                                }
+                            ]
                         }
                     ]
                 }
