@@ -99,8 +99,8 @@ export const DisqualifiedTooltip = (props) => {
 }
 
 export const FairPlayTooltip = (props) => {
-    const { target, fp_notes } = props
-    const content = `Fair play points: ${fp_notes}`
+    const { target, notes } = props
+    const content = notes
     return <TopTooltip target={target} content={content} />
 }
 

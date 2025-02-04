@@ -929,7 +929,7 @@
         "short_name": "1991 United States",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "1991_CONCACAF_Gold_Cup_logo.jpg",
@@ -1037,7 +1037,7 @@
         "short_name": "1985",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
@@ -1442,7 +1442,7 @@
         "short_name": "1963 El Salvador",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["SLV"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",

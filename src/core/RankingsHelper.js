@@ -179,7 +179,14 @@ export const sortPools = (group, config) => {
                 p.h2h_rankings.push(ranking)
             })
             // 4. Sort the rankings
-            const result = sortRankings(p.h2h_rankings, { ...config, sort: 'h2h', three_way_tied: group.three_way_tied })
+            // three_way_tied: AFCON2006, AFCON2010, EURO2020
+            // four_way_tied: EURO2024
+            const result = sortRankings(p.h2h_rankings, {
+                ...config,
+                sort: 'h2h',
+                three_way_tied: p.rankings.length === 3,
+                four_way_tied: p.rankings.length === 4,
+            })
             // 5. Update the pool
             const pool_rankings = []
             p.h2h_rankings.forEach((hr) => {
@@ -399,7 +406,7 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
         }
     }
     // AFCON2006
-    if (config.sort === 'h2h' && ranking1.gd !== ranking2.gd) {
+    if (config.sort === 'h2h' && !config.four_way_tied && ranking1.gd !== ranking2.gd) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_note =
             'Tied on heah-to-head points. Tiebreak by head-to-head goal difference: ' +
@@ -482,7 +489,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
         }
     }
     // AFCON2010
-    if (config.sort === 'h2h' && ranking1.gf !== ranking2.gf) {
+    if (config.sort === 'h2h' && !config.four_way_tied && ranking1.gf !== ranking2.gf) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_p_gd = true
         ranking1.tie_h2h_note =
@@ -540,10 +547,46 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
         ranking2 = { ...temp }
     }
     // WC2018
-    ranking1.fair_play = true
-    ranking1.fair_play_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
-    ranking2.fair_play = true
-    ranking2.fair_play_note = ranking2.team.name + ' ' + ranking2.fp + ' | ' + ranking1.team.name + ' ' + ranking1.fp
+    if (config.sort === 'h2h') {
+        ranking1.fair_play = true
+        ranking1.fair_play_note = 'Fair play points: ' + ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
+        ranking2.fair_play = true
+        ranking2.fair_play_note = 'Fair play points: ' + ranking2.team.name + ' ' + ranking2.fp + ' | ' + ranking1.team.name + ' ' + ranking1.fp
+    }
+    // EURO2024
+    if (config.sort === 'h2htie') {
+        ranking1.fair_play = true
+        ranking1.fair_play_note =
+            'Tied on heah-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.fp +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.fp
+        ranking2.fair_play = true
+        ranking2.fair_play_note =
+            'Tied on heah-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.fp +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.fp
+    }
+    // EURO2024
+    if (config.sort === 'partial') {
+        console.log('config.sort', config.sort)
+        console.log('ranking1.fp', ranking1.fp)
+        console.log('ranking2.fp', ranking2.fp)
+        console.log('ranking1.fp < ranking2.fp', ranking1.fp < ranking2.fp)
+        ranking1.partial_disciplinary_point = true
+        ranking1.partial_disciplinary_point_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
+        ranking2.partial_disciplinary_point = true
+        ranking2.partial_disciplinary_point_note = ranking2.team.name + ' ' + ranking2.fp + ' | ' + ranking1.team.name + ' ' + ranking1.fp
+    }
     return { ranking1, ranking2 }
 }
 

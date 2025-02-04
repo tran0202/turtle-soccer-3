@@ -3,207 +3,298 @@
     "stages": [
         {
             "name": "First Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "home_and_away": true,
             "eliminate_count": 3,
             "next_round": "Final Round",
-            "advancement": { "teams": { "auto": [1], "eliminated": [2, 3], "text": "The winners would advance to the final round." } },
+            "advanced_note": "Winners advance to the knockout stage",
+            "advancement": [{ "pos": 1, "will": "advance" }],
             "groups": [
                 {
                     "name": "Group 1",
                     "teams": [{ "id": "SUR" }, { "id": "SLV" }, { "id": "HON-1949-2022" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "SUR",
-                            "away_team": "SLV",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "1985-02-24",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "San Salvador, El Salvador"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "SUR",
+                                    "away_team": "SLV",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "1985-02-24",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Cuscatlán",
+                                    "city": "San Salvador, El Salvador"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SLV",
-                            "away_team": "SUR",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "1985-02-27",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "San Salvador, El Salvador"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "SUR",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "1985-02-27",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Cuscatlán",
+                                    "city": "San Salvador, El Salvador"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SUR",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1985-03-03",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Tegucigalpa, Honduras"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "SUR",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1985-03-03",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Nacional Chelato Uclés",
+                                    "city": "Tegucigalpa, Honduras"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "SUR",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1985-03-06",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Tegucigalpa, Honduras"
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "SUR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1985-03-06",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Nacional Chelato Uclés",
+                                    "city": "Tegucigalpa, Honduras"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SLV",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "1985-03-10",
-                            "time": "12:00",
-                            "stadium": "Estadio Cuscatlán",
-                            "city": "San Salvador, El Salvador"
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "1985-03-10",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Cuscatlán",
+                                    "city": "San Salvador, El Salvador"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "SLV",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1985-03-14",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Tegucigalpa, Honduras"
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "SLV",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1985-03-14",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Nacional Chelato Uclés",
+                                    "city": "Tegucigalpa, Honduras"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group 2",
                     "teams": [{ "id": "CAN" }, { "id": "HAI-1964-1986" }, { "id": "GUA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CAN",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1985-04-13",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Victoria, Canada"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1985-04-13",
+                                    "time": "12:00",
+                                    "stadium": "Royal Athletic Park",
+                                    "city": "Victoria, Canada"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CAN",
-                            "away_team": "GUA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1985-04-20",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Victoria, Canada"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "GUA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1985-04-20",
+                                    "time": "12:00",
+                                    "stadium": "Royal Athletic Park",
+                                    "city": "Victoria, Canada"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HAI-1964-1986",
-                            "away_team": "GUA",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "1985-04-26",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Port-au-Prince, Haiti"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "HAI-1964-1986",
+                                    "away_team": "GUA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "1985-04-26",
+                                    "time": "12:00",
+                                    "stadium": "Stade Sylvio Cator",
+                                    "city": "Port-au-Prince, Haiti"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUA",
-                            "away_team": "CAN",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1985-05-05",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Guatemala City, Guatemala"
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "CAN",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1985-05-05",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Doroteo Guamuch Flores",
+                                    "city": "Guatemala City, Guatemala"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HAI-1964-1986",
-                            "away_team": "CAN",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "1985-05-08",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Port-au-Prince, Haiti"
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "HAI-1964-1986",
+                                    "away_team": "CAN",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "1985-05-08",
+                                    "time": "12:00",
+                                    "stadium": "Stade Sylvio Cator",
+                                    "city": "Port-au-Prince, Haiti"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUA",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "1985-05-15",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Guatemala City, Guatemala"
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "1985-05-15",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Doroteo Guamuch Flores",
+                                    "city": "Guatemala City, Guatemala"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group 3",
                     "teams": [{ "id": "TRI" }, { "id": "CRC" }, { "id": "USA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "TRI",
-                            "away_team": "CRC",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "1985-04-24",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "San José, Costa Rica"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "1985-04-24",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Nacional de Costa Rica",
+                                    "city": "San José, Costa Rica"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "TRI",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1985-04-28",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "San José, Costa Rica"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "TRI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1985-04-28",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Ricardo Saprissa Aymá",
+                                    "city": "San Juan de Tibás, Costa Rica"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TRI",
-                            "away_team": "USA",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "1985-05-15",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "St. Louis, United States"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "TRI",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1985-05-15",
+                                    "time": "12:00",
+                                    "stadium": "Busch Stadium",
+                                    "city": "St. Louis, United States"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "TRI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1985-05-19",
-                            "time": "12:00",
-                            "stadium": "Murdock Stadium",
-                            "city": "Torrance, United States"
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "USA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "1985-05-19",
+                                    "time": "12:00",
+                                    "stadium": "Murdock Stadium",
+                                    "city": "Torrance, United States"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "USA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1985-05-26",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Alajuela, Costa Rica"
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "USA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1985-05-26",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Alejandro Morera Soto",
+                                    "city": "Alajuela, Costa Rica"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "CRC",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "1985-05-31",
-                            "time": "12:00",
-                            "stadium": "Murdock Stadium",
-                            "city": "Torrance, United States"
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "1985-05-31",
+                                    "time": "12:00",
+                                    "stadium": "Murdock Stadium",
+                                    "city": "Torrance, United States"
+                                }
+                            ]
                         }
                     ]
                 }

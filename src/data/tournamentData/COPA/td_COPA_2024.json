@@ -3,226 +3,336 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2, 3, 4],
-                    "eliminated": [5],
-                    "text": "The top 4 teams would advance to the Quarter-finals."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" }
+            ],
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ARG" }, { "id": "CHI" }, { "id": "PAR" }, { "id": "BOL" }, { "id": "URU" }],
-                    "matches": [
+                    "teams": [{ "id": "ARG" }, { "id": "PER" }, { "id": "CAN" }, { "id": "CHI" }],
+                    "matchdays": [
                         {
-                            "home_team": "ARG",
-                            "away_team": "CHI",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2021-06-14",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "CAN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-06-20",
+                                    "time": "20:00",
+                                    "stadium": "Mercedes-Benz Stadium",
+                                    "city": "Atlanta, Georgia"
+                                },
+                                {
+                                    "home_team": "PER",
+                                    "away_team": "CHI",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-06-21",
+                                    "time": "19:00",
+                                    "stadium": "AT&T Stadium",
+                                    "city": "Arlington, Texas"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PAR",
-                            "away_team": "BOL",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2021-06-14",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PER",
+                                    "away_team": "CAN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-06-25",
+                                    "time": "17:00",
+                                    "stadium": "Children's Mercy Park",
+                                    "city": "Kansas City, Kansas"
+                                },
+                                {
+                                    "home_team": "CHI",
+                                    "away_team": "ARG",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-06-25",
+                                    "time": "21:00",
+                                    "stadium": "MetLife Stadium",
+                                    "city": "East Rutherford, New Jersey"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CHI",
-                            "away_team": "BOL",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-06-18",
-                            "time": "18:00",
-                            "stadium": "Arena Pantanal",
-                            "city": "Cuiabá"
-                        },
-                        {
-                            "home_team": "ARG",
-                            "away_team": "URU",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-06-18",
-                            "time": "21:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
-                        },
-                        {
-                            "home_team": "URU",
-                            "away_team": "CHI",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2021-06-21",
-                            "time": "18:00",
-                            "stadium": "Arena Pantanal",
-                            "city": "Cuiabá"
-                        },
-                        {
-                            "home_team": "ARG",
-                            "away_team": "PAR",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-06-21",
-                            "time": "21:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
-                        },
-                        {
-                            "home_team": "BOL",
-                            "away_team": "URU",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2021-06-24",
-                            "time": "18:00",
-                            "stadium": "Arena Pantanal",
-                            "city": "Cuiabá"
-                        },
-                        {
-                            "home_team": "CHI",
-                            "away_team": "PAR",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2021-06-24",
-                            "time": "21:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
-                        },
-                        {
-                            "home_team": "URU",
-                            "away_team": "PAR",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-06-28",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro"
-                        },
-                        {
-                            "home_team": "BOL",
-                            "away_team": "ARG",
-                            "home_score": 1,
-                            "away_score": 4,
-                            "date": "2021-06-28",
-                            "time": "21:00",
-                            "stadium": "Arena Pantanal",
-                            "city": "Cuiabá"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "PER",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-06-29",
+                                    "time": "20:00",
+                                    "stadium": "Hard Rock Stadium",
+                                    "city": "Miami Gardens, Florida"
+                                },
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "CHI",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-06-29",
+                                    "time": "20:00",
+                                    "stadium": "Inter&Co Stadium",
+                                    "city": "Orlando, Florida"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "BRA" }, { "id": "VEN" }, { "id": "COL" }, { "id": "ECU" }, { "id": "PER" }],
-                    "matches": [
+                    "teams": [{ "id": "ECU" }, { "id": "VEN" }, { "id": "MEX" }, { "id": "JAM" }],
+                    "matchdays": [
                         {
-                            "home_team": "BRA",
-                            "away_team": "VEN",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2021-06-13",
-                            "time": "18:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ECU",
+                                    "away_team": "VEN",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-06-22",
+                                    "time": "15:00",
+                                    "stadium": "Levi's Stadium",
+                                    "city": "Santa Clara, California"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "JAM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-06-22",
+                                    "time": "20:00",
+                                    "stadium": "NRG Stadium",
+                                    "city": "Houston, Texas"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "COL",
-                            "away_team": "ECU",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-06-13",
-                            "time": "21:00",
-                            "stadium": "Arena Pantanal",
-                            "city": "Cuiabá"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "ECU",
+                                    "away_team": "JAM",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-06-26",
+                                    "time": "15:00",
+                                    "stadium": "Allegiant Stadium",
+                                    "city": "Paradise, Nevada"
+                                },
+                                {
+                                    "home_team": "VEN",
+                                    "away_team": "MEX",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-06-26",
+                                    "time": "18:00",
+                                    "stadium": "SoFi Stadium",
+                                    "city": "Inglewood, California"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "COL",
-                            "away_team": "VEN",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "2021-06-17",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "ECU",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-06-30",
+                                    "time": "17:00",
+                                    "stadium": "State Farm Stadium",
+                                    "city": "Glendale, Arizona"
+                                },
+                                {
+                                    "home_team": "JAM",
+                                    "away_team": "VEN",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-06-30",
+                                    "time": "19:00",
+                                    "stadium": "Q2 Stadium",
+                                    "city": "Austin, Texas"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Group C",
+                    "teams": [{ "id": "USA" }, { "id": "BOL" }, { "id": "URU" }, { "id": "PAN" }],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "BOL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-06-23",
+                                    "time": "17:00",
+                                    "stadium": "AT&T Stadium",
+                                    "city": "Arlington, Texas"
+                                },
+                                {
+                                    "home_team": "URU",
+                                    "away_team": "PAN",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-06-23",
+                                    "time": "21:00",
+                                    "stadium": "Hard Rock Stadium",
+                                    "city": "Miami Gardens, Florida"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "BRA",
-                            "away_team": "PER",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2021-06-17",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PAN",
+                                    "away_team": "USA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-06-27",
+                                    "time": "18:00",
+                                    "stadium": "Mercedes-Benz Stadium",
+                                    "city": "Atlanta, Georgia"
+                                },
+                                {
+                                    "home_team": "URU",
+                                    "away_team": "BOL",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2024-06-27",
+                                    "time": "21:00",
+                                    "stadium": "MetLife Stadium",
+                                    "city": "East Rutherford, New Jersey"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VEN",
-                            "away_team": "ECU",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2021-06-20",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "USA",
+                                    "away_team": "URU",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-07-01",
+                                    "time": "20:00",
+                                    "stadium": "Arrowhead Stadium",
+                                    "city": "Kansas City, Missouri"
+                                },
+                                {
+                                    "home_team": "BOL",
+                                    "away_team": "PAN",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-07-01",
+                                    "time": "21:00",
+                                    "stadium": "Inter&Co Stadium",
+                                    "city": "Orlando, Florida"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Group D",
+                    "teams": [{ "id": "PAR" }, { "id": "COL" }, { "id": "BRA" }, { "id": "CRC" }],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "COL",
+                                    "away_team": "PAR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-06-24",
+                                    "time": "17:00",
+                                    "stadium": "NRG Stadium",
+                                    "city": "Houston, Texas"
+                                },
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "CRC",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-06-24",
+                                    "time": "18:00",
+                                    "stadium": "SoFi Stadium",
+                                    "city": "Inglewood, California"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "COL",
-                            "away_team": "PER",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2021-06-20",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "COL",
+                                    "away_team": "CRC",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-06-28",
+                                    "time": "15:00",
+                                    "stadium": "State Farm Stadium",
+                                    "city": "Glendale, Arizona"
+                                },
+                                {
+                                    "home_team": "PAR",
+                                    "away_team": "BRA",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-06-28",
+                                    "time": "18:00",
+                                    "stadium": "Allegiant Stadium",
+                                    "city": "Paradise, Nevada"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "ECU",
-                            "away_team": "PER",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2021-06-23",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia"
-                        },
-                        {
-                            "home_team": "BRA",
-                            "away_team": "COL",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2021-06-23",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro"
-                        },
-                        {
-                            "home_team": "BRA",
-                            "away_team": "ECU",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2021-06-27",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia"
-                        },
-                        {
-                            "home_team": "VEN",
-                            "away_team": "PER",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2021-06-27",
-                            "time": "18:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "COL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-07-02",
+                                    "time": "18:00",
+                                    "stadium": "Levi's Stadium",
+                                    "city": "Santa Clara, California"
+                                },
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "PAR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-07-02",
+                                    "time": "20:00",
+                                    "stadium": "Q2 Stadium",
+                                    "city": "Austin, Texas"
+                                }
+                            ]
                         }
                     ]
                 }

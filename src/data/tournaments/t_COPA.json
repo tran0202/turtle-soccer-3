@@ -5,7 +5,7 @@
         "name": "Copa America USA 2024",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "Rocking the Continent",
             "host": { "teams": ["USA"] },
@@ -60,7 +60,7 @@
         "short_name": "Brazil 2021",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "Rocking the Continent",
             "host": { "teams": ["BRA"] },
@@ -117,7 +117,7 @@
         "name": "Copa America Brazil 2019",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "fairplay", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "Rocking the Continent",
             "host": { "teams": ["BRA"] },
@@ -175,7 +175,7 @@
         "name": "Copa America Centenario USA 2016",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2head", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "Copa_América_Centenario.svg",
@@ -231,7 +231,7 @@
         "name": "Copa America Chile 2015",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headresults", "penalty", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "slogan": "The Heart of Football",
             "host": { "teams": ["CHI"] },
@@ -294,7 +294,7 @@
         "name": "Copa America Argentina 2011",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headresults", "penalty", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["ARG"] },
             "logo_filename": "2011_Copa_América_logo.svg",
@@ -353,7 +353,7 @@
         "name": "Copa America Venezuela 2007",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headresults", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["VEN"] },
             "logo_filename": "2007_Copa_América_logo.svg",
@@ -405,7 +405,7 @@
         "name": "Copa America Peru 2004",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headresults", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["PER"] },
             "logo_filename": "2004_Copa_América_logo.svg",
@@ -456,7 +456,7 @@
         "name": "Copa America Colombia 2001",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["COL"] },
             "logo_filename": "Copa_América_2001_official_logo.png",
@@ -507,7 +507,7 @@
         "name": "Copa America Paraguay 1999",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["PAR"] },
             "logo_filename": "1999_Copa_América_logo.svg",
@@ -561,7 +561,7 @@
         "name": "Copa America Bolivia 1997",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["BOL"] },
             "logo_filename": "1997_Copa_América_logo.svg",
@@ -613,7 +613,7 @@
         "short_name": "Uruguay 1995",
         "competition_id": "COPA",
         "points_for_win": 3,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["URU"] },
             "logo_filename": "1995-copa-america-logo-300x200.png",
@@ -668,7 +668,7 @@
         "short_name": "Ecuador 1993",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["ECU"] },
             "logo_filename": "1993_Copa_América_logo.jpg",
@@ -720,7 +720,7 @@
         "short_name": "Chile 1991",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["CHI"] },
             "logo_filename": "1991_Copa_América_logo.png",
@@ -771,7 +771,7 @@
         "name": "Copa America Brazil 1989",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team", "head2headmatch", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["BRA"] },
             "logo_filename": "1989_Copa_América_logo.png",
@@ -822,7 +822,7 @@
         "name": "Copa America Argentina 1987",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "host": { "teams": ["ARG"] },
             "logo_filename": "1987_Copa_América_logo.svg",
@@ -879,7 +879,7 @@
         "short_name": "1983",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",
@@ -942,7 +942,7 @@
         "short_name": "1979",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",
@@ -999,7 +999,7 @@
         "short_name": "1975",
         "competition_id": "COPA",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "logo_filename": "640px-Logo_de_la_Conmebol_Copa_América.svg.png",

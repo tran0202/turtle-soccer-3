@@ -6,7 +6,7 @@
         "competition_id": "EURO",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferencegoalscoredwins", "penalty", "fairplaylight", "coefficient"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "United by Football",

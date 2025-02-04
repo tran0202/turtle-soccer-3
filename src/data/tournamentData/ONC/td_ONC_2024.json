@@ -3,140 +3,171 @@
     "stages": [
         {
             "name": "Group Stage",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advancement": { "teams": { "auto": [1, 2], "eliminated": [3, 4], "text": "The top 2 teams would advance to the Semi-finals." } },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" }
+            ],
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "PNG" }, { "id": "NCL" }, { "id": "TAH" }, { "id": "SAM" }],
-                    "matches": [
+                    "teams": [{ "id": "NCL", "withdrew": true }, { "id": "NZL" }, { "id": "SOL" }, { "id": "VAN" }],
+                    "matchdays": [
                         {
-                            "home_team": "PNG",
-                            "away_team": "NCL",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2016-05-29",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "NZL",
+                                    "away_team": "NCL",
+                                    "match_cancelled": true,
+                                    "date": "2024-06-15",
+                                    "time": "12:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "SOL",
+                                    "away_team": "VAN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-06-15",
+                                    "time": "15:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TAH",
-                            "away_team": "SAM",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2016-05-29",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "NZL",
+                                    "away_team": "SOL",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-06-18",
+                                    "time": "12:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "VAN",
+                                    "away_team": "NCL",
+                                    "match_cancelled": true,
+                                    "date": "2024-06-18",
+                                    "time": "15:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "PNG",
-                            "away_team": "TAH",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "2016-06-01",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "NCL",
-                            "away_team": "SAM",
-                            "home_score": 7,
-                            "away_score": 0,
-                            "date": "2016-06-01",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "SAM",
-                            "away_team": "PNG",
-                            "home_score": 0,
-                            "away_score": 8,
-                            "date": "2016-06-05",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "TAH",
-                            "away_team": "NCL",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "2016-06-05",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "NCL",
+                                    "away_team": "SOL",
+                                    "match_cancelled": true,
+                                    "date": "2024-06-21",
+                                    "time": "12:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "VAN",
+                                    "away_team": "NZL",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2024-06-21",
+                                    "time": "15:00",
+                                    "stadium": "VFF Freshwater Stadium",
+                                    "city": "Port Vila"
+                                }
+                            ]
                         }
                     ]
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "NZL" }, { "id": "FIJ" }, { "id": "VAN" }, { "id": "SOL" }],
-                    "matches": [
+                    "teams": [{ "id": "TAH" }, { "id": "SAM" }, { "id": "PNG" }, { "id": "FIJ" }],
+                    "matchdays": [
                         {
-                            "home_team": "NZL",
-                            "away_team": "FIJ",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2016-05-28",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "TAH",
+                                    "away_team": "SAM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-06-16",
+                                    "time": "13:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                },
+                                {
+                                    "home_team": "PNG",
+                                    "away_team": "FIJ",
+                                    "home_score": 1,
+                                    "away_score": 5,
+                                    "date": "2024-06-16",
+                                    "time": "16:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VAN",
-                            "away_team": "SOL",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2016-05-28",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "PNG",
+                                    "away_team": "TAH",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-06-19",
+                                    "time": "16:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                },
+                                {
+                                    "home_team": "SAM",
+                                    "away_team": "FIJ",
+                                    "home_score": 1,
+                                    "away_score": 9,
+                                    "date": "2024-06-19",
+                                    "time": "19:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "VAN",
-                            "away_team": "NZL",
-                            "home_score": 0,
-                            "away_score": 5,
-                            "date": "2016-05-31",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "SOL",
-                            "away_team": "FIJ",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2016-05-31",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "FIJ",
-                            "away_team": "VAN",
-                            "home_score": 2,
-                            "away_score": 3,
-                            "date": "2016-06-04",
-                            "time": "16:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
-                        },
-                        {
-                            "home_team": "NZL",
-                            "away_team": "SOL",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2016-06-04",
-                            "time": "19:00",
-                            "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "SAM",
+                                    "away_team": "PNG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-06-22",
+                                    "time": "16:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                },
+                                {
+                                    "home_team": "FIJ",
+                                    "away_team": "TAH",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-06-22",
+                                    "time": "19:00",
+                                    "stadium": "HFC Bank Stadium",
+                                    "city": "Suva"
+                                }
+                            ]
                         }
                     ]
                 }

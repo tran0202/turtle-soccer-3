@@ -3,7 +3,15 @@ import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
 import { getTeamFlag } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
-import { TiebreakTooltip, PlayoffWinTooltip, WithdrewTooltip, PointDeductionTooltip, TieLastMatchTooltip, TieH2HTooltip } from '../core/TooltipHelper'
+import {
+    TiebreakTooltip,
+    FairPlayTooltip,
+    PlayoffWinTooltip,
+    WithdrewTooltip,
+    PointDeductionTooltip,
+    TieLastMatchTooltip,
+    TieH2HTooltip,
+} from '../core/TooltipHelper'
 
 const RankingsHeader = (props) => {
     const { config } = props
@@ -83,8 +91,15 @@ const RankingsRow = (props) => {
                 {ranking.away_goal_win && (
                     <TiebreakTooltip target={`${ranking.id}awayGoalTooltip`} anchor="(a)" rule={`away goals: ${ranking.away_goal_win_note}`} />
                 )}
-                {ranking.fair_play && (
-                    <TiebreakTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" rule={`fair play points: ${ranking.fair_play_note}`} />
+                {!config.no_h2h_tooltip && ranking.fair_play && (
+                    <FairPlayTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" notes={ranking.fair_play_note} />
+                )}
+                {ranking.partial_disciplinary_point && (
+                    <TiebreakTooltip
+                        target={`${ranking.id}disciplinaryPointTooltip`}
+                        anchor="(dp)"
+                        rule={`disciplinary points: ${ranking.partial_disciplinary_point_note}`}
+                    />
                 )}
                 {!config.no_h2h_tooltip && ranking.draw_lot && (
                     <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
