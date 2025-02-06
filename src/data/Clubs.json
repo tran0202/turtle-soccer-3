@@ -100,7 +100,7 @@
         "nation_id": "MDA",
         "parent_team_id": "",
         "club_code": "SHE",
-        "logo_filename": "SHE.png",
+        "logo_filename": "FC_Sheriff.svg.png",
         "official_name": "FC Sheriff Tiraspol"
     },
     {
@@ -205,12 +205,12 @@
     },
     {
         "id": "MAL",
-        "name": "Malmo",
+        "name": "Malmö FF",
         "team_type_id": "CLUB",
         "nation_id": "SWE",
         "parent_team_id": "",
         "club_code": "MAL",
-        "logo_filename": "MAL.png",
+        "logo_filename": "Malmo_FF_logo.svg.png",
         "official_name": "Malmö FF"
     },
     {
@@ -372,7 +372,7 @@
         "nation_id": "SCO",
         "parent_team_id": "",
         "club_code": "CEL",
-        "logo_filename": "CEL.png",
+        "logo_filename": "Celtic_FC_crest.svg.png",
         "official_name": "Celtic FC"
     },
     {
@@ -422,7 +422,7 @@
         "nation_id": "DEN",
         "parent_team_id": "",
         "club_code": "FCM",
-        "logo_filename": "FCM.png",
+        "logo_filename": "FC_Midtjylland_logo.svg.png",
         "official_name": "FC Midtjylland"
     },
     {
@@ -443,7 +443,7 @@
         "nation_id": "CRO",
         "parent_team_id": "",
         "club_code": "DZA",
-        "logo_filename": "GNK_Dinamo_Zagreb_badge_in_2019_(2).png",
+        "logo_filename": "GNK_Dinamo_Zagreb_crest.svg.png",
         "official_name": "GNK Dinamo Zagreb"
     },
     {
@@ -495,7 +495,7 @@
         "nation_id": "AUT",
         "parent_team_id": "",
         "club_code": "RBS",
-        "logo_filename": "FC_Red_Bull_Salzburg_logo.svg",
+        "logo_filename": "FC_Red_Bull_Salzburg_logo.svg.png",
         "official_name": "FC Salzburg"
     },
     {
@@ -526,7 +526,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "DYK",
-        "logo_filename": "DYK.png",
+        "logo_filename": "289px-FC_Dynamo_Kyiv_logo.svg.png",
         "official_name": "FC Dynamo Kyiv"
     },
     {
@@ -567,7 +567,7 @@
         "nation_id": "CZE",
         "parent_team_id": "",
         "club_code": "SLP",
-        "logo_filename": "SLP.png",
+        "logo_filename": "348px-SK_Slavia_Praha_full_logo.svg.png",
         "official_name": "SK Slavia Praha"
     },
     {
@@ -626,7 +626,7 @@
     },
     {
         "id": "ATM",
-        "name": "Atletico Madrid",
+        "name": "Atlético Madrid",
         "short_name": "Atletico Ma.",
         "team_type_id": "CLUB",
         "nation_id": "ESP",
@@ -913,12 +913,12 @@
     },
     {
         "id": "FER",
-        "name": "Ferencvaros",
+        "name": "Ferencváros",
         "team_type_id": "CLUB",
         "nation_id": "HUN",
         "parent_team_id": "",
         "club_code": "FER",
-        "logo_filename": "FerencvárosiTClogó.png",
+        "logo_filename": "462px-Ferencvarosi_TC.svg.png",
         "official_name": "Ferencvárosi TC"
     },
     {
@@ -1008,7 +1008,7 @@
         "nation_id": "DEN",
         "parent_team_id": "",
         "club_code": "COP",
-        "logo_filename": "COP.png",
+        "logo_filename": "FC_Copenhagen_logo.svg.png",
         "official_name": "FC København"
     },
     {
@@ -1030,7 +1030,7 @@
         "nation_id": "GRE",
         "parent_team_id": "",
         "club_code": "OLY",
-        "logo_filename": "OLY.png",
+        "logo_filename": "Olympiacos_FC_crest.svg.png",
         "official_name": "Olympiacos FC"
     },
     {
@@ -1040,18 +1040,18 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "KRA",
-        "logo_filename": "KRA.png",
+        "logo_filename": "FC_Krasnodar_logo.svg.png",
         "official_name": "FC Krasnodar"
     },
     {
         "id": "IBA",
-        "name": "Istanbul Basaksehir",
+        "name": "İstanbul Başakşehir",
         "short_name": "Basaksehir",
         "team_type_id": "CLUB",
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "IBA",
-        "logo_filename": "İstanbul_Başakşehir_logo.svg",
+        "logo_filename": "İstanbul_Başakşehir_logo.svg.png",
         "official_name": "İstanbul Başakşehir"
     },
     {
@@ -1097,7 +1097,7 @@
     },
     {
         "id": "LIL",
-        "name": "Lille OSC",
+        "name": "Lille",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -1113,7 +1113,7 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "ZSP",
-        "logo_filename": "ZSP.png",
+        "logo_filename": "640px-FC_Zenit_2_star_2023_logo.png",
         "official_name": "FC Zenit"
     },
     {
@@ -1123,7 +1123,7 @@
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "GNK",
-        "logo_filename": "GNK.png",
+        "logo_filename": "KRC_Genk_Logo_2016.svg.png",
         "official_name": "KRC Genk"
     },
     {
@@ -2259,12 +2259,12 @@
     },
     {
         "id": "BES",
-        "name": "Besiktas",
+        "name": "Beşiktaş",
         "team_type_id": "CLUB",
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "BES",
-        "logo_filename": "Besiktas_JK.svg",
+        "logo_filename": "367px-BesiktasJK-Logo.svg.png",
         "official_name": "Beşiktaş JK"
     },
     {
@@ -2500,7 +2500,7 @@
     },
     {
         "id": "SLI",
-        "name": "Sporting Lisbon",
+        "name": "Sporting CP",
         "short_name": "Sporting Li.",
         "team_type_id": "CLUB",
         "nation_id": "POR",
@@ -2551,7 +2551,7 @@
     },
     {
         "id": "OLM",
-        "name": "Olympique Marseille",
+        "name": "Marseille",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -2566,7 +2566,7 @@
         "nation_id": "ITA",
         "parent_team_id": "",
         "club_code": "LAZ",
-        "logo_filename": "LAZ.png",
+        "logo_filename": "S.S._Lazio_badge.svg.png",
         "official_name": "SS Lazio"
     },
     {
@@ -2586,7 +2586,7 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "REN",
-        "logo_filename": "REN.png",
+        "logo_filename": "Stade_Rennais_FC.svg.png",
         "official_name": "Stade Rennais FC"
     },
     {
@@ -2696,7 +2696,7 @@
         "nation_id": "ISR",
         "parent_team_id": "",
         "club_code": "HAI",
-        "logo_filename": "Maccabi_Haifa_FC_Logo_2020.png",
+        "logo_filename": "Maccabi_Haifa_FC_Logo_2023.png",
         "official_name": "Maccabi Haifa Football Club"
     },
     {
@@ -3139,7 +3139,7 @@
         "nation_id": "GER",
         "parent_team_id": "",
         "club_code": "WOB",
-        "logo_filename": "Logo-VfL-Wolfsburg.svg",
+        "logo_filename": "VfL_Wolfsburg_Logo.svg.png",
         "official_name": "VfL Wolfsburg"
     },
     {
@@ -3164,13 +3164,13 @@
     },
     {
         "id": "BMG",
-        "name": "Borussia Monchengladbach",
+        "name": "Borussia Mönchengladbach",
         "short_name": "Mönchengladbach",
         "team_type_id": "CLUB",
         "nation_id": "GER",
         "parent_team_id": "",
         "club_code": "BMG",
-        "logo_filename": "Borussia_Mönchengladbach_logo.svg",
+        "logo_filename": "301px-Borussia_Mönchengladbach_logo.svg.png",
         "official_name": "Borussia Verein für Leibesübungen 1900 e.V. Mönchengladbach"
     },
     {

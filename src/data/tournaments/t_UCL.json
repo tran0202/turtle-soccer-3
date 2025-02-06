@@ -82,16 +82,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": [
-            "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
-        ],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "awaygoals", "fairplay"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "640px-Champions_League_2023_Graffiti_01.jpg",
@@ -152,16 +143,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": [
-            "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
-        ],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "640px-Champions_League_Ball_2021-22.jpg",
@@ -222,16 +204,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": [
-            "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
-        ],
+        "tiebreakers": ["point", "head2head", "head2headawaygoals", "goaldifference", "goalfor", "fairplay"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "347px-Manchester_City_vs_Chelsea_2021-05-29.svg.png",
@@ -294,16 +267,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": [
-            "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
-        ],
+        "tiebreakers": ["point", "head2head", "head2headawaygoals", "goaldifference", "goalfor", "fairplay"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "347px-Paris_Saint-Germain_vs_Bayern_Munich_2020-08-23.svg.png",
@@ -366,7 +330,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": ["point", "head2head", "head2headawaygoals", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "head2headawaygoals", "goaldifference", "goalfor", "fairplay"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "320px-Plaza_del_Callao_with_decoration_related_to_the_2019_Champions_League_final.jpg",

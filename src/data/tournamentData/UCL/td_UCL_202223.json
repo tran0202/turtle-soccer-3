@@ -761,45 +761,44 @@
         },
         {
             "name": "Group Stage",
-            "type": "roundrobinmatchday",
+            "type": "roundrobin_final",
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "transferred": [3],
-                    "eliminated": [4],
-                    "text": "The top 2 teams would advance to the Round of 16.The third-placed teams would transfer to the Europa League Round of 32."
-                }
-            },
+            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round" }
+            ],
+            "next_round_note": "Third-place teams transfer to the Europa League Round of 32",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "RBS" }, { "id": "LMO" }, { "id": "BAY" }, { "id": "ATM" }],
+                    "teams": [{ "id": "AJA" }, { "id": "RFC" }, { "id": "NAP" }, { "id": "LIV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "LMO",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-21",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
-                                },
-                                {
-                                    "home_team": "BAY",
-                                    "away_team": "ATM",
+                                    "home_team": "AJA",
+                                    "away_team": "RFC",
                                     "home_score": 4,
                                     "away_score": 0,
-                                    "date": "2020-10-21",
+                                    "date": "2022-09-07",
+                                    "time": "18:45",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
+                                },
+                                {
+                                    "home_team": "NAP",
+                                    "away_team": "LIV",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2022-09-07",
                                     "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich"
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 }
                             ]
                         },
@@ -807,24 +806,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
-                                    "away_team": "BAY",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
+                                    "home_team": "LIV",
+                                    "away_team": "AJA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-09-13",
+                                    "time": "21:00",
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "ATM",
-                                    "away_team": "RBS",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "home_team": "RFC",
+                                    "away_team": "NAP",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -832,24 +831,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
-                                    "away_team": "ATM",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-11-03",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
+                                    "home_team": "LIV",
+                                    "away_team": "RFC",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-10-04",
+                                    "time": "21:00",
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "BAY",
-                                    "home_score": 2,
+                                    "home_team": "AJA",
+                                    "away_team": "NAP",
+                                    "home_score": 1,
                                     "away_score": 6,
-                                    "date": "2020-11-03",
+                                    "date": "2022-10-04",
                                     "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
                                 }
                             ]
                         },
@@ -857,24 +856,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "ATM",
-                                    "away_team": "LMO",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-11-25",
-                                    "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
+                                    "home_team": "NAP",
+                                    "away_team": "AJA",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2022-10-12",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 },
                                 {
-                                    "home_team": "BAY",
-                                    "away_team": "RBS",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-11-25",
+                                    "home_team": "RFC",
+                                    "away_team": "LIV",
+                                    "home_score": 1,
+                                    "away_score": 7,
+                                    "date": "2022-10-12",
                                     "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -882,24 +881,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
-                                    "away_team": "RBS",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-12-01",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
+                                    "home_team": "NAP",
+                                    "away_team": "RFC",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2022-10-26",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 },
                                 {
-                                    "home_team": "ATM",
-                                    "away_team": "BAY",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-01",
+                                    "home_team": "AJA",
+                                    "away_team": "LIV",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2022-10-26",
                                     "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
                                 }
                             ]
                         },
@@ -907,24 +906,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "BAY",
-                                    "away_team": "LMO",
+                                    "home_team": "LIV",
+                                    "away_team": "NAP",
                                     "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-12-09",
+                                    "date": "2022-11-01",
                                     "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich"
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "ATM",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-09",
+                                    "home_team": "RFC",
+                                    "away_team": "AJA",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2022-11-01",
                                     "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         }
@@ -932,30 +931,30 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "RMA" }, { "id": "SHK" }, { "id": "INT" }, { "id": "BMG" }],
+                    "teams": [{ "id": "ATM" }, { "id": "PTO" }, { "id": "BRG" }, { "id": "B04" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "SHK",
+                                    "home_team": "ATM",
+                                    "away_team": "PTO",
                                     "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2020-10-21",
-                                    "time": "18:55",
-                                    "stadium": "Alfredo di Stéfano",
+                                    "away_score": 1,
+                                    "date": "2022-09-07",
+                                    "time": "21:00",
+                                    "stadium": "Metropolitano Stadium",
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "BMG",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-21",
+                                    "home_team": "BRG",
+                                    "away_team": "B04",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-09-07",
                                     "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
                                 }
                             ]
                         },
@@ -963,24 +962,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "INT",
+                                    "home_team": "PTO",
+                                    "away_team": "BRG",
                                     "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "away_score": 4,
+                                    "date": "2022-09-13",
+                                    "time": "21:00",
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 },
                                 {
-                                    "home_team": "BMG",
-                                    "away_team": "RMA",
+                                    "home_team": "B04",
+                                    "away_team": "ATM",
                                     "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "away_score": 0,
+                                    "date": "2022-09-13",
                                     "time": "21:00",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
                                 }
                             ]
                         },
@@ -988,24 +987,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "BMG",
-                                    "home_score": 0,
-                                    "away_score": 6,
-                                    "date": "2020-11-03",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "PTO",
+                                    "away_team": "B04",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-10-04",
+                                    "time": "21:00",
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 },
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "INT",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-03",
+                                    "home_team": "BRG",
+                                    "away_team": "ATM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-10-04",
                                     "time": "21:00",
-                                    "stadium": "Alfredo di Stéfano",
-                                    "city": "Madrid"
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
                                 }
                             ]
                         },
@@ -1013,24 +1012,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "BMG",
-                                    "away_team": "SHK",
-                                    "home_score": 4,
+                                    "home_team": "ATM",
+                                    "away_team": "BRG",
+                                    "home_score": 0,
                                     "away_score": 0,
-                                    "date": "2020-11-25",
-                                    "time": "18:55",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "date": "2022-10-12",
+                                    "time": "18:45",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "RMA",
+                                    "home_team": "B04",
+                                    "away_team": "PTO",
                                     "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-25",
+                                    "away_score": 3,
+                                    "date": "2022-10-12",
                                     "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
                                 }
                             ]
                         },
@@ -1038,24 +1037,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "RMA",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "BRG",
+                                    "away_team": "PTO",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2022-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
                                 },
                                 {
-                                    "home_team": "BMG",
-                                    "away_team": "INT",
+                                    "home_team": "ATM",
+                                    "away_team": "B04",
                                     "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2020-12-01",
+                                    "away_score": 2,
+                                    "date": "2022-10-26",
                                     "time": "21:00",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid"
                                 }
                             ]
                         },
@@ -1063,24 +1062,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "BMG",
+                                    "home_team": "PTO",
+                                    "away_team": "ATM",
                                     "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-09",
-                                    "time": "21:00",
-                                    "stadium": "Alfredo di Stéfano",
-                                    "city": "Madrid"
+                                    "away_score": 1,
+                                    "date": "2022-11-01",
+                                    "time": "18:45",
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "SHK",
+                                    "home_team": "B04",
+                                    "away_team": "BRG",
                                     "home_score": 0,
                                     "away_score": 0,
-                                    "date": "2020-12-09",
-                                    "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "date": "2022-11-01",
+                                    "time": "18:45",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
                                 }
                             ]
                         }
@@ -1088,30 +1087,30 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "MCI" }, { "id": "PTO" }, { "id": "OLY" }, { "id": "OLM" }],
+                    "teams": [{ "id": "FCB" }, { "id": "VPL" }, { "id": "INT" }, { "id": "BAY" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "PTO",
-                                    "home_score": 3,
+                                    "home_team": "FCB",
+                                    "away_team": "VPL",
+                                    "home_score": 5,
                                     "away_score": 1,
-                                    "date": "2020-10-21",
+                                    "date": "2022-09-07",
                                     "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "OLM",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-21",
+                                    "home_team": "INT",
+                                    "away_team": "BAY",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-09-07",
                                     "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1119,24 +1118,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "OLY",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "home_team": "VPL",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-09-13",
+                                    "time": "18:45",
+                                    "stadium": "Doosan Arena",
+                                    "city": "Plzeň"
                                 },
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-10-27",
+                                    "home_team": "BAY",
+                                    "away_team": "FCB",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-09-13",
                                     "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich"
                                 }
                             ]
                         },
@@ -1144,24 +1143,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "OLY",
-                                    "home_score": 3,
+                                    "home_team": "BAY",
+                                    "away_team": "VPL",
+                                    "home_score": 5,
                                     "away_score": 0,
-                                    "date": "2020-11-03",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
+                                    "date": "2022-10-04",
+                                    "time": "18:45",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich"
                                 },
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "OLM",
-                                    "home_score": 3,
+                                    "home_team": "INT",
+                                    "away_team": "FCB",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-11-03",
+                                    "date": "2022-10-04",
                                     "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1169,24 +1168,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-11-25",
-                                    "time": "18:55",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "home_team": "FCB",
+                                    "away_team": "INT",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2022-10-12",
+                                    "time": "21:00",
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "PTO",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-25",
+                                    "home_team": "VPL",
+                                    "away_team": "BAY",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2022-10-12",
                                     "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "stadium": "Doosan Arena",
+                                    "city": "Plzeň"
                                 }
                             ]
                         },
@@ -1194,24 +1193,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "OLY",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-01",
-                                    "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "home_team": "INT",
+                                    "away_team": "VPL",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2022-10-26",
+                                    "time": "18:45",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 },
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "MCI",
+                                    "home_team": "FCB",
+                                    "away_team": "BAY",
                                     "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
+                                    "away_score": 3,
+                                    "date": "2022-10-26",
                                     "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona"
                                 }
                             ]
                         },
@@ -1219,24 +1218,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "OLM",
-                                    "home_score": 3,
+                                    "home_team": "BAY",
+                                    "away_team": "INT",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-12-09",
+                                    "date": "2022-11-01",
                                     "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich"
                                 },
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "PTO",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-09",
+                                    "home_team": "VPL",
+                                    "away_team": "FCB",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2022-11-01",
                                     "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "stadium": "Doosan Arena",
+                                    "city": "Plzeň"
                                 }
                             ]
                         }
@@ -1244,30 +1243,30 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "AJA" }, { "id": "LIV" }, { "id": "FCM" }, { "id": "ATT" }],
+                    "teams": [{ "id": "SGE" }, { "id": "SLI" }, { "id": "TOT" }, { "id": "OLM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "LIV",
+                                    "home_team": "SGE",
+                                    "away_team": "SLI",
                                     "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-10-21",
-                                    "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "away_score": 3,
+                                    "date": "2022-09-07",
+                                    "time": "18:45",
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt"
                                 },
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "ATT",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-10-21",
+                                    "home_team": "TOT",
+                                    "away_team": "OLM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-09-07",
                                     "time": "21:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "stadium": "Tottenham Hotspur Stadium",
+                                    "city": "London"
                                 }
                             ]
                         },
@@ -1275,24 +1274,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "FCM",
+                                    "home_team": "SLI",
+                                    "away_team": "TOT",
                                     "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
+                                    "date": "2022-09-13",
+                                    "time": "18:45",
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "AJA",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "home_team": "OLM",
+                                    "away_team": "SGE",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-09-13",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 }
                             ]
                         },
@@ -1300,24 +1299,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "AJA",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-11-03",
-                                    "time": "21:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "home_team": "OLM",
+                                    "away_team": "SLI",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2022-10-04",
+                                    "time": "19:05",
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "LIV",
+                                    "home_team": "SGE",
+                                    "away_team": "TOT",
                                     "home_score": 0,
-                                    "away_score": 5,
-                                    "date": "2020-11-03",
+                                    "away_score": 0,
+                                    "date": "2022-10-04",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt"
                                 }
                             ]
                         },
@@ -1325,24 +1324,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "ATT",
-                                    "home_score": 0,
+                                    "home_team": "TOT",
+                                    "away_team": "SGE",
+                                    "home_score": 3,
                                     "away_score": 2,
-                                    "date": "2020-11-25",
+                                    "date": "2022-10-12",
                                     "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
+                                    "stadium": "Tottenham Hotspur Stadium",
+                                    "city": "London"
                                 },
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "FCM",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-11-25",
+                                    "home_team": "SLI",
+                                    "away_team": "OLM",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-10-12",
                                     "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1350,24 +1349,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "AJA",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
-                                    "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
-                                },
-                                {
-                                    "home_team": "ATT",
-                                    "away_team": "FCM",
+                                    "home_team": "TOT",
+                                    "away_team": "SLI",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-12-01",
+                                    "date": "2022-10-26",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "Tottenham Hotspur Stadium",
+                                    "city": "London"
+                                },
+                                {
+                                    "home_team": "SGE",
+                                    "away_team": "OLM",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-10-26",
+                                    "time": "21:00",
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt"
                                 }
                             ]
                         },
@@ -1375,24 +1374,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "ATT",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-12-09",
-                                    "time": "18:55",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "home_team": "SLI",
+                                    "away_team": "SGE",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-01",
+                                    "time": "21:00",
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "LIV",
+                                    "home_team": "OLM",
+                                    "away_team": "TOT",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-09",
-                                    "time": "18:55",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "away_score": 2,
+                                    "date": "2022-11-01",
+                                    "time": "21:00",
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 }
                             ]
                         }
@@ -1400,30 +1399,30 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "CHE" }, { "id": "SEV" }, { "id": "REN" }, { "id": "KRA" }],
+                    "teams": [{ "id": "DZA" }, { "id": "CHE" }, { "id": "RBS" }, { "id": "MIL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "CHE",
-                                    "away_team": "SEV",
-                                    "home_score": 0,
+                                    "home_team": "DZA",
+                                    "away_team": "CHE",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-10-20",
-                                    "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London"
+                                    "date": "2022-09-06",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Maksimir",
+                                    "city": "Zagreb"
                                 },
                                 {
-                                    "home_team": "REN",
-                                    "away_team": "KRA",
+                                    "home_team": "RBS",
+                                    "away_team": "MIL",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "date": "2022-09-06",
                                     "time": "21:00",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 }
                             ]
                         },
@@ -1431,24 +1430,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-10-28",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "home_team": "MIL",
+                                    "away_team": "DZA",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2022-09-14",
+                                    "time": "18:45",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 },
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "REN",
+                                    "home_team": "CHE",
+                                    "away_team": "RBS",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-28",
+                                    "away_score": 1,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London"
                                 }
                             ]
                         },
@@ -1456,21 +1455,21 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "KRA",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-04",
-                                    "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "home_team": "RBS",
+                                    "away_team": "DZA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "REN",
+                                    "away_team": "MIL",
                                     "home_score": 3,
                                     "away_score": 0,
-                                    "date": "2020-11-04",
+                                    "date": "2022-10-05",
                                     "time": "21:00",
                                     "stadium": "Stamford Bridge",
                                     "city": "London"
@@ -1481,24 +1480,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "SEV",
+                                    "home_team": "DZA",
+                                    "away_team": "RBS",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-11-24",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "away_score": 1,
+                                    "date": "2022-10-11",
+                                    "time": "21:00",
+                                    "stadium": "Stadion Maksimir",
+                                    "city": "Zagreb"
                                 },
                                 {
-                                    "home_team": "REN",
+                                    "home_team": "MIL",
                                     "away_team": "CHE",
-                                    "home_score": 1,
+                                    "home_score": 0,
                                     "away_score": 2,
-                                    "date": "2020-11-24",
-                                    "time": "18:55",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "date": "2022-10-11",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1506,24 +1505,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "REN",
+                                    "home_team": "RBS",
+                                    "away_team": "CHE",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-02",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "away_score": 2,
+                                    "date": "2022-10-25",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 },
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "CHE",
+                                    "home_team": "DZA",
+                                    "away_team": "MIL",
                                     "home_score": 0,
                                     "away_score": 4,
-                                    "date": "2020-12-02",
+                                    "date": "2022-10-25",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "stadium": "Stadion Maksimir",
+                                    "city": "Zagreb"
                                 }
                             ]
                         },
@@ -1532,23 +1531,23 @@
                             "matches": [
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "KRA",
-                                    "home_score": 1,
+                                    "away_team": "DZA",
+                                    "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2020-12-08",
+                                    "date": "2022-11-02",
                                     "time": "21:00",
                                     "stadium": "Stamford Bridge",
                                     "city": "London"
                                 },
                                 {
-                                    "home_team": "REN",
-                                    "away_team": "SEV",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-12-08",
+                                    "home_team": "MIL",
+                                    "away_team": "RBS",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2022-11-02",
                                     "time": "21:00",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         }
@@ -1556,30 +1555,30 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "DOR" }],
+                    "teams": [{ "id": "CEL" }, { "id": "RMA" }, { "id": "RBL" }, { "id": "SHK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "BRG",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "home_team": "CEL",
+                                    "away_team": "RMA",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2022-09-06",
+                                    "time": "21:00",
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 },
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "DOR",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "home_team": "RBL",
+                                    "away_team": "SHK",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2022-09-06",
                                     "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 }
                             ]
                         },
@@ -1587,24 +1586,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "ZSP",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-28",
-                                    "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund"
-                                },
-                                {
-                                    "home_team": "BRG",
-                                    "away_team": "LAZ",
+                                    "home_team": "SHK",
+                                    "away_team": "CEL",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-10-28",
+                                    "date": "2022-09-14",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Wojska Polskiego",
+                                    "city": "Warsaw"
+                                },
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "RBL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
                                 }
                             ]
                         },
@@ -1612,24 +1611,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "LAZ",
-                                    "home_score": 1,
+                                    "home_team": "RBL",
+                                    "away_team": "CEL",
+                                    "home_score": 3,
                                     "away_score": 1,
-                                    "date": "2020-11-04",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "date": "2022-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 },
                                 {
-                                    "home_team": "BRG",
-                                    "away_team": "DOR",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-04",
+                                    "home_team": "RMA",
+                                    "away_team": "SHK",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-10-05",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
                                 }
                             ]
                         },
@@ -1637,24 +1636,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "ZSP",
-                                    "home_score": 3,
+                                    "home_team": "SHK",
+                                    "away_team": "RMA",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-11-24",
+                                    "date": "2022-10-11",
                                     "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "stadium": "Stadion Wojska Polskiego",
+                                    "city": "Warsaw"
                                 },
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "BRG",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-11-24",
+                                    "home_team": "CEL",
+                                    "away_team": "RBL",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-10-11",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund"
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -1662,24 +1661,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "LAZ",
+                                    "home_team": "CEL",
+                                    "away_team": "SHK",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-12-02",
+                                    "date": "2022-10-25",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund"
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 },
                                 {
-                                    "home_team": "BRG",
-                                    "away_team": "ZSP",
+                                    "home_team": "RBL",
+                                    "away_team": "RMA",
                                     "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-12-02",
+                                    "away_score": 2,
+                                    "date": "2022-10-25",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 }
                             ]
                         },
@@ -1687,24 +1686,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "DOR",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-12-08",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "home_team": "RMA",
+                                    "away_team": "CEL",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2022-11-02",
+                                    "time": "18:45",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "BRG",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-12-08",
-                                    "time": "18:55",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "home_team": "SHK",
+                                    "away_team": "RBL",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2022-11-02",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Wojska Polskiego",
+                                    "city": "Warsaw"
                                 }
                             ]
                         }
@@ -1712,30 +1711,30 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "DYK" }, { "id": "JUV" }, { "id": "FCB" }, { "id": "FER" }],
+                    "teams": [{ "id": "DOR" }, { "id": "COP" }, { "id": "SEV" }, { "id": "MCI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "JUV",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "DOR",
+                                    "away_team": "COP",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2022-09-06",
+                                    "time": "18:45",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund"
                                 },
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "FER",
-                                    "home_score": 5,
-                                    "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "home_team": "SEV",
+                                    "away_team": "MCI",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2022-09-06",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
                                 }
                             ]
                         },
@@ -1743,24 +1742,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "FCB",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-28",
+                                    "home_team": "MCI",
+                                    "away_team": "DOR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "DYK",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-28",
+                                    "home_team": "COP",
+                                    "away_team": "SEV",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Groupama Arena",
-                                    "city": "Budapest"
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 }
                             ]
                         },
@@ -1768,24 +1767,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "DYK",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-11-04",
+                                    "home_team": "MCI",
+                                    "away_team": "COP",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2022-10-05",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "JUV",
+                                    "home_team": "SEV",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 4,
-                                    "date": "2020-11-04",
+                                    "date": "2022-10-05",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest"
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
                                 }
                             ]
                         },
@@ -1793,24 +1792,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "FCB",
+                                    "home_team": "COP",
+                                    "away_team": "MCI",
                                     "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-11-24",
-                                    "time": "21:00",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "away_score": 0,
+                                    "date": "2022-10-11",
+                                    "time": "18:45",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 },
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "FER",
-                                    "home_score": 2,
+                                    "home_team": "DOR",
+                                    "away_team": "SEV",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-11-24",
+                                    "date": "2022-10-11",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund"
                                 }
                             ]
                         },
@@ -1818,24 +1817,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "DYK",
+                                    "home_team": "SEV",
+                                    "away_team": "COP",
                                     "home_score": 3,
                                     "away_score": 0,
-                                    "date": "2020-12-02",
-                                    "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "date": "2022-10-25",
+                                    "time": "18:45",
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "FCB",
+                                    "home_team": "DOR",
+                                    "away_team": "MCI",
                                     "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-12-02",
+                                    "away_score": 0,
+                                    "date": "2022-10-25",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest"
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund"
                                 }
                             ]
                         },
@@ -1843,24 +1842,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "JUV",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-12-08",
+                                    "home_team": "MCI",
+                                    "away_team": "SEV",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2022-11-02",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "FER",
+                                    "home_team": "COP",
+                                    "away_team": "DOR",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-08",
+                                    "away_score": 1,
+                                    "date": "2022-11-02",
                                     "time": "21:00",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 }
                             ]
                         }
@@ -1868,30 +1867,30 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "PSG" }, { "id": "MUN" }, { "id": "RBL" }, { "id": "IBA" }],
+                    "teams": [{ "id": "PSG" }, { "id": "JUV" }, { "id": "SLB" }, { "id": "MHA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "MUN",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
+                                    "away_team": "JUV",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-09-06",
                                     "time": "21:00",
                                     "stadium": "Parc des Princes",
                                     "city": "Paris"
                                 },
                                 {
-                                    "home_team": "RBL",
-                                    "away_team": "IBA",
+                                    "home_team": "SLB",
+                                    "away_team": "MHA",
                                     "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-10-20",
+                                    "date": "2022-09-06",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1899,24 +1898,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "PSG",
-                                    "home_score": 0,
+                                    "home_team": "JUV",
+                                    "away_team": "SLB",
+                                    "home_score": 1,
                                     "away_score": 2,
-                                    "date": "2020-10-28",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "date": "2022-09-14",
+                                    "time": "21:00",
+                                    "stadium": "Juventus Stadium",
+                                    "city": "Turin"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "RBL",
-                                    "home_score": 5,
-                                    "away_score": 0,
-                                    "date": "2020-10-28",
+                                    "home_team": "MHA",
+                                    "away_team": "PSG",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2022-09-14",
                                     "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
+                                    "stadium": "Sammy Ofer Stadium",
+                                    "city": "Haifa"
                                 }
                             ]
                         },
@@ -1924,24 +1923,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "MUN",
-                                    "home_score": 2,
+                                    "home_team": "JUV",
+                                    "away_team": "MHA",
+                                    "home_score": 3,
                                     "away_score": 1,
-                                    "date": "2020-11-04",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "date": "2022-10-05",
+                                    "time": "21:00",
+                                    "stadium": "Juventus Stadium",
+                                    "city": "Turin"
                                 },
                                 {
-                                    "home_team": "RBL",
+                                    "home_team": "SLB",
                                     "away_team": "PSG",
-                                    "home_score": 2,
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-11-04",
+                                    "date": "2022-10-05",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1949,21 +1948,21 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "IBA",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-11-24",
-                                    "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
+                                    "home_team": "MHA",
+                                    "away_team": "JUV",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-10-11",
+                                    "time": "18:45",
+                                    "stadium": "Sammy Ofer Stadium",
+                                    "city": "Haifa"
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "RBL",
+                                    "away_team": "SLB",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-11-24",
+                                    "away_score": 1,
+                                    "date": "2022-10-11",
                                     "time": "21:00",
                                     "stadium": "Parc des Princes",
                                     "city": "Paris"
@@ -1974,24 +1973,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "RBL",
-                                    "home_score": 3,
-                                    "away_score": 4,
-                                    "date": "2020-12-02",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "home_team": "PSG",
+                                    "away_team": "MHA",
+                                    "home_score": 7,
+                                    "away_score": 2,
+                                    "date": "2022-10-25",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "PSG",
-                                    "home_score": 1,
+                                    "home_team": "SLB",
+                                    "away_team": "JUV",
+                                    "home_score": 4,
                                     "away_score": 3,
-                                    "date": "2020-12-02",
+                                    "date": "2022-10-25",
                                     "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1999,24 +1998,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "IBA",
-                                    "home_score": 5,
-                                    "away_score": 1,
-                                    "date": "2020-12-08",
+                                    "home_team": "JUV",
+                                    "away_team": "PSG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-11-02",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris"
+                                    "stadium": "Juventus Stadium",
+                                    "city": "Turin"
                                 },
                                 {
-                                    "home_team": "RBL",
-                                    "away_team": "MUN",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-12-08",
+                                    "home_team": "MHA",
+                                    "away_team": "SLB",
+                                    "home_score": 1,
+                                    "away_score": 6,
+                                    "date": "2022-11-02",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Sammy Ofer Stadium",
+                                    "city": "Haifa"
                                 }
                             ]
                         }
