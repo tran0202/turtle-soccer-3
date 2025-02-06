@@ -176,14 +176,14 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "BRA" }, { "id": "TUR-2024" }, { "id": "CHN" }, { "id": "CRC" }],
+                    "teams": [{ "id": "BRA" }, { "id": "TUR-2022" }, { "id": "CHN" }, { "id": "CRC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "BRA",
-                                    "away_team": "TUR-2024",
+                                    "away_team": "TUR-2022",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2002-06-03",
@@ -218,7 +218,7 @@
                                 },
                                 {
                                     "home_team": "CRC",
-                                    "away_team": "TUR-2024",
+                                    "away_team": "TUR-2022",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2002-06-09",
@@ -242,7 +242,7 @@
                                     "city": "Suwon"
                                 },
                                 {
-                                    "home_team": "TUR-2024",
+                                    "home_team": "TUR-2022",
                                     "away_team": "CHN",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -746,7 +746,7 @@
                         },
                         {
                             "home_team": "JPN",
-                            "away_team": "TUR-2024",
+                            "away_team": "TUR-2022",
                             "home_score": 0,
                             "away_score": 1,
                             "date": "2002-06-18",
@@ -815,7 +815,7 @@
                         },
                         {
                             "home_team": "SEN",
-                            "away_team": "TUR-2024",
+                            "away_team": "TUR-2022",
                             "home_score": 0,
                             "away_score": 0,
                             "home_extra_score": 0,
@@ -847,7 +847,7 @@
                         },
                         {
                             "home_team": "BRA",
-                            "away_team": "TUR-2024",
+                            "away_team": "TUR-2022",
                             "home_score": 1,
                             "away_score": 0,
                             "date": "2002-06-26",
@@ -863,7 +863,7 @@
                     "matches": [
                         {
                             "home_team": "KOR",
-                            "away_team": "TUR-2024",
+                            "away_team": "TUR-2022",
                             "home_score": 2,
                             "away_score": 3,
                             "date": "2002-06-29",

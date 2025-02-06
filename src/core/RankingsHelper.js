@@ -67,6 +67,9 @@ export const accumulateRanking = (ranking, matches, config) => {
                             ranking.fp = parseInt(m.home_fair_pts)
                         }
                     }
+                    if (!ranking.gaw) {
+                        ranking.gaw = 0
+                    }
                 }
                 if (ranking.id === m.away_team) {
                     ranking.mp++
@@ -95,6 +98,11 @@ export const accumulateRanking = (ranking, matches, config) => {
                         } else {
                             ranking.fp = parseInt(m.away_fair_pts)
                         }
+                    }
+                    if (!ranking.gaw) {
+                        ranking.gaw = parseInt(m.away_score)
+                    } else {
+                        ranking.gaw += parseInt(m.away_score)
                     }
                 }
             } else {
@@ -174,6 +182,7 @@ export const sortPools = (group, config) => {
                 const ranking = getBlankRanking(t)
                 ranking.team = t.team
                 accumulateRanking(ranking, p.h2h_matches, config)
+                if (p.rankings.length === 2 && p.h2h_matches.length === 2) ranking.h2h_homeaway = true
                 // 3. Transfer the total fair play points to h2h teams
                 ranking.fp = t.fp
                 p.h2h_rankings.push(ranking)
@@ -260,41 +269,16 @@ export const comparePoints = (rankings, config) => {
                 }
             }
             // WC1994
+            // h2h_homeaway UCL201819
             if (config.sort === 'h2h' && rankings[i].pts !== rankings[j].pts) {
                 rankings[i].h2h_point = true
-                rankings[i].h2h_point_note =
-                    rankings[i].team.name +
-                    ' ' +
-                    rankings[i].gf +
-                    '-' +
-                    rankings[i].ga +
-                    ' ' +
-                    rankings[j].team.name +
-                    ' >>> ' +
-                    rankings[i].team.name +
-                    ' ' +
-                    rankings[i].pts +
-                    ' | ' +
-                    rankings[j].team.name +
-                    ' ' +
-                    rankings[j].pts
+                rankings[i].h2h_point_note = !rankings[i].h2h_homeaway
+                    ? rankings[i].team.name + ' ' + rankings[i].gf + '-' + rankings[i].ga + ' ' + rankings[j].team.name + ' >>> '
+                    : '' + rankings[i].team.name + ' ' + rankings[i].pts + ' | ' + rankings[j].team.name + ' ' + rankings[j].pts
                 rankings[j].h2h_point = true
-                rankings[j].h2h_point_note =
-                    rankings[j].team.name +
-                    ' ' +
-                    rankings[j].gf +
-                    '-' +
-                    rankings[j].ga +
-                    ' ' +
-                    rankings[i].team.name +
-                    ' >>> ' +
-                    rankings[j].team.name +
-                    ' ' +
-                    rankings[j].pts +
-                    ' | ' +
-                    rankings[i].team.name +
-                    ' ' +
-                    rankings[i].pts
+                rankings[j].h2h_point_note = !rankings[i].h2h_homeaway
+                    ? rankings[j].team.name + ' ' + rankings[j].gf + '-' + rankings[j].ga + ' ' + rankings[i].team.name + ' >>> '
+                    : '' + rankings[j].team.name + ' ' + rankings[j].pts + ' | ' + rankings[i].team.name + ' ' + rankings[i].pts
             }
         }
     }
@@ -472,7 +456,12 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
         ranking1 = { ...ranking2 }
         ranking2 = { ...temp }
     } else if (ranking1.gf === ranking2.gf) {
-        if (isH2HTiebreaker(config) && config.sort === 'h2h') {
+        if (isH2HAwayGoalsTiebreaker(config)) {
+            const result = compareAwayGoals(ranking1, ranking2, config)
+            ranking1 = result.ranking1
+            ranking2 = result.ranking2
+            h2htie = result.h2htie
+        } else if (isH2HTiebreaker(config) && config.sort === 'h2h') {
             h2htie = true
         } else if (isFairPlayTiebreaker(config)) {
             const result = compareFairPlay(ranking1, ranking2, config)
@@ -512,7 +501,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
             ' ' +
             ranking1.gf
     }
-    // AFCON2023
+    // AFCON2023 | UCL201819
     if (config.sort === 'h2htie' && ranking1.gf !== ranking2.gf) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_p_gd = true
@@ -535,6 +524,44 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
             ranking1.team.name +
             ' ' +
             ranking1.gf
+    }
+    return { ranking1, ranking2, h2htie }
+}
+
+export const compareAwayGoals = (ranking1, ranking2, config) => {
+    if (!ranking1 || !ranking2 || !config) return
+    let h2htie = false
+    if (ranking1.gaw < ranking2.gaw) {
+        const temp = ranking1
+        ranking1 = { ...ranking2 }
+        ranking2 = { ...temp }
+    } else if (ranking1.gaw === ranking2.gaw) {
+        if (isH2HTiebreaker(config) && config.sort === 'h2h') {
+            h2htie = true
+        }
+    }
+    // UCL201819
+    if (config.sort === 'h2h' && ranking1.gaw !== ranking2.gaw) {
+        ranking1.tie_h2h = true
+        ranking1.tie_h2h_note =
+            'Tied on heah-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gaw +
+            ' | ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gaw
+        ranking2.tie_h2h = true
+        ranking2.tie_h2h_note =
+            'Tied on heah-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
+            ranking2.team.name +
+            ' ' +
+            ranking2.gaw +
+            ' | ' +
+            ranking1.team.name +
+            ' ' +
+            ranking1.gaw
     }
     return { ranking1, ranking2, h2htie }
 }
@@ -741,6 +768,12 @@ export const isH2HTiebreaker = (config) => {
     const { tiebreakers } = config
     if (!tiebreakers) return false
     return tiebreakers.find((tb) => tb === 'head2head') != null
+}
+
+export const isH2HAwayGoalsTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'head2headawaygoals') != null
 }
 
 export const isGoalDifferenceTiebreaker = (config) => {

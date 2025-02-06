@@ -1351,7 +1351,7 @@
                     "name": "Third Qualifying Round",
                     "next_round": "Play-off Round",
                     "eliminate_count": 77,
-                    "bye_teams": [{ "id": "YBO" }, { "id": "KFT" }, { "id": "DZA" }, { "id": "RSB" }, { "id": "DBR" }, { "id": "LUD" }, { "id": "QAR" }],
+                    "bye_teams": [{ "id": "YBO" }, { "id": "KFT" }, { "id": "DZA" }, { "id": "ZVE" }, { "id": "DBR" }, { "id": "LUD" }, { "id": "QAR" }],
                     "matches": [
                         {
                             "home_team": "SAR",
@@ -1816,7 +1816,7 @@
                         },
                         {
                             "home_team": "ARA",
-                            "away_team": "RSB",
+                            "away_team": "ZVE",
                             "home_score": 1,
                             "away_score": 2,
                             "date": "2020-10-01",
@@ -3764,14 +3764,14 @@
                 },
                 {
                     "name": "Group L",
-                    "teams": [{ "id": "TSG" }, { "id": "RSB" }, { "id": "SLL" }, { "id": "GNT" }],
+                    "teams": [{ "id": "TSG" }, { "id": "ZVE" }, { "id": "SLL" }, { "id": "GNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "TSG",
-                                    "away_team": "RSB",
+                                    "away_team": "ZVE",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-10-22",
@@ -3805,7 +3805,7 @@
                                     "city": "Ghent"
                                 },
                                 {
-                                    "home_team": "RSB",
+                                    "home_team": "ZVE",
                                     "away_team": "SLL",
                                     "home_score": 5,
                                     "away_score": 1,
@@ -3820,7 +3820,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "RSB",
+                                    "home_team": "ZVE",
                                     "away_team": "GNT",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -3846,7 +3846,7 @@
                             "matches": [
                                 {
                                     "home_team": "GNT",
-                                    "away_team": "RSB",
+                                    "away_team": "ZVE",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2020-11-26",
@@ -3880,7 +3880,7 @@
                                     "city": "Ghent"
                                 },
                                 {
-                                    "home_team": "RSB",
+                                    "home_team": "ZVE",
                                     "away_team": "TSG",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -3906,7 +3906,7 @@
                                 },
                                 {
                                     "home_team": "SLL",
-                                    "away_team": "RSB",
+                                    "away_team": "ZVE",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2020-12-10",
@@ -4043,7 +4043,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "RSB",
+                                    "home_team": "ZVE",
                                     "away_team": "MIL",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -4055,7 +4055,7 @@
                                 },
                                 {
                                     "home_team": "MIL",
-                                    "away_team": "RSB",
+                                    "away_team": "ZVE",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2021-02-25",

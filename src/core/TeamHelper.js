@@ -221,11 +221,12 @@ export const getTeamFlag = (t) => {
 export const getTeamFlagId = (id, config) => {
     if (!id || !config) return
     const teams = config.competition ? config.competition.teams : config.teams
+    const team_type_id = config.competition ? config.competition.team_type_id : config.team_type_id
     const team = teams.find((t) => t.id === id)
     if (!team) return
     return (
         <React.Fragment>
-            {config.team_type_id !== 'CLUB' && (
+            {team_type_id !== 'CLUB' && (
                 <img
                     className="flag-sm flag-md margin-bottom-xs-4"
                     src={'/images/flags/' + team.nation.flag_filename}
@@ -233,7 +234,7 @@ export const getTeamFlagId = (id, config) => {
                     title={`${id} ${team.nation.name} ${team.nation.official_name}`}
                 />
             )}
-            {config.team_type_id === 'CLUB' && (
+            {team_type_id === 'CLUB' && (
                 <React.Fragment>
                     <img className="flag-club-sm flag-club-md" src={`/images/club_logos/${team.logo_filename}`} alt={id} title={id} />{' '}
                     <img

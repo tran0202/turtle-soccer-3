@@ -345,15 +345,15 @@
         "official_name": "FK Spartaks Jūrmala"
     },
     {
-        "id": "RSB",
-        "name": "Red Star Belgrade",
-        "short_name": "Red Star B.",
+        "id": "ZVE",
+        "name": "Crvena Zvezda",
+        "short_name": "Red Star Belgrade",
         "team_type_id": "CLUB",
         "nation_id": "SRB",
         "parent_team_id": "",
-        "club_code": "RSB",
-        "logo_filename": "Grb-fk-crvena-zvezda.svg",
-        "official_name": "FK Crvena zvezda"
+        "club_code": "ZVE",
+        "logo_filename": "Red_Star_Belgrade_crest.svg.png",
+        "official_name": "FK Crvena Zvezda"
     },
     {
         "id": "ASH",
@@ -505,7 +505,7 @@
         "nation_id": "GRE",
         "parent_team_id": "",
         "club_code": "AEK",
-        "logo_filename": "AEK.png",
+        "logo_filename": "AEK_Athens_FC_logo.svg.png",
         "official_name": "AEK Athens FC"
     },
     {
@@ -515,7 +515,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "SLB",
-        "logo_filename": "SL_Benfica_logo.svg",
+        "logo_filename": "SL_Benfica_logo.svg.png",
         "official_name": "SL Benfica"
     },
     {
@@ -578,7 +578,7 @@
         "nation_id": "NED",
         "parent_team_id": "",
         "club_code": "PSV",
-        "logo_filename": "PSV.png",
+        "logo_filename": "PSV_Eindhoven.svg.png",
         "official_name": "PSV Eindhoven"
     },
     {
@@ -589,7 +589,7 @@
         "nation_id": "SUI",
         "parent_team_id": "",
         "club_code": "YBO",
-        "logo_filename": "YBO.png",
+        "logo_filename": "480px-BSC_Young_Boys.svg.png",
         "official_name": "BSC Young Boys"
     },
     {
@@ -600,7 +600,7 @@
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "BRU",
-        "logo_filename": "BRU.png",
+        "logo_filename": "Club_Brugge_KV_logo.svg.png",
         "official_name": "Club Brugge"
     },
     {
@@ -621,7 +621,7 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "AMO",
-        "logo_filename": "AMO.png",
+        "logo_filename": "LogoASMonacoFC2021.svg.png",
         "official_name": "AS Monaco FC"
     },
     {
@@ -632,7 +632,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "ATM",
-        "logo_filename": "ATM.png",
+        "logo_filename": "Atletico_Madrid_Logo_2024.svg.png",
         "official_name": "Club Atlético de Madrid"
     },
     {
@@ -673,7 +673,7 @@
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "GAL",
-        "logo_filename": "GAL.png",
+        "logo_filename": "Galatasaray_4_Sterne_Logo.svg.png",
         "official_name": "Galatasaray AŞ"
     },
     {
@@ -683,7 +683,7 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "LMO",
-        "logo_filename": "LMO.png",
+        "logo_filename": "FC_Lokomotiv_Moscow_logo.svg.png",
         "official_name": "FC Lokomotiv Moskva"
     },
     {
@@ -693,7 +693,7 @@
         "nation_id": "GER",
         "parent_team_id": "",
         "club_code": "S04",
-        "logo_filename": "S04.png",
+        "logo_filename": "480px-FC_Schalke_04_Logo.svg.png",
         "official_name": "FC Schalke 04"
     },
     {
@@ -703,7 +703,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "POR",
-        "logo_filename": "POR.png",
+        "logo_filename": "FC_Porto.svg.png",
         "official_name": "FC Porto"
     },
     {
@@ -730,13 +730,13 @@
     },
     {
         "id": "TSG",
-        "name": "1899 Hoffenheim",
+        "name": "TSG Hoffenheim",
         "short_name": "Hoffenheim",
         "team_type_id": "CLUB",
         "nation_id": "GER",
         "parent_team_id": "",
         "club_code": "TSG",
-        "logo_filename": "TSG.png",
+        "logo_filename": "402px-Logo_TSG_Hoffenheim.svg.png",
         "official_name": "TSG 1899 Hoffenheim"
     },
     {
@@ -781,13 +781,13 @@
     },
     {
         "id": "VPL",
-        "name": "Viktoria Plzen",
-        "short_name": "Vikto. Plzen",
+        "name": "Viktoria Plzeň",
+        "short_name": "Vikto. Plzeň",
         "team_type_id": "CLUB",
         "nation_id": "CZE",
         "parent_team_id": "",
         "club_code": "VPL",
-        "logo_filename": "VPL.png",
+        "logo_filename": "Viktoria_Plzen_logo.svg.png",
         "official_name": "FC Viktoria Plzeň"
     },
     {
@@ -797,7 +797,7 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "CSK",
-        "logo_filename": "CSK.png",
+        "logo_filename": "PFK_CSKA_Logo.svg.png",
         "official_name": "PFC CSKA Moskva"
     },
     {
@@ -1102,7 +1102,7 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "LIL",
-        "logo_filename": "Lille_OSC_2018_logo.svg",
+        "logo_filename": "Lille_OSC_2018_logo.svg.png",
         "official_name": "Lille Olympique Sporting Club"
     },
     {
@@ -2506,7 +2506,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "SLI",
-        "logo_filename": "Sporting_Clube_de_Portugal_(Logo).svg",
+        "logo_filename": "Sporting_Clube_de_Portugal_(Logo).svg.png",
         "official_name": "Sporting Clube de Portugal"
     },
     {

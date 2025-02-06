@@ -70,7 +70,7 @@ const MatchDayRow = (props) => {
                     return (
                         <React.Fragment key={index}>
                             <Row className="no-gutters ranking-tbl padding-tb-md">
-                                <Col className="col-box-23 font-14">
+                                <Col className="col-box-20 font-14">
                                     {moment(m.date).format('MMMM D, YYYY')}
                                     {m.time ? ' @' : ''} {m.time}
                                     <br />
@@ -78,7 +78,7 @@ const MatchDayRow = (props) => {
                                     {m.city ? ',' : ''} {m.city}
                                 </Col>
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
-                                <Col className="col-box-6">{homeTeamFlag}</Col>
+                                <Col className="col-box-7 col-box-no-padding-lr text-center">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
                                     {!m.match_cancelled && (
                                         <React.Fragment>
@@ -91,7 +91,7 @@ const MatchDayRow = (props) => {
                                         <AwardedTooltip target={`${m.home_team}_${m.away_team}_awardedToolTip`} content={m.awarded_text} />
                                     )}
                                 </Col>
-                                <Col className="col-box-6">{awayTeamFlag}</Col>
+                                <Col className="col-box-7 col-box-no-padding-lr text-center">{awayTeamFlag}</Col>
                                 <Col className="col-box-25">{awayTeamName}</Col>
                             </Row>
                             {m.tie_last_match && (

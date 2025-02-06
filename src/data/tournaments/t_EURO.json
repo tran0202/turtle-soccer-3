@@ -75,7 +75,7 @@
         "competition_id": "EURO",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferencegoalscoredwins", "penalty", "fairplaylight", "coefficient"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Live It. For Real.",
@@ -141,7 +141,7 @@
         "name": "UEFA Euro 2016 France",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "fairplay", "coefficient"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Le Rendez-Vous",
@@ -198,7 +198,7 @@
         "name": "UEFA Euro 2012 Poland-Ukraine",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Creating History Together",
@@ -269,7 +269,7 @@
         "short_name": "Austria-Switzerland",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["points", "penalty", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Expect Emotions",
@@ -313,7 +313,7 @@
             "champions": "ESP",
             "runners_up": "GER",
             "semi_finalist1": "RUS",
-            "semi_finalist2": "TUR-2024",
+            "semi_finalist2": "TUR-2022",
             "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
         },
         "statistics": { "total_matches": 31, "total_goals": 77, "attendance": 1143990 },
@@ -330,7 +330,7 @@
         "competition_id": "EURO",
         "silver_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "penalty", "coefficient", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Welcome to 2004!",
@@ -400,7 +400,7 @@
         "competition_id": "EURO",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Football without frontiers",
@@ -462,7 +462,7 @@
         "competition_id": "EURO",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["points", "head2head", "head2headreapply", "goaldifferenceandgoalscored", "coefficient", "fairplay", "lot"],
+        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Football Comes Home",
@@ -521,7 +521,7 @@
         "short_name": "Sweden",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "slogan": "Small is Beautiful",
@@ -584,7 +584,7 @@
         "short_name": "Germany",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["GER-1949-1990"], "qualification_date": "1985-03-14" },
@@ -642,7 +642,7 @@
         "short_name": "France",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["FRA"], "qualification_date": "1981-12-10" },
@@ -696,7 +696,7 @@
         "short_name": "Italy",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["team", "lot"],
+        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
         "details": {
             "host": { "teams": ["ITA"], "qualification_date": "1977-11-12" },
             "logo_filename": "UEFA_Euro_1980_official_logo.svg",

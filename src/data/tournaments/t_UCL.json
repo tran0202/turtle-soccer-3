@@ -366,16 +366,7 @@
         "show_match_year": true,
         "no_third_place": true,
         "tiebreakers_collapsed": true,
-        "tiebreakers": [
-            "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
-        ],
+        "tiebreakers": ["point", "head2head", "head2headawaygoals", "goaldifference", "goalfor", "fairplay", "lot"],
         "details": {
             "logo_filename": "UEFA_Champions_League.svg",
             "mascot_filename": "320px-Plaza_del_Callao_with_decoration_related_to_the_2019_Champions_League_final.jpg",

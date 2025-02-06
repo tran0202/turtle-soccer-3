@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
-import { getTeamFlag } from '../core/TeamHelper'
+import { getTeamFlagId } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
 import {
     TiebreakTooltip,
@@ -55,7 +55,7 @@ const RankingsRow = (props) => {
         <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}${withdrew_striped}`}>
             <Col className="col-box-4">{rank}</Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
-            <Col className="col-box-6">{getTeamFlag(ranking.team)}</Col>
+            <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
             {!config.added_group && (
                 <Col className="col-box-27">
@@ -80,7 +80,7 @@ const RankingsRow = (props) => {
                     {ranking.gr === null && <span>&mdash;</span>}
                 </Col>
             )}
-            <Col className="col-box-14 text-center">
+            <Col className="col-box-13 text-center">
                 {pts}{' '}
                 {!config.no_h2h_tooltip && ranking.h2h_point && (
                     <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points: ${ranking.h2h_point_note}`} />

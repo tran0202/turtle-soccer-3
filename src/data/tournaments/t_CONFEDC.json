@@ -271,16 +271,16 @@
                 "text": "The Stade Geoffroy-Guichard hosted group matches."
             }
         ],
-        "final_standings": { "champions": "FRA", "runners_up": "CMR", "third_place": "TUR-2024", "fourth_place": "COL" },
+        "final_standings": { "champions": "FRA", "runners_up": "CMR", "third_place": "TUR-2022", "fourth_place": "COL" },
         "statistics": { "total_matches": 16, "total_goals": 37, "attendance": 491700 },
         "awards": {
             "golden_ball": [
                 { "player": "Thierry Henry", "team": "FRA" },
-                { "player": "Tuncay Şanlı", "team": "TUR-2024" },
+                { "player": "Tuncay Şanlı", "team": "TUR-2022" },
                 { "player": "Marc-Vivien Foé", "team": "CMR" }
             ],
             "golden_boot": [{ "player": "Thierry Henry", "team": "FRA", "goals": 4 }],
-            "silver_boot": [{ "player": "Tuncay Şanlı", "team": "TUR-2024", "goals": 3, "assists": 1 }],
+            "silver_boot": [{ "player": "Tuncay Şanlı", "team": "TUR-2022", "goals": 3, "assists": 1 }],
             "bronze_boot": [{ "player": "Shunsuke Nakamura", "team": "JPN", "goals": 3, "assists": "0", "minutes": 170 }],
             "fair_play_team": ["JPN"],
             "award_category_highlighted": ["ball", "fair"]
