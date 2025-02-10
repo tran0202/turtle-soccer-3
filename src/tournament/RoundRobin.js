@@ -12,7 +12,7 @@ class RoundRobin extends React.Component {
         return (
             <React.Fragment>
                 <Row className="text-start padding-top-md padding-left-sm">
-                    <Col sm="5">
+                    <Col sm="6">
                         <Row>
                             <Col className="advanced-next-round-striped">{stage.advanced_note}</Col>
                         </Row>

@@ -20,11 +20,16 @@ export const calculateGroupRankings = (stage, config) => {
                 g.rankings.push(ranking)
             })
         collectH2HMatches(g)
-        createPools(g, config)
-        sortPools(g, config)
+        createPointPools(g, config)
+        sortGroup(g, config)
+
+        // createPools(g, config)
+        // sortPools(g, config)
+
         flattenPools(g)
-        processPartialAdvancement(stage, config)
+        // processPartialAdvancement(stage, config)
     })
+    processPartialAdvancement2(stage, config)
     stage.groups.forEach((g) => {
         setAdvancement(g, stage.advancement)
     })
@@ -152,6 +157,635 @@ export const collectH2HMatches = (group) => {
     })
 }
 
+export const createPointPools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.pools = []
+    group.rankings.forEach((r) => {
+        const foundPool = group.pools.find((p) => p.pts === r.pts)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            group.pools.push({ pts: r.pts, rankings: [r] })
+        }
+    })
+    group.pool_to_sort = group.pools.length
+    group.pool_sorted = 0
+}
+
+export const sortGroup = (group, config) => {
+    if (!group || !config || !config.tiebreakers) return
+    config.tiebreakers.forEach((tb) => {
+        switch (tb) {
+            case 'points':
+                sortOverallPoints(group, config)
+                break
+            case 'goaldifference':
+                sortOverallGoalDifference(group, config)
+                break
+            case 'goalsfor':
+                sortOverallGoalsFor(group, config)
+                break
+            case 'awaygoals':
+                sortOverallAwayGoals(group, config)
+                break
+            case 'h2hpoints':
+                sortH2HPoints(group, config)
+                break
+            case 'h2hgoaldifference':
+                sortH2HGoalDifference(group, config)
+                break
+            case 'h2hgoalsfor':
+                sortH2HGoalsFor(group, config)
+                break
+            case 'h2hawaygoals':
+                sortH2HAwayGoals(group, config)
+                break
+            case 'fairplaypoints':
+                sortFairPlayPoints(group, config)
+                break
+            case 'lots':
+                drawLots(group, config)
+                break
+            default:
+        }
+    })
+}
+
+export const sortOverallPoints = (group, config) => {
+    if (!group || !config) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length - 1; i++) {
+        for (var j = i + 1; j < pools.length; j++) {
+            if (pools[i].pts < pools[j].pts) {
+                const temp = pools[i]
+                pools[i] = pools[j]
+                pools[j] = temp
+            }
+        }
+    }
+    group.pools.forEach((p) => {
+        if (p.rankings.length === 1) {
+            group.pool_sorted++
+        }
+    })
+}
+
+// WC2022
+export const sortOverallGoalDifference = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            if (rankings[0].gd < rankings[1].gd) {
+                const temp = rankings[0]
+                rankings[0] = rankings[1]
+                rankings[1] = temp
+            }
+            if (rankings[0].gd !== rankings[1].gd) {
+                group.pool_sorted++
+                p.sorted = true
+
+                // UCL202223
+                if (isHead2HeadBeforeGoalDifference(config)) {
+                    rankings[0].tb_anchor = '(ogd)'
+                    rankings[0].tb_note =
+                        'Tied on Heah-to-head results (' +
+                        p.h2h_rankings[0].pts +
+                        'pts, ' +
+                        p.h2h_rankings[0].gd +
+                        'gd, ' +
+                        p.h2h_rankings[0].gf +
+                        'gf). Tiebreak by Overall goal difference: ' +
+                        rankings[0].team.name +
+                        ' ' +
+                        (rankings[0].gd > 0 ? '+' : '') +
+                        rankings[0].gd +
+                        ' >< ' +
+                        rankings[1].team.name +
+                        ' ' +
+                        (rankings[1].gd > 0 ? '+' : '') +
+                        rankings[1].gd
+                    rankings[1].tb_anchor = '(ogd)'
+                    rankings[1].tb_note =
+                        'Tied on Heah-to-head results (' +
+                        p.h2h_rankings[0].pts +
+                        'pts, ' +
+                        p.h2h_rankings[0].gd +
+                        'gd, ' +
+                        p.h2h_rankings[0].gf +
+                        'gf). Tiebreak by Overall goal difference: ' +
+                        rankings[1].team.name +
+                        ' ' +
+                        (rankings[1].gd > 0 ? '+' : '') +
+                        rankings[1].gd +
+                        ' >< ' +
+                        rankings[0].team.name +
+                        ' ' +
+                        (rankings[0].gd > 0 ? '+' : '') +
+                        rankings[0].gd
+                }
+            }
+            // WC1990 Partial
+        } else if (rankings.length === 4) {
+            for (var k = 0; k < rankings.length - 1; k++) {
+                for (var l = k + 1; l < rankings.length; l++) {
+                    if (rankings[k].gd < rankings[l].gd) {
+                        const temp = rankings[k]
+                        rankings[k] = rankings[l]
+                        rankings[l] = temp
+                    }
+                    if (rankings[k].gd !== rankings[l].gd) {
+                    }
+                }
+            }
+        }
+    }
+}
+
+// WC2022
+export const sortOverallGoalsFor = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                if (rankings[0].gf < rankings[1].gf) {
+                    const temp = rankings[0]
+                    rankings[0] = rankings[1]
+                    rankings[1] = temp
+                }
+                if (rankings[0].gf !== rankings[1].gf) {
+                    group.pool_sorted++
+                    p.sorted = true
+
+                    // UCL202324
+                    if (isHead2HeadBeforeGoalDifference(config)) {
+                        rankings[0].tb_anchor = '(ogf)'
+                        rankings[0].tb_note =
+                            'Tied on Heah-to-head results (' +
+                            p.h2h_rankings[0].pts +
+                            'pts, ' +
+                            p.h2h_rankings[0].gd +
+                            'gd, ' +
+                            p.h2h_rankings[0].gf +
+                            'gf). Tied on Overall goal difference (' +
+                            rankings[0].gd +
+                            '). Tiebreak by Overall goals scored: ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].gf +
+                            ' >< ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].gf
+                        rankings[1].tb_anchor = '(ogf)'
+                        rankings[1].tb_note =
+                            'Tied on Heah-to-head results (' +
+                            p.h2h_rankings[0].pts +
+                            'pts, ' +
+                            p.h2h_rankings[0].gd +
+                            'gd, ' +
+                            p.h2h_rankings[0].gf +
+                            'gf). Tied on Overall goal difference (' +
+                            rankings[1].gd +
+                            '). Tiebreak by Overall goals scored: ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].gf +
+                            ' >< ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].gf
+                    }
+                }
+                // WC1990 Partial
+            } else if (rankings.length === 4) {
+                for (var k = 0; k < rankings.length - 1; k++) {
+                    for (var l = k + 1; l < rankings.length; l++) {
+                        if (rankings[k].gd < rankings[l].gd) {
+                            const temp = rankings[k]
+                            rankings[k] = rankings[l]
+                            rankings[l] = temp
+                        }
+                        if (rankings[k].gd !== rankings[l].gd) {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// UCL202223
+export const sortOverallAwayGoals = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                if (rankings[0].gaw < rankings[1].gaw) {
+                    const temp = rankings[0]
+                    rankings[0] = rankings[1]
+                    rankings[1] = temp
+                }
+                if (rankings[0].gaw !== rankings[1].gaw) {
+                    group.pool_sorted++
+                    p.sorted = true
+
+                    // UCL202223
+                    if (isHead2HeadBeforeGoalDifference(config)) {
+                        rankings[0].tb_anchor = '(oag)'
+                        rankings[0].tb_note =
+                            'Tied on Heah-to-head results (' +
+                            p.h2h_rankings[0].pts +
+                            'pts, ' +
+                            p.h2h_rankings[0].gd +
+                            'gd, ' +
+                            p.h2h_rankings[0].gf +
+                            'gf). Tied on Overall goal difference (' +
+                            rankings[0].gd +
+                            '), goals scored (' +
+                            rankings[0].gf +
+                            '). Tiebreak by Overall away goals: ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].gaw +
+                            ' >< ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].gaw
+                        rankings[1].tb_anchor = '(oag)'
+                        rankings[1].tb_note =
+                            'Tied on Heah-to-head results (' +
+                            p.h2h_rankings[0].pts +
+                            'pts, ' +
+                            p.h2h_rankings[0].gd +
+                            'gd, ' +
+                            p.h2h_rankings[0].gf +
+                            'gf). Tied on Overall goal difference (' +
+                            rankings[1].gd +
+                            '), goals scored (' +
+                            rankings[1].gf +
+                            '). Tiebreak by Overall away goals: ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].gaw +
+                            ' >< ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].gaw
+                    }
+                }
+            }
+        }
+    }
+}
+
+// UCL202223
+export const sortH2HPoints = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            // 1. Collect the h2h matches
+            collectPoolH2HMatches(p, group.matchdays)
+            // 2. Accumulate the rankings
+            p.h2h_rankings = []
+            rankings.forEach((t) => {
+                const ranking = getBlankRanking(t)
+                ranking.team = t.team
+                accumulateRanking(ranking, p.h2h_matches, config)
+                if (p.h2h_matches.length === 2) {
+                    ranking.h2h_homeaway = true
+                }
+                // 3. Transfer the total fair play points to h2h teams
+                ranking.fp = t.fp
+                p.h2h_rankings.push(ranking)
+            })
+            // 4. Sort the rankings
+            // UCL202223
+            if (p.h2h_rankings[0].pts < p.h2h_rankings[1].pts) {
+                const temp = p.h2h_rankings[0]
+                p.h2h_rankings[0] = p.h2h_rankings[1]
+                p.h2h_rankings[1] = temp
+            }
+            if (p.h2h_rankings[0].pts !== p.h2h_rankings[1].pts) {
+                group.pool_sorted++
+
+                p.h2h_rankings[0].tb_anchor = '(hp)'
+                p.h2h_rankings[0].tb_note =
+                    'Tiebreak by Head-to-head points: ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    p.h2h_rankings[0].pts +
+                    ' >< ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    p.h2h_rankings[1].pts
+                p.h2h_rankings[1].tb_anchor = '(hp)'
+                p.h2h_rankings[1].tb_note =
+                    'Tiebreak by Head-to-head points: ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    p.h2h_rankings[1].pts +
+                    ' >< ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    p.h2h_rankings[0].pts
+            }
+            // 5. Update the pool
+            updatePool(p)
+        }
+    }
+}
+
+export const updatePool = (pool) => {
+    if (!pool || !pool.h2h_rankings || !pool.rankings) return
+    const pool_rankings = []
+    pool.h2h_rankings.forEach((hr) => {
+        const foundRanking = pool.rankings.find((r) => r.id === hr.id)
+        if (foundRanking) {
+            pool_rankings.push({ ...hr, ...foundRanking })
+        }
+    })
+    pool.rankings = pool_rankings
+}
+
+export const collectPoolH2HMatches = (pool, matchdays) => {
+    if (!pool || !pool.rankings || pool.rankings.length <= 1 || !matchdays) return
+    pool.h2h_matches = []
+    for (var i = 0; i < pool.rankings.length - 1; i++) {
+        for (var j = i + 1; j < pool.rankings.length; j++) {
+            matchdays.forEach((md) => {
+                md.matches.forEach((m) => {
+                    if (
+                        (m.home_team === pool.rankings[i].id && m.away_team === pool.rankings[j].id) ||
+                        (m.home_team === pool.rankings[j].id && m.away_team === pool.rankings[i].id)
+                    ) {
+                        pool.h2h_matches.push(m)
+                    }
+                })
+            })
+        }
+    }
+}
+
+// UCL202223
+export const sortH2HGoalDifference = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            if (p.h2h_rankings[0].gd < p.h2h_rankings[1].gd) {
+                const temp = p.h2h_rankings[0]
+                p.h2h_rankings[0] = p.h2h_rankings[1]
+                p.h2h_rankings[1] = temp
+            }
+            if (p.h2h_rankings[0].gd !== p.h2h_rankings[1].gd) {
+                group.pool_sorted++
+
+                p.h2h_rankings[0].tb_anchor = '(hgd)'
+                p.h2h_rankings[0].tb_note =
+                    'Tied on Heah-to-head points (' +
+                    p.h2h_rankings[0].pts +
+                    '). Tiebreak by Head-to-head goal difference: ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    (p.h2h_rankings[0].gd > 0 ? '+' : '') +
+                    p.h2h_rankings[0].gd +
+                    ' >< ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    (p.h2h_rankings[1].gd > 0 ? '+' : '') +
+                    p.h2h_rankings[1].gd
+                p.h2h_rankings[1].tb_anchor = '(hgd)'
+                p.h2h_rankings[1].tb_note =
+                    'Tied on Heah-to-head points (' +
+                    p.h2h_rankings[0].pts +
+                    '). Tiebreak by Head-to-head goal difference: ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    (p.h2h_rankings[1].gd > 0 ? '+' : '') +
+                    p.h2h_rankings[1].gd +
+                    ' >< ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    (p.h2h_rankings[0].gd > 0 ? '+' : '') +
+                    p.h2h_rankings[0].gd
+            }
+            updatePool(p)
+        }
+    }
+}
+
+export const sortH2HGoalsFor = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            if (p.h2h_rankings[0].gf < p.h2h_rankings[1].gf) {
+                const temp = p.h2h_rankings[0]
+                p.h2h_rankings[0] = p.h2h_rankings[1]
+                p.h2h_rankings[1] = temp
+            }
+
+            if (p.h2h_rankings[0].gf !== p.h2h_rankings[1].gf) {
+                group.pool_sorted++
+            }
+            updatePool(p)
+        }
+    }
+}
+
+// UCL202021
+export const sortH2HAwayGoals = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            if (p.h2h_rankings[0].gaw < p.h2h_rankings[1].gaw) {
+                const temp = p.h2h_rankings[0]
+                p.h2h_rankings[0] = p.h2h_rankings[1]
+                p.h2h_rankings[1] = temp
+            }
+
+            if (p.h2h_rankings[0].gaw !== p.h2h_rankings[1].gaw) {
+                group.pool_sorted++
+
+                p.h2h_rankings[0].tb_anchor = '(hag)'
+                p.h2h_rankings[0].tb_note =
+                    'Tied on Heah-to-head points (' +
+                    p.h2h_rankings[0].pts +
+                    '), goal difference (' +
+                    p.h2h_rankings[0].gd +
+                    '), goals scored (' +
+                    p.h2h_rankings[0].gf +
+                    '). Tiebreak by Head-to-head away goals: ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    p.h2h_rankings[0].gaw +
+                    ' >< ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    p.h2h_rankings[1].gaw
+                p.h2h_rankings[1].tb_anchor = '(hag)'
+                p.h2h_rankings[1].tb_note =
+                    'Tied on Heah-to-head points (' +
+                    p.h2h_rankings[1].pts +
+                    '), goal difference (' +
+                    p.h2h_rankings[1].gd +
+                    '), goals scored (' +
+                    p.h2h_rankings[1].gf +
+                    '). Tiebreak by Head-to-head away goals: ' +
+                    p.h2h_rankings[1].team.name +
+                    ' ' +
+                    p.h2h_rankings[1].gaw +
+                    ' >< ' +
+                    p.h2h_rankings[0].team.name +
+                    ' ' +
+                    p.h2h_rankings[0].gaw
+            }
+            updatePool(p)
+        }
+    }
+}
+
+// WC2018
+export const sortFairPlayPoints = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                if (rankings[0].fp < rankings[1].fp) {
+                    const temp = rankings[0]
+                    rankings[0] = rankings[1]
+                    rankings[1] = temp
+                }
+                if (rankings[0].fp !== rankings[1].fp) {
+                    group.pool_sorted++
+                    p.sorted = true
+
+                    rankings[0].tb_anchor = '(fp)'
+                    rankings[0].tb_note =
+                        'Tiebreak by Fair play points: ' + rankings[0].team.name + ' ' + rankings[0].fp + ' >< ' + rankings[1].team.name + ' ' + rankings[1].fp
+                    rankings[1].tb_anchor = '(fp)'
+                    rankings[1].tb_note =
+                        'Tiebreak by Fair play points: ' + rankings[1].team.name + ' ' + rankings[1].fp + ' >< ' + rankings[0].team.name + ' ' + rankings[0].fp
+                }
+            }
+        }
+    }
+}
+
+// WC1990
+export const drawLots = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (group.pool_to_sort === group.pool_sorted) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                const winlot1 = rankings[0].team.draw_lot_win
+                const winlot2 = rankings[1].team.draw_lot_win
+                if (winlot2) {
+                    const temp = rankings[0]
+                    rankings[0] = rankings[1]
+                    rankings[1] = temp
+                }
+                if (winlot1 || winlot2) {
+                    group.pool_sorted++
+                    p.sorted = true
+
+                    rankings[0].tb_anchor = '(dl)'
+                    rankings[0].tb_note = 'Tiebreak by Drawing lots: ' + rankings[0].team.draw_lot_note
+                    rankings[1].tb_anchor = '(dl)'
+                    rankings[1].tb_note = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_note
+                }
+                // WC1990 Partial
+            } else if (rankings.length === 4) {
+                for (var k = 0; k < rankings.length - 1; k++) {
+                    for (var l = k + 1; l < rankings.length; l++) {
+                        const winlot1 = rankings[k].team.draw_lot_win
+                        const winlot2 = rankings[l].team.draw_lot_win
+                        if (winlot2) {
+                            const temp = rankings[0]
+                            rankings[0] = rankings[1]
+                            rankings[1] = temp
+                        }
+                        if (winlot1 || winlot2) {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+export const processPartialAdvancement2 = (stage, config) => {
+    if (!stage || !stage.advancement) return
+    const partial = stage.advancement.some((a) => a.count)
+    if (partial) {
+        stage.partial_advancement = true
+        const pa = stage.advancement.filter((a) => a.count)
+        pa.forEach((a) => {
+            const rankings = []
+            stage.groups.forEach((g) => {
+                let customGroup = true
+                if (a.groups) {
+                    customGroup = a.groups.find((g2) => g2 === g.name)
+                }
+                const foundTeam = g.rankings && g.rankings.find((t) => customGroup && t.rank === a.pos)
+                if (foundTeam) {
+                    rankings.push({ ...foundTeam, group_name: g.name })
+                }
+            })
+            stage.partial = {}
+            stage.partial.rankings = rankings
+            createPointPools(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers })
+            sortGroup(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers })
+            flattenPools(stage.partial)
+            stage.partial.rankings.forEach((t, index) => {
+                t.rank = index + 1
+                if (index < a.count) {
+                    t.next_rounded = true
+                } else {
+                    delete t.next_rounded
+                }
+            })
+            a.rankings = stage.partial.rankings
+        })
+    }
+}
+
+// ------------------ V1 -------------------
+
 export const createPools = (group, config) => {
     if (!group || !group.rankings || !config) return
     group.pools = []
@@ -211,25 +845,6 @@ export const sortPools = (group, config) => {
         }
     })
     sortRankings(group.pools, { ...config, sort: 'pool' })
-}
-
-export const collectPoolH2HMatches = (pool, matchdays) => {
-    if (!pool || !pool.rankings || pool.rankings.length <= 1 || !matchdays) return
-    pool.h2h_matches = []
-    for (var i = 0; i < pool.rankings.length - 1; i++) {
-        for (var j = i + 1; j < pool.rankings.length; j++) {
-            matchdays.forEach((md) => {
-                md.matches.forEach((m) => {
-                    if (
-                        (m.home_team === pool.rankings[i].id && m.away_team === pool.rankings[j].id) ||
-                        (m.home_team === pool.rankings[j].id && m.away_team === pool.rankings[i].id)
-                    ) {
-                        pool.h2h_matches.push(m)
-                    }
-                })
-            })
-        }
-    }
 }
 
 export const sortRankings = (rankings, config) => {
@@ -859,15 +1474,14 @@ export const isLotTiebreaker = (config) => {
     return tiebreakers.find((tb) => tb === 'lot') != null
 }
 
+export const isHead2HeadBeforeGoalDifference = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    const index1 = tiebreakers.findIndex((tb) => tb === 'h2hpoints')
+    const index2 = tiebreakers.findIndex((tb) => tb === 'goaldifference')
+    return index1 !== -1 && index2 !== -1 && index1 < index2
+}
+
 // export const isOnlyPointGoalDifferenceTiebreaker = (config) => {
 //     return isPointTiebreaker(config) && isGoalDifferenceTiebreaker(config) && !isGoalForTiebreaker(config)
-// }
-
-// export const isHead2HeadBeforeGoalDifference = (config) => {
-//     const { tiebreakers } = config
-//     if (!tiebreakers) return false
-//     return (
-//         tiebreakers.findIndex((tb) => tb === 'head2head') <
-//         tiebreakers.findIndex((tb) => tb === 'goaldifferenceandgoalscored' || tb === 'goaldifferencegoalscoredwins')
-//     )
 // }

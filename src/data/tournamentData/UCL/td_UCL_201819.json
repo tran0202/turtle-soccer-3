@@ -1386,17 +1386,17 @@
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advanced_note": "Group winners and runners-up advance to the knockout stage",
             "advancement": [
                 { "pos": 1, "will": "advance" },
                 { "pos": 2, "will": "advance" },
                 { "pos": 3, "will": "next_round" }
             ],
-            "next_round_note": "Third-place teams transfer to the Europa League Round of 32",
+            "next_round_note": "Third-placed teams transfer to the Europa League Round of 32",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "BRG" }, { "id": "DOR" }, { "id": "AMO" }, { "id": "ATM" }],
+                    "teams": [{ "id": "BRG" }, { "id": "ATM" }, { "id": "DOR" }, { "id": "AMO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1552,7 +1552,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "FCB" }, { "id": "PSV" }, { "id": "INT" }, { "id": "TOT" }],
+                    "teams": [{ "id": "PSV" }, { "id": "FCB" }, { "id": "INT" }, { "id": "TOT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1708,7 +1708,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "LIV" }, { "id": "PSG" }, { "id": "ZVE" }, { "id": "NAP" }],
+                    "teams": [{ "id": "NAP" }, { "id": "LIV" }, { "id": "PSG" }, { "id": "ZVE" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2332,7 +2332,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "RMA" }, { "id": "ROM" }, { "id": "VPL" }, { "id": "CSK" }],
+                    "teams": [{ "id": "CSK" }, { "id": "RMA" }, { "id": "ROM" }, { "id": "VPL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

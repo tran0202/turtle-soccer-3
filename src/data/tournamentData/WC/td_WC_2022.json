@@ -95,7 +95,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ENG" }, { "id": "IRN" }, { "id": "USA" }, { "id": "WAL" }],
+                    "teams": [{ "id": "IRN" }, { "id": "ENG" }, { "id": "USA" }, { "id": "WAL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +176,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "ARG" }, { "id": "KSA" }, { "id": "MEX" }, { "id": "POL" }],
+                    "teams": [{ "id": "KSA" }, { "id": "ARG" }, { "id": "MEX" }, { "id": "POL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +257,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "FRA" }, { "id": "AUS" }, { "id": "DEN" }, { "id": "TUN" }],
+                    "teams": [{ "id": "AUS" }, { "id": "FRA" }, { "id": "DEN" }, { "id": "TUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -338,7 +338,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "ESP" }, { "id": "CRC" }, { "id": "GER" }, { "id": "JPN" }],
+                    "teams": [{ "id": "GER" }, { "id": "JPN" }, { "id": "ESP" }, { "id": "CRC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -500,7 +500,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "BRA" }, { "id": "SRB" }, { "id": "SUI" }, { "id": "CMR" }],
+                    "teams": [{ "id": "SRB" }, { "id": "BRA" }, { "id": "SUI" }, { "id": "CMR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -581,7 +581,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "POR" }, { "id": "GHA" }, { "id": "URU" }, { "id": "KOR" }],
+                    "teams": [{ "id": "GHA" }, { "id": "POR" }, { "id": "URU" }, { "id": "KOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

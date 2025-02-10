@@ -176,7 +176,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "PER" }, { "id": "AUS" }],
+                    "teams": [{ "id": "DEN" }, { "id": "FRA" }, { "id": "PER" }, { "id": "AUS" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +257,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CRO" }, { "id": "ARG" }, { "id": "NGA" }, { "id": "ISL" }],
+                    "teams": [{ "id": "ARG" }, { "id": "CRO" }, { "id": "NGA" }, { "id": "ISL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -338,7 +338,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "BRA" }, { "id": "SUI" }, { "id": "SRB" }, { "id": "CRC" }],
+                    "teams": [{ "id": "SUI" }, { "id": "BRA" }, { "id": "SRB" }, { "id": "CRC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -500,7 +500,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "BEL" }, { "id": "ENG" }, { "id": "TUN" }, { "id": "PAN" }],
+                    "teams": [{ "id": "ENG" }, { "id": "BEL" }, { "id": "TUN" }, { "id": "PAN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

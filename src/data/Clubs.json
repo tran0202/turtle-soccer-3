@@ -2404,7 +2404,7 @@
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "SBR",
-        "logo_filename": "SBR.png",
+        "logo_filename": "S.C._Braga_logo.svg.png",
         "official_name": "SC Braga"
     },
     {
@@ -2445,7 +2445,7 @@
         "nation_id": "NED",
         "parent_team_id": "",
         "club_code": "FEY",
-        "logo_filename": "FEY.png",
+        "logo_filename": "480px-Feyenoord_logo_since_2024.svg.png",
         "official_name": "Feyenoord"
     },
     {
@@ -3062,13 +3062,13 @@
     },
     {
         "id": "ROA",
-        "name": "Royal Antwerp",
+        "name": "Antwerp",
         "short_name": "Antwerp",
         "team_type_id": "CLUB",
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "ROA",
-        "logo_filename": "Royal_Antwerp_Football_Club_logo.svg",
+        "logo_filename": "Royal_Antwerp_Football_Club_logo.svg.png",
         "official_name": "Royal Antwerp Football Club"
     },
     {
@@ -3733,7 +3733,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "SOC",
-        "logo_filename": "Real_Sociedad_logo.svg",
+        "logo_filename": "Real_Sociedad_logo.svg.png",
         "official_name": "Real Sociedad de Fútbol"
     },
     {
@@ -3776,5 +3776,35 @@
         "club_code": "USG",
         "logo_filename": "Royale_Union_Saint-Gilloise_logo.png",
         "official_name": "Royale Union Saint-Gilloise"
+    },
+    {
+        "id": "RCL",
+        "name": "Lens",
+        "team_type_id": "CLUB",
+        "nation_id": "FRA",
+        "parent_team_id": "",
+        "club_code": "RCL",
+        "logo_filename": "RC_Lens_logo.svg.png",
+        "official_name": "Racing Club de Lens"
+    },
+    {
+        "id": "FCU",
+        "name": "Union Berlin",
+        "team_type_id": "CLUB",
+        "nation_id": "GER",
+        "parent_team_id": "",
+        "club_code": "FCU",
+        "logo_filename": "1._FC_Union_Berlin_Logo.svg.png",
+        "official_name": "1. Fußballclub Union Berlin e. V."
+    },
+    {
+        "id": "NEW",
+        "name": "Newcastle United",
+        "team_type_id": "CLUB",
+        "nation_id": "ENG",
+        "parent_team_id": "",
+        "club_code": "NEW",
+        "logo_filename": "Newcastle_United_Logo.svg.png",
+        "official_name": "Newcastle United F.C."
     }
 ]

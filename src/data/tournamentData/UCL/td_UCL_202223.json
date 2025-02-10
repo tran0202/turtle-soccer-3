@@ -765,17 +765,17 @@
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advanced_note": "Group winners and runners-up advance to the knockout stage",
             "advancement": [
                 { "pos": 1, "will": "advance" },
                 { "pos": 2, "will": "advance" },
                 { "pos": 3, "will": "next_round" }
             ],
-            "next_round_note": "Third-place teams transfer to the Europa League Round of 32",
+            "next_round_note": "Third-placed teams transfer to the Europa League Knockout Round play-offs",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "AJA" }, { "id": "RFC" }, { "id": "NAP" }, { "id": "LIV" }],
+                    "teams": [{ "id": "AJA" }, { "id": "RFC" }, { "id": "LIV" }, { "id": "NAP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -931,7 +931,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ATM" }, { "id": "PTO" }, { "id": "BRG" }, { "id": "B04" }],
+                    "teams": [{ "id": "ATM" }, { "id": "B04" }, { "id": "PTO" }, { "id": "BRG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1867,7 +1867,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "PSG" }, { "id": "JUV" }, { "id": "SLB" }, { "id": "MHA" }],
+                    "teams": [{ "id": "PSG" }, { "id": "MHA" }, { "id": "JUV" }, { "id": "SLB" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

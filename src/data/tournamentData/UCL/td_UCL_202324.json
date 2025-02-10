@@ -761,42 +761,41 @@
         },
         {
             "name": "Group Stage",
-            "type": "roundrobinmatchday",
+            "type": "roundrobin_final",
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "transferred": [3],
-                    "eliminated": [4],
-                    "text": "The top 2 teams would advance to the Round of 16.The third-placed teams would transfer to the Europa League Round of 32."
-                }
-            },
+            "advanced_note": "Group winners and runners-up advance to the knockout stage",
+            "advancement": [
+                { "pos": 1, "will": "advance" },
+                { "pos": 2, "will": "advance" },
+                { "pos": 3, "will": "next_round" }
+            ],
+            "next_round_note": "Third-placed teams transfer to the Europa League Knockout Round play-offs",
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "RBS" }, { "id": "LMO" }, { "id": "BAY" }, { "id": "ATM" }],
+                    "teams": [{ "id": "GAL" }, { "id": "COP" }, { "id": "BAY" }, { "id": "MUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "LMO",
+                                    "home_team": "GAL",
+                                    "away_team": "COP",
                                     "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2020-10-21",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
+                                    "date": "2023-09-20",
+                                    "time": "18:45",
+                                    "stadium": "Rams Park",
+                                    "city": "Istanbul"
                                 },
                                 {
                                     "home_team": "BAY",
-                                    "away_team": "ATM",
+                                    "away_team": "MUN",
                                     "home_score": 4,
-                                    "away_score": 0,
-                                    "date": "2020-10-21",
+                                    "away_score": 3,
+                                    "date": "2023-09-20",
                                     "time": "21:00",
                                     "stadium": "Allianz Arena",
                                     "city": "Munich"
@@ -807,24 +806,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
+                                    "home_team": "MUN",
+                                    "away_team": "GAL",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Old Trafford",
+                                    "city": "Manchester"
+                                },
+                                {
+                                    "home_team": "COP",
                                     "away_team": "BAY",
                                     "home_score": 1,
                                     "away_score": 2,
-                                    "date": "2020-10-27",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
-                                },
-                                {
-                                    "home_team": "ATM",
-                                    "away_team": "RBS",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "date": "2023-10-03",
                                     "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 }
                             ]
                         },
@@ -832,24 +831,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
-                                    "away_team": "ATM",
+                                    "home_team": "GAL",
+                                    "away_team": "BAY",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-11-03",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
+                                    "away_score": 3,
+                                    "date": "2023-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Rams Park",
+                                    "city": "Istanbul"
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "BAY",
-                                    "home_score": 2,
-                                    "away_score": 6,
-                                    "date": "2020-11-03",
+                                    "home_team": "MUN",
+                                    "away_team": "COP",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-10-24",
                                     "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
+                                    "stadium": "Old Trafford",
+                                    "city": "Manchester"
                                 }
                             ]
                         },
@@ -857,24 +856,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "ATM",
-                                    "away_team": "LMO",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-11-25",
-                                    "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
-                                },
-                                {
                                     "home_team": "BAY",
-                                    "away_team": "RBS",
-                                    "home_score": 3,
+                                    "away_team": "GAL",
+                                    "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2020-11-25",
+                                    "date": "2023-11-08",
                                     "time": "21:00",
                                     "stadium": "Allianz Arena",
                                     "city": "Munich"
+                                },
+                                {
+                                    "home_team": "COP",
+                                    "away_team": "MUN",
+                                    "home_score": 4,
+                                    "away_score": 3,
+                                    "date": "2023-11-08",
+                                    "time": "21:00",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 }
                             ]
                         },
@@ -882,24 +881,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "LMO",
-                                    "away_team": "RBS",
-                                    "home_score": 1,
+                                    "home_team": "GAL",
+                                    "away_team": "MUN",
+                                    "home_score": 3,
                                     "away_score": 3,
-                                    "date": "2020-12-01",
-                                    "time": "18:55",
-                                    "stadium": "RZD Arena",
-                                    "city": "Moscow"
+                                    "date": "2023-11-29",
+                                    "time": "18:45",
+                                    "stadium": "Rams Park",
+                                    "city": "Istanbul"
                                 },
                                 {
-                                    "home_team": "ATM",
-                                    "away_team": "BAY",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-01",
+                                    "home_team": "BAY",
+                                    "away_team": "COP",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Metropolitano Stadium",
-                                    "city": "Madrid"
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich"
                                 }
                             ]
                         },
@@ -907,24 +906,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "BAY",
-                                    "away_team": "LMO",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-09",
+                                    "home_team": "MUN",
+                                    "away_team": "BAY",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-12-12",
                                     "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich"
+                                    "stadium": "Old Trafford",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "ATM",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-09",
+                                    "home_team": "COP",
+                                    "away_team": "GAL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-12-12",
                                     "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim"
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
                                 }
                             ]
                         }
@@ -932,30 +931,30 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "RMA" }, { "id": "SHK" }, { "id": "INT" }, { "id": "BMG" }],
+                    "teams": [{ "id": "SEV" }, { "id": "RCL" }, { "id": "ARS" }, { "id": "PSV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "SHK",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2020-10-21",
-                                    "time": "18:55",
-                                    "stadium": "Alfredo di Stéfano",
-                                    "city": "Madrid"
+                                    "home_team": "SEV",
+                                    "away_team": "RCL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-09-20",
+                                    "time": "21:00",
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "BMG",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-21",
+                                    "home_team": "ARS",
+                                    "away_team": "PSV",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2023-09-20",
                                     "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London"
                                 }
                             ]
                         },
@@ -963,24 +962,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "INT",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "RCL",
+                                    "away_team": "ARS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Stade Bollaert-Delelis",
+                                    "city": "Lens"
                                 },
                                 {
-                                    "home_team": "BMG",
-                                    "away_team": "RMA",
+                                    "home_team": "PSV",
+                                    "away_team": "SEV",
                                     "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "date": "2023-10-03",
                                     "time": "21:00",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven"
                                 }
                             ]
                         },
@@ -988,24 +987,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "BMG",
-                                    "home_score": 0,
-                                    "away_score": 6,
-                                    "date": "2020-11-03",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "SEV",
+                                    "away_team": "ARS",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "INT",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-03",
+                                    "home_team": "RCL",
+                                    "away_team": "PSV",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-10-24",
                                     "time": "21:00",
-                                    "stadium": "Alfredo di Stéfano",
-                                    "city": "Madrid"
+                                    "stadium": "Stade Bollaert-Delelis",
+                                    "city": "Lens"
                                 }
                             ]
                         },
@@ -1013,24 +1012,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "BMG",
-                                    "away_team": "SHK",
-                                    "home_score": 4,
+                                    "home_team": "ARS",
+                                    "away_team": "SEV",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-11-25",
-                                    "time": "18:55",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "date": "2023-11-08",
+                                    "time": "21:00",
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "RMA",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-25",
+                                    "home_team": "PSV",
+                                    "away_team": "RCL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-11-08",
                                     "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven"
                                 }
                             ]
                         },
@@ -1038,24 +1037,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SHK",
-                                    "away_team": "RMA",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
-                                },
-                                {
-                                    "home_team": "BMG",
-                                    "away_team": "INT",
+                                    "home_team": "SEV",
+                                    "away_team": "PSV",
                                     "home_score": 2,
                                     "away_score": 3,
-                                    "date": "2020-12-01",
+                                    "date": "2023-11-29",
+                                    "time": "18:45",
+                                    "stadium": "Ramón Sánchez Pizjuán",
+                                    "city": "Seville"
+                                },
+                                {
+                                    "home_team": "ARS",
+                                    "away_team": "RCL",
+                                    "home_score": 6,
+                                    "away_score": 0,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Borussia-Park",
-                                    "city": "Mönchengladbach"
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London"
                                 }
                             ]
                         },
@@ -1063,24 +1062,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "BMG",
+                                    "home_team": "RCL",
+                                    "away_team": "SEV",
                                     "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-09",
-                                    "time": "21:00",
-                                    "stadium": "Alfredo di Stéfano",
-                                    "city": "Madrid"
+                                    "away_score": 1,
+                                    "date": "2023-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Stade Bollaert-Delelis",
+                                    "city": "Lens"
                                 },
                                 {
-                                    "home_team": "INT",
-                                    "away_team": "SHK",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-09",
-                                    "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "home_team": "PSV",
+                                    "away_team": "ARS",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven"
                                 }
                             ]
                         }
@@ -1088,30 +1087,30 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "MCI" }, { "id": "PTO" }, { "id": "OLY" }, { "id": "OLM" }],
+                    "teams": [{ "id": "FCU" }, { "id": "RMA" }, { "id": "SBR" }, { "id": "NAP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "PTO",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-10-21",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
-                                },
-                                {
-                                    "home_team": "OLY",
-                                    "away_team": "OLM",
+                                    "home_team": "RMA",
+                                    "away_team": "FCU",
                                     "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-10-21",
+                                    "date": "2023-09-20",
+                                    "time": "18:45",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
+                                },
+                                {
+                                    "home_team": "SBR",
+                                    "away_team": "NAP",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-09-20",
                                     "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga"
                                 }
                             ]
                         },
@@ -1119,24 +1118,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "OLY",
+                                    "home_team": "FCU",
+                                    "away_team": "SBR",
                                     "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "away_score": 3,
+                                    "date": "2023-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Olympiastadion",
+                                    "city": "Berlin"
                                 },
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
+                                    "home_team": "NAP",
+                                    "away_team": "RMA",
+                                    "home_score": 2,
                                     "away_score": 3,
-                                    "date": "2020-10-27",
+                                    "date": "2023-10-03",
                                     "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 }
                             ]
                         },
@@ -1144,24 +1143,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "OLY",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-11-03",
+                                    "home_team": "SBR",
+                                    "away_team": "RMA",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-10-24",
                                     "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga"
                                 },
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "OLM",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-11-03",
+                                    "home_team": "FCU",
+                                    "away_team": "NAP",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-10-24",
                                     "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "stadium": "Olympiastadion",
+                                    "city": "Berlin"
                                 }
                             ]
                         },
@@ -1169,24 +1168,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
+                                    "home_team": "NAP",
+                                    "away_team": "FCU",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-11-25",
-                                    "time": "18:55",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "date": "2023-11-08",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 },
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "PTO",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-25",
+                                    "home_team": "RMA",
+                                    "away_team": "SBR",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-11-08",
                                     "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
                                 }
                             ]
                         },
@@ -1194,24 +1193,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "OLM",
-                                    "away_team": "OLY",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-01",
+                                    "home_team": "RMA",
+                                    "away_team": "NAP",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Stade Vélodrome",
-                                    "city": "Marseille"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "PTO",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
+                                    "home_team": "SBR",
+                                    "away_team": "FCU",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga"
                                 }
                             ]
                         },
@@ -1219,24 +1218,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "OLM",
-                                    "home_score": 3,
+                                    "home_team": "NAP",
+                                    "away_team": "SBR",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-12-09",
+                                    "date": "2023-12-12",
                                     "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester"
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples"
                                 },
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "PTO",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-09",
+                                    "home_team": "FCU",
+                                    "away_team": "RMA",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-12-12",
                                     "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus"
+                                    "stadium": "Olympiastadion",
+                                    "city": "Berlin"
                                 }
                             ]
                         }
@@ -1244,30 +1243,30 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "AJA" }, { "id": "LIV" }, { "id": "FCM" }, { "id": "ATT" }],
+                    "teams": [{ "id": "RBS" }, { "id": "INT" }, { "id": "SLB" }, { "id": "SOC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "LIV",
-                                    "home_score": 0,
+                                    "home_team": "SOC",
+                                    "away_team": "INT",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-10-21",
+                                    "date": "2023-09-20",
                                     "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "stadium": "Anoeta",
+                                    "city": "San Sebastián"
                                 },
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "ATT",
+                                    "home_team": "SLB",
+                                    "away_team": "RBS",
                                     "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-10-21",
+                                    "away_score": 2,
+                                    "date": "2023-09-20",
                                     "time": "21:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1275,24 +1274,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "FCM",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-27",
-                                    "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
+                                    "home_team": "RBS",
+                                    "away_team": "SOC",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2023-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "AJA",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-27",
+                                    "home_team": "INT",
+                                    "away_team": "SLB",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-10-03",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1300,24 +1299,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "AJA",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-11-03",
-                                    "time": "21:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "home_team": "INT",
+                                    "away_team": "RBS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-10-24",
+                                    "time": "18:45",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "LIV",
+                                    "home_team": "SLB",
+                                    "away_team": "SOC",
                                     "home_score": 0,
-                                    "away_score": 5,
-                                    "date": "2020-11-03",
+                                    "away_score": 1,
+                                    "date": "2023-10-24",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -1325,24 +1324,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "ATT",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-25",
-                                    "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
-                                },
-                                {
-                                    "home_team": "AJA",
-                                    "away_team": "FCM",
+                                    "home_team": "SOC",
+                                    "away_team": "SLB",
                                     "home_score": 3,
                                     "away_score": 1,
-                                    "date": "2020-11-25",
+                                    "date": "2023-11-08",
+                                    "time": "18:45",
+                                    "stadium": "Anoeta",
+                                    "city": "San Sebastián"
+                                },
+                                {
+                                    "home_team": "RBS",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-11-08",
                                     "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 }
                             ]
                         },
@@ -1350,24 +1349,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "AJA",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-01",
+                                    "home_team": "SLB",
+                                    "away_team": "INT",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "FCM",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-01",
+                                    "home_team": "SOC",
+                                    "away_team": "RBS",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-11-29",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo"
+                                    "stadium": "Anoeta",
+                                    "city": "San Sebastián"
                                 }
                             ]
                         },
@@ -1375,24 +1374,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "ATT",
+                                    "home_team": "INT",
+                                    "away_team": "SOC",
                                     "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-12-09",
-                                    "time": "18:55",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam"
+                                    "away_score": 0,
+                                    "date": "2023-12-12",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 },
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "LIV",
+                                    "home_team": "RBS",
+                                    "away_team": "SLB",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-09",
-                                    "time": "18:55",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning"
+                                    "away_score": 3,
+                                    "date": "2023-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Salzburg"
                                 }
                             ]
                         }
@@ -1400,30 +1399,30 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "CHE" }, { "id": "SEV" }, { "id": "REN" }, { "id": "KRA" }],
+                    "teams": [{ "id": "FEY" }, { "id": "CEL" }, { "id": "LAZ" }, { "id": "ATM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "CHE",
-                                    "away_team": "SEV",
-                                    "home_score": 0,
+                                    "home_team": "FEY",
+                                    "away_team": "CEL",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-10-20",
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London"
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam"
                                 },
                                 {
-                                    "home_team": "REN",
-                                    "away_team": "KRA",
+                                    "home_team": "LAZ",
+                                    "away_team": "ATM",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 }
                             ]
                         },
@@ -1431,24 +1430,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-10-28",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "home_team": "ATM",
+                                    "away_team": "FEY",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2023-10-04",
+                                    "time": "18:45",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "REN",
+                                    "home_team": "CEL",
+                                    "away_team": "LAZ",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-28",
+                                    "away_score": 2,
+                                    "date": "2023-10-04",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -1456,24 +1455,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "KRA",
+                                    "home_team": "FEY",
+                                    "away_team": "LAZ",
                                     "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-04",
-                                    "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "away_score": 1,
+                                    "date": "2023-10-25",
+                                    "time": "18:45",
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam"
                                 },
                                 {
-                                    "home_team": "CHE",
-                                    "away_team": "REN",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-11-04",
+                                    "home_team": "CEL",
+                                    "away_team": "ATM",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2023-10-25",
                                     "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London"
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -1481,24 +1480,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "SEV",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-11-24",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "home_team": "ATM",
+                                    "away_team": "CEL",
+                                    "home_score": 6,
+                                    "away_score": 0,
+                                    "date": "2023-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "REN",
-                                    "away_team": "CHE",
+                                    "home_team": "LAZ",
+                                    "away_team": "FEY",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-11-24",
-                                    "time": "18:55",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "away_score": 0,
+                                    "date": "2023-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 }
                             ]
                         },
@@ -1506,24 +1505,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "KRA",
-                                    "away_team": "REN",
-                                    "home_score": 1,
+                                    "home_team": "LAZ",
+                                    "away_team": "CEL",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-12-02",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar"
+                                    "date": "2023-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 },
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-12-02",
+                                    "home_team": "FEY",
+                                    "away_team": "ATM",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville"
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam"
                                 }
                             ]
                         },
@@ -1531,24 +1530,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "CHE",
-                                    "away_team": "KRA",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-08",
+                                    "home_team": "ATM",
+                                    "away_team": "LAZ",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-12-13",
                                     "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London"
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "REN",
-                                    "away_team": "SEV",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-12-08",
+                                    "home_team": "CEL",
+                                    "away_team": "FEY",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-12-13",
                                     "time": "21:00",
-                                    "stadium": "Roazhon Park",
-                                    "city": "Rennes"
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow"
                                 }
                             ]
                         }
@@ -1556,30 +1555,30 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "DOR" }],
+                    "teams": [{ "id": "MIL" }, { "id": "NEW" }, { "id": "PSG" }, { "id": "DOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "BRG",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "home_team": "MIL",
+                                    "away_team": "NEW",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-09-19",
+                                    "time": "18:45",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 },
                                 {
-                                    "home_team": "LAZ",
+                                    "home_team": "PSG",
                                     "away_team": "DOR",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris"
                                 }
                             ]
                         },
@@ -1588,23 +1587,23 @@
                             "matches": [
                                 {
                                     "home_team": "DOR",
-                                    "away_team": "ZSP",
-                                    "home_score": 2,
+                                    "away_team": "MIL",
+                                    "home_score": 0,
                                     "away_score": 0,
-                                    "date": "2020-10-28",
+                                    "date": "2023-10-04",
                                     "time": "21:00",
                                     "stadium": "Westfalenstadion",
                                     "city": "Dortmund"
                                 },
                                 {
-                                    "home_team": "BRG",
-                                    "away_team": "LAZ",
-                                    "home_score": 1,
+                                    "home_team": "NEW",
+                                    "away_team": "PSG",
+                                    "home_score": 4,
                                     "away_score": 1,
-                                    "date": "2020-10-28",
+                                    "date": "2023-10-04",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "St James' Park",
+                                    "city": "Newcastle upon Tyne"
                                 }
                             ]
                         },
@@ -1612,24 +1611,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "LAZ",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-11-04",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "home_team": "PSG",
+                                    "away_team": "MIL",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-10-25",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris"
                                 },
                                 {
-                                    "home_team": "BRG",
+                                    "home_team": "NEW",
                                     "away_team": "DOR",
                                     "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-04",
+                                    "away_score": 1,
+                                    "date": "2023-10-25",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "St James' Park",
+                                    "city": "Newcastle upon Tyne"
                                 }
                             ]
                         },
@@ -1637,24 +1636,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "ZSP",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-11-24",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
-                                },
-                                {
                                     "home_team": "DOR",
-                                    "away_team": "BRG",
-                                    "home_score": 3,
+                                    "away_team": "NEW",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-11-24",
-                                    "time": "21:00",
+                                    "date": "2023-11-07",
+                                    "time": "18:45",
                                     "stadium": "Westfalenstadion",
                                     "city": "Dortmund"
+                                },
+                                {
+                                    "home_team": "MIL",
+                                    "away_team": "PSG",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-11-07",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1662,24 +1661,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "LAZ",
+                                    "home_team": "PSG",
+                                    "away_team": "NEW",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-12-02",
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund"
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris"
                                 },
                                 {
-                                    "home_team": "BRG",
-                                    "away_team": "ZSP",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-12-02",
+                                    "home_team": "MIL",
+                                    "away_team": "DOR",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges"
+                                    "stadium": "San Siro",
+                                    "city": "Milan"
                                 }
                             ]
                         },
@@ -1687,24 +1686,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "ZSP",
-                                    "away_team": "DOR",
+                                    "home_team": "DOR",
+                                    "away_team": "PSG",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-12-08",
-                                    "time": "18:55",
-                                    "stadium": "Krestovsky Stadium",
-                                    "city": "Saint Petersburg"
+                                    "away_score": 1,
+                                    "date": "2023-12-13",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund"
                                 },
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "BRG",
-                                    "home_score": 2,
+                                    "home_team": "NEW",
+                                    "away_team": "MIL",
+                                    "home_score": 1,
                                     "away_score": 2,
-                                    "date": "2020-12-08",
-                                    "time": "18:55",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "date": "2023-12-13",
+                                    "time": "21:00",
+                                    "stadium": "St James' Park",
+                                    "city": "Newcastle upon Tyne"
                                 }
                             ]
                         }
@@ -1712,30 +1711,30 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "DYK" }, { "id": "JUV" }, { "id": "FCB" }, { "id": "FER" }],
+                    "teams": [{ "id": "YBO" }, { "id": "RBL" }, { "id": "MCI" }, { "id": "ZVE" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "JUV",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "YBO",
+                                    "away_team": "RBL",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-09-19",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Wankdorf",
+                                    "city": "Bern"
                                 },
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "FER",
-                                    "home_score": 5,
+                                    "home_team": "MCI",
+                                    "away_team": "ZVE",
+                                    "home_score": 3,
                                     "away_score": 1,
-                                    "date": "2020-10-20",
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 }
                             ]
                         },
@@ -1743,24 +1742,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "FCB",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-28",
+                                    "home_team": "RBL",
+                                    "away_team": "MCI",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-10-04",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "DYK",
+                                    "home_team": "ZVE",
+                                    "away_team": "YBO",
                                     "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2020-10-28",
+                                    "date": "2023-10-04",
                                     "time": "21:00",
-                                    "stadium": "Groupama Arena",
-                                    "city": "Budapest"
+                                    "stadium": "Rajko Mitić Stadium",
+                                    "city": "Belgrade"
                                 }
                             ]
                         },
@@ -1768,24 +1767,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "DYK",
-                                    "home_score": 2,
+                                    "home_team": "RBL",
+                                    "away_team": "ZVE",
+                                    "home_score": 3,
                                     "away_score": 1,
-                                    "date": "2020-11-04",
+                                    "date": "2023-10-25",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "JUV",
+                                    "home_team": "YBO",
+                                    "away_team": "MCI",
                                     "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-11-04",
+                                    "away_score": 3,
+                                    "date": "2023-10-25",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest"
+                                    "stadium": "Stadion Wankdorf",
+                                    "city": "Bern"
                                 }
                             ]
                         },
@@ -1793,24 +1792,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "FCB",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2020-11-24",
+                                    "home_team": "MCI",
+                                    "away_team": "YBO",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-11-07",
                                     "time": "21:00",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "FER",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-11-24",
+                                    "home_team": "ZVE",
+                                    "away_team": "RBL",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-11-07",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "stadium": "Rajko Mitić Stadium",
+                                    "city": "Belgrade"
                                 }
                             ]
                         },
@@ -1818,24 +1817,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "JUV",
-                                    "away_team": "DYK",
+                                    "home_team": "MCI",
+                                    "away_team": "RBL",
                                     "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-12-02",
+                                    "away_score": 2,
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "FCB",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-12-02",
+                                    "home_team": "YBO",
+                                    "away_team": "ZVE",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest"
+                                    "stadium": "Stadion Wankdorf",
+                                    "city": "Bern"
                                 }
                             ]
                         },
@@ -1843,24 +1842,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "JUV",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-12-08",
-                                    "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona"
+                                    "home_team": "RBL",
+                                    "away_team": "YBO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-12-13",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig"
                                 },
                                 {
-                                    "home_team": "DYK",
-                                    "away_team": "FER",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-08",
-                                    "time": "21:00",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv"
+                                    "home_team": "ZVE",
+                                    "away_team": "MCI",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-12-13",
+                                    "time": "18:45",
+                                    "stadium": "Rajko Mitić Stadium",
+                                    "city": "Belgrade"
                                 }
                             ]
                         }
@@ -1868,30 +1867,30 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "PSG" }, { "id": "MUN" }, { "id": "RBL" }, { "id": "IBA" }],
+                    "teams": [{ "id": "PTO" }, { "id": "FCB" }, { "id": "ROA" }, { "id": "SHK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "MUN",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-20",
+                                    "home_team": "FCB",
+                                    "away_team": "ROA",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris"
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "RBL",
-                                    "away_team": "IBA",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-20",
+                                    "home_team": "SHK",
+                                    "away_team": "PTO",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-09-19",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Volksparkstadion",
+                                    "city": "Hamburg, Germany"
                                 }
                             ]
                         },
@@ -1899,24 +1898,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "PSG",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-28",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "home_team": "ROA",
+                                    "away_team": "SHK",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-10-04",
+                                    "time": "18:45",
+                                    "stadium": "Bosuilstadion",
+                                    "city": "Antwerp"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "RBL",
-                                    "home_score": 5,
-                                    "away_score": 0,
-                                    "date": "2020-10-28",
+                                    "home_team": "PTO",
+                                    "away_team": "FCB",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-10-04",
                                     "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 }
                             ]
                         },
@@ -1924,24 +1923,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "MUN",
+                                    "home_team": "FCB",
+                                    "away_team": "SHK",
                                     "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2020-11-04",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "date": "2023-10-25",
+                                    "time": "18:45",
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "RBL",
-                                    "away_team": "PSG",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-11-04",
+                                    "home_team": "ROA",
+                                    "away_team": "PTO",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2023-10-25",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Bosuilstadion",
+                                    "city": "Antwerp"
                                 }
                             ]
                         },
@@ -1949,24 +1948,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "IBA",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-11-24",
-                                    "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
-                                },
-                                {
-                                    "home_team": "PSG",
-                                    "away_team": "RBL",
+                                    "home_team": "SHK",
+                                    "away_team": "FCB",
                                     "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-11-24",
+                                    "date": "2023-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Volksparkstadion",
+                                    "city": "Hamburg, Germany"
+                                },
+                                {
+                                    "home_team": "PTO",
+                                    "away_team": "ROA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-11-07",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris"
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 }
                             ]
                         },
@@ -1974,24 +1973,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "IBA",
-                                    "away_team": "RBL",
-                                    "home_score": 3,
-                                    "away_score": 4,
-                                    "date": "2020-12-02",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul"
+                                    "home_team": "SHK",
+                                    "away_team": "ROA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Volksparkstadion",
+                                    "city": "Hamburg, Germany"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "PSG",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-12-02",
+                                    "home_team": "FCB",
+                                    "away_team": "PTO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-11-28",
                                     "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester"
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona"
                                 }
                             ]
                         },
@@ -1999,24 +1998,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "IBA",
+                                    "home_team": "PTO",
+                                    "away_team": "SHK",
                                     "home_score": 5,
-                                    "away_score": 1,
-                                    "date": "2020-12-08",
+                                    "away_score": 3,
+                                    "date": "2023-12-13",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris"
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto"
                                 },
                                 {
-                                    "home_team": "RBL",
-                                    "away_team": "MUN",
+                                    "home_team": "ROA",
+                                    "away_team": "FCB",
                                     "home_score": 3,
                                     "away_score": 2,
-                                    "date": "2020-12-08",
+                                    "date": "2023-12-13",
                                     "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Leipzig"
+                                    "stadium": "Bosuilstadion",
+                                    "city": "Antwerp"
                                 }
                             ]
                         }

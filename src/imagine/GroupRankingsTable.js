@@ -5,6 +5,7 @@ import { getTeamFlagId } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
 import {
     TiebreakTooltip,
+    TiebreakTooltip2,
     FairPlayTooltip,
     PlayoffWinTooltip,
     WithdrewTooltip,
@@ -82,6 +83,9 @@ const RankingsRow = (props) => {
             )}
             <Col className="col-box-13 text-center">
                 {pts}{' '}
+                {!config.no_h2h_tooltip && ranking.tb_anchor && (
+                    <TiebreakTooltip2 target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_note} />
+                )}
                 {!config.no_h2h_tooltip && ranking.h2h_point && (
                     <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points: ${ranking.h2h_point_note}`} />
                 )}

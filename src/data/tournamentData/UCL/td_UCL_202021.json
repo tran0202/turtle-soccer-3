@@ -765,13 +765,13 @@
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
+            "advanced_note": "Group winners and runners-up advance to the knockout stage",
             "advancement": [
                 { "pos": 1, "will": "advance" },
                 { "pos": 2, "will": "advance" },
                 { "pos": 3, "will": "next_round" }
             ],
-            "next_round_note": "Third-place teams transfer to the Europa League Round of 32",
+            "next_round_note": "Third-placed teams transfer to the Europa League Round of 32",
             "groups": [
                 {
                     "name": "Group A",
@@ -931,7 +931,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "RMA" }, { "id": "SHK" }, { "id": "INT" }, { "id": "BMG" }],
+                    "teams": [{ "id": "SHK" }, { "id": "RMA" }, { "id": "INT" }, { "id": "BMG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1087,7 +1087,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "MCI" }, { "id": "PTO" }, { "id": "OLY" }, { "id": "OLM" }],
+                    "teams": [{ "id": "PTO" }, { "id": "OLM" }, { "id": "MCI" }, { "id": "OLY" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1399,7 +1399,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "CHE" }, { "id": "SEV" }, { "id": "REN" }, { "id": "KRA" }],
+                    "teams": [{ "id": "SEV" }, { "id": "CHE" }, { "id": "REN" }, { "id": "KRA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1711,7 +1711,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "DYK" }, { "id": "JUV" }, { "id": "FCB" }, { "id": "FER" }],
+                    "teams": [{ "id": "DYK" }, { "id": "FCB" }, { "id": "JUV" }, { "id": "FER" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1867,7 +1867,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "PSG" }, { "id": "MUN" }, { "id": "RBL" }, { "id": "IBA" }],
+                    "teams": [{ "id": "MUN" }, { "id": "RBL" }, { "id": "PSG" }, { "id": "IBA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

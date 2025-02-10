@@ -20,6 +20,12 @@ export const TiebreakTooltip = (props) => {
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const TiebreakTooltip2 = (props) => {
+    const { target, anchor, note } = props
+    const content = note
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const GoldenGoalTooltip = (props) => {
     const { target, anchor } = props
     const content = 'Golden goal'

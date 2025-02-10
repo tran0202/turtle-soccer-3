@@ -17,12 +17,12 @@
                 {
                     "name": "Group A",
                     "teams": [
+                        { "id": "USA" },
                         { "id": "ITA" },
                         {
                             "id": "AUT",
                             "draw_lot_win": true
                         },
-                        { "id": "USA" },
                         { "id": "TCH" }
                     ],
                     "matchdays": [
@@ -186,7 +186,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "BRA" }, { "id": "SWE" }, { "id": "CRC" }, { "id": "SCO" }],
+                    "teams": [{ "id": "SWE" }, { "id": "BRA" }, { "id": "CRC" }, { "id": "SCO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -430,16 +430,16 @@
                 {
                     "name": "Group F",
                     "teams": [
+                        {
+                            "id": "NED",
+                            "draw_lot_win": false,
+                            "draw_lot_note": "Netherlands took 3rd place after finished identical records (points, goal difference and goals scored) with Republic of Ireland."
+                        },
                         { "id": "ENG" },
                         {
                             "id": "IRL",
                             "draw_lot_win": true,
-                            "draw_lot_note": "Republic of Ireland took 2nd place after finished identical records (points, goal difference and goal forward) with Netherlands."
-                        },
-                        {
-                            "id": "NED",
-                            "draw_lot_win": false,
-                            "draw_lot_note": "Netherlands took 3rd place after finished identical records (points, goal difference and goal forward) with Republic of Ireland."
+                            "draw_lot_note": "Republic of Ireland took 2nd place after finished identical records (points, goal difference and goals scored) with Netherlands."
                         },
                         { "id": "EGY" }
                     ],

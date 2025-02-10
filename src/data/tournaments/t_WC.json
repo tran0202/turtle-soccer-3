@@ -39,7 +39,7 @@
         "name": "FIFA World Cup Qatar 2022",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "slogan": "Now is All",
             "host": { "teams": ["QAT"], "qualification_date": "2010-12-02" },
@@ -92,7 +92,7 @@
         "name": "FIFA World Cup Russia 2018",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "slogan": "Play with an open heart",
             "host": { "teams": ["RUS"], "qualification_date": "2010-12-02" },
@@ -558,7 +558,8 @@
         "name": "FIFA World Cup Italy 1990",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ITA"], "qualification_date": "1984-05-19" },
             "logo_filename": "1990_FIFA_World_Cup.svg",
