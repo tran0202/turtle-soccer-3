@@ -38,9 +38,10 @@ const RankingsHeader = (props) => {
 
 const RankingsRow = (props) => {
     const { ranking, config } = props
-    const qualified_striped = ranking.qualified ? 'advanced-next-round-striped' : ''
-    const advanced_striped = ranking.advanced ? 'advanced-next-round-striped' : ''
-    const next_round_striped = ranking.next_rounded ? 'advanced-wild-card-striped' : ''
+    const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
+    const advanced_striped = ranking.advanced ? 'advanced-striped' : ''
+    const wild_card_striped = ranking.wild_card ? 'wild-card-striped' : ''
+    const transferred_striped = ranking.transferred ? 'transferred-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
     const rank = !ranking.team.withdrew ? ranking.rank : ''
     const w = !ranking.team.withdrew ? ranking.w : <span>&mdash;</span>
@@ -53,7 +54,9 @@ const RankingsRow = (props) => {
     const drawLotAnchor = ranking.team.draw_lot_label ? '(ct)' : '(dl)'
     const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
-        <Row className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${next_round_striped}${withdrew_striped}`}>
+        <Row
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${withdrew_striped}`}
+        >
             <Col className="col-box-4">{rank}</Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
             <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>

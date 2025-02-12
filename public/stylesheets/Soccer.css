@@ -444,11 +444,17 @@
     color: #f39205;
 }
 
-.advanced-next-round-striped {
+.qualified-striped {
     background-color: #e3fae3;
 }
-.advanced-wild-card-striped {
+.advanced-striped {
+    background-color: #e3fae3;
+}
+.wild-card-striped {
     background-color: #bbf3ff;
+}
+.transferred-striped {
+    background-color: #ffffdd;
 }
 .advanced-wild-card-extra-striped {
     background-color: #ffffbb;
@@ -457,9 +463,6 @@
     background-color: #bbf3ff;
 }
 .advanced-third-place-striped {
-    background-color: #bbf3ff;
-}
-.transferred-striped {
     background-color: #bbf3ff;
 }
 .qualification-winner-striped {

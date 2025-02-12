@@ -251,7 +251,7 @@
                         { "id": "TOT" },
                         { "id": "ART" },
                         { "id": "KKO" },
-                        { "id": "SLL" },
+                        { "id": "SLL-2024" },
                         { "id": "RFC" },
                         { "id": "REI" },
                         { "id": "RIO" },
@@ -1192,7 +1192,7 @@
                         },
                         {
                             "home_team": "RIT",
-                            "away_team": "SLL",
+                            "away_team": "SLL-2024",
                             "home_score": 1,
                             "away_score": 5,
                             "date": "2020-09-17",
@@ -1351,7 +1351,7 @@
                     "name": "Third Qualifying Round",
                     "next_round": "Play-off Round",
                     "eliminate_count": 77,
-                    "bye_teams": [{ "id": "YBO" }, { "id": "KFT" }, { "id": "DZA" }, { "id": "ZVE" }, { "id": "DBR" }, { "id": "LUD" }, { "id": "QAR" }],
+                    "bye_teams": [{ "id": "YBO" }, { "id": "KFT" }, { "id": "DZA" }, { "id": "CZV" }, { "id": "DBR" }, { "id": "LUD" }, { "id": "QAR" }],
                     "matches": [
                         {
                             "home_team": "SAR",
@@ -1676,7 +1676,7 @@
                         },
                         {
                             "home_team": "SBU",
-                            "away_team": "SLL",
+                            "away_team": "SLL-2024",
                             "home_score": 0,
                             "away_score": 2,
                             "date": "2020-09-24",
@@ -1816,7 +1816,7 @@
                         },
                         {
                             "home_team": "ARA",
-                            "away_team": "ZVE",
+                            "away_team": "CZV",
                             "home_score": 1,
                             "away_score": 2,
                             "date": "2020-10-01",
@@ -1984,7 +1984,7 @@
                             "path": "Main"
                         },
                         {
-                            "home_team": "SLL",
+                            "home_team": "SLL-2024",
                             "away_team": "APO",
                             "home_score": 1,
                             "away_score": 0,
@@ -2022,7 +2022,7 @@
         },
         {
             "name": "Group Stage",
-            "type": "roundrobinmatchday",
+            "type": "roundrobin_final",
             "eliminate_count": 32,
             "home_and_away": true,
             "next_round": "Round of 32",
@@ -2036,12 +2036,12 @@
                 { "id": "AJA" },
                 { "id": "OLY" }
             ],
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "eliminated": [3, 4],
-                    "text": "The top 2 teams would advance to the Round of 32, joined by 8 third-placed teams from UCL."
-                }
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_note": "Group winners and runners-up advanced to Knockout stage"
             },
             "groups": [
                 {
@@ -2358,7 +2358,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "B04" }, { "id": "NCE" }, { "id": "HBS" }, { "id": "SLP" }],
+                    "teams": [{ "id": "NCE" }, { "id": "B04" }, { "id": "HBS" }, { "id": "SLP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2670,7 +2670,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "PSV" }, { "id": "GCF" }, { "id": "PAO" }, { "id": "OMO" }],
+                    "teams": [{ "id": "GCF" }, { "id": "PSV" }, { "id": "PAO" }, { "id": "OMO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2826,7 +2826,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "NAP" }, { "id": "AZA" }, { "id": "RIJ" }, { "id": "SOC" }],
+                    "teams": [{ "id": "AZA" }, { "id": "NAP" }, { "id": "RIJ" }, { "id": "SOC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -3294,7 +3294,7 @@
                 },
                 {
                     "name": "Group I",
-                    "teams": [{ "id": "VIL" }, { "id": "SIV" }, { "id": "MTA" }, { "id": "QAR" }],
+                    "teams": [{ "id": "SIV" }, { "id": "VIL" }, { "id": "MTA" }, { "id": "QAR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -3434,7 +3434,7 @@
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal",
                                     "home_awarded": true,
-                                    "awarded_text": "Awarded: The Villarreal v Qarabag match was cancelled and awarded as a 3–0 win to Villarreal after several players of the Qarabağ squad tested positive for the SARS-CoV-2."
+                                    "awarded_text": "Awarded: The Villarreal - Qarabağ match was cancelled and awarded as a 3–0 win to Villarreal after several players of the Qarabağ squad tested positive for the SARS-CoV-2."
                                 },
                                 {
                                     "home_team": "MTA",
@@ -3452,7 +3452,7 @@
                 },
                 {
                     "name": "Group J",
-                    "teams": [{ "id": "TOT" }, { "id": "LIN" }, { "id": "LUD" }, { "id": "ROA" }],
+                    "teams": [{ "id": "LIN" }, { "id": "TOT" }, { "id": "LUD" }, { "id": "ROA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -3608,7 +3608,7 @@
                 },
                 {
                     "name": "Group K",
-                    "teams": [{ "id": "DZA" }, { "id": "FEY" }, { "id": "WOL" }, { "id": "CSK" }],
+                    "teams": [{ "id": "FEY" }, { "id": "DZA" }, { "id": "WOL" }, { "id": "CSK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -3764,14 +3764,14 @@
                 },
                 {
                     "name": "Group L",
-                    "teams": [{ "id": "TSG" }, { "id": "ZVE" }, { "id": "SLL" }, { "id": "GNT" }],
+                    "teams": [{ "id": "SLL-2024" }, { "id": "TSG" }, { "id": "CZV" }, { "id": "GNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "TSG",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-10-22",
@@ -3780,7 +3780,7 @@
                                     "city": "Sinsheim"
                                 },
                                 {
-                                    "home_team": "SLL",
+                                    "home_team": "SLL-2024",
                                     "away_team": "GNT",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -3805,8 +3805,8 @@
                                     "city": "Ghent"
                                 },
                                 {
-                                    "home_team": "ZVE",
-                                    "away_team": "SLL",
+                                    "home_team": "CZV",
+                                    "away_team": "SLL-2024",
                                     "home_score": 5,
                                     "away_score": 1,
                                     "date": "2020-10-29",
@@ -3820,7 +3820,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "GNT",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -3831,7 +3831,7 @@
                                 },
                                 {
                                     "home_team": "TSG",
-                                    "away_team": "SLL",
+                                    "away_team": "SLL-2024",
                                     "home_score": 5,
                                     "away_score": 0,
                                     "date": "2020-11-05",
@@ -3846,7 +3846,7 @@
                             "matches": [
                                 {
                                     "home_team": "GNT",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2020-11-26",
@@ -3855,7 +3855,7 @@
                                     "city": "Ghent"
                                 },
                                 {
-                                    "home_team": "SLL",
+                                    "home_team": "SLL-2024",
                                     "away_team": "TSG",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -3871,7 +3871,7 @@
                             "matches": [
                                 {
                                     "home_team": "GNT",
-                                    "away_team": "SLL",
+                                    "away_team": "SLL-2024",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2020-12-03",
@@ -3880,7 +3880,7 @@
                                     "city": "Ghent"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "TSG",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -3905,8 +3905,8 @@
                                     "city": "Sinsheim"
                                 },
                                 {
-                                    "home_team": "SLL",
-                                    "away_team": "ZVE",
+                                    "home_team": "SLL-2024",
+                                    "away_team": "CZV",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2020-12-10",
@@ -4043,7 +4043,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "MIL",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -4055,7 +4055,7 @@
                                 },
                                 {
                                     "home_team": "MIL",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2021-02-25",

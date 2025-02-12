@@ -54,7 +54,7 @@
                         { "id": "LJU" },
                         { "id": "QAR" },
                         { "id": "F91" },
-                        { "id": "VID-2018" },
+                        { "id": "VID-2018-2019" },
                         { "id": "MAL" },
                         { "id": "VIK" },
                         { "id": "HJK" },
@@ -69,7 +69,7 @@
                         { "id": "FTA" },
                         { "id": "HBS" },
                         { "id": "JUR" },
-                        { "id": "ZVE" },
+                        { "id": "CZV" },
                         { "id": "ASH" },
                         { "id": "CEL" },
                         { "id": "SPT" },
@@ -223,7 +223,7 @@
                             "matches": [
                                 {
                                     "home_team": "F91",
-                                    "away_team": "VID-2018",
+                                    "away_team": "VID-2018-2019",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2018-07-10",
@@ -233,7 +233,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "VID-2018",
+                                    "home_team": "VID-2018-2019",
                                     "away_team": "F91",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -431,7 +431,7 @@
                             "matches": [
                                 {
                                     "home_team": "JUR",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2018-07-11",
@@ -441,7 +441,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "JUR",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -589,7 +589,7 @@
                             "matches": [
                                 {
                                     "home_team": "LUD",
-                                    "away_team": "VID-2018",
+                                    "away_team": "VID-2018-2019",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2018-07-25",
@@ -600,7 +600,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "VID-2018",
+                                    "home_team": "VID-2018-2019",
                                     "away_team": "LUD",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -700,7 +700,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "SMA",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -713,7 +713,7 @@
                                 },
                                 {
                                     "home_team": "SMA",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2018-08-01",
@@ -969,7 +969,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "SPT",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -982,7 +982,7 @@
                                 },
                                 {
                                     "home_team": "SPT",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "home_extra_score": 0,
@@ -1056,7 +1056,7 @@
                             "matches": [
                                 {
                                     "home_team": "MAL",
-                                    "away_team": "VID-2018",
+                                    "away_team": "VID-2018-2019",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2018-08-07",
@@ -1067,7 +1067,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "VID-2018",
+                                    "home_team": "VID-2018-2019",
                                     "away_team": "MAL",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -1211,7 +1211,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "RBS",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -1224,7 +1224,7 @@
                                 },
                                 {
                                     "home_team": "RBS",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2018-08-29",
@@ -1295,7 +1295,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "VID-2018",
+                                    "home_team": "VID-2018-2019",
                                     "away_team": "AEK",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -1308,7 +1308,7 @@
                                 },
                                 {
                                     "home_team": "AEK",
-                                    "away_team": "VID-2018",
+                                    "away_team": "VID-2018-2019",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2018-08-28",
@@ -1708,7 +1708,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "NAP" }, { "id": "LIV" }, { "id": "PSG" }, { "id": "ZVE" }],
+                    "teams": [{ "id": "NAP" }, { "id": "LIV" }, { "id": "PSG" }, { "id": "CZV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1724,7 +1724,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "NAP",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -1740,7 +1740,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 6,
                                     "away_score": 1,
                                     "date": "2018-10-03",
@@ -1775,7 +1775,7 @@
                                 },
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2018-10-24",
@@ -1789,7 +1789,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "LIV",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1825,7 +1825,7 @@
                                 },
                                 {
                                     "home_team": "NAP",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2018-11-28",
@@ -1849,7 +1849,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 4,

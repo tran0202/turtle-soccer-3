@@ -27,11 +27,11 @@ const GroupsCollapse = (props) => {
                 </Col>
                 <Col sm="5">
                     <Row>
-                        <Col className="advanced-next-round-striped">{stage.advanced_note}</Col>
+                        <Col className="advanced-striped">{stage.advanced_note}</Col>
                     </Row>
                     {stage.next_round_note && (
                         <Row>
-                            <Col className="advanced-wild-card-striped">{stage.next_round_note}</Col>
+                            <Col className="wild-card-striped">{stage.next_round_note}</Col>
                         </Row>
                     )}
                 </Col>

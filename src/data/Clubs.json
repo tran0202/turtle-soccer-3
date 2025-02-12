@@ -140,7 +140,7 @@
         "nation_id": "CYP",
         "parent_team_id": "",
         "club_code": "APO",
-        "logo_filename": "APO.png",
+        "logo_filename": "APOEL_(logo_with_stars).svg.png",
         "official_name": "APOEL FC"
     },
     {
@@ -155,12 +155,12 @@
     },
     {
         "id": "QAR",
-        "name": "Qarabag",
+        "name": "Qarabağ",
         "team_type_id": "CLUB",
         "nation_id": "AZE",
         "parent_team_id": "",
         "club_code": "QAR",
-        "logo_filename": "QAR.png",
+        "logo_filename": "Qarabağ_FK_logo.png",
         "official_name": "Qarabağ FK"
     },
     {
@@ -170,27 +170,27 @@
         "nation_id": "LUX",
         "parent_team_id": "",
         "club_code": "F91",
-        "logo_filename": "F91.png",
+        "logo_filename": "F91_Dudelange.png",
         "official_name": "F91 Dudelange"
     },
     {
         "id": "VID",
-        "name": "Fehervar FC",
+        "name": "Fehérvár FC",
         "team_type_id": "CLUB",
         "nation_id": "HUN",
         "parent_team_id": "",
         "club_code": "VID",
-        "logo_filename": "MOL_Fehérvár_FC_logo.svg",
+        "logo_filename": "MOL_Fehérvár_FC_logo.svg.png",
         "official_name": "MOL Fehérvár FC"
     },
     {
-        "id": "VID-2018",
-        "name": "Vidi",
+        "id": "VID-2018-2019",
+        "name": "MOL Vidi",
         "team_type_id": "CLUB",
         "nation_id": "HUN",
         "parent_team_id": "VID",
         "club_code": "VID",
-        "logo_filename": "VID.png",
+        "logo_filename": "MOL_Vidi_FC_logo_2018.webp",
         "official_name": "MOL Vidi FC"
     },
     {
@@ -200,7 +200,7 @@
         "nation_id": "HUN",
         "parent_team_id": "VID",
         "club_code": "VID",
-        "logo_filename": "VID.png",
+        "logo_filename": "Videoton_FC_–_2013.svg",
         "official_name": "Videoton FC"
     },
     {
@@ -230,7 +230,7 @@
         "nation_id": "FIN",
         "parent_team_id": "",
         "club_code": "HJK",
-        "logo_filename": "HJK.png",
+        "logo_filename": "HJK_Helsinki_Logo.svg.png",
         "official_name": "HJK Helsinki"
     },
     {
@@ -241,7 +241,7 @@
         "nation_id": "BUL",
         "parent_team_id": "",
         "club_code": "LUD",
-        "logo_filename": "LUD.png",
+        "logo_filename": "PFC_Ludogorets_Razgrad_logo.svg.png",
         "official_name": "PFC Ludogorets 1945"
     },
     {
@@ -271,7 +271,7 @@
         "nation_id": "POL",
         "parent_team_id": "",
         "club_code": "WAR",
-        "logo_filename": "WAR.png",
+        "logo_filename": "Legia_Warsaw_logo.svg.png",
         "official_name": "Legia Warszawa"
     },
     {
@@ -291,7 +291,7 @@
         "nation_id": "NOR",
         "parent_team_id": "",
         "club_code": "RBK",
-        "logo_filename": "RBK.png",
+        "logo_filename": "RBK-logo.png",
         "official_name": "Rosenborg BK"
     },
     {
@@ -326,12 +326,12 @@
     },
     {
         "id": "HBS",
-        "name": "Hapoel Beer-Sheva",
+        "name": "Hapoel Be'er Sheva",
         "team_type_id": "CLUB",
         "nation_id": "ISR",
         "parent_team_id": "",
         "club_code": "HBS",
-        "logo_filename": "HBS.png",
+        "logo_filename": "Logo-hapoel-positive.svg.png",
         "official_name": "Hapoel Beer-Sheva FC"
     },
     {
@@ -345,13 +345,13 @@
         "official_name": "FK Spartaks Jūrmala"
     },
     {
-        "id": "ZVE",
-        "name": "Crvena Zvezda",
+        "id": "CZV",
+        "name": "Red Star Belgrade",
         "short_name": "Red Star Belgrade",
         "team_type_id": "CLUB",
         "nation_id": "SRB",
         "parent_team_id": "",
-        "club_code": "ZVE",
+        "club_code": "CZV",
         "logo_filename": "Red_Star_Belgrade_crest.svg.png",
         "official_name": "FK Crvena Zvezda"
     },
@@ -382,7 +382,7 @@
         "nation_id": "SVK",
         "parent_team_id": "",
         "club_code": "SPT",
-        "logo_filename": "SPT.png",
+        "logo_filename": "Spartak_Trnava_logo.svg.png",
         "official_name": "FC Spartak Trnava"
     },
     {
@@ -402,7 +402,7 @@
         "nation_id": "KAZ",
         "parent_team_id": "",
         "club_code": "AST",
-        "logo_filename": "FC_Astana_Logo.svg",
+        "logo_filename": "FC_Astana_Logo.svg.png",
         "official_name": "FC Astana"
     },
     {
@@ -432,7 +432,7 @@
         "nation_id": "ROU",
         "parent_team_id": "",
         "club_code": "CFR",
-        "logo_filename": "CFR.png",
+        "logo_filename": "CFR_Cluj_badge.svg.png",
         "official_name": "CFR 1907 Cluj"
     },
     {
@@ -454,7 +454,7 @@
         "nation_id": "BLR",
         "parent_team_id": "",
         "club_code": "BBO",
-        "logo_filename": "BATE_Borisov_logo.svg",
+        "logo_filename": "BATE_Borisov_logo.svg.png",
         "official_name": "FC BATE Borisov"
     },
     {
@@ -464,7 +464,7 @@
         "nation_id": "GRE",
         "parent_team_id": "",
         "club_code": "PAO",
-        "logo_filename": "PAO.png",
+        "logo_filename": "PAOK_FC_Logo.png",
         "official_name": "PAOK FC"
     },
     {
@@ -474,7 +474,7 @@
         "nation_id": "SUI",
         "parent_team_id": "",
         "club_code": "BAS",
-        "logo_filename": "BAS.png",
+        "logo_filename": "FC_Basel.png",
         "official_name": "FC Basel 1893"
     },
     {
@@ -484,7 +484,7 @@
         "nation_id": "AUT",
         "parent_team_id": "",
         "club_code": "SGR",
-        "logo_filename": "SGR.png",
+        "logo_filename": "SK_Sturm_Graz_logo.svg.png",
         "official_name": "SK Sturm Graz"
     },
     {
@@ -531,12 +531,12 @@
     },
     {
         "id": "FEN",
-        "name": "Fenerbahce",
+        "name": "Fenerbahçe",
         "team_type_id": "CLUB",
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "FEN",
-        "logo_filename": "FEN.png",
+        "logo_filename": "Fenerbahçe.svg.png",
         "official_name": "Fenerbahçe SK"
     },
     {
@@ -546,17 +546,17 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "SPM",
-        "logo_filename": "SPM.png",
-        "official_name": "FC Spartak Moskva"
+        "logo_filename": "640px-FC_Spartak_Moscow_Logotype.png",
+        "official_name": "FC Spartak Moscow"
     },
     {
         "id": "STL",
-        "name": "Standard Liege",
+        "name": "Standard Liège",
         "team_type_id": "CLUB",
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "STL",
-        "logo_filename": "STL.png",
+        "logo_filename": "Standard_Liège_BC_logo.png",
         "official_name": "R. Standard de Liège"
     },
     {
@@ -898,7 +898,7 @@
         "nation_id": "SVK",
         "parent_team_id": "",
         "club_code": "SKS",
-        "logo_filename": "SKS.png",
+        "logo_filename": "SK_Slovan_Bratislava_logo.svg.png",
         "official_name": "ŠK Slovan Bratislava"
     },
     {
@@ -928,7 +928,7 @@
         "nation_id": "IRL",
         "parent_team_id": "",
         "club_code": "DUN",
-        "logo_filename": "DUN.png",
+        "logo_filename": "Dundalk_FC_Crest_2024.png",
         "official_name": "Dundalk FC"
     },
     {
@@ -1019,7 +1019,7 @@
         "nation_id": "ISR",
         "parent_team_id": "",
         "club_code": "MTA",
-        "logo_filename": "MTA.png",
+        "logo_filename": "Maccabi_Tel_Aviv.png",
         "official_name": "Maccabi Tel-Aviv FC"
     },
     {
@@ -1056,12 +1056,12 @@
     },
     {
         "id": "LIN",
-        "name": "LASK Linz",
+        "name": "LASK",
         "team_type_id": "CLUB",
         "nation_id": "AUT",
         "parent_team_id": "",
         "club_code": "LIN",
-        "logo_filename": "LIN.png",
+        "logo_filename": "380px-LASK-Logo_2023.svg.png",
         "official_name": "LASK Linz"
     },
     {
@@ -1364,7 +1364,7 @@
         "nation_id": "NOR",
         "parent_team_id": "",
         "club_code": "MOL",
-        "logo_filename": "MOL.png",
+        "logo_filename": "Molde_Fotball_Logo.svg.png",
         "official_name": "Molde FK"
     },
     {
@@ -1414,7 +1414,7 @@
         "nation_id": "CYP",
         "parent_team_id": "",
         "club_code": "APL",
-        "logo_filename": "APL.png",
+        "logo_filename": "Apollon_Limassol_Logo.png",
         "official_name": "Apollon Limassol FC"
     },
     {
@@ -1454,7 +1454,7 @@
         "nation_id": "SCO",
         "parent_team_id": "RFC",
         "club_code": "RFC",
-        "logo_filename": "RFC.png",
+        "logo_filename": "Rangers_FC_logo_1991-2020_639x640.png",
         "official_name": "Rangers FC"
     },
     {
@@ -1904,7 +1904,7 @@
         "nation_id": "SRB",
         "parent_team_id": "",
         "club_code": "PBE",
-        "logo_filename": "PBE.png",
+        "logo_filename": "FK_Partizan.svg.png",
         "official_name": "FK Partizan"
     },
     {
@@ -1949,22 +1949,22 @@
     },
     {
         "id": "POZ",
-        "name": "Lech Poznan",
+        "name": "Lech Poznań",
         "team_type_id": "CLUB",
         "nation_id": "POL",
         "parent_team_id": "",
         "club_code": "POZ",
-        "logo_filename": "KKS_Lech_Poznans_100th_anniversary_crest.png",
+        "logo_filename": "KKS_Lech_Poznań.svg.png",
         "official_name": "KKS Lech Poznań"
     },
     {
         "id": "POZ-2021",
-        "name": "Lech Poznan",
+        "name": "Lech Poznań",
         "team_type_id": "CLUB",
         "nation_id": "POL",
         "parent_team_id": "POZ",
         "club_code": "POZ",
-        "logo_filename": "POZ.png",
+        "logo_filename": "KKS_Lech_Poznans_100th_anniversary_crest.png",
         "official_name": "KKS Lech Poznań"
     },
     {
@@ -2099,12 +2099,12 @@
     },
     {
         "id": "S08",
-        "name": "Sarpsborg",
+        "name": "Sarpsborg 08",
         "team_type_id": "CLUB",
         "nation_id": "NOR",
         "parent_team_id": "",
         "club_code": "S08",
-        "logo_filename": "S08.png",
+        "logo_filename": "Sarpsborg_08_FF_logo.svg.png",
         "official_name": "Sarpsborg 08 FF"
     },
     {
@@ -2139,12 +2139,12 @@
     },
     {
         "id": "AZA",
-        "name": "AZ Alkmaar",
+        "name": "AZ",
         "team_type_id": "CLUB",
         "nation_id": "NED",
         "parent_team_id": "",
         "club_code": "AZA",
-        "logo_filename": "AZA.png",
+        "logo_filename": "AZ_Alkmaar.svg.png",
         "official_name": "AZ Alkmaar"
     },
     {
@@ -2194,7 +2194,7 @@
         "nation_id": "CYP",
         "parent_team_id": "",
         "club_code": "LAR",
-        "logo_filename": "LAR.png",
+        "logo_filename": "AEK_Larnaca_logo.svg.png",
         "official_name": "AEK Larnaca FC"
     },
     {
@@ -2214,7 +2214,7 @@
         "nation_id": "CZE",
         "parent_team_id": "",
         "club_code": "SPP",
-        "logo_filename": "Sparta_Praha_logo.png",
+        "logo_filename": "AC-Sparta-LOGO2021.svg.png",
         "official_name": "AC Sparta Praha"
     },
     {
@@ -2274,7 +2274,7 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "BOR",
-        "logo_filename": "BOR.png",
+        "logo_filename": "FC_Girondins_de_Bordeaux_logo.svg.png",
         "official_name": "FC Girondins de Bordeaux"
     },
     {
@@ -2384,7 +2384,7 @@
         "nation_id": "CRO",
         "parent_team_id": "",
         "club_code": "RIJ",
-        "logo_filename": "RIJ.png",
+        "logo_filename": "HNK_Rijeka.svg.png",
         "official_name": "HNK Rijeka"
     },
     {
@@ -2394,7 +2394,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "ZLH",
-        "logo_filename": "ZLH.png",
+        "logo_filename": "FC_Zorya_Luhansk_logo.svg.png",
         "official_name": "FC Zorya Luhansk"
     },
     {
@@ -2420,12 +2420,12 @@
     {
         "id": "RAV",
         "name": "Rapid Vienna",
-        "short_name": "Rapid Vien.",
+        "short_name": "Rapid Vienna",
         "team_type_id": "CLUB",
         "nation_id": "AUT",
         "parent_team_id": "",
         "club_code": "RAV",
-        "logo_filename": "RAV.png",
+        "logo_filename": "382px-SK_Rapid_Wien_Logo.svg.png",
         "official_name": "SK Rapid Wien"
     },
     {
@@ -2455,17 +2455,17 @@
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "GNT",
-        "logo_filename": "GNT.png",
+        "logo_filename": "KAA_Gent_logo.svg.png",
         "official_name": "KAA Gent"
     },
     {
         "id": "BIF",
-        "name": "Brondby",
+        "name": "Brøndby",
         "team_type_id": "CLUB",
         "nation_id": "DEN",
         "parent_team_id": "",
         "club_code": "BIF",
-        "logo_filename": "BIF.png",
+        "logo_filename": "Brondby_IF_logo.svg.png",
         "official_name": "Brøndby IF"
     },
     {
@@ -2480,12 +2480,12 @@
     },
     {
         "id": "ZUR",
-        "name": "Zurich",
+        "name": "Zürich",
         "team_type_id": "CLUB",
         "nation_id": "SUI",
         "parent_team_id": "",
         "club_code": "ZUR",
-        "logo_filename": "ZUR.png",
+        "logo_filename": "480px-FC_Zurich_Logo_2022.svg.png",
         "official_name": "FC Zürich"
     },
     {
@@ -2495,7 +2495,7 @@
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "ADL",
-        "logo_filename": "ADL.png",
+        "logo_filename": "R.S.C._Anderlecht.svg.png",
         "official_name": "RSC Anderlecht"
     },
     {
@@ -2516,7 +2516,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "VPO",
-        "logo_filename": "VPO.png",
+        "logo_filename": "FC_Vorskla_Poltava_logo.svg.png",
         "official_name": "FC Vorskla Poltava"
     },
     {
@@ -2536,7 +2536,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "BET",
-        "logo_filename": "BET.png",
+        "logo_filename": "Real_betis_logo.svg.png",
         "official_name": "Real Betis Balompié"
     },
     {
@@ -2576,7 +2576,7 @@
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "AKB",
-        "logo_filename": "AKB.png",
+        "logo_filename": "Akhisar_Belediyespor_logo_1050x562.png",
         "official_name": "Akhisar Belediyespor"
     },
     {
@@ -2596,7 +2596,7 @@
         "nation_id": "CZE",
         "parent_team_id": "",
         "club_code": "JAB",
-        "logo_filename": "JAB.png",
+        "logo_filename": "480px-FK_Jablonec_logo.png",
         "official_name": "FK Jablonec"
     },
     {
@@ -2936,7 +2936,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "EPN",
-        "logo_filename": "Rcd_espanyol_logo.svg",
+        "logo_filename": "RCD_Espanyol_crest.svg.png",
         "official_name": "RCD Espanyol"
     },
     {
@@ -3017,7 +3017,7 @@
         "nation_id": "ENG",
         "parent_team_id": "",
         "club_code": "WLV",
-        "logo_filename": "Wolverhampton_Wanderers.svg",
+        "logo_filename": "Wolverhampton_Wanderers_FC_crest.svg.png",
         "official_name": "Wolverhampton Wanderers FC"
     },
     {
@@ -3042,12 +3042,12 @@
     },
     {
         "id": "VDG",
-        "name": "Vitoria de Guimaraes",
+        "name": "Vitória de Guimarães",
         "team_type_id": "CLUB",
         "nation_id": "POR",
         "parent_team_id": "",
         "club_code": "VDG",
-        "logo_filename": "Vitória_Guimarães.svg",
+        "logo_filename": "Vitória_Guimarães.svg.png",
         "official_name": "Vitória S.C."
     },
     {
@@ -3108,7 +3108,7 @@
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "TRA",
-        "logo_filename": "Trabzonspor_logo.svg",
+        "logo_filename": "Trabzonspor_Amblem.svg.png",
         "official_name": "Trabzonspor Profesyonel Futbol Takımı"
     },
     {
@@ -3118,7 +3118,7 @@
         "nation_id": "SUI",
         "parent_team_id": "",
         "club_code": "LUG",
-        "logo_filename": "FC_Lugano_logo.svg",
+        "logo_filename": "480px-Logo_FC_Lugano_2025.svg.png",
         "official_name": "FC Lugano"
     },
     {
@@ -3128,7 +3128,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "GET",
-        "logo_filename": "Getafe_logo.svg",
+        "logo_filename": "Getafe_logo.svg.png",
         "official_name": "Getafe CF"
     },
     {
@@ -3144,12 +3144,12 @@
     },
     {
         "id": "STE",
-        "name": "Saint-Etienne",
+        "name": "Saint-Étienne",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "STE",
-        "logo_filename": "Logo_AS_Saint-Étienne.svg",
+        "logo_filename": "AS_Saint-Étienne_logo.svg.png",
         "official_name": "Association Sportive de Saint-Étienne Loire"
     },
     {
@@ -3159,7 +3159,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "OLE",
-        "logo_filename": "FC_Oleksandriya_logo.svg",
+        "logo_filename": "FC_Oleksandriya_logo.svg.png",
         "official_name": "FC Oleksandriya"
     },
     {
@@ -3181,7 +3181,7 @@
         "nation_id": "AUT",
         "parent_team_id": "",
         "club_code": "WOL",
-        "logo_filename": "Wolfsberger_AC_logo.svg",
+        "logo_filename": "Wolfsberger_AC_logo.svg.png",
         "official_name": "Wolfsberger AC"
     },
     {
@@ -3356,12 +3356,12 @@
     },
     {
         "id": "BOD",
-        "name": "Bodo/Glimt",
+        "name": "Bodø/Glimt",
         "team_type_id": "CLUB",
         "nation_id": "NOR",
         "parent_team_id": "",
         "club_code": "BOD",
-        "logo_filename": "FK_Bodo_Glimt_logo.svg",
+        "logo_filename": "FK_Bodo_Glimt_logo.svg.png",
         "official_name": "FK Bodø/Glimt"
     },
     {
@@ -3542,7 +3542,7 @@
         "nation_id": "ESP",
         "parent_team_id": "",
         "club_code": "GCF",
-        "logo_filename": "Logo_of_Granada_Club_de_Fútbol.svg",
+        "logo_filename": "Logo_of_Granada_Club_de_Fútbol.svg.png",
         "official_name": "Granada Club de Fútbol"
     },
     {
@@ -3592,7 +3592,17 @@
         "nation_id": "CZE",
         "parent_team_id": "",
         "club_code": "SLL",
-        "logo_filename": "Slovan_Liberec_logo.svg",
+        "logo_filename": "Slovan_Liberec_logo_since_2024.png",
+        "official_name": "FC Slovan Liberec"
+    },
+    {
+        "id": "SLL-2024",
+        "name": "Slovan Liberec",
+        "team_type_id": "CLUB",
+        "nation_id": "CZE",
+        "parent_team_id": "",
+        "club_code": "SLL",
+        "logo_filename": "Slovan_Liberec_logo.svg.png",
         "official_name": "FC Slovan Liberec"
     },
     {
@@ -3712,17 +3722,17 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "NCE",
-        "logo_filename": "OGC_Nice_logo.svg",
+        "logo_filename": "OGC_Nice_logo.svg.png",
         "official_name": "OGC Nice"
     },
     {
         "id": "OMO",
-        "name": "Omonoia",
+        "name": "Omonia",
         "team_type_id": "CLUB",
         "nation_id": "CYP",
         "parent_team_id": "",
         "club_code": "OMO",
-        "logo_filename": "AC_Omonia_logo.svg",
+        "logo_filename": "AC_Omonia_logo.svg.png",
         "official_name": "AC Omonoia"
     },
     {
@@ -3744,7 +3754,7 @@
         "nation_id": "ENG",
         "parent_team_id": "",
         "club_code": "LEI",
-        "logo_filename": "Leicester_City_crest.svg",
+        "logo_filename": "Leicester_City_crest.svg.png",
         "official_name": "Leicester City Football Club"
     },
     {
@@ -3754,7 +3764,7 @@
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "SIV",
-        "logo_filename": "Sivasspor_logo.svg",
+        "logo_filename": "Sivasspor_logo.svg.png",
         "official_name": "Demir Grup Sivasspor"
     },
     {

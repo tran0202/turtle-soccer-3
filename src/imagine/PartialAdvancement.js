@@ -28,7 +28,7 @@ const PartialAdvancementCollapse = (props) => {
                 <Col sm="5">
                     {stage.next_round_note && (
                         <Row>
-                            <Col className="advanced-wild-card-striped">{stage.next_round_note}</Col>
+                            <Col className="wild-card-striped">{stage.next_round_note}</Col>
                         </Row>
                     )}
                 </Col>

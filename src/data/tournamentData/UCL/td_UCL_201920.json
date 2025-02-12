@@ -45,7 +45,7 @@
                         { "id": "NOM" },
                         { "id": "KFS" },
                         { "id": "SMA" },
-                        { "id": "ZVE" },
+                        { "id": "CZV" },
                         { "id": "ARA" },
                         { "id": "AIK" },
                         { "id": "AST" },
@@ -140,7 +140,7 @@
                             "matches": [
                                 {
                                     "home_team": "SMA",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-07-09",
@@ -150,7 +150,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "SMA",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -759,7 +759,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "HJK",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -772,7 +772,7 @@
                                 },
                                 {
                                     "home_team": "HJK",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-07-31",
@@ -1030,7 +1030,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "COP",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1043,7 +1043,7 @@
                                 },
                                 {
                                     "home_team": "COP",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "home_extra_score": 0,
@@ -1275,7 +1275,7 @@
                             "matches": [
                                 {
                                     "home_team": "YBO",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2019-08-21",
@@ -1286,7 +1286,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "YBO",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1559,7 +1559,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "OLY" }, { "id": "TOT" }, { "id": "BAY" }, { "id": "ZVE" }],
+                    "teams": [{ "id": "OLY" }, { "id": "TOT" }, { "id": "BAY" }, { "id": "CZV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1576,7 +1576,7 @@
                                 },
                                 {
                                     "home_team": "BAY",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2019-09-18",
@@ -1590,7 +1590,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "OLY",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -1616,7 +1616,7 @@
                             "matches": [
                                 {
                                     "home_team": "TOT",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 5,
                                     "away_score": 0,
                                     "date": "2019-10-22",
@@ -1650,7 +1650,7 @@
                                     "city": "Munich"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "TOT",
                                     "home_score": 0,
                                     "away_score": 4,
@@ -1675,7 +1675,7 @@
                                     "city": "London"
                                 },
                                 {
-                                    "home_team": "ZVE",
+                                    "home_team": "CZV",
                                     "away_team": "BAY",
                                     "home_score": 0,
                                     "away_score": 6,
@@ -1691,7 +1691,7 @@
                             "matches": [
                                 {
                                     "home_team": "OLY",
-                                    "away_team": "ZVE",
+                                    "away_team": "CZV",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-12-11",

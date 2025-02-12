@@ -51,7 +51,7 @@
                         { "id": "FOL" },
                         { "id": "CQN" },
                         { "id": "SAR" },
-                        { "id": "ZVE" },
+                        { "id": "CZV" },
                         { "id": "EUR" },
                         { "id": "BUP" },
                         { "id": "LUD" },
@@ -165,7 +165,7 @@
                             "city": "Cardiff"
                         },
                         {
-                            "home_team": "ZVE",
+                            "home_team": "CZV",
                             "away_team": "EUR",
                             "home_score": 5,
                             "away_score": 0,
@@ -415,7 +415,7 @@
                         },
                         {
                             "home_team": "KFT",
-                            "away_team": "ZVE",
+                            "away_team": "CZV",
                             "home_score": 0,
                             "away_score": 1,
                             "date": "2020-08-25",
@@ -503,7 +503,7 @@
                         },
                         {
                             "home_team": "OMO",
-                            "away_team": "ZVE",
+                            "away_team": "CZV",
                             "home_score": 1,
                             "away_score": 1,
                             "home_extra_score": 0,

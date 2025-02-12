@@ -8,17 +8,24 @@ import PartialAdvancement from '../imagine/PartialAdvancement'
 class RoundRobin extends React.Component {
     render() {
         const { stage, config } = this.props
-        const { groups } = stage
+        const { groups, advancements } = stage
         return (
             <React.Fragment>
                 <Row className="text-start padding-top-md padding-left-sm">
                     <Col sm="6">
-                        <Row>
-                            <Col className="advanced-next-round-striped">{stage.advanced_note}</Col>
-                        </Row>
-                        {stage.next_round_note && (
+                        {advancements && advancements.advanced_note && (
                             <Row>
-                                <Col className="advanced-wild-card-striped">{stage.next_round_note}</Col>
+                                <Col className="advanced-striped">{advancements.advanced_note}</Col>
+                            </Row>
+                        )}
+                        {advancements && advancements.wild_card_note && (
+                            <Row>
+                                <Col className="wild-card-striped">{advancements.wild_card_note}</Col>
+                            </Row>
+                        )}
+                        {advancements && advancements.transferred_note && (
+                            <Row>
+                                <Col className="transferred-striped">{advancements.transferred_note}</Col>
                             </Row>
                         )}
                     </Col>

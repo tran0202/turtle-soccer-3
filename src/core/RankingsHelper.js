@@ -31,7 +31,7 @@ export const calculateGroupRankings = (stage, config) => {
     })
     processPartialAdvancement2(stage, config)
     stage.groups.forEach((g) => {
-        setAdvancement(g, stage.advancement)
+        setAdvancements(g, stage.advancements)
     })
 }
 
@@ -288,21 +288,100 @@ export const sortOverallGoalDifference = (group, config) => {
                         rankings[0].gd
                 }
             }
-            // WC1990 Partial
+            // WC1990 Partial || UCL202223
         } else if (rankings.length === 4) {
-            for (var k = 0; k < rankings.length - 1; k++) {
-                for (var l = k + 1; l < rankings.length; l++) {
-                    if (rankings[k].gd < rankings[l].gd) {
-                        const temp = rankings[k]
-                        rankings[k] = rankings[l]
-                        rankings[l] = temp
-                    }
-                    if (rankings[k].gd !== rankings[l].gd) {
-                    }
-                }
+            createGdPools(p, config)
+            flattenPools(p)
+            if (p.pool_to_sort === p.pool_sorted) {
+                group.pool_sorted++
             }
         }
     }
+}
+
+// UEL202223
+export const createGdPools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.pools = []
+    group.rankings.forEach((r) => {
+        const foundPool = group.pools.find((p) => p.gd === r.gd)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            group.pools.push({ gd: r.gd, rankings: [r] })
+        }
+    })
+    group.pool_to_sort = group.pools.length
+    group.pool_sorted = 0
+    const pools = group.pools
+    for (var i = 0; i < pools.length - 1; i++) {
+        for (var j = i + 1; j < pools.length; j++) {
+            if (pools[i].gd < pools[j].gd) {
+                const temp = pools[i]
+                pools[i] = pools[j]
+                pools[j] = temp
+            }
+        }
+    }
+    group.pools.forEach((p) => {
+        if (p.rankings.length === 1) {
+            group.pool_sorted++
+
+            const rankings = p.rankings
+            rankings[0].tb_anchor = '(ogd)'
+            rankings[0].tb_note =
+                'All tied on Heah-to-head results. Tiebreak by Overall goal difference: ' +
+                rankings[0].team.name +
+                ' ' +
+                (rankings[0].gd > 0 ? '+' : '') +
+                rankings[0].gd
+        } else if (p.rankings.length === 2) {
+            createGfPools(p, config)
+            flattenPools(p)
+            if (p.pool_to_sort === p.pool_sorted) {
+                group.pool_sorted++
+            }
+        }
+    })
+}
+
+// UEL202223
+export const createGfPools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.pools = []
+    group.rankings.forEach((r) => {
+        const foundPool = group.pools.find((p) => p.gf === r.gf)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            group.pools.push({ gf: r.gf, rankings: [r] })
+        }
+    })
+    group.pool_to_sort = group.pools.length
+    group.pool_sorted = 0
+    const pools = group.pools
+    for (var i = 0; i < pools.length - 1; i++) {
+        for (var j = i + 1; j < pools.length; j++) {
+            if (pools[i].gf < pools[j].gf) {
+                const temp = pools[i]
+                pools[i] = pools[j]
+                pools[j] = temp
+            }
+        }
+    }
+    group.pools.forEach((p) => {
+        if (p.rankings.length === 1) {
+            group.pool_sorted++
+
+            const rankings = p.rankings
+            rankings[0].tb_anchor = '(ogf)'
+            rankings[0].tb_note =
+                'All tied on Heah-to-head results and Overall goal difference. Tiebreak by Overall goals scored: ' +
+                rankings[0].team.name +
+                ' ' +
+                rankings[0].gf
+        }
+    })
 }
 
 // WC2022
@@ -366,17 +445,6 @@ export const sortOverallGoalsFor = (group, config) => {
                 }
                 // WC1990 Partial
             } else if (rankings.length === 4) {
-                for (var k = 0; k < rankings.length - 1; k++) {
-                    for (var l = k + 1; l < rankings.length; l++) {
-                        if (rankings[k].gd < rankings[l].gd) {
-                            const temp = rankings[k]
-                            rankings[k] = rankings[l]
-                            rankings[l] = temp
-                        }
-                        if (rankings[k].gd !== rankings[l].gd) {
-                        }
-                    }
-                }
             }
         }
     }
@@ -507,6 +575,7 @@ export const sortH2HPoints = (group, config) => {
             }
             // 5. Update the pool
             updatePool(p)
+        } else if (rankings.length === 4) {
         }
     }
 }
@@ -589,6 +658,7 @@ export const sortH2HGoalDifference = (group, config) => {
                     p.h2h_rankings[0].gd
             }
             updatePool(p)
+        } else if (rankings.length === 4) {
         }
     }
 }
@@ -611,6 +681,7 @@ export const sortH2HGoalsFor = (group, config) => {
                 group.pool_sorted++
             }
             updatePool(p)
+        } else if (rankings.length === 4) {
         }
     }
 }
@@ -743,6 +814,8 @@ export const drawLots = (group, config) => {
                         }
                     }
                 }
+                group.pool_sorted++
+                p.sorted = true
             }
         }
     }
@@ -1360,22 +1433,22 @@ export const processPartialAdvancement = (stage, config) => {
     }
 }
 
-export const setAdvancement = (group, advancement) => {
-    if (!group || !group.matchdays || group.matchdays.length === 0 || !advancement || advancement.length === 0) return
+export const setAdvancements = (group, advancements) => {
+    if (!group || !group.matchdays || group.matchdays.length === 0 || !advancements || !advancements.positions || advancements.positions.length === 0) return
     group.rankings.forEach((t) => {
         const qualified_date = group.matchdays[group.matchdays.length - 1].date
-        const groupAdvancement = group.advancement ? group.advancement : advancement
-        const foundAdvancement = groupAdvancement.find((a) => a.pos === t.rank)
-        if (foundAdvancement) {
-            let passed = !foundAdvancement.rankings
-            if (foundAdvancement.rankings) {
-                const foundPartial = foundAdvancement.rankings.find((t2) => t2.id === t.id && t2.next_rounded)
+        const groupPositions = group.advancements && group.advancements.positions ? group.advancements.positions : advancements.positions
+        const foundPosition = groupPositions.find((a) => a.pos === t.rank)
+        if (foundPosition) {
+            let passed = !foundPosition.rankings
+            if (foundPosition.rankings) {
+                const foundPartial = foundPosition.rankings.find((t2) => t2.id === t.id && t2.wild_card)
                 if (foundPartial) {
                     passed = true
                 }
             }
             if (passed) {
-                if (foundAdvancement.will === 'qualify') {
+                if (foundPosition.next === 'qualify') {
                     t.qualified = true
                     if (t.rank === 1) {
                         t.qualified_position = 'winners'
@@ -1391,13 +1464,15 @@ export const setAdvancement = (group, advancement) => {
                         t.qualified_position = '6th place'
                     }
                     t.qualified_date = qualified_date
-                } else if (foundAdvancement.will === 'advance') {
+                } else if (foundPosition.next === 'advance') {
                     t.advanced = true
-                } else if (foundAdvancement.will === 'next_round') {
-                    t.next_rounded = true
+                } else if (foundPosition.next === 'wild_card') {
+                    t.wild_card = true
+                } else if (foundPosition.next === 'transfer') {
+                    t.transferred = true
                 }
             } else {
-                delete t.next_rounded
+                delete t.wild_card
             }
         }
     })
