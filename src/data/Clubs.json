@@ -458,12 +458,12 @@
         "official_name": "FC BATE Borisov"
     },
     {
-        "id": "PAO",
+        "id": "PKT",
         "name": "PAOK",
         "team_type_id": "CLUB",
         "nation_id": "GRE",
         "parent_team_id": "",
-        "club_code": "PAO",
+        "club_code": "PKT",
         "logo_filename": "PAOK_FC_Logo.png",
         "official_name": "PAOK FC"
     },
@@ -616,7 +616,7 @@
     },
     {
         "id": "AMO",
-        "name": "Monaco",
+        "name": "AS Monaco",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -1055,12 +1055,12 @@
         "official_name": "İstanbul Başakşehir"
     },
     {
-        "id": "LIN",
+        "id": "LAS",
         "name": "LASK",
         "team_type_id": "CLUB",
         "nation_id": "AUT",
         "parent_team_id": "",
-        "club_code": "LIN",
+        "club_code": "LAS",
         "logo_filename": "380px-LASK-Logo_2023.svg.png",
         "official_name": "LASK Linz"
     },
@@ -2128,13 +2128,13 @@
         "official_name": "FK Liepāja"
     },
     {
-        "id": "HAC",
-        "name": "Hacken",
+        "id": "BKH",
+        "name": "BK Häcken",
         "team_type_id": "CLUB",
         "nation_id": "SWE",
         "parent_team_id": "",
-        "club_code": "HAC",
-        "logo_filename": "HAC.png",
+        "club_code": "BKH",
+        "logo_filename": "BK_Hacken_logo.svg.png",
         "official_name": "BK Häcken"
     },
     {
@@ -2551,7 +2551,7 @@
     },
     {
         "id": "OLM",
-        "name": "Marseille",
+        "name": "Olympique Marseille",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -3022,7 +3022,7 @@
     },
     {
         "id": "ART",
-        "name": "Aris",
+        "name": "Aris Thessaloniki",
         "team_type_id": "CLUB",
         "nation_id": "GRE",
         "parent_team_id": "",
@@ -3341,7 +3341,7 @@
         "nation_id": "SUI",
         "parent_team_id": "",
         "club_code": "SER",
-        "logo_filename": "Servette_FC.svg",
+        "logo_filename": "Servette_FC_crest.svg.png",
         "official_name": "Servette FC"
     },
     {
@@ -3426,12 +3426,12 @@
     },
     {
         "id": "TSC",
-        "name": "TSC Backa Topola",
+        "name": "TSC",
         "team_type_id": "CLUB",
         "nation_id": "SRB",
         "parent_team_id": "",
         "club_code": "TSC",
-        "logo_filename": "TSC_emblem.jpg",
+        "logo_filename": "480px-TSC_BT_logo.png",
         "official_name": "FK TSC Bačka Topola"
     },
     {
@@ -3816,5 +3816,75 @@
         "club_code": "NEW",
         "logo_filename": "Newcastle_United_Logo.svg.png",
         "official_name": "Newcastle United F.C."
+    },
+    {
+        "id": "SCF",
+        "name": "SC Freiburg",
+        "team_type_id": "CLUB",
+        "nation_id": "GER",
+        "parent_team_id": "",
+        "club_code": "SCF",
+        "logo_filename": "SC_Freiburg_logo.svg.png",
+        "official_name": "Sport-Club Freiburg e.V."
+    },
+    {
+        "id": "NAN",
+        "name": "Nantes",
+        "team_type_id": "CLUB",
+        "nation_id": "FRA",
+        "parent_team_id": "",
+        "club_code": "NAN",
+        "logo_filename": "Logo_FC_Nantes_(avec_fond)_-_2019.svg.png",
+        "official_name": "Football Club de Nantes"
+    },
+    {
+        "id": "BHA",
+        "name": "Brighton & Hove Albion",
+        "team_type_id": "CLUB",
+        "nation_id": "ENG",
+        "parent_team_id": "",
+        "club_code": "BHA",
+        "logo_filename": "Brighton_and_Hove_Albion_FC_crest.svg.png",
+        "official_name": "Brighton & Hove Albion Football Club"
+    },
+    {
+        "id": "ARL",
+        "name": "Aris Limassol",
+        "team_type_id": "CLUB",
+        "nation_id": "CYP",
+        "parent_team_id": "",
+        "club_code": "ARL",
+        "logo_filename": "480px-Aris_Limassol_Logo.png",
+        "official_name": "Aris Limassol FC"
+    },
+    {
+        "id": "RAK",
+        "name": "Raków Częstochowa",
+        "team_type_id": "CLUB",
+        "nation_id": "POL",
+        "parent_team_id": "",
+        "club_code": "RAK",
+        "logo_filename": "400px-Rks_rakow_crest_ai.svg.png",
+        "official_name": "Robotniczy Klub Sportowy Raków Częstochowa"
+    },
+    {
+        "id": "TFC",
+        "name": "Toulouse",
+        "team_type_id": "CLUB",
+        "nation_id": "FRA",
+        "parent_team_id": "",
+        "club_code": "TFC",
+        "logo_filename": "Toulouse_FC_2018_logo.svg.png",
+        "official_name": "Toulouse Football Club"
+    },
+    {
+        "id": "PAO",
+        "name": "Panathinaikos",
+        "team_type_id": "CLUB",
+        "nation_id": "GRE",
+        "parent_team_id": "",
+        "club_code": "PAO",
+        "logo_filename": "Panathinaikos_F.C._logo.svg.png",
+        "official_name": "Panathinaikos Football Club"
     }
 ]

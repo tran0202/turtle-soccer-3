@@ -114,7 +114,7 @@
                         { "id": "KUP" },
                         { "id": "COP" },
                         { "id": "LIP" },
-                        { "id": "HAC" }
+                        { "id": "BKH" }
                     ],
                     "pairs": [
                         {
@@ -349,7 +349,7 @@
                         { "id": "UFA" },
                         { "id": "JAG" },
                         { "id": "RIO" },
-                        { "id": "LIN" },
+                        { "id": "LAS" },
                         { "id": "LSK" },
                         { "id": "BES" },
                         { "id": "BOR" },
@@ -1575,7 +1575,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIP",
-                                    "away_team": "HAC",
+                                    "away_team": "BKH",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2018-07-12",
@@ -1585,7 +1585,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "HAC",
+                                    "home_team": "BKH",
                                     "away_team": "LIP",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -2319,7 +2319,7 @@
                             "matches": [
                                 {
                                     "home_team": "RBL",
-                                    "away_team": "HAC",
+                                    "away_team": "BKH",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2018-07-26",
@@ -2330,7 +2330,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "HAC",
+                                    "home_team": "BKH",
                                     "away_team": "RBL",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2458,7 +2458,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "LSK",
                                     "home_score": 4,
                                     "away_score": 0,
@@ -2471,7 +2471,7 @@
                                 },
                                 {
                                     "home_team": "LSK",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2018-08-02",
@@ -3884,7 +3884,7 @@
                             "matches": [
                                 {
                                     "home_team": "BES",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2018-08-09",
@@ -3895,7 +3895,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "BES",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -6322,13 +6322,13 @@
                 },
                 {
                     "name": "Group L",
-                    "teams": [{ "id": "PAO" }, { "id": "CHE" }, { "id": "VID-2018-2019" }, { "id": "BBO" }],
+                    "teams": [{ "id": "PKT" }, { "id": "CHE" }, { "id": "VID-2018-2019" }, { "id": "BBO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "CHE",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -6354,7 +6354,7 @@
                             "matches": [
                                 {
                                     "home_team": "BBO",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 1,
                                     "away_score": 4,
                                     "date": "2018-10-04",
@@ -6388,7 +6388,7 @@
                                     "city": "London"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "VID-2018-2019",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -6414,7 +6414,7 @@
                                 },
                                 {
                                     "home_team": "VID-2018-2019",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2018-11-08",
@@ -6439,7 +6439,7 @@
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2018-11-29",
@@ -6453,7 +6453,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "BBO",
                                     "home_score": 1,
                                     "away_score": 3,

@@ -11,12 +11,15 @@
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
             "coefficient"
         ],
         "details": {

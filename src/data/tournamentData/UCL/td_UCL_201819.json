@@ -109,7 +109,7 @@
                         { "id": "CFR" },
                         { "id": "DZA" },
                         { "id": "BBO" },
-                        { "id": "PAO" },
+                        { "id": "PKT" },
                         { "id": "BAS" },
                         { "id": "AJA" },
                         { "id": "SGR" }
@@ -840,7 +840,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "BAS",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -853,7 +853,7 @@
                                 },
                                 {
                                     "home_team": "BAS",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2018-08-01",
@@ -1167,7 +1167,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "SPM",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -1180,7 +1180,7 @@
                                 },
                                 {
                                     "home_team": "SPM",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2018-08-14",
@@ -1324,7 +1324,7 @@
                             "matches": [
                                 {
                                     "home_team": "SLB",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2018-08-21",
@@ -1335,7 +1335,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "SLB",
                                     "home_score": 1,
                                     "away_score": 4,
@@ -1386,13 +1386,15 @@
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advanced_note": "Group winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round" }
-            ],
-            "next_round_note": "Third-placed teams transfer to the Europa League Round of 32",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card" }
+                ],
+                "advanced_note": "Group winners and runners-up advanced to Round of 16",
+                "wild_card_note": "Third-placed teams transferred to Europa League"
+            },
             "groups": [
                 {
                     "name": "Group A",

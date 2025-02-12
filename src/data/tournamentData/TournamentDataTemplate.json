@@ -598,14 +598,14 @@
                     "eliminate_count": 48,
                     "next_round": "Third Qualifying First Leg",
                     "bye_teams": [
-                        { "id": "PAO" },
+                        { "id": "PKT" },
                         { "id": "AJA" },
                         { "id": "IBA" },
                         { "id": "KRA" },
                         { "id": "PTO" },
                         { "id": "BRG" },
                         { "id": "DYK" },
-                        { "id": "LIN" }
+                        { "id": "LAS" }
                     ],
                     "matches": [
                         {
@@ -779,7 +779,7 @@
                             "path": "Champions"
                         },
                         {
-                            "home_team": "PAO",
+                            "home_team": "PKT",
                             "away_team": "AJA",
                             "home_score": 2,
                             "away_score": 2,
@@ -857,7 +857,7 @@
                         },
                         {
                             "home_team": "BAS",
-                            "away_team": "LIN",
+                            "away_team": "LAS",
                             "home_score": 1,
                             "away_score": 2,
                             "date": "2019-08-07",
@@ -899,7 +899,7 @@
                         },
                         {
                             "home_team": "AJA",
-                            "away_team": "PAO",
+                            "away_team": "PKT",
                             "home_score": 3,
                             "away_score": 2,
                             "date": "2019-08-13",
@@ -979,7 +979,7 @@
                             "path": "League"
                         },
                         {
-                            "home_team": "LIN",
+                            "home_team": "LAS",
                             "away_team": "BAS",
                             "home_score": 3,
                             "away_score": 1,
@@ -1048,7 +1048,7 @@
                             "path": "Champions"
                         },
                         {
-                            "home_team": "LIN",
+                            "home_team": "LAS",
                             "away_team": "BRG",
                             "home_score": 0,
                             "away_score": 1,
@@ -1124,7 +1124,7 @@
                         },
                         {
                             "home_team": "BRG",
-                            "away_team": "LIN",
+                            "away_team": "LAS",
                             "home_score": 2,
                             "away_score": 1,
                             "date": "2019-08-28",

@@ -71,8 +71,22 @@ export const processTournament = (tournament, config) => {
     if (!tournament || !config) return
     // const draws = createDraws(tournament, teamArray, qualifiedTeams)
     // const stages = createPots(tournament, draws)
+    if (tournament.leagues) {
+        processLeagues(tournament, config)
+    }
     processStages(tournament, config)
     // return { draws, stages }
+}
+
+export const processLeagues = (tournament, config) => {
+    if (!tournament || !tournament.leagues || !config) return
+    tournament.stages = []
+    tournament.leagues.forEach((l) => {
+        l.stages &&
+            l.stages.forEach((s) => {
+                tournament.stages.push(s)
+            })
+    })
 }
 
 export const processStages = (tournament, config) => {

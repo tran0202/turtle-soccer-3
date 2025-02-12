@@ -798,7 +798,7 @@
                         { "id": "RIJ" },
                         { "id": "STG" },
                         { "id": "AEK" },
-                        { "id": "LIN" },
+                        { "id": "LAS" },
                         { "id": "VOJ" },
                         { "id": "FCR" },
                         { "id": "BES" },
@@ -1581,7 +1581,7 @@
                             "path": "Main"
                         },
                         {
-                            "home_team": "LIN",
+                            "home_team": "LAS",
                             "away_team": "DAC-2021",
                             "home_score": 7,
                             "away_score": 0,
@@ -1919,7 +1919,7 @@
                         },
                         {
                             "home_team": "SLI",
-                            "away_team": "LIN",
+                            "away_team": "LAS",
                             "home_score": 1,
                             "away_score": 4,
                             "date": "2020-10-01",
@@ -2670,7 +2670,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "GCF" }, { "id": "PSV" }, { "id": "PAO" }, { "id": "OMO" }],
+                    "teams": [{ "id": "GCF" }, { "id": "PSV" }, { "id": "PKT" }, { "id": "OMO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2686,7 +2686,7 @@
                                     "city": "Eindhoven"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "OMO",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2712,7 +2712,7 @@
                                 },
                                 {
                                     "home_team": "GCF",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2020-10-29",
@@ -2726,7 +2726,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "PSV",
                                     "home_score": 4,
                                     "away_score": 1,
@@ -2752,7 +2752,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSV",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2020-11-26",
@@ -2787,7 +2787,7 @@
                                 },
                                 {
                                     "home_team": "OMO",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-12-03",
@@ -2811,7 +2811,7 @@
                                     "city": "Eindhoven"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "GCF",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -3452,14 +3452,14 @@
                 },
                 {
                     "name": "Group J",
-                    "teams": [{ "id": "LIN" }, { "id": "TOT" }, { "id": "LUD" }, { "id": "ROA" }],
+                    "teams": [{ "id": "LAS" }, { "id": "TOT" }, { "id": "LUD" }, { "id": "ROA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "TOT",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2020-10-22",
@@ -3483,7 +3483,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "LUD",
                                     "home_score": 4,
                                     "away_score": 3,
@@ -3519,7 +3519,7 @@
                                 },
                                 {
                                     "home_team": "ROA",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2020-11-05",
@@ -3533,7 +3533,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "ROA",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -3558,7 +3558,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "TOT",
                                     "home_score": 3,
                                     "away_score": 3,
@@ -3594,7 +3594,7 @@
                                 },
                                 {
                                     "home_team": "LUD",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2020-12-10",

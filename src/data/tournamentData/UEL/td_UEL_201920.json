@@ -351,7 +351,7 @@
                         { "id": "STR" },
                         { "id": "MBO" },
                         { "id": "AZA" },
-                        { "id": "HAC" },
+                        { "id": "BKH" },
                         { "id": "PLO" },
                         { "id": "WLV" },
                         { "id": "ART" },
@@ -2687,7 +2687,7 @@
                             "matches": [
                                 {
                                     "home_team": "AZA",
-                                    "away_team": "HAC",
+                                    "away_team": "BKH",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-07-25",
@@ -2698,7 +2698,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "HAC",
+                                    "home_team": "BKH",
                                     "away_team": "AZA",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -2954,7 +2954,7 @@
                     "round_type": "knockout2legged",
                     "eliminate_count": 77,
                     "next_round": "Play-off Round",
-                    "bye_teams": [{ "id": "FER" }, { "id": "COP" }, { "id": "CEL" }, { "id": "MRB" }, { "id": "QAR" }, { "id": "PAO" }],
+                    "bye_teams": [{ "id": "FER" }, { "id": "COP" }, { "id": "CEL" }, { "id": "MRB" }, { "id": "QAR" }, { "id": "PKT" }],
                     "pairs": [
                         {
                             "matches": [
@@ -4160,7 +4160,7 @@
                             "matches": [
                                 {
                                     "home_team": "SKS",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-08-22",
@@ -4171,7 +4171,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "SKS",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -5076,7 +5076,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "PSV" }, { "id": "SLI" }, { "id": "LIN" }, { "id": "RBK" }],
+                    "teams": [{ "id": "PSV" }, { "id": "SLI" }, { "id": "LAS" }, { "id": "RBK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -5092,7 +5092,7 @@
                                     "city": "Eindhoven"
                                 },
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "RBK",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -5118,7 +5118,7 @@
                                 },
                                 {
                                     "home_team": "SLI",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-10-03",
@@ -5143,7 +5143,7 @@
                                 },
                                 {
                                     "home_team": "PSV",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-10-24",
@@ -5167,7 +5167,7 @@
                                     "city": "Trondheim"
                                 },
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "PSV",
                                     "home_score": 4,
                                     "away_score": 1,
@@ -5193,7 +5193,7 @@
                                 },
                                 {
                                     "home_team": "RBK",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2019-11-28",
@@ -5217,7 +5217,7 @@
                                     "city": "Eindhoven"
                                 },
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "SLI",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -6715,7 +6715,7 @@
                             "matches": [
                                 {
                                     "home_team": "AZA",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2020-02-20",
@@ -6725,7 +6725,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "AZA",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -7106,7 +7106,7 @@
                         {
                             "matches": [
                                 {
-                                    "home_team": "LIN",
+                                    "home_team": "LAS",
                                     "away_team": "MUN",
                                     "home_score": 0,
                                     "away_score": 5,
@@ -7118,7 +7118,7 @@
                                 },
                                 {
                                     "home_team": "MUN",
-                                    "away_team": "LIN",
+                                    "away_team": "LAS",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-08-05",

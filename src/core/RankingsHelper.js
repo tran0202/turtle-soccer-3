@@ -822,11 +822,11 @@ export const drawLots = (group, config) => {
 }
 
 export const processPartialAdvancement2 = (stage, config) => {
-    if (!stage || !stage.advancement) return
-    const partial = stage.advancement.some((a) => a.count)
+    if (!stage || !stage.advancements || !stage.advancements.positions) return
+    const partial = stage.advancements.positions.some((a) => a.count)
     if (partial) {
         stage.partial_advancement = true
-        const pa = stage.advancement.filter((a) => a.count)
+        const pa = stage.advancements.positions.filter((a) => a.count)
         pa.forEach((a) => {
             const rankings = []
             stage.groups.forEach((g) => {
@@ -847,9 +847,9 @@ export const processPartialAdvancement2 = (stage, config) => {
             stage.partial.rankings.forEach((t, index) => {
                 t.rank = index + 1
                 if (index < a.count) {
-                    t.next_rounded = true
+                    t.wild_card = true
                 } else {
-                    delete t.next_rounded
+                    delete t.wild_card
                 }
             })
             a.rankings = stage.partial.rankings
@@ -1328,10 +1328,6 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
     }
     // EURO2024
     if (config.sort === 'partial') {
-        console.log('config.sort', config.sort)
-        console.log('ranking1.fp', ranking1.fp)
-        console.log('ranking2.fp', ranking2.fp)
-        console.log('ranking1.fp < ranking2.fp', ranking1.fp < ranking2.fp)
         ranking1.partial_disciplinary_point = true
         ranking1.partial_disciplinary_point_note = ranking1.team.name + ' ' + ranking1.fp + ' | ' + ranking2.team.name + ' ' + ranking2.fp
         ranking2.partial_disciplinary_point = true
@@ -1479,8 +1475,8 @@ export const setAdvancements = (group, advancements) => {
 }
 
 export const getPartialAdvancementRankings = (stage) => {
-    if (!stage) return
-    return stage.advancement.filter((a) => a.count)
+    if (!stage || !stage.advancements || !stage.advancements.positions) return
+    return stage.advancements.positions.filter((a) => a.count)
 }
 
 export const isPointTiebreaker = (config) => {

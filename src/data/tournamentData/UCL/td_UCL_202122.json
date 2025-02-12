@@ -108,7 +108,7 @@
                         { "id": "FCM" },
                         { "id": "AZA" },
                         { "id": "VPL" },
-                        { "id": "PAO" },
+                        { "id": "PKT" },
                         { "id": "BES" },
                         { "id": "LZA" },
                         { "id": "RAV" }
@@ -438,7 +438,7 @@
                             "path": "League"
                         },
                         {
-                            "home_team": "PAO",
+                            "home_team": "PKT",
                             "away_team": "BES",
                             "home_score": 3,
                             "away_score": 1,
@@ -539,7 +539,7 @@
                             "path": "Champions"
                         },
                         {
-                            "home_team": "PAO",
+                            "home_team": "PKT",
                             "away_team": "SLB",
                             "home_score": 2,
                             "away_score": 1,
@@ -703,7 +703,7 @@
                             "matches": [
                                 {
                                     "home_team": "KRA",
-                                    "away_team": "PAO",
+                                    "away_team": "PKT",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-09-22",
@@ -714,7 +714,7 @@
                                     "match_type": "firstleg"
                                 },
                                 {
-                                    "home_team": "PAO",
+                                    "home_team": "PKT",
                                     "away_team": "KRA",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -765,13 +765,15 @@
             "eliminate_count": 16,
             "home_and_away": true,
             "next_round": "Round of 16",
-            "advanced_note": "Group winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round" }
-            ],
-            "next_round_note": "Third-placed teams transfer to the Europa League Knockout Round play-offs",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card" }
+                ],
+                "advanced_note": "Group winners and runners-up advanced to Round of 16",
+                "wild_card_note": "Third-placed teams transferred to Europa League"
+            },
             "groups": [
                 {
                     "name": "Group A",

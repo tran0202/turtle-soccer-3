@@ -798,7 +798,7 @@
                         { "id": "RIJ" },
                         { "id": "STG" },
                         { "id": "AEK" },
-                        { "id": "LIN" },
+                        { "id": "LAS" },
                         { "id": "VOJ" },
                         { "id": "FCR" },
                         { "id": "BES" },
@@ -1581,7 +1581,7 @@
                             "path": "Main"
                         },
                         {
-                            "home_team": "LIN",
+                            "home_team": "LAS",
                             "away_team": "DAC-2021",
                             "home_score": 7,
                             "away_score": 0,
@@ -1919,7 +1919,7 @@
                         },
                         {
                             "home_team": "SLI",
-                            "away_team": "LIN",
+                            "away_team": "LAS",
                             "home_score": 1,
                             "away_score": 4,
                             "date": "2020-10-01",
@@ -2022,7 +2022,7 @@
         },
         {
             "name": "Group Stage",
-            "type": "roundrobinmatchday",
+            "type": "roundrobin_final",
             "eliminate_count": 32,
             "home_and_away": true,
             "next_round": "Round of 32",
@@ -2036,40 +2036,43 @@
                 { "id": "AJA" },
                 { "id": "OLY" }
             ],
-            "advancement": {
-                "teams": {
-                    "auto": [1, 2],
-                    "eliminated": [3, 4],
-                    "text": "The top 2 teams would advance to the Round of 32, joined by 8 third-placed teams from UCL."
-                }
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "wild_card" },
+                    { "pos": 3, "next": "transfer" }
+                ],
+                "advanced_note": "Group winners advanced directly to Round of 16",
+                "wild_card_note": "Group runners-up advanced to Knockout Round play-offs",
+                "transferred_note": "Third-placed teams transferred to Europa Conference League"
             },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "YBO" }, { "id": "ROM" }, { "id": "CSO" }, { "id": "CFR" }],
+                    "teams": [{ "id": "TSC" }, { "id": "WHU" }, { "id": "OLY" }, { "id": "SCF" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "YBO",
-                                    "away_team": "ROM",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Wankdorf",
-                                    "city": "Bern"
+                                    "home_team": "WHU",
+                                    "away_team": "TSC",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "London Stadium",
+                                    "city": "London"
                                 },
                                 {
-                                    "home_team": "CSO",
-                                    "away_team": "CFR",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Vasil Levski National Stadium",
-                                    "city": "Sofia"
+                                    "home_team": "OLY",
+                                    "away_team": "SCF",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Karaiskakis Stadium",
+                                    "city": "Piraeus"
                                 }
                             ]
                         },
@@ -2077,24 +2080,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "ROM",
-                                    "away_team": "CSO",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "home_team": "SCF",
+                                    "away_team": "WHU",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Europa-Park Stadion",
+                                    "city": "Freiburg im Breisgau"
                                 },
                                 {
-                                    "home_team": "CFR",
-                                    "away_team": "YBO",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Stadionul Dr. Constantin Rădulescu",
-                                    "city": "Cluj-Napoca"
+                                    "home_team": "TSC",
+                                    "away_team": "OLY",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
                                 }
                             ]
                         },
@@ -2102,24 +2105,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "ROM",
-                                    "away_team": "CFR",
-                                    "home_score": 5,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "home_team": "OLY",
+                                    "away_team": "WHU",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Karaiskakis Stadium",
+                                    "city": "Piraeus"
                                 },
                                 {
-                                    "home_team": "YBO",
-                                    "away_team": "CSO",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Wankdorf",
-                                    "city": "Bern"
+                                    "home_team": "TSC",
+                                    "away_team": "SCF",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
                                 }
                             ]
                         },
@@ -2127,24 +2130,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "CSO",
-                                    "away_team": "YBO",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Vasil Levski National Stadium",
-                                    "city": "Sofia"
+                                    "home_team": "SCF",
+                                    "away_team": "TSC",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2023-11-09",
+                                    "time": "21:00",
+                                    "stadium": "Europa-Park Stadion",
+                                    "city": "Freiburg im Breisgau"
                                 },
                                 {
-                                    "home_team": "CFR",
-                                    "away_team": "ROM",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-26",
+                                    "home_team": "WHU",
+                                    "away_team": "OLY",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "Stadionul Dr. Constantin Rădulescu",
-                                    "city": "Cluj-Napoca"
+                                    "stadium": "London Stadium",
+                                    "city": "London"
                                 }
                             ]
                         },
@@ -2152,24 +2155,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "ROM",
-                                    "away_team": "YBO",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome"
+                                    "home_team": "SCF",
+                                    "away_team": "OLY",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Europa-Park Stadion",
+                                    "city": "Freiburg im Breisgau"
                                 },
                                 {
-                                    "home_team": "CFR",
-                                    "away_team": "CSO",
+                                    "home_team": "TSC",
+                                    "away_team": "WHU",
                                     "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Stadionul Dr. Constantin Rădulescu",
-                                    "city": "Cluj-Napoca"
+                                    "away_score": 1,
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
                                 }
                             ]
                         },
@@ -2177,24 +2180,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "YBO",
-                                    "away_team": "CFR",
+                                    "home_team": "WHU",
+                                    "away_team": "SCF",
                                     "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Wankdorf",
-                                    "city": "Bern"
+                                    "away_score": 0,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "London Stadium",
+                                    "city": "London"
                                 },
                                 {
-                                    "home_team": "CSO",
-                                    "away_team": "ROM",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Vasil Levski National Stadium",
-                                    "city": "Sofia"
+                                    "home_team": "OLY",
+                                    "away_team": "TSC",
+                                    "home_score": 5,
+                                    "away_score": 2,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Karaiskakis Stadium",
+                                    "city": "Piraeus"
                                 }
                             ]
                         }
@@ -2202,30 +2205,30 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "DUN" }, { "id": "MOL" }, { "id": "RAV" }, { "id": "ARS" }],
+                    "teams": [{ "id": "AJA" }, { "id": "OLM" }, { "id": "BHA" }, { "id": "AEK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "DUN",
-                                    "away_team": "MOL",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Tallaght Stadium",
-                                    "city": "Dublin"
+                                    "home_team": "AJA",
+                                    "away_team": "OLM",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
                                 },
                                 {
-                                    "home_team": "RAV",
-                                    "away_team": "ARS",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Allianz Stadion",
-                                    "city": "Vienna"
+                                    "home_team": "BHA",
+                                    "away_team": "AEK",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Falmer Stadium",
+                                    "city": "Brighton and Hove"
                                 }
                             ]
                         },
@@ -2233,24 +2236,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "ARS",
-                                    "away_team": "DUN",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London"
+                                    "home_team": "OLM",
+                                    "away_team": "BHA",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 },
                                 {
-                                    "home_team": "MOL",
-                                    "away_team": "RAV",
+                                    "home_team": "AEK",
+                                    "away_team": "AJA",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Aker Stadion",
-                                    "city": "Molde"
+                                    "away_score": 1,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Agia Sophia Stadium",
+                                    "city": "Athens"
                                 }
                             ]
                         },
@@ -2258,24 +2261,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "RAV",
-                                    "away_team": "DUN",
-                                    "home_score": 4,
-                                    "away_score": 3,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Allianz Stadion",
-                                    "city": "Vienna"
+                                    "home_team": "OLM",
+                                    "away_team": "AEK",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 },
                                 {
-                                    "home_team": "ARS",
-                                    "away_team": "MOL",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-11-05",
+                                    "home_team": "BHA",
+                                    "away_team": "AJA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-10-26",
                                     "time": "21:00",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London"
+                                    "stadium": "Falmer Stadium",
+                                    "city": "Brighton and Hove"
                                 }
                             ]
                         },
@@ -2283,24 +2286,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "MOL",
-                                    "away_team": "ARS",
+                                    "home_team": "AJA",
+                                    "away_team": "BHA",
                                     "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Aker Stadion",
-                                    "city": "Molde"
+                                    "away_score": 2,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
                                 },
                                 {
-                                    "home_team": "DUN",
-                                    "away_team": "RAV",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
+                                    "home_team": "AEK",
+                                    "away_team": "OLM",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "Aviva Stadium",
-                                    "city": "Dublin"
+                                    "stadium": "Agia Sophia Stadium",
+                                    "city": "Athens"
                                 }
                             ]
                         },
@@ -2308,24 +2311,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "ARS",
-                                    "away_team": "RAV",
-                                    "home_score": 4,
+                                    "home_team": "AEK",
+                                    "away_team": "BHA",
+                                    "home_score": 0,
                                     "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London"
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Agia Sophia Stadium",
+                                    "city": "Athens"
                                 },
                                 {
-                                    "home_team": "MOL",
-                                    "away_team": "DUN",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
+                                    "home_team": "OLM",
+                                    "away_team": "AJA",
+                                    "home_score": 4,
+                                    "away_score": 3,
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Aker Stadion",
-                                    "city": "Molde"
+                                    "stadium": "Stade Vélodrome",
+                                    "city": "Marseille"
                                 }
                             ]
                         },
@@ -2333,24 +2336,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "DUN",
-                                    "away_team": "ARS",
-                                    "home_score": 2,
-                                    "away_score": 4,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Aviva Stadium",
-                                    "city": "Dublin"
+                                    "home_team": "AJA",
+                                    "away_team": "AEK",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam"
                                 },
                                 {
-                                    "home_team": "RAV",
-                                    "away_team": "MOL",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Allianz Stadion",
-                                    "city": "Vienna"
+                                    "home_team": "BHA",
+                                    "away_team": "OLM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Falmer Stadium",
+                                    "city": "Brighton and Hove"
                                 }
                             ]
                         }
@@ -2358,30 +2361,30 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "B04" }, { "id": "NCE" }, { "id": "HBS" }, { "id": "SLP" }],
+                    "teams": [{ "id": "SPP" }, { "id": "ARL" }, { "id": "RFC" }, { "id": "BET" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "B04",
-                                    "away_team": "NCE",
-                                    "home_score": 6,
+                                    "home_team": "SPP",
+                                    "away_team": "ARL",
+                                    "home_score": 3,
                                     "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "BayArena",
-                                    "city": "Leverkusen"
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Stadion Letná",
+                                    "city": "Prague"
                                 },
                                 {
-                                    "home_team": "HBS",
-                                    "away_team": "SLP",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "HaMoshava Stadium",
-                                    "city": "Petah Tikva"
+                                    "home_team": "RFC",
+                                    "away_team": "BET",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -2389,24 +2392,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "B04",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Sinobo Stadium",
-                                    "city": "Prague"
+                                    "home_team": "BET",
+                                    "away_team": "SPP",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "NCE",
-                                    "away_team": "HBS",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Allianz Riviera",
-                                    "city": "Nice"
+                                    "home_team": "ARL",
+                                    "away_team": "RFC",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
                                 }
                             ]
                         },
@@ -2414,24 +2417,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "NCE",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Sinobo Stadium",
+                                    "home_team": "SPP",
+                                    "away_team": "RFC",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Letná",
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "HBS",
-                                    "away_team": "B04",
-                                    "home_score": 2,
-                                    "away_score": 4,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "HaMoshava Stadium",
-                                    "city": "Petah Tikva"
+                                    "home_team": "ARL",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
                                 }
                             ]
                         },
@@ -2439,24 +2442,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "B04",
-                                    "away_team": "HBS",
+                                    "home_team": "BET",
+                                    "away_team": "ARL",
                                     "home_score": 4,
                                     "away_score": 1,
-                                    "date": "2020-11-26",
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "BayArena",
-                                    "city": "Leverkusen"
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "NCE",
-                                    "away_team": "SLP",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
+                                    "home_team": "RFC",
+                                    "away_team": "SPP",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "Allianz Riviera",
-                                    "city": "Nice"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -2464,24 +2467,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "HBS",
-                                    "home_score": 3,
+                                    "home_team": "SPP",
+                                    "away_team": "BET",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Sinobo Stadium",
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Letná",
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "NCE",
-                                    "away_team": "B04",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2020-12-03",
+                                    "home_team": "RFC",
+                                    "away_team": "ARL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Allianz Riviera",
-                                    "city": "Nice"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow"
                                 }
                             ]
                         },
@@ -2489,24 +2492,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "B04",
-                                    "away_team": "SLP",
-                                    "home_score": 4,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "BayArena",
-                                    "city": "Leverkusen"
+                                    "home_team": "BET",
+                                    "away_team": "RFC",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
                                 },
                                 {
-                                    "home_team": "HBS",
-                                    "away_team": "NCE",
+                                    "home_team": "ARL",
+                                    "away_team": "SPP",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "HaMoshava Stadium",
-                                    "city": "Petah Tikva"
+                                    "away_score": 3,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
                                 }
                             ]
                         }
@@ -2514,30 +2517,30 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "STL" }, { "id": "RFC" }, { "id": "POZ-2021" }, { "id": "SLB" }],
+                    "teams": [{ "id": "RAK" }, { "id": "ATT" }, { "id": "SGR" }, { "id": "SLI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "STL",
-                                    "away_team": "RFC",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Stade Maurice Dufrasne",
-                                    "city": "Liège"
+                                    "home_team": "ATT",
+                                    "away_team": "RAK",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "POZ-2021",
-                                    "away_team": "SLB",
-                                    "home_score": 2,
-                                    "away_score": 4,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Miejski",
-                                    "city": "Poznań"
+                                    "home_team": "SGR",
+                                    "away_team": "SLI",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-09-21",
+                                    "time": "21:00",
+                                    "stadium": "Liebenauer Stadium",
+                                    "city": "Graz"
                                 }
                             ]
                         },
@@ -2545,24 +2548,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SLB",
-                                    "away_team": "STL",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Estádio da Luz",
+                                    "home_team": "SLI",
+                                    "away_team": "ATT",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Estádio José Alvalade",
                                     "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "POZ-2021",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "21:00",
-                                    "stadium": "Ibrox Stadium",
-                                    "city": "Glasgow"
+                                    "home_team": "RAK",
+                                    "away_team": "SGR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-10-05",
+                                    "time": "18:45",
+                                    "stadium": "Zagłębiowski Park Sportowy",
+                                    "city": "Sosnowiec"
                                 }
                             ]
                         },
@@ -2570,24 +2573,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SLB",
-                                    "away_team": "RFC",
-                                    "home_score": 3,
-                                    "away_score": 3,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Estádio da Luz",
-                                    "city": "Lisbon"
+                                    "home_team": "SGR",
+                                    "away_team": "ATT",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Liebenauer Stadium",
+                                    "city": "Graz"
                                 },
                                 {
-                                    "home_team": "POZ-2021",
-                                    "away_team": "STL",
-                                    "home_score": 3,
+                                    "home_team": "RAK",
+                                    "away_team": "SLI",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Miejski",
-                                    "city": "Poznań"
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Zagłębiowski Park Sportowy",
+                                    "city": "Sosnowiec"
                                 }
                             ]
                         },
@@ -2595,24 +2598,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "STL",
-                                    "away_team": "POZ-2021",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
+                                    "home_team": "ATT",
+                                    "away_team": "SGR",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "Stade Maurice Dufrasne",
-                                    "city": "Liège"
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "SLB",
+                                    "home_team": "SLI",
+                                    "away_team": "RAK",
                                     "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-11-26",
+                                    "away_score": 1,
+                                    "date": "2023-11-09",
                                     "time": "21:00",
-                                    "stadium": "Ibrox Stadium",
-                                    "city": "Glasgow"
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon"
                                 }
                             ]
                         },
@@ -2620,24 +2623,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SLB",
-                                    "away_team": "POZ-2021",
-                                    "home_score": 4,
-                                    "away_score": 0,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Estádio da Luz",
-                                    "city": "Lisbon"
+                                    "home_team": "ATT",
+                                    "away_team": "SLI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "STL",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "Ibrox Stadium",
-                                    "city": "Glasgow"
+                                    "home_team": "SGR",
+                                    "away_team": "RAK",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Liebenauer Stadium",
+                                    "city": "Graz"
                                 }
                             ]
                         },
@@ -2645,24 +2648,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "STL",
-                                    "away_team": "SLB",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Stade Maurice Dufrasne",
-                                    "city": "Liège"
+                                    "home_team": "SLI",
+                                    "away_team": "SGR",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "POZ-2021",
-                                    "away_team": "RFC",
+                                    "home_team": "RAK",
+                                    "away_team": "ATT",
                                     "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Miejski",
-                                    "city": "Poznań"
+                                    "away_score": 4,
+                                    "date": "2023-12-14",
+                                    "time": "21:00",
+                                    "stadium": "Zagłębiowski Park Sportowy",
+                                    "city": "Sosnowiec"
                                 }
                             ]
                         }
@@ -2670,30 +2673,30 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "PSV" }, { "id": "GCF" }, { "id": "PAO" }, { "id": "OMO" }],
+                    "teams": [{ "id": "LAS" }, { "id": "LIV" }, { "id": "USG" }, { "id": "TFC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "PSV",
-                                    "away_team": "GCF",
+                                    "home_team": "LAS",
+                                    "away_team": "LIV",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Philips Stadion",
-                                    "city": "Eindhoven"
+                                    "away_score": 3,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
                                 },
                                 {
-                                    "home_team": "PAO",
-                                    "away_team": "OMO",
+                                    "home_team": "USG",
+                                    "away_team": "TFC",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2020-10-22",
+                                    "date": "2023-09-21",
                                     "time": "18:55",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki"
+                                    "stadium": "Constant Vanden Stock Stadium",
+                                    "city": "Brussels"
                                 }
                             ]
                         },
@@ -2701,24 +2704,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "OMO",
-                                    "away_team": "PSV",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-29",
+                                    "home_team": "LIV",
+                                    "away_team": "USG",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-10-05",
                                     "time": "21:00",
-                                    "stadium": "GSP Stadium",
-                                    "city": "Strovolos"
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "GCF",
-                                    "away_team": "PAO",
-                                    "home_score": 0,
+                                    "home_team": "TFC",
+                                    "away_team": "LAS",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2020-10-29",
+                                    "date": "2023-10-05",
                                     "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada"
+                                    "stadium": "Stadium de Toulouse",
+                                    "city": "Toulouse"
                                 }
                             ]
                         },
@@ -2726,24 +2729,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "PAO",
-                                    "away_team": "PSV",
-                                    "home_score": 4,
+                                    "home_team": "USG",
+                                    "away_team": "LAS",
+                                    "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki"
+                                    "date": "2023-10-26",
+                                    "time": "21:00",
+                                    "stadium": "Constant Vanden Stock Stadium",
+                                    "city": "Brussels"
                                 },
                                 {
-                                    "home_team": "OMO",
-                                    "away_team": "GCF",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "GSP Stadium",
-                                    "city": "Strovolos"
+                                    "home_team": "LIV",
+                                    "away_team": "TFC",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "21:00",
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 }
                             ]
                         },
@@ -2751,24 +2754,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "PSV",
-                                    "away_team": "PAO",
+                                    "home_team": "LAS",
+                                    "away_team": "USG",
                                     "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-11-26",
-                                    "time": "21:00",
-                                    "stadium": "Philips Stadion",
-                                    "city": "Eindhoven"
+                                    "away_score": 0,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
                                 },
                                 {
-                                    "home_team": "GCF",
-                                    "away_team": "OMO",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
-                                    "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada"
+                                    "home_team": "TFC",
+                                    "away_team": "LIV",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Stadium de Toulouse",
+                                    "city": "Toulouse"
                                 }
                             ]
                         },
@@ -2776,24 +2779,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "GCF",
-                                    "away_team": "PSV",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
+                                    "home_team": "LIV",
+                                    "away_team": "LAS",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada"
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "OMO",
-                                    "away_team": "PAO",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
+                                    "home_team": "TFC",
+                                    "away_team": "USG",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "GSP Stadium",
-                                    "city": "Strovolos"
+                                    "stadium": "Stadium de Toulouse",
+                                    "city": "Toulouse"
                                 }
                             ]
                         },
@@ -2801,24 +2804,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "PSV",
-                                    "away_team": "OMO",
-                                    "home_score": 4,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Philips Stadion",
-                                    "city": "Eindhoven"
+                                    "home_team": "USG",
+                                    "away_team": "LIV",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Constant Vanden Stock Stadium",
+                                    "city": "Brussels"
                                 },
                                 {
-                                    "home_team": "PAO",
-                                    "away_team": "GCF",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki"
+                                    "home_team": "LAS",
+                                    "away_team": "TFC",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
                                 }
                             ]
                         }
@@ -2826,30 +2829,30 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "NAP" }, { "id": "AZA" }, { "id": "RIJ" }, { "id": "SOC" }],
+                    "teams": [{ "id": "REN" }, { "id": "MHA" }, { "id": "PAO" }, { "id": "VIL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "NAP",
-                                    "away_team": "AZA",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Stadio San Paolo",
-                                    "city": "Naples"
+                                    "home_team": "REN",
+                                    "away_team": "MHA",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Roazhon Park",
+                                    "city": "Rennes"
                                 },
                                 {
-                                    "home_team": "RIJ",
-                                    "away_team": "SOC",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-10-22",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Rujevica",
-                                    "city": "Rijeka"
+                                    "home_team": "PAO",
+                                    "away_team": "VIL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens"
                                 }
                             ]
                         },
@@ -2857,24 +2860,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SOC",
-                                    "away_team": "NAP",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-10-29",
+                                    "home_team": "VIL",
+                                    "away_team": "REN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-10-05",
                                     "time": "21:00",
-                                    "stadium": "Anoeta",
-                                    "city": "San Sebastián"
+                                    "stadium": "Estadio de la Cerámica",
+                                    "city": "Villarreal"
                                 },
                                 {
-                                    "home_team": "AZA",
-                                    "away_team": "RIJ",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-10-29",
+                                    "home_team": "MHA",
+                                    "away_team": "PAO",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-10-05",
                                     "time": "21:00",
-                                    "stadium": "AFAS Stadion",
-                                    "city": "Alkmaar"
+                                    "stadium": "Sammy Ofer Stadium",
+                                    "city": "Haifa"
                                 }
                             ]
                         },
@@ -2882,24 +2885,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SOC",
-                                    "away_team": "AZA",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Anoeta",
-                                    "city": "San Sebastián"
-                                },
-                                {
-                                    "home_team": "RIJ",
-                                    "away_team": "NAP",
+                                    "home_team": "PAO",
+                                    "away_team": "REN",
                                     "home_score": 1,
                                     "away_score": 2,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Rujevica",
-                                    "city": "Rijeka"
+                                    "date": "2023-10-26",
+                                    "time": "21:00",
+                                    "stadium": "Leoforos Alexandras Stadium",
+                                    "city": "Athens"
+                                },
+                                {
+                                    "home_team": "VIL",
+                                    "away_team": "MHA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-12-06",
+                                    "time": "21:00",
+                                    "stadium": "Estadio de la Cerámica",
+                                    "city": "Villarreal"
                                 }
                             ]
                         },
@@ -2907,24 +2910,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "NAP",
-                                    "away_team": "RIJ",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-11-26",
-                                    "time": "21:00",
-                                    "stadium": "Stadio San Paolo",
-                                    "city": "Naples"
+                                    "home_team": "REN",
+                                    "away_team": "PAO",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Roazhon Park",
+                                    "city": "Rennes"
                                 },
                                 {
-                                    "home_team": "AZA",
-                                    "away_team": "SOC",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-11-26",
-                                    "time": "21:00",
-                                    "stadium": "AFAS Stadion",
-                                    "city": "Alkmaar"
+                                    "home_team": "MHA",
+                                    "away_team": "VIL",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "AEK Arena",
+                                    "city": "Larnaca, Cyprus"
                                 }
                             ]
                         },
@@ -2932,24 +2935,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "AZA",
-                                    "away_team": "NAP",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "21:00",
-                                    "stadium": "AFAS Stadion",
-                                    "city": "Alkmaar"
+                                    "home_team": "MHA",
+                                    "away_team": "REN",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2023-11-30",
+                                    "time": "18:45",
+                                    "stadium": "Puskás Aréna",
+                                    "city": "Budapest, Hungary"
                                 },
                                 {
-                                    "home_team": "SOC",
-                                    "away_team": "RIJ",
-                                    "home_score": 2,
+                                    "home_team": "VIL",
+                                    "away_team": "PAO",
+                                    "home_score": 3,
                                     "away_score": 2,
-                                    "date": "2020-12-03",
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Anoeta",
-                                    "city": "San Sebastián"
+                                    "stadium": "Estadio de la Cerámica",
+                                    "city": "Villarreal"
                                 }
                             ]
                         },
@@ -2957,24 +2960,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "NAP",
-                                    "away_team": "SOC",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Stadio San Paolo",
-                                    "city": "Naples"
+                                    "home_team": "REN",
+                                    "away_team": "VIL",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Roazhon Park",
+                                    "city": "Rennes"
                                 },
                                 {
-                                    "home_team": "RIJ",
-                                    "away_team": "AZA",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Rujevica",
-                                    "city": "Rijeka"
+                                    "home_team": "PAO",
+                                    "away_team": "MHA",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Leoforos Alexandras Stadium",
+                                    "city": "Athens"
                                 }
                             ]
                         }
@@ -2982,30 +2985,30 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "SBR" }, { "id": "AEK" }, { "id": "LEI" }, { "id": "ZLH" }],
+                    "teams": [{ "id": "SER" }, { "id": "SLP" }, { "id": "SHE" }, { "id": "ROM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "SBR",
-                                    "away_team": "AEK",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Estádio Municipal",
-                                    "city": "Braga"
+                                    "home_team": "SER",
+                                    "away_team": "SLP",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Stade de Genève",
+                                    "city": "Geneva"
                                 },
                                 {
-                                    "home_team": "LEI",
-                                    "away_team": "ZLH",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "King Power Stadium",
-                                    "city": "Leicester"
+                                    "home_team": "SHE",
+                                    "away_team": "ROM",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Sheriff Arena",
+                                    "city": "Tiraspol"
                                 }
                             ]
                         },
@@ -3013,24 +3016,24 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "AEK",
-                                    "away_team": "LEI",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Olympic Stadium",
-                                    "city": "Athens"
+                                    "home_team": "ROM",
+                                    "away_team": "SER",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2023-10-05",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 },
                                 {
-                                    "home_team": "ZLH",
-                                    "away_team": "SBR",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Slavutych-Arena",
-                                    "city": "Zaporizhzhia"
+                                    "home_team": "SLP",
+                                    "away_team": "SHE",
+                                    "home_score": 6,
+                                    "away_score": 0,
+                                    "date": "2023-10-05",
+                                    "time": "21:00",
+                                    "stadium": "Fortuna Arena",
+                                    "city": "Prague"
                                 }
                             ]
                         },
@@ -3038,24 +3041,24 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "LEI",
-                                    "away_team": "SBR",
-                                    "home_score": 4,
+                                    "home_team": "ROM",
+                                    "away_team": "SLP",
+                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-11-05",
+                                    "date": "2023-10-26",
                                     "time": "21:00",
-                                    "stadium": "King Power Stadium",
-                                    "city": "Leicester"
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 },
                                 {
-                                    "home_team": "ZLH",
-                                    "away_team": "AEK",
+                                    "home_team": "SHE",
+                                    "away_team": "SER",
                                     "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-11-05",
+                                    "away_score": 1,
+                                    "date": "2023-12-06",
                                     "time": "21:00",
-                                    "stadium": "Slavutych-Arena",
-                                    "city": "Zaporizhzhia"
+                                    "stadium": "Sheriff Arena",
+                                    "city": "Tiraspol"
                                 }
                             ]
                         },
@@ -3063,24 +3066,24 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "SBR",
-                                    "away_team": "LEI",
-                                    "home_score": 3,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Estádio Municipal",
-                                    "city": "Braga"
+                                    "home_team": "SER",
+                                    "away_team": "SHE",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Stade de Genève",
+                                    "city": "Geneva"
                                 },
                                 {
-                                    "home_team": "AEK",
-                                    "away_team": "ZLH",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Olympic Stadium",
-                                    "city": "Athens"
+                                    "home_team": "SLP",
+                                    "away_team": "ROM",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Fortuna Arena",
+                                    "city": "Prague"
                                 }
                             ]
                         },
@@ -3088,24 +3091,24 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "AEK",
-                                    "away_team": "SBR",
-                                    "home_score": 2,
-                                    "away_score": 4,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Olympic Stadium",
-                                    "city": "Athens"
+                                    "home_team": "SER",
+                                    "away_team": "ROM",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-11-30",
+                                    "time": "21:00",
+                                    "stadium": "Stade de Genève",
+                                    "city": "Geneva"
                                 },
                                 {
-                                    "home_team": "ZLH",
-                                    "away_team": "LEI",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Slavutych-Arena",
-                                    "city": "Zaporizhzhia"
+                                    "home_team": "SHE",
+                                    "away_team": "SLP",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-11-30",
+                                    "time": "21:00",
+                                    "stadium": "Sheriff Arena",
+                                    "city": "Tiraspol"
                                 }
                             ]
                         },
@@ -3113,24 +3116,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "SBR",
-                                    "away_team": "ZLH",
-                                    "home_score": 2,
+                                    "home_team": "ROM",
+                                    "away_team": "SHE",
+                                    "home_score": 3,
                                     "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Estádio Municipal",
-                                    "city": "Braga"
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome"
                                 },
                                 {
-                                    "home_team": "LEI",
-                                    "away_team": "AEK",
-                                    "home_score": 2,
+                                    "home_team": "SLP",
+                                    "away_team": "SER",
+                                    "home_score": 4,
                                     "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "King Power Stadium",
-                                    "city": "Leicester"
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Fortuna Arena",
+                                    "city": "Prague"
                                 }
                             ]
                         }
@@ -3138,444 +3141,130 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "CEL" }, { "id": "MIL" }, { "id": "SPP" }, { "id": "LIL" }],
+                    "teams": [{ "id": "BKH" }, { "id": "B04" }, { "id": "QAR" }, { "id": "MOL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "CEL",
-                                    "away_team": "MIL",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Celtic Park",
-                                    "city": "Glasgow"
-                                },
-                                {
-                                    "home_team": "SPP",
-                                    "away_team": "LIL",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Letná",
-                                    "city": "Prague"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "matches": [
-                                {
-                                    "home_team": "MIL",
-                                    "away_team": "SPP",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
-                                },
-                                {
-                                    "home_team": "LIL",
-                                    "away_team": "CEL",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Stade Pierre-Mauroy",
-                                    "city": "Villeneuve-d'Ascq"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "matches": [
-                                {
-                                    "home_team": "CEL",
-                                    "away_team": "SPP",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Celtic Park",
-                                    "city": "Glasgow"
-                                },
-                                {
-                                    "home_team": "MIL",
-                                    "away_team": "LIL",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 4",
-                            "matches": [
-                                {
-                                    "home_team": "SPP",
-                                    "away_team": "CEL",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Letná",
-                                    "city": "Prague"
-                                },
-                                {
-                                    "home_team": "LIL",
-                                    "away_team": "MIL",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Stade Pierre-Mauroy",
-                                    "city": "Villeneuve-d'Ascq"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 5",
-                            "matches": [
-                                {
-                                    "home_team": "MIL",
-                                    "away_team": "CEL",
-                                    "home_score": 4,
-                                    "away_score": 2,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
-                                },
-                                {
-                                    "home_team": "LIL",
-                                    "away_team": "SPP",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Stade Pierre-Mauroy",
-                                    "city": "Villeneuve-d'Ascq"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 6",
-                            "matches": [
-                                {
-                                    "home_team": "CEL",
-                                    "away_team": "LIL",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Celtic Park",
-                                    "city": "Glasgow"
-                                },
-                                {
-                                    "home_team": "SPP",
-                                    "away_team": "MIL",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Letná",
-                                    "city": "Prague"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Group I",
-                    "teams": [{ "id": "VIL" }, { "id": "SIV" }, { "id": "MTA" }, { "id": "QAR" }],
-                    "matchdays": [
-                        {
-                            "name": "Matchday 1",
-                            "matches": [
-                                {
-                                    "home_team": "VIL",
-                                    "away_team": "SIV",
-                                    "home_score": 5,
-                                    "away_score": 3,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal"
-                                },
-                                {
-                                    "home_team": "MTA",
-                                    "away_team": "QAR",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Bloomfield Stadium",
-                                    "city": "Tel Aviv"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "matches": [
-                                {
-                                    "home_team": "QAR",
-                                    "away_team": "VIL",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul (Turkey)"
-                                },
-                                {
-                                    "home_team": "SIV",
-                                    "away_team": "MTA",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "New Sivas 4 Eylül Stadium",
-                                    "city": "Sivas"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "matches": [
-                                {
-                                    "home_team": "SIV",
-                                    "away_team": "QAR",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "New Sivas 4 Eylül Stadium",
-                                    "city": "Sivas"
-                                },
-                                {
-                                    "home_team": "VIL",
-                                    "away_team": "MTA",
+                                    "home_team": "B04",
+                                    "away_team": "BKH",
                                     "home_score": 4,
                                     "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "22:10",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 4",
-                            "matches": [
-                                {
-                                    "home_team": "MTA",
-                                    "away_team": "VIL",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Bloomfield Stadium",
-                                    "city": "Tel Aviv"
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
                                 },
                                 {
                                     "home_team": "QAR",
-                                    "away_team": "SIV",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul (Turkey)"
+                                    "away_team": "MOL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-09-21",
+                                    "time": "18:45",
+                                    "stadium": "Tofiq Bahramov Republican Stadium",
+                                    "city": "Baku"
                                 }
                             ]
                         },
                         {
-                            "name": "Matchday 5",
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "B04",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2023-10-05",
+                                    "time": "21:00",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
+                                },
+                                {
+                                    "home_team": "BKH",
+                                    "away_team": "QAR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-10-05",
+                                    "time": "21:00",
+                                    "stadium": "Ullevi",
+                                    "city": "Gothenburg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "BKH",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "18:45",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
+                                },
+                                {
+                                    "home_team": "B04",
+                                    "away_team": "QAR",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2023-10-26",
+                                    "time": "21:00",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
                             "matches": [
                                 {
                                     "home_team": "QAR",
-                                    "away_team": "MTA",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Başakşehir Fatih Terim Stadium",
-                                    "city": "Istanbul (Turkey)"
-                                },
-                                {
-                                    "home_team": "SIV",
-                                    "away_team": "VIL",
+                                    "away_team": "B04",
                                     "home_score": 0,
                                     "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "New Sivas 4 Eylül Stadium",
-                                    "city": "Sivas"
+                                    "date": "2023-11-09",
+                                    "time": "18:45",
+                                    "stadium": "Tofiq Bahramov Republican Stadium",
+                                    "city": "Baku"
+                                },
+                                {
+                                    "home_team": "BKH",
+                                    "away_team": "MOL",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2023-11-09",
+                                    "time": "21:00",
+                                    "stadium": "Ullevi",
+                                    "city": "Gothenburg"
                                 }
                             ]
                         },
                         {
-                            "name": "Matchday 6",
+                            "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "VIL",
+                                    "home_team": "MOL",
                                     "away_team": "QAR",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal",
-                                    "home_awarded": true,
-                                    "awarded_text": "Awarded: The Villarreal v Qarabag match was cancelled and awarded as a 3–0 win to Villarreal after several players of the Qarabağ squad tested positive for the SARS-CoV-2."
-                                },
-                                {
-                                    "home_team": "MTA",
-                                    "away_team": "SIV",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Bloomfield Stadium",
-                                    "city": "Tel Aviv"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Group J",
-                    "teams": [{ "id": "TOT" }, { "id": "LIN" }, { "id": "LUD" }, { "id": "ROA" }],
-                    "matchdays": [
-                        {
-                            "name": "Matchday 1",
-                            "matches": [
-                                {
-                                    "home_team": "TOT",
-                                    "away_team": "LIN",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Tottenham Hotspur Stadium",
-                                    "city": "London"
-                                },
-                                {
-                                    "home_team": "LUD",
-                                    "away_team": "ROA",
-                                    "home_score": 1,
+                                    "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2020-10-22",
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Huvepharma Arena",
-                                    "city": "Razgrad"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "matches": [
-                                {
-                                    "home_team": "LIN",
-                                    "away_team": "LUD",
-                                    "home_score": 4,
-                                    "away_score": 3,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Linzer Stadion",
-                                    "city": "Linz"
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
                                 },
                                 {
-                                    "home_team": "ROA",
-                                    "away_team": "TOT",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Bosuilstadion",
-                                    "city": "Antwerp"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "matches": [
-                                {
-                                    "home_team": "LUD",
-                                    "away_team": "TOT",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-11-05",
-                                    "time": "18:55",
-                                    "stadium": "Huvepharma Arena",
-                                    "city": "Razgrad"
-                                },
-                                {
-                                    "home_team": "ROA",
-                                    "away_team": "LIN",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Bosuilstadion",
-                                    "city": "Antwerp"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 4",
-                            "matches": [
-                                {
-                                    "home_team": "LIN",
-                                    "away_team": "ROA",
+                                    "home_team": "BKH",
+                                    "away_team": "B04",
                                     "home_score": 0,
                                     "away_score": 2,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Linzer Stadion",
-                                    "city": "Linz"
-                                },
-                                {
-                                    "home_team": "TOT",
-                                    "away_team": "LUD",
-                                    "home_score": 4,
-                                    "away_score": 0,
-                                    "date": "2020-11-26",
+                                    "date": "2023-11-30",
                                     "time": "21:00",
-                                    "stadium": "Tottenham Hotspur Stadium",
-                                    "city": "London"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 5",
-                            "matches": [
-                                {
-                                    "home_team": "LIN",
-                                    "away_team": "TOT",
-                                    "home_score": 3,
-                                    "away_score": 3,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Linzer Stadion",
-                                    "city": "Linz"
-                                },
-                                {
-                                    "home_team": "ROA",
-                                    "away_team": "LUD",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Bosuilstadion",
-                                    "city": "Antwerp"
+                                    "stadium": "Ullevi",
+                                    "city": "Gothenburg"
                                 }
                             ]
                         },
@@ -3583,336 +3272,24 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "TOT",
-                                    "away_team": "ROA",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Tottenham Hotspur Stadium",
-                                    "city": "London"
-                                },
-                                {
-                                    "home_team": "LUD",
-                                    "away_team": "LIN",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Huvepharma Arena",
-                                    "city": "Razgrad"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Group K",
-                    "teams": [{ "id": "DZA" }, { "id": "FEY" }, { "id": "WOL" }, { "id": "CSK" }],
-                    "matchdays": [
-                        {
-                            "name": "Matchday 1",
-                            "matches": [
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "FEY",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb"
-                                },
-                                {
-                                    "home_team": "WOL",
-                                    "away_team": "CSK",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Wörthersee Stadion",
-                                    "city": "Klagenfurt"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "matches": [
-                                {
-                                    "home_team": "CSK",
-                                    "away_team": "DZA",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "VEB Arena",
-                                    "city": "Moscow"
-                                },
-                                {
-                                    "home_team": "FEY",
-                                    "away_team": "WOL",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "De Kuip",
-                                    "city": "Rotterdam"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "matches": [
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "WOL",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb"
-                                },
-                                {
-                                    "home_team": "FEY",
-                                    "away_team": "CSK",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "De Kuip",
-                                    "city": "Rotterdam"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 4",
-                            "matches": [
-                                {
-                                    "home_team": "CSK",
-                                    "away_team": "FEY",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "VEB Arena",
-                                    "city": "Moscow"
-                                },
-                                {
-                                    "home_team": "WOL",
-                                    "away_team": "DZA",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Wörthersee Stadion",
-                                    "city": "Klagenfurt"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 5",
-                            "matches": [
-                                {
-                                    "home_team": "CSK",
-                                    "away_team": "WOL",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "VEB Arena",
-                                    "city": "Moscow"
-                                },
-                                {
-                                    "home_team": "FEY",
-                                    "away_team": "DZA",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "De Kuip",
-                                    "city": "Rotterdam"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 6",
-                            "matches": [
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "CSK",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb"
-                                },
-                                {
-                                    "home_team": "WOL",
-                                    "away_team": "FEY",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Wörthersee Stadion",
-                                    "city": "Klagenfurt"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "name": "Group L",
-                    "teams": [{ "id": "TSG" }, { "id": "CZV" }, { "id": "SLL-2024" }, { "id": "GNT" }],
-                    "matchdays": [
-                        {
-                            "name": "Matchday 1",
-                            "matches": [
-                                {
-                                    "home_team": "TSG",
-                                    "away_team": "CZV",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Rhein-Neckar-Arena",
-                                    "city": "Sinsheim"
-                                },
-                                {
-                                    "home_team": "SLL-2024",
-                                    "away_team": "GNT",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2020-10-22",
-                                    "time": "21:00",
-                                    "stadium": "Stadion u Nisy",
-                                    "city": "Liberec"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 2",
-                            "matches": [
-                                {
-                                    "home_team": "GNT",
-                                    "away_team": "TSG",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Ghelamco Arena",
-                                    "city": "Ghent"
-                                },
-                                {
-                                    "home_team": "CZV",
-                                    "away_team": "SLL-2024",
+                                    "home_team": "B04",
+                                    "away_team": "MOL",
                                     "home_score": 5,
                                     "away_score": 1,
-                                    "date": "2020-10-29",
-                                    "time": "18:55",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 3",
-                            "matches": [
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen"
+                                },
                                 {
-                                    "home_team": "CZV",
-                                    "away_team": "GNT",
+                                    "home_team": "QAR",
+                                    "away_team": "BKH",
                                     "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade"
-                                },
-                                {
-                                    "home_team": "TSG",
-                                    "away_team": "SLL-2024",
-                                    "home_score": 5,
-                                    "away_score": 0,
-                                    "date": "2020-11-05",
-                                    "time": "21:00",
-                                    "stadium": "Rhein-Neckar-Arena",
-                                    "city": "Sinsheim"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 4",
-                            "matches": [
-                                {
-                                    "home_team": "GNT",
-                                    "away_team": "CZV",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Ghelamco Arena",
-                                    "city": "Ghent"
-                                },
-                                {
-                                    "home_team": "SLL-2024",
-                                    "away_team": "TSG",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2020-11-26",
-                                    "time": "18:55",
-                                    "stadium": "Stadion u Nisy",
-                                    "city": "Liberec"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 5",
-                            "matches": [
-                                {
-                                    "home_team": "GNT",
-                                    "away_team": "SLL-2024",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Ghelamco Arena",
-                                    "city": "Ghent"
-                                },
-                                {
-                                    "home_team": "CZV",
-                                    "away_team": "TSG",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-03",
-                                    "time": "18:55",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Matchday 6",
-                            "matches": [
-                                {
-                                    "home_team": "TSG",
-                                    "away_team": "GNT",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Rhein-Neckar-Arena",
-                                    "city": "Sinsheim"
-                                },
-                                {
-                                    "home_team": "SLL-2024",
-                                    "away_team": "CZV",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-12-10",
-                                    "time": "21:00",
-                                    "stadium": "Stadion u Nisy",
-                                    "city": "Liberec"
+                                    "date": "2023-12-14",
+                                    "time": "18:45",
+                                    "stadium": "Tofiq Bahramov Republican Stadium",
+                                    "city": "Baku"
                                 }
                             ]
                         }
