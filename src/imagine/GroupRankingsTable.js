@@ -9,6 +9,7 @@ import {
     FairPlayTooltip,
     PlayoffWinTooltip,
     WithdrewTooltip,
+    BannedTooltip,
     PointDeductionTooltip,
     TieLastMatchTooltip,
     TieH2HTooltip,
@@ -42,20 +43,23 @@ const RankingsRow = (props) => {
     const advanced_striped = ranking.advanced ? 'advanced-striped' : ''
     const wild_card_striped = ranking.wild_card ? 'wild-card-striped' : ''
     const transferred_striped = ranking.transferred ? 'transferred-striped' : ''
+    const relegated_striped = ranking.relegated ? 'relegated-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
-    const rank = !ranking.team.withdrew ? ranking.rank : ''
-    const w = !ranking.team.withdrew ? ranking.w : <span>&mdash;</span>
-    const d = !ranking.team.withdrew ? ranking.d : <span>&mdash;</span>
-    const l = !ranking.team.withdrew ? ranking.l : <span>&mdash;</span>
-    const gf = !ranking.team.withdrew ? ranking.gf : <span>&mdash;</span>
-    const ga = !ranking.team.withdrew ? ranking.ga : <span>&mdash;</span>
-    const gd = !ranking.team.withdrew ? ranking.gd : <span>&mdash;</span>
-    const pts = !ranking.team.withdrew ? ranking.pts : <span>&mdash;</span>
+    const banned_striped = ranking.team.banned ? 'gray-striped' : ''
+    const withdrew = ranking.team.withdrew || ranking.team.banned
+    const rank = !withdrew ? ranking.rank : ''
+    const w = !withdrew ? ranking.w : <span>&mdash;</span>
+    const d = !withdrew ? ranking.d : <span>&mdash;</span>
+    const l = !withdrew ? ranking.l : <span>&mdash;</span>
+    const gf = !withdrew ? ranking.gf : <span>&mdash;</span>
+    const ga = !withdrew ? ranking.ga : <span>&mdash;</span>
+    const gd = !withdrew ? ranking.gd : <span>&mdash;</span>
+    const pts = !withdrew ? ranking.pts : <span>&mdash;</span>
     const drawLotAnchor = ranking.team.draw_lot_label ? '(ct)' : '(dl)'
     const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
         <Row
-            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${withdrew_striped}`}
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}`}
         >
             <Col className="col-box-4">{rank}</Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
@@ -64,6 +68,7 @@ const RankingsRow = (props) => {
             {!config.added_group && (
                 <Col className="col-box-27">
                     {ranking.team.name} {ranking.team.withdrew ? <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" /> : ''}
+                    {ranking.team.banned ? <BannedTooltip target={`${ranking.id}bannedTooltip`} anchor="(banned)" notes={ranking.team.banned_notes} /> : ''}
                 </Col>
             )}
             <Col className="col-box-7 text-center">{ranking.mp}</Col>

@@ -9,14 +9,18 @@
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "accesslist"
         ],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "awaygoals", "wins", "awaywins", "disciplinarypoints", "accesslist"],
         "details": {
             "logo_filename": "2023_UEFA_Nations_League_Finals_logo.png",
             "mascot_filename": "2022–23_UEFA_Nations_League_map.svg",
@@ -95,13 +99,17 @@
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
-            "head2head",
-            "head2headawaygoals",
-            "head2headreapply",
-            "goaldifferenceandgoalscored",
-            "awaygoalswinsawaywins",
-            "fairplaylight",
-            "coefficient"
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "h2hawaygoals",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "accesslist"
         ],
         "details": {
             "logo_filename": "UEFA_Nations_League.svg",

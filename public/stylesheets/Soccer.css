@@ -456,6 +456,9 @@
 .transferred-striped {
     background-color: #ffffdd;
 }
+.relegated-striped {
+    background-color: #ffe2e2;
+}
 .advanced-wild-card-extra-striped {
     background-color: #ffffbb;
 }
@@ -470,9 +473,6 @@
 }
 .promotion-striped {
     background-color: #bbf3bb;
-}
-.relegation-striped {
-    background-color: #ffe2e2;
 }
 .gray-striped {
     background-color: #eaecf0;

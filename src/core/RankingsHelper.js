@@ -36,7 +36,7 @@ export const calculateGroupRankings = (stage, config) => {
 }
 
 export const getBlankRanking = (team) => {
-    return { id: team.id, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: team.withdrew ? -1 : 0 }
+    return { id: team.id, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: team.withdrew || team.banned ? -1 : 0 }
 }
 
 export const accumulateRanking = (ranking, matches, config) => {
@@ -846,15 +846,75 @@ export const processPartialAdvancement2 = (stage, config) => {
             flattenPools(stage.partial)
             stage.partial.rankings.forEach((t, index) => {
                 t.rank = index + 1
-                if (index < a.count) {
-                    t.wild_card = true
+                const count = a.count
+                if (count > 0) {
+                    if (index < count) {
+                        t.wild_card = true
+                    } else {
+                        delete t.wild_card
+                    }
                 } else {
-                    delete t.wild_card
+                    if (index >= 0 - count) {
+                        t.relegated = true
+                    } else {
+                        delete t.relegated
+                    }
                 }
             })
             a.rankings = stage.partial.rankings
         })
     }
+}
+
+export const setAdvancements = (group, advancements) => {
+    if (!group || !group.matchdays || group.matchdays.length === 0 || !advancements || !advancements.positions || advancements.positions.length === 0) return
+    group.rankings.forEach((t) => {
+        const qualified_date = group.matchdays[group.matchdays.length - 1].date
+        const groupPositions = group.advancements && group.advancements.positions ? group.advancements.positions : advancements.positions
+        const foundPosition = groupPositions.find((a) => a.pos === t.rank)
+        if (foundPosition) {
+            let passed = !foundPosition.rankings
+            const foundWildCard = foundPosition.next === 'wild_card'
+            const foundRelegated = foundPosition.next === 'relegate'
+            if (foundPosition.rankings) {
+                const foundPartial = foundPosition.rankings.find(
+                    (t2) => t2.id === t.id && ((foundWildCard && t2.wild_card) || (foundRelegated && t2.relegated)),
+                )
+                if (foundPartial) {
+                    passed = true
+                }
+            }
+            if (passed) {
+                if (foundPosition.next === 'qualify') {
+                    t.qualified = true
+                    if (t.rank === 1) {
+                        t.qualified_position = 'winners'
+                    } else if (t.rank === 2) {
+                        t.qualified_position = 'runners-up'
+                    } else if (t.rank === 3) {
+                        t.qualified_position = '3rd place'
+                    } else if (t.rank === 4) {
+                        t.qualified_position = '4th place'
+                    } else if (t.rank === 5) {
+                        t.qualified_position = '5th place'
+                    } else if (t.rank === 6) {
+                        t.qualified_position = '6th place'
+                    }
+                    t.qualified_date = qualified_date
+                } else if (foundPosition.next === 'advance') {
+                    t.advanced = true
+                } else if (foundPosition.next === 'wild_card') {
+                    t.wild_card = true
+                } else if (foundPosition.next === 'transfer') {
+                    t.transferred = true
+                } else if (foundPosition.next === 'relegate') {
+                    t.relegated = true
+                }
+            } else {
+                delete t.wild_card
+            }
+        }
+    })
 }
 
 // ------------------ V1 -------------------
@@ -1427,51 +1487,6 @@ export const processPartialAdvancement = (stage, config) => {
             a.rankings = stage.partial.rankings
         })
     }
-}
-
-export const setAdvancements = (group, advancements) => {
-    if (!group || !group.matchdays || group.matchdays.length === 0 || !advancements || !advancements.positions || advancements.positions.length === 0) return
-    group.rankings.forEach((t) => {
-        const qualified_date = group.matchdays[group.matchdays.length - 1].date
-        const groupPositions = group.advancements && group.advancements.positions ? group.advancements.positions : advancements.positions
-        const foundPosition = groupPositions.find((a) => a.pos === t.rank)
-        if (foundPosition) {
-            let passed = !foundPosition.rankings
-            if (foundPosition.rankings) {
-                const foundPartial = foundPosition.rankings.find((t2) => t2.id === t.id && t2.wild_card)
-                if (foundPartial) {
-                    passed = true
-                }
-            }
-            if (passed) {
-                if (foundPosition.next === 'qualify') {
-                    t.qualified = true
-                    if (t.rank === 1) {
-                        t.qualified_position = 'winners'
-                    } else if (t.rank === 2) {
-                        t.qualified_position = 'runners-up'
-                    } else if (t.rank === 3) {
-                        t.qualified_position = '3rd place'
-                    } else if (t.rank === 4) {
-                        t.qualified_position = '4th place'
-                    } else if (t.rank === 5) {
-                        t.qualified_position = '5th place'
-                    } else if (t.rank === 6) {
-                        t.qualified_position = '6th place'
-                    }
-                    t.qualified_date = qualified_date
-                } else if (foundPosition.next === 'advance') {
-                    t.advanced = true
-                } else if (foundPosition.next === 'wild_card') {
-                    t.wild_card = true
-                } else if (foundPosition.next === 'transfer') {
-                    t.transferred = true
-                }
-            } else {
-                delete t.wild_card
-            }
-        }
-    })
 }
 
 export const getPartialAdvancementRankings = (stage) => {

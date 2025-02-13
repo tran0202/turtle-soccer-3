@@ -11,17 +11,17 @@
                     "name": "League A",
                     "type": "roundrobin_final",
                     "home_and_away": true,
-                    "advancement": {
-                        "teams": {
-                            "auto": [1],
-                            "eliminated": [2, 3],
-                            "relegated": [4],
-                            "text": "The top teams in League A would advance to the Nations League Finals. The top teams in leagues B, C and D would be promoted to the higher league. The last-placed teams in leagues A and B would be relegated to the lower league. The last-placed teams in league C would play in relegation play-outs to determine 2 to be relegated to league D."
-                        }
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 4, "next": "relegate" }
+                        ],
+                        "advanced_note": "Group winners in League A advanced to Nations League Finals",
+                        "relegated_note": "The fourth-placed teams in League A relegated to League B"
                     },
                     "groups": [
                         {
-                            "name": "Group 1",
+                            "name": "Group A1",
                             "teams": [{ "id": "ITA" }, { "id": "BIH" }, { "id": "NED" }, { "id": "POL" }],
                             "matchdays": [
                                 {
@@ -177,7 +177,7 @@
                             ]
                         },
                         {
-                            "name": "Group 2",
+                            "name": "Group A2",
                             "teams": [{ "id": "ISL" }, { "id": "ENG" }, { "id": "DEN" }, { "id": "BEL" }],
                             "matchdays": [
                                 {
@@ -333,7 +333,7 @@
                             ]
                         },
                         {
-                            "name": "Group 3",
+                            "name": "Group A3",
                             "teams": [{ "id": "POR" }, { "id": "CRO" }, { "id": "SWE" }, { "id": "FRA" }],
                             "matchdays": [
                                 {
@@ -489,7 +489,7 @@
                             ]
                         },
                         {
-                            "name": "Group 4",
+                            "name": "Group A4",
                             "teams": [{ "id": "GER" }, { "id": "ESP" }, { "id": "UKR" }, { "id": "SUI" }],
                             "matchdays": [
                                 {
@@ -726,17 +726,17 @@
                     "name": "League B",
                     "type": "roundrobin_final",
                     "home_and_away": true,
-                    "advancement": {
-                        "teams": {
-                            "auto": [1],
-                            "eliminated": [2, 3],
-                            "relegated": [4],
-                            "text": "The top teams in League A would advance to the Nations League Finals. The top teams in leagues B, C and D would be promoted to the higher league. The last-placed teams in leagues A and B would be relegated to the lower league. The last-placed teams in league C would play in relegation play-outs to determine 2 to be relegated to league D."
-                        }
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 4, "next": "relegate" }
+                        ],
+                        "advanced_note": "Group winners in League B promoted to League A",
+                        "relegated_note": "The fourth-placed teams in League B relegated to League C"
                     },
                     "groups": [
                         {
-                            "name": "Group 1",
+                            "name": "Group B1",
                             "teams": [{ "id": "NOR" }, { "id": "AUT" }, { "id": "ROU" }, { "id": "NIR" }],
                             "matchdays": [
                                 {
@@ -894,8 +894,8 @@
                             ]
                         },
                         {
-                            "name": "Group 2",
-                            "teams": [{ "id": "SCO" }, { "id": "ISR" }, { "id": "SVK" }, { "id": "CZE" }],
+                            "name": "Group B2",
+                            "teams": [{ "id": "SCO" }, { "id": "ISR" }, { "id": "SVK" }, { "id": "CZE-1993-2022" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -912,7 +912,7 @@
                                         },
                                         {
                                             "home_team": "SVK",
-                                            "away_team": "CZE",
+                                            "away_team": "CZE-1993-2022",
                                             "home_score": 1,
                                             "away_score": 3,
                                             "date": "2020-09-04",
@@ -926,7 +926,7 @@
                                     "name": "Matchday 2",
                                     "matches": [
                                         {
-                                            "home_team": "CZE",
+                                            "home_team": "CZE-1993-2022",
                                             "away_team": "SCO",
                                             "home_score": 1,
                                             "away_score": 2,
@@ -952,7 +952,7 @@
                                     "matches": [
                                         {
                                             "home_team": "ISR",
-                                            "away_team": "CZE",
+                                            "away_team": "CZE-1993-2022",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2020-10-11",
@@ -977,7 +977,7 @@
                                     "matches": [
                                         {
                                             "home_team": "SCO",
-                                            "away_team": "CZE",
+                                            "away_team": "CZE-1993-2022",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2020-10-14",
@@ -1011,7 +1011,7 @@
                                             "city": "Trnava"
                                         },
                                         {
-                                            "home_team": "CZE",
+                                            "home_team": "CZE-1993-2022",
                                             "away_team": "ISR",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -1026,7 +1026,7 @@
                                     "name": "Matchday 6",
                                     "matches": [
                                         {
-                                            "home_team": "CZE",
+                                            "home_team": "CZE-1993-2022",
                                             "away_team": "SVK",
                                             "home_score": 2,
                                             "away_score": 0,
@@ -1050,8 +1050,8 @@
                             ]
                         },
                         {
-                            "name": "Group 3",
-                            "teams": [{ "id": "RUS" }, { "id": "SRB" }, { "id": "TUR" }, { "id": "HUN" }],
+                            "name": "Group B3",
+                            "teams": [{ "id": "RUS" }, { "id": "SRB" }, { "id": "TUR-2022" }, { "id": "HUN" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -1067,7 +1067,7 @@
                                             "city": "Moscow"
                                         },
                                         {
-                                            "home_team": "TUR",
+                                            "home_team": "TUR-2022",
                                             "away_team": "HUN",
                                             "home_score": 0,
                                             "away_score": 1,
@@ -1093,7 +1093,7 @@
                                         },
                                         {
                                             "home_team": "SRB",
-                                            "away_team": "TUR",
+                                            "away_team": "TUR-2022",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2020-09-06",
@@ -1108,7 +1108,7 @@
                                     "matches": [
                                         {
                                             "home_team": "RUS",
-                                            "away_team": "TUR",
+                                            "away_team": "TUR-2022",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2020-10-11",
@@ -1142,7 +1142,7 @@
                                             "city": "Moscow"
                                         },
                                         {
-                                            "home_team": "TUR",
+                                            "home_team": "TUR-2022",
                                             "away_team": "SRB",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -1157,7 +1157,7 @@
                                     "name": "Matchday 5",
                                     "matches": [
                                         {
-                                            "home_team": "TUR",
+                                            "home_team": "TUR-2022",
                                             "away_team": "RUS",
                                             "home_score": 3,
                                             "away_score": 2,
@@ -1183,7 +1183,7 @@
                                     "matches": [
                                         {
                                             "home_team": "HUN",
-                                            "away_team": "TUR",
+                                            "away_team": "TUR-2022",
                                             "home_score": 2,
                                             "away_score": 0,
                                             "date": "2020-11-18",
@@ -1206,7 +1206,7 @@
                             ]
                         },
                         {
-                            "name": "Group 4",
+                            "name": "Group B4",
                             "teams": [{ "id": "BUL" }, { "id": "IRL" }, { "id": "FIN" }, { "id": "WAL" }],
                             "matchdays": [
                                 {
@@ -1373,17 +1373,17 @@
                     "name": "League C",
                     "type": "roundrobin_final",
                     "home_and_away": true,
-                    "advancement": {
-                        "teams": {
-                            "auto": [1],
-                            "eliminated": [2, 3],
-                            "relegated": [4],
-                            "text": "The top teams in League A would advance to the Nations League Finals. The top teams in leagues B, C and D would be promoted to the higher league. The last-placed teams in leagues A and B would be relegated to the lower league. The last-placed teams in league C would play in relegation play-outs to determine 2 to be relegated to league D."
-                        }
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 4, "next": "relegate" }
+                        ],
+                        "advanced_note": "Group winners in League C promoted to League B",
+                        "relegated_note": "The fourth-placed teams in League C participated in Relegation play-outs"
                     },
                     "groups": [
                         {
-                            "name": "Group 1",
+                            "name": "Group C1",
                             "teams": [{ "id": "AZE" }, { "id": "LUX" }, { "id": "CYP" }, { "id": "MNE" }],
                             "matchdays": [
                                 {
@@ -1539,7 +1539,7 @@
                             ]
                         },
                         {
-                            "name": "Group 2",
+                            "name": "Group C2",
                             "teams": [{ "id": "MKD" }, { "id": "ARM" }, { "id": "EST" }, { "id": "GEO" }],
                             "matchdays": [
                                 {
@@ -1695,7 +1695,7 @@
                             ]
                         },
                         {
-                            "name": "Group 3",
+                            "name": "Group C3",
                             "teams": [{ "id": "MDA" }, { "id": "KVX" }, { "id": "SVN" }, { "id": "GRE" }],
                             "matchdays": [
                                 {
@@ -1851,7 +1851,7 @@
                             ]
                         },
                         {
-                            "name": "Group 4",
+                            "name": "Group C4",
                             "teams": [{ "id": "LTU" }, { "id": "KAZ" }, { "id": "BLR" }, { "id": "ALB" }],
                             "matchdays": [
                                 {
@@ -2023,16 +2023,13 @@
                     "name": "League D",
                     "type": "roundrobin_final",
                     "home_and_away": true,
-                    "advancement": {
-                        "teams": {
-                            "auto": [1],
-                            "eliminated": [2, 3, 4],
-                            "text": "The top teams in League A would advance to the Nations League Finals. The top teams in leagues B, C and D would be promoted to the higher league. The last-placed teams in leagues A and B would be relegated to the lower league. The last-placed teams in league C would play in relegation play-outs to determine 2 to be relegated to league D."
-                        }
+                    "advancements": {
+                        "positions": [{ "pos": 1, "next": "advance" }],
+                        "advanced_note": "Group winners in League D promoted to League C"
                     },
                     "groups": [
                         {
-                            "name": "Group 1",
+                            "name": "Group D1",
                             "teams": [{ "id": "LVA" }, { "id": "AND" }, { "id": "FRO" }, { "id": "MLT" }],
                             "final_standings_excluded": "AND",
                             "matchdays": [
@@ -2189,7 +2186,7 @@
                             ]
                         },
                         {
-                            "name": "Group 2",
+                            "name": "Group D2",
                             "teams": [{ "id": "GIB" }, { "id": "SMR" }, { "id": "LIE" }],
                             "matchdays": [
                                 {

@@ -28,6 +28,11 @@ class RoundRobin extends React.Component {
                                 <Col className="transferred-striped">{advancements.transferred_note}</Col>
                             </Row>
                         )}
+                        {advancements && advancements.relegated_note && (
+                            <Row>
+                                <Col className="relegated-striped">{advancements.relegated_note}</Col>
+                            </Row>
+                        )}
                     </Col>
                 </Row>
                 {groups &&

@@ -74,6 +74,12 @@ export const WithdrewTooltip = (props) => {
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const BannedTooltip = (props) => {
+    const { target, anchor, notes } = props
+    const content = `Banned: ${notes ? notes : ''}`
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const MatchPostponedTooltip = (props) => {
     const { target, anchor, notes } = props
     const content = `Match postponed ${notes ? notes : ''}`
