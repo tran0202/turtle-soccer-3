@@ -6,11 +6,13 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "PAR" }, { "id": "RSA" }, { "id": "ESP" }, { "id": "SVN" }],
+                    "teams": [{ "id": "RSA" }, { "id": "PAR" }, { "id": "ESP" }, { "id": "SVN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "BRA" }, { "id": "TUR-2022" }, { "id": "CHN" }, { "id": "CRC" }],
+                    "teams": [{ "id": "CHN" }, { "id": "CRC" }, { "id": "BRA" }, { "id": "TUR-2022" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -500,7 +502,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "CRO" }, { "id": "MEX" }, { "id": "ITA" }, { "id": "ECU" }],
+                    "teams": [{ "id": "ECU" }, { "id": "CRO" }, { "id": "MEX" }, { "id": "ITA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -581,7 +583,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "JPN" }, { "id": "BEL" }, { "id": "RUS" }, { "id": "TUN" }],
+                    "teams": [{ "id": "BEL" }, { "id": "JPN" }, { "id": "RUS" }, { "id": "TUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

@@ -13,7 +13,7 @@
                     "home_and_away": true,
                     "advancements": {
                         "positions": [{ "pos": 1, "next": "advance" }],
-                        "advanced_note": "Group winners in League A advanced to Nations League Finals"
+                        "advanced_notes": "Group winners in League A advanced to Nations League Finals"
                     },
                     "groups": [
                         {
@@ -114,7 +114,7 @@
                         },
                         {
                             "name": "Group A2",
-                            "teams": [{ "id": "SUI" }, { "id": "ISL" }, { "id": "BEL" }],
+                            "teams": [{ "id": "BEL" }, { "id": "SUI" }, { "id": "ISL" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -488,7 +488,7 @@
                     "home_and_away": true,
                     "advancements": {
                         "positions": [{ "pos": 1, "next": "advance" }],
-                        "advanced_note": "Group winners in League B promoted to League A"
+                        "advanced_notes": "Group winners in League B promoted to League A"
                     },
                     "groups": [
                         {
@@ -892,7 +892,7 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 2, "next": "advance" }
                         ],
-                        "advanced_note": "Group winners and runners-up in League C promoted to League B"
+                        "advanced_notes": "Group winners and runners-up in League C promoted to League B"
                     },
                     "groups": [
                         {
@@ -993,7 +993,7 @@
                         },
                         {
                             "name": "Group C2",
-                            "teams": [{ "id": "FIN" }, { "id": "HUN" }, { "id": "EST" }, { "id": "GRE" }],
+                            "teams": [{ "id": "HUN" }, { "id": "FIN" }, { "id": "EST" }, { "id": "GRE" }],
                             "final_standings_excluded": "EST",
                             "matchdays": [
                                 {
@@ -1480,13 +1480,13 @@
                             { "pos": 2, "next": "advance" },
                             { "pos": 3, "next": "wild_card", "count": 1, "name": "third-placed teams" }
                         ],
-                        "advanced_note": "Group winners and runners-up in League D promoted to League C",
-                        "wild_card_note": "The best third-placed team in League D also promoted to League C"
+                        "advanced_notes": "Group winners and runners-up in League D promoted to League C",
+                        "wild_card_notes": "The best third-placed team in League D also promoted to League C"
                     },
                     "groups": [
                         {
                             "name": "Group D1",
-                            "teams": [{ "id": "KAZ" }, { "id": "GEO" }, { "id": "LVA" }, { "id": "AND" }],
+                            "teams": [{ "id": "KAZ" }, { "id": "GEO" }, { "id": "AND" }, { "id": "LVA" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -1642,7 +1642,7 @@
                         },
                         {
                             "name": "Group D2",
-                            "teams": [{ "id": "BLR" }, { "id": "SMR" }, { "id": "LUX" }, { "id": "MDA" }],
+                            "teams": [{ "id": "SMR" }, { "id": "BLR" }, { "id": "LUX" }, { "id": "MDA" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",

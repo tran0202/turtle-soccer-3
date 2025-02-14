@@ -2042,9 +2042,9 @@
                     { "pos": 2, "next": "wild_card" },
                     { "pos": 3, "next": "transfer" }
                 ],
-                "advanced_note": "Group winners advanced directly to Round of 16",
-                "wild_card_note": "Group runners-up advanced to Knockout Round play-offs",
-                "transferred_note": "Third-placed teams transferred to Europa Conference League"
+                "advanced_notes": "Group winners advanced directly to Round of 16",
+                "wild_card_notes": "Group runners-up advanced to Knockout Round play-offs",
+                "transferred_notes": "Third-placed teams transferred to Europa Conference League"
             },
             "groups": [
                 {
@@ -2829,7 +2829,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "LAZ" }, { "id": "FEY" }, { "id": "SGR" }, { "id": "FCM" }],
+                    "teams": [{ "id": "SGR" }, { "id": "LAZ" }, { "id": "FCM" }, { "id": "FEY" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

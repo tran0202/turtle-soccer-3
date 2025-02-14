@@ -16,8 +16,8 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate" }
                         ],
-                        "advanced_note": "Group winners in League A advanced to Nations League Finals",
-                        "relegated_note": "The fourth-placed teams in League A relegated to League B"
+                        "advanced_notes": "Group winners in League A advanced to Nations League Finals",
+                        "relegated_notes": "Fourth-placed teams in League A relegated to League B"
                     },
                     "groups": [
                         {
@@ -729,8 +729,8 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate" }
                         ],
-                        "advanced_note": "Group winners in League B promoted to League A",
-                        "relegated_note": "The fourth-placed teams in League B relegated to League C"
+                        "advanced_notes": "Group winners in League B promoted to League A",
+                        "relegated_notes": "Fourth-placed teams in League B relegated to League C"
                     },
                     "groups": [
                         {
@@ -1381,8 +1381,8 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate", "count": -2, "name": "fourth-placed teams" }
                         ],
-                        "advanced_note": "Group winners in League C promoted to League B",
-                        "relegated_note": "The 2 worst fourth-placed teams in League C participated in Relegation play-outs"
+                        "advanced_notes": "Group winners in League C promoted to League B",
+                        "relegated_notes": "The 2 worst fourth-placed teams in League C participated in Relegation play-outs"
                     },
                     "groups": [
                         {
@@ -2028,7 +2028,7 @@
                     "home_and_away": true,
                     "advancements": {
                         "positions": [{ "pos": 1, "next": "advance" }],
-                        "advanced_note": "Group winners in League D promoted to League C"
+                        "advanced_notes": "Group winners in League D promoted to League C"
                     },
                     "groups": [
                         {

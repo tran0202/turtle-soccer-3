@@ -16,13 +16,13 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate" }
                         ],
-                        "advanced_note": "Group winners in League A advanced to Nations League Finals",
-                        "relegated_note": "The fourth-placed teams in League A relegated to League B"
+                        "advanced_notes": "Group winners in League A advanced to Nations League Finals",
+                        "relegated_notes": "Fourth-placed teams in League A relegated to League B"
                     },
                     "groups": [
                         {
                             "name": "Group A1",
-                            "teams": [{ "id": "ITA" }, { "id": "BIH" }, { "id": "NED" }, { "id": "POL" }],
+                            "teams": [{ "id": "BIH" }, { "id": "ITA" }, { "id": "NED" }, { "id": "POL" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -334,7 +334,7 @@
                         },
                         {
                             "name": "Group A3",
-                            "teams": [{ "id": "POR" }, { "id": "CRO" }, { "id": "SWE" }, { "id": "FRA" }],
+                            "teams": [{ "id": "POR" }, { "id": "SWE" }, { "id": "CRO" }, { "id": "FRA" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -731,8 +731,8 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate" }
                         ],
-                        "advanced_note": "Group winners in League B promoted to League A",
-                        "relegated_note": "The fourth-placed teams in League B relegated to League C"
+                        "advanced_notes": "Group winners in League B promoted to League A",
+                        "relegated_notes": "Fourth-placed teams in League B relegated to League C"
                     },
                     "groups": [
                         {
@@ -1051,7 +1051,7 @@
                         },
                         {
                             "name": "Group B3",
-                            "teams": [{ "id": "RUS" }, { "id": "SRB" }, { "id": "TUR-2022" }, { "id": "HUN" }],
+                            "teams": [{ "id": "RUS" }, { "id": "TUR-2022" }, { "id": "SRB" }, { "id": "HUN" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -1378,8 +1378,8 @@
                             { "pos": 1, "next": "advance" },
                             { "pos": 4, "next": "relegate" }
                         ],
-                        "advanced_note": "Group winners in League C promoted to League B",
-                        "relegated_note": "The fourth-placed teams in League C participated in Relegation play-outs"
+                        "advanced_notes": "Group winners in League C promoted to League B",
+                        "relegated_notes": "Fourth-placed teams in League C participated in Relegation play-outs"
                     },
                     "groups": [
                         {
@@ -2025,7 +2025,7 @@
                     "home_and_away": true,
                     "advancements": {
                         "positions": [{ "pos": 1, "next": "advance" }],
-                        "advanced_note": "Group winners in League D promoted to League C"
+                        "advanced_notes": "Group winners in League D promoted to League C"
                     },
                     "groups": [
                         {
@@ -2187,7 +2187,7 @@
                         },
                         {
                             "name": "Group D2",
-                            "teams": [{ "id": "GIB" }, { "id": "SMR" }, { "id": "LIE" }],
+                            "teams": [{ "id": "SMR" }, { "id": "GIB" }, { "id": "LIE" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",

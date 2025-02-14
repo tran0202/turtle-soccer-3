@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "GER" }, { "id": "CRC" }, { "id": "POL" }, { "id": "ECU" }],
+                    "teams": [{ "id": "CRC" }, { "id": "GER" }, { "id": "POL" }, { "id": "ECU" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ENG" }, { "id": "PAR" }, { "id": "TRI" }, { "id": "SWE" }],
+                    "teams": [{ "id": "PAR" }, { "id": "ENG" }, { "id": "TRI" }, { "id": "SWE" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "ARG" }, { "id": "CIV" }, { "id": "SRB-2003-2006" }, { "id": "NED" }],
+                    "teams": [{ "id": "CIV" }, { "id": "NED" }, { "id": "ARG" }, { "id": "SRB-2003-2006" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -581,7 +583,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "ESP" }, { "id": "UKR" }, { "id": "TUN" }, { "id": "KSA" }],
+                    "teams": [{ "id": "ESP" }, { "id": "UKR" }, { "id": "KSA" }, { "id": "TUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

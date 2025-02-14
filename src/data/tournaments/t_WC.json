@@ -154,7 +154,7 @@
         "name": "FIFA World Cup Brazil 2014",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "slogan": "All in One Rhythm",
             "host": { "teams": ["BRA"], "qualification_date": "2007-10-30" },
@@ -226,7 +226,7 @@
         "name": "FIFA World Cup South Africa 2010",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "slogan": "It's time. Celebrate Africa's Humanity",
             "host": { "teams": ["RSA"], "qualification_date": "2004-05-15" },
@@ -307,7 +307,7 @@
         "name": "FIFA World Cup Germany 2006",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "slogan": "A time to make friends",
             "host": { "teams": ["GER"], "qualification_date": "2000-07-06" },
@@ -367,7 +367,7 @@
         "competition_id": "WC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["KOR", "JPN"], "qualification_date": "1996-05-31" },
             "logo_filename": "2002_FIFA_World_Cup_logo.svg",
@@ -431,7 +431,7 @@
         "competition_id": "WC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["FRA"], "qualification_date": "1992-07-02" },
             "logo_filename": "1998_FIFA_World_Cup.svg",
@@ -494,7 +494,8 @@
         "name": "FIFA World Cup USA 1994",
         "competition_id": "WC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "slogan": "Making Soccer History",
             "host": { "teams": ["USA"], "qualification_date": "1988-07-04" },

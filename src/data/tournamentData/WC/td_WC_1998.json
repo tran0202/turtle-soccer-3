@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "BRA" }, { "id": "SCO" }, { "id": "MAR" }, { "id": "NOR" }],
+                    "teams": [{ "id": "SCO" }, { "id": "BRA" }, { "id": "MAR" }, { "id": "NOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ITA" }, { "id": "CHI" }, { "id": "CMR" }, { "id": "AUT" }],
+                    "teams": [{ "id": "CHI" }, { "id": "ITA" }, { "id": "CMR" }, { "id": "AUT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -581,7 +583,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "ARG" }, { "id": "JPN" }, { "id": "JAM" }, { "id": "CRO" }],
+                    "teams": [{ "id": "JPN" }, { "id": "ARG" }, { "id": "JAM" }, { "id": "CRO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

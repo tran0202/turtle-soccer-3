@@ -13,24 +13,24 @@ class RoundRobin extends React.Component {
             <React.Fragment>
                 <Row className="text-start padding-top-md padding-left-sm">
                     <Col sm="6">
-                        {advancements && advancements.advanced_note && (
+                        {advancements && advancements.advanced_notes && (
                             <Row>
-                                <Col className="advanced-striped">{advancements.advanced_note}</Col>
+                                <Col className="advanced-striped">{advancements.advanced_notes}</Col>
                             </Row>
                         )}
-                        {advancements && advancements.wild_card_note && (
+                        {advancements && advancements.wild_card_notes && (
                             <Row>
-                                <Col className="wild-card-striped">{advancements.wild_card_note}</Col>
+                                <Col className="wild-card-striped">{advancements.wild_card_notes}</Col>
                             </Row>
                         )}
-                        {advancements && advancements.transferred_note && (
+                        {advancements && advancements.transferred_notes && (
                             <Row>
-                                <Col className="transferred-striped">{advancements.transferred_note}</Col>
+                                <Col className="transferred-striped">{advancements.transferred_notes}</Col>
                             </Row>
                         )}
-                        {advancements && advancements.relegated_note && (
+                        {advancements && advancements.relegated_notes && (
                             <Row>
-                                <Col className="relegated-striped">{advancements.relegated_note}</Col>
+                                <Col className="relegated-striped">{advancements.relegated_notes}</Col>
                             </Row>
                         )}
                     </Col>

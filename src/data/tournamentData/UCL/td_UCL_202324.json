@@ -771,8 +771,8 @@
                     { "pos": 2, "next": "advance" },
                     { "pos": 3, "next": "wild_card" }
                 ],
-                "advanced_note": "Group winners and runners-up advanced to Round of 16",
-                "wild_card_note": "Third-placed teams transferred to Europa League"
+                "advanced_notes": "Group winners and runners-up advanced to Round of 16",
+                "wild_card_notes": "Third-placed teams transferred to Europa League"
             },
             "groups": [
                 {
