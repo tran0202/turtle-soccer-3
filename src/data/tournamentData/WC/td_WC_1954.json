@@ -7,15 +7,17 @@
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
             "odd_format": "Each group contained 2 seeded teams and 2 unseeded teams. Only 4 matches were scheduled for each group, each pitting a seeded team against an unseeded team. Another oddity was that extra time would be played in the group matches if the scores were level after 90 minutes. If the scores were still level after 120 minutes, the match would end as a draw.",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group 1",
-                    "teams": [{ "id": "BRA" }, { "id": "MEX" }, { "id": "YUG-1945-1963" }, { "id": "FRA" }],
+                    "teams": [{ "id": "YUG-1945-1963" }, { "id": "BRA" }, { "id": "MEX" }, { "id": "FRA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -73,7 +75,7 @@
                 },
                 {
                     "name": "Group 2",
-                    "teams": [{ "id": "GER-1949-1990" }, { "id": "TUR-2022" }, { "id": "HUN-1949-1956" }, { "id": "KOR" }],
+                    "teams": [{ "id": "TUR-2022" }, { "id": "GER-1949-1990" }, { "id": "HUN-1949-1956" }, { "id": "KOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -146,7 +148,7 @@
                 },
                 {
                     "name": "Group 3",
-                    "teams": [{ "id": "URU" }, { "id": "TCH" }, { "id": "AUT" }, { "id": "SCO" }],
+                    "teams": [{ "id": "AUT" }, { "id": "URU" }, { "id": "SCO" }, { "id": "TCH" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -202,7 +204,7 @@
                 },
                 {
                     "name": "Group 4",
-                    "teams": [{ "id": "SUI" }, { "id": "ITA" }, { "id": "ENG" }, { "id": "BEL" }],
+                    "teams": [{ "id": "ITA" }, { "id": "SUI" }, { "id": "ENG" }, { "id": "BEL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

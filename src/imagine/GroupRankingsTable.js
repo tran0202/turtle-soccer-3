@@ -37,6 +37,27 @@ const RankingsHeader = (props) => {
     )
 }
 
+const RankColumn = (props) => {
+    const { ranking } = props
+    const withdrew = ranking.team.withdrew || ranking.team.banned
+
+    return (
+        !withdrew && (
+            <React.Fragment>
+                {ranking.champion ? (
+                    <img className="award-icon margin-bottom-xs-4" src={'/images/awards/1st-place.png'} alt={`1st`} title={`1st`} />
+                ) : ranking.runner_up ? (
+                    <img className="award-icon margin-bottom-xs-4" src={'/images/awards/2nd-place.png'} alt={`2nd`} title={`2nd`} />
+                ) : ranking.third_place ? (
+                    <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`3rd`} title={`3rd`} />
+                ) : (
+                    ranking.rank
+                )}
+            </React.Fragment>
+        )
+    )
+}
+
 const RankingsRow = (props) => {
     const { ranking, config } = props
     const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
@@ -46,8 +67,10 @@ const RankingsRow = (props) => {
     const relegated_striped = ranking.relegated ? 'relegated-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
     const banned_striped = ranking.team.banned ? 'gray-striped' : ''
+    const champion_striped = ranking.champion ? 'gold' : ''
+    const runnerup_striped = ranking.runner_up ? 'silver' : ''
+    const thirdplace_striped = ranking.third_place ? 'bronze' : ''
     const withdrew = ranking.team.withdrew || ranking.team.banned
-    const rank = !withdrew ? ranking.rank : ''
     const w = !withdrew ? ranking.w : <span>&mdash;</span>
     const d = !withdrew ? ranking.d : <span>&mdash;</span>
     const l = !withdrew ? ranking.l : <span>&mdash;</span>
@@ -59,9 +82,11 @@ const RankingsRow = (props) => {
     const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
         <Row
-            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}`}
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
         >
-            <Col className="col-box-4">{rank}</Col>
+            <Col className="col-box-4 col-box-no-padding-lr text-center">
+                <RankColumn ranking={ranking} />
+            </Col>
             {config.added_group && <Col className="col-box-4">{ranking.group_name.replace('Group ', '')}</Col>}
             <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
@@ -116,7 +141,7 @@ const RankingsRow = (props) => {
                 {!config.no_h2h_tooltip && ranking.draw_lot && (
                     <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
                 )}
-                {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} notes={ranking.playoff_note} />}
+                {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.playoff_note} />}
                 {ranking.team.point_deduction && (
                     <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} notes={ranking.team.point_deduction_note} />
                 )}

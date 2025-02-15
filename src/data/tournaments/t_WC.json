@@ -1110,7 +1110,7 @@
         "short_name": "Switzerland 1954",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "groupplayoff", "goaldifference", "lot"],
+        "tiebreakers": ["points", "groupplayoff", "goaldifference", "lots"],
         "details": {
             "host": { "teams": ["SUI"], "qualification_date": "1946-07-22" },
             "logo_filename": "1954_FIFA_World_Cup.jpg",
@@ -1165,7 +1165,7 @@
         "short_name": "Brazil 1950",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference"],
+        "tiebreakers": ["points", "goaldifference"],
         "details": {
             "host": { "teams": ["BRA"], "qualification_date": "1946-01-01" },
             "logo_filename": "309px-Poster_-_World_Cup_1950.jpg",
@@ -1329,7 +1329,7 @@
         "short_name": "Uruguay 1930",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point"],
+        "tiebreakers": ["points"],
         "details": {
             "host": { "teams": ["URU"] },
             "logo_filename": "317px-Uruguay_1930_World_Cup.jpg",

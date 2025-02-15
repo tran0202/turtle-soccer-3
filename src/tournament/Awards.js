@@ -288,7 +288,7 @@ const FinalStandingRow = (props) => {
                     <Row className="team-name">
                         <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
                             {championIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/1st-place.png'} alt={`1st`} title={`1st`} />}
-                            {runnersupIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/2nd-place.png'} alt={`1st`} title={`1st`} />}
+                            {runnersupIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/2nd-place.png'} alt={`2nd`} title={`2nd`} />}
                             {fourthIcon && <span className="padding-left-md-2"> </span>} <b>{label}</b>
                         </Col>
                         <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-md">
@@ -312,7 +312,7 @@ const BronzeRow = (props) => {
                 <Col className="box-sm">
                     <Row className="team-name">
                         <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
-                            {thirdIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`1st`} title={`1st`} />}{' '}
+                            {thirdIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`3rd`} title={`3rd`} />}{' '}
                             <b>{label}</b>
                         </Col>
                         <Col xs={{ size: 7 }} className="padding-tb-sm padding-lr-md">

@@ -99,9 +99,9 @@ export const ReplacementTooltip = (props) => {
 }
 
 export const PlayoffWinTooltip = (props) => {
-    const { target, notes } = props
+    const { target, notes, anchor } = props
     const content = `Playoff${notes ? `: ${notes}` : ''}`
-    return <TopTooltip target={target} content={content} />
+    return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const DisqualifiedTooltip = (props) => {

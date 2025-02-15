@@ -1126,9 +1126,13 @@ export const setAdvancements = (group, advancements) => {
                     t.transferred = true
                 } else if (foundPosition.next === 'relegate') {
                     t.relegated = true
+                } else if (foundPosition.next === 'champion') {
+                    t.champion = true
+                } else if (foundPosition.next === 'runner-up') {
+                    t.runner_up = true
+                } else if (foundPosition.next === 'third-place') {
+                    t.third_place = true
                 }
-            } else {
-                delete t.wild_card
             }
         }
     })
