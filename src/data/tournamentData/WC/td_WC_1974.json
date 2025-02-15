@@ -6,11 +6,13 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Second Round",
-            "advanced_note": "Winners and runners-up advance to the second round",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Second round"
+            },
             "groups": [
                 {
                     "name": "Group 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group 2",
-                    "teams": [{ "id": "BRA" }, { "id": "YUG-1963-1992" }, { "id": "ZAI" }, { "id": "SCO" }],
+                    "teams": [{ "id": "SCO" }, { "id": "BRA" }, { "id": "YUG-1963-1992" }, { "id": "ZAI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -344,16 +346,18 @@
             "eliminate_count": 4,
             "next_round": "Final",
             "tiebreakers": ["team", "firstroundposition", "lot"],
-            "advanced_note": "Winners advance to the final",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "next_round" }
-            ],
-            "next_round_note": "Runners-up advance to the third-place match",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "wild_card" }
+                ],
+                "advanced_notes": "Group winners advanced to Final",
+                "wild_card_notes": "Group runners-up advanced to Third-place match"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "NED" }, { "id": "ARG" }, { "id": "BRA" }, { "id": "GDR" }],
+                    "teams": [{ "id": "ARG" }, { "id": "NED" }, { "id": "BRA" }, { "id": "GDR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

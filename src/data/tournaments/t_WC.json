@@ -622,7 +622,8 @@
         "name": "FIFA World Cup Mexico 1986",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MEX"], "qualification_date": "1983-05-20" },
             "logo_filename": "1986_FIFA_World_Cup.svg",
@@ -694,7 +695,7 @@
         "name": "FIFA World Cup Spain 1982",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ESP"], "qualification_date": "1966-07-06" },
             "logo_filename": "1982_FIFA_World_Cup.svg",
@@ -753,7 +754,7 @@
         "name": "FIFA World Cup Argentina 1978",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ARG"], "qualification_date": "1966-07-06" },
             "logo_filename": "460px-Logo_Mundial_78.svg.png",
@@ -818,7 +819,7 @@
         "short_name": "Germany 1974",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GER-1949-1990"], "qualification_date": "1966-07-06" },
             "logo_filename": "FIFA_World_Cup_1974_-_emblem.svg",
@@ -879,7 +880,7 @@
         "name": "FIFA World Cup Mexico 1970",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "lot"],
+        "tiebreakers": ["points", "goaldifference", "lots"],
         "details": {
             "host": { "teams": ["MEX"], "qualification_date": "1964-10-08" },
             "logo_filename": "340px-1970_FIFA_World_Cup.svg.png",
@@ -934,7 +935,7 @@
         "short_name": "England 1966",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goalratio", "lot"],
+        "tiebreakers": ["points", "goalratio", "lots"],
         "details": {
             "host": { "teams": ["ENG"], "qualification_date": "1960-08-22" },
             "logo_filename": "1966_FIFA_World_Cup.png",
@@ -993,7 +994,7 @@
         "short_name": "Chile 1962",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goalratio", "lot"],
+        "tiebreakers": ["points", "goalratio"],
         "details": {
             "host": { "teams": ["CHI"], "qualification_date": "1956-06-11" },
             "logo_filename": "1962_FIFA_World_Cup.jpg",
@@ -1053,7 +1054,7 @@
         "short_name": "Sweden 1958",
         "competition_id": "WC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "groupplayoff", "goalratio", "lot"],
+        "tiebreakers": ["points", "groupplayoff", "goalratio"],
         "details": {
             "host": { "teams": ["SWE"], "qualification_date": "1950-06-23" },
             "logo_filename": "1958_FIFA_World_Cup.jpg",

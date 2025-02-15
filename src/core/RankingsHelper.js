@@ -185,6 +185,12 @@ export const sortGroup = (group, config) => {
             case 'goaldifference':
                 sortOverallGoalDifference(group, config)
                 break
+            case 'goalratio':
+                sortGoalRatio(group, config)
+                break
+            case 'groupplayoff':
+                sortGroupPlayoff(group, config)
+                break
             case 'goalsfor':
                 sortOverallGoalsFor(group, config)
                 break
@@ -301,6 +307,49 @@ export const sortOverallGoalDifference = (group, config) => {
         }
     }
     flattenPools(group, config)
+}
+
+// WC1966 || WC1962
+export const sortGoalRatio = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            if (rankings[0].gr < rankings[1].gr) {
+                const temp = rankings[0]
+                rankings[0] = rankings[1]
+                rankings[1] = temp
+            }
+            if (rankings[0].gr !== rankings[1].gr) {
+                p.sorted = true
+            }
+        }
+    }
+}
+
+// WC1958
+export const sortGroupPlayoff = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (rankings.length === 2) {
+            const playoff = rankings[0].playoff && rankings[1].playoff
+            const playoff_win = rankings[1].playoff_win
+            if (playoff && playoff_win) {
+                const temp = rankings[0]
+                rankings[0] = rankings[1]
+                rankings[1] = temp
+
+                p.sorted = true
+            }
+        }
+    }
 }
 
 export const flattenPools = (group, config) => {
@@ -971,22 +1020,6 @@ export const drawLots = (group, config) => {
                     rankings[1].tb_anchor = '(dl)'
                     rankings[1].tb_note = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_note
                 }
-                // WC1990 Partial
-            } else if (rankings.length === 4) {
-                for (var k = 0; k < rankings.length - 1; k++) {
-                    for (var l = k + 1; l < rankings.length; l++) {
-                        const winlot1 = rankings[k].team.draw_lot_win
-                        const winlot2 = rankings[l].team.draw_lot_win
-                        if (winlot2) {
-                            const temp = rankings[0]
-                            rankings[0] = rankings[1]
-                            rankings[1] = temp
-                        }
-                        if (winlot1 || winlot2) {
-                        }
-                    }
-                }
-                p.sorted = true
             }
         }
     }

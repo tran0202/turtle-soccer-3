@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 12,
             "next_round": "Second Group Stage",
-            "advanced_note": "Winners and runners-up advance to the second group stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Second group stage"
+            },
             "groups": [
                 {
                     "name": "Group 1",
-                    "teams": [{ "id": "ITA" }, { "id": "POL" }, { "id": "PER" }, { "id": "CMR" }],
+                    "teams": [{ "id": "CMR" }, { "id": "ITA" }, { "id": "POL" }, { "id": "PER" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group 2",
-                    "teams": [{ "id": "GER-1949-1990" }, { "id": "ALG" }, { "id": "CHI" }, { "id": "AUT" }],
+                    "teams": [{ "id": "ALG" }, { "id": "AUT" }, { "id": "GER-1949-1990" }, { "id": "CHI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group 4",
-                    "teams": [{ "id": "ENG" }, { "id": "FRA" }, { "id": "TCH" }, { "id": "KUW" }],
+                    "teams": [{ "id": "FRA" }, { "id": "ENG" }, { "id": "TCH" }, { "id": "KUW" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -338,7 +340,7 @@
                 },
                 {
                     "name": "Group 5",
-                    "teams": [{ "id": "ESP" }, { "id": "HON-1949-2022" }, { "id": "YUG-1963-1992" }, { "id": "NIR" }],
+                    "teams": [{ "id": "YUG-1963-1992" }, { "id": "ESP" }, { "id": "HON-1949-2022" }, { "id": "NIR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -419,7 +421,7 @@
                 },
                 {
                     "name": "Group 6",
-                    "teams": [{ "id": "BRA" }, { "id": "URS" }, { "id": "SCO" }, { "id": "NZL" }],
+                    "teams": [{ "id": "SCO" }, { "id": "BRA" }, { "id": "URS" }, { "id": "NZL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -506,12 +508,14 @@
             "eliminate_count": 4,
             "next_round": "Semi-finals",
             "tiebreakers": ["team", "firstroundfirstsecond", "lot"],
-            "advanced_note": "Winners advance to the knockout stage",
-            "advancement": [{ "pos": 1, "will": "advance" }],
+            "advancements": {
+                "positions": [{ "pos": 1, "next": "advance" }],
+                "advanced_notes": "Group winners advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "POL" }, { "id": "BEL" }, { "id": "URS" }],
+                    "teams": [{ "id": "URS" }, { "id": "POL" }, { "id": "BEL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -562,7 +566,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "GER-1949-1990" }, { "id": "ENG" }, { "id": "ESP" }],
+                    "teams": [{ "id": "ENG" }, { "id": "GER-1949-1990" }, { "id": "ESP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -613,7 +617,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "ITA" }, { "id": "BRA" }, { "id": "ARG" }],
+                    "teams": [{ "id": "BRA" }, { "id": "ITA" }, { "id": "ARG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -664,7 +668,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "FRA" }, { "id": "AUT" }, { "id": "NIR" }],
+                    "teams": [{ "id": "NIR" }, { "id": "FRA" }, { "id": "AUT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

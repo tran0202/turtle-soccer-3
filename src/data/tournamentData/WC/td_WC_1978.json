@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Second Round",
-            "advanced_note": "Winners and runners-up advance to the second round",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Second round"
+            },
             "groups": [
                 {
                     "name": "Group 1",
-                    "teams": [{ "id": "ITA" }, { "id": "FRA" }, { "id": "ARG" }, { "id": "HUN" }],
+                    "teams": [{ "id": "FRA" }, { "id": "ITA" }, { "id": "ARG" }, { "id": "HUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group 3",
-                    "teams": [{ "id": "AUT" }, { "id": "ESP-1977-1981" }, { "id": "BRA" }, { "id": "SWE" }],
+                    "teams": [{ "id": "BRA" }, { "id": "AUT" }, { "id": "ESP-1977-1981" }, { "id": "SWE" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group 4",
-                    "teams": [{ "id": "PER" }, { "id": "SCO" }, { "id": "NED" }, { "id": "IRN-1964-1980" }],
+                    "teams": [{ "id": "SCO" }, { "id": "PER" }, { "id": "NED" }, { "id": "IRN-1964-1980" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -344,12 +346,14 @@
             "eliminate_count": 4,
             "next_round": "Final",
             "tiebreakers": ["team", "firstroundposition", "lot"],
-            "advanced_note": "Winners advance to the final",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "next_round" }
-            ],
-            "next_round_note": "Runners-up advance to the third-place match",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "wild_card" }
+                ],
+                "advanced_notes": "Group winners advanced to Final",
+                "wild_card_notes": "Group runners-up advanced to Third-place match"
+            },
             "groups": [
                 {
                     "name": "Group A",
