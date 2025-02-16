@@ -6,7 +6,8 @@
         "competition_id": "WOFT",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["FRA_U23WNT"] },
             "logo_filename": "2024_Summer_Olympics_logo.svg",
@@ -55,7 +56,8 @@
         "competition_id": "WOFT",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["JPN_U23WNT"] },
             "logo_filename": "2020_Summer_Olympics_logo_new.svg",
@@ -103,7 +105,8 @@
         "name": "Women's Olympic Football Tournament Rio 2016",
         "competition_id": "WOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["BRA_U23WNT"], "qualification_date": "2009-10-02" },
             "logo_filename": "2016_Summer_Olympics_logo.svg",
@@ -162,7 +165,8 @@
         "name": "Women's Olympic Football Tournament London 2012",
         "competition_id": "WOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GBR_U23WNT"] },
             "logo_filename": "2012_Summer_Olympics_logo.svg",
@@ -216,7 +220,8 @@
         "name": "Women's Olympic Football Tournament Beijing 2008",
         "competition_id": "WOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CHN_U23WNT"] },
             "logo_filename": "2008_Summer_Olympics_logo.svg",
@@ -265,7 +270,7 @@
         "name": "Women's Olympic Football Tournament Athens 2004",
         "competition_id": "WOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
         "details": {
             "host": { "teams": ["GRE_U23WNT"] },
             "logo_filename": "Athens_2004_logo.svg",
@@ -317,7 +322,7 @@
         "name": "Women's Olympic Football Tournament Sydney 2000",
         "competition_id": "WOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["AUS_U23WNT"] },
             "logo_filename": "2000_Summer_Olympics_logo.svg",
@@ -367,7 +372,7 @@
         "competition_id": "WOFT",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA_U23WNT"] },
             "logo_filename": "1996_Summer_Olympics_logo.svg",

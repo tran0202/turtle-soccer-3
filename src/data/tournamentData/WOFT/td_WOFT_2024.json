@@ -6,20 +6,22 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 2, "name": "third-placed teams" }
-            ],
-            "next_round_note": "2 best third-placed teams advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 2, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 2 best third-placed teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
                     "teams": [
-                        { "id": "FRA_U23WNT" },
-                        { "id": "CAN_U23WNT", "point_deduction": 6, "point_deduction_note": "Canada was penalized 6 points for illegal drone spying." },
                         { "id": "COL_U23WNT" },
+                        { "id": "FRA_U23WNT" },
+                        { "id": "CAN_U23WNT", "point_deduction": 6, "point_deduction_notes": "Canada was penalized 6 points for illegal drone spying." },
                         { "id": "NZL_U23WNT" }
                     ],
                     "matchdays": [
@@ -102,7 +104,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "USA_U23WNT" }, { "id": "GER_U23WNT" }, { "id": "AUS_U23WNT" }, { "id": "ZAM_U23WNT" }],
+                    "teams": [{ "id": "GER_U23WNT" }, { "id": "USA_U23WNT" }, { "id": "AUS_U23WNT" }, { "id": "ZAM_U23WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -183,7 +185,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "ESP_U23WNT" }, { "id": "JPN_U23WNT" }, { "id": "BRA_U23WNT" }, { "id": "NGA_U23WNT" }],
+                    "teams": [{ "id": "JPN_U23WNT" }, { "id": "ESP_U23WNT" }, { "id": "BRA_U23WNT" }, { "id": "NGA_U23WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

@@ -10,6 +10,7 @@ import {
     PlayoffWinTooltip,
     WithdrewTooltip,
     BannedTooltip,
+    DisqualifiedTooltip,
     PointDeductionTooltip,
     TieLastMatchTooltip,
     TieH2HTooltip,
@@ -39,7 +40,7 @@ const RankingsHeader = (props) => {
 
 const RankColumn = (props) => {
     const { ranking } = props
-    const withdrew = ranking.team.withdrew || ranking.team.banned
+    const withdrew = ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
 
     return (
         !withdrew && (
@@ -58,6 +59,9 @@ const RankColumn = (props) => {
     )
 }
 
+// Banned: UNL202223
+// Withdrew: MOFT1964 || MOFT1976
+// Disqualified: MOFT1964
 const RankingsRow = (props) => {
     const { ranking, config } = props
     const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
@@ -67,10 +71,11 @@ const RankingsRow = (props) => {
     const relegated_striped = ranking.relegated ? 'relegated-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
     const banned_striped = ranking.team.banned ? 'gray-striped' : ''
+    const disqualified_striped = ranking.team.disqualified ? 'gray-striped' : ''
     const champion_striped = ranking.champion ? 'gold' : ''
     const runnerup_striped = ranking.runner_up ? 'silver' : ''
     const thirdplace_striped = ranking.third_place ? 'bronze' : ''
-    const withdrew = ranking.team.withdrew || ranking.team.banned
+    const withdrew = ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
     const w = !withdrew ? ranking.w : <span>&mdash;</span>
     const d = !withdrew ? ranking.d : <span>&mdash;</span>
     const l = !withdrew ? ranking.l : <span>&mdash;</span>
@@ -82,7 +87,7 @@ const RankingsRow = (props) => {
     const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
         <Row
-            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
         >
             <Col className="col-box-4 col-box-no-padding-lr text-center">
                 <RankColumn ranking={ranking} />
@@ -92,8 +97,14 @@ const RankingsRow = (props) => {
             {config.added_group && <Col className="col-box-23">{ranking.team.name}</Col>}
             {!config.added_group && (
                 <Col className="col-box-27">
-                    {ranking.team.name} {ranking.team.withdrew ? <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" /> : ''}
-                    {ranking.team.banned ? <BannedTooltip target={`${ranking.id}bannedTooltip`} anchor="(banned)" notes={ranking.team.banned_notes} /> : ''}
+                    {ranking.team.name}{' '}
+                    {ranking.team.withdrew && (
+                        <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" notes={ranking.team.withdrew_notes} />
+                    )}
+                    {ranking.team.banned && <BannedTooltip target={`${ranking.id}bannedTooltip`} anchor="(banned)" notes={ranking.team.banned_notes} />}
+                    {ranking.team.disqualified && (
+                        <DisqualifiedTooltip target={`${ranking.id}disqualifiedTooltip`} anchor="(disqualified)" notes={ranking.team.disqualified_notes} />
+                    )}
                 </Col>
             )}
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
@@ -143,9 +154,11 @@ const RankingsRow = (props) => {
                 )}
                 {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.playoff_note} />}
                 {ranking.team.point_deduction && (
-                    <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} notes={ranking.team.point_deduction_note} />
+                    <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} anchor="(pd)" notes={ranking.team.point_deduction_notes} />
                 )}
-                {ranking.tie_last_match && <TieLastMatchTooltip target={`${ranking.id}tieLastMatchTooltip`} notes={ranking.tie_last_match_note} />}
+                {ranking.tie_last_match && (
+                    <TieLastMatchTooltip target={`${ranking.id}tieLastMatchTooltip`} anchor="(tlm)" notes={ranking.tie_last_match_note} />
+                )}
                 {!config.no_h2h_tooltip && ranking.tie_h2h && <TieH2HTooltip target={`${ranking.id}tieH2HTooltip`} notes={ranking.tie_h2h_note} />}
             </Col>
         </Row>

@@ -12,6 +12,14 @@
                 { "pos": 2, "will": "next_round" }
             ],
             "next_round_note": "Runners-up advance to the third-place match",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "wild_card" }
+                ],
+                "advanced_notes": "Group winners advanced to the Final",
+                "wild_card_notes": "Group runners-up advanced to the Third-place match"
+            },
             "groups": [
                 {
                     "name": "Group A",

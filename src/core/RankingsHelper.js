@@ -36,7 +36,7 @@ export const calculateGroupRankings = (stage, config) => {
 }
 
 export const getBlankRanking = (team) => {
-    return { id: team.id, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: team.withdrew || team.banned ? -1 : 0 }
+    return { id: team.id, mp: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: team.withdrew || team.banned || team.disqualified ? -1 : 0 }
 }
 
 export const accumulateRanking = (ranking, matches, config) => {
@@ -214,6 +214,9 @@ export const sortGroup = (group, config) => {
                 break
             case 'lots':
                 drawLots(group, config)
+                break
+            case 'tielastmatch':
+                sortTieLastMatch(group, config)
                 break
             default:
         }
@@ -410,7 +413,14 @@ export const processBigGdPool = (pool, config) => {
                 // WC1994
             } else {
                 rankings[0].tb_anchor = '(ogd)'
-                rankings[0].tb_note = 'Tiebreak by Overall goal difference: ' + rankings[0].team.name + ' ' + (rankings[0].gd > 0 ? '+' : '') + rankings[0].gd
+                rankings[0].tb_note =
+                    'Tied on Overall points (' +
+                    rankings[0].pts +
+                    '). Tiebreak by Overall goal difference: ' +
+                    rankings[0].team.name +
+                    ' ' +
+                    (rankings[0].gd > 0 ? '+' : '') +
+                    rankings[0].gd
             }
         } else {
             p.multi_tie = true
@@ -509,6 +519,41 @@ export const sortOverallGoalsFor = (group, config) => {
                                 rankings[0].gf
                         }
                     }
+                    // WWC2019
+                    else {
+                        if (p.multi_tie) {
+                            rankings[0].tb_anchor = '(ogf)'
+                            rankings[0].tb_note =
+                                'Tied on Overall points (' +
+                                rankings[0].pts +
+                                '), goal difference (' +
+                                (rankings[0].gd > 0 ? '+' : '') +
+                                rankings[0].gd +
+                                '). Tiebreak by Overall goals scored: ' +
+                                rankings[0].team.name +
+                                ' ' +
+                                rankings[0].gf +
+                                ' >< ' +
+                                rankings[1].team.name +
+                                ' ' +
+                                rankings[1].gf
+                            rankings[1].tb_anchor = '(ogf)'
+                            rankings[1].tb_note =
+                                'Tied on Overall points (' +
+                                rankings[0].pts +
+                                '), goal difference (' +
+                                (rankings[0].gd > 0 ? '+' : '') +
+                                rankings[0].gd +
+                                '). Tiebreak by Overall goals scored: ' +
+                                rankings[1].team.name +
+                                ' ' +
+                                rankings[1].gf +
+                                ' >< ' +
+                                rankings[0].team.name +
+                                ' ' +
+                                rankings[0].gf
+                        }
+                    }
                 }
             } else if (rankings.length > 2) {
                 processBigGfPool(p, config)
@@ -561,7 +606,14 @@ export const processBigGfPool = (pool, config) => {
                 // WC1994
             } else {
                 rankings[0].tb_anchor = '(ogf)'
-                rankings[0].tb_note = 'All tied on Overall goal difference. Tiebreak by Overall goals scored: ' + rankings[0].team.name + ' ' + rankings[0].gf
+                rankings[0].tb_note =
+                    'All tied on Overall goal difference (' +
+                    (rankings[0].gd > 0 ? '+' : '') +
+                    rankings[0].gd +
+                    '). Tiebreak by Overall goals scored: ' +
+                    rankings[0].team.name +
+                    ' ' +
+                    rankings[0].gf
             }
         } else {
             p.multi_tie = true
@@ -649,153 +701,155 @@ export const sortH2HPoints = (group, config) => {
     for (var i = 0; i < pools.length; i++) {
         const p = pools[i]
         const rankings = p.rankings
-        if (rankings.length === 2) {
-            // 1. Collect the h2h matches
-            collectPoolH2HMatches(p, group.matchdays)
-            // 2. Accumulate the rankings
-            p.h2h_rankings = []
-            rankings.forEach((t) => {
-                const ranking = getBlankRanking(t)
-                ranking.team = t.team
-                accumulateRanking(ranking, p.h2h_matches, config)
-                if (p.h2h_matches.length === 2) {
-                    ranking.h2h_homeaway = true
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                // 1. Collect the h2h matches
+                collectPoolH2HMatches(p, group.matchdays)
+                // 2. Accumulate the rankings
+                p.h2h_rankings = []
+                rankings.forEach((t) => {
+                    const ranking = getBlankRanking(t)
+                    ranking.team = t.team
+                    accumulateRanking(ranking, p.h2h_matches, config)
+                    if (p.h2h_matches.length === 2) {
+                        ranking.h2h_homeaway = true
+                    }
+                    // 3. Transfer the total fair play points to h2h teams
+                    ranking.fp = t.fp
+                    p.h2h_rankings.push(ranking)
+                })
+                // 4. Sort the rankings
+                if (p.h2h_rankings[0].pts < p.h2h_rankings[1].pts) {
+                    const temp = p.h2h_rankings[0]
+                    p.h2h_rankings[0] = p.h2h_rankings[1]
+                    p.h2h_rankings[1] = temp
                 }
-                // 3. Transfer the total fair play points to h2h teams
-                ranking.fp = t.fp
-                p.h2h_rankings.push(ranking)
-            })
-            // 4. Sort the rankings
-            if (p.h2h_rankings[0].pts < p.h2h_rankings[1].pts) {
-                const temp = p.h2h_rankings[0]
-                p.h2h_rankings[0] = p.h2h_rankings[1]
-                p.h2h_rankings[1] = temp
-            }
-            if (p.h2h_rankings[0].pts !== p.h2h_rankings[1].pts) {
-                p.sorted = true
+                if (p.h2h_rankings[0].pts !== p.h2h_rankings[1].pts) {
+                    p.sorted = true
 
-                if (isHead2HeadBeforeGoalDifference(config)) {
-                    p.h2h_rankings[0].tb_anchor = '(hp)'
-                    p.h2h_rankings[0].tb_note =
-                        'Tiebreak by Head-to-head points: ' +
-                        p.h2h_rankings[0].team.name +
-                        ' ' +
-                        p.h2h_rankings[0].pts +
-                        ' >< ' +
-                        p.h2h_rankings[1].team.name +
-                        ' ' +
-                        p.h2h_rankings[1].pts +
-                        ' (' +
-                        getTeamName(p.h2h_matches[0].home_team, config) +
-                        ' ' +
-                        p.h2h_matches[0].home_score +
-                        '-' +
-                        p.h2h_matches[0].away_score +
-                        ' ' +
-                        getTeamName(p.h2h_matches[0].away_team, config) +
-                        (p.h2h_matches.length === 2
-                            ? ' | ' +
-                              getTeamName(p.h2h_matches[1].home_team, config) +
-                              ' ' +
-                              p.h2h_matches[1].home_score +
-                              '-' +
-                              p.h2h_matches[1].away_score +
-                              ' ' +
-                              getTeamName(p.h2h_matches[1].away_team, config)
-                            : '') +
-                        ')'
-                    p.h2h_rankings[1].tb_anchor = '(hp)'
-                    p.h2h_rankings[1].tb_note =
-                        'Tiebreak by Head-to-head points: ' +
-                        p.h2h_rankings[1].team.name +
-                        ' ' +
-                        p.h2h_rankings[1].pts +
-                        ' >< ' +
-                        p.h2h_rankings[0].team.name +
-                        ' ' +
-                        p.h2h_rankings[0].pts +
-                        ' (' +
-                        getTeamName(p.h2h_matches[0].home_team, config) +
-                        ' ' +
-                        p.h2h_matches[0].home_score +
-                        '-' +
-                        p.h2h_matches[0].away_score +
-                        ' ' +
-                        getTeamName(p.h2h_matches[0].away_team, config) +
-                        (p.h2h_matches.length === 2
-                            ? ' | ' +
-                              getTeamName(p.h2h_matches[1].home_team, config) +
-                              ' ' +
-                              p.h2h_matches[1].home_score +
-                              '-' +
-                              p.h2h_matches[1].away_score +
-                              ' ' +
-                              getTeamName(p.h2h_matches[1].away_team, config)
-                            : '') +
-                        ')'
-                } else {
-                    p.h2h_rankings[0].tb_anchor = '(hp)'
-                    p.h2h_rankings[0].tb_note =
-                        'Tied on Overall points, goal difference and goals scored. Tiebreak by Head-to-head points: ' +
-                        p.h2h_rankings[0].team.name +
-                        ' ' +
-                        p.h2h_rankings[0].pts +
-                        ' >< ' +
-                        p.h2h_rankings[1].team.name +
-                        ' ' +
-                        p.h2h_rankings[1].pts +
-                        ' (' +
-                        getTeamName(p.h2h_matches[0].home_team, config) +
-                        ' ' +
-                        p.h2h_matches[0].home_score +
-                        '-' +
-                        p.h2h_matches[0].away_score +
-                        ' ' +
-                        getTeamName(p.h2h_matches[0].away_team, config) +
-                        (p.h2h_matches.length === 2
-                            ? ' | ' +
-                              getTeamName(p.h2h_matches[1].home_team, config) +
-                              ' ' +
-                              p.h2h_matches[1].home_score +
-                              '-' +
-                              p.h2h_matches[1].away_score +
-                              ' ' +
-                              getTeamName(p.h2h_matches[1].away_team, config)
-                            : '') +
-                        ')'
-                    p.h2h_rankings[1].tb_anchor = '(hp)'
-                    p.h2h_rankings[1].tb_note =
-                        'Tied on Overall points, goal difference and goals scored. Tiebreak by Head-to-head points: ' +
-                        p.h2h_rankings[1].team.name +
-                        ' ' +
-                        p.h2h_rankings[1].pts +
-                        ' >< ' +
-                        p.h2h_rankings[0].team.name +
-                        ' ' +
-                        p.h2h_rankings[0].pts +
-                        ' (' +
-                        getTeamName(p.h2h_matches[0].home_team, config) +
-                        ' ' +
-                        p.h2h_matches[0].home_score +
-                        '-' +
-                        p.h2h_matches[0].away_score +
-                        ' ' +
-                        getTeamName(p.h2h_matches[0].away_team, config) +
-                        (p.h2h_matches.length === 2
-                            ? ' | ' +
-                              getTeamName(p.h2h_matches[1].home_team, config) +
-                              ' ' +
-                              p.h2h_matches[1].home_score +
-                              '-' +
-                              p.h2h_matches[1].away_score +
-                              ' ' +
-                              getTeamName(p.h2h_matches[1].away_team, config)
-                            : '') +
-                        ')'
+                    if (isHead2HeadBeforeGoalDifference(config)) {
+                        p.h2h_rankings[0].tb_anchor = '(hp)'
+                        p.h2h_rankings[0].tb_note =
+                            'Tiebreak by Head-to-head points: ' +
+                            p.h2h_rankings[0].team.name +
+                            ' ' +
+                            p.h2h_rankings[0].pts +
+                            ' >< ' +
+                            p.h2h_rankings[1].team.name +
+                            ' ' +
+                            p.h2h_rankings[1].pts +
+                            ' (' +
+                            getTeamName(p.h2h_matches[0].home_team, config) +
+                            ' ' +
+                            p.h2h_matches[0].home_score +
+                            '-' +
+                            p.h2h_matches[0].away_score +
+                            ' ' +
+                            getTeamName(p.h2h_matches[0].away_team, config) +
+                            (p.h2h_matches.length === 2
+                                ? ' | ' +
+                                  getTeamName(p.h2h_matches[1].home_team, config) +
+                                  ' ' +
+                                  p.h2h_matches[1].home_score +
+                                  '-' +
+                                  p.h2h_matches[1].away_score +
+                                  ' ' +
+                                  getTeamName(p.h2h_matches[1].away_team, config)
+                                : '') +
+                            ')'
+                        p.h2h_rankings[1].tb_anchor = '(hp)'
+                        p.h2h_rankings[1].tb_note =
+                            'Tiebreak by Head-to-head points: ' +
+                            p.h2h_rankings[1].team.name +
+                            ' ' +
+                            p.h2h_rankings[1].pts +
+                            ' >< ' +
+                            p.h2h_rankings[0].team.name +
+                            ' ' +
+                            p.h2h_rankings[0].pts +
+                            ' (' +
+                            getTeamName(p.h2h_matches[0].home_team, config) +
+                            ' ' +
+                            p.h2h_matches[0].home_score +
+                            '-' +
+                            p.h2h_matches[0].away_score +
+                            ' ' +
+                            getTeamName(p.h2h_matches[0].away_team, config) +
+                            (p.h2h_matches.length === 2
+                                ? ' | ' +
+                                  getTeamName(p.h2h_matches[1].home_team, config) +
+                                  ' ' +
+                                  p.h2h_matches[1].home_score +
+                                  '-' +
+                                  p.h2h_matches[1].away_score +
+                                  ' ' +
+                                  getTeamName(p.h2h_matches[1].away_team, config)
+                                : '') +
+                            ')'
+                    } else {
+                        p.h2h_rankings[0].tb_anchor = '(hp)'
+                        p.h2h_rankings[0].tb_note =
+                            'Tied on Overall points, goal difference and goals scored. Tiebreak by Head-to-head points: ' +
+                            p.h2h_rankings[0].team.name +
+                            ' ' +
+                            p.h2h_rankings[0].pts +
+                            ' >< ' +
+                            p.h2h_rankings[1].team.name +
+                            ' ' +
+                            p.h2h_rankings[1].pts +
+                            ' (' +
+                            getTeamName(p.h2h_matches[0].home_team, config) +
+                            ' ' +
+                            p.h2h_matches[0].home_score +
+                            '-' +
+                            p.h2h_matches[0].away_score +
+                            ' ' +
+                            getTeamName(p.h2h_matches[0].away_team, config) +
+                            (p.h2h_matches.length === 2
+                                ? ' | ' +
+                                  getTeamName(p.h2h_matches[1].home_team, config) +
+                                  ' ' +
+                                  p.h2h_matches[1].home_score +
+                                  '-' +
+                                  p.h2h_matches[1].away_score +
+                                  ' ' +
+                                  getTeamName(p.h2h_matches[1].away_team, config)
+                                : '') +
+                            ')'
+                        p.h2h_rankings[1].tb_anchor = '(hp)'
+                        p.h2h_rankings[1].tb_note =
+                            'Tied on Overall points, goal difference and goals scored. Tiebreak by Head-to-head points: ' +
+                            p.h2h_rankings[1].team.name +
+                            ' ' +
+                            p.h2h_rankings[1].pts +
+                            ' >< ' +
+                            p.h2h_rankings[0].team.name +
+                            ' ' +
+                            p.h2h_rankings[0].pts +
+                            ' (' +
+                            getTeamName(p.h2h_matches[0].home_team, config) +
+                            ' ' +
+                            p.h2h_matches[0].home_score +
+                            '-' +
+                            p.h2h_matches[0].away_score +
+                            ' ' +
+                            getTeamName(p.h2h_matches[0].away_team, config) +
+                            (p.h2h_matches.length === 2
+                                ? ' | ' +
+                                  getTeamName(p.h2h_matches[1].home_team, config) +
+                                  ' ' +
+                                  p.h2h_matches[1].home_score +
+                                  '-' +
+                                  p.h2h_matches[1].away_score +
+                                  ' ' +
+                                  getTeamName(p.h2h_matches[1].away_team, config)
+                                : '') +
+                            ')'
+                    }
                 }
+                // 5. Update the pool
+                updatePool(p)
             }
-            // 5. Update the pool
-            updatePool(p)
         }
     }
 }
@@ -1019,6 +1073,28 @@ export const drawLots = (group, config) => {
                     rankings[0].tb_note = 'Tiebreak by Drawing lots: ' + rankings[0].team.draw_lot_note
                     rankings[1].tb_anchor = '(dl)'
                     rankings[1].tb_note = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_note
+                }
+            }
+        }
+    }
+}
+
+// CONFEDC1995
+export const sortTieLastMatch = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+        if (!p.sorted) {
+            if (rankings.length === 2) {
+                if (rankings[1].tie_last_match_win) {
+                    const temp = rankings[0]
+                    rankings[0] = rankings[1]
+                    rankings[1] = temp
+
+                    p.sorted = true
                 }
             }
         }

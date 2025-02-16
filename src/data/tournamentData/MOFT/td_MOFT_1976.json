@@ -6,15 +6,22 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "BRA_U23MNT" }, { "id": "GDR_U23MNT" }, { "id": "ESP-1945-1977_U23MNT" }, { "id": "NGA_U23MNT", "withdrew": true }],
+                    "teams": [
+                        { "id": "GDR_U23MNT" },
+                        { "id": "BRA_U23MNT" },
+                        { "id": "ESP-1945-1977_U23MNT" },
+                        { "id": "NGA_U23MNT", "withdrew": true, "withdrew_notes": "Three African teams withdrew in support of the anti-racism boycott" }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -65,7 +72,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ISR_U23MNT" }, { "id": "GUA_U23MNT" }, { "id": "FRA_U23MNT" }, { "id": "MEX_U23MNT" }],
+                    "teams": [{ "id": "GUA_U23MNT" }, { "id": "ISR_U23MNT" }, { "id": "FRA_U23MNT" }, { "id": "MEX_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -146,7 +153,12 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "POL_U23MNT" }, { "id": "CUB_U23MNT" }, { "id": "IRN-1964-1980_U23MNT" }, { "id": "GHA_U23MNT", "withdrew": true }],
+                    "teams": [
+                        { "id": "CUB_U23MNT" },
+                        { "id": "POL_U23MNT" },
+                        { "id": "IRN-1964-1980_U23MNT" },
+                        { "id": "GHA_U23MNT", "withdrew": true, "withdrew_notes": "Three African teams withdrew in support of the anti-racism boycott" }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -197,7 +209,12 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CAN_U23MNT" }, { "id": "URS_U23MNT" }, { "id": "PRK_U23MNT" }, { "id": "ZAM_U23MNT", "withdrew": true }],
+                    "teams": [
+                        { "id": "CAN_U23MNT" },
+                        { "id": "URS_U23MNT" },
+                        { "id": "PRK_U23MNT" },
+                        { "id": "ZAM_U23MNT", "withdrew": true, "withdrew_notes": "Three African teams withdrew in support of the anti-racism boycott" }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

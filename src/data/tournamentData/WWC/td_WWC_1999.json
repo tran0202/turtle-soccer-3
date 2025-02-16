@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "USA_WNT" }, { "id": "DEN_WNT" }, { "id": "PRK_WNT" }, { "id": "NGA_WNT" }],
+                    "teams": [{ "id": "DEN_WNT" }, { "id": "USA_WNT" }, { "id": "PRK_WNT" }, { "id": "NGA_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "BRA_WNT" }, { "id": "MEX_WNT" }, { "id": "GER_WNT" }, { "id": "ITA_WNT" }],
+                    "teams": [{ "id": "MEX_WNT" }, { "id": "BRA_WNT" }, { "id": "GER_WNT" }, { "id": "ITA_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CHN_WNT" }, { "id": "SWE_WNT" }, { "id": "AUS_WNT" }, { "id": "GHA_WNT" }],
+                    "teams": [{ "id": "GHA_WNT" }, { "id": "CHN_WNT" }, { "id": "SWE_WNT" }, { "id": "AUS_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

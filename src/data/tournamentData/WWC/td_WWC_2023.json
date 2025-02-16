@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "NOR_WNT" }, { "id": "SUI_WNT" }, { "id": "NZL_WNT" }, { "id": "PHI_WNT" }],
+                    "teams": [{ "id": "NZL_WNT" }, { "id": "NOR_WNT" }, { "id": "SUI_WNT" }, { "id": "PHI_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "AUS_WNT" }, { "id": "NGA_WNT" }, { "id": "CAN_WNT" }, { "id": "IRL_WNT" }],
+                    "teams": [{ "id": "NGA_WNT" }, { "id": "AUS_WNT" }, { "id": "CAN_WNT" }, { "id": "IRL_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "JPN_WNT" }, { "id": "ESP_WNT" }, { "id": "ZAM_WNT" }, { "id": "CRC_WNT" }],
+                    "teams": [{ "id": "ESP_WNT" }, { "id": "JPN_WNT" }, { "id": "ZAM_WNT" }, { "id": "CRC_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "ENG_WNT" }, { "id": "DEN_WNT" }, { "id": "CHN_WNT" }, { "id": "HAI_WNT" }],
+                    "teams": [{ "id": "DEN_WNT" }, { "id": "ENG_WNT" }, { "id": "CHN_WNT" }, { "id": "HAI_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -338,7 +340,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "NED_WNT" }, { "id": "USA_WNT" }, { "id": "POR_WNT" }, { "id": "VIE_WNT" }],
+                    "teams": [{ "id": "USA_WNT" }, { "id": "NED_WNT" }, { "id": "POR_WNT" }, { "id": "VIE_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -419,7 +421,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "FRA_WNT" }, { "id": "JAM_WNT" }, { "id": "BRA_WNT" }, { "id": "PAN_WNT" }],
+                    "teams": [{ "id": "JAM_WNT" }, { "id": "FRA_WNT" }, { "id": "BRA_WNT" }, { "id": "PAN_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -500,7 +502,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "SWE_WNT" }, { "id": "RSA_WNT" }, { "id": "ITA_WNT" }, { "id": "ARG_WNT" }],
+                    "teams": [{ "id": "RSA_WNT" }, { "id": "SWE_WNT" }, { "id": "ITA_WNT" }, { "id": "ARG_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -581,7 +583,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "COL_WNT" }, { "id": "MAR_WNT" }, { "id": "GER_WNT" }, { "id": "KOR_WNT" }],
+                    "teams": [{ "id": "MAR_WNT" }, { "id": "COL_WNT" }, { "id": "GER_WNT" }, { "id": "KOR_WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

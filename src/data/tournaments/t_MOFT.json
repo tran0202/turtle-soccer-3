@@ -6,7 +6,7 @@
         "competition_id": "MOFT",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["FRA_U23MNT"] },
             "logo_filename": "2024_Summer_Olympics_logo.svg",
@@ -55,7 +55,7 @@
         "competition_id": "MOFT",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["JPN_U23MNT"] },
             "logo_filename": "2020_Summer_Olympics_logo_new.svg",
@@ -103,7 +103,7 @@
         "name": "Men's Olympic Football Tournament Rio 2016",
         "competition_id": "MOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["BRA_U23MNT"], "qualification_date": "2009-10-02" },
             "logo_filename": "2016_Summer_Olympics_logo.svg",
@@ -180,7 +180,7 @@
         "name": "Men's Olympic Football Tournament London 2012",
         "competition_id": "MOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GBR_U23MNT"] },
             "logo_filename": "2012_Summer_Olympics_logo.svg",
@@ -229,7 +229,7 @@
         "name": "Men's Olympic Football Tournament Beijing 2008",
         "competition_id": "MOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CHN_U23MNT"] },
             "logo_filename": "2008_Summer_Olympics_logo.svg",
@@ -283,7 +283,7 @@
         "name": "Men's Olympic Football Tournament Athens 2004",
         "competition_id": "MOFT",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GRE_U23MNT"] },
             "logo_filename": "Athens_2004_logo.svg",
@@ -333,7 +333,7 @@
         "competition_id": "MOFT",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["AUS_U23MNT"] },
             "logo_filename": "2000_Summer_Olympics_logo.svg",
@@ -383,7 +383,7 @@
         "competition_id": "MOFT",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA_U23MNT"] },
             "logo_filename": "1996_Summer_Olympics_logo.svg",
@@ -434,7 +434,7 @@
         "name": "Men's Olympic Football Tournament Barcelona 1992",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ESP_U23MNT"] },
             "logo_filename": "1992_Summer_Olympics_logo.svg",
@@ -482,7 +482,7 @@
         "name": "Men's Olympic Football Tournament Seoul 1988",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["KOR_U23MNT"] },
             "logo_filename": "1988_Summer_Olympics_logo.svg",
@@ -531,7 +531,7 @@
         "short_name": "Los Angeles 1984",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA_U23MNT"] },
             "logo_filename": "1984_Summer_Olympics_logo.svg",
@@ -583,7 +583,7 @@
         "name": "Men's Olympic Football Tournament Moscow 1980",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["URS_U23MNT"] },
             "logo_filename": "Emblem_of_the_1980_Summer_Olympics.svg",
@@ -631,7 +631,7 @@
         "name": "Men's Olympic Football Tournament Montreal 1976",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CAN_U23MNT"] },
             "logo_filename": "1976_Summer_Olympics_logo.svg",
@@ -679,7 +679,7 @@
         "name": "Men's Olympic Football Tournament Munich 1972",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GER-1949-1990_U23MNT"] },
             "logo_filename": "1972_Summer_Olympics_logo.svg",
@@ -738,7 +738,7 @@
         "name": "Men's Olympic Football Tournament Mexico City 1968",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MEX_U23MNT"] },
             "logo_filename": "1968_Mexico_emblem.svg",
@@ -787,7 +787,7 @@
         "name": "Men's Olympic Football Tournament Tokyo 1964",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["JPN_U23MNT"] },
             "logo_filename": "Tokyo_1964_Summer_Olympics_logo.svg",
@@ -841,7 +841,7 @@
         "short_name": "Rome 1960",
         "competition_id": "MOFT",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ITA_U23MNT"] },
             "logo_filename": "1960_Summer_Olympics_logo.png",

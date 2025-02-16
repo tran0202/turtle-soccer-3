@@ -69,14 +69,20 @@ export const PointDeductionTooltip = (props) => {
 }
 
 export const WithdrewTooltip = (props) => {
-    const { target, anchor } = props
-    const content = 'Withdrew'
+    const { target, anchor, notes } = props
+    const content = `Withdrew${notes ? `: ${notes}` : ''}`
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const BannedTooltip = (props) => {
     const { target, anchor, notes } = props
-    const content = `Banned: ${notes ? notes : ''}`
+    const content = `Banned${notes ? `: ${notes}` : ''}`
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
+export const DisqualifiedTooltip = (props) => {
+    const { target, anchor, notes } = props
+    const content = `Disqualified${notes ? `: ${notes}` : ''}`
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
@@ -101,12 +107,6 @@ export const ReplacementTooltip = (props) => {
 export const PlayoffWinTooltip = (props) => {
     const { target, notes, anchor } = props
     const content = `Playoff${notes ? `: ${notes}` : ''}`
-    return <TopTooltip target={target} content={content} anchor={anchor} />
-}
-
-export const DisqualifiedTooltip = (props) => {
-    const { target, anchor, notes } = props
-    const content = `Disqualified${notes ? `: ${notes}` : ''}`
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
@@ -161,9 +161,9 @@ export const ShortNameTooltip = (props) => {
 }
 
 export const TieLastMatchTooltip = (props) => {
-    const { target, notes } = props
+    const { target, notes, anchor } = props
     const content = notes
-    return <TopTooltip target={target} content={content} />
+    return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const TieH2HTooltip = (props) => {

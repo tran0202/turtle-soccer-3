@@ -5,7 +5,7 @@
         "name": "FIFA Women's World Cup Australia-New Zealand 2023",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["AUS_WNT", "NZL_WNT"], "qualification_date": "2020-06-25" },
             "logo_filename": "Logo_of_the_2023_FIFA_Women's_World_Cup.svg",
@@ -64,7 +64,8 @@
         "name": "FIFA Women's World Cup France 2019",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["FRA_WNT"], "qualification_date": "2015-03-19" },
             "logo_filename": "2019_FIFA_Women's_World_Cup.svg",
@@ -133,7 +134,8 @@
         "name": "FIFA Women's World Cup Canada 2015",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
         "details": {
             "host": { "teams": ["CAN_WNT"], "qualification_date": "2011-03-03" },
             "logo_filename": "2015_FIFA_Women's_World_Cup.svg",
@@ -192,7 +194,7 @@
         "name": "FIFA Women's World Cup Germany 2011",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["GER_WNT"], "qualification_date": "2007-10-03" },
             "logo_filename": "2011_FIFA_Women's_World_Cup.svg",
@@ -251,7 +253,7 @@
         "name": "FIFA Women's World Cup China 2007",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["CHN_WNT"], "qualification_date": "2000-10-26" },
             "logo_filename": "2007_FIFA_Women's_World_Cup.svg",
@@ -312,7 +314,7 @@
         "competition_id": "WWC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA_WNT"], "qualification_date": "2003-05-26" },
             "logo_filename": "2003_FIFA_Women's_World_Cup.svg",
@@ -372,7 +374,7 @@
         "competition_id": "WWC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA_WNT"], "qualification_date": "1996-05-31" },
             "logo_filename": "1999_FIFA_Women's_World_Cup.gif",
@@ -437,7 +439,8 @@
         "name": "FIFA Women's World Cup Sweden 1995",
         "competition_id": "WWC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["SWE_WNT"] },
             "logo_filename": "1995_FIFA_Women's_World_Cup.png",
@@ -496,7 +499,8 @@
         "short_name": "China 1991",
         "competition_id": "WWC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CHN_WNT"] },
             "logo_filename": "1991_FIFA_Women's_World_Cup.png",

@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ROU-1952-1965_U23MNT" }, { "id": "MEX_U23MNT" }, { "id": "GER-1956-1968_U23MNT" }, { "id": "IRN-1964-1980_U23MNT" }],
+                    "teams": [{ "id": "ROU-1952-1965_U23MNT" }, { "id": "IRN-1964-1980_U23MNT" }, { "id": "MEX_U23MNT" }, { "id": "GER-1956-1968_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,16 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "HUN_U23MNT" }, { "id": "MAR_U23MNT" }, { "id": "YUG-1963-1992_U23MNT" }, { "id": "PRK_U23MNT", "withdrew": true }],
+                    "teams": [
+                        { "id": "MAR_U23MNT" },
+                        { "id": "HUN_U23MNT" },
+                        { "id": "YUG-1963-1992_U23MNT" },
+                        {
+                            "id": "PRK_U23MNT",
+                            "withdrew": true,
+                            "withdrew_notes": "North Korea withdrew from the entire Games before the Opening Ceremony after Japanese immigration officials refused six of their athletes entry"
+                        }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -227,7 +238,12 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "ARG_U23MNT" }, { "id": "GHA-1964-1966_U23MNT" }, { "id": "JPN_U23MNT" }, { "id": "ITA_U23MNT", "withdrew": true }],
+                    "teams": [
+                        { "id": "ARG_U23MNT" },
+                        { "id": "GHA-1964-1966_U23MNT" },
+                        { "id": "JPN_U23MNT" },
+                        { "id": "ITA_U23MNT", "disqualified": true, "disqualified_notes": "Italy were disqualified as their team was not amateur" }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

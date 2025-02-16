@@ -6,11 +6,13 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "TCH_U23MNT" }, { "id": "COL_U23MNT" }, { "id": "KUW_U23MNT" }, { "id": "NGA_U23MNT" }],
+                    "teams": [{ "id": "KUW_U23MNT" }, { "id": "TCH_U23MNT" }, { "id": "COL_U23MNT" }, { "id": "NGA_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "GDR_U23MNT" }, { "id": "ESP-1977-1981_U23MNT" }, { "id": "ALG_U23MNT" }, { "id": "SYR_U23MNT" }],
+                    "teams": [{ "id": "ESP-1977-1981_U23MNT" }, { "id": "GDR_U23MNT" }, { "id": "ALG_U23MNT" }, { "id": "SYR_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "YUG-1963-1992_U23MNT" }, { "id": "FIN_U23MNT" }, { "id": "IRQ-1963-1991_U23MNT" }, { "id": "CRC_U23MNT" }],
+                    "teams": [{ "id": "FIN_U23MNT" }, { "id": "YUG-1963-1992_U23MNT" }, { "id": "IRQ-1963-1991_U23MNT" }, { "id": "CRC_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners, runners-up and the third-placed team from the 4-team group G advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 1, "groups": ["Group E", "Group F"], "name": "third-placed teams from 3-team groups E and F" }
-            ],
-            "next_round_note": "The better third-placed team from the 3-team groups E and F advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 1, "groups": ["Group E", "Group F"], "name": "third-placed teams from 3-team groups E and F" }
+                ],
+                "advanced_notes": "Group winners, runners-up and the third-placed team from the 4-team group G advanced to Knockout stage",
+                "wild_card_notes": "The better third-placed team from the 3-team groups E and F advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "SWE_U23WNT" }, { "id": "JPN_U23WNT" }, { "id": "NGA_U23WNT" }],
+                    "teams": [{ "id": "JPN_U23WNT" }, { "id": "NGA_U23WNT" }, { "id": "SWE_U23WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -67,7 +69,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "GER_U23WNT" }, { "id": "CHN_U23WNT" }, { "id": "MEX_U23WNT" }],
+                    "teams": [{ "id": "CHN_U23WNT" }, { "id": "GER_U23WNT" }, { "id": "MEX_U23WNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -118,11 +120,13 @@
                 },
                 {
                     "name": "Group G",
-                    "advancement": [
-                        { "pos": 1, "will": "advance" },
-                        { "pos": 2, "will": "advance" },
-                        { "pos": 3, "will": "advance" }
-                    ],
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 2, "next": "advance" },
+                            { "pos": 3, "next": "advance" }
+                        ]
+                    },
                     "teams": [{ "id": "GRE_U23WNT" }, { "id": "USA_U23WNT" }, { "id": "BRA_U23WNT" }, { "id": "AUS_U23WNT" }],
                     "matchdays": [
                         {
