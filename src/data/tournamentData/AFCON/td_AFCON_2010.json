@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ANG" }, { "id": "MLI" }, { "id": "MWI" }, { "id": "ALG" }],
+                    "teams": [{ "id": "MLI" }, { "id": "ANG" }, { "id": "MWI" }, { "id": "ALG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,16 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "CIV" }, { "id": "BFA" }, { "id": "TOG", "withdrew": true }, { "id": "GHA" }],
+                    "teams": [
+                        { "id": "BFA" },
+                        { "id": "CIV" },
+                        {
+                            "id": "TOG",
+                            "disqualified": true,
+                            "disqualified_notes": "Togo withdrew from the tournament due to the attack on their team bus while traveling to their opening match against Ghana, thus they were officially disqualified"
+                        },
+                        { "id": "GHA" }
+                    ],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -179,7 +190,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "EGY" }, { "id": "NGA" }, { "id": "MOZ" }, { "id": "BEN" }],
+                    "teams": [{ "id": "MOZ" }, { "id": "EGY" }, { "id": "NGA" }, { "id": "BEN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -260,7 +271,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "GAB" }, { "id": "TUN" }, { "id": "CMR" }, { "id": "ZAM" }],
+                    "teams": [{ "id": "GAB" }, { "id": "CMR" }, { "id": "TUN" }, { "id": "ZAM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

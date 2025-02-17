@@ -116,6 +116,12 @@ export const FairPlayTooltip = (props) => {
     return <TopTooltip target={target} content={content} />
 }
 
+export const DisciplinaryPointsTooltip = (props) => {
+    const { target, notes, anchor } = props
+    const content = notes
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const Head2HeadTooltip = (props) => {
     const { target, h2h_notes, group_playoff } = props
     const content = group_playoff ? `Playoff: ${h2h_notes}` : `Head-to-head: ${h2h_notes}`

@@ -7,6 +7,7 @@ import {
     TiebreakTooltip,
     TiebreakTooltip2,
     FairPlayTooltip,
+    DisciplinaryPointsTooltip,
     PlayoffWinTooltip,
     WithdrewTooltip,
     BannedTooltip,
@@ -61,7 +62,7 @@ const RankColumn = (props) => {
 
 // Banned: UNL202223
 // Withdrew: MOFT1964 || MOFT1976
-// Disqualified: MOFT1964
+// Disqualified: MOFT1964 || AFCON2010
 const RankingsRow = (props) => {
     const { ranking, config } = props
     const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
@@ -128,7 +129,10 @@ const RankingsRow = (props) => {
             <Col className="col-box-13 text-center">
                 {pts}{' '}
                 {!config.no_h2h_tooltip && ranking.tb_anchor && (
-                    <TiebreakTooltip2 target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_note} />
+                    <TiebreakTooltip2 target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_notes} />
+                )}
+                {ranking.partial_disciplinary_point && (
+                    <DisciplinaryPointsTooltip target={`${ranking.id}disciplinaryPointsTooltip`} anchor="(dp)" notes={ranking.tb_notes} />
                 )}
                 {!config.no_h2h_tooltip && ranking.h2h_point && (
                     <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points: ${ranking.h2h_point_note}`} />
@@ -142,16 +146,10 @@ const RankingsRow = (props) => {
                 {!config.no_h2h_tooltip && ranking.fair_play && (
                     <FairPlayTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" notes={ranking.fair_play_note} />
                 )}
-                {ranking.partial_disciplinary_point && (
-                    <TiebreakTooltip
-                        target={`${ranking.id}disciplinaryPointTooltip`}
-                        anchor="(dp)"
-                        rule={`disciplinary points: ${ranking.partial_disciplinary_point_note}`}
-                    />
-                )}
                 {!config.no_h2h_tooltip && ranking.draw_lot && (
                     <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
                 )}
+                {!config.no_h2h_tooltip && ranking.tie_h2h && <TieH2HTooltip target={`${ranking.id}tieH2HTooltip`} notes={ranking.tie_h2h_note} />}
                 {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.playoff_note} />}
                 {ranking.team.point_deduction && (
                     <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} anchor="(pd)" notes={ranking.team.point_deduction_notes} />
@@ -159,7 +157,6 @@ const RankingsRow = (props) => {
                 {ranking.tie_last_match && (
                     <TieLastMatchTooltip target={`${ranking.id}tieLastMatchTooltip`} anchor="(tlm)" notes={ranking.tie_last_match_note} />
                 )}
-                {!config.no_h2h_tooltip && ranking.tie_h2h && <TieH2HTooltip target={`${ranking.id}tieH2HTooltip`} notes={ranking.tie_h2h_note} />}
             </Col>
         </Row>
     )

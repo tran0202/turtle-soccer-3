@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 4, "name": "third-placed teams" }
-            ],
-            "next_round_note": "4 best third-placed teams advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 4, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 4 best third-placed teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "CMR" }, { "id": "BFA" }, { "id": "ETH" }, { "id": "CPV" }],
+                    "teams": [{ "id": "CPV" }, { "id": "CMR" }, { "id": "BFA" }, { "id": "ETH" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -97,7 +99,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "SEN" }, { "id": "ZIM" }, { "id": "MWI" }, { "id": "GUI" }],
+                    "teams": [{ "id": "MWI" }, { "id": "SEN" }, { "id": "ZIM" }, { "id": "GUI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -178,7 +180,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "MAR" }, { "id": "GHA" }, { "id": "COM" }, { "id": "GAB" }],
+                    "teams": [{ "id": "GHA" }, { "id": "MAR" }, { "id": "COM" }, { "id": "GAB" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -259,7 +261,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "NGA" }, { "id": "EGY" }, { "id": "GNB" }, { "id": "SDN" }],
+                    "teams": [{ "id": "GNB" }, { "id": "NGA" }, { "id": "EGY" }, { "id": "SDN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -421,7 +423,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "TUN" }, { "id": "MLI" }, { "id": "MTN" }, { "id": "GAM" }],
+                    "teams": [{ "id": "GAM" }, { "id": "TUN" }, { "id": "MLI" }, { "id": "MTN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

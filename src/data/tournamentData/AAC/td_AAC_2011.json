@@ -6,11 +6,13 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "JPN" }, { "id": "JOR" }, { "id": "KSA" }, { "id": "SYR" }],
+                    "teams": [{ "id": "JOR" }, { "id": "JPN" }, { "id": "KSA" }, { "id": "SYR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "IND" }, { "id": "AUS" }, { "id": "KOR" }, { "id": "BHR" }],
+                    "teams": [{ "id": "KOR" }, { "id": "IND" }, { "id": "AUS" }, { "id": "BHR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "PRK" }, { "id": "UAE" }, { "id": "IRQ" }, { "id": "IRN" }],
+                    "teams": [{ "id": "UAE" }, { "id": "PRK" }, { "id": "IRQ" }, { "id": "IRN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

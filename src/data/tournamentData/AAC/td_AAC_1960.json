@@ -1,80 +1,101 @@
 {
-  "id": "AAC1960",
-  "stages": [
-    {
-      "name": "Final Round",
-      "type": "roundrobin",
-      "championship_round": true,
-      "eliminate_count": 0,
-      "advancement": { "teams": { "text": "The winner would win the AFC Asian Cup." } },
-      "groups": [
+    "id": "AAC1960",
+    "stages": [
         {
-          "name": "Final Round",
-          "teams": [{ "id": "KOR" }, { "id": "VSO" }, { "id": "TPE-1960-1979" }, { "id": "ISR" }],
-          "matches": [
-            {
-              "home_team": "KOR",
-              "away_team": "VSO",
-              "home_score": 5,
-              "away_score": 1,
-              "date": "1960-10-14",
-              "time": "15:15",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
+            "name": "Final Round",
+            "type": "roundrobin_final",
+            "championship_round": true,
+            "eliminate_count": 0,
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
             },
-            {
-              "home_team": "KOR",
-              "away_team": "ISR",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "1960-10-17",
-              "time": "15:00",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
-            },
-            {
-              "home_team": "TPE-1960-1979",
-              "away_team": "VSO",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "1960-10-17",
-              "time": "18:00",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
-            },
-            {
-              "home_team": "VSO",
-              "away_team": "ISR",
-              "home_score": 1,
-              "away_score": 5,
-              "date": "1960-10-19",
-              "time": "12:00",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
-            },
-            {
-              "home_team": "KOR",
-              "away_team": "TPE-1960-1979",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1960-10-21",
-              "time": "15:00",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
-            },
-            {
-              "home_team": "ISR",
-              "away_team": "TPE-1960-1979",
-              "home_score": 1,
-              "away_score": 0,
-              "date": "1960-10-23",
-              "time": "12:00",
-              "stadium": "Hyochang Stadium",
-              "city": "Seoul"
-            }
-          ]
+            "groups": [
+                {
+                    "name": "Final Round",
+                    "teams": [{ "id": "VSO" }, { "id": "KOR" }, { "id": "TPE-1960-1979" }, { "id": "ISR" }],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "VSO",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "1960-10-14",
+                                    "time": "15:15",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                },
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "ISR",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "1960-10-17",
+                                    "time": "15:00",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "TPE-1960-1979",
+                                    "away_team": "VSO",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1960-10-17",
+                                    "time": "18:00",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                },
+                                {
+                                    "home_team": "VSO",
+                                    "away_team": "ISR",
+                                    "home_score": 1,
+                                    "away_score": 5,
+                                    "date": "1960-10-19",
+                                    "time": "12:00",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "KOR",
+                                    "away_team": "TPE-1960-1979",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1960-10-21",
+                                    "time": "15:00",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                },
+                                {
+                                    "home_team": "ISR",
+                                    "away_team": "TPE-1960-1979",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1960-10-23",
+                                    "time": "12:00",
+                                    "stadium": "Hyochang Stadium",
+                                    "city": "Seoul"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

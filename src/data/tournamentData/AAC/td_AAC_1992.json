@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "PRK" }, { "id": "IRN" }, { "id": "JPN" }, { "id": "UAE" }],
+                    "teams": [{ "id": "JPN" }, { "id": "UAE" }, { "id": "PRK" }, { "id": "IRN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "KSA" }, { "id": "CHN" }, { "id": "THA" }, { "id": "QAT" }],
+                    "teams": [{ "id": "CHN" }, { "id": "THA" }, { "id": "KSA" }, { "id": "QAT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
