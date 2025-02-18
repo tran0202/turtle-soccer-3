@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 2, "name": "third-placed teams" }
-            ],
-            "next_round_note": "2 best third-placed teams advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 2, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 2 best third-placed teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "CRC" }, { "id": "CUB" }, { "id": "MEX" }, { "id": "SLV" }],
+                    "teams": [{ "id": "SLV" }, { "id": "CRC" }, { "id": "CUB" }, { "id": "MEX" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -97,7 +99,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "JAM" }, { "id": "GRN" }, { "id": "HON-1949-2022" }, { "id": "GUA" }],
+                    "teams": [{ "id": "GUA" }, { "id": "JAM" }, { "id": "GRN" }, { "id": "HON-1949-2022" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -178,7 +180,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "PAN" }, { "id": "GLP" }, { "id": "USA" }, { "id": "CAN" }],
+                    "teams": [{ "id": "GLP" }, { "id": "PAN" }, { "id": "USA" }, { "id": "CAN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

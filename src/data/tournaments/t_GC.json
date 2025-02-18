@@ -6,7 +6,7 @@
         "short_name": "2023 Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
@@ -67,7 +67,7 @@
         "short_name": "2021 United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "This Is Ours",
@@ -129,7 +129,7 @@
         "short_name": "2019 Costa Rica-Jamaica-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["CRC", "JAM", "USA"], "qualification_date": "2018-03-07" },
@@ -186,7 +186,8 @@
         "short_name": "2017 United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -250,7 +251,8 @@
         "short_name": "Canada-United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CAN", "USA"] },
             "logo_filename": "CONCACAF_Gold_Cup_2015.svg",
@@ -303,7 +305,8 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -366,7 +369,8 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -425,7 +429,8 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -484,7 +489,8 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -543,7 +549,8 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -603,7 +610,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "2003_CONCACAF_Gold_Cup_logo.svg",
@@ -659,7 +666,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "2002_CONCACAF_Gold_Cup_logo.png",
@@ -712,7 +719,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["USA"] },
@@ -771,7 +778,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "gc_1998.png",
@@ -822,7 +829,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "1996_CONCACAF_Gold_Cup.png",
@@ -873,7 +880,7 @@
         "competition_id": "GC",
         "golden_goal_rule": true,
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MEX", "USA"] },
             "logo_filename": "1993_CONCACAF_Gold_Cup.jpg",
@@ -929,7 +936,7 @@
         "short_name": "1991 United States",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "1991_CONCACAF_Gold_Cup_logo.jpg",
@@ -980,7 +987,7 @@
         "era": "CONCACAF Championship",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "640px-CONCACAF_member_associations_map.svg.png",
@@ -1037,7 +1044,7 @@
         "short_name": "1985",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "logo_filename": "552px-Concacaf_logo.svg.png",
             "mascot_filename": "480px-CONCACAF_orthographic_projection_Mapa_CONCACAF.png",
@@ -1094,7 +1101,7 @@
         "short_name": "1981 Honduras",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["HON-1949-2022"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1145,7 +1152,7 @@
         "short_name": "1977 Mexico",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MEX"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1195,7 +1202,7 @@
         "short_name": "1973 Haiti",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["HAI-1964-1986"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1246,7 +1253,7 @@
         "short_name": "1971 Trinidad and Tobago",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["TRI"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1292,7 +1299,7 @@
         "short_name": "1969 Costa Rica",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CRC"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1343,7 +1350,7 @@
         "short_name": "1967 Honduras",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["HON-1949-2022"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1393,7 +1400,7 @@
         "short_name": "1965 Guatemala",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GUA"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",
@@ -1442,7 +1449,7 @@
         "short_name": "1963 El Salvador",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["SLV"] },
             "logo_filename": "552px-Concacaf_logo.svg.png",

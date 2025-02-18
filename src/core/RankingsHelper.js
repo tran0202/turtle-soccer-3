@@ -42,7 +42,7 @@ export const getBlankRanking = (team) => {
 export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches) return
     matches.forEach((m) => {
-        if (!m.match_cancelled) {
+        if (!m.match_cancelled && !m.match_not_played) {
             if (!m.group_playoff) {
                 if (ranking.id === m.home_team) {
                     ranking.mp++
@@ -266,7 +266,7 @@ export const sortOverallGoalDifference = (group, config) => {
                 if (isHead2HeadBeforeGoalDifference(config)) {
                     rankings[0].tb_anchor = '(ogd)'
                     rankings[0].tb_notes =
-                        'Tied on Heah-to-head results (' +
+                        'Tied on Head-to-head results (' +
                         p.h2h_rankings[0].pts +
                         'pts, ' +
                         (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -285,7 +285,7 @@ export const sortOverallGoalDifference = (group, config) => {
                         rankings[1].gd
                     rankings[1].tb_anchor = '(ogd)'
                     rankings[1].tb_notes =
-                        'Tied on Heah-to-head results (' +
+                        'Tied on Head-to-head results (' +
                         p.h2h_rankings[0].pts +
                         'pts, ' +
                         (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -402,11 +402,11 @@ export const processBigGdPool = (pool, config) => {
     pool.pools.forEach((p) => {
         if (p.rankings.length === 1) {
             const rankings = p.rankings
-            // UEL202223 4-way
+            // UEL202223 4-way || AFCON2000
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings[0].tb_anchor = '(ogd)'
                 rankings[0].tb_notes =
-                    'All tied on Heah-to-head results. Tiebreak by Overall goal difference: ' +
+                    'All tied on Head-to-head results. Tiebreak by Overall goal difference: ' +
                     rankings[0].team.name +
                     ' ' +
                     (rankings[0].gd > 0 ? '+' : '') +
@@ -452,7 +452,7 @@ export const sortOverallGoalsFor = (group, config) => {
                         if (!p.multi_tie) {
                             rankings[0].tb_anchor = '(ogf)'
                             rankings[0].tb_notes =
-                                'Tied on Heah-to-head results (' +
+                                'Tied on head-to-head results (' +
                                 p.h2h_rankings[0].pts +
                                 'pts, ' +
                                 (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -472,7 +472,7 @@ export const sortOverallGoalsFor = (group, config) => {
                                 rankings[1].gf
                             rankings[1].tb_anchor = '(ogf)'
                             rankings[1].tb_notes =
-                                'Tied on Heah-to-head results (' +
+                                'Tied on head-to-head results (' +
                                 p.h2h_rankings[0].pts +
                                 'pts, ' +
                                 (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -490,11 +490,11 @@ export const sortOverallGoalsFor = (group, config) => {
                                 rankings[0].team.name +
                                 ' ' +
                                 rankings[0].gf
-                            // UEL202223 4-way
+                            // UEL202223 4-way || AFCON2000
                         } else {
                             rankings[0].tb_anchor = '(ogf)'
                             rankings[0].tb_notes =
-                                'All tied on Heah-to-head results. Tied on Overall goal difference (' +
+                                'All tied on head-to-head results. Tied on Overall goal difference (' +
                                 (rankings[0].gd > 0 ? '+' : '') +
                                 rankings[0].gd +
                                 '). Tiebreak by Overall goals scored: ' +
@@ -507,7 +507,7 @@ export const sortOverallGoalsFor = (group, config) => {
                                 rankings[1].gf
                             rankings[1].tb_anchor = '(ogf)'
                             rankings[1].tb_notes =
-                                'All tied on Heah-to-head results. Tied on Overall goal difference (' +
+                                'All tied on Head-to-head results. Tied on Overall goal difference (' +
                                 (rankings[1].gd > 0 ? '+' : '') +
                                 rankings[1].gd +
                                 '). Tiebreak by Overall goals scored: ' +
@@ -597,7 +597,7 @@ export const processBigGfPool = (pool, config) => {
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings[0].tb_anchor = '(ogf)'
                 rankings[0].tb_notes =
-                    'All tied on Heah-to-head results. Tied on Overall goal difference (' +
+                    'All tied on Head-to-head results. Tied on Overall goal difference (' +
                     (rankings[0].gd > 0 ? '+' : '') +
                     rankings[0].gd +
                     '). Tiebreak by Overall goals scored: ' +
@@ -643,7 +643,7 @@ export const sortOverallAwayGoals = (group, config) => {
                     if (isHead2HeadBeforeGoalDifference(config)) {
                         rankings[0].tb_anchor = '(oag)'
                         rankings[0].tb_notes =
-                            'Tied on Heah-to-head results (' +
+                            'Tied on Head-to-head results (' +
                             p.h2h_rankings[0].pts +
                             'pts, ' +
                             (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -665,7 +665,7 @@ export const sortOverallAwayGoals = (group, config) => {
                             rankings[1].gaw
                         rankings[1].tb_anchor = '(oag)'
                         rankings[1].tb_notes =
-                            'Tied on Heah-to-head results (' +
+                            'Tied on Head-to-head results (' +
                             p.h2h_rankings[0].pts +
                             'pts, ' +
                             (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -861,7 +861,7 @@ export const sortH2HPoints = (group, config) => {
                 // 5. Update the pool
                 updatePool(p)
                 // AFCON2010
-            } else if (rankings.length > 2) {
+            } else if (rankings.length === 3) {
                 prepareH2HPool(p, group.matchdays, config)
                 processBigH2HPointPools(p, config)
             }
@@ -914,7 +914,7 @@ export const processBigH2HPointPools = (pool, config) => {
     const pools = pool.h2h_pools
     for (var k = 0; k < pools.length - 1; k++) {
         for (var l = k + 1; l < pools.length; l++) {
-            if (pools[k].pts < pools[l].pts) {
+            if (pools[k].h2h_pts < pools[l].h2h_pts) {
                 const temp = pools[k]
                 pools[k] = pools[l]
                 pools[l] = temp
@@ -986,7 +986,7 @@ export const sortH2HGoalDifference = (group, config) => {
 
                 p.h2h_rankings[0].tb_anchor = '(hgd)'
                 p.h2h_rankings[0].tb_notes =
-                    'Tied on Heah-to-head points (' +
+                    'Tied on Head-to-head points (' +
                     p.h2h_rankings[0].pts +
                     '). Tiebreak by Head-to-head goal difference: ' +
                     p.h2h_rankings[0].team.name +
@@ -1000,7 +1000,7 @@ export const sortH2HGoalDifference = (group, config) => {
                     p.h2h_rankings[1].gd
                 p.h2h_rankings[1].tb_anchor = '(hgd)'
                 p.h2h_rankings[1].tb_notes =
-                    'Tied on Heah-to-head points (' +
+                    'Tied on Head-to-head points (' +
                     p.h2h_rankings[0].pts +
                     '). Tiebreak by Head-to-head goal difference: ' +
                     p.h2h_rankings[1].team.name +
@@ -1014,12 +1014,15 @@ export const sortH2HGoalDifference = (group, config) => {
                     p.h2h_rankings[0].gd
             }
             updatePool(p)
-            //AFCON2010
-        } else if (rankings.length > 2) {
+            // AFCON2006 || AFCON2010
+        } else if (rankings.length === 3) {
             prepareH2HPool(p, group.matchdays, config)
             processBigH2HGdPools(p, config)
+            flattenH2HRankings(p)
+            updatePool(p)
         }
     }
+    flattenH2HPools(group, config)
 }
 
 export const processBigH2HGdPools = (pool, config) => {
@@ -1036,7 +1039,7 @@ export const processBigH2HGdPools = (pool, config) => {
     const pools = pool.h2h_pools
     for (var k = 0; k < pools.length - 1; k++) {
         for (var l = k + 1; l < pools.length; l++) {
-            if (pools[k].gd < pools[l].gd) {
+            if (pools[k].h2h_gd < pools[l].h2h_gd) {
                 const temp = pools[k]
                 pools[k] = pools[l]
                 pools[l] = temp
@@ -1044,9 +1047,19 @@ export const processBigH2HGdPools = (pool, config) => {
         }
     }
     pool.h2h_pools.forEach((h2h_p) => {
+        const rankings = h2h_p.rankings
         if (h2h_p.rankings.length === 1) {
             h2h_p.sorted = true
-        } else {
+
+            rankings[0].tb_anchor = '(ogd)'
+            rankings[0].tb_notes =
+                'All tied on Head-to-head points (' +
+                rankings[0].pts +
+                '). Tiebreak by Head-to-head goal difference: ' +
+                rankings[0].team.name +
+                ' ' +
+                (rankings[0].gd > 0 ? '+' : '') +
+                rankings[0].gd
         }
     })
 }
@@ -1059,6 +1072,7 @@ export const sortH2HGoalsFor = (group, config) => {
         const p = pools[i]
         const rankings = p.rankings
         if (rankings.length === 2) {
+            prepareH2HPool(p, group.matchdays, config)
             if (p.h2h_rankings[0].gf < p.h2h_rankings[1].gf) {
                 const temp = p.h2h_rankings[0]
                 p.h2h_rankings[0] = p.h2h_rankings[1]
@@ -1069,8 +1083,7 @@ export const sortH2HGoalsFor = (group, config) => {
                 p.sorted = true
             }
             updatePool(p)
-            // AFCON2010
-        } else if (rankings.length > 2) {
+        } else if (rankings.length === 3) {
             prepareH2HPool(p, group.matchdays, config)
             processBigH2HGfPools(p, config)
             flattenH2HRankings(p)
@@ -1108,7 +1121,7 @@ export const processBigH2HGfPools = (pool, config) => {
 
             rankings[0].tb_anchor = '(ogf)'
             rankings[0].tb_notes =
-                'All tied on Heah-to-head points (' +
+                'All tied on Head-to-head points (' +
                 rankings[0].pts +
                 ') and goal difference (' +
                 (rankings[0].gd > 0 ? '+' : '') +
@@ -1142,7 +1155,7 @@ export const sortH2HAwayGoals = (group, config) => {
 
                 p.h2h_rankings[0].tb_anchor = '(hag)'
                 p.h2h_rankings[0].tb_notes =
-                    'Tied on Heah-to-head points (' +
+                    'Tied on Head-to-head points (' +
                     p.h2h_rankings[0].pts +
                     '), goal difference (' +
                     (p.h2h_rankings[0].gd > 0 ? '+' : '') +
@@ -1159,7 +1172,7 @@ export const sortH2HAwayGoals = (group, config) => {
                     p.h2h_rankings[1].gaw
                 p.h2h_rankings[1].tb_anchor = '(hag)'
                 p.h2h_rankings[1].tb_notes =
-                    'Tied on Heah-to-head points (' +
+                    'Tied on Head-to-head points (' +
                     p.h2h_rankings[1].pts +
                     '), goal difference (' +
                     (p.h2h_rankings[1].gd > 0 ? '+' : '') +
@@ -1216,7 +1229,6 @@ export const sortFairPlayPoints = (group, config) => {
     }
 }
 
-// WC1990 || AFCON2015
 export const drawLots = (group, config) => {
     if (!group || !group.pools || !config) return
     if (isDoneSorting(group, config)) return
@@ -1225,6 +1237,7 @@ export const drawLots = (group, config) => {
         const p = pools[i]
         const rankings = p.rankings
         if (!p.sorted) {
+            // WC1990 || AFCON1988 || AFCON2015 || GC2000
             if (rankings.length === 2) {
                 const winlot1 = rankings[0].team.draw_lot_win
                 const winlot2 = rankings[1].team.draw_lot_win
@@ -1241,6 +1254,22 @@ export const drawLots = (group, config) => {
                     rankings[1].tb_anchor = '(dl)'
                     rankings[1].tb_notes = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_note
                 }
+                // GC2002
+            } else {
+                for (var k = 0; k < rankings.length - 1; k++) {
+                    for (var l = k + 1; l < rankings.length; l++) {
+                        if (rankings[l].team.draw_lot_win) {
+                            const temp = rankings[k]
+                            rankings[k] = rankings[l]
+                            rankings[l] = temp
+                        }
+                    }
+                }
+                p.sorted = true
+                rankings.forEach((r) => {
+                    r.tb_anchor = '(dl)'
+                    r.tb_notes = 'Tiebreak by Drawing lots: ' + r.team.draw_lot_note
+                })
             }
         }
     }
@@ -1605,7 +1634,7 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
     if (config.sort === 'h2h' && !config.four_way_tied && ranking1.gd !== ranking2.gd) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head points (' +
+            'Tied on head-to-head points (' +
             ranking1.pts +
             '). Tiebreak by head-to-head goal difference: ' +
             ranking1.team.name +
@@ -1619,7 +1648,7 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
             ranking2.gd
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head points (' +
+            'Tied on head-to-head points (' +
             ranking1.pts +
             '). Tiebreak by head-to-head goal difference: ' +
             ranking2.team.name +
@@ -1636,7 +1665,7 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
     if (config.sort === 'h2htie' && ranking1.gd !== ranking2.gd) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head points. Tiebreak by overall goal difference: ' +
+            'Tied on head-to-head points. Tiebreak by overall goal difference: ' +
             ranking1.team.name +
             ' ' +
             (ranking1.gd > 0 ? '+' : '') +
@@ -1648,7 +1677,7 @@ export const compareGoalDifference = (ranking1, ranking2, config) => {
             ranking2.gd
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head points. Tiebreak by overall goal difference: ' +
+            'Tied on head-to-head points. Tiebreak by overall goal difference: ' +
             ranking2.team.name +
             ' ' +
             (ranking2.gd > 0 ? '+' : '') +
@@ -1706,7 +1735,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_p_gd = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
+            'Tied on head-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
             ranking1.team.name +
             ' ' +
             ranking1.gf +
@@ -1716,7 +1745,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
             ranking2.gf
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
+            'Tied on head-to-head points and goal difference. Tiebreak by head-to-head goals scored: ' +
             ranking2.team.name +
             ' ' +
             ranking2.gf +
@@ -1730,7 +1759,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_p_gd = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
+            'Tied on head-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
             ranking1.team.name +
             ' ' +
             ranking1.gf +
@@ -1740,7 +1769,7 @@ export const compareGoalFor = (ranking1, ranking2, config) => {
             ranking2.gf
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
+            'Tied on head-to-head points and overall goal difference. Tiebreak by overall goals scored: ' +
             ranking2.team.name +
             ' ' +
             ranking2.gf +
@@ -1768,7 +1797,7 @@ export const compareAwayGoals = (ranking1, ranking2, config) => {
     if (config.sort === 'h2h' && ranking1.gaw !== ranking2.gaw) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
+            'Tied on head-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
             ranking1.team.name +
             ' ' +
             ranking1.gaw +
@@ -1778,7 +1807,7 @@ export const compareAwayGoals = (ranking1, ranking2, config) => {
             ranking2.gaw
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
+            'Tied on head-to-head points, goal difference and goal scored. Tiebreak by head-to-head away goals: ' +
             ranking2.team.name +
             ' ' +
             ranking2.gaw +
@@ -1791,7 +1820,7 @@ export const compareAwayGoals = (ranking1, ranking2, config) => {
     if (config.sort === 'h2htie' && ranking1.gaw !== ranking2.gaw) {
         ranking1.tie_h2h = true
         ranking1.tie_h2h_note =
-            'Tied on heah-to-head results, overall goal difference and overall goal scored. Tiebreak by overall away goals: ' +
+            'Tied on head-to-head results, overall goal difference and overall goal scored. Tiebreak by overall away goals: ' +
             ranking1.team.name +
             ' ' +
             ranking1.gaw +
@@ -1801,7 +1830,7 @@ export const compareAwayGoals = (ranking1, ranking2, config) => {
             ranking2.gaw
         ranking2.tie_h2h = true
         ranking2.tie_h2h_note =
-            'Tied on heah-to-head results, overall goal difference and overall goal scored. Tiebreak by overall away goals: ' +
+            'Tied on head-to-head results, overall goal difference and overall goal scored. Tiebreak by overall away goals: ' +
             ranking2.team.name +
             ' ' +
             ranking2.gaw +
@@ -1831,7 +1860,7 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
     if (config.sort === 'h2htie') {
         ranking1.fair_play = true
         ranking1.fair_play_note =
-            'Tied on heah-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
+            'Tied on head-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
             ranking1.team.name +
             ' ' +
             ranking1.fp +
@@ -1841,7 +1870,7 @@ export const compareFairPlay = (ranking1, ranking2, config) => {
             ranking2.fp
         ranking2.fair_play = true
         ranking2.fair_play_note =
-            'Tied on heah-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
+            'Tied on head-to-head points, overall goal difference and overall goals scored. Tiebreak by disciplinary points: ' +
             ranking2.team.name +
             ' ' +
             ranking2.fp +

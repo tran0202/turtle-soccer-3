@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "EGY" }, { "id": "LBY-1977-2011" }, { "id": "MAR" }, { "id": "CIV" }],
+                    "teams": [{ "id": "LBY-1977-2011" }, { "id": "EGY" }, { "id": "MAR" }, { "id": "CIV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "CMR" }, { "id": "ANG" }, { "id": "TOG" }, { "id": "COD-2003-2006" }],
+                    "teams": [{ "id": "ANG" }, { "id": "CMR" }, { "id": "TOG" }, { "id": "COD-2003-2006" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "NGA" }, { "id": "GHA" }, { "id": "ZIM" }, { "id": "SEN" }],
+                    "teams": [{ "id": "NGA" }, { "id": "ZIM" }, { "id": "GHA" }, { "id": "SEN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

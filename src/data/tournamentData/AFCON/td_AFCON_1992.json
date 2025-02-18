@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "NGA" }, { "id": "SEN" }, { "id": "KEN" }],
+                    "teams": [{ "id": "SEN" }, { "id": "NGA" }, { "id": "KEN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -65,7 +67,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "CMR" }, { "id": "MAR" }, { "id": "ZAI" }],
+                    "teams": [{ "id": "MAR" }, { "id": "CMR" }, { "id": "ZAI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -116,7 +118,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "CIV" }, { "id": "ALG" }, { "id": "CGO" }],
+                    "teams": [{ "id": "ALG" }, { "id": "CIV" }, { "id": "CGO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

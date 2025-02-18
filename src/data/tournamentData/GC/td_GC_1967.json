@@ -3,164 +3,195 @@
     "stages": [
         {
             "name": "Final Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "championship_round": true,
             "eliminate_count": 0,
-            "advancement": { "teams": { "text": "The winner would win the CONCACAF Championship." } },
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
+            },
             "groups": [
                 {
                     "name": "Final Round",
                     "teams": [{ "id": "HON-1949-2022" }, { "id": "TRI" }, { "id": "GUA" }, { "id": "HAI-1964-1986" }, { "id": "MEX" }, { "id": "NCA" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "TRI",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1967-03-05",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "TRI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1967-03-05",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1967-03-06",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "NCA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "1967-03-06",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "GUA",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1967-03-06",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "1967-03-08",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "NCA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1967-03-08",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "HAI-1964-1986",
+                                    "away_team": "NCA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1967-03-10",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "NCA",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "1967-03-06",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "MEX",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1967-03-10",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "TRI",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "1967-03-12",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1967-03-12",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "TRI",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "1967-03-08",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "TRI",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1967-03-14",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1967-03-14",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "TRI",
+                                    "away_team": "NCA",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "1967-03-17",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "NCA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1967-03-08",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "HAI-1964-1986",
-                            "away_team": "NCA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1967-03-10",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "MEX",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1967-03-10",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "TRI",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "1967-03-12",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1967-03-12",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "TRI",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1967-03-14",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1967-03-14",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "TRI",
-                            "away_team": "NCA",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "1967-03-17",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "HAI-1964-1986",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1967-03-17",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "GUA",
-                            "away_team": "NCA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1967-03-19",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1967-03-19",
-                            "time": "15:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa"
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "HAI-1964-1986",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1967-03-17",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "GUA",
+                                    "away_team": "NCA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1967-03-19",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                },
+                                {
+                                    "home_team": "MEX",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1967-03-19",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa"
+                                }
+                            ]
                         }
                     ]
                 }

@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "CMR-1961-1975" }, { "id": "KEN" }, { "id": "MLI" }, { "id": "TOG" }],
+                    "teams": [{ "id": "TOG" }, { "id": "KEN" }, { "id": "CMR-1961-1975" }, { "id": "MLI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "CGO-1970-1991" }, { "id": "MAR" }, { "id": "ZAI" }, { "id": "SDN" }],
+                    "teams": [{ "id": "MAR" }, { "id": "CGO-1970-1991" }, { "id": "ZAI" }, { "id": "SDN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

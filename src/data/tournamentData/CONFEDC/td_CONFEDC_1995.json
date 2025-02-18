@@ -6,12 +6,6 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Final",
-            "advanced_note": "Winners advance to the final",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "next_round" }
-            ],
-            "next_round_note": "Runners-up advance to the third-place match",
             "advancements": {
                 "positions": [
                     { "pos": 1, "next": "advance" },

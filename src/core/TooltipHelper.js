@@ -195,6 +195,12 @@ export const CancelledTooltip = (props) => {
     return <TopTooltip target={target} content={content} />
 }
 
+export const NotPlayedTooltip = (props) => {
+    const { target, notes, anchor } = props
+    const content = `Not Played${notes ? `: ${notes}` : ''}`
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const WildCardTooltip = (props) => {
     const { target, content } = props
     return <TopTooltip target={target} content={content} />

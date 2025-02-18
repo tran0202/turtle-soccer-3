@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "GHA" }, { "id": "GUI" }, { "id": "NAM" }, { "id": "MAR" }],
+                    "teams": [{ "id": "GUI" }, { "id": "GHA" }, { "id": "NAM" }, { "id": "MAR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "NGA" }, { "id": "CIV" }, { "id": "MLI" }, { "id": "BEN" }],
+                    "teams": [{ "id": "MLI" }, { "id": "NGA" }, { "id": "CIV" }, { "id": "BEN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "EGY" }, { "id": "CMR" }, { "id": "SDN" }, { "id": "ZAM" }],
+                    "teams": [{ "id": "CMR" }, { "id": "EGY" }, { "id": "SDN" }, { "id": "ZAM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "TUN" }, { "id": "SEN" }, { "id": "RSA" }, { "id": "ANG" }],
+                    "teams": [{ "id": "ANG" }, { "id": "TUN" }, { "id": "RSA" }, { "id": "SEN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

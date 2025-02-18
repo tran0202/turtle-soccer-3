@@ -440,7 +440,7 @@
         "name": "Africa Cup of Nations Ghana 2008",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GHA"], "qualification_date": "2004-07-08" },
             "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg",
@@ -493,7 +493,7 @@
         "name": "Africa Cup of Nations Egypt 2006",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["EGY"], "qualification_date": "2002-10-24" },
             "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",
@@ -543,7 +543,7 @@
         "name": "Africa Cup of Nations Tunisia 2004",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["TUN"], "qualification_date": "2000-09-04" },
             "logo_filename": "2004_Africa_Cup_of_Nations_logo.svg",
@@ -598,7 +598,7 @@
         "name": "Africa Cup of Nations Mali 2002",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MLI"], "qualification_date": "1998-02-05" },
             "logo_filename": "Mali_CAN2002.png",
@@ -653,7 +653,7 @@
         "short_name": "Ghana-Nigeria 2000",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GHA", "NGA"], "qualification_date": "1999-03-15" },
             "logo_filename": "GhanaNigeria2000logo.png",
@@ -704,7 +704,7 @@
         "name": "Africa Cup of Nations Burkina Faso 1998",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["BFA"] },
             "logo_filename": "Af98logo.png",
@@ -758,7 +758,7 @@
         "name": "Africa Cup of Nations South Africa 1996",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["RSA"] },
             "logo_filename": "CAN_1996_logo.jpg",
@@ -810,7 +810,7 @@
         "short_name": "Tunisia 1994",
         "competition_id": "AFCON",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["TUN"] },
             "logo_filename": "1994_African_Cup_of_Nations_logo.jpg",
@@ -861,7 +861,7 @@
         "short_name": "Senegal 1992",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["SEN"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -913,7 +913,7 @@
         "name": "Africa Cup of Nations Algeria 1990",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["ALG"] },
             "logo_filename": "CAN_Algerie_1990_logo.png",
@@ -962,7 +962,7 @@
         "name": "Africa Cup of Nations Morocco 1988",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["MAR"] },
             "logo_filename": "CAN_1988_(logo).png",
@@ -1018,7 +1018,7 @@
         "name": "Africa Cup of Nations Egypt 1986",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["EGY"] },
             "logo_filename": "CAN_1986_(logo).png",
@@ -1067,7 +1067,7 @@
         "name": "Africa Cup of Nations Ivory Coast 1984",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CIV"] },
             "logo_filename": "CAN_1984_(logo).png",
@@ -1119,7 +1119,7 @@
         "short_name": "Libya 1982",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["LBY-1977-2011"] },
             "logo_filename": "CAN_1982_(logo).png",
@@ -1169,7 +1169,7 @@
         "short_name": "Nigeria 1980",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["NGA"] },
             "logo_filename": "1980_Afcon_(logo).png",
@@ -1222,7 +1222,7 @@
         "short_name": "Ghana 1978",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["GHA"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1276,7 +1276,7 @@
         "short_name": "Ethiopia 1976",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ETH-1975-1987"] },
             "logo_filename": "1976_Afcon_-_logo.png",
@@ -1326,7 +1326,7 @@
         "short_name": "Egypt 1974",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["EGY"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1376,7 +1376,7 @@
         "short_name": "Cameroon 1972",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["CMR-1961-1975"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1426,7 +1426,7 @@
         "short_name": "Sudan 1970",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["SDN-1956-1970"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1476,7 +1476,7 @@
         "short_name": "Ethiopia 1968",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ETH-1941-1974"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1526,7 +1526,7 @@
         "short_name": "Tunisia 1965",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "lot"],
+        "tiebreakers": ["points", "lots", "goalratio"],
         "details": {
             "host": { "teams": ["TUN"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1580,7 +1580,7 @@
         "short_name": "Ghana 1963",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goalratio", "lot"],
+        "tiebreakers": ["points", "goalratio", "lots"],
         "details": {
             "host": { "teams": ["GHA"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",
@@ -1683,7 +1683,7 @@
         "short_name": "United Arab Republic 1959",
         "competition_id": "AFCON",
         "points_for_win": 2,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["UAR"] },
             "logo_filename": "Africa_Cup_of_Nation_official_logo.png",

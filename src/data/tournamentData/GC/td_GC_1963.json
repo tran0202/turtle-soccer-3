@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Final Round",
-            "advanced_note": "Winners and runners-up advance to the final round",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "SLV" }, { "id": "PAN" }, { "id": "HON-1949-2022" }, { "id": "GUA" }, { "id": "NCA" }],
+                    "teams": [{ "id": "GUA" }, { "id": "SLV" }, { "id": "PAN" }, { "id": "HON-1949-2022" }, { "id": "NCA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -145,7 +147,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "CRC" }, { "id": "JAM" }, { "id": "ANT-1959-1986" }, { "id": "MEX" }],
+                    "teams": [{ "id": "JAM" }, { "id": "CRC" }, { "id": "ANT-1959-1986" }, { "id": "MEX" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -228,74 +230,95 @@
         },
         {
             "name": "Final Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "championship_round": true,
             "eliminate_count": 0,
-            "advancement": { "teams": { "text": "The winner would win the CONCACAF Championship." } },
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
+            },
             "groups": [
                 {
                     "name": "Final Round",
-                    "teams": [{ "id": "CRC" }, { "id": "ANT-1959-1986" }, { "id": "SLV" }, { "id": "HON-1949-2022" }],
-                    "matches": [
+                    "teams": [{ "id": "ANT-1959-1986" }, { "id": "CRC" }, { "id": "SLV" }, { "id": "HON-1949-2022" }],
+                    "matchdays": [
                         {
-                            "home_team": "CRC",
-                            "away_team": "ANT-1959-1986",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "1963-04-03",
-                            "time": "12:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "ANT-1959-1986",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "1963-04-03",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                },
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "1963-04-03",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "SLV",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "1963-04-03",
-                            "time": "15:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1963-04-05",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                },
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "ANT-1959-1986",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "1963-04-05",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1963-04-05",
-                            "time": "12:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
-                        },
-                        {
-                            "home_team": "SLV",
-                            "away_team": "ANT-1959-1986",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "1963-04-05",
-                            "time": "15:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
-                        },
-                        {
-                            "home_team": "SLV",
-                            "away_team": "CRC",
-                            "home_score": 1,
-                            "away_score": 4,
-                            "date": "1963-04-07",
-                            "time": "12:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
-                        },
-                        {
-                            "home_team": "ANT-1959-1986",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 4,
-                            "away_score": 1,
-                            "date": "1963-04-07",
-                            "time": "15:00",
-                            "stadium": "Estadio Flor Blanca",
-                            "city": "San Salvador"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "SLV",
+                                    "away_team": "CRC",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "1963-04-07",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                },
+                                {
+                                    "home_team": "ANT-1959-1986",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "1963-04-07",
+                                    "time": "15:00",
+                                    "stadium": "Estadio Flor Blanca",
+                                    "city": "San Salvador"
+                                }
+                            ]
                         }
                     ]
                 }

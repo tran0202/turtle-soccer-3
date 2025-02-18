@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, AwardedTooltip } from '../core/TooltipHelper'
+import { AetTooltip, AwardedTooltip, NotPlayedTooltip } from '../core/TooltipHelper'
 
 const MatchesGroupCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -80,12 +80,22 @@ const MatchDayRow = (props) => {
                                 <Col className="col-box-25 text-end">{homeTeamName}</Col>
                                 <Col className="col-box-7 col-box-no-padding-lr text-center">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
-                                    {!m.match_cancelled && (
+                                    {!m.match_cancelled && !m.match_not_played && (
                                         <React.Fragment>
                                             {matchHomeScore} - {matchAwayScore}{' '}
                                         </React.Fragment>
                                     )}
                                     {m.match_cancelled && <React.Fragment>Cancelled</React.Fragment>}
+                                    {m.match_not_played && (
+                                        <React.Fragment>
+                                            Not Played{' '}
+                                            <NotPlayedTooltip
+                                                target={`${m.home_team}_${m.away_team}_notPlayedToolTip`}
+                                                notes={m.match_not_played_notes}
+                                                anchor="(*)"
+                                            />
+                                        </React.Fragment>
+                                    )}
                                     {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                     {(m.home_awarded || m.away_awarded) && (
                                         <AwardedTooltip target={`${m.home_team}_${m.away_team}_awardedToolTip`} content={m.awarded_text} />

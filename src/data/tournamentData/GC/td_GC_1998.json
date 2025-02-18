@@ -6,15 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [{ "pos": 1, "will": "advance" }],
+            "advancements": {
+                "positions": [{ "pos": 1, "next": "advance" }],
+                "advanced_notes": "Group winners and the runners-up of group A advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "advancement": [
-                        { "pos": 1, "will": "advance" },
-                        { "pos": 2, "will": "advance" }
-                    ],
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 2, "next": "advance" }
+                        ]
+                    },
                     "teams": [{ "id": "SLV" }, { "id": "GUA" }, { "id": "BRA" }, { "id": "JAM" }],
                     "matchdays": [
                         {
@@ -147,7 +151,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "USA" }, { "id": "CUB" }, { "id": "CRC" }],
+                    "teams": [{ "id": "CUB" }, { "id": "USA" }, { "id": "CRC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

@@ -7,8 +7,10 @@
             "home_and_away": true,
             "eliminate_count": 3,
             "next_round": "Final Round",
-            "advanced_note": "Winners advance to the knockout stage",
-            "advancement": [{ "pos": 1, "will": "advance" }],
+            "advancements": {
+                "positions": [{ "pos": 1, "next": "advance" }],
+                "advanced_notes": "Group winners advanced to Final round"
+            },
             "groups": [
                 {
                     "name": "Group 1",
@@ -108,7 +110,7 @@
                 },
                 {
                     "name": "Group 2",
-                    "teams": [{ "id": "CAN" }, { "id": "HAI-1964-1986" }, { "id": "GUA" }],
+                    "teams": [{ "id": "HAI-1964-1986" }, { "id": "CAN" }, { "id": "GUA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -302,75 +304,111 @@
         },
         {
             "name": "Final Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "championship_round": true,
             "home_and_away": true,
             "eliminate_count": 0,
-            "advancement": { "teams": { "text": "The winner would win the CONCACAF Championship." } },
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
+            },
             "groups": [
                 {
                     "name": "Final Round",
                     "teams": [{ "id": "CRC" }, { "id": "HON-1949-2022" }, { "id": "CAN" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "CRC",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "date": "1985-08-11",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "San José, Costa Rica"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "1985-08-11",
+                                    "time": "12:00",
+                                    "stadium": "",
+                                    "city": "San José, Costa Rica"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CAN",
-                            "away_team": "CRC",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1985-08-17",
-                            "time": "12:00",
-                            "stadium": "Varsity Stadium",
-                            "city": "Toronto, Canada"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "CRC",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1985-08-17",
+                                    "time": "12:00",
+                                    "stadium": "Varsity Stadium",
+                                    "city": "Toronto, Canada"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "CAN",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "1985-08-25",
-                            "time": "12:00",
-                            "stadium": "Estadio Tiburcio Carías Andino",
-                            "city": "Tegucigalpa, Honduras"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "CAN",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "1985-08-25",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Tiburcio Carías Andino",
+                                    "city": "Tegucigalpa, Honduras"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CRC",
-                            "away_team": "CAN",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1985-09-01",
-                            "time": "12:00",
-                            "stadium": "Estadio Nacional",
-                            "city": "San José, Costa Rica"
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "CRC",
+                                    "away_team": "CAN",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1985-09-01",
+                                    "time": "12:00",
+                                    "stadium": "Estadio Nacional",
+                                    "city": "San José, Costa Rica"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "CRC",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "1985-09-08",
-                            "time": "12:00",
-                            "stadium": "",
-                            "city": "Tegucigalpa, Honduras"
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "HON-1949-2022",
+                                    "away_team": "CRC",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "1985-09-08",
+                                    "time": "12:00",
+                                    "stadium": "",
+                                    "city": "Tegucigalpa, Honduras"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CAN",
-                            "away_team": "HON-1949-2022",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1985-09-14",
-                            "time": "12:00",
-                            "stadium": "King George V Park",
-                            "city": "St. John's, Canada"
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "CAN",
+                                    "away_team": "HON-1949-2022",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1985-09-14",
+                                    "time": "12:00",
+                                    "stadium": "King George V Park",
+                                    "city": "St. John's, Canada"
+                                }
+                            ]
                         }
                     ]
                 }

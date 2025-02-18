@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "NGA" }, { "id": "TAN" }, { "id": "EGY" }, { "id": "CIV" }],
+                    "teams": [{ "id": "TAN" }, { "id": "NGA" }, { "id": "EGY" }, { "id": "CIV" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
