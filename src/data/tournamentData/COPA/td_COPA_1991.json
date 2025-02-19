@@ -6,11 +6,13 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Final Round",
-            "advanced_note": "Winners and runners-up advance to the final round",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
@@ -145,7 +147,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "COL" }, { "id": "ECU" }, { "id": "URU" }, { "id": "BOL" }, { "id": "BRA" }],
+                    "teams": [{ "id": "URU" }, { "id": "BRA" }, { "id": "COL" }, { "id": "ECU" }, { "id": "BOL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -278,74 +280,95 @@
         },
         {
             "name": "Final Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "championship_round": true,
             "eliminate_count": 0,
-            "advancement": { "teams": { "text": "The winner would win the Copa America." } },
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
+            },
             "groups": [
                 {
                     "name": "Final Round",
-                    "teams": [{ "id": "ARG" }, { "id": "BRA" }, { "id": "CHI" }, { "id": "COL" }],
-                    "matches": [
+                    "teams": [{ "id": "BRA" }, { "id": "ARG" }, { "id": "CHI" }, { "id": "COL" }],
+                    "matchdays": [
                         {
-                            "home_team": "ARG",
-                            "away_team": "BRA",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "1991-07-17",
-                            "time": "12:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "BRA",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "1991-07-17",
+                                    "time": "12:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                },
+                                {
+                                    "home_team": "CHI",
+                                    "away_team": "COL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1991-07-17",
+                                    "time": "15:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "CHI",
-                            "away_team": "COL",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1991-07-17",
-                            "time": "15:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "CHI",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "1991-07-19",
+                                    "time": "12:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                },
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "COL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1991-07-19",
+                                    "time": "15:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "ARG",
-                            "away_team": "CHI",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "date": "1991-07-19",
-                            "time": "12:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
-                        },
-                        {
-                            "home_team": "BRA",
-                            "away_team": "COL",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1991-07-19",
-                            "time": "15:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
-                        },
-                        {
-                            "home_team": "BRA",
-                            "away_team": "CHI",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "1991-07-21",
-                            "time": "12:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
-                        },
-                        {
-                            "home_team": "ARG",
-                            "away_team": "COL",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1991-07-21",
-                            "time": "15:00",
-                            "stadium": "Estádio Nacional de Chile",
-                            "city": "Santiago"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "BRA",
+                                    "away_team": "CHI",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "1991-07-21",
+                                    "time": "12:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                },
+                                {
+                                    "home_team": "ARG",
+                                    "away_team": "COL",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1991-07-21",
+                                    "time": "15:00",
+                                    "stadium": "Estádio Nacional de Chile",
+                                    "city": "Santiago"
+                                }
+                            ]
                         }
                     ]
                 }

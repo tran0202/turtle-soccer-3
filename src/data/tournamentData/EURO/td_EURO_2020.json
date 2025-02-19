@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 4, "name": "third-placed teams" }
-            ],
-            "next_round_note": "4 best third-placed teams advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 4, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 4 best third-placed teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "TUR-2022" }, { "id": "ITA" }, { "id": "WAL" }, { "id": "SUI" }],
+                    "teams": [{ "id": "SUI" }, { "id": "TUR-2022" }, { "id": "ITA" }, { "id": "WAL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -97,7 +99,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "DEN" }, { "id": "FIN" }, { "id": "BEL" }, { "id": "RUS" }],
+                    "teams": [{ "id": "RUS" }, { "id": "FIN" }, { "id": "DEN" }, { "id": "BEL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -259,7 +261,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "ENG" }, { "id": "CRO" }, { "id": "SCO" }, { "id": "CZE-1993-2022" }],
+                    "teams": [{ "id": "CZE-1993-2022" }, { "id": "ENG" }, { "id": "CRO" }, { "id": "SCO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -421,7 +423,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "HUN" }, { "id": "POR" }, { "id": "FRA" }, { "id": "GER" }],
+                    "teams": [{ "id": "POR" }, { "id": "HUN" }, { "id": "FRA" }, { "id": "GER" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

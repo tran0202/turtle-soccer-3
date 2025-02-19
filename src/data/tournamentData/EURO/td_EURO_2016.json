@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 16,
             "next_round": "Round of 16",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 4, "name": "third-placed teams" }
-            ],
-            "next_round_note": "4 best third-placed teams advance to the knockout stage",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 4, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 4 best third-placed teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "FRA" }, { "id": "ROU" }, { "id": "ALB" }, { "id": "SUI" }],
+                    "teams": [{ "id": "ROU" }, { "id": "FRA" }, { "id": "ALB" }, { "id": "SUI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -97,7 +99,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "WAL" }, { "id": "SVK" }, { "id": "ENG" }, { "id": "RUS" }],
+                    "teams": [{ "id": "SVK" }, { "id": "WAL" }, { "id": "ENG" }, { "id": "RUS" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -340,7 +342,7 @@
                 },
                 {
                     "name": "Group E",
-                    "teams": [{ "id": "IRL" }, { "id": "SWE" }, { "id": "BEL" }, { "id": "ITA" }],
+                    "teams": [{ "id": "BEL" }, { "id": "IRL" }, { "id": "SWE" }, { "id": "ITA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -421,7 +423,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "AUT" }, { "id": "HUN" }, { "id": "POR" }, { "id": "ISL" }],
+                    "teams": [{ "id": "ISL" }, { "id": "AUT" }, { "id": "HUN" }, { "id": "POR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

@@ -6,14 +6,16 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Final",
-            "advanced_note": "Winners and runners-up advance to the final",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round" },
-                { "pos": 4, "will": "next_round" }
-            ],
-            "next_round_note": "The third-place and fourth-place teams advance to the third-place match",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card" },
+                    { "pos": 4, "next": "wild_card" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to the Final",
+                "wild_card_notes": "The third-place and fourth-place teams advanced to the Third-place match"
+            },
             "groups": [
                 {
                     "name": "Group Stage",

@@ -131,7 +131,8 @@ const RankingsRow = (props) => {
                 {!config.no_h2h_tooltip && ranking.tb_anchor && (
                     <TiebreakTooltip2 target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_notes} />
                 )}
-                {ranking.partial_disciplinary_point && (
+                {((!config.no_h2h_tooltip && ranking.disciplinary_point) ||
+                    (config.no_h2h_tooltip && ranking.disciplinary_point && ranking.sort === 'partial')) && (
                     <DisciplinaryPointsTooltip target={`${ranking.id}disciplinaryPointsTooltip`} anchor="(dp)" notes={ranking.tb_notes} />
                 )}
                 {!config.no_h2h_tooltip && ranking.h2h_point && (

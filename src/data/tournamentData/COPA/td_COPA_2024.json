@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ARG" }, { "id": "PER" }, { "id": "CAN" }, { "id": "CHI" }],
+                    "teams": [{ "id": "PER" }, { "id": "ARG" }, { "id": "CAN" }, { "id": "CHI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ECU" }, { "id": "VEN" }, { "id": "MEX" }, { "id": "JAM" }],
+                    "teams": [{ "id": "MEX" }, { "id": "ECU" }, { "id": "VEN" }, { "id": "JAM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

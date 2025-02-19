@@ -8,12 +8,14 @@
             "eliminate_count": 4,
             "next_round": "Semi-finals",
             "bye_teams": [{ "id": "PAR" }],
-            "advanced_note": "Winners advance to the final round",
-            "advancement": [{ "pos": 1, "will": "advance" }],
+            "advancements": {
+                "positions": [{ "pos": 1, "next": "advance" }],
+                "advanced_notes": "Group winners advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "URU" }, { "id": "CHI" }, { "id": "VEN-1954-2006" }],
+                    "teams": [{ "id": "CHI" }, { "id": "URU" }, { "id": "VEN-1954-2006" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -109,7 +111,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ECU" }, { "id": "ARG" }, { "id": "BRA" }],
+                    "teams": [{ "id": "ARG" }, { "id": "ECU" }, { "id": "BRA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

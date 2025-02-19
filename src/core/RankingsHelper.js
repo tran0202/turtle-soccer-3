@@ -42,7 +42,7 @@ export const getBlankRanking = (team) => {
 export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches) return
     matches.forEach((m) => {
-        if (!m.match_cancelled && !m.match_not_played) {
+        if (!m.match_cancelled && !m.match_not_played && !m.home_awarded_adjust) {
             if (!m.group_playoff) {
                 if (ranking.id === m.home_team) {
                     ranking.mp++
@@ -135,6 +135,22 @@ export const accumulateRanking = (ranking, matches, config) => {
                     ranking.tie_last_match_win = !isHomeWinMatch(m)
                     ranking.tie_last_match_note = m.tie_last_match_note
                 }
+            }
+        } else if (m.home_awarded_adjust) {
+            if (ranking.id === m.home_team) {
+                ranking.mp++
+                ranking.w++
+                ranking.pts += parseInt(config.points_for_win)
+                ranking.gf += parseInt(m.home_score)
+                ranking.ga += parseInt(m.away_score)
+                ranking.gd = ranking.gf - ranking.ga
+            }
+            if (ranking.id === m.away_team) {
+                ranking.mp++
+                ranking.l++
+                ranking.gf += parseInt(m.away_score)
+                ranking.ga += parseInt(m.home_score)
+                ranking.gd = ranking.gf - ranking.ga
             }
         }
     })
@@ -1194,7 +1210,7 @@ export const sortH2HAwayGoals = (group, config) => {
 }
 
 // Fair play: WC2018
-// Disciplinary points: AAC2019 Partial
+// Disciplinary points: AAC2019 Partial || EURO2024
 export const sortFairPlayPoints = (group, config) => {
     if (!group || !group.pools || !config) return
     if (isDoneSorting(group, config)) return
@@ -1211,18 +1227,81 @@ export const sortFairPlayPoints = (group, config) => {
                     rankings[1] = temp
                 }
                 if (rankings[0].fp !== rankings[1].fp) {
-                    if (isDisciplinaryPointsTiebreaker(config)) {
-                        rankings[0].partial_disciplinary_point = true
-                        rankings[1].partial_disciplinary_point = true
-                    }
                     p.sorted = true
 
-                    rankings[0].tb_anchor = '(fp)'
-                    rankings[0].tb_notes =
-                        'Tiebreak by ' + fairPlay + ': ' + rankings[0].team.name + ' ' + rankings[0].fp + ' >< ' + rankings[1].team.name + ' ' + rankings[1].fp
-                    rankings[1].tb_anchor = '(fp)'
-                    rankings[1].tb_notes =
-                        'Tiebreak by ' + fairPlay + ': ' + rankings[1].team.name + ' ' + rankings[1].fp + ' >< ' + rankings[0].team.name + ' ' + rankings[0].fp
+                    const h2h = p.h2h_matches
+                        ? 'Tied on head-to-head results (' +
+                          getTeamName(p.h2h_matches[0].home_team, config) +
+                          ' ' +
+                          p.h2h_matches[0].home_score +
+                          '-' +
+                          p.h2h_matches[0].away_score +
+                          ' ' +
+                          getTeamName(p.h2h_matches[0].away_team, config) +
+                          '). Tied on Overall goal difference (' +
+                          (rankings[0].gd > 0 ? '+' : '') +
+                          rankings[0].gd +
+                          ') and Overall goals scored (' +
+                          rankings[0].gf +
+                          '). '
+                        : ''
+                    if (isDisciplinaryPointsTiebreaker(config)) {
+                        if (config.sort === 'partial') {
+                            rankings[0].sort = 'partial'
+                            rankings[1].sort = 'partial'
+                        }
+                        rankings[0].disciplinary_point = true
+                        rankings[0].tb_notes =
+                            h2h +
+                            'Tiebreak by ' +
+                            fairPlay +
+                            ': ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].fp +
+                            ' >< ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].fp
+                        rankings[1].disciplinary_point = true
+                        rankings[1].tb_notes =
+                            h2h +
+                            'Tiebreak by ' +
+                            fairPlay +
+                            ': ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].fp +
+                            ' >< ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].fp
+                    } else {
+                        rankings[0].tb_anchor = '(fp)'
+                        rankings[0].tb_notes =
+                            'Tiebreak by ' +
+                            fairPlay +
+                            ': ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].fp +
+                            ' >< ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].fp
+                        rankings[1].tb_anchor = '(fp)'
+                        rankings[1].tb_notes =
+                            'Tiebreak by ' +
+                            fairPlay +
+                            ': ' +
+                            rankings[1].team.name +
+                            ' ' +
+                            rankings[1].fp +
+                            ' >< ' +
+                            rankings[0].team.name +
+                            ' ' +
+                            rankings[0].fp
+                    }
                 }
             }
         }
@@ -1318,7 +1397,7 @@ export const processPartialAdvancement2 = (stage, config) => {
             stage.partial = {}
             stage.partial.rankings = rankings
             createPointPools(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers })
-            sortGroup(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers })
+            sortGroup(stage.partial, { ...config, tiebreakers: config.partial_tiebreakers, sort: 'partial' })
             flattenRankings(stage.partial)
             stage.partial.rankings.forEach((t, index) => {
                 t.rank = index + 1

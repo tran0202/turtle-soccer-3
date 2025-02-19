@@ -6,7 +6,7 @@
         "short_name": "Fiji-Vanauatu 2024",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": [{ "id": "FIJ", "qualification_date": "2024-01-24" }, "VAN"], "qualification_date": "2023-12-01" },
@@ -65,7 +65,7 @@
         "short_name": "Papua New Guinea 2016",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "h2hawaygoals", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["PNG"] },
@@ -123,7 +123,7 @@
         "short_name": "Solomon Islands 2012",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["SOL"] },
             "logo_filename": "OFCcup.png",
@@ -175,7 +175,7 @@
         "competition_id": "ONC",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["team"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "logo_filename": "OFCcup.png",
             "mascot_filename": "ofc-nations-cup.png",
@@ -227,7 +227,7 @@
         "short_name": "Australia 2004",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["AUS"] },
             "logo_filename": "OFCcup.png",
@@ -278,7 +278,7 @@
         "short_name": "New Zealand 2002",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["NZL"] },
             "logo_filename": "OFC3-copy-2002.jpeg",
@@ -331,7 +331,7 @@
         "short_name": "Tahiti 2000",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["TAH"] },
             "logo_filename": "OFCcup.png",
@@ -382,7 +382,7 @@
         "short_name": "Australia 1998",
         "competition_id": "ONC",
         "points_for_win": 3,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "details": {
             "host": { "teams": ["AUS"] },
             "logo_filename": "OFCcup.png",
@@ -488,7 +488,7 @@
         "short_name": "New Caledonia 1980",
         "competition_id": "ONC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["NCL-1973-2008"] },
             "logo_filename": "OFCcup.png",
@@ -539,7 +539,7 @@
         "short_name": "New Zealand 1973",
         "competition_id": "ONC",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["NZL"] },
             "logo_filename": "OFCcup.png",

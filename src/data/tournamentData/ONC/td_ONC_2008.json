@@ -1,141 +1,182 @@
 {
-  "id": "ONC2008",
-  "stages": [
-    {
-      "name": "Final Tournament",
-      "type": "roundrobin",
-      "home_and_away": true,
-      "championship_round": true,
-      "eliminate_count": 0,
-      "advancement": { "teams": { "text": "The winner would win the OFC Nations Cup." } },
-      "groups": [
+    "id": "ONC2008",
+    "stages": [
         {
-          "name": "Final Tournament",
-          "teams": [{ "id": "FIJ" }, { "id": "NZL" }, { "id": "VAN" }, { "id": "NCL-1973-2008" }],
-          "matches": [
-            {
-              "home_team": "FIJ",
-              "away_team": "NZL",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2007-10-17",
-              "time": "16:00",
-              "stadium": "Churchill Park",
-              "city": "Lautoka"
+            "name": "Final Tournament",
+            "type": "roundrobin_final",
+            "home_and_away": true,
+            "championship_round": true,
+            "eliminate_count": 0,
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
             },
-            {
-              "home_team": "VAN",
-              "away_team": "NZL",
-              "home_score": 1,
-              "away_score": 2,
-              "date": "2007-11-17",
-              "time": "14:00",
-              "stadium": "Korman Stadium",
-              "city": "Port Vila"
-            },
-            {
-              "home_team": "FIJ",
-              "away_team": "NCL-1973-2008",
-              "home_score": 3,
-              "away_score": 3,
-              "date": "2007-11-17",
-              "time": "15:00",
-              "stadium": "Govind Park",
-              "city": "Ba"
-            },
-            {
-              "home_team": "NZL",
-              "away_team": "VAN",
-              "home_score": 4,
-              "away_score": 1,
-              "date": "2007-11-21",
-              "time": "19:00",
-              "stadium": "Westpac Stadium",
-              "city": "Wellington"
-            },
-            {
-              "home_team": "NCL-1973-2008",
-              "away_team": "FIJ",
-              "home_score": 4,
-              "away_score": 0,
-              "date": "2007-11-21",
-              "time": "19:00",
-              "stadium": "Stade Numa-Daly Magenta",
-              "city": "Noumea"
-            },
-            {
-              "home_team": "VAN",
-              "away_team": "NCL-1973-2008",
-              "home_score": 1,
-              "away_score": 1,
-              "date": "2008-06-14",
-              "time": "14:00",
-              "stadium": "Korman Stadium",
-              "city": "Port Vila"
-            },
-            {
-              "home_team": "NCL-1973-2008",
-              "away_team": "VAN",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "2008-06-21",
-              "time": "15:00",
-              "stadium": "Stade Numa-Daly Magenta",
-              "city": "Noumea"
-            },
-            {
-              "home_team": "FIJ",
-              "away_team": "VAN",
-              "home_score": 2,
-              "away_score": 0,
-              "date": "2008-09-06",
-              "time": "15:00",
-              "stadium": "Govind Park",
-              "city": "Ba"
-            },
-            {
-              "home_team": "NCL-1973-2008",
-              "away_team": "NZL",
-              "home_score": 1,
-              "away_score": 3,
-              "date": "2008-09-06",
-              "time": "17:00",
-              "stadium": "Stade Numa-Daly Magenta",
-              "city": "Noumea"
-            },
-            {
-              "home_team": "VAN",
-              "away_team": "FIJ",
-              "home_score": 2,
-              "away_score": 1,
-              "date": "2008-09-10",
-              "time": "14:00",
-              "stadium": "Korman Stadium",
-              "city": "Port Vila"
-            },
-            {
-              "home_team": "NZL",
-              "away_team": "NCL-1973-2008",
-              "home_score": 3,
-              "away_score": 0,
-              "date": "2008-09-10",
-              "time": "19:30",
-              "stadium": "North Harbour Stadium",
-              "city": "Auckland"
-            },
-            {
-              "home_team": "NZL",
-              "away_team": "FIJ",
-              "home_score": 0,
-              "away_score": 2,
-              "date": "2008-11-19",
-              "time": "18:00",
-              "stadium": "Churchill Park",
-              "city": "Lautoka"
-            }
-          ]
+            "groups": [
+                {
+                    "name": "Final Tournament",
+                    "teams": [{ "id": "FIJ" }, { "id": "NZL" }, { "id": "VAN" }, { "id": "NCL-1973-2008" }],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "FIJ",
+                                    "away_team": "NZL",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2007-10-17",
+                                    "time": "16:00",
+                                    "stadium": "Churchill Park",
+                                    "city": "Lautoka"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "VAN",
+                                    "away_team": "NZL",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2007-11-17",
+                                    "time": "14:00",
+                                    "stadium": "Korman Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "FIJ",
+                                    "away_team": "NCL-1973-2008",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2007-11-17",
+                                    "time": "15:00",
+                                    "stadium": "Govind Park",
+                                    "city": "Ba"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "NZL",
+                                    "away_team": "VAN",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2007-11-21",
+                                    "time": "19:00",
+                                    "stadium": "Westpac Stadium",
+                                    "city": "Wellington"
+                                },
+                                {
+                                    "home_team": "NCL-1973-2008",
+                                    "away_team": "FIJ",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2007-11-21",
+                                    "time": "19:00",
+                                    "stadium": "Stade Numa-Daly Magenta",
+                                    "city": "Noumea"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "VAN",
+                                    "away_team": "NCL-1973-2008",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2008-06-14",
+                                    "time": "14:00",
+                                    "stadium": "Korman Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "NCL-1973-2008",
+                                    "away_team": "VAN",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2008-06-21",
+                                    "time": "15:00",
+                                    "stadium": "Stade Numa-Daly Magenta",
+                                    "city": "Noumea"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "FIJ",
+                                    "away_team": "VAN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2008-09-06",
+                                    "time": "15:00",
+                                    "stadium": "Govind Park",
+                                    "city": "Ba"
+                                },
+                                {
+                                    "home_team": "NCL-1973-2008",
+                                    "away_team": "NZL",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2008-09-06",
+                                    "time": "17:00",
+                                    "stadium": "Stade Numa-Daly Magenta",
+                                    "city": "Noumea"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "VAN",
+                                    "away_team": "FIJ",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2008-09-10",
+                                    "time": "14:00",
+                                    "stadium": "Korman Stadium",
+                                    "city": "Port Vila"
+                                },
+                                {
+                                    "home_team": "NZL",
+                                    "away_team": "NCL-1973-2008",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2008-09-10",
+                                    "time": "19:30",
+                                    "stadium": "North Harbour Stadium",
+                                    "city": "Auckland"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 7",
+                            "matches": [
+                                {
+                                    "home_team": "NZL",
+                                    "away_team": "FIJ",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2008-11-19",
+                                    "time": "18:00",
+                                    "stadium": "Churchill Park",
+                                    "city": "Lautoka"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

@@ -8,8 +8,10 @@
             "eliminate_count": 4,
             "next_round": "Semi-finals",
             "bye_teams": [{ "id": "URU" }],
-            "advanced_note": "Winners advance to the final round",
-            "advancement": [{ "pos": 1, "will": "advance" }],
+            "advancements": {
+                "positions": [{ "pos": 1, "next": "advance" }],
+                "advanced_notes": "Group winners advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
@@ -205,7 +207,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "COL" }, { "id": "PAR" }, { "id": "ECU" }],
+                    "teams": [{ "id": "PAR" }, { "id": "COL" }, { "id": "ECU" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

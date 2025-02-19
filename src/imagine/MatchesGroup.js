@@ -77,7 +77,12 @@ const MatchDayRow = (props) => {
                                     {m.stadium}
                                     {m.city ? ',' : ''} {m.city}
                                 </Col>
-                                <Col className="col-box-25 text-end">{homeTeamName}</Col>
+                                <Col className="col-box-25 text-end">
+                                    {homeTeamName}{' '}
+                                    {m.home_awarded_adjust && (
+                                        <AwardedTooltip target={`${m.home_team}_${m.away_team}_awardedToolTip`} content={m.awarded_adjust_notes} />
+                                    )}
+                                </Col>
                                 <Col className="col-box-7 col-box-no-padding-lr text-center">{homeTeamFlag}</Col>
                                 <Col className="text-center score-no-padding-right col-box-14">
                                     {!m.match_cancelled && !m.match_not_played && (

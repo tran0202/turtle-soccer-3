@@ -6,17 +6,19 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "The top 4 teams advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "advance" },
-                { "pos": 4, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "advance" },
+                    { "pos": 4, "next": "advance" }
+                ],
+                "advanced_notes": "The top 4 teams advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ARG" }, { "id": "CHI" }, { "id": "PAR" }, { "id": "BOL" }, { "id": "URU" }],
+                    "teams": [{ "id": "CHI" }, { "id": "ARG" }, { "id": "PAR" }, { "id": "BOL" }, { "id": "URU" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -147,7 +149,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "BRA" }, { "id": "VEN" }, { "id": "COL" }, { "id": "ECU" }, { "id": "PER" }],
+                    "teams": [{ "id": "VEN" }, { "id": "BRA" }, { "id": "COL" }, { "id": "ECU" }, { "id": "PER" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

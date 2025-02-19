@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "POR" }, { "id": "GRE" }, { "id": "ESP" }, { "id": "RUS" }],
+                    "teams": [{ "id": "ESP" }, { "id": "POR" }, { "id": "GRE" }, { "id": "RUS" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "DEN" }, { "id": "ITA" }, { "id": "SWE" }, { "id": "BUL" }],
+                    "teams": [{ "id": "ITA" }, { "id": "DEN" }, { "id": "SWE" }, { "id": "BUL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -257,7 +259,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "CZE-1993-2022" }, { "id": "LVA" }, { "id": "GER" }, { "id": "NED" }],
+                    "teams": [{ "id": "LVA" }, { "id": "CZE-1993-2022" }, { "id": "GER" }, { "id": "NED" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

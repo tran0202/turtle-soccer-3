@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 8,
             "next_round": "Quarter-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "ENG" }, { "id": "SUI" }, { "id": "NED" }, { "id": "SCO" }],
+                    "teams": [{ "id": "SCO" }, { "id": "ENG" }, { "id": "SUI" }, { "id": "NED" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -176,7 +178,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "GER" }, { "id": "CZE-1993-2022" }, { "id": "ITA" }, { "id": "RUS" }],
+                    "teams": [{ "id": "ITA" }, { "id": "GER" }, { "id": "CZE-1993-2022" }, { "id": "RUS" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

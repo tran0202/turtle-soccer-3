@@ -6,15 +6,17 @@
             "type": "roundrobin_final",
             "eliminate_count": 4,
             "next_round": "Semi-finals",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" }
-            ],
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+            },
             "groups": [
                 {
                     "name": "Group 1",
-                    "teams": [{ "id": "FRA" }, { "id": "DEN" }, { "id": "BEL" }, { "id": "YUG-1963-1992" }],
+                    "teams": [{ "id": "DEN" }, { "id": "FRA" }, { "id": "BEL" }, { "id": "YUG-1963-1992" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -95,7 +97,7 @@
                 },
                 {
                     "name": "Group 2",
-                    "teams": [{ "id": "GER-1949-1990" }, { "id": "POR" }, { "id": "ROU-1965-1989" }, { "id": "ESP" }],
+                    "teams": [{ "id": "POR" }, { "id": "GER-1949-1990" }, { "id": "ROU-1965-1989" }, { "id": "ESP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",

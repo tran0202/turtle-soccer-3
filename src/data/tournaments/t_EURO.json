@@ -6,7 +6,8 @@
         "competition_id": "EURO",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
         "no_third_place": true,
         "details": {
             "slogan": "United by Football",
@@ -75,7 +76,8 @@
         "competition_id": "EURO",
         "points_for_win": 3,
         "show_match_year": true,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
         "no_third_place": true,
         "details": {
             "slogan": "Live It. For Real.",
@@ -141,7 +143,8 @@
         "name": "UEFA Euro 2016 France",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "disciplinarypoints", "coefficient"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "disciplinarypoints", "coefficient"],
         "no_third_place": true,
         "details": {
             "slogan": "Le Rendez-Vous",
@@ -198,7 +201,7 @@
         "name": "UEFA Euro 2012 Poland-Ukraine",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "coefficient", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Creating History Together",
@@ -269,7 +272,7 @@
         "short_name": "Austria-Switzerland",
         "competition_id": "EURO",
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "coefficient", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Expect Emotions",
@@ -330,7 +333,7 @@
         "competition_id": "EURO",
         "silver_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "coefficient", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Welcome to 2004!",
@@ -400,7 +403,7 @@
         "competition_id": "EURO",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "coefficient", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Football without frontiers",
@@ -462,7 +465,7 @@
         "competition_id": "EURO",
         "golden_goal_rule": true,
         "points_for_win": 3,
-        "tiebreakers": ["point", "head2head", "goaldifference", "goalfor", "fairplay", "lot"],
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "coefficient", "fairplaypoints", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Football Comes Home",
@@ -521,7 +524,7 @@
         "short_name": "Sweden",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "slogan": "Small is Beautiful",
@@ -584,7 +587,7 @@
         "short_name": "Germany",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["GER-1949-1990"], "qualification_date": "1985-03-14" },
@@ -642,7 +645,7 @@
         "short_name": "France",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
             "host": { "teams": ["FRA"], "qualification_date": "1981-12-10" },
@@ -696,7 +699,7 @@
         "short_name": "Italy",
         "competition_id": "EURO",
         "points_for_win": 2,
-        "tiebreakers": ["point", "goaldifference", "goalfor", "lot"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "details": {
             "host": { "teams": ["ITA"], "qualification_date": "1977-11-12" },
             "logo_filename": "UEFA_Euro_1980_official_logo.svg",
