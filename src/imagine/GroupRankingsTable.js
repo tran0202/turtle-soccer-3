@@ -151,7 +151,7 @@ const RankingsRow = (props) => {
                     <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
                 )}
                 {!config.no_h2h_tooltip && ranking.tie_h2h && <TieH2HTooltip target={`${ranking.id}tieH2HTooltip`} notes={ranking.tie_h2h_note} />}
-                {ranking.playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.playoff_note} />}
+                {ranking.group_playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.group_playoff_notes} />}
                 {ranking.team.point_deduction && (
                     <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} anchor="(pd)" notes={ranking.team.point_deduction_notes} />
                 )}
