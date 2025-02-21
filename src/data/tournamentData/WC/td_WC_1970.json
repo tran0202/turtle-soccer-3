@@ -20,12 +20,12 @@
                         {
                             "id": "MEX",
                             "draw_lot_win": false,
-                            "draw_lot_note": "Mexico took 2nd place after finished level on points and goal difference with Soviet Union."
+                            "draw_lot_notes": "Mexico took 2nd place after finished level on points and goal difference with Soviet Union."
                         },
                         {
                             "id": "URS",
                             "draw_lot_win": true,
-                            "draw_lot_note": "Soviet Union took 1st place after finished level on points and goal difference with Mexico."
+                            "draw_lot_notes": "Soviet Union took 1st place after finished level on points and goal difference with Mexico."
                         },
                         { "id": "BEL" },
                         { "id": "SLV" }

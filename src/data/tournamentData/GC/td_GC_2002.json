@@ -173,17 +173,17 @@
                         {
                             "id": "ECU",
                             "draw_lot_win": false,
-                            "draw_lot_note": "Ecuador took 3rd place after finished identical records (points, goal difference and goal forward) with Canada and Haiti."
+                            "draw_lot_notes": "Ecuador took 3rd place after finished identical records (points, goal difference and goal forward) with Canada and Haiti."
                         },
                         {
                             "id": "HAI",
                             "draw_lot_win": true,
-                            "draw_lot_note": "Haiti took 2nd place after finished identical records (points, goal difference and goal forward) with Canada and Ecuador."
+                            "draw_lot_notes": "Haiti took 2nd place after finished identical records (points, goal difference and goal forward) with Canada and Ecuador."
                         },
                         {
                             "id": "CAN",
                             "draw_lot_win": true,
-                            "draw_lot_note": "Canada took 1st place after finished identical records (points, goal difference and goal forward) with Haiti and Ecuador."
+                            "draw_lot_notes": "Canada took 1st place after finished identical records (points, goal difference and goal forward) with Haiti and Ecuador."
                         }
                     ],
                     "matchdays": [

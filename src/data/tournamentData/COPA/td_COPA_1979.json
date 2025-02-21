@@ -304,7 +304,7 @@
             ]
         },
         {
-            "name": "Semi-finals",
+            "name": "Knockout Stage",
             "type": "knockout",
             "rounds": [
                 {
@@ -369,13 +369,7 @@
                             "bracket_order": 2
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Final",
-            "type": "knockout",
-            "rounds": [
+                },
                 {
                     "name": "Final",
                     "short_name": "1st",

@@ -174,13 +174,13 @@
                             "id": "KOR",
                             "draw_lot_win": false,
                             "draw_lot_label": "coin toss",
-                            "draw_lot_note": "Korea Republic took 3rd place after finished identical records (points, goal difference and goal forward) with Canada."
+                            "draw_lot_notes": "Korea Republic took 3rd place after finished identical records (points, goal difference and goal forward) with Canada."
                         },
                         {
                             "id": "CAN",
                             "draw_lot_win": true,
                             "draw_lot_label": "coin toss",
-                            "draw_lot_note": "Canada took 2nd place after finished identical records (points, goal difference and goal forward) with Korea Republic."
+                            "draw_lot_notes": "Canada took 2nd place after finished identical records (points, goal difference and goal forward) with Korea Republic."
                         },
                         { "id": "CRC" }
                     ],

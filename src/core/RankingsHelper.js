@@ -290,11 +290,13 @@ export const sortOverallGoalDifference = (group, config) => {
             })
         }
 
-        // WC2022
+        // AAC2011 || AAC2019 || AAC2023
+        // AFCON2002 || AFCON2006 || AFCON2008 || AFCON2010 || AFCON2012 || AFCON2013 || AFCON2017 || AFCON2019 || AFCON2021 || AFCON2023
+        // GC2000 || GC2003 || GC2005
+        // EURO2008 || EURO2016 || EURO2020
+        // UNL201819 || UNL202021 || UNL202223
         // UCL202223 || UCL202324
         // UEL201819 || UEL202223 || UEL202324
-        // UNL201819 || UNL202021 || UNL202223
-        // EURO2024
         if (rankings.length === 2) {
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings[0].tb_anchor = '(ogd)'
@@ -322,20 +324,14 @@ export const sortOverallGoalDifference = (group, config) => {
                     (rankings[0].gd > 0 ? '+' : '') +
                     rankings[0].gd
             }
-        }
-        // WC1994
-        else if (rankings.length >= 3) {
-            // UEL202223
+        } else if (rankings.length >= 3) {
+            // 4: AFCON2000
+            // 4: EURO2024
+            // 4: UEL202223
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings.forEach((r) => {
                     r.tb_anchor = '(ogd)'
                     r.tb_notes = 'All tied on Head-to-head results. Tiebreak by Overall goal difference: ' + r.team.name + ' ' + (r.gd > 0 ? '+' : '') + r.gd
-                })
-            } else {
-                rankings.forEach((r) => {
-                    r.tb_anchor = '(ogd)'
-                    r.tb_notes =
-                        'All tied on Overall points (' + r.pts + '). Tiebreak by Overall goal difference: ' + r.team.name + ' ' + (r.gd > 0 ? '+' : '') + r.gd
                 })
             }
         }
@@ -375,7 +371,7 @@ export const flattenSubpools = (group, config) => {
     group.pools = new_pools
 }
 
-// WC1966 || WC1962
+// WC1962 || WC1966
 export const sortGoalRatio = (group, config) => {
     if (!group || !group.pools || !config) return
     if (isDoneSorting(group, config)) return
@@ -446,7 +442,6 @@ export const sortGroupPlayoff = (group, config) => {
     }
 }
 
-// WC2022
 export const sortOverallGoalsFor = (group, config) => {
     if (!group || !group.pools || !config) return
     if (isDoneSorting(group, config)) return
@@ -476,8 +471,11 @@ export const sortOverallGoalsFor = (group, config) => {
                 }
             })
         }
+        // AFCON2000 || AFCON2008 || AFCON2015 || AFCON2019 || AFCON2021 || AFCON2023
+        // GC2002 || GC2003
+        // EURO1996 || EURO2004 || EURO2020 || EURO2024
         // UCL201819 || UCL202324
-        // EURO2024
+        // UEL202223
         if (rankings.length === 2) {
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings[0].tb_anchor = '(ogf)'
@@ -507,52 +505,16 @@ export const sortOverallGoalsFor = (group, config) => {
                     ' ' +
                     rankings[0].gf
             }
-            // WWC2019
-            else {
-                rankings[0].tb_anchor = '(ogf)'
-                rankings[0].tb_notes =
-                    'Tied on Overall points and goal difference (' +
-                    (rankings[0].gd > 0 ? '+' : '') +
-                    rankings[0].gd +
-                    '). Tiebreak by Overall goals scored: ' +
-                    rankings[0].team.name +
-                    ' ' +
-                    rankings[0].gf +
-                    ' >< ' +
-                    rankings[1].team.name +
-                    ' ' +
-                    rankings[1].gf
-                rankings[1].tb_anchor = '(ogf)'
-                rankings[1].tb_notes =
-                    'Tied on Overall points and goal difference (' +
-                    (rankings[1].gd > 0 ? '+' : '') +
-                    rankings[1].gd +
-                    '). Tiebreak by Overall goals scored: ' +
-                    rankings[1].team.name +
-                    ' ' +
-                    rankings[1].gf +
-                    ' >< ' +
-                    rankings[0].team.name +
-                    ' ' +
-                    rankings[0].gf
-            }
         }
         // 3: WC1994
+        // 3: WOFT2004
+        // 3: COPA1922
         // 4: WC1994
         else if (rankings.length >= 3) {
             if (!isHead2HeadBeforeGoalDifference(config)) {
                 rankings.forEach((r) => {
                     r.tb_anchor = '(ogf)'
-                    r.tb_notes =
-                        'All tied on Overall points (' +
-                        r.pts +
-                        ') and goal difference (' +
-                        (r.gd > 0 ? '+' : '') +
-                        r.gd +
-                        '). Tiebreak by Overall goals scored: ' +
-                        r.team.name +
-                        ' ' +
-                        r.gf
+                    r.tb_notes = 'All tied on Overall points and goal difference. Tiebreak by Overall goals scored: ' + r.team.name + ' ' + r.gf
                 })
             }
         }
@@ -583,7 +545,6 @@ export const sortOverallAwayGoals = (group, config) => {
         const p = pools[i]
         const rankings = p.rankings
 
-        // UCL202223
         if (rankings.length >= 2) {
             createAwayGoalsSubpools(p, config)
 
@@ -604,6 +565,7 @@ export const sortOverallAwayGoals = (group, config) => {
             })
         }
 
+        // UCL202223
         if (rankings.length === 2) {
             if (isHead2HeadBeforeGoalDifference(config)) {
                 rankings[0].tb_anchor = '(oag)'
@@ -686,10 +648,14 @@ export const sortH2HPoints = (group, config) => {
             })
         }
 
-        // UCL201819 || UCL201920 || UCL202021 || UCL202223 || UCL202324
-        // UEL201819 || UEL202021 || UEL202122 || UEL202223
-        // UNL201819 || UNL202021 || UNL202223
         if (rankings.length === 2) {
+            // AAC2019
+            // AFCON2004 || AFCON2010 || AFCON2015 || AFCON2021 || AFCON2023
+            // GC2007
+            // EURO1996 || EURO2000 || EURO2008 || EURO2012 || EURO2016 || EURO2020 || EURO2024
+            // UNL201819 || UNL202021 || UNL202223
+            // UCL201819 || UCL201920 || UCL202021 || UCL202223 || UCL202324
+            // UEL201819 || UEL202021 || UEL202122 || UEL202223
             if (isHead2HeadBeforeGoalDifference(config)) {
                 p.h2h_rankings[0].tb_anchor = '(hp)'
                 p.h2h_rankings[0].tb_notes =
@@ -751,6 +717,9 @@ export const sortH2HPoints = (group, config) => {
                     ')'
             }
             // WC1994
+            // MOFT2024
+            // WOFT2004
+            // AAC1996
             else {
                 p.h2h_rankings[0].tb_anchor = '(hp)'
                 p.h2h_rankings[0].tb_notes =
@@ -933,9 +902,9 @@ export const sortH2HGoalDifference = (group, config) => {
             })
         }
 
+        // UNL201819 || UNL202021 || UNL202223
         // UCL201819 || UCL201920 || UCL202021 || UCL202122 || UCL202223 || UCL202324
         // UEL201819
-        // UNL201819 || UNL202021 || UNL202223
         if (rankings.length === 2) {
             p.h2h_rankings[0].tb_anchor = '(hgd)'
             p.h2h_rankings[0].tb_notes =
@@ -967,11 +936,10 @@ export const sortH2HGoalDifference = (group, config) => {
                 p.h2h_rankings[0].gd
 
             updateSubpools(p)
-        }
-        // AFCON2006
-        else if (rankings.length === 3) {
-            console.log('h2hgd')
+        } else if (rankings.length === 3) {
             p.h2h_rankings.forEach((r) => {
+                // AFCON2006
+                // EURO2020
                 if (isHead2HeadBeforeGoalDifference(config)) {
                     r.tb_anchor = '(hgd)'
                     r.tb_notes =
@@ -1046,10 +1014,10 @@ export const sortH2HGoalsFor = (group, config) => {
 
         if (rankings.length === 2) {
             updateSubpools(p)
-        }
-        // AFCON2010
-        else if (rankings.length === 3) {
+        } else if (rankings.length === 3) {
             p.h2h_rankings.forEach((r) => {
+                // AFCON2010
+                // EURO2004
                 if (isHead2HeadBeforeGoalDifference(config)) {
                     r.tb_anchor = '(hgf)'
                     r.tb_notes =
@@ -1126,8 +1094,8 @@ export const sortH2HAwayGoals = (group, config) => {
             })
         }
 
-        // UCL201819 || UCL202021
         // UNL202021
+        // UCL201819 || UCL202021
         if (rankings.length === 2) {
             p.h2h_rankings[0].tb_anchor = '(hag)'
             p.h2h_rankings[0].tb_notes =
@@ -1192,7 +1160,6 @@ export const sortFairPlayPoints = (group, config) => {
     }
 
     const pools = group.pools
-    const fairPlay = !isDisciplinaryPointsTiebreaker(config) ? 'Fair play' : 'Disciplinary points'
     for (var i = 0; i < pools.length; i++) {
         const p = pools[i]
         const rankings = p.rankings
@@ -1217,9 +1184,8 @@ export const sortFairPlayPoints = (group, config) => {
             })
         }
 
-        // Fair play: WC2018
-        // Disciplinary points: AAC2019 Partial || EURO2024
         if (rankings.length === 2) {
+            // EURO2024
             const h2h = isHead2HeadBeforeGoalDifference(config)
                 ? 'Tied on head-to-head results. Tied on Overall goal difference (' +
                   (rankings[0].gd > 0 ? '+' : '') +
@@ -1228,6 +1194,7 @@ export const sortFairPlayPoints = (group, config) => {
                   rankings[0].gf +
                   '). '
                 : ''
+            // Disciplinary points: AAC2019 Partial
             if (isDisciplinaryPointsTiebreaker(config)) {
                 if (config.sort === 'partial') {
                     rankings[0].sort = 'partial'
@@ -1237,9 +1204,7 @@ export const sortFairPlayPoints = (group, config) => {
                 rankings[0].disciplinary_point = true
                 rankings[0].tb_notes =
                     h2h +
-                    'Tiebreak by ' +
-                    fairPlay +
-                    ': ' +
+                    'Tiebreak by Disciplinary points: ' +
                     rankings[0].team.name +
                     ' ' +
                     rankings[0].fp +
@@ -1251,9 +1216,7 @@ export const sortFairPlayPoints = (group, config) => {
                 rankings[1].disciplinary_point = true
                 rankings[1].tb_notes =
                     h2h +
-                    'Tiebreak by ' +
-                    fairPlay +
-                    ': ' +
+                    'Tiebreak by Disciplinary points: ' +
                     rankings[1].team.name +
                     ' ' +
                     rankings[1].fp +
@@ -1261,13 +1224,15 @@ export const sortFairPlayPoints = (group, config) => {
                     rankings[0].team.name +
                     ' ' +
                     rankings[0].fp
-            } else {
+            }
+            // Fair play points: WC2018
+            else {
                 rankings[0].tb_anchor = '(fp)'
                 rankings[0].tb_notes =
-                    'Tiebreak by ' + fairPlay + ': ' + rankings[0].team.name + ' ' + rankings[0].fp + ' >< ' + rankings[1].team.name + ' ' + rankings[1].fp
+                    'Tiebreak by Fair play points: ' + rankings[0].team.name + ' ' + rankings[0].fp + ' >< ' + rankings[1].team.name + ' ' + rankings[1].fp
                 rankings[1].tb_anchor = '(fp)'
                 rankings[1].tb_notes =
-                    'Tiebreak by ' + fairPlay + ': ' + rankings[1].team.name + ' ' + rankings[1].fp + ' >< ' + rankings[0].team.name + ' ' + rankings[0].fp
+                    'Tiebreak by Fair play points: ' + rankings[1].team.name + ' ' + rankings[1].fp + ' >< ' + rankings[0].team.name + ' ' + rankings[0].fp
             }
         }
     }
@@ -1298,7 +1263,9 @@ export const drawLots = (group, config) => {
         const rankings = p.rankings
 
         if (!p.sorted) {
-            // WC1990 || AFCON1988 || AFCON2015 || GC2000
+            // WC1970 || WC1990
+            // AFCON1965 || AFCON1988 || AFCON2015
+            // GC2000
             if (rankings.length === 2) {
                 const winlot1 = rankings[0].team.draw_lot_win
                 const winlot2 = rankings[1].team.draw_lot_win
@@ -1311,12 +1278,13 @@ export const drawLots = (group, config) => {
                     p.sorted = true
 
                     rankings[0].tb_anchor = '(dl)'
-                    rankings[0].tb_notes = 'Tiebreak by Drawing lots: ' + rankings[0].team.draw_lot_note
+                    rankings[0].tb_notes = 'Tiebreak by Drawing lots: ' + rankings[0].team.draw_lot_notes
                     rankings[1].tb_anchor = '(dl)'
-                    rankings[1].tb_notes = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_note
+                    rankings[1].tb_notes = 'Tiebreak by Drawing lots: ' + rankings[1].team.draw_lot_notes
                 }
-                // GC2002
-            } else {
+            }
+            // GC2002
+            else {
                 for (var k = 0; k < rankings.length - 1; k++) {
                     for (var l = k + 1; l < rankings.length; l++) {
                         if (rankings[l].team.draw_lot_win) {
@@ -1329,7 +1297,7 @@ export const drawLots = (group, config) => {
                 p.sorted = true
                 rankings.forEach((r) => {
                     r.tb_anchor = '(dl)'
-                    r.tb_notes = 'Tiebreak by Drawing lots: ' + r.team.draw_lot_note
+                    r.tb_notes = 'Tiebreak by Drawing lots: ' + r.team.draw_lot_notes
                 })
             }
         }

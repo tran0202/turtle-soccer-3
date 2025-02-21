@@ -20,14 +20,14 @@
                         {
                             "id": "CIV",
                             "draw_lot_win": false,
-                            "draw_lot_note": "Ivory Coast took 3rd place after finished identical records (points, goal difference and goal forward) with Algeria."
+                            "draw_lot_notes": "Ivory Coast took 3rd place after finished identical records (points, goal difference and goal forward) with Algeria."
                         },
                         { "id": "MAR" },
                         { "id": "ZAI" },
                         {
                             "id": "ALG",
                             "draw_lot_win": true,
-                            "draw_lot_note": "Algeria took 2nd place after finished identical records (points, goal difference and goal forward) with Ivory Coast."
+                            "draw_lot_notes": "Algeria took 2nd place after finished identical records (points, goal difference and goal forward) with Ivory Coast."
                         }
                     ],
                     "matchdays": [

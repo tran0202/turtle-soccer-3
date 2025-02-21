@@ -369,7 +369,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
         "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
@@ -429,7 +429,7 @@
         "short_name": "United States",
         "competition_id": "GC",
         "points_for_win": 3,
-        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
         "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "lots"],
         "no_third_place": true,
         "details": {
@@ -936,7 +936,7 @@
         "short_name": "1991 United States",
         "competition_id": "GC",
         "points_for_win": 2,
-        "tiebreakers": ["points", "h2hpoints", "goaldifference", "goalsfor", "lots"],
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "lots"],
         "details": {
             "host": { "teams": ["USA"] },
             "logo_filename": "1991_CONCACAF_Gold_Cup_logo.jpg",

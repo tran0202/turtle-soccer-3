@@ -19,8 +19,8 @@
                     "name": "Group A",
                     "teams": [
                         { "id": "ETH-1941-1974" },
-                        { "id": "SEN", "draw_lot_win": false, "draw_lot_note": "Senegal took 2nd place after tied on points with Tunisia." },
-                        { "id": "TUN", "draw_lot_win": true, "draw_lot_note": "Tunisia took 1st place after tied on points with Senegal." }
+                        { "id": "SEN", "draw_lot_win": false, "draw_lot_notes": "Senegal took 2nd place after tied on points with Tunisia." },
+                        { "id": "TUN", "draw_lot_win": true, "draw_lot_notes": "Tunisia took 1st place after tied on points with Senegal." }
                     ],
                     "matchdays": [
                         {

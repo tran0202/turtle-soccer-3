@@ -5,8 +5,6 @@ import { getTeamFlagId } from '../core/TeamHelper'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
 import {
     TiebreakTooltip,
-    TiebreakTooltip2,
-    FairPlayTooltip,
     DisciplinaryPointsTooltip,
     PlayoffWinTooltip,
     WithdrewTooltip,
@@ -14,7 +12,6 @@ import {
     DisqualifiedTooltip,
     PointDeductionTooltip,
     TieLastMatchTooltip,
-    TieH2HTooltip,
 } from '../core/TooltipHelper'
 
 const RankingsHeader = (props) => {
@@ -84,8 +81,6 @@ const RankingsRow = (props) => {
     const ga = !withdrew ? ranking.ga : <span>&mdash;</span>
     const gd = !withdrew ? ranking.gd : <span>&mdash;</span>
     const pts = !withdrew ? ranking.pts : <span>&mdash;</span>
-    const drawLotAnchor = ranking.team.draw_lot_label ? '(ct)' : '(dl)'
-    const drawLotRule = ranking.team.draw_lot_label ? ranking.team.draw_lot_label : 'drawing lots'
     return (
         <Row
             className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
@@ -129,28 +124,12 @@ const RankingsRow = (props) => {
             <Col className="col-box-13 text-center">
                 {pts}{' '}
                 {!config.no_h2h_tooltip && ranking.tb_anchor && (
-                    <TiebreakTooltip2 target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_notes} />
+                    <TiebreakTooltip target={`${ranking.id}tbTooltip`} anchor={ranking.tb_anchor} note={ranking.tb_notes} />
                 )}
                 {((!config.no_h2h_tooltip && ranking.disciplinary_point) ||
                     (config.no_h2h_tooltip && ranking.disciplinary_point && ranking.sort === 'partial')) && (
                     <DisciplinaryPointsTooltip target={`${ranking.id}disciplinaryPointsTooltip`} anchor="(dp)" notes={ranking.tb_notes} />
                 )}
-                {!config.no_h2h_tooltip && ranking.h2h_point && (
-                    <TiebreakTooltip target={`${ranking.id}pointTooltip`} anchor="(p)" rule={`head-to-head points: ${ranking.h2h_point_note}`} />
-                )}
-                {ranking.h2h_gd_win && (
-                    <TiebreakTooltip target={`${ranking.id}gdTooltip`} anchor="(gd)" rule={`goal differential: ${ranking.h2h_gd_win_note}`} />
-                )}
-                {ranking.away_goal_win && (
-                    <TiebreakTooltip target={`${ranking.id}awayGoalTooltip`} anchor="(a)" rule={`away goals: ${ranking.away_goal_win_note}`} />
-                )}
-                {!config.no_h2h_tooltip && ranking.fair_play && (
-                    <FairPlayTooltip target={`${ranking.id}fairPlayTooltip`} anchor="(fp)" notes={ranking.fair_play_note} />
-                )}
-                {!config.no_h2h_tooltip && ranking.draw_lot && (
-                    <TiebreakTooltip target={`${ranking.id}drawLotTooltip`} anchor={drawLotAnchor} rule={`${drawLotRule}. ${ranking.draw_lot_note}`} />
-                )}
-                {!config.no_h2h_tooltip && ranking.tie_h2h && <TieH2HTooltip target={`${ranking.id}tieH2HTooltip`} notes={ranking.tie_h2h_note} />}
                 {ranking.group_playoff && <PlayoffWinTooltip target={`${ranking.id}playoffTooltip`} anchor="(po)" notes={ranking.group_playoff_notes} />}
                 {ranking.team.point_deduction && (
                     <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} anchor="(pd)" notes={ranking.team.point_deduction_notes} />
