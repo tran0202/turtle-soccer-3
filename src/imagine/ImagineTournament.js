@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
-import Seeding from './Seeding'
-import Entrants from './Entrants'
-import Results from './Results'
-import Matches from './Matches'
-import Groups from './Groups'
-import Brackets from './Brackets'
-import PartialAdvancement from './PartialAdvancement'
+import Seeding from '../components/Seeding'
+import Entrants from '../components/Entrants'
+import Results from '../components/Results'
+import Matches from '../components/Matches'
+import Groups from '../components/Groups'
+import Brackets from '../components/Brackets'
+import PartialAdvancement from '../components/PartialAdvancement'
 
-const TournamentCollapse = (props) => {
+const ImagineTournamentCollapse = (props) => {
     const { title, initialStatus, children } = props
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
@@ -42,7 +42,7 @@ const TournamentCollapse = (props) => {
     )
 }
 
-class Tournament extends React.Component {
+class ImagineTournament extends React.Component {
     render() {
         const { tournament, config } = this.props
         const tournament_id = tournament && tournament.id ? tournament.id : ''
@@ -60,7 +60,7 @@ class Tournament extends React.Component {
                     tournament.stages &&
                     tournament.stages.map((s) => {
                         return !isPlayoff ? (
-                            <TournamentCollapse key={tournament_id + s.name} title={s.name} initialStatus="Opened">
+                            <ImagineTournamentCollapse key={tournament_id + s.name} title={s.name} initialStatus="Opened">
                                 {s.type && showSeeding(s) && (
                                     <React.Fragment>
                                         <Seeding stage={s} config={config} />
@@ -97,7 +97,7 @@ class Tournament extends React.Component {
                                         <Matches stage={s} config={config} />
                                     </React.Fragment>
                                 )}
-                            </TournamentCollapse>
+                            </ImagineTournamentCollapse>
                         ) : (
                             <React.Fragment key={tournament_id + s.name}>
                                 <Entrants stage={s} config={config} />
@@ -113,4 +113,4 @@ class Tournament extends React.Component {
     }
 }
 
-export default Tournament
+export default ImagineTournament

@@ -1,9 +1,8 @@
 import React from 'react'
-// import { getTournamentTitleFont } from '../core/Helper'
 import { Row, Col } from 'reactstrap'
-import GroupRankingsTable from '../imagine/GroupRankingsTable'
-import MatchesGroup from '../imagine/MatchesGroup'
-import PartialAdvancement from '../imagine/PartialAdvancement'
+import GroupRankingsTable from '../components/GroupRankingsTable'
+import MatchesGroup from '../components/MatchesGroup'
+import PartialAdvancement from '../components/PartialAdvancement'
 
 class RoundRobin extends React.Component {
     render() {

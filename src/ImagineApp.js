@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { getActiveTeams, getRandomHostTeamArray, getImagine, processSoccerTournament, getConfederations } from './core/TeamHelper'
 import Page from './core/Page'
 import QualifiedTable from './imagine/QualifiedTable'
-import Tournament from './imagine/Tournament'
+import ImagineTournament from './imagine/ImagineTournament'
 
 export const ImagineCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -72,7 +72,7 @@ const ConfederationQualifications = (props) => {
                         <React.Fragment key={q.id}>
                             {q.id && (
                                 <TabPane tabId={q.id.replace(/ /g, '-')}>
-                                    <Tournament tournament={q} config={config} />
+                                    <ImagineTournament tournament={q} config={config} />
                                 </TabPane>
                             )}
                         </React.Fragment>
@@ -137,7 +137,7 @@ class ImagineApp extends React.Component {
                     </ImagineCollapse>
 
                     <ImagineCollapse title="Final" initialStatus="Closed">
-                        <Tournament tournament={tournament} config={config} />
+                        <ImagineTournament tournament={tournament} config={config} />
                     </ImagineCollapse>
                 </Container>
             </Page>

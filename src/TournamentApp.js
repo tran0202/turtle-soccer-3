@@ -6,11 +6,12 @@ import Page from './core/Page'
 import Header from './tournament/Header'
 import Awards from './tournament/Awards'
 import RoundRobin from './tournament/RoundRobin'
+import Knockout from './tournament/Knockout'
 
 const TournamentTabs = (props) => {
     const { tournament, config } = props
     const { stages } = tournament
-    const first_final_stage = stages && stages.length > 0 ? stages[0].name : 'Group Stage'
+    const first_final_stage = 'Knockout Stage' // stages && stages.length > 0 ? stages[0].name : 'Group Stage'
     const [activeTab, setActiveTab] = useState(first_final_stage)
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
@@ -50,6 +51,7 @@ const TournamentTabs = (props) => {
                         return (
                             <TabPane key={s.name} tabId={s.name}>
                                 {s.type === 'roundrobin_final' && <RoundRobin stage={s} config={config} />}
+                                {s.type === 'knockout' && <Knockout stage={s} config={config} />}
                             </TabPane>
                         )
                     })}
