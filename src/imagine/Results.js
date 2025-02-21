@@ -40,11 +40,11 @@ const ResultsCollapse = (props) => {
 
 class Results extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         return (
             <React.Fragment>
-                <ResultsCollapse title="Results" stage={stage} initialStatus="Closed">
-                    {stage.type && stage.type.includes('pair') && <ResultsPairTable state={state} stage={stage} />}
+                <ResultsCollapse title="Results" stage={stage} initialStatus="Opened">
+                    {stage.type && stage.type.includes('pair') && <ResultsPairTable stage={stage} config={config} />}
                 </ResultsCollapse>
             </React.Fragment>
         )

@@ -59,11 +59,11 @@ const SeedingCollapse = (props) => {
 
 class Seeding extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         return (
             <React.Fragment>
-                <SeedingCollapse title="Seeding" stage={stage} initialStatus="Closed">
-                    <SeedingTable state={state} stage={stage} />
+                <SeedingCollapse title="Seeding" stage={stage} initialStatus="Opened">
+                    <SeedingTable stage={stage} config={config} />
                 </SeedingCollapse>
             </React.Fragment>
         )

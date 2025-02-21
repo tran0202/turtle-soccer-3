@@ -52,11 +52,11 @@ const EntrantsCollapse = (props) => {
 
 class Entrants extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         return (
             <React.Fragment>
-                <EntrantsCollapse title="Entrants" stage={stage} initialStatus="Closed">
-                    <EntrantsTable state={state} stage={stage} />
+                <EntrantsCollapse title="Entrants" stage={stage} initialStatus="Opened">
+                    <EntrantsTable stage={stage} config={config} />
                 </EntrantsCollapse>
             </React.Fragment>
         )

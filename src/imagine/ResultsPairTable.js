@@ -61,7 +61,7 @@ const ResultsPairRow = (props) => {
 
 class ResultsPairTable extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         const { groups } = stage
         return (
             <React.Fragment>
@@ -70,7 +70,7 @@ class ResultsPairTable extends React.Component {
                         <ResultsPairHeader />
                         {groups &&
                             groups.map((g, index) => {
-                                return <ResultsPairRow key={g.name} group={g} config={state.config} />
+                                return <ResultsPairRow key={g.name} group={g} config={config} />
                             })}
                     </Col>
                 </Row>

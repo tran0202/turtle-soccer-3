@@ -46,9 +46,8 @@ const PartialAdvancementCollapse = (props) => {
 
 class PartialAdvancement extends React.Component {
     render() {
-        const { state, stage, config } = this.props
-        const isImagine = state ? true : false
-        const new_config = isImagine ? { ...state.config, added_group: true } : { ...config, added_group: true, no_h2h_tooltip: true }
+        const { stage, config, isImagine } = this.props
+        const new_config = { ...config, added_group: true, no_h2h_tooltip: true }
         const pa = getPartialAdvancementRankings(stage)
         return (
             <React.Fragment>

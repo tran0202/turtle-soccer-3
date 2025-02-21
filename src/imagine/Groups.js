@@ -5,6 +5,7 @@ import GroupRankingsTable from './GroupRankingsTable'
 
 const GroupsCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
+    const { advancements } = stage
     const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
     const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
     const onEntering = () => setStatus('Opening...')
@@ -26,12 +27,14 @@ const GroupsCollapse = (props) => {
                     </Button>
                 </Col>
                 <Col sm="5">
-                    <Row>
-                        <Col className="advanced-striped">{stage.advanced_note}</Col>
-                    </Row>
-                    {stage.next_round_note && (
+                    {advancements && advancements.advanced_notes && (
                         <Row>
-                            <Col className="wild-card-striped">{stage.next_round_note}</Col>
+                            <Col className="advanced-striped">{advancements.advanced_notes}</Col>
+                        </Row>
+                    )}
+                    {advancements && advancements.wild_card_notes && (
+                        <Row>
+                            <Col className="wild-card-striped">{advancements.wild_card_notes}</Col>
                         </Row>
                     )}
                 </Col>
@@ -49,24 +52,25 @@ const GroupsCollapse = (props) => {
 
 class Groups extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
+        const { groups, type } = stage
         const title = stage.type && !stage.type.includes('_nopot') ? 'Groups' : 'Standings'
         return (
             <React.Fragment>
-                <GroupsCollapse title={title} stage={stage} initialStatus="Closed">
-                    {stage.groups &&
-                        stage.groups.map((g) => {
+                <GroupsCollapse title={title} stage={stage} initialStatus="Opened">
+                    {groups &&
+                        groups.map((g) => {
                             return (
                                 <Row key={g.name} className="mt-5 box-xl">
                                     <Col xs={{ size: 10, offset: 1 }}>
-                                        {!stage.type.includes('_nopot') && (
+                                        {!type.includes('_nopot') && (
                                             <Row className="no-gutters group-header padding-tb-sm text-start">
                                                 <Col className="col-box-5"></Col>
                                                 <Col className="col-box-75">Group {g.name}</Col>
                                             </Row>
                                         )}
-                                        <GroupRankingsTable group={g} config={state.config} />
-                                        <MatchesGroup group={g} config={state.config} />
+                                        <GroupRankingsTable group={g} config={config} />
+                                        <MatchesGroup group={g} config={config} />
                                     </Col>
                                 </Row>
                             )

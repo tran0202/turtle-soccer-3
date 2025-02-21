@@ -5,6 +5,8 @@
     "competition_id": "WC",
     "active": true,
     "points_for_win": 3,
+    "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "h2hawaygoals", "fairplaypoints", "lots"],
+    "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
     "details": {
         "host": {
             "confederations": [{ "id": "CONCACAF", "count": 3 }],
@@ -111,11 +113,13 @@
                         }
                     ],
                     "next_stage": "Third Round",
-                    "advanced_note": "Winners and runners-up advance to the third round",
-                    "advancement": [
-                        { "pos": 1, "will": "advance" },
-                        { "pos": 2, "will": "advance" }
-                    ]
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 2, "next": "advance" }
+                        ],
+                        "advanced_notes": "Group winners and runners-up advanced to Third round"
+                    }
                 },
                 {
                     "name": "Third Round",
@@ -224,14 +228,16 @@
                         }
                     ],
                     "next_stage": "Fourth Round",
-                    "advanced_note": "Winners and runners-up qualify for World Cup 2026",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "qualify" },
-                        { "pos": 3, "will": "next_round" },
-                        { "pos": 4, "will": "next_round" }
-                    ],
-                    "next_round_note": "The third and fourth-placed teams advance to the fourth round"
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "qualify" },
+                            { "pos": 3, "next": "wild_card" },
+                            { "pos": 4, "next": "wild_card" }
+                        ],
+                        "advanced_notes": "Group winners and runners-up qualified for World Cup 2026",
+                        "wild_card_notes": "The third and fourth-placed teams advanced to the Fourth round"
+                    }
                 },
                 {
                     "name": "Fourth Round",
@@ -267,7 +273,15 @@
                         { "pos": 1, "will": "qualify" },
                         { "pos": 2, "will": "next_round" }
                     ],
-                    "next_round_note": "The runners-up advance to the fifth round"
+                    "next_round_note": "The runners-up advance to the fifth round",
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "wild_card" }
+                        ],
+                        "advanced_notes": "Group winners qualified for World Cup 2026",
+                        "wild_card_notes": "Group runners-up advanced to the Fifth round"
+                    }
                 },
                 {
                     "name": "Fifth Round",
@@ -401,12 +415,14 @@
                         }
                     ],
                     "next_stage": "Second Round",
-                    "advanced_note": "Winners qualify for World Cup 2026",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round", "count": 4, "name": "runners-up" }
-                    ],
-                    "next_round_note": "The 4 best runners-up advance to the second round"
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "wild_card", "count": 4, "name": "runners-up" }
+                        ],
+                        "advanced_notes": "Group winners qualified for World Cup 2026",
+                        "wild_card_notes": "The 4 best runners-up advanced to the Second round"
+                    }
                 },
                 {
                     "name": "Second Round",
@@ -535,11 +551,13 @@
                         }
                     ],
                     "next_stage": "Third Round",
-                    "advanced_note": "Winners and runners-up advance to the third round",
-                    "advancement": [
-                        { "pos": 1, "will": "advance" },
-                        { "pos": 2, "will": "advance" }
-                    ]
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 2, "next": "advance" }
+                        ],
+                        "advanced_notes": "Group winners and runners-up advanced to the Third round"
+                    }
                 },
                 {
                     "name": "Third Round",
@@ -604,12 +622,14 @@
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
-                    "advanced_note": "Winners qualify for World Cup 2026",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round", "count": 2, "name": "runners-up" }
-                    ],
-                    "next_round_note": "The 2 best runners-up advance to the inter-confederation play-offs"
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "wild_card", "count": 2, "name": "runners-up" }
+                        ],
+                        "advanced_notes": "Group winners qualified for World Cup 2026",
+                        "wild_card_notes": "The 2 best runners-up advanced to the Inter-confederation play-offs"
+                    }
                 }
             ]
         },
@@ -824,17 +844,19 @@
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
-                    "advanced_note": "The top 6 teams qualify for World Cup 2026",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "qualify" },
-                        { "pos": 3, "will": "qualify" },
-                        { "pos": 4, "will": "qualify" },
-                        { "pos": 5, "will": "qualify" },
-                        { "pos": 6, "will": "qualify" },
-                        { "pos": 7, "will": "next_round" }
-                    ],
-                    "next_round_note": "The 7th team advance to the inter-confederation play-offs"
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "qualify" },
+                            { "pos": 3, "next": "qualify" },
+                            { "pos": 4, "next": "qualify" },
+                            { "pos": 5, "next": "qualify" },
+                            { "pos": 6, "next": "qualify" },
+                            { "pos": 7, "next": "wild_card" }
+                        ],
+                        "advanced_notes": "The top 6 teams qualified for World Cup 2026",
+                        "wild_card_notes": "The 7th team advanced to the Inter-confederation play-offs"
+                    }
                 }
             ]
         },
@@ -883,7 +905,7 @@
                     "group_count": 2,
                     "matchdays": [
                         {
-                            "name": "Matchday 3",
+                            "name": "Matchday 1",
                             "date": "2024-10-10",
                             "matches": [
                                 { "home_pos": 1, "away_pos": 4 },
@@ -891,7 +913,7 @@
                             ]
                         },
                         {
-                            "name": "Matchday 4",
+                            "name": "Matchday 2",
                             "date": "2024-11-14",
                             "matches": [
                                 { "home_pos": 3, "away_pos": 1 },
@@ -899,7 +921,7 @@
                             ]
                         },
                         {
-                            "name": "Matchday 5",
+                            "name": "Matchday 3",
                             "date": "2024-11-17",
                             "matches": [
                                 { "home_pos": 2, "away_pos": 1 },
@@ -908,11 +930,13 @@
                         }
                     ],
                     "next_stage": "Third Round",
-                    "advanced_note": "Winners and runners-up advance to the third round",
-                    "advancement": [
-                        { "pos": 1, "will": "advance" },
-                        { "pos": 2, "will": "advance" }
-                    ]
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "advance" },
+                            { "pos": 2, "next": "advance" }
+                        ],
+                        "advanced_notes": "Group winners and runners-up advanced to the Third round"
+                    }
                 },
                 {
                     "name": "Third Round",
@@ -1797,12 +1821,14 @@
                         }
                     ],
                     "next_stage": "Second Round",
-                    "advanced_note": "Winners qualify for World Cup 2026",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round" }
-                    ],
-                    "next_round_note": "Runners-up advance to the second round"
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "wild_card" }
+                        ],
+                        "advanced_notes": "Group winners qualified for World Cup 2026",
+                        "wild_card_notes": "Group runners-up advanced to the Second round"
+                    }
                 },
                 {
                     "name": "Second Round",
@@ -2326,13 +2352,15 @@
                 }
             ],
             "next_stage": "Knockout Stage",
-            "advanced_note": "Winners and runners-up advance to the knockout stage",
-            "advancement": [
-                { "pos": 1, "will": "advance" },
-                { "pos": 2, "will": "advance" },
-                { "pos": 3, "will": "next_round", "count": 8, "name": "third-placed teams" }
-            ],
-            "next_round_note": "8 best third-placed teams advance to the knockout stage"
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "wild_card", "count": 8, "name": "third-placed teams" }
+                ],
+                "advanced_notes": "Group winners and runners-up advanced to Knockout stage",
+                "wild_card_notes": "The 8 best third-placed teams advanced to Knockout stage"
+            }
         },
         {
             "name": "Knockout Stage",

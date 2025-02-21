@@ -42,7 +42,7 @@ const SeedingRow = (props) => {
 
 class SeedingTable extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         const { drawPotRows } = stage
         return (
             <React.Fragment>
@@ -52,7 +52,7 @@ class SeedingTable extends React.Component {
                             {dpr.map((col) => (
                                 <Col key={col.name}>
                                     <SeedingHeader name={col.name} />
-                                    {col.rankings && col.rankings.map((r) => <SeedingRow key={r.id} ranking={r} config={state.config} />)}
+                                    {col.rankings && col.rankings.map((r) => <SeedingRow key={r.id} ranking={r} config={config} />)}
                                 </Col>
                             ))}
                         </Row>

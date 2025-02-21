@@ -73,16 +73,16 @@ const MatchesPairRow = (props) => {
 
 class MatchesPair extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         const { groups, next_stage } = stage
-        const config = { ...state.config, next_stage }
+        const new_config = { ...config, next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-5 box-white">
                     <Col xs={{ size: 10, offset: 1 }}>
                         {groups &&
                             groups.map((g, index) => {
-                                return <MatchesPairRow key={g.name} group={g} config={config} />
+                                return <MatchesPairRow key={g.name} group={g} config={new_config} />
                             })}
                     </Col>
                 </Row>

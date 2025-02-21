@@ -44,7 +44,7 @@ const TournamentCollapse = (props) => {
 
 class Tournament extends React.Component {
     render() {
-        const { state, tournament } = this.props
+        const { tournament, config } = this.props
         const tournament_id = tournament && tournament.id ? tournament.id : ''
         const isPlayoff = tournament_id.includes('play-off')
         const showSeeding = (s) =>
@@ -63,48 +63,48 @@ class Tournament extends React.Component {
                             <TournamentCollapse key={tournament_id + s.name} title={s.name} initialStatus="Opened">
                                 {s.type && showSeeding(s) && (
                                     <React.Fragment>
-                                        <Seeding state={state} stage={s} />
+                                        <Seeding stage={s} config={config} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                     </React.Fragment>
                                 )}
                                 {s.type && showEntrants(s) && (
                                     <React.Fragment>
-                                        <Entrants state={state} stage={s} />
+                                        <Entrants stage={s} config={config} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                     </React.Fragment>
                                 )}
                                 {s.type && s.type.includes('pair_') && (
                                     <React.Fragment>
-                                        <Results state={state} stage={s} />
+                                        <Results stage={s} config={config} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                        <Matches state={state} stage={s} />
+                                        <Matches stage={s} config={config} />
                                     </React.Fragment>
                                 )}
                                 {s.type && s.type.includes('roundrobin_') && (
                                     <React.Fragment>
-                                        <Groups state={state} stage={s} />
+                                        <Groups stage={s} config={config} />
                                     </React.Fragment>
                                 )}
                                 {s.partial_advancement && (
                                     <React.Fragment>
-                                        <PartialAdvancement state={state} stage={s} />
+                                        <PartialAdvancement stage={s} config={config} isImagine={true} />
                                     </React.Fragment>
                                 )}
                                 {s.type && s.type.includes('knockout_') && (
                                     <React.Fragment>
-                                        <Brackets state={state} stage={s} />
+                                        <Brackets stage={s} config={config} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                        <Matches state={state} stage={s} />
+                                        <Matches stage={s} config={config} />
                                     </React.Fragment>
                                 )}
                             </TournamentCollapse>
                         ) : (
                             <React.Fragment key={tournament_id + s.name}>
-                                <Entrants state={state} stage={s} />
+                                <Entrants stage={s} config={config} />
                                 <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                <Brackets state={state} stage={s} />
+                                <Brackets stage={s} config={config} />
                                 <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                <Matches state={state} stage={s} />
+                                <Matches stage={s} config={config} />
                             </React.Fragment>
                         )
                     })}

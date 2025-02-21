@@ -218,7 +218,7 @@ const MatchesKnockoutRound = (props) => {
 
 class MatchesKnockout extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         const { rounds, paths } = stage
         const is_stage_qualify = stage.advancement && stage.advancement[0].will === 'qualify'
         const is_stage_next_round = !stage.advancement
@@ -226,13 +226,13 @@ class MatchesKnockout extends React.Component {
             : stage.advancement.length === 1
             ? stage.advancement[0].will === 'next_round'
             : stage.advancement[1].will === 'next_round'
-        const config = { ...state.config, year: state.tournament.year, is_stage_qualify, is_stage_next_round, next_stage: stage.next_stage }
+        const new_config = { ...config, year: config.year, is_stage_qualify, is_stage_next_round, next_stage: stage.next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-3 box-white">
                     <Col xs={{ size: 12 }}>
-                        {stage.rounds && <MatchesKnockoutRound rounds={rounds} config={config} />}
-                        {stage.paths && <MatchesKnockoutPath paths={paths} config={config} />}
+                        {stage.rounds && <MatchesKnockoutRound rounds={rounds} config={new_config} />}
+                        {stage.paths && <MatchesKnockoutPath paths={paths} config={new_config} />}
                     </Col>
                 </Row>
             </React.Fragment>

@@ -30,8 +30,7 @@ const QualifiedRow = (props) => {
 
 class QualifiedTable extends React.Component {
     render() {
-        const { state } = this.props
-        const { qualifiedTeams, config } = state
+        const { qualifiedTeams, config } = this.props
         return (
             <React.Fragment>
                 <Row className="mt-5 box-xl">

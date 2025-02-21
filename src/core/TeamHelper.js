@@ -155,7 +155,7 @@ export const getCapLastName = (name) => {
 export const getTeamName = (id, config) => {
     if (!id || !config) return
     const teams = config.competition ? config.competition.teams : config.teams
-    const team = teams.find((t) => t.id === id)
+    const team = teams && teams.find((t) => t.id === id)
     if (team) {
         return team.name
     }
@@ -167,7 +167,7 @@ export const getShortTeamName = (id, config) => {
     if (team) {
         if (team.short_name) return team.short_name
         else return team.name
-    } else {
+    } else if (!config.imagine) {
         console.log('Team error', team)
     }
 }
@@ -631,7 +631,12 @@ export const prepareOutsidePot = (stage) => {
     prepareEvenPot(stage)
     const temp = []
     stage.draw.rankings.forEach((t) => {
-        if (!stage.last_stage_winners.find((t2) => t2.id === t.id) && !stage.entrants.find((t3) => t3.id === t.id)) {
+        if (
+            stage.last_stage_winners &&
+            !stage.last_stage_winners.find((t2) => t2.id === t.id) &&
+            stage.entrants &&
+            !stage.entrants.find((t3) => t3.id === t.id)
+        ) {
             temp.push(t)
         }
     })
@@ -639,7 +644,7 @@ export const prepareOutsidePot = (stage) => {
     for (var i = 0; i < stage.outside_entrants.count; i++) {
         outside.push({ ...temp[i], draw_seed: stage.outside_entrants.name + (i + 1) })
     }
-    stage.pots.push({ name: stage.outside_entrants.name, rankings: outside })
+    stage.pots && stage.pots.push({ name: stage.outside_entrants.name, rankings: outside })
 }
 
 export const createDrawPotTable = (stage) => {
@@ -950,9 +955,9 @@ export const initEntrants = (stage) => {
 export const initEntrantsRound = (stage) => {
     if (!stage || !stage.rounds) return
     if (!stage.entrants) {
-        const stageEntrants = stage.draw.rankings.filter(
-            (t) => stage.entrants_placement[0].rankingFrom <= t.conf_rank && t.conf_rank <= stage.entrants_placement[0].rankingTo,
-        )
+        const stageEntrants =
+            stage.entrants_placement &&
+            stage.draw.rankings.filter((t) => stage.entrants_placement[0].rankingFrom <= t.conf_rank && t.conf_rank <= stage.entrants_placement[0].rankingTo)
         stage.entrants = stageEntrants
     }
     if (stage.inter_confederation_playoff) {
@@ -1053,11 +1058,12 @@ export const processPathRounds = (stage) => {
 export const updateFirstRound = (stage) => {
     if (!stage) return
     let third_place_groups = ''
-    stage.entrants.forEach((t) => {
-        if (t.entrant_pos.includes('3')) {
-            third_place_groups = third_place_groups.concat(t.entrant_pos.slice(0, 1))
-        }
-    })
+    stage.entrants &&
+        stage.entrants.forEach((t) => {
+            if (t.entrant_pos.includes('3')) {
+                third_place_groups = third_place_groups.concat(t.entrant_pos.slice(0, 1))
+            }
+        })
     stage.third_place_groups_phrase = third_place_groups
     if (stage.rounds) {
         const combination = ThirdPlaceCombination.find((c) => c.id === third_place_groups)
@@ -1234,14 +1240,14 @@ export const finishGroupStage = (stage, next_stage) => {
     if (!stage || !stage.groups || !next_stage) return
     const qualified_teams = []
     const advanced_teams = []
-    const next_rounded_teams = []
+    const wild_card_teams = []
     stage.groups.forEach((g) => {
         g.rankings.forEach((r) => {
             if (r.qualified) {
                 qualified_teams.push(r.team)
             } else if (r.advanced) {
                 advanced_teams.push({ ...r.team, entrant_pos: g.name + r.rank, pos: g.name + r.rank })
-            } else if (r.next_rounded) {
+            } else if (r.wild_card) {
                 const new_team = { ...r.team }
                 if (next_stage.type === 'knockout_final') {
                     new_team.entrant_pos = g.name + r.rank
@@ -1249,7 +1255,7 @@ export const finishGroupStage = (stage, next_stage) => {
                 }
                 delete new_team.draw_seed
                 delete new_team.draw_striped
-                next_rounded_teams.push(new_team)
+                wild_card_teams.push(new_team)
             }
         })
     })
@@ -1262,11 +1268,11 @@ export const finishGroupStage = (stage, next_stage) => {
             })
         }
     }
-    if (next_rounded_teams.length > 0) {
+    if (wild_card_teams.length > 0) {
         if (!next_stage.entrants) {
-            next_stage.entrants = next_rounded_teams
+            next_stage.entrants = wild_card_teams
         } else {
-            next_rounded_teams.forEach((t) => {
+            wild_card_teams.forEach((t) => {
                 next_stage.entrants.push(t)
             })
         }

@@ -41,7 +41,7 @@ export const ImagineCollapse = (props) => {
 }
 
 const ConfederationQualifications = (props) => {
-    const { state, qualifications } = props
+    const { qualifications, config } = props
     const [activeTab, setActiveTab] = useState('UEFA')
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
@@ -72,7 +72,7 @@ const ConfederationQualifications = (props) => {
                         <React.Fragment key={q.id}>
                             {q.id && (
                                 <TabPane tabId={q.id.replace(/ /g, '-')}>
-                                    <Tournament state={state} tournament={q} />
+                                    <Tournament tournament={q} config={config} />
                                 </TabPane>
                             )}
                         </React.Fragment>
@@ -90,22 +90,22 @@ class ImagineApp extends React.Component {
         this.state = {
             qualifiedTeams: [],
             qualifications: [],
-            tournament: {},
             config: {},
+            tournament: {},
         }
     }
 
     getData = () => {
         const teamTypeId = 'MNT'
-        const config = getImagine()
         const teamArray = getActiveTeams(teamTypeId)
+        const config = { ...getImagine(), team_type_id: teamTypeId, confederations: getConfederations(), teams: teamArray, imagine: true }
         const qualifiedTeams = getRandomHostTeamArray(teamArray, config)
         const qualifications = processSoccerTournament(teamArray, qualifiedTeams, config)
         this.setState({
+            config,
             qualifiedTeams,
             qualifications,
-            tournament: config,
-            config: { team_type_id: 'MNT', confederations: getConfederations(), teams: teamArray },
+            tournament: { stages: config.stages },
         })
     }
 
@@ -122,23 +122,22 @@ class ImagineApp extends React.Component {
     }
 
     render() {
-        const { tournament } = this.state
-        const { qualifications } = tournament
+        const { config, qualifiedTeams, qualifications, tournament } = this.state
         return (
             <Page>
                 <Container className="container-xxxl">
                     <h1 className="h1-ff5 text-center mt-3 mb-3">Imaginary World Cup 2026</h1>
 
                     <ImagineCollapse title="Qualified Teams" initialStatus="Closed">
-                        <QualifiedTable state={this.state} />
+                        <QualifiedTable qualifiedTeams={qualifiedTeams} config={config} />
                     </ImagineCollapse>
 
-                    <ImagineCollapse title="Confederation Qualifications" initialStatus="Closed">
-                        <ConfederationQualifications state={this.state} qualifications={qualifications} />
+                    <ImagineCollapse title="Confederation Qualifications" initialStatus="Opened">
+                        <ConfederationQualifications qualifications={qualifications} config={config} />
                     </ImagineCollapse>
 
-                    <ImagineCollapse title="Final" initialStatus="Opened">
-                        <Tournament state={this.state} tournament={tournament} />
+                    <ImagineCollapse title="Final" initialStatus="Closed">
+                        <Tournament tournament={tournament} config={config} />
                     </ImagineCollapse>
                 </Container>
             </Page>

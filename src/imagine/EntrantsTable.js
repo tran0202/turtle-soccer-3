@@ -38,17 +38,17 @@ const EntrantsRow = (props) => {
 
 class EntrantsTable extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         const { entrants } = stage
-        const config = {
-            ...state.config,
+        const new_config = {
+            ...config,
             last_round_rank: stage.type.includes('_lastroundrank'),
             inter_confederation_playoff: stage.inter_confederation_playoff,
         }
         return (
             <React.Fragment>
                 <EntrantsHeader />
-                {entrants && entrants.map((t) => <EntrantsRow key={t.id} team={t} config={config} />)}
+                {entrants && entrants.map((t) => <EntrantsRow key={t.id} team={t} config={new_config} />)}
             </React.Fragment>
         )
     }

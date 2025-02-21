@@ -338,12 +338,12 @@ const BracketCol = (props) => {
 }
 
 const BracketTable = (props) => {
-    const { state, stage } = props
+    const { stage, config } = props
     return (
         <Row className="no-gutters">
             {stage.rounds &&
                 stage.rounds.map((r, index) => {
-                    const roundConfig = { ...state.config, column_count: stage.rounds.length }
+                    const roundConfig = { ...config, column_count: stage.rounds.length }
                     const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
                     if (r.final) {
                         return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
@@ -363,7 +363,7 @@ const BracketTable = (props) => {
 }
 
 const BracketPath = (props) => {
-    const { state, stage } = props
+    const { stage, config } = props
     return (
         <React.Fragment>
             {stage.paths.map((p) => {
@@ -374,7 +374,7 @@ const BracketPath = (props) => {
                                 {p.name}
                             </Col>
                         </Row>
-                        <BracketTable state={state} stage={p} />
+                        <BracketTable stage={p} config={config} />
                     </React.Fragment>
                 )
             })}
@@ -384,12 +384,12 @@ const BracketPath = (props) => {
 
 class Brackets extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         return (
             <React.Fragment>
                 <BracketsCollapse title="Brackets" stage={stage} initialStatus="Closed">
-                    {stage.rounds && <BracketTable state={state} stage={stage} />}
-                    {stage.paths && <BracketPath state={state} stage={stage} />}
+                    {stage.rounds && <BracketTable stage={stage} config={config} />}
+                    {stage.paths && <BracketPath stage={stage} config={config} />}
                 </BracketsCollapse>
             </React.Fragment>
         )

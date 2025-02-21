@@ -39,12 +39,12 @@ const MatchesCollapse = (props) => {
 
 class Matches extends React.Component {
     render() {
-        const { state, stage } = this.props
+        const { stage, config } = this.props
         return (
             <React.Fragment>
-                <MatchesCollapse title="Matches" stage={stage} initialStatus="Closed">
-                    {stage.type && stage.type.includes('pair') && <MatchesPair state={state} stage={stage} />}
-                    {stage.type && stage.type.includes('knockout') && <MatchesKnockout state={state} stage={stage} />}
+                <MatchesCollapse title="Matches" stage={stage} initialStatus="Opened">
+                    {stage.type && stage.type.includes('pair') && <MatchesPair stage={stage} config={config} />}
+                    {stage.type && stage.type.includes('knockout') && <MatchesKnockout stage={stage} config={config} />}
                 </MatchesCollapse>
             </React.Fragment>
         )
