@@ -176,8 +176,7 @@ const BracketHook2 = (props) => {
 
 const BracketBox = (props) => {
     const { match, colIndex, lastBox, config } = props
-    const stadiumStr = match.stadium && match.city ? ' | ' + match.stadium + ', ' + match.city : ''
-    const stadiumStr2 = stadiumStr.length >= 45 ? stadiumStr.slice(0, 41) + '...' : stadiumStr
+    const stadiumStr = match.stadium && match.city ? match.stadium + ', ' + match.city : ''
     const homeTeamName = getShortTeamName(match.home_team, config)
     const awayTeamName = getShortTeamName(match.away_team, config)
     const homeTeamFlag = getBracketTeamFlagId(match.home_team, config)
@@ -190,23 +189,31 @@ const BracketBox = (props) => {
     const awayPenaltyScore = match.away_penalty_score ? match.away_penalty_score : 0
     const homeHighlight = isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
     const awayHighlight = !isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
+    const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
+    const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
+    const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
+    const away_runnerup_striped = match.final && isHomeWinMatch(match) ? 'silver' : ''
+    const home_thirdplace_striped = match.third_place && isHomeWinMatch(match) ? 'bronze' : ''
+    const away_thirdplace_striped = match.third_place && !isHomeWinMatch(match) ? 'bronze' : ''
     return (
         <React.Fragment>
             <Row className="no-gutters box-sm bracket-box-height">
                 <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
                     <Row className="no-gutters">
-                        <Col className="padding-left-xs">
+                        <Col xs={{ size: 11, offset: 1 }}>
                             <span className="box-time d-none d-lg-block">
                                 <React.Fragment>
-                                    {moment(match.date).format('MMM D, YYYY')}
+                                    {moment(match.date).format('MMMM D, YYYY')}
                                     {match.time ? ' @' : ''} {match.time}
-                                    {stadiumStr2}
                                 </React.Fragment>
                             </span>
                         </Col>
                     </Row>
                 </Col>
-                <Col sm="12" className="bracket-half-box-height no-padding-lr border-bottom-gray5">
+                <Col
+                    sm="12"
+                    className={`bracket-half-box-height no-padding-lr border-bottom-gray5 ${home_champion_striped}${home_runnerup_striped}${home_thirdplace_striped}`}
+                >
                     <Row className="no-gutters h3-ff3">
                         <Col xs={{ size: 2 }} className="brk-halfbox-ml">
                             {homeTeamFlag}
@@ -238,7 +245,7 @@ const BracketBox = (props) => {
                         </Col>
                     </Row>
                 </Col>
-                <Col sm="12" className="bracket-half-box-height no-padding-lr">
+                <Col sm="12" className={`bracket-half-box-height no-padding-lr ${away_champion_striped}${away_runnerup_striped}${away_thirdplace_striped}`}>
                     <Row className="no-gutters h4-ff3">
                         <Col xs={{ size: 2 }} className="brk-halfbox-ml">
                             {awayTeamFlag}
@@ -267,6 +274,15 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm="12" className="bracket-box-header-height border-top-gray5">
+                    <Row className="no-gutters">
+                        <Col xs={{ size: 11, offset: 1 }}>
+                            <span className="box-time d-none d-lg-block">
+                                <React.Fragment>{stadiumStr}</React.Fragment>
+                            </span>
                         </Col>
                     </Row>
                 </Col>

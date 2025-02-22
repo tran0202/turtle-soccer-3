@@ -1510,7 +1510,7 @@
     height: 68px;
 }
 .bracket-box-height {
-    height: 120px;
+    height: 140px;
 }
 .bracket-box-header-height {
     height: 20px;
@@ -1519,55 +1519,55 @@
     height: 50px;
 }
 .bracket-hook10 {
-    height: 140px;
+    height: 161px;
     border-top: 1px solid #5c6066;
     border-right: 1px solid #5c6066;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook11 {
-    height: 280px;
+    height: 321px;
     border-top: 1px solid #5c6066;
     border-right: 1px solid #5c6066;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook12 {
-    height: 560px;
+    height: 641px;
     border-top: 1px solid #5c6066;
     border-right: 1px solid #5c6066;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook13 {
-    height: 1119px;
+    height: 1290px;
     border-top: 1px solid #5c6066;
     border-right: 1px solid #5c6066;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook200 {
-    height: 218px;
+    height: 228px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook201 {
-    height: 280px;
+    height: 320px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook210 {
-    height: 358px;
+    height: 388px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook211 {
-    height: 560px;
+    height: 640px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook220 {
-    height: 638px;
+    height: 708px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook221 {
-    height: 1119px;
+    height: 1289px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-hook230 {
-    height: 1198px;
+    height: 1348px;
     border-bottom: 1px solid #5c6066;
 }
 .bracket-gap-height-00 {
@@ -1580,43 +1580,43 @@
     height: 148px;
 }
 .bracket-hook1-gap-height-01 {
-    height: 140px;
+    height: 159px;
 }
 .bracket-gap-height-10 {
-    height: 80px;
+    height: 89px;
 }
 .bracket-gap-height-11 {
-    height: 160px;
+    height: 180px;
 }
 .bracket-hook1-gap-height-10 {
-    height: 218px;
+    height: 227px;
 }
 .bracket-hook1-gap-height-11 {
-    height: 280px;
+    height: 319px;
 }
 .bracket-gap-height-20 {
-    height: 220px;
+    height: 249px;
 }
 .bracket-gap-height-21 {
-    height: 440px;
-}
-.bracket-hook1-gap-height-20 {
-    height: 358px;
-}
-.bracket-hook1-gap-height-21 {
-    height: 560px;
-}
-.bracket-gap-height-30 {
     height: 500px;
 }
+.bracket-hook1-gap-height-20 {
+    height: 387px;
+}
+.bracket-hook1-gap-height-21 {
+    height: 639px;
+}
+.bracket-gap-height-30 {
+    height: 569px;
+}
 .bracket-gap-height-31 {
-    height: 999px;
+    height: 1149px;
 }
 .bracket-hook1-gap-height-30 {
-    height: 638px;
+    height: 707px;
 }
 .bracket-gap-height-40 {
-    height: 1060px;
+    height: 1209px;
 }
 
 /* ========== Miscelaneous ========== */
