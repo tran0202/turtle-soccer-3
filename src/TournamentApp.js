@@ -51,7 +51,7 @@ const TournamentTabs = (props) => {
                         return (
                             <TabPane key={s.name} tabId={s.name}>
                                 {s.type === 'roundrobin_final' && <RoundRobin stage={s} config={config} />}
-                                {s.type === 'knockout' && <Knockout stage={s} config={config} />}
+                                {s.type === 'knockout_' && <Knockout stage={s} config={config} />}
                             </TabPane>
                         )
                     })}

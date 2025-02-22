@@ -125,10 +125,10 @@ export const processStage = (stage, config) => {
         // createGroupMatches(stage)
         calculateGroupRankings(stage, config)
     }
-    // if (stage.type.includes('knockout_')) {
-    //     initEntrants(stage)
-    //     processPathRounds(stage)
-    // }
+    if (stage.type.includes('knockout_')) {
+        //     initEntrants(stage)
+        processPathRounds(stage)
+    }
 }
 
 export const processGroups = (stage, config) => {
@@ -168,6 +168,69 @@ export const createGroupMatches = (stage) => {
         })
     })
     // overwriteGroup(stage.groups[0])
+}
+
+export const processPathRounds = (stage) => {
+    if (!stage) return
+    if (stage.rounds) {
+        // if (stage.third_place_groups) {
+        //     updateFirstRound(stage)
+        // }
+        processRounds(stage, stage)
+    }
+    if (stage.paths) {
+        stage.paths.forEach((p) => {
+            processRounds(p, stage)
+        })
+    }
+}
+
+export const processRounds = (path, stage) => {
+    if (!stage || !path || !path.rounds) return
+    path.rounds.forEach((r) => {
+        // r.matches.forEach((m) => {
+        //     populateMatch(m, stage.entrants)
+        //     getKnockoutScore(m)
+        // })
+        sortBracketOrder(r)
+        createMatchdays(r)
+        // finishRound(r, path, stage)
+    })
+}
+
+export const sortBracketOrder = (round) => {
+    if (!round || !round.matches) return
+    const bracketMatches = []
+    round.matches.forEach((m) => {
+        const m2 = { ...m }
+        bracketMatches.push(m2)
+    })
+    bracketMatches.sort((a, b) => {
+        if (a.bracket_order < b.bracket_order) {
+            return -1
+        } else if (a.bracket_order > b.bracket_order) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+    round.bracketMatches = round.final ? round.matches : bracketMatches
+}
+
+export const createMatchdays = (round) => {
+    if (!round || !round.matches) return
+    const matchdays = []
+    round.matches.forEach((m) => {
+        const final = m.final
+        const third_place = m.third_place
+        const foundMatchday = matchdays.find((md) => md.date === m.date)
+        if (!foundMatchday) {
+            matchdays.push({ date: m.date, final, third_place, matches: [m] })
+        } else {
+            foundMatchday.matches.push(m)
+        }
+    })
+    round.matchdays = matchdays
 }
 
 export const getPreviousTournament = (tournaments, current_id) => {

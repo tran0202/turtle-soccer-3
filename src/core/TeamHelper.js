@@ -162,8 +162,9 @@ export const getTeamName = (id, config) => {
 }
 
 export const getShortTeamName = (id, config) => {
-    if (!id || !config || !config.teams) return
-    const team = config.teams.find((t) => t.id === id)
+    if (!id || !config) return
+    const teams = config.competition ? config.competition.teams : config.teams
+    const team = teams.find((t) => t.id === id)
     if (team) {
         if (team.short_name) return team.short_name
         else return team.name
@@ -277,7 +278,8 @@ export const getPlayerFlagId = (club_id, club_id2, nation_id, config) => {
 
 export const getBracketTeamFlagId = (id, config) => {
     if (!id || !config) return
-    const team = config.teams.find((t) => t.id === id)
+    const teams = config.competition ? config.competition.teams : config.teams
+    const team = teams.find((t) => t.id === id)
     if (!team) return
     return (
         <React.Fragment>
@@ -1085,6 +1087,7 @@ export const processRounds = (path, stage) => {
             populateMatch(m, stage.entrants)
             getKnockoutScore(m)
         })
+        sortBracketOrder(r)
         createMatchdays(r)
         finishRound(r, path, stage)
     })
@@ -1100,6 +1103,25 @@ export const populateMatch = (match, entrants) => {
     if (awayTeam) {
         match.away_team = awayTeam.id
     }
+}
+
+export const sortBracketOrder = (round) => {
+    if (!round || !round.matches) return
+    const bracketMatches = []
+    round.matches.forEach((m) => {
+        const m2 = { ...m }
+        bracketMatches.push(m2)
+    })
+    bracketMatches.sort((a, b) => {
+        if (a.bracket_order < b.bracket_order) {
+            return -1
+        } else if (a.bracket_order > b.bracket_order) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+    round.bracketMatches = round.final ? round.matches : bracketMatches
 }
 
 export const createMatchdays = (round) => {

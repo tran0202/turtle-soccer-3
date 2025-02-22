@@ -5,7 +5,7 @@ import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
 import { AetTooltip } from '../core/TooltipHelper'
 
 const MatchRow = (props) => {
-    const { m, round, config } = props
+    const { m, round, config, last } = props
     const isByeMatch = (m.home_team === 'BYE') | (m.away_team === 'BYE')
     const pairHomeHighlight = isHomeWinMatch(m) ? 'team-name-win' : 'team-name-lose'
     const pairAwayHighlight = !isHomeWinMatch(m) ? 'team-name-win' : 'team-name-lose'
@@ -59,7 +59,11 @@ const MatchRow = (props) => {
         !isByeMatch && (
             <React.Fragment key={m.id}>
                 <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
-                    <Col className="col-box-14"></Col>
+                    <Col className="col-box-14 font-14">
+                        {m.time ? ' @' : ''} {m.time}
+                        <br />
+                        {m.stadium && m.city ? m.stadium + ', ' + m.city : ''}
+                    </Col>
                     <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{homeTeamName}</Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
@@ -98,7 +102,7 @@ const MatchRow = (props) => {
                     </Row>
                 )}
 
-                <Row className="border-bottom-gray5 margin-left-sm margin-top-sm" />
+                {!last && <Row className="border-bottom-gray5 margin-left-sm margin-top-sm" />}
             </React.Fragment>
         )
     )
@@ -107,75 +111,82 @@ const MatchRow = (props) => {
 const MatchesKnockoutRow = (props) => {
     const { round, config } = props
     return (
-        <React.Fragment>
-            <Row>
-                <Col>
-                    <div className="h2-ff1 margin-top-md">{round.name}</div>
-                </Col>
-            </Row>
-            {round.matchdays &&
-                round.matchdays.map((md) => {
-                    return (
-                        <React.Fragment key={md.date}>
-                            <Row>
-                                <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
-                                    {moment(md.date).format('dddd, MMMM D, YYYY')}
-                                </Col>
-                            </Row>
-                            {md.matches &&
-                                md.matches.map((m) => {
-                                    return <MatchRow key={m.id} m={m} round={round} config={config} />
-                                })}
-                        </React.Fragment>
-                    )
-                })}
-        </React.Fragment>
+        <Row>
+            <Col className="mt-3 round-box">
+                <Row>
+                    <Col>
+                        <div className="h2-ff1">{round.name}</div>
+                    </Col>
+                </Row>
+                {round.matchdays &&
+                    round.matchdays.map((md) => {
+                        return (
+                            <React.Fragment key={md.date}>
+                                <Row>
+                                    <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
+                                        {moment(md.date).format('dddd, MMMM D, YYYY')}
+                                    </Col>
+                                </Row>
+                                {md.matches &&
+                                    md.matches.map((m, index) => {
+                                        const lastMatch = index === md.matches.length - 1
+                                        return <MatchRow key={index} m={m} round={round} config={config} last={lastMatch} />
+                                    })}
+                            </React.Fragment>
+                        )
+                    })}
+            </Col>
+        </Row>
     )
 }
 
 const MatchesKnockoutRowFinal = (props) => {
     const { round, config } = props
-    const final = round.matchdays.find((md) => md.final)
-    const thirdPlace = round.matchdays.find((md) => md.third_place)
+    const final = round.matchdays && round.matchdays.find((md) => md.final)
+    const thirdPlace = round.matchdays && round.matchdays.find((md) => md.third_place)
     return (
-        <React.Fragment>
-            {thirdPlace && (
-                <React.Fragment>
-                    <Row>
-                        <Col>
-                            <div className="h2-ff1 margin-top-md">Third place</div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
-                            {moment(thirdPlace.date).format('dddd, MMMM D, YYYY')}
-                        </Col>
-                    </Row>
-                    {thirdPlace.matches &&
-                        thirdPlace.matches.map((m) => {
-                            return <MatchRow key={m.id} m={m} round={round} config={config} />
-                        })}
-                </React.Fragment>
-            )}
-            {final && (
-                <React.Fragment>
-                    <Row>
-                        <Col>
-                            <div className="h2-ff1 margin-top-md">{round.name}</div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
-                            {moment(final.date).format('dddd, MMMM D, YYYY')}
-                        </Col>
-                    </Row>
-                    {final.matches &&
-                        final.matches.map((m) => {
-                            return <MatchRow key={m.id} m={m} round={round} config={config} />
-                        })}
-                </React.Fragment>
-            )}
-        </React.Fragment>
+        <Row>
+            <Col className="mt-3 round-box">
+                {thirdPlace && (
+                    <React.Fragment>
+                        <Row>
+                            <Col>
+                                <div className="h2-ff1 margin-top-md">Third place</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
+                                {moment(thirdPlace.date).format('dddd, MMMM D, YYYY')}
+                            </Col>
+                        </Row>
+                        {thirdPlace.matches &&
+                            thirdPlace.matches.map((m, index) => {
+                                const lastMatch = index === thirdPlace.matches.length - 1
+                                return <MatchRow key={index} m={m} round={round} config={config} last={lastMatch} />
+                            })}
+                    </React.Fragment>
+                )}
+                {final && (
+                    <React.Fragment>
+                        <Row>
+                            <Col>
+                                <div className="h2-ff1 margin-top-md">{round.name}</div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
+                                {moment(final.date).format('dddd, MMMM D, YYYY')}
+                            </Col>
+                        </Row>
+                        {final.matches &&
+                            final.matches.map((m, index) => {
+                                const lastMatch = index === final.matches.length - 1
+                                return <MatchRow key={index} m={m} round={round} config={config} last={lastMatch} />
+                            })}
+                    </React.Fragment>
+                )}
+            </Col>
+        </Row>
     )
 }
 
@@ -229,7 +240,7 @@ class MatchesKnockout extends React.Component {
         const new_config = { ...config, year: config.year, is_stage_qualify, is_stage_next_round, next_stage: stage.next_stage }
         return (
             <React.Fragment>
-                <Row className="mt-3 box-white">
+                <Row className="mt-3">
                     <Col xs={{ size: 12 }}>
                         {stage.rounds && <MatchesKnockoutRound rounds={rounds} config={new_config} />}
                         {stage.paths && <MatchesKnockoutPath paths={paths} config={new_config} />}

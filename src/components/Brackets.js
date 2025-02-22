@@ -42,10 +42,10 @@ const BracketFinalCol = (props) => {
     const { round, config } = props
     const { column_count } = config
     const colClassname = column_count === 5 ? 'col-brk-16' : 'col-brk-22'
-    const final = round.matches.find((m) => m.final)
-    const thirdPlace = round.matches.find((m) => m.third_place)
-    const finalRound = !round.third_place ? round : { ...round, matches: [final] }
-    const thirdPlaceRound = !round.third_place ? round : { ...round, name: 'Third place', matches: [thirdPlace] }
+    const final = round.bracketMatches.find((m) => m.final)
+    const thirdPlace = round.bracketMatches.find((m) => m.third_place)
+    const finalRound = !round.third_place ? round : { ...round, bracketMatches: [final] }
+    const thirdPlaceRound = !round.third_place ? round : { ...round, name: 'Third place', bracketMatches: [thirdPlace] }
     return (
         <Col className={colClassname}>
             {column_count === 2 && <Row className="bracket-gap-height-10"></Row>}
@@ -176,6 +176,8 @@ const BracketHook2 = (props) => {
 
 const BracketBox = (props) => {
     const { match, colIndex, lastBox, config } = props
+    const stadiumStr = match.stadium && match.city ? ' | ' + match.stadium + ', ' + match.city : ''
+    const stadiumStr2 = stadiumStr.length >= 45 ? stadiumStr.slice(0, 41) + '...' : stadiumStr
     const homeTeamName = getShortTeamName(match.home_team, config)
     const awayTeamName = getShortTeamName(match.away_team, config)
     const homeTeamFlag = getBracketTeamFlagId(match.home_team, config)
@@ -193,9 +195,13 @@ const BracketBox = (props) => {
             <Row className="no-gutters box-sm bracket-box-height">
                 <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
                     <Row className="no-gutters">
-                        <Col xs={{ size: 11, offset: 1 }}>
+                        <Col className="padding-left-xs">
                             <span className="box-time d-none d-lg-block">
-                                <React.Fragment>{moment(match.date).format('MMMM D, YYYY')}</React.Fragment>
+                                <React.Fragment>
+                                    {moment(match.date).format('MMM D, YYYY')}
+                                    {match.time ? ' @' : ''} {match.time}
+                                    {stadiumStr2}
+                                </React.Fragment>
                             </span>
                         </Col>
                     </Row>
@@ -311,8 +317,8 @@ const BracketColInner = (props) => {
             <Row className="no-margin-lr">
                 <Col>
                     <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
-                    {round.matches &&
-                        round.matches.map((m, index) => {
+                    {round.bracketMatches &&
+                        round.bracketMatches.map((m, index) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
                             const lastBox = round.matches ? index === round.matches.length - 1 : false
                             return !bye ? (
@@ -384,13 +390,21 @@ const BracketPath = (props) => {
 
 class Brackets extends React.Component {
     render() {
-        const { stage, config } = this.props
+        const { stage, config, isImagine } = this.props
         return (
             <React.Fragment>
-                <BracketsCollapse title="Brackets" stage={stage} initialStatus="Closed">
-                    {stage.rounds && <BracketTable stage={stage} config={config} />}
-                    {stage.paths && <BracketPath stage={stage} config={config} />}
-                </BracketsCollapse>
+                {isImagine && (
+                    <BracketsCollapse title="Brackets" stage={stage} initialStatus="Opened">
+                        {stage.rounds && <BracketTable stage={stage} config={config} />}
+                        {stage.paths && <BracketPath stage={stage} config={config} />}
+                    </BracketsCollapse>
+                )}
+                {!isImagine && (
+                    <React.Fragment>
+                        {stage.rounds && <BracketTable stage={stage} config={config} />}
+                        {stage.paths && <BracketPath stage={stage} config={config} />}
+                    </React.Fragment>
+                )}
             </React.Fragment>
         )
     }

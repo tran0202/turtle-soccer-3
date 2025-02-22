@@ -92,7 +92,7 @@ class ImagineTournament extends React.Component {
                                 )}
                                 {s.type && s.type.includes('knockout_') && (
                                     <React.Fragment>
-                                        <Brackets stage={s} config={config} />
+                                        <Brackets stage={s} config={config} isImagine={true} />
                                         <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
                                         <Matches stage={s} config={config} />
                                     </React.Fragment>
