@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
+import { AetTooltip, PenaltyTooltip, GoldenGoalTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -226,6 +226,7 @@ const BracketBox = (props) => {
                                     <AetTooltip target="aetTooltip" anchor="(aet)" />
                                 </React.Fragment>
                             )}
+                            {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {homePenaltyScore > awayPenaltyScore && (
                                 <React.Fragment>
                                     {' '}
@@ -258,6 +259,7 @@ const BracketBox = (props) => {
                                     <AetTooltip target="aetTooltip" anchor="(aet)" />
                                 </React.Fragment>
                             )}
+                            {match.away_golden_goal && <GoldenGoalTooltip target={`${match.away_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {awayPenaltyScore > homePenaltyScore && (
                                 <React.Fragment>
                                     {' '}

@@ -666,7 +666,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Round of 16",
@@ -703,6 +703,7 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "2002-06-16",
                             "time": "15:30",
                             "stadium": "Ōita Dome",
@@ -764,6 +765,7 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2002-06-18",
                             "time": "20:30",
                             "stadium": "Daejeon World Cup Stadium",
@@ -822,6 +824,7 @@
                             "away_score": 0,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "2002-06-22",
                             "time": "20:30",
                             "stadium": "Osaka Nagai Stadium",
@@ -860,8 +863,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "KOR",
@@ -871,14 +877,9 @@
                             "date": "2002-06-29",
                             "time": "20:00",
                             "stadium": "Daegu World Cup Stadium",
-                            "city": "Daegu"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Daegu",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GER",
                             "away_team": "BRA",
@@ -887,7 +888,8 @@
                             "date": "2002-06-30",
                             "time": "20:00",
                             "stadium": "International Stadium Yokohama",
-                            "city": "Yokohama"
+                            "city": "Yokohama",
+                            "final": true
                         }
                     ]
                 }

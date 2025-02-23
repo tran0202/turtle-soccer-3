@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip } from '../core/TooltipHelper'
+import { AetTooltip, GoldenGoalTooltip } from '../core/TooltipHelper'
 
 const MatchRow = (props) => {
     const { m, round, config, last } = props
@@ -68,6 +68,7 @@ const MatchRow = (props) => {
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
                         {matchHomeScore} - {matchAwayScore} {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                        {(m.home_golden_goal || m.away_golden_goal) && <GoldenGoalTooltip target="goldenGoalTooltip" anchor="(gg)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
                     <Col className={`col-box-25 ${pairAwayHighlight}`}>{awayTeamName}</Col>

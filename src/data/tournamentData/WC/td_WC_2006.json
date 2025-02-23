@@ -666,7 +666,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Round of 16",
@@ -863,8 +863,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GER",
@@ -874,14 +877,9 @@
                             "date": "2006-07-08",
                             "time": "21:00",
                             "stadium": "Mercedes-Benz Arena",
-                            "city": "Stuttgart"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Stuttgart",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ITA",
                             "away_team": "FRA",
@@ -894,7 +892,8 @@
                             "date": "2006-07-09",
                             "time": "20:00",
                             "stadium": "Olympiastadion",
-                            "city": "Berlin"
+                            "city": "Berlin",
+                            "final": true
                         }
                     ]
                 }
