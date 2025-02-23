@@ -355,7 +355,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -446,8 +446,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URU",
@@ -457,14 +460,9 @@
                             "date": "1970-06-20",
                             "time": "16:00",
                             "stadium": "Estadio Azteca",
-                            "city": "Mexico City"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Mexico City",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA",
                             "away_team": "ITA",
@@ -473,7 +471,8 @@
                             "date": "1970-06-21",
                             "time": "12:00",
                             "stadium": "Estadio Azteca",
-                            "city": "Mexico City"
+                            "city": "Mexico City",
+                            "final": true
                         }
                     ]
                 }

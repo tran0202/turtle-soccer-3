@@ -39,9 +39,8 @@ export const PenaltyTooltip = (props) => {
 }
 
 export const ReplayTooltip = (props) => {
-    const { target, anchor } = props
-    const content = 'Replay'
-    return <TopTooltip target={target} content={content} anchor={anchor} />
+    const { target, notes, anchor } = props
+    return <TopTooltip target={target} content={notes} anchor={anchor} />
 }
 
 export const CoinTossTooltip = (props) => {

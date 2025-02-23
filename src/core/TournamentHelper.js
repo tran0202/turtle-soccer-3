@@ -192,18 +192,27 @@ export const processRounds = (path, stage) => {
         //     populateMatch(m, stage.entrants)
         //     getKnockoutScore(m)
         // })
-        sortBracketOrder(r)
+        prepareBracketOrder(r)
         createMatchdays(r)
         // finishRound(r, path, stage)
     })
 }
 
-export const sortBracketOrder = (round) => {
+export const prepareBracketOrder = (round) => {
     if (!round || !round.matches) return
     const bracketMatches = []
     round.matches.forEach((m) => {
-        const m2 = { ...m }
-        bracketMatches.push(m2)
+        if (!m.replay) {
+            if (m.replay_required) {
+                const foundReplay = round.matches.find((m2) => m2.home_team === m.home_team && m2.away_team === m.away_team && m2.replay)
+                if (foundReplay) {
+                    m.home_replay_score = foundReplay.home_score
+                    m.away_replay_score = foundReplay.away_score
+                }
+            }
+            const m2 = { ...m }
+            bracketMatches.push(m2)
+        }
     })
     bracketMatches.sort((a, b) => {
         if (a.bracket_order < b.bracket_order) {
@@ -223,11 +232,16 @@ export const createMatchdays = (round) => {
     round.matches.forEach((m) => {
         const final = m.final
         const third_place = m.third_place
-        const foundMatchday = matchdays.find((md) => md.date === m.date)
-        if (!foundMatchday) {
-            matchdays.push({ date: m.date, final, third_place, matches: [m] })
+        const replay = m.replay
+        if (!final && !third_place) {
+            const foundMatchday = matchdays.find((md) => md.date === m.date)
+            if (!foundMatchday) {
+                matchdays.push({ date: m.date, replay, matches: [m] })
+            } else {
+                foundMatchday.matches.push(m)
+            }
         } else {
-            foundMatchday.matches.push(m)
+            matchdays.push({ date: m.date, final, third_place, matches: [m] })
         }
     })
     round.matchdays = matchdays

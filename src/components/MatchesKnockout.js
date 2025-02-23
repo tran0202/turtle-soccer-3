@@ -2,13 +2,13 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, GoldenGoalTooltip } from '../core/TooltipHelper'
+import { AetTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const MatchRow = (props) => {
     const { m, round, config, last } = props
     const isByeMatch = (m.home_team === 'BYE') | (m.away_team === 'BYE')
-    const pairHomeHighlight = isHomeWinMatch(m) ? 'team-name-win' : 'team-name-lose'
-    const pairAwayHighlight = !isHomeWinMatch(m) ? 'team-name-win' : 'team-name-lose'
+    const pairHomeHighlight = isHomeWinMatch(m) || m.replay_required ? 'team-name-win' : 'team-name-lose'
+    const pairAwayHighlight = !isHomeWinMatch(m) || m.replay_required ? 'team-name-win' : 'team-name-lose'
     const homeTeamName = getTeamName(m.home_team, config)
     const awayTeamName = getTeamName(m.away_team, config)
     const matchHomeExtraScore = m.home_extra_score ? m.home_extra_score : 0
@@ -67,8 +67,15 @@ const MatchRow = (props) => {
                     <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{homeTeamName}</Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
-                        {matchHomeScore} - {matchAwayScore} {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                        {!m.home_walkover && !m.away_walkover && (
+                            <React.Fragment>
+                                {matchHomeScore} - {matchAwayScore}
+                            </React.Fragment>
+                        )}{' '}
+                        {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                         {(m.home_golden_goal || m.away_golden_goal) && <GoldenGoalTooltip target="goldenGoalTooltip" anchor="(gg)" />}
+                        {(m.home_walkover || m.away_walkover) && <WalkoverTooltip target="walkoverTooltip" content="Walkover" anchor="(w/o)" />}
+                        {m.replay_required && <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayTooltip`} notes="Replay Required" anchor="(r)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
                     <Col className={`col-box-25 ${pairAwayHighlight}`}>{awayTeamName}</Col>
@@ -76,8 +83,12 @@ const MatchRow = (props) => {
                 {m.home_extra_score !== undefined && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>
-                            {teamWonLine}
-                            {extraTimeLine}
+                            {!m.replay_required && (
+                                <React.Fragment>
+                                    {teamWonLine}
+                                    {extraTimeLine}
+                                </React.Fragment>
+                            )}
                             {penaltyLine}
                         </Col>
                     </Row>
@@ -126,6 +137,7 @@ const MatchesKnockoutRow = (props) => {
                                 <Row>
                                     <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
                                         {moment(md.date).format('dddd, MMMM D, YYYY')}
+                                        {md.replay && <React.Fragment> ::: Replay</React.Fragment>}
                                     </Col>
                                 </Row>
                                 {md.matches &&

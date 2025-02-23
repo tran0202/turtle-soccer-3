@@ -666,7 +666,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Round of 16",
@@ -703,6 +703,7 @@
                             "away_score": 0,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "1998-06-28",
                             "time": "16:30",
                             "stadium": "Stade Bollaert-Delelis",
@@ -861,8 +862,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NED",
@@ -872,14 +876,9 @@
                             "date": "1998-07-11",
                             "time": "21:00",
                             "stadium": "Parc des Princes",
-                            "city": "Paris"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Paris",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA",
                             "away_team": "FRA",
@@ -888,7 +887,8 @@
                             "date": "1998-07-12",
                             "time": "21:00",
                             "stadium": "Stade de France",
-                            "city": "Saint-Denis"
+                            "city": "Saint-Denis",
+                            "final": true
                         }
                     ]
                 }

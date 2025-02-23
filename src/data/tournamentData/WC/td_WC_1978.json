@@ -521,11 +521,14 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -535,14 +538,9 @@
                             "date": "1978-06-24",
                             "time": "15:00",
                             "stadium": "Estadio Monumental",
-                            "city": "Buenos Aires"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Buenos Aires",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ARG",
                             "away_team": "NED",
@@ -553,7 +551,8 @@
                             "date": "1978-06-25",
                             "time": "15:00",
                             "stadium": "Estadio Monumental",
-                            "city": "Buenos Aires"
+                            "city": "Buenos Aires",
+                            "final": true
                         }
                     ]
                 }

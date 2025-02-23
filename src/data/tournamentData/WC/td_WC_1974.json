@@ -521,11 +521,14 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -535,14 +538,9 @@
                             "date": "1974-07-06",
                             "time": "16:00",
                             "stadium": "Olympiastadion",
-                            "city": "Munich"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Munich",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NED",
                             "away_team": "GER-1949-1990",
@@ -551,7 +549,8 @@
                             "date": "1974-07-07",
                             "time": "16:00",
                             "stadium": "Olympiastadion",
-                            "city": "Munich"
+                            "city": "Munich",
+                            "final": true
                         }
                     ]
                 }

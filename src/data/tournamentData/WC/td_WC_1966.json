@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -427,8 +427,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "POR",
@@ -438,14 +441,9 @@
                             "date": "1966-07-28",
                             "time": "19:30",
                             "stadium": "Wembley Stadium",
-                            "city": "London"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "London",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ENG",
                             "away_team": "GER-1949-1990",
@@ -456,7 +454,8 @@
                             "date": "1966-07-30",
                             "time": "15:00",
                             "stadium": "Wembley Stadium",
-                            "city": "London"
+                            "city": "London",
+                            "final": true
                         }
                     ]
                 }

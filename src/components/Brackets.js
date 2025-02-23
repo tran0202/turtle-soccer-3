@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, PenaltyTooltip, GoldenGoalTooltip } from '../core/TooltipHelper'
+import { AetTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -219,23 +219,15 @@ const BracketBox = (props) => {
                             {homeTeamFlag}
                         </Col>
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${homeHighlight}`}>
-                            {homeTeamName}
-                            {homeExtraScore > awayExtraScore && (
-                                <React.Fragment>
-                                    {' '}
-                                    <AetTooltip target="aetTooltip" anchor="(aet)" />
-                                </React.Fragment>
-                            )}
+                            {homeTeamName} {homeExtraScore > awayExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
-                            {homePenaltyScore > awayPenaltyScore && (
-                                <React.Fragment>
-                                    {' '}
-                                    <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
-                                </React.Fragment>
+                            {homePenaltyScore > awayPenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
+                            {match.replay_required && (
+                                <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayBracketTooltip`} notes="Replay" anchor="(r)" />
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
-                            {homeScore}
+                            {!match.home_walkover && !match.away_walkover && <React.Fragment>{homeScore}</React.Fragment>}
                             {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
                                 <React.Fragment>
                                     {' ('}
@@ -243,6 +235,14 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
+                            {match.home_replay_score && (
+                                <React.Fragment>
+                                    {' ('}
+                                    {match.home_replay_score}
+                                    {')'}
+                                </React.Fragment>
+                            )}
+                            {match.home_walkover && <WalkoverTooltip target="walkoverTooltip" content="Walkover" anchor="(w/o)" />}
                         </Col>
                     </Row>
                 </Col>
@@ -268,7 +268,7 @@ const BracketBox = (props) => {
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
-                            {awayScore}
+                            {!match.home_walkover && !match.away_walkover && <React.Fragment>{awayScore}</React.Fragment>}
                             {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
                                 <React.Fragment>
                                     {' ('}
@@ -276,6 +276,14 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
+                            {match.away_replay_score && (
+                                <React.Fragment>
+                                    {' ('}
+                                    {match.away_replay_score}
+                                    {')'}
+                                </React.Fragment>
+                            )}
+                            {match.away_walkover && <WalkoverTooltip target="walkoverTooltip" content="Walkover" anchor="(w/o)" />}
                         </Col>
                     </Row>
                 </Col>
@@ -338,7 +346,7 @@ const BracketColInner = (props) => {
                     {round.bracketMatches &&
                         round.bracketMatches.map((m, index) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
-                            const lastBox = round.matches ? index === round.matches.length - 1 : false
+                            const lastBox = round.bracketMatches ? index === round.bracketMatches.length - 1 : false
                             return !bye ? (
                                 <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
                             ) : (
@@ -368,7 +376,7 @@ const BracketTable = (props) => {
             {stage.rounds &&
                 stage.rounds.map((r, index) => {
                     const roundConfig = { ...config, column_count: stage.rounds.length }
-                    const hookCount = r.matches.length % 2 === 0 ? r.matches.length / 2 : (r.matches.length - 1) / 2
+                    const hookCount = r.bracketMatches.length % 2 === 0 ? r.bracketMatches.length / 2 : (r.bracketMatches.length - 1) / 2
                     if (r.final) {
                         return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
                     } else if (r.name !== 'Third-place') {

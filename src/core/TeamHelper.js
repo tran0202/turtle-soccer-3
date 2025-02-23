@@ -930,10 +930,13 @@ export const isHomeWinMatch = (match) => {
     if (!match) return
     if (match.away_team === 'BYE') return true
     if (match.home_team === 'BYE') return false
+    if (match.home_walkover) return true
+    if (match.away_walkover) return false
     if (match.home_score > match.away_score) return true
     if (match.home_score === match.away_score) {
         if (match.home_extra_score > match.away_extra_score) return true
         if (match.home_extra_score === match.away_extra_score) {
+            if (match.home_replay_score && match.away_replay_score && match.home_replay_score > match.away_replay_score) return true
             if (match.home_penalty_score > match.away_penalty_score) return true
         }
     }

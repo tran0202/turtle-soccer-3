@@ -281,7 +281,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -368,8 +368,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "AUT",
@@ -379,14 +382,9 @@
                             "date": "1954-07-03",
                             "time": "17:00",
                             "stadium": "Hardturm",
-                            "city": "Zurich"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Zurich",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GER-1949-1990",
                             "away_team": "HUN-1949-1956",
@@ -395,7 +393,8 @@
                             "date": "1954-07-04",
                             "time": "17:00",
                             "stadium": "Wankdorf Stadium",
-                            "city": "Bern"
+                            "city": "Bern",
+                            "final": true
                         }
                     ]
                 }

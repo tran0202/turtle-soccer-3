@@ -506,7 +506,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Round of 16",
@@ -701,8 +701,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BEL",
@@ -714,14 +717,9 @@
                             "date": "1986-06-28",
                             "time": "12:00",
                             "stadium": "Estadio Cuauhtémoc",
-                            "city": "Puebla"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Puebla",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ARG",
                             "away_team": "GER-1949-1990",
@@ -730,7 +728,8 @@
                             "date": "1986-06-29",
                             "time": "12:00",
                             "stadium": "Estadio Azteca",
-                            "city": "Mexico City"
+                            "city": "Mexico City",
+                            "final": true
                         }
                     ]
                 }

@@ -395,7 +395,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -480,8 +480,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "FRA",
@@ -491,14 +494,9 @@
                             "date": "1958-06-28",
                             "time": "17:00",
                             "stadium": "Ullevi",
-                            "city": "Gothenburg"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Gothenburg",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA",
                             "away_team": "SWE",
@@ -507,7 +505,8 @@
                             "date": "1958-06-29",
                             "time": "15:00",
                             "stadium": "Råsunda Stadium",
-                            "city": "Solna"
+                            "city": "Solna",
+                            "final": true
                         }
                     ]
                 }

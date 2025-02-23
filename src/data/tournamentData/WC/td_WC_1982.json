@@ -721,7 +721,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -758,8 +758,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "POL",
@@ -769,14 +772,9 @@
                             "date": "1982-07-10",
                             "time": "20:00",
                             "stadium": "Estadio José Rico Pérez",
-                            "city": "Alicante"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Alicante",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ITA",
                             "away_team": "GER-1949-1990",
@@ -785,7 +783,8 @@
                             "date": "1982-07-11",
                             "time": "20:00",
                             "stadium": "Santiago Bernabéu Stadium",
-                            "city": "Madrid"
+                            "city": "Madrid",
+                            "final": true
                         }
                     ]
                 }
