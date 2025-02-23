@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AetTooltip, AetSkippedTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const MatchRow = (props) => {
     const { m, round, config, last } = props
@@ -47,7 +47,7 @@ const MatchRow = (props) => {
     )
     const championshipLine = (
         <React.Fragment>
-            {' >>> '} <b>{teamWon}</b> won World Cup {config.year}!
+            {' >>> '} <b>{teamWon}</b> won {config.name}!
         </React.Fragment>
     )
     const thirdPlaceLine = (
@@ -73,6 +73,7 @@ const MatchRow = (props) => {
                             </React.Fragment>
                         )}{' '}
                         {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                        {m.extra_time_skipped && <AetSkippedTooltip target="aetSkippedTooltip" anchor="(no.e.t.)" />}
                         {(m.home_golden_goal || m.away_golden_goal) && <GoldenGoalTooltip target="goldenGoalTooltip" anchor="(gg)" />}
                         {(m.home_walkover || m.away_walkover) && <WalkoverTooltip target="walkoverTooltip" content="Walkover" anchor="(w/o)" />}
                         {m.replay_required && <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayTooltip`} notes="Replay Required" anchor="(r)" />}
@@ -80,7 +81,7 @@ const MatchRow = (props) => {
                     <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
                     <Col className={`col-box-25 ${pairAwayHighlight}`}>{awayTeamName}</Col>
                 </Row>
-                {m.home_extra_score !== undefined && (
+                {(m.home_extra_score !== undefined || m.extra_time_skipped) && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>
                             {!m.replay_required && (

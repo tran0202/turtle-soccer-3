@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -390,6 +390,7 @@
                             "away_score": 3,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "1999-07-01",
                             "time": "21:30",
                             "stadium": "Jack Kent Cooke Stadium",
@@ -429,27 +430,26 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA_WNT",
                             "away_team": "NOR_WNT",
                             "home_score": 0,
                             "away_score": 0,
+                            "extra_time_skipped": true,
                             "home_penalty_score": 5,
                             "away_penalty_score": 4,
                             "date": "1999-07-10",
                             "time": "10:15",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Pasadena",
+                            "third_place": true
+                        },
                         {
                             "home_team": "USA_WNT",
                             "away_team": "CHN_WNT",
@@ -462,7 +462,8 @@
                             "date": "1999-07-10",
                             "time": "12:50",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "city": "Pasadena",
+                            "final": true
                         }
                     ]
                 }

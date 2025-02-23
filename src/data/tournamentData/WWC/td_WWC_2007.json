@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -427,8 +427,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NOR_WNT",
@@ -438,14 +441,9 @@
                             "date": "2007-09-30",
                             "time": "17:00",
                             "stadium": "Hongkou Football Stadium",
-                            "city": "Shanghai"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Shanghai",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GER_WNT",
                             "away_team": "BRA_WNT",
@@ -454,7 +452,8 @@
                             "date": "2007-09-30",
                             "time": "20:00",
                             "stadium": "Hongkou Football Stadium",
-                            "city": "Shanghai"
+                            "city": "Shanghai",
+                            "final": true
                         }
                     ]
                 }

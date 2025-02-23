@@ -8,6 +8,12 @@ export const AetTooltip = (props) => {
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
+export const AetSkippedTooltip = (props) => {
+    const { target, anchor } = props
+    const content = 'Extra time was skipped, the match advanced straight into penalty shootout'
+    return <TopTooltip target={target} content={content} anchor={anchor} />
+}
+
 export const AwayGoalsTooltip = (props) => {
     const { target, anchor } = props
     const content = 'Won on away goal'

@@ -249,7 +249,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -284,6 +284,8 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URU",
@@ -291,9 +293,10 @@
                             "home_score": 4,
                             "away_score": 2,
                             "date": "1930-07-30",
-                            "time": "14:15",
+                            "time": "12:45",
                             "stadium": "Estadio Centenario",
-                            "city": "Montevideo"
+                            "city": "Montevideo",
+                            "final": true
                         }
                     ]
                 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AetTooltip, AetSkippedTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -220,6 +220,7 @@ const BracketBox = (props) => {
                         </Col>
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${homeHighlight}`}>
                             {homeTeamName} {homeExtraScore > awayExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
+                            {match.extra_time_skipped && <AetSkippedTooltip target="aetSkippedTooltip" anchor="(no.e.t.)" />}
                             {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {homePenaltyScore > awayPenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.replay_required && (
@@ -235,7 +236,7 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
-                            {match.home_replay_score && (
+                            {match.home_replay_score !== undefined && (
                                 <React.Fragment>
                                     {' ('}
                                     {match.home_replay_score}
@@ -276,7 +277,7 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
-                            {match.away_replay_score && (
+                            {match.away_replay_score !== undefined && (
                                 <React.Fragment>
                                     {' ('}
                                     {match.away_replay_score}

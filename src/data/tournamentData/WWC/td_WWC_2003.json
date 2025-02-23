@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -427,8 +427,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA_WNT",
@@ -438,14 +441,9 @@
                             "date": "2003-10-11",
                             "time": "12:30",
                             "stadium": "Home Depot Center",
-                            "city": "Carson"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Carson",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GER_WNT",
                             "away_team": "SWE_WNT",
@@ -453,10 +451,12 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2003-10-12",
                             "time": "10:00",
                             "stadium": "Home Depot Center",
-                            "city": "Carson"
+                            "city": "Carson",
+                            "final": true
                         }
                     ]
                 }

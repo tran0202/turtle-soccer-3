@@ -936,7 +936,7 @@ export const isHomeWinMatch = (match) => {
     if (match.home_score === match.away_score) {
         if (match.home_extra_score > match.away_extra_score) return true
         if (match.home_extra_score === match.away_extra_score) {
-            if (match.home_replay_score && match.away_replay_score && match.home_replay_score > match.away_replay_score) return true
+            if (match.home_replay_score !== undefined && match.away_replay_score !== undefined && match.home_replay_score > match.away_replay_score) return true
             if (match.home_penalty_score > match.away_penalty_score) return true
         }
     }
