@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,8 +429,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "ITA_U23MNT",
@@ -440,14 +443,9 @@
                             "date": "2004-08-27",
                             "time": "20:30",
                             "stadium": "Kaftanzoglio Stadium",
-                            "city": "Thessaloniki"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Thessaloniki",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ARG_U23MNT",
                             "away_team": "PAR_U23MNT",
@@ -456,7 +454,8 @@
                             "date": "2004-08-28",
                             "time": "10:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Athens"
+                            "city": "Athens",
+                            "final": true
                         }
                     ]
                 }

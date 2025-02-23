@@ -267,7 +267,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -352,8 +352,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URS_U23MNT",
@@ -361,16 +364,11 @@
                             "home_score": 2,
                             "away_score": 0,
                             "date": "1976-07-29",
-                            "time": "12:00",
+                            "time": "21:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Montreal"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Montreal",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GDR_U23MNT",
                             "away_team": "POL_U23MNT",
@@ -379,7 +377,8 @@
                             "date": "1976-07-31",
                             "time": "21:30",
                             "stadium": "Olympic Stadium",
-                            "city": "Montreal"
+                            "city": "Montreal",
+                            "final": true
                         }
                     ]
                 }

@@ -520,41 +520,38 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URS_U23MNT",
                             "away_team": "GDR_U23MNT",
                             "home_score": 2,
                             "away_score": 2,
-                            "home_extra_score": 0,
-                            "away_extra_score": 0,
                             "shared_bronze": true,
-                            "shared_bronze_text": "Both teams were awarded bronze medals.",
+                            "shared_bronze_notes": "Both teams shared bronze medals",
                             "date": "1972-09-10",
-                            "time": "12:00",
+                            "time": "10:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Munich"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Munich",
+                            "third_place": true
+                        },
                         {
                             "home_team": "POL_U23MNT",
                             "away_team": "HUN_U23MNT",
                             "home_score": 2,
                             "away_score": 1,
                             "date": "1972-09-10",
-                            "time": "15:00",
+                            "time": "20:15",
                             "stadium": "Olympic Stadium",
-                            "city": "Munich"
+                            "city": "Munich",
+                            "final": true
                         }
                     ]
                 }

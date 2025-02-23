@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -431,8 +431,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BEL_U23MNT",
@@ -442,14 +445,9 @@
                             "date": "2008-08-22",
                             "time": "19:00",
                             "stadium": "Shanghai Stadium",
-                            "city": "Shanghai"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Shanghai",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NGA_U23MNT",
                             "away_team": "ARG_U23MNT",
@@ -458,7 +456,8 @@
                             "date": "2008-08-23",
                             "time": "12:00",
                             "stadium": "National Stadium",
-                            "city": "Beijing"
+                            "city": "Beijing",
+                            "final": true
                         }
                     ]
                 }

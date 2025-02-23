@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -437,8 +437,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "YUG-1963-1992_U23MNT",
@@ -448,14 +451,9 @@
                             "date": "1984-08-10",
                             "time": "19:00",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Pasadena",
+                            "third_place": true
+                        },
                         {
                             "home_team": "FRA_U23MNT",
                             "away_team": "BRA_U23MNT",
@@ -464,7 +462,8 @@
                             "date": "1984-08-11",
                             "time": "19:00",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "city": "Pasadena",
+                            "final": true
                         }
                     ]
                 }

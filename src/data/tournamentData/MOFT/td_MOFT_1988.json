@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -435,8 +435,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "ITA_U23MNT",
@@ -446,14 +449,9 @@
                             "date": "1988-09-30",
                             "time": "19:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Seoul"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Seoul",
+                            "third_place": true
+                        },
                         {
                             "home_team": "URS_U23MNT",
                             "away_team": "BRA_U23MNT",
@@ -464,7 +462,8 @@
                             "date": "1988-10-01",
                             "time": "19:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Seoul"
+                            "city": "Seoul",
+                            "final": true
                         }
                     ]
                 }

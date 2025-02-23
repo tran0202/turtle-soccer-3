@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -357,6 +357,7 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "1996-07-27",
                             "time": "18:00",
                             "stadium": "Orange Bowl",
@@ -422,6 +423,7 @@
                             "away_score": 3,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "1996-07-31",
                             "time": "18:00",
                             "stadium": "Sanford Stadium",
@@ -431,8 +433,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "POR_U23MNT",
@@ -442,14 +447,9 @@
                             "date": "1996-08-02",
                             "time": "18:00",
                             "stadium": "Sanford Stadium",
-                            "city": "Athens, Georgia"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Athens, Georgia",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ARG_U23MNT",
                             "away_team": "NGA_U23MNT",
@@ -458,7 +458,8 @@
                             "date": "1996-08-03",
                             "time": "15:45",
                             "stadium": "Sanford Stadium",
-                            "city": "Athens, Georgia"
+                            "city": "Athens, Georgia",
+                            "final": true
                         }
                     ]
                 }

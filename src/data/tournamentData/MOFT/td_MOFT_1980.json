@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -427,8 +427,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URS_U23MNT",
@@ -438,14 +441,9 @@
                             "date": "1980-08-01",
                             "time": "12:00",
                             "stadium": "Dinamo Stadium",
-                            "city": "Moscow"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Moscow",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GDR_U23MNT",
                             "away_team": "TCH_U23MNT",
@@ -454,7 +452,8 @@
                             "date": "1980-08-02",
                             "time": "12:00",
                             "stadium": "Lenin Stadium",
-                            "city": "Moscow"
+                            "city": "Moscow",
+                            "final": true
                         }
                     ]
                 }

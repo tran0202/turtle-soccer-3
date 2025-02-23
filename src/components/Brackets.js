@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, AetSkippedTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AetTooltip, AetSkippedTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip, SharedBronzeTooltip } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -187,8 +187,8 @@ const BracketBox = (props) => {
     const awayScore = match.away_score + awayExtraScore
     const homePenaltyScore = match.home_penalty_score ? match.home_penalty_score : 0
     const awayPenaltyScore = match.away_penalty_score ? match.away_penalty_score : 0
-    const homeHighlight = isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
-    const awayHighlight = !isHomeWinMatch(match) ? 'team-name-win' : 'team-name-lose'
+    const homeHighlight = isHomeWinMatch(match) || match.shared_bronze ? 'team-name-win' : 'team-name-lose'
+    const awayHighlight = !isHomeWinMatch(match) || match.shared_bronze ? 'team-name-win' : 'team-name-lose'
     const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
     const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
     const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
@@ -226,6 +226,7 @@ const BracketBox = (props) => {
                             {match.replay_required && (
                                 <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayBracketTooltip`} notes="Replay" anchor="(r)" />
                             )}
+                            {match.shared_bronze && <SharedBronzeTooltip target={`${match.home_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
                             {!match.home_walkover && !match.away_walkover && <React.Fragment>{homeScore}</React.Fragment>}
@@ -253,20 +254,10 @@ const BracketBox = (props) => {
                             {awayTeamFlag}
                         </Col>
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${awayHighlight}`}>
-                            {awayTeamName}
-                            {awayExtraScore > homeExtraScore && (
-                                <React.Fragment>
-                                    {' '}
-                                    <AetTooltip target="aetTooltip" anchor="(aet)" />
-                                </React.Fragment>
-                            )}
+                            {awayTeamName} {awayExtraScore > homeExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.away_golden_goal && <GoldenGoalTooltip target={`${match.away_team}goldenGoalTooltip`} anchor="(gg)" />}
-                            {awayPenaltyScore > homePenaltyScore && (
-                                <React.Fragment>
-                                    {' '}
-                                    <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
-                                </React.Fragment>
-                            )}
+                            {awayPenaltyScore > homePenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
+                            {match.shared_bronze && <SharedBronzeTooltip target={`${match.away_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
                             {!match.home_walkover && !match.away_walkover && <React.Fragment>{awayScore}</React.Fragment>}
@@ -335,6 +326,8 @@ const BracketBoxBye = (props) => {
 
 const BracketColInner = (props) => {
     const { round, colIndex, config } = props
+    const isOlympic = config.competition_id === 'MOFT' || config.competition_id === 'WOFT'
+    const roundName = isOlympic ? (round.name === 'Final' ? 'Gold Medal' : round.name === 'Third place' ? 'Bronze Medal' : round.name) : round.name
     return (
         <React.Fragment>
             {colIndex === 0 && <Row className="bracket-gap-height-00"></Row>}
@@ -343,7 +336,7 @@ const BracketColInner = (props) => {
             {colIndex === 3 && <Row className="bracket-gap-height-30"></Row>}
             <Row className="no-margin-lr">
                 <Col>
-                    <div className="h2-ff1 margin-top-md d-none d-xl-block">{round.name}</div>
+                    <div className="h2-ff1 margin-top-md d-none d-xl-block">{roundName}</div>
                     {round.bracketMatches &&
                         round.bracketMatches.map((m, index) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'

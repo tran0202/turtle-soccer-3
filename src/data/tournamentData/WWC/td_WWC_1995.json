@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -352,8 +352,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CHN_WNT",
@@ -363,14 +366,9 @@
                             "date": "1995-06-17",
                             "time": "16:00",
                             "stadium": "Strömvallen",
-                            "city": "Gävle"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Gävle",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GER_WNT",
                             "away_team": "NOR_WNT",
@@ -379,7 +377,8 @@
                             "date": "1995-06-18",
                             "time": "18:00",
                             "stadium": "Råsunda Stadium",
-                            "city": "Solna"
+                            "city": "Solna",
+                            "final": true
                         }
                     ]
                 }

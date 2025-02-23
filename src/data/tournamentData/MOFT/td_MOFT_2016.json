@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -427,8 +427,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "HON-1949-2022_U23MNT",
@@ -438,14 +441,9 @@
                             "date": "2016-08-20",
                             "time": "13:00",
                             "stadium": "Mineirão",
-                            "city": "Belo Horizonte"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Belo Horizonte",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA_U23MNT",
                             "away_team": "GER_U23MNT",
@@ -458,7 +456,8 @@
                             "date": "2016-08-20",
                             "time": "17:30",
                             "stadium": "Maracanã",
-                            "city": "Rio de Janeiro"
+                            "city": "Rio de Janeiro",
+                            "final": true
                         }
                     ]
                 }

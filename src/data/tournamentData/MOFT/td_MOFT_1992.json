@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,8 +429,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GHA_U23MNT",
@@ -440,14 +443,9 @@
                             "date": "1992-08-07",
                             "time": "20:00",
                             "stadium": "Camp Nou",
-                            "city": "Barcelona"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Barcelona",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ESP_U23MNT",
                             "away_team": "POL_U23MNT",
@@ -456,7 +454,8 @@
                             "date": "1992-08-08",
                             "time": "20:00",
                             "stadium": "Camp Nou",
-                            "city": "Barcelona"
+                            "city": "Barcelona",
+                            "final": true
                         }
                     ]
                 }

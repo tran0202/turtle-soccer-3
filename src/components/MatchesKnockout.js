@@ -6,9 +6,10 @@ import { AetTooltip, AetSkippedTooltip, GoldenGoalTooltip, ReplayTooltip, Walkov
 
 const MatchRow = (props) => {
     const { m, round, config, last } = props
+    const isOlympic = config.competition_id === 'MOFT' || config.competition_id === 'WOFT'
     const isByeMatch = (m.home_team === 'BYE') | (m.away_team === 'BYE')
-    const pairHomeHighlight = isHomeWinMatch(m) || m.replay_required ? 'team-name-win' : 'team-name-lose'
-    const pairAwayHighlight = !isHomeWinMatch(m) || m.replay_required ? 'team-name-win' : 'team-name-lose'
+    const pairHomeHighlight = isHomeWinMatch(m) || m.replay_required || m.shared_bronze ? 'team-name-win' : 'team-name-lose'
+    const pairAwayHighlight = !isHomeWinMatch(m) || m.replay_required || m.shared_bronze ? 'team-name-win' : 'team-name-lose'
     const homeTeamName = getTeamName(m.home_team, config)
     const awayTeamName = getTeamName(m.away_team, config)
     const matchHomeExtraScore = m.home_extra_score ? m.home_extra_score : 0
@@ -47,12 +48,13 @@ const MatchRow = (props) => {
     )
     const championshipLine = (
         <React.Fragment>
-            {' >>> '} <b>{teamWon}</b> won {config.name}!
+            {' >>> '} <b>{teamWon}</b> won {isOlympic ? ' the gold medal of ' : ''}
+            {config.name}!
         </React.Fragment>
     )
     const thirdPlaceLine = (
         <React.Fragment>
-            {' >>> '} <b>{teamWon}</b> won the third place
+            {' >>> '} <b>{teamWon}</b> won the {isOlympic ? 'bronze medal' : 'third place'}
         </React.Fragment>
     )
     return (
@@ -104,14 +106,26 @@ const MatchRow = (props) => {
                         <Col xs={{ size: 7, offset: 5 }}>{nextRoundLine}</Col>
                     </Row>
                 )}
-                {round.championship && m.final && (
+                {round.championship && m.final && !isOlympic && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>{championshipLine}</Col>
                     </Row>
                 )}
-                {round.championship && m.third_place && (
+                {round.championship && m.final && isOlympic && (
+                    <Row className="no-gutters aggregate-line team-row padding-tb-sm">
+                        <Col xs={{ size: 8, offset: 4 }}>{championshipLine}</Col>
+                    </Row>
+                )}
+                {round.championship && m.third_place && !m.shared_bronze && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>{thirdPlaceLine}</Col>
+                    </Row>
+                )}
+                {m.shared_bronze && (
+                    <Row className="no-gutters aggregate-line team-row padding-tb-sm">
+                        <Col xs={{ size: 7, offset: 5 }}>
+                            {' >>> '} {m.shared_bronze_notes}
+                        </Col>
                     </Row>
                 )}
 
@@ -158,6 +172,9 @@ const MatchesKnockoutRowFinal = (props) => {
     const { round, config } = props
     const final = round.matchdays && round.matchdays.find((md) => md.final)
     const thirdPlace = round.matchdays && round.matchdays.find((md) => md.third_place)
+    const isOlympic = config.competition_id === 'MOFT' || config.competition_id === 'WOFT'
+    const thirdPlaceRoundName = isOlympic ? 'Bronze Medal' : 'Third place'
+    const finalRoundName = isOlympic ? 'Gold Medal' : 'Final'
     return (
         <Row>
             <Col className="mt-3 round-box">
@@ -165,7 +182,7 @@ const MatchesKnockoutRowFinal = (props) => {
                     <React.Fragment>
                         <Row>
                             <Col>
-                                <div className="h2-ff1 margin-top-md">Third place</div>
+                                <div className="h2-ff1 margin-top-md">{thirdPlaceRoundName}</div>
                             </Col>
                         </Row>
                         <Row>
@@ -184,7 +201,7 @@ const MatchesKnockoutRowFinal = (props) => {
                     <React.Fragment>
                         <Row>
                             <Col>
-                                <div className="h2-ff1 margin-top-md">{round.name}</div>
+                                <div className="h2-ff1 margin-top-md">{finalRoundName}</div>
                             </Col>
                         </Row>
                         <Row>

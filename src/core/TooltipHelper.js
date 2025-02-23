@@ -140,7 +140,7 @@ export const AwardedTooltip = (props) => {
 
 export const SharedBronzeTooltip = (props) => {
     const { target, notes } = props
-    return <TopTooltip target={target} content={notes} />
+    return <TopTooltip target={target} content={notes} anchor="(sb)" />
 }
 
 export const GoldenBallRejectedTooltip = (props) => {

@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -372,6 +372,7 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "2000-09-23",
                             "time": "19:00",
                             "stadium": "Brisbane Cricket Ground",
@@ -433,8 +434,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA_U23MNT",
@@ -444,14 +448,9 @@
                             "date": "2000-09-29",
                             "time": "20:00",
                             "stadium": "Sydney Football Stadium",
-                            "city": "Sydney"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Sydney",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ESP_U23MNT",
                             "away_team": "CMR_U23MNT",
@@ -464,7 +463,8 @@
                             "date": "2000-09-30",
                             "time": "12:00",
                             "stadium": "Olympic Stadium",
-                            "city": "Sydney"
+                            "city": "Sydney",
+                            "final": true
                         }
                     ]
                 }
