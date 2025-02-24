@@ -11,6 +11,9 @@ import {
     WalkoverTooltip,
     SharedBronzeTooltip,
     DrawLotTooltip,
+    MatchPostponedTooltip,
+    ByeTooltip,
+    WithdrewTooltip,
 } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
@@ -196,8 +199,10 @@ const BracketBox = (props) => {
     const awayScore = match.away_score + awayExtraScore
     const homePenaltyScore = match.home_penalty_score ? match.home_penalty_score : 0
     const awayPenaltyScore = match.away_penalty_score ? match.away_penalty_score : 0
-    const homeHighlight = isHomeWinMatch(match) || match.shared_bronze ? 'team-name-win' : 'team-name-lose'
-    const awayHighlight = !isHomeWinMatch(match) || match.shared_bronze ? 'team-name-win' : 'team-name-lose'
+    const homeHighlight =
+        (isHomeWinMatch(match) && !match.home_withdrew) || match.shared_bronze || match.match_postponed || match.home_bye ? 'team-name-win' : 'team-name-lose'
+    const awayHighlight =
+        (!isHomeWinMatch(match) && !match.away_withdrew) || match.shared_bronze || match.match_postponed || match.away_bye ? 'team-name-win' : 'team-name-lose'
     const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
     const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
     const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
@@ -233,13 +238,22 @@ const BracketBox = (props) => {
                             {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {homePenaltyScore > awayPenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.replay_required && (
-                                <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayBracketTooltip`} notes="Replay" anchor="(r)" />
+                                <ReplayTooltip target={`${match.home_team}${match.away_team}replayBracketTooltip`} notes="Replay" anchor="(r)" />
                             )}
                             {match.shared_bronze && <SharedBronzeTooltip target={`${match.home_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
                             {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                            {match.match_postponed && (
+                                <MatchPostponedTooltip target={`${match.home_team}postponedTooltip`} notes={match.postponed_notes} anchor="(mp)" />
+                            )}
+                            {match.home_bye && <ByeTooltip target={`${match.home_team}byeTooltip`} notes={match.bye_notes} anchor="(bye)" />}
+                            {match.home_withdrew && (
+                                <WithdrewTooltip target={`${match.home_team}withdrewTooltip`} notes={match.home_withdrew_notes} anchor="(withdrew)" />
+                            )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
-                            {!match.home_walkover && !match.away_walkover && <React.Fragment>{homeScore}</React.Fragment>}
+                            {!isNaN(homeScore) && !match.match_postponed && !match.home_bye && !match.home_withdrew && (
+                                <React.Fragment>{homeScore}</React.Fragment>
+                            )}
                             {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
                                 <React.Fragment>
                                     {' ('}
@@ -269,9 +283,18 @@ const BracketBox = (props) => {
                             {awayPenaltyScore > homePenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.shared_bronze && <SharedBronzeTooltip target={`${match.away_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
                             {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                            {match.match_postponed && (
+                                <MatchPostponedTooltip target={`${match.away_team}postponedTooltip`} notes={match.postponed_notes} anchor="(mp)" />
+                            )}
+                            {match.away_bye && <ByeTooltip target={`${match.away_team}byeTooltip`} notes={match.bye_notes} anchor="(bye)" />}
+                            {match.away_withdrew && (
+                                <WithdrewTooltip target={`${match.away_team}withdrewTooltip`} notes={match.away_withdrew_notes} anchor="(withdrew)" />
+                            )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
-                            {!match.home_walkover && !match.away_walkover && <React.Fragment>{awayScore}</React.Fragment>}
+                            {!isNaN(awayScore) && !match.match_postponed && !match.away_bye && !match.away_withdrew && (
+                                <React.Fragment>{awayScore}</React.Fragment>
+                            )}
                             {(homePenaltyScore !== 0 || awayPenaltyScore !== 0) && (
                                 <React.Fragment>
                                     {' ('}
@@ -286,7 +309,7 @@ const BracketBox = (props) => {
                                     {')'}
                                 </React.Fragment>
                             )}
-                            {match.away_walkover && <WalkoverTooltip target="walkoverTooltip" content="Walkover" anchor="(w/o)" />}
+                            {match.away_walkover && <WalkoverTooltip target="walkoverTooltip" content={match.walkover_notes} anchor="(w/o)" />}
                         </Col>
                     </Row>
                 </Col>
@@ -402,6 +425,7 @@ const BracketTable = (props) => {
 class Brackets extends React.Component {
     render() {
         const { stage, config, isImagine } = this.props
+        const excludePreliminaryRounds = { ...stage, rounds: stage.rounds && stage.rounds.filter((r) => r.name !== 'Preliminary Round') }
         return (
             <React.Fragment>
                 {isImagine && (
@@ -409,7 +433,7 @@ class Brackets extends React.Component {
                         <BracketTable stage={stage} config={config} />
                     </BracketsCollapse>
                 )}
-                {!isImagine && <BracketTable stage={stage} config={config} />}
+                {!isImagine && <BracketTable stage={excludePreliminaryRounds} config={config} />}
             </React.Fragment>
         )
     }

@@ -17,7 +17,7 @@
         "parent_nation_id": "AFG",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Afghanistan_1931_1973.png",
+        "flag_filename": "640px-Flag_of_Afghanistan_(1931–1973).svg.png",
         "code": "AFG",
         "start_date": "1930-03-27",
         "end_date": "1973-07-16"
@@ -645,7 +645,7 @@
         "parent_nation_id": "TPE",
         "confederation_id": "AFC",
         "nation_type_id": "NATN",
-        "flag_filename": "Republic_of_China.png",
+        "flag_filename": "640px-Flag_of_the_Republic_of_China.svg.png",
         "code": "CHN",
         "start_date": "1924-01-01",
         "end_date": "1949-01-01"
@@ -866,6 +866,17 @@
         "code": "ANT",
         "start_date": "1959-01-01",
         "end_date": "1986-01-01"
+    },
+    {
+        "id": "ANT-1921-1958",
+        "name": "Netherlands Antilles",
+        "official_name": "Territory of Curaçao",
+        "parent_nation_id": "CUW",
+        "confederation_id": "CONCACAF",
+        "nation_type_id": "NATN",
+        "flag_filename": "640px-Flag_of_the_Netherlands.svg.png",
+        "start_date": "1921-01-01",
+        "end_date": "1958-12-31"
     },
     {
         "id": "CYP",
@@ -2916,7 +2927,7 @@
         "parent_nation_id": "SRB",
         "confederation_id": "UEFA",
         "nation_type_id": "NATN",
-        "flag_filename": "Kingdom_of_Yugoslavia.png",
+        "flag_filename": "Flag_of_Yugoslavia_(1918–1941).svg",
         "code": "YUG",
         "start_date": "1918-12-01",
         "end_date": "1929-10-03"

@@ -934,6 +934,8 @@ export const isHomeWinMatch = (match) => {
     if (match.away_walkover) return false
     if (match.home_draw_lot) return true
     if (match.away_draw_lot) return false
+    if (match.home_withdrew) return false
+    if (match.away_withdrew) return true
     if (match.home_score > match.away_score) return true
     if (match.home_score === match.away_score) {
         if (match.home_extra_score > match.away_extra_score) return true

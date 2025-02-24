@@ -460,7 +460,13 @@
     { "id": "EGY-1953-1958_U23MNT", "name": "Egypt", "team_type_id": "U23MNT", "nation_id": "EGY-1953-1958", "parent_team_id": "EGY_U23MNT" },
     { "id": "HUN-1949-1956_U23MNT", "name": "Hungary", "team_type_id": "U23MNT", "nation_id": "HUN-1949-1956", "parent_team_id": "HUN_U23MNT" },
     { "id": "VIE_U23MNT", "name": "Vietnam", "team_type_id": "U23MNT", "nation_id": "VIE", "parent_team_id": "" },
-    { "id": "VSO_U23MNT", "name": "South Vietnam", "short_name": "S. Vietnam", "team_type_id": "U23MNT", "nation_id": "VSO", "parent_team_id": "VIE_U23MNT" },
+    {
+        "id": "VSO_U23MNT",
+        "name": "South Vietnam",
+        "team_type_id": "U23MNT",
+        "nation_id": "VSO",
+        "parent_team_id": "VIE_U23MNT"
+    },
     { "id": "LUX_U23MNT", "name": "Luxembourg", "team_type_id": "U23MNT", "nation_id": "LUX", "parent_team_id": "" },
     { "id": "EGY-1922-1953_U23MNT", "name": "Egypt", "team_type_id": "U23MNT", "nation_id": "EGY-1922-1953", "parent_team_id": "EGY_U23MNT" },
     { "id": "AUT_U23MNT", "name": "Austria", "team_type_id": "U23MNT", "nation_id": "AUT", "parent_team_id": "" },
@@ -468,9 +474,17 @@
     {
         "id": "ANT-1959-1986_U23MNT",
         "name": "Netherlands Antilles",
-        "short_name": "Nether. Antilles",
+        "short_name": "Netherlands Antilles",
         "team_type_id": "U23MNT",
         "nation_id": "ANT-1959-1986",
+        "parent_team_id": "CUW_U23MNT"
+    },
+    {
+        "id": "ANT-1921-1958_U23MNT",
+        "name": "Netherlands Antilles",
+        "short_name": "Netherlands Antilles",
+        "team_type_id": "U23MNT",
+        "nation_id": "ANT-1921-1958",
         "parent_team_id": "CUW_U23MNT"
     },
     { "id": "AFG_U23MNT", "name": "Afghanistan", "team_type_id": "U23MNT", "nation_id": "AFG", "parent_team_id": "" },
@@ -486,7 +500,7 @@
     },
     { "id": "GER-1935-1945_U23MNT", "name": "Germany", "team_type_id": "U23MNT", "nation_id": "GER-1935-1945", "parent_team_id": "GER_U23MNT" },
     { "id": "ITA-1861-1946_U23MNT", "name": "Italy", "team_type_id": "U23MNT", "nation_id": "ITA-1861-1946", "parent_team_id": "ITA_U23MNT" },
-    { "id": "YUG-1918-1929_U23MNT", "name": "Kingdom SCS", "team_type_id": "U23MNT", "nation_id": "YUG-1918-1929", "parent_team_id": "SRB_U23MNT" },
+    { "id": "YUG-1918-1929_U23MNT", "name": "Kingdom of SCS", "team_type_id": "U23MNT", "nation_id": "YUG-1918-1929", "parent_team_id": "SRB_U23MNT" },
     { "id": "ESP-1875-1931_U23MNT", "name": "Spain", "team_type_id": "U23MNT", "nation_id": "ESP-1875-1931", "parent_team_id": "ESP_U23MNT" },
     { "id": "MEX-1916-1934_U23MNT", "name": "Mexico", "team_type_id": "U23MNT", "nation_id": "MEX-1916-1934", "parent_team_id": "MEX_U23MNT" },
     { "id": "LTU_U23MNT", "name": "Lithuania", "team_type_id": "U23MNT", "nation_id": "LTU", "parent_team_id": "" },

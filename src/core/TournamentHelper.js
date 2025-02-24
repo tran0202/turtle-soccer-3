@@ -241,7 +241,7 @@ export const createMatchdays = (round) => {
                 foundMatchday.matches.push(m)
             }
         } else {
-            matchdays.push({ date: m.date, final, third_place, matches: [m] })
+            matchdays.push({ date: m.date, final, third_place, replay, matches: [m] })
         }
     })
     round.matchdays = matchdays
