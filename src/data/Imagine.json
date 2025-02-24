@@ -447,7 +447,9 @@
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
-                    "advancement": [{ "pos": 1, "will": "next_round" }]
+                    "advancements": {
+                        "positions": [{ "pos": 1, "next": "next_round" }]
+                    }
                 }
             ]
         },
@@ -889,7 +891,9 @@
                         }
                     ],
                     "next_stage": "Second Round",
-                    "advancement": [{ "pos": 1, "will": "next_round" }]
+                    "advancements": {
+                        "positions": [{ "pos": 1, "next": "next_round" }]
+                    }
                 },
                 {
                     "name": "Second Round",
@@ -961,10 +965,12 @@
                         }
                     ],
                     "next_stage": "Inter-confederation play-offs",
-                    "advancement": [
-                        { "pos": 1, "will": "qualify" },
-                        { "pos": 2, "will": "next_round" }
-                    ]
+                    "advancements": {
+                        "positions": [
+                            { "pos": 1, "next": "qualify" },
+                            { "pos": 2, "next": "next_round" }
+                        ]
+                    }
                 }
             ]
         },
@@ -1860,7 +1866,10 @@
                                     "final": true,
                                     "matches": [{ "id": "FA", "home_team": "SF1", "away_team": "SF2", "date": "2026-03-31", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         },
                         {
                             "name": "Path B",
@@ -1880,7 +1889,10 @@
                                     "final": true,
                                     "matches": [{ "id": "FB", "home_team": "SF3", "away_team": "SF4", "date": "2026-03-31", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         },
                         {
                             "name": "Path C",
@@ -1900,7 +1912,10 @@
                                     "final": true,
                                     "matches": [{ "id": "FC", "home_team": "SF5", "away_team": "SF6", "date": "2026-03-31", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         },
                         {
                             "name": "Path D",
@@ -1920,10 +1935,15 @@
                                     "final": true,
                                     "matches": [{ "id": "FD", "home_team": "SF7", "away_team": "SF8", "date": "2026-03-31", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         }
                     ],
-                    "advancement": [{ "pos": 1, "will": "qualify" }]
+                    "advancements": {
+                        "positions": [{ "pos": 1, "next": "qualify" }]
+                    }
                 }
             ]
         },
@@ -1957,7 +1977,10 @@
                                     "final": true,
                                     "matches": [{ "id": "F1", "home_team": "SF1", "away_team": "SF4", "date": "2025-11-28", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         },
                         {
                             "name": "Path 2",
@@ -1977,10 +2000,15 @@
                                     "final": true,
                                     "matches": [{ "id": "F2", "home_team": "SF2", "away_team": "SF3", "date": "2025-11-28", "final": true }]
                                 }
-                            ]
+                            ],
+                            "advancements": {
+                                "positions": [{ "pos": 1, "next": "qualify" }]
+                            }
                         }
                     ],
-                    "advancement": [{ "pos": 1, "will": "qualify" }]
+                    "advancements": {
+                        "positions": [{ "pos": 1, "next": "qualify" }]
+                    }
                 }
             ]
         }

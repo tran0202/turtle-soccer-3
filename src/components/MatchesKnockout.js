@@ -1,8 +1,42 @@
-import React from 'react'
-import { Row, Col } from 'reactstrap'
+import React, { useState } from 'react'
+import { Row, Col, Collapse, Button } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, AetSkippedTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AetTooltip, AetSkippedTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip, DrawLotTooltip } from '../core/TooltipHelper'
+
+const MatchesKnockoutCollapse = (props) => {
+    const { title, initialStatus, children } = props
+    const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
+    const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
+    const onEntering = () => setStatus('Opening...')
+    const onEntered = () => setStatus('Opened')
+    const onExiting = () => setStatus('Closing...')
+    const onExited = () => setStatus('Closed')
+    const toggle = () => setCollapse(!collapse)
+
+    return (
+        <React.Fragment>
+            <Row className="text-start padding-top-md padding-left-sm">
+                <Col sm="3" md="3">
+                    <Button outline color="primary" onClick={toggle} className="h3-ff3 orange btn-collapse-orange">
+                        {title}&nbsp;
+                        {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
+                        {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
+                        {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
+                        {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
+                    </Button>
+                </Col>
+            </Row>
+            <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
+                <Row className="mb-3 text-start padding-left-sm">
+                    <Col sm="12" md="12">
+                        {children}
+                    </Col>
+                </Row>
+            </Collapse>
+        </React.Fragment>
+    )
+}
 
 const MatchRow = (props) => {
     const { m, round, config, last } = props
@@ -66,7 +100,9 @@ const MatchRow = (props) => {
                         <br />
                         {m.stadium && m.city ? m.stadium + ', ' + m.city : ''}
                     </Col>
-                    <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{homeTeamName}</Col>
+                    <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>
+                        {homeTeamName} {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                    </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
                         {!m.home_walkover && !m.away_walkover && (
@@ -81,7 +117,9 @@ const MatchRow = (props) => {
                         {m.replay_required && <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayTooltip`} notes="Replay Required" anchor="(r)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
-                    <Col className={`col-box-25 ${pairAwayHighlight}`}>{awayTeamName}</Col>
+                    <Col className={`col-box-25 ${pairAwayHighlight}`}>
+                        {awayTeamName} {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                    </Col>
                 </Row>
                 {(m.home_extra_score !== undefined || m.extra_time_skipped) && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
@@ -221,27 +259,6 @@ const MatchesKnockoutRowFinal = (props) => {
     )
 }
 
-const MatchesKnockoutPath = (props) => {
-    const { paths, config } = props
-    return (
-        <React.Fragment>
-            {paths &&
-                paths.map((p) => {
-                    return (
-                        <React.Fragment key={p.name}>
-                            <Row>
-                                <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
-                                    {p.name}
-                                </Col>
-                            </Row>
-                            <MatchesKnockoutRound key={p.name} rounds={p.rounds} config={config} />
-                        </React.Fragment>
-                    )
-                })}
-        </React.Fragment>
-    )
-}
-
 const MatchesKnockoutRound = (props) => {
     const { rounds, config } = props
     return (
@@ -260,21 +277,26 @@ const MatchesKnockoutRound = (props) => {
 
 class MatchesKnockout extends React.Component {
     render() {
-        const { stage, config } = this.props
-        const { rounds, paths } = stage
-        const is_stage_qualify = stage.advancement && stage.advancement[0].will === 'qualify'
-        const is_stage_next_round = !stage.advancement
-            ? false
-            : stage.advancement.length === 1
-            ? stage.advancement[0].will === 'next_round'
-            : stage.advancement[1].will === 'next_round'
+        const { stage, config, isImagine } = this.props
+        const { rounds } = stage
+        const is_stage_qualify = stage.advancements && stage.advancements.positions && stage.advancements.positions[0].next === 'qualify'
+        const is_stage_next_round =
+            !stage.advancements || !stage.advancements.positions
+                ? false
+                : stage.advancements.positions.length === 1
+                ? stage.advancements.positions[0].next === 'next_round'
+                : stage.advancements.positions[1].next === 'next_round'
         const new_config = { ...config, year: config.year, is_stage_qualify, is_stage_next_round, next_stage: stage.next_stage }
         return (
             <React.Fragment>
                 <Row className="mt-3">
                     <Col xs={{ size: 12 }}>
-                        {stage.rounds && <MatchesKnockoutRound rounds={rounds} config={new_config} />}
-                        {stage.paths && <MatchesKnockoutPath paths={paths} config={new_config} />}
+                        {isImagine && (
+                            <MatchesKnockoutCollapse title="Matches" stage={stage} initialStatus="Opened">
+                                <MatchesKnockoutRound rounds={rounds} config={new_config} />
+                            </MatchesKnockoutCollapse>
+                        )}
+                        {!isImagine && <MatchesKnockoutRound rounds={rounds} config={new_config} />}
                     </Col>
                 </Row>
             </React.Fragment>

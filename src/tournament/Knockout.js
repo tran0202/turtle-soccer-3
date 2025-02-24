@@ -1,15 +1,16 @@
 import React from 'react'
-import Brackets from '../components/Brackets'
-import MatchesKnockout from '../components/MatchesKnockout'
+import Path from '../components/Path'
 
 class Knockout extends React.Component {
     render() {
-        const { stage, config } = this.props
-        // const { groups, advancements } = stage
+        const { stage, config, isImagine } = this.props
         return (
             <React.Fragment>
-                <Brackets stage={stage} config={config} />
-                <MatchesKnockout stage={stage} config={config} />
+                {stage.paths &&
+                    stage.paths.map((p) => {
+                        return <Path key={p.name} stage={p} config={{ ...config, multi_path: true }} isImagine={isImagine} />
+                    })}
+                {stage.rounds && <Path stage={stage} config={config} isImagine={isImagine} />}
             </React.Fragment>
         )
     }

@@ -2,7 +2,16 @@ import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import moment from 'moment'
 import { getShortTeamName, getBracketTeamFlagId, isHomeWinMatch } from '../core/TeamHelper'
-import { AetTooltip, AetSkippedTooltip, PenaltyTooltip, GoldenGoalTooltip, ReplayTooltip, WalkoverTooltip, SharedBronzeTooltip } from '../core/TooltipHelper'
+import {
+    AetTooltip,
+    AetSkippedTooltip,
+    PenaltyTooltip,
+    GoldenGoalTooltip,
+    ReplayTooltip,
+    WalkoverTooltip,
+    SharedBronzeTooltip,
+    DrawLotTooltip,
+} from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -227,6 +236,7 @@ const BracketBox = (props) => {
                                 <ReplayTooltip target={`${homeTeamName}${awayTeamName}replayBracketTooltip`} notes="Replay" anchor="(r)" />
                             )}
                             {match.shared_bronze && <SharedBronzeTooltip target={`${match.home_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
+                            {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
                             {!match.home_walkover && !match.away_walkover && <React.Fragment>{homeScore}</React.Fragment>}
@@ -258,6 +268,7 @@ const BracketBox = (props) => {
                             {match.away_golden_goal && <GoldenGoalTooltip target={`${match.away_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {awayPenaltyScore > homePenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.shared_bronze && <SharedBronzeTooltip target={`${match.away_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
+                            {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
                             {!match.home_walkover && !match.away_walkover && <React.Fragment>{awayScore}</React.Fragment>}
@@ -388,26 +399,6 @@ const BracketTable = (props) => {
     )
 }
 
-const BracketPath = (props) => {
-    const { stage, config } = props
-    return (
-        <React.Fragment>
-            {stage.paths.map((p) => {
-                return (
-                    <React.Fragment key={p.name}>
-                        <Row>
-                            <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
-                                {p.name}
-                            </Col>
-                        </Row>
-                        <BracketTable stage={p} config={config} />
-                    </React.Fragment>
-                )
-            })}
-        </React.Fragment>
-    )
-}
-
 class Brackets extends React.Component {
     render() {
         const { stage, config, isImagine } = this.props
@@ -415,16 +406,10 @@ class Brackets extends React.Component {
             <React.Fragment>
                 {isImagine && (
                     <BracketsCollapse title="Brackets" stage={stage} initialStatus="Opened">
-                        {stage.rounds && <BracketTable stage={stage} config={config} />}
-                        {stage.paths && <BracketPath stage={stage} config={config} />}
+                        <BracketTable stage={stage} config={config} />
                     </BracketsCollapse>
                 )}
-                {!isImagine && (
-                    <React.Fragment>
-                        {stage.rounds && <BracketTable stage={stage} config={config} />}
-                        {stage.paths && <BracketPath stage={stage} config={config} />}
-                    </React.Fragment>
-                )}
+                {!isImagine && <BracketTable stage={stage} config={config} />}
             </React.Fragment>
         )
     }

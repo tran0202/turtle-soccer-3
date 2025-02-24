@@ -5,8 +5,8 @@ import Entrants from '../components/Entrants'
 import Results from '../components/Results'
 import Matches from '../components/Matches'
 import Groups from '../components/Groups'
-import Brackets from '../components/Brackets'
 import PartialAdvancement from '../components/PartialAdvancement'
+import Knockout from '../tournament/Knockout'
 
 const ImagineTournamentCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -92,9 +92,7 @@ class ImagineTournament extends React.Component {
                                 )}
                                 {s.type && s.type.includes('knockout_') && (
                                     <React.Fragment>
-                                        <Brackets stage={s} config={config} isImagine={true} />
-                                        <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                        <Matches stage={s} config={config} />
+                                        <Knockout stage={s} config={config} isImagine={true} />
                                     </React.Fragment>
                                 )}
                             </ImagineTournamentCollapse>
@@ -102,9 +100,7 @@ class ImagineTournament extends React.Component {
                             <React.Fragment key={tournament_id + s.name}>
                                 <Entrants stage={s} config={config} />
                                 <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                <Brackets stage={s} config={config} />
-                                <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
-                                <Matches stage={s} config={config} />
+                                <Knockout stage={s} config={config} isImagine={true} />
                             </React.Fragment>
                         )
                     })}

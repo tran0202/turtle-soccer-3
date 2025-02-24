@@ -932,6 +932,8 @@ export const isHomeWinMatch = (match) => {
     if (match.home_team === 'BYE') return false
     if (match.home_walkover) return true
     if (match.away_walkover) return false
+    if (match.home_draw_lot) return true
+    if (match.away_draw_lot) return false
     if (match.home_score > match.away_score) return true
     if (match.home_score === match.away_score) {
         if (match.home_extra_score > match.away_extra_score) return true
@@ -1306,7 +1308,7 @@ export const finishGroupStage = (stage, next_stage) => {
 
 export const finishKnockoutStage = (stage, next_stage) => {
     if (!stage || !stage.winners || !next_stage) return
-    if (stage.winners && stage.advancement && stage.advancement[0].will === 'next_round') {
+    if (stage.winners && stage.advancements && stage.advancements.positions && stage.advancements.positions[0].next === 'next_round') {
         if (!next_stage.entrants) {
             next_stage.entrants = stage.winners
         } else {
@@ -1376,7 +1378,7 @@ export const qualifyGroupStage = (tournament, stage, qualifiedTeams, next_stage)
 
 export const qualifyKnockoutStage = (tournament, stage, qualifiedTeams, next_stage) => {
     if (!tournament || !stage || !qualifiedTeams) return
-    if (stage.advancement && stage.advancement[0].will === 'qualify') {
+    if (stage.advancements && stage.advancements.positions && stage.advancements.positions[0].next === 'qualify') {
         const qualification_method =
             tournament.id === 'Inter-confederation play-offs' ? tournament.id + ' winners' : tournament.id + ' ' + stage.name + ' winners'
         stage.winners &&
@@ -1387,7 +1389,13 @@ export const qualifyKnockoutStage = (tournament, stage, qualifiedTeams, next_sta
     qualifiedTeams.sort((a, b) => {
         return a.qualification_date >= b.qualification_date ? 1 : -1
     })
-    if (stage.advancement && stage.advancement[1] && stage.advancement[1].will === 'next_round' && stage.losers) {
+    if (
+        stage.advancements &&
+        stage.advancements.positions &&
+        stage.advancements.positions[1] &&
+        stage.advancements.positions[1].next === 'next_round' &&
+        stage.losers
+    ) {
         if (!next_stage.entrants) {
             next_stage.entrants = stage.losers
         } else {

@@ -269,7 +269,7 @@
     { "id": "CGO-1970-1991", "name": "Congo", "team_type_id": "MNT", "nation_id": "CGO-1970-1991", "parent_team_id": "CGO" },
     { "id": "CMR-1961-1975", "name": "Cameroon", "team_type_id": "MNT", "nation_id": "CMR-1961-1975", "parent_team_id": "CMR" },
     { "id": "SDN-1956-1970", "name": "Sudan", "team_type_id": "MNT", "nation_id": "SDN-1956-1970", "parent_team_id": "SDN" },
-    { "id": "UAR", "name": "United Arab Republic", "short_name": "United Arab Republic", "team_type_id": "MNT", "nation_id": "UAR", "parent_team_id": "EGY" },
+    { "id": "UAR", "name": "United Arab Republic", "short_name": "United Arab Rep.", "team_type_id": "MNT", "nation_id": "UAR", "parent_team_id": "EGY" },
     { "id": "ETH-1941-1974", "name": "Ethiopia", "team_type_id": "MNT", "nation_id": "ETH-1941-1974", "parent_team_id": "ETH" },
     {
         "id": "COD-1966-1971",
@@ -432,7 +432,7 @@
     {
         "id": "EGY-1958-1971_U23MNT",
         "name": "United Arab Republic",
-        "short_name": "United Arab Republic",
+        "short_name": "United Arab Rep.",
         "team_type_id": "U23MNT",
         "nation_id": "UAR",
         "parent_team_id": "EGY_U23MNT"
@@ -448,7 +448,14 @@
     { "id": "TUR-2022_U23MNT", "name": "Turkey", "team_type_id": "U23MNT", "nation_id": "TUR-2022", "parent_team_id": "TUR_U23MNT" },
     { "id": "PER_U23MNT", "name": "Peru", "team_type_id": "U23MNT", "nation_id": "PER", "parent_team_id": "" },
     { "id": "IND_U23MNT", "name": "India", "team_type_id": "U23MNT", "nation_id": "IND", "parent_team_id": "" },
-    { "id": "GER-1956-1968_U23MNT", "name": "United Team of Germany", "team_type_id": "U23MNT", "nation_id": "GER-1956-1968", "parent_team_id": "GER_U23MNT" },
+    {
+        "id": "GER-1956-1968_U23MNT",
+        "name": "United Team of Germany",
+        "short_name": "UnitedTeamGermany",
+        "team_type_id": "U23MNT",
+        "nation_id": "GER-1956-1968",
+        "parent_team_id": "GER_U23MNT"
+    },
     { "id": "IDN_U23MNT", "name": "Indonesia", "team_type_id": "U23MNT", "nation_id": "IDN", "parent_team_id": "" },
     { "id": "EGY-1953-1958_U23MNT", "name": "Egypt", "team_type_id": "U23MNT", "nation_id": "EGY-1953-1958", "parent_team_id": "EGY_U23MNT" },
     { "id": "HUN-1949-1956_U23MNT", "name": "Hungary", "team_type_id": "U23MNT", "nation_id": "HUN-1949-1956", "parent_team_id": "HUN_U23MNT" },

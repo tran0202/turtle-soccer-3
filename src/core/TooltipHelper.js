@@ -128,9 +128,9 @@ export const Head2HeadTooltip = (props) => {
 }
 
 export const DrawLotTooltip = (props) => {
-    const { target, draw_lot_notes } = props
-    const content = `Drawing lots: ${draw_lot_notes}`
-    return <TopTooltip target={target} content={content} />
+    const { target, notes } = props
+    const content = `Drawing lots: ${notes}`
+    return <TopTooltip target={target} content={content} anchor="(dl)" />
 }
 
 export const AwardedTooltip = (props) => {
