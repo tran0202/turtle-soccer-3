@@ -125,11 +125,14 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "MEX",
@@ -143,14 +146,9 @@
                             "date": "1995-01-13",
                             "time": "18:00",
                             "stadium": "King Fahd II Stadium",
-                            "city": "Riyadh"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Riyadh",
+                            "third_place": true
+                        },
                         {
                             "home_team": "DEN",
                             "away_team": "ARG",
@@ -159,7 +157,8 @@
                             "date": "1995-01-13",
                             "time": "20:15",
                             "stadium": "King Fahd II Stadium",
-                            "city": "Riyadh"
+                            "city": "Riyadh",
+                            "final": true
                         }
                     ]
                 }

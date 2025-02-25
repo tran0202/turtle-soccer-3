@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -352,8 +352,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GER_U23WNT",
@@ -363,14 +366,9 @@
                             "date": "2008-08-21",
                             "time": "18:00",
                             "stadium": "Beijing Workers' Stadium",
-                            "city": "Beijing"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Beijing",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA_U23WNT",
                             "away_team": "USA_U23WNT",
@@ -381,7 +379,8 @@
                             "date": "2008-08-21",
                             "time": "21:00",
                             "stadium": "Beijing Workers' Stadium",
-                            "city": "Beijing"
+                            "city": "Beijing",
+                            "final": true
                         }
                     ]
                 }

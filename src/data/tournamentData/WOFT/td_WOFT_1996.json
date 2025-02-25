@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -206,6 +206,7 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "1996-07-28",
                             "time": "15:00",
                             "stadium": "Sanford Stadium",
@@ -215,8 +216,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA_U23WNT",
@@ -226,14 +230,9 @@
                             "date": "1996-08-01",
                             "time": "12:00",
                             "stadium": "Sanford Stadium",
-                            "city": "Athens, Georgia"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Athens, Georgia",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CHN_U23WNT",
                             "away_team": "USA_U23WNT",
@@ -242,7 +241,8 @@
                             "date": "1996-08-01",
                             "time": "15:00",
                             "stadium": "Sanford Stadium",
-                            "city": "Athens, Georgia"
+                            "city": "Athens, Georgia",
+                            "final": true
                         }
                     ]
                 }

@@ -517,7 +517,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Round of 16",
@@ -712,6 +712,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "JPN",
@@ -721,7 +724,8 @@
                             "date": "2019-02-01",
                             "time": "18:00",
                             "stadium": "Zayed Sports City Stadium",
-                            "city": "Abu Dhabi"
+                            "city": "Abu Dhabi",
+                            "final": true
                         }
                     ]
                 }

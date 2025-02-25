@@ -98,9 +98,9 @@ export const MatchVoidedTooltip = (props) => {
 }
 
 export const ReplacementTooltip = (props) => {
-    const { target, notes } = props
+    const { target, anchor, notes } = props
     const content = `Replacement${notes ? `: ${notes}` : ''}`
-    return <TopTooltip target={target} content={content} />
+    return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 
 export const PlayoffWinTooltip = (props) => {
@@ -134,8 +134,8 @@ export const DrawLotTooltip = (props) => {
 }
 
 export const AwardedTooltip = (props) => {
-    const { target, content } = props
-    return <TopTooltip target={target} content={content} anchor="(awd)" />
+    const { target, notes } = props
+    return <TopTooltip target={target} content={notes} anchor="(awd)" />
 }
 
 export const SharedBronzeTooltip = (props) => {

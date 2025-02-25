@@ -210,7 +210,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -249,7 +249,7 @@
                             "time": "21:00",
                             "stadium": "Pankritio Stadium",
                             "city": "Heraklio",
-                            "bracket_order": 3
+                            "bracket_order": 4
                         },
                         {
                             "home_team": "SWE_U23WNT",
@@ -260,7 +260,7 @@
                             "time": "21:00",
                             "stadium": "Panthessaliko Stadium",
                             "city": "Volos",
-                            "bracket_order": 4
+                            "bracket_order": 3
                         }
                     ]
                 },
@@ -284,12 +284,12 @@
                             "bracket_order": 1
                         },
                         {
-                            "home_team": "BRA_U23WNT",
-                            "away_team": "SWE_U23WNT",
-                            "home_score": 1,
-                            "away_score": 0,
+                            "home_team": "SWE_U23WNT",
+                            "away_team": "BRA_U23WNT",
+                            "home_score": 0,
+                            "away_score": 1,
                             "date": "2004-08-23",
-                            "time": "18:00",
+                            "time": "21:00",
                             "stadium": "Pampeloponnisiako Stadium",
                             "city": "Patras",
                             "bracket_order": 2
@@ -297,8 +297,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GER_U23WNT",
@@ -308,14 +311,9 @@
                             "date": "2004-08-26",
                             "time": "18:00",
                             "stadium": "Karaiskaki Stadium",
-                            "city": "Athens"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Athens",
+                            "third_place": true
+                        },
                         {
                             "home_team": "USA_U23WNT",
                             "away_team": "BRA_U23WNT",
@@ -326,7 +324,8 @@
                             "date": "2004-08-26",
                             "time": "21:00",
                             "stadium": "Karaiskaki Stadium",
-                            "city": "Athens"
+                            "city": "Athens",
+                            "final": true
                         }
                     ]
                 }

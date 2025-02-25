@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -439,8 +439,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "KOR",
@@ -454,14 +457,9 @@
                             "date": "2007-07-28",
                             "time": "19:30",
                             "stadium": "Gelora Sriwijaya Stadium",
-                            "city": "Palembang"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Palembang",
+                            "third_place": true
+                        },
                         {
                             "home_team": "IRQ-2004-2008",
                             "away_team": "KSA",
@@ -470,7 +468,8 @@
                             "date": "2007-07-29",
                             "time": "19:30",
                             "stadium": "Gelora Bung Karno Stadium",
-                            "city": "Jakarta"
+                            "city": "Jakarta",
+                            "final": true
                         }
                     ]
                 }

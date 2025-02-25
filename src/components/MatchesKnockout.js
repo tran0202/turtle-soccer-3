@@ -6,12 +6,15 @@ import {
     AetTooltip,
     AetSkippedTooltip,
     GoldenGoalTooltip,
+    SilverGoalTooltip,
     ReplayTooltip,
     WalkoverTooltip,
     DrawLotTooltip,
     MatchPostponedTooltip,
     ByeTooltip,
     WithdrewTooltip,
+    AwardedTooltip,
+    ReplacementTooltip,
 } from '../core/TooltipHelper'
 
 const MatchesKnockoutCollapse = (props) => {
@@ -116,6 +119,7 @@ const MatchRow = (props) => {
                         {homeTeamName} {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                         {m.home_bye && <ByeTooltip target={`${m.home_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                         {m.home_withdrew && <WithdrewTooltip target={`${m.home_team}withdrewTooltip`} notes={m.home_withdrew_notes} anchor="(withdrew)" />}
+                        {m.home_replacement && <ReplacementTooltip target={`${m.home_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
@@ -127,15 +131,18 @@ const MatchRow = (props) => {
                         {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                         {m.extra_time_skipped && <AetSkippedTooltip target="aetSkippedTooltip" anchor="(no.e.t.)" />}
                         {(m.home_golden_goal || m.away_golden_goal) && <GoldenGoalTooltip target="goldenGoalTooltip" anchor="(gg)" />}
+                        {(m.home_silver_goal || m.away_silver_goal) && <SilverGoalTooltip target="silverGoalTooltip" anchor="(sg)" />}
                         {(m.home_walkover || m.away_walkover) && <WalkoverTooltip target="walkoverTooltip" content={m.walkover_notes} anchor="(w/o)" />}
                         {m.replay_required && <ReplayTooltip target={`${m.home_team}${m.away_team}replayTooltip`} notes="Replay Required" anchor="(r)" />}
                         {m.match_postponed && <MatchPostponedTooltip target={`postponedTooltip`} notes={m.postponed_notes} anchor="(mp)" />}
+                        {(m.home_awarded || m.away_awarded) && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
                     <Col className={`col-box-25 ${pairAwayHighlight}`}>
                         {awayTeamName} {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                         {m.away_bye && <ByeTooltip target={`${m.away_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                         {m.away_withdrew && <WithdrewTooltip target={`${m.away_team}withdrewTooltip`} notes={m.away_withdrew_notes} anchor="(withdrew)" />}
+                        {m.away_replacement && <ReplacementTooltip target={`${m.away_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
                     </Col>
                 </Row>
                 {((m.home_extra_score !== undefined && !m.home_draw_lot && !m.away_draw_lot && !m.home_walkover && !m.away_walkover) ||
@@ -172,7 +179,7 @@ const MatchRow = (props) => {
                         <Col xs={{ size: 8, offset: 4 }}>{championshipLine}</Col>
                     </Row>
                 )}
-                {round.championship && m.third_place && !m.shared_bronze && (
+                {round.championship && m.third_place && !m.replay_required && !m.shared_bronze && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>{thirdPlaceLine}</Col>
                     </Row>
@@ -227,33 +234,40 @@ const MatchesKnockoutRow = (props) => {
 const MatchesKnockoutRowFinal = (props) => {
     const { round, config } = props
     const final_matchdays = round.matchdays && round.matchdays.filter((md) => md.final)
-    const thirdPlace = round.matchdays && round.matchdays.find((md) => md.third_place)
+    const third_place_matchdays = round.matchdays && round.matchdays.filter((md) => md.third_place)
     const isOlympic = config.competition_id === 'MOFT' || config.competition_id === 'WOFT'
     const thirdPlaceRoundName = isOlympic ? 'Bronze Medal' : 'Third place'
     const finalRoundName = isOlympic ? 'Gold Medal' : 'Final'
     return (
         <Row>
             <Col className="mt-3 round-box">
-                {thirdPlace && (
+                {third_place_matchdays && third_place_matchdays.length > 0 && (
                     <React.Fragment>
                         <Row>
                             <Col>
                                 <div className="h2-ff1 margin-top-md">{thirdPlaceRoundName}</div>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
-                                {moment(thirdPlace.date).format('dddd, MMMM D, YYYY')}
-                            </Col>
-                        </Row>
-                        {thirdPlace.matches &&
-                            thirdPlace.matches.map((m, index) => {
-                                const lastMatch = index === thirdPlace.matches.length - 1
-                                return <MatchRow key={index} m={m} round={round} config={config} last={lastMatch} />
-                            })}
+                        {third_place_matchdays.map((md) => {
+                            return (
+                                <React.Fragment key={md.date}>
+                                    <Row>
+                                        <Col sm="12" className="h5-ff6 border-bottom-gray4 margin-top-md">
+                                            {moment(md.date).format('dddd, MMMM D, YYYY')}
+                                            {md.replay && <React.Fragment> ::: Replay</React.Fragment>}
+                                        </Col>
+                                    </Row>
+                                    {md.matches &&
+                                        md.matches.map((m, index) => {
+                                            const lastMatch = index === md.matches.length - 1
+                                            return <MatchRow key={index} m={m} round={round} config={config} last={lastMatch} />
+                                        })}
+                                </React.Fragment>
+                            )
+                        })}
                     </React.Fragment>
                 )}
-                {final_matchdays && (
+                {final_matchdays && final_matchdays.length > 0 && (
                     <React.Fragment>
                         <Row>
                             <Col>

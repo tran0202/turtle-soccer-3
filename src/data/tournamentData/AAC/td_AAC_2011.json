@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -357,8 +357,8 @@
                             "away_score": 2,
                             "date": "2011-01-21",
                             "time": "16:30",
-                            "stadium": "Al-Gharafa Stadium",
-                            "city": "Doha",
+                            "stadium": "Thani bin Jassim Stadium",
+                            "city": "Al Rayyan",
                             "bracket_order": 3
                         },
                         {
@@ -417,8 +417,8 @@
                             "away_penalty_score": 0,
                             "date": "2011-01-25",
                             "time": "16:30",
-                            "stadium": "Al-Gharafa Stadium",
-                            "city": "Doha",
+                            "stadium": "Thani bin Jassim Stadium",
+                            "city": "Al Rayyan",
                             "bracket_order": 2
                         },
                         {
@@ -435,8 +435,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "UZB",
@@ -446,14 +449,9 @@
                             "date": "2011-01-28",
                             "time": "18:00",
                             "stadium": "Jassim Bin Hamad Stadium",
-                            "city": "Doha"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Doha",
+                            "third_place": true
+                        },
                         {
                             "home_team": "AUS",
                             "away_team": "JPN",
@@ -464,7 +462,8 @@
                             "date": "2011-01-29",
                             "time": "18:00",
                             "stadium": "Khalifa International Stadium",
-                            "city": "Doha"
+                            "city": "Doha",
+                            "final": true
                         }
                     ]
                 }

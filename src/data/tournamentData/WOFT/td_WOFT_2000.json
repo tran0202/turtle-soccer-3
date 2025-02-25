@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -213,8 +213,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GER_U23WNT",
@@ -224,14 +227,9 @@
                             "date": "2000-09-28",
                             "time": "17:00",
                             "stadium": "Sydney Football Stadium",
-                            "city": "Sydney"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Sydney",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NOR_U23WNT",
                             "away_team": "USA_U23WNT",
@@ -239,10 +237,12 @@
                             "away_score": 2,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2000-09-28",
                             "time": "20:00",
                             "stadium": "Sydney Football Stadium",
-                            "city": "Sydney"
+                            "city": "Sydney",
+                            "final": true
                         }
                     ]
                 }

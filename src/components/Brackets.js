@@ -7,6 +7,7 @@ import {
     AetSkippedTooltip,
     PenaltyTooltip,
     GoldenGoalTooltip,
+    SilverGoalTooltip,
     ReplayTooltip,
     WalkoverTooltip,
     SharedBronzeTooltip,
@@ -14,6 +15,8 @@ import {
     MatchPostponedTooltip,
     ByeTooltip,
     WithdrewTooltip,
+    AwardedTooltip,
+    ReplacementTooltip,
 } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
@@ -236,6 +239,7 @@ const BracketBox = (props) => {
                             {homeTeamName} {homeExtraScore > awayExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.extra_time_skipped && <AetSkippedTooltip target="aetSkippedTooltip" anchor="(no.e.t.)" />}
                             {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
+                            {match.home_silver_goal && <SilverGoalTooltip target={`${match.home_team}silverGoalTooltip`} anchor="(sg)" />}
                             {homePenaltyScore > awayPenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.replay_required && (
                                 <ReplayTooltip target={`${match.home_team}${match.away_team}replayBracketTooltip`} notes="Replay" anchor="(r)" />
@@ -248,6 +252,10 @@ const BracketBox = (props) => {
                             {match.home_bye && <ByeTooltip target={`${match.home_team}byeTooltip`} notes={match.bye_notes} anchor="(bye)" />}
                             {match.home_withdrew && (
                                 <WithdrewTooltip target={`${match.home_team}withdrewTooltip`} notes={match.home_withdrew_notes} anchor="(withdrew)" />
+                            )}
+                            {match.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
+                            {match.home_replacement && (
+                                <ReplacementTooltip target={`${match.home_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
@@ -280,6 +288,7 @@ const BracketBox = (props) => {
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${awayHighlight}`}>
                             {awayTeamName} {awayExtraScore > homeExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.away_golden_goal && <GoldenGoalTooltip target={`${match.away_team}goldenGoalTooltip`} anchor="(gg)" />}
+                            {match.away_silver_goal && <SilverGoalTooltip target={`${match.away_team}silverGoalTooltip`} anchor="(sg)" />}
                             {awayPenaltyScore > homePenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
                             {match.shared_bronze && <SharedBronzeTooltip target={`${match.away_team}sharedBronzeTooltip`} notes={match.shared_bronze_notes} />}
                             {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
@@ -289,6 +298,10 @@ const BracketBox = (props) => {
                             {match.away_bye && <ByeTooltip target={`${match.away_team}byeTooltip`} notes={match.bye_notes} anchor="(bye)" />}
                             {match.away_withdrew && (
                                 <WithdrewTooltip target={`${match.away_team}withdrewTooltip`} notes={match.away_withdrew_notes} anchor="(withdrew)" />
+                            )}
+                            {match.away_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
+                            {match.away_replacement && (
+                                <ReplacementTooltip target={`${match.away_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
