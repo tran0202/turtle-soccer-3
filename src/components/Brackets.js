@@ -17,6 +17,7 @@ import {
     WithdrewTooltip,
     AwardedTooltip,
     ReplacementTooltip,
+    DisqualifiedTooltip,
 } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
@@ -253,6 +254,13 @@ const BracketBox = (props) => {
                             {match.home_withdrew && (
                                 <WithdrewTooltip target={`${match.home_team}withdrewTooltip`} notes={match.home_withdrew_notes} anchor="(withdrew)" />
                             )}
+                            {match.home_disqualified && (
+                                <DisqualifiedTooltip
+                                    target={`${match.home_team}disqualifiedTooltip`}
+                                    notes={match.disqualified_notes}
+                                    anchor="(disqualified)"
+                                />
+                            )}
                             {match.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
                             {match.home_replacement && (
                                 <ReplacementTooltip target={`${match.home_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
@@ -298,6 +306,13 @@ const BracketBox = (props) => {
                             {match.away_bye && <ByeTooltip target={`${match.away_team}byeTooltip`} notes={match.bye_notes} anchor="(bye)" />}
                             {match.away_withdrew && (
                                 <WithdrewTooltip target={`${match.away_team}withdrewTooltip`} notes={match.away_withdrew_notes} anchor="(withdrew)" />
+                            )}
+                            {match.away_disqualified && (
+                                <DisqualifiedTooltip
+                                    target={`${match.away_team}disqualifiedTooltip`}
+                                    notes={match.disqualified_notes}
+                                    anchor="(disqualified)"
+                                />
                             )}
                             {match.away_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
                             {match.away_replacement && (

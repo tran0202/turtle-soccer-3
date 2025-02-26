@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -215,8 +215,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "MAR",
@@ -226,14 +229,9 @@
                             "date": "1980-03-21",
                             "time": "12:00",
                             "stadium": "Surulere Stadium",
-                            "city": "Lagos"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Lagos",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NGA",
                             "away_team": "ALG",
@@ -242,7 +240,8 @@
                             "date": "1980-03-22",
                             "time": "12:00",
                             "stadium": "Surulere Stadium",
-                            "city": "Lagos"
+                            "city": "Lagos",
+                            "final": true
                         }
                     ]
                 }

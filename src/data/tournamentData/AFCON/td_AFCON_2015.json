@@ -355,7 +355,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -442,8 +442,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "COD",
@@ -455,14 +458,9 @@
                             "date": "2015-02-07",
                             "time": "17:00",
                             "stadium": "Nuevo Estadio de Malabo",
-                            "city": "Malabo"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Malabo",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CIV",
                             "away_team": "GHA",
@@ -475,7 +473,8 @@
                             "date": "2015-02-08",
                             "time": "20:00",
                             "stadium": "Estadio de Bata",
-                            "city": "Bata"
+                            "city": "Bata",
+                            "final": true
                         }
                     ]
                 }

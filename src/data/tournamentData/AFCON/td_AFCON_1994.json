@@ -222,7 +222,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -311,8 +311,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CIV",
@@ -322,14 +325,9 @@
                             "date": "1994-04-10",
                             "time": "12:00",
                             "stadium": "Stade El Menzah",
-                            "city": "Tunis"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Tunis",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NGA",
                             "away_team": "ZAM",
@@ -338,7 +336,8 @@
                             "date": "1994-04-10",
                             "time": "15:00",
                             "stadium": "Stade El Menzah",
-                            "city": "Tunis"
+                            "city": "Tunis",
+                            "final": true
                         }
                     ]
                 }

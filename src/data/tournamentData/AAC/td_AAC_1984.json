@@ -280,7 +280,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -319,27 +319,27 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "IRN",
                             "away_team": "KUW",
                             "home_score": 1,
                             "away_score": 1,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
                             "home_penalty_score": 3,
                             "away_penalty_score": 5,
                             "date": "1984-12-16",
                             "time": "18:00",
                             "stadium": "National Stadium",
-                            "city": "Singapore"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Singapore",
+                            "third_place": true
+                        },
                         {
                             "home_team": "KSA",
                             "away_team": "CHN",
@@ -348,7 +348,8 @@
                             "date": "1984-12-16",
                             "time": "20:00",
                             "stadium": "National Stadium",
-                            "city": "Singapore"
+                            "city": "Singapore",
+                            "final": true
                         }
                     ]
                 }

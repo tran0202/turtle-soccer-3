@@ -3018,19 +3018,30 @@
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
         "flag_filename": "640px-Flag_of_South_Africa.svg.png",
-        "start_date": "1957-01-01",
+        "start_date": "1994-04-26",
         "end_date": ""
     },
     {
-        "id": "RSA-1928-1994",
+        "id": "RSA-1982-1994",
         "name": "South Africa",
         "official_name": "",
         "parent_nation_id": "RSA",
         "confederation_id": "CAF",
         "nation_type_id": "NATN",
-        "flag_filename": "Flag_of_South_Africa_(1928–1994).svg",
-        "start_date": "1928-05-31",
+        "flag_filename": "640px-Flag_of_South_Africa_(1982–1994).svg.png",
+        "start_date": "1982-01-01",
         "end_date": "1994-04-26"
+    },
+    {
+        "id": "RSA-1928-1982",
+        "name": "South Africa",
+        "official_name": "",
+        "parent_nation_id": "RSA",
+        "confederation_id": "CAF",
+        "nation_type_id": "NATN",
+        "flag_filename": "640px-Flag_of_South_Africa_(1928-1982).svg.png",
+        "start_date": "1928-05-31",
+        "end_date": "1982-01-01"
     },
     {
         "id": "SSD",

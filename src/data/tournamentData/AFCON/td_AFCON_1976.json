@@ -11,7 +11,7 @@
                     { "pos": 1, "next": "advance" },
                     { "pos": 2, "next": "advance" }
                 ],
-                "advanced_notes": "Group winners and runners-up advanced to Knockout stage"
+                "advanced_notes": "Group winners and runners-up advanced to Final round"
             },
             "groups": [
                 {
@@ -180,75 +180,96 @@
         },
         {
             "name": "Final Round",
-            "type": "roundrobin",
+            "type": "roundrobin_final",
             "championship_round": true,
             "eliminate_count": 0,
             "tiebreakers": ["team"],
-            "advancement": { "teams": { "text": "The winner would win the African Cup of Nations." } },
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "champion" },
+                    { "pos": 2, "next": "runner-up" },
+                    { "pos": 3, "next": "third-place" }
+                ]
+            },
             "groups": [
                 {
                     "name": "Final Round",
                     "teams": [{ "id": "GUI" }, { "id": "NGA" }, { "id": "MAR" }, { "id": "EGY" }],
-                    "matches": [
+                    "matchdays": [
                         {
-                            "home_team": "GUI",
-                            "away_team": "NGA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1976-03-09",
-                            "time": "12:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "GUI",
+                                    "away_team": "NGA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1976-03-09",
+                                    "time": "12:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                },
+                                {
+                                    "home_team": "MAR",
+                                    "away_team": "EGY",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1976-03-09",
+                                    "time": "15:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MAR",
-                            "away_team": "EGY",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1976-03-09",
-                            "time": "15:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "MAR",
+                                    "away_team": "NGA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "1976-03-11",
+                                    "time": "12:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                },
+                                {
+                                    "home_team": "GUI",
+                                    "away_team": "EGY",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "1976-03-11",
+                                    "time": "15:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                }
+                            ]
                         },
                         {
-                            "home_team": "MAR",
-                            "away_team": "NGA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "1976-03-11",
-                            "time": "12:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
-                        },
-                        {
-                            "home_team": "GUI",
-                            "away_team": "EGY",
-                            "home_score": 4,
-                            "away_score": 2,
-                            "date": "1976-03-11",
-                            "time": "15:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
-                        },
-                        {
-                            "home_team": "NGA",
-                            "away_team": "EGY",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "1976-03-14",
-                            "time": "12:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
-                        },
-                        {
-                            "home_team": "GUI",
-                            "away_team": "MAR",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "date": "1976-03-14",
-                            "time": "15:00",
-                            "stadium": "Addis Ababa Stadium",
-                            "city": "Addis Ababa"
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "NGA",
+                                    "away_team": "EGY",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "1976-03-14",
+                                    "time": "12:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                },
+                                {
+                                    "home_team": "GUI",
+                                    "away_team": "MAR",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "1976-03-14",
+                                    "time": "15:00",
+                                    "stadium": "Addis Ababa Stadium",
+                                    "city": "Addis Ababa"
+                                }
+                            ]
                         }
                     ]
                 }

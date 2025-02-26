@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -278,6 +278,7 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "2000-10-23",
                             "time": "16:45",
                             "stadium": "International Olympic Stadium",
@@ -313,6 +314,7 @@
                             "away_score": 2,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "2000-10-24",
                             "time": "19:45",
                             "stadium": "Sports City Stadium",
@@ -352,8 +354,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CHN",
@@ -363,14 +368,9 @@
                             "date": "2000-10-29",
                             "time": "17:00",
                             "stadium": "Sports City Stadium",
-                            "city": "Beirut"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Beirut",
+                            "third_place": true
+                        },
                         {
                             "home_team": "JPN",
                             "away_team": "KSA",
@@ -379,7 +379,8 @@
                             "date": "2000-10-29",
                             "time": "19:45",
                             "stadium": "Sports City Stadium",
-                            "city": "Beirut"
+                            "city": "Beirut",
+                            "final": true
                         }
                     ]
                 }

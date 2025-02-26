@@ -121,11 +121,14 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "UAR",
@@ -135,14 +138,9 @@
                             "date": "1963-11-30",
                             "time": "12:00",
                             "stadium": "Accra Sports Stadium",
-                            "city": "Accra"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Accra",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GHA",
                             "away_team": "SDN-1956-1970",
@@ -151,7 +149,8 @@
                             "date": "1963-12-01",
                             "time": "12:00",
                             "stadium": "Accra Sports Stadium",
-                            "city": "Accra"
+                            "city": "Accra",
+                            "final": true
                         }
                     ]
                 }

@@ -120,7 +120,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -136,7 +136,7 @@
                             "home_extra_score": 1,
                             "away_extra_score": 0,
                             "date": "1976-06-11",
-                            "time": "12:00",
+                            "time": "18:00",
                             "stadium": "Aryamehr Stadium",
                             "city": "Tehran",
                             "bracket_order": 1
@@ -149,7 +149,7 @@
                             "home_extra_score": 2,
                             "away_extra_score": 0,
                             "date": "1976-06-11",
-                            "time": "15:00",
+                            "time": "20:00",
                             "stadium": "Aryamehr Stadium",
                             "city": "Tehran",
                             "bracket_order": 2
@@ -157,8 +157,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "IRQ-1963-1991",
@@ -166,25 +169,21 @@
                             "home_score": 0,
                             "away_score": 1,
                             "date": "1976-06-13",
-                            "time": "12:00",
+                            "time": "18:00",
                             "stadium": "Aryamehr Stadium",
-                            "city": "Tehran"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Tehran",
+                            "third_place": true
+                        },
                         {
                             "home_team": "KUW",
                             "away_team": "IRN-1964-1980",
                             "home_score": 0,
                             "away_score": 1,
                             "date": "1976-06-13",
-                            "time": "15:00",
+                            "time": "20:00",
                             "stadium": "Aryamehr Stadium",
-                            "city": "Tehran"
+                            "city": "Tehran",
+                            "final": true
                         }
                     ]
                 }

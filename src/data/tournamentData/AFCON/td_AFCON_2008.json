@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,8 +429,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GHA",
@@ -440,14 +443,9 @@
                             "date": "2008-02-09",
                             "time": "17:00",
                             "stadium": "Baba Yara Stadium",
-                            "city": "Kumasi"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Kumasi",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CMR",
                             "away_team": "EGY",
@@ -456,7 +454,8 @@
                             "date": "2008-02-10",
                             "time": "17:00",
                             "stadium": "Ohene Djan Stadium",
-                            "city": "Accra"
+                            "city": "Accra",
+                            "final": true
                         }
                     ]
                 }

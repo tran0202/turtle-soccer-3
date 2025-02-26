@@ -222,7 +222,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -313,8 +313,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NGA",
@@ -324,14 +327,9 @@
                             "date": "1992-01-25",
                             "time": "12:00",
                             "stadium": "Stade de l'Amitié",
-                            "city": "Dakar"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Dakar",
+                            "third_place": true
+                        },
                         {
                             "home_team": "GHA",
                             "away_team": "CIV",
@@ -344,7 +342,8 @@
                             "date": "1992-01-26",
                             "time": "12:00",
                             "stadium": "Stade de l'Amitié",
-                            "city": "Dakar"
+                            "city": "Dakar",
+                            "final": true
                         }
                     ]
                 }

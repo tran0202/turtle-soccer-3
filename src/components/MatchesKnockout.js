@@ -15,6 +15,7 @@ import {
     WithdrewTooltip,
     AwardedTooltip,
     ReplacementTooltip,
+    DisqualifiedTooltip,
 } from '../core/TooltipHelper'
 
 const MatchesKnockoutCollapse = (props) => {
@@ -73,6 +74,8 @@ const MatchRow = (props) => {
             {' >>> '} <b>{teamWon}</b> won
         </React.Fragment>
     )
+    const goldenGoalLine = m.home_golden_goal || m.away_golden_goal ? <span className="blue"> golden goal</span> : ''
+    const silverGoalLine = m.home_silver_goal || m.away_silver_goal ? <span className="blue"> silver goal</span> : ''
     const extraTimeLine = m.home_extra_score !== undefined && m.home_penalty_score === undefined ? <span className="blue"> after extra time</span> : ''
     const penaltyLine =
         m.home_penalty_score !== undefined ? (
@@ -119,11 +122,14 @@ const MatchRow = (props) => {
                         {homeTeamName} {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                         {m.home_bye && <ByeTooltip target={`${m.home_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                         {m.home_withdrew && <WithdrewTooltip target={`${m.home_team}withdrewTooltip`} notes={m.home_withdrew_notes} anchor="(withdrew)" />}
+                        {m.home_disqualified && (
+                            <DisqualifiedTooltip target={`${m.home_team}disqualifiedTooltip`} notes={m.disqualified_notes} anchor="(disqualified)" />
+                        )}
                         {m.home_replacement && <ReplacementTooltip target={`${m.home_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
-                        {!m.match_postponed && !m.home_withdrew && !m.away_withdrew && (
+                        {!m.match_postponed && !m.home_withdrew && !m.away_withdrew && !m.home_disqualified && !m.away_disqualified && (
                             <React.Fragment>
                                 {matchHomeScore} - {matchAwayScore}
                             </React.Fragment>
@@ -142,16 +148,25 @@ const MatchRow = (props) => {
                         {awayTeamName} {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                         {m.away_bye && <ByeTooltip target={`${m.away_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                         {m.away_withdrew && <WithdrewTooltip target={`${m.away_team}withdrewTooltip`} notes={m.away_withdrew_notes} anchor="(withdrew)" />}
+                        {m.away_disqualified && (
+                            <DisqualifiedTooltip target={`${m.away_team}disqualifiedTooltip`} notes={m.disqualified_notes} anchor="(disqualified)" />
+                        )}
                         {m.away_replacement && <ReplacementTooltip target={`${m.away_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
                     </Col>
                 </Row>
-                {((m.home_extra_score !== undefined && !m.home_draw_lot && !m.away_draw_lot && !m.home_walkover && !m.away_walkover) ||
+                {(((m.home_extra_score !== undefined || m.home_penalty_score !== undefined) &&
+                    !m.home_draw_lot &&
+                    !m.away_draw_lot &&
+                    !m.home_walkover &&
+                    !m.away_walkover) ||
                     m.extra_time_skipped) && (
                     <Row className="no-gutters aggregate-line team-row padding-tb-sm">
                         <Col xs={{ size: 7, offset: 5 }}>
                             {!m.replay_required && (
                                 <React.Fragment>
                                     {teamWonLine}
+                                    {goldenGoalLine}
+                                    {silverGoalLine}
                                     {extraTimeLine}
                                 </React.Fragment>
                             )}

@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -213,27 +213,27 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CHN",
                             "away_team": "UAE",
                             "home_score": 1,
                             "away_score": 1,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
                             "home_penalty_score": 4,
                             "away_penalty_score": 3,
                             "date": "1992-11-08",
                             "time": "12:00",
                             "stadium": "Hiroshima Big Arch",
-                            "city": "Hiroshima"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Hiroshima",
+                            "third_place": true
+                        },
                         {
                             "home_team": "JPN",
                             "away_team": "KSA",
@@ -242,7 +242,8 @@
                             "date": "1992-11-08",
                             "time": "14:30",
                             "stadium": "Hiroshima Big Arch",
-                            "city": "Hiroshima"
+                            "city": "Hiroshima",
+                            "final": true
                         }
                     ]
                 }

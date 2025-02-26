@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,8 +429,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NGA",
@@ -440,14 +443,9 @@
                             "date": "2002-02-09",
                             "time": "16:00",
                             "stadium": "Stade Barema Bocoum",
-                            "city": "Mopti"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Mopti",
+                            "third_place": true
+                        },
                         {
                             "home_team": "SEN",
                             "away_team": "CMR",
@@ -460,7 +458,8 @@
                             "date": "2002-02-10",
                             "time": "16:00",
                             "stadium": "Stade du 26 Mars",
-                            "city": "Bamako"
+                            "city": "Bamako",
+                            "final": true
                         }
                     ]
                 }

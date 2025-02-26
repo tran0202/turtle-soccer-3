@@ -280,7 +280,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -313,8 +313,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "IRN",
@@ -324,14 +327,9 @@
                             "date": "1980-09-29",
                             "time": "12:00",
                             "stadium": "Sabah Al-Salem Stadium",
-                            "city": "Kuwait City"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Kuwait City",
+                            "third_place": true
+                        },
                         {
                             "home_team": "KUW",
                             "away_team": "KOR",
@@ -340,7 +338,8 @@
                             "date": "1980-09-30",
                             "time": "18:30",
                             "stadium": "Sabah Al-Salem Stadium",
-                            "city": "Kuwait City"
+                            "city": "Kuwait City",
+                            "final": true
                         }
                     ]
                 }

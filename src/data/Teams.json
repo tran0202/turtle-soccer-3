@@ -63,7 +63,7 @@
     { "id": "GUI", "name": "Guinea", "team_type_id": "MNT", "nation_id": "GUI", "parent_team_id": "" },
     { "id": "ZAM", "name": "Zambia", "team_type_id": "MNT", "nation_id": "ZAM", "parent_team_id": "" },
     { "id": "GAB", "name": "Gabon", "team_type_id": "MNT", "nation_id": "GAB", "parent_team_id": "" },
-    { "id": "EQG", "name": "Equatorial Guinea", "short_name": "Equatorial Guinea", "team_type_id": "MNT", "nation_id": "EQG", "parent_team_id": "" },
+    { "id": "EQG", "name": "Equatorial Guinea", "short_name": "EquatorialGuinea", "team_type_id": "MNT", "nation_id": "EQG", "parent_team_id": "" },
     { "id": "UGA", "name": "Uganda", "team_type_id": "MNT", "nation_id": "UGA", "parent_team_id": "" },
     { "id": "BEN", "name": "Benin", "team_type_id": "MNT", "nation_id": "BEN", "parent_team_id": "" },
     { "id": "MTN", "name": "Mauritania", "team_type_id": "MNT", "nation_id": "MTN", "parent_team_id": "" },
@@ -284,11 +284,11 @@
     { "id": "UGA-1914-1962", "name": "Uganda", "team_type_id": "MNT", "nation_id": "UGA-1914-1962", "parent_team_id": "UGA" },
     { "id": "EGY-1953-1958", "name": "Egypt", "team_type_id": "MNT", "nation_id": "EGY-1953-1958", "parent_team_id": "EGY" },
     {
-        "id": "RSA-1928-1994",
+        "id": "RSA-1928-1982",
         "name": "South Africa",
         "short_name": "SouthAfrica",
         "team_type_id": "MNT",
-        "nation_id": "RSA-1928-1994",
+        "nation_id": "RSA-1928-1982",
         "parent_team_id": "RSA"
     },
     { "id": "IRQ-2004-2008", "name": "Iraq", "team_type_id": "MNT", "nation_id": "IRQ-2004-2008", "parent_team_id": "IRQ" },

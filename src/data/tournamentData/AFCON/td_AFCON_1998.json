@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -417,6 +417,7 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "1998-02-25",
                             "time": "16:00",
                             "stadium": "Stade du 4 Août",
@@ -437,8 +438,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "COD-1997-2003",
@@ -452,14 +456,9 @@
                             "date": "1998-02-27",
                             "time": "16:00",
                             "stadium": "Stade Municipal",
-                            "city": "Ouagadougou"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Ouagadougou",
+                            "third_place": true
+                        },
                         {
                             "home_team": "RSA",
                             "away_team": "EGY",
@@ -468,7 +467,8 @@
                             "date": "1998-02-28",
                             "time": "16:00",
                             "stadium": "Stade du 4 Août",
-                            "city": "Ouagadougou"
+                            "city": "Ouagadougou",
+                            "final": true
                         }
                     ]
                 }
