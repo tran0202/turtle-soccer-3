@@ -211,8 +211,8 @@ const BracketBox = (props) => {
     const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
     const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
     const away_runnerup_striped = match.final && isHomeWinMatch(match) ? 'silver' : ''
-    const home_thirdplace_striped = match.third_place && isHomeWinMatch(match) ? 'bronze' : ''
-    const away_thirdplace_striped = match.third_place && !isHomeWinMatch(match) ? 'bronze' : ''
+    const home_thirdplace_striped = match.third_place && (isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
+    const away_thirdplace_striped = match.third_place && (!isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
     return (
         <React.Fragment>
             <Row className="no-gutters box-sm bracket-box-height">

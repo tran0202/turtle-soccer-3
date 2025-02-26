@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -356,8 +356,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -371,14 +374,9 @@
                             "date": "2015-07-25",
                             "time": "16:00",
                             "stadium": "PPL Park",
-                            "city": "Chester"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Chester",
+                            "third_place": true
+                        },
                         {
                             "home_team": "JAM",
                             "away_team": "MEX",
@@ -387,7 +385,8 @@
                             "date": "2015-07-26",
                             "time": "20:00",
                             "stadium": "Lincoln Financial Field",
-                            "city": "Philadelphia"
+                            "city": "Philadelphia",
+                            "final": true
                         }
                     ]
                 }

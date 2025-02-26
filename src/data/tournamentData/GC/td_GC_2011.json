@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -360,6 +360,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -369,7 +372,8 @@
                             "date": "2011-06-25",
                             "time": "21:00",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "city": "Pasadena",
+                            "final": true
                         }
                     ]
                 }

@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -351,48 +351,52 @@
                     "next_round": "Semi-finals",
                     "matches": [
                         {
-                            "home_team": "QAT",
-                            "away_team": "SLV",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2021-07-24",
-                            "time": "19:30",
-                            "stadium": "State Farm Stadium",
-                            "city": "Glendale",
-                            "bracket_order": 1
-                        },
-                        {
-                            "home_team": "MEX",
-                            "away_team": "HON",
-                            "home_score": 3,
+                            "home_team": "PAN",
+                            "away_team": "QAT",
+                            "home_score": 4,
                             "away_score": 0,
-                            "date": "2021-07-24",
-                            "time": "22:30",
-                            "stadium": "State Farm Stadium",
-                            "city": "Glendale",
-                            "bracket_order": 3
-                        },
-                        {
-                            "home_team": "CRC",
-                            "away_team": "CAN",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2021-07-25",
+                            "date": "2023-07-08",
                             "time": "19:00",
                             "stadium": "AT&T Stadium",
                             "city": "Arlington",
                             "bracket_order": 4
                         },
                         {
-                            "home_team": "USA",
-                            "away_team": "JAM",
-                            "home_score": 1,
+                            "home_team": "MEX",
+                            "away_team": "CRC",
+                            "home_score": 2,
                             "away_score": 0,
-                            "date": "2021-07-25",
+                            "date": "2023-07-08",
                             "time": "21:30",
                             "stadium": "AT&T Stadium",
                             "city": "Arlington",
                             "bracket_order": 2
+                        },
+                        {
+                            "home_team": "GUA",
+                            "away_team": "JAM",
+                            "home_score": 0,
+                            "away_score": 1,
+                            "date": "2023-07-09",
+                            "time": "17:00",
+                            "stadium": "TQL Stadium",
+                            "city": "Cincinnati",
+                            "bracket_order": 1
+                        },
+                        {
+                            "home_team": "USA",
+                            "away_team": "CAN",
+                            "home_score": 1,
+                            "away_score": 1,
+                            "home_extra_score": 1,
+                            "away_extra_score": 1,
+                            "home_penalty_score": 3,
+                            "away_penalty_score": 2,
+                            "date": "2023-07-09",
+                            "time": "19:30",
+                            "stadium": "TQL Stadium",
+                            "city": "Cincinnati",
+                            "bracket_order": 3
                         }
                     ]
                 },
@@ -403,44 +407,50 @@
                     "next_round": "Final",
                     "matches": [
                         {
-                            "home_team": "QAT",
-                            "away_team": "USA",
+                            "home_team": "USA",
+                            "away_team": "PAN",
                             "home_score": 0,
-                            "away_score": 1,
-                            "date": "2021-07-29",
+                            "away_score": 0,
+                            "home_extra_score": 1,
+                            "away_extra_score": 1,
+                            "home_penalty_score": 4,
+                            "away_penalty_score": 5,
+                            "date": "2023-07-12",
                             "time": "19:30",
-                            "stadium": "Q2 Stadium",
-                            "city": "Austin",
-                            "bracket_order": 1
+                            "stadium": "Snapdragon Stadium",
+                            "city": "San Diego",
+                            "bracket_order": 2
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "CAN",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2021-07-29",
-                            "time": "22:15",
-                            "stadium": "NRG Stadium",
-                            "city": "Houston",
-                            "bracket_order": 2
+                            "home_team": "JAM",
+                            "away_team": "MEX",
+                            "home_score": 0,
+                            "away_score": 3,
+                            "date": "2023-07-12",
+                            "time": "22:00",
+                            "stadium": "Allegiant Stadium",
+                            "city": "Paradise",
+                            "bracket_order": 1
                         }
                     ]
                 },
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
-                            "home_team": "USA",
-                            "away_team": "MEX",
-                            "home_score": 0,
+                            "home_team": "MEX",
+                            "away_team": "PAN",
+                            "home_score": 1,
                             "away_score": 0,
-                            "home_extra_score": 1,
-                            "away_extra_score": 0,
-                            "date": "2021-08-01",
-                            "time": "21:00",
-                            "stadium": "Allegiant Stadium",
-                            "city": "Paradise"
+                            "date": "2023-07-16",
+                            "time": "19:30",
+                            "stadium": "SoFi Stadium",
+                            "city": "Inglewood",
+                            "final": true
                         }
                     ]
                 }

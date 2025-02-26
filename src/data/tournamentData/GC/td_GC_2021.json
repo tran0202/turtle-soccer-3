@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,6 +429,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -440,7 +443,8 @@
                             "date": "2021-08-01",
                             "time": "21:00",
                             "stadium": "Allegiant Stadium",
-                            "city": "Paradise"
+                            "city": "Paradise",
+                            "final": true
                         }
                     ]
                 }

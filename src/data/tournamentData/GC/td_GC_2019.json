@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -435,6 +435,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "MEX",
@@ -444,7 +447,8 @@
                             "date": "2019-07-07",
                             "time": "21:15",
                             "stadium": "Soldier Field",
-                            "city": "Chicago"
+                            "city": "Chicago",
+                            "final": true
                         }
                     ]
                 }

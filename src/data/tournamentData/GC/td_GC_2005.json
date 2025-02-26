@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -354,6 +354,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -367,7 +370,8 @@
                             "date": "2005-07-24",
                             "time": "15:00",
                             "stadium": "Giants Stadium",
-                            "city": "East Rutherford"
+                            "city": "East Rutherford",
+                            "final": true
                         }
                     ]
                 }

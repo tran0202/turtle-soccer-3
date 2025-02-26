@@ -238,7 +238,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -253,6 +253,7 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2002-01-26",
                             "time": "15:00",
                             "stadium": "Orange Bowl",
@@ -337,8 +338,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "KOR",
@@ -348,14 +352,9 @@
                             "date": "2002-02-02",
                             "time": "10:00",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Pasadena",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CRC",
                             "away_team": "USA",
@@ -364,7 +363,8 @@
                             "date": "2002-02-02",
                             "time": "12:00",
                             "stadium": "Rose Bowl",
-                            "city": "Pasadena"
+                            "city": "Pasadena",
+                            "final": true
                         }
                     ]
                 }

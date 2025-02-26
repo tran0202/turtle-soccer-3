@@ -265,7 +265,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -352,6 +352,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -361,7 +364,8 @@
                             "date": "2017-07-26",
                             "time": "21:30",
                             "stadium": "Levi's Stadium",
-                            "city": "Santa Clara"
+                            "city": "Santa Clara",
+                            "final": true
                         }
                     ]
                 }

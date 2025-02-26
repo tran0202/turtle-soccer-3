@@ -11,7 +11,7 @@ import Knockout from './tournament/Knockout'
 const TournamentTabs = (props) => {
     const { tournament, config } = props
     const { stages } = tournament
-    const first_final_stage = 'Knockout Stage' // stages && stages.length > 0 ? stages[0].name : 'Group Stage'
+    const first_final_stage = stages && stages.length > 0 && stages.find((s) => s.name === 'Knockout Stage') ? 'Knockout Stage' : stages[0].name
     const [activeTab, setActiveTab] = useState(first_final_stage)
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)

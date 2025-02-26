@@ -204,7 +204,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -224,12 +224,13 @@
                             "bracket_order": 1
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "JAM",
+                            "home_team": "JAM",
+                            "away_team": "MEX",
                             "home_score": 0,
                             "away_score": 0,
-                            "home_extra_score": 1,
-                            "away_extra_score": 0,
+                            "home_extra_score": 0,
+                            "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "1998-02-12",
                             "time": "12:00",
                             "stadium": "Los Angeles Memorial Coliseum",
@@ -239,8 +240,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -250,14 +254,9 @@
                             "date": "1998-02-15",
                             "time": "12:00",
                             "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Los Angeles",
+                            "third_place": true
+                        },
                         {
                             "home_team": "USA",
                             "away_team": "MEX",
@@ -266,7 +265,8 @@
                             "date": "1998-02-15",
                             "time": "15:00",
                             "stadium": "Los Angeles Memorial Coliseum",
-                            "city": "Los Angeles"
+                            "city": "Los Angeles",
+                            "final": true
                         }
                     ]
                 }

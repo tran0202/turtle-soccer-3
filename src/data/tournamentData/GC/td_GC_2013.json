@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -280,7 +280,7 @@
                             "time": "15:30",
                             "stadium": "Georgia Dome",
                             "city": "Atlanta",
-                            "bracket_order": 2
+                            "bracket_order": 3
                         },
                         {
                             "home_team": "MEX",
@@ -291,7 +291,7 @@
                             "time": "18:30",
                             "stadium": "Georgia Dome",
                             "city": "Atlanta",
-                            "bracket_order": 1
+                            "bracket_order": 4
                         },
                         {
                             "home_team": "USA",
@@ -302,7 +302,7 @@
                             "time": "16:00",
                             "stadium": "M&T Bank Stadium",
                             "city": "Baltimore",
-                            "bracket_order": 4
+                            "bracket_order": 1
                         },
                         {
                             "home_team": "HON-1949-2022",
@@ -313,7 +313,7 @@
                             "time": "19:00",
                             "stadium": "M&T Bank Stadium",
                             "city": "Baltimore",
-                            "bracket_order": 3
+                            "bracket_order": 2
                         }
                     ]
                 },
@@ -324,42 +324,46 @@
                     "next_round": "Final",
                     "matches": [
                         {
-                            "home_team": "HON-1949-2022",
-                            "away_team": "USA",
-                            "home_score": 1,
-                            "away_score": 3,
+                            "home_team": "USA",
+                            "away_team": "HON-1949-2022",
+                            "home_score": 3,
+                            "away_score": 1,
                             "date": "2013-07-24",
                             "time": "19:00",
                             "stadium": "Cowboys Stadium",
                             "city": "Arlington",
-                            "bracket_order": 2
+                            "bracket_order": 1
                         },
                         {
-                            "home_team": "MEX",
-                            "away_team": "PAN",
-                            "home_score": 1,
-                            "away_score": 2,
+                            "home_team": "PAN",
+                            "away_team": "MEX",
+                            "home_score": 2,
+                            "away_score": 1,
                             "date": "2013-07-24",
                             "time": "22:00",
                             "stadium": "Cowboys Stadium",
                             "city": "Arlington",
-                            "bracket_order": 1
+                            "bracket_order": 2
                         }
                     ]
                 },
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
-                            "home_team": "PAN",
-                            "away_team": "USA",
-                            "home_score": 0,
-                            "away_score": 1,
+                            "home_team": "USA",
+                            "away_team": "PAN",
+                            "home_score": 1,
+                            "away_score": 0,
                             "date": "2013-07-28",
                             "time": "16:00",
                             "stadium": "Soldier Field",
-                            "city": "Chicago"
+                            "city": "Chicago",
+                            "final": true
                         }
                     ]
                 }

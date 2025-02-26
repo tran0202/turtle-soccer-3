@@ -11,6 +11,7 @@ import {
     WalkoverTooltip,
     DrawLotTooltip,
     MatchPostponedTooltip,
+    SharedBronzeTooltip,
     ByeTooltip,
     WithdrewTooltip,
     AwardedTooltip,
@@ -126,6 +127,7 @@ const MatchRow = (props) => {
                             <DisqualifiedTooltip target={`${m.home_team}disqualifiedTooltip`} notes={m.disqualified_notes} anchor="(disqualified)" />
                         )}
                         {m.home_replacement && <ReplacementTooltip target={`${m.home_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
+                        {m.shared_bronze && <SharedBronzeTooltip target={`${m.home_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
@@ -152,6 +154,7 @@ const MatchRow = (props) => {
                             <DisqualifiedTooltip target={`${m.away_team}disqualifiedTooltip`} notes={m.disqualified_notes} anchor="(disqualified)" />
                         )}
                         {m.away_replacement && <ReplacementTooltip target={`${m.away_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
+                        {m.shared_bronze && <SharedBronzeTooltip target={`${m.home_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
                     </Col>
                 </Row>
                 {(((m.home_extra_score !== undefined || m.home_penalty_score !== undefined) &&
