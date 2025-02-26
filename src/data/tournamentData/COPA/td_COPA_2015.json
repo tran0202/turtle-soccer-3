@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -352,8 +352,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "PER",
@@ -363,14 +366,9 @@
                             "date": "2015-07-03",
                             "time": "20:30",
                             "stadium": "Estadio Municipal de Concepción",
-                            "city": "Concepción"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Concepción",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CHI",
                             "away_team": "ARG",
@@ -383,7 +381,8 @@
                             "date": "2015-07-04",
                             "time": "17:00",
                             "stadium": "Estadio Nacional",
-                            "city": "Santiago"
+                            "city": "Santiago",
+                            "final": true
                         }
                     ]
                 }

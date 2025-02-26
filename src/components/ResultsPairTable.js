@@ -18,33 +18,33 @@ const ResultsPairHeader = () => {
 }
 
 const ResultsPairRow = (props) => {
-    const { group } = props
-    const team1 = group.teams.find((t) => t.pos === 1)
-    const team2 = group.teams.find((t) => t.pos === 2)
-    if (!team1 || !team2 || !group.matches) return
-    const match1HomeScore = group.matches[0].home_score
-    const match1AwayScore = group.matches[0].away_score
-    const match2HomeExtraScore = group.matches[1].home_extra_score ? group.matches[1].home_extra_score : 0
-    const match2AwayExtraScore = group.matches[1].away_extra_score ? group.matches[1].away_extra_score : 0
-    const match2HomeScore = group.matches[1].home_score + match2HomeExtraScore
-    const match2AwayScore = group.matches[1].away_score + match2AwayExtraScore
-    const match2HomePenaltyScore = group.matches[1].home_penalty_score
-    const match2AwayPenaltyScore = group.matches[1].away_penalty_score
-    const pairHomeHighlight = group.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
-    const pairAwayHighlight = group.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
+    const { pair, last } = props
+    const team1 = pair.teams.find((t) => t.pos === 1)
+    const team2 = pair.teams.find((t) => t.pos === 2)
+    if (!team1 || !team2 || !pair.matches) return
+    const match1HomeScore = pair.matches[0].home_score
+    const match1AwayScore = pair.matches[0].away_score
+    const match2HomeExtraScore = pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
+    const match2AwayExtraScore = pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
+    const match2HomeScore = pair.matches[1].home_score + match2HomeExtraScore
+    const match2AwayScore = pair.matches[1].away_score + match2AwayExtraScore
+    const match2HomePenaltyScore = pair.matches[1].home_penalty_score
+    const match2AwayPenaltyScore = pair.matches[1].away_penalty_score
+    const pairHomeHighlight = pair.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
+    const pairAwayHighlight = pair.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
     return (
-        <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
+        <Row className={`no-gutters ranking-tbl padding-tb-sm ${!last ? 'team-row' : ''}`}>
             <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{team1.name}</Col>
             <Col className="col-box-6">{getTeamFlag(team1)}</Col>
             <Col className="text-center score-no-padding-right col-box-10">
                 {match1HomeScore} - {match1AwayScore}
             </Col>
             <Col className="text-center score-no-padding-right col-box-10">
-                {match2AwayScore} - {match2HomeScore} {group.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                {match2AwayScore} - {match2HomeScore} {pair.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
             </Col>
             <Col className="text-center score-no-padding-right col-box-14">
-                {group.agg_home_score} - {group.agg_away_score} {group.away_goal_winner && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
-                {group.matches[1].home_penalty_score !== undefined && (
+                {pair.agg_home_score} - {pair.agg_away_score} {pair.away_goal_winner && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                {pair.matches[1].home_penalty_score !== undefined && (
                     <Row>
                         <Col className="text-center">
                             {'>>> '}
@@ -62,15 +62,15 @@ const ResultsPairRow = (props) => {
 class ResultsPairTable extends React.Component {
     render() {
         const { stage, config } = this.props
-        const { groups } = stage
+        const { pairs } = stage
         return (
             <React.Fragment>
                 <Row className="mt-5 box-xl">
                     <Col xs={{ size: 10, offset: 1 }}>
                         <ResultsPairHeader />
-                        {groups &&
-                            groups.map((g, index) => {
-                                return <ResultsPairRow key={g.name} group={g} config={config} />
+                        {pairs &&
+                            pairs.map((p, index) => {
+                                return <ResultsPairRow key={p.name} pair={p} config={config} last={index === pairs.length - 1} />
                             })}
                     </Col>
                 </Row>

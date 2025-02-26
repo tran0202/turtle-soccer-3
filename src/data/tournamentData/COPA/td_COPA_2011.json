@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -362,8 +362,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "PER",
@@ -373,14 +376,9 @@
                             "date": "2011-07-23",
                             "time": "16:00",
                             "stadium": "Estadio Ciudad de La Plata",
-                            "city": "La Plata"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "La Plata",
+                            "third_place": true
+                        },
                         {
                             "home_team": "URU",
                             "away_team": "PAR",
@@ -389,7 +387,8 @@
                             "date": "2011-07-24",
                             "time": "16:00",
                             "stadium": "Estadio Monumental Antonio Vespucio Liberti",
-                            "city": "Buenos Aires"
+                            "city": "Buenos Aires",
+                            "final": true
                         }
                     ]
                 }

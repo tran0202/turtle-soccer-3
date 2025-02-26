@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -272,38 +272,38 @@
                     "next_round": "Semi-finals",
                     "matches": [
                         {
-                            "home_team": "MEX",
-                            "away_team": "PER",
+                            "home_team": "PER",
+                            "away_team": "MEX",
                             "home_score": 3,
                             "away_score": 3,
-                            "home_penalty_score": 4,
-                            "away_penalty_score": 2,
+                            "home_penalty_score": 2,
+                            "away_penalty_score": 4,
                             "date": "1999-07-10",
-                            "time": "12:00",
+                            "time": "15:05",
                             "stadium": "Estadio Defensores del Chaco",
                             "city": "Asunción",
                             "bracket_order": 3
                         },
                         {
-                            "home_team": "URU",
-                            "away_team": "PAR",
+                            "home_team": "PAR",
+                            "away_team": "URU",
                             "home_score": 1,
                             "away_score": 1,
-                            "home_penalty_score": 5,
-                            "away_penalty_score": 3,
+                            "home_penalty_score": 3,
+                            "away_penalty_score": 5,
                             "date": "1999-07-10",
-                            "time": "15:00",
+                            "time": "17:35",
                             "stadium": "Estadio Defensores del Chaco",
                             "city": "Asunción",
                             "bracket_order": 1
                         },
                         {
-                            "home_team": "CHI",
-                            "away_team": "COL",
-                            "home_score": 3,
-                            "away_score": 2,
+                            "home_team": "COL",
+                            "away_team": "CHI",
+                            "home_score": 2,
+                            "away_score": 3,
                             "date": "1999-07-11",
-                            "time": "12:00",
+                            "time": "14:35",
                             "stadium": "Estadio Feliciano Cáceres",
                             "city": "Luque",
                             "bracket_order": 2
@@ -314,7 +314,7 @@
                             "home_score": 2,
                             "away_score": 1,
                             "date": "1999-07-11",
-                            "time": "12:00",
+                            "time": "17:05",
                             "stadium": "Estadio Antonio Oddone Sarubbi",
                             "city": "Ciudad del Este",
                             "bracket_order": 4
@@ -335,7 +335,7 @@
                             "home_penalty_score": 5,
                             "away_penalty_score": 3,
                             "date": "1999-07-13",
-                            "time": "12:00",
+                            "time": "21:05",
                             "stadium": "Estadio Defensores del Chaco",
                             "city": "Asunción",
                             "bracket_order": 1
@@ -346,7 +346,7 @@
                             "home_score": 0,
                             "away_score": 2,
                             "date": "1999-07-14",
-                            "time": "12:00",
+                            "time": "20:35",
                             "stadium": "Estadio Antonio Oddone Sarubbi",
                             "city": "Ciudad del Este",
                             "bracket_order": 2
@@ -354,8 +354,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CHI",
@@ -363,25 +366,21 @@
                             "home_score": 1,
                             "away_score": 2,
                             "date": "1999-07-17",
-                            "time": "21:10",
+                            "time": "15:05",
                             "stadium": "Estadio Defensores del Chaco",
-                            "city": "Asunción"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Asunción",
+                            "third_place": true
+                        },
                         {
                             "home_team": "URU",
                             "away_team": "BRA",
                             "home_score": 0,
                             "away_score": 3,
                             "date": "1999-07-18",
-                            "time": "17:10",
+                            "time": "17:05",
                             "stadium": "Estadio Defensores del Chaco",
-                            "city": "Asunción"
+                            "city": "Asunción",
+                            "final": true
                         }
                     ]
                 }

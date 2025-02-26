@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -429,8 +429,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "USA",
@@ -440,14 +443,9 @@
                             "date": "2016-06-25",
                             "time": "20:00",
                             "stadium": "University of Phoenix Stadium",
-                            "city": "Glendale, Arizona"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Glendale, Arizona",
+                            "third_place": true
+                        },
                         {
                             "home_team": "ARG",
                             "away_team": "CHI",
@@ -460,7 +458,8 @@
                             "date": "2016-06-26",
                             "time": "20:00",
                             "stadium": "MetLife Stadium",
-                            "city": "East Rutherford, New Jersey"
+                            "city": "East Rutherford, New Jersey",
+                            "final": true
                         }
                     ]
                 }

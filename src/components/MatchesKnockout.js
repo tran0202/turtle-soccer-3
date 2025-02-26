@@ -18,6 +18,7 @@ import {
     ReplacementTooltip,
     DisqualifiedTooltip,
 } from '../core/TooltipHelper'
+import MatchesPair from './MatchesPair'
 
 const MatchesKnockoutCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -115,6 +116,7 @@ const MatchRow = (props) => {
             <React.Fragment key={m.id}>
                 <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
                     <Col className="col-box-14 font-14">
+                        {m.match_type ? moment(m.date).format('MMMM D, YYYY') : ''}
                         {m.time ? ' @' : ''} {m.time}
                         <br />
                         {m.stadium && m.city ? m.stadium + ', ' + m.city : ''}
@@ -316,17 +318,39 @@ const MatchesKnockoutRowFinal = (props) => {
     )
 }
 
+const MatchesKnockoutPair = (props) => {
+    const { round, config } = props
+    return (
+        <Row>
+            <Col className="mt-3 round-box">
+                <Row>
+                    <Col>
+                        <div className="h2-ff1">{round.name}</div>
+                    </Col>
+                </Row>
+                {round.pairs && <MatchesPair stage={round} config={config} />}
+            </Col>
+        </Row>
+    )
+}
+
 const MatchesKnockoutRound = (props) => {
     const { rounds, config } = props
     return (
         <React.Fragment>
             {rounds &&
                 rounds.map((r) => {
-                    return !r.final ? (
-                        <MatchesKnockoutRow key={r.name} round={r} config={config} />
-                    ) : (
-                        <MatchesKnockoutRowFinal key={r.name} round={r} config={config} />
-                    )
+                    if (r.matches) {
+                        if (!r.final) {
+                            return <MatchesKnockoutRow key={r.name} round={r} config={config} />
+                        } else {
+                            return <MatchesKnockoutRowFinal key={r.name} round={r} config={config} />
+                        }
+                    }
+                    if (r.pairs) {
+                        return <MatchesKnockoutPair key={r.name} round={r} config={config} />
+                    }
+                    return null
                 })}
         </React.Fragment>
     )

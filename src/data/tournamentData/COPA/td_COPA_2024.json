@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -351,52 +351,60 @@
                     "next_round": "Semi-finals",
                     "matches": [
                         {
-                            "home_team": "PER",
-                            "away_team": "PAR",
-                            "home_score": 3,
-                            "away_score": 3,
-                            "home_penalty_score": 4,
-                            "away_penalty_score": 3,
-                            "date": "2021-07-02",
-                            "time": "18:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia",
-                            "bracket_order": 4
-                        },
-                        {
-                            "home_team": "BRA",
-                            "away_team": "CHI",
+                            "home_team": "ARG",
+                            "away_team": "ECU",
                             "home_score": 1,
-                            "away_score": 0,
-                            "date": "2021-07-02",
-                            "time": "21:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro",
-                            "bracket_order": 3
+                            "away_score": 1,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
+                            "home_penalty_score": 4,
+                            "away_penalty_score": 2,
+                            "date": "2024-07-04",
+                            "time": "20:00",
+                            "stadium": "NRG Stadium",
+                            "city": "Houston, Texas",
+                            "bracket_order": 1
                         },
                         {
-                            "home_team": "URU",
-                            "away_team": "COL",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "home_penalty_score": 2,
+                            "home_team": "VEN",
+                            "away_team": "CAN",
+                            "home_score": 1,
+                            "away_score": 1,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
+                            "home_penalty_score": 3,
                             "away_penalty_score": 4,
-                            "date": "2021-07-03",
-                            "time": "19:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília",
+                            "date": "2024-07-05",
+                            "time": "20:00",
+                            "stadium": "AT&T Stadium",
+                            "city": "Arlington, Texas",
                             "bracket_order": 2
                         },
                         {
-                            "home_team": "ARG",
-                            "away_team": "ECU",
-                            "home_score": 3,
+                            "home_team": "COL",
+                            "away_team": "PAN",
+                            "home_score": 5,
                             "away_score": 0,
-                            "date": "2021-07-03",
-                            "time": "22:00",
-                            "stadium": "Estádio Olímpico Pedro Ludovico",
-                            "city": "Goiânia",
-                            "bracket_order": 1
+                            "date": "2024-07-06",
+                            "time": "15:00",
+                            "stadium": "State Farm Stadium",
+                            "city": "Glendale, Arizona",
+                            "bracket_order": 4
+                        },
+                        {
+                            "home_team": "URU",
+                            "away_team": "BRA",
+                            "home_score": 0,
+                            "away_score": 0,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
+                            "home_penalty_score": 4,
+                            "away_penalty_score": 2,
+                            "date": "2024-07-06",
+                            "time": "18:00",
+                            "stadium": "Allegiant Stadium",
+                            "city": "Paradise, Nevada",
+                            "bracket_order": 3
                         }
                     ]
                 },
@@ -407,60 +415,63 @@
                     "next_round": "Final",
                     "matches": [
                         {
-                            "home_team": "BRA",
-                            "away_team": "PER",
-                            "home_score": 1,
+                            "home_team": "ARG",
+                            "away_team": "CAN",
+                            "home_score": 2,
                             "away_score": 0,
-                            "date": "2021-07-05",
+                            "date": "2024-07-09",
                             "time": "20:00",
-                            "stadium": "Estádio Olímpico Nilton Santos",
-                            "city": "Rio de Janeiro",
-                            "bracket_order": 2
+                            "stadium": "MetLife Stadium, East Rutherford",
+                            "city": "New Jersey",
+                            "bracket_order": 1
                         },
                         {
-                            "home_team": "ARG",
+                            "home_team": "URU",
                             "away_team": "COL",
-                            "home_score": 1,
+                            "home_score": 0,
                             "away_score": 1,
-                            "home_penalty_score": 3,
-                            "away_penalty_score": 2,
-                            "date": "2021-07-06",
-                            "time": "22:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília",
-                            "bracket_order": 1
-                        }
-                    ]
-                },
-                {
-                    "name": "Third-place",
-                    "short_name": "3rd",
-                    "matches": [
-                        {
-                            "home_team": "COL",
-                            "away_team": "PER",
-                            "home_score": 3,
-                            "away_score": 2,
-                            "date": "2021-07-09",
-                            "time": "21:00",
-                            "stadium": "Estádio Nacional Mané Garrincha",
-                            "city": "Brasília"
+                            "date": "2024-07-10",
+                            "time": "20:00",
+                            "stadium": "Bank of America Stadium",
+                            "city": "Charlotte, North Carolina",
+                            "bracket_order": 2
                         }
                     ]
                 },
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
+                            "home_team": "CAN",
+                            "away_team": "URU",
+                            "home_score": 2,
+                            "away_score": 2,
+                            "home_extra_score": 0,
+                            "away_extra_score": 0,
+                            "home_penalty_score": 3,
+                            "away_penalty_score": 4,
+                            "date": "2024-07-13",
+                            "time": "20:00",
+                            "stadium": "Bank of America Stadium",
+                            "city": "Charlotte, North Carolina",
+                            "third_place": true
+                        },
+                        {
                             "home_team": "ARG",
-                            "away_team": "BRA",
-                            "home_score": 1,
+                            "away_team": "COL",
+                            "home_score": 0,
                             "away_score": 0,
-                            "date": "2021-07-10",
-                            "time": "21:00",
-                            "stadium": "Maracanã Stadium",
-                            "city": "Rio de Janeiro"
+                            "home_extra_score": 1,
+                            "away_extra_score": 0,
+                            "date": "2024-07-14",
+                            "time": "21:22",
+                            "stadium": "Hard Rock Stadium",
+                            "city": "Miami Gardens, Florida",
+                            "final": true
                         }
                     ]
                 }

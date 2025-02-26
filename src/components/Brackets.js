@@ -359,6 +359,95 @@ const BracketBox = (props) => {
     )
 }
 
+const BracketPairBox = (props) => {
+    const { match, colIndex, lastBox, config } = props
+    const homeTeamName = getShortTeamName(match.home_team, config)
+    const awayTeamName = getShortTeamName(match.away_team, config)
+    const homeTeamFlag = getBracketTeamFlagId(match.home_team, config)
+    const awayTeamFlag = getBracketTeamFlagId(match.away_team, config)
+    const homeHighlight =
+        (isHomeWinMatch(match) && !match.home_withdrew) || match.shared_bronze || match.match_postponed || match.home_bye ? 'team-name-win' : 'team-name-lose'
+    const awayHighlight =
+        (!isHomeWinMatch(match) && !match.away_withdrew) || match.shared_bronze || match.match_postponed || match.away_bye ? 'team-name-win' : 'team-name-lose'
+    const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
+    const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
+    const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
+    const away_runnerup_striped = match.final && isHomeWinMatch(match) ? 'silver' : ''
+    const home_thirdplace_striped = match.third_place && (isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
+    const away_thirdplace_striped = match.third_place && (!isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
+    return (
+        <React.Fragment>
+            <Row className="no-gutters box-sm bracket-box-height">
+                <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
+                    <Row className="no-gutters">
+                        <Col xs={{ size: 11, offset: 1 }}>
+                            <span className="box-time d-none d-lg-block">
+                                <React.Fragment>
+                                    {moment(match.leg1_date).format('MMMM D, YYYY')}
+                                    {match.leg1_time ? ' @' : ''} {match.leg1_time}
+                                    {match.leg1_city ? ' - ' : ''} {match.leg1_city}
+                                </React.Fragment>
+                            </span>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col
+                    sm="12"
+                    className={`bracket-half-box-height no-padding-lr border-bottom-gray5 ${home_champion_striped}${home_runnerup_striped}${home_thirdplace_striped}`}
+                >
+                    <Row className="no-gutters h3-ff3">
+                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                            {homeTeamFlag}
+                        </Col>
+                        <Col xs={{ size: 6 }} className={`no-padding-lr ${homeHighlight}`}>
+                            {homeTeamName} {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                        </Col>
+                        <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                            <React.Fragment>{match.leg1_home_score}</React.Fragment>
+                        </Col>
+                        <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                            <React.Fragment>{match.leg2_home_score}</React.Fragment>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm="12" className={`bracket-half-box-height no-padding-lr ${away_champion_striped}${away_runnerup_striped}${away_thirdplace_striped}`}>
+                    <Row className="no-gutters h4-ff3">
+                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                            {awayTeamFlag}
+                        </Col>
+                        <Col xs={{ size: 6 }} className={`no-padding-lr ${awayHighlight}`}>
+                            {awayTeamName} {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                        </Col>
+                        <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                            <React.Fragment>{match.leg1_away_score}</React.Fragment>
+                        </Col>
+                        <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                            <React.Fragment>{match.leg2_away_score}</React.Fragment>
+                        </Col>
+                    </Row>
+                </Col>
+                <Col sm="12" className="bracket-box-header-height border-top-gray5">
+                    <Row className="no-gutters">
+                        <Col xs={{ size: 11, offset: 1 }}>
+                            <span className="box-time d-none d-lg-block">
+                                <React.Fragment>
+                                    {moment(match.leg2_date).format('MMMM D, YYYY')}
+                                    {match.leg2_time ? ' @' : ''} {match.leg2_time}
+                                    {match.leg2_city ? ' - ' : ''} {match.leg2_city}
+                                </React.Fragment>
+                            </span>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+            {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
+            {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
+            {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
+            {colIndex === 3 && !lastBox && <Row className="bracket-gap-height-31"></Row>}
+        </React.Fragment>
+    )
+}
+
 const BracketBoxBye = (props) => {
     const { match, colIndex, lastBox, config } = props
     const byeTeam = match.away_team === 'BYE' ? match.home_team : match.away_team
@@ -404,7 +493,11 @@ const BracketColInner = (props) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
                             const lastBox = round.bracketMatches ? index === round.bracketMatches.length - 1 : false
                             return !bye ? (
-                                <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                                config.pair_agg_points ? (
+                                    <BracketPairBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                                ) : (
+                                    <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                                )
                             ) : (
                                 <BracketBoxBye match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
                             )
@@ -431,18 +524,23 @@ const BracketTable = (props) => {
         <Row className="no-gutters">
             {stage.rounds &&
                 stage.rounds.map((r, index) => {
-                    const roundConfig = { ...config, column_count: stage.rounds.length }
-                    const hookCount = r.bracketMatches.length % 2 === 0 ? r.bracketMatches.length / 2 : (r.bracketMatches.length - 1) / 2
-                    if (r.final) {
-                        return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
-                    } else if (r.name !== 'Third-place') {
-                        return (
-                            <React.Fragment key={r.name}>
-                                <BracketCol round={r} colIndex={index} config={roundConfig} />
-                                <BracketHook1 colIndex={index} hookCount={hookCount} config={roundConfig} />
-                                <BracketHook2 colIndex={index} hookCount={hookCount} config={roundConfig} />
-                            </React.Fragment>
-                        )
+                    if (r.bracketMatches) {
+                        const roundConfig = { ...config, column_count: stage.rounds.length }
+                        const hookCount = r.bracketMatches.length % 2 === 0 ? r.bracketMatches.length / 2 : (r.bracketMatches.length - 1) / 2
+                        if (r.final) {
+                            return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
+                        } else if (r.name !== 'Third-place') {
+                            return (
+                                <React.Fragment key={r.name}>
+                                    <BracketCol round={r} colIndex={index} config={roundConfig} />
+                                    <BracketHook1 colIndex={index} hookCount={hookCount} config={roundConfig} />
+                                    <BracketHook2 colIndex={index} hookCount={hookCount} config={roundConfig} />
+                                </React.Fragment>
+                            )
+                        }
+                    }
+                    if (r.pairs) {
+                        return <React.Fragment key={r.name}>Pairs</React.Fragment>
                     }
                     return null
                 })}

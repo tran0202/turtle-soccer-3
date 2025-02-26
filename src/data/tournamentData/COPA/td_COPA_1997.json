@@ -263,7 +263,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -280,7 +280,7 @@
                             "time": "12:00",
                             "stadium": "Estadio Olímpico Patria",
                             "city": "Sucre",
-                            "bracket_order": 1
+                            "bracket_order": 2
                         },
                         {
                             "home_team": "BOL",
@@ -315,7 +315,7 @@
                             "time": "17:30",
                             "stadium": "Estadio Ramón Aguilera",
                             "city": "Santa Cruz",
-                            "bracket_order": 2
+                            "bracket_order": 1
                         }
                     ]
                 },
@@ -337,10 +337,10 @@
                             "bracket_order": 2
                         },
                         {
-                            "home_team": "PER",
-                            "away_team": "BRA",
-                            "home_score": 0,
-                            "away_score": 7,
+                            "home_team": "BRA",
+                            "away_team": "PER",
+                            "home_score": 7,
+                            "away_score": 0,
                             "date": "1997-06-26",
                             "time": "12:00",
                             "stadium": "Estadio Ramón Aguilera",
@@ -350,8 +350,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "PER",
@@ -361,14 +364,9 @@
                             "date": "1997-06-28",
                             "time": "19:00",
                             "stadium": "Estadio Jesus Bermudez",
-                            "city": "Oruro"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Oruro",
+                            "third_place": true
+                        },
                         {
                             "home_team": "BRA",
                             "away_team": "BOL",
@@ -377,7 +375,8 @@
                             "date": "1997-06-29",
                             "time": "17:10",
                             "stadium": "Estadio Hernando Siles",
-                            "city": "La Paz"
+                            "city": "La Paz",
+                            "final": true
                         }
                     ]
                 }

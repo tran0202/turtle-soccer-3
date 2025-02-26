@@ -1,7 +1,7 @@
 import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
-import { getTeams, getHostTeamArray } from './TeamHelper'
+import { getTeams, getHostTeamArray, calculatePairAggregateScore, calculatePairAggregatePoints } from './TeamHelper'
 import { calculateGroupRankings } from './RankingsHelper'
 
 // ----------------------------- Competition ----------------------------------
@@ -127,7 +127,7 @@ export const processStage = (stage, config) => {
     }
     if (stage.type.includes('knockout_')) {
         //     initEntrants(stage)
-        processPathRounds(stage)
+        processPathRounds(stage, config)
     }
 }
 
@@ -170,28 +170,34 @@ export const createGroupMatches = (stage) => {
     // overwriteGroup(stage.groups[0])
 }
 
-export const processPathRounds = (stage) => {
+export const processPathRounds = (stage, config) => {
     if (!stage) return
     if (stage.rounds) {
         // if (stage.third_place_groups) {
         //     updateFirstRound(stage)
         // }
-        processRounds(stage, stage)
+        processRounds(stage, stage, config)
     }
     if (stage.paths) {
         stage.paths.forEach((p) => {
-            processRounds(p, stage)
+            processRounds(p, stage, config)
         })
     }
 }
 
-export const processRounds = (path, stage) => {
+export const processRounds = (path, stage, config) => {
     if (!stage || !path || !path.rounds) return
     path.rounds.forEach((r) => {
         // r.matches.forEach((m) => {
         //     populateMatch(m, stage.entrants)
         //     getKnockoutScore(m)
         // })
+
+        if (r.round_type && r.round_type.includes('2legged')) {
+            calculatePairAggregatePoints(r, config)
+            calculatePairAggregateScore(r, config)
+            prepareBracketPairOrder(r)
+        }
         prepareBracketOrder(r)
         createMatchdays(r)
         // finishRound(r, path, stage)
@@ -224,6 +230,44 @@ export const prepareBracketOrder = (round) => {
         }
     })
     round.bracketMatches = round.final ? round.matches : bracketMatches
+}
+
+export const prepareBracketPairOrder = (round) => {
+    if (!round || !round.pairs) return
+    const bracketMatches = []
+    round.pairs.forEach((p) => {
+        const match = {
+            ...p,
+            home_team: p.matches[0].home_team,
+            away_team: p.matches[0].away_team,
+            leg1_home_score: p.matches[0].home_score,
+            leg1_away_score: p.matches[0].away_score,
+            leg1_date: p.matches[0].date,
+            leg1_time: p.matches[0].time,
+            leg1_city: p.matches[0].city,
+            leg1_stadium: p.matches[0].stadium,
+            leg2_home_score: p.matches[1].away_score,
+            leg2_away_score: p.matches[1].home_score,
+            leg2_date: p.matches[1].date,
+            leg2_time: p.matches[1].time,
+            leg2_city: p.matches[1].city,
+            leg2_stadium: p.matches[1].stadium,
+            home_draw_lot: p.matches[1].away_draw_lot,
+            away_draw_lot: p.matches[1].home_draw_lot,
+            draw_lot_notes: p.matches[1].draw_lot_notes,
+        }
+        bracketMatches.push(match)
+    })
+    bracketMatches.sort((a, b) => {
+        if (a.bracket_order < b.bracket_order) {
+            return -1
+        } else if (a.bracket_order > b.bracket_order) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+    round.bracketMatches = bracketMatches
 }
 
 export const createMatchdays = (round) => {

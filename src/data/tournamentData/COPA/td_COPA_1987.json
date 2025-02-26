@@ -169,7 +169,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -204,8 +204,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "COL",
@@ -215,14 +218,9 @@
                             "date": "1987-07-11",
                             "time": "12:00",
                             "stadium": "Estádio Monumental",
-                            "city": "Buenos Aires"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Buenos Aires",
+                            "third_place": true
+                        },
                         {
                             "home_team": "CHI",
                             "away_team": "URU",
@@ -231,7 +229,8 @@
                             "date": "1987-07-12",
                             "time": "12:00",
                             "stadium": "Estádio Monumental",
-                            "city": "Buenos Aires"
+                            "city": "Buenos Aires",
+                            "final": true
                         }
                     ]
                 }
