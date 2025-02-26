@@ -252,9 +252,17 @@ export const prepareBracketPairOrder = (round) => {
             leg2_time: p.matches[1].time,
             leg2_city: p.matches[1].city,
             leg2_stadium: p.matches[1].stadium,
+            playoff_home_score: p.matches[2] && p.matches[2].home_score,
+            playoff_away_score: p.matches[2] && p.matches[2].away_score,
+            playoff_home_extra_score: p.matches[2] && p.matches[2].home_extra_score,
+            playoff_away_extra_score: p.matches[2] && p.matches[2].away_extra_score,
+            home_playoff_win: p.matches[2] && p.matches[2].home_playoff_win,
+            away_playoff_win: p.matches[2] && p.matches[2].away_playoff_win,
+            playoff_notes: p.matches[2] && p.matches[2].playoff_notes,
             home_draw_lot: p.matches[1].away_draw_lot,
             away_draw_lot: p.matches[1].home_draw_lot,
             draw_lot_notes: p.matches[1].draw_lot_notes,
+            final: p.final,
         }
         bracketMatches.push(match)
     })

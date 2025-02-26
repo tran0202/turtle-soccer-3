@@ -953,6 +953,7 @@
         "short_name": "1979",
         "competition_id": "COPA",
         "points_for_win": 2,
+        "pair_agg_points": true,
         "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "lots"],
         "no_third_place": true,
         "details": {

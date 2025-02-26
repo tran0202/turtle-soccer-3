@@ -381,6 +381,7 @@
                     "pairs": [
                         {
                             "name": "Final",
+                            "final": true,
                             "matches": [
                                 {
                                     "home_team": "URU",

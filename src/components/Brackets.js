@@ -401,6 +401,7 @@ const BracketPairBox = (props) => {
                         </Col>
                         <Col xs={{ size: 6 }} className={`no-padding-lr ${homeHighlight}`}>
                             {homeTeamName} {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                            {match.home_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                             <React.Fragment>{match.leg1_home_score}</React.Fragment>
@@ -408,6 +409,11 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                             <React.Fragment>{match.leg2_home_score}</React.Fragment>
                         </Col>
+                        {(match.home_playoff_win || match.away_playoff_win) && (
+                            <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                                <React.Fragment>{match.playoff_home_score}</React.Fragment>
+                            </Col>
+                        )}
                     </Row>
                 </Col>
                 <Col sm="12" className={`bracket-half-box-height no-padding-lr ${away_champion_striped}${away_runnerup_striped}${away_thirdplace_striped}`}>
@@ -417,6 +423,7 @@ const BracketPairBox = (props) => {
                         </Col>
                         <Col xs={{ size: 6 }} className={`no-padding-lr ${awayHighlight}`}>
                             {awayTeamName} {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                            {match.away_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                             <React.Fragment>{match.leg1_away_score}</React.Fragment>
@@ -424,6 +431,11 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                             <React.Fragment>{match.leg2_away_score}</React.Fragment>
                         </Col>
+                        {(match.home_playoff_win || match.away_playoff_win) && (
+                            <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                                <React.Fragment>{match.playoff_away_score}</React.Fragment>
+                            </Col>
+                        )}
                     </Row>
                 </Col>
                 <Col sm="12" className="bracket-box-header-height border-top-gray5">

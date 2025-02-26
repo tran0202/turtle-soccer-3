@@ -3,8 +3,8 @@ import { getFlagSrc, getTeamName } from './TeamHelper'
 import { Tooltip } from 'reactstrap'
 
 export const AetTooltip = (props) => {
-    const { target, anchor } = props
-    const content = 'After extra time'
+    const { target, anchor, notes } = props
+    const content = `After extra time${notes ? `: ${notes}` : ''}`
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

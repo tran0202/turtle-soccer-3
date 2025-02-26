@@ -305,7 +305,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -315,6 +315,7 @@
                     "next_round": "Final",
                     "pairs": [
                         {
+                            "name": "SF1",
                             "matches": [
                                 {
                                     "home_team": "PER",
@@ -325,7 +326,7 @@
                                     "time": "12:00",
                                     "stadium": "Estadio Nacional",
                                     "city": "Lima",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "CHI",
@@ -336,12 +337,13 @@
                                     "time": "12:00",
                                     "stadium": "Estadio Nacional",
                                     "city": "Santiago",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 1
+                            "bracket_order": 2
                         },
                         {
+                            "name": "SF2",
                             "matches": [
                                 {
                                     "home_team": "PAR",
@@ -352,7 +354,7 @@
                                     "time": "12:00",
                                     "stadium": "Defensores del Chaco",
                                     "city": "Asunción",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "BRA",
@@ -363,10 +365,10 @@
                                     "time": "12:00",
                                     "stadium": "Estadio do Maracanã",
                                     "city": "Rio de Janeiro",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 2
+                            "bracket_order": 1
                         }
                     ]
                 },
@@ -376,6 +378,8 @@
                     "round_type": "knockout2legged",
                     "pairs": [
                         {
+                            "name": "Final",
+                            "final": true,
                             "matches": [
                                 {
                                     "home_team": "PAR",
@@ -386,7 +390,7 @@
                                     "time": "12:00",
                                     "stadium": "Defensores del Chaco",
                                     "city": "Asunción",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "CHI",
@@ -398,7 +402,7 @@
                                     "time": "12:00",
                                     "stadium": "Estadio Nacional",
                                     "city": "Santiago",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 },
                                 {
                                     "home_team": "PAR",
@@ -408,12 +412,12 @@
                                     "home_extra_score": 0,
                                     "away_extra_score": 0,
                                     "home_playoff_win": true,
-                                    "playoff_notes": "As both teams finished tied on points, Paraguay won the playoff on aggregate goals from the first and second legs (3–1)",
+                                    "playoff_notes": "Tied on points, Paraguay won the playoff on aggregate goals from the first and second legs (3–1).",
                                     "date": "1979-12-11",
                                     "time": "12:00",
                                     "stadium": "José Amalfitani",
                                     "city": "Buenos Aires",
-                                    "match_type": "playoffleg"
+                                    "matchday": "playoffleg"
                                 }
                             ]
                         }
