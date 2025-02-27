@@ -934,8 +934,14 @@ export const isHomeWinPair = (pair, config) => {
         if (pair.agg_home_points > pair.agg_away_points) {
             return true
         } else if (pair.agg_home_points === pair.agg_away_points) {
-            if (pair.matches[1].home_draw_lot) return false
-            if (pair.matches[1].away_draw_lot) return true
+            if (pair.agg_home_score > pair.agg_away_score) {
+                return true
+            } else if (pair.agg_home_score === pair.agg_away_score) {
+                if (pair.matches[1].home_draw_lot) return false
+                if (pair.matches[1].away_draw_lot) return true
+            } else {
+                return false
+            }
         } else {
             return false
         }

@@ -409,7 +409,7 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                             <React.Fragment>{match.leg2_home_score}</React.Fragment>
                         </Col>
-                        {(match.home_playoff_win || match.away_playoff_win) && (
+                        {match.playoff_home_score !== undefined && (
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                                 <React.Fragment>{match.playoff_home_score}</React.Fragment>
                             </Col>
@@ -431,7 +431,7 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                             <React.Fragment>{match.leg2_away_score}</React.Fragment>
                         </Col>
-                        {(match.home_playoff_win || match.away_playoff_win) && (
+                        {match.playoff_away_score !== undefined && (
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                                 <React.Fragment>{match.playoff_away_score}</React.Fragment>
                             </Col>
