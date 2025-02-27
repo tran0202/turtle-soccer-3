@@ -323,7 +323,10 @@
     background-color: #fff;
 }
 
-.box-sm {
+.box-sm,
+.box-sm-gold,
+.box-sm-silver,
+.box-sm-bronze {
     padding: 0;
 }
 .box-xl {
@@ -340,6 +343,38 @@
 }
 .box-sm:hover,
 .box-xl:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.box-sm-gold {
+    transition: box-shadow 0.3s;
+    border-radius: 10px;
+    border: 1px solid #e6e7e9;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 rgba(230, 230, 230, 0.5);
+    background-color: gold;
+}
+
+.box-sm-silver {
+    transition: box-shadow 0.3s;
+    border-radius: 10px;
+    border: 1px solid #e6e7e9;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 rgba(230, 230, 230, 0.5);
+    background-color: silver;
+}
+
+.box-sm-bronze {
+    transition: box-shadow 0.3s;
+    border-radius: 10px;
+    border: 1px solid #e6e7e9;
+    background-color: #fff;
+    box-shadow: 0 2px 0 0 rgba(230, 230, 230, 0.5);
+    background-color: rgb(204, 153, 102);
+}
+.box-sm-gold:hover,
+.box-sm-silver:hover,
+.box-sm-bronze:hover {
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 .box-xl .team-header-row,

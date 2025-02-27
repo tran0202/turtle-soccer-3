@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -215,6 +215,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NZL",
@@ -228,7 +231,8 @@
                             "date": "2016-06-11",
                             "time": "16:00",
                             "stadium": "Sir John Guise Stadium",
-                            "city": "Port Moresby"
+                            "city": "Port Moresby",
+                            "final": true
                         }
                     ]
                 }

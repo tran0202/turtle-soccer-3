@@ -199,7 +199,7 @@
         },
         {
             "name": "Final",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final",
@@ -207,6 +207,8 @@
                     "round_type": "knockout2legged",
                     "pairs": [
                         {
+                            "name": "Final",
+                            "final": true,
                             "matches": [
                                 {
                                     "home_team": "SOL",
@@ -217,7 +219,7 @@
                                     "time": "12:00",
                                     "stadium": "Lawson Tama Stadium",
                                     "city": "Honiara",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "AUS",
@@ -228,7 +230,7 @@
                                     "time": "12:00",
                                     "stadium": "Sydney Football Stadium",
                                     "city": "Sydney",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ]
                         }

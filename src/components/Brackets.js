@@ -551,9 +551,6 @@ const BracketTable = (props) => {
                             )
                         }
                     }
-                    if (r.pairs) {
-                        return <React.Fragment key={r.name}>Pairs</React.Fragment>
-                    }
                     return null
                 })}
         </Row>

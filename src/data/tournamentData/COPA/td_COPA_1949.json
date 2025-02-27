@@ -363,10 +363,14 @@
         },
         {
             "name": "Final Playoff",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final Playoff",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -376,7 +380,8 @@
                             "date": "1949-05-11",
                             "time": "12:00",
                             "stadium": "Estádio São Januário",
-                            "city": "Rio de Janeiro"
+                            "city": "Rio de Janeiro",
+                            "final": true
                         }
                     ]
                 }

@@ -273,10 +273,14 @@
         },
         {
             "name": "Final Playoff",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final Playoff",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "PAR",
@@ -286,7 +290,8 @@
                             "date": "1953-04-01",
                             "time": "12:00",
                             "stadium": "Estadio Nacional",
-                            "city": "Lima"
+                            "city": "Lima",
+                            "final": true
                         }
                     ]
                 }

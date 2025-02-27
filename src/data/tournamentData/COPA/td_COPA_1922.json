@@ -12,7 +12,7 @@
                     { "pos": 2, "next": "advance" },
                     { "pos": 3, "next": "advance" }
                 ],
-                "advanced_notes": "After Brazil, Paraguay and Uruguay finished tied on points, they were to play a Final playoff series to determine the champions"
+                "advanced_notes": "After Brazil, Paraguay and Uruguay finished tied on points, they were to play a Final playoff series. However, Uruguay withdrew from the competition to protest the performance of Brazilian referee Pedro Santos in their match against Paraguay. Therefore, Final playoff was played between Brazil and Paraguay to determine the champion."
             },
             "groups": [
                 {
@@ -150,10 +150,14 @@
         },
         {
             "name": "Final Playoff",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final Playoff",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -163,7 +167,8 @@
                             "date": "1922-10-22",
                             "time": "12:00",
                             "stadium": "Estadio das Laranjeiras",
-                            "city": "Rio de Janeiro"
+                            "city": "Rio de Janeiro",
+                            "final": true
                         }
                     ]
                 }

@@ -884,24 +884,6 @@ export const getKnockoutScore = (match) => {
     }
 }
 
-export const calculatePairAggregatePoints = (stage, config) => {
-    if (!stage || !stage.pairs || !config) return
-    stage.pairs.forEach((p) => {
-        if (p.matches && p.matches.length >= 2) {
-            const match1_home_point =
-                p.matches[0].home_score > p.matches[0].away_score ? config.points_for_win : p.matches[0].home_score === p.matches[0].away_score ? 1 : 0
-            const match1_away_point =
-                p.matches[0].away_score > p.matches[0].home_score ? config.points_for_win : p.matches[0].away_score === p.matches[0].home_score ? 1 : 0
-            const match2_home_point =
-                p.matches[1].away_score > p.matches[1].home_score ? config.points_for_win : p.matches[1].away_score === p.matches[1].home_score ? 1 : 0
-            const match2_away_point =
-                p.matches[1].home_score > p.matches[1].away_score ? config.points_for_win : p.matches[1].home_score === p.matches[1].away_score ? 1 : 0
-            p.agg_home_points = match1_home_point + match2_home_point
-            p.agg_away_points = match1_away_point + match2_away_point
-        }
-    })
-}
-
 export const calculatePairAggregateScore = (stage, config) => {
     if (!stage || !stage.pairs) return
     stage.pairs.forEach((p) => {

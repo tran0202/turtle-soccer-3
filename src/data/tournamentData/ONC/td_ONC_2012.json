@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -213,8 +213,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "SOL",
@@ -224,14 +227,9 @@
                             "date": "2012-06-10",
                             "time": "11:00",
                             "stadium": "Lawson Tama Stadium",
-                            "city": "Honiara"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Honiara",
+                            "third_place": true
+                        },
                         {
                             "home_team": "TAH",
                             "away_team": "NCL",
@@ -240,7 +238,8 @@
                             "date": "2012-06-10",
                             "time": "15:00",
                             "stadium": "Lawson Tama Stadium",
-                            "city": "Honiara"
+                            "city": "Honiara",
+                            "final": true
                         }
                     ]
                 }

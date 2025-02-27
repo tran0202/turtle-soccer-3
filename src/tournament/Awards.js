@@ -281,10 +281,11 @@ const FinalStandingRow = (props) => {
     const championIcon = label.includes('Champions') || label.includes('Gold')
     const runnersupIcon = label.includes('Runners-up') || label.includes('Silver')
     const fourthIcon = label.includes('Fourth')
+    const boxClassname = championIcon ? 'box-sm-gold' : runnersupIcon ? 'box-sm-silver' : 'box-sm'
     return (
         <React.Fragment>
             <Row className="margin-tb-sm margin-lr-sm">
-                <Col className="box-sm">
+                <Col className={boxClassname}>
                     <Row className="team-name">
                         <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
                             {championIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/1st-place.png'} alt={`1st`} title={`1st`} />}
@@ -309,7 +310,7 @@ const BronzeRow = (props) => {
     return (
         <React.Fragment>
             <Row className="margin-tb-sm margin-lr-sm">
-                <Col className="box-sm">
+                <Col className="box-sm-bronze">
                     <Row className="team-name">
                         <Col xs={{ size: 5 }} className="padding-tb-sm padding-left-lg">
                             {thirdIcon && <img className="award-icon margin-bottom-xs-4" src={'/images/awards/3rd-place.png'} alt={`3rd`} title={`3rd`} />}{' '}

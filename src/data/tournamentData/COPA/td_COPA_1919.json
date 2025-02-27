@@ -106,10 +106,14 @@
         },
         {
             "name": "Final Playoff",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final Playoff",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "BRA",
@@ -121,7 +125,8 @@
                             "date": "1919-05-29",
                             "time": "12:00",
                             "stadium": "Estádio das Laranjeiras",
-                            "city": "Rio de Janeiro"
+                            "city": "Rio de Janeiro",
+                            "final": true
                         }
                     ]
                 }

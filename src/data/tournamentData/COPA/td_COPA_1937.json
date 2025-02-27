@@ -199,10 +199,14 @@
         },
         {
             "name": "Final Playoff",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Final Playoff",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "ARG",
@@ -214,7 +218,8 @@
                             "date": "1937-02-01",
                             "time": "12:00",
                             "stadium": "Estadio Gasómetro",
-                            "city": "Buenos Aires"
+                            "city": "Buenos Aires",
+                            "final": true
                         }
                     ]
                 }
