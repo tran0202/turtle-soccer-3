@@ -650,7 +650,7 @@
                 },
                 {
                     "name": "Nations League Finals",
-                    "type": "knockout",
+                    "type": "knockout_",
                     "rounds": [
                         {
                             "name": "Semi-finals",
@@ -683,8 +683,11 @@
                             ]
                         },
                         {
-                            "name": "Third-place",
-                            "short_name": "3rd",
+                            "name": "Final",
+                            "short_name": "1st",
+                            "final": true,
+                            "third_place": true,
+                            "championship": true,
                             "matches": [
                                 {
                                     "home_team": "ITA",
@@ -694,14 +697,9 @@
                                     "date": "2021-10-10",
                                     "time": "15:00",
                                     "stadium": "Juventus Stadium",
-                                    "city": "Turin"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Final",
-                            "short_name": "1st",
-                            "matches": [
+                                    "city": "Turin",
+                                    "third_place": true
+                                },
                                 {
                                     "home_team": "ESP",
                                     "away_team": "FRA",
@@ -710,7 +708,8 @@
                                     "date": "2021-10-10",
                                     "time": "20:45",
                                     "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "city": "Milan",
+                                    "final": true
                                 }
                             ]
                         }
@@ -2010,8 +2009,78 @@
                 },
                 {
                     "name": "Relegation play-outs",
-                    "type": "knockout",
-                    "rounds": [{ "name": "Relegation play-outs", "round_type": "knockout2legged", "matches": [] }]
+                    "type": "pair_",
+                    "rounds": [
+                        {
+                            "name": "Relegation play-outs",
+                            "round_type": "pairs2legged",
+                            "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                            "round_won_notes": "remained in League C",
+                            "round_lost_notes": "were relegated to League D",
+                            "pairs": [
+                                {
+                                    "name": "Pair 1",
+                                    "matches": [
+                                        {
+                                            "home_team": "MDA",
+                                            "away_team": "KAZ",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2022-03-24",
+                                            "time": "18:00",
+                                            "stadium": "Zimbru Stadium",
+                                            "city": "Chișinău",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "KAZ",
+                                            "away_team": "MDA",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "home_extra_score": 0,
+                                            "away_extra_score": 0,
+                                            "home_penalty_score": 5,
+                                            "away_penalty_score": 4,
+                                            "date": "2022-03-29",
+                                            "time": "16:00",
+                                            "stadium": "Astana Arena",
+                                            "city": "Nur-Sultan",
+                                            "matchday": "secondleg"
+                                        }
+                                    ],
+                                    "bracket_order": 1
+                                },
+                                {
+                                    "name": "Pair 2",
+                                    "matches": [
+                                        {
+                                            "home_team": "EST",
+                                            "away_team": "CYP",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2022-03-24",
+                                            "time": "18:00",
+                                            "stadium": "A. Le Coq Arena",
+                                            "city": "Tallinn",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "CYP",
+                                            "away_team": "EST",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2022-03-29",
+                                            "time": "18:00",
+                                            "stadium": "AEK Arena – Georgios Karapatakis",
+                                            "city": "Larnaca",
+                                            "matchday": "secondleg"
+                                        }
+                                    ],
+                                    "bracket_order": 2
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },

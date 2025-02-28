@@ -7,6 +7,7 @@ import Header from './tournament/Header'
 import Awards from './tournament/Awards'
 import RoundRobin from './tournament/RoundRobin'
 import Knockout from './tournament/Knockout'
+import Pair from './tournament/Pair'
 
 const TournamentTabs = (props) => {
     const { tournament, config } = props
@@ -52,6 +53,7 @@ const TournamentTabs = (props) => {
                             <TabPane key={s.name} tabId={s.name}>
                                 {s.type === 'roundrobin_final' && <RoundRobin stage={s} config={config} />}
                                 {s.type === 'knockout_' && <Knockout stage={s} config={config} />}
+                                {s.type === 'pair_' && <Pair stage={s} config={config} />}
                             </TabPane>
                         )
                     })}

@@ -36,39 +36,29 @@ const MatchesPairRow = (props) => {
                     const matchHomeScore = m.home_score + matchHomeExtraScore
                     const matchAwayScore = m.away_score + matchAwayExtraScore
                     const teamWon = (isSecondLeg && pair.agg_winner === 'home') || (isThirdLeg && pair.agg_winner === 'away') ? awayTeamName : homeTeamName
+                    const teamLost = (isSecondLeg && pair.agg_winner === 'home') || (isThirdLeg && pair.agg_winner === 'away') ? homeTeamName : awayTeamName
                     const aggregateLine = config.pair_agg_points ? (
                         isSecondLeg ? (
                             <React.Fragment>
                                 Aggregate points: {pair.agg_away_pts} - {pair.agg_home_pts} {' >>> '}
                                 {pair.agg_home_pts !== pair.agg_away_pts ? (
-                                    <React.Fragment>
-                                        {pair.final ? (
-                                            <React.Fragment>
-                                                <b>{teamWon}</b> won {config.name}!
-                                            </React.Fragment>
-                                        ) : (
-                                            <React.Fragment>
-                                                <b>{teamWon}</b> advanced to the {config.next_stage}
-                                                {config.next_round}
-                                            </React.Fragment>
-                                        )}
-                                    </React.Fragment>
+                                    <React.Fragment></React.Fragment>
                                 ) : (
                                     <React.Fragment>
                                         {hasPlayoff ? (
-                                            <React.Fragment>Playoff required</React.Fragment>
+                                            <React.Fragment>Playoff required. </React.Fragment>
                                         ) : pair.agg_home_score !== pair.agg_away_score ? (
                                             <React.Fragment>
-                                                <b>{teamWon}</b> advanced to the {config.next_stage}
-                                                {config.next_round}{' '}
+                                                <b>{teamWon}</b> won{' '}
                                                 <span className="blue">
                                                     on aggregate goals {pair.agg_away_score}-{pair.agg_home_score}
+                                                    {'. '}
                                                 </span>
                                             </React.Fragment>
                                         ) : (
                                             <React.Fragment>
-                                                <b>{teamWon}</b> advanced to the {config.next_stage}
-                                                {config.next_round} <span className="blue">on drawing lots</span>
+                                                <b>{teamWon}</b> won <span className="blue">on drawing lots</span>
+                                                {'. '}
                                             </React.Fragment>
                                         )}
                                     </React.Fragment>
@@ -76,45 +66,67 @@ const MatchesPairRow = (props) => {
                             </React.Fragment>
                         ) : m.home_playoff_win || m.away_playoff_win ? (
                             <React.Fragment>
-                                {m.playoff_notes} {' >>> '} <b>{teamWon}</b> won {config.name}!
+                                {m.playoff_notes} {' >>> '}
                             </React.Fragment>
                         ) : (
-                            <React.Fragment>
-                                {' >>> '} <b>{teamWon}</b> won {config.name}!
-                            </React.Fragment>
+                            <React.Fragment></React.Fragment>
                         )
                     ) : (
                         <React.Fragment>
                             Aggregate: {pair.agg_away_score} - {pair.agg_home_score} {' >>> '}{' '}
-                            {pair.final ? (
-                                <React.Fragment>
-                                    <b>{teamWon}</b> won {config.name}!
-                                </React.Fragment>
-                            ) : (
-                                <React.Fragment>
-                                    <b>{teamWon}</b> advanced to the {config.next_stage}
-                                    {config.next_round}
-                                </React.Fragment>
-                            )}
                         </React.Fragment>
                     )
-                    const awayGoalLine = !config.pair_agg_points && pair.away_goal_winner !== undefined ? <span className="blue"> on away goals</span> : ''
+                    const awayGoalLine =
+                        !config.pair_agg_points && pair.away_goal_winner !== undefined ? (
+                            <React.Fragment>
+                                <b>{teamWon}</b> won <span className="blue">on away goals</span>
+                                {'. '}
+                            </React.Fragment>
+                        ) : (
+                            ''
+                        )
                     const extraTimeLine =
                         !config.pair_agg_points && m.home_extra_score !== undefined && m.home_penalty_score === undefined ? (
-                            <span className="blue"> after extra time</span>
+                            <React.Fragment>
+                                <b>{teamWon}</b> won <span className="blue"> after extra time</span>
+                                {'. '}
+                            </React.Fragment>
                         ) : (
                             ''
                         )
                     const penaltyLine =
                         !config.pair_agg_points && m.home_penalty_score !== undefined ? (
                             <React.Fragment>
-                                <span className="blue"> on penalties </span>{' '}
+                                <b>{teamWon}</b> won <span className="blue"> on penalties </span>
                                 <b>
                                     {m.home_penalty_score} - {m.away_penalty_score}
                                 </b>
+                                {'. '}
                             </React.Fragment>
                         ) : (
                             ''
+                        )
+                    const nextLine =
+                        config.round_won_notes || config.round_lost_notes ? (
+                            <React.Fragment>
+                                <b>{teamWon}</b> {config.round_won_notes}
+                                {'. '}
+                                {config.round_lost_notes && (
+                                    <React.Fragment>
+                                        <b>{teamLost}</b> {config.round_lost_notes}
+                                        {'.'}
+                                    </React.Fragment>
+                                )}
+                            </React.Fragment>
+                        ) : pair.final ? (
+                            <React.Fragment>
+                                <b>{teamWon}</b> won {config.name}!
+                            </React.Fragment>
+                        ) : (
+                            <React.Fragment>
+                                <b>{teamWon}</b> advanced to the {config.next_stage}
+                                {config.next_round}.
+                            </React.Fragment>
                         )
                     return (
                         <React.Fragment key={pair.name + m.matchday}>
@@ -148,6 +160,7 @@ const MatchesPairRow = (props) => {
                                             {awayGoalLine}
                                             {extraTimeLine}
                                             {penaltyLine}
+                                            {!(isSecondLeg && hasPlayoff) && nextLine}
                                         </Col>
                                     </Row>
                                 )}
@@ -162,8 +175,8 @@ const MatchesPairRow = (props) => {
 class MatchesPair extends React.Component {
     render() {
         const { stage, config } = this.props
-        const { pairs, next_stage, next_round } = stage
-        const new_config = { ...config, next_stage, next_round }
+        const { pairs, next_stage, next_round, round_won_notes, round_lost_notes } = stage
+        const new_config = { ...config, next_stage, next_round, round_won_notes, round_lost_notes }
         return (
             <React.Fragment>
                 <Row className="mt-5 box-white">

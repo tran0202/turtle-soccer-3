@@ -2,7 +2,7 @@ import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { getTeams, getHostTeamArray } from './TeamHelper'
-import { calculateGroupRankings } from './RankingsHelper'
+import { calculateGroupRankings, isAwayGoalsTiebreaker } from './RankingsHelper'
 
 // ----------------------------- Competition ----------------------------------
 
@@ -129,6 +129,9 @@ export const processStage = (stage, config) => {
         //     initEntrants(stage)
         processPathRounds(stage, config)
     }
+    if (stage.type.includes('pairs_')) {
+        processRounds(stage, stage, config)
+    }
 }
 
 export const processGroups = (stage, config) => {
@@ -193,9 +196,13 @@ export const processRounds = (path, stage, config) => {
         //     getKnockoutScore(m)
         // })
 
-        if (r.round_type && r.round_type.includes('2legged')) {
-            calculatePairAggregateScore(r, config)
-            prepareBracketPairOrder(r)
+        if (r.round_type) {
+            if (r.round_type === 'knockout2legged') {
+                calculatePairAggregateScore(r, config)
+                prepareBracketPairOrder(r)
+            } else if (r.round_type === 'pairs2legged') {
+                calculatePairAggregateScore(r, config)
+            }
         } else {
             createMatchdays(r)
             prepareBracketOrder(r)
@@ -244,7 +251,7 @@ export const calculatePairAggregateScore = (stage, config) => {
                 p.playoff_home_pts = p.playoff_home_score > p.playoff_away_score ? config.points_for_win : p.playoff_home_score === p.playoff_away_score ? 1 : 0
                 p.playoff_away_pts = p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
             }
-            const ihwp = isHomeWinPair(p, config)
+            const ihwp = isHomeWinPair(p, stage.tiebreakers ? { ...config, tiebreakers: stage.tiebreakers } : config)
             p.agg_winner = ihwp ? 'home' : 'away'
             const winTeam = p.teams && p.teams.find((t) => t.id === (ihwp ? p.matches[0].home_team : p.matches[0].away_team))
             if (winTeam) winTeam.advanced = true
@@ -286,12 +293,16 @@ export const isHomeWinPair = (pair, config) => {
     if (pair.agg_home_score > pair.agg_away_score) return true
     else if (pair.agg_home_score === pair.agg_away_score) {
         if (match2_away_score > match1_away_score) {
-            pair.away_goal_winner = 'home'
+            if (isAwayGoalsTiebreaker(config)) {
+                pair.away_goal_winner = 'home'
+            }
             return true
         } else if (match2_away_score === match1_away_score) {
             if (match2_away_penalty_score > match2_home_penalty_score) return true
         } else {
-            pair.away_goal_winner = 'away'
+            if (isAwayGoalsTiebreaker(config)) {
+                pair.away_goal_winner = 'away'
+            }
         }
     }
     return false

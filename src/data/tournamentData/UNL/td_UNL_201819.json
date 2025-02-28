@@ -404,7 +404,7 @@
                 },
                 {
                     "name": "Nations League Finals",
-                    "type": "knockout",
+                    "type": "knockout_",
                     "rounds": [
                         {
                             "name": "Semi-finals",
@@ -439,8 +439,11 @@
                             ]
                         },
                         {
-                            "name": "Third-place",
-                            "short_name": "3rd",
+                            "name": "Final",
+                            "short_name": "1st",
+                            "final": true,
+                            "third_place": true,
+                            "championship": true,
                             "matches": [
                                 {
                                     "home_team": "SUI",
@@ -454,14 +457,9 @@
                                     "date": "2019-06-09",
                                     "time": "15:00",
                                     "stadium": "Estádio D. Afonso Henriques",
-                                    "city": "Guimarães"
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Final",
-                            "short_name": "1st",
-                            "matches": [
+                                    "city": "Guimarães",
+                                    "third_place": true
+                                },
                                 {
                                     "home_team": "POR",
                                     "away_team": "NED",
@@ -470,7 +468,8 @@
                                     "date": "2019-06-09",
                                     "time": "20:45",
                                     "stadium": "Estádio do Dragão",
-                                    "city": "Porto"
+                                    "city": "Porto",
+                                    "final": true
                                 }
                             ]
                         }
