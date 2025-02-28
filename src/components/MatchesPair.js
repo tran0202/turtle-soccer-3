@@ -157,8 +157,8 @@ const MatchesPairRow = (props) => {
                                     <Row className={`no-gutters aggregate-line team-row padding-tb-sm ${!last ? 'border-bottom-gray4' : ''}`}>
                                         <Col xs={{ size: 7, offset: 5 }}>
                                             {aggregateLine}
-                                            {awayGoalLine}
                                             {extraTimeLine}
+                                            {awayGoalLine}
                                             {penaltyLine}
                                             {!(isSecondLeg && hasPlayoff) && nextLine}
                                         </Col>

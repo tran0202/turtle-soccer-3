@@ -261,8 +261,12 @@ export const calculatePairAggregateScore = (stage, config) => {
 
 export const isHomeWinPair = (pair, config) => {
     if (!pair || !pair.matches || pair.matches.length > 3 || !config) return
+    // const match1_home_score = pair.matches[0].home_score
     const match1_away_score = pair.matches[0].away_score
-    const match2_away_score = pair.matches[1].away_score
+    // const match2_home_extra_score = pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
+    const match2_away_extra_score = pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
+    // const match2_home_score = pair.matches[1].home_score+match2_home_extra_score
+    const match2_away_score = pair.matches[1].away_score + match2_away_extra_score
     const match2_home_penalty_score = pair.matches[1].home_penalty_score ? pair.matches[1].home_penalty_score : 0
     const match2_away_penalty_score = pair.matches[1].away_penalty_score ? pair.matches[1].away_penalty_score : 0
     if (config.pair_agg_points) {
