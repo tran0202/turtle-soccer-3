@@ -314,6 +314,10 @@
     .bracket-logo-sm {
         height: 28px;
     }
+    .bracket-flag-club-md {
+        max-width: 32px;
+        height: 28px;
+    }
 }
 
 /* ========== Boxes ========== */

@@ -19,6 +19,7 @@ import {
     ReplacementTooltip,
     DisqualifiedTooltip,
     CoinTossTooltip,
+    AwayGoalsTooltip,
 } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
@@ -376,6 +377,10 @@ const BracketPairBox = (props) => {
         (isHomeWinMatch(match) && !match.home_withdrew) || match.shared_bronze || match.match_postponed || match.home_bye ? 'team-name-win' : 'team-name-lose'
     const awayHighlight =
         (!isHomeWinMatch(match) && !match.away_withdrew) || match.shared_bronze || match.match_postponed || match.away_bye ? 'team-name-win' : 'team-name-lose'
+    const leg2_home_extra_score = match.leg2_home_extra_score ? match.leg2_home_extra_score : 0
+    const leg2_away_extra_score = match.leg2_away_extra_score ? match.leg2_away_extra_score : 0
+    const leg2_home_score = match.leg2_home_score + leg2_home_extra_score
+    const leg2_away_score = match.leg2_away_score + leg2_away_extra_score
     const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
     const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
     const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
@@ -409,13 +414,20 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 6 }} className={`no-padding-lr ${homeHighlight}`}>
                             {homeTeamName} {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
                             {match.home_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
+                            {match.away_goal_winner === 'home' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                            {match.leg2_home_extra_score > match.leg2_away_extra_score && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                             <React.Fragment>{match.leg1_home_score}</React.Fragment>
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
-                            <React.Fragment>{match.leg2_home_score}</React.Fragment>
+                            <React.Fragment>{leg2_home_score}</React.Fragment>
                         </Col>
+                        {match.playoff_home_score === undefined && !config.pair_agg_points && (
+                            <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                                <React.Fragment>{match.agg_home_score}</React.Fragment>
+                            </Col>
+                        )}
                         {match.playoff_home_score !== undefined && (
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
                                 <React.Fragment>{match.playoff_home_score}</React.Fragment>
@@ -431,13 +443,20 @@ const BracketPairBox = (props) => {
                         <Col xs={{ size: 6 }} className={`no-padding-lr ${awayHighlight}`}>
                             {awayTeamName} {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
                             {match.away_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
+                            {match.away_goal_winner === 'away' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                            {match.leg2_away_extra_score > match.leg2_home_extra_score && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                             <React.Fragment>{match.leg1_away_score}</React.Fragment>
                         </Col>
                         <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
-                            <React.Fragment>{match.leg2_away_score}</React.Fragment>
+                            <React.Fragment>{leg2_away_score}</React.Fragment>
                         </Col>
+                        {match.playoff_away_score === undefined && !config.pair_agg_points && (
+                            <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                                <React.Fragment>{match.agg_away_score}</React.Fragment>
+                            </Col>
+                        )}
                         {match.playoff_away_score !== undefined && (
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
                                 <React.Fragment>{match.playoff_away_score}</React.Fragment>

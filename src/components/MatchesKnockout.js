@@ -20,6 +20,7 @@ import {
     CoinTossTooltip,
 } from '../core/TooltipHelper'
 import MatchesPair from './MatchesPair'
+import PairSummary from './PairSummary'
 
 const MatchesKnockoutCollapse = (props) => {
     const { title, initialStatus, children } = props
@@ -141,8 +142,8 @@ const MatchRow = (props) => {
                         {m.shared_bronze && <SharedBronzeTooltip target={`${m.home_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
                         {m.home_coin_toss && <CoinTossTooltip target={`${m.home_team}cointossTooltip`} notes={m.coin_toss_notes} anchor="(cointoss)" />}
                     </Col>
-                    <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
-                    <Col className="text-center score-no-padding-right col-box-14">
+                    <Col className="col-box-8">{getTeamFlagId(m.home_team, config)}</Col>
+                    <Col className="text-center score-no-padding-right col-box-10">
                         {!m.match_postponed && !m.home_withdrew && !m.away_withdrew && !m.home_disqualified && !m.away_disqualified && (
                             <React.Fragment>
                                 {matchHomeScore} - {matchAwayScore}
@@ -157,7 +158,7 @@ const MatchRow = (props) => {
                         {m.match_postponed && <MatchPostponedTooltip target={`postponedTooltip`} notes={m.postponed_notes} anchor="(mp)" />}
                         {(m.home_awarded || m.away_awarded) && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
                     </Col>
-                    <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
+                    <Col className="col-box-8">{getTeamFlagId(m.away_team, config)}</Col>
                     <Col className={`col-box-25 ${pairAwayHighlight}`}>
                         {awayTeamName} {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                         {m.away_bye && <ByeTooltip target={`${m.away_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
@@ -334,14 +335,7 @@ const MatchesKnockoutPair = (props) => {
     const { round, config } = props
     return (
         <Row>
-            <Col className="mt-3 round-box">
-                <Row>
-                    <Col>
-                        <div className="h2-ff1">{round.name}</div>
-                    </Col>
-                </Row>
-                {round.pairs && <MatchesPair stage={round} config={config} />}
-            </Col>
+            <Col className="mt-3 round-box">{round.pairs && <MatchesPair stage={round} config={config} />}</Col>
         </Row>
     )
 }
@@ -360,7 +354,12 @@ const MatchesKnockoutRound = (props) => {
                         }
                     }
                     if (r.pairs) {
-                        return <MatchesKnockoutPair key={r.name} round={r} config={config} />
+                        return (
+                            <React.Fragment key={r.name}>
+                                <PairSummary round={r} config={config} />
+                                <MatchesKnockoutPair round={r} config={config} />
+                            </React.Fragment>
+                        )
                     }
                     return null
                 })}

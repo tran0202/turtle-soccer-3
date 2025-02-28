@@ -279,17 +279,23 @@ export const getPlayerFlagId = (club_id, club_id2, nation_id, config) => {
 export const getBracketTeamFlagId = (id, config) => {
     if (!id || !config) return
     const teams = config.competition ? config.competition.teams : config.teams
+    const team_type_id = config.competition ? config.competition.team_type_id : config.team_type_id
     const team = teams.find((t) => t.id === id)
     if (!team) return
     return (
         <React.Fragment>
-            {config.team_type_id !== 'CLUB' && (
+            {team_type_id !== 'CLUB' && (
                 <img
                     className="bracket-flag-sm margin-bottom-xs-4"
                     src={'/images/flags/' + team.nation.flag_filename}
-                    alt={`${id} ${team.nation.official_name}`}
-                    title={`${id} ${team.nation.official_name}`}
+                    alt={`${id} ${team.nation.name} ${team.nation.official_name}`}
+                    title={`${id} ${team.nation.name} ${team.nation.official_name}`}
                 />
+            )}
+            {team_type_id === 'CLUB' && (
+                <React.Fragment>
+                    <img className="bracket-flag-club-md" src={`/images/club_logos/${team.logo_filename}`} alt={id} title={id} />{' '}
+                </React.Fragment>
             )}
         </React.Fragment>
     )

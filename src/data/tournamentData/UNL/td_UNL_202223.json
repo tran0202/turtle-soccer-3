@@ -648,7 +648,7 @@
                 },
                 {
                     "name": "Nations League Finals",
-                    "type": "knockout",
+                    "type": "knockout_",
                     "rounds": [
                         {
                             "name": "Semi-finals",
@@ -657,58 +657,63 @@
                             "next_round": "Final",
                             "matches": [
                                 {
-                                    "home_team": "ITA",
-                                    "away_team": "ESP",
-                                    "home_score": 1,
+                                    "home_team": "NED",
+                                    "away_team": "CRO",
+                                    "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2021-10-06",
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 2,
+                                    "date": "2023-06-14",
                                     "time": "20:45",
-                                    "stadium": "San Siro",
-                                    "city": "Milan",
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam",
                                     "bracket_order": 1
                                 },
                                 {
-                                    "home_team": "BEL",
-                                    "away_team": "FRA",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-10-07",
-                                    "time": "20:45",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin",
-                                    "bracket_order": 2
-                                }
-                            ]
-                        },
-                        {
-                            "name": "Third-place",
-                            "short_name": "3rd",
-                            "matches": [
-                                {
-                                    "home_team": "ITA",
-                                    "away_team": "BEL",
+                                    "home_team": "ESP",
+                                    "away_team": "ITA",
                                     "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2021-10-10",
-                                    "time": "15:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin"
+                                    "date": "2023-06-15",
+                                    "time": "20:45",
+                                    "stadium": "De Grolsch Veste",
+                                    "city": "Enschede",
+                                    "bracket_order": 2
                                 }
                             ]
                         },
                         {
                             "name": "Final",
                             "short_name": "1st",
+                            "final": true,
+                            "third_place": true,
+                            "championship": true,
                             "matches": [
                                 {
-                                    "home_team": "ESP",
-                                    "away_team": "FRA",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-10-10",
+                                    "home_team": "NED",
+                                    "away_team": "ITA",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2023-06-18",
+                                    "time": "15:00",
+                                    "stadium": "De Grolsch Veste",
+                                    "city": "Enschede",
+                                    "third_place": true
+                                },
+                                {
+                                    "home_team": "CRO",
+                                    "away_team": "ESP",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 4,
+                                    "away_penalty_score": 5,
+                                    "date": "2023-06-18",
                                     "time": "20:45",
-                                    "stadium": "San Siro",
-                                    "city": "Milan"
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam",
+                                    "final": true
                                 }
                             ]
                         }
@@ -2013,8 +2018,45 @@
                 },
                 {
                     "name": "Relegation play-outs",
-                    "type": "knockout",
-                    "rounds": [{ "name": "Relegation play-outs", "round_type": "knockout2legged", "matches": [] }]
+                    "type": "pair_",
+                    "rounds": [
+                        {
+                            "name": "Relegation play-outs",
+                            "round_type": "pairs2legged",
+                            "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                            "round_won_notes": "remained in League C",
+                            "round_lost_notes": "were relegated to League D",
+                            "pairs": [
+                                {
+                                    "name": "Pair 1",
+                                    "matches": [
+                                        {
+                                            "home_team": "GIB",
+                                            "away_team": "LTU",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2024-03-21",
+                                            "time": "20:45",
+                                            "stadium": "Estádio Algarve",
+                                            "city": "Faro/Loulé (Portugal)",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LTU",
+                                            "away_team": "GIB",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2024-03-26",
+                                            "time": "18:00",
+                                            "stadium": "Darius and Girėnas Stadium",
+                                            "city": "Kaunas",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },

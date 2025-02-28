@@ -132,7 +132,7 @@ const MatchesPairRow = (props) => {
                         <React.Fragment key={pair.name + m.matchday}>
                             <Row className={bottomLine}>
                                 <Row className={`no-gutters ranking-tbl team-row padding-tb-sm`}>
-                                    <Col className="col-box-20 font-14">
+                                    <Col className="col-box-18 font-14">
                                         {moment(m.date).format('MMMM D, YYYY')}
                                         {m.time ? ' @' : ''} {m.time}
                                         <br />
@@ -142,12 +142,12 @@ const MatchesPairRow = (props) => {
                                         {homeTeamName}
                                         {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
                                     </Col>
-                                    <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
-                                    <Col className="text-center score-no-padding-right col-box-14">
+                                    <Col className="col-box-10">{getTeamFlagId(m.home_team, config)}</Col>
+                                    <Col className="text-center score-no-padding-right col-box-10">
                                         {matchHomeScore} - {matchAwayScore}{' '}
                                         {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                     </Col>
-                                    <Col className="col-box-6">{getTeamFlagId(m.away_team, config)}</Col>
+                                    <Col className="col-box-10">{getTeamFlagId(m.away_team, config)}</Col>
                                     <Col className={`col-box-25 ${pairHomeHighlight}`}>
                                         {awayTeamName}
                                         {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}

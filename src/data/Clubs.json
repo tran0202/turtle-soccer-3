@@ -33,7 +33,6 @@
     {
         "id": "AJA",
         "name": "Ajax Amsterdam",
-        "short_name": "Ajax",
         "team_type_id": "CLUB",
         "nation_id": "NED",
         "parent_team_id": "",
@@ -606,7 +605,7 @@
     {
         "id": "DOR",
         "name": "Borussia Dortmund",
-        "short_name": "Borus.Dortmund",
+        "short_name": "BorussiaDortmund",
         "team_type_id": "CLUB",
         "nation_id": "GER",
         "parent_team_id": "",
@@ -627,7 +626,7 @@
     {
         "id": "ATM",
         "name": "Atlético Madrid",
-        "short_name": "Atletico Ma.",
+        "short_name": "Atlético Madrid",
         "team_type_id": "CLUB",
         "nation_id": "ESP",
         "parent_team_id": "",
@@ -648,7 +647,7 @@
     {
         "id": "PSG",
         "name": "Paris Saint-Germain",
-        "short_name": "Paris Saint-Germain",
+        "short_name": "PSG",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -803,7 +802,7 @@
     {
         "id": "MUN",
         "name": "Manchester United",
-        "short_name": "Man Utd",
+        "short_name": "Man United",
         "team_type_id": "CLUB",
         "nation_id": "ENG",
         "parent_team_id": "",

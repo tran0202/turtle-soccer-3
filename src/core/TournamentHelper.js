@@ -129,7 +129,7 @@ export const processStage = (stage, config) => {
         //     initEntrants(stage)
         processPathRounds(stage, config)
     }
-    if (stage.type.includes('pairs_')) {
+    if (stage.type.includes('pair_')) {
         processRounds(stage, stage, config)
     }
 }
@@ -352,6 +352,8 @@ export const prepareBracketPairOrder = (round) => {
             leg1_stadium: p.matches[0].stadium,
             leg2_home_score: p.matches[1].away_score,
             leg2_away_score: p.matches[1].home_score,
+            leg2_home_extra_score: p.matches[1].away_extra_score,
+            leg2_away_extra_score: p.matches[1].home_extra_score,
             leg2_date: p.matches[1].date,
             leg2_time: p.matches[1].time,
             leg2_city: p.matches[1].city,
