@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -215,6 +215,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "URS",
@@ -224,7 +227,8 @@
                             "date": "1988-06-25",
                             "time": "15:30",
                             "stadium": "Olympiastadion",
-                            "city": "Munich"
+                            "city": "Munich",
+                            "final": true
                         }
                     ]
                 }

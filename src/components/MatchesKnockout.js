@@ -17,6 +17,7 @@ import {
     AwardedTooltip,
     ReplacementTooltip,
     DisqualifiedTooltip,
+    CoinTossTooltip,
 } from '../core/TooltipHelper'
 import MatchesPair from './MatchesPair'
 
@@ -90,6 +91,14 @@ const MatchRow = (props) => {
         ) : (
             ''
         )
+    const coinTossLine =
+        m.home_coin_toss || m.away_coin_toss ? (
+            <React.Fragment>
+                <span className="blue"> on coin toss</span>
+            </React.Fragment>
+        ) : (
+            ''
+        )
     const qualifyLine = (
         <React.Fragment>
             {' >>> '} <b>{teamWon}</b> qualify for World Cup {config.year}
@@ -115,7 +124,7 @@ const MatchRow = (props) => {
         !isByeMatch && (
             <React.Fragment key={m.id}>
                 <Row className="no-gutters ranking-tbl team-row padding-tb-sm">
-                    <Col className="col-box-14 font-14">
+                    <Col className="col-box-20 font-14">
                         {m.match_type ? moment(m.date).format('MMMM D, YYYY') : ''}
                         {m.time ? ' @' : ''} {m.time}
                         <br />
@@ -130,6 +139,7 @@ const MatchRow = (props) => {
                         )}
                         {m.home_replacement && <ReplacementTooltip target={`${m.home_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
                         {m.shared_bronze && <SharedBronzeTooltip target={`${m.home_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
+                        {m.home_coin_toss && <CoinTossTooltip target={`${m.home_team}cointossTooltip`} notes={m.coin_toss_notes} anchor="(cointoss)" />}
                     </Col>
                     <Col className="col-box-6">{getTeamFlagId(m.home_team, config)}</Col>
                     <Col className="text-center score-no-padding-right col-box-14">
@@ -156,7 +166,8 @@ const MatchRow = (props) => {
                             <DisqualifiedTooltip target={`${m.away_team}disqualifiedTooltip`} notes={m.disqualified_notes} anchor="(disqualified)" />
                         )}
                         {m.away_replacement && <ReplacementTooltip target={`${m.away_team}replacementTooltip`} notes={m.replacement_notes} anchor="(r)" />}
-                        {m.shared_bronze && <SharedBronzeTooltip target={`${m.home_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
+                        {m.shared_bronze && <SharedBronzeTooltip target={`${m.away_team}sharedBronzeTooltip`} notes={m.shared_bronze_notes} />}
+                        {m.away_coin_toss && <CoinTossTooltip target={`${m.away_team}cointossTooltip`} notes={m.coin_toss_notes} anchor="(cointoss)" />}
                     </Col>
                 </Row>
                 {(((m.home_extra_score !== undefined || m.home_penalty_score !== undefined) &&
@@ -173,6 +184,7 @@ const MatchRow = (props) => {
                                     {goldenGoalLine}
                                     {silverGoalLine}
                                     {extraTimeLine}
+                                    {coinTossLine}
                                 </React.Fragment>
                             )}
                             {penaltyLine}

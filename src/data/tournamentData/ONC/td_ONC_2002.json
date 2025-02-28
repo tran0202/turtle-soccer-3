@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -195,6 +195,7 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2002-07-12",
                             "time": "12:00",
                             "stadium": "Ericsson Stadium",
@@ -215,8 +216,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "TAH",
@@ -226,14 +230,9 @@
                             "date": "2002-07-14",
                             "time": "12:00",
                             "stadium": "Ericsson Stadium",
-                            "city": "Auckland"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Auckland",
+                            "third_place": true
+                        },
                         {
                             "home_team": "AUS",
                             "away_team": "NZL",
@@ -242,7 +241,8 @@
                             "date": "2002-07-14",
                             "time": "15:00",
                             "stadium": "Ericsson Stadium",
-                            "city": "Auckland"
+                            "city": "Auckland",
+                            "final": true
                         }
                     ]
                 }

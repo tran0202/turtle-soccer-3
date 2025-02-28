@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -437,6 +437,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "ESP",
@@ -446,7 +449,8 @@
                             "date": "2012-07-01",
                             "time": "21:45",
                             "stadium": "Olympic Stadium",
-                            "city": "Kyiv"
+                            "city": "Kyiv",
+                            "final": true
                         }
                     ]
                 }

@@ -50,8 +50,8 @@ export const ReplayTooltip = (props) => {
 }
 
 export const CoinTossTooltip = (props) => {
-    const { target, anchor } = props
-    const content = 'Coin toss'
+    const { target, anchor, notes } = props
+    const content = `Coin toss${notes ? `: ${notes}` : ''}`
     return <TopTooltip target={target} content={content} anchor={anchor} />
 }
 

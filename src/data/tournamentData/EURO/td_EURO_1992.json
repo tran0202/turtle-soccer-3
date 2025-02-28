@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -219,6 +219,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "DEN",
@@ -228,7 +231,8 @@
                             "date": "1992-06-26",
                             "time": "20:15",
                             "stadium": "Ullevi",
-                            "city": "Gothenburg"
+                            "city": "Gothenburg",
+                            "final": true
                         }
                     ]
                 }

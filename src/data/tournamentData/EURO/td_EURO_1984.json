@@ -180,7 +180,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -221,6 +221,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "FRA",
@@ -230,7 +233,8 @@
                             "date": "1984-06-27",
                             "time": "20:00",
                             "stadium": "Parc des Princes",
-                            "city": "Paris"
+                            "city": "Paris",
+                            "final": true
                         }
                     ]
                 }

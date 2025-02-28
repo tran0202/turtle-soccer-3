@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -439,6 +439,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "GER",
@@ -448,7 +451,8 @@
                             "date": "2008-06-29",
                             "time": "20:45",
                             "stadium": "Ernst-Happel-Stadion",
-                            "city": "Vienna"
+                            "city": "Vienna",
+                            "final": true
                         }
                     ]
                 }

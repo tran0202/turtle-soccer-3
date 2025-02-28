@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -445,6 +445,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "CZE-1993-2022",
@@ -453,10 +456,12 @@
                             "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 1,
+                            "away_golden_goal": true,
                             "date": "1996-06-30",
                             "time": "19:00",
                             "stadium": "Wembley Stadium",
-                            "city": "London"
+                            "city": "London",
+                            "final": true
                         }
                     ]
                 }

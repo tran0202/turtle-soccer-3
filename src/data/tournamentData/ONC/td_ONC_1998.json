@@ -120,7 +120,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -153,8 +153,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "FIJ",
@@ -164,14 +167,9 @@
                             "date": "1998-10-04",
                             "time": "12:00",
                             "stadium": "Lang Park",
-                            "city": "Brisbane"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Brisbane",
+                            "third_place": true
+                        },
                         {
                             "home_team": "NZL",
                             "away_team": "AUS",
@@ -180,7 +178,8 @@
                             "date": "1998-10-04",
                             "time": "15:00",
                             "stadium": "Lang Park",
-                            "city": "Brisbane"
+                            "city": "Brisbane",
+                            "final": true
                         }
                     ]
                 }

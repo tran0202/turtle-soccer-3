@@ -948,6 +948,8 @@ export const isHomeWinMatch = (match) => {
     if (match.agg_winner === 'away') return false
     if (match.home_playoff_win) return true
     if (match.away_playoff_win) return false
+    if (match.home_coin_toss) return true
+    if (match.away_coin_toss) return false
     if (match.away_team === 'BYE') return true
     if (match.home_team === 'BYE') return false
     if (match.home_walkover) return true

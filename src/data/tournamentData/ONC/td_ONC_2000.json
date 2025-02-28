@@ -120,7 +120,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Semi-finals",
@@ -153,8 +153,11 @@
                     ]
                 },
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "VAN",
@@ -164,14 +167,9 @@
                             "date": "2000-06-28",
                             "time": "12:00",
                             "stadium": "Stade Pater",
-                            "city": "Papeete"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Papeete",
+                            "third_place": true
+                        },
                         {
                             "home_team": "AUS",
                             "away_team": "NZL",
@@ -180,7 +178,8 @@
                             "date": "2000-06-28",
                             "time": "15:00",
                             "stadium": "Stade Pater",
-                            "city": "Papeete"
+                            "city": "Papeete",
+                            "final": true
                         }
                     ]
                 }

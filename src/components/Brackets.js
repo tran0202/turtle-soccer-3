@@ -18,6 +18,7 @@ import {
     AwardedTooltip,
     ReplacementTooltip,
     DisqualifiedTooltip,
+    CoinTossTooltip,
 } from '../core/TooltipHelper'
 
 const BracketsCollapse = (props) => {
@@ -237,7 +238,7 @@ const BracketBox = (props) => {
                             {homeTeamFlag}
                         </Col>
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${homeHighlight}`}>
-                            {homeTeamName} {homeExtraScore > awayExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
+                            {homeTeamName} {(homeExtraScore > awayExtraScore || match.home_coin_toss) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.extra_time_skipped && <AetSkippedTooltip target="aetSkippedTooltip" anchor="(no.e.t.)" />}
                             {match.home_golden_goal && <GoldenGoalTooltip target={`${match.home_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {match.home_silver_goal && <SilverGoalTooltip target={`${match.home_team}silverGoalTooltip`} anchor="(sg)" />}
@@ -264,6 +265,9 @@ const BracketBox = (props) => {
                             {match.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
                             {match.home_replacement && (
                                 <ReplacementTooltip target={`${match.home_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
+                            )}
+                            {match.home_coin_toss && (
+                                <CoinTossTooltip target={`${match.home_team}cointossTooltip`} notes={match.coin_toss_notes} anchor="(cointoss)" />
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${homeHighlight}`}>
@@ -294,7 +298,7 @@ const BracketBox = (props) => {
                             {awayTeamFlag}
                         </Col>
                         <Col xs={{ size: 7 }} className={`no-padding-lr ${awayHighlight}`}>
-                            {awayTeamName} {awayExtraScore > homeExtraScore && <AetTooltip target="aetTooltip" anchor="(aet)" />}
+                            {awayTeamName} {(awayExtraScore > homeExtraScore || match.away_coin_toss) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
                             {match.away_golden_goal && <GoldenGoalTooltip target={`${match.away_team}goldenGoalTooltip`} anchor="(gg)" />}
                             {match.away_silver_goal && <SilverGoalTooltip target={`${match.away_team}silverGoalTooltip`} anchor="(sg)" />}
                             {awayPenaltyScore > homePenaltyScore && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
@@ -317,6 +321,9 @@ const BracketBox = (props) => {
                             {match.away_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
                             {match.away_replacement && (
                                 <ReplacementTooltip target={`${match.away_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
+                            )}
+                            {match.away_coin_toss && (
+                                <CoinTossTooltip target={`${match.away_team}cointossTooltip`} notes={match.coin_toss_notes} anchor="(cointoss)" />
                             )}
                         </Col>
                         <Col xs={{ size: 2 }} className={`no-padding-lr ${awayHighlight}`}>
@@ -505,7 +512,7 @@ const BracketColInner = (props) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
                             const lastBox = round.bracketMatches ? index === round.bracketMatches.length - 1 : false
                             return !bye ? (
-                                config.pair_agg_points ? (
+                                round.round_type === 'knockout2legged' ? (
                                     <BracketPairBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
                                 ) : (
                                     <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />

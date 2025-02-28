@@ -181,11 +181,14 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
-                    "name": "Third-place",
-                    "short_name": "3rd",
+                    "name": "Final",
+                    "short_name": "1st",
+                    "final": true,
+                    "third_place": true,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "NCL-1973-2008",
@@ -195,14 +198,9 @@
                             "date": "1980-03-01",
                             "time": "12:00",
                             "stadium": "Stade de Magenta",
-                            "city": "Noumea"
-                        }
-                    ]
-                },
-                {
-                    "name": "Final",
-                    "short_name": "1st",
-                    "matches": [
+                            "city": "Noumea",
+                            "third_place": true
+                        },
                         {
                             "home_team": "AUS",
                             "away_team": "TAH-1794-1984",
@@ -211,7 +209,8 @@
                             "date": "1980-03-01",
                             "time": "15:00",
                             "stadium": "Stade de Magenta",
-                            "city": "Noumea"
+                            "city": "Noumea",
+                            "final": true
                         }
                     ]
                 }

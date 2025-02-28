@@ -342,7 +342,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Quarter-finals",
@@ -409,6 +409,7 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2000-06-28",
                             "time": "20:45",
                             "stadium": "King Baudouin Stadium",
@@ -435,6 +436,9 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "FRA",
@@ -443,10 +447,12 @@
                             "away_score": 1,
                             "home_extra_score": 1,
                             "away_extra_score": 0,
+                            "home_golden_goal": true,
                             "date": "2000-07-02",
                             "time": "20:00",
                             "stadium": "Stadion Feijenoord",
-                            "city": "Rotterdam"
+                            "city": "Rotterdam",
+                            "final": true
                         }
                     ]
                 }
