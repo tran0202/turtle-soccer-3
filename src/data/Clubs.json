@@ -95,6 +95,7 @@
     {
         "id": "SHE",
         "name": "Sheriff Tiraspol",
+        "short_name": "Sheriff T.",
         "team_type_id": "CLUB",
         "nation_id": "MDA",
         "parent_team_id": "",
@@ -346,7 +347,7 @@
     {
         "id": "CZV",
         "name": "Red Star Belgrade",
-        "short_name": "Red Star Belgrade",
+        "short_name": "Red Star Bel.",
         "team_type_id": "CLUB",
         "nation_id": "SRB",
         "parent_team_id": "",
@@ -541,6 +542,7 @@
     {
         "id": "SPM",
         "name": "Spartak Moscow",
+        "short_name": "Sprtk. Moscow",
         "team_type_id": "CLUB",
         "nation_id": "RUS",
         "parent_team_id": "",
@@ -1138,7 +1140,7 @@
     {
         "id": "SGE",
         "name": "Eintracht Frankfurt",
-        "short_name": "Eintracht Fran.",
+        "short_name": "Eintracht Fr.",
         "team_type_id": "CLUB",
         "nation_id": "GER",
         "parent_team_id": "",
@@ -3769,6 +3771,7 @@
     {
         "id": "WHU",
         "name": "West Ham United",
+        "short_name": "West Ham",
         "team_type_id": "CLUB",
         "nation_id": "ENG",
         "parent_team_id": "",

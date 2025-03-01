@@ -3922,7 +3922,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "default": true,
             "rounds": [
                 {
@@ -3933,6 +3933,7 @@
                     "next_round": "Round of 16",
                     "pairs": [
                         {
+                            "name": "R3201",
                             "matches": [
                                 {
                                     "home_team": "WOL",
@@ -3943,7 +3944,7 @@
                                     "time": "18:55",
                                     "stadium": "Puskás Aréna",
                                     "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "TOT",
@@ -3954,12 +3955,13 @@
                                     "time": "18:00",
                                     "stadium": "Tottenham Hotspur Stadium",
                                     "city": "London",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
+                            "name": "R3202",
                             "matches": [
                                 {
                                     "home_team": "DYK",
@@ -3970,7 +3972,7 @@
                                     "time": "16:00",
                                     "stadium": "NSC Olimpiyskiy Stadium",
                                     "city": "Kyiv",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "BRG",
@@ -3981,12 +3983,13 @@
                                     "time": "21:00",
                                     "stadium": "Jan Breydel Stadium",
                                     "city": "Bruges",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
                         },
                         {
+                            "name": "R3203",
                             "matches": [
                                 {
                                     "home_team": "SOC",
@@ -3997,7 +4000,7 @@
                                     "time": "18:55",
                                     "stadium": "Juventus Stadium",
                                     "city": "Turin (Italy)",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MUN",
@@ -4008,12 +4011,13 @@
                                     "time": "21:00",
                                     "stadium": "Old Trafford",
                                     "city": "Manchester",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 11
                         },
                         {
+                            "name": "R3204",
                             "matches": [
                                 {
                                     "home_team": "SLB",
@@ -4024,7 +4028,7 @@
                                     "time": "21:00",
                                     "stadium": "Stadio Olimpico",
                                     "city": "Rome (Italy)",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ARS",
@@ -4035,12 +4039,13 @@
                                     "time": "18:55",
                                     "stadium": "Karaiskakis Stadium",
                                     "city": "Piraeus (Greece)",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 6
                         },
                         {
+                            "name": "R3205",
                             "matches": [
                                 {
                                     "home_team": "CZV",
@@ -4051,7 +4056,7 @@
                                     "time": "18:55",
                                     "stadium": "Red Star Stadium",
                                     "city": "Belgrade",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MIL",
@@ -4062,12 +4067,13 @@
                                     "time": "21:00",
                                     "stadium": "San Siro",
                                     "city": "Milan",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 12
                         },
                         {
+                            "name": "R3206",
                             "matches": [
                                 {
                                     "home_team": "ROA",
@@ -4078,7 +4084,7 @@
                                     "time": "21:00",
                                     "stadium": "Bosuilstadion",
                                     "city": "Antwerp",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "RFC",
@@ -4089,12 +4095,13 @@
                                     "time": "18:55",
                                     "stadium": "Ibrox Stadium",
                                     "city": "Glasgow",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 8
                         },
                         {
+                            "name": "R3207",
                             "matches": [
                                 {
                                     "home_team": "SLP",
@@ -4105,7 +4112,7 @@
                                     "time": "18:55",
                                     "stadium": "Sinobo Stadium",
                                     "city": "Prague",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "LEI",
@@ -4116,12 +4123,13 @@
                                     "time": "21:00",
                                     "stadium": "King Power Stadium",
                                     "city": "Leicester",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 7
                         },
                         {
+                            "name": "R3208",
                             "matches": [
                                 {
                                     "home_team": "RBS",
@@ -4132,7 +4140,7 @@
                                     "time": "21:00",
                                     "stadium": "Stadion Wals-Siezenheim",
                                     "city": "Wals-Siezenheim",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "VIL",
@@ -4143,12 +4151,13 @@
                                     "time": "18:55",
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
                         },
                         {
+                            "name": "R3209",
                             "matches": [
                                 {
                                     "home_team": "SBR",
@@ -4159,7 +4168,7 @@
                                     "time": "18:55",
                                     "stadium": "Estádio Municipal",
                                     "city": "Braga",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ROM",
@@ -4170,12 +4179,13 @@
                                     "time": "21:00",
                                     "stadium": "Stadio Olimpico",
                                     "city": "Rome",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 15
                         },
                         {
+                            "name": "R3210",
                             "matches": [
                                 {
                                     "home_team": "KRA",
@@ -4186,7 +4196,7 @@
                                     "time": "18:55",
                                     "stadium": "Krasnodar Stadium",
                                     "city": "Krasnodar",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "DZA",
@@ -4197,12 +4207,13 @@
                                     "time": "21:00",
                                     "stadium": "Stadion Maksimir",
                                     "city": "Zagreb",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "R3211",
                             "matches": [
                                 {
                                     "home_team": "YBO",
@@ -4213,7 +4224,7 @@
                                     "time": "18:55",
                                     "stadium": "Stadion Wankdorf",
                                     "city": "Bern",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "B04",
@@ -4224,12 +4235,13 @@
                                     "time": "21:00",
                                     "stadium": "BayArena",
                                     "city": "Leverkusen",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 14
                         },
                         {
+                            "name": "R3212",
                             "matches": [
                                 {
                                     "home_team": "MOL",
@@ -4240,7 +4252,7 @@
                                     "time": "21:00",
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal (Spain)",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "TSG",
@@ -4251,12 +4263,13 @@
                                     "time": "18:55",
                                     "stadium": "Rhein-Neckar-Arena",
                                     "city": "Sinsheim",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 10
                         },
                         {
+                            "name": "R3213",
                             "matches": [
                                 {
                                     "home_team": "GCF",
@@ -4267,7 +4280,7 @@
                                     "time": "21:00",
                                     "stadium": "Nuevo Los Cármenes",
                                     "city": "Granada",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "NAP",
@@ -4278,12 +4291,13 @@
                                     "time": "18:55",
                                     "stadium": "Stadio San Paolo",
                                     "city": "Naples",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 9
                         },
                         {
+                            "name": "R3214",
                             "matches": [
                                 {
                                     "home_team": "MTA",
@@ -4294,7 +4308,7 @@
                                     "time": "21:00",
                                     "stadium": "Bloomfield Stadium",
                                     "city": "Tel Aviv",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "SHK",
@@ -4305,12 +4319,13 @@
                                     "time": "18:55",
                                     "stadium": "NSC Olimpiyskiy Stadium",
                                     "city": "Kyiv",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 16
                         },
                         {
+                            "name": "R3215",
                             "matches": [
                                 {
                                     "home_team": "LIL",
@@ -4321,7 +4336,7 @@
                                     "time": "21:00",
                                     "stadium": "Stade Pierre-Mauroy",
                                     "city": "Villeneuve-d'Ascq",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "AJA",
@@ -4332,12 +4347,13 @@
                                     "time": "18:55",
                                     "stadium": "Johan Cruyff Arena",
                                     "city": "Amsterdam",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 13
                         },
                         {
+                            "name": "R3216",
                             "matches": [
                                 {
                                     "home_team": "OLY",
@@ -4348,7 +4364,7 @@
                                     "time": "18:55",
                                     "stadium": "Karaiskakis Stadium",
                                     "city": "Piraeus",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "PSV",
@@ -4359,7 +4375,7 @@
                                     "time": "21:00",
                                     "stadium": "Philips Stadion",
                                     "city": "Eindhoven",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 5
@@ -4374,6 +4390,7 @@
                     "next_round": "Quarter-finals",
                     "pairs": [
                         {
+                            "name": "R161",
                             "matches": [
                                 {
                                     "home_team": "AJA",
@@ -4384,7 +4401,7 @@
                                     "time": "18:55",
                                     "stadium": "Johan Cruyff Arena",
                                     "city": "Amsterdam",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "YBO",
@@ -4395,12 +4412,13 @@
                                     "time": "21:00",
                                     "stadium": "Stadion Wankdorf",
                                     "city": "Bern",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 7
                         },
                         {
+                            "name": "R162",
                             "matches": [
                                 {
                                     "home_team": "DYK",
@@ -4411,7 +4429,7 @@
                                     "time": "18:55",
                                     "stadium": "NSC Olimpiyskiy Stadium",
                                     "city": "Kyiv",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "VIL",
@@ -4422,12 +4440,13 @@
                                     "time": "21:00",
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "R163",
                             "matches": [
                                 {
                                     "home_team": "ROM",
@@ -4438,7 +4457,7 @@
                                     "time": "21:00",
                                     "stadium": "Stadio Olimpico",
                                     "city": "Rome",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "SHK",
@@ -4449,12 +4468,13 @@
                                     "time": "18:55",
                                     "stadium": "NSC Olimpiyskiy Stadium",
                                     "city": "Kyiv",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 8
                         },
                         {
+                            "name": "R164",
                             "matches": [
                                 {
                                     "home_team": "OLY",
@@ -4465,7 +4485,7 @@
                                     "time": "21:00",
                                     "stadium": "Karaiskakis Stadium",
                                     "city": "Piraeus",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ARS",
@@ -4476,12 +4496,13 @@
                                     "time": "18:55",
                                     "stadium": "Emirates Stadium",
                                     "city": "London",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
                         },
                         {
+                            "name": "R165",
                             "matches": [
                                 {
                                     "home_team": "TOT",
@@ -4492,7 +4513,7 @@
                                     "time": "21:00",
                                     "stadium": "Tottenham Hotspur Stadium",
                                     "city": "London",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "DZA",
@@ -4505,12 +4526,13 @@
                                     "time": "18:55",
                                     "stadium": "Stadion Maksimir",
                                     "city": "Zagreb",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
+                            "name": "R166",
                             "matches": [
                                 {
                                     "home_team": "MUN",
@@ -4521,7 +4543,7 @@
                                     "time": "18:55",
                                     "stadium": "Old Trafford",
                                     "city": "Manchester",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MIL",
@@ -4532,12 +4554,13 @@
                                     "time": "21:00",
                                     "stadium": "San Siro",
                                     "city": "Milan",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 6
                         },
                         {
+                            "name": "R167",
                             "matches": [
                                 {
                                     "home_team": "SLP",
@@ -4548,7 +4571,7 @@
                                     "time": "18:55",
                                     "stadium": "Sinobo Stadium",
                                     "city": "Prague",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "RFC",
@@ -4559,12 +4582,13 @@
                                     "time": "21:00",
                                     "stadium": "Ibrox Stadium",
                                     "city": "Glasgow",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
                         },
                         {
+                            "name": "R168",
                             "matches": [
                                 {
                                     "home_team": "GCF",
@@ -4575,7 +4599,7 @@
                                     "time": "21:00",
                                     "stadium": "Nuevo Los Cármenes",
                                     "city": "Granada",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MOL",
@@ -4586,7 +4610,7 @@
                                     "time": "18:55",
                                     "stadium": "Puskás Aréna",
                                     "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 5
@@ -4601,6 +4625,7 @@
                     "next_round": "Semi-finals",
                     "pairs": [
                         {
+                            "name": "QF1",
                             "matches": [
                                 {
                                     "home_team": "GCF",
@@ -4611,7 +4636,7 @@
                                     "time": "21:00",
                                     "stadium": "Nuevo Los Cármenes",
                                     "city": "Granada",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MUN",
@@ -4622,12 +4647,13 @@
                                     "time": "21:00",
                                     "stadium": "Old Trafford",
                                     "city": "Manchester",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
                         },
                         {
+                            "name": "QF2",
                             "matches": [
                                 {
                                     "home_team": "ARS",
@@ -4638,7 +4664,7 @@
                                     "time": "21:00",
                                     "stadium": "Emirates Stadium",
                                     "city": "London",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "SLP",
@@ -4649,12 +4675,13 @@
                                     "time": "21:00",
                                     "stadium": "Sinobo Stadium",
                                     "city": "Prague",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "QF3",
                             "matches": [
                                 {
                                     "home_team": "AJA",
@@ -4665,7 +4692,7 @@
                                     "time": "21:00",
                                     "stadium": "Johan Cruyff Arena",
                                     "city": "Amsterdam",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ROM",
@@ -4676,12 +4703,13 @@
                                     "time": "21:00",
                                     "stadium": "Stadio Olimpico",
                                     "city": "Rome",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
                         },
                         {
+                            "name": "QF4",
                             "matches": [
                                 {
                                     "home_team": "DZA",
@@ -4692,7 +4720,7 @@
                                     "time": "21:00",
                                     "stadium": "Stadion Maksimir",
                                     "city": "Zagreb",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "VIL",
@@ -4703,7 +4731,7 @@
                                     "time": "21:00",
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
@@ -4718,6 +4746,7 @@
                     "next_round": "Final",
                     "pairs": [
                         {
+                            "name": "SF1",
                             "matches": [
                                 {
                                     "home_team": "MUN",
@@ -4728,7 +4757,7 @@
                                     "time": "21:00",
                                     "stadium": "Old Trafford",
                                     "city": "Manchester",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ROM",
@@ -4739,12 +4768,13 @@
                                     "time": "21:00",
                                     "stadium": "Stadio Olimpico",
                                     "city": "Rome",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "SF2",
                             "matches": [
                                 {
                                     "home_team": "VIL",
@@ -4755,7 +4785,7 @@
                                     "time": "21:00",
                                     "stadium": "Estadio de la Cerámica",
                                     "city": "Villarreal",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "ARS",
@@ -4766,7 +4796,7 @@
                                     "time": "21:00",
                                     "stadium": "Emirates Stadium",
                                     "city": "London",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
@@ -4776,12 +4806,15 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "VIL",
                             "away_team": "MUN",
-                            "home_score": 0,
-                            "away_score": 0,
+                            "home_score": 1,
+                            "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 0,
                             "home_penalty_score": 11,
@@ -4789,7 +4822,8 @@
                             "date": "2021-05-26",
                             "time": "21:00",
                             "stadium": "Stadion Gdańsk",
-                            "city": "Gdańsk"
+                            "city": "Gdańsk",
+                            "final": true
                         }
                     ]
                 }

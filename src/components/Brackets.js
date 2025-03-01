@@ -387,109 +387,129 @@ const BracketPairBox = (props) => {
     const away_runnerup_striped = match.final && isHomeWinMatch(match) ? 'silver' : ''
     const home_thirdplace_striped = match.third_place && (isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
     const away_thirdplace_striped = match.third_place && (!isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
+    const nameColumnSize = match.leg2_home_penalty_score || match.leg2_away_penalty_score ? 'col-5' : 'col-6'
+    const aggColumnSize = match.leg2_home_penalty_score || match.leg2_away_penalty_score ? 'col-2' : 'col-1'
     return (
         <React.Fragment>
-            <Row className="no-gutters box-sm bracket-box-height">
-                <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
-                    <Row className="no-gutters">
-                        <Col xs={{ size: 11, offset: 1 }}>
-                            <span className="box-time d-none d-lg-block">
-                                <React.Fragment>
-                                    {moment(match.leg1_date).format('MMMM D, YYYY')}
-                                    {match.leg1_time ? ' @' : ''} {match.leg1_time}
-                                    {match.leg1_city ? ' - ' : ''} {match.leg1_city}
-                                </React.Fragment>
-                            </span>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col
-                    sm="12"
-                    className={`bracket-half-box-height no-padding-lr border-bottom-gray5 ${home_champion_striped}${home_runnerup_striped}${home_thirdplace_striped}`}
-                >
-                    <Row className="no-gutters h3-ff3">
-                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
-                            {homeTeamFlag}
-                        </Col>
-                        <Col xs={{ size: 6 }} className={`no-padding-lr ${homeHighlight}`}>
-                            {homeTeamName} {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
-                            {match.home_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
-                            {(match.leg2_home_extra_score > match.leg2_away_extra_score ||
-                                (match.leg2_home_extra_score !== undefined &&
-                                    match.leg2_home_extra_score === match.leg2_away_extra_score &&
-                                    match.away_goal_winner === 'home')) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
-                            {match.away_goal_winner === 'home' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
-                            {match.leg2_home_penalty_score > match.leg2_away_penalty_score && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
-                        </Col>
-                        <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
-                            <React.Fragment>{match.leg1_home_score}</React.Fragment>
-                        </Col>
-                        {!isNaN(leg2_home_score) && (
+            {!match.blank ? (
+                <Row className="no-gutters box-sm bracket-box-height">
+                    <Col sm="12" className="bracket-box-header-height border-bottom-gray5">
+                        <Row className="no-gutters">
+                            <Col xs={{ size: 11, offset: 1 }}>
+                                <span className="box-time d-none d-lg-block">
+                                    <React.Fragment>
+                                        {moment(match.leg1_date).format('MMMM D, YYYY')}
+                                        {match.leg1_time ? ' @' : ''} {match.leg1_time}
+                                        {match.leg1_city ? ' - ' : ''} {match.leg1_city}
+                                    </React.Fragment>
+                                </span>
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col
+                        sm="12"
+                        className={`bracket-half-box-height no-padding-lr border-bottom-gray5 ${home_champion_striped}${home_runnerup_striped}${home_thirdplace_striped}`}
+                    >
+                        <Row className="no-gutters h3-ff3">
+                            <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                                {homeTeamFlag}
+                            </Col>
+                            <Col className={`no-padding-lr ${nameColumnSize} ${homeHighlight}`}>
+                                {homeTeamName} {match.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                                {match.home_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
+                                {(match.leg2_home_extra_score > match.leg2_away_extra_score ||
+                                    (match.leg2_home_extra_score !== undefined &&
+                                        match.leg2_home_extra_score === match.leg2_away_extra_score &&
+                                        match.away_goal_winner === 'home')) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
+                                {match.away_goal_winner === 'home' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                                {match.leg2_home_penalty_score > match.leg2_away_penalty_score && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
+                                {match.home_walkover && (
+                                    <WalkoverTooltip target={`${match.home_team}walkoverTooltip`} anchor="(w/o)" content={match.walkover_notes} />
+                                )}
+                                {match.home_disqualified && (
+                                    <DisqualifiedTooltip target={`${match.home_team}disqualifiedTooltip`} notes={match.disqualified_notes} anchor="(dq)" />
+                                )}
+                            </Col>
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
-                                <React.Fragment>{leg2_home_score}</React.Fragment>
+                                <React.Fragment>{match.leg1_home_score}</React.Fragment>
                             </Col>
-                        )}
-                        {!isNaN(leg2_home_score) && match.playoff_home_score === undefined && !config.pair_agg_points && (
-                            <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
-                                <React.Fragment>{match.agg_home_score}</React.Fragment>
+                            {!isNaN(leg2_home_score) && (
+                                <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                                    <React.Fragment>{leg2_home_score}</React.Fragment>
+                                </Col>
+                            )}
+                            {!isNaN(leg2_home_score) && match.playoff_home_score === undefined && !config.pair_agg_points && (
+                                <Col className={`no-padding-lr ${aggColumnSize} ${homeHighlight}`}>
+                                    <React.Fragment>{match.agg_home_score}</React.Fragment>
+                                    {match.leg2_home_penalty_score && <React.Fragment> ({match.leg2_home_penalty_score})</React.Fragment>}
+                                </Col>
+                            )}
+                            {match.playoff_home_score !== undefined && (
+                                <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
+                                    <React.Fragment>{match.playoff_home_score}</React.Fragment>
+                                </Col>
+                            )}
+                        </Row>
+                    </Col>
+                    <Col sm="12" className={`bracket-half-box-height no-padding-lr ${away_champion_striped}${away_runnerup_striped}${away_thirdplace_striped}`}>
+                        <Row className="no-gutters h4-ff3">
+                            <Col xs={{ size: 2 }} className="brk-halfbox-ml">
+                                {awayTeamFlag}
                             </Col>
-                        )}
-                        {match.playoff_home_score !== undefined && (
-                            <Col xs={{ size: 1 }} className={`no-padding-lr ${homeHighlight}`}>
-                                <React.Fragment>{match.playoff_home_score}</React.Fragment>
+                            <Col className={`no-padding-lr ${nameColumnSize} ${awayHighlight}`}>
+                                {awayTeamName} {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
+                                {match.away_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
+                                {(match.leg2_away_extra_score > match.leg2_home_extra_score ||
+                                    (match.leg2_away_extra_score !== undefined &&
+                                        match.leg2_home_extra_score === match.leg2_away_extra_score &&
+                                        match.away_goal_winner === 'away')) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
+                                {match.away_goal_winner === 'away' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                                {match.leg2_away_penalty_score > match.leg2_home_penalty_score && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
+                                {match.away_walkover && (
+                                    <WalkoverTooltip target={`${match.away_team}walkoverTooltip`} anchor="(w/o)" content={match.walkover_notes} />
+                                )}
+                                {match.away_disqualified && (
+                                    <DisqualifiedTooltip target={`${match.away_team}disqualifiedTooltip`} notes={match.disqualified_notes} anchor="(dq)" />
+                                )}
                             </Col>
-                        )}
-                    </Row>
-                </Col>
-                <Col sm="12" className={`bracket-half-box-height no-padding-lr ${away_champion_striped}${away_runnerup_striped}${away_thirdplace_striped}`}>
-                    <Row className="no-gutters h4-ff3">
-                        <Col xs={{ size: 2 }} className="brk-halfbox-ml">
-                            {awayTeamFlag}
-                        </Col>
-                        <Col xs={{ size: 6 }} className={`no-padding-lr ${awayHighlight}`}>
-                            {awayTeamName} {match.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={match.draw_lot_notes} />}
-                            {match.away_playoff_win && <AetTooltip target="aetPlayoffTooltip" anchor="(aet)" notes={match.playoff_notes} />}
-                            {(match.leg2_away_extra_score > match.leg2_home_extra_score ||
-                                (match.leg2_away_extra_score !== undefined &&
-                                    match.leg2_home_extra_score === match.leg2_away_extra_score &&
-                                    match.away_goal_winner === 'away')) && <AetTooltip target="aetTooltip" anchor="(aet)" />}
-                            {match.away_goal_winner === 'away' && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
-                            {match.leg2_away_penalty_score > match.leg2_home_penalty_score && <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />}
-                        </Col>
-                        <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
-                            <React.Fragment>{match.leg1_away_score}</React.Fragment>
-                        </Col>
-                        {!isNaN(leg2_away_score) && (
                             <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
-                                <React.Fragment>{leg2_away_score}</React.Fragment>
+                                <React.Fragment>{match.leg1_away_score}</React.Fragment>
                             </Col>
-                        )}
-                        {!isNaN(leg2_away_score) && match.playoff_away_score === undefined && !config.pair_agg_points && (
-                            <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
-                                <React.Fragment>{match.agg_away_score}</React.Fragment>
+                            {!isNaN(leg2_away_score) && (
+                                <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                                    <React.Fragment>{leg2_away_score}</React.Fragment>
+                                </Col>
+                            )}
+                            {!isNaN(leg2_away_score) && match.playoff_away_score === undefined && !config.pair_agg_points && (
+                                <Col className={`no-padding-lr ${aggColumnSize} ${awayHighlight}`}>
+                                    <React.Fragment>{match.agg_away_score}</React.Fragment>
+                                    {match.leg2_away_penalty_score && <React.Fragment> ({match.leg2_away_penalty_score})</React.Fragment>}
+                                </Col>
+                            )}
+                            {match.playoff_away_score !== undefined && (
+                                <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
+                                    <React.Fragment>{match.playoff_away_score}</React.Fragment>
+                                </Col>
+                            )}
+                        </Row>
+                    </Col>
+                    <Col sm="12" className="bracket-box-header-height border-top-gray5">
+                        <Row className="no-gutters">
+                            <Col xs={{ size: 11, offset: 1 }}>
+                                <span className="box-time d-none d-lg-block">
+                                    <React.Fragment>
+                                        {moment(match.leg2_date).format('MMMM D, YYYY')}
+                                        {match.leg2_time ? ' @' : ''} {match.leg2_time}
+                                        {match.leg2_city ? ' - ' : ''} {match.leg2_city}
+                                    </React.Fragment>
+                                </span>
                             </Col>
-                        )}
-                        {match.playoff_away_score !== undefined && (
-                            <Col xs={{ size: 1 }} className={`no-padding-lr ${awayHighlight}`}>
-                                <React.Fragment>{match.playoff_away_score}</React.Fragment>
-                            </Col>
-                        )}
-                    </Row>
-                </Col>
-                <Col sm="12" className="bracket-box-header-height border-top-gray5">
-                    <Row className="no-gutters">
-                        <Col xs={{ size: 11, offset: 1 }}>
-                            <span className="box-time d-none d-lg-block">
-                                <React.Fragment>
-                                    {moment(match.leg2_date).format('MMMM D, YYYY')}
-                                    {match.leg2_time ? ' @' : ''} {match.leg2_time}
-                                    {match.leg2_city ? ' - ' : ''} {match.leg2_city}
-                                </React.Fragment>
-                            </span>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
+                        </Row>
+                    </Col>
+                </Row>
+            ) : (
+                <Row className="no-gutters box-sm bracket-box-height"></Row>
+            )}
             {colIndex === 0 && !lastBox && <Row className="bracket-gap-height-01"></Row>}
             {colIndex === 1 && !lastBox && <Row className="bracket-gap-height-11"></Row>}
             {colIndex === 2 && !lastBox && <Row className="bracket-gap-height-21"></Row>}
@@ -542,14 +562,12 @@ const BracketColInner = (props) => {
                         round.bracketMatches.map((m, index) => {
                             const bye = m.home_team === 'BYE' || m.away_team === 'BYE'
                             const lastBox = round.bracketMatches ? index === round.bracketMatches.length - 1 : false
-                            return !bye ? (
-                                round.round_type === 'knockout2legged' ? (
-                                    <BracketPairBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
-                                ) : (
-                                    <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
-                                )
-                            ) : (
+                            return bye ? (
                                 <BracketBoxBye match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                            ) : round.round_type === 'knockout2legged' ? (
+                                <BracketPairBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
+                            ) : (
+                                <BracketBox match={m} colIndex={colIndex} lastBox={lastBox} config={config} key={index} />
                             )
                         })}
                 </Col>

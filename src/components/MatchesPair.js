@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AetTooltip, DrawLotTooltip } from '../core/TooltipHelper'
+import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const MatchesPairRow = (props) => {
     const { pair, config, last } = props
@@ -38,6 +38,16 @@ const MatchesPairRow = (props) => {
                     const matchAwayScore = m.away_score + matchAwayExtraScore
                     const teamWon = (isSecondLeg && pair.agg_winner === 'home') || (isThirdLeg && pair.agg_winner === 'away') ? awayTeamName : homeTeamName
                     const teamLost = (isSecondLeg && pair.agg_winner === 'home') || (isThirdLeg && pair.agg_winner === 'away') ? homeTeamName : awayTeamName
+                    const walkoverLine =
+                        m.home_walkover || m.away_walkover ? (
+                            <React.Fragment>
+                                <b>{teamWon}</b> won
+                                <span className="blue"> on walkover</span>
+                                {'. '}
+                            </React.Fragment>
+                        ) : (
+                            ''
+                        )
                     const aggregateLine = config.pair_agg_points ? (
                         isSecondLeg ? (
                             <React.Fragment>
@@ -72,6 +82,8 @@ const MatchesPairRow = (props) => {
                         ) : (
                             <React.Fragment></React.Fragment>
                         )
+                    ) : m.home_walkover || m.away_walkover ? (
+                        walkoverLine
                     ) : (
                         <React.Fragment>
                             Aggregate: {pair.agg_away_score} - {pair.agg_home_score} {' >>> '}{' '}
@@ -140,18 +152,42 @@ const MatchesPairRow = (props) => {
                                         {m.stadium && m.city ? m.stadium + ', ' + m.city : ''}
                                     </Col>
                                     <Col className={`col-box-25 text-end ${pairAwayHighlight}`}>
-                                        {homeTeamName}
-                                        {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                                        {homeTeamName} {m.home_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                                        {m.home_disqualified && (
+                                            <DisqualifiedTooltip
+                                                target={`${m.home_team}disqualifiedTooltip`}
+                                                notes={m.disqualified_notes}
+                                                anchor="(disqualified)"
+                                            />
+                                        )}
+                                        {m.home_walkover && (
+                                            <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
+                                        )}
                                     </Col>
                                     <Col className="col-box-10">{getTeamFlagId(m.home_team, config)}</Col>
                                     <Col className="text-center score-no-padding-right col-box-10">
-                                        {matchHomeScore} - {matchAwayScore}{' '}
+                                        {m.match_cancelled ? (
+                                            <React.Fragment>Cancelled</React.Fragment>
+                                        ) : (
+                                            <React.Fragment>
+                                                {matchHomeScore} - {matchAwayScore}
+                                            </React.Fragment>
+                                        )}{' '}
                                         {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                     </Col>
                                     <Col className="col-box-10">{getTeamFlagId(m.away_team, config)}</Col>
                                     <Col className={`col-box-25 ${pairHomeHighlight}`}>
-                                        {awayTeamName}
-                                        {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                                        {awayTeamName} {m.away_draw_lot && <DrawLotTooltip target="drawLotTooltip" notes={m.draw_lot_notes} />}
+                                        {m.away_disqualified && (
+                                            <DisqualifiedTooltip
+                                                target={`${m.away_team}disqualifiedTooltip`}
+                                                notes={m.disqualified_notes}
+                                                anchor="(disqualified)"
+                                            />
+                                        )}
+                                        {m.away_walkover && (
+                                            <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
+                                        )}
                                     </Col>
                                 </Row>
                                 {(isSecondLeg || isThirdLeg) && (
@@ -185,7 +221,7 @@ class MatchesPair extends React.Component {
                     <Col xs={{ size: 10, offset: 1 }}>
                         {pairs &&
                             pairs.map((p, index) => {
-                                return <MatchesPairRow key={p.name} pair={p} config={new_config} last={index === pairs.length - 1} />
+                                return !p.blank && <MatchesPairRow key={p.name} pair={p} config={new_config} last={index === pairs.length - 1} />
                             })}
                     </Col>
                 </Row>

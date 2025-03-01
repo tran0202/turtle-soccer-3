@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip } from '../core/TooltipHelper'
+import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip } from '../core/TooltipHelper'
 
 const PairHeader = () => {
     return (
@@ -39,28 +39,40 @@ const PairRow = (props) => {
                 <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{getTeamName(team1, config)}</Col>
                 <Col className="col-box-10 text-end">{getTeamFlagId(team1, config)}</Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {!hasFirstLegOnly && (
+                    {!hasFirstLegOnly && !pair.matches[0].match_cancelled ? (
                         <React.Fragment>
                             {match1HomeScore} - {match1AwayScore}
                         </React.Fragment>
+                    ) : (
+                        <React.Fragment>Cancelled</React.Fragment>
                     )}
                 </Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {!hasFirstLegOnly && (
+                    {!hasFirstLegOnly && !pair.matches[1].match_cancelled ? (
                         <React.Fragment>
                             {match2AwayScore} - {match2HomeScore}{' '}
                         </React.Fragment>
+                    ) : (
+                        <React.Fragment>Cancelled</React.Fragment>
                     )}
                     {pair.matches[1] && pair.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                 </Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {pair.agg_home_score} - {pair.agg_away_score} {pair.away_goal_winner && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
+                    {!pair.matches[0].match_cancelled && !pair.matches[1].match_cancelled && (
+                        <React.Fragment>
+                            {pair.agg_home_score} - {pair.agg_away_score}
+                        </React.Fragment>
+                    )}{' '}
+                    {pair.away_goal_winner && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
                     {pair.matches[1] && pair.matches[1].home_penalty_score !== undefined && (
                         <Row>
                             <Col className="text-center">
                                 {match2AwayPenaltyScore} - {match2HomePenaltyScore} <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
                             </Col>
                         </Row>
+                    )}
+                    {pair.matches[0].home_walkover && (
+                        <WalkoverTooltip target={`${pair.matches[0].home_team}walkoverTooltip`} content={pair.matches[0].walkover_notes} anchor="(w/o)" />
                     )}
                 </Col>
                 <Col className="col-box-10 text-start">{getTeamFlagId(team2, config)}</Col>

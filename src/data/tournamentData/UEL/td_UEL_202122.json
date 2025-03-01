@@ -3299,447 +3299,283 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "default": true,
             "rounds": [
                 {
-                    "name": "Round of 32",
+                    "name": "Knockout Round",
                     "short_name": "1/16",
                     "round_type": "knockout2legged",
                     "eliminate_count": 16,
                     "next_round": "Round of 16",
                     "pairs": [
                         {
+                            "name": "KO1",
                             "matches": [
                                 {
-                                    "home_team": "WOL",
-                                    "away_team": "TOT",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
+                                    "home_team": "SEV",
+                                    "away_team": "DZA",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2022-02-17",
+                                    "time": "21:00",
+                                    "stadium": "Ramón Sánchez Pizjuán Stadium",
+                                    "city": "Seville",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "TOT",
-                                    "away_team": "WOL",
-                                    "home_score": 4,
+                                    "home_team": "DZA",
+                                    "away_team": "SEV",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2021-02-24",
-                                    "time": "18:00",
-                                    "stadium": "Tottenham Hotspur Stadium",
-                                    "city": "London",
-                                    "match_type": "secondleg"
+                                    "date": "2022-02-24",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Maksimir",
+                                    "city": "Zagreb",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
-                            "matches": [
-                                {
-                                    "home_team": "DYK",
-                                    "away_team": "BRG",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-02-18",
-                                    "time": "16:00",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "BRG",
-                                    "away_team": "DYK",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "Jan Breydel Stadium",
-                                    "city": "Bruges",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 3
+                            "name": "KO2",
+                            "blank": true,
+                            "bracket_order": 2
                         },
                         {
+                            "name": "KO3",
                             "matches": [
                                 {
-                                    "home_team": "SOC",
-                                    "away_team": "MUN",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin (Italy)",
-                                    "match_type": "firstleg"
+                                    "home_team": "ATT",
+                                    "away_team": "OLY",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2022-02-17",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "SOC",
+                                    "home_team": "OLY",
+                                    "away_team": "ATT",
                                     "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester",
-                                    "match_type": "secondleg"
+                                    "away_score": 3,
+                                    "date": "2022-02-24",
+                                    "time": "18:45",
+                                    "stadium": "Karaiskakis Stadium",
+                                    "city": "Piraeus",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 11
                         },
                         {
-                            "matches": [
-                                {
-                                    "home_team": "SLB",
-                                    "away_team": "ARS",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome (Italy)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "ARS",
-                                    "away_team": "SLB",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus (Greece)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 6
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "CZV",
-                                    "away_team": "MIL",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "MIL",
-                                    "away_team": "CZV",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 12
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "ROA",
-                                    "away_team": "RFC",
-                                    "home_score": 3,
-                                    "away_score": 4,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Bosuilstadion",
-                                    "city": "Antwerp",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "RFC",
-                                    "away_team": "ROA",
-                                    "home_score": 5,
-                                    "away_score": 2,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Ibrox Stadium",
-                                    "city": "Glasgow",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 8
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "SLP",
-                                    "away_team": "LEI",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Sinobo Stadium",
-                                    "city": "Prague",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "LEI",
-                                    "away_team": "SLP",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "King Power Stadium",
-                                    "city": "Leicester",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 7
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "RBS",
-                                    "away_team": "VIL",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "VIL",
-                                    "away_team": "RBS",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal",
-                                    "match_type": "secondleg"
-                                }
-                            ],
+                            "name": "KO4",
+                            "blank": true,
                             "bracket_order": 4
                         },
                         {
+                            "name": "KO5",
                             "matches": [
                                 {
-                                    "home_team": "SBR",
-                                    "away_team": "ROM",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Estádio Municipal",
-                                    "city": "Braga",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "ROM",
-                                    "away_team": "SBR",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 15
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "KRA",
-                                    "away_team": "DZA",
+                                    "home_team": "RBL",
+                                    "away_team": "SOC",
                                     "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar",
-                                    "match_type": "firstleg"
+                                    "away_score": 2,
+                                    "date": "2022-02-17",
+                                    "time": "21:00",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DZA",
-                                    "away_team": "KRA",
+                                    "home_team": "SOC",
+                                    "away_team": "RBL",
                                     "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 2
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "YBO",
-                                    "away_team": "B04",
-                                    "home_score": 4,
                                     "away_score": 3,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Wankdorf",
-                                    "city": "Bern",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "B04",
-                                    "away_team": "YBO",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-25",
-                                    "time": "21:00",
-                                    "stadium": "BayArena",
-                                    "city": "Leverkusen",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 14
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "MOL",
-                                    "away_team": "TSG",
-                                    "home_score": 3,
-                                    "away_score": 3,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal (Spain)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "TSG",
-                                    "away_team": "MOL",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Rhein-Neckar-Arena",
-                                    "city": "Sinsheim",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 10
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "GCF",
-                                    "away_team": "NAP",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "NAP",
-                                    "away_team": "GCF",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Stadio San Paolo",
-                                    "city": "Naples",
-                                    "match_type": "secondleg"
+                                    "date": "2022-02-24",
+                                    "time": "18:45",
+                                    "stadium": "Anoeta",
+                                    "city": "San Sebastián",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 9
                         },
                         {
-                            "matches": [
-                                {
-                                    "home_team": "MTA",
-                                    "away_team": "SHK",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Bloomfield Stadium",
-                                    "city": "Tel Aviv",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "SHK",
-                                    "away_team": "MTA",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 16
+                            "name": "KO6",
+                            "blank": true,
+                            "bracket_order": 6
                         },
                         {
+                            "name": "KO7",
                             "matches": [
                                 {
-                                    "home_team": "LIL",
-                                    "away_team": "AJA",
+                                    "home_team": "FCB",
+                                    "away_team": "NAP",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "21:00",
-                                    "stadium": "Stade Pierre-Mauroy",
-                                    "city": "Villeneuve-d'Ascq",
-                                    "match_type": "firstleg"
+                                    "away_score": 1,
+                                    "date": "2022-02-17",
+                                    "time": "18:45",
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "LIL",
+                                    "home_team": "NAP",
+                                    "away_team": "FCB",
                                     "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-02-25",
-                                    "time": "18:55",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "match_type": "secondleg"
+                                    "away_score": 4,
+                                    "date": "2022-02-24",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "KO8",
+                            "blank": true,
+                            "bracket_order": 8
+                        },
+                        {
+                            "name": "KO9",
+                            "matches": [
+                                {
+                                    "home_team": "ZSP",
+                                    "away_team": "BET",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2022-02-17",
+                                    "time": "18:45",
+                                    "stadium": "Krestovsky Stadium",
+                                    "city": "Saint Petersburg",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "ZSP",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-02-24",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "K10",
+                            "blank": true,
+                            "bracket_order": 10
+                        },
+                        {
+                            "name": "K11",
+                            "matches": [
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "RFC",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2022-02-17",
+                                    "time": "18:45",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RFC",
+                                    "away_team": "DOR",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2022-02-24",
+                                    "time": "21:00",
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 15
+                        },
+                        {
+                            "name": "K12",
+                            "blank": true,
+                            "bracket_order": 12
+                        },
+                        {
+                            "name": "K13",
+                            "matches": [
+                                {
+                                    "home_team": "SHE",
+                                    "away_team": "SBR",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2022-02-17",
+                                    "time": "18:45",
+                                    "stadium": "Sheriff Stadium",
+                                    "city": "Tiraspol",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SBR",
+                                    "away_team": "SHE",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 3,
+                                    "away_penalty_score": 2,
+                                    "date": "2022-02-24",
+                                    "time": "21:00",
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 13
                         },
                         {
+                            "name": "K142",
+                            "blank": true,
+                            "bracket_order": 14
+                        },
+                        {
+                            "name": "K15",
                             "matches": [
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "PSV",
-                                    "home_score": 4,
-                                    "away_score": 2,
-                                    "date": "2021-02-18",
-                                    "time": "18:55",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "PSV",
-                                    "away_team": "OLY",
+                                    "home_team": "PTO",
+                                    "away_team": "LAZ",
                                     "home_score": 2,
                                     "away_score": 1,
-                                    "date": "2021-02-25",
+                                    "date": "2022-02-17",
                                     "time": "21:00",
-                                    "stadium": "Philips Stadion",
-                                    "city": "Eindhoven",
-                                    "match_type": "secondleg"
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LAZ",
+                                    "away_team": "PTO",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2022-02-24",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome",
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 5
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "K16",
+                            "blank": true,
+                            "bracket_order": 16
                         }
                     ]
                 },
@@ -3751,222 +3587,238 @@
                     "next_round": "Quarter-finals",
                     "pairs": [
                         {
+                            "name": "R161",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "YBO",
+                                    "home_team": "RFC",
+                                    "away_team": "CZV",
                                     "home_score": 3,
                                     "away_score": 0,
-                                    "date": "2021-03-11",
-                                    "time": "18:55",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "YBO",
-                                    "away_team": "AJA",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-03-18",
+                                    "date": "2022-03-10",
                                     "time": "21:00",
-                                    "stadium": "Stadion Wankdorf",
-                                    "city": "Bern",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 7
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "DYK",
-                                    "away_team": "VIL",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-03-11",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv",
-                                    "match_type": "firstleg"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "VIL",
-                                    "away_team": "DYK",
+                                    "home_team": "CZV",
+                                    "away_team": "RFC",
                                     "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-18",
-                                    "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 2
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "ROM",
-                                    "away_team": "SHK",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2021-03-11",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "SHK",
-                                    "away_team": "ROM",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-03-18",
-                                    "time": "18:55",
-                                    "stadium": "NSC Olimpiyskiy Stadium",
-                                    "city": "Kyiv",
-                                    "match_type": "secondleg"
+                                    "away_score": 1,
+                                    "date": "2022-03-17",
+                                    "time": "18:45",
+                                    "stadium": "Red Star Stadium",
+                                    "city": "Belgrade",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 8
                         },
                         {
+                            "name": "R162",
                             "matches": [
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "ARS",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2021-03-11",
-                                    "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "ARS",
-                                    "away_team": "OLY",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-03-18",
-                                    "time": "18:55",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 3
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "TOT",
-                                    "away_team": "DZA",
+                                    "home_team": "SBR",
+                                    "away_team": "AMO",
                                     "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2021-03-11",
+                                    "date": "2022-03-10",
                                     "time": "21:00",
-                                    "stadium": "Tottenham Hotspur Stadium",
-                                    "city": "London",
-                                    "match_type": "firstleg"
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DZA",
-                                    "away_team": "TOT",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "home_extra_score": 1,
-                                    "away_extra_score": 0,
-                                    "date": "2021-03-18",
-                                    "time": "18:55",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 1
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "MUN",
-                                    "away_team": "MIL",
+                                    "home_team": "AMO",
+                                    "away_team": "SBR",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2021-03-11",
-                                    "time": "18:55",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester",
-                                    "match_type": "firstleg"
-                                },
+                                    "date": "2022-03-17",
+                                    "time": "18:45",
+                                    "stadium": "Stade Louis II",
+                                    "city": "Monaco",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "R163",
+                            "matches": [
                                 {
-                                    "home_team": "MIL",
-                                    "away_team": "MUN",
+                                    "home_team": "PTO",
+                                    "away_team": "LYO",
                                     "home_score": 0,
                                     "away_score": 1,
-                                    "date": "2021-03-18",
+                                    "date": "2022-03-09",
+                                    "time": "18:45",
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LYO",
+                                    "away_team": "PTO",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-03-17",
                                     "time": "21:00",
-                                    "stadium": "San Siro",
-                                    "city": "Milan",
-                                    "match_type": "secondleg"
+                                    "stadium": "Parc Olympique Lyonnais",
+                                    "city": "Décines-Charpieu",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "R164",
+                            "matches": [
+                                {
+                                    "home_team": "ATT",
+                                    "away_team": "B04",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2022-03-10",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "B04",
+                                    "away_team": "ATT",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2022-03-17",
+                                    "time": "18:45",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 6
                         },
                         {
+                            "name": "R165",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "RFC",
+                                    "home_team": "SEV",
+                                    "away_team": "WHU",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-03-11",
-                                    "time": "18:55",
-                                    "stadium": "Sinobo Stadium",
-                                    "city": "Prague",
-                                    "match_type": "firstleg"
+                                    "away_score": 0,
+                                    "date": "2022-03-10",
+                                    "time": "18:45",
+                                    "stadium": "Ramón Sánchez Pizjuán Stadium",
+                                    "city": "Seville",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "SLP",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-03-18",
+                                    "home_team": "WHU",
+                                    "away_team": "SEV",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2022-03-17",
                                     "time": "21:00",
-                                    "stadium": "Ibrox Stadium",
-                                    "city": "Glasgow",
-                                    "match_type": "secondleg"
+                                    "stadium": "London Stadium",
+                                    "city": "London",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "R166",
+                            "matches": [
+                                {
+                                    "home_team": "FCB",
+                                    "away_team": "GAL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2022-03-10",
+                                    "time": "21:00",
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "GAL",
+                                    "away_team": "FCB",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-03-17",
+                                    "time": "18:45",
+                                    "stadium": "Nef Stadium",
+                                    "city": "Istanbul",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
                         },
                         {
+                            "name": "R167",
                             "matches": [
                                 {
-                                    "home_team": "GCF",
-                                    "away_team": "MOL",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-11",
-                                    "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada",
-                                    "match_type": "firstleg"
+                                    "home_team": "RBL",
+                                    "away_team": "SPM",
+                                    "match_cancelled": true,
+                                    "home_walkover": true,
+                                    "walkover_notes": "Walkover: RB Leipzig won on walkover as UEFA suspended Spartak Moscow due to the Russian invasion of Ukraine.",
+                                    "away_disqualified": true,
+                                    "disqualified_notes": "Spartak Moscow was disqualified due to the Russian invasion of Ukraine.",
+                                    "date": "2022-03-10",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "MOL",
-                                    "away_team": "GCF",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-03-18",
-                                    "time": "18:55",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
+                                    "home_team": "SPM",
+                                    "away_team": "RBL",
+                                    "match_cancelled": true,
+                                    "away_walkover": true,
+                                    "walkover_notes": "Walkover: RB Leipzig won on walkover as UEFA suspended Spartak Moscow due to the Russian invasion of Ukraine.",
+                                    "home_disqualified": true,
+                                    "disqualified_notes": "Spartak Moscow was disqualified due to the Russian invasion of Ukraine.",
+                                    "date": "2022-03-17",
+                                    "time": "18:45",
+                                    "stadium": "Otkritie Arena",
+                                    "city": "Moscow",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 5
+                        },
+                        {
+                            "name": "R168",
+                            "matches": [
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "SGE",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-03-09",
+                                    "time": "18:45",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SGE",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2022-03-17",
+                                    "time": "21:00",
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
                         }
                     ]
                 },
@@ -3978,112 +3830,118 @@
                     "next_round": "Semi-finals",
                     "pairs": [
                         {
+                            "name": "QF1",
                             "matches": [
                                 {
-                                    "home_team": "GCF",
-                                    "away_team": "MUN",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-04-08",
-                                    "time": "21:00",
-                                    "stadium": "Nuevo Los Cármenes",
-                                    "city": "Granada",
-                                    "match_type": "firstleg"
+                                    "home_team": "RBL",
+                                    "away_team": "ATT",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2022-04-07",
+                                    "time": "18:45",
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "GCF",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-04-15",
-                                    "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester",
-                                    "match_type": "secondleg"
+                                    "home_team": "ATT",
+                                    "away_team": "RBL",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2022-04-14",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
                         },
                         {
+                            "name": "QF2",
                             "matches": [
                                 {
-                                    "home_team": "ARS",
-                                    "away_team": "SLP",
+                                    "home_team": "SGE",
+                                    "away_team": "FCB",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2021-04-08",
+                                    "date": "2022-04-07",
                                     "time": "21:00",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London",
-                                    "match_type": "firstleg"
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "ARS",
-                                    "home_score": 0,
-                                    "away_score": 4,
-                                    "date": "2021-04-15",
+                                    "home_team": "FCB",
+                                    "away_team": "SGE",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2022-04-14",
                                     "time": "21:00",
-                                    "stadium": "Sinobo Stadium",
-                                    "city": "Prague",
-                                    "match_type": "secondleg"
+                                    "stadium": "Camp Nou",
+                                    "city": "Barcelona",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "QF3",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "ROM",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-04-08",
-                                    "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "ROM",
-                                    "away_team": "AJA",
+                                    "home_team": "WHU",
+                                    "away_team": "LYO",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2021-04-15",
+                                    "date": "2022-04-07",
                                     "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 4
-                        },
-                        {
-                            "matches": [
+                                    "stadium": "London Stadium",
+                                    "city": "London",
+                                    "matchday": "firstleg"
+                                },
                                 {
-                                    "home_team": "DZA",
-                                    "away_team": "VIL",
+                                    "home_team": "LYO",
+                                    "away_team": "WHU",
                                     "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-04-08",
+                                    "away_score": 3,
+                                    "date": "2022-04-14",
                                     "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "VIL",
-                                    "away_team": "DZA",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-04-15",
-                                    "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal",
-                                    "match_type": "secondleg"
+                                    "stadium": "Parc Olympique Lyonnais",
+                                    "city": "Décines-Charpieu",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
+                        },
+                        {
+                            "name": "QF4",
+                            "matches": [
+                                {
+                                    "home_team": "SBR",
+                                    "away_team": "RFC",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-04-07",
+                                    "time": "21:00",
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RFC",
+                                    "away_team": "SBR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2022-04-14",
+                                    "time": "21:00",
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
                         }
                     ]
                 },
@@ -4095,55 +3953,57 @@
                     "next_round": "Final",
                     "pairs": [
                         {
+                            "name": "SF1",
                             "matches": [
                                 {
-                                    "home_team": "MUN",
-                                    "away_team": "ROM",
-                                    "home_score": 6,
-                                    "away_score": 2,
-                                    "date": "2021-04-29",
+                                    "home_team": "RBL",
+                                    "away_team": "RFC",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2022-04-28",
                                     "time": "21:00",
-                                    "stadium": "Old Trafford",
-                                    "city": "Manchester",
-                                    "match_type": "firstleg"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "ROM",
-                                    "away_team": "MUN",
+                                    "home_team": "RFC",
+                                    "away_team": "RBL",
                                     "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2021-05-06",
+                                    "away_score": 1,
+                                    "date": "2022-05-05",
                                     "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "secondleg"
+                                    "stadium": "Ibrox Stadium",
+                                    "city": "Glasgow",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "SF2",
                             "matches": [
                                 {
-                                    "home_team": "VIL",
-                                    "away_team": "ARS",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-04-29",
+                                    "home_team": "WHU",
+                                    "away_team": "SGE",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2022-04-28",
                                     "time": "21:00",
-                                    "stadium": "Estadio de la Cerámica",
-                                    "city": "Villarreal",
-                                    "match_type": "firstleg"
+                                    "stadium": "London Stadium",
+                                    "city": "London",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "ARS",
-                                    "away_team": "VIL",
-                                    "home_score": 0,
+                                    "home_team": "SGE",
+                                    "away_team": "WHU",
+                                    "home_score": 1,
                                     "away_score": 0,
-                                    "date": "2021-05-06",
+                                    "date": "2022-05-05",
                                     "time": "21:00",
-                                    "stadium": "Emirates Stadium",
-                                    "city": "London",
-                                    "match_type": "secondleg"
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
@@ -4153,20 +4013,24 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
-                            "home_team": "VIL",
-                            "away_team": "MUN",
-                            "home_score": 0,
-                            "away_score": 0,
+                            "home_team": "SGE",
+                            "away_team": "RFC",
+                            "home_score": 1,
+                            "away_score": 1,
                             "home_extra_score": 0,
                             "away_extra_score": 0,
-                            "home_penalty_score": 11,
-                            "away_penalty_score": 10,
-                            "date": "2021-05-26",
+                            "home_penalty_score": 5,
+                            "away_penalty_score": 4,
+                            "date": "2022-05-18",
                             "time": "21:00",
-                            "stadium": "Stadion Gdańsk",
-                            "city": "Gdańsk"
+                            "stadium": "Ramón Sánchez Pizjuán Stadium",
+                            "city": "Seville",
+                            "final": true
                         }
                     ]
                 }
