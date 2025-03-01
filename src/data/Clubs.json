@@ -721,7 +721,7 @@
     {
         "id": "SHK",
         "name": "Shakhtar Donetsk",
-        "short_name": "Shakhtar Don.",
+        "short_name": "Shakhtar",
         "team_type_id": "CLUB",
         "nation_id": "UKR",
         "parent_team_id": "",
@@ -2442,6 +2442,7 @@
     {
         "id": "FEY",
         "name": "Feyenoord Rotterdam",
+        "short_name": "Feyenoord",
         "team_type_id": "CLUB",
         "nation_id": "NED",
         "parent_team_id": "",
@@ -2502,7 +2503,7 @@
     {
         "id": "SLI",
         "name": "Sporting CP",
-        "short_name": "Sporting CP",
+        "short_name": "Sporting",
         "team_type_id": "CLUB",
         "nation_id": "POR",
         "parent_team_id": "",
@@ -2553,6 +2554,7 @@
     {
         "id": "OLM",
         "name": "Olympique Marseille",
+        "short_name": "Marseille",
         "team_type_id": "CLUB",
         "nation_id": "FRA",
         "parent_team_id": "",
@@ -3782,6 +3784,7 @@
     {
         "id": "USG",
         "name": "Union Saint-Gilloise",
+        "short_name": "Union SG",
         "team_type_id": "CLUB",
         "nation_id": "BEL",
         "parent_team_id": "",
@@ -3842,6 +3845,7 @@
     {
         "id": "BHA",
         "name": "Brighton & Hove Albion",
+        "short_name": "Brighton & Hove",
         "team_type_id": "CLUB",
         "nation_id": "ENG",
         "parent_team_id": "",
