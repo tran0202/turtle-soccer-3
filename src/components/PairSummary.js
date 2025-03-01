@@ -20,16 +20,17 @@ const PairHeader = () => {
 const PairRow = (props) => {
     const { pair, config, last } = props
     if (!pair.matches) return
+    const hasFirstLegOnly = pair.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
     const team1 = pair.matches[0].home_team
     const team2 = pair.matches[0].away_team
     const match1HomeScore = pair.matches[0].home_score
     const match1AwayScore = pair.matches[0].away_score
-    const match2HomeExtraScore = pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
-    const match2AwayExtraScore = pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
-    const match2HomeScore = pair.matches[1].home_score + match2HomeExtraScore
-    const match2AwayScore = pair.matches[1].away_score + match2AwayExtraScore
-    const match2HomePenaltyScore = pair.matches[1].home_penalty_score
-    const match2AwayPenaltyScore = pair.matches[1].away_penalty_score
+    const match2HomeExtraScore = pair.matches[1] && pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
+    const match2AwayExtraScore = pair.matches[1] && pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
+    const match2HomeScore = (pair.matches[1] ? pair.matches[1].home_score : 0) + match2HomeExtraScore
+    const match2AwayScore = (pair.matches[1] ? pair.matches[1].away_score : 0) + match2AwayExtraScore
+    const match2HomePenaltyScore = pair.matches[1] ? pair.matches[1].home_penalty_score : 0
+    const match2AwayPenaltyScore = pair.matches[1] ? pair.matches[1].away_penalty_score : 0
     const pairHomeHighlight = pair.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
     const pairAwayHighlight = pair.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
     return (
@@ -38,15 +39,23 @@ const PairRow = (props) => {
                 <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{getTeamName(team1, config)}</Col>
                 <Col className="col-box-10 text-end">{getTeamFlagId(team1, config)}</Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {match1HomeScore} - {match1AwayScore}
+                    {!hasFirstLegOnly && (
+                        <React.Fragment>
+                            {match1HomeScore} - {match1AwayScore}
+                        </React.Fragment>
+                    )}
                 </Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {match2AwayScore} - {match2HomeScore}{' '}
-                    {pair.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                    {!hasFirstLegOnly && (
+                        <React.Fragment>
+                            {match2AwayScore} - {match2HomeScore}{' '}
+                        </React.Fragment>
+                    )}
+                    {pair.matches[1] && pair.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                 </Col>
                 <Col className="text-center score-no-padding-right col-box-10">
                     {pair.agg_home_score} - {pair.agg_away_score} {pair.away_goal_winner && <AwayGoalsTooltip target="awayGoalsTooltip" anchor="(a)" />}
-                    {pair.matches[1].home_penalty_score !== undefined && (
+                    {pair.matches[1] && pair.matches[1].home_penalty_score !== undefined && (
                         <Row>
                             <Col className="text-center">
                                 {match2AwayPenaltyScore} - {match2HomePenaltyScore} <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />

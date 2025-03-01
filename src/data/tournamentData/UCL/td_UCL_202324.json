@@ -2027,233 +2027,248 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "default": true,
             "rounds": [
                 {
                     "name": "Round of 16",
                     "short_name": "1/8",
                     "round_type": "knockout2legged",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
                     "eliminate_count": 8,
                     "next_round": "Quarter-finals",
                     "pairs": [
                         {
-                            "matches": [
-                                {
-                                    "home_team": "BMG",
-                                    "away_team": "MCI",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-24",
-                                    "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "MCI",
-                                    "away_team": "BMG",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-16",
-                                    "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 3
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "LAZ",
-                                    "away_team": "BAY",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2021-02-23",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "BAY",
-                                    "away_team": "LAZ",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-03-17",
-                                    "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 1
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "ATM",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-02-23",
-                                    "time": "21:00",
-                                    "stadium": "Arena Națională",
-                                    "city": "Bucharest (Romania)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "CHE",
-                                    "away_team": "ATM",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-17",
-                                    "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 8
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "RBL",
-                                    "away_team": "LIV",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-16",
-                                    "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "LIV",
-                                    "away_team": "RBL",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-10",
-                                    "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 6
-                        },
-                        {
+                            "name": "R161",
                             "matches": [
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "JUV",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-02-17",
+                                    "away_team": "ARS",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-02-21",
                                     "time": "21:00",
                                     "stadium": "Estádio do Dragão",
                                     "city": "Porto",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "JUV",
+                                    "home_team": "ARS",
                                     "away_team": "PTO",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "home_extra_score": 1,
-                                    "away_extra_score": 1,
-                                    "date": "2021-03-09",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 4,
+                                    "away_penalty_score": 2,
+                                    "date": "2024-03-12",
                                     "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin",
-                                    "match_type": "secondleg"
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London",
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 7
+                            "bracket_order": 5
                         },
                         {
+                            "name": "R162",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "PSG",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2021-02-16",
-                                    "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "PSG",
+                                    "home_team": "NAP",
                                     "away_team": "FCB",
                                     "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2021-03-10",
+                                    "date": "2024-02-21",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 2
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "SEV",
-                                    "away_team": "DOR",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-02-17",
-                                    "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville",
-                                    "match_type": "firstleg"
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "SEV",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2021-03-09",
+                                    "home_team": "FCB",
+                                    "away_team": "NAP",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-03-12",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund",
-                                    "match_type": "secondleg"
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
                         },
                         {
+                            "name": "R163",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "PSG",
+                                    "away_team": "SOC",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-02-14",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SOC",
+                                    "away_team": "PSG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-03-05",
+                                    "time": "21:00",
+                                    "stadium": "Anoeta",
+                                    "city": "San Sebastián",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "R164",
+                            "matches": [
+                                {
+                                    "home_team": "INT",
+                                    "away_team": "ATM",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "204-02-20",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ATM",
+                                    "away_team": "INT",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 3,
+                                    "away_penalty_score": 2,
+                                    "date": "2023-03-13",
+                                    "time": "21:00",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "R165",
+                            "matches": [
+                                {
+                                    "home_team": "PSV",
+                                    "away_team": "DOR",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-02-20",
+                                    "time": "21:00",
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "PSV",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-03-15",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "R166",
+                            "matches": [
+                                {
+                                    "home_team": "LAZ",
+                                    "away_team": "BAY",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-02-14",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Olimpico",
+                                    "city": "Rome",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "LAZ",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-03-05",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "R167",
+                            "matches": [
+                                {
+                                    "home_team": "COP",
+                                    "away_team": "MCI",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-02-13",
+                                    "time": "21:00",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MCI",
+                                    "away_team": "COP",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-03-06",
+                                    "time": "21:00",
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 8
+                        },
+                        {
+                            "name": "R168",
+                            "matches": [
+                                {
+                                    "home_team": "RBL",
                                     "away_team": "RMA",
                                     "home_score": 0,
                                     "away_score": 1,
-                                    "date": "2021-02-24",
+                                    "date": "2024-02-13",
                                     "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo",
-                                    "match_type": "firstleg"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "RMA",
-                                    "away_team": "ATT",
-                                    "home_score": 3,
+                                    "away_team": "RBL",
+                                    "home_score": 1,
                                     "away_score": 1,
-                                    "date": "2021-03-16",
+                                    "date": "2024-03-06",
                                     "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
+                                    "stadium": "Santiago Bernabéu",
                                     "city": "Madrid",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 5
+                            "bracket_order": 7
                         }
                     ]
                 },
@@ -2261,116 +2276,125 @@
                     "name": "Quarter-finals",
                     "short_name": "1/4",
                     "round_type": "knockout2legged",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
                     "eliminate_count": 4,
                     "next_round": "Semi-finals",
                     "pairs": [
                         {
+                            "name": "QF1",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "DOR",
+                                    "home_team": "ARS",
+                                    "away_team": "BAY",
                                     "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-04-06",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "DOR",
-                                    "away_team": "MCI",
-                                    "home_score": 1,
                                     "away_score": 2,
-                                    "date": "2021-04-14",
+                                    "date": "2024-04-09",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 2
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "PTO",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-04-07",
-                                    "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville (Spain)",
-                                    "match_type": "firstleg"
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London",
+                                    "matchday": "firstleg"
                                 },
-                                {
-                                    "home_team": "CHE",
-                                    "away_team": "PTO",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-04-13",
-                                    "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville (Spain)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 4
-                        },
-                        {
-                            "matches": [
                                 {
                                     "home_team": "BAY",
-                                    "away_team": "PSG",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-04-07",
+                                    "away_team": "ARS",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-04-17",
                                     "time": "21:00",
                                     "stadium": "Allianz Arena",
                                     "city": "Munich",
-                                    "match_type": "firstleg"
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "QF2",
+                            "matches": [
+                                {
+                                    "home_team": "ATM",
+                                    "away_team": "DOR",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-04-10",
+                                    "time": "21:00",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "BAY",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-04-13",
+                                    "home_team": "DOR",
+                                    "away_team": "ATM",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2024-04-16",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris",
-                                    "match_type": "secondleg"
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
+                            "name": "QF3",
                             "matches": [
                                 {
                                     "home_team": "RMA",
-                                    "away_team": "LIV",
+                                    "away_team": "MCI",
                                     "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2021-04-06",
+                                    "away_score": 3,
+                                    "date": "2024-04-09",
                                     "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
+                                    "stadium": "Santiago Bernabéu",
                                     "city": "Madrid",
-                                    "match_type": "firstleg"
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "LIV",
+                                    "home_team": "MCI",
                                     "away_team": "RMA",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2021-04-14",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 3,
+                                    "away_penalty_score": 4,
+                                    "date": "2024-04-17",
                                     "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool",
-                                    "match_type": "secondleg"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "secondleg"
                                 }
                             ],
-                            "bracket_order": 3
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "QF4",
+                            "matches": [
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "FCB",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2024-04-10",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "FCB",
+                                    "away_team": "PSG",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-04-16",
+                                    "time": "21:00",
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
                         }
                     ]
                 },
@@ -2382,55 +2406,57 @@
                     "next_round": "Final",
                     "pairs": [
                         {
+                            "name": "SF1",
                             "matches": [
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "MCI",
+                                    "home_team": "DOR",
+                                    "away_team": "PSG",
                                     "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-04-28",
+                                    "away_score": 0,
+                                    "date": "2024-05-01",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "DOR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-05-07",
                                     "time": "21:00",
                                     "stadium": "Parc des Princes",
                                     "city": "Paris",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "MCI",
-                                    "away_team": "PSG",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-05-04",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester",
-                                    "match_type": "secondleg"
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
+                            "name": "SF2",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "CHE",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-04-27",
-                                    "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
-                                    "city": "Madrid",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "CHE",
+                                    "home_team": "BAY",
                                     "away_team": "RMA",
                                     "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-05-05",
+                                    "away_score": 2,
+                                    "date": "2024-04-30",
                                     "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London",
-                                    "match_type": "secondleg"
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "BAY",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-05-08",
+                                    "time": "21:00",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
@@ -2440,16 +2466,20 @@
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
-                            "home_team": "MCI",
-                            "away_team": "CHE",
+                            "home_team": "DOR",
+                            "away_team": "RMA",
                             "home_score": 0,
-                            "away_score": 1,
-                            "date": "2021-05-29",
-                            "time": "20:00",
-                            "stadium": "Estádio do Dragão",
-                            "city": "Porto"
+                            "away_score": 2,
+                            "date": "2024-06-01",
+                            "time": "21:00",
+                            "stadium": "Wembley Stadium",
+                            "city": "London",
+                            "final": true
                         }
                     ]
                 }

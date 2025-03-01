@@ -115,7 +115,7 @@ class TournamentApp extends React.Component {
     render() {
         return (
             <Page>
-                <Container>
+                <Container className="container-xxxl">
                     <Header tournament={this.state.tournament} config={this.state.config} />
                     {this.state.tournament.stages && <TournamentTabs tournament={this.state.tournament} config={this.state.config} />}
                 </Container>

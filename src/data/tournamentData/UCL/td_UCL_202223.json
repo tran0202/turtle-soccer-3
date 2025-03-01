@@ -2027,7 +2027,7 @@
         },
         {
             "name": "Knockout Stage",
-            "type": "knockout",
+            "type": "knockout_",
             "default": true,
             "rounds": [
                 {
@@ -2038,222 +2038,228 @@
                     "next_round": "Quarter-finals",
                     "pairs": [
                         {
+                            "name": "R161",
                             "matches": [
                                 {
-                                    "home_team": "BMG",
+                                    "home_team": "RBL",
                                     "away_team": "MCI",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-02-24",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-02-22",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
+                                    "stadium": "Red Bull Arena",
+                                    "city": "Leipzig",
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "BMG",
-                                    "home_score": 2,
+                                    "away_team": "RBL",
+                                    "home_score": 7,
                                     "away_score": 0,
-                                    "date": "2021-03-16",
+                                    "date": "2023-03-14",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
                         },
                         {
+                            "name": "R162",
                             "matches": [
                                 {
-                                    "home_team": "LAZ",
-                                    "away_team": "BAY",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2021-02-23",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Olimpico",
-                                    "city": "Rome",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "BAY",
-                                    "away_team": "LAZ",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-03-17",
-                                    "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 1
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "ATM",
-                                    "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-02-23",
-                                    "time": "21:00",
-                                    "stadium": "Arena Națională",
-                                    "city": "Bucharest (Romania)",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "CHE",
-                                    "away_team": "ATM",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-17",
-                                    "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 8
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "RBL",
-                                    "away_team": "LIV",
+                                    "home_team": "BRG",
+                                    "away_team": "SLB",
                                     "home_score": 0,
                                     "away_score": 2,
-                                    "date": "2021-02-16",
+                                    "date": "2023-02-15",
                                     "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "firstleg"
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "RBL",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-03-10",
-                                    "time": "21:00",
-                                    "stadium": "Puskás Aréna",
-                                    "city": "Budapest (Hungary)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 6
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "PTO",
-                                    "away_team": "JUV",
-                                    "home_score": 2,
+                                    "home_team": "SLB",
+                                    "away_team": "BRG",
+                                    "home_score": 5,
                                     "away_score": 1,
-                                    "date": "2021-02-17",
+                                    "date": "2023-03-07",
                                     "time": "21:00",
-                                    "stadium": "Estádio do Dragão",
-                                    "city": "Porto",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "JUV",
-                                    "away_team": "PTO",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "home_extra_score": 1,
-                                    "away_extra_score": 1,
-                                    "date": "2021-03-09",
-                                    "time": "21:00",
-                                    "stadium": "Juventus Stadium",
-                                    "city": "Turin",
-                                    "match_type": "secondleg"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 7
                         },
                         {
+                            "name": "R163",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "PSG",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2021-02-16",
+                                    "home_team": "LIV",
+                                    "away_team": "RMA",
+                                    "home_score": 2,
+                                    "away_score": 5,
+                                    "date": "2023-02-21",
                                     "time": "21:00",
-                                    "stadium": "Camp Nou",
-                                    "city": "Barcelona",
-                                    "match_type": "firstleg"
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "FCB",
+                                    "home_team": "RMA",
+                                    "away_team": "LIV",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-03-10",
+                                    "away_score": 0,
+                                    "date": "2023-03-15",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris",
-                                    "match_type": "secondleg"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "R164",
+                            "matches": [
+                                {
+                                    "home_team": "MIL",
+                                    "away_team": "TOT",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-02-14",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "TOT",
+                                    "away_team": "MIL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-03-08",
+                                    "time": "21:10",
+                                    "stadium": "Tottenham Hotspur Stadium",
+                                    "city": "London",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "R165",
+                            "matches": [
+                                {
+                                    "home_team": "SGE",
+                                    "away_team": "NAP",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2023-02-21",
+                                    "time": "21:00",
+                                    "stadium": "Waldstadion",
+                                    "city": "Frankfurt",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "NAP",
+                                    "away_team": "SGE",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-03-15",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "R166",
+                            "matches": [
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "CHE",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-02-15",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "DOR",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-03-07",
+                                    "time": "21:10",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
                         },
                         {
+                            "name": "R167",
                             "matches": [
                                 {
-                                    "home_team": "SEV",
-                                    "away_team": "DOR",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-02-17",
+                                    "home_team": "INT",
+                                    "away_team": "PTO",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-02-22",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville",
-                                    "match_type": "firstleg"
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "SEV",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2021-03-09",
+                                    "home_team": "PTO",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2023-03-14",
                                     "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund",
-                                    "match_type": "secondleg"
+                                    "stadium": "Estádio do Dragão",
+                                    "city": "Porto",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 8
+                        },
+                        {
+                            "name": "R168",
+                            "matches": [
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "BAY",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2023-02-14",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "PSG",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-03-08",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 4
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "ATT",
-                                    "away_team": "RMA",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-02-24",
-                                    "time": "21:00",
-                                    "stadium": "Stadio Atleti Azzurri d'Italia",
-                                    "city": "Bergamo",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "RMA",
-                                    "away_team": "ATT",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2021-03-16",
-                                    "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
-                                    "city": "Madrid",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 5
                         }
                     ]
                 },
@@ -2265,109 +2271,113 @@
                     "next_round": "Semi-finals",
                     "pairs": [
                         {
+                            "name": "QF1",
                             "matches": [
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "DOR",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2021-04-06",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "DOR",
-                                    "away_team": "MCI",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2021-04-14",
-                                    "time": "21:00",
-                                    "stadium": "Westfalenstadion",
-                                    "city": "Dortmund",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 2
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "PTO",
+                                    "home_team": "RMA",
                                     "away_team": "CHE",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2021-04-07",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2023-04-12",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville (Spain)",
-                                    "match_type": "firstleg"
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "firstleg"
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "PTO",
+                                    "away_team": "RMA",
                                     "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-04-13",
+                                    "away_score": 2,
+                                    "date": "2023-04-18",
                                     "time": "21:00",
-                                    "stadium": "Ramón Sánchez Pizjuán",
-                                    "city": "Seville (Spain)",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 4
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "BAY",
-                                    "away_team": "PSG",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2021-04-07",
-                                    "time": "21:00",
-                                    "stadium": "Allianz Arena",
-                                    "city": "Munich",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "PSG",
-                                    "away_team": "BAY",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2021-04-13",
-                                    "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris",
-                                    "match_type": "secondleg"
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 1
                         },
                         {
+                            "name": "QF2",
                             "matches": [
                                 {
-                                    "home_team": "RMA",
-                                    "away_team": "LIV",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2021-04-06",
+                                    "home_team": "SLB",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2023-04-11",
                                     "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
-                                    "city": "Madrid",
-                                    "match_type": "firstleg"
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "LIV",
-                                    "away_team": "RMA",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2021-04-14",
+                                    "home_team": "INT",
+                                    "away_team": "SLB",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2023-04-19",
                                     "time": "21:00",
-                                    "stadium": "Anfield",
-                                    "city": "Liverpool",
-                                    "match_type": "secondleg"
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "QF3",
+                            "matches": [
+                                {
+                                    "home_team": "MCI",
+                                    "away_team": "BAY",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2023-04-11",
+                                    "time": "21:00",
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "MCI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-04-19",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "QF4",
+                            "matches": [
+                                {
+                                    "home_team": "MIL",
+                                    "away_team": "NAP",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2023-04-12",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "NAP",
+                                    "away_team": "MIL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-04-18",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Diego Armando Maradona",
+                                    "city": "Naples",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 3
@@ -2382,74 +2392,80 @@
                     "next_round": "Final",
                     "pairs": [
                         {
+                            "name": "SF1",
                             "matches": [
                                 {
-                                    "home_team": "PSG",
-                                    "away_team": "MCI",
-                                    "home_score": 1,
+                                    "home_team": "MIL",
+                                    "away_team": "INT",
+                                    "home_score": 0,
                                     "away_score": 2,
-                                    "date": "2021-04-28",
+                                    "date": "2023-05-10",
                                     "time": "21:00",
-                                    "stadium": "Parc des Princes",
-                                    "city": "Paris",
-                                    "match_type": "firstleg"
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "MCI",
-                                    "away_team": "PSG",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2021-05-04",
-                                    "time": "21:00",
-                                    "stadium": "City of Manchester Stadium",
-                                    "city": "Manchester",
-                                    "match_type": "secondleg"
-                                }
-                            ],
-                            "bracket_order": 1
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "RMA",
-                                    "away_team": "CHE",
+                                    "home_team": "INT",
+                                    "away_team": "MIL",
                                     "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2021-04-27",
-                                    "time": "21:00",
-                                    "stadium": "Alfredo Di Stéfano",
-                                    "city": "Madrid",
-                                    "match_type": "firstleg"
-                                },
-                                {
-                                    "home_team": "CHE",
-                                    "away_team": "RMA",
-                                    "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2021-05-05",
+                                    "date": "2023-05-16",
                                     "time": "21:00",
-                                    "stadium": "Stamford Bridge",
-                                    "city": "London",
-                                    "match_type": "secondleg"
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "secondleg"
                                 }
                             ],
                             "bracket_order": 2
+                        },
+                        {
+                            "name": "SF2",
+                            "matches": [
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "MCI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2023-05-09",
+                                    "time": "21:00",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MCI",
+                                    "away_team": "RMA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2023-05-17",
+                                    "time": "21:00",
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
                         }
                     ]
                 },
                 {
                     "name": "Final",
                     "short_name": "1st",
+                    "final": true,
+                    "third_place": false,
+                    "championship": true,
                     "matches": [
                         {
                             "home_team": "MCI",
-                            "away_team": "CHE",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2021-05-29",
-                            "time": "20:00",
-                            "stadium": "Estádio do Dragão",
-                            "city": "Porto"
+                            "away_team": "INT",
+                            "home_score": 1,
+                            "away_score": 0,
+                            "date": "2023-06-10",
+                            "time": "21:00",
+                            "stadium": "Atatürk Olympic Stadium",
+                            "city": "Istanbul",
+                            "final": true
                         }
                     ]
                 }

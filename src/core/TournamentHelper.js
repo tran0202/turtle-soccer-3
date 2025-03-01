@@ -215,41 +215,51 @@ export const calculatePairAggregateScore = (stage, config) => {
     if (!stage || !stage.pairs) return
     stage.pairs.forEach((p) => {
         if (p.matches && p.matches.length <= 3) {
-            const match1_home_score = p.matches[0].home_score
-            const match1_away_score = p.matches[0].away_score
-            const match2_home_score = p.matches[1].home_score
-            const match2_away_score = p.matches[1].away_score
-            const match2_home_extra_score = p.matches[1].home_extra_score ? p.matches[1].home_extra_score : 0
-            const match2_away_extra_score = p.matches[1].away_extra_score ? p.matches[1].away_extra_score : 0
-            const agg_home_score = match1_home_score + match2_away_score + match2_away_extra_score
-            const agg_away_score = match1_away_score + match2_home_score + match2_home_extra_score
-            p.agg_home_score = agg_home_score
-            p.agg_away_score = agg_away_score
-            p.agg_home_penalty_score = p.matches[1].home_penalty_score
-            p.agg_away_penalty_score = p.matches[1].away_penalty_score
-            const match1_home_pts =
-                p.matches[0].home_score > p.matches[0].away_score ? config.points_for_win : p.matches[0].home_score === p.matches[0].away_score ? 1 : 0
-            const match1_away_pts =
-                p.matches[0].away_score > p.matches[0].home_score ? config.points_for_win : p.matches[0].away_score === p.matches[0].home_score ? 1 : 0
-            const match2_home_pts =
-                p.matches[1].home_score > p.matches[1].away_score ? config.points_for_win : p.matches[1].home_score === p.matches[1].away_score ? 1 : 0
-            const match2_away_pts =
-                p.matches[1].away_score > p.matches[1].home_score ? config.points_for_win : p.matches[1].away_score === p.matches[1].home_score ? 1 : 0
-            p.agg_home_pts = match1_home_pts + match2_away_pts
-            p.agg_away_pts = match1_away_pts + match2_home_pts
-            p.home_draw_lot = p.matches[1].away_draw_lot
-            p.away_draw_lot = p.matches[1].home_draw_lot
+            const hasFirstLegOnly = p.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
+            if (hasFirstLegOnly) {
+            }
+            if (!hasFirstLegOnly) {
+                const match1_home_score = p.matches[0].home_score
+                const match1_away_score = p.matches[0].away_score
+                const match2_home_score = p.matches[1].home_score
+                const match2_away_score = p.matches[1].away_score
+                const match2_home_extra_score = p.matches[1].home_extra_score ? p.matches[1].home_extra_score : 0
+                const match2_away_extra_score = p.matches[1].away_extra_score ? p.matches[1].away_extra_score : 0
+                const agg_home_score = match1_home_score + match2_away_score + match2_away_extra_score
+                const agg_away_score = match1_away_score + match2_home_score + match2_home_extra_score
+                p.agg_home_score = agg_home_score
+                p.agg_away_score = agg_away_score
+                p.agg_home_penalty_score = p.matches[1].home_penalty_score
+                p.agg_away_penalty_score = p.matches[1].away_penalty_score
+                const match1_home_pts =
+                    p.matches[0].home_score > p.matches[0].away_score ? config.points_for_win : p.matches[0].home_score === p.matches[0].away_score ? 1 : 0
+                const match1_away_pts =
+                    p.matches[0].away_score > p.matches[0].home_score ? config.points_for_win : p.matches[0].away_score === p.matches[0].home_score ? 1 : 0
+                const match2_home_pts =
+                    p.matches[1].home_score > p.matches[1].away_score ? config.points_for_win : p.matches[1].home_score === p.matches[1].away_score ? 1 : 0
+                const match2_away_pts =
+                    p.matches[1].away_score > p.matches[1].home_score ? config.points_for_win : p.matches[1].away_score === p.matches[1].home_score ? 1 : 0
+                p.agg_home_pts = match1_home_pts + match2_away_pts
+                p.agg_away_pts = match1_away_pts + match2_home_pts
+                p.home_draw_lot = p.matches[1].away_draw_lot
+                p.away_draw_lot = p.matches[1].home_draw_lot
 
-            const hasPlayoff = p.matches.find((m) => m.matchday === 'playoffleg') !== undefined
-            if (hasPlayoff) {
-                const match3_home_score = p.matches[2].home_score
-                const match3_away_score = p.matches[2].away_score
-                const match3_home_extra_score = p.matches[2].home_extra_score ? p.matches[2].home_extra_score : 0
-                const match3_away_extra_score = p.matches[2].away_extra_score ? p.matches[2].away_extra_score : 0
-                p.playoff_home_score = match3_home_score + match3_home_extra_score
-                p.playoff_away_score = match3_away_score + match3_away_extra_score
-                p.playoff_home_pts = p.playoff_home_score > p.playoff_away_score ? config.points_for_win : p.playoff_home_score === p.playoff_away_score ? 1 : 0
-                p.playoff_away_pts = p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
+                const hasPlayoff = p.matches.find((m) => m.matchday === 'playoffleg') !== undefined
+                if (hasPlayoff) {
+                    const match3_home_score = p.matches[2].home_score
+                    const match3_away_score = p.matches[2].away_score
+                    const match3_home_extra_score = p.matches[2].home_extra_score ? p.matches[2].home_extra_score : 0
+                    const match3_away_extra_score = p.matches[2].away_extra_score ? p.matches[2].away_extra_score : 0
+                    p.playoff_home_score = match3_home_score + match3_home_extra_score
+                    p.playoff_away_score = match3_away_score + match3_away_extra_score
+                    p.playoff_home_pts =
+                        p.playoff_home_score > p.playoff_away_score ? config.points_for_win : p.playoff_home_score === p.playoff_away_score ? 1 : 0
+                    p.playoff_away_pts =
+                        p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
+                }
+            } else {
+                p.agg_home_score = p.matches[0].home_score
+                p.agg_away_score = p.matches[0].away_score
             }
             const ihwp = isHomeWinPair(p, stage.tiebreakers ? { ...config, tiebreakers: stage.tiebreakers } : config)
             p.agg_winner = ihwp ? 'home' : 'away'
@@ -261,53 +271,55 @@ export const calculatePairAggregateScore = (stage, config) => {
 
 export const isHomeWinPair = (pair, config) => {
     if (!pair || !pair.matches || pair.matches.length > 3 || !config) return
-    // const match1_home_score = pair.matches[0].home_score
-    const match1_away_score = pair.matches[0].away_score
-    // const match2_home_extra_score = pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
-    const match2_away_extra_score = pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
-    // const match2_home_score = pair.matches[1].home_score+match2_home_extra_score
-    const match2_away_score = pair.matches[1].away_score + match2_away_extra_score
-    const match2_home_penalty_score = pair.matches[1].home_penalty_score ? pair.matches[1].home_penalty_score : 0
-    const match2_away_penalty_score = pair.matches[1].away_penalty_score ? pair.matches[1].away_penalty_score : 0
-    if (config.pair_agg_points) {
-        if (pair.agg_home_pts > pair.agg_away_pts) {
-            return true
-        } else if (pair.agg_home_pts === pair.agg_away_pts) {
-            if (pair.playoff_home_pts && pair.playoff_away_pts) {
-                if (pair.playoff_home_pts > pair.playoff_away_pts) {
+    const hasFirstLegOnly = pair.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
+    if (!hasFirstLegOnly) {
+        const match1_away_score = pair.matches[0].away_score
+        const match2_away_extra_score = pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
+        const match2_away_score = pair.matches[1].away_score + match2_away_extra_score
+        const match2_home_penalty_score = pair.matches[1].home_penalty_score ? pair.matches[1].home_penalty_score : 0
+        const match2_away_penalty_score = pair.matches[1].away_penalty_score ? pair.matches[1].away_penalty_score : 0
+        if (config.pair_agg_points) {
+            if (pair.agg_home_pts > pair.agg_away_pts) {
+                return true
+            } else if (pair.agg_home_pts === pair.agg_away_pts) {
+                if (pair.playoff_home_pts && pair.playoff_away_pts) {
+                    if (pair.playoff_home_pts > pair.playoff_away_pts) {
+                        return true
+                    } else if (pair.playoff_home_pts === pair.playoff_away_pts) {
+                        return pair.agg_home_score > pair.agg_away_score
+                    } else {
+                        return false
+                    }
+                }
+                if (pair.agg_home_score > pair.agg_away_score) {
                     return true
-                } else if (pair.playoff_home_pts === pair.playoff_away_pts) {
-                    return pair.agg_home_score > pair.agg_away_score
+                } else if (pair.agg_home_score === pair.agg_away_score) {
+                    if (pair.matches[1].home_draw_lot) return false
+                    if (pair.matches[1].away_draw_lot) return true
                 } else {
                     return false
                 }
-            }
-            if (pair.agg_home_score > pair.agg_away_score) {
-                return true
-            } else if (pair.agg_home_score === pair.agg_away_score) {
-                if (pair.matches[1].home_draw_lot) return false
-                if (pair.matches[1].away_draw_lot) return true
             } else {
                 return false
             }
-        } else {
-            return false
         }
-    }
-    if (pair.agg_home_score > pair.agg_away_score) return true
-    else if (pair.agg_home_score === pair.agg_away_score) {
-        if (match2_away_score > match1_away_score) {
+        if (pair.agg_home_score > pair.agg_away_score) return true
+        else if (pair.agg_home_score === pair.agg_away_score) {
             if (isAwayGoalsTiebreaker(config)) {
-                pair.away_goal_winner = 'home'
-            }
-            return true
-        } else if (match2_away_score === match1_away_score) {
-            if (match2_away_penalty_score > match2_home_penalty_score) return true
-        } else {
-            if (isAwayGoalsTiebreaker(config)) {
-                pair.away_goal_winner = 'away'
+                if (match2_away_score > match1_away_score) {
+                    pair.away_goal_winner = 'home'
+                    return true
+                } else if (match2_away_score === match1_away_score) {
+                    if (match2_away_penalty_score > match2_home_penalty_score) return true
+                } else {
+                    pair.away_goal_winner = 'away'
+                }
+            } else {
+                return match2_away_penalty_score > match2_home_penalty_score
             }
         }
+    } else {
+        if (pair.agg_home_score > pair.agg_away_score) return true
     }
     return false
 }
@@ -354,14 +366,16 @@ export const prepareBracketPairOrder = (round) => {
             leg1_time: p.matches[0].time,
             leg1_city: p.matches[0].city,
             leg1_stadium: p.matches[0].stadium,
-            leg2_home_score: p.matches[1].away_score,
-            leg2_away_score: p.matches[1].home_score,
-            leg2_home_extra_score: p.matches[1].away_extra_score,
-            leg2_away_extra_score: p.matches[1].home_extra_score,
-            leg2_date: p.matches[1].date,
-            leg2_time: p.matches[1].time,
-            leg2_city: p.matches[1].city,
-            leg2_stadium: p.matches[1].stadium,
+            leg2_home_score: p.matches[1] && p.matches[1].away_score,
+            leg2_away_score: p.matches[1] && p.matches[1].home_score,
+            leg2_home_extra_score: p.matches[1] && p.matches[1].away_extra_score,
+            leg2_away_extra_score: p.matches[1] && p.matches[1].home_extra_score,
+            leg2_home_penalty_score: p.matches[1] && p.matches[1].away_penalty_score,
+            leg2_away_penalty_score: p.matches[1] && p.matches[1].home_penalty_score,
+            leg2_date: p.matches[1] && p.matches[1].date,
+            leg2_time: p.matches[1] && p.matches[1].time,
+            leg2_city: p.matches[1] && p.matches[1].city,
+            leg2_stadium: p.matches[1] && p.matches[1].stadium,
             playoff_home_score: p.matches[2] && p.matches[2].home_score,
             playoff_away_score: p.matches[2] && p.matches[2].away_score,
             playoff_home_extra_score: p.matches[2] && p.matches[2].home_extra_score,
@@ -369,9 +383,9 @@ export const prepareBracketPairOrder = (round) => {
             home_playoff_win: p.matches[2] && p.matches[2].home_playoff_win,
             away_playoff_win: p.matches[2] && p.matches[2].away_playoff_win,
             playoff_notes: p.matches[2] && p.matches[2].playoff_notes,
-            home_draw_lot: p.matches[1].away_draw_lot,
-            away_draw_lot: p.matches[1].home_draw_lot,
-            draw_lot_notes: p.matches[1].draw_lot_notes,
+            home_draw_lot: p.matches[1] && p.matches[1].away_draw_lot,
+            away_draw_lot: p.matches[1] && p.matches[1].home_draw_lot,
+            draw_lot_notes: p.matches[1] && p.matches[1].draw_lot_notes,
             final: p.final,
         }
         bracketMatches.push(match)

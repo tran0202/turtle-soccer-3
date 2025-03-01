@@ -14,19 +14,20 @@ const MatchesPairRow = (props) => {
             {matches &&
                 matches.map((m, index) => {
                     const isFirstLeg = m.matchday === 'firstleg'
+                    const isFirstLegOnly = m.matchday === 'firstlegonly'
                     const isSecondLeg = m.matchday === 'secondleg'
                     const isThirdLeg = m.matchday === 'playoffleg'
                     const bottomLine = isFirstLeg || (hasPlayoff && isSecondLeg) ? 'border-bottom-gray5' : ''
                     const pairHomeHighlight =
                         isFirstLeg || (hasPlayoff && isSecondLeg)
                             ? ''
-                            : (isSecondLeg && pair.agg_winner === 'home') || (isThirdLeg && pair.agg_winner === 'away')
+                            : (isSecondLeg && pair.agg_winner === 'home') || ((isFirstLegOnly || isThirdLeg) && pair.agg_winner === 'away')
                             ? 'team-name-win'
                             : 'team-name-lose'
                     const pairAwayHighlight =
                         isFirstLeg || (hasPlayoff && isSecondLeg)
                             ? ''
-                            : (isSecondLeg && pair.agg_winner === 'away') || (isThirdLeg && pair.agg_winner === 'home')
+                            : (isSecondLeg && pair.agg_winner === 'away') || ((isFirstLegOnly || isThirdLeg) && pair.agg_winner === 'home')
                             ? 'team-name-win'
                             : 'team-name-lose'
                     const homeTeamName = getTeamName(m.home_team, config)
@@ -164,6 +165,7 @@ const MatchesPairRow = (props) => {
                                         </Col>
                                     </Row>
                                 )}
+                                {isFirstLegOnly && <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />}
                             </Row>
                         </React.Fragment>
                     )
