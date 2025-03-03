@@ -127,10 +127,10 @@ export const processStage = (stage, config) => {
     }
     if (stage.type.includes('knockout_')) {
         //     initEntrants(stage)
-        processPathRounds(stage, config)
+        processKnockoutRounds(stage, config)
     }
     if (stage.type.includes('pair_')) {
-        processRounds(stage, stage, config)
+        processPairPaths(stage, config)
     }
 }
 
@@ -173,7 +173,7 @@ export const createGroupMatches = (stage) => {
     // overwriteGroup(stage.groups[0])
 }
 
-export const processPathRounds = (stage, config) => {
+export const processKnockoutRounds = (stage, config) => {
     if (!stage) return
     if (stage.rounds) {
         // if (stage.third_place_groups) {
@@ -188,9 +188,23 @@ export const processPathRounds = (stage, config) => {
     }
 }
 
-export const processRounds = (path, stage, config) => {
-    if (!stage || !path || !path.rounds) return
-    path.rounds.forEach((r) => {
+export const processPairPaths = (stage, config) => {
+    if (!stage || !stage.rounds) return
+    stage.rounds.forEach((r) => {
+        if (r.pairs) {
+            calculatePairAggregateScore(r, config)
+        }
+        if (r.paths) {
+            r.paths.forEach((p) => {
+                calculatePairAggregateScore(p, config)
+            })
+        }
+    })
+}
+
+export const processRounds = (set, stage, config) => {
+    if (!stage || !set || !set.rounds) return
+    set.rounds.forEach((r) => {
         // r.matches.forEach((m) => {
         //     populateMatch(m, stage.entrants)
         //     getKnockoutScore(m)
@@ -200,8 +214,6 @@ export const processRounds = (path, stage, config) => {
             if (r.round_type === 'knockout2legged') {
                 calculatePairAggregateScore(r, config)
                 prepareBracketPairOrder(r)
-            } else if (r.round_type === 'pair1legged' || r.round_type === 'pair2legged') {
-                calculatePairAggregateScore(r, config)
             }
         } else {
             createMatchdays(r)

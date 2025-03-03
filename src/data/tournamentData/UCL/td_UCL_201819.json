@@ -99,7 +99,7 @@
             ]
         },
         {
-            "name": "First Qualifying Round",
+            "name": "Qualifying Rounds",
             "type": "pair_",
             "hide_bracket": true,
             "rounds": [
@@ -552,18 +552,10 @@
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Second Qualifying Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
+                },
                 {
                     "name": "Second Qualifying Round",
-                    "round_type": "knockout2legged",
+                    "round_type": "pair2legged",
                     "eliminate_count": 48,
                     "next_round": "Third Qualifying Round",
                     "bye_teams": [
@@ -576,823 +568,861 @@
                         { "id": "STL" },
                         { "id": "SLP" }
                     ],
-                    "pairs": [
+                    "paths": [
                         {
-                            "matches": [
+                            "name": "Champions Path",
+                            "pairs": [
                                 {
-                                    "home_team": "AST",
-                                    "away_team": "FCM",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2018-07-24",
-                                    "time": "16:00",
-                                    "stadium": "Astana Arena",
-                                    "city": "Astana",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "AST",
+                                            "away_team": "FCM",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2018-07-24",
+                                            "time": "16:00",
+                                            "stadium": "Astana Arena",
+                                            "city": "Astana",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FCM",
+                                            "away_team": "AST",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-01",
+                                            "time": "19:00",
+                                            "stadium": "MCH Arena",
+                                            "city": "Herning",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "FCM",
-                                    "away_team": "AST",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-01",
-                                    "time": "19:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "LUD",
+                                            "away_team": "VID-2018-2019",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-07-25",
+                                            "time": "19:00",
+                                            "stadium": "Ludogorets Arena",
+                                            "city": "Razgrad",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "VID-2018-2019",
+                                            "away_team": "LUD",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2018-08-01",
+                                            "time": "20:00",
+                                            "stadium": "Pancho Aréna",
+                                            "city": "Felcsút",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "KUK",
+                                            "away_team": "QAR",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-07-25",
+                                            "time": "19:00",
+                                            "stadium": "Loro Boriçi Stadium",
+                                            "city": "Shkodër",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "QAR",
+                                            "away_team": "KUK",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2018-08-01",
+                                            "time": "19:00",
+                                            "stadium": "Tofiq Bahramov Republican Stadium",
+                                            "city": "Baku",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "CFR",
+                                            "away_team": "MAL",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2018-07-24",
+                                            "time": "18:00",
+                                            "stadium": "Stadionul Dr. Constantin Rădulescu",
+                                            "city": "Cluj-Napoca",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "MAL",
+                                            "away_team": "CFR",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-01",
+                                            "time": "19:15",
+                                            "stadium": "Stadion",
+                                            "city": "Malmö",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C05",
+                                    "matches": [
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "HBS",
+                                            "home_score": 5,
+                                            "away_score": 0,
+                                            "date": "2018-07-24",
+                                            "time": "20:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "HBS",
+                                            "away_team": "DZA",
+                                            "home_score": 2,
+                                            "away_score": 2,
+                                            "date": "2018-07-31",
+                                            "time": "19:00",
+                                            "stadium": "Turner Stadium",
+                                            "city": "Beersheba",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C06",
+                                    "matches": [
+                                        {
+                                            "home_team": "CZV",
+                                            "away_team": "SMA",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2018-07-24",
+                                            "time": "20:30",
+                                            "stadium": "Red Star Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SMA",
+                                            "away_team": "CZV",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2018-08-01",
+                                            "time": "19:30",
+                                            "stadium": "Sūduva Stadium",
+                                            "city": "Marijampolė",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C07",
+                                    "matches": [
+                                        {
+                                            "home_team": "BBO",
+                                            "away_team": "HJK",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-07-25",
+                                            "time": "19:00",
+                                            "stadium": "Borisov Arena",
+                                            "city": "Barysaw",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "HJK",
+                                            "away_team": "BBO",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2018-08-01",
+                                            "time": "18:00",
+                                            "stadium": "Telia 5G -areena",
+                                            "city": "Helsinki",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C08",
+                                    "matches": [
+                                        {
+                                            "home_team": "KFS",
+                                            "away_team": "SHE",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2018-07-24",
+                                            "time": "20:15",
+                                            "stadium": "Philip II Arena",
+                                            "city": "Skopje",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHE",
+                                            "away_team": "KFS",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-07-31",
+                                            "time": "19:00",
+                                            "stadium": "Sheriff Stadium",
+                                            "city": "Tiraspol",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C09",
+                                    "matches": [
+                                        {
+                                            "home_team": "WAR",
+                                            "away_team": "SPT",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2018-07-24",
+                                            "time": "21:00",
+                                            "stadium": "Polish Army Stadium",
+                                            "city": "Warsaw",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SPT",
+                                            "away_team": "WAR",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2018-07-31",
+                                            "time": "20:30",
+                                            "stadium": "Anton Malatinský Stadium",
+                                            "city": "Trnava",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C10",
+                                    "matches": [
+                                        {
+                                            "home_team": "CEL",
+                                            "away_team": "RBK",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2018-07-25",
+                                            "time": "20:45",
+                                            "stadium": "Celtic Park",
+                                            "city": "Glasgow",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "RBK",
+                                            "away_team": "CEL",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-01",
+                                            "time": "20:45",
+                                            "stadium": "Lerkendal Stadion",
+                                            "city": "Trondheim",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "matches": [
+                            "name": "League Path",
+                            "pairs": [
                                 {
-                                    "home_team": "LUD",
-                                    "away_team": "VID-2018-2019",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-07-25",
-                                    "time": "19:00",
-                                    "stadium": "Ludogorets Arena",
-                                    "city": "Razgrad",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "PKT",
+                                            "away_team": "BAS",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2018-07-24",
+                                            "time": "19:30",
+                                            "stadium": "Toumba Stadium",
+                                            "city": "Thessaloniki",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "BAS",
+                                            "away_team": "PKT",
+                                            "home_score": 0,
+                                            "away_score": 3,
+                                            "date": "2018-08-01",
+                                            "time": "20:00",
+                                            "stadium": "St. Jakob-Park",
+                                            "city": "Basel",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "VID-2018-2019",
-                                    "away_team": "LUD",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2018-08-01",
-                                    "time": "20:00",
-                                    "stadium": "Pancho Aréna",
-                                    "city": "Felcsút",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "KUK",
-                                    "away_team": "QAR",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-07-25",
-                                    "time": "19:00",
-                                    "stadium": "Loro Boriçi Stadium",
-                                    "city": "Shkodër",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "QAR",
-                                    "away_team": "KUK",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2018-08-01",
-                                    "time": "19:00",
-                                    "stadium": "Tofiq Bahramov Republican Stadium",
-                                    "city": "Baku",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "CFR",
-                                    "away_team": "MAL",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2018-07-24",
-                                    "time": "18:00",
-                                    "stadium": "Stadionul Dr. Constantin Rădulescu",
-                                    "city": "Cluj-Napoca",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "MAL",
-                                    "away_team": "CFR",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-01",
-                                    "time": "19:15",
-                                    "stadium": "Stadion",
-                                    "city": "Malmö",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "HBS",
-                                    "home_score": 5,
-                                    "away_score": 0,
-                                    "date": "2018-07-24",
-                                    "time": "20:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "HBS",
-                                    "away_team": "DZA",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2018-07-31",
-                                    "time": "19:00",
-                                    "stadium": "Turner Stadium",
-                                    "city": "Beersheba",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "CZV",
-                                    "away_team": "SMA",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2018-07-24",
-                                    "time": "20:30",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "SMA",
-                                    "away_team": "CZV",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2018-08-01",
-                                    "time": "19:30",
-                                    "stadium": "Sūduva Stadium",
-                                    "city": "Marijampolė",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "BBO",
-                                    "away_team": "HJK",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-07-25",
-                                    "time": "19:00",
-                                    "stadium": "Borisov Arena",
-                                    "city": "Barysaw",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "HJK",
-                                    "away_team": "BBO",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2018-08-01",
-                                    "time": "18:00",
-                                    "stadium": "Telia 5G -areena",
-                                    "city": "Helsinki",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "KFS",
-                                    "away_team": "SHE",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2018-07-24",
-                                    "time": "20:15",
-                                    "stadium": "Philip II Arena",
-                                    "city": "Skopje",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "SHE",
-                                    "away_team": "KFS",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-07-31",
-                                    "time": "19:00",
-                                    "stadium": "Sheriff Stadium",
-                                    "city": "Tiraspol",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "WAR",
-                                    "away_team": "SPT",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2018-07-24",
-                                    "time": "21:00",
-                                    "stadium": "Polish Army Stadium",
-                                    "city": "Warsaw",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "SPT",
-                                    "away_team": "WAR",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2018-07-31",
-                                    "time": "20:30",
-                                    "stadium": "Anton Malatinský Stadium",
-                                    "city": "Trnava",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "CEL",
-                                    "away_team": "RBK",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2018-07-25",
-                                    "time": "20:45",
-                                    "stadium": "Celtic Park",
-                                    "city": "Glasgow",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "RBK",
-                                    "away_team": "CEL",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-01",
-                                    "time": "20:45",
-                                    "stadium": "Lerkendal Stadion",
-                                    "city": "Trondheim",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "PKT",
-                                    "away_team": "BAS",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2018-07-24",
-                                    "time": "19:30",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "BAS",
-                                    "away_team": "PKT",
-                                    "home_score": 0,
-                                    "away_score": 3,
-                                    "date": "2018-08-01",
-                                    "time": "20:00",
-                                    "stadium": "St. Jakob-Park",
-                                    "city": "Basel",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "AJA",
-                                    "away_team": "SGR",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2018-07-25",
-                                    "time": "20:30",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "SGR",
-                                    "away_team": "AJA",
-                                    "home_score": 1,
-                                    "away_score": 3,
-                                    "date": "2018-08-01",
-                                    "time": "20:30",
-                                    "stadium": "Liebenauer Stadium",
-                                    "city": "Graz",
-                                    "path": "League",
-                                    "matchday": "secondleg"
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "AJA",
+                                            "away_team": "SGR",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2018-07-25",
+                                            "time": "20:30",
+                                            "stadium": "Johan Cruyff Arena",
+                                            "city": "Amsterdam",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SGR",
+                                            "away_team": "AJA",
+                                            "home_score": 1,
+                                            "away_score": 3,
+                                            "date": "2018-08-01",
+                                            "time": "20:30",
+                                            "stadium": "Liebenauer Stadium",
+                                            "city": "Graz",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Third Qualifying Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
+                },
                 {
                     "name": "Third Qualifying Round",
-                    "round_type": "knockout2legged",
+                    "round_type": "pair2legged",
                     "eliminate_count": 38,
                     "next_round": "Play-off Round",
                     "bye_teams": [{ "id": "PSV" }, { "id": "YBO" }],
-                    "pairs": [
+                    "paths": [
                         {
-                            "matches": [
+                            "name": "Champions Path",
+                            "pairs": [
                                 {
-                                    "home_team": "CEL",
-                                    "away_team": "AEK",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-08",
-                                    "time": "20:45",
-                                    "stadium": "Celtic Park",
-                                    "city": "Glasgow",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "CEL",
+                                            "away_team": "AEK",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-08",
+                                            "time": "20:45",
+                                            "stadium": "Celtic Park",
+                                            "city": "Glasgow",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "AEK",
+                                            "away_team": "CEL",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2018-08-14",
+                                            "time": "20:00",
+                                            "stadium": "Olympic Stadium",
+                                            "city": "Athens",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "AEK",
-                                    "away_team": "CEL",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2018-08-14",
-                                    "time": "20:00",
-                                    "stadium": "Olympic Stadium",
-                                    "city": "Athens",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "RBS",
+                                            "away_team": "KFS",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2018-08-08",
+                                            "time": "19:00",
+                                            "stadium": "Red Bull Arena",
+                                            "city": "Wals-Siezenheim",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "KFS",
+                                            "away_team": "RBS",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2018-08-14",
+                                            "time": "20:15",
+                                            "stadium": "Philip II Arena",
+                                            "city": "Skopje",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "CZV",
+                                            "away_team": "SPT",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-07",
+                                            "time": "20:30",
+                                            "stadium": "Red Star Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SPT",
+                                            "away_team": "CZV",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "home_extra_score": 0,
+                                            "away_extra_score": 1,
+                                            "date": "2018-08-14",
+                                            "time": "20:30",
+                                            "stadium": "Anton Malatinský Stadium",
+                                            "city": "Trnava",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "QAR",
+                                            "away_team": "BBO",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2018-08-07",
+                                            "time": "19:00",
+                                            "stadium": "Tofiq Bahramov Republican Stadium",
+                                            "city": "Baku",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "BBO",
+                                            "away_team": "QAR",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-14",
+                                            "time": "19:00",
+                                            "stadium": "Borisov Arena",
+                                            "city": "Barysaw",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C05",
+                                    "matches": [
+                                        {
+                                            "home_team": "AST",
+                                            "away_team": "DZA",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2018-08-07",
+                                            "time": "16:00",
+                                            "stadium": "Astana Arena",
+                                            "city": "Astana",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "AST",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2018-08-14",
+                                            "time": "20:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C06",
+                                    "matches": [
+                                        {
+                                            "home_team": "MAL",
+                                            "away_team": "VID-2018-2019",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-07",
+                                            "time": "19:15",
+                                            "stadium": "Stadion",
+                                            "city": "Malmö",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "VID-2018-2019",
+                                            "away_team": "MAL",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-14",
+                                            "time": "20:00",
+                                            "stadium": "Pancho Aréna",
+                                            "city": "Felcsút",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "matches": [
+                            "name": "League Path",
+                            "pairs": [
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "KFS",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2018-08-08",
-                                    "time": "19:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Wals-Siezenheim",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "STL",
+                                            "away_team": "AJA",
+                                            "home_score": 2,
+                                            "away_score": 2,
+                                            "date": "2018-08-07",
+                                            "time": "20:00",
+                                            "stadium": "Stade Maurice Dufrasne",
+                                            "city": "Liège",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "AJA",
+                                            "away_team": "STL",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2018-08-14",
+                                            "time": "20:30",
+                                            "stadium": "Johan Cruyff Arena",
+                                            "city": "Amsterdam",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "KFS",
-                                    "away_team": "RBS",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2018-08-14",
-                                    "time": "20:15",
-                                    "stadium": "Philip II Arena",
-                                    "city": "Skopje",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "CZV",
-                                    "away_team": "SPT",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-07",
-                                    "time": "20:30",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "SLB",
+                                            "away_team": "FEN",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2018-08-07",
+                                            "time": "21:00",
+                                            "stadium": "Estádio da Luz",
+                                            "city": "Lisbon",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FEN",
+                                            "away_team": "SLB",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-14",
+                                            "time": "20:00",
+                                            "stadium": "Şükrü Saracoğlu Stadium",
+                                            "city": "Istanbul",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "SPT",
-                                    "away_team": "CZV",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "home_extra_score": 0,
-                                    "away_extra_score": 1,
-                                    "date": "2018-08-14",
-                                    "time": "20:30",
-                                    "stadium": "Anton Malatinský Stadium",
-                                    "city": "Trnava",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "QAR",
-                                    "away_team": "BBO",
-                                    "home_score": 0,
-                                    "away_score": 1,
-                                    "date": "2018-08-07",
-                                    "time": "19:00",
-                                    "stadium": "Tofiq Bahramov Republican Stadium",
-                                    "city": "Baku",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "L03",
+                                    "matches": [
+                                        {
+                                            "home_team": "SLP",
+                                            "away_team": "DYK",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-07",
+                                            "time": "19:30",
+                                            "stadium": "Eden Arena",
+                                            "city": "Prague",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "DYK",
+                                            "away_team": "SLP",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2018-08-14",
+                                            "time": "18:30",
+                                            "stadium": "Olimpiyskiy National Sports Complex",
+                                            "city": "Kiev",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "BBO",
-                                    "away_team": "QAR",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-14",
-                                    "time": "19:00",
-                                    "stadium": "Borisov Arena",
-                                    "city": "Barysaw",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "AST",
-                                    "away_team": "DZA",
-                                    "home_score": 0,
-                                    "away_score": 2,
-                                    "date": "2018-08-07",
-                                    "time": "16:00",
-                                    "stadium": "Astana Arena",
-                                    "city": "Astana",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "AST",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2018-08-14",
-                                    "time": "20:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "MAL",
-                                    "away_team": "VID-2018-2019",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-07",
-                                    "time": "19:15",
-                                    "stadium": "Stadion",
-                                    "city": "Malmö",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "VID-2018-2019",
-                                    "away_team": "MAL",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-14",
-                                    "time": "20:00",
-                                    "stadium": "Pancho Aréna",
-                                    "city": "Felcsút",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "STL",
-                                    "away_team": "AJA",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2018-08-07",
-                                    "time": "20:00",
-                                    "stadium": "Stade Maurice Dufrasne",
-                                    "city": "Liège",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "AJA",
-                                    "away_team": "STL",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2018-08-14",
-                                    "time": "20:30",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "SLB",
-                                    "away_team": "FEN",
-                                    "home_score": 1,
-                                    "away_score": 0,
-                                    "date": "2018-08-07",
-                                    "time": "21:00",
-                                    "stadium": "Estádio da Luz",
-                                    "city": "Lisbon",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "FEN",
-                                    "away_team": "SLB",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-14",
-                                    "time": "20:00",
-                                    "stadium": "Şükrü Saracoğlu Stadium",
-                                    "city": "Istanbul",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "SLP",
-                                    "away_team": "DYK",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-07",
-                                    "time": "19:30",
-                                    "stadium": "Eden Arena",
-                                    "city": "Prague",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "DYK",
-                                    "away_team": "SLP",
-                                    "home_score": 2,
-                                    "away_score": 0,
-                                    "date": "2018-08-14",
-                                    "time": "18:30",
-                                    "stadium": "Olimpiyskiy National Sports Complex",
-                                    "city": "Kiev",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "PKT",
-                                    "away_team": "SPM",
-                                    "home_score": 3,
-                                    "away_score": 2,
-                                    "date": "2018-08-08",
-                                    "time": "19:00",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "SPM",
-                                    "away_team": "PKT",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-14",
-                                    "time": "19:30",
-                                    "stadium": "Otkritie Arena",
-                                    "city": "Moscow",
-                                    "path": "League",
-                                    "matchday": "secondleg"
+                                    "name": "L04",
+                                    "matches": [
+                                        {
+                                            "home_team": "PKT",
+                                            "away_team": "SPM",
+                                            "home_score": 3,
+                                            "away_score": 2,
+                                            "date": "2018-08-08",
+                                            "time": "19:00",
+                                            "stadium": "Toumba Stadium",
+                                            "city": "Thessaloniki",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SPM",
+                                            "away_team": "PKT",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-14",
+                                            "time": "19:30",
+                                            "stadium": "Otkritie Arena",
+                                            "city": "Moscow",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            "name": "Play-off Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
+                },
                 {
                     "name": "Play-off Round",
                     "round_type": "knockout2legged",
                     "eliminate_count": 32,
                     "next_round": "Group Stage",
-                    "pairs": [
+                    "paths": [
                         {
-                            "matches": [
+                            "name": "Champions Path",
+                            "pairs": [
                                 {
-                                    "home_team": "CZV",
-                                    "away_team": "RBS",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-21",
-                                    "time": "21:00",
-                                    "stadium": "Red Star Stadium",
-                                    "city": "Belgrade",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "CZV",
+                                            "away_team": "RBS",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-21",
+                                            "time": "21:00",
+                                            "stadium": "Red Star Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "RBS",
+                                            "away_team": "CZV",
+                                            "home_score": 2,
+                                            "away_score": 2,
+                                            "date": "2018-08-29",
+                                            "time": "21:00",
+                                            "stadium": "Red Bull Arena",
+                                            "city": "Wals-Siezenheim",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "CZV",
-                                    "home_score": 2,
-                                    "away_score": 2,
-                                    "date": "2018-08-29",
-                                    "time": "21:00",
-                                    "stadium": "Red Bull Arena",
-                                    "city": "Wals-Siezenheim",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "BBO",
+                                            "away_team": "PSV",
+                                            "home_score": 2,
+                                            "away_score": 3,
+                                            "date": "2018-08-21",
+                                            "time": "21:00",
+                                            "stadium": "Borisov Arena",
+                                            "city": "Barysaw",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "PSV",
+                                            "away_team": "BBO",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2018-08-29",
+                                            "time": "21:00",
+                                            "stadium": "Philips Stadion",
+                                            "city": "Eindhoven",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "YBO",
+                                            "away_team": "DZA",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-22",
+                                            "time": "21:00",
+                                            "stadium": "Stade de Suisse",
+                                            "city": "Bern",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "YBO",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2018-08-28",
+                                            "time": "21:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "VID-2018-2019",
+                                            "away_team": "AEK",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2018-08-22",
+                                            "time": "21:00",
+                                            "stadium": "Groupama Arena",
+                                            "city": "Budapest",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "AEK",
+                                            "away_team": "VID-2018-2019",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-28",
+                                            "time": "21:00",
+                                            "stadium": "Olympic Stadium",
+                                            "city": "Athens",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "matches": [
+                            "name": "League Path",
+                            "pairs": [
                                 {
-                                    "home_team": "BBO",
-                                    "away_team": "PSV",
-                                    "home_score": 2,
-                                    "away_score": 3,
-                                    "date": "2018-08-21",
-                                    "time": "21:00",
-                                    "stadium": "Borisov Arena",
-                                    "city": "Barysaw",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "SLB",
+                                            "away_team": "PKT",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2018-08-21",
+                                            "time": "21:00",
+                                            "stadium": "Estádio da Luz",
+                                            "city": "Lisbon",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "PKT",
+                                            "away_team": "SLB",
+                                            "home_score": 1,
+                                            "away_score": 4,
+                                            "date": "2018-08-29",
+                                            "time": "21:00",
+                                            "stadium": "Toumba Stadium",
+                                            "city": "Thessaloniki",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 },
                                 {
-                                    "home_team": "PSV",
-                                    "away_team": "BBO",
-                                    "home_score": 3,
-                                    "away_score": 0,
-                                    "date": "2018-08-29",
-                                    "time": "21:00",
-                                    "stadium": "Philips Stadion",
-                                    "city": "Eindhoven",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "YBO",
-                                    "away_team": "DZA",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-22",
-                                    "time": "21:00",
-                                    "stadium": "Stade de Suisse",
-                                    "city": "Bern",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "DZA",
-                                    "away_team": "YBO",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2018-08-28",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Maksimir",
-                                    "city": "Zagreb",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "VID-2018-2019",
-                                    "away_team": "AEK",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2018-08-22",
-                                    "time": "21:00",
-                                    "stadium": "Groupama Arena",
-                                    "city": "Budapest",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "AEK",
-                                    "away_team": "VID-2018-2019",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-28",
-                                    "time": "21:00",
-                                    "stadium": "Olympic Stadium",
-                                    "city": "Athens",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "SLB",
-                                    "away_team": "PKT",
-                                    "home_score": 1,
-                                    "away_score": 1,
-                                    "date": "2018-08-21",
-                                    "time": "21:00",
-                                    "stadium": "Estádio da Luz",
-                                    "city": "Lisbon",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "PKT",
-                                    "away_team": "SLB",
-                                    "home_score": 1,
-                                    "away_score": 4,
-                                    "date": "2018-08-29",
-                                    "time": "21:00",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "AJA",
-                                    "away_team": "DYK",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2018-08-22",
-                                    "time": "21:00",
-                                    "stadium": "Johan Cruyff Arena",
-                                    "city": "Amsterdam",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "DYK",
-                                    "away_team": "AJA",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2018-08-28",
-                                    "time": "21:00",
-                                    "stadium": "Olimpiyskiy National Sports Complex",
-                                    "city": "Kiev",
-                                    "path": "League",
-                                    "matchday": "secondleg"
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "AJA",
+                                            "away_team": "DYK",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2018-08-22",
+                                            "time": "21:00",
+                                            "stadium": "Johan Cruyff Arena",
+                                            "city": "Amsterdam",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "DYK",
+                                            "away_team": "AJA",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2018-08-28",
+                                            "time": "21:00",
+                                            "stadium": "Olimpiyskiy National Sports Complex",
+                                            "city": "Kiev",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         }

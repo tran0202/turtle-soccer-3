@@ -217,10 +217,27 @@ const MatchesPairRow = (props) => {
     )
 }
 
+const MatchesPairPath = (props) => {
+    const { path, config } = props
+    return (
+        <React.Fragment>
+            <Row>
+                <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
+                    {path.name}
+                </Col>
+            </Row>
+            {path.pairs &&
+                path.pairs.map((p, index) => {
+                    return <MatchesPairRow key={p.name} pair={p} config={config} last={index === path.pairs.length - 1} />
+                })}
+        </React.Fragment>
+    )
+}
+
 class MatchesPair extends React.Component {
     render() {
         const { stage, config } = this.props
-        const { pairs, next_stage, next_round, round_won_notes, round_lost_notes } = stage
+        const { pairs, paths, next_stage, next_round, round_won_notes, round_lost_notes } = stage
         const new_config = { ...config, next_stage, next_round, round_won_notes, round_lost_notes }
         return (
             <React.Fragment>
@@ -229,6 +246,10 @@ class MatchesPair extends React.Component {
                         {pairs &&
                             pairs.map((p, index) => {
                                 return !p.blank && <MatchesPairRow key={p.name} pair={p} config={new_config} last={index === pairs.length - 1} />
+                            })}
+                        {paths &&
+                            paths.map((p2) => {
+                                return <MatchesPairPath path={p2} config={new_config} />
                             })}
                     </Col>
                 </Row>

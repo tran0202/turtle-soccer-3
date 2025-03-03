@@ -90,6 +90,23 @@ const PairRow = (props) => {
     )
 }
 
+const PairPath = (props) => {
+    const { path, config } = props
+    return (
+        <React.Fragment>
+            <Row>
+                <Col sm="12" className="h2-ff6 border-bottom-double-gray3 margin-top-md">
+                    {path.name}
+                </Col>
+            </Row>
+            {path.pairs &&
+                path.pairs.map((p, index) => {
+                    return <PairRow key={p.name} pair={p} config={config} last={index === path.pairs.length - 1} />
+                })}
+        </React.Fragment>
+    )
+}
+
 class PairSummary extends React.Component {
     render() {
         const { round, config } = this.props
@@ -100,6 +117,10 @@ class PairSummary extends React.Component {
                 {round.pairs &&
                     round.pairs.map((p, index) => {
                         return <PairRow key={p.name} pair={p} config={new_config} last={index === round.pairs.length - 1} />
+                    })}
+                {round.paths &&
+                    round.paths.map((p) => {
+                        return <PairPath path={p} config={new_config} />
                     })}
             </React.Fragment>
         )
