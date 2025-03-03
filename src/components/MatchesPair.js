@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, PenaltyTooltip } from '../core/TooltipHelper'
 
 const MatchesPairRow = (props) => {
     const { pair, config, last } = props
@@ -174,6 +174,13 @@ const MatchesPairRow = (props) => {
                                             </React.Fragment>
                                         )}{' '}
                                         {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                                        {m.home_penalty_score !== undefined && m.away_penalty_score !== undefined && (
+                                            <Row>
+                                                <Col className="text-center">
+                                                    {m.home_penalty_score} - {m.away_penalty_score} <PenaltyTooltip target="penaltyTooltip" anchor="(pen)" />
+                                                </Col>
+                                            </Row>
+                                        )}
                                     </Col>
                                     <Col className="col-box-10">{getTeamFlagId(m.away_team, config)}</Col>
                                     <Col className={`col-box-25 ${pairHomeHighlight}`}>
@@ -201,7 +208,7 @@ const MatchesPairRow = (props) => {
                                         </Col>
                                     </Row>
                                 )}
-                                {isFirstLegOnly && <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />}
+                                {isFirstLegOnly && <Row className={`${!last ? 'border-bottom-gray4' : ''} margin-left-sm margin-top-md`} />}
                             </Row>
                         </React.Fragment>
                     )

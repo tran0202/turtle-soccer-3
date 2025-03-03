@@ -200,7 +200,7 @@ export const processRounds = (path, stage, config) => {
             if (r.round_type === 'knockout2legged') {
                 calculatePairAggregateScore(r, config)
                 prepareBracketPairOrder(r)
-            } else if (r.round_type === 'pairs2legged') {
+            } else if (r.round_type === 'pairs1legged' || r.round_type === 'pairs2legged') {
                 calculatePairAggregateScore(r, config)
             }
         } else {
@@ -217,8 +217,6 @@ export const calculatePairAggregateScore = (stage, config) => {
         if (p.blank) return
         if (p.matches && p.matches.length <= 3) {
             const hasFirstLegOnly = p.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
-            if (hasFirstLegOnly) {
-            }
             if (!hasFirstLegOnly) {
                 const match1_home_score = p.matches[0].home_score
                 const match1_away_score = p.matches[0].away_score
@@ -261,6 +259,8 @@ export const calculatePairAggregateScore = (stage, config) => {
             } else {
                 p.agg_home_score = p.matches[0].home_score
                 p.agg_away_score = p.matches[0].away_score
+                p.agg_home_penalty_score = p.matches[0].home_penalty_score
+                p.agg_away_penalty_score = p.matches[0].away_penalty_score
             }
             const ihwp = isHomeWinPair(p, stage.tiebreakers ? { ...config, tiebreakers: stage.tiebreakers } : config)
             p.agg_winner = ihwp ? 'home' : 'away'
@@ -322,7 +322,13 @@ export const isHomeWinPair = (pair, config) => {
             }
         }
     } else {
-        if (pair.agg_home_score > pair.agg_away_score) return true
+        if (pair.agg_home_score > pair.agg_away_score) {
+            return true
+        } else if (pair.agg_home_score === pair.agg_away_score) {
+            return pair.agg_home_penalty_score > pair.agg_away_penalty_score
+        } else {
+            return false
+        }
     }
     return false
 }
