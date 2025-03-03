@@ -43,7 +43,7 @@
     {
         "id": "SAC",
         "name": "FC Santa Coloma",
-        "short_name": "Santa Coloma",
+        "short_name": "FC Santa Coloma",
         "team_type_id": "CLUB",
         "nation_id": "AND",
         "parent_team_id": "",
@@ -58,7 +58,7 @@
         "nation_id": "KVX",
         "parent_team_id": "",
         "club_code": "DRI",
-        "logo_filename": "DRI.png",
+        "logo_filename": "FC_Drita.svg.png",
         "official_name": "KF Drita"
     },
     {
@@ -68,18 +68,18 @@
         "nation_id": "SMR",
         "parent_team_id": "",
         "club_code": "LFI",
-        "logo_filename": "LFI.png",
+        "logo_filename": "SP_La_Fiorita_logo.png",
         "official_name": "SP La Fiorita"
     },
     {
         "id": "LRI",
         "name": "Lincoln Red Imps",
-        "short_name": "Lincoln Red Im",
+        "short_name": "Lincoln Red Imps",
         "team_type_id": "CLUB",
         "nation_id": "GIB",
         "parent_team_id": "",
         "club_code": "LRI",
-        "logo_filename": "LRI.png",
+        "logo_filename": "Lincoln_Red_Imps_F.C._Logo.png",
         "official_name": "Lincoln Red Imps FC"
     },
     {
@@ -105,12 +105,12 @@
     },
     {
         "id": "KFS",
-        "name": "Shkendija",
+        "name": "Shkëndija",
         "team_type_id": "CLUB",
         "nation_id": "MKD",
         "parent_team_id": "",
         "club_code": "KFS",
-        "logo_filename": "KFS.png",
+        "logo_filename": "345px-KF_Shkëndija_Logo.svg.png",
         "official_name": "KF Shkëndija"
     },
     {
@@ -120,18 +120,18 @@
         "nation_id": "WAL",
         "parent_team_id": "",
         "club_code": "TNS",
-        "logo_filename": "TNS.png",
+        "logo_filename": "The_New_Saints_FC_logo.svg.png",
         "official_name": "The New Saints FC"
     },
     {
         "id": "SMA",
-        "name": "Suduva Marijampole",
+        "name": "Sūduva",
         "team_type_id": "CLUB",
         "nation_id": "LTU",
         "parent_team_id": "",
         "club_code": "SMA",
-        "logo_filename": "SMA.png",
-        "official_name": "FK Sūduva"
+        "logo_filename": "FK_Suduva_logo.svg.png",
+        "official_name": "FK Sūduva Marijampole"
     },
     {
         "id": "APO",
@@ -150,7 +150,7 @@
         "nation_id": "SVN",
         "parent_team_id": "",
         "club_code": "LJU",
-        "logo_filename": "LJU.png",
+        "logo_filename": "NK_Olimpija_Ljubljana_logo.svg.png",
         "official_name": "NK Olimpija Ljubljana"
     },
     {
@@ -215,13 +215,13 @@
     },
     {
         "id": "VIK",
-        "name": "Vikingur Gota",
+        "name": "Víkingur Gøta",
         "team_type_id": "CLUB",
         "nation_id": "FRO",
         "parent_team_id": "",
         "club_code": "VIK",
-        "logo_filename": "VIK.png",
-        "official_name": "Víkingur"
+        "logo_filename": "Víkingur_Gøta_logo.svg.png",
+        "official_name": "Víkingur Gøta"
     },
     {
         "id": "HJK",
@@ -251,7 +251,7 @@
         "nation_id": "NIR",
         "parent_team_id": "",
         "club_code": "CRS",
-        "logo_filename": "CRS.png",
+        "logo_filename": "Crusaders_F.C._logo.png",
         "official_name": "Crusaders FC"
     },
     {
@@ -261,7 +261,7 @@
         "nation_id": "IRL",
         "parent_team_id": "",
         "club_code": "COR",
-        "logo_filename": "COR.png",
+        "logo_filename": "Cork-City-Football-Club-Crest.png",
         "official_name": "Cork City FC"
     },
     {
@@ -281,7 +281,7 @@
         "nation_id": "ISL",
         "parent_team_id": "",
         "club_code": "VRE",
-        "logo_filename": "VRE.png",
+        "logo_filename": "Valur.png",
         "official_name": "Valur Reykjavík"
     },
     {
@@ -296,12 +296,12 @@
     },
     {
         "id": "KUK",
-        "name": "Kukesi",
+        "name": "Kukësi",
         "team_type_id": "CLUB",
         "nation_id": "ALB",
         "parent_team_id": "",
         "club_code": "KUK",
-        "logo_filename": "KUK.png",
+        "logo_filename": "Kukësi_Club_Logo.svg.png",
         "official_name": "FK Kukësi"
     },
     {
@@ -311,7 +311,7 @@
         "nation_id": "MLT",
         "parent_team_id": "",
         "club_code": "VFC",
-        "logo_filename": "VFC.png",
+        "logo_filename": "Valletta_F.C._logo.png",
         "official_name": "Valletta FC"
     },
     {
@@ -321,7 +321,7 @@
         "nation_id": "EST",
         "parent_team_id": "",
         "club_code": "FTA",
-        "logo_filename": "FC_Flora_logo.svg",
+        "logo_filename": "FC_Flora_logo.svg.png",
         "official_name": "FC Flora Tallinn"
     },
     {
@@ -336,12 +336,12 @@
     },
     {
         "id": "JUR",
-        "name": "Spartaks Jurmala",
+        "name": "Spartaks Jūrmala",
         "team_type_id": "CLUB",
         "nation_id": "LVA",
         "parent_team_id": "",
         "club_code": "JUR",
-        "logo_filename": "JUR.png",
+        "logo_filename": "FK_Spartaks_Jūrmala.svg.png",
         "official_name": "FK Spartaks Jūrmala"
     },
     {
@@ -362,7 +362,7 @@
         "nation_id": "ARM",
         "parent_team_id": "",
         "club_code": "ASH",
-        "logo_filename": "ASH.png",
+        "logo_filename": "Logo_of_FC_Alashkert.png",
         "official_name": "Alashkert FC"
     },
     {
@@ -392,7 +392,7 @@
         "nation_id": "BIH",
         "parent_team_id": "",
         "club_code": "ZRI",
-        "logo_filename": "ZRI.png",
+        "logo_filename": "HŠK_Zrinjski_Mostar.svg.png",
         "official_name": "HŠK Zrinjski"
     },
     {

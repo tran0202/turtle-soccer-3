@@ -3,7 +3,7 @@
     "stages": [
         {
             "name": "Preliminary Round",
-            "type": "knockout",
+            "type": "knockout_",
             "default": true,
             "rounds": [
                 {
@@ -42,6 +42,9 @@
                 {
                     "name": "Preliminary Final",
                     "short_name": "1stP",
+                    "final": true,
+                    "third_place": false,
+                    "championship": false,
                     "eliminate_count": 76,
                     "next_round": "First Qualifying Round",
                     "bye_teams": [
@@ -88,7 +91,8 @@
                             "date": "2018-06-29",
                             "time": "20:30",
                             "stadium": "Victoria Stadium",
-                            "city": "Gibraltar"
+                            "city": "Gibraltar",
+                            "final": true
                         }
                     ]
                 }
@@ -96,12 +100,12 @@
         },
         {
             "name": "First Qualifying Round",
-            "type": "knockout",
+            "type": "pair_",
             "hide_bracket": true,
             "rounds": [
                 {
                     "name": "First Qualifying Round",
-                    "round_type": "knockout2legged",
+                    "round_type": "pair2legged",
                     "eliminate_count": 60,
                     "next_round": "Second Qualifying Round",
                     "bye_teams": [
@@ -116,6 +120,7 @@
                     ],
                     "pairs": [
                         {
+                            "name": "1stQlf01",
                             "matches": [
                                 {
                                     "home_team": "KUT",
@@ -142,6 +147,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf02",
                             "matches": [
                                 {
                                     "home_team": "KFS",
@@ -168,6 +174,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf03",
                             "matches": [
                                 {
                                     "home_team": "SMA",
@@ -194,6 +201,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf04",
                             "matches": [
                                 {
                                     "home_team": "LJU",
@@ -220,6 +228,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf05",
                             "matches": [
                                 {
                                     "home_team": "F91",
@@ -246,6 +255,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf06",
                             "matches": [
                                 {
                                     "home_team": "DRI",
@@ -272,6 +282,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf07",
                             "matches": [
                                 {
                                     "home_team": "VIK",
@@ -298,6 +309,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf08",
                             "matches": [
                                 {
                                     "home_team": "LUD",
@@ -324,6 +336,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf09",
                             "matches": [
                                 {
                                     "home_team": "COR",
@@ -350,6 +363,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf10",
                             "matches": [
                                 {
                                     "home_team": "VRE",
@@ -376,6 +390,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf11",
                             "matches": [
                                 {
                                     "home_team": "KUK",
@@ -402,6 +417,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf12",
                             "matches": [
                                 {
                                     "home_team": "FTA",
@@ -428,6 +444,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf13",
                             "matches": [
                                 {
                                     "home_team": "JUR",
@@ -454,6 +471,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf14",
                             "matches": [
                                 {
                                     "home_team": "ASH",
@@ -480,6 +498,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf15",
                             "matches": [
                                 {
                                     "home_team": "SPT",
@@ -506,6 +525,7 @@
                             ]
                         },
                         {
+                            "name": "1stQlf16",
                             "matches": [
                                 {
                                     "home_team": "AST",

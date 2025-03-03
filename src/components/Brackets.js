@@ -209,10 +209,10 @@ const BracketBox = (props) => {
         (isHomeWinMatch(match) && !match.home_withdrew) || match.shared_bronze || match.match_postponed || match.home_bye ? 'team-name-win' : 'team-name-lose'
     const awayHighlight =
         (!isHomeWinMatch(match) && !match.away_withdrew) || match.shared_bronze || match.match_postponed || match.away_bye ? 'team-name-win' : 'team-name-lose'
-    const home_champion_striped = match.final && isHomeWinMatch(match) ? 'gold' : ''
-    const away_champion_striped = match.final && !isHomeWinMatch(match) ? 'gold' : ''
-    const home_runnerup_striped = match.final && !isHomeWinMatch(match) ? 'silver' : ''
-    const away_runnerup_striped = match.final && isHomeWinMatch(match) ? 'silver' : ''
+    const home_champion_striped = config.championship && match.final && isHomeWinMatch(match) ? 'gold' : ''
+    const away_champion_striped = config.championship && match.final && !isHomeWinMatch(match) ? 'gold' : ''
+    const home_runnerup_striped = config.championship && match.final && !isHomeWinMatch(match) ? 'silver' : ''
+    const away_runnerup_striped = config.championship && match.final && isHomeWinMatch(match) ? 'silver' : ''
     const home_thirdplace_striped = match.third_place && (isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
     const away_thirdplace_striped = match.third_place && (!isHomeWinMatch(match) || match.shared_bronze) ? 'bronze' : ''
     return (
@@ -593,7 +593,7 @@ const BracketTable = (props) => {
             {stage.rounds &&
                 stage.rounds.map((r, index) => {
                     if (r.bracketMatches) {
-                        const roundConfig = { ...config, column_count: stage.rounds.length }
+                        const roundConfig = { ...config, column_count: stage.rounds.length, championship: r.championship }
                         const hookCount = r.bracketMatches.length % 2 === 0 ? r.bracketMatches.length / 2 : (r.bracketMatches.length - 1) / 2
                         if (r.final) {
                             return <BracketFinalCol round={r} config={roundConfig} key={r.name} />

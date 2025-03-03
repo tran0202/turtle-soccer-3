@@ -2022,7 +2022,7 @@
                     "rounds": [
                         {
                             "name": "Relegation play-outs",
-                            "round_type": "pairs2legged",
+                            "round_type": "pair2legged",
                             "tiebreakers": ["points", "goaldifference", "goalsfor"],
                             "round_won_notes": "remained in League C",
                             "round_lost_notes": "were relegated to League D",

@@ -19,7 +19,7 @@ class Pair extends React.Component {
                                                 <div className="h2-ff1">{r.name}</div>
                                             </Col>
                                         </Row>
-                                        {r.round_type !== 'pairs1legged' && (
+                                        {r.round_type !== 'pair1legged' && (
                                             <React.Fragment>
                                                 <PairSummary round={r} config={config} />
                                                 <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />

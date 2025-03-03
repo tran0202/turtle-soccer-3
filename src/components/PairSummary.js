@@ -10,8 +10,8 @@ const PairHeader = (props) => {
             <Col className="col-box-25"></Col>
             <Col className="col-box-10"></Col>
             <Col className="text-center score-no-padding-right col-box-10">1st Leg</Col>
-            {config.round_type !== 'pairs1legged' && <Col className="text-center score-no-padding-right col-box-10">2nd Leg</Col>}
-            {config.round_type !== 'pairs1legged' && <Col className="text-center score-no-padding-right col-box-10">Aggregate</Col>}
+            {config.round_type !== 'pair1legged' && <Col className="text-center score-no-padding-right col-box-10">2nd Leg</Col>}
+            {config.round_type !== 'pair1legged' && <Col className="text-center score-no-padding-right col-box-10">Aggregate</Col>}
             <Col className="col-box-10"></Col>
             <Col className="col-box-25"></Col>
         </Row>
@@ -48,7 +48,7 @@ const PairRow = (props) => {
                         <React.Fragment>Cancelled</React.Fragment>
                     )}
                 </Col>
-                {config.round_type !== 'pairs1legged' && (
+                {config.round_type !== 'pair1legged' && (
                     <Col className="text-center score-no-padding-right col-box-10">
                         {!hasFirstLegOnly && !pair.matches[1].match_cancelled ? (
                             <React.Fragment>
@@ -62,7 +62,7 @@ const PairRow = (props) => {
                         {pair.matches[1] && pair.matches[1].home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                     </Col>
                 )}
-                {config.round_type !== 'pairs1legged' && (
+                {config.round_type !== 'pair1legged' && (
                     <Col className="text-center score-no-padding-right col-box-10">
                         {!hasFirstLegOnly && !pair.matches[0].match_cancelled && (
                             <React.Fragment>

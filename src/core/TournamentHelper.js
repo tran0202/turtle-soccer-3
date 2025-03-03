@@ -200,7 +200,7 @@ export const processRounds = (path, stage, config) => {
             if (r.round_type === 'knockout2legged') {
                 calculatePairAggregateScore(r, config)
                 prepareBracketPairOrder(r)
-            } else if (r.round_type === 'pairs1legged' || r.round_type === 'pairs2legged') {
+            } else if (r.round_type === 'pair1legged' || r.round_type === 'pair2legged') {
                 calculatePairAggregateScore(r, config)
             }
         } else {

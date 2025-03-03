@@ -270,7 +270,7 @@ const MatchesKnockoutRowFinal = (props) => {
     const third_place_matchdays = round.matchdays && round.matchdays.filter((md) => md.third_place)
     const isOlympic = config.competition_id === 'MOFT' || config.competition_id === 'WOFT'
     const thirdPlaceRoundName = isOlympic ? 'Bronze Medal' : 'Third place'
-    const finalRoundName = isOlympic ? 'Gold Medal' : 'Final'
+    const finalRoundName = isOlympic ? 'Gold Medal' : round.name
     return (
         <Row>
             <Col className="mt-3 round-box">
@@ -333,11 +333,7 @@ const MatchesKnockoutRowFinal = (props) => {
 
 const MatchesKnockoutPair = (props) => {
     const { round, config } = props
-    return (
-        <Row>
-            <Col className="mt-3 round-box">{round.pairs && <MatchesPair stage={round} config={config} />}</Col>
-        </Row>
-    )
+    return <React.Fragment>{round.pairs && <MatchesPair stage={round} config={config} />}</React.Fragment>
 }
 
 const MatchesKnockoutRound = (props) => {
@@ -356,8 +352,18 @@ const MatchesKnockoutRound = (props) => {
                     if (r.pairs) {
                         return (
                             <React.Fragment key={r.name}>
-                                <PairSummary round={r} config={config} />
-                                <MatchesKnockoutPair round={r} config={config} />
+                                <Row>
+                                    <Col className="mt-3 round-box">
+                                        <Row>
+                                            <Col>
+                                                <div className="h2-ff1">{r.name}</div>
+                                            </Col>
+                                        </Row>
+                                        <PairSummary round={r} config={config} />
+                                        <Row className="border-bottom-gray4 margin-left-sm margin-top-md" />
+                                        <MatchesKnockoutPair round={r} config={config} />
+                                    </Col>
+                                </Row>
                             </React.Fragment>
                         )
                     }
