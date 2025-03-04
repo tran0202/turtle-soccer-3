@@ -269,8 +269,8 @@ export const calculatePairAggregateScore = (stage, config) => {
                         p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
                 }
             } else {
-                p.agg_home_score = p.matches[0].home_score
-                p.agg_away_score = p.matches[0].away_score
+                p.agg_home_score = p.matches[0].home_score + (p.matches[0].home_extra_score ? p.matches[0].home_extra_score : 0)
+                p.agg_away_score = p.matches[0].away_score + (p.matches[0].away_extra_score ? p.matches[0].away_extra_score : 0)
                 p.agg_home_penalty_score = p.matches[0].home_penalty_score
                 p.agg_away_penalty_score = p.matches[0].away_penalty_score
             }

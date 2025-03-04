@@ -407,7 +407,7 @@
     },
     {
         "id": "SUJ",
-        "name": "Sutjeska Niksic",
+        "name": "Sutjeska",
         "team_type_id": "CLUB",
         "nation_id": "MNE",
         "parent_team_id": "",
@@ -859,7 +859,7 @@
         "nation_id": "KVX",
         "parent_team_id": "",
         "club_code": "FRN",
-        "logo_filename": "FC_Feronikeli.svg",
+        "logo_filename": "FC_Feronikeli.svg.png",
         "official_name": "KF Feronikeli"
     },
     {
@@ -869,7 +869,7 @@
         "nation_id": "POL",
         "parent_team_id": "",
         "club_code": "GLI",
-        "logo_filename": "GKS_Piast_Gliwice.svg",
+        "logo_filename": "GKS_Piast_Gliwice.svg.png",
         "official_name": "Gliwicki Klub Sportowy Piast Gliwice"
     },
     {
@@ -879,7 +879,7 @@
         "nation_id": "SWE",
         "parent_team_id": "",
         "club_code": "AIK",
-        "logo_filename": "AIK.png",
+        "logo_filename": "AIK_logo_355x443.png",
         "official_name": "AIK"
     },
     {
@@ -889,7 +889,7 @@
         "nation_id": "SVN",
         "parent_team_id": "",
         "club_code": "MAR",
-        "logo_filename": "MAR.png",
+        "logo_filename": "NK_Maribor.svg.png",
         "official_name": "NK Maribor"
     },
     {
@@ -909,7 +909,7 @@
         "nation_id": "ALB",
         "parent_team_id": "",
         "club_code": "TIR",
-        "logo_filename": "Partizani_Tirana_logo.svg",
+        "logo_filename": "Partizani_Tirana_Club_Logo.svg.png",
         "official_name": "FK Partizani Tirana"
     },
     {
@@ -939,7 +939,7 @@
         "nation_id": "BIH",
         "parent_team_id": "",
         "club_code": "SAR",
-        "logo_filename": "SAR.png",
+        "logo_filename": "FK_Sarajevo_logo.svg.png",
         "official_name": "FK Sarajevo"
     },
     {
@@ -949,28 +949,42 @@
         "nation_id": "LVA",
         "parent_team_id": "",
         "club_code": "RIG",
-        "logo_filename": "RIG.png",
+        "logo_filename": "Riga_Football_Club.svg.png",
         "official_name": "Riga FC"
     },
     {
         "id": "NOM",
-        "name": "Nomme Kalju",
+        "name": "Nõmme Kalju",
         "team_type_id": "CLUB",
         "nation_id": "EST",
         "parent_team_id": "",
         "club_code": "NOM",
-        "logo_filename": "NOM.png",
+        "logo_filename": "Nõmme_Kalju_FC_logo_2024.png",
         "official_name": "Nõmme Kalju FC"
     },
     {
         "id": "SAB",
-        "name": "Saburtalo Tbilisi",
+        "name": "Iberia",
         "team_type_id": "CLUB",
         "nation_id": "GEO",
         "parent_team_id": "",
         "club_code": "SAB",
         "logo_filename": "Saburtalo_Tbilisi_Logo.png",
-        "official_name": "FC Saburtalo Tbilisi"
+        "official_name": "FC Iberia 1999",
+        "start_date": "2024-02-27",
+        "end_date": ""
+    },
+    {
+        "id": "SAB-2024",
+        "name": "Saburtalo Tbilisi",
+        "team_type_id": "CLUB",
+        "nation_id": "GEO",
+        "parent_team_id": "SAB",
+        "club_code": "SAB-2024",
+        "logo_filename": "Saburtalo_Tbilisi_Logo.png",
+        "official_name": "FC Saburtalo Tbilisi",
+        "start_date": "1999-08-20",
+        "end_date": "2024-02-27"
     },
     {
         "id": "ARA",
@@ -979,7 +993,7 @@
         "nation_id": "ARM",
         "parent_team_id": "",
         "club_code": "ARA",
-        "logo_filename": "FC_Ararat-Armenia_logo.svg",
+        "logo_filename": "FC_Ararat-Armenia_logo.svg.png",
         "official_name": "FC Ararat-Armenia"
     },
     {
@@ -989,17 +1003,17 @@
         "nation_id": "NIR",
         "parent_team_id": "",
         "club_code": "LNF",
-        "logo_filename": "Linfield.png",
+        "logo_filename": "Linfield_F.C._(badge).png",
         "official_name": "Linfield FC"
     },
     {
         "id": "HBT",
-        "name": "HB Torshavn",
+        "name": "HB",
         "team_type_id": "CLUB",
         "nation_id": "FRO",
         "parent_team_id": "",
         "club_code": "HBT",
-        "logo_filename": "Havnar_Bóltfelag_logo.svg",
+        "logo_filename": "Havnar_Bóltfelag_logo.svg.png",
         "official_name": "Havnar Bóltfelag"
     },
     {
@@ -1155,7 +1169,7 @@
         "nation_id": "GIB",
         "parent_team_id": "",
         "club_code": "EUR",
-        "logo_filename": "EUR.png",
+        "logo_filename": "Europa_FC_logo.png",
         "official_name": "Europa FC"
     },
     {
@@ -1240,12 +1254,12 @@
     },
     {
         "id": "KIK",
-        "name": "KI Klaksvik",
+        "name": "KÍ",
         "team_type_id": "CLUB",
         "nation_id": "FRO",
         "parent_team_id": "",
         "club_code": "KIK",
-        "logo_filename": "KIK.png",
+        "logo_filename": "KÍ_Klaksvík_logo.svg.png",
         "official_name": "KÍ Klaksvík"
     },
     {
@@ -1255,7 +1269,7 @@
         "nation_id": "SMR",
         "parent_team_id": "",
         "club_code": "TRF",
-        "logo_filename": "TRF.png",
+        "logo_filename": "Tre_Fiori_FC_logo.png",
         "official_name": "SP Tre Fiori"
     },
     {
@@ -1345,7 +1359,7 @@
         "nation_id": "LUX",
         "parent_team_id": "",
         "club_code": "FOL",
-        "logo_filename": "FOL.png",
+        "logo_filename": "Fola_Esch_logo.svg.png",
         "official_name": "CS Fola Esch"
     },
     {
@@ -1395,7 +1409,7 @@
         "nation_id": "GEO",
         "parent_team_id": "",
         "club_code": "TBI",
-        "logo_filename": "TBI.png",
+        "logo_filename": "FC_Dinamo_Tbilisi_logo.png",
         "official_name": "FC Dinamo Tbilisi"
     },
     {
@@ -1550,12 +1564,12 @@
     },
     {
         "id": "BUP",
-        "name": "Buducnost Podgorica",
+        "name": "Budućnost Podgorica",
         "team_type_id": "CLUB",
         "nation_id": "MNE",
         "parent_team_id": "",
         "club_code": "BUP",
-        "logo_filename": "BUP.png",
+        "logo_filename": "Fk_Buducnost_Logo.png",
         "official_name": "FK Budućnost Podgorica"
     },
     {
@@ -1690,12 +1704,12 @@
     },
     {
         "id": "CQN",
-        "name": "Connah's Quay",
+        "name": "Connah's Quay Nomads",
         "team_type_id": "CLUB",
         "nation_id": "WAL",
         "parent_team_id": "",
         "club_code": "CQN",
-        "logo_filename": "CQN.png",
+        "logo_filename": "Connahs_Quay_Nomads_FC_logo.svg.png",
         "official_name": "Connah's Quay Nomads FC"
     },
     {
@@ -2115,7 +2129,7 @@
         "nation_id": "FIN",
         "parent_team_id": "",
         "club_code": "KUP",
-        "logo_filename": "KUP.png",
+        "logo_filename": "KuPS_logo.svg.png",
         "official_name": "KuPS Kuopio"
     },
     {
@@ -2305,7 +2319,7 @@
         "nation_id": "BLR",
         "parent_team_id": "",
         "club_code": "DBR",
-        "logo_filename": "DBR.png",
+        "logo_filename": "FC_Dynamo_Brest_logo.svg.png",
         "official_name": "FC Dynamo Brest"
     },
     {
@@ -2350,12 +2364,12 @@
     },
     {
         "id": "DJU",
-        "name": "Djurgardens IF",
+        "name": "Djurgårdens IF",
         "team_type_id": "CLUB",
         "nation_id": "SWE",
         "parent_team_id": "",
         "club_code": "DJU",
-        "logo_filename": "DJU.png",
+        "logo_filename": "Djurgardens_IF_logo.svg.png",
         "official_name": "Djurgårdens IF"
     },
     {
@@ -2754,12 +2768,12 @@
     },
     {
         "id": "KRR",
-        "name": "KR Reykjavik",
+        "name": "KR",
         "team_type_id": "CLUB",
         "nation_id": "ISL",
         "parent_team_id": "",
         "club_code": "KRR",
-        "logo_filename": "KR_Reykjavik.png",
+        "logo_filename": "KR_Reykjavík.png",
         "official_name": "Knattspyrnufélag Reykjavíkur"
     },
     {
@@ -3480,12 +3494,12 @@
     {
         "id": "ICE",
         "name": "Inter Club d'Escaldes",
-        "short_name": "Inter Escaldes",
+        "short_name": "Inter Club d'Escaldes",
         "team_type_id": "CLUB",
         "nation_id": "AND",
         "parent_team_id": "",
         "club_code": "ICE",
-        "logo_filename": "LogoInter2019.jpg",
+        "logo_filename": "Inter_d'Escaldes_logo.png",
         "official_name": "Inter Club d'Escaldes"
     },
     {
@@ -3505,7 +3519,7 @@
         "nation_id": "MKD",
         "parent_team_id": "",
         "club_code": "SLK",
-        "logo_filename": "FK_Sileks_logo.svg",
+        "logo_filename": "FK_Sileks_logo.svg.png",
         "official_name": "FK Sileks"
     },
     {
@@ -3630,12 +3644,12 @@
     },
     {
         "id": "NKC",
-        "name": "NK Celje",
+        "name": "Celje",
         "team_type_id": "CLUB",
         "nation_id": "SVN",
         "parent_team_id": "",
         "club_code": "NKC",
-        "logo_filename": "NK_Celje_logo.svg",
+        "logo_filename": "NK_Celje.png",
         "official_name": "NK Celje"
     },
     {
@@ -3645,7 +3659,7 @@
         "nation_id": "CRO",
         "parent_team_id": "",
         "club_code": "LZA",
-        "logo_filename": "NK_Lokomotiva_Zagreb.svg",
+        "logo_filename": "NK_Lokomotiva_Zagreb.svg.png",
         "official_name": "NK Lokomotiva Zagreb"
     },
     {
@@ -3710,12 +3724,12 @@
     },
     {
         "id": "KFT",
-        "name": "KF Tirana",
+        "name": "Tirana",
         "team_type_id": "CLUB",
         "nation_id": "ALB",
         "parent_team_id": "",
         "club_code": "KFT",
-        "logo_filename": "Tirana_Club_Logo.svg",
+        "logo_filename": "Tirana_Club_Logo.svg.png",
         "official_name": "Klubi i Futbollit Tirana"
     },
     {

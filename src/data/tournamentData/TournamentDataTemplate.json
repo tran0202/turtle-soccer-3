@@ -59,7 +59,7 @@
                         { "id": "SAR" },
                         { "id": "CEL" },
                         { "id": "SHE" },
-                        { "id": "SAB" },
+                        { "id": "SAB-2024" },
                         { "id": "F91" },
                         { "id": "VFC" },
                         { "id": "LNF" },
@@ -180,7 +180,7 @@
                         },
                         {
                             "home_team": "SHE",
-                            "away_team": "SAB",
+                            "away_team": "SAB-2024",
                             "home_score": 0,
                             "away_score": 3,
                             "date": "2019-07-10",
@@ -361,7 +361,7 @@
                             "city": "Glasgow"
                         },
                         {
-                            "home_team": "SAB",
+                            "home_team": "SAB-2024",
                             "away_team": "SHE",
                             "home_score": 1,
                             "away_score": 3,
@@ -514,7 +514,7 @@
                             "path": "Champions"
                         },
                         {
-                            "home_team": "SAB",
+                            "home_team": "SAB-2024",
                             "away_team": "DZA",
                             "home_score": 0,
                             "away_score": 2,
@@ -665,7 +665,7 @@
                         },
                         {
                             "home_team": "DZA",
-                            "away_team": "SAB",
+                            "away_team": "SAB-2024",
                             "home_score": 3,
                             "away_score": 0,
                             "date": "2019-07-30",

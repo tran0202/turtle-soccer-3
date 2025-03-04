@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, PenaltyTooltip } from '../core/TooltipHelper'
+import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, PenaltyTooltip, AwardedTooltip } from '../core/TooltipHelper'
 
 const MatchesPairRow = (props) => {
     const { pair, config, last } = props
@@ -163,6 +163,7 @@ const MatchesPairRow = (props) => {
                                         {m.home_walkover && (
                                             <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
                                         )}
+                                        {m.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
                                     </Col>
                                     <Col className="col-box-10">{getTeamFlagId(m.home_team, config)}</Col>
                                     <Col className="text-center score-no-padding-right col-box-10">
@@ -195,6 +196,7 @@ const MatchesPairRow = (props) => {
                                         {m.away_walkover && (
                                             <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
                                         )}
+                                        {m.away_awarded && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
                                     </Col>
                                 </Row>
                                 {(isSecondLeg || isThirdLeg) && (
@@ -249,7 +251,7 @@ class MatchesPair extends React.Component {
                             })}
                         {paths &&
                             paths.map((p2) => {
-                                return <MatchesPairPath path={p2} config={new_config} />
+                                return <MatchesPairPath key={p2.name} path={p2} config={new_config} />
                             })}
                     </Col>
                 </Row>

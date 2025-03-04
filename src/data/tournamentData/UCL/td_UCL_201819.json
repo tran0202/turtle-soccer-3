@@ -1238,7 +1238,7 @@
                 },
                 {
                     "name": "Play-off Round",
-                    "round_type": "knockout2legged",
+                    "round_type": "pair2legged",
                     "eliminate_count": 32,
                     "next_round": "Group Stage",
                     "paths": [
