@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip } from '../core/TooltipHelper'
+import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip, ByeTooltip } from '../core/TooltipHelper'
 
 const PairHeader = (props) => {
     const { config } = props
@@ -24,6 +24,10 @@ const PairRow = (props) => {
     const hasFirstLegOnly = pair.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
     const team1 = pair.matches[0].home_team
     const team2 = pair.matches[0].away_team
+    const homeBye = pair.matches[0].home_bye
+    const awayBye = pair.matches[0].away_bye
+    const byeNotes = pair.matches[0].bye_notes
+    const byeMatch = homeBye || awayBye
     const match1HomeScore = pair.matches[0].home_score
     const match1AwayScore = pair.matches[0].away_score
     const match2HomeExtraScore = pair.matches[1] && pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
@@ -32,20 +36,24 @@ const PairRow = (props) => {
     const match2AwayScore = (pair.matches[1] ? pair.matches[1].away_score : 0) + match2AwayExtraScore
     const match2HomePenaltyScore = pair.matches[1] ? pair.matches[1].home_penalty_score : 0
     const match2AwayPenaltyScore = pair.matches[1] ? pair.matches[1].away_penalty_score : 0
-    const pairHomeHighlight = pair.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
-    const pairAwayHighlight = pair.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
+    const pairHomeHighlight = byeMatch ? '' : pair.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
+    const pairAwayHighlight = byeMatch ? '' : pair.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
     return (
         <React.Fragment>
             <Row className={`no-gutters ranking-tbl padding-tb-sm ${!last ? 'team-row' : ''}`}>
-                <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>{getTeamName(team1, config)}</Col>
+                <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>
+                    {getTeamName(team1, config)} {hasFirstLegOnly && homeBye && <ByeTooltip target={`${team1}byeTooltip`} notes={byeNotes} anchor="(bye)" />}
+                </Col>
                 <Col className="col-box-10 text-end">{getTeamFlagId(team1, config)}</Col>
                 <Col className="text-center score-no-padding-right col-box-10">
-                    {!pair.matches[0].match_cancelled ? (
+                    {!pair.matches[0].match_cancelled && !byeMatch ? (
                         <React.Fragment>
                             {match1HomeScore} - {match1AwayScore}
                         </React.Fragment>
-                    ) : (
+                    ) : pair.matches[0].match_cancelled ? (
                         <React.Fragment>Cancelled</React.Fragment>
+                    ) : (
+                        <React.Fragment></React.Fragment>
                     )}
                 </Col>
                 {config.round_type !== 'pair1legged' && (
@@ -82,7 +90,9 @@ const PairRow = (props) => {
                         )}
                     </Col>
                 )}
-                <Col className="col-box-10 text-start">{getTeamFlagId(team2, config)}</Col>
+                <Col className="col-box-10 text-start">
+                    {getTeamFlagId(team2, config)} {hasFirstLegOnly && awayBye && <ByeTooltip target={`${team2}byeTooltip`} notes={byeNotes} anchor="(bye)" />}
+                </Col>
                 <Col className={`col-box-25 text-start ${pairAwayHighlight}`}>{getTeamName(team2, config)}</Col>
             </Row>
             {!last && <Row className="border-bottom-gray5 margin-left-sm margin-top-sm" />}
@@ -120,7 +130,7 @@ class PairSummary extends React.Component {
                     })}
                 {round.paths &&
                     round.paths.map((p) => {
-                        return <PairPath path={p} config={new_config} />
+                        return <PairPath key={p.name} path={p} config={new_config} />
                     })}
             </React.Fragment>
         )

@@ -3,755 +3,1415 @@
     "stages": [
         {
             "name": "Preliminary Round",
-            "type": "knockout",
+            "type": "knockout_",
             "rounds": [
                 {
                     "name": "Preliminary Semi-finals",
                     "short_name": "1/2P",
                     "eliminate_count": 77,
                     "next_round": "Preliminary Final",
-                    "teams": [{ "id": "TRF" }, { "id": "LNF" }, { "id": "DRI" }, { "id": "ICE" }],
+                    "teams": [{ "id": "FOG" }, { "id": "PRI" }, { "id": "HBT" }, { "id": "ICE" }],
                     "matches": [
                         {
-                            "home_team": "TRF",
-                            "away_team": "LNF",
+                            "home_team": "FOG",
+                            "away_team": "PRI",
                             "home_score": 0,
                             "away_score": 2,
-                            "date": "2020-08-08",
-                            "time": "15:00",
-                            "stadium": "Colovray Stadium",
-                            "city": "Nyon (Switzerland)",
-                            "bracket_order": 2
+                            "date": "2021-06-22",
+                            "time": "20:00",
+                            "stadium": "Elbasan Arena",
+                            "city": "Elbasan",
+                            "bracket_order": 1
                         },
                         {
-                            "home_team": "DRI",
+                            "home_team": "HBT",
                             "away_team": "ICE",
-                            "home_score": 2,
+                            "home_score": 0,
                             "away_score": 1,
-                            "date": "2020-08-08",
-                            "time": "19:30",
-                            "stadium": "Colovray Stadium",
-                            "city": "Nyon (Switzerland)",
-                            "bracket_order": 1
+                            "date": "2021-06-22",
+                            "time": "20:00",
+                            "stadium": "Niko Dovana Stadium",
+                            "city": "Durrës",
+                            "bracket_order": 2
                         }
                     ]
                 },
                 {
                     "name": "Preliminary Final",
                     "short_name": "1stP",
+                    "final": true,
+                    "third_place": false,
+                    "championship": false,
                     "eliminate_count": 76,
                     "next_round": "First Qualifying Round",
-                    "bye_teams": [
-                        { "id": "FER" },
-                        { "id": "DJU" },
-                        { "id": "CEL" },
-                        { "id": "KRR" },
-                        { "id": "WAR" },
-                        { "id": "SHE" },
-                        { "id": "FOL" },
-                        { "id": "CQN" },
-                        { "id": "SAR" },
-                        { "id": "CZV" },
-                        { "id": "EUR" },
-                        { "id": "BUP" },
-                        { "id": "LUD" },
-                        { "id": "ARA" },
-                        { "id": "OMO" },
-                        { "id": "FLO" },
-                        { "id": "CFR" },
-                        { "id": "MTA" },
-                        { "id": "RIG" },
-                        { "id": "QAR" },
-                        { "id": "SLK" },
-                        { "id": "TBI" },
-                        { "id": "KFT" },
-                        { "id": "DBR" },
-                        { "id": "AST" },
-                        { "id": "MOL" },
-                        { "id": "KUP" },
-                        { "id": "FTA" },
-                        { "id": "SMA" },
-                        { "id": "NKC" },
-                        { "id": "DUN" },
-                        { "id": "KIK" },
-                        { "id": "SKS" }
-                    ],
+                    "bye_teams": [],
                     "matches": [
                         {
-                            "home_team": "DRI",
-                            "away_team": "LNF",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2020-08-11",
-                            "time": "18:00",
-                            "stadium": "Colovray Stadium",
-                            "city": "Nyon (Switzerland)",
-                            "away_awarded": true,
-                            "awarded_notes": "Awarded: The Drita vs Linfield match could not be played due to two players from Drita testing positive for SARS-2 coronavirus and the whole team being put into quarantine by the Swiss authorities. Linfield were subsequently awarded a technical 3–0 victory by UEFA."
+                            "home_team": "PRI",
+                            "away_team": "ICE",
+                            "home_score": 2,
+                            "away_score": 0,
+                            "date": "2021-06-25",
+                            "time": "20:00",
+                            "stadium": "Elbasan Arena",
+                            "city": "Elbasan",
+                            "final": true
                         }
                     ]
                 }
             ]
         },
         {
-            "name": "First Qualifying Round",
-            "type": "knockout",
+            "name": "Qualifying Rounds",
+            "type": "pair_",
             "hide_bracket": true,
             "rounds": [
                 {
                     "name": "First Qualifying Round",
+                    "round_type": "pair2legged",
+                    "eliminate_count": 60,
                     "next_round": "Second Qualifying Round",
-                    "eliminate_count": 59,
-                    "bye_teams": [
-                        { "id": "DZA" },
-                        { "id": "YBO" },
-                        { "id": "FCM" },
-                        { "id": "AZA" },
-                        { "id": "VPL" },
-                        { "id": "PKT" },
-                        { "id": "BES" },
-                        { "id": "LZA" },
-                        { "id": "RAV" }
-                    ],
-                    "matches": [
-                        {
-                            "home_team": "FER",
-                            "away_team": "DJU",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2020-08-19",
-                            "time": "19:00",
-                            "stadium": "Groupama Arena",
-                            "city": "Budapest"
-                        },
-                        {
-                            "home_team": "CEL",
-                            "away_team": "KRR",
-                            "home_score": 6,
-                            "away_score": 0,
-                            "date": "2020-08-18",
-                            "time": "20:45",
-                            "stadium": "Celtic Park",
-                            "city": "Glasgow"
-                        },
-                        {
-                            "home_team": "WAR",
-                            "away_team": "LNF",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2020-08-18",
-                            "time": "19:00",
-                            "stadium": "Polish Army Stadium",
-                            "city": "Warsaw"
-                        },
-                        {
-                            "home_team": "SHE",
-                            "away_team": "FOL",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2020-08-19",
-                            "time": "20:00",
-                            "stadium": "Sheriff Stadium",
-                            "city": "Tiraspol"
-                        },
-                        {
-                            "home_team": "CQN",
-                            "away_team": "SAR",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2020-08-19",
-                            "time": "20:00",
-                            "stadium": "Cardiff City Stadium",
-                            "city": "Cardiff"
-                        },
-                        {
-                            "home_team": "CZV",
-                            "away_team": "EUR",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "2020-08-18",
-                            "time": "21:00",
-                            "stadium": "Red Star Stadium",
-                            "city": "Belgrade"
-                        },
-                        {
-                            "home_team": "BUP",
-                            "away_team": "LUD",
-                            "home_score": 1,
-                            "away_score": 3,
-                            "date": "2020-08-19",
-                            "time": "20:00",
-                            "stadium": "City Stadium",
-                            "city": "Podgorica"
-                        },
-                        {
-                            "home_team": "ARA",
-                            "away_team": "OMO",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "home_extra_score": 0,
-                            "away_extra_score": 1,
-                            "date": "2020-08-19",
-                            "time": "17:00",
-                            "stadium": "Football Academy Stadium",
-                            "city": "Yerevan"
-                        },
-                        {
-                            "home_team": "FLO",
-                            "away_team": "CFR",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2020-08-19",
-                            "time": "21:00",
-                            "stadium": "Centenary Stadium",
-                            "city": "Ta' Qali"
-                        },
-                        {
-                            "home_team": "MTA",
-                            "away_team": "RIG",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2020-08-19",
-                            "time": "19:00",
-                            "stadium": "Bloomfield Stadium",
-                            "city": "Tel Aviv"
-                        },
-                        {
-                            "home_team": "QAR",
-                            "away_team": "SLK",
-                            "home_score": 4,
-                            "away_score": 0,
-                            "date": "2020-08-18",
-                            "time": "18:00",
-                            "stadium": "Tofiq Bahramov Republican Stadium",
-                            "city": "Baku"
-                        },
-                        {
-                            "home_team": "TBI",
-                            "away_team": "KFT",
-                            "home_score": 0,
-                            "away_score": 2,
-                            "date": "2020-08-19",
-                            "time": "19:00",
-                            "stadium": "Boris Paichadze Dinamo Arena",
-                            "city": "Tbilisi"
-                        },
-                        {
-                            "home_team": "DBR",
-                            "away_team": "AST",
-                            "home_score": 6,
-                            "away_score": 3,
-                            "date": "2020-08-18",
-                            "time": "20:00",
-                            "stadium": "Regional Sport Complex",
-                            "city": "Brest"
-                        },
-                        {
-                            "home_team": "MOL",
-                            "away_team": "KUP",
-                            "home_score": 5,
-                            "away_score": 0,
-                            "date": "2020-08-19",
-                            "time": "18:00",
-                            "stadium": "Aker Stadion",
-                            "city": "Molde"
-                        },
-                        {
-                            "home_team": "FTA",
-                            "away_team": "SMA",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "home_extra_score": 0,
-                            "away_extra_score": 0,
-                            "home_penalty_score": 2,
-                            "away_penalty_score": 4,
-                            "date": "2020-08-19",
-                            "time": "18:30",
-                            "stadium": "A. Le Coq Arena",
-                            "city": "Tallinn"
-                        },
-                        {
-                            "home_team": "NKC",
-                            "away_team": "DUN",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2020-08-19",
-                            "time": "19:00",
-                            "stadium": "Szusza Ferenc Stadion",
-                            "city": "Budapest"
-                        },
-                        {
-                            "home_team": "KIK",
-                            "away_team": "SKS",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2020-08-21",
-                            "time": "18:00",
-                            "stadium": "Við Djúpumýrar",
-                            "city": "Klaksvík",
-                            "home_awarded": true,
-                            "awarded_notes": "Awarded: The KÍ v Slovan Bratislava match was postponed to 21 August 2020 due to one staff member from Slovan Bratislava testing positive for SARS-2 coronavirus and the whole team being put into quarantine by the Faroese authorities. On 21 August, the match could not be played due to one player from Slovan Bratislava testing positive for SARS-2 coronavirus and the whole second team being put into quarantine by the Faroese authorities. KÍ were subsequently awarded a technical 3–0 victory by UEFA according to the regulations related to COVID-19."
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Second Qualifying Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
-                {
-                    "name": "Second Qualifying Round",
-                    "next_round": "Third Qualifying Round",
-                    "eliminate_count": 46,
-                    "bye_teams": [{ "id": "SLB" }, { "id": "DYK" }, { "id": "GNT" }],
-                    "matches": [
-                        {
-                            "home_team": "CFR",
-                            "away_team": "DZA",
-                            "home_score": 2,
-                            "away_score": 2,
-                            "home_extra_score": 0,
-                            "away_extra_score": 0,
-                            "home_penalty_score": 5,
-                            "away_penalty_score": 6,
-                            "date": "2020-08-26",
-                            "time": "20:00",
-                            "stadium": "Stadionul Dr. Constantin Rădulescu",
-                            "city": "Cluj-Napoca",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "YBO",
-                            "away_team": "KIK",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2020-08-26",
-                            "time": "20:15",
-                            "stadium": "Stadion Wankdorf",
-                            "city": "Bern",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "CEL",
-                            "away_team": "FER",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2020-08-26",
-                            "time": "20:45",
-                            "stadium": "Celtic Park",
-                            "city": "Glasgow",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "SMA",
-                            "away_team": "MTA",
-                            "home_score": 0,
-                            "away_score": 3,
-                            "date": "2020-08-26",
-                            "time": "18:00",
-                            "stadium": "Sūduva Stadium",
-                            "city": "Marijampolė",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "WAR",
-                            "away_team": "OMO",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "home_extra_score": 0,
-                            "away_extra_score": 2,
-                            "date": "2020-08-26",
-                            "time": "20:00",
-                            "stadium": "Polish Army Stadium",
-                            "city": "Warsaw",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "NKC",
-                            "away_team": "MOL",
-                            "home_score": 1,
-                            "away_score": 2,
-                            "date": "2020-08-26",
-                            "time": "18:00",
-                            "stadium": "Stadion Z'dežele",
-                            "city": "Celje",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "LUD",
-                            "away_team": "FCM",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2020-08-26",
-                            "time": "19:30",
-                            "stadium": "Huvepharma Arena",
-                            "city": "Razgrad",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "DBR",
-                            "away_team": "SAR",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2020-08-26",
-                            "time": "20:00",
-                            "stadium": "Regional Sport Complex",
-                            "city": "Brest",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "QAR",
-                            "away_team": "SHE",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2020-08-26",
-                            "time": "18:00",
-                            "stadium": "Tofiq Bahramov Republican Stadium",
-                            "city": "Baku",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "KFT",
-                            "away_team": "CZV",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2020-08-25",
-                            "time": "20:00",
-                            "stadium": "Arena Kombëtare",
-                            "city": "Tirana",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "AZA",
-                            "away_team": "VPL",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "home_extra_score": 2,
-                            "away_extra_score": 0,
-                            "date": "2020-08-26",
-                            "time": "16:30",
-                            "stadium": "AFAS Stadion",
-                            "city": "Alkmaar",
-                            "path": "League"
-                        },
-                        {
-                            "home_team": "PKT",
-                            "away_team": "BES",
-                            "home_score": 3,
-                            "away_score": 1,
-                            "date": "2020-08-25",
-                            "time": "20:00",
-                            "stadium": "Toumba Stadium",
-                            "city": "Thessaloniki",
-                            "path": "League"
-                        },
-                        {
-                            "home_team": "LZA",
-                            "away_team": "RAV",
-                            "home_score": 0,
-                            "away_score": 1,
-                            "date": "2020-08-26",
-                            "time": "19:00",
-                            "stadium": "Stadion Kranjčevićeva",
-                            "city": "Zagreb",
-                            "path": "League"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Third Qualifying Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
-                {
-                    "name": "Third Qualifying Round",
-                    "next_round": "Play-off Round",
-                    "eliminate_count": 38,
-                    "bye_teams": [{ "id": "SLP" }, { "id": "RBS" }, { "id": "OLY" }, { "id": "KRA" }],
-                    "matches": [
-                        {
-                            "home_team": "FER",
-                            "away_team": "DZA",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2020-09-16",
-                            "time": "19:00",
-                            "stadium": "Groupama Arena",
-                            "city": "Budapest",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "QAR",
-                            "away_team": "MOL",
-                            "home_score": 0,
-                            "away_score": 0,
-                            "home_extra_score": 0,
-                            "away_extra_score": 0,
-                            "home_penalty_score": 5,
-                            "away_penalty_score": 6,
-                            "date": "2020-09-16",
-                            "time": "19:00",
-                            "stadium": "AEK Arena – Georgios Karapatakis",
-                            "city": "Larnaca (Cyprus)",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "OMO",
-                            "away_team": "CZV",
-                            "home_score": 1,
-                            "away_score": 1,
-                            "home_extra_score": 0,
-                            "away_extra_score": 0,
-                            "home_penalty_score": 4,
-                            "away_penalty_score": 2,
-                            "date": "2020-09-16",
-                            "time": "17:00",
-                            "stadium": "GSP Stadium",
-                            "city": "Nicosia",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "FCM",
-                            "away_team": "YBO",
-                            "home_score": 3,
-                            "away_score": 0,
-                            "date": "2020-09-16",
-                            "time": "20:30",
-                            "stadium": "MCH Arena",
-                            "city": "Herning",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "MTA",
-                            "away_team": "DBR",
-                            "home_score": 1,
-                            "away_score": 0,
-                            "date": "2020-09-16",
-                            "time": "19:00",
-                            "stadium": "Bloomfield Stadium",
-                            "city": "Tel Aviv",
-                            "path": "Champions"
-                        },
-                        {
-                            "home_team": "PKT",
-                            "away_team": "SLB",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2020-09-15",
-                            "time": "20:00",
-                            "stadium": "Toumba Stadium",
-                            "city": "Thessaloniki",
-                            "path": "League"
-                        },
-                        {
-                            "home_team": "DYK",
-                            "away_team": "AZA",
-                            "home_score": 2,
-                            "away_score": 0,
-                            "date": "2020-09-15",
-                            "time": "19:00",
-                            "stadium": "NSC Olimpiyskiy",
-                            "city": "Kyiv",
-                            "path": "League"
-                        },
-                        {
-                            "home_team": "GNT",
-                            "away_team": "RAV",
-                            "home_score": 2,
-                            "away_score": 1,
-                            "date": "2020-09-15",
-                            "time": "20:30",
-                            "stadium": "Ghelamco Arena",
-                            "city": "Ghent",
-                            "path": "League"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Play-off Round",
-            "type": "knockout",
-            "multiple_paths": true,
-            "hide_bracket": true,
-            "rounds": [
-                {
-                    "name": "Play-off Round",
-                    "round_type": "knockout2legged",
-                    "eliminate_count": 32,
-                    "next_round": "Group Stage",
+                    "bye_teams": [],
                     "pairs": [
                         {
+                            "name": "1stQlf01",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "FCM",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-09-22",
-                                    "time": "21:00",
-                                    "stadium": "Sinobo Stadium",
-                                    "city": "Prague",
-                                    "path": "Champions",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "FCM",
-                                    "away_team": "SLP",
-                                    "home_score": 4,
-                                    "away_score": 1,
-                                    "date": "2020-09-30",
-                                    "time": "21:00",
-                                    "stadium": "MCH Arena",
-                                    "city": "Herning",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "MTA",
-                                    "away_team": "RBS",
-                                    "home_score": 1,
+                                    "home_team": "FOL",
+                                    "away_team": "LRI",
+                                    "home_score": 2,
                                     "away_score": 2,
-                                    "date": "2020-09-22",
-                                    "time": "21:00",
-                                    "stadium": "Bloomfield Stadium",
-                                    "city": "Tel Aviv",
-                                    "path": "Champions",
+                                    "date": "2021-07-06",
+                                    "time": "19:30",
+                                    "stadium": "Stade Émile Mayrisch",
+                                    "city": "Esch-sur-Alzette",
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "RBS",
-                                    "away_team": "MTA",
-                                    "home_score": 3,
-                                    "away_score": 1,
-                                    "date": "2020-09-30",
-                                    "time": "21:00",
-                                    "stadium": "Stadion Wals-Siezenheim",
-                                    "city": "Wals-Siezenheim",
-                                    "path": "Champions",
+                                    "home_team": "LRI",
+                                    "away_team": "FOL",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2021-07-13",
+                                    "time": "18:00",
+                                    "stadium": "Victoria Stadium",
+                                    "city": "Gibraltar",
                                     "matchday": "secondleg"
                                 }
                             ]
                         },
                         {
+                            "name": "1stQlf02",
                             "matches": [
                                 {
-                                    "home_team": "OLY",
-                                    "away_team": "OMO",
+                                    "home_team": "SKS",
+                                    "away_team": "SHR",
                                     "home_score": 2,
                                     "away_score": 0,
-                                    "date": "2020-09-23",
-                                    "time": "21:00",
-                                    "stadium": "Karaiskakis Stadium",
-                                    "city": "Piraeus",
-                                    "path": "Champions",
+                                    "date": "2021-07-07",
+                                    "time": "18:30",
+                                    "stadium": "Tehelné pole",
+                                    "city": "Bratislava",
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "OMO",
-                                    "away_team": "OLY",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-09-29",
+                                    "home_team": "SHR",
+                                    "away_team": "SKS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2021-07-13",
                                     "time": "21:00",
-                                    "stadium": "GSP Stadium",
-                                    "city": "Nicosia",
-                                    "path": "Champions",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Dublin",
                                     "matchday": "secondleg"
                                 }
                             ]
                         },
                         {
+                            "name": "1stQlf03",
                             "matches": [
                                 {
-                                    "home_team": "MOL",
-                                    "away_team": "FER",
-                                    "home_score": 3,
-                                    "away_score": 3,
-                                    "date": "2020-09-23",
-                                    "time": "21:00",
-                                    "stadium": "Aker Stadion",
-                                    "city": "Molde",
-                                    "path": "Champions",
+                                    "home_team": "MAL",
+                                    "away_team": "RIG",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2021-07-07",
+                                    "time": "19:00",
+                                    "stadium": "Stadion",
+                                    "city": "Malmö",
                                     "matchday": "firstleg"
                                 },
+                                {
+                                    "home_team": "RIG",
+                                    "away_team": "MAL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2021-07-13",
+                                    "time": "18:00",
+                                    "stadium": "Skonto Stadium",
+                                    "city": "Riga",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf04",
+                            "matches": [
+                                {
+                                    "home_team": "BOD",
+                                    "away_team": "WAR",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2021-07-07",
+                                    "time": "18:00",
+                                    "stadium": "Aspmyra Stadion",
+                                    "city": "Bodø",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "WAR",
+                                    "away_team": "BOD",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2021-07-14",
+                                    "time": "20:00",
+                                    "stadium": "Stadion Wojska Polskiego",
+                                    "city": "Warsaw",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf05",
+                            "matches": [
+                                {
+                                    "home_team": "CQN",
+                                    "away_team": "ASH",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2021-07-07",
+                                    "time": "20:00",
+                                    "stadium": "Park Avenue",
+                                    "city": "Aberystwyth",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ASH",
+                                    "away_team": "CQN",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2021-07-14",
+                                    "time": "17:00",
+                                    "stadium": "Vazgen Sargsyan Republican Stadium",
+                                    "city": "Yerevan",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf06",
+                            "matches": [
+                                {
+                                    "home_team": "HJK",
+                                    "away_team": "BUP",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2021-07-06",
+                                    "time": "18:00",
+                                    "stadium": "Bolt Arena",
+                                    "city": "Helsinki",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BUP",
+                                    "away_team": "HJK",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2021-07-13",
+                                    "time": "20:30",
+                                    "stadium": "Stadion pod Goricom",
+                                    "city": "Podgorica",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf07",
+                            "matches": [
+                                {
+                                    "home_team": "CFR",
+                                    "away_team": "BBL",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2021-07-06",
+                                    "time": "19:00",
+                                    "stadium": "Dr. Constantin Rădulescu",
+                                    "city": "Cluj-Napoca",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "CFR",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 1,
+                                    "date": "2021-07-13",
+                                    "time": "20:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf08",
+                            "matches": [
+                                {
+                                    "home_team": "KFS",
+                                    "away_team": "MUR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2021-07-06",
+                                    "time": "20:00",
+                                    "stadium": "Toše Proeski Arena",
+                                    "city": "Skopje",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MUR",
+                                    "away_team": "KFS",
+                                    "home_score": 5,
+                                    "away_score": 0,
+                                    "date": "2021-07-13",
+                                    "time": "20:00",
+                                    "stadium": "Fazanerija",
+                                    "city": "Murska Sobota",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf09",
+                            "matches": [
+                                {
+                                    "home_team": "TEU",
+                                    "away_team": "SHE",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2021-07-07",
+                                    "time": "19:00",
+                                    "stadium": "Niko Dovana Stadium",
+                                    "city": "Durrës",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SHE",
+                                    "away_team": "TEU",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2021-07-13",
+                                    "time": "19:00",
+                                    "stadium": "Malaya Sportivnaya Arena",
+                                    "city": "Tiraspol",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf10",
+                            "matches": [
+                                {
+                                    "home_team": "TBI",
+                                    "away_team": "BAK",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2021-07-07",
+                                    "time": "18:00",
+                                    "stadium": "Boris Paichadze Dinamo Arena",
+                                    "city": "Tbilisi",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAK",
+                                    "away_team": "TBI",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2021-07-14",
+                                    "time": "19:00",
+                                    "stadium": "Bakcell Arena",
+                                    "city": "Baku",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf11",
+                            "matches": [
+                                {
+                                    "home_team": "MHA",
+                                    "away_team": "KAI",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2021-07-07",
+                                    "time": "19:00",
+                                    "stadium": "Sammy Ofer Stadium",
+                                    "city": "Haifa",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "KAI",
+                                    "away_team": "MHA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2021-07-14",
+                                    "time": "16:00",
+                                    "stadium": "Almaty Central Stadium",
+                                    "city": "Almaty",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf12",
+                            "matches": [
+                                {
+                                    "home_team": "LUD",
+                                    "away_team": "SSO",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2021-07-07",
+                                    "time": "19:00",
+                                    "stadium": "Huvepharma Arena",
+                                    "city": "Razgrad",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SSO",
+                                    "away_team": "LUD",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2021-07-13",
+                                    "time": "21:30",
+                                    "stadium": "Čukarički Stadium",
+                                    "city": "Belgrade, Serbia",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf13",
+                            "matches": [
                                 {
                                     "home_team": "FER",
-                                    "away_team": "MOL",
-                                    "home_score": 0,
-                                    "away_score": 0,
-                                    "date": "2020-09-29",
-                                    "time": "21:00",
-                                    "stadium": "Groupama Arena",
-                                    "city": "Budapest",
-                                    "path": "Champions",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "KRA",
-                                    "away_team": "PKT",
-                                    "home_score": 2,
-                                    "away_score": 1,
-                                    "date": "2020-09-22",
-                                    "time": "21:00",
-                                    "stadium": "Krasnodar Stadium",
-                                    "city": "Krasnodar",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "PKT",
-                                    "away_team": "KRA",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-09-30",
-                                    "time": "21:00",
-                                    "stadium": "Toumba Stadium",
-                                    "city": "Thessaloniki",
-                                    "path": "League",
-                                    "matchday": "secondleg"
-                                }
-                            ]
-                        },
-                        {
-                            "matches": [
-                                {
-                                    "home_team": "GNT",
-                                    "away_team": "DYK",
-                                    "home_score": 1,
-                                    "away_score": 2,
-                                    "date": "2020-09-23",
-                                    "time": "21:00",
-                                    "stadium": "Ghelamco Arena",
-                                    "city": "Ghent",
-                                    "path": "League",
-                                    "matchday": "firstleg"
-                                },
-                                {
-                                    "home_team": "DYK",
-                                    "away_team": "GNT",
+                                    "away_team": "PRI",
                                     "home_score": 3,
                                     "away_score": 0,
-                                    "date": "2020-09-29",
-                                    "time": "21:00",
-                                    "stadium": "NSC Olimpiyskiy",
-                                    "city": "Kyiv",
-                                    "path": "League",
+                                    "date": "2021-07-06",
+                                    "time": "18:00",
+                                    "stadium": "Ferencváros Stadion",
+                                    "city": "Budapest",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PRI",
+                                    "away_team": "FER",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2021-07-13",
+                                    "time": "20:00",
+                                    "stadium": "Fadil Vokrri Stadium",
+                                    "city": "Pristina",
                                     "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf14",
+                            "matches": [
+                                {
+                                    "home_team": "ZAL",
+                                    "away_team": "LNF",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2021-07-06",
+                                    "time": "19:00",
+                                    "stadium": "LFF Stadium",
+                                    "city": "Vilnius",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LNF",
+                                    "away_team": "ZAL",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2021-07-13",
+                                    "time": "20:45",
+                                    "stadium": "Windsor Park",
+                                    "city": "Belfast",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf15",
+                            "matches": [
+                                {
+                                    "home_team": "FTA",
+                                    "away_team": "HBN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2021-07-06",
+                                    "time": "18:00",
+                                    "stadium": "Lilleküla Stadium",
+                                    "city": "Tallinn",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "HBN",
+                                    "away_team": "FTA",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2021-07-13",
+                                    "time": "18:00",
+                                    "stadium": "Centenary Stadium",
+                                    "city": "Ta' Qali",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf16",
+                            "matches": [
+                                {
+                                    "home_team": "DZA",
+                                    "away_team": "VRE",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2021-07-07",
+                                    "time": "20:00",
+                                    "stadium": "Stadion Maksimir",
+                                    "city": "Zagreb",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "VRE",
+                                    "away_team": "DZA",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2021-07-13",
+                                    "time": "22:00",
+                                    "stadium": "Hlíðarendi",
+                                    "city": "Reykjavík",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Second Qualifying Round",
+                    "round_type": "pair2legged",
+                    "eliminate_count": 48,
+                    "next_round": "Third Qualifying Round",
+                    "bye_teams": [],
+                    "paths": [
+                        {
+                            "name": "Champions Path",
+                            "pairs": [
+                                {
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "OMO",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-07-20",
+                                            "time": "20:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "OMO",
+                                            "away_team": "DZA",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-07-27",
+                                            "time": "17:00",
+                                            "stadium": "GSP Stadium",
+                                            "city": "Strovolos",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "SKS",
+                                            "away_team": "YBO",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2021-07-21",
+                                            "time": "20:30",
+                                            "stadium": "Tehelné pole",
+                                            "city": "Bratislava",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "YBO",
+                                            "away_team": "SKS",
+                                            "home_score": 3,
+                                            "away_score": 2,
+                                            "date": "2021-07-28",
+                                            "time": "20:15",
+                                            "stadium": "Wankdorf Stadium",
+                                            "city": "Bern",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "WAR",
+                                            "away_team": "FTA",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-07-21",
+                                            "time": "21:00",
+                                            "stadium": "Stadion Wojska Polskiego",
+                                            "city": "Warsaw",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FTA",
+                                            "away_team": "WAR",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-07-27",
+                                            "time": "18:00",
+                                            "stadium": "Lilleküla Stadium",
+                                            "city": "Tallinn",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "ASH",
+                                            "away_team": "SHE",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-07-20",
+                                            "time": "17:00",
+                                            "stadium": "Vazgen Sargsyan Republican Stadium",
+                                            "city": "Yerevan",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHE",
+                                            "away_team": "ASH",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2021-07-28",
+                                            "time": "19:00",
+                                            "stadium": "Malaya Sportivnaya Arena",
+                                            "city": "Tiraspol",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C05",
+                                    "matches": [
+                                        {
+                                            "home_team": "OLY",
+                                            "away_team": "BAK",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2021-07-21",
+                                            "time": "21:00",
+                                            "stadium": "Karaiskakis Stadium",
+                                            "city": "Piraeus",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "BAK",
+                                            "away_team": "OLY",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-07-28",
+                                            "time": "19:00",
+                                            "stadium": "Eighth Kilometer District Stadium",
+                                            "city": "Baku",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C06",
+                                    "matches": [
+                                        {
+                                            "home_team": "KAI",
+                                            "away_team": "CZV",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-07-21",
+                                            "time": "16:00",
+                                            "stadium": "Almaty Central Stadium",
+                                            "city": "Almaty",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "CZV",
+                                            "away_team": "KAI",
+                                            "home_score": 5,
+                                            "away_score": 0,
+                                            "date": "2021-07-28",
+                                            "time": "20:30",
+                                            "stadium": "Red Star Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C07",
+                                    "matches": [
+                                        {
+                                            "home_team": "LRI",
+                                            "away_team": "CFR",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2021-07-20",
+                                            "time": "18:00",
+                                            "stadium": "Victoria Stadium",
+                                            "city": "Gibraltar",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "CFR",
+                                            "away_team": "LRI",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-07-28",
+                                            "time": "19:30",
+                                            "stadium": "Dr. Constantin Rădulescu",
+                                            "city": "Cluj-Napoca",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C08",
+                                    "matches": [
+                                        {
+                                            "home_team": "MAL",
+                                            "away_team": "HJK",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-07-21",
+                                            "time": "19:00",
+                                            "stadium": "Stadion",
+                                            "city": "Malmö",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "HJK",
+                                            "away_team": "MAL",
+                                            "home_score": 2,
+                                            "away_score": 2,
+                                            "date": "2021-07-27",
+                                            "time": "18:00",
+                                            "stadium": "Bolt Arena",
+                                            "city": "Helsinki",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C09",
+                                    "matches": [
+                                        {
+                                            "home_team": "FER",
+                                            "away_team": "ZAL",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-07-20",
+                                            "time": "20:00",
+                                            "stadium": "Ferencváros Stadion",
+                                            "city": "Budapest",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "ZAL",
+                                            "away_team": "FER",
+                                            "home_score": 1,
+                                            "away_score": 3,
+                                            "date": "2021-07-27",
+                                            "time": "19:00",
+                                            "stadium": "LFF Stadium",
+                                            "city": "Vilnius",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C10",
+                                    "matches": [
+                                        {
+                                            "home_team": "MUR",
+                                            "away_team": "LUD",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2021-07-21",
+                                            "time": "20:00",
+                                            "stadium": "Fazanerija",
+                                            "city": "Murska Sobota",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LUD",
+                                            "away_team": "MUR",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2021-07-28",
+                                            "time": "20:00",
+                                            "stadium": "Huvepharma Arena",
+                                            "city": "Razgrad",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "League Path",
+                            "pairs": [
+                                {
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "RAV",
+                                            "away_team": "SPP",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-07-20",
+                                            "time": "20:30",
+                                            "stadium": "Allianz Stadion",
+                                            "city": "Vienna",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SPP",
+                                            "away_team": "RAV",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-07-28",
+                                            "time": "20:30",
+                                            "stadium": "Stadion Letná",
+                                            "city": "Prague",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "CEL",
+                                            "away_team": "FCM",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2021-07-20",
+                                            "time": "20:45",
+                                            "stadium": "Celtic Park",
+                                            "city": "Glasgow",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FCM",
+                                            "away_team": "CEL",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "home_extra_score": 1,
+                                            "away_extra_score": 0,
+                                            "date": "2021-07-28",
+                                            "time": "19:45",
+                                            "stadium": "MCH Arena",
+                                            "city": "Herning",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L03",
+                                    "matches": [
+                                        {
+                                            "home_team": "PSV",
+                                            "away_team": "GAL",
+                                            "home_score": 5,
+                                            "away_score": 1,
+                                            "date": "2021-07-21",
+                                            "time": "21:00",
+                                            "stadium": "Philips Stadion",
+                                            "city": "Eindhoven",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "GAL",
+                                            "away_team": "PSV",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2021-07-28",
+                                            "time": "20:00",
+                                            "stadium": "Başakşehir Fatih Terim Stadium",
+                                            "city": "Istanbul",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Third Qualifying Round",
+                    "round_type": "pair2legged",
+                    "eliminate_count": 38,
+                    "next_round": "Play-off Round",
+                    "bye_teams": [],
+                    "paths": [
+                        {
+                            "name": "Champions Path",
+                            "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                            "pairs": [
+                                {
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "WAR",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2021-08-04",
+                                            "time": "20:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "WAR",
+                                            "away_team": "DZA",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "21:00",
+                                            "stadium": "Stadion Wojska Polskiego",
+                                            "city": "Warsaw",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "CFR",
+                                            "away_team": "YBO",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2021-08-03",
+                                            "time": "20:00",
+                                            "stadium": "Dr. Constantin Rădulescu",
+                                            "city": "Cluj-Napoca",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "YBO",
+                                            "away_team": "CFR",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "20:30",
+                                            "stadium": "Wankdorf Stadium",
+                                            "city": "Bern",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "OLY",
+                                            "away_team": "LUD",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2021-08-03",
+                                            "time": "21:00",
+                                            "stadium": "Karaiskakis Stadium",
+                                            "city": "Piraeus",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LUD",
+                                            "away_team": "OLY",
+                                            "home_score": 2,
+                                            "away_score": 2,
+                                            "home_extra_score": 0,
+                                            "away_extra_score": 0,
+                                            "home_penalty_score": 4,
+                                            "away_penalty_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "20:00",
+                                            "stadium": "Huvepharma Arena",
+                                            "city": "Razgrad",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "CZV",
+                                            "away_team": "SHE",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2021-08-03",
+                                            "time": "21:00",
+                                            "stadium": "Red Star Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHE",
+                                            "away_team": "CZV",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2021-08-10",
+                                            "time": "19:00",
+                                            "stadium": "Sheriff Stadium",
+                                            "city": "Tiraspol",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C05",
+                                    "matches": [
+                                        {
+                                            "home_team": "MAL",
+                                            "away_team": "RFC",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-08-03",
+                                            "time": "19:00",
+                                            "stadium": "Stadion",
+                                            "city": "Malmö",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "RFC",
+                                            "away_team": "MAL",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2021-08-10",
+                                            "time": "21:00",
+                                            "stadium": "Ibrox Stadium",
+                                            "city": "Glasgow",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C06",
+                                    "matches": [
+                                        {
+                                            "home_team": "FER",
+                                            "away_team": "SLP",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-08-04",
+                                            "time": "20:00",
+                                            "stadium": "Ferencváros Stadion",
+                                            "city": "Budapest",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SLP",
+                                            "away_team": "FER",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2021-08-10",
+                                            "time": "19:00",
+                                            "stadium": "Sinobo Stadium",
+                                            "city": "Prague",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "League Path",
+                            "pairs": [
+                                {
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "PSV",
+                                            "away_team": "FCM",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2021-08-03",
+                                            "time": "20:00",
+                                            "stadium": "Philips Stadion",
+                                            "city": "Eindhoven",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FCM",
+                                            "away_team": "PSV",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "20:00",
+                                            "stadium": "MCH Arena",
+                                            "city": "Herning",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "SPM",
+                                            "away_team": "SLB",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2021-08-04",
+                                            "time": "19:00",
+                                            "stadium": "Otkritie Arena",
+                                            "city": "Moscow",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SLB",
+                                            "away_team": "SPM",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-08-10",
+                                            "time": "21:00",
+                                            "stadium": "Estádio da Luz",
+                                            "city": "Lisbon",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L03",
+                                    "matches": [
+                                        {
+                                            "home_team": "GNK",
+                                            "away_team": "SHK",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2021-08-03",
+                                            "time": "20:00",
+                                            "stadium": "Luminus Arena",
+                                            "city": "Genk",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHK",
+                                            "away_team": "GNK",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "19:30",
+                                            "stadium": "NSC Olimpiyskiy",
+                                            "city": "Kyiv",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L04",
+                                    "matches": [
+                                        {
+                                            "home_team": "SPP",
+                                            "away_team": "AMO",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2021-08-03",
+                                            "time": "19:00",
+                                            "stadium": "Stadion Letná",
+                                            "city": "Prague",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "AMO",
+                                            "away_team": "SPP",
+                                            "home_score": 3,
+                                            "away_score": 1,
+                                            "date": "2021-08-10",
+                                            "time": "20:00",
+                                            "stadium": "Stade Louis II",
+                                            "city": "Monaco",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Play-off Round",
+                    "round_type": "pair2legged",
+                    "eliminate_count": 32,
+                    "next_round": "Group Stage",
+                    "paths": [
+                        {
+                            "name": "Champions Path",
+                            "pairs": [
+                                {
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "RBS",
+                                            "away_team": "BIF",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-08-17",
+                                            "time": "21:00",
+                                            "stadium": "Stadion Wals-Siezenheim",
+                                            "city": "Wals-Siezenheim",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "BIF",
+                                            "away_team": "RBS",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2021-08-25",
+                                            "time": "21:00",
+                                            "stadium": "Brøndby Stadium",
+                                            "city": "Brøndbyvester",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "YBO",
+                                            "away_team": "FER",
+                                            "home_score": 3,
+                                            "away_score": 2,
+                                            "date": "2021-08-18",
+                                            "time": "21:00",
+                                            "stadium": "Wankdorf Stadium",
+                                            "city": "Bern",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "FER",
+                                            "away_team": "YBO",
+                                            "home_score": 2,
+                                            "away_score": 3,
+                                            "date": "2021-08-24",
+                                            "time": "21:00",
+                                            "stadium": "Ferencváros Stadion",
+                                            "city": "Budapest",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "MAL",
+                                            "away_team": "LUD",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2021-08-18",
+                                            "time": "21:00",
+                                            "stadium": "Stadion",
+                                            "city": "Malmö",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LUD",
+                                            "away_team": "MAL",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-08-24",
+                                            "time": "21:00",
+                                            "stadium": "Huvepharma Arena",
+                                            "city": "Razgrad",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "SHE",
+                                            "away_team": "DZA",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2021-08-17",
+                                            "time": "21:00",
+                                            "stadium": "Sheriff Stadium",
+                                            "city": "Tiraspol",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "DZA",
+                                            "away_team": "SHE",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2021-08-25",
+                                            "time": "21:00",
+                                            "stadium": "Stadion Maksimir",
+                                            "city": "Zagreb",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "League Path",
+                            "pairs": [
+                                {
+                                    "name": "L01",
+                                    "matches": [
+                                        {
+                                            "home_team": "AMO",
+                                            "away_team": "SHK",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2021-08-17",
+                                            "time": "21:00",
+                                            "stadium": "Stade Louis II",
+                                            "city": "Monaco",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHK",
+                                            "away_team": "AMO",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "home_extra_score": 1,
+                                            "away_extra_score": 0,
+                                            "date": "2021-08-25",
+                                            "time": "21:00",
+                                            "stadium": "Metalist OSC",
+                                            "city": "Kharkiv",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "L02",
+                                    "matches": [
+                                        {
+                                            "home_team": "SLB",
+                                            "away_team": "PSV",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2021-08-18",
+                                            "time": "21:00",
+                                            "stadium": "Estádio da Luz",
+                                            "city": "Lisbon",
+                                            "path": "League",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "PSV",
+                                            "away_team": "SLB",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2021-08-24",
+                                            "time": "21:00",
+                                            "stadium": "Philips Stadion",
+                                            "city": "Eindhoven",
+                                            "path": "League",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
                                 }
                             ]
                         }

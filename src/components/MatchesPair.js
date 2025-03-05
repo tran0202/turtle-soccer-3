@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'reactstrap'
 import moment from 'moment'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, PenaltyTooltip, AwardedTooltip } from '../core/TooltipHelper'
+import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, PenaltyTooltip, AwardedTooltip, ByeTooltip } from '../core/TooltipHelper'
 
 const MatchesPairRow = (props) => {
     const { pair, config, last } = props
@@ -17,15 +17,16 @@ const MatchesPairRow = (props) => {
                     const isFirstLegOnly = m.matchday === 'firstlegonly'
                     const isSecondLeg = m.matchday === 'secondleg'
                     const isThirdLeg = m.matchday === 'playoffleg'
+                    const isByeMatch = m.home_bye || m.away_bye
                     const bottomLine = isFirstLeg || (hasPlayoff && isSecondLeg) ? 'border-bottom-gray5' : ''
                     const pairHomeHighlight =
-                        isFirstLeg || (hasPlayoff && isSecondLeg)
+                        isByeMatch || isFirstLeg || (hasPlayoff && isSecondLeg)
                             ? ''
                             : (isSecondLeg && pair.agg_winner === 'home') || ((isFirstLegOnly || isThirdLeg) && pair.agg_winner === 'away')
                             ? 'team-name-win'
                             : 'team-name-lose'
                     const pairAwayHighlight =
-                        isFirstLeg || (hasPlayoff && isSecondLeg)
+                        isByeMatch || isFirstLeg || (hasPlayoff && isSecondLeg)
                             ? ''
                             : (isSecondLeg && pair.agg_winner === 'away') || ((isFirstLegOnly || isThirdLeg) && pair.agg_winner === 'home')
                             ? 'team-name-win'
@@ -146,7 +147,7 @@ const MatchesPairRow = (props) => {
                             <Row className={bottomLine}>
                                 <Row className={`no-gutters ranking-tbl team-row padding-tb-sm`}>
                                     <Col className="col-box-18 font-14">
-                                        {moment(m.date).format('MMMM D, YYYY')}
+                                        {m.date ? moment(m.date).format('MMMM D, YYYY') : ''}
                                         {m.time ? ' @' : ''} {m.time}
                                         <br />
                                         {m.stadium && m.city ? m.stadium + ', ' + m.city : ''}
@@ -164,11 +165,14 @@ const MatchesPairRow = (props) => {
                                             <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
                                         )}
                                         {m.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
+                                        {m.home_bye && <ByeTooltip target={`${m.home_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                                     </Col>
                                     <Col className="col-box-10">{getTeamFlagId(m.home_team, config)}</Col>
                                     <Col className="text-center score-no-padding-right col-box-10">
                                         {m.match_cancelled ? (
                                             <React.Fragment>Cancelled</React.Fragment>
+                                        ) : m.home_bye || m.away_bye ? (
+                                            <React.Fragment></React.Fragment>
                                         ) : (
                                             <React.Fragment>
                                                 {matchHomeScore} - {matchAwayScore}
@@ -197,6 +201,7 @@ const MatchesPairRow = (props) => {
                                             <WalkoverTooltip target={`${m.away_team}walkoverTooltip`} content={m.walkover_notes} anchor="(w/o)" />
                                         )}
                                         {m.away_awarded && <AwardedTooltip target={`awardedTooltip`} notes={m.awarded_notes} />}
+                                        {m.awawy_bye && <ByeTooltip target={`${m.away_team}byeTooltip`} notes={m.bye_notes} anchor="(bye)" />}
                                     </Col>
                                 </Row>
                                 {(isSecondLeg || isThirdLeg) && (
