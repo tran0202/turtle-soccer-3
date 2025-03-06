@@ -225,6 +225,7 @@ export const getTeamFlagId = (id, config) => {
     const team_type_id = config.competition ? config.competition.team_type_id : config.team_type_id
     const team = teams.find((t) => t.id === id)
     if (!team) return
+    const customHeight = team && team.height ? getCustomHeight(team) : ''
     return (
         <React.Fragment>
             {team_type_id !== 'CLUB' && (
@@ -237,7 +238,7 @@ export const getTeamFlagId = (id, config) => {
             )}
             {team_type_id === 'CLUB' && (
                 <React.Fragment>
-                    <img className="flag-club-sm flag-club-md" src={`/images/club_logos/${team.logo_filename}`} alt={id} title={id} />{' '}
+                    <img className={`flag-club-sm flag-club-md ${customHeight}`} src={`/images/club_logos/${team.logo_filename}`} alt={id} title={id} />{' '}
                     <img
                         className="flag-xs-2 flag-sm-2"
                         src={`/images/flags/${team.nation.flag_filename}`}
@@ -248,6 +249,12 @@ export const getTeamFlagId = (id, config) => {
             )}
         </React.Fragment>
     )
+}
+
+export const getCustomHeight = (team) => {
+    if (!team || !team.height) return ''
+    if (team.height === '10px') return 'height-10'
+    else return 'height-20'
 }
 
 export const getPlayerFlagId = (club_id, club_id2, nation_id, config) => {
