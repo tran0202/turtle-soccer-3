@@ -69,7 +69,7 @@
                         { "id": "APA-2017-2023" },
                         { "id": "ZRI" },
                         { "id": "SPN" },
-                        { "id": "BAK" },
+                        { "id": "NEF" },
                         { "id": "ZET" },
                         { "id": "FEH" },
                         { "id": "SSO" },
@@ -960,7 +960,7 @@
                             "matches": [
                                 {
                                     "home_team": "SPN",
-                                    "away_team": "BAK",
+                                    "away_team": "NEF",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2019-07-11",
@@ -970,7 +970,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BAK",
+                                    "home_team": "NEF",
                                     "away_team": "SPN",
                                     "home_score": 6,
                                     "away_score": 0,
@@ -2017,7 +2017,7 @@
                                     "matches": [
                                         {
                                             "home_team": "FCA",
-                                            "away_team": "BAK",
+                                            "away_team": "NEF",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2019-07-25",
@@ -2028,7 +2028,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "BAK",
+                                            "home_team": "NEF",
                                             "away_team": "FCA",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -3998,7 +3998,7 @@
                                     "name": "M23",
                                     "matches": [
                                         {
-                                            "home_team": "BAK",
+                                            "home_team": "NEF",
                                             "away_team": "YEH",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -4011,7 +4011,7 @@
                                         },
                                         {
                                             "home_team": "YEH",
-                                            "away_team": "BAK",
+                                            "away_team": "NEF",
                                             "home_score": 2,
                                             "away_score": 1,
                                             "date": "2019-08-15",

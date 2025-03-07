@@ -126,7 +126,8 @@ class PairSummary extends React.Component {
                 <PairHeader config={new_config} />
                 {round.pairs &&
                     round.pairs.map((p, index) => {
-                        return <PairRow key={p.name} pair={p} config={new_config} last={index === round.pairs.length - 1} />
+                        const last = index === round.pairs.length - 1 || (index === round.pairs.length - 2 && round.pairs[round.pairs.length - 1].blank)
+                        return <PairRow key={p.name} pair={p} config={new_config} last={last} />
                     })}
                 {round.paths &&
                     round.paths.map((p) => {

@@ -252,7 +252,8 @@ class MatchesPair extends React.Component {
                     <Col xs={{ size: 10, offset: 1 }}>
                         {pairs &&
                             pairs.map((p, index) => {
-                                return !p.blank && <MatchesPairRow key={p.name} pair={p} config={new_config} last={index === pairs.length - 1} />
+                                const last = index === pairs.length - 1 || (index === pairs.length - 2 && pairs[pairs.length - 1].blank)
+                                return !p.blank && <MatchesPairRow key={p.name} pair={p} config={new_config} last={last} />
                             })}
                         {paths &&
                             paths.map((p2) => {

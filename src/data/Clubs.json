@@ -1547,14 +1547,14 @@
         "official_name": "FC Tobol Kostanay"
     },
     {
-        "id": "BAK",
+        "id": "NEF",
         "name": "Neftçi",
         "team_type_id": "CLUB",
         "nation_id": "AZE",
         "parent_team_id": "",
-        "club_code": "BAK",
+        "club_code": "NEF",
         "logo_filename": "Neftçi_PFK_logo.png",
-        "official_name": "Neftçi PFK"
+        "official_name": "Neftçi Peşəkar Futbol Klubu"
     },
     {
         "id": "UJP",
@@ -1917,7 +1917,7 @@
         "nation_id": "HUN",
         "parent_team_id": "BUH",
         "club_code": "BUH",
-        "logo_filename": "Kispest_honved_fc_logo.png",
+        "logo_filename": "Budapest_Honved_FC_logo.svg.png",
         "official_name": "Budapest Honvéd FC"
     },
     {
@@ -3280,17 +3280,17 @@
         "nation_id": "KVX",
         "parent_team_id": "",
         "club_code": "GJI",
-        "logo_filename": "SCGjilani.svg",
+        "logo_filename": "SCGjilani.svg.png",
         "official_name": "SC Gjilani"
     },
     {
         "id": "ISK",
-        "name": "Iskra Danilovgrad",
+        "name": "Iskra",
         "team_type_id": "CLUB",
         "nation_id": "MNE",
         "parent_team_id": "",
         "club_code": "ISK",
-        "logo_filename": "Iskra_no1.png",
+        "logo_filename": "451px-FK_Iskra_Danilovgrad_logo.png",
         "official_name": "FK Iskra Danilovgrad"
     },
     {
@@ -3300,7 +3300,7 @@
         "nation_id": "NIR",
         "parent_team_id": "",
         "club_code": "GLN",
-        "logo_filename": "GlentoranFC.png",
+        "logo_filename": "Glentoran_FC_logo.png",
         "official_name": "Glentoran FC"
     },
     {
@@ -3330,17 +3330,17 @@
         "nation_id": "LUX",
         "parent_team_id": "",
         "club_code": "D03",
-        "logo_filename": "Logo_fcd_grand.svg",
+        "logo_filename": "327px-Logo_fcd_grand.svg.png",
         "official_name": "Foussballclub Differdange 03"
     },
     {
         "id": "UTP",
-        "name": "Union Titus Petange",
+        "name": "Union Titus Pétange",
         "team_type_id": "CLUB",
         "nation_id": "LUX",
         "parent_team_id": "",
         "club_code": "UTP",
-        "logo_filename": "Union_Titus_Pétange_logo.svg",
+        "logo_filename": "Union_Titus_Pétange_logo.svg.png",
         "official_name": "Union Titus Petange"
     },
     {
@@ -3350,7 +3350,7 @@
         "nation_id": "SCO",
         "parent_team_id": "",
         "club_code": "MOT",
-        "logo_filename": "Motherwell_FC_crest.svg",
+        "logo_filename": "Motherwell_FC_crest.svg.png",
         "official_name": "Motherwell Football Club"
     },
     {
@@ -3360,17 +3360,17 @@
         "nation_id": "SWE",
         "parent_team_id": "",
         "club_code": "HAM",
-        "logo_filename": "Hammarby_IF_logo.svg",
+        "logo_filename": "Hammarby_IF_logo.svg.png",
         "official_name": "Hammarby IF"
     },
     {
         "id": "PUS",
-        "name": "Puskas Akademia",
+        "name": "Puskás Akadémia",
         "team_type_id": "CLUB",
         "nation_id": "HUN",
         "parent_team_id": "",
         "club_code": "PUS",
-        "logo_filename": "Puskás_Akadémia_FC_logo.svg",
+        "logo_filename": "Puskás_Akadémia_FC_logo.svg.png",
         "official_name": "Puskás Akadémia Football Club"
     },
     {
@@ -3380,12 +3380,12 @@
         "nation_id": "MDA",
         "parent_team_id": "",
         "club_code": "DAT",
-        "logo_filename": "720px-Logo_FC_Dinamo_Auto.png",
+        "logo_filename": "Dinamo_Auto_logo.png",
         "official_name": "FC Dinamo-Auto Tiraspol"
     },
     {
         "id": "SFI",
-        "name": "Sfintul Gheorghe",
+        "name": "Sfîntul Gheorghe",
         "team_type_id": "CLUB",
         "nation_id": "MDA",
         "parent_team_id": "",
@@ -3395,12 +3395,12 @@
     },
     {
         "id": "AGF",
-        "name": "AGF Aarhus",
+        "name": "AGF",
         "team_type_id": "CLUB",
         "nation_id": "DEN",
         "parent_team_id": "",
         "club_code": "AGF",
-        "logo_filename": "AGF_Aarhus_logo.svg",
+        "logo_filename": "AGF_Aarhus_logo.svg.png",
         "official_name": "Aarhus Gymnastikforening"
     },
     {
@@ -3410,17 +3410,17 @@
         "nation_id": "FIN",
         "parent_team_id": "",
         "club_code": "HON",
-        "logo_filename": "FC_Honka_logo.svg",
+        "logo_filename": "FC_Honka_logo.svg.png",
         "official_name": "FC Honka"
     },
     {
         "id": "ZIL",
-        "name": "Zilina",
+        "name": "Žilina",
         "team_type_id": "CLUB",
         "nation_id": "SVK",
         "parent_team_id": "",
         "club_code": "ZIL",
-        "logo_filename": "MSK_Zilina_logo.svg",
+        "logo_filename": "MSK_Zilina_logo.svg.png",
         "official_name": "MŠK Žilina a.s."
     },
     {
@@ -3470,7 +3470,7 @@
         "nation_id": "MKD",
         "parent_team_id": "",
         "club_code": "KFR",
-        "logo_filename": "FK_Renova_Logo.svg",
+        "logo_filename": "FK_Renova_Logo.svg.png",
         "official_name": "KF Renova"
     },
     {
@@ -3485,12 +3485,12 @@
     },
     {
         "id": "BTO",
-        "name": "Botosani",
+        "name": "Botoșani",
         "team_type_id": "CLUB",
         "nation_id": "ROU",
         "parent_team_id": "",
         "club_code": "BTO",
-        "logo_filename": "FC_Botosani_logo.png",
+        "logo_filename": "FC_Botoșani_logo.png",
         "official_name": "FC Botoșani"
     },
     {
@@ -3500,7 +3500,7 @@
         "nation_id": "ARM",
         "parent_team_id": "",
         "club_code": "SGS",
-        "logo_filename": "FC_Shirak_logo.svg",
+        "logo_filename": "FC_Shirak_logo.svg.png",
         "official_name": "Shirak Gyumri Sports Club"
     },
     {
@@ -3540,7 +3540,7 @@
         "nation_id": "ARM",
         "parent_team_id": "",
         "club_code": "NOA",
-        "logo_filename": "FC_Noah-logo.png",
+        "logo_filename": "285px-Noah_logo.png",
         "official_name": "FC Noah"
     },
     {
@@ -3596,12 +3596,12 @@
     },
     {
         "id": "KKY",
-        "name": "Kaysar Kyzylorda",
+        "name": "Kaisar",
         "team_type_id": "CLUB",
         "nation_id": "KAZ",
         "parent_team_id": "",
         "club_code": "KKY",
-        "logo_filename": "FC_Kaisar_logo.svg",
+        "logo_filename": "FC_Kaisar_logo.svg.png",
         "official_name": "FC Kaysar Kyzylorda"
     },
     {
@@ -3611,17 +3611,17 @@
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "DMO",
-        "logo_filename": "Dynamo_Moscow_logo.svg",
+        "logo_filename": "Dynamo_Moscow_logo.svg.png",
         "official_name": "FC Dynamo Moscow"
     },
     {
         "id": "GOT",
-        "name": "IFK Goteborg",
+        "name": "IFK Göteborg",
         "team_type_id": "CLUB",
         "nation_id": "SWE",
         "parent_team_id": "",
         "club_code": "GOT",
-        "logo_filename": "IFK_Göteborg.png",
+        "logo_filename": "IFK_Goteborg_logo.svg.png",
         "official_name": "IFK Göteborg Fotboll"
     },
     {
@@ -3636,7 +3636,7 @@
     },
     {
         "id": "OFI",
-        "name": "OFI Crete",
+        "name": "OFI",
         "team_type_id": "CLUB",
         "nation_id": "GRE",
         "parent_team_id": "",
@@ -3651,17 +3651,18 @@
         "nation_id": "NED",
         "parent_team_id": "",
         "club_code": "WIL",
-        "logo_filename": "Willem_II_logo.svg",
+        "logo_filename": "Willem_II_logo.svg.png",
         "official_name": "Willem II Tilburg"
     },
     {
         "id": "VST",
-        "name": "Viking Stavanger",
+        "name": "Viking",
         "team_type_id": "CLUB",
         "nation_id": "NOR",
         "parent_team_id": "",
         "club_code": "VST",
-        "logo_filename": "Viking_FK_logo_2020.svg",
+        "logo_filename": "Viking_FK_logo_2020.svg.png",
+        "height": "22px",
         "official_name": "Viking FK"
     },
     {
@@ -3671,7 +3672,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "KKO",
-        "logo_filename": "FCKolos2018.svg",
+        "logo_filename": "FCKolos2018.svg.png",
         "official_name": "FC Kolos Kovalivka"
     },
     {
@@ -3701,7 +3702,7 @@
         "nation_id": "FRA",
         "parent_team_id": "",
         "club_code": "REI",
-        "logo_filename": "Stade_de_Reims_logo.svg",
+        "logo_filename": "Stade_de_Reims_logo.svg.png",
         "official_name": "Stade de Reims"
     },
     {
@@ -3736,12 +3737,12 @@
     },
     {
         "id": "SPC",
-        "name": "Sporting Charleroi",
+        "name": "Charleroi",
         "team_type_id": "CLUB",
         "nation_id": "BEL",
         "parent_team_id": "",
         "club_code": "SPC",
-        "logo_filename": "Royal_Charleroi_Sporting_Club_logo.svg",
+        "logo_filename": "Royal_Charleroi_Sporting_Club_logo.svg.png",
         "official_name": "Royal Charleroi Sporting Club"
     },
     {
@@ -3751,7 +3752,7 @@
         "nation_id": "TUR",
         "parent_team_id": "",
         "club_code": "ANY",
-        "logo_filename": "Alanyaspor_logo.svg",
+        "logo_filename": "Alanyaspor_logo.svg.png",
         "official_name": "Alanyaspor"
     },
     {
@@ -3761,7 +3762,7 @@
         "nation_id": "UKR",
         "parent_team_id": "",
         "club_code": "DES",
-        "logo_filename": "FC_Desna.png",
+        "logo_filename": "345px-FC_Desna.png",
         "official_name": "FC Desna Chernihiv"
     },
     {
@@ -3771,27 +3772,27 @@
         "nation_id": "SRB",
         "parent_team_id": "",
         "club_code": "VOJ",
-        "logo_filename": "FK_Vojvodina_logo.svg",
+        "logo_filename": "FK_Vojvodina_logo.svg.png",
         "official_name": "FK Vojvodina"
     },
     {
         "id": "FCR",
-        "name": "FC Rostov",
+        "name": "Rostov",
         "team_type_id": "CLUB",
         "nation_id": "RUS",
         "parent_team_id": "",
         "club_code": "FCR",
-        "logo_filename": "FC_Rostov_logo.svg",
+        "logo_filename": "FC_Rostov_logo.svg.png",
         "official_name": "FC Rostov"
     },
     {
         "id": "SON",
-        "name": "SonderjyskE",
+        "name": "SønderjyskE",
         "team_type_id": "CLUB",
         "nation_id": "DEN",
         "parent_team_id": "",
         "club_code": "SON",
-        "logo_filename": "SonderjyskE_logo.svg",
+        "logo_filename": "SonderjyskE_logo.svg.png",
         "official_name": "SønderjyskE Fodbold"
     },
     {
@@ -4058,5 +4059,55 @@
         "club_code": "DN1",
         "logo_filename": "SC_Dnipro-1_(Ukraine)_white_background_CMYK.svg.png",
         "official_name": "SC Dnipro-1"
+    },
+    {
+        "id": "STJ",
+        "name": "St Johnstone",
+        "team_type_id": "CLUB",
+        "nation_id": "SCO",
+        "parent_team_id": "",
+        "club_code": "STJ",
+        "logo_filename": "StJohnstoneFC_Logo.svg.png",
+        "official_name": "St Johnstone Football Club"
+    },
+    {
+        "id": "RAN",
+        "name": "Randers",
+        "team_type_id": "CLUB",
+        "nation_id": "DEN",
+        "parent_team_id": "",
+        "club_code": "RAN",
+        "logo_filename": "Randers_FC_logo.svg.png",
+        "official_name": "Randers FC"
+    },
+    {
+        "id": "SLO",
+        "name": "Slovácko",
+        "team_type_id": "CLUB",
+        "nation_id": "CZE",
+        "parent_team_id": "",
+        "club_code": "SLO",
+        "logo_filename": "1FC_Slovacko.png",
+        "official_name": "1. FC Slovácko"
+    },
+    {
+        "id": "HMI",
+        "name": "Heart of Midlothian",
+        "team_type_id": "CLUB",
+        "nation_id": "SCO",
+        "parent_team_id": "",
+        "club_code": "HMI",
+        "logo_filename": "Heart_of_Midlothian_FC_logo.svg.png",
+        "official_name": "Heart of Midlothian Football Club"
+    },
+    {
+        "id": "SIL",
+        "name": "Silkeborg",
+        "team_type_id": "CLUB",
+        "nation_id": "DEN",
+        "parent_team_id": "",
+        "club_code": "SIL",
+        "logo_filename": "Silkeborg_IF_logo.svg.png",
+        "official_name": "Silkeborg Idrætsforening"
     }
 ]
