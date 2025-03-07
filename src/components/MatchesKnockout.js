@@ -342,13 +342,6 @@ const MatchesKnockoutRound = (props) => {
         <React.Fragment>
             {rounds &&
                 rounds.map((r) => {
-                    if (r.matches) {
-                        if (!r.final) {
-                            return <MatchesKnockoutRow key={r.name} round={r} config={config} />
-                        } else {
-                            return <MatchesKnockoutRowFinal key={r.name} round={r} config={config} />
-                        }
-                    }
                     if (r.pairs) {
                         return (
                             <React.Fragment key={r.name}>
@@ -366,6 +359,13 @@ const MatchesKnockoutRound = (props) => {
                                 </Row>
                             </React.Fragment>
                         )
+                    }
+                    if (r.matches) {
+                        if (!r.final) {
+                            return <MatchesKnockoutRow key={r.name} round={r} config={config} />
+                        } else {
+                            return <MatchesKnockoutRowFinal key={r.name} round={r} config={config} />
+                        }
                     }
                     return null
                 })}

@@ -41,8 +41,8 @@
                         { "name": 2, "rankingFrom": 37, "rankingTo": 46 }
                     ],
                     "matchdays": [
-                        { "name": "First leg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
-                        { "name": "Second leg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                        { "name": "firstleg", "date": "2023-10-12", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "secondleg", "date": "2023-10-17", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
                     ],
                     "next_stage": "Second Round",
                     "advanced_note": "Bolded team winners advance to the second round"
@@ -293,8 +293,8 @@
                         { "name": 2, "rankingFrom": 2, "rankingTo": 2 }
                     ],
                     "matchdays": [
-                        { "name": "First leg", "date": "2025-11-13", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
-                        { "name": "Second leg", "date": "2025-11-18", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                        { "name": "firstleg", "date": "2025-11-13", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "secondleg", "date": "2025-11-18", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
                     ],
                     "next_stage": "Inter-confederation play-offs",
                     "advanced_note": "Bolded team winners advance to the inter-confederation play-offs",
@@ -482,8 +482,8 @@
                         }
                     ],
                     "matchdays": [
-                        { "name": "First leg", "date": "2024-03-22", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
-                        { "name": "Second leg", "date": "2024-03-26", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
+                        { "name": "firstleg", "date": "2024-03-22", "matches": [{ "home_pos": 1, "away_pos": 2 }] },
+                        { "name": "secondleg", "date": "2024-03-26", "matches": [{ "home_pos": 2, "away_pos": 1 }] }
                     ],
                     "next_stage": "Second Round",
                     "advanced_note": "Bolded team winners advance to the second round"

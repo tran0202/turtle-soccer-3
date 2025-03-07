@@ -37,8 +37,7 @@ const BracketsCollapse = (props) => {
             <Row className="text-start padding-top-md padding-left-sm">
                 <Col sm="3" md="3">
                     <Button outline color="primary" onClick={toggle} className="h3-ff3 orange btn-collapse-orange">
-                        {title}&nbsp;
-                        {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
+                        {title} {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
                         {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
                         {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
@@ -597,7 +596,7 @@ const BracketTable = (props) => {
                         const hookCount = r.bracketMatches.length % 2 === 0 ? r.bracketMatches.length / 2 : (r.bracketMatches.length - 1) / 2
                         if (r.final) {
                             return <BracketFinalCol round={r} config={roundConfig} key={r.name} />
-                        } else if (r.name !== 'Third-place') {
+                        } else {
                             return (
                                 <React.Fragment key={r.name}>
                                     <BracketCol round={r} colIndex={index} config={roundConfig} />
@@ -620,7 +619,7 @@ class Brackets extends React.Component {
         return (
             <React.Fragment>
                 {isImagine && (
-                    <BracketsCollapse title="Brackets" stage={stage} initialStatus="Opened">
+                    <BracketsCollapse title="Brackets" initialStatus="Opened">
                         <BracketTable stage={stage} config={config} />
                     </BracketsCollapse>
                 )}

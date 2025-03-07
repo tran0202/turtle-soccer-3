@@ -296,24 +296,6 @@ export const getTournamentDataArray = () => {
     )
 }
 
-// import QualificationTournamentWCArray from '../data/QualificationTournamentWC.json'
-// import qtd_WC_2022 from '../data/qualTournamentData/qtd_WC_2022.json'
-
-// import Competitions from '../data/Competitions.json'
-// import ClubArray from '../data/Clubs.json'
-
-// export const getCurrentTournament = () => {
-//   return { tournament: 'UCL202122', qualificationTournament: 'WC2022_CONMEBOL' }
-// }
-
-// export const getQualificationTournamentArray = () => {
-//   return QualificationTournamentWCArray
-// }
-
-// export const getQualificationTournamentDataArray = () => {
-//   return [].concat(qtd_WC_2022)
-// }
-
 export const getTournamentDataWC = () => {
     return [].concat(
         [td_WC_1930],
@@ -603,7 +585,6 @@ export const setConfederationDetails = (confederation) => {
     delete confederation.descriptions
     delete confederation.logo_filename
     delete confederation.name
-    // console.log('conf', conf)
 }
 
 export const setCompetitionConfig = (comp) => {
@@ -635,39 +616,6 @@ export const setCompetitionDetails = (comp) => {
     delete comp.name
     delete comp.trophy_filename
 }
-
-// export const setTournamentConfig = (t) => {
-//   const competition = Competitions.find((c) => c.id === t.competition_id)
-//   if (!competition) return
-//   !competition.config && setCompetitionConfig(competition)
-//   t.config = {
-//     active: t.active || false,
-//     competition_id: t.competition_id || '',
-//     confederation_id: t.confederation_id || '',
-//     golden_goal_rule: t.golden_goal_rule || false,
-//     logo_path: competition.config.logo_path,
-//     multi_league: t.competition_id === 'UNL',
-//     no_third_place: t.no_third_place || false,
-//     points_for_win: t.points_for_win,
-//     show_match_year: t.show_match_year || false,
-//     silver_goal_rule: t.silver_goal_rule || false,
-//     team_type_id: competition.config.team_type_id,
-//     tiebreakers: t.tiebreakers || [],
-//     tiebreakers_collapsed: t.tiebreakers_collapsed || false,
-//     tournament_id: t.tournament_id || '',
-//   }
-//   delete t.active
-//   delete t.competition_id
-//   delete t.confederation_id
-//   delete t.golden_goal_rule
-//   delete t.no_third_place
-//   delete t.points_for_win
-//   delete t.show_match_year
-//   delete t.silver_goal_rule
-//   delete t.tiebreakers
-//   delete t.tiebreakers_collapsed
-//   delete t.tournament_id
-// }
 
 export const setTournamentDetails = (t) => {
     t.details = {

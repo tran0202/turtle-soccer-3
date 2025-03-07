@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Collapse, Row, Col, Button } from 'reactstrap'
 import { getBoldText } from '../core/TeamHelper'
-import ResultsPairTable from './ResultsPairTable'
+import PairSummary from './PairSummary'
 
 const ResultsCollapse = (props) => {
     const { title, initialStatus, stage, children } = props
@@ -44,7 +44,9 @@ class Results extends React.Component {
         return (
             <React.Fragment>
                 <ResultsCollapse title="Results" stage={stage} initialStatus="Opened">
-                    {stage.type && stage.type.includes('pair') && <ResultsPairTable stage={stage} config={config} />}
+                    <Row className="mt-5 box-xl">
+                        <Col xs={{ size: 10, offset: 1 }}>{stage.type && stage.type.includes('pair') && <PairSummary round={stage} config={config} />}</Col>
+                    </Row>
                 </ResultsCollapse>
             </React.Fragment>
         )

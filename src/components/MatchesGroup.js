@@ -43,10 +43,7 @@ const MatchDayHeader = (props) => {
     const { matchday } = props
     return (
         <Row className="matchday-header text-start margin-top-md">
-            <Col className="col-12 border-bottom-gray4">
-                {matchday.name}
-                {/*  | {moment(matchday.date).format('MMMM D, YYYY')} */}
-            </Col>
+            <Col className="col-12 border-bottom-gray4">{matchday.name}</Col>
         </Row>
     )
 }
