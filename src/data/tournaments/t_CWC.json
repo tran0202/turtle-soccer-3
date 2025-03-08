@@ -1,0 +1,29 @@
+[
+    {
+        "id": "CWC2025",
+        "year": "2025",
+        "name": "FIFA Club World Cup United States 2025",
+        "competition_id": "CWC",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "details": {
+            "slogan": "Take it to the World",
+            "host": { "teams": ["USA"], "qualification_date": "2024-10-19" },
+            "logo_filename": "2025_FIFA_Club_World_Cup.svg.png",
+            "mascot": "",
+            "mascot_filename": "",
+            "mascot_height": "190px",
+            "start_date": "2025-06-14",
+            "end_date": "2025-07-13",
+            "color": "#ffd700",
+            "team_count": 32,
+            "confed_count": 6,
+            "venue_count": 12,
+            "city_count": 11
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    }
+]

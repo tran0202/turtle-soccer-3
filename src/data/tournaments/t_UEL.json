@@ -1,5 +1,46 @@
 [
     {
+        "id": "UEL202425",
+        "year": "2024-25",
+        "name": "2024-25 UEFA Europa League",
+        "short_name": "2024-25",
+        "competition_id": "UEL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Europa_League_2024.png",
+            "mascot_filename": "",
+            "mascot_height": "230px",
+            "start_qualifying_date": "2024-07-11",
+            "end_qualifying_date": "2024-08-29",
+            "start_competition_date": "2024-09-25",
+            "end_competition_date": "2025-05-21",
+            "color": "#15611e",
+            "competition_team_count": 252,
+            "transfer_team_count": 11,
+            "total_team_count": 45,
+            "total_transfer_team_count": 31,
+            "association_count": 41
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "UEL202324",
         "year": "2023-24",
         "name": "2023-24 UEFA Europa League",

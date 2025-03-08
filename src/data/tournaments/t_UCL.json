@@ -1,5 +1,43 @@
 [
     {
+        "id": "UCL202425",
+        "year": "2024-25",
+        "name": "2024-25 UEFA Champions League",
+        "short_name": "2024-25",
+        "competition_id": "UCL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Champions_League.svg",
+            "mascot_filename": "",
+            "start_qualifying_date": "2024-07-09",
+            "end_qualifying_date": "2024-08-28",
+            "start_competition_date": "2024-09-17",
+            "end_competition_date": "2025-05-31",
+            "color": "#15611e",
+            "competition_team_count": 36,
+            "total_team_count": 81,
+            "association_count": 53
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "UCL202324",
         "year": "2023-24",
         "name": "2023-24 UEFA Champions League",

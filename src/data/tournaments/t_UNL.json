@@ -1,5 +1,48 @@
 [
     {
+        "id": "UNL202425",
+        "year": "2024/25",
+        "name": "2024/25 UEFA Nations League",
+        "short_name": "Italy/Germany 2024/25",
+        "competition_id": "UNL",
+        "points_for_win": 3,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "h2hawaygoals",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "accesslist"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Nations_League.svg",
+            "mascot_filename": "",
+            "mascot_height": "150px",
+            "start_league_date": "2024-09-05",
+            "end_league_date": "2024-11-19",
+            "start_final_date": "2025-06-04",
+            "end_final_date": "2025-06-08",
+            "start_relegation_date": "",
+            "end_relegation_date": "",
+            "color": "#008C45",
+            "team_count": 54,
+            "final_host": [],
+            "final_team_count": 4,
+            "final_venue_count": 2,
+            "final_city_count": 2
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "UNL202223",
         "year": "2022/23",
         "name": "2022/23 UEFA Nations League",

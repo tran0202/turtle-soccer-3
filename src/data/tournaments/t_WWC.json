@@ -1,5 +1,30 @@
 [
     {
+        "id": "WWC2027",
+        "year": "2027",
+        "name": "FIFA Women's World Cup Brazil 2027",
+        "competition_id": "WWC",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "details": {
+            "host": { "teams": ["BRA_WNT"], "qualification_date": "2024-05-17" },
+            "logo_filename": "FIFA_logo_without_slogan.svg",
+            "mascot": "",
+            "mascot_filename": "",
+            "start_date": "2027-06-24",
+            "end_date": "2027-07-25",
+            "color": "#009440",
+            "team_count": 32,
+            "confed_count": 6,
+            "venue_count": 12,
+            "city_count": 12
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "WWC2023",
         "year": "2023",
         "name": "FIFA Women's World Cup Australia-New Zealand 2023",

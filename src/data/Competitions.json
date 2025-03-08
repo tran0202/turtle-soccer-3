@@ -59,6 +59,20 @@
         ]
     },
     {
+        "id": "CWC",
+        "name": "FIFA Club World Cup",
+        "color": "rgb(255, 201, 5)",
+        "team_type_id": "CLUB",
+        "confederation_id": "FIFA",
+        "logo_path": "cwc_logos",
+        "trophy_filename": "473572280_1574271119930201_6027368488576703343_n.jpg",
+        "descriptions": [
+            "The FIFA Club World Cup is an international men's association football competition organised by the Fédération Internationale de Football Association (FIFA), the sport's global governing body. The competition was first contested in 2000 as the FIFA Club World Championship.",
+            "In 2005, the Intercontinental Cup was merged with the FIFA Club World Championship, and in 2006, the tournament was renamed as the FIFA Club World Cup. The winner of the Club World Cup receives the FIFA Club World Cup trophy and a FIFA World Champions certificate.",
+            "The new format, which will come into effect with the 2025 edition, features 32 teams competing for the title at venues within the host nation; 12 teams from Europe, 6 from South America, 4 from Asia, 4 from Africa, 4 from North, Central America and Caribbean, 1 from Oceania, and 1 team from the host nation. The teams are drawn into eight groups of four, with each team playing three group stage matches in a round-robin format. The top two teams from each group advance to the knockout stage, starting with the round of 16 and culminating with the final."
+        ]
+    },
+    {
         "id": "CONFEDC",
         "name": "FIFA Confederations Cup",
         "color": "rgb(0, 2, 166)",
@@ -133,6 +147,22 @@
         "descriptions": [
             "The UEFA Europa League (abbreviated as UEL) is an annual football club competition organised by UEFA since 1971 for eligible European football clubs. Clubs qualify for the competition based on their performance in their national leagues and cup competitions. It is now the second-tier competition of European club football, ranking below the UEFA Champions League and above the UEFA Europa Conference League after being a third-tier competition from 1971 to 1999 before the UEFA Cup Winners' Cup was discontinued. Previously called the UEFA Cup, the competition has been known as the Europa League since the 2009–10 season, following a change in format.",
             "Spanish clubs have the highest number of victories (14 wins), followed by teams from Italy (10 wins) and England (9 wins). The title has been won by 30 clubs, 14 of which have won it more than once. The most successful club in the competition is Sevilla, with seven titles. Colombian striker Radamel Falcao holds the record of most goals (17) scored in a single season of the tournament."
+        ]
+    },
+    {
+        "id": "UECL",
+        "name": "UEFA Conference League",
+        "color": "rgb(36, 215, 51)",
+        "team_type_id": "CLUB",
+        "confederation_id": "UEFA",
+        "logo_path": "uecl_logos",
+        "trophy_filename": "360px-UEFA_Europa_Conference_League_Trophy.jpg",
+        "all_semi_finalist": true,
+        "all_semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order.",
+        "descriptions": [
+            "The UEFA Conference League, previously known as the UEFA Europa Conference League, both abbreviated as UECL,[1] is an annual football competition organised since 2021 by the Union of European Football Associations (UEFA) for eligible European football clubs. It is the third tier of continental club football in Europe, behind the second-tier Europa League, and the first-tier Champions League.",
+            "Introduced in 2021 as the UEFA Europa Conference League, the competition was initially intended as the bottom level of the Europa League. The competition is primarily contested by teams from lower-ranked UEFA member associations.[2] No teams qualify directly for the league phase: instead the teams eliminated in the Europa League play-off round qualify, with the rest coming from the Conference League qualifying and play-off rounds. The winners of the competition qualify for the following season's Europa League, unless they also qualify for the Champions League via their domestic league position.",
+            "From the 2024–25 season, the competition was rebranded to the UEFA Conference League, and the group stage was replaced with an expanded league phase."
         ]
     },
     {

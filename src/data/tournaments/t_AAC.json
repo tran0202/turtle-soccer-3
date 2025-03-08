@@ -1,5 +1,34 @@
 [
     {
+        "id": "AAC2027",
+        "year": "2027",
+        "name": "AFC Asian Cup Saudi Arabia 2027",
+        "competition_id": "AAC",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
+        "no_third_place": true,
+        "details": {
+            "host": { "teams": ["KSA"], "qualification_date": "2023-02-01" },
+            "logo_filename": "2027_AFC_Asian_Cup_Logo.png",
+            "mascot": "",
+            "mascot_filename": "",
+            "mascot_height": "130px",
+            "start_date": "2027-01-07",
+            "end_date": "2027-02-05",
+            "color": "#005430",
+            "team_count": 24,
+            "venue_count": 8,
+            "city_count": 3
+        },
+        "hero_images": [],
+        "final_standings": {
+            "semi_finalist_text": "No third-place match was played. Semi-finalists are ranked on goal difference in the semi-finals."
+        },
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "AAC2023",
         "year": "2023",
         "name": "AFC Asian Cup Qatar 2023",

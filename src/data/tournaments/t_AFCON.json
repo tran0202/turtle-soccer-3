@@ -1,5 +1,30 @@
 [
     {
+        "id": "AFCON2025",
+        "year": "2025",
+        "name": "Africa Cup of Nations Morocco 2025",
+        "competition_id": "AFCON",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
+        "details": {
+            "host": { "teams": ["MAR"], "qualification_date": "2023-09-27" },
+            "logo_filename": "2025_Africa_Cup_of_Nations_logo.svg.png",
+            "mascot": "",
+            "mascot_filename": "",
+            "start_date": "2025-12-21",
+            "end_date": "2026-01-18",
+            "color": "#c1272d",
+            "team_count": 24,
+            "venue_count": 9,
+            "city_count": 6
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "AFCON2023",
         "year": "2023",
         "name": "Africa Cup of Nations Ivory Coast 2023",

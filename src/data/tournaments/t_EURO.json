@@ -1,8 +1,38 @@
 [
     {
+        "id": "EURO2028",
+        "year": "2028",
+        "name": "UEFA Euro 2028 UK & Ireland",
+        "competition_id": "EURO",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "wins", "disciplinarypoints", "coefficient"],
+        "no_third_place": true,
+        "details": {
+            "slogan": "",
+            "host": { "teams": ["ENG", "IRL", "SCO", "WAL"], "qualification_date": "2023-10-10" },
+            "logo_filename": "UEFA_Euro_2028_logo.svg.png",
+            "mascot": "",
+            "mascot_filename": "",
+            "mascot_height": "190px",
+            "start_date": "2028-06-09",
+            "end_date": "2028-07-09",
+            "color": "#C8102E",
+            "team_count": 24,
+            "venue_count": 9,
+            "city_count": 8
+        },
+        "hero_images": [],
+        "final_standings": {
+            "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
+        },
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "EURO2024",
         "year": "2024",
-        "name": "UEFA Euro 2024",
+        "name": "UEFA Euro 2024 Germany",
         "competition_id": "EURO",
         "points_for_win": 3,
         "show_match_year": true,

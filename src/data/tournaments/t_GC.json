@@ -1,5 +1,35 @@
 [
     {
+        "id": "GC2025",
+        "year": "2025",
+        "name": "Gold Cup 2025 Canada-United States",
+        "short_name": "2025 Canada-United States",
+        "competition_id": "GC",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "no_third_place": true,
+        "details": {
+            "slogan": "This Is Ours",
+            "host": { "teams": ["CAN", "USA"], "qualification_date": "2024-11-18" },
+            "logo_filename": "Concacaf_Gold_Cup_2021.svg",
+            "mascot_filename": "",
+            "mascot_height": "220px",
+            "start_date": "2025-06-14",
+            "end_date": "2025-07-06",
+            "color": "#3C3B6E",
+            "team_count": 16,
+            "confed_count": 2,
+            "venue_count": 14,
+            "city_count": 13
+        },
+        "hero_images": [],
+        "final_standings": {
+            "semi_finalist_text": "No third-place match was played. Semi-finalists are listed in alphabetical order."
+        },
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "GC2023",
         "year": "2023",
         "name": "Gold Cup 2023 Canada-United States",

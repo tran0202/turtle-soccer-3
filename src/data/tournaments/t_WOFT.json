@@ -1,5 +1,30 @@
 [
     {
+        "id": "WOFT2028",
+        "year": "2028",
+        "name": "Women's Olympic Football Tournament Los Angeles 2028",
+        "competition_id": "WOFT",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
+        "details": {
+            "host": { "teams": ["USA_U23WNT"] },
+            "logo_filename": "2028_Summer_Olympics_Logo.svg.png",
+            "mascot_filename": "",
+            "start_date": "2028-07-14",
+            "end_date": "2028-07-30",
+            "color": "#3C3B6E",
+            "team_count": 12,
+            "confed_count": 6,
+            "venue_count": 7,
+            "city_count": 7
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "WOFT2024",
         "year": "2024",
         "name": "Women's Olympic Football Tournament Paris 2024",

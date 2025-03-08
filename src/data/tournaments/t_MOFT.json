@@ -1,5 +1,29 @@
 [
     {
+        "id": "MOFT2028",
+        "year": "2028",
+        "name": "Men's Olympic Football Tournament Los Angeles 2028",
+        "competition_id": "MOFT",
+        "points_for_win": 3,
+        "tiebreakers": ["points", "goaldifference", "goalsfor", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "fairplaypoints", "lots"],
+        "details": {
+            "host": { "teams": ["USA_U23MNT"] },
+            "logo_filename": "2028_Summer_Olympics_Logo.svg.png",
+            "mascot_filename": "",
+            "start_date": "2028-07-14",
+            "end_date": "2028-07-30",
+            "color": "#B22234",
+            "team_count": 16,
+            "confed_count": 6,
+            "venue_count": 7,
+            "city_count": 7
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
         "id": "MOFT2024",
         "year": "2024",
         "name": "Men's Olympic Football Tournament Paris 2024",

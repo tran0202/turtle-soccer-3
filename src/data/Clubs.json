@@ -4109,5 +4109,25 @@
         "club_code": "SIL",
         "logo_filename": "Silkeborg_IF_logo.svg.png",
         "official_name": "Silkeborg Idrætsforening"
+    },
+    {
+        "id": "FIO",
+        "name": "Fiorentina",
+        "team_type_id": "CLUB",
+        "nation_id": "ITA",
+        "parent_team_id": "",
+        "club_code": "FIO",
+        "logo_filename": "ACF_Fiorentina_-_logo_(Italy,_2022).svg.png",
+        "official_name": "ACF Fiorentina S.r.l."
+    },
+    {
+        "id": "ASV",
+        "name": "Aston Villa",
+        "team_type_id": "CLUB",
+        "nation_id": "ENG",
+        "parent_team_id": "",
+        "club_code": "ASV",
+        "logo_filename": "Aston_Villa_FC_new_crest.svg.png",
+        "official_name": "Aston Villa Football Club"
     }
 ]

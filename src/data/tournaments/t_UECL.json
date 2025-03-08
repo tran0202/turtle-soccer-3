@@ -1,0 +1,205 @@
+[
+    {
+        "id": "UECL202425",
+        "year": "2024-25",
+        "name": "2024-25 UEFA Conference League",
+        "short_name": "2024-25",
+        "competition_id": "UECL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Conference_League_2024.png",
+            "mascot_filename": "",
+            "mascot_height": "230px",
+            "start_qualifying_date": "2024-07-10",
+            "end_qualifying_date": "2024-08-29",
+            "start_competition_date": "2024-10-02",
+            "end_competition_date": "2025-05-28",
+            "color": "#15611e",
+            "competition_team_count": 24,
+            "transfer_team_count": 12,
+            "total_team_count": 110,
+            "total_transfer_team_count": 54,
+            "association_count": 54
+        },
+        "hero_images": [],
+        "final_standings": {},
+        "statistics": {},
+        "awards": {}
+    },
+    {
+        "id": "UECL202324",
+        "year": "2023-24",
+        "name": "2023-24 UEFA Europa Conference League",
+        "short_name": "2023-24",
+        "competition_id": "UECL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Conference_League_2024.png",
+            "mascot_filename": "",
+            "mascot_height": "230px",
+            "start_qualifying_date": "2023-07-12",
+            "end_qualifying_date": "2023-08-31",
+            "start_competition_date": "2023-09-20",
+            "end_competition_date": "2024-05-20",
+            "color": "#15611e",
+            "competition_team_count": 32,
+            "transfer_team_count": 8,
+            "total_team_count": 135,
+            "total_transfer_team_count": 43,
+            "association_count": 54
+        },
+        "hero_images": [],
+        "final_standings": {
+            "champions": "OLY",
+            "runners_up": "FIO",
+            "semi_finalist1": "ASV",
+            "semi_finalist2": "BRG"
+        },
+        "statistics": { "total_matches": 141, "total_goals": 411, "attendance": 2327520 },
+        "awards": {
+            "golden_ball": [{ "player": "Ayoub El Kaabi", "team": "MAR", "club": "OLY" }],
+            "golden_boot": [{ "player": "Ayoub El Kaabi", "team": "MAR", "club": "OLY", "goals": 11 }],
+            "best_young_player": { "player": "Igor Thiago", "team": "BRA", "club": "BRG" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
+        }
+    },
+    {
+        "id": "UECL202223",
+        "year": "2022-23",
+        "name": "2022-23 UEFA Europa Conference League",
+        "short_name": "2022-23",
+        "competition_id": "UECL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Conference_League_2024.png",
+            "mascot_filename": "",
+            "mascot_height": "230px",
+            "start_qualifying_date": "2022-07-05",
+            "end_qualifying_date": "2022-08-25",
+            "start_competition_date": "2022-09-08",
+            "end_competition_date": "2023-06-07",
+            "color": "#15611e",
+            "competition_team_count": 32,
+            "transfer_team_count": 8,
+            "total_team_count": 134,
+            "total_transfer_team_count": 43,
+            "association_count": 54
+        },
+        "hero_images": [],
+        "final_standings": {
+            "champions": "WHU",
+            "runners_up": "FIO",
+            "semi_finalist1": "AZA",
+            "semi_finalist2": "BAS"
+        },
+        "statistics": { "total_matches": 141, "total_goals": 379, "attendance": 2077952 },
+        "awards": {
+            "golden_ball": [{ "player": "Declan Rice", "team": "ENG", "club": "WHU" }],
+            "golden_boot": [
+                { "player": "Zeki Amdouni", "team": "SUI", "club": "BAS", "goals": 7 },
+                { "player": "Arthur Cabral", "team": "BRA", "club": "FIO", "goals": 7 }
+            ],
+            "best_young_player": { "player": "Andy Diouf", "team": "FRA", "club": "BAS" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
+        }
+    },
+    {
+        "id": "UECL202122",
+        "year": "2021-22",
+        "name": "2021-22 UEFA Europa Conference League",
+        "short_name": "2021-22",
+        "competition_id": "UECL",
+        "points_for_win": 3,
+        "no_third_place": true,
+        "tiebreakers": [
+            "points",
+            "h2hpoints",
+            "h2hgoaldifference",
+            "h2hgoalsfor",
+            "goaldifference",
+            "goalsfor",
+            "awaygoals",
+            "wins",
+            "awaywins",
+            "disciplinarypoints",
+            "coefficient"
+        ],
+        "details": {
+            "logo_filename": "UEFA_Conference_League_2024.png",
+            "mascot_filename": "",
+            "mascot_height": "230px",
+            "start_qualifying_date": "2021-07-06",
+            "end_qualifying_date": "2021-08-26",
+            "start_competition_date": "2021-09-14",
+            "end_competition_date": "2022-05-25",
+            "color": "#15611e",
+            "competition_team_count": 32,
+            "transfer_team_count": 8,
+            "total_team_count": 136,
+            "total_transfer_team_count": 45,
+            "association_count": 54
+        },
+        "hero_images": [],
+        "final_standings": {
+            "champions": "ROM",
+            "runners_up": "FEY",
+            "semi_finalist1": "LEI",
+            "semi_finalist2": "OLM"
+        },
+        "statistics": { "total_matches": 140, "total_goals": 401, "attendance": 1978850 },
+        "awards": {
+            "golden_ball": [{ "player": "Lorenzo Pellegrini", "team": "ITA", "club": "ROM" }],
+            "golden_boot": [{ "player": "Cyriel Dessers", "team": "NGA", "club": "FEY", "goals": 10 }],
+            "best_young_player": { "player": "Luis Sinisterra", "team": "COL", "club": "FEY" },
+            "award_category_highlighted": ["ball", "young"],
+            "ball_label": "Player Season",
+            "boot_label": "Top Scorer"
+        }
+    }
+]
