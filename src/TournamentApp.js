@@ -12,7 +12,8 @@ import Pair from './tournament/Pair'
 const TournamentTabs = (props) => {
     const { tournament, config } = props
     const { stages } = tournament
-    const first_final_stage = stages && stages.length > 0 && stages.find((s) => s.name === 'Knockout Stage') ? 'Knockout Stage' : stages[0].name
+    const first_final_stage =
+        stages && stages.length > 0 && stages.find((s) => s.name === 'Knockout Stage') ? 'Knockout Stage' : stages.length === 1 ? stages[0].name : 'Group Stage'
     const [activeTab, setActiveTab] = useState(first_final_stage)
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
@@ -22,6 +23,7 @@ const TournamentTabs = (props) => {
         <React.Fragment>
             <Nav tabs className="mt-4 mb-4">
                 {stages &&
+                    stages.length > 0 &&
                     stages.map((s) => {
                         return (
                             <NavLink
@@ -48,6 +50,7 @@ const TournamentTabs = (props) => {
             </Nav>
             <TabContent activeTab={activeTab}>
                 {stages &&
+                    stages.length > 0 &&
                     stages.map((s) => {
                         return (
                             <TabPane key={s.name} tabId={s.name}>

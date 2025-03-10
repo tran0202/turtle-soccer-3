@@ -116,7 +116,7 @@
         ],
         "details": {
             "logo_filename": "UEFA_Conference_League_2024.png",
-            "mascot_filename": "",
+            "mascot_filename": "347px-Fiorentina_vs_West_Ham_United_2023-06-07.svg.png",
             "mascot_height": "230px",
             "start_qualifying_date": "2022-07-05",
             "end_qualifying_date": "2022-08-25",
@@ -129,7 +129,28 @@
             "total_transfer_team_count": 43,
             "association_count": 54
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Fortuna Arena",
+                "filename": "640px-Praha,_Slavia,_fotbalový_stadion_(2).jpg",
+                "text": "The Fortuna Arena in Prague hosted the final"
+            },
+            {
+                "name": "Final: Fiorentina vs West Ham United",
+                "filename": "640px-2023_Uefa_Europa_Conference_League_final_line-up.jpeg",
+                "text": "The players of Fiorentina and West Ham United line up before the 2023 UEFA Europa Conference League final in Prague"
+            },
+            {
+                "name": "Declan Rice",
+                "filename": "365px-Rice_UEFA_winner.jpeg",
+                "text": "West Ham’s Declan Rice (in white and orange shirt) celebrates on the pitch after winning the 2023 UEFA Europa Conference League cup final in Prague"
+            },
+            {
+                "name": "CFR Cluj vs Lazio",
+                "filename": "640px-CFR_Cluj_-_Lazio_0-0_(52707778591).png",
+                "text": "CFR Cluj - Lazio 0-0"
+            }
+        ],
         "final_standings": {
             "champions": "WHU",
             "runners_up": "FIO",
@@ -172,7 +193,7 @@
         ],
         "details": {
             "logo_filename": "UEFA_Conference_League_2024.png",
-            "mascot_filename": "",
+            "mascot_filename": "347px-Roma_vs_Feyenoord_2022-05-25.svg.png",
             "mascot_height": "230px",
             "start_qualifying_date": "2021-07-06",
             "end_qualifying_date": "2021-08-26",
@@ -185,7 +206,28 @@
             "total_transfer_team_count": 45,
             "association_count": 54
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Arena Kombëtare",
+                "filename": "640px-Arena_Kombetare,_Tirane.jpg",
+                "text": "The Arena Kombëtare in Tirana hosted the final"
+            },
+            {
+                "name": "CSKA Sofia VS Roma",
+                "filename": "640px-UEFA_Europa_Conference_League_CSKA_Sofia_-_Roma,_2021-12-09_03.jpg",
+                "text": "CSKA Sofia VS Roma, 9 dicembre 2021"
+            },
+            {
+                "name": "Tottenham v Vitesse",
+                "filename": "640px-Tottenham_v_Vitesse_Europa_Conference_League_at_Tottenham_Hotspur_Stadium.jpg",
+                "text": "Tottenham v Vitesse Europa Conference League at Tottenham Hotspur Stadium in November 2021"
+            },
+            {
+                "name": "FC København v PSV Eindhoven",
+                "filename": "640px-FC_København_v_PSV_Eindhoven,_17._March_2022_(3).jpg",
+                "text": "FC København v PSV Eindhoven, 17. March 2022"
+            }
+        ],
         "final_standings": {
             "champions": "ROM",
             "runners_up": "FEY",
