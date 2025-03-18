@@ -28,7 +28,7 @@
                         { "id": "CLI" }
                     ],
                     "bye_teams": [
-                        { "id": "MAL" },
+                        { "id": "MFF" },
                         { "id": "CQN" },
                         { "id": "KIL-2018-2020" },
                         { "id": "KUP" },
@@ -36,12 +36,12 @@
                         { "id": "UBK" },
                         { "id": "VAD" },
                         { "id": "BRN" },
-                        { "id": "SHR" },
+                        { "id": "SHA" },
                         { "id": "ORD" },
                         { "id": "KUT" },
-                        { "id": "WAR" },
+                        { "id": "LEG" },
                         { "id": "CSO" },
-                        { "id": "POD" },
+                        { "id": "TIT" },
                         { "id": "GZU" },
                         { "id": "HAJ" },
                         { "id": "FTA" },
@@ -54,7 +54,7 @@
                         { "id": "BNA" },
                         { "id": "JEU" },
                         { "id": "TOB" },
-                        { "id": "SBU" },
+                        { "id": "FCS" },
                         { "id": "ORH" },
                         { "id": "CRS" },
                         { "id": "B36" },
@@ -62,7 +62,7 @@
                         { "id": "ITU" },
                         { "id": "MOL" },
                         { "id": "KRR" },
-                        { "id": "RFC" },
+                        { "id": "RAN" },
                         { "id": "COR" },
                         { "id": "RUZ" },
                         { "id": "LSO" },
@@ -78,7 +78,7 @@
                         { "id": "RFS" },
                         { "id": "BUH-2020" },
                         { "id": "ZAL" },
-                        { "id": "ASH" },
+                        { "id": "ALA" },
                         { "id": "MGP" },
                         { "id": "RBI" },
                         { "id": "SPT" },
@@ -114,7 +114,7 @@
                         { "id": "PYU" },
                         { "id": "FKS" },
                         { "id": "LAR" },
-                        { "id": "HIN" }
+                        { "id": "PET" }
                     ],
                     "pairs": [
                         {
@@ -324,7 +324,7 @@
                         { "id": "LRI" },
                         { "id": "VRE" },
                         { "id": "LUD" },
-                        { "id": "SKS" },
+                        { "id": "SLO" },
                         { "id": "FRN" },
                         { "id": "SAC" },
                         { "id": "AST" },
@@ -334,11 +334,11 @@
                         { "id": "F91" },
                         { "id": "FCA" },
                         { "id": "EPN" },
-                        { "id": "ATS" },
-                        { "id": "SGR" },
+                        { "id": "ATR" },
+                        { "id": "STU" },
                         { "id": "UTR" },
                         { "id": "JAB" },
-                        { "id": "LEG" },
+                        { "id": "LEC" },
                         { "id": "GBL" },
                         { "id": "YMA" },
                         { "id": "SGE" },
@@ -349,12 +349,12 @@
                         { "id": "TOR" },
                         { "id": "LUZ" },
                         { "id": "STR" },
-                        { "id": "MBO" },
+                        { "id": "MBL" },
                         { "id": "AZA" },
                         { "id": "BKH" },
                         { "id": "PLO" },
                         { "id": "WLV" },
-                        { "id": "ART" },
+                        { "id": "ARI" },
                         { "id": "AEL" },
                         { "id": "VDG" },
                         { "id": "ESB" },
@@ -365,7 +365,7 @@
                             "name": "1stQlf01",
                             "matches": [
                                 {
-                                    "home_team": "MAL",
+                                    "home_team": "MFF",
                                     "away_team": "BMU",
                                     "home_score": 7,
                                     "away_score": 0,
@@ -377,7 +377,7 @@
                                 },
                                 {
                                     "home_team": "BMU",
-                                    "away_team": "MAL",
+                                    "away_team": "MFF",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2019-07-18",
@@ -474,7 +474,7 @@
                             "matches": [
                                 {
                                     "home_team": "BRN",
-                                    "away_team": "SHR",
+                                    "away_team": "SHA",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2019-07-11",
@@ -484,7 +484,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SHR",
+                                    "home_team": "SHA",
                                     "away_team": "BRN",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -528,7 +528,7 @@
                             "matches": [
                                 {
                                     "home_team": "EUR",
-                                    "away_team": "WAR",
+                                    "away_team": "LEG",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-07-11",
@@ -538,7 +538,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "WAR",
+                                    "home_team": "LEG",
                                     "away_team": "EUR",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -555,7 +555,7 @@
                             "matches": [
                                 {
                                     "home_team": "CSO",
-                                    "away_team": "POD",
+                                    "away_team": "TIT",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2019-07-09",
@@ -565,7 +565,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "POD",
+                                    "home_team": "TIT",
                                     "away_team": "CSO",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -743,7 +743,7 @@
                             "name": "1stQlf15",
                             "matches": [
                                 {
-                                    "home_team": "SBU",
+                                    "home_team": "FCS",
                                     "away_team": "ORH",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -755,7 +755,7 @@
                                 },
                                 {
                                     "home_team": "ORH",
-                                    "away_team": "SBU",
+                                    "away_team": "FCS",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2019-07-18",
@@ -852,7 +852,7 @@
                             "matches": [
                                 {
                                     "home_team": "SJF",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2019-07-09",
@@ -862,7 +862,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "SJF",
                                     "home_score": 6,
                                     "away_score": 0,
@@ -1094,7 +1094,7 @@
                             "name": "1stQlf28",
                             "matches": [
                                 {
-                                    "home_team": "ASH",
+                                    "home_team": "ALA",
                                     "away_team": "MGP",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -1106,7 +1106,7 @@
                                 },
                                 {
                                     "home_team": "MGP",
-                                    "away_team": "ASH",
+                                    "away_team": "ALA",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2019-07-18",
@@ -1616,7 +1616,7 @@
                             "matches": [
                                 {
                                     "home_team": "LAR",
-                                    "away_team": "HIN",
+                                    "away_team": "PET",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-07-11",
@@ -1626,7 +1626,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "HIN",
+                                    "home_team": "PET",
                                     "away_team": "LAR",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -1657,9 +1657,9 @@
                         { "id": "VFC" },
                         { "id": "AIK" },
                         { "id": "DUN" },
-                        { "id": "ROA" },
+                        { "id": "ANT" },
                         { "id": "VPL" },
-                        { "id": "AUV" },
+                        { "id": "FKA" },
                         { "id": "FEY" },
                         { "id": "SBR" },
                         { "id": "THU" },
@@ -1669,7 +1669,7 @@
                         { "id": "PSV" },
                         { "id": "RIJ" },
                         { "id": "YEH" },
-                        { "id": "SPP" },
+                        { "id": "ACS" },
                         { "id": "TRA" },
                         { "id": "AEK" }
                     ],
@@ -1837,7 +1837,7 @@
                                     "name": "C06",
                                     "matches": [
                                         {
-                                            "home_team": "SKS",
+                                            "home_team": "SLO",
                                             "away_team": "FRN",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -1850,7 +1850,7 @@
                                         },
                                         {
                                             "home_team": "FRN",
-                                            "away_team": "SKS",
+                                            "away_team": "SLO",
                                             "home_score": 0,
                                             "away_score": 2,
                                             "date": "2019-07-30",
@@ -2075,7 +2075,7 @@
                                     "matches": [
                                         {
                                             "home_team": "DAC-2021",
-                                            "away_team": "ATS",
+                                            "away_team": "ATR",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2019-07-25",
@@ -2086,7 +2086,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "ATS",
+                                            "home_team": "ATR",
                                             "away_team": "DAC-2021",
                                             "home_score": 3,
                                             "away_score": 2,
@@ -2104,7 +2104,7 @@
                                     "matches": [
                                         {
                                             "home_team": "HAU",
-                                            "away_team": "SGR",
+                                            "away_team": "STU",
                                             "home_score": 2,
                                             "away_score": 0,
                                             "date": "2019-07-25",
@@ -2115,7 +2115,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SGR",
+                                            "home_team": "STU",
                                             "away_team": "HAU",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -2161,7 +2161,7 @@
                                     "name": "M08",
                                     "matches": [
                                         {
-                                            "home_team": "WAR",
+                                            "home_team": "LEG",
                                             "away_team": "KUP",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -2174,7 +2174,7 @@
                                         },
                                         {
                                             "home_team": "KUP",
-                                            "away_team": "WAR",
+                                            "away_team": "LEG",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-01",
@@ -2250,7 +2250,7 @@
                                     "name": "M11",
                                     "matches": [
                                         {
-                                            "home_team": "LEG",
+                                            "home_team": "LEC",
                                             "away_team": "BIF",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -2263,7 +2263,7 @@
                                         },
                                         {
                                             "home_team": "BIF",
-                                            "away_team": "LEG",
+                                            "away_team": "LEC",
                                             "home_score": 2,
                                             "away_score": 1,
                                             "home_extra_score": 2,
@@ -2400,7 +2400,7 @@
                                     "matches": [
                                         {
                                             "home_team": "DOZ",
-                                            "away_team": "MAL",
+                                            "away_team": "MFF",
                                             "home_score": 2,
                                             "away_score": 2,
                                             "date": "2019-07-25",
@@ -2411,7 +2411,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "MAL",
+                                            "home_team": "MFF",
                                             "away_team": "DOZ",
                                             "home_score": 3,
                                             "away_score": 2,
@@ -2635,7 +2635,7 @@
                                     "name": "M24",
                                     "matches": [
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "PRO",
                                             "home_score": 2,
                                             "away_score": 0,
@@ -2648,7 +2648,7 @@
                                         },
                                         {
                                             "home_team": "PRO",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-01",
@@ -2722,7 +2722,7 @@
                                     "name": "M27",
                                     "matches": [
                                         {
-                                            "home_team": "MBO",
+                                            "home_team": "MBL",
                                             "away_team": "ORD",
                                             "home_score": 1,
                                             "away_score": 1,
@@ -2735,7 +2735,7 @@
                                         },
                                         {
                                             "home_team": "ORD",
-                                            "away_team": "MBO",
+                                            "away_team": "MBL",
                                             "home_score": 2,
                                             "away_score": 3,
                                             "date": "2019-08-01",
@@ -2751,7 +2751,7 @@
                                     "name": "M28",
                                     "matches": [
                                         {
-                                            "home_team": "SHR",
+                                            "home_team": "SHA",
                                             "away_team": "APL",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -2764,7 +2764,7 @@
                                         },
                                         {
                                             "home_team": "APL",
-                                            "away_team": "SHR",
+                                            "away_team": "SHA",
                                             "home_score": 2,
                                             "away_score": 1,
                                             "home_extra_score": 1,
@@ -2811,8 +2811,8 @@
                                     "name": "M30",
                                     "matches": [
                                         {
-                                            "home_team": "ASH",
-                                            "away_team": "SBU",
+                                            "home_team": "ALA",
+                                            "away_team": "FCS",
                                             "home_score": 0,
                                             "away_score": 3,
                                             "date": "2019-07-25",
@@ -2823,8 +2823,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SBU",
-                                            "away_team": "ASH",
+                                            "home_team": "FCS",
+                                            "away_team": "ALA",
                                             "home_score": 2,
                                             "away_score": 3,
                                             "date": "2019-08-01",
@@ -2898,7 +2898,7 @@
                                     "name": "M33",
                                     "matches": [
                                         {
-                                            "home_team": "ART",
+                                            "home_team": "ARI",
                                             "away_team": "AEL",
                                             "home_score": 0,
                                             "away_score": 0,
@@ -2911,7 +2911,7 @@
                                         },
                                         {
                                             "home_team": "AEL",
-                                            "away_team": "ART",
+                                            "away_team": "ARI",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2019-08-01",
@@ -3052,7 +3052,7 @@
                     "round_type": "pair2legged",
                     "eliminate_count": 77,
                     "next_round": "Play-off Round",
-                    "bye_teams": [{ "id": "FER" }, { "id": "COP" }, { "id": "CEL" }, { "id": "MRB" }, { "id": "QAR" }, { "id": "PKT" }],
+                    "bye_teams": [{ "id": "FTC" }, { "id": "FCK" }, { "id": "CEL" }, { "id": "MRB" }, { "id": "QAR" }, { "id": "PKT" }],
                     "paths": [
                         {
                             "name": "Champions Path",
@@ -3322,7 +3322,7 @@
                                     "name": "C10",
                                     "matches": [
                                         {
-                                            "home_team": "SKS",
+                                            "home_team": "SLO",
                                             "away_team": "DUN",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -3335,7 +3335,7 @@
                                         },
                                         {
                                             "home_team": "DUN",
-                                            "away_team": "SKS",
+                                            "away_team": "SLO",
                                             "home_score": 1,
                                             "away_score": 3,
                                             "date": "2019-08-13",
@@ -3414,7 +3414,7 @@
                                     "name": "M03",
                                     "matches": [
                                         {
-                                            "home_team": "ROA",
+                                            "home_team": "ANT",
                                             "away_team": "VPL",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -3427,7 +3427,7 @@
                                         },
                                         {
                                             "home_team": "VPL",
-                                            "away_team": "ROA",
+                                            "away_team": "ANT",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "home_extra_score": 1,
@@ -3445,7 +3445,7 @@
                                     "name": "M04",
                                     "matches": [
                                         {
-                                            "home_team": "AUV",
+                                            "home_team": "FKA",
                                             "away_team": "APL",
                                             "home_score": 1,
                                             "away_score": 2,
@@ -3458,7 +3458,7 @@
                                         },
                                         {
                                             "home_team": "APL",
-                                            "away_team": "AUV",
+                                            "away_team": "FKA",
                                             "home_score": 3,
                                             "away_score": 1,
                                             "date": "2019-08-15",
@@ -3533,7 +3533,7 @@
                                     "matches": [
                                         {
                                             "home_team": "MOL",
-                                            "away_team": "ART",
+                                            "away_team": "ARI",
                                             "home_score": 3,
                                             "away_score": 0,
                                             "date": "2019-08-08",
@@ -3544,7 +3544,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "ART",
+                                            "home_team": "ARI",
                                             "away_team": "MOL",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -3621,8 +3621,8 @@
                                     "name": "M10",
                                     "matches": [
                                         {
-                                            "home_team": "SBU",
-                                            "away_team": "MBO",
+                                            "home_team": "FCS",
+                                            "away_team": "MBL",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-08",
@@ -3633,8 +3633,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "MBO",
-                                            "away_team": "SBU",
+                                            "home_team": "MBL",
+                                            "away_team": "FCS",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2019-08-15",
@@ -3680,7 +3680,7 @@
                                     "matches": [
                                         {
                                             "home_team": "FCM",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 2,
                                             "away_score": 4,
                                             "date": "2019-08-08",
@@ -3691,7 +3691,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "FCM",
                                             "home_score": 3,
                                             "away_score": 1,
@@ -3766,8 +3766,8 @@
                                     "name": "M15",
                                     "matches": [
                                         {
-                                            "home_team": "WAR",
-                                            "away_team": "ATS",
+                                            "home_team": "LEG",
+                                            "away_team": "ATR",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-08",
@@ -3778,8 +3778,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "ATS",
-                                            "away_team": "WAR",
+                                            "home_team": "ATR",
+                                            "away_team": "LEG",
                                             "home_score": 0,
                                             "away_score": 2,
                                             "date": "2019-08-14",
@@ -3940,7 +3940,7 @@
                                     "name": "M21",
                                     "matches": [
                                         {
-                                            "home_team": "MAL",
+                                            "home_team": "MFF",
                                             "away_team": "ZRI",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -3953,7 +3953,7 @@
                                         },
                                         {
                                             "home_team": "ZRI",
-                                            "away_team": "MAL",
+                                            "away_team": "MFF",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2019-08-15",
@@ -4056,7 +4056,7 @@
                                     "name": "M25",
                                     "matches": [
                                         {
-                                            "home_team": "SPP",
+                                            "home_team": "ACS",
                                             "away_team": "TRA",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -4069,7 +4069,7 @@
                                         },
                                         {
                                             "home_team": "TRA",
-                                            "away_team": "SPP",
+                                            "away_team": "ACS",
                                             "home_score": 2,
                                             "away_score": 1,
                                             "date": "2019-08-15",
@@ -4128,7 +4128,7 @@
                                     "matches": [
                                         {
                                             "home_team": "SMA",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-22",
@@ -4139,7 +4139,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "SMA",
                                             "home_score": 4,
                                             "away_score": 2,
@@ -4156,7 +4156,7 @@
                                     "name": "C02",
                                     "matches": [
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "RIG",
                                             "home_score": 3,
                                             "away_score": 1,
@@ -4169,7 +4169,7 @@
                                         },
                                         {
                                             "home_team": "RIG",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2019-08-29",
@@ -4305,7 +4305,7 @@
                                     "name": "C07",
                                     "matches": [
                                         {
-                                            "home_team": "SKS",
+                                            "home_team": "SLO",
                                             "away_team": "PKT",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -4318,7 +4318,7 @@
                                         },
                                         {
                                             "home_team": "PKT",
-                                            "away_team": "SKS",
+                                            "away_team": "SLO",
                                             "home_score": 3,
                                             "away_score": 2,
                                             "date": "2019-08-29",
@@ -4397,8 +4397,8 @@
                                     "name": "M02",
                                     "matches": [
                                         {
-                                            "home_team": "WAR",
-                                            "away_team": "RFC",
+                                            "home_team": "LEG",
+                                            "away_team": "RAN",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-22",
@@ -4409,8 +4409,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "RFC",
-                                            "away_team": "WAR",
+                                            "home_team": "RAN",
+                                            "away_team": "LEG",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2019-08-29",
@@ -4426,7 +4426,7 @@
                                     "name": "M03",
                                     "matches": [
                                         {
-                                            "home_team": "SBU",
+                                            "home_team": "FCS",
                                             "away_team": "VDG",
                                             "home_score": 0,
                                             "away_score": 0,
@@ -4439,7 +4439,7 @@
                                         },
                                         {
                                             "home_team": "VDG",
-                                            "away_team": "SBU",
+                                            "away_team": "FCS",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2019-08-29",
@@ -4658,7 +4658,7 @@
                                     "name": "M11",
                                     "matches": [
                                         {
-                                            "home_team": "MAL",
+                                            "home_team": "MFF",
                                             "away_team": "YEH",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -4671,7 +4671,7 @@
                                         },
                                         {
                                             "home_team": "YEH",
-                                            "away_team": "MAL",
+                                            "away_team": "MFF",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2019-08-29",
@@ -4717,7 +4717,7 @@
                                     "matches": [
                                         {
                                             "home_team": "AZA",
-                                            "away_team": "ROA",
+                                            "away_team": "ANT",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2019-08-22",
@@ -4728,7 +4728,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "ROA",
+                                            "home_team": "ANT",
                                             "away_team": "AZA",
                                             "home_score": 1,
                                             "away_score": 1,
@@ -4756,8 +4756,8 @@
             "home_and_away": true,
             "next_round": "Round of 32",
             "bye_teams": [
-                { "id": "AJA" },
-                { "id": "B04" },
+                { "id": "AJX" },
+                { "id": "LEV" },
                 { "id": "OLY" },
                 { "id": "BRG" },
                 { "id": "INT" },
@@ -4931,14 +4931,14 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "DYK" }, { "id": "MAL" }, { "id": "COP" }, { "id": "LUG" }],
+                    "teams": [{ "id": "DYK" }, { "id": "MFF" }, { "id": "FCK" }, { "id": "LUG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "DYK",
-                                    "away_team": "MAL",
+                                    "away_team": "MFF",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-09-19",
@@ -4947,7 +4947,7 @@
                                     "city": "Kyiv"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "LUG",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -4972,8 +4972,8 @@
                                     "city": "St. Gallen"
                                 },
                                 {
-                                    "home_team": "MAL",
-                                    "away_team": "COP",
+                                    "home_team": "MFF",
+                                    "away_team": "FCK",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-10-03",
@@ -4987,7 +4987,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "MAL",
+                                    "home_team": "MFF",
                                     "away_team": "LUG",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -4998,7 +4998,7 @@
                                 },
                                 {
                                     "home_team": "DYK",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-10-24",
@@ -5013,7 +5013,7 @@
                             "matches": [
                                 {
                                     "home_team": "LUG",
-                                    "away_team": "MAL",
+                                    "away_team": "MFF",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-11-07",
@@ -5022,7 +5022,7 @@
                                     "city": "St. Gallen"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "DYK",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -5037,7 +5037,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "MAL",
+                                    "home_team": "MFF",
                                     "away_team": "DYK",
                                     "home_score": 4,
                                     "away_score": 3,
@@ -5048,7 +5048,7 @@
                                 },
                                 {
                                     "home_team": "LUG",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2019-11-28",
@@ -5072,8 +5072,8 @@
                                     "city": "Kyiv"
                                 },
                                 {
-                                    "home_team": "COP",
-                                    "away_team": "MAL",
+                                    "home_team": "FCK",
+                                    "away_team": "MFF",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2019-12-12",
@@ -5243,14 +5243,14 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "PSV" }, { "id": "SLI" }, { "id": "LAS" }, { "id": "RBK" }],
+                    "teams": [{ "id": "PSV" }, { "id": "SCP" }, { "id": "LAS" }, { "id": "RBK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "PSV",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2019-09-19",
@@ -5284,7 +5284,7 @@
                                     "city": "Trondheim"
                                 },
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "LAS",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -5299,7 +5299,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "RBK",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -5325,7 +5325,7 @@
                             "matches": [
                                 {
                                     "home_team": "RBK",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-11-07",
@@ -5349,7 +5349,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "PSV",
                                     "home_score": 4,
                                     "away_score": 0,
@@ -5385,7 +5385,7 @@
                                 },
                                 {
                                     "home_team": "LAS",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2019-12-12",
@@ -5555,7 +5555,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "SGE" }, { "id": "ARS" }, { "id": "STL" }, { "id": "VDG" }],
+                    "teams": [{ "id": "SGE" }, { "id": "ARS" }, { "id": "STA" }, { "id": "VDG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -5571,7 +5571,7 @@
                                     "city": "Frankfurt"
                                 },
                                 {
-                                    "home_team": "STL",
+                                    "home_team": "STA",
                                     "away_team": "VDG",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -5597,7 +5597,7 @@
                                 },
                                 {
                                     "home_team": "ARS",
-                                    "away_team": "STL",
+                                    "away_team": "STA",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2019-10-03",
@@ -5622,7 +5622,7 @@
                                 },
                                 {
                                     "home_team": "SGE",
-                                    "away_team": "STL",
+                                    "away_team": "STA",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-10-24",
@@ -5646,7 +5646,7 @@
                                     "city": "Guimarães"
                                 },
                                 {
-                                    "home_team": "STL",
+                                    "home_team": "STA",
                                     "away_team": "SGE",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -5662,7 +5662,7 @@
                             "matches": [
                                 {
                                     "home_team": "VDG",
-                                    "away_team": "STL",
+                                    "away_team": "STA",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-11-28",
@@ -5696,7 +5696,7 @@
                                     "city": "Frankfurt"
                                 },
                                 {
-                                    "home_team": "STL",
+                                    "home_team": "STA",
                                     "away_team": "ARS",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -5711,7 +5711,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "YBO" }, { "id": "PTO" }, { "id": "RFC" }, { "id": "FEY" }],
+                    "teams": [{ "id": "YBO" }, { "id": "PTO" }, { "id": "RAN" }, { "id": "FEY" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -5727,7 +5727,7 @@
                                     "city": "Porto"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "FEY",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -5753,7 +5753,7 @@
                                 },
                                 {
                                     "home_team": "YBO",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-10-03",
@@ -5778,7 +5778,7 @@
                                 },
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-10-24",
@@ -5802,7 +5802,7 @@
                                     "city": "Rotterdam"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "PTO",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -5828,7 +5828,7 @@
                                 },
                                 {
                                     "home_team": "FEY",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2019-11-28",
@@ -5852,7 +5852,7 @@
                                     "city": "Porto"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "YBO",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -5867,7 +5867,7 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "LUD" }, { "id": "CSK" }, { "id": "EPN" }, { "id": "FER" }],
+                    "teams": [{ "id": "LUD" }, { "id": "CSK" }, { "id": "EPN" }, { "id": "FTC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -5884,7 +5884,7 @@
                                 },
                                 {
                                     "home_team": "EPN",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-09-19",
@@ -5898,7 +5898,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "LUD",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -5924,7 +5924,7 @@
                             "matches": [
                                 {
                                     "home_team": "CSK",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2019-10-24",
@@ -5948,7 +5948,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "CSK",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -5983,7 +5983,7 @@
                                     "city": "Moscow"
                                 },
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "EPN",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -5999,7 +5999,7 @@
                             "matches": [
                                 {
                                     "home_team": "LUD",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-12-12",
@@ -6179,7 +6179,7 @@
                 },
                 {
                     "name": "Group J",
-                    "teams": [{ "id": "ROM" }, { "id": "IBA" }, { "id": "BMG" }, { "id": "WOL" }],
+                    "teams": [{ "id": "ROM" }, { "id": "IBA" }, { "id": "BMG" }, { "id": "WAC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -6196,7 +6196,7 @@
                                 },
                                 {
                                     "home_team": "BMG",
-                                    "away_team": "WOL",
+                                    "away_team": "WAC",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2019-09-19",
@@ -6210,7 +6210,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "WOL",
+                                    "home_team": "WAC",
                                     "away_team": "ROM",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -6236,7 +6236,7 @@
                             "matches": [
                                 {
                                     "home_team": "IBA",
-                                    "away_team": "WOL",
+                                    "away_team": "WAC",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-10-24",
@@ -6260,7 +6260,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "WOL",
+                                    "home_team": "WAC",
                                     "away_team": "IBA",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -6295,7 +6295,7 @@
                                     "city": "Istanbul"
                                 },
                                 {
-                                    "home_team": "WOL",
+                                    "home_team": "WAC",
                                     "away_team": "BMG",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -6311,7 +6311,7 @@
                             "matches": [
                                 {
                                     "home_team": "ROM",
-                                    "away_team": "WOL",
+                                    "away_team": "WAC",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2019-12-12",
@@ -6335,14 +6335,14 @@
                 },
                 {
                     "name": "Group K",
-                    "teams": [{ "id": "SKS" }, { "id": "BES" }, { "id": "WLV" }, { "id": "SBR" }],
+                    "teams": [{ "id": "SLO" }, { "id": "BJK" }, { "id": "WLV" }, { "id": "SBR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
-                                    "away_team": "BES",
+                                    "home_team": "SLO",
+                                    "away_team": "BJK",
                                     "home_score": 4,
                                     "away_score": 2,
                                     "date": "2019-09-19",
@@ -6367,7 +6367,7 @@
                             "matches": [
                                 {
                                     "home_team": "SBR",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2019-10-03",
@@ -6376,7 +6376,7 @@
                                     "city": "Braga"
                                 },
                                 {
-                                    "home_team": "BES",
+                                    "home_team": "BJK",
                                     "away_team": "WLV",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -6391,7 +6391,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "BES",
+                                    "home_team": "BJK",
                                     "away_team": "SBR",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -6401,7 +6401,7 @@
                                     "city": "Istanbul"
                                 },
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "WLV",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -6417,7 +6417,7 @@
                             "matches": [
                                 {
                                     "home_team": "SBR",
-                                    "away_team": "BES",
+                                    "away_team": "BJK",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2019-11-07",
@@ -6427,7 +6427,7 @@
                                 },
                                 {
                                     "home_team": "WLV",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-11-07",
@@ -6441,8 +6441,8 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "BES",
-                                    "away_team": "SKS",
+                                    "home_team": "BJK",
+                                    "away_team": "SLO",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-11-28",
@@ -6466,7 +6466,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "SBR",
                                     "home_score": 2,
                                     "away_score": 4,
@@ -6477,7 +6477,7 @@
                                 },
                                 {
                                     "home_team": "WLV",
-                                    "away_team": "BES",
+                                    "away_team": "BJK",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2019-12-12",
@@ -6690,7 +6690,7 @@
                             "name": "R3202",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "IBA",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -6702,7 +6702,7 @@
                                 },
                                 {
                                     "home_team": "IBA",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "home_extra_score": 1,
@@ -6721,7 +6721,7 @@
                             "matches": [
                                 {
                                     "home_team": "GET",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-02-20",
@@ -6731,7 +6731,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "GET",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -6748,7 +6748,7 @@
                             "name": "R3204",
                             "matches": [
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "PTO",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -6760,7 +6760,7 @@
                                 },
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2020-02-27",
@@ -6776,7 +6776,7 @@
                             "name": "R3205",
                             "matches": [
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "CEL",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -6788,7 +6788,7 @@
                                 },
                                 {
                                     "home_team": "CEL",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2020-02-27",
@@ -7031,7 +7031,7 @@
                             "matches": [
                                 {
                                     "home_team": "WOB",
-                                    "away_team": "MAL",
+                                    "away_team": "MFF",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-02-20",
@@ -7041,7 +7041,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "MAL",
+                                    "home_team": "MFF",
                                     "away_team": "WOB",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -7086,7 +7086,7 @@
                             "name": "R3216",
                             "matches": [
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "SBR",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -7098,7 +7098,7 @@
                                 },
                                 {
                                     "home_team": "SBR",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2020-02-26",
@@ -7124,7 +7124,7 @@
                             "matches": [
                                 {
                                     "home_team": "IBA",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2020-03-12",
@@ -7134,7 +7134,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "IBA",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -7179,8 +7179,8 @@
                             "name": "R163",
                             "matches": [
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "B04",
+                                    "home_team": "RAN",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2020-03-12",
@@ -7190,8 +7190,8 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "B04",
-                                    "away_team": "RFC",
+                                    "home_team": "LEV",
+                                    "away_team": "RAN",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2020-08-06",
@@ -7342,7 +7342,7 @@
                         },
                         {
                             "home_team": "MUN",
-                            "away_team": "COP",
+                            "away_team": "FCK",
                             "home_score": 0,
                             "away_score": 0,
                             "home_extra_score": 1,
@@ -7355,7 +7355,7 @@
                         },
                         {
                             "home_team": "INT",
-                            "away_team": "B04",
+                            "away_team": "LEV",
                             "home_score": 2,
                             "away_score": 1,
                             "date": "2020-08-10",

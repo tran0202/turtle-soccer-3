@@ -7,7 +7,7 @@ import { AetTooltip, DisqualifiedTooltip, DrawLotTooltip, WalkoverTooltip, Penal
 const MatchesPairRow = (props) => {
     const { pair, config, last } = props
     const { matches } = pair
-    const hasPlayoff = matches.find((m) => m.matchday === 'playoffleg') !== undefined
+    const hasPlayoff = matches && matches.find((m) => m.matchday === 'playoffleg') !== undefined
 
     return (
         <React.Fragment>

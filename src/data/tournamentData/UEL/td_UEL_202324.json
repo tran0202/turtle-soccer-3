@@ -199,7 +199,7 @@
                                     "name": "M02",
                                     "matches": [
                                         {
-                                            "home_team": "SLP",
+                                            "home_team": "SLA",
                                             "away_team": "DN1",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -212,7 +212,7 @@
                                         },
                                         {
                                             "home_team": "DN1",
-                                            "away_team": "SLP",
+                                            "away_team": "SLA",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2023-08-17",
@@ -238,7 +238,7 @@
                             "name": "PO01",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "ZLH",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -250,7 +250,7 @@
                                 },
                                 {
                                     "home_team": "ZLH",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2023-08-31",
@@ -320,7 +320,7 @@
                             "matches": [
                                 {
                                     "home_team": "LUD",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 4,
                                     "date": "2023-08-24",
@@ -330,7 +330,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "LUD",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -454,7 +454,7 @@
                             "name": "PO09",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "ARL",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -466,7 +466,7 @@
                                 },
                                 {
                                     "home_team": "ARL",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 6,
                                     "away_score": 2,
                                     "date": "2023-08-31",
@@ -482,7 +482,7 @@
                             "matches": [
                                 {
                                     "home_team": "DZA",
-                                    "away_team": "SPP",
+                                    "away_team": "ACS",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2023-08-24",
@@ -492,7 +492,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SPP",
+                                    "home_team": "ACS",
                                     "away_team": "DZA",
                                     "home_score": 4,
                                     "away_score": 1,
@@ -521,7 +521,7 @@
                 { "id": "RBS" },
                 { "id": "KRA" },
                 { "id": "SHK" },
-                { "id": "AJA" },
+                { "id": "AJX" },
                 { "id": "OLY" }
             ],
             "advancements": {
@@ -693,13 +693,13 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "AJA" }, { "id": "OLM" }, { "id": "BHA" }, { "id": "AEK" }],
+                    "teams": [{ "id": "AJX" }, { "id": "OLM" }, { "id": "BHA" }, { "id": "AEK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "OLM",
                                     "home_score": 3,
                                     "away_score": 3,
@@ -735,7 +735,7 @@
                                 },
                                 {
                                     "home_team": "AEK",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2023-10-05",
@@ -760,7 +760,7 @@
                                 },
                                 {
                                     "home_team": "BHA",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-10-26",
@@ -774,7 +774,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "BHA",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -810,7 +810,7 @@
                                 },
                                 {
                                     "home_team": "OLM",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 4,
                                     "away_score": 3,
                                     "date": "2023-11-30",
@@ -824,7 +824,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "AEK",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -849,13 +849,13 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "SPP" }, { "id": "ARL" }, { "id": "RFC" }, { "id": "BET" }],
+                    "teams": [{ "id": "ACS" }, { "id": "ARL" }, { "id": "RAN" }, { "id": "BET" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "SPP",
+                                    "home_team": "ACS",
                                     "away_team": "ARL",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -865,7 +865,7 @@
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "BET",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -881,7 +881,7 @@
                             "matches": [
                                 {
                                     "home_team": "BET",
-                                    "away_team": "SPP",
+                                    "away_team": "ACS",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2023-10-05",
@@ -891,7 +891,7 @@
                                 },
                                 {
                                     "home_team": "ARL",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2023-10-05",
@@ -905,8 +905,8 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SPP",
-                                    "away_team": "RFC",
+                                    "home_team": "ACS",
+                                    "away_team": "RAN",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2023-10-26",
@@ -940,8 +940,8 @@
                                     "city": "Seville"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "SPP",
+                                    "home_team": "RAN",
+                                    "away_team": "ACS",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2023-11-09",
@@ -955,7 +955,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SPP",
+                                    "home_team": "ACS",
                                     "away_team": "BET",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -965,7 +965,7 @@
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "ARL",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -981,7 +981,7 @@
                             "matches": [
                                 {
                                     "home_team": "BET",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2023-12-14",
@@ -991,7 +991,7 @@
                                 },
                                 {
                                     "home_team": "ARL",
-                                    "away_team": "SPP",
+                                    "away_team": "ACS",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2023-12-14",
@@ -1005,13 +1005,13 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "RAK" }, { "id": "ATT" }, { "id": "SGR" }, { "id": "SLI" }],
+                    "teams": [{ "id": "RAK" }, { "id": "ATA" }, { "id": "STU" }, { "id": "SCP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "RAK",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1021,8 +1021,8 @@
                                     "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "SGR",
-                                    "away_team": "SLI",
+                                    "home_team": "STU",
+                                    "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2023-09-21",
@@ -1036,8 +1036,8 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
-                                    "away_team": "ATT",
+                                    "home_team": "SCP",
+                                    "away_team": "ATA",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2023-10-05",
@@ -1047,7 +1047,7 @@
                                 },
                                 {
                                     "home_team": "RAK",
-                                    "away_team": "SGR",
+                                    "away_team": "STU",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-10-05",
@@ -1061,8 +1061,8 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SGR",
-                                    "away_team": "ATT",
+                                    "home_team": "STU",
+                                    "away_team": "ATA",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2023-10-26",
@@ -1072,7 +1072,7 @@
                                 },
                                 {
                                     "home_team": "RAK",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2023-10-26",
@@ -1086,8 +1086,8 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "SGR",
+                                    "home_team": "ATA",
+                                    "away_team": "STU",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2023-11-09",
@@ -1096,7 +1096,7 @@
                                     "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "RAK",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -1111,8 +1111,8 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "SLI",
+                                    "home_team": "ATA",
+                                    "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2023-11-30",
@@ -1121,7 +1121,7 @@
                                     "city": "Bergamo"
                                 },
                                 {
-                                    "home_team": "SGR",
+                                    "home_team": "STU",
                                     "away_team": "RAK",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -1136,8 +1136,8 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
-                                    "away_team": "SGR",
+                                    "home_team": "SCP",
+                                    "away_team": "STU",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2023-12-14",
@@ -1147,7 +1147,7 @@
                                 },
                                 {
                                     "home_team": "RAK",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2023-12-14",
@@ -1473,14 +1473,14 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "SER" }, { "id": "SLP" }, { "id": "SHE" }, { "id": "ROM" }],
+                    "teams": [{ "id": "SER" }, { "id": "SLA" }, { "id": "SHE" }, { "id": "ROM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "SER",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2023-09-21",
@@ -1514,7 +1514,7 @@
                                     "city": "Rome"
                                 },
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "SHE",
                                     "home_score": 6,
                                     "away_score": 0,
@@ -1530,7 +1530,7 @@
                             "matches": [
                                 {
                                     "home_team": "ROM",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-10-26",
@@ -1564,7 +1564,7 @@
                                     "city": "Geneva"
                                 },
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "ROM",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1590,7 +1590,7 @@
                                 },
                                 {
                                     "home_team": "SHE",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2023-11-30",
@@ -1614,7 +1614,7 @@
                                     "city": "Rome"
                                 },
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "SER",
                                     "home_score": 4,
                                     "away_score": 0,
@@ -1629,13 +1629,13 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "BKH" }, { "id": "B04" }, { "id": "QAR" }, { "id": "MOL" }],
+                    "teams": [{ "id": "BKH" }, { "id": "LEV" }, { "id": "QAR" }, { "id": "MOL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "BKH",
                                     "home_score": 4,
                                     "away_score": 0,
@@ -1661,7 +1661,7 @@
                             "matches": [
                                 {
                                     "home_team": "MOL",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2023-10-05",
@@ -1695,7 +1695,7 @@
                                     "city": "Molde"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "QAR",
                                     "home_score": 5,
                                     "away_score": 1,
@@ -1711,7 +1711,7 @@
                             "matches": [
                                 {
                                     "home_team": "QAR",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-11-09",
@@ -1746,7 +1746,7 @@
                                 },
                                 {
                                     "home_team": "BKH",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2023-11-30",
@@ -1760,7 +1760,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "MOL",
                                     "home_score": 5,
                                     "away_score": 1,
@@ -1907,7 +1907,7 @@
                             "matches": [
                                 {
                                     "home_team": "YBO",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2024-02-15",
@@ -1917,7 +1917,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "YBO",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2008,7 +2008,7 @@
                             "matches": [
                                 {
                                     "home_team": "GAL",
-                                    "away_team": "SPP",
+                                    "away_team": "ACS",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2024-02-15",
@@ -2018,7 +2018,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SPP",
+                                    "home_team": "ACS",
                                     "away_team": "GAL",
                                     "home_score": 4,
                                     "away_score": 1,
@@ -2082,7 +2082,7 @@
                             "name": "R161",
                             "matches": [
                                 {
-                                    "home_team": "SPP",
+                                    "home_team": "ACS",
                                     "away_team": "LIV",
                                     "home_score": 1,
                                     "away_score": 5,
@@ -2094,7 +2094,7 @@
                                 },
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "SPP",
+                                    "away_team": "ACS",
                                     "home_score": 6,
                                     "away_score": 1,
                                     "date": "2024-03-14",
@@ -2167,7 +2167,7 @@
                             "matches": [
                                 {
                                     "home_team": "SLB",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2024-03-07",
@@ -2177,7 +2177,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "SLB",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -2222,8 +2222,8 @@
                             "name": "R166",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
-                                    "away_team": "ATT",
+                                    "home_team": "SCP",
+                                    "away_team": "ATA",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-03-06",
@@ -2233,8 +2233,8 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "SLI",
+                                    "home_team": "ATA",
+                                    "away_team": "SCP",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2024-03-14",
@@ -2251,7 +2251,7 @@
                             "matches": [
                                 {
                                     "home_team": "MIL",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 4,
                                     "away_score": 2,
                                     "date": "2024-03-07",
@@ -2261,7 +2261,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "MIL",
                                     "home_score": 1,
                                     "away_score": 3,
@@ -2279,7 +2279,7 @@
                             "matches": [
                                 {
                                     "home_team": "QAR",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2024-03-07",
@@ -2289,7 +2289,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "QAR",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -2345,7 +2345,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2024-04-11",
@@ -2355,7 +2355,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "LIV",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -2372,7 +2372,7 @@
                             "name": "QF3",
                             "matches": [
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "WHU",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -2384,7 +2384,7 @@
                                 },
                                 {
                                     "home_team": "WHU",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-04-18",
@@ -2442,7 +2442,7 @@
                             "matches": [
                                 {
                                     "home_team": "OLM",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-05-02",
@@ -2452,7 +2452,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "OLMV",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -2470,7 +2470,7 @@
                             "matches": [
                                 {
                                     "home_team": "ROM",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2024-05-02",
@@ -2480,7 +2480,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "ROM",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -2503,8 +2503,8 @@
                     "championship": true,
                     "matches": [
                         {
-                            "home_team": "ATT",
-                            "away_team": "B04",
+                            "home_team": "ATA",
+                            "away_team": "LEV",
                             "home_score": 3,
                             "away_score": 0,
                             "date": "2024-05-22",

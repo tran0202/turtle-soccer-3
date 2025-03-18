@@ -35,7 +35,13 @@
             "total_transfer_team_count": 54,
             "association_count": 54
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Wrocław Stadium",
+                "filename": "640px-Municipal_stadium_in_Wroclaw.jpg",
+                "text": "Municipal stadium in wroclaw with aerials"
+            }
+        ],
         "final_standings": {},
         "statistics": {},
         "awards": {}
@@ -63,12 +69,12 @@
         ],
         "details": {
             "logo_filename": "UEFA_Conference_League_2024.png",
-            "mascot_filename": "",
+            "mascot_filename": "575px-UEFA_members_Conference_League_group_stage.png",
             "mascot_height": "230px",
             "start_qualifying_date": "2023-07-12",
             "end_qualifying_date": "2023-08-31",
             "start_competition_date": "2023-09-20",
-            "end_competition_date": "2024-05-20",
+            "end_competition_date": "2024-05-29",
             "color": "#15611e",
             "competition_team_count": 32,
             "transfer_team_count": 8,
@@ -76,11 +82,32 @@
             "total_transfer_team_count": 43,
             "association_count": 54
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Ayoub El Kaabi",
+                "filename": "172px-Kaabi.png",
+                "text": "Olympiacos forward Ayoub El Kaabi finished the tournament as the top scorer with 11 goals, and was named the inaugural Europa Conference League Player of the Season."
+            },
+            {
+                "name": "Fenerbahçe vs Olympiacos",
+                "filename": "640px-2023–24_UEFA_Europa_Conference_League_Quarter-Final_game_Fenerbahçe_-_Olympiacos_FC_penalty_shootout.jpg",
+                "text": "Fenerbahçe v Olympiacos penalty shoot-out."
+            },
+            {
+                "name": "Dynamo Kyiv vs Aris Thessaloniki",
+                "filename": "640px-2023-08-17_Dynamo_Kyiv_vs_Aris_Thessaloniki.jpg",
+                "text": "2023-08-17 Dynamo Kyiv vs Aris Thessaloniki"
+            },
+            {
+                "name": "Royale Union Saint-Gilloise vs Fenerbaçe SK",
+                "filename": "640px-RUSG_vs_Fenerbahçe_-_Conference_League_2024_-_4.jpg",
+                "text": "European football game in Conference League 2024, Royale Union Saint-Gilloise versus Fenerbaçe SK"
+            }
+        ],
         "final_standings": {
             "champions": "OLY",
             "runners_up": "FIO",
-            "semi_finalist1": "ASV",
+            "semi_finalist1": "AVL",
             "semi_finalist2": "BRG"
         },
         "statistics": { "total_matches": 141, "total_goals": 411, "attendance": 2327520 },
@@ -161,8 +188,8 @@
         "awards": {
             "golden_ball": [{ "player": "Declan Rice", "team": "ENG", "club": "WHU" }],
             "golden_boot": [
-                { "player": "Zeki Amdouni", "team": "SUI", "club": "BAS", "goals": 7 },
-                { "player": "Arthur Cabral", "team": "BRA", "club": "FIO", "goals": 7 }
+                { "player": "Arthur Cabral", "team": "BRA", "club": "FIO", "goals": 7, "minutes": 704 },
+                { "player": "Zeki Amdouni", "team": "SUI", "club": "BAS", "goals": 7, "minutes": 876 }
             ],
             "best_young_player": { "player": "Andy Diouf", "team": "FRA", "club": "BAS" },
             "award_category_highlighted": ["ball", "young"],

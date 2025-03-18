@@ -45,11 +45,11 @@
                     "eliminate_count": 76,
                     "next_round": "First Qualifying Round",
                     "bye_teams": [
-                        { "id": "FER" },
-                        { "id": "DJU" },
+                        { "id": "FTC" },
+                        { "id": "DIF" },
                         { "id": "CEL" },
                         { "id": "KRR" },
-                        { "id": "WAR" },
+                        { "id": "LEG" },
                         { "id": "SHE" },
                         { "id": "FOL" },
                         { "id": "CQN" },
@@ -77,7 +77,7 @@
                         { "id": "NKC" },
                         { "id": "DUN" },
                         { "id": "KIK" },
-                        { "id": "SKS" }
+                        { "id": "SLO" }
                     ],
                     "matches": [
                         {
@@ -114,17 +114,17 @@
                         { "id": "AZA" },
                         { "id": "VPL" },
                         { "id": "PKT" },
-                        { "id": "BES" },
+                        { "id": "BJK" },
                         { "id": "LZA" },
-                        { "id": "RAV" }
+                        { "id": "RAP" }
                     ],
                     "pairs": [
                         {
                             "name": "Pair 1",
                             "matches": [
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "DJU",
+                                    "home_team": "FTC",
+                                    "away_team": "DIF",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-08-19",
@@ -155,7 +155,7 @@
                             "name": "Pair 3",
                             "matches": [
                                 {
-                                    "home_team": "WAR",
+                                    "home_team": "LEG",
                                     "away_team": "LNF",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -386,7 +386,7 @@
                             "matches": [
                                 {
                                     "home_team": "KIK",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2020-08-21",
@@ -454,7 +454,7 @@
                                     "matches": [
                                         {
                                             "home_team": "CEL",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2020-08-26",
@@ -487,7 +487,7 @@
                                     "name": "C05",
                                     "matches": [
                                         {
-                                            "home_team": "WAR",
+                                            "home_team": "LEG",
                                             "away_team": "OMO",
                                             "home_score": 0,
                                             "away_score": 0,
@@ -616,7 +616,7 @@
                                     "matches": [
                                         {
                                             "home_team": "PKT",
-                                            "away_team": "BES",
+                                            "away_team": "BJK",
                                             "home_score": 3,
                                             "away_score": 1,
                                             "date": "2020-08-25",
@@ -633,7 +633,7 @@
                                     "matches": [
                                         {
                                             "home_team": "LZA",
-                                            "away_team": "RAV",
+                                            "away_team": "RAP",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2020-08-26",
@@ -654,7 +654,7 @@
                     "round_type": "pair1legged",
                     "eliminate_count": 38,
                     "next_round": "Play-off Round",
-                    "bye_teams": [{ "id": "SLP" }, { "id": "RBS" }, { "id": "OLY" }, { "id": "KRA" }],
+                    "bye_teams": [{ "id": "SLA" }, { "id": "RBS" }, { "id": "OLY" }, { "id": "KRA" }],
                     "paths": [
                         {
                             "name": "Champions Path",
@@ -663,7 +663,7 @@
                                     "name": "C01",
                                     "matches": [
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "DZA",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -796,7 +796,7 @@
                                     "matches": [
                                         {
                                             "home_team": "GNT",
-                                            "away_team": "RAV",
+                                            "away_team": "RAP",
                                             "home_score": 2,
                                             "away_score": 1,
                                             "date": "2020-09-15",
@@ -825,7 +825,7 @@
                                     "name": "C01",
                                     "matches": [
                                         {
-                                            "home_team": "SLP",
+                                            "home_team": "SLA",
                                             "away_team": "FCM",
                                             "home_score": 0,
                                             "away_score": 0,
@@ -838,7 +838,7 @@
                                         },
                                         {
                                             "home_team": "FCM",
-                                            "away_team": "SLP",
+                                            "away_team": "SLA",
                                             "home_score": 4,
                                             "away_score": 1,
                                             "date": "2020-09-30",
@@ -913,7 +913,7 @@
                                     "matches": [
                                         {
                                             "home_team": "MOL",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 3,
                                             "away_score": 3,
                                             "date": "2020-09-23",
@@ -924,7 +924,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "MOL",
                                             "home_score": 0,
                                             "away_score": 0,
@@ -1492,13 +1492,13 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "AJA" }, { "id": "LIV" }, { "id": "FCM" }, { "id": "ATT" }],
+                    "teams": [{ "id": "AJX" }, { "id": "LIV" }, { "id": "FCM" }, { "id": "ATA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "LIV",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -1509,7 +1509,7 @@
                                 },
                                 {
                                     "home_team": "FCM",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2020-10-21",
@@ -1533,8 +1533,8 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "ATT",
-                                    "away_team": "AJA",
+                                    "home_team": "ATA",
+                                    "away_team": "AJX",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2020-10-27",
@@ -1549,7 +1549,7 @@
                             "matches": [
                                 {
                                     "home_team": "FCM",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2020-11-03",
@@ -1558,7 +1558,7 @@
                                     "city": "Herning"
                                 },
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "LIV",
                                     "home_score": 0,
                                     "away_score": 5,
@@ -1574,7 +1574,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2020-11-25",
@@ -1583,7 +1583,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "FCM",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -1599,7 +1599,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2020-12-01",
@@ -1608,7 +1608,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "FCM",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1623,8 +1623,8 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "ATT",
+                                    "home_team": "AJX",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2020-12-09",
@@ -1804,7 +1804,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "DOR" }],
+                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "BVB" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1821,7 +1821,7 @@
                                 },
                                 {
                                     "home_team": "LAZ",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2020-10-20",
@@ -1835,7 +1835,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "ZSP",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1871,7 +1871,7 @@
                                 },
                                 {
                                     "home_team": "BRG",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2020-11-04",
@@ -1895,7 +1895,7 @@
                                     "city": "Rome"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "BRG",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -1910,7 +1910,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "LAZ",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1936,7 +1936,7 @@
                             "matches": [
                                 {
                                     "home_team": "ZSP",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2020-12-08",
@@ -1960,7 +1960,7 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "DYK" }, { "id": "FCB" }, { "id": "JUV" }, { "id": "FER" }],
+                    "teams": [{ "id": "DYK" }, { "id": "BAR" }, { "id": "JUV" }, { "id": "FTC" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1976,8 +1976,8 @@
                                     "city": "Kyiv"
                                 },
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "FER",
+                                    "home_team": "BAR",
+                                    "away_team": "FTC",
                                     "home_score": 5,
                                     "away_score": 1,
                                     "date": "2020-10-20",
@@ -1992,7 +1992,7 @@
                             "matches": [
                                 {
                                     "home_team": "JUV",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2020-10-28",
@@ -2001,7 +2001,7 @@
                                     "city": "Turin"
                                 },
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "DYK",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -2016,7 +2016,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "DYK",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2026,7 +2026,7 @@
                                     "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "JUV",
                                     "home_score": 1,
                                     "away_score": 4,
@@ -2042,7 +2042,7 @@
                             "matches": [
                                 {
                                     "home_team": "DYK",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 4,
                                     "date": "2020-11-24",
@@ -2052,7 +2052,7 @@
                                 },
                                 {
                                     "home_team": "JUV",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-11-24",
@@ -2076,8 +2076,8 @@
                                     "city": "Turin"
                                 },
                                 {
-                                    "home_team": "FER",
-                                    "away_team": "FCB",
+                                    "home_team": "FTC",
+                                    "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2020-12-02",
@@ -2091,7 +2091,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "JUV",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -2102,7 +2102,7 @@
                                 },
                                 {
                                     "home_team": "DYK",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2020-12-08",
@@ -2431,7 +2431,7 @@
                             "name": "R166",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 4,
@@ -2443,7 +2443,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2021-03-10",
@@ -2460,7 +2460,7 @@
                             "matches": [
                                 {
                                     "home_team": "SEV",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2021-02-17",
@@ -2470,7 +2470,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "SEV",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -2487,7 +2487,7 @@
                             "name": "R168",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "RMA",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -2499,7 +2499,7 @@
                                 },
                                 {
                                     "home_team": "RMA",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2021-03-16",
@@ -2525,7 +2525,7 @@
                             "matches": [
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2021-04-06",
@@ -2535,7 +2535,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "MCI",
                                     "home_score": 1,
                                     "away_score": 2,

@@ -132,7 +132,7 @@
                             "name": "1stQlf03",
                             "matches": [
                                 {
-                                    "home_team": "SHR",
+                                    "home_team": "SHA",
                                     "away_team": "UBK",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -144,7 +144,7 @@
                                 },
                                 {
                                     "home_team": "UBK",
-                                    "away_team": "SHR",
+                                    "away_team": "SHA",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2023-07-18",
@@ -160,7 +160,7 @@
                             "matches": [
                                 {
                                     "home_team": "ZAL",
-                                    "away_team": "STA",
+                                    "away_team": "STT",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2023-07-11",
@@ -170,7 +170,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "STA",
+                                    "home_team": "STT",
                                     "away_team": "ZAL",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -187,7 +187,7 @@
                             "matches": [
                                 {
                                     "home_team": "KIK",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2023-07-11",
@@ -197,7 +197,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "KIK",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -323,7 +323,7 @@
                             "name": "1stQlf10",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "SWH",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -335,7 +335,7 @@
                                 },
                                 {
                                     "home_team": "SWH",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2023-07-19",
@@ -654,7 +654,7 @@
                                     "matches": [
                                         {
                                             "home_team": "UBK",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 0,
                                             "away_score": 2,
                                             "date": "2023-07-25",
@@ -665,7 +665,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "UBK",
                                             "home_score": 6,
                                             "away_score": 3,
@@ -743,7 +743,7 @@
                                     "matches": [
                                         {
                                             "home_team": "ZRI",
-                                            "away_team": "SKS",
+                                            "away_team": "SLO",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2023-07-25",
@@ -754,7 +754,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SKS",
+                                            "home_team": "SLO",
                                             "away_team": "ZRI",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -912,7 +912,7 @@
                                     "name": "C02",
                                     "matches": [
                                         {
-                                            "home_team": "SKS",
+                                            "home_team": "SLO",
                                             "away_team": "MHA",
                                             "home_score": 1,
                                             "away_score": 2,
@@ -925,7 +925,7 @@
                                         },
                                         {
                                             "home_team": "MHA",
-                                            "away_team": "SKS",
+                                            "away_team": "SLO",
                                             "home_score": 3,
                                             "away_score": 1,
                                             "date": "2023-08-15",
@@ -999,8 +999,8 @@
                                     "name": "C05",
                                     "matches": [
                                         {
-                                            "home_team": "COP",
-                                            "away_team": "SPP",
+                                            "home_team": "FCK",
+                                            "away_team": "ACS",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2023-08-08",
@@ -1011,8 +1011,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SPP",
-                                            "away_team": "COP",
+                                            "home_team": "ACS",
+                                            "away_team": "FCK",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "home_extra_score": 2,
@@ -1098,7 +1098,7 @@
                                     "name": "L02",
                                     "matches": [
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "SER",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -1111,7 +1111,7 @@
                                         },
                                         {
                                             "home_team": "SER",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2023-08-15",
@@ -1161,7 +1161,7 @@
                                     "matches": [
                                         {
                                             "home_team": "PSV",
-                                            "away_team": "SGR",
+                                            "away_team": "STU",
                                             "home_score": 4,
                                             "away_score": 1,
                                             "date": "2023-08-08",
@@ -1172,7 +1172,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SGR",
+                                            "home_team": "STU",
                                             "away_team": "PSV",
                                             "home_score": 1,
                                             "away_score": 3,
@@ -1231,7 +1231,7 @@
                                     "name": "C02",
                                     "matches": [
                                         {
-                                            "home_team": "ROA",
+                                            "home_team": "ANT",
                                             "away_team": "AEK",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -1244,7 +1244,7 @@
                                         },
                                         {
                                             "home_team": "AEK",
-                                            "away_team": "ROA",
+                                            "away_team": "ANT",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2023-08-30",
@@ -1261,7 +1261,7 @@
                                     "matches": [
                                         {
                                             "home_team": "RAK",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2023-08-22",
@@ -1272,7 +1272,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "RAK",
                                             "home_score": 1,
                                             "away_score": 1,
@@ -1323,7 +1323,7 @@
                                     "name": "L01",
                                     "matches": [
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "PSV",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -1336,7 +1336,7 @@
                                         },
                                         {
                                             "home_team": "PSV",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 5,
                                             "away_score": 1,
                                             "date": "2023-08-30",
@@ -1401,14 +1401,14 @@
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "GAL" }, { "id": "COP" }, { "id": "BAY" }, { "id": "MUN" }],
+                    "teams": [{ "id": "GAL" }, { "id": "FCK" }, { "id": "BAY" }, { "id": "MUN" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "GAL",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2023-09-20",
@@ -1442,7 +1442,7 @@
                                     "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "BAY",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -1468,7 +1468,7 @@
                                 },
                                 {
                                     "home_team": "MUN",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2023-10-24",
@@ -1492,7 +1492,7 @@
                                     "city": "Munich"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "MUN",
                                     "home_score": 4,
                                     "away_score": 3,
@@ -1518,7 +1518,7 @@
                                 },
                                 {
                                     "home_team": "BAY",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2023-11-29",
@@ -1542,7 +1542,7 @@
                                     "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "GAL",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -1869,13 +1869,13 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "RBS" }, { "id": "INT" }, { "id": "SLB" }, { "id": "SOC" }],
+                    "teams": [{ "id": "RBS" }, { "id": "INT" }, { "id": "SLB" }, { "id": "RSO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "SOC",
+                                    "home_team": "RSO",
                                     "away_team": "INT",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1901,7 +1901,7 @@
                             "matches": [
                                 {
                                     "home_team": "RBS",
-                                    "away_team": "SOC",
+                                    "away_team": "RSO",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2023-10-03",
@@ -1936,7 +1936,7 @@
                                 },
                                 {
                                     "home_team": "SLB",
-                                    "away_team": "SOC",
+                                    "away_team": "RSO",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-10-24",
@@ -1950,7 +1950,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "SOC",
+                                    "home_team": "RSO",
                                     "away_team": "SLB",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -1985,7 +1985,7 @@
                                     "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "SOC",
+                                    "home_team": "RSO",
                                     "away_team": "RBS",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2001,7 +2001,7 @@
                             "matches": [
                                 {
                                     "home_team": "INT",
-                                    "away_team": "SOC",
+                                    "away_team": "RSO",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2023-12-12",
@@ -2181,7 +2181,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "MIL" }, { "id": "NEW" }, { "id": "PSG" }, { "id": "DOR" }],
+                    "teams": [{ "id": "MIL" }, { "id": "NEW" }, { "id": "PSG" }, { "id": "BVB" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2198,7 +2198,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-09-19",
@@ -2212,7 +2212,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "MIL",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2248,7 +2248,7 @@
                                 },
                                 {
                                     "home_team": "NEW",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-10-25",
@@ -2262,7 +2262,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "NEW",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -2298,7 +2298,7 @@
                                 },
                                 {
                                     "home_team": "MIL",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2023-11-28",
@@ -2312,7 +2312,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2493,14 +2493,14 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "PTO" }, { "id": "FCB" }, { "id": "ROA" }, { "id": "SHK" }],
+                    "teams": [{ "id": "PTO" }, { "id": "BAR" }, { "id": "ANT" }, { "id": "SHK" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "ROA",
+                                    "home_team": "BAR",
+                                    "away_team": "ANT",
                                     "home_score": 5,
                                     "away_score": 0,
                                     "date": "2023-09-19",
@@ -2524,7 +2524,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "ROA",
+                                    "home_team": "ANT",
                                     "away_team": "SHK",
                                     "home_score": 2,
                                     "away_score": 3,
@@ -2535,7 +2535,7 @@
                                 },
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-10-04",
@@ -2549,7 +2549,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "SHK",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2559,7 +2559,7 @@
                                     "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "ROA",
+                                    "home_team": "ANT",
                                     "away_team": "PTO",
                                     "home_score": 1,
                                     "away_score": 4,
@@ -2575,7 +2575,7 @@
                             "matches": [
                                 {
                                     "home_team": "SHK",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2023-11-07",
@@ -2585,7 +2585,7 @@
                                 },
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "ROA",
+                                    "away_team": "ANT",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-11-07",
@@ -2600,7 +2600,7 @@
                             "matches": [
                                 {
                                     "home_team": "SHK",
-                                    "away_team": "ROA",
+                                    "away_team": "ANT",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2023-11-28",
@@ -2609,7 +2609,7 @@
                                     "city": "Hamburg, Germany"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "PTO",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2634,8 +2634,8 @@
                                     "city": "Porto"
                                 },
                                 {
-                                    "home_team": "ROA",
-                                    "away_team": "FCB",
+                                    "home_team": "ANT",
+                                    "away_team": "BAR",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2023-12-13",
@@ -2699,7 +2699,7 @@
                             "matches": [
                                 {
                                     "home_team": "NAP",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-02-21",
@@ -2709,7 +2709,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "NAP",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -2727,7 +2727,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "SOC",
+                                    "away_team": "RSO",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2024-02-14",
@@ -2737,7 +2737,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SOC",
+                                    "home_team": "RSO",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -2787,7 +2787,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSV",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-02-20",
@@ -2797,7 +2797,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "PSV",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -2842,7 +2842,7 @@
                             "name": "R167",
                             "matches": [
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "MCI",
                                     "home_score": 1,
                                     "away_score": 3,
@@ -2854,7 +2854,7 @@
                                 },
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2024-03-06",
@@ -2937,7 +2937,7 @@
                             "matches": [
                                 {
                                     "home_team": "ATM",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2024-04-10",
@@ -2947,7 +2947,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "ATM",
                                     "home_score": 4,
                                     "away_score": 2,
@@ -2997,7 +2997,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2024-04-10",
@@ -3007,7 +3007,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 4,
@@ -3033,7 +3033,7 @@
                             "name": "SF1",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -3045,7 +3045,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2024-05-07",
@@ -3095,7 +3095,7 @@
                     "championship": true,
                     "matches": [
                         {
-                            "home_team": "DOR",
+                            "home_team": "BVB",
                             "away_team": "RMA",
                             "home_score": 0,
                             "away_score": 2,

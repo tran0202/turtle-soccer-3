@@ -12,7 +12,7 @@ class App extends React.Component {
         return (
             <Page>
                 <Container>
-                    <div id="hero" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+                    <div id="hero" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
                         <div className="carousel-indicators">
                             <button
                                 type="button"

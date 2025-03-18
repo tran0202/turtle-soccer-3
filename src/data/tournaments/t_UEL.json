@@ -29,13 +29,19 @@
             "start_competition_date": "2024-09-25",
             "end_competition_date": "2025-05-21",
             "color": "#15611e",
-            "competition_team_count": 252,
+            "competition_team_count": 25,
             "transfer_team_count": 11,
             "total_team_count": 45,
             "total_transfer_team_count": 31,
             "association_count": 41
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "San Mamés Stadium, Bilbao",
+                "filename": "640px-San_Mames,_Bilbao,_Euskal_Herria_-_Basque_Country.jpg",
+                "text": "The San Mamés Stadium in Bilbao will host the final."
+            }
+        ],
         "final_standings": {},
         "statistics": {},
         "awards": {}
@@ -101,8 +107,8 @@
             }
         ],
         "final_standings": {
-            "champions": "ATT",
-            "runners_up": "B04",
+            "champions": "ATA",
+            "runners_up": "LEV",
             "semi_finalist1": "ROM",
             "semi_finalist2": "OLM"
         },
@@ -110,7 +116,7 @@
         "awards": {
             "golden_ball": [{ "player": "Pierre-Emerick Aubameyang", "team": "GAB", "club": "OLM" }],
             "golden_boot": [{ "player": "Pierre-Emerick Aubameyang", "team": "GAB", "club": "OLM", "goals": 10 }],
-            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "B04" },
+            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "LEV" },
             "award_category_highlighted": ["ball", "young"],
             "ball_label": "Player Season",
             "boot_label": "Top Scorer"
@@ -179,7 +185,7 @@
         "final_standings": {
             "champions": "SEV",
             "runners_up": "ROM",
-            "semi_finalist1": "B04",
+            "semi_finalist1": "LEV",
             "semi_finalist2": "JUV"
         },
         "statistics": { "total_matches": 141, "total_goals": 381, "attendance": 4067872 },
@@ -189,7 +195,7 @@
                 { "player": "Marcus Rashford", "team": "ENG", "club": "MUN", "goals": 6, "minutes": 560 },
                 { "player": "Victor Boniface", "team": "NGA", "club": "USG", "goals": 6, "minutes": 777 }
             ],
-            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "B04" },
+            "best_young_player": { "player": "Florian Wirtz", "team": "GER", "club": "LEV" },
             "award_category_highlighted": ["ball", "young"],
             "ball_label": "Player Season",
             "boot_label": "Top Scorer"
@@ -257,14 +263,14 @@
         ],
         "final_standings": {
             "champions": "SGE",
-            "runners_up": "RFC",
+            "runners_up": "RAN",
             "semi_finalist1": "RBL",
             "semi_finalist2": "WHU"
         },
         "statistics": { "total_matches": 139, "total_goals": 367, "attendance": 3435542 },
         "awards": {
             "golden_ball": [{ "player": "Filip Kostić", "team": "SRB", "club": "SGE" }],
-            "golden_boot": [{ "player": "James Tavernier", "team": "ENG", "club": "RFC", "goals": 7 }],
+            "golden_boot": [{ "player": "James Tavernier", "team": "ENG", "club": "RAN", "goals": 7 }],
             "best_young_player": { "player": "Ansgar Knauff", "team": "GER", "club": "SGE" },
             "award_category_highlighted": ["ball", "young"],
             "ball_label": "Player Season",
@@ -422,7 +428,7 @@
         "statistics": { "total_matches": 197, "total_goals": 548, "attendance": 4069102 },
         "awards": {
             "golden_ball": [{ "player": "Romelu Lukaku", "team": "BEL", "club": "INT" }],
-            "golden_boot": [{ "player": "Bruno Fernandes", "team": "POR", "club": "SLI", "club2": "MUN", "goals": 8 }],
+            "golden_boot": [{ "player": "Bruno Fernandes", "team": "POR", "club": "SCP", "club2": "MUN", "goals": 8 }],
             "award_category_highlighted": ["ball"],
             "ball_label": "Player Season",
             "boot_label": "Top Scorer"

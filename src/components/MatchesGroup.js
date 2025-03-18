@@ -100,7 +100,7 @@ const MatchDayRow = (props) => {
                                     )}
                                     {m.home_extra_score !== undefined && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
                                     {(m.home_awarded || m.away_awarded) && (
-                                        <AwardedTooltip target={`${m.home_team}_${m.away_team}_awardedToolTip`} content={m.awarded_notes} />
+                                        <AwardedTooltip target={`${m.home_team}_${m.away_team}_awardedToolTip`} notes={m.awarded_notes} />
                                     )}
                                 </Col>
                                 <Col className="col-box-7 col-box-no-padding-lr text-center">{awayTeamFlag}</Col>

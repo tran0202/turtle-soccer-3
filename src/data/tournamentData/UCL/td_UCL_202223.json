@@ -10,11 +10,11 @@
                     "short_name": "1/2P",
                     "eliminate_count": 77,
                     "next_round": "Preliminary Final",
-                    "teams": [{ "id": "LET" }, { "id": "VKR" }, { "id": "LFI" }, { "id": "ICE" }],
+                    "teams": [{ "id": "LET" }, { "id": "VIR" }, { "id": "LFI" }, { "id": "ICE" }],
                     "matches": [
                         {
                             "home_team": "LET",
-                            "away_team": "VKR",
+                            "away_team": "VIR",
                             "home_score": 1,
                             "away_score": 6,
                             "date": "2022-06-21",
@@ -45,11 +45,11 @@
                     "eliminate_count": 76,
                     "next_round": "First Qualifying Round",
                     "bye_teams": [
-                        { "id": "FER" },
-                        { "id": "DJU" },
+                        { "id": "FTC" },
+                        { "id": "DIF" },
                         { "id": "CEL" },
                         { "id": "KRR" },
-                        { "id": "WAR" },
+                        { "id": "LEG" },
                         { "id": "SHE" },
                         { "id": "FOL" },
                         { "id": "CQN" },
@@ -77,12 +77,12 @@
                         { "id": "NKC" },
                         { "id": "DUN" },
                         { "id": "KIK" },
-                        { "id": "SKS" }
+                        { "id": "SLO" }
                     ],
                     "matches": [
                         {
                             "home_team": "ICE",
-                            "away_team": "VKR",
+                            "away_team": "VIR",
                             "home_score": 0,
                             "away_score": 1,
                             "date": "2022-06-24",
@@ -225,7 +225,7 @@
                             "matches": [
                                 {
                                     "home_team": "TOB",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2022-07-06",
@@ -235,7 +235,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "TOB",
                                     "home_score": 5,
                                     "away_score": 1,
@@ -251,8 +251,8 @@
                             "name": "1stQlf06",
                             "matches": [
                                 {
-                                    "home_team": "MAL",
-                                    "away_team": "VKR",
+                                    "home_team": "MFF",
+                                    "away_team": "VIR",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2022-07-05",
@@ -262,8 +262,8 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "VKR",
-                                    "away_team": "MAL",
+                                    "home_team": "VIR",
+                                    "away_team": "MFF",
                                     "home_score": 3,
                                     "away_score": 3,
                                     "date": "2022-07-12",
@@ -394,7 +394,7 @@
                             "name": "1stQlf11",
                             "matches": [
                                 {
-                                    "home_team": "SHR",
+                                    "home_team": "SHA",
                                     "away_team": "HBN",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -406,7 +406,7 @@
                                 },
                                 {
                                     "home_team": "HBN",
-                                    "away_team": "SHR",
+                                    "away_team": "SHA",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2022-07-12",
@@ -502,7 +502,7 @@
                             "name": "1stQlf15",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "BAT",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -514,7 +514,7 @@
                                 },
                                 {
                                     "home_team": "BAT",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "home_extra_score": 1,
@@ -543,8 +543,8 @@
                                     "name": "C01",
                                     "matches": [
                                         {
-                                            "home_team": "FER",
-                                            "away_team": "SKS",
+                                            "home_team": "FTC",
+                                            "away_team": "SLO",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2022-07-20",
@@ -555,8 +555,8 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SKS",
-                                            "away_team": "FER",
+                                            "home_team": "SLO",
+                                            "away_team": "FTC",
                                             "home_score": 1,
                                             "away_score": 4,
                                             "date": "2022-07-27",
@@ -691,7 +691,7 @@
                                     "matches": [
                                         {
                                             "home_team": "ZAL",
-                                            "away_team": "MAL",
+                                            "away_team": "MFF",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2022-07-19",
@@ -702,7 +702,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "MAL",
+                                            "home_team": "MFF",
                                             "away_team": "ZAL",
                                             "home_score": 0,
                                             "away_score": 2,
@@ -720,7 +720,7 @@
                                     "matches": [
                                         {
                                             "home_team": "LUD",
-                                            "away_team": "SHR",
+                                            "away_team": "SHA",
                                             "home_score": 3,
                                             "away_score": 0,
                                             "date": "2022-07-19",
@@ -731,7 +731,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SHR",
+                                            "home_team": "SHA",
                                             "away_team": "LUD",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -949,7 +949,7 @@
                                     "matches": [
                                         {
                                             "home_team": "QAR",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2022-08-03",
@@ -960,7 +960,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "QAR",
                                             "home_score": 1,
                                             "away_score": 3,
@@ -1098,7 +1098,7 @@
                                     "name": "L01",
                                     "matches": [
                                         {
-                                            "home_team": "AMO",
+                                            "home_team": "ASM",
                                             "away_team": "PSV",
                                             "home_score": 1,
                                             "away_score": 1,
@@ -1111,7 +1111,7 @@
                                         },
                                         {
                                             "home_team": "PSV",
-                                            "away_team": "AMO",
+                                            "away_team": "ASM",
                                             "home_score": 2,
                                             "away_score": 2,
                                             "home_extra_score": 1,
@@ -1130,7 +1130,7 @@
                                     "matches": [
                                         {
                                             "home_team": "DYK",
-                                            "away_team": "SGR",
+                                            "away_team": "STU",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2022-08-03",
@@ -1141,7 +1141,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SGR",
+                                            "home_team": "STU",
                                             "away_team": "DYK",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -1161,7 +1161,7 @@
                                     "matches": [
                                         {
                                             "home_team": "USG",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 2,
                                             "away_score": 0,
                                             "date": "2022-08-02",
@@ -1172,7 +1172,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "USG",
                                             "home_score": 3,
                                             "away_score": 0,
@@ -1320,7 +1320,7 @@
                                     "name": "C04",
                                     "matches": [
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "TRA",
                                             "home_score": 2,
                                             "away_score": 1,
@@ -1333,7 +1333,7 @@
                                         },
                                         {
                                             "home_team": "TRA",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2022-08-24",
@@ -1383,7 +1383,7 @@
                                     "name": "L02",
                                     "matches": [
                                         {
-                                            "home_team": "RFC",
+                                            "home_team": "RAN",
                                             "away_team": "PSV",
                                             "home_score": 2,
                                             "away_score": 2,
@@ -1396,7 +1396,7 @@
                                         },
                                         {
                                             "home_team": "PSV",
-                                            "away_team": "RFC",
+                                            "away_team": "RAN",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2022-08-24",
@@ -1432,14 +1432,14 @@
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "AJA" }, { "id": "RFC" }, { "id": "LIV" }, { "id": "NAP" }],
+                    "teams": [{ "id": "AJX" }, { "id": "RAN" }, { "id": "LIV" }, { "id": "NAP" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
-                                    "away_team": "RFC",
+                                    "home_team": "AJX",
+                                    "away_team": "RAN",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2022-09-07",
@@ -1464,7 +1464,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2022-09-13",
@@ -1473,7 +1473,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "NAP",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -1489,7 +1489,7 @@
                             "matches": [
                                 {
                                     "home_team": "LIV",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2022-10-04",
@@ -1498,7 +1498,7 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "NAP",
                                     "home_score": 1,
                                     "away_score": 6,
@@ -1514,7 +1514,7 @@
                             "matches": [
                                 {
                                     "home_team": "NAP",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 4,
                                     "away_score": 2,
                                     "date": "2022-10-12",
@@ -1523,7 +1523,7 @@
                                     "city": "Naples"
                                 },
                                 {
-                                    "home_team": "RFC",
+                                    "home_team": "RAN",
                                     "away_team": "LIV",
                                     "home_score": 1,
                                     "away_score": 7,
@@ -1539,7 +1539,7 @@
                             "matches": [
                                 {
                                     "home_team": "NAP",
-                                    "away_team": "RFC",
+                                    "away_team": "RAN",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2022-10-26",
@@ -1548,7 +1548,7 @@
                                     "city": "Naples"
                                 },
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "LIV",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -1573,8 +1573,8 @@
                                     "city": "Liverpool"
                                 },
                                 {
-                                    "home_team": "RFC",
-                                    "away_team": "AJA",
+                                    "home_team": "RAN",
+                                    "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2022-11-01",
@@ -1588,7 +1588,7 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "ATM" }, { "id": "B04" }, { "id": "PTO" }, { "id": "BRG" }],
+                    "teams": [{ "id": "ATM" }, { "id": "LEV" }, { "id": "PTO" }, { "id": "BRG" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1605,7 +1605,7 @@
                                 },
                                 {
                                     "home_team": "BRG",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2022-09-07",
@@ -1629,7 +1629,7 @@
                                     "city": "Porto"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "ATM",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1645,7 +1645,7 @@
                             "matches": [
                                 {
                                     "home_team": "PTO",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2022-10-04",
@@ -1679,7 +1679,7 @@
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "PTO",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -1705,7 +1705,7 @@
                                 },
                                 {
                                     "home_team": "ATM",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 2,
                                     "away_score": 2,
                                     "date": "2022-10-26",
@@ -1729,7 +1729,7 @@
                                     "city": "Porto"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "BRG",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -1744,13 +1744,13 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "FCB" }, { "id": "VPL" }, { "id": "INT" }, { "id": "BAY" }],
+                    "teams": [{ "id": "BAR" }, { "id": "VPL" }, { "id": "INT" }, { "id": "BAY" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "VPL",
                                     "home_score": 5,
                                     "away_score": 1,
@@ -1786,7 +1786,7 @@
                                 },
                                 {
                                     "home_team": "BAY",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2022-09-13",
@@ -1811,7 +1811,7 @@
                                 },
                                 {
                                     "home_team": "INT",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2022-10-04",
@@ -1825,7 +1825,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "INT",
                                     "home_score": 3,
                                     "away_score": 3,
@@ -1860,7 +1860,7 @@
                                     "city": "Milan"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "BAY",
                                     "home_score": 0,
                                     "away_score": 3,
@@ -1886,7 +1886,7 @@
                                 },
                                 {
                                     "home_team": "VPL",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 2,
                                     "away_score": 4,
                                     "date": "2022-11-01",
@@ -1900,14 +1900,14 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "SGE" }, { "id": "SLI" }, { "id": "TOT" }, { "id": "OLM" }],
+                    "teams": [{ "id": "SGE" }, { "id": "SCP" }, { "id": "TOT" }, { "id": "OLM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "SGE",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2022-09-07",
@@ -1931,7 +1931,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "TOT",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1957,7 +1957,7 @@
                             "matches": [
                                 {
                                     "home_team": "OLM",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 4,
                                     "away_score": 1,
                                     "date": "2022-10-04",
@@ -1991,7 +1991,7 @@
                                     "city": "London"
                                 },
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "OLM",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -2007,7 +2007,7 @@
                             "matches": [
                                 {
                                     "home_team": "TOT",
-                                    "away_team": "SLI",
+                                    "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2022-10-26",
@@ -2031,7 +2031,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "SLI",
+                                    "home_team": "SCP",
                                     "away_team": "SGE",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -2368,14 +2368,14 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "DOR" }, { "id": "COP" }, { "id": "SEV" }, { "id": "MCI" }],
+                    "teams": [{ "id": "BVB" }, { "id": "FCK" }, { "id": "SEV" }, { "id": "MCI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "COP",
+                                    "home_team": "BVB",
+                                    "away_team": "FCK",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2022-09-06",
@@ -2400,7 +2400,7 @@
                             "matches": [
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2022-09-14",
@@ -2409,7 +2409,7 @@
                                     "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "SEV",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2425,7 +2425,7 @@
                             "matches": [
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 5,
                                     "away_score": 0,
                                     "date": "2022-10-05",
@@ -2435,7 +2435,7 @@
                                 },
                                 {
                                     "home_team": "SEV",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 1,
                                     "away_score": 4,
                                     "date": "2022-10-05",
@@ -2449,7 +2449,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "COP",
+                                    "home_team": "FCK",
                                     "away_team": "MCI",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2459,7 +2459,7 @@
                                     "city": "Copenhagen"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "SEV",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2475,7 +2475,7 @@
                             "matches": [
                                 {
                                     "home_team": "SEV",
-                                    "away_team": "COP",
+                                    "away_team": "FCK",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2022-10-25",
@@ -2484,7 +2484,7 @@
                                     "city": "Seville"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "MCI",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2509,8 +2509,8 @@
                                     "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "COP",
-                                    "away_team": "DOR",
+                                    "home_team": "FCK",
+                                    "away_team": "BVB",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2022-11-02",
@@ -2836,7 +2836,7 @@
                             "name": "R166",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "CHE",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -2848,7 +2848,7 @@
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-03-07",

@@ -53,11 +53,11 @@
                         { "id": "AIK" },
                         { "id": "AST" },
                         { "id": "CFR" },
-                        { "id": "FER" },
+                        { "id": "FTC" },
                         { "id": "LUD" },
                         { "id": "TIR" },
                         { "id": "QAR" },
-                        { "id": "SKS" },
+                        { "id": "SLO" },
                         { "id": "SUJ" },
                         { "id": "SAR" },
                         { "id": "CEL" },
@@ -105,7 +105,7 @@
                     "next_round": "Second Qualifying Round",
                     "bye_teams": [
                         { "id": "MTA" },
-                        { "id": "COP" },
+                        { "id": "FCK" },
                         { "id": "DZA" },
                         { "id": "APO" },
                         { "id": "VPL" },
@@ -226,7 +226,7 @@
                             "name": "1stQlf05",
                             "matches": [
                                 {
-                                    "home_team": "FER",
+                                    "home_team": "FTC",
                                     "away_team": "LUD",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -238,7 +238,7 @@
                                 },
                                 {
                                     "home_team": "LUD",
-                                    "away_team": "FER",
+                                    "away_team": "FTC",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2019-07-17",
@@ -280,7 +280,7 @@
                             "name": "1stQlf07",
                             "matches": [
                                 {
-                                    "home_team": "SKS",
+                                    "home_team": "SLO",
                                     "away_team": "SUJ",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -292,7 +292,7 @@
                                 },
                                 {
                                     "home_team": "SUJ",
-                                    "away_team": "SKS",
+                                    "away_team": "SLO",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "home_extra_score": 0,
@@ -563,7 +563,7 @@
                     "next_round": "Third Qualifying Round",
                     "bye_teams": [
                         { "id": "PKT" },
-                        { "id": "AJA" },
+                        { "id": "AJX" },
                         { "id": "IBA" },
                         { "id": "KRA" },
                         { "id": "PTO" },
@@ -638,7 +638,7 @@
                                     "matches": [
                                         {
                                             "home_team": "TNS",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 0,
                                             "away_score": 2,
                                             "date": "2019-07-23",
@@ -649,7 +649,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "TNS",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -666,7 +666,7 @@
                                     "name": "C04",
                                     "matches": [
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "VFC",
                                             "home_score": 3,
                                             "away_score": 1,
@@ -679,7 +679,7 @@
                                         },
                                         {
                                             "home_team": "VFC",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2019-07-30",
@@ -939,7 +939,7 @@
                     "round_type": "pair2legged",
                     "eliminate_count": 38,
                     "next_round": "Play-off Round",
-                    "bye_teams": [{ "id": "SLP" }, { "id": "YBO" }],
+                    "bye_teams": [{ "id": "SLA" }, { "id": "YBO" }],
                     "paths": [
                         {
                             "name": "Champions Path",
@@ -1007,7 +1007,7 @@
                                     "matches": [
                                         {
                                             "home_team": "PKT",
-                                            "away_team": "AJA",
+                                            "away_team": "AJX",
                                             "home_score": 2,
                                             "away_score": 2,
                                             "date": "2019-08-06",
@@ -1018,7 +1018,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "AJA",
+                                            "home_team": "AJX",
                                             "away_team": "PKT",
                                             "home_score": 3,
                                             "away_score": 2,
@@ -1036,7 +1036,7 @@
                                     "matches": [
                                         {
                                             "home_team": "DZA",
-                                            "away_team": "FER",
+                                            "away_team": "FTC",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2019-08-06",
@@ -1047,7 +1047,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "FER",
+                                            "home_team": "FTC",
                                             "away_team": "DZA",
                                             "home_score": 0,
                                             "away_score": 4,
@@ -1065,7 +1065,7 @@
                                     "matches": [
                                         {
                                             "home_team": "CZV",
-                                            "away_team": "COP",
+                                            "away_team": "FCK",
                                             "home_score": 1,
                                             "away_score": 1,
                                             "date": "2019-08-06",
@@ -1076,7 +1076,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "COP",
+                                            "home_team": "FCK",
                                             "away_team": "CZV",
                                             "home_score": 1,
                                             "away_score": 1,
@@ -1290,7 +1290,7 @@
                                     "matches": [
                                         {
                                             "home_team": "CFR",
-                                            "away_team": "SLP",
+                                            "away_team": "SLA",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2019-08-20",
@@ -1301,7 +1301,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SLP",
+                                            "home_team": "SLA",
                                             "away_team": "CFR",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -1348,7 +1348,7 @@
                                     "matches": [
                                         {
                                             "home_team": "APO",
-                                            "away_team": "AJA",
+                                            "away_team": "AJX",
                                             "home_score": 0,
                                             "away_score": 0,
                                             "date": "2019-08-20",
@@ -1359,7 +1359,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "AJA",
+                                            "home_team": "AJX",
                                             "away_team": "APO",
                                             "home_score": 2,
                                             "away_score": 0,
@@ -1771,7 +1771,7 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "SHK" }, { "id": "MCI" }, { "id": "DZA" }, { "id": "ATT" }],
+                    "teams": [{ "id": "SHK" }, { "id": "MCI" }, { "id": "DZA" }, { "id": "ATA" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1788,7 +1788,7 @@
                                 },
                                 {
                                     "home_team": "DZA",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2019-09-18",
@@ -1802,7 +1802,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "SHK",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -1838,7 +1838,7 @@
                                 },
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 5,
                                     "away_score": 1,
                                     "date": "2019-10-22",
@@ -1852,7 +1852,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "MCI",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1887,7 +1887,7 @@
                                     "city": "Manchester"
                                 },
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "DZA",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1903,7 +1903,7 @@
                             "matches": [
                                 {
                                     "home_team": "SHK",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2019-12-11",
@@ -1927,7 +1927,7 @@
                 },
                 {
                     "name": "Group D",
-                    "teams": [{ "id": "ATM" }, { "id": "JUV" }, { "id": "B04" }, { "id": "LMO" }],
+                    "teams": [{ "id": "ATM" }, { "id": "JUV" }, { "id": "LEV" }, { "id": "LMO" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1943,7 +1943,7 @@
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "LMO",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -1969,7 +1969,7 @@
                                 },
                                 {
                                     "home_team": "JUV",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2019-10-01",
@@ -1984,7 +1984,7 @@
                             "matches": [
                                 {
                                     "home_team": "ATM",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 1,
                                     "away_score": 0,
                                     "date": "2019-10-22",
@@ -2018,7 +2018,7 @@
                                     "city": "Moscow"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "ATM",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2034,7 +2034,7 @@
                             "matches": [
                                 {
                                     "home_team": "LMO",
-                                    "away_team": "B04",
+                                    "away_team": "LEV",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-11-26",
@@ -2068,7 +2068,7 @@
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "B04",
+                                    "home_team": "LEV",
                                     "away_team": "JUV",
                                     "home_score": 0,
                                     "away_score": 2,
@@ -2239,14 +2239,14 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "INT" }, { "id": "SLP" }, { "id": "DOR" }, { "id": "FCB" }],
+                    "teams": [{ "id": "INT" }, { "id": "SLA" }, { "id": "BVB" }, { "id": "BAR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "INT",
-                                    "away_team": "SLP",
+                                    "away_team": "SLA",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2019-09-17",
@@ -2255,8 +2255,8 @@
                                     "city": "Milan"
                                 },
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "FCB",
+                                    "home_team": "BVB",
+                                    "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-09-17",
@@ -2270,8 +2270,8 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "DOR",
+                                    "home_team": "SLA",
+                                    "away_team": "BVB",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-10-02",
@@ -2280,7 +2280,7 @@
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "INT",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2295,8 +2295,8 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
-                                    "away_team": "FCB",
+                                    "home_team": "SLA",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2019-10-23",
@@ -2306,7 +2306,7 @@
                                 },
                                 {
                                     "home_team": "INT",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2019-10-23",
@@ -2320,8 +2320,8 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "SLP",
+                                    "home_team": "BAR",
+                                    "away_team": "SLA",
                                     "home_score": 0,
                                     "away_score": 0,
                                     "date": "2019-11-05",
@@ -2330,7 +2330,7 @@
                                     "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "INT",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -2345,7 +2345,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "SLP",
+                                    "home_team": "SLA",
                                     "away_team": "INT",
                                     "home_score": 1,
                                     "away_score": 3,
@@ -2355,8 +2355,8 @@
                                     "city": "Prague"
                                 },
                                 {
-                                    "home_team": "FCB",
-                                    "away_team": "DOR",
+                                    "home_team": "BAR",
+                                    "away_team": "BVB",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2019-11-27",
@@ -2371,7 +2371,7 @@
                             "matches": [
                                 {
                                     "home_team": "INT",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2019-12-10",
@@ -2380,8 +2380,8 @@
                                     "city": "Milan"
                                 },
                                 {
-                                    "home_team": "DOR",
-                                    "away_team": "SLP",
+                                    "home_team": "BVB",
+                                    "away_team": "SLA",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-12-10",
@@ -2395,13 +2395,13 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "LYO" }, { "id": "ZSP" }, { "id": "SLB" }, { "id": "RBL" }],
+                    "teams": [{ "id": "OLL" }, { "id": "ZSP" }, { "id": "SLB" }, { "id": "RBL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "LYO",
+                                    "home_team": "OLL",
                                     "away_team": "ZSP",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2437,7 +2437,7 @@
                                 },
                                 {
                                     "home_team": "RBL",
-                                    "away_team": "LYO",
+                                    "away_team": "OLL",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-10-02",
@@ -2462,7 +2462,7 @@
                                 },
                                 {
                                     "home_team": "SLB",
-                                    "away_team": "LYO",
+                                    "away_team": "OLL",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-10-23",
@@ -2486,7 +2486,7 @@
                                     "city": "Saint Petersburg"
                                 },
                                 {
-                                    "home_team": "LYO",
+                                    "home_team": "OLL",
                                     "away_team": "SLB",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -2502,7 +2502,7 @@
                             "matches": [
                                 {
                                     "home_team": "ZSP",
-                                    "away_team": "LYO",
+                                    "away_team": "OLL",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2019-11-27",
@@ -2536,7 +2536,7 @@
                                     "city": "Lisbon"
                                 },
                                 {
-                                    "home_team": "LYO",
+                                    "home_team": "OLL",
                                     "away_team": "RBL",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -2551,13 +2551,13 @@
                 },
                 {
                     "name": "Group H",
-                    "teams": [{ "id": "AJA" }, { "id": "LIL" }, { "id": "CHE" }, { "id": "VAL" }],
+                    "teams": [{ "id": "AJX" }, { "id": "LIL" }, { "id": "CHE" }, { "id": "VAL" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "LIL",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -2583,7 +2583,7 @@
                             "matches": [
                                 {
                                     "home_team": "VAL",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2019-10-02",
@@ -2607,7 +2607,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "CHE",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -2643,7 +2643,7 @@
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 4,
                                     "away_score": 4,
                                     "date": "2019-11-05",
@@ -2668,7 +2668,7 @@
                                 },
                                 {
                                     "home_team": "LIL",
-                                    "away_team": "AJA",
+                                    "away_team": "AJX",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-11-27",
@@ -2682,7 +2682,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "AJA",
+                                    "home_team": "AJX",
                                     "away_team": "VAL",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -2722,7 +2722,7 @@
                             "name": "R161",
                             "matches": [
                                 {
-                                    "home_team": "DOR",
+                                    "home_team": "BVB",
                                     "away_team": "PSG",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2734,7 +2734,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "DOR",
+                                    "away_team": "BVB",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-03-11",
@@ -2778,7 +2778,7 @@
                             "name": "R163",
                             "matches": [
                                 {
-                                    "home_team": "ATT",
+                                    "home_team": "ATA",
                                     "away_team": "VAL",
                                     "home_score": 4,
                                     "away_score": 1,
@@ -2790,7 +2790,7 @@
                                 },
                                 {
                                     "home_team": "VAL",
-                                    "away_team": "ATT",
+                                    "away_team": "ATA",
                                     "home_score": 3,
                                     "away_score": 4,
                                     "date": "2020-03-10",
@@ -2864,7 +2864,7 @@
                             "name": "R166",
                             "matches": [
                                 {
-                                    "home_team": "LYO",
+                                    "home_team": "OLL",
                                     "away_team": "JUV",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -2876,7 +2876,7 @@
                                 },
                                 {
                                     "home_team": "JUV",
-                                    "away_team": "LYO",
+                                    "away_team": "OLL",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2020-08-07",
@@ -2921,7 +2921,7 @@
                             "matches": [
                                 {
                                     "home_team": "NAP",
-                                    "away_team": "FCB",
+                                    "away_team": "BAR",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2020-02-25",
@@ -2931,7 +2931,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "FCB",
+                                    "home_team": "BAR",
                                     "away_team": "NAP",
                                     "home_score": 3,
                                     "away_score": 1,
@@ -2954,7 +2954,7 @@
                     "matches": [
                         {
                             "home_team": "MCI",
-                            "away_team": "LYO",
+                            "away_team": "OLL",
                             "home_score": 1,
                             "away_score": 3,
                             "date": "2020-08-15",
@@ -2975,7 +2975,7 @@
                             "bracket_order": 1
                         },
                         {
-                            "home_team": "FCB",
+                            "home_team": "BAR",
                             "away_team": "BAY",
                             "home_score": 2,
                             "away_score": 8,
@@ -2986,7 +2986,7 @@
                             "bracket_order": 4
                         },
                         {
-                            "home_team": "ATT",
+                            "home_team": "ATA",
                             "away_team": "PSG",
                             "home_score": 1,
                             "away_score": 2,
@@ -3005,7 +3005,7 @@
                     "next_round": "Final",
                     "matches": [
                         {
-                            "home_team": "LYO",
+                            "home_team": "OLL",
                             "away_team": "BAY",
                             "home_score": 0,
                             "away_score": 3,

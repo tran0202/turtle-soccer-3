@@ -32,7 +32,13 @@
             "total_team_count": 81,
             "association_count": 53
         },
-        "hero_images": [],
+        "hero_images": [
+            {
+                "name": "Allianz Arena",
+                "filename": "640px-Allianz-Arena-München.jpg",
+                "text": "Allianz Arena, Munich."
+            }
+        ],
         "final_standings": {},
         "statistics": {},
         "awards": {}
@@ -96,7 +102,7 @@
         ],
         "final_standings": {
             "champions": "RMA",
-            "runners_up": "DOR",
+            "runners_up": "BVB",
             "semi_finalist1": "BAY",
             "semi_finalist2": "PSG"
         },
@@ -325,11 +331,11 @@
         },
         "statistics": { "total_matches": 125, "total_goals": 366, "attendance": 180049 },
         "awards": {
-            "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR", "goals": 10 }],
+            "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "BVB", "goals": 10 }],
             "golden_glove": [{ "player": "Édouard Mendy", "team": "SEN", "club": "CHE" }],
             "best_defender": [{ "player": "Rúben Dias", "team": "POR", "club": "MCI" }],
             "best_midfielder": [{ "player": "N'Golo Kanté", "team": "FRA", "club": "CHE" }],
-            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR" }],
+            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "BVB" }],
             "award_category_highlighted": ["boot", "defender", "forward"],
             "boot_label": "Top Scorer",
             "glove_label": "BestGoalkeeper"
@@ -396,7 +402,7 @@
         "final_standings": {
             "champions": "BAY",
             "runners_up": "PSG",
-            "semi_finalist1": "LYO",
+            "semi_finalist1": "OLL",
             "semi_finalist2": "RBL"
         },
         "statistics": { "total_matches": 119, "total_goals": 386, "attendance": 4758398 },
@@ -472,16 +478,16 @@
         "final_standings": {
             "champions": "LIV",
             "runners_up": "TOT",
-            "semi_finalist1": "AJA",
-            "semi_finalist2": "FCB"
+            "semi_finalist1": "AJX",
+            "semi_finalist2": "BAR"
         },
         "statistics": { "total_matches": 125, "total_goals": 366, "attendance": 6163044 },
         "awards": {
-            "golden_boot": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB", "goals": 12 }],
+            "golden_boot": [{ "player": "Lionel Messi", "team": "ARG", "club": "BAR", "goals": 12 }],
             "golden_glove": [{ "player": "Alisson", "team": "BRA", "club": "LIV" }],
             "best_defender": [{ "player": "Virgil van Dijk", "team": "NED", "club": "LIV" }],
-            "best_midfielder": [{ "player": "Frenkie de Jong", "team": "NED", "club": "AJA" }],
-            "best_forward": [{ "player": "Lionel Messi", "team": "ARG", "club": "FCB" }],
+            "best_midfielder": [{ "player": "Frenkie de Jong", "team": "NED", "club": "AJX" }],
+            "best_forward": [{ "player": "Lionel Messi", "team": "ARG", "club": "BAR" }],
             "award_category_highlighted": ["boot", "defender", "forward"],
             "boot_label": "Top Scorer",
             "glove_label": "BestGoalkeeper"

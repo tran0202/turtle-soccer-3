@@ -218,42 +218,46 @@ export const calculatePairAggregateScore = (set, config) => {
         const match1_away_extra_score = p.matches[0].away_extra_score ? p.matches[0].away_extra_score : 0
 
         if (hasFirstLegOnly) {
-            console.log('hasFirstLegOnly')
             p.agg_home_score = match1_home_score + match1_home_extra_score
             p.agg_away_score = match1_away_score + match1_away_extra_score
             p.agg_home_penalty_score = p.matches[0].home_penalty_score
             p.agg_away_penalty_score = p.matches[0].away_penalty_score
         } else {
-            const match2_home_score = p.matches[1].home_score
-            const match2_away_score = p.matches[1].away_score
-            const match2_home_extra_score = p.matches[1].home_extra_score ? p.matches[1].home_extra_score : 0
-            const match2_away_extra_score = p.matches[1].away_extra_score ? p.matches[1].away_extra_score : 0
-            p.agg_home_score = match1_home_score + match2_away_score + match2_away_extra_score
-            p.agg_away_score = match1_away_score + match2_home_score + match2_home_extra_score
-            p.agg_home_penalty_score = p.matches[1].home_penalty_score
-            p.agg_away_penalty_score = p.matches[1].away_penalty_score
+            const hasSecondLeg = p.matches.find((m) => m.matchday === 'secondleg') !== undefined
+            if (hasSecondLeg) {
+                const match2_home_score = p.matches[1].home_score
+                const match2_away_score = p.matches[1].away_score
+                const match2_home_extra_score = p.matches[1].home_extra_score ? p.matches[1].home_extra_score : 0
+                const match2_away_extra_score = p.matches[1].away_extra_score ? p.matches[1].away_extra_score : 0
+                p.agg_home_score = match1_home_score + match2_away_score + match2_away_extra_score
+                p.agg_away_score = match1_away_score + match2_home_score + match2_home_extra_score
+                p.agg_home_penalty_score = p.matches[1].home_penalty_score
+                p.agg_away_penalty_score = p.matches[1].away_penalty_score
 
-            const match1_home_pts = match1_home_score > match1_away_score ? config.points_for_win : match1_home_score === match1_away_score ? 1 : 0
-            const match1_away_pts = match1_away_score > match1_home_score ? config.points_for_win : match1_away_score === match1_home_score ? 1 : 0
-            const match2_home_pts = match2_home_score > match2_away_score ? config.points_for_win : match2_home_score === match2_away_score ? 1 : 0
-            const match2_away_pts = match2_away_score > match2_home_score ? config.points_for_win : match2_away_score === match2_home_score ? 1 : 0
-            p.agg_home_pts = match1_home_pts + match2_away_pts
-            p.agg_away_pts = match1_away_pts + match2_home_pts
+                const match1_home_pts = match1_home_score > match1_away_score ? config.points_for_win : match1_home_score === match1_away_score ? 1 : 0
+                const match1_away_pts = match1_away_score > match1_home_score ? config.points_for_win : match1_away_score === match1_home_score ? 1 : 0
+                const match2_home_pts = match2_home_score > match2_away_score ? config.points_for_win : match2_home_score === match2_away_score ? 1 : 0
+                const match2_away_pts = match2_away_score > match2_home_score ? config.points_for_win : match2_away_score === match2_home_score ? 1 : 0
+                p.agg_home_pts = match1_home_pts + match2_away_pts
+                p.agg_away_pts = match1_away_pts + match2_home_pts
 
-            p.home_draw_lot = p.matches[1].away_draw_lot
-            p.away_draw_lot = p.matches[1].home_draw_lot
+                p.home_draw_lot = p.matches[1].away_draw_lot
+                p.away_draw_lot = p.matches[1].home_draw_lot
 
-            // COPA1975
-            const hasPlayoff = p.matches.find((m) => m.matchday === 'playoffleg') !== undefined
-            if (hasPlayoff) {
-                const match3_home_score = p.matches[2].home_score
-                const match3_away_score = p.matches[2].away_score
-                const match3_home_extra_score = p.matches[2].home_extra_score ? p.matches[2].home_extra_score : 0
-                const match3_away_extra_score = p.matches[2].away_extra_score ? p.matches[2].away_extra_score : 0
-                p.playoff_home_score = match3_home_score + match3_home_extra_score
-                p.playoff_away_score = match3_away_score + match3_away_extra_score
-                p.playoff_home_pts = p.playoff_home_score > p.playoff_away_score ? config.points_for_win : p.playoff_home_score === p.playoff_away_score ? 1 : 0
-                p.playoff_away_pts = p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
+                // COPA1975
+                const hasPlayoff = p.matches.find((m) => m.matchday === 'playoffleg') !== undefined
+                if (hasPlayoff) {
+                    const match3_home_score = p.matches[2].home_score
+                    const match3_away_score = p.matches[2].away_score
+                    const match3_home_extra_score = p.matches[2].home_extra_score ? p.matches[2].home_extra_score : 0
+                    const match3_away_extra_score = p.matches[2].away_extra_score ? p.matches[2].away_extra_score : 0
+                    p.playoff_home_score = match3_home_score + match3_home_extra_score
+                    p.playoff_away_score = match3_away_score + match3_away_extra_score
+                    p.playoff_home_pts =
+                        p.playoff_home_score > p.playoff_away_score ? config.points_for_win : p.playoff_home_score === p.playoff_away_score ? 1 : 0
+                    p.playoff_away_pts =
+                        p.playoff_away_score > p.playoff_home_score ? config.points_for_win : p.playoff_away_score === p.playoff_home_score ? 1 : 0
+                }
             }
         }
 
@@ -281,54 +285,57 @@ export const isHomeWinPair = (pair, config) => {
         if (pair.matches[0].home_walkover) return true
         if (pair.matches[0].away_walkover) return false
 
-        const match1_away_score = pair.matches[0].away_score
-        const match2_away_score = pair.matches[1].away_score + pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
-        const match2_home_penalty_score = pair.matches[1].home_penalty_score ? pair.matches[1].home_penalty_score : 0
-        const match2_away_penalty_score = pair.matches[1].away_penalty_score ? pair.matches[1].away_penalty_score : 0
+        const hasSecondLeg = pair.matches.find((m) => m.matchday === 'secondleg') !== undefined
+        if (hasSecondLeg) {
+            const match1_away_score = pair.matches[0].away_score
+            const match2_away_score = pair.matches[1].away_score + pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
+            const match2_home_penalty_score = pair.matches[1].home_penalty_score ? pair.matches[1].home_penalty_score : 0
+            const match2_away_penalty_score = pair.matches[1].away_penalty_score ? pair.matches[1].away_penalty_score : 0
 
-        // COPA1983
-        if (config.pair_agg_points) {
-            if (pair.agg_home_pts > pair.agg_away_pts) {
-                return true
-            } else if (pair.agg_home_pts === pair.agg_away_pts) {
-                const hasPlayoff = pair.matches.find((m) => m.matchday === 'playoffleg') !== undefined
-                if (hasPlayoff) {
-                    if (pair.playoff_home_pts > pair.playoff_away_pts) {
+            // COPA1983
+            if (config.pair_agg_points) {
+                if (pair.agg_home_pts > pair.agg_away_pts) {
+                    return true
+                } else if (pair.agg_home_pts === pair.agg_away_pts) {
+                    const hasPlayoff = pair.matches.find((m) => m.matchday === 'playoffleg') !== undefined
+                    if (hasPlayoff) {
+                        if (pair.playoff_home_pts > pair.playoff_away_pts) {
+                            return true
+                        } else if (pair.playoff_home_pts === pair.playoff_away_pts) {
+                            return pair.agg_home_score > pair.agg_away_score
+                        } else {
+                            return false
+                        }
+                    }
+
+                    if (pair.agg_home_score > pair.agg_away_score) {
                         return true
-                    } else if (pair.playoff_home_pts === pair.playoff_away_pts) {
-                        return pair.agg_home_score > pair.agg_away_score
+                    } else if (pair.agg_home_score === pair.agg_away_score) {
+                        if (pair.matches[1].home_draw_lot) return false
+                        if (pair.matches[1].away_draw_lot) return true
                     } else {
                         return false
                     }
-                }
-
-                if (pair.agg_home_score > pair.agg_away_score) {
-                    return true
-                } else if (pair.agg_home_score === pair.agg_away_score) {
-                    if (pair.matches[1].home_draw_lot) return false
-                    if (pair.matches[1].away_draw_lot) return true
                 } else {
                     return false
                 }
-            } else {
-                return false
             }
-        }
 
-        if (pair.agg_home_score > pair.agg_away_score) {
-            return true
-        } else if (pair.agg_home_score === pair.agg_away_score) {
-            if (isAwayGoalsTiebreaker(config)) {
-                if (match2_away_score > match1_away_score) {
-                    pair.away_goal_winner = 'home'
-                    return true
-                } else if (match2_away_score === match1_away_score) {
-                    if (match2_away_penalty_score > match2_home_penalty_score) return true
+            if (pair.agg_home_score > pair.agg_away_score) {
+                return true
+            } else if (pair.agg_home_score === pair.agg_away_score) {
+                if (isAwayGoalsTiebreaker(config)) {
+                    if (match2_away_score > match1_away_score) {
+                        pair.away_goal_winner = 'home'
+                        return true
+                    } else if (match2_away_score === match1_away_score) {
+                        if (match2_away_penalty_score > match2_home_penalty_score) return true
+                    } else {
+                        pair.away_goal_winner = 'away'
+                    }
                 } else {
-                    pair.away_goal_winner = 'away'
+                    return match2_away_penalty_score > match2_home_penalty_score
                 }
-            } else {
-                return match2_away_penalty_score > match2_home_penalty_score
             }
         }
     }
