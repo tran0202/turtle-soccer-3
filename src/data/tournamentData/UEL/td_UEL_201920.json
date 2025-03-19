@@ -1648,7 +1648,7 @@
                     "bye_teams": [
                         { "id": "SUJ" },
                         { "id": "MTA" },
-                        { "id": "SAB-2024" },
+                        { "id": "STB" },
                         { "id": "HJK" },
                         { "id": "TNS" },
                         { "id": "SAR" },
@@ -3120,7 +3120,7 @@
                                     "matches": [
                                         {
                                             "home_team": "ARA",
-                                            "away_team": "SAB-2024",
+                                            "away_team": "STB",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2019-08-06",
@@ -3131,7 +3131,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "SAB-2024",
+                                            "home_team": "STB",
                                             "away_team": "ARA",
                                             "home_score": 0,
                                             "away_score": 2,

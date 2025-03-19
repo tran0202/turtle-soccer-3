@@ -62,7 +62,7 @@
                         { "id": "SAR" },
                         { "id": "CEL" },
                         { "id": "SHE" },
-                        { "id": "SAB-2024" },
+                        { "id": "STB" },
                         { "id": "F91" },
                         { "id": "VFC" },
                         { "id": "LNF" },
@@ -339,7 +339,7 @@
                             "matches": [
                                 {
                                     "home_team": "SHE",
-                                    "away_team": "SAB-2024",
+                                    "away_team": "STB",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2019-07-10",
@@ -349,7 +349,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "SAB-2024",
+                                    "home_team": "STB",
                                     "away_team": "SHE",
                                     "home_score": 1,
                                     "away_score": 3,
@@ -724,7 +724,7 @@
                                     "name": "C06",
                                     "matches": [
                                         {
-                                            "home_team": "SAB-2024",
+                                            "home_team": "STB",
                                             "away_team": "DZA",
                                             "home_score": 0,
                                             "away_score": 2,
@@ -737,7 +737,7 @@
                                         },
                                         {
                                             "home_team": "DZA",
-                                            "away_team": "SAB-2024",
+                                            "away_team": "STB",
                                             "home_score": 3,
                                             "away_score": 0,
                                             "date": "2019-07-30",

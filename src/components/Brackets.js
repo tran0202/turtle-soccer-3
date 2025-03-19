@@ -440,7 +440,7 @@ const BracketPairBox = (props) => {
                             {!isNaN(leg2_home_score) && match.playoff_home_score === undefined && !config.pair_agg_points && (
                                 <Col className={`no-padding-lr ${aggColumnSize} ${homeHighlight}`}>
                                     <React.Fragment>{match.agg_home_score}</React.Fragment>
-                                    {match.leg2_home_penalty_score && <React.Fragment> ({match.leg2_home_penalty_score})</React.Fragment>}
+                                    {match.leg2_home_penalty_score !== undefined && <React.Fragment> ({match.leg2_home_penalty_score})</React.Fragment>}
                                 </Col>
                             )}
                             {match.playoff_home_score !== undefined && (
@@ -482,7 +482,7 @@ const BracketPairBox = (props) => {
                             {!isNaN(leg2_away_score) && match.playoff_away_score === undefined && !config.pair_agg_points && (
                                 <Col className={`no-padding-lr ${aggColumnSize} ${awayHighlight}`}>
                                     <React.Fragment>{match.agg_away_score}</React.Fragment>
-                                    {match.leg2_away_penalty_score && <React.Fragment> ({match.leg2_away_penalty_score})</React.Fragment>}
+                                    {match.leg2_away_penalty_score !== undefined && <React.Fragment> ({match.leg2_away_penalty_score})</React.Fragment>}
                                 </Col>
                             )}
                             {match.playoff_away_score !== undefined && (
