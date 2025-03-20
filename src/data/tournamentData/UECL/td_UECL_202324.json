@@ -2362,7 +2362,7 @@
                                             "date": "2023-07-26",
                                             "time": "20:00",
                                             "stadium": "Ménfői úti Stadion",
-                                            "city": "Győr, Hungarya",
+                                            "city": "Győr, Hungary",
                                             "path": "Main",
                                             "matchday": "firstleg"
                                         },
@@ -3502,7 +3502,7 @@
                                     "matches": [
                                         {
                                             "home_team": "STT",
-                                            "away_team": "UBK",
+                                            "away_team": "BRE",
                                             "home_score": 0,
                                             "away_score": 1,
                                             "date": "2023-08-24",
@@ -3513,7 +3513,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "UBK",
+                                            "home_team": "BRE",
                                             "away_team": "STT",
                                             "home_score": 1,
                                             "away_score": 0,
@@ -4278,14 +4278,14 @@
                 },
                 {
                     "name": "Group B",
-                    "teams": [{ "id": "UBK" }, { "id": "MTA" }, { "id": "ZLH" }, { "id": "GNT" }],
+                    "teams": [{ "id": "BRE" }, { "id": "MTA" }, { "id": "ZLH" }, { "id": "GNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "MTA",
-                                    "away_team": "UBK",
+                                    "away_team": "BRE",
                                     "home_score": 3,
                                     "away_score": 2,
                                     "date": "2023-09-21",
@@ -4309,7 +4309,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "UBK",
+                                    "home_team": "BRE",
                                     "away_team": "ZLH",
                                     "home_score": 0,
                                     "away_score": 1,
@@ -4335,7 +4335,7 @@
                             "matches": [
                                 {
                                     "home_team": "GNT",
-                                    "away_team": "UBK",
+                                    "away_team": "BRE",
                                     "home_score": 5,
                                     "away_score": 0,
                                     "date": "2023-10-26",
@@ -4359,7 +4359,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "UBK",
+                                    "home_team": "BRE",
                                     "away_team": "GNT",
                                     "home_score": 2,
                                     "away_score": 3,
@@ -4384,7 +4384,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "UBK",
+                                    "home_team": "BRE",
                                     "away_team": "MTA",
                                     "home_score": 1,
                                     "away_score": 2,
@@ -4420,7 +4420,7 @@
                                 },
                                 {
                                     "home_team": "ZLH",
-                                    "away_team": "UBK",
+                                    "away_team": "BRE",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2023-12-14",

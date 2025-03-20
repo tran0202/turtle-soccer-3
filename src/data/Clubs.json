@@ -176,7 +176,7 @@
     },
     {
         "id": "FEH",
-        "name": "MOL Fehérvár",
+        "name": "Fehérvár",
         "team_type_id": "CLUB",
         "nation_id": "HUN",
         "parent_team_id": "",
@@ -890,7 +890,7 @@
         "team_type_id": "CLUB",
         "nation_id": "SVN",
         "parent_team_id": "",
-        "club_code": "MAR",
+        "club_code": "MRB",
         "logo_filename": "NK_Maribor.svg.png",
         "official_name": "NK Maribor"
     },
@@ -966,7 +966,7 @@
     },
     {
         "id": "IBE",
-        "name": "Iberia",
+        "name": "Iberia 1999",
         "team_type_id": "CLUB",
         "nation_id": "GEO",
         "parent_team_id": "",
@@ -1319,12 +1319,12 @@
         "end_date": "2019-02-21"
     },
     {
-        "id": "UMF",
+        "id": "STN",
         "name": "Stjarnan",
         "team_type_id": "CLUB",
         "nation_id": "ISL",
         "parent_team_id": "",
-        "club_code": "UMF",
+        "club_code": "STN",
         "logo_filename": "374px-Stjarnan_Logo.png",
         "official_name": "UMF Stjarnan"
     },
@@ -2724,12 +2724,12 @@
         "official_name": "FC Vitebsk"
     },
     {
-        "id": "UBK",
+        "id": "BRE",
         "name": "Breiðablik",
         "team_type_id": "CLUB",
         "nation_id": "ISL",
         "parent_team_id": "",
-        "club_code": "UBK",
+        "club_code": "BRE",
         "logo_filename": "Breiðablik_men's_football_logo.png",
         "official_name": "Breiðablik"
     },
@@ -4794,5 +4794,305 @@
         "club_code": "OSA",
         "logo_filename": "CA_Osasuna_2024_crest.svg.png",
         "official_name": "Club Atlético Osasuna"
+    },
+    {
+        "id": "SIA",
+        "name": "Šiauliai",
+        "team_type_id": "CLUB",
+        "nation_id": "LTU",
+        "parent_team_id": "",
+        "club_code": "SIA",
+        "logo_filename": "FA_Šiauliai_logo.png",
+        "official_name": "Football Academy of Šiauliai"
+    },
+    {
+        "id": "IMR",
+        "name": "Isloch Minsk Raion",
+        "team_type_id": "CLUB",
+        "nation_id": "BLR",
+        "parent_team_id": "",
+        "club_code": "IMR",
+        "logo_filename": "FC_Isloch_Logo.png",
+        "official_name": "FC Isloch Minsk Raion"
+    },
+    {
+        "id": "CAE",
+        "name": "Caernarfon Town",
+        "team_type_id": "CLUB",
+        "nation_id": "WAL",
+        "parent_team_id": "",
+        "club_code": "CAE",
+        "logo_filename": "Caernarfon_Town_F.C.png",
+        "official_name": "Caernarfon Town Football Club"
+    },
+    {
+        "id": "TKA",
+        "name": "Tallinna Kalev",
+        "team_type_id": "CLUB",
+        "nation_id": "EST",
+        "parent_team_id": "",
+        "club_code": "TKA",
+        "logo_filename": "347px-KalevTallinn.png",
+        "official_name": "Jalgpalliklubi Tallinna Kalev"
+    },
+    {
+        "id": "MAL",
+        "name": "Malisheva",
+        "team_type_id": "CLUB",
+        "nation_id": "KVX",
+        "parent_team_id": "",
+        "club_code": "MAL",
+        "logo_filename": "FC_Malisheva.svg.png",
+        "official_name": "KF Malisheva"
+    },
+    {
+        "id": "MAX",
+        "name": "Marsaxlokk",
+        "team_type_id": "CLUB",
+        "nation_id": "MLT",
+        "parent_team_id": "",
+        "club_code": "MAX",
+        "logo_filename": "MarsaxlokkFC.png",
+        "official_name": "Marsaxlokk F.C."
+    },
+    {
+        "id": "SHB",
+        "name": "Shelbourne",
+        "team_type_id": "CLUB",
+        "nation_id": "IRL",
+        "parent_team_id": "",
+        "club_code": "SHB",
+        "logo_filename": "Shels_logo_sml.png",
+        "official_name": "Shelbourne F.C."
+    },
+    {
+        "id": "BRV",
+        "name": "Bravo",
+        "team_type_id": "CLUB",
+        "nation_id": "SVN",
+        "parent_team_id": "",
+        "club_code": "BRV",
+        "logo_filename": "NK_Bravo_logo.svg.png",
+        "official_name": "Nogometni klub Bravo"
+    },
+    {
+        "id": "TIK",
+        "name": "Tikvesh",
+        "team_type_id": "CLUB",
+        "nation_id": "MKD",
+        "parent_team_id": "",
+        "club_code": "TIK",
+        "logo_filename": "Gfk_tikves_logo.jpg",
+        "official_name": "GFK Tikvesh"
+    },
+    {
+        "id": "MOR",
+        "name": "Mornar",
+        "team_type_id": "CLUB",
+        "nation_id": "MNE",
+        "parent_team_id": "",
+        "club_code": "MOR",
+        "logo_filename": "FK_Mornar_Bar_Logo.png",
+        "official_name": "FK Mornar Bar"
+    },
+    {
+        "id": "UAS",
+        "name": "UNA Strassen",
+        "team_type_id": "CLUB",
+        "nation_id": "LUX",
+        "parent_team_id": "",
+        "club_code": "UAS",
+        "logo_filename": "FC_UNA_Strassen.png",
+        "official_name": "FC UNA Strassen"
+    },
+    {
+        "id": "VPS",
+        "name": "VPS",
+        "team_type_id": "CLUB",
+        "nation_id": "FIN",
+        "parent_team_id": "",
+        "club_code": "VPS",
+        "logo_filename": "Vaasan_Palloseura_logo.svg.png",
+        "official_name": "Vaasan Palloseura"
+    },
+    {
+        "id": "VIS",
+        "name": "Virtus",
+        "team_type_id": "CLUB",
+        "nation_id": "SMR",
+        "parent_team_id": "",
+        "club_code": "VIS",
+        "logo_filename": "virtus-ac-1964-logo-png_seeklogo-454174.png",
+        "official_name": "A.C. Virtus"
+    },
+    {
+        "id": "GAE",
+        "name": "Go Ahead Eagles",
+        "team_type_id": "CLUB",
+        "nation_id": "NED",
+        "parent_team_id": "",
+        "club_code": "GAE",
+        "logo_filename": "Go_Ahead_Eagles_logo.svg.png",
+        "official_name": "Go Ahead Eagles"
+    },
+    {
+        "id": "PZH",
+        "name": "Polissya Zhytomyr",
+        "team_type_id": "CLUB",
+        "nation_id": "UKR",
+        "parent_team_id": "",
+        "club_code": "PZH",
+        "logo_filename": "FC_Polissya_Zhytomyr.png",
+        "official_name": "FC Polissya Zhytomyr"
+    },
+    {
+        "id": "TRO",
+        "name": "Tromsø",
+        "team_type_id": "CLUB",
+        "nation_id": "NOR",
+        "parent_team_id": "",
+        "club_code": "TRO",
+        "logo_filename": "Tromsø_IL_logo.svg.png",
+        "official_name": "Tromsø IL"
+    },
+    {
+        "id": "STM",
+        "name": "St Mirren",
+        "team_type_id": "CLUB",
+        "nation_id": "SCO",
+        "parent_team_id": "",
+        "club_code": "STM",
+        "logo_filename": "St_mirren_fc_logo.png",
+        "official_name": "St Mirren F.C."
+    },
+    {
+        "id": "PAF",
+        "name": "Pafos",
+        "team_type_id": "CLUB",
+        "nation_id": "CYP",
+        "parent_team_id": "",
+        "club_code": "PAF",
+        "logo_filename": "Pafos_FC_badge.png",
+        "official_name": "Pafos FC"
+    },
+    {
+        "id": "CMO",
+        "name": "Cherno More",
+        "team_type_id": "CLUB",
+        "nation_id": "BUL",
+        "parent_team_id": "",
+        "club_code": "CMO",
+        "logo_filename": "Cherno_More_Varna.svg.png",
+        "official_name": "PFC Cherno More Varna"
+    },
+    {
+        "id": "TRS",
+        "name": "TransINVEST",
+        "team_type_id": "CLUB",
+        "nation_id": "LTU",
+        "parent_team_id": "",
+        "club_code": "TRS",
+        "logo_filename": "FK_TransINVEST_logo.png",
+        "official_name": "FK TransINVEST"
+    },
+    {
+        "id": "SWA",
+        "name": "Sliema Wanderers",
+        "team_type_id": "CLUB",
+        "nation_id": "MLT",
+        "parent_team_id": "",
+        "club_code": "SWA",
+        "logo_filename": "Sliema_Wanderers_F.C._logo.png",
+        "official_name": "Sliema Wanderers F.C."
+    },
+    {
+        "id": "BOS",
+        "name": "Baník Ostrava",
+        "team_type_id": "CLUB",
+        "nation_id": "CZE",
+        "parent_team_id": "",
+        "club_code": "BOS",
+        "logo_filename": "FC_Banik_Ostrava_logo.svg.png",
+        "official_name": "FC Baník Ostrava"
+    },
+    {
+        "id": "R23",
+        "name": "Radnički 1923",
+        "team_type_id": "CLUB",
+        "nation_id": "SRB",
+        "parent_team_id": "",
+        "club_code": "R23",
+        "logo_filename": "FK_Radnicki_Kragujevac_logo.svg.png",
+        "official_name": "FK Radnički 1923"
+    },
+    {
+        "id": "PAK",
+        "name": "Paks",
+        "team_type_id": "CLUB",
+        "nation_id": "HUN",
+        "parent_team_id": "",
+        "club_code": "PAK",
+        "logo_filename": "Paksi_FC_(Logo).svg.png",
+        "official_name": "Paksi FC"
+    },
+    {
+        "id": "WKR",
+        "name": "Wisła Kraków",
+        "team_type_id": "CLUB",
+        "nation_id": "POL",
+        "parent_team_id": "",
+        "club_code": "WKR",
+        "logo_filename": "Wisła_Kraków_logo.svg.png",
+        "official_name": "Towarzystwo Sportowe Wisła KrakówC"
+    },
+    {
+        "id": "CHU",
+        "name": "Corvinul Hunedoara",
+        "team_type_id": "CLUB",
+        "nation_id": "ROU",
+        "parent_team_id": "",
+        "club_code": "CHU",
+        "logo_filename": "Corvinul_Hunedoara.png",
+        "official_name": "Asociaţia Club Sportiv FC Corvinul Hunedoara 1921"
+    },
+    {
+        "id": "MPT",
+        "name": "Maccabi Petah Tikva",
+        "team_type_id": "CLUB",
+        "nation_id": "ISR",
+        "parent_team_id": "",
+        "club_code": "MPT",
+        "logo_filename": "maccabi-petah-tikva-logo-DF604501F8-seeklogo.com.png",
+        "official_name": "Maccabi Petah Tikva F.C."
+    },
+    {
+        "id": "HEI",
+        "name": "1. FC Heidenheim",
+        "team_type_id": "CLUB",
+        "nation_id": "GER",
+        "parent_team_id": "",
+        "club_code": "HEI",
+        "logo_filename": "389px-1._FC_Heidenheim_1846.svg.png",
+        "official_name": "1. FC Heidenheim"
+    },
+    {
+        "id": "CBR",
+        "name": "Cercle Brugge",
+        "team_type_id": "CLUB",
+        "nation_id": "BEL",
+        "parent_team_id": "",
+        "club_code": "CBR",
+        "logo_filename": "400px-Logo_Cercle_Brugge_2022.png",
+        "official_name": "Cercle Brugge Koninklijke Sportvereniging"
+    },
+    {
+        "id": "KKR",
+        "name": "Kryvbas Kryvyi Rih",
+        "team_type_id": "CLUB",
+        "nation_id": "UKR",
+        "parent_team_id": "",
+        "club_code": "KKR",
+        "logo_filename": "FC_Kryvbas_Kryvyi_Rih_(2020).png",
+        "official_name": "FC Kryvbas Kryvyi Rih"
     }
 ]

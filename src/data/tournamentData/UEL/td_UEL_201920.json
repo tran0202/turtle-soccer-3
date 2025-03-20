@@ -33,7 +33,7 @@
                         { "id": "KIL-2018-2020" },
                         { "id": "KUP" },
                         { "id": "VIB" },
-                        { "id": "UBK" },
+                        { "id": "BRE" },
                         { "id": "VAD" },
                         { "id": "BRN" },
                         { "id": "SHA" },
@@ -93,7 +93,7 @@
                         { "id": "APL" },
                         { "id": "VES" },
                         { "id": "TEU" },
-                        { "id": "UMF" },
+                        { "id": "STN" },
                         { "id": "LET" },
                         { "id": "HAU" },
                         { "id": "RIT" },
@@ -446,7 +446,7 @@
                             "name": "1stQlf04",
                             "matches": [
                                 {
-                                    "home_team": "UBK",
+                                    "home_team": "BRE",
                                     "away_team": "VAD",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -458,7 +458,7 @@
                                 },
                                 {
                                     "home_team": "VAD",
-                                    "away_team": "UBK",
+                                    "away_team": "BRE",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2019-07-18",
@@ -1316,7 +1316,7 @@
                             "name": "1stQlf36",
                             "matches": [
                                 {
-                                    "home_team": "UMF",
+                                    "home_team": "STN",
                                     "away_team": "LET",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -1328,7 +1328,7 @@
                                 },
                                 {
                                     "home_team": "LET",
-                                    "away_team": "UMF",
+                                    "away_team": "STN",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "home_extra_score": 1,
@@ -2046,7 +2046,7 @@
                                     "matches": [
                                         {
                                             "home_team": "EPN",
-                                            "away_team": "UMF",
+                                            "away_team": "STN",
                                             "home_score": 4,
                                             "away_score": 0,
                                             "date": "2019-07-25",
@@ -2057,7 +2057,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "UMF",
+                                            "home_team": "STN",
                                             "away_team": "EPN",
                                             "home_score": 1,
                                             "away_score": 3,

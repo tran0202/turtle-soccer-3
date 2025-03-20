@@ -60,7 +60,7 @@ const HeroCarousel = (props) => {
 
 const TournamentDetails = (props) => {
     const { config } = props
-    const { details, competition, statistics, name } = config
+    const { details, competition, competition_id, statistics, name, league_phase } = config
     const {
         slogan,
         host,
@@ -84,6 +84,8 @@ const TournamentDetails = (props) => {
     const { total_matches, total_goals, attendance, final_matches, final_goals, final_attendance } = statistics
     const { logo_path } = competition
     const adjustedHost = !host ? null : Array.isArray(host) ? host : host.teams
+    const is_UEL = competition_id === 'UEL'
+    const is_UECL = competition_id === 'UECL'
     return (
         <React.Fragment>
             <Row>
@@ -131,7 +133,7 @@ const TournamentDetails = (props) => {
                                     <b>{total_team_count}</b> teams
                                     {total_transfer_team_count ? (
                                         <React.Fragment>
-                                            , plus <b>{total_transfer_team_count}</b> transferred from UCL,
+                                            , plus <b>{total_transfer_team_count}</b> transferred from UCL{is_UECL ? ' & UEL' : ''},
                                         </React.Fragment>
                                     ) : (
                                         ''
@@ -142,12 +144,13 @@ const TournamentDetails = (props) => {
                                     <b>{competition_team_count}</b> teams
                                     {transfer_team_count ? (
                                         <React.Fragment>
-                                            , plus <b>{transfer_team_count}</b> transferred from UCL,
+                                            , plus <b>{transfer_team_count}</b> transferred from {is_UEL ? 'UCL' : ''}
+                                            {is_UECL ? 'UEL' : ''},
                                         </React.Fragment>
                                     ) : (
                                         ''
                                     )}{' '}
-                                    qualified for the competition group stage
+                                    qualified for the competition {league_phase ? 'league phase' : 'group stage'}
                                 </li>
                             </React.Fragment>
                         )}

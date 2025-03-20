@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip, ByeTooltip } from '../core/TooltipHelper'
+import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip, ByeTooltip, AwardedTooltip } from '../core/TooltipHelper'
 
 const PairHeader = (props) => {
     const { config } = props
@@ -36,6 +36,8 @@ const PairRow = (props) => {
     const match1Cancelled = pair.matches[0].match_cancelled
     const homeWalkover = pair.matches[0].home_walkover
     const walkoverNotes = pair.matches[0].walkover_notes
+    const match1Awarded = pair.matches[0].home_awarded || pair.matches[0].away_awarded
+    const match1AwardedNotes = pair.matches[0].awarded_notes
 
     const match2HomeExtraScore = pair.matches[1] && pair.matches[1].home_extra_score ? pair.matches[1].home_extra_score : 0
     const match2AwayExtraScore = pair.matches[1] && pair.matches[1].away_extra_score ? pair.matches[1].away_extra_score : 0
@@ -46,6 +48,8 @@ const PairRow = (props) => {
     const match2HomePenaltyScore = pair.matches[1] ? pair.matches[1].home_penalty_score : 0
     const match2AwayPenaltyScore = pair.matches[1] ? pair.matches[1].away_penalty_score : 0
     const match2Cancelled = pair.matches[1] && pair.matches[1].match_cancelled
+    const match2Awarded = pair.matches[1] && (pair.matches[1].home_awarded || pair.matches[1].away_awarded)
+    const match2AwardedNotes = pair.matches[1] && pair.matches[1].awarded_notes
 
     const pairHomeHighlight = byeMatch ? '' : pair.agg_winner === 'home' ? 'team-name-win' : 'team-name-lose'
     const pairAwayHighlight = byeMatch ? '' : pair.agg_winner === 'home' ? 'team-name-lose' : 'team-name-win'
@@ -74,6 +78,7 @@ const PairRow = (props) => {
                     ) : (
                         ''
                     )}
+                    {match1Awarded && <AwardedTooltip target={`${homeTeam}${awayTeam}match1AwardedTooltip`} notes={match1AwardedNotes} />}
                 </Col>
 
                 {showLeg2Score && (
@@ -88,6 +93,7 @@ const PairRow = (props) => {
                             ''
                         )}
                         {showAetTooltip && <AetTooltip target="aetTooltip" anchor="(a.e.t.)" />}
+                        {match2Awarded && <AwardedTooltip target={`${awayTeam}${homeTeam}match2AwardedTooltip`} notes={match2AwardedNotes} />}
                     </Col>
                 )}
 
