@@ -2239,7 +2239,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "INT" }, { "id": "SLA" }, { "id": "BVB" }, { "id": "BAR" }],
+                    "teams": [{ "id": "INT" }, { "id": "SLA" }, { "id": "DOR" }, { "id": "BAR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2255,7 +2255,7 @@
                                     "city": "Milan"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "BAR",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2271,7 +2271,7 @@
                             "matches": [
                                 {
                                     "home_team": "SLA",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2019-10-02",
@@ -2306,7 +2306,7 @@
                                 },
                                 {
                                     "home_team": "INT",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2019-10-23",
@@ -2330,7 +2330,7 @@
                                     "city": "Barcelona"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "INT",
                                     "home_score": 3,
                                     "away_score": 2,
@@ -2356,7 +2356,7 @@
                                 },
                                 {
                                     "home_team": "BAR",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2019-11-27",
@@ -2380,7 +2380,7 @@
                                     "city": "Milan"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "SLA",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2708,7 +2708,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "rounds": [
                 {
@@ -2722,7 +2722,7 @@
                             "name": "R161",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "PSG",
                                     "home_score": 2,
                                     "away_score": 1,
@@ -2734,7 +2734,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2020-03-11",

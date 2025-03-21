@@ -2,7 +2,7 @@
     "id": "UECL202324",
     "stages": [
         {
-            "name": "Qualifying Stage",
+            "name": "Qualifying Rounds",
             "type": "pair_",
             "rounds": [
                 {
@@ -5371,12 +5371,12 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [
                 {
-                    "name": "Knockout Round",
+                    "name": "Play-offs",
                     "short_name": "1/16",
                     "round_type": "knockout2legged",
                     "next_round": "Round of 16",

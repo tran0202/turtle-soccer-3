@@ -20,7 +20,7 @@ const RankingsHeader = (props) => {
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-center">
             <Col className="col-box-4"></Col>
             {config.added_group && <Col className="col-box-4">Gr</Col>}
-            <Col className="col-box-6"></Col>
+            <Col className="col-box-7"></Col>
             {config.added_group && <Col className="col-box-23"></Col>}
             {!config.added_group && <Col className="col-box-27"></Col>}
             <Col className="col-box-7">MP</Col>
@@ -31,7 +31,7 @@ const RankingsHeader = (props) => {
             <Col className="col-box-7">GA</Col>
             {!isGoalRatioTiebreaker(config) && <Col className="col-box-7">+/-</Col>}
             {isGoalRatioTiebreaker(config) && <Col className="col-box-7">GR</Col>}
-            <Col className="col-box-14">Pts</Col>
+            <Col className="col-box-13">Pts</Col>
         </Row>
     )
 }
@@ -65,6 +65,7 @@ const RankingsRow = (props) => {
     const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
     const advanced_striped = ranking.advanced ? 'advanced-striped' : ''
     const wild_card_striped = ranking.wild_card ? 'wild-card-striped' : ''
+    const wild_card2_striped = ranking.wild_card2 ? 'wild-card2-striped' : ''
     const transferred_striped = ranking.transferred ? 'transferred-striped' : ''
     const relegated_striped = ranking.relegated ? 'relegated-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
@@ -83,7 +84,7 @@ const RankingsRow = (props) => {
     const pts = !withdrew ? ranking.pts : <span>&mdash;</span>
     return (
         <Row
-            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${wild_card2_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
         >
             <Col className="col-box-4 col-box-no-padding-lr text-center">
                 <RankColumn ranking={ranking} />

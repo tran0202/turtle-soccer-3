@@ -1448,14 +1448,14 @@
             "groups": [
                 {
                     "name": "Group A",
-                    "teams": [{ "id": "BRG" }, { "id": "ATM" }, { "id": "BVB" }, { "id": "ASM" }],
+                    "teams": [{ "id": "BRG" }, { "id": "ATM" }, { "id": "DOR" }, { "id": "ASM" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "BRG",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2018-09-18",
@@ -1489,7 +1489,7 @@
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "ASM",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -1514,7 +1514,7 @@
                                     "city": "Bruges"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "ATM",
                                     "home_score": 4,
                                     "away_score": 0,
@@ -1540,7 +1540,7 @@
                                 },
                                 {
                                     "home_team": "ATM",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2018-11-06",
@@ -1564,7 +1564,7 @@
                                     "city": "Madrid"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "BRG",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -1590,7 +1590,7 @@
                                 },
                                 {
                                     "home_team": "ASM",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 2,
                                     "date": "2018-12-11",
@@ -2697,7 +2697,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "rounds": [
                 {
@@ -2796,7 +2796,7 @@
                             "matches": [
                                 {
                                     "home_team": "TOT",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 3,
                                     "away_score": 0,
                                     "date": "2019-02-13",
@@ -2806,7 +2806,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "TOT",
                                     "home_score": 0,
                                     "away_score": 1,

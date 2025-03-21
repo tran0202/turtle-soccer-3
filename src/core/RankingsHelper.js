@@ -75,6 +75,9 @@ export const accumulateRanking = (ranking, matches, config) => {
                     if (!ranking.gaw) {
                         ranking.gaw = 0
                     }
+                    if (!ranking.wa) {
+                        ranking.wa = 0
+                    }
                 }
                 if (ranking.id === m.away_team) {
                     ranking.mp++
@@ -86,6 +89,11 @@ export const accumulateRanking = (ranking, matches, config) => {
                     } else {
                         ranking.w++
                         ranking.pts += parseInt(config.points_for_win)
+                        if (!ranking.wa) {
+                            ranking.wa = 1
+                        } else {
+                            ranking.wa++
+                        }
                     }
                     ranking.gf += parseInt(m.away_score)
                     ranking.ga += parseInt(m.home_score)
@@ -182,6 +190,12 @@ export const sortGroup = (group, config) => {
                 break
             case 'awaygoals':
                 sortOverallAwayGoals(group, config)
+                break
+            case 'wins':
+                sortOverallWins(group, config)
+                break
+            case 'awaywins':
+                sortOverallAwayWins(group, config)
                 break
             case 'h2hpoints':
                 sortH2HPoints(group, config)
@@ -613,6 +627,144 @@ export const createAwayGoalsSubpools = (pool, config) => {
             foundPool.rankings.push(r)
         } else {
             pool.subpools.push({ pts: r.pts, gd: r.gd, gf: r.gf, gaw: r.gaw, rankings: [r] })
+        }
+    })
+}
+
+export const sortOverallWins = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    addSortPath(group, 'wins')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+
+        if (rankings.length >= 2) {
+            createWinsSubpools(p, config)
+
+            const subpools = p.subpools
+            for (var k = 0; k < subpools.length - 1; k++) {
+                for (var l = k + 1; l < subpools.length; l++) {
+                    if (subpools[k].w < subpools[l].w) {
+                        const temp = subpools[k]
+                        subpools[k] = subpools[l]
+                        subpools[l] = temp
+                    }
+                }
+            }
+            p.subpools.forEach((sp) => {
+                if (sp.rankings && sp.rankings.length === 1) {
+                    sp.sorted = true
+                }
+            })
+        }
+    }
+    flattenSubpools(group, config)
+}
+
+export const createWinsSubpools = (pool, config) => {
+    if (!pool || !pool.rankings || !config) return
+    pool.subpools = []
+    pool.rankings.forEach((r) => {
+        const foundPool = pool.subpools.find((p) => p.w === r.w)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            pool.subpools.push({ pts: r.pts, gd: r.gd, gf: r.gf, gaw: r.gaw, w: r.w, rankings: [r] })
+        }
+    })
+}
+
+export const sortOverallAwayWins = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    addSortPath(group, 'awaywins')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+
+        if (rankings.length >= 2) {
+            createAwayWinsSubpools(p, config)
+
+            const subpools = p.subpools
+            for (var k = 0; k < subpools.length - 1; k++) {
+                for (var l = k + 1; l < subpools.length; l++) {
+                    if (subpools[k].wa < subpools[l].wa) {
+                        const temp = subpools[k]
+                        subpools[k] = subpools[l]
+                        subpools[l] = temp
+                    }
+                }
+            }
+            p.subpools.forEach((sp) => {
+                if (sp.rankings && sp.rankings.length === 1) {
+                    sp.sorted = true
+                }
+            })
+        }
+
+        // UCL202425
+        if (rankings.length === 2) {
+            rankings[0].tb_anchor = '(oaw)'
+            rankings[0].tb_notes =
+                'Tied on Overall points (' +
+                rankings[0].pts +
+                '), goal difference (' +
+                (rankings[0].gd > 0 ? '+' : '') +
+                rankings[0].gd +
+                '), goals scored (' +
+                rankings[0].gf +
+                '), away goals (' +
+                rankings[0].gaw +
+                ') and wins (' +
+                rankings[0].w +
+                '). Tiebreak by Overall away wins: ' +
+                rankings[0].team.name +
+                ' ' +
+                rankings[0].wa +
+                ' >< ' +
+                rankings[1].team.name +
+                ' ' +
+                rankings[1].wa
+            rankings[1].tb_anchor = '(oaw)'
+            rankings[1].tb_notes =
+                'Tied on Overall points (' +
+                rankings[1].pts +
+                '), goal difference (' +
+                (rankings[1].gd > 0 ? '+' : '') +
+                rankings[1].gd +
+                '), goals scored (' +
+                rankings[1].gf +
+                '), away goals (' +
+                rankings[1].gaw +
+                ') and wins (' +
+                rankings[1].w +
+                '). Tiebreak by Overall away wins: ' +
+                rankings[1].team.name +
+                ' ' +
+                rankings[1].wa +
+                ' >< ' +
+                rankings[0].team.name +
+                ' ' +
+                rankings[0].wa
+        }
+    }
+    flattenSubpools(group, config)
+}
+
+export const createAwayWinsSubpools = (pool, config) => {
+    if (!pool || !pool.rankings || !config) return
+    pool.subpools = []
+    pool.rankings.forEach((r) => {
+        const foundPool = pool.subpools.find((p) => p.wa === r.wa)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            pool.subpools.push({ pts: r.pts, gd: r.gd, gf: r.gf, gaw: r.gaw, w: r.w, wa: r.wa, rankings: [r] })
         }
     })
 }
@@ -1434,6 +1586,8 @@ export const setAdvancements = (group, advancements) => {
                     t.advanced = true
                 } else if (foundPosition.next === 'wild_card') {
                     t.wild_card = true
+                } else if (foundPosition.next === 'wild_card2') {
+                    t.wild_card2 = true
                 } else if (foundPosition.next === 'transfer') {
                     t.transferred = true
                 } else if (foundPosition.next === 'relegate') {

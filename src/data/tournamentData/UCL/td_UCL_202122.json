@@ -1749,14 +1749,14 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "BJK" }, { "id": "BVB" }, { "id": "SCP" }, { "id": "AJX" }],
+                    "teams": [{ "id": "BJK" }, { "id": "DOR" }, { "id": "SCP" }, { "id": "AJX" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "BJK",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2021-09-15",
@@ -1790,7 +1790,7 @@
                                     "city": "Amsterdam"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "SCP",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -1816,7 +1816,7 @@
                                 },
                                 {
                                     "home_team": "AJX",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 4,
                                     "away_score": 0,
                                     "date": "2021-10-19",
@@ -1830,7 +1830,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "AJX",
                                     "home_score": 1,
                                     "away_score": 3,
@@ -1866,7 +1866,7 @@
                                 },
                                 {
                                     "home_team": "SCP",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2021-11-24",
@@ -1890,7 +1890,7 @@
                                     "city": "Amsterdam"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "BJK",
                                     "home_score": 5,
                                     "away_score": 0,
@@ -2686,7 +2686,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [

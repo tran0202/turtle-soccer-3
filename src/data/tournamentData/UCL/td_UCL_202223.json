@@ -2368,13 +2368,13 @@
                 },
                 {
                     "name": "Group G",
-                    "teams": [{ "id": "BVB" }, { "id": "FCK" }, { "id": "SEV" }, { "id": "MCI" }],
+                    "teams": [{ "id": "DOR" }, { "id": "FCK" }, { "id": "SEV" }, { "id": "MCI" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "FCK",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -2400,7 +2400,7 @@
                             "matches": [
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2022-09-14",
@@ -2435,7 +2435,7 @@
                                 },
                                 {
                                     "home_team": "SEV",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 4,
                                     "date": "2022-10-05",
@@ -2459,7 +2459,7 @@
                                     "city": "Copenhagen"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "SEV",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2484,7 +2484,7 @@
                                     "city": "Seville"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "MCI",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2510,7 +2510,7 @@
                                 },
                                 {
                                     "home_team": "FCK",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2022-11-02",
@@ -2681,7 +2681,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [
@@ -2836,7 +2836,7 @@
                             "name": "R166",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "CHE",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -2848,7 +2848,7 @@
                                 },
                                 {
                                     "home_team": "CHE",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-03-07",

@@ -1804,7 +1804,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "BVB" }],
+                    "teams": [{ "id": "ZSP" }, { "id": "BRG" }, { "id": "LAZ" }, { "id": "DOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -1821,7 +1821,7 @@
                                 },
                                 {
                                     "home_team": "LAZ",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 3,
                                     "away_score": 1,
                                     "date": "2020-10-20",
@@ -1835,7 +1835,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "ZSP",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -1871,7 +1871,7 @@
                                 },
                                 {
                                     "home_team": "BRG",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 3,
                                     "date": "2020-11-04",
@@ -1895,7 +1895,7 @@
                                     "city": "Rome"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "BRG",
                                     "home_score": 3,
                                     "away_score": 0,
@@ -1910,7 +1910,7 @@
                             "name": "Matchday 5",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "LAZ",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -1936,7 +1936,7 @@
                             "matches": [
                                 {
                                     "home_team": "ZSP",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 2,
                                     "date": "2020-12-08",
@@ -2273,7 +2273,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [
@@ -2460,7 +2460,7 @@
                             "matches": [
                                 {
                                     "home_team": "SEV",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 3,
                                     "date": "2021-02-17",
@@ -2470,7 +2470,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "SEV",
                                     "home_score": 2,
                                     "away_score": 2,
@@ -2525,7 +2525,7 @@
                             "matches": [
                                 {
                                     "home_team": "MCI",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2021-04-06",
@@ -2535,7 +2535,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "MCI",
                                     "home_score": 1,
                                     "away_score": 2,

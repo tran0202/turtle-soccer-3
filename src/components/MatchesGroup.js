@@ -130,7 +130,7 @@ class MatchesGroup extends React.Component {
     render() {
         const { group, config } = this.props
         return (
-            <MatchesGroupCollapse title="Matches" initialStatus="Closed">
+            <MatchesGroupCollapse title="Matches" initialStatus="Opened">
                 {group.matchdays &&
                     group.matchdays.map((md) => {
                         return (

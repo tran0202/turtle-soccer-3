@@ -1,4 +1,1186 @@
 {
     "id": "UEL202425",
-    "stages": []
+    "stages": [
+        {
+            "name": "Qualifying Rounds",
+            "type": "pair_",
+            "rounds": [
+                {
+                    "name": "First Qualifying Round",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "round_type": "pair2legged",
+                    "next_round": "Second Qualifying Round",
+                    "pairs": [
+                        {
+                            "name": "1stQlf01",
+                            "matches": [
+                                {
+                                    "home_team": "BPL",
+                                    "away_team": "MRB",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-07-11",
+                                    "time": "20:00",
+                                    "stadium": "Stadion Hristo Botev",
+                                    "city": "Plovdiv",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MRB",
+                                    "away_team": "BPL",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-07-18",
+                                    "time": "20:15",
+                                    "stadium": "Ljudski vrt",
+                                    "city": "Maribor",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf02",
+                            "matches": [
+                                {
+                                    "home_team": "ELF",
+                                    "away_team": "PAF",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-07-11",
+                                    "time": "19:00",
+                                    "stadium": "Borås Arena",
+                                    "city": "Borås",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "ELF",
+                                    "home_score": 2,
+                                    "away_score": 5,
+                                    "date": "2024-07-18",
+                                    "time": "18:00",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf03",
+                            "matches": [
+                                {
+                                    "home_team": "PAK",
+                                    "away_team": "CHU",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2024-07-11",
+                                    "time": "19:00",
+                                    "stadium": "Fehérvári úti Stadion",
+                                    "city": "Paks",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CHU",
+                                    "away_team": "PAK",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-07-18",
+                                    "time": "20:00",
+                                    "stadium": "Sibiu Municipal Stadium",
+                                    "city": "Sibiu",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf04",
+                            "matches": [
+                                {
+                                    "home_team": "SHE",
+                                    "away_team": "ZIR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-07-11",
+                                    "time": "19:00",
+                                    "stadium": "Sheriff Arena",
+                                    "city": "Tiraspol",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ZIR",
+                                    "away_team": "SHE",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 4,
+                                    "away_penalty_score": 5,
+                                    "date": "2024-07-18",
+                                    "time": "18:00",
+                                    "stadium": "Dalga Arena",
+                                    "city": "Baku",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf05",
+                            "matches": [
+                                {
+                                    "home_team": "WKR",
+                                    "away_team": "LLA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-07-11",
+                                    "time": "20:30",
+                                    "stadium": "Henryk Reyman Stadium",
+                                    "city": "Kraków",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LLA",
+                                    "away_team": "WKR",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-07-18",
+                                    "time": "16:30",
+                                    "stadium": "Zahir Pajaziti Stadium",
+                                    "city": "Podujevo",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "1stQlf06",
+                            "matches": [
+                                {
+                                    "home_team": "RUZ",
+                                    "away_team": "TOB",
+                                    "home_score": 5,
+                                    "away_score": 2,
+                                    "date": "2024-07-11",
+                                    "time": "19:00",
+                                    "stadium": "Štadión pod Čebraťom",
+                                    "city": "Ružomberok",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "TOB",
+                                    "away_team": "RUZ",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-07-18",
+                                    "time": "17:00",
+                                    "stadium": "Kostanay Central Stadium",
+                                    "city": "Kostanay",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Second Qualifying Round",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "round_type": "pair2legged",
+                    "next_round": "Third Qualifying Round",
+                    "pairs": [
+                        {
+                            "name": "2ndQlf01",
+                            "matches": [
+                                {
+                                    "home_team": "AJX",
+                                    "away_team": "VOJ",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-07-25",
+                                    "time": "20:30",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "VOJ",
+                                    "away_team": "AJX",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-08-01",
+                                    "time": "19:30",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf02",
+                            "matches": [
+                                {
+                                    "home_team": "RUZ",
+                                    "away_team": "TRA",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-07-25",
+                                    "time": "18:30",
+                                    "stadium": "Štadión pod Čebraťom",
+                                    "city": "Ružomberok",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "TRA",
+                                    "away_team": "RUZ",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-01",
+                                    "time": "19:30",
+                                    "stadium": "Şenol Güneş Sports Complex",
+                                    "city": "Trabzon",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf03",
+                            "matches": [
+                                {
+                                    "home_team": "WKR",
+                                    "away_team": "RAP",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-07-25",
+                                    "time": "18:00",
+                                    "stadium": "Henryk Reyman Stadium",
+                                    "city": "Kraków",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "WKR",
+                                    "home_score": 6,
+                                    "away_score": 1,
+                                    "date": "2024-08-01",
+                                    "time": "20:30",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf04",
+                            "matches": [
+                                {
+                                    "home_team": "KIL",
+                                    "away_team": "CBR",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-07-25",
+                                    "time": "20:30",
+                                    "stadium": "Rugby Park",
+                                    "city": "Kilmarnock",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CBR",
+                                    "away_team": "KIL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-01",
+                                    "time": "20:00",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf05",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "SIF",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-07-25",
+                                    "time": "19:00",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SIF",
+                                    "away_team": "MOL",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2024-08-01",
+                                    "time": "19:15",
+                                    "stadium": "JYSK Park",
+                                    "city": "Silkeborg",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf06",
+                            "matches": [
+                                {
+                                    "home_team": "CHU",
+                                    "away_team": "RIJ",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-07-25",
+                                    "time": "19:00",
+                                    "stadium": "Sibiu Municipal Stadium",
+                                    "city": "Sibiu",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RIJ",
+                                    "away_team": "CHU",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-01",
+                                    "time": "20:00",
+                                    "stadium": "Stadion Rujevica",
+                                    "city": "Rijeka",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf07",
+                            "matches": [
+                                {
+                                    "home_team": "SBR",
+                                    "away_team": "MPT",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-07-25",
+                                    "time": "21:30",
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MPT",
+                                    "away_team": "SBR",
+                                    "home_score": 0,
+                                    "away_score": 5,
+                                    "date": "2024-08-01",
+                                    "time": "20:30",
+                                    "stadium": "Stadion Georgi Asparuhov",
+                                    "city": "Sofia, Bulgaria",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf08",
+                            "matches": [
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "BPL",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-07-25",
+                                    "time": "19:00",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BPL",
+                                    "away_team": "PAO",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2024-08-01",
+                                    "time": "20:00",
+                                    "stadium": "Stadion Hristo Botev",
+                                    "city": "Plovdiv",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "2ndQlf09",
+                            "matches": [
+                                {
+                                    "home_team": "SHE",
+                                    "away_team": "ELF",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-07-25",
+                                    "time": "19:00",
+                                    "stadium": "Sheriff Arena",
+                                    "city": "Tiraspol",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ELF",
+                                    "away_team": "SHE",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-08-01",
+                                    "time": "19:00",
+                                    "stadium": "Borås Arena",
+                                    "city": "Borås",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Third Qualifying Round",
+                    "round_type": "pair2legged",
+                    "next_round": "Play-off Round",
+                    "paths": [
+                        {
+                            "name": "Champions Path",
+                            "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                            "pairs": [
+                                {
+                                    "name": "C01",
+                                    "matches": [
+                                        {
+                                            "home_team": "KIK",
+                                            "away_team": "BBL",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2024-08-08",
+                                            "time": "19:00",
+                                            "stadium": "Tórsvøllur",
+                                            "city": "Tórshavn",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "BBL",
+                                            "away_team": "KIK",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "home_extra_score": 1,
+                                            "away_extra_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "21:00",
+                                            "stadium": "Banja Luka City Stadium",
+                                            "city": "Banja Luka",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C02",
+                                    "matches": [
+                                        {
+                                            "home_team": "UES",
+                                            "away_team": "RFS",
+                                            "home_score": 0,
+                                            "away_score": 2,
+                                            "date": "2024-08-08",
+                                            "time": "20:00",
+                                            "stadium": "Estadi Nacional",
+                                            "city": "Andorra la Vella",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "RFS",
+                                            "away_team": "UES",
+                                            "home_score": 7,
+                                            "away_score": 0,
+                                            "date": "2024-08-14",
+                                            "time": "18:00",
+                                            "stadium": "LNK Sporta Parks",
+                                            "city": "Riga",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C03",
+                                    "matches": [
+                                        {
+                                            "home_team": "NKC",
+                                            "away_team": "SHA",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2024-08-08",
+                                            "time": "20:15",
+                                            "stadium": "Stadion Z'dežele",
+                                            "city": "Celje",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SHA",
+                                            "away_team": "NKC",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "home_extra_score": 1,
+                                            "away_extra_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "21:00",
+                                            "stadium": "Tallaght Stadium",
+                                            "city": "Tallaght",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C04",
+                                    "matches": [
+                                        {
+                                            "home_team": "PNE",
+                                            "away_team": "MTA",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2024-08-06",
+                                            "time": "18:30",
+                                            "stadium": "LFF Stadium",
+                                            "city": "Vilnius",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "MTA",
+                                            "away_team": "PNE",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "20:30",
+                                            "stadium": "Haladás Stadium",
+                                            "city": "Szombathely, Hungary",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C05",
+                                    "matches": [
+                                        {
+                                            "home_team": "PET",
+                                            "away_team": "TNS",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2024-08-06",
+                                            "time": "19:00",
+                                            "stadium": "Stadionul Zimbru",
+                                            "city": "Chișinău",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "TNS",
+                                            "away_team": "PET",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2024-08-13",
+                                            "time": "19:30",
+                                            "stadium": "Park Hall",
+                                            "city": "Oswestry",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "C06",
+                                    "matches": [
+                                        {
+                                            "home_team": "DMI",
+                                            "away_team": "LRI",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2024-08-08",
+                                            "time": "20:45",
+                                            "stadium": "Mezőkövesdi Városi Stadion",
+                                            "city": "Mezőkövesd, Hungary",
+                                            "path": "Champions",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LRI",
+                                            "away_team": "DMI",
+                                            "home_score": 2,
+                                            "away_score": 1,
+                                            "date": "2024-08-15",
+                                            "time": "18:00",
+                                            "stadium": "Europa Sports Park",
+                                            "city": "Gibraltar",
+                                            "path": "Champions",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Main Path",
+                            "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                            "pairs": [
+                                {
+                                    "name": "M01",
+                                    "matches": [
+                                        {
+                                            "home_team": "PBE",
+                                            "away_team": "LUG",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2024-08-08",
+                                            "time": "20:00",
+                                            "stadium": "Partizan Stadium",
+                                            "city": "Belgrade",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "LUG",
+                                            "away_team": "PBE",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "home_extra_score": 1,
+                                            "away_extra_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "20:30",
+                                            "stadium": "Stockhorn Arena",
+                                            "city": "Thun",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M02",
+                                    "matches": [
+                                        {
+                                            "home_team": "MOL",
+                                            "away_team": "CBR",
+                                            "home_score": 3,
+                                            "away_score": 0,
+                                            "date": "2024-08-08",
+                                            "time": "19:00",
+                                            "stadium": "Aker Stadion",
+                                            "city": "Molde",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "CBR",
+                                            "away_team": "MOL",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "20:00",
+                                            "stadium": "Jan Breydel Stadium",
+                                            "city": "Bruges",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M03",
+                                    "matches": [
+                                        {
+                                            "home_team": "PAO",
+                                            "away_team": "AJX",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2024-08-08",
+                                            "time": "20:00",
+                                            "stadium": "Olympic Stadium",
+                                            "city": "Athens",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "AJX",
+                                            "away_team": "PAO",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "home_extra_score": 0,
+                                            "away_extra_score": 0,
+                                            "home_penalty_score": 13,
+                                            "away_penalty_score": 12,
+                                            "date": "2024-08-15",
+                                            "time": "20:15",
+                                            "stadium": "Johan Cruyff Arena",
+                                            "city": "Amsterdam",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M04",
+                                    "matches": [
+                                        {
+                                            "home_team": "TRA",
+                                            "away_team": "RAP",
+                                            "home_score": 0,
+                                            "away_score": 1,
+                                            "date": "2024-08-08",
+                                            "time": "19:00",
+                                            "stadium": "Şenol Güneş Sports Complex",
+                                            "city": "Trabzon",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "RAP",
+                                            "away_team": "TRA",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "18:00",
+                                            "stadium": "Allianz Stadion",
+                                            "city": "Vienna",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M05",
+                                    "matches": [
+                                        {
+                                            "home_team": "SBR",
+                                            "away_team": "SER",
+                                            "home_score": 0,
+                                            "away_score": 0,
+                                            "date": "2024-08-08",
+                                            "time": "21:30",
+                                            "stadium": "Estádio Municipal",
+                                            "city": "Braga",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "SER",
+                                            "away_team": "SBR",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2024-08-15",
+                                            "time": "20:30",
+                                            "stadium": "Stade de Genève",
+                                            "city": "Geneva",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M06",
+                                    "matches": [
+                                        {
+                                            "home_team": "RIJ",
+                                            "away_team": "ELF",
+                                            "home_score": 1,
+                                            "away_score": 1,
+                                            "date": "2024-08-08",
+                                            "time": "20:00",
+                                            "stadium": "Stadion Rujevica",
+                                            "city": "Rijeka",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "ELF",
+                                            "away_team": "RIJ",
+                                            "home_score": 2,
+                                            "away_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "19:00",
+                                            "stadium": "Borås Arena",
+                                            "city": "Borås",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "M07",
+                                    "matches": [
+                                        {
+                                            "home_team": "KKR",
+                                            "away_team": "VPL",
+                                            "home_score": 1,
+                                            "away_score": 2,
+                                            "date": "2024-08-08",
+                                            "time": "20:00",
+                                            "stadium": "Košická futbalová aréna",
+                                            "city": "Košice, Slovakia",
+                                            "path": "Main",
+                                            "matchday": "firstleg"
+                                        },
+                                        {
+                                            "home_team": "VPL",
+                                            "away_team": "KKR",
+                                            "home_score": 1,
+                                            "away_score": 0,
+                                            "date": "2024-08-15",
+                                            "time": "19:00",
+                                            "stadium": "Doosan Arena",
+                                            "city": "Plzeň",
+                                            "path": "Main",
+                                            "matchday": "secondleg"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Play-off Round",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "round_type": "pair2legged",
+                    "next_round": "League Phase",
+                    "pairs": [
+                        {
+                            "name": "PO01",
+                            "matches": [
+                                {
+                                    "home_team": "DMI",
+                                    "away_team": "ADL",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-08-22",
+                                    "time": "20:45",
+                                    "stadium": "Mezőkövesdi Városi Stadion",
+                                    "city": "Mezőkövesd, Hungary",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ADL",
+                                    "away_team": "DMI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-29",
+                                    "time": "20:00",
+                                    "stadium": "Constant Vanden Stock Stadium",
+                                    "city": "Brussels",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO02",
+                            "matches": [
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "AJX",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-08-22",
+                                    "time": "20:45",
+                                    "stadium": "Jagiellonia Stadium",
+                                    "city": "Białystok",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "AJX",
+                                    "away_team": "JAG",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-08-29",
+                                    "time": "20:00",
+                                    "stadium": "Johan Cruyff Arena",
+                                    "city": "Amsterdam",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO03",
+                            "matches": [
+                                {
+                                    "home_team": "LUD",
+                                    "away_team": "PET",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2024-08-22",
+                                    "time": "20:00",
+                                    "stadium": "Huvepharma Arena",
+                                    "city": "Razgrad",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PET",
+                                    "away_team": "LUD",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-08-29",
+                                    "time": "19:00",
+                                    "stadium": "Stadionul Zimbru",
+                                    "city": "Chișinău",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO04",
+                            "matches": [
+                                {
+                                    "home_team": "LUG",
+                                    "away_team": "BJK",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2024-08-22",
+                                    "time": "20:30",
+                                    "stadium": "Stockhorn Arena",
+                                    "city": "Thun",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BJK",
+                                    "away_team": "LUG",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2024-08-29",
+                                    "time": "20:00",
+                                    "stadium": "Beşiktaş Stadium",
+                                    "city": "Istanbul",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO05",
+                            "matches": [
+                                {
+                                    "home_team": "LAS",
+                                    "away_team": "FCS",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-08-22",
+                                    "time": "19:00",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "FCS",
+                                    "away_team": "LAS",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-29",
+                                    "time": "20:30",
+                                    "stadium": "Steaua Stadium",
+                                    "city": "Bucharest",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO06",
+                            "matches": [
+                                {
+                                    "home_team": "RFS",
+                                    "away_team": "APO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-08-22",
+                                    "time": "19:00",
+                                    "stadium": "LNK Sporta Parks",
+                                    "city": "Riga",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "APO",
+                                    "away_team": "RFS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 2,
+                                    "away_penalty_score": 4,
+                                    "date": "2024-08-29",
+                                    "time": "19:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO07",
+                            "matches": [
+                                {
+                                    "home_team": "MTA",
+                                    "away_team": "TSC",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-08-22",
+                                    "time": "20:00",
+                                    "stadium": "Haladás Stadium",
+                                    "city": "Szombathely, Hungary",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "TSC",
+                                    "away_team": "MTA",
+                                    "home_score": 1,
+                                    "away_score": 5,
+                                    "date": "2024-08-29",
+                                    "time": "21:00",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO08",
+                            "matches": [
+                                {
+                                    "home_team": "PKT",
+                                    "away_team": "SHA",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2024-08-22",
+                                    "time": "19:30",
+                                    "stadium": "Toumba Stadium",
+                                    "city": "Thessaloniki",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SHA",
+                                    "away_team": "PKT",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-08-29",
+                                    "time": "21:00",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Tallaght",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO09",
+                            "matches": [
+                                {
+                                    "home_team": "FTC",
+                                    "away_team": "BBL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-08-22",
+                                    "time": "21:00",
+                                    "stadium": "Ferencváros Stadion",
+                                    "city": "Budapest",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "FTC",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 1,
+                                    "home_penalty_score": 2,
+                                    "away_penalty_score": 3,
+                                    "date": "2024-08-29",
+                                    "time": "21:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO10",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "ELF",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-08-22",
+                                    "time": "19:00",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ELF",
+                                    "away_team": "MOL",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 4,
+                                    "away_penalty_score": 2,
+                                    "date": "2024-08-29",
+                                    "time": "19:00",
+                                    "stadium": "Borås Arena",
+                                    "city": "Borås",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO11",
+                            "matches": [
+                                {
+                                    "home_team": "SBR",
+                                    "away_team": "RAP",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-08-22",
+                                    "time": "21:30",
+                                    "stadium": "Estádio Municipal",
+                                    "city": "Braga",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "SBR",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-08-29",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "PO12",
+                            "matches": [
+                                {
+                                    "home_team": "VPL",
+                                    "away_team": "HEA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-08-22",
+                                    "time": "19:00",
+                                    "stadium": "Doosan Arena",
+                                    "city": "Plzeň",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "HEA",
+                                    "away_team": "VPL",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-08-29",
+                                    "time": "20:45",
+                                    "stadium": "Tynecastle Park",
+                                    "city": "Edinburgh",
+                                    "matchday": "secondleg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

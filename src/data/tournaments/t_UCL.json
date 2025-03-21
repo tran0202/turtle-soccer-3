@@ -10,14 +10,14 @@
         "league_phase": true,
         "tiebreakers": [
             "points",
-            "h2hpoints",
-            "h2hgoaldifference",
-            "h2hgoalsfor",
             "goaldifference",
             "goalsfor",
             "awaygoals",
             "wins",
             "awaywins",
+            "opponentpoints",
+            "opponentgoaldifference",
+            "opponentgoalsfor",
             "disciplinarypoints",
             "coefficient"
         ],
@@ -103,7 +103,7 @@
         ],
         "final_standings": {
             "champions": "RMA",
-            "runners_up": "BVB",
+            "runners_up": "DOR",
             "semi_finalist1": "BAY",
             "semi_finalist2": "PSG"
         },
@@ -332,11 +332,11 @@
         },
         "statistics": { "total_matches": 125, "total_goals": 366, "attendance": 180049 },
         "awards": {
-            "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "BVB", "goals": 10 }],
+            "golden_boot": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR", "goals": 10 }],
             "golden_glove": [{ "player": "Édouard Mendy", "team": "SEN", "club": "CHE" }],
             "best_defender": [{ "player": "Rúben Dias", "team": "POR", "club": "MCI" }],
             "best_midfielder": [{ "player": "N'Golo Kanté", "team": "FRA", "club": "CHE" }],
-            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "BVB" }],
+            "best_forward": [{ "player": "Erling Haaland", "team": "NOR", "club": "DOR" }],
             "award_category_highlighted": ["boot", "defender", "forward"],
             "boot_label": "Top Scorer",
             "glove_label": "BestGoalkeeper"

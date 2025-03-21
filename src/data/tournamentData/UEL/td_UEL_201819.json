@@ -2,7 +2,7 @@
     "id": "UEL201819",
     "stages": [
         {
-            "name": "Qualifying Stage",
+            "name": "Qualifying Rounds",
             "type": "pair_",
             "hide_bracket": true,
             "rounds": [
@@ -6646,7 +6646,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "rounds": [
                 {

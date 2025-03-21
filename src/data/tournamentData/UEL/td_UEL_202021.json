@@ -2,7 +2,7 @@
     "id": "UEL202021",
     "stages": [
         {
-            "name": "Qualifying Stage",
+            "name": "Qualifying Rounds",
             "type": "pair_",
             "hide_bracket": true,
             "rounds": [
@@ -4867,7 +4867,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [

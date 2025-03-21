@@ -2181,7 +2181,7 @@
                 },
                 {
                     "name": "Group F",
-                    "teams": [{ "id": "MIL" }, { "id": "NEW" }, { "id": "PSG" }, { "id": "BVB" }],
+                    "teams": [{ "id": "MIL" }, { "id": "NEW" }, { "id": "PSG" }, { "id": "DOR" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
@@ -2198,7 +2198,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 0,
                                     "date": "2023-09-19",
@@ -2212,7 +2212,7 @@
                             "name": "Matchday 2",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "MIL",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -2248,7 +2248,7 @@
                                 },
                                 {
                                     "home_team": "NEW",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2023-10-25",
@@ -2262,7 +2262,7 @@
                             "name": "Matchday 4",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "NEW",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -2298,7 +2298,7 @@
                                 },
                                 {
                                     "home_team": "MIL",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 3,
                                     "date": "2023-11-28",
@@ -2312,7 +2312,7 @@
                             "name": "Matchday 6",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 1,
@@ -2650,7 +2650,7 @@
             ]
         },
         {
-            "name": "Knockout Stage",
+            "name": "Knockout Phase",
             "type": "knockout_",
             "default": true,
             "rounds": [
@@ -2787,7 +2787,7 @@
                             "matches": [
                                 {
                                     "home_team": "PSV",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "2024-02-20",
@@ -2797,7 +2797,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "PSV",
                                     "home_score": 2,
                                     "away_score": 0,
@@ -2937,7 +2937,7 @@
                             "matches": [
                                 {
                                     "home_team": "ATM",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 2,
                                     "away_score": 1,
                                     "date": "2024-04-10",
@@ -2947,7 +2947,7 @@
                                     "matchday": "firstleg"
                                 },
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "ATM",
                                     "home_score": 4,
                                     "away_score": 2,
@@ -3033,7 +3033,7 @@
                             "name": "SF1",
                             "matches": [
                                 {
-                                    "home_team": "BVB",
+                                    "home_team": "DOR",
                                     "away_team": "PSG",
                                     "home_score": 1,
                                     "away_score": 0,
@@ -3045,7 +3045,7 @@
                                 },
                                 {
                                     "home_team": "PSG",
-                                    "away_team": "BVB",
+                                    "away_team": "DOR",
                                     "home_score": 0,
                                     "away_score": 1,
                                     "date": "2024-05-07",
@@ -3095,7 +3095,7 @@
                     "championship": true,
                     "matches": [
                         {
-                            "home_team": "BVB",
+                            "home_team": "DOR",
                             "away_team": "RMA",
                             "home_score": 0,
                             "away_score": 2,

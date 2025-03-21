@@ -607,13 +607,13 @@
         "official_name": "Club Brugge"
     },
     {
-        "id": "BVB",
+        "id": "DOR",
         "name": "Borussia Dortmund",
         "short_name": "B. Dortmund",
         "team_type_id": "CLUB",
         "nation_id": "GER",
         "parent_team_id": "",
-        "club_code": "BVB",
+        "club_code": "DOR",
         "logo_filename": "480px-Borussia_Dortmund_logo.svg.png",
         "official_name": "Borussia Dortmund"
     },
@@ -5094,5 +5094,45 @@
         "club_code": "KKR",
         "logo_filename": "FC_Kryvbas_Kryvyi_Rih_(2020).png",
         "official_name": "FC Kryvbas Kryvyi Rih"
+    },
+    {
+        "id": "VFB",
+        "name": "VfB Stuttgart",
+        "team_type_id": "CLUB",
+        "nation_id": "GER",
+        "parent_team_id": "",
+        "club_code": "VFB",
+        "logo_filename": "VfB_Stuttgart_1893_Logo.svg.png",
+        "official_name": "Verein für Bewegungsspiele Stuttgart 1893 e. V."
+    },
+    {
+        "id": "BLN",
+        "name": "Bologna",
+        "team_type_id": "CLUB",
+        "nation_id": "ITA",
+        "parent_team_id": "",
+        "club_code": "BLN",
+        "logo_filename": "Bologna_F.C._1909_logo.svg.png",
+        "official_name": "Bologna FC 1909"
+    },
+    {
+        "id": "GIR",
+        "name": "Girona",
+        "team_type_id": "CLUB",
+        "nation_id": "ESP",
+        "parent_team_id": "",
+        "club_code": "GIR",
+        "logo_filename": "Girona_FC_Logo.svg.png",
+        "official_name": "Girona Futbol Club, S.A.D."
+    },
+    {
+        "id": "BRT",
+        "name": "Brest",
+        "team_type_id": "CLUB",
+        "nation_id": "FRA",
+        "parent_team_id": "",
+        "club_code": "BRT",
+        "logo_filename": "Stade_Brestois_29_logo.svg.png",
+        "official_name": "Stade Brestois 29"
     }
 ]

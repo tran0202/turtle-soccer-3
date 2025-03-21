@@ -22,6 +22,11 @@ class RoundRobin extends React.Component {
                                 <Col className="wild-card-striped">{advancements.wild_card_notes}</Col>
                             </Row>
                         )}
+                        {advancements && advancements.wild_card2_notes && (
+                            <Row>
+                                <Col className="wild-card2-striped">{advancements.wild_card2_notes}</Col>
+                            </Row>
+                        )}
                         {advancements && advancements.transferred_notes && (
                             <Row>
                                 <Col className="transferred-striped">{advancements.transferred_notes}</Col>
