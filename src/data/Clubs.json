@@ -5134,5 +5134,15 @@
         "club_code": "BRT",
         "logo_filename": "Stade_Brestois_29_logo.svg.png",
         "official_name": "Stade Brestois 29"
+    },
+    {
+        "id": "ABI",
+        "name": "Athletic Bilbao",
+        "team_type_id": "CLUB",
+        "nation_id": "ESP",
+        "parent_team_id": "",
+        "club_code": "ABI",
+        "logo_filename": "Club_Athletic_Bilbao_logo.svg.png",
+        "official_name": "Athletic Club"
     }
 ]

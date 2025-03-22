@@ -612,6 +612,41 @@ export const sortOverallAwayGoals = (group, config) => {
                     rankings[0].team.name +
                     ' ' +
                     rankings[0].gaw
+            } else {
+                rankings[0].tb_anchor = '(oag)'
+                rankings[0].tb_notes =
+                    'Tied on Overall points (' +
+                    rankings[0].pts +
+                    '), goal difference (' +
+                    (rankings[0].gd > 0 ? '+' : '') +
+                    rankings[0].gd +
+                    '), goals scored (' +
+                    rankings[0].gf +
+                    '). Tiebreak by Overall away goals: ' +
+                    rankings[0].team.name +
+                    ' ' +
+                    rankings[0].gaw +
+                    ' >< ' +
+                    rankings[1].team.name +
+                    ' ' +
+                    rankings[1].gaw
+                rankings[1].tb_anchor = '(oag)'
+                rankings[1].tb_notes =
+                    'Tied on Overall points (' +
+                    rankings[1].pts +
+                    '), goal difference (' +
+                    (rankings[1].gd > 0 ? '+' : '') +
+                    rankings[1].gd +
+                    '), goals scored (' +
+                    rankings[1].gf +
+                    '). Tiebreak by Overall away wins: ' +
+                    rankings[1].team.name +
+                    ' ' +
+                    rankings[1].gaw +
+                    ' >< ' +
+                    rankings[0].team.name +
+                    ' ' +
+                    rankings[0].gaw
             }
         }
     }

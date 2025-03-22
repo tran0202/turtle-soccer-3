@@ -3837,6 +3837,1847 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "League Phase",
+            "type": "roundrobin_final",
+            "next_round": "Knockout Phase Play-offs",
+            "advancements": {
+                "positions": [
+                    { "pos": 1, "next": "advance" },
+                    { "pos": 2, "next": "advance" },
+                    { "pos": 3, "next": "advance" },
+                    { "pos": 4, "next": "advance" },
+                    { "pos": 5, "next": "advance" },
+                    { "pos": 6, "next": "advance" },
+                    { "pos": 7, "next": "advance" },
+                    { "pos": 8, "next": "advance" },
+                    { "pos": 9, "next": "wild_card" },
+                    { "pos": 10, "next": "wild_card" },
+                    { "pos": 11, "next": "wild_card" },
+                    { "pos": 12, "next": "wild_card" },
+                    { "pos": 13, "next": "wild_card" },
+                    { "pos": 14, "next": "wild_card" },
+                    { "pos": 15, "next": "wild_card" },
+                    { "pos": 16, "next": "wild_card" },
+                    { "pos": 17, "next": "wild_card2" },
+                    { "pos": 18, "next": "wild_card2" },
+                    { "pos": 19, "next": "wild_card2" },
+                    { "pos": 20, "next": "wild_card2" },
+                    { "pos": 21, "next": "wild_card2" },
+                    { "pos": 22, "next": "wild_card2" },
+                    { "pos": 23, "next": "wild_card2" },
+                    { "pos": 24, "next": "wild_card2" }
+                ],
+                "advanced_notes": "Advanced to Round of 16 as seeded",
+                "wild_card_notes": "Advanced to Knockout Phase Play-offs as seeded",
+                "wild_card2_notes": "Advanced to Knockout Phase Play-offs as unseeded"
+            },
+            "groups": [
+                {
+                    "name": "",
+                    "teams": [
+                        { "id": "IBA" },
+                        { "id": "RAP" },
+                        { "id": "VDG" },
+                        { "id": "NKC" },
+                        { "id": "HEI" },
+                        { "id": "LJU" },
+                        { "id": "CBR" },
+                        { "id": "STG" },
+                        { "id": "AST" },
+                        { "id": "TSC" },
+                        { "id": "DMI" },
+                        { "id": "HEA" },
+                        { "id": "NOA" },
+                        { "id": "MBL" },
+                        { "id": "LEG" },
+                        { "id": "BET" },
+                        { "id": "MOL" },
+                        { "id": "LRN" },
+                        { "id": "OMO" },
+                        { "id": "VIR" },
+                        { "id": "FIO" },
+                        { "id": "TNS" },
+                        { "id": "CHE" },
+                        { "id": "GNT" },
+                        { "id": "FCK" },
+                        { "id": "JAG" },
+                        { "id": "LUG" },
+                        { "id": "HJK" },
+                        { "id": "PET" },
+                        { "id": "PAF" },
+                        { "id": "BBL" },
+                        { "id": "PAO" },
+                        { "id": "LAS" },
+                        { "id": "DIF" },
+                        { "id": "SHA" },
+                        { "id": "APO" }
+                    ],
+                    "matchdays": [
+                        {
+                            "name": "Matchday 1",
+                            "matches": [
+                                {
+                                    "home_team": "IBA",
+                                    "away_team": "RAP",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-10-02",
+                                    "time": "16:30",
+                                    "stadium": "Başakşehir Fatih Terim Stadium",
+                                    "city": "Istanbul"
+                                },
+                                {
+                                    "home_team": "VDG",
+                                    "away_team": "NKC",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-10-02",
+                                    "time": "16:30",
+                                    "stadium": "Estádio D. Afonso Henriques",
+                                    "city": "Guimarães"
+                                },
+                                {
+                                    "home_team": "HEI",
+                                    "away_team": "LJU",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Voith-Arena",
+                                    "city": "Heidenheim an der Brenz"
+                                },
+                                {
+                                    "home_team": "CBR",
+                                    "away_team": "STG",
+                                    "home_score": 6,
+                                    "away_score": 2,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
+                                },
+                                {
+                                    "home_team": "AST",
+                                    "away_team": "TSC",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Almaty Central Stadium",
+                                    "city": "Almaty"
+                                },
+                                {
+                                    "home_team": "DMI",
+                                    "away_team": "HEA",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Sumgayit City Stadium",
+                                    "city": "Sumgait, Azerbaijan"
+                                },
+                                {
+                                    "home_team": "NOA",
+                                    "away_team": "MBL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Vazgen Sargsyan Republican Stadium",
+                                    "city": "Yerevan"
+                                },
+                                {
+                                    "home_team": "LEG",
+                                    "away_team": "BET",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Polish Army Stadium",
+                                    "city": "Warsaw"
+                                },
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "LRN",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
+                                },
+                                {
+                                    "home_team": "OMO",
+                                    "away_team": "VIR",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "18:45",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "FIO",
+                                    "away_team": "TNS",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Artemio Franchi",
+                                    "city": "Florence"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "GNT",
+                                    "home_score": 4,
+                                    "away_score": 2,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London"
+                                },
+                                {
+                                    "home_team": "FCK",
+                                    "away_team": "JAG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
+                                },
+                                {
+                                    "home_team": "LUG",
+                                    "away_team": "HJK",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Stockhorn Arena",
+                                    "city": "Thun"
+                                },
+                                {
+                                    "home_team": "PET",
+                                    "away_team": "PAF",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Zimbru Stadium",
+                                    "city": "Chișinău"
+                                },
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "PAO",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka"
+                                },
+                                {
+                                    "home_team": "LAS",
+                                    "away_team": "DIF",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
+                                },
+                                {
+                                    "home_team": "SHA",
+                                    "away_team": "APO",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-10-03",
+                                    "time": "21:00",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Tallaght"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 2",
+                            "matches": [
+                                {
+                                    "home_team": "VIR",
+                                    "away_team": "CBR",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "16:30",
+                                    "stadium": "Kópavogsvöllur",
+                                    "city": "Kópavogur"
+                                },
+                                {
+                                    "home_team": "APO",
+                                    "away_team": "BBL",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "DIF",
+                                    "away_team": "VDG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Tele2 Arena",
+                                    "city": "Stockholm"
+                                },
+                                {
+                                    "home_team": "STG",
+                                    "away_team": "FIO",
+                                    "home_score": 2,
+                                    "away_score": 4,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Kybunpark",
+                                    "city": "St. Gallen"
+                                },
+                                {
+                                    "home_team": "HEA",
+                                    "away_team": "OMO",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Tynecastle Park",
+                                    "city": "Edinburgh"
+                                },
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "PET",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok"
+                                },
+                                {
+                                    "home_team": "GNT",
+                                    "away_team": "MOL",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Planet Group Arena",
+                                    "city": "Ghent"
+                                },
+                                {
+                                    "home_team": "LRN",
+                                    "away_team": "SHA",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Windsor Park",
+                                    "city": "Belfast"
+                                },
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "IBA",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje"
+                                },
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "CHE",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "NOA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "18:45",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna"
+                                },
+                                {
+                                    "home_team": "MBL",
+                                    "away_team": "LUG",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Lokotrans Aréna",
+                                    "city": "Mladá Boleslav"
+                                },
+                                {
+                                    "home_team": "TSC",
+                                    "away_team": "LEG",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
+                                },
+                                {
+                                    "home_team": "HJK",
+                                    "away_team": "DMI",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Bolt Arena",
+                                    "city": "Helsinki"
+                                },
+                                {
+                                    "home_team": "LJU",
+                                    "away_team": "LAS",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Stožice Stadium",
+                                    "city": "Ljubljana"
+                                },
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "HEI",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
+                                },
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "FCK",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
+                                },
+                                {
+                                    "home_team": "TNS",
+                                    "away_team": "AST",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-10-24",
+                                    "time": "21:00",
+                                    "stadium": "New Meadow",
+                                    "city": "Shrewsbury, England"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 3",
+                            "matches": [
+                                {
+                                    "home_team": "VIR",
+                                    "away_team": "BBL",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "15:30",
+                                    "stadium": "Kópavogsvöllur",
+                                    "city": "Kópavogur"
+                                },
+                                {
+                                    "home_team": "PET",
+                                    "away_team": "RAP",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Zimbru Stadium",
+                                    "city": "Chișinău"
+                                },
+                                {
+                                    "home_team": "TSC",
+                                    "away_team": "LUG",
+                                    "home_score": 4,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
+                                },
+                                {
+                                    "home_team": "HJK",
+                                    "away_team": "LJU",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Bolt Arena",
+                                    "city": "Helsinki"
+                                },
+                                {
+                                    "home_team": "GNT",
+                                    "away_team": "OMO",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Planet Group Arena",
+                                    "city": "Ghent"
+                                },
+                                {
+                                    "home_team": "LEG",
+                                    "away_team": "DMI",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Polish Army Stadium",
+                                    "city": "Warsaw"
+                                },
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "AST",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
+                                },
+                                {
+                                    "home_team": "SHA",
+                                    "away_team": "TNS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "18:45",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Tallaght"
+                                },
+                                {
+                                    "home_team": "APO",
+                                    "away_team": "FIO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "NOA",
+                                    "home_score": 8,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London"
+                                },
+                                {
+                                    "home_team": "DIF",
+                                    "away_team": "PAO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Tele2 Arena",
+                                    "city": "Stockholm"
+                                },
+                                {
+                                    "home_team": "FCK",
+                                    "away_team": "IBA",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
+                                },
+                                {
+                                    "home_team": "HEA",
+                                    "away_team": "HEI",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Tynecastle Park",
+                                    "city": "Edinburgh"
+                                },
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "MOL",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok"
+                                },
+                                {
+                                    "home_team": "LRN",
+                                    "away_team": "STG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Windsor Park",
+                                    "city": "Belfast"
+                                },
+                                {
+                                    "home_team": "LAS",
+                                    "away_team": "CBR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
+                                },
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "NKC",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
+                                },
+                                {
+                                    "home_team": "VDG",
+                                    "away_team": "MBL",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-07",
+                                    "time": "21:00",
+                                    "stadium": "Estádio D. Afonso Henriques",
+                                    "city": "Guimarães"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 4",
+                            "matches": [
+                                {
+                                    "home_team": "IBA",
+                                    "away_team": "PET",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-11-27",
+                                    "time": "16:30",
+                                    "stadium": "Başakşehir Fatih Terim Stadium",
+                                    "city": "Istanbul"
+                                },
+                                {
+                                    "home_team": "AST",
+                                    "away_team": "VDG",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "16:30",
+                                    "stadium": "Almaty Central Stadium",
+                                    "city": "Almaty"
+                                },
+                                {
+                                    "home_team": "HEI",
+                                    "away_team": "CHE",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Voith-Arena",
+                                    "city": "Heidenheim an der Brenz"
+                                },
+                                {
+                                    "home_team": "CBR",
+                                    "away_team": "HEA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
+                                },
+                                {
+                                    "home_team": "DMI",
+                                    "away_team": "FCK",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Sumgayit City Stadium",
+                                    "city": "Sumgait, Azerbaijan"
+                                },
+                                {
+                                    "home_team": "NOA",
+                                    "away_team": "VIR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Vazgen Sargsyan Republican Stadium",
+                                    "city": "Yerevan"
+                                },
+                                {
+                                    "home_team": "STG",
+                                    "away_team": "TSC",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Kybunpark",
+                                    "city": "St. Gallen"
+                                },
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "LAS",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka"
+                                },
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "APO",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
+                                },
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "JAG",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje"
+                                },
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "HJK",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens"
+                                },
+                                {
+                                    "home_team": "TNS",
+                                    "away_team": "DIF",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "18:45",
+                                    "stadium": "New Meadow",
+                                    "city": "Shrewsbury, England"
+                                },
+                                {
+                                    "home_team": "FIO",
+                                    "away_team": "PAF",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Artemio Franchi",
+                                    "city": "Florence"
+                                },
+                                {
+                                    "home_team": "LUG",
+                                    "away_team": "GNT",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "Stockhorn Arena",
+                                    "city": "Thun"
+                                },
+                                {
+                                    "home_team": "MBL",
+                                    "away_team": "BET",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "Lokotrans Aréna",
+                                    "city": "Mladá Boleslav"
+                                },
+                                {
+                                    "home_team": "LJU",
+                                    "away_team": "LRN",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "Stožice Stadium",
+                                    "city": "Ljubljana"
+                                },
+                                {
+                                    "home_team": "OMO",
+                                    "away_team": "LEG",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "SHA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-11-28",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 5",
+                            "matches": [
+                                {
+                                    "home_team": "VIR",
+                                    "away_team": "DIF",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-12-12",
+                                    "time": "14:00",
+                                    "stadium": "Kópavogsvöllur",
+                                    "city": "Kópavogur"
+                                },
+                                {
+                                    "home_team": "AST",
+                                    "away_team": "CHE",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-12-12",
+                                    "time": "16:30",
+                                    "stadium": "Almaty Central Stadium",
+                                    "city": "Almaty"
+                                },
+                                {
+                                    "home_team": "FIO",
+                                    "away_team": "LAS",
+                                    "home_score": 7,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Artemio Franchi",
+                                    "city": "Florence"
+                                },
+                                {
+                                    "home_team": "FCK",
+                                    "away_team": "HEA",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen"
+                                },
+                                {
+                                    "home_team": "DMI",
+                                    "away_team": "LRN",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Sumgayit City Stadium",
+                                    "city": "Sumgait, Azerbaijan"
+                                },
+                                {
+                                    "home_team": "NOA",
+                                    "away_team": "APO",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Vazgen Sargsyan Republican Stadium",
+                                    "city": "Yerevan"
+                                },
+                                {
+                                    "home_team": "PET",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Zimbru Stadium",
+                                    "city": "Chișinău"
+                                },
+                                {
+                                    "home_team": "HJK",
+                                    "away_team": "MOL",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Bolt Arena",
+                                    "city": "Helsinki"
+                                },
+                                {
+                                    "home_team": "IBA",
+                                    "away_team": "HEI",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Başakşehir Fatih Terim Stadium",
+                                    "city": "Istanbul"
+                                },
+                                {
+                                    "home_team": "LEG",
+                                    "away_team": "LUG",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Polish Army Stadium",
+                                    "city": "Warsaw"
+                                },
+                                {
+                                    "home_team": "LJU",
+                                    "away_team": "CBR",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-12-12",
+                                    "time": "18:45",
+                                    "stadium": "Stožice Stadium",
+                                    "city": "Ljubljana"
+                                },
+                                {
+                                    "home_team": "STG",
+                                    "away_team": "VDG",
+                                    "home_score": 1,
+                                    "away_score": 4,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Kybunpark",
+                                    "city": "St. Gallen"
+                                },
+                                {
+                                    "home_team": "MBL",
+                                    "away_team": "JAG",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Lokotrans Aréna",
+                                    "city": "Mladá Boleslav"
+                                },
+                                {
+                                    "home_team": "GNT",
+                                    "away_team": "TSC",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Planet Group Arena",
+                                    "city": "Ghent"
+                                },
+                                {
+                                    "home_team": "OMO",
+                                    "away_team": "RAP",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "NKC",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol"
+                                },
+                                {
+                                    "home_team": "SHA",
+                                    "away_team": "BBL",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Tallaght"
+                                },
+                                {
+                                    "home_team": "TNS",
+                                    "away_team": "PAO",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2024-12-12",
+                                    "time": "21:00",
+                                    "stadium": "New Meadow",
+                                    "city": "Shrewsbury, England"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Matchday 6",
+                            "matches": [
+                                {
+                                    "home_team": "HEI",
+                                    "away_team": "STG",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Voith-Arena",
+                                    "city": "Heidenheim an der Brenz"
+                                },
+                                {
+                                    "home_team": "APO",
+                                    "away_team": "AST",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia"
+                                },
+                                {
+                                    "home_team": "CBR",
+                                    "away_team": "IBA",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "SHA",
+                                    "home_score": 5,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London"
+                                },
+                                {
+                                    "home_team": "DIF",
+                                    "away_team": "LEG",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Tele2 Arena",
+                                    "city": "Stockholm"
+                                },
+                                {
+                                    "home_team": "LUG",
+                                    "away_team": "PAF",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Stockhorn Arena",
+                                    "city": "Thun"
+                                },
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "OMO",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka"
+                                },
+                                {
+                                    "home_team": "TSC",
+                                    "away_team": "NOA",
+                                    "home_score": 4,
+                                    "away_score": 3,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola"
+                                },
+                                {
+                                    "home_team": "HEA",
+                                    "away_team": "PET",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Tynecastle Park",
+                                    "city": "Edinburgh"
+                                },
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "LJU",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok"
+                                },
+                                {
+                                    "home_team": "LRN",
+                                    "away_team": "GNT",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Windsor Park",
+                                    "city": "Belfast"
+                                },
+                                {
+                                    "home_team": "LAS",
+                                    "away_team": "VIR",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Raiffeisen Arena",
+                                    "city": "Linz"
+                                },
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "MBL",
+                                    "home_score": 4,
+                                    "away_score": 3,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde"
+                                },
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "TNS",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje"
+                                },
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "DMI",
+                                    "home_score": 4,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens"
+                                },
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "HJK",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "FCK",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna"
+                                },
+                                {
+                                    "home_team": "VDG",
+                                    "away_team": "FIO",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2024-12-19",
+                                    "time": "21:00",
+                                    "stadium": "Estádio D. Afonso Henriques",
+                                    "city": "Guimarães"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Knockout Phase",
+            "type": "knockout_",
+            "default": true,
+            "rounds": [
+                {
+                    "name": "Play-offs",
+                    "short_name": "1/16",
+                    "round_type": "knockout2legged",
+                    "next_round": "Round of 16",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "pairs": [
+                        {
+                            "name": "KO1",
+                            "matches": [
+                                {
+                                    "home_team": "GNT",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2025-02-13",
+                                    "time": "21:00",
+                                    "stadium": "Planet Group Arena",
+                                    "city": "Ghent",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "GNT",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2025-02-20",
+                                    "time": "18:45",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "KO2",
+                            "blank": true,
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "KO3",
+                            "matches": [
+                                {
+                                    "home_team": "TSC",
+                                    "away_team": "JAG",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2025-02-13",
+                                    "time": "18:45",
+                                    "stadium": "TSC Arena",
+                                    "city": "Bačka Topola",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "TSC",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2025-02-20",
+                                    "time": "21:00",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "KO4",
+                            "blank": true,
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "KO5",
+                            "matches": [
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "APO",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2025-02-13",
+                                    "time": "18:45",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "APO",
+                                    "away_team": "NKC",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2025-02-20",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "KO6",
+                            "blank": true,
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "KO7",
+                            "matches": [
+                                {
+                                    "home_team": "VIR",
+                                    "away_team": "PAO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-02-13",
+                                    "time": "18:45",
+                                    "stadium": "Bolt Arena",
+                                    "city": "Helsinki, Finland",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "VIR",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2025-02-20",
+                                    "time": "21:00",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "KO8",
+                            "blank": true,
+                            "bracket_order": 8
+                        },
+                        {
+                            "name": "KO9",
+                            "matches": [
+                                {
+                                    "home_team": "FCK",
+                                    "away_team": "HEI",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2025-02-13",
+                                    "time": "21:00",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "HEI",
+                                    "away_team": "FCK",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 1,
+                                    "date": "2025-02-20",
+                                    "time": "18:45",
+                                    "stadium": "Voith-Arena",
+                                    "city": "Heidenheim an der Brenz",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 11
+                        },
+                        {
+                            "name": "K10",
+                            "blank": true,
+                            "bracket_order": 10
+                        },
+                        {
+                            "name": "K11",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "SHA",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2025-02-13",
+                                    "time": "18:45",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SHA",
+                                    "away_team": "MOL",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 4,
+                                    "away_penalty_score": 5,
+                                    "date": "2025-02-20",
+                                    "time": "21:00",
+                                    "stadium": "Tallaght Stadium",
+                                    "city": "Tallaght",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 9
+                        },
+                        {
+                            "name": "K12",
+                            "blank": true,
+                            "bracket_order": 12
+                        },
+                        {
+                            "name": "K13",
+                            "matches": [
+                                {
+                                    "home_team": "OMO",
+                                    "away_team": "PAF",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2025-02-13",
+                                    "time": "21:00",
+                                    "stadium": "GSP Stadium",
+                                    "city": "Nicosia",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "OMO",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-02-20",
+                                    "time": "18:45",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 13
+                        },
+                        {
+                            "name": "K14",
+                            "blank": true,
+                            "bracket_order": 14
+                        },
+                        {
+                            "name": "K15",
+                            "matches": [
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "LJU",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2025-02-13",
+                                    "time": "21:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LJU",
+                                    "away_team": "BBL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-02-20",
+                                    "time": "18:45",
+                                    "stadium": "Stožice Stadium",
+                                    "city": "Ljubljana",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 15
+                        },
+                        {
+                            "name": "K16",
+                            "blank": true,
+                            "bracket_order": 16
+                        }
+                    ]
+                },
+                {
+                    "name": "Round of 16",
+                    "short_name": "1/8",
+                    "round_type": "knockout2legged",
+                    "eliminate_count": 8,
+                    "next_round": "Quarter-finals",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "pairs": [
+                        {
+                            "name": "R161",
+                            "matches": [
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "VDG",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2025-03-06",
+                                    "time": "18:45",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "VDG",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 4,
+                                    "date": "2025-03-13",
+                                    "time": "21:00",
+                                    "stadium": "Estádio D. Afonso Henriques",
+                                    "city": "Guimarães",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "R162",
+                            "matches": [
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "CBR",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2025-03-06",
+                                    "time": "21:00",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CBR",
+                                    "away_team": "JAG",
+                                    "home_score": 2,
+                                    "away_score": 0,
+                                    "date": "2025-03-13",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "R163",
+                            "matches": [
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "LUG",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2025-03-06",
+                                    "time": "21:00",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LUG",
+                                    "away_team": "NKC",
+                                    "home_score": 4,
+                                    "away_score": 3,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 1,
+                                    "home_penalty_score": 1,
+                                    "away_penalty_score": 3,
+                                    "date": "2025-03-13",
+                                    "time": "18:45",
+                                    "stadium": "Stockhorn Arena",
+                                    "city": "Thun",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "R164",
+                            "matches": [
+                                {
+                                    "home_team": "PAO",
+                                    "away_team": "FIO",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2025-03-06",
+                                    "time": "18:45",
+                                    "stadium": "Olympic Stadium",
+                                    "city": "Athens",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "FIO",
+                                    "away_team": "PAO",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2025-03-13",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Artemio Franchi",
+                                    "city": "Florence",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "R165",
+                            "matches": [
+                                {
+                                    "home_team": "FCK",
+                                    "away_team": "CHE",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2025-03-06",
+                                    "time": "18:45",
+                                    "stadium": "Parken Stadium",
+                                    "city": "Copenhagen",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "FCK",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2025-03-13",
+                                    "time": "21:00",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "R166",
+                            "matches": [
+                                {
+                                    "home_team": "MOL",
+                                    "away_team": "LEG",
+                                    "home_score": 3,
+                                    "away_score": 2,
+                                    "date": "2025-03-06",
+                                    "time": "18:45",
+                                    "stadium": "Aker Stadion",
+                                    "city": "Molde",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LEG",
+                                    "away_team": "MOL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2025-03-13",
+                                    "time": "21:00",
+                                    "stadium": "Polish Army Stadium",
+                                    "city": "Warsaw",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "R167",
+                            "matches": [
+                                {
+                                    "home_team": "PAF",
+                                    "away_team": "DIF",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2025-03-06",
+                                    "time": "21:00",
+                                    "stadium": "Alphamega Stadium",
+                                    "city": "Limassol",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "DIF",
+                                    "away_team": "PAF",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2025-03-13",
+                                    "time": "18:45",
+                                    "stadium": "3Arena",
+                                    "city": "Stockholm",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "R168",
+                            "matches": [
+                                {
+                                    "home_team": "BBL",
+                                    "away_team": "RAP",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2025-03-06",
+                                    "time": "21:00",
+                                    "stadium": "Banja Luka City Stadium",
+                                    "city": "Banja Luka",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "BBL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2025-03-13",
+                                    "time": "18:45",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "Quarter-finals",
+                    "short_name": "1/4",
+                    "round_type": "knockout2legged",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "eliminate_count": 4,
+                    "next_round": "Semi-finals",
+                    "pairs": [
+                        {
+                            "name": "QF1",
+                            "matches": [
+                                {
+                                    "home_team": "BET",
+                                    "away_team": "JAG",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-10",
+                                    "time": "21:00",
+                                    "stadium": "Benito Villamarín",
+                                    "city": "Seville",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "JAG",
+                                    "away_team": "BET",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-17",
+                                    "time": "18:45",
+                                    "stadium": "Białystok Municipal Stadium",
+                                    "city": "Białystok",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "QF2",
+                            "matches": [
+                                {
+                                    "home_team": "NKC",
+                                    "away_team": "FIO",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-10",
+                                    "time": "21:00",
+                                    "stadium": "Stadion Z'dežele",
+                                    "city": "Celje",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "FIO",
+                                    "away_team": "NKC",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-17",
+                                    "time": "18:45",
+                                    "stadium": "Stadio Artemio Franchi",
+                                    "city": "Florence",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "QF3",
+                            "matches": [
+                                {
+                                    "home_team": "LEG",
+                                    "away_team": "CHE",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-10",
+                                    "time": "18:45",
+                                    "stadium": "Polish Army Stadium",
+                                    "city": "Warsaw",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "CHE",
+                                    "away_team": "LEG",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-17",
+                                    "time": "21:00",
+                                    "stadium": "Stamford Bridge",
+                                    "city": "London",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "QF4",
+                            "matches": [
+                                {
+                                    "home_team": "DIF",
+                                    "away_team": "RAP",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-10",
+                                    "time": "21:00",
+                                    "stadium": "3Arena",
+                                    "city": "Stockholm",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RAP",
+                                    "away_team": "DIF",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-17",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Stadion",
+                                    "city": "Vienna",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

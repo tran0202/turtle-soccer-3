@@ -2926,6 +2926,651 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Knockout Phase",
+            "type": "knockout_",
+            "default": true,
+            "rounds": [
+                {
+                    "name": "Play-offs",
+                    "short_name": "1/16",
+                    "round_type": "knockout2legged",
+                    "next_round": "Round of 16",
+                    "pairs": [
+                        {
+                            "name": "KO1",
+                            "matches": [
+                                {
+                                    "home_team": "BRT",
+                                    "away_team": "PSG",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2025-02-11",
+                                    "time": "18:45",
+                                    "stadium": "Stade de Roudourou",
+                                    "city": "Guingamp",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "BRT",
+                                    "home_score": 7,
+                                    "away_score": 0,
+                                    "date": "2025-02-19",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "KO2",
+                            "blank": true,
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "KO3",
+                            "matches": [
+                                {
+                                    "home_team": "BRG",
+                                    "away_team": "ATA",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-02-12",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ATA",
+                                    "away_team": "BRG",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2025-02-18",
+                                    "time": "21:00",
+                                    "stadium": "Stadio Atleti Azzurri d'Italia",
+                                    "city": "Bergamo",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "KO4",
+                            "blank": true,
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "KO5",
+                            "matches": [
+                                {
+                                    "home_team": "MCI",
+                                    "away_team": "RMA",
+                                    "home_score": 2,
+                                    "away_score": 3,
+                                    "date": "2025-02-11",
+                                    "time": "21:00",
+                                    "stadium": "City of Manchester Stadium",
+                                    "city": "Manchester",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "MCI",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2025-02-19",
+                                    "time": "21:00",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "KO6",
+                            "blank": true,
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "KO7",
+                            "matches": [
+                                {
+                                    "home_team": "JUV",
+                                    "away_team": "PSV",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-02-11",
+                                    "time": "21:00",
+                                    "stadium": "Juventus Stadium",
+                                    "city": "Turin",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "PSV",
+                                    "away_team": "JUV",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "home_extra_score": 1,
+                                    "away_extra_score": 0,
+                                    "date": "2025-02-19",
+                                    "time": "21:00",
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "KO8",
+                            "blank": true,
+                            "bracket_order": 8
+                        },
+                        {
+                            "name": "KO9",
+                            "matches": [
+                                {
+                                    "home_team": "ASM",
+                                    "away_team": "SLB",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2025-02-12",
+                                    "time": "21:00",
+                                    "stadium": "Stade Louis II",
+                                    "city": "Monaco",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "SLB",
+                                    "away_team": "ASM",
+                                    "home_score": 3,
+                                    "away_score": 3,
+                                    "date": "2025-02-18",
+                                    "time": "21:00",
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 9
+                        },
+                        {
+                            "name": "K10",
+                            "blank": true,
+                            "bracket_order": 10
+                        },
+                        {
+                            "name": "K11",
+                            "matches": [
+                                {
+                                    "home_team": "SCP",
+                                    "away_team": "DOR",
+                                    "home_score": 0,
+                                    "away_score": 3,
+                                    "date": "2025-02-11",
+                                    "time": "21:00",
+                                    "stadium": "Estádio José Alvalade",
+                                    "city": "Lisbon",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "SCP",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-02-19",
+                                    "time": "18:45",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 11
+                        },
+                        {
+                            "name": "K12",
+                            "blank": true,
+                            "bracket_order": 12
+                        },
+                        {
+                            "name": "K13",
+                            "matches": [
+                                {
+                                    "home_team": "CEL",
+                                    "away_team": "BAY",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2025-02-12",
+                                    "time": "21:00",
+                                    "stadium": "Celtic Park",
+                                    "city": "Glasgow",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "CEL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2025-02-18",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 13
+                        },
+                        {
+                            "name": "K14",
+                            "blank": true,
+                            "bracket_order": 14
+                        },
+                        {
+                            "name": "K15",
+                            "matches": [
+                                {
+                                    "home_team": "FEY",
+                                    "away_team": "MIL",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "date": "2025-02-12",
+                                    "time": "21:00",
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "MIL",
+                                    "away_team": "FEY",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2025-02-18",
+                                    "time": "18:45",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 15
+                        },
+                        {
+                            "name": "K16",
+                            "blank": true,
+                            "bracket_order": 16
+                        }
+                    ]
+                },
+                {
+                    "name": "Round of 16",
+                    "short_name": "1/8",
+                    "round_type": "knockout2legged",
+                    "eliminate_count": 8,
+                    "next_round": "Quarter-finals",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "pairs": [
+                        {
+                            "name": "R161",
+                            "matches": [
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "LIV",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2025-03-05",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LIV",
+                                    "away_team": "PSG",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 1,
+                                    "away_penalty_score": 4,
+                                    "date": "2025-03-11",
+                                    "time": "21:00",
+                                    "stadium": "Anfield",
+                                    "city": "Liverpool",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "R162",
+                            "matches": [
+                                {
+                                    "home_team": "BRG",
+                                    "away_team": "AVL",
+                                    "home_score": 1,
+                                    "away_score": 3,
+                                    "date": "2025-03-04",
+                                    "time": "18:45",
+                                    "stadium": "Jan Breydel Stadium",
+                                    "city": "Bruges",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "AVL",
+                                    "away_team": "BRG",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2025-03-12",
+                                    "time": "21:00",
+                                    "stadium": "Villa Park",
+                                    "city": "Birmingham",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
+                        },
+                        {
+                            "name": "R163",
+                            "matches": [
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "ATM",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-03-04",
+                                    "time": "21:00",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ATM",
+                                    "away_team": "RMA",
+                                    "home_score": 1,
+                                    "away_score": 0,
+                                    "home_extra_score": 0,
+                                    "away_extra_score": 0,
+                                    "home_penalty_score": 2,
+                                    "away_penalty_score": 4,
+                                    "date": "2025-03-12",
+                                    "time": "21:00",
+                                    "stadium": "Metropolitano Stadium",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "R164",
+                            "matches": [
+                                {
+                                    "home_team": "PSV",
+                                    "away_team": "ARS",
+                                    "home_score": 1,
+                                    "away_score": 7,
+                                    "date": "2025-03-04",
+                                    "time": "21:00",
+                                    "stadium": "Philips Stadion",
+                                    "city": "Eindhoven",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "ARS",
+                                    "away_team": "PSV",
+                                    "home_score": 2,
+                                    "away_score": 2,
+                                    "date": "2025-03-12",
+                                    "time": "21:00",
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "R165",
+                            "matches": [
+                                {
+                                    "home_team": "SLB",
+                                    "away_team": "BAR",
+                                    "home_score": 0,
+                                    "away_score": 1,
+                                    "date": "2025-03-05",
+                                    "time": "21:00",
+                                    "stadium": "Estádio da Luz",
+                                    "city": "Lisbon",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "BAR",
+                                    "away_team": "SLB",
+                                    "home_score": 3,
+                                    "away_score": 1,
+                                    "date": "2025-03-11",
+                                    "time": "18:45",
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 5
+                        },
+                        {
+                            "name": "R166",
+                            "matches": [
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "LIL",
+                                    "home_score": 1,
+                                    "away_score": 1,
+                                    "date": "2025-03-04",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LIL",
+                                    "away_team": "DOR",
+                                    "home_score": 1,
+                                    "away_score": 2,
+                                    "date": "2025-03-12",
+                                    "time": "18:45",
+                                    "stadium": "Stade Pierre-Mauroy",
+                                    "city": "Villeneuve-d'Ascq",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 6
+                        },
+                        {
+                            "name": "R167",
+                            "matches": [
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "LEV",
+                                    "home_score": 3,
+                                    "away_score": 0,
+                                    "date": "2025-03-05",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "LEV",
+                                    "away_team": "BAY",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2025-03-11",
+                                    "time": "21:00",
+                                    "stadium": "BayArena",
+                                    "city": "Leverkusen",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 7
+                        },
+                        {
+                            "name": "R168",
+                            "matches": [
+                                {
+                                    "home_team": "FEY",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 2,
+                                    "date": "2025-03-05",
+                                    "time": "18:45",
+                                    "stadium": "De Kuip",
+                                    "city": "Rotterdam",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "INT",
+                                    "away_team": "FEY",
+                                    "home_score": 2,
+                                    "away_score": 1,
+                                    "date": "2025-03-11",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 8
+                        }
+                    ]
+                },
+                {
+                    "name": "Quarter-finals",
+                    "short_name": "1/4",
+                    "round_type": "knockout2legged",
+                    "tiebreakers": ["points", "goaldifference", "goalsfor"],
+                    "eliminate_count": 4,
+                    "next_round": "Semi-finals",
+                    "pairs": [
+                        {
+                            "name": "QF1",
+                            "matches": [
+                                {
+                                    "home_team": "PSG",
+                                    "away_team": "AVL",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-09",
+                                    "time": "21:00",
+                                    "stadium": "Parc des Princes",
+                                    "city": "Paris",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "AVL",
+                                    "away_team": "PSG",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-15",
+                                    "time": "21:00",
+                                    "stadium": "Villa Park",
+                                    "city": "Birmingham",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 2
+                        },
+                        {
+                            "name": "QF2",
+                            "matches": [
+                                {
+                                    "home_team": "ARS",
+                                    "away_team": "RMA",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-08",
+                                    "time": "21:00",
+                                    "stadium": "Emirates Stadium",
+                                    "city": "London",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "RMA",
+                                    "away_team": "ARS",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-16",
+                                    "time": "21:00",
+                                    "stadium": "Santiago Bernabéu",
+                                    "city": "Madrid",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 1
+                        },
+                        {
+                            "name": "QF3",
+                            "matches": [
+                                {
+                                    "home_team": "BAR",
+                                    "away_team": "DOR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-09",
+                                    "time": "21:00",
+                                    "stadium": "Estadi Olímpic Lluís Companys",
+                                    "city": "Barcelona",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "DOR",
+                                    "away_team": "BAR",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-15",
+                                    "time": "21:00",
+                                    "stadium": "Westfalenstadion",
+                                    "city": "Dortmund",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 3
+                        },
+                        {
+                            "name": "QF4",
+                            "matches": [
+                                {
+                                    "home_team": "BAY",
+                                    "away_team": "INT",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-08",
+                                    "time": "21:00",
+                                    "stadium": "Allianz Arena",
+                                    "city": "Munich",
+                                    "matchday": "firstleg"
+                                },
+                                {
+                                    "home_team": "INT",
+                                    "away_team": "BAY",
+                                    "home_score": 0,
+                                    "away_score": 0,
+                                    "date": "2025-04-16",
+                                    "time": "21:00",
+                                    "stadium": "San Siro",
+                                    "city": "Milan",
+                                    "matchday": "secondleg"
+                                }
+                            ],
+                            "bracket_order": 4
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

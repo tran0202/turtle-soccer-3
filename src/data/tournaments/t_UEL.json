@@ -10,14 +10,14 @@
         "league_phase": true,
         "tiebreakers": [
             "points",
-            "h2hpoints",
-            "h2hgoaldifference",
-            "h2hgoalsfor",
             "goaldifference",
             "goalsfor",
             "awaygoals",
             "wins",
             "awaywins",
+            "opponentpoints",
+            "opponentgoaldifference",
+            "opponentgoalsfor",
             "disciplinarypoints",
             "coefficient"
         ],
