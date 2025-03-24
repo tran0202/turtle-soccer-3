@@ -130,28 +130,37 @@ const MatchesPairRow = (props) => {
                             ''
                         )
 
-                    const nextLine =
-                        config.round_won_notes || config.round_lost_notes ? (
-                            <React.Fragment>
-                                <b>{teamWon}</b> {config.round_won_notes}
-                                {'. '}
-                                {config.round_lost_notes && (
-                                    <React.Fragment>
-                                        <b>{teamLost}</b> {config.round_lost_notes}
-                                        {'.'}
-                                    </React.Fragment>
-                                )}
-                            </React.Fragment>
-                        ) : pair.final ? (
-                            <React.Fragment>
-                                <b>{teamWon}</b> won {config.name}!
-                            </React.Fragment>
-                        ) : (
-                            <React.Fragment>
-                                <b>{teamWon}</b> advanced to the {config.next_stage}
-                                {config.next_round}.
-                            </React.Fragment>
-                        )
+                    const promotionRelegationLine1 = isSecondLeg && pair.agg_winner === 'home' ? config.round_won_notes : config.round_remain_notes
+                    const promotionRelegationLine2 = isSecondLeg && pair.agg_winner === 'home' ? config.round_lost_notes : config.round_remain2_notes
+
+                    const nextLine = config.interleague_exchanged ? (
+                        <React.Fragment>
+                            <b>{teamWon}</b> {promotionRelegationLine1}
+                            {'. '}
+                            <b>{teamLost}</b> {promotionRelegationLine2}
+                            {'.'}
+                        </React.Fragment>
+                    ) : config.round_won_notes || config.round_lost_notes ? (
+                        <React.Fragment>
+                            <b>{teamWon}</b> {config.round_won_notes}
+                            {'. '}
+                            {config.round_lost_notes && (
+                                <React.Fragment>
+                                    <b>{teamLost}</b> {config.round_lost_notes}
+                                    {'.'}
+                                </React.Fragment>
+                            )}
+                        </React.Fragment>
+                    ) : pair.final ? (
+                        <React.Fragment>
+                            <b>{teamWon}</b> won {config.name}!
+                        </React.Fragment>
+                    ) : (
+                        <React.Fragment>
+                            <b>{teamWon}</b> advanced to the {config.next_stage}
+                            {config.next_round}.
+                        </React.Fragment>
+                    )
                     return (
                         <React.Fragment key={pair.name + m.matchday}>
                             <Row className={bottomLine}>
@@ -241,6 +250,8 @@ const MatchesPairRow = (props) => {
 
 const MatchesPairPath = (props) => {
     const { path, config } = props
+    const { round_won_notes, round_lost_notes, round_remain_notes, round_remain2_notes } = path
+    const new_config = { ...config, round_won_notes, round_lost_notes, round_remain_notes, round_remain2_notes }
     return (
         <React.Fragment>
             <Row>
@@ -250,7 +261,7 @@ const MatchesPairPath = (props) => {
             </Row>
             {path.pairs &&
                 path.pairs.map((p, index) => {
-                    return <MatchesPairRow key={p.name} pair={p} config={config} last={index === path.pairs.length - 1} />
+                    return <MatchesPairRow key={p.name} pair={p} config={new_config} last={index === path.pairs.length - 1} />
                 })}
         </React.Fragment>
     )
@@ -259,8 +270,8 @@ const MatchesPairPath = (props) => {
 class MatchesPair extends React.Component {
     render() {
         const { stage, config } = this.props
-        const { pairs, paths, next_stage, next_round, round_won_notes, round_lost_notes } = stage
-        const new_config = { ...config, next_stage, next_round, round_won_notes, round_lost_notes }
+        const { pairs, paths, next_stage, next_round, round_won_notes, round_lost_notes, interleague_exchanged } = stage
+        const new_config = { ...config, next_stage, next_round, round_won_notes, round_lost_notes, interleague_exchanged }
         return (
             <React.Fragment>
                 <Row className="mt-5 box-white">

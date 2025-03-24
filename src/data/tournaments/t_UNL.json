@@ -20,6 +20,7 @@
             "disciplinarypoints",
             "accesslist"
         ],
+        "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "awaygoals", "wins", "awaywins", "disciplinarypoints", "accesslist"],
         "details": {
             "logo_filename": "UEFA_Nations_League.svg",
             "mascot_filename": "",

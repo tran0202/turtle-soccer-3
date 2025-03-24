@@ -1551,6 +1551,8 @@ export const processPartialAdvancement = (stage, config) => {
                 } else {
                     if (index >= 0 - count) {
                         t.relegated = true
+                    } else if (a.other === 'relegate_playoff') {
+                        t.relegated_playoff = true
                     } else {
                         delete t.relegated
                     }
@@ -1592,9 +1594,13 @@ export const setAdvancements = (group, advancements) => {
             let passed = !foundPosition.rankings
             const foundWildCard = foundPosition.next === 'wild_card'
             const foundRelegated = foundPosition.next === 'relegate'
+            const foundRelegatedPlayoff = foundPosition.next === 'relegate' && foundPosition.other === 'relegate_playoff'
+            let foundPartial
             if (foundPosition.rankings) {
-                const foundPartial = foundPosition.rankings.find(
-                    (t2) => t2.id === t.id && ((foundWildCard && t2.wild_card) || (foundRelegated && t2.relegated)),
+                foundPartial = foundPosition.rankings.find(
+                    (t2) =>
+                        t2.id === t.id &&
+                        ((foundWildCard && t2.wild_card) || (foundRelegated && t2.relegated) || (foundRelegatedPlayoff && t2.relegated_playoff)),
                 )
                 if (foundPartial) {
                     passed = true
@@ -1619,14 +1625,27 @@ export const setAdvancements = (group, advancements) => {
                     t.qualified_date = qualified_date
                 } else if (foundPosition.next === 'advance') {
                     t.advanced = true
+                } else if (foundPosition.next === 'advance_playoff') {
+                    t.advanced_playoff = true
                 } else if (foundPosition.next === 'wild_card') {
                     t.wild_card = true
                 } else if (foundPosition.next === 'wild_card2') {
                     t.wild_card2 = true
                 } else if (foundPosition.next === 'transfer') {
                     t.transferred = true
+                } else if (foundPosition.next === 'relegate_playoff') {
+                    t.relegated_playoff = true
                 } else if (foundPosition.next === 'relegate') {
-                    t.relegated = true
+                    if (foundPartial) {
+                        if (foundPartial.relegated) {
+                            t.relegated = true
+                        }
+                        if (foundPartial.relegated_playoff) {
+                            t.relegated_playoff = true
+                        }
+                    } else {
+                        t.relegated = true
+                    }
                 } else if (foundPosition.next === 'champion') {
                     t.champion = true
                 } else if (foundPosition.next === 'runner-up') {

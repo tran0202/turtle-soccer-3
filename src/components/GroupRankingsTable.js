@@ -64,9 +64,11 @@ const RankingsRow = (props) => {
     const { ranking, config } = props
     const qualified_striped = ranking.qualified ? 'qualified-striped' : ''
     const advanced_striped = ranking.advanced ? 'advanced-striped' : ''
+    const advanced_playoff_striped = ranking.advanced_playoff ? 'advanced-playoff-striped' : ''
     const wild_card_striped = ranking.wild_card ? 'wild-card-striped' : ''
     const wild_card2_striped = ranking.wild_card2 ? 'wild-card2-striped' : ''
     const transferred_striped = ranking.transferred ? 'transferred-striped' : ''
+    const relegated_playoff_striped = ranking.relegated_playoff ? 'relegated-playoff-striped' : ''
     const relegated_striped = ranking.relegated ? 'relegated-striped' : ''
     const withdrew_striped = ranking.team.withdrew ? 'gray-striped' : ''
     const banned_striped = ranking.team.banned ? 'gray-striped' : ''
@@ -84,7 +86,7 @@ const RankingsRow = (props) => {
     const pts = !withdrew ? ranking.pts : <span>&mdash;</span>
     return (
         <Row
-            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${wild_card_striped}${wild_card2_striped}${transferred_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
+            className={`no-gutters ranking-tbl team-row padding-tb-sm ${qualified_striped}${advanced_striped}${advanced_playoff_striped}${wild_card_striped}${wild_card2_striped}${transferred_striped}${relegated_playoff_striped}${relegated_striped}${withdrew_striped}${banned_striped}${disqualified_striped}${champion_striped}${runnerup_striped}${thirdplace_striped}`}
         >
             <Col className="col-box-4 col-box-no-padding-lr text-center">
                 <RankColumn ranking={ranking} />

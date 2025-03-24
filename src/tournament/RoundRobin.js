@@ -17,6 +17,11 @@ class RoundRobin extends React.Component {
                                 <Col className="advanced-striped">{advancements.advanced_notes}</Col>
                             </Row>
                         )}
+                        {advancements && advancements.advanced_playoff_notes && (
+                            <Row>
+                                <Col className="advanced-playoff-striped">{advancements.advanced_playoff_notes}</Col>
+                            </Row>
+                        )}
                         {advancements && advancements.wild_card_notes && (
                             <Row>
                                 <Col className="wild-card-striped">{advancements.wild_card_notes}</Col>
@@ -30,6 +35,11 @@ class RoundRobin extends React.Component {
                         {advancements && advancements.transferred_notes && (
                             <Row>
                                 <Col className="transferred-striped">{advancements.transferred_notes}</Col>
+                            </Row>
+                        )}
+                        {advancements && advancements.relegated_playoff_notes && (
+                            <Row>
+                                <Col className="relegated-playoff-striped">{advancements.relegated_playoff_notes}</Col>
                             </Row>
                         )}
                         {advancements && advancements.relegated_notes && (

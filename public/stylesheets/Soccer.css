@@ -505,6 +505,9 @@
     background-color: #e3fae3;
 }
 .advanced-striped {
+    background-color: #ccf9cc;
+}
+.advanced-playoff-striped {
     background-color: #e3fae3;
 }
 .wild-card-striped {
@@ -516,14 +519,14 @@
 .transferred-striped {
     background-color: #ffffdd;
 }
-.relegated-striped {
+.relegated-playoff-striped {
     background-color: #ffe2e2;
+}
+.relegated-striped {
+    background-color: #ffcccc;
 }
 .advanced-wild-card-extra-striped {
     background-color: #ffffbb;
-}
-.advanced-playoff-striped {
-    background-color: #bbf3ff;
 }
 .advanced-third-place-striped {
     background-color: #bbf3ff;
