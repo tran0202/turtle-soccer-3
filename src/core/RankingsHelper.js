@@ -1,6 +1,35 @@
 /* eslint-disable no-loop-func */
 import { isHomeWinMatch, getTeamName } from './TeamHelper'
 
+export const calculateKnockoutRankings = (stage, config) => {
+    if (!stage || !config) return
+    if (stage.paths) {
+    }
+    if (stage.rounds) {
+        stage.rounds.forEach((r) => {
+            const teams = []
+            r.matches.forEach((m) => {
+                const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
+                teams.push(homeTeam)
+                const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
+                teams.push(awayTeam)
+            })
+            r.teams = teams
+
+            r.rankings = []
+            r.teams.forEach((t) => {
+                const ranking = getBlankRanking(t)
+                ranking.team = t
+                accumulateRanking(ranking, r.matches, config)
+                r.rankings.push(ranking)
+            })
+
+            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+            sortGroup(r, standings_config)
+        })
+    }
+}
+
 export const calculateGroupRankings = (stage, config) => {
     if (!stage || !stage.groups || !config) return
     stage.groups.forEach((g) => {
@@ -50,8 +79,21 @@ export const accumulateRanking = (ranking, matches, config) => {
                         ranking.w++
                         ranking.pts += parseInt(config.points_for_win)
                     } else if (m.home_score === m.away_score) {
-                        ranking.d++
-                        ranking.pts++
+                        if (m.home_extra_score !== undefined && m.away_extra_score !== undefined) {
+                            if (m.home_extra_score > m.away_extra_score) {
+                                ranking.w++
+                                ranking.pts += parseInt(config.points_for_win)
+                            } else if (m.home_extra_score === m.away_extra_score) {
+                                ranking.d++
+                                ranking.pts++
+                                ranking.pen = m.home_penalty_score
+                            } else {
+                                ranking.l++
+                            }
+                        } else {
+                            ranking.d++
+                            ranking.pts++
+                        }
                     } else {
                         ranking.l++
                     }
@@ -84,8 +126,21 @@ export const accumulateRanking = (ranking, matches, config) => {
                     if (m.home_score > m.away_score) {
                         ranking.l++
                     } else if (m.home_score === m.away_score) {
-                        ranking.d++
-                        ranking.pts++
+                        if (m.home_extra_score !== undefined && m.away_extra_score !== undefined) {
+                            if (m.home_extra_score > m.away_extra_score) {
+                                ranking.l++
+                            } else if (m.home_extra_score === m.away_extra_score) {
+                                ranking.d++
+                                ranking.pts++
+                                ranking.pen = m.away_penalty_score
+                            } else {
+                                ranking.w++
+                                ranking.pts += parseInt(config.points_for_win)
+                            }
+                        } else {
+                            ranking.d++
+                            ranking.pts++
+                        }
                     } else {
                         ranking.w++
                         ranking.pts += parseInt(config.points_for_win)
@@ -187,6 +242,9 @@ export const sortGroup = (group, config) => {
                 break
             case 'goalsfor':
                 sortOverallGoalsFor(group, config)
+                break
+            case 'penalties':
+                sortPenalties(group, config)
                 break
             case 'awaygoals':
                 sortOverallAwayGoals(group, config)
@@ -545,6 +603,52 @@ export const createGoalsForSubpools = (pool, config) => {
             foundPool.rankings.push(r)
         } else {
             pool.subpools.push({ pts: r.pts, gd: r.gd, gf: r.gf, rankings: [r] })
+        }
+    })
+}
+
+export const sortPenalties = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    addSortPath(group, 'penalties')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+
+        if (rankings.length >= 2) {
+            createPenaltiesSubpools(p, config)
+
+            const subpools = p.subpools
+            for (var k = 0; k < subpools.length - 1; k++) {
+                for (var l = k + 1; l < subpools.length; l++) {
+                    if (subpools[k].pen < subpools[l].pen) {
+                        const temp = subpools[k]
+                        subpools[k] = subpools[l]
+                        subpools[l] = temp
+                    }
+                }
+            }
+            p.subpools.forEach((sp) => {
+                if (sp.rankings && sp.rankings.length === 1) {
+                    sp.sorted = true
+                }
+            })
+        }
+    }
+    flattenSubpools(group, config)
+}
+
+export const createPenaltiesSubpools = (pool, config) => {
+    if (!pool || !pool.rankings || !config) return
+    pool.subpools = []
+    pool.rankings.forEach((r) => {
+        const foundPool = pool.subpools.find((p) => p.pen === r.pen)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            pool.subpools.push({ pts: r.pts, gd: r.gd, gf: r.gf, pen: r.pen, rankings: [r] })
         }
     })
 }

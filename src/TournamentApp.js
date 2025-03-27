@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import { Container, TabContent, TabPane, Nav, NavLink } from 'reactstrap'
 import classnames from 'classnames'
 import { getTournament } from './core/TournamentHelper'
 import Page from './core/Page'
@@ -8,12 +8,13 @@ import Awards from './tournament/Awards'
 import RoundRobin from './tournament/RoundRobin'
 import Knockout from './tournament/Knockout'
 import Pair from './tournament/Pair'
+import FinalStandings from './tournament/FinalStandings'
 
 const TournamentTabs = (props) => {
     const { tournament, config } = props
     const { stages } = tournament
-    const first_final_stage =
-        stages && stages.length > 0 && stages.find((s) => s.name === 'Knockout Stage') ? 'Knockout Stage' : stages.length === 1 ? stages[0].name : 'Group Stage'
+    const first_final_stage = 'Final Standings'
+    // stages && stages.length > 0 && stages.find((s) => s.name === 'Knockout Stage') ? 'Knockout Stage' : stages.length === 1 ? stages[0].name : 'Group Stage'
     const [activeTab, setActiveTab] = useState(first_final_stage)
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
@@ -37,16 +38,22 @@ const TournamentTabs = (props) => {
                             </NavLink>
                         )
                     })}
-                <NavItem>
-                    <NavLink
-                        className={classnames({ active: activeTab === 'Awards' })}
-                        onClick={() => {
-                            toggle('Awards')
-                        }}
-                    >
-                        Awards
-                    </NavLink>
-                </NavItem>
+                <NavLink
+                    className={classnames({ active: activeTab === 'Final Standings' })}
+                    onClick={() => {
+                        toggle('Final Standings')
+                    }}
+                >
+                    Final Standings
+                </NavLink>
+                <NavLink
+                    className={classnames({ active: activeTab === 'Awards' })}
+                    onClick={() => {
+                        toggle('Awards')
+                    }}
+                >
+                    Awards
+                </NavLink>
             </Nav>
             <TabContent activeTab={activeTab}>
                 {stages &&
@@ -60,6 +67,9 @@ const TournamentTabs = (props) => {
                             </TabPane>
                         )
                     })}
+                <TabPane tabId="Final Standings">
+                    <FinalStandings tournament={tournament} config={config} />
+                </TabPane>
                 <TabPane tabId="Awards">
                     <Awards tournament={tournament} config={config} />
                 </TabPane>

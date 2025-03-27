@@ -1,8 +1,10 @@
+/* eslint-disable no-loop-func */
 import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { getTeams, getHostTeamArray } from './TeamHelper'
-import { calculateGroupRankings, isAwayGoalsTiebreaker } from './RankingsHelper'
+import { calculateGroupRankings, calculateKnockoutRankings, sortGroup, isAwayGoalsTiebreaker, isGoalRatioTiebreaker } from './RankingsHelper'
+import { isHomeWinMatch } from './TeamHelper'
 
 // ----------------------------- Competition ----------------------------------
 
@@ -76,6 +78,7 @@ export const processTournament = (tournament, config) => {
         processLeagues(tournament, config)
     }
     processStages(tournament, config)
+    processStandings(tournament, config)
     // return { draws, stages }
 }
 
@@ -104,6 +107,117 @@ export const processStages = (tournament, config) => {
     })
 }
 
+export const processStandings = (tournament, config) => {
+    if (!tournament || !tournament.stages || !config) return
+    const rounds = []
+    tournament.stages.forEach((s) => {
+        if (s.type === 'roundrobin_final') {
+            rounds.push(s)
+        } else if (s.type === 'knockout_') {
+            s.rounds.forEach((r) => {
+                rounds.push(r)
+            })
+        } else if (s.type === 'pair_') {
+            s.rounds.forEach((r) => {
+                rounds.push(r)
+            })
+        }
+    })
+
+    for (var k = 0; k < rounds.length - 1; k++) {
+        const remainedRankings = []
+        if (rounds[k].next_round === rounds[k + 1].name) {
+            rounds[k].rankings.forEach((r1, index) => {
+                const rankingNextRound = rounds[k + 1].rankings.find((r2) => r2.id === r1.id)
+                if (rankingNextRound) {
+                    addStandings(rankingNextRound, rounds[k].rankings[index], config)
+                } else {
+                    remainedRankings.push(rounds[k].rankings[index])
+                }
+            })
+        }
+        rounds[k].rankings = remainedRankings
+        const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+        sortGroup(rounds[k], standings_config)
+    }
+
+    const finalRound = rounds[rounds.length - 1]
+    if (finalRound.championship) {
+        const finalRoundStandings = [{}, {}, {}, {}]
+        const finalMatch = finalRound.matches.find((m) => m.final)
+        if (finalMatch) {
+            const champion = isHomeWinMatch(finalMatch) ? finalMatch.home_team : finalMatch.away_team
+            const runner_up = isHomeWinMatch(finalMatch) ? finalMatch.away_team : finalMatch.home_team
+            finalRound.pools.forEach((p) => {
+                if (p.rankings[0].id === champion) {
+                    p.rankings[0].champion = true
+                    finalRoundStandings[0] = p
+                }
+                if (p.rankings[0].id === runner_up) {
+                    p.rankings[0].runner_up = true
+                    finalRoundStandings[1] = p
+                }
+            })
+        }
+        const thirdPlaceMatch = finalRound.matches.find((m) => m.third_place)
+        if (thirdPlaceMatch) {
+            const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
+            const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
+            finalRound.pools.forEach((p) => {
+                if (p.rankings[0].id === third_place) {
+                    p.rankings[0].third_place = true
+                    finalRoundStandings[2] = p
+                }
+                if (p.rankings[0].id === fourth_place) {
+                    finalRoundStandings[3] = p
+                }
+            })
+        }
+        finalRound.pools = finalRoundStandings
+    }
+    tournament.standing_rounds = rounds.reverse()
+    sortPool(tournament, config)
+}
+
+export const addStandings = (rankingDest, rankingSource, config) => {
+    if (!rankingDest || !rankingSource) return
+    rankingDest.mp = rankingDest.mp + rankingSource.mp
+    rankingDest.w = rankingDest.w + rankingSource.w
+    rankingDest.d = rankingDest.d + rankingSource.d
+    rankingDest.l = rankingDest.l + rankingSource.l
+    rankingDest.gf = rankingDest.gf + rankingSource.gf
+    rankingDest.ga = rankingDest.ga + rankingSource.ga
+    rankingDest.gd = rankingDest.gf - rankingDest.ga
+    rankingDest.gr = isGoalRatioTiebreaker(config) && rankingDest.ga !== 0 ? rankingDest.gf / rankingDest.ga : null
+    rankingDest.pts = rankingDest.pts + rankingSource.pts
+}
+
+export const sortPool = (tournament, config) => {
+    if (!tournament || !tournament.standing_rounds || !config) return
+    let pool_rank = 0
+    tournament.standing_rounds.forEach((sr) => {
+        sr.pools.forEach((p) => {
+            p.pool_rank = pool_rank + 1
+            p.rankings &&
+                p.rankings.forEach((r) => {
+                    pool_rank++
+                })
+            const rankings = p.rankings
+            if (rankings) {
+                for (var k = 0; k < rankings.length - 1; k++) {
+                    for (var l = k + 1; l < rankings.length; l++) {
+                        if (rankings[k].team.name > rankings[l].team.name) {
+                            const temp = rankings[k]
+                            rankings[k] = rankings[l]
+                            rankings[l] = temp
+                        }
+                    }
+                }
+            }
+        })
+    })
+}
+
 export const processStage = (stage, config) => {
     if (!stage || !stage.type || !config) return
 
@@ -117,10 +231,12 @@ export const processStage = (stage, config) => {
         }
         // createGroupMatches(stage)
         calculateGroupRankings(stage, config)
+        collectGroupRankings(stage, config)
     }
     if (stage.type.includes('knockout_')) {
         //     initEntrants(stage)
         processKnockoutRounds(stage, config)
+        calculateKnockoutRankings(stage, config)
     }
     if (stage.type.includes('pair_')) {
         processPairPaths(stage, config)
@@ -150,6 +266,19 @@ export const processGroups = (stage, config) => {
             })
         g.teams = new_teams
     })
+}
+
+export const collectGroupRankings = (stage, config) => {
+    if (!stage || !stage.groups || !config) return
+    const rankings = []
+    stage.groups.forEach((g) => {
+        g.rankings.forEach((r) => {
+            const new_r = { ...r }
+            delete new_r.advanced
+            rankings.push(new_r)
+        })
+    })
+    stage.rankings = rankings
 }
 
 export const processKnockoutRounds = (stage, config) => {

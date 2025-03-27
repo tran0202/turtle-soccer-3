@@ -402,6 +402,28 @@
     border-bottom: none;
 }
 
+.box-xl .standing-row {
+    border-bottom: 1px solid #e6e7e9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.box-xl .standing-row:last-child {
+    border-bottom: none;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.box-xl .standing-row:first-child {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.box-xl .standing-row:only-child {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .group-modal .team-row:last-child {
     border-bottom: none;
     margin-bottom: 2rem;
@@ -630,11 +652,15 @@
     border-top: 1px solid #e6e7e9;
 }
 
+.rank-col-padding-1 {
+    padding-top: 10px;
+}
+
 .rank-col-padding-2 {
-    padding-top: 65px;
+    padding-top: 50px;
 }
 .rank-col-padding-3 {
-    padding-top: 115px;
+    padding-top: 90px;
 }
 .rank-col-padding-4 {
     padding-top: 155px;
