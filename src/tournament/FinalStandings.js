@@ -3,6 +3,7 @@ import { Row, Col } from 'reactstrap'
 import { NumericFormat } from 'react-number-format'
 import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
 import { getTeamFlagId } from '../core/TeamHelper'
+import { WithdrewTooltip } from '../core/TooltipHelper'
 
 const StandingsHeader = (props) => {
     const { round, config } = props
@@ -53,7 +54,7 @@ const RankColumn = (props) => {
 
 const StandingsRow = (props) => {
     const { ranking, config } = props
-    const withdrew = ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
+    const withdrew = ranking.withdrew || ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
     const w = !withdrew ? ranking.w : <span>&mdash;</span>
     const d = !withdrew ? ranking.d : <span>&mdash;</span>
     const l = !withdrew ? ranking.l : <span>&mdash;</span>
@@ -64,7 +65,10 @@ const StandingsRow = (props) => {
     return (
         <Row className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
             <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
-            <Col className="col-box-27">{ranking.team.name}</Col>
+            <Col className="col-box-27">
+                {ranking.team.name}{' '}
+                {ranking.withdrew && <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" notes={`${ranking.team.name} withdrew`} />}
+            </Col>
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
             <Col className="col-box-7 text-center">{w}</Col>
             <Col className="col-box-7 text-center">{d}</Col>
@@ -94,7 +98,7 @@ const StandingsPools = (props) => {
         round.pools &&
         round.pools.map((p) => {
             const rankColPadding =
-                p.rankings.length === 1
+                p.rankings && p.rankings.length === 1
                     ? 'rank-col-padding-1'
                     : p.rankings.length === 2
                     ? 'rank-col-padding-2'
@@ -149,6 +153,7 @@ class FinalStandings extends React.Component {
             tournament.standing_rounds &&
             tournament.standing_rounds.map((sr) => {
                 return (
+                    sr.pools &&
                     sr.pools.length > 0 && (
                         <React.Fragment key={sr.name}>
                             <Row className="box-xl">

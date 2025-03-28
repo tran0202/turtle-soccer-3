@@ -143,7 +143,12 @@ export const processStandings = (tournament, config) => {
 
     const finalRound = rounds[rounds.length - 1]
     if (finalRound.championship) {
-        const finalRoundStandings = [{}, {}, {}, {}]
+        const pools = []
+        finalRound.rankings.forEach((r) => {
+            pools.push({ rankings: [r] })
+        })
+        finalRound.pools = pools
+        const finalRoundStandings = [{}, {}]
         const finalMatch = finalRound.matches.find((m) => m.final)
         if (finalMatch) {
             const champion = isHomeWinMatch(finalMatch) ? finalMatch.home_team : finalMatch.away_team
@@ -161,6 +166,8 @@ export const processStandings = (tournament, config) => {
         }
         const thirdPlaceMatch = finalRound.matches.find((m) => m.third_place)
         if (thirdPlaceMatch) {
+            finalRoundStandings[2] = {}
+            finalRoundStandings[3] = {}
             const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
             const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
             finalRound.pools.forEach((p) => {
@@ -175,7 +182,32 @@ export const processStandings = (tournament, config) => {
         }
         finalRound.pools = finalRoundStandings
     }
-    tournament.standing_rounds = rounds.reverse()
+    if (finalRound.championship_round) {
+        const pools = []
+        finalRound.rankings.forEach((r) => {
+            pools.push({ rankings: [r] })
+        })
+        finalRound.pools = pools
+    }
+
+    const excludedSemiFinal = []
+    rounds.forEach((r, index) => {
+        if (r.name !== 'Semi-finals') {
+            excludedSemiFinal.push(r)
+        } else {
+            const final = rounds[index + 1]
+            if (final.name === 'Final') {
+                r.pools.forEach((p, index) => {
+                    if (index === 0) {
+                        p.rankings[0].third_place = true
+                    }
+                    final.pools.push(p)
+                })
+            }
+        }
+    })
+
+    tournament.standing_rounds = excludedSemiFinal.reverse()
     sortPool(tournament, config)
 }
 
@@ -196,25 +228,26 @@ export const sortPool = (tournament, config) => {
     if (!tournament || !tournament.standing_rounds || !config) return
     let pool_rank = 0
     tournament.standing_rounds.forEach((sr) => {
-        sr.pools.forEach((p) => {
-            p.pool_rank = pool_rank + 1
-            p.rankings &&
-                p.rankings.forEach((r) => {
-                    pool_rank++
-                })
-            const rankings = p.rankings
-            if (rankings) {
-                for (var k = 0; k < rankings.length - 1; k++) {
-                    for (var l = k + 1; l < rankings.length; l++) {
-                        if (rankings[k].team.name > rankings[l].team.name) {
-                            const temp = rankings[k]
-                            rankings[k] = rankings[l]
-                            rankings[l] = temp
+        sr.pools &&
+            sr.pools.forEach((p) => {
+                p.pool_rank = pool_rank + 1
+                p.rankings &&
+                    p.rankings.forEach((r) => {
+                        pool_rank++
+                    })
+                const rankings = p.rankings
+                if (rankings) {
+                    for (var k = 0; k < rankings.length - 1; k++) {
+                        for (var l = k + 1; l < rankings.length; l++) {
+                            if (rankings[k].team.name > rankings[l].team.name) {
+                                const temp = rankings[k]
+                                rankings[k] = rankings[l]
+                                rankings[l] = temp
+                            }
                         }
                     }
                 }
-            }
-        })
+            })
     })
 }
 

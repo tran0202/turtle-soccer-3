@@ -9,10 +9,14 @@ export const calculateKnockoutRankings = (stage, config) => {
         stage.rounds.forEach((r) => {
             const teams = []
             r.matches.forEach((m) => {
-                const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
-                teams.push(homeTeam)
-                const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
-                teams.push(awayTeam)
+                if (!teams.find((t) => t.id === m.home_team)) {
+                    const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
+                    teams.push(homeTeam)
+                }
+                if (!teams.find((t) => t.id === m.away_team)) {
+                    const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
+                    teams.push(awayTeam)
+                }
             })
             r.teams = teams
 
@@ -23,9 +27,6 @@ export const calculateKnockoutRankings = (stage, config) => {
                 accumulateRanking(ranking, r.matches, config)
                 r.rankings.push(ranking)
             })
-
-            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
-            sortGroup(r, standings_config)
         })
     }
 }
@@ -203,6 +204,18 @@ export const accumulateRanking = (ranking, matches, config) => {
                 ranking.ga += parseInt(m.home_score)
                 ranking.gd = ranking.gf - ranking.ga
             }
+            // WC1938
+        } else if (m.match_cancelled) {
+            if (ranking.id === m.home_team) {
+                if (m.home_withdrew) {
+                    ranking.withdrew = true
+                }
+            }
+            if (ranking.id === m.away_team) {
+                if (m.away_withdrew) {
+                    ranking.withdrew = true
+                }
+            }
         }
         // CONFEDC1995
         if (m.tie_last_match) {
@@ -309,11 +322,15 @@ export const createPointPools = (group, config) => {
     if (!group || !group.rankings || !config) return
     group.pools = []
     group.rankings.forEach((r) => {
-        const foundPool = group.pools.find((p) => p.pts === r.pts)
-        if (foundPool) {
-            foundPool.rankings.push(r)
+        if (r.withdrew) {
+            group.pools.push({ withdrew: true, pts: r.pts, rankings: [r] })
         } else {
-            group.pools.push({ pts: r.pts, rankings: [r] })
+            const foundPool = group.pools.find((p) => p.pts === r.pts)
+            if (foundPool) {
+                foundPool.rankings.push(r)
+            } else {
+                group.pools.push({ pts: r.pts, rankings: [r] })
+            }
         }
     })
 }
