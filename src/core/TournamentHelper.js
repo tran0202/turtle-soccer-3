@@ -110,13 +110,27 @@ export const processStages = (tournament, config) => {
 export const processStandings = (tournament, config) => {
     if (!tournament || !tournament.stages || !config) return
     const rounds = []
+    const consolation_rounds = []
     tournament.stages.forEach((s) => {
         if (s.type === 'roundrobin_final') {
             rounds.push(s)
         } else if (s.type === 'knockout_') {
-            s.rounds.forEach((r) => {
-                rounds.push(r)
-            })
+            s.paths &&
+                s.paths.forEach((p) => {
+                    if (p.name === 'Medal Path') {
+                        p.rounds.forEach((r) => {
+                            rounds.push(r)
+                        })
+                    } else if (p.name === 'Consolation Path') {
+                        p.rounds.forEach((r) => {
+                            consolation_rounds.push(r)
+                        })
+                    }
+                })
+            s.rounds &&
+                s.rounds.forEach((r) => {
+                    rounds.push(r)
+                })
         } else if (s.type === 'pair_') {
             s.rounds.forEach((r) => {
                 rounds.push(r)
@@ -141,6 +155,60 @@ export const processStandings = (tournament, config) => {
         sortGroup(rounds[k], standings_config)
     }
 
+    // Consolation path
+    if (consolation_rounds.length > 0) {
+        const index = rounds.findIndex((r) => r.next_consolation_round)
+        rounds.splice(index + 1, 0, consolation_rounds[0], consolation_rounds[1])
+
+        const index2 = rounds.findIndex((r) => r.next_consolation_round)
+        let remainedRankings = []
+        rounds[index2].rankings.forEach((r1, index) => {
+            const rankingNextRound = rounds[index2 + 1].rankings.find((r2) => r2.id === r1.id)
+            if (rankingNextRound) {
+                addStandings(rankingNextRound, rounds[index2].rankings[index], config)
+            } else {
+                remainedRankings.push(rounds[index2].rankings[index])
+            }
+        })
+        rounds[index2].rankings = remainedRankings
+        const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+        sortGroup(rounds[index2], standings_config)
+
+        rounds[index2 + 1].rankings.forEach((r1, index) => {
+            const rankingNextRound = rounds[index2 + 2].rankings.find((r2) => r2.id === r1.id)
+            if (rankingNextRound) {
+                addStandings(rankingNextRound, rounds[index2 + 1].rankings[index], config)
+            } else {
+                remainedRankings.push(rounds[index2 + 1].rankings[index])
+            }
+        })
+        rounds[index2 + 1].rankings = remainedRankings
+        sortGroup(rounds[index2 + 1], standings_config)
+
+        const pools = []
+        const fifthPlaceRound = rounds[index2 + 2]
+        fifthPlaceRound.rankings.forEach((r) => {
+            pools.push({ rankings: [r] })
+        })
+        fifthPlaceRound.pools = pools
+        const fifthPlaceRoundStandings = [{}, {}]
+        const fifthPlaceMatch = fifthPlaceRound.matches[0]
+        if (fifthPlaceMatch) {
+            const fifthPlace = isHomeWinMatch(fifthPlaceMatch) ? fifthPlaceMatch.home_team : fifthPlaceMatch.away_team
+            const sixthPlace = isHomeWinMatch(fifthPlaceMatch) ? fifthPlaceMatch.away_team : fifthPlaceMatch.home_team
+            fifthPlaceRound.pools.forEach((p) => {
+                if (p.rankings[0].id === fifthPlace) {
+                    fifthPlaceRoundStandings[0] = p
+                }
+                if (p.rankings[0].id === sixthPlace) {
+                    fifthPlaceRoundStandings[1] = p
+                }
+            })
+        }
+        fifthPlaceRound.pools = fifthPlaceRoundStandings
+    }
+
+    // Final round
     const finalRound = rounds[rounds.length - 1]
     if (finalRound.championship) {
         const pools = []

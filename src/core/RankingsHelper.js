@@ -4,6 +4,30 @@ import { isHomeWinMatch, getTeamName } from './TeamHelper'
 export const calculateKnockoutRankings = (stage, config) => {
     if (!stage || !config) return
     if (stage.paths) {
+        stage.paths.forEach((p) => {
+            p.rounds.forEach((r) => {
+                const teams = []
+                r.matches.forEach((m) => {
+                    if (!teams.find((t) => t.id === m.home_team)) {
+                        const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
+                        teams.push(homeTeam)
+                    }
+                    if (!teams.find((t) => t.id === m.away_team)) {
+                        const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
+                        teams.push(awayTeam)
+                    }
+                })
+                r.teams = teams
+
+                r.rankings = []
+                r.teams.forEach((t) => {
+                    const ranking = getBlankRanking(t)
+                    ranking.team = t
+                    accumulateRanking(ranking, r.matches, config)
+                    r.rankings.push(ranking)
+                })
+            })
+        })
     }
     if (stage.rounds) {
         stage.rounds.forEach((r) => {
