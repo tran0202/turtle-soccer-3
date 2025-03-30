@@ -31,6 +31,7 @@
                             "bye_notes": "Opponent withdrew",
                             "away_withdrew": true,
                             "away_withdrew_notes": "due to Suez Crisis",
+                            "match_cancelled": true,
                             "date": "1956-11-23",
                             "bracket_order": 7
                         },
@@ -40,6 +41,7 @@
                             "home_bye": true,
                             "bye_notes": "Opponent withdrew",
                             "away_withdrew": true,
+                            "match_cancelled": true,
                             "date": "1956-11-23",
                             "bracket_order": 4
                         },
@@ -49,6 +51,7 @@
                             "home_bye": true,
                             "bye_notes": "Opponent withdrew",
                             "away_withdrew": true,
+                            "match_cancelled": true,
                             "date": "1956-11-23",
                             "bracket_order": 5
                         },
@@ -58,6 +61,7 @@
                             "home_withdrew": true,
                             "home_withdrew_notes": "boycotted the Games to protest the reception of Taiwan",
                             "away_withdrew": true,
+                            "match_cancelled": true,
                             "date": "1956-11-23",
                             "bracket_order": 2
                         },

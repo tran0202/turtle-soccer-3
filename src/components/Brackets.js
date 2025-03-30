@@ -262,7 +262,7 @@ const BracketBox = (props) => {
                                     anchor="(disqualified)"
                                 />
                             )}
-                            {match.home_awarded && <AwardedTooltip target={`awardedTooltip`} notes={match.awarded_notes} />}
+                            {match.home_awarded && <AwardedTooltip target={`${match.home_team}awardedTooltip`} notes={match.awarded_notes} />}
                             {match.home_replacement && (
                                 <ReplacementTooltip target={`${match.home_team}replacementTooltip`} notes={match.replacement_notes} anchor="(r)" />
                             )}

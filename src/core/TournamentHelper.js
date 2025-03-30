@@ -117,11 +117,11 @@ export const processStandings = (tournament, config) => {
         } else if (s.type === 'knockout_') {
             s.paths &&
                 s.paths.forEach((p) => {
-                    if (p.name === 'Medal Path') {
+                    if (p.name === 'Medal Path' || p.name === 'Gold Medal Path') {
                         p.rounds.forEach((r) => {
                             rounds.push(r)
                         })
-                    } else if (p.name === 'Consolation Path') {
+                    } else if (p.name === 'Consolation Path' || p.name === 'Silver and Bronze Medal Path') {
                         p.rounds.forEach((r) => {
                             consolation_rounds.push(r)
                         })
@@ -155,10 +155,13 @@ export const processStandings = (tournament, config) => {
         sortGroup(rounds[k], standings_config)
     }
 
-    // Consolation path
+    // Consolation path: MOFT1964
     if (consolation_rounds.length > 0) {
         const index = rounds.findIndex((r) => r.next_consolation_round)
         rounds.splice(index + 1, 0, consolation_rounds[0], consolation_rounds[1])
+        if (consolation_rounds.length === 3) {
+            rounds.splice(index + 3, 0, consolation_rounds[2])
+        }
 
         const index2 = rounds.findIndex((r) => r.next_consolation_round)
         let remainedRankings = []
@@ -185,7 +188,7 @@ export const processStandings = (tournament, config) => {
         rounds[index2 + 1].rankings = remainedRankings
         sortGroup(rounds[index2 + 1], standings_config)
 
-        const pools = []
+        let pools = []
         const fifthPlaceRound = rounds[index2 + 2]
         fifthPlaceRound.rankings.forEach((r) => {
             pools.push({ rankings: [r] })
@@ -206,6 +209,24 @@ export const processStandings = (tournament, config) => {
             })
         }
         fifthPlaceRound.pools = fifthPlaceRoundStandings
+
+        // MOFT1920
+        if (consolation_rounds.length === 3) {
+            rounds[index2 + 2].rankings.forEach((r1, index) => {
+                const rankingNextRound = rounds[index2 + 3].rankings.find((r2) => r2.id === r1.id)
+                if (rankingNextRound) {
+                    addStandings(rankingNextRound, rounds[index2 + 2].rankings[index], config)
+                }
+            })
+            pools = []
+            rounds[index2 + 3].rankings.forEach((r) => {
+                pools.push({ rankings: [r] })
+            })
+            rounds[index2 + 3].pools = pools
+
+            // NED
+            addStandings(rounds[5].pools[0].rankings[0], rounds[4].pools[1].rankings[0], config)
+        }
     }
 
     // Final round
@@ -293,6 +314,9 @@ export const processStandings = (tournament, config) => {
     })
 
     tournament.standing_rounds = excludedSemiFinal.reverse()
+    if (config.id === 'MOFT1920') {
+        customAdjustMOFT1920(tournament.standing_rounds)
+    }
     sortPool(tournament, config)
 }
 
@@ -707,6 +731,39 @@ export const createMatchdays = (round) => {
         }
     })
     round.matchdays = matchdays
+}
+
+export const customAdjustMOFT1920 = (standing_rounds) => {
+    const tch = standing_rounds[0].pools.find((p) => p.rankings[0].id === 'TCH_U23MNT')
+    tch.rankings[0].disqualified = true
+    tch.rankings[0].disqualified_notes =
+        'Czechoslovakia walked off the field in the 40th minute of the final to protest the officiating and then was ejected from the competition.'
+    delete tch.rankings[0].runner_up
+    standing_rounds[0].pools.splice(1, 1)
+    standing_rounds[5].pools.push(tch)
+
+    const esp = standing_rounds[1].pools.find((p) => p.rankings[0].id === 'ESP-1875-1931_U23MNT')
+    esp.rankings[0].runner_up = true
+    standing_rounds[1].pools.splice(0, 1)
+    standing_rounds[2].pools.splice(0, 1)
+    standing_rounds[0].pools.splice(1, 0, esp)
+
+    // NED
+    standing_rounds[1].pools.splice(0, 1)
+
+    const swe = standing_rounds[3].pools.find((p) => p.rankings[0].id === 'SWE_U23MNT')
+    standing_rounds[3].pools.splice(0, 1)
+    standing_rounds[2].pools.splice(1, 0, swe)
+
+    const fra = standing_rounds[0].pools.find((p) => p.rankings[0].id === 'FRA_U23MNT')
+    standing_rounds[0].pools.splice(3, 1)
+    standing_rounds[2].pools.splice(2, 0, fra)
+
+    const nor = standing_rounds[3].pools.find((p) => p.rankings[0].id === 'NOR_U23MNT')
+    standing_rounds[3].pools.splice(0, 1)
+    standing_rounds[2].pools.splice(3, 0, nor)
+
+    standing_rounds[2].name = 'Play-offs'
 }
 
 export const getPreviousTournament = (tournaments, current_id) => {

@@ -34,12 +34,16 @@ export const calculateKnockoutRankings = (stage, config) => {
             const teams = []
             r.matches.forEach((m) => {
                 if (!teams.find((t) => t.id === m.home_team)) {
-                    const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
-                    teams.push(homeTeam)
+                    const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                    if (homeTeam) {
+                        teams.push(homeTeam)
+                    }
                 }
                 if (!teams.find((t) => t.id === m.away_team)) {
-                    const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
-                    teams.push(awayTeam)
+                    const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                    if (awayTeam) {
+                        teams.push(awayTeam)
+                    }
                 }
             })
             r.teams = teams
@@ -96,7 +100,7 @@ export const getBlankRanking = (team) => {
 export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches || !config) return
     matches.forEach((m) => {
-        if (!m.match_cancelled && !m.match_not_played && !m.home_awarded_adjust) {
+        if (!m.match_cancelled && !m.match_not_played && !m.match_postponed && !m.home_bye && !m.away_bye && !m.home_awarded_adjust) {
             if (!m.group_playoff || config.group_playoff_override) {
                 if (ranking.id === m.home_team) {
                     ranking.mp++
@@ -328,7 +332,7 @@ export const sortOverallPoints = (group, config) => {
     const pools = group.pools
     for (var i = 0; i < pools.length - 1; i++) {
         for (var j = i + 1; j < pools.length; j++) {
-            if (pools[i].pts < pools[j].pts) {
+            if (pools[i].withdrew || pools[i].pts < pools[j].pts) {
                 const temp = pools[i]
                 pools[i] = pools[j]
                 pools[j] = temp
@@ -349,11 +353,11 @@ export const createPointPools = (group, config) => {
         if (r.withdrew) {
             group.pools.push({ withdrew: true, pts: r.pts, rankings: [r] })
         } else {
-            const foundPool = group.pools.find((p) => p.pts === r.pts)
+            const foundPool = group.pools.find((p) => (p.pts === r.pts) & !p.withdrew)
             if (foundPool) {
                 foundPool.rankings.push(r)
             } else {
-                group.pools.push({ pts: r.pts, rankings: [r] })
+                group.pools.push({ pts: r.pts, withdrew: false, rankings: [r] })
             }
         }
     })

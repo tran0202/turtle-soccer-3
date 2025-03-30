@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlagId } from '../core/TeamHelper'
-import { WithdrewTooltip, SharedBronzeTooltip } from '../core/TooltipHelper'
+import { WithdrewTooltip, SharedBronzeTooltip, DisqualifiedTooltip } from '../core/TooltipHelper'
 
 const StandingsHeader = (props) => {
     const { round } = props
@@ -68,6 +68,9 @@ const StandingsRow = (props) => {
                     <WithdrewTooltip target={`${ranking.id}withrewStandingsTooltip`} anchor="(withdrew)" notes={`${ranking.team.name} withdrew`} />
                 )}
                 {ranking.shared_bronze && <SharedBronzeTooltip target={`${ranking.home_team}sharedBronzeTooltip`} notes={ranking.shared_bronze_notes} />}
+                {ranking.disqualified && (
+                    <DisqualifiedTooltip target={`${ranking.id}disqualifiedTooltip`} anchor="(disqualified)" notes={ranking.disqualified_notes} />
+                )}
             </Col>
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
             <Col className="col-box-7 text-center">{w}</Col>
