@@ -10,11 +10,15 @@ export const calculateKnockoutRankings = (stage, config) => {
                 r.matches.forEach((m) => {
                     if (!teams.find((t) => t.id === m.home_team)) {
                         const homeTeam = config.competition.teams.find((t) => t.id === m.home_team)
-                        teams.push(homeTeam)
+                        if (homeTeam) {
+                            teams.push(homeTeam)
+                        }
                     }
                     if (!teams.find((t) => t.id === m.away_team)) {
                         const awayTeam = config.competition.teams.find((t) => t.id === m.away_team)
-                        teams.push(awayTeam)
+                        if (awayTeam) {
+                            teams.push(awayTeam)
+                        }
                     }
                 })
                 r.teams = teams

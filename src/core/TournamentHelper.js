@@ -156,7 +156,7 @@ export const processStandings = (tournament, config) => {
     }
 
     // Consolation path: MOFT1964
-    if (consolation_rounds.length > 0) {
+    if (config.id === 'MOFT1964' || config.id === 'MOFT1920') {
         const index = rounds.findIndex((r) => r.next_consolation_round)
         rounds.splice(index + 1, 0, consolation_rounds[0], consolation_rounds[1])
         if (consolation_rounds.length === 3) {
@@ -211,7 +211,7 @@ export const processStandings = (tournament, config) => {
         fifthPlaceRound.pools = fifthPlaceRoundStandings
 
         // MOFT1920
-        if (consolation_rounds.length === 3) {
+        if (config.id === 'MOFT1920') {
             rounds[index2 + 2].rankings.forEach((r1, index) => {
                 const rankingNextRound = rounds[index2 + 3].rankings.find((r2) => r2.id === r1.id)
                 if (rankingNextRound) {
@@ -298,7 +298,7 @@ export const processStandings = (tournament, config) => {
 
     const excludedSemiFinal = []
     rounds.forEach((r, index) => {
-        if (r.name !== 'Semi-finals') {
+        if (r.name !== 'Semi-finals' || config.id === 'MOFT1908') {
             excludedSemiFinal.push(r)
         } else {
             const final = rounds[index + 1]
@@ -316,6 +316,9 @@ export const processStandings = (tournament, config) => {
     tournament.standing_rounds = excludedSemiFinal.reverse()
     if (config.id === 'MOFT1920') {
         customAdjustMOFT1920(tournament.standing_rounds)
+    }
+    if (config.id === 'MOFT1908') {
+        customAdjustMOFT1908(tournament.standing_rounds)
     }
     sortPool(tournament, config)
 }
@@ -764,6 +767,16 @@ export const customAdjustMOFT1920 = (standing_rounds) => {
     standing_rounds[2].pools.splice(3, 0, nor)
 
     standing_rounds[2].name = 'Play-offs'
+}
+
+export const customAdjustMOFT1908 = (standing_rounds) => {
+    const swe = standing_rounds[0].pools.find((p) => p.rankings[0].id === 'SWE_U23MNT')
+    swe.rankings[0].mp = 2
+    swe.rankings[0].l = 2
+    swe.rankings[0].gf = 1
+    swe.rankings[0].ga = 14
+    swe.rankings[0].gd = -13
+    standing_rounds[2].pools.splice(1, 1)
 }
 
 export const getPreviousTournament = (tournaments, current_id) => {

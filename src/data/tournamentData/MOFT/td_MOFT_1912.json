@@ -73,10 +73,10 @@
                                 {
                                     "home_team": "NOR_U23MNT",
                                     "away_team": "FRA_U23MNT",
-                                    "home_score": 2,
-                                    "away_score": 0,
                                     "home_awarded": true,
+                                    "away_withdrew": true,
                                     "awarded_notes": "Awarded: France withdrew three days after the draw",
+                                    "match_cancelled": true,
                                     "date": "1912-06-29",
                                     "time": "12:00",
                                     "bracket_order": 6
