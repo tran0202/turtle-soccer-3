@@ -178,14 +178,14 @@
                 },
                 {
                     "name": "Group C",
-                    "teams": [{ "id": "ESP-1977-1981_U23MNT" }, { "id": "GDR_U23MNT" }, { "id": "ALG_U23MNT" }, { "id": "SYR_U23MNT" }],
+                    "teams": [{ "id": "IOC-ESP_U23MNT" }, { "id": "GDR_U23MNT" }, { "id": "ALG_U23MNT" }, { "id": "SYR_U23MNT" }],
                     "matchdays": [
                         {
                             "name": "Matchday 1",
                             "matches": [
                                 {
                                     "home_team": "GDR_U23MNT",
-                                    "away_team": "ESP-1977-1981_U23MNT",
+                                    "away_team": "IOC-ESP_U23MNT",
                                     "home_score": 1,
                                     "away_score": 1,
                                     "date": "1980-07-20",
@@ -219,7 +219,7 @@
                                     "city": "Kiev"
                                 },
                                 {
-                                    "home_team": "ESP-1977-1981_U23MNT",
+                                    "home_team": "IOC-ESP_U23MNT",
                                     "away_team": "SYR_U23MNT",
                                     "home_score": 0,
                                     "away_score": 0,
@@ -234,7 +234,7 @@
                             "name": "Matchday 3",
                             "matches": [
                                 {
-                                    "home_team": "ESP-1977-1981_U23MNT",
+                                    "home_team": "IOC-ESP_U23MNT",
                                     "away_team": "ALG_U23MNT",
                                     "home_score": 1,
                                     "away_score": 1,

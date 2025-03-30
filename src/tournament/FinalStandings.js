@@ -1,15 +1,13 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import { NumericFormat } from 'react-number-format'
-import { isGoalRatioTiebreaker } from '../core/RankingsHelper'
 import { getTeamFlagId } from '../core/TeamHelper'
-import { WithdrewTooltip } from '../core/TooltipHelper'
+import { WithdrewTooltip, SharedBronzeTooltip } from '../core/TooltipHelper'
 
 const StandingsHeader = (props) => {
-    const { round, config } = props
+    const { round } = props
     return (
         <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-center">
-            {round.championship ? (
+            {round.championship || round.championship_round ? (
                 <React.Fragment>
                     <Col className="col-box-5"></Col>
                     <Col className="col-box-95">
@@ -22,8 +20,7 @@ const StandingsHeader = (props) => {
                             <Col className="col-box-7">L</Col>
                             <Col className="col-box-7">GF</Col>
                             <Col className="col-box-7">GA</Col>
-                            {!isGoalRatioTiebreaker(config) && <Col className="col-box-7">+/-</Col>}
-                            {isGoalRatioTiebreaker(config) && <Col className="col-box-7">GR</Col>}
+                            <Col className="col-box-7">+/-</Col>
                             <Col className="col-box-13">Pts</Col>
                         </Row>
                     </Col>
@@ -67,7 +64,10 @@ const StandingsRow = (props) => {
             <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
             <Col className="col-box-27">
                 {ranking.team.name}{' '}
-                {ranking.withdrew && <WithdrewTooltip target={`${ranking.id}withrewTooltip`} anchor="(withdrew)" notes={`${ranking.team.name} withdrew`} />}
+                {ranking.withdrew && (
+                    <WithdrewTooltip target={`${ranking.id}withrewStandingsTooltip`} anchor="(withdrew)" notes={`${ranking.team.name} withdrew`} />
+                )}
+                {ranking.shared_bronze && <SharedBronzeTooltip target={`${ranking.home_team}sharedBronzeTooltip`} notes={ranking.shared_bronze_notes} />}
             </Col>
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
             <Col className="col-box-7 text-center">{w}</Col>
@@ -75,18 +75,10 @@ const StandingsRow = (props) => {
             <Col className="col-box-7 text-center">{l}</Col>
             <Col className="col-box-7 text-center">{gf}</Col>
             <Col className="col-box-7 text-center">{ga}</Col>
-            {!isGoalRatioTiebreaker(config) && (
-                <Col className="col-box-7 text-center">
-                    {gd > 0 ? '+' : ''}
-                    {gd}
-                </Col>
-            )}
-            {isGoalRatioTiebreaker(config) && (
-                <Col className="col-box-7 text-center">
-                    {ranking.gr !== null && <NumericFormat displayType="text" value={ranking.gr} decimalScale={3} fixedDecimalScale />}
-                    {ranking.gr === null && <span>&mdash;</span>}
-                </Col>
-            )}
+            <Col className="col-box-7 text-center">
+                {gd > 0 ? '+' : ''}
+                {gd}
+            </Col>
             <Col className="col-box-13 text-center">{pts}</Col>
         </Row>
     )

@@ -73,7 +73,7 @@ export const accumulateRanking = (ranking, matches, config) => {
     if (!ranking || !matches || !config) return
     matches.forEach((m) => {
         if (!m.match_cancelled && !m.match_not_played && !m.home_awarded_adjust) {
-            if (!m.group_playoff) {
+            if (!m.group_playoff || config.group_playoff_override) {
                 if (ranking.id === m.home_team) {
                     ranking.mp++
                     if (m.home_score > m.away_score) {

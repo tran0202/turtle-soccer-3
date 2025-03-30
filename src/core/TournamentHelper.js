@@ -3,7 +3,7 @@ import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { getTeams, getHostTeamArray } from './TeamHelper'
-import { calculateGroupRankings, calculateKnockoutRankings, sortGroup, isAwayGoalsTiebreaker, isGoalRatioTiebreaker } from './RankingsHelper'
+import { calculateGroupRankings, calculateKnockoutRankings, sortGroup, isAwayGoalsTiebreaker, isGoalRatioTiebreaker, accumulateRanking } from './RankingsHelper'
 import { isHomeWinMatch } from './TeamHelper'
 
 // ----------------------------- Competition ----------------------------------
@@ -168,17 +168,34 @@ export const processStandings = (tournament, config) => {
         if (thirdPlaceMatch) {
             finalRoundStandings[2] = {}
             finalRoundStandings[3] = {}
-            const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
-            const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
-            finalRound.pools.forEach((p) => {
-                if (p.rankings[0].id === third_place) {
-                    p.rankings[0].third_place = true
-                    finalRoundStandings[2] = p
-                }
-                if (p.rankings[0].id === fourth_place) {
-                    finalRoundStandings[3] = p
-                }
-            })
+            if (thirdPlaceMatch.shared_bronze) {
+                finalRound.pools.forEach((p) => {
+                    if (p.rankings[0].id === thirdPlaceMatch.home_team) {
+                        p.rankings[0].third_place = true
+                        p.rankings[0].shared_bronze = true
+                        p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
+                        finalRoundStandings[2] = p
+                    }
+                    if (p.rankings[0].id === thirdPlaceMatch.away_team) {
+                        p.rankings[0].third_place = true
+                        p.rankings[0].shared_bronze = true
+                        p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
+                        finalRoundStandings[3] = p
+                    }
+                })
+            } else {
+                const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
+                const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
+                finalRound.pools.forEach((p) => {
+                    if (p.rankings[0].id === third_place) {
+                        p.rankings[0].third_place = true
+                        finalRoundStandings[2] = p
+                    }
+                    if (p.rankings[0].id === fourth_place) {
+                        finalRoundStandings[3] = p
+                    }
+                })
+            }
         }
         finalRound.pools = finalRoundStandings
     }
@@ -306,8 +323,16 @@ export const collectGroupRankings = (stage, config) => {
     const rankings = []
     stage.groups.forEach((g) => {
         g.rankings.forEach((r) => {
-            const new_r = { ...r }
+            const playoffMatchday = g.matchdays.find((md) => md.name === 'Play-off')
+            const playoff = playoffMatchday && playoffMatchday.matches.find((m) => m.group_playoff)
+            let new_r = { ...r }
             delete new_r.advanced
+            if (playoff) {
+                accumulateRanking(new_r, playoffMatchday.matches, { ...config, group_playoff_override: true })
+            }
+            if (new_r.pts === -1) {
+                new_r.withdrew = true
+            }
             rankings.push(new_r)
         })
     })
