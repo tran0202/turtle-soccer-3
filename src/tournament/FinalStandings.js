@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamFlagId } from '../core/TeamHelper'
-import { WithdrewTooltip, SharedBronzeTooltip, DisqualifiedTooltip } from '../core/TooltipHelper'
+import { WithdrewTooltip, SharedBronzeTooltip, DisqualifiedTooltip, PointDeductionTooltip } from '../core/TooltipHelper'
 
 const StandingsHeader = (props) => {
     const { round } = props
@@ -51,7 +51,7 @@ const RankColumn = (props) => {
 
 const StandingsRow = (props) => {
     const { ranking, config } = props
-    const withdrew = ranking.withdrew || ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
+    const withdrew = ranking.withdrew || ranking.disqualified || ranking.team.withdrew || ranking.team.banned || ranking.team.disqualified
     const w = !withdrew ? ranking.w : <span>&mdash;</span>
     const d = !withdrew ? ranking.d : <span>&mdash;</span>
     const l = !withdrew ? ranking.l : <span>&mdash;</span>
@@ -69,7 +69,7 @@ const StandingsRow = (props) => {
                 )}
                 {ranking.shared_bronze && <SharedBronzeTooltip target={`${ranking.home_team}sharedBronzeTooltip`} notes={ranking.shared_bronze_notes} />}
                 {ranking.disqualified && (
-                    <DisqualifiedTooltip target={`${ranking.id}disqualifiedTooltip`} anchor="(disqualified)" notes={ranking.disqualified_notes} />
+                    <DisqualifiedTooltip target={`${ranking.id}disqualifiedStandingsTooltip`} anchor="(disqualified)" notes={ranking.disqualified_notes} />
                 )}
             </Col>
             <Col className="col-box-7 text-center">{ranking.mp}</Col>
@@ -82,7 +82,12 @@ const StandingsRow = (props) => {
                 {gd > 0 ? '+' : ''}
                 {gd}
             </Col>
-            <Col className="col-box-13 text-center">{pts}</Col>
+            <Col className="col-box-13 text-center">
+                {pts}{' '}
+                {ranking.team.point_deduction && (
+                    <PointDeductionTooltip target={`${ranking.id}pointDeductionTooltip`} anchor="(pd)" notes={ranking.team.point_deduction_notes} />
+                )}
+            </Col>
         </Row>
     )
 }

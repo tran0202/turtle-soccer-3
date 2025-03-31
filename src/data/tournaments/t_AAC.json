@@ -37,6 +37,8 @@
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
         "partial_tiebreakers": ["points", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
         "no_third_place": true,
+        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
+        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints", "lots"],
         "details": {
             "host": { "teams": ["QAT"], "qualification_date": "2021-06-07" },
             "logo_filename": "2023_AFC_Asian_Cup_logo.svg",

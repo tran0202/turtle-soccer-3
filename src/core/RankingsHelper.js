@@ -36,29 +36,66 @@ export const calculateKnockoutRankings = (stage, config) => {
     if (stage.rounds) {
         stage.rounds.forEach((r) => {
             const teams = []
-            r.matches.forEach((m) => {
-                if (!teams.find((t) => t.id === m.home_team)) {
-                    const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
-                    if (homeTeam) {
-                        teams.push(homeTeam)
-                    }
-                }
-                if (!teams.find((t) => t.id === m.away_team)) {
-                    const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
-                    if (awayTeam) {
-                        teams.push(awayTeam)
-                    }
-                }
-            })
-            r.teams = teams
+            if (r.pairs) {
+                r.pairs.forEach((p) => {
+                    const teams2 = []
+                    p.matches.forEach((m) => {
+                        if (!teams2.find((t) => t.id === m.home_team)) {
+                            const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                            if (homeTeam) {
+                                teams2.push(homeTeam)
+                            }
+                        }
+                        if (!teams2.find((t) => t.id === m.away_team)) {
+                            const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                            if (awayTeam) {
+                                teams2.push(awayTeam)
+                            }
+                        }
+                    })
+                    p.teams = teams2
 
-            r.rankings = []
-            r.teams.forEach((t) => {
-                const ranking = getBlankRanking(t)
-                ranking.team = t
-                accumulateRanking(ranking, r.matches, config)
-                r.rankings.push(ranking)
-            })
+                    p.rankings = []
+                    p.teams.forEach((t) => {
+                        const ranking = getBlankRanking(t)
+                        ranking.team = t
+                        accumulateRanking(ranking, p.matches, config)
+                        p.rankings.push(ranking)
+                    })
+                })
+                const rankings = []
+                r.pairs.forEach((p) => {
+                    p.rankings.forEach((r) => {
+                        rankings.push(r)
+                    })
+                })
+                r.rankings = rankings
+            }
+            if (r.matches) {
+                r.matches.forEach((m) => {
+                    if (!teams.find((t) => t.id === m.home_team)) {
+                        const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                        if (homeTeam) {
+                            teams.push(homeTeam)
+                        }
+                    }
+                    if (!teams.find((t) => t.id === m.away_team)) {
+                        const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                        if (awayTeam) {
+                            teams.push(awayTeam)
+                        }
+                    }
+                })
+                r.teams = teams
+
+                r.rankings = []
+                r.teams.forEach((t) => {
+                    const ranking = getBlankRanking(t)
+                    ranking.team = t
+                    accumulateRanking(ranking, r.matches, config)
+                    r.rankings.push(ranking)
+                })
+            }
         })
     }
 }
@@ -242,10 +279,16 @@ export const accumulateRanking = (ranking, matches, config) => {
                 if (m.home_withdrew) {
                     ranking.withdrew = true
                 }
+                if (m.home_disqualified) {
+                    ranking.disqualified = true
+                }
             }
             if (ranking.id === m.away_team) {
                 if (m.away_withdrew) {
                     ranking.withdrew = true
+                }
+                if (m.away_disqualified) {
+                    ranking.disqualified = true
                 }
             }
         }
@@ -336,7 +379,7 @@ export const sortOverallPoints = (group, config) => {
     const pools = group.pools
     for (var i = 0; i < pools.length - 1; i++) {
         for (var j = i + 1; j < pools.length; j++) {
-            if (pools[i].withdrew || pools[i].pts < pools[j].pts) {
+            if (pools[i].withdrew || pools[i].disqualified || pools[i].pts < pools[j].pts) {
                 const temp = pools[i]
                 pools[i] = pools[j]
                 pools[j] = temp
@@ -354,7 +397,7 @@ export const createPointPools = (group, config) => {
     if (!group || !group.rankings || !config) return
     group.pools = []
     group.rankings.forEach((r) => {
-        if (r.withdrew) {
+        if (r.withdrew || r.disqualified) {
             group.pools.push({ withdrew: true, pts: r.pts, rankings: [r] })
         } else {
             const foundPool = group.pools.find((p) => (p.pts === r.pts) & !p.withdrew)

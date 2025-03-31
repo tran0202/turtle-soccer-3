@@ -145,6 +145,10 @@ export const processStandings = (tournament, config) => {
                 const rankingNextRound = rounds[k + 1].rankings.find((r2) => r2.id === r1.id)
                 if (rankingNextRound) {
                     addStandings(rankingNextRound, rounds[k].rankings[index], config)
+                    if (rounds[k].rankings[index].team.point_deduction_notes) {
+                        rankingNextRound.team.point_deduction = rounds[k].rankings[index].team.point_deduction
+                        rankingNextRound.team.point_deduction_notes = rounds[k].rankings[index].team.point_deduction_notes
+                    }
                 } else {
                     remainedRankings.push(rounds[k].rankings[index])
                 }
@@ -238,50 +242,69 @@ export const processStandings = (tournament, config) => {
         })
         finalRound.pools = pools
         const finalRoundStandings = [{}, {}]
-        const finalMatch = finalRound.matches.find((m) => m.final)
-        if (finalMatch) {
-            const champion = isHomeWinMatch(finalMatch) ? finalMatch.home_team : finalMatch.away_team
-            const runner_up = isHomeWinMatch(finalMatch) ? finalMatch.away_team : finalMatch.home_team
-            finalRound.pools.forEach((p) => {
-                if (p.rankings[0].id === champion) {
-                    p.rankings[0].champion = true
-                    finalRoundStandings[0] = p
-                }
-                if (p.rankings[0].id === runner_up) {
-                    p.rankings[0].runner_up = true
-                    finalRoundStandings[1] = p
-                }
-            })
-        }
-        const thirdPlaceMatch = finalRound.matches.find((m) => m.third_place)
-        if (thirdPlaceMatch) {
-            finalRoundStandings[2] = {}
-            finalRoundStandings[3] = {}
-            if (thirdPlaceMatch.shared_bronze) {
+        if (finalRound.matches) {
+            const finalMatch = finalRound.matches.find((m) => m.final)
+            if (finalMatch) {
+                const champion = isHomeWinMatch(finalMatch) ? finalMatch.home_team : finalMatch.away_team
+                const runner_up = isHomeWinMatch(finalMatch) ? finalMatch.away_team : finalMatch.home_team
                 finalRound.pools.forEach((p) => {
-                    if (p.rankings[0].id === thirdPlaceMatch.home_team) {
-                        p.rankings[0].third_place = true
-                        p.rankings[0].shared_bronze = true
-                        p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
-                        finalRoundStandings[2] = p
+                    if (p.rankings[0].id === champion) {
+                        p.rankings[0].champion = true
+                        finalRoundStandings[0] = p
                     }
-                    if (p.rankings[0].id === thirdPlaceMatch.away_team) {
-                        p.rankings[0].third_place = true
-                        p.rankings[0].shared_bronze = true
-                        p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
-                        finalRoundStandings[3] = p
+                    if (p.rankings[0].id === runner_up) {
+                        p.rankings[0].runner_up = true
+                        finalRoundStandings[1] = p
                     }
                 })
-            } else {
-                const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
-                const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
+            }
+            const thirdPlaceMatch = finalRound.matches.find((m) => m.third_place)
+            if (thirdPlaceMatch) {
+                finalRoundStandings[2] = {}
+                finalRoundStandings[3] = {}
+                if (thirdPlaceMatch.shared_bronze) {
+                    finalRound.pools.forEach((p) => {
+                        if (p.rankings[0].id === thirdPlaceMatch.home_team) {
+                            p.rankings[0].third_place = true
+                            p.rankings[0].shared_bronze = true
+                            p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
+                            finalRoundStandings[2] = p
+                        }
+                        if (p.rankings[0].id === thirdPlaceMatch.away_team) {
+                            p.rankings[0].third_place = true
+                            p.rankings[0].shared_bronze = true
+                            p.rankings[0].shared_bronze_notes = thirdPlaceMatch.shared_bronze_notes
+                            finalRoundStandings[3] = p
+                        }
+                    })
+                } else {
+                    const third_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.home_team : thirdPlaceMatch.away_team
+                    const fourth_place = isHomeWinMatch(thirdPlaceMatch) ? thirdPlaceMatch.away_team : thirdPlaceMatch.home_team
+                    finalRound.pools.forEach((p) => {
+                        if (p.rankings[0].id === third_place) {
+                            p.rankings[0].third_place = true
+                            finalRoundStandings[2] = p
+                        }
+                        if (p.rankings[0].id === fourth_place) {
+                            finalRoundStandings[3] = p
+                        }
+                    })
+                }
+            }
+        }
+        if (finalRound.pairs) {
+            const finalPair = finalRound.pairs.find((p) => p.final)
+            if (finalPair) {
+                const champion = isHomeWinPair(finalPair, config) ? finalPair.matches[0].home_team : finalPair.matches[0].away_team
+                const runner_up = isHomeWinPair(finalPair, config) ? finalPair.matches[0].away_team : finalPair.matches[0].home_team
                 finalRound.pools.forEach((p) => {
-                    if (p.rankings[0].id === third_place) {
-                        p.rankings[0].third_place = true
-                        finalRoundStandings[2] = p
+                    if (p.rankings[0].id === champion) {
+                        p.rankings[0].champion = true
+                        finalRoundStandings[0] = p
                     }
-                    if (p.rankings[0].id === fourth_place) {
-                        finalRoundStandings[3] = p
+                    if (p.rankings[0].id === runner_up) {
+                        p.rankings[0].runner_up = true
+                        finalRoundStandings[1] = p
                     }
                 })
             }
@@ -298,7 +321,7 @@ export const processStandings = (tournament, config) => {
 
     const excludedSemiFinal = []
     rounds.forEach((r, index) => {
-        if (r.name !== 'Semi-finals' || config.id === 'MOFT1908') {
+        if (r.name !== 'Semi-finals' || config.no_third_place || config.id === 'MOFT1908') {
             excludedSemiFinal.push(r)
         } else {
             const final = rounds[index + 1]
@@ -553,7 +576,6 @@ export const calculatePairAggregateScore = (set, config) => {
 
 export const isHomeWinPair = (pair, config) => {
     if (!pair || !pair.matches || pair.matches.length === 0 || pair.matches.length > 3 || !config) return
-
     const hasFirstLegOnly = pair.matches.find((m) => m.matchday === 'firstlegonly') !== undefined
     if (hasFirstLegOnly) {
         if (pair.agg_home_score > pair.agg_away_score) {
