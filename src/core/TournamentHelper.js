@@ -24,14 +24,68 @@ export const getCompetition = (competition_id) => {
     const competition = getCompetitions().find((c) => c.id === competition_id)
     if (competition) {
         const tournaments = getTournamentArray().filter((t) => t.competition_id === competition_id)
-        tournaments.forEach((t, index) => {
-            t.index = tournaments.length - index
-        })
-        competition.tournaments = tournaments
         competition.teams = getTeams(competition.team_type_id, competition.all_members)
         competition.nations = NationArray
+        tournaments.forEach((t, index) => {
+            t.index = tournaments.length - index
+            const tournamentData = getTournamentData(t.id)
+            processSoccerTournament(tournamentData, { ...t, competition })
+            t.data = tournamentData
+        })
+        competition.tournaments = tournaments
+        collectAlltimeStandings(competition)
     }
     return competition
+}
+
+export const collectAlltimeStandings = (competition) => {
+    if (!competition || !competition.tournaments) return
+    let alltime_pools = []
+    competition.tournaments.forEach((t) => {
+        t.data.standing_rounds &&
+            t.data.standing_rounds.forEach((sr) => {
+                sr.pools &&
+                    sr.pools.forEach((p) => {
+                        alltime_pools.push(p)
+                    })
+            })
+    })
+    const all_rankings = []
+    alltime_pools.forEach((p) => {
+        const ranking = all_rankings.find((r) => r.id === p.rankings[0].id)
+        if (ranking) {
+            addStandings(ranking, p.rankings[0], {})
+        } else {
+            all_rankings.push(p.rankings[0])
+        }
+    })
+    alltime_pools = []
+    all_rankings.forEach((r, index) => {
+        alltime_pools.push({ pool_rank: index + 1, rankings: [r] })
+    })
+    competition.rankings = all_rankings
+    const standings_config = { tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+    sortGroup(competition, standings_config)
+    let pool_rank = 0
+    competition.pools.forEach((p) => {
+        p.pool_rank = pool_rank + 1
+        p.rankings &&
+            p.rankings.forEach((r) => {
+                pool_rank++
+            })
+        const rankings = p.rankings
+        if (rankings) {
+            for (var k = 0; k < rankings.length - 1; k++) {
+                for (var l = k + 1; l < rankings.length; l++) {
+                    if (rankings[k].team.name > rankings[l].team.name) {
+                        const temp = rankings[k]
+                        rankings[k] = rankings[l]
+                        rankings[l] = temp
+                    }
+                }
+            }
+        }
+    })
 }
 
 // ----------------------------- Tournament ----------------------------------

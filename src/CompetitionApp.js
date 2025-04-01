@@ -1,5 +1,6 @@
-import React from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import React, { useState } from 'react'
+import { Container, Row, Col, TabContent, TabPane, Nav, NavLink } from 'reactstrap'
+import classnames from 'classnames'
 import { getTournamentTitleFont } from './core/Helper'
 import { getTeams, getTeamFlagId, getTeamName } from './core/TeamHelper'
 import { getCompetition } from './core/TournamentHelper'
@@ -197,6 +198,122 @@ const TournamentsTable = (props) => {
     )
 }
 
+const StandingsHeader = () => {
+    return (
+        <Row className="no-gutters ranking-tbl-header team-row padding-tb-md text-center">
+            <Col className="col-box-5"></Col>
+            <Col className="col-box-95">
+                <Row>
+                    <Col className="col-box-7"></Col>
+                    <Col className="col-box-27"></Col>
+                    <Col className="col-box-7">MP</Col>
+                    <Col className="col-box-7">W</Col>
+                    <Col className="col-box-7">D</Col>
+                    <Col className="col-box-7">L</Col>
+                    <Col className="col-box-7">GF</Col>
+                    <Col className="col-box-7">GA</Col>
+                    <Col className="col-box-7">+/-</Col>
+                    <Col className="col-box-13">Pts</Col>
+                </Row>
+            </Col>
+        </Row>
+    )
+}
+
+const StandingsRow = (props) => {
+    const { ranking, config } = props
+    return (
+        <Row className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
+            <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
+            <Col className="col-box-27">{ranking.team.name}</Col>
+            <Col className="col-box-7 text-center">{ranking.mp}</Col>
+            <Col className="col-box-7 text-center">{ranking.w}</Col>
+            <Col className="col-box-7 text-center">{ranking.d}</Col>
+            <Col className="col-box-7 text-center">{ranking.l}</Col>
+            <Col className="col-box-7 text-center">{ranking.gf}</Col>
+            <Col className="col-box-7 text-center">{ranking.ga}</Col>
+            <Col className="col-box-7 text-center">
+                {ranking.gd > 0 ? '+' : ''}
+                {ranking.gd}
+            </Col>
+            <Col className="col-box-13 text-center">{ranking.pts}</Col>
+        </Row>
+    )
+}
+
+const StandingsPools = (props) => {
+    const { round, config } = props
+    return (
+        round.pools &&
+        round.pools.map((p) => {
+            const rankColPadding =
+                p.rankings && p.rankings.length === 1 ? 'rank-col-padding2-1' : p.rankings.length === 2 ? 'rank-col-padding2-2' : 'rank-col-padding2-3'
+            return (
+                <React.Fragment key={p.pool_rank}>
+                    <Row className={`mt-3 no-gutters ranking-tbl box-sm padding-tb-sm`}>
+                        <Col className={`col-box-5 text-center ${rankColPadding}`}>{p.pool_rank}</Col>
+                        <Col className="col-box-95">
+                            {p.rankings.map((r) => {
+                                return <StandingsRow key={r.id} ranking={r} config={config} />
+                            })}
+                        </Col>
+                    </Row>
+                </React.Fragment>
+            )
+        })
+    )
+}
+
+const StandingsTable = (props) => {
+    const { competition, config } = props
+    return (
+        <React.Fragment>
+            <StandingsHeader />
+            <StandingsPools round={competition} config={config} />
+        </React.Fragment>
+    )
+}
+
+const CompetitionTabs = (props) => {
+    const { competition, config } = props
+    const { tournaments } = competition
+    const [activeTab, setActiveTab] = useState('All-time Standings')
+    const toggle = (tab) => {
+        if (activeTab !== tab) setActiveTab(tab)
+    }
+
+    return (
+        <React.Fragment>
+            <Nav tabs className="mt-4 mb-4">
+                <NavLink
+                    className={classnames({ active: activeTab === 'Tournament Results' })}
+                    onClick={() => {
+                        toggle('Tournament Results')
+                    }}
+                >
+                    Tournament Results
+                </NavLink>
+                <NavLink
+                    className={classnames({ active: activeTab === 'All-time Standings' })}
+                    onClick={() => {
+                        toggle('All-time Standings')
+                    }}
+                >
+                    All-time Standings
+                </NavLink>
+            </Nav>
+            <TabContent activeTab={activeTab}>
+                <TabPane tabId="Tournament Results">
+                    <TournamentsTable tournaments={tournaments} config={config} />
+                </TabPane>
+                <TabPane tabId="All-time Standings">
+                    <StandingsTable competition={competition} config={config} />
+                </TabPane>
+            </TabContent>
+        </React.Fragment>
+    )
+}
+
 class CompetitionApp extends React.Component {
     constructor(props) {
         super(props)
@@ -262,14 +379,7 @@ class CompetitionApp extends React.Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <div className="h2-ff1 margin-top-md">Tournament Results</div>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <TournamentsTable tournaments={competition.tournaments} config={competitionConfig} />
-                        </Col>
+                        <CompetitionTabs competition={competition} config={competitionConfig} />
                     </Row>
                 </Container>
             </Page>
