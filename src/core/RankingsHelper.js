@@ -38,36 +38,40 @@ export const calculateKnockoutRankings = (stage, config) => {
             const teams = []
             if (r.pairs) {
                 r.pairs.forEach((p) => {
-                    const teams2 = []
-                    p.matches.forEach((m) => {
-                        if (!teams2.find((t) => t.id === m.home_team)) {
-                            const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
-                            if (homeTeam) {
-                                teams2.push(homeTeam)
+                    if (!p.blank) {
+                        const teams2 = []
+                        p.matches.forEach((m) => {
+                            if (!teams2.find((t) => t.id === m.home_team)) {
+                                const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                                if (homeTeam) {
+                                    teams2.push(homeTeam)
+                                }
                             }
-                        }
-                        if (!teams2.find((t) => t.id === m.away_team)) {
-                            const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
-                            if (awayTeam) {
-                                teams2.push(awayTeam)
+                            if (!teams2.find((t) => t.id === m.away_team)) {
+                                const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                                if (awayTeam) {
+                                    teams2.push(awayTeam)
+                                }
                             }
-                        }
-                    })
-                    p.teams = teams2
+                        })
+                        p.teams = teams2
 
-                    p.rankings = []
-                    p.teams.forEach((t) => {
-                        const ranking = getBlankRanking(t)
-                        ranking.team = t
-                        accumulateRanking(ranking, p.matches, config)
-                        p.rankings.push(ranking)
-                    })
+                        p.rankings = []
+                        p.teams.forEach((t) => {
+                            const ranking = getBlankRanking(t)
+                            ranking.team = t
+                            accumulateRanking(ranking, p.matches, config)
+                            p.rankings.push(ranking)
+                        })
+                    }
                 })
                 const rankings = []
                 r.pairs.forEach((p) => {
-                    p.rankings.forEach((r) => {
-                        rankings.push(r)
-                    })
+                    if (!p.blank) {
+                        p.rankings.forEach((r) => {
+                            rankings.push(r)
+                        })
+                    }
                 })
                 r.rankings = rankings
             }
@@ -98,6 +102,101 @@ export const calculateKnockoutRankings = (stage, config) => {
             }
         })
     }
+}
+
+export const calculatePairRankings = (stage, config) => {
+    if (!stage || !stage.rounds || !config) return
+    stage.rounds.forEach((r) => {
+        if (r.pairs) {
+            r.pairs.forEach((p) => {
+                const teams2 = []
+                p.matches.forEach((m) => {
+                    if (!teams2.find((t) => t.id === m.home_team)) {
+                        const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                        if (homeTeam) {
+                            teams2.push(homeTeam)
+                        }
+                    }
+                    if (!teams2.find((t) => t.id === m.away_team)) {
+                        const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                        if (awayTeam) {
+                            teams2.push(awayTeam)
+                        }
+                    }
+                })
+                p.teams = teams2
+
+                p.rankings = []
+                p.teams.forEach((t) => {
+                    const ranking = getBlankRanking(t)
+                    ranking.team = t
+                    accumulateRanking(ranking, p.matches, config)
+                    p.rankings.push(ranking)
+                })
+            })
+            const rankings = []
+            r.pairs.forEach((p) => {
+                p.rankings.forEach((r) => {
+                    rankings.push(r)
+                })
+            })
+            r.rankings = rankings
+        }
+        if (r.paths) {
+            r.paths.forEach((pa) => {
+                pa.pairs.forEach((p) => {
+                    const teams2 = []
+                    p.matches.forEach((m) => {
+                        if (!teams2.find((t) => t.id === m.home_team)) {
+                            const homeTeam = config.competition.teams.find((t2) => t2.id === m.home_team)
+                            if (homeTeam) {
+                                teams2.push(homeTeam)
+                            }
+                        }
+                        if (!teams2.find((t) => t.id === m.away_team)) {
+                            const awayTeam = config.competition.teams.find((t2) => t2.id === m.away_team)
+                            if (awayTeam) {
+                                teams2.push(awayTeam)
+                            }
+                        }
+                    })
+                    p.teams = teams2
+
+                    p.rankings = []
+                    p.teams.forEach((t) => {
+                        const ranking = getBlankRanking(t)
+                        ranking.team = t
+                        accumulateRanking(ranking, p.matches, config)
+                        p.rankings.push(ranking)
+                    })
+                })
+                const teams3 = []
+                const rankings3 = []
+                pa.pairs.forEach((p) => {
+                    p.teams.forEach((t) => {
+                        teams3.push(t)
+                    })
+                    p.rankings.forEach((r) => {
+                        rankings3.push(r)
+                    })
+                })
+                pa.teams = teams3
+                pa.rankings = rankings3
+            })
+            const teams4 = []
+            const rankings4 = []
+            r.paths.forEach((pa) => {
+                pa.teams.forEach((t) => {
+                    teams4.push(t)
+                })
+                pa.rankings.forEach((r) => {
+                    rankings4.push(r)
+                })
+            })
+            r.teams = teams4
+            r.rankings = rankings4
+        }
+    })
 }
 
 export const calculateGroupRankings = (stage, config) => {

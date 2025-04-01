@@ -3,7 +3,15 @@ import Competitions from '../data/Competitions.json'
 import NationArray from '../data/Nations.json'
 import { getTournamentArray, getTournamentDataArray } from './DataHelper'
 import { getTeams, getHostTeamArray } from './TeamHelper'
-import { calculateGroupRankings, calculateKnockoutRankings, sortGroup, isAwayGoalsTiebreaker, isGoalRatioTiebreaker, accumulateRanking } from './RankingsHelper'
+import {
+    calculateGroupRankings,
+    calculateKnockoutRankings,
+    calculatePairRankings,
+    sortGroup,
+    isAwayGoalsTiebreaker,
+    isGoalRatioTiebreaker,
+    accumulateRanking,
+} from './RankingsHelper'
 import { isHomeWinMatch } from './TeamHelper'
 
 // ----------------------------- Competition ----------------------------------
@@ -150,7 +158,16 @@ export const processStandings = (tournament, config) => {
                         rankingNextRound.team.point_deduction_notes = rounds[k].rankings[index].team.point_deduction_notes
                     }
                 } else {
-                    remainedRankings.push(rounds[k].rankings[index])
+                    if (rounds[k].next_bye_round && rounds[k].next_bye_round === rounds[k + 2].name) {
+                        const rankingNextByeRound = rounds[k + 2].rankings.find((r2) => r2.id === r1.id)
+                        if (rankingNextByeRound) {
+                            addStandings(rankingNextByeRound, rounds[k].rankings[index], config)
+                        } else {
+                            remainedRankings.push(rounds[k].rankings[index])
+                        }
+                    } else {
+                        remainedRankings.push(rounds[k].rankings[index])
+                    }
                 }
             })
         }
@@ -408,6 +425,7 @@ export const processStage = (stage, config) => {
     }
     if (stage.type.includes('pair_')) {
         processPairPaths(stage, config)
+        calculatePairRankings(stage, config)
         //     if (stage.type.includes('_drawpair') || stage.type.includes('_noshowpot')) {
         //         stage.groups = []
         //         createPairs(stage)
