@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { getTeamName, getTeamFlagId } from '../core/TeamHelper'
-import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip, ByeTooltip, AwardedTooltip } from '../core/TooltipHelper'
+import { AwayGoalsTooltip, AetTooltip, PenaltyTooltip, WalkoverTooltip, ByeTooltip, AwardedTooltip, DisqualifiedTooltip } from '../core/TooltipHelper'
 
 const PairHeader = (props) => {
     const { config } = props
@@ -36,6 +36,9 @@ const PairRow = (props) => {
     const match1Cancelled = pair.matches[0].match_cancelled
     const homeWalkover = pair.matches[0].home_walkover
     const walkoverNotes = pair.matches[0].walkover_notes
+    const homeDisqualified = pair.matches[0].home_disqualified
+    const awayDisqualified = pair.matches[0].away_disqualified
+    const disqualifiedNotes = pair.matches[0].disqualified_notes
     const match1Awarded = pair.matches[0].home_awarded || pair.matches[0].away_awarded
     const match1AwardedNotes = pair.matches[0].awarded_notes
 
@@ -64,6 +67,7 @@ const PairRow = (props) => {
                 <Col className={`col-box-25 text-end ${pairHomeHighlight}`}>
                     {getTeamName(homeTeam, config)}{' '}
                     {hasFirstLegOnly && homeBye && <ByeTooltip target={`${homeTeam}byeTooltip`} notes={byeNotes} anchor="(bye)" />}
+                    {homeDisqualified && <DisqualifiedTooltip target={`${homeTeam}disqualifiedTooltip`} content={disqualifiedNotes} anchor="(disqualified)" />}
                 </Col>
 
                 <Col className="col-box-10 text-end">{getTeamFlagId(homeTeam, config)}</Col>
@@ -116,12 +120,13 @@ const PairRow = (props) => {
                     </Col>
                 )}
 
-                <Col className="col-box-10 text-start">
-                    {getTeamFlagId(awayTeam, config)}{' '}
-                    {hasFirstLegOnly && awayBye && <ByeTooltip target={`${awayTeam}byeTooltip`} notes={byeNotes} anchor="(bye)" />}
-                </Col>
+                <Col className="col-box-10 text-start">{getTeamFlagId(awayTeam, config)} </Col>
 
-                <Col className={`col-box-25 text-start ${pairAwayHighlight}`}>{getTeamName(awayTeam, config)}</Col>
+                <Col className={`col-box-25 text-start ${pairAwayHighlight}`}>
+                    {getTeamName(awayTeam, config)}{' '}
+                    {hasFirstLegOnly && awayBye && <ByeTooltip target={`${awayTeam}byeTooltip`} notes={byeNotes} anchor="(bye)" />}
+                    {awayDisqualified && <DisqualifiedTooltip target={`${awayTeam}disqualifiedTooltip`} content={disqualifiedNotes} anchor="(disqualified)" />}
+                </Col>
             </Row>
             {!last && <Row className="border-bottom-gray5 margin-left-sm margin-top-sm" />}
         </React.Fragment>

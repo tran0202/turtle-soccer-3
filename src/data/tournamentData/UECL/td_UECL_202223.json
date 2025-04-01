@@ -4095,7 +4095,8 @@
         {
             "name": "Group Stage",
             "type": "roundrobin_final",
-            "next_round": "Round of 16",
+            "next_round": "Play-offs",
+            "next_bye_round": "Round of 16",
             "advancements": {
                 "positions": [
                     { "pos": 1, "next": "advance" },

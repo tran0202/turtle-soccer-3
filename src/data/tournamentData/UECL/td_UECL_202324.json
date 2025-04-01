@@ -840,7 +840,7 @@
                             ]
                         },
                         {
-                            "name": "1stQlf30",
+                            "name": "1stQlf31",
                             "matches": [
                                 {
                                     "home_team": "GZU",
@@ -907,7 +907,7 @@
                                     "matches": [
                                         {
                                             "home_team": "TRP",
-                                            "away_team": "VAL",
+                                            "away_team": "VLM",
                                             "home_score": 0,
                                             "away_score": 3,
                                             "date": "2023-07-27",
@@ -918,7 +918,7 @@
                                             "matchday": "firstleg"
                                         },
                                         {
-                                            "home_team": "VAL",
+                                            "home_team": "VLM",
                                             "away_team": "TRP",
                                             "home_score": 7,
                                             "away_score": 0,
@@ -4110,7 +4110,8 @@
         {
             "name": "Group Stage",
             "type": "roundrobin_final",
-            "next_round": "Round of 16",
+            "next_round": "Play-offs",
+            "next_bye_round": "Round of 16",
             "advancements": {
                 "positions": [
                     { "pos": 1, "next": "advance" },
