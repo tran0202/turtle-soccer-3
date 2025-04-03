@@ -46,23 +46,42 @@ export const collectAlltimeStandings = (competition) => {
             t.data.standing_rounds.forEach((sr) => {
                 sr.pools &&
                     sr.pools.forEach((p) => {
-                        alltime_pools.push(p)
+                        p.rankings.forEach((r) => {
+                            !p.withdrew && alltime_pools.push({ ...r, rankings: [r], year: t.year })
+                        })
                     })
             })
     })
     const all_rankings = []
     alltime_pools.forEach((p) => {
-        const ranking = all_rankings.find((r) => r.id === p.rankings[0].id)
+        const parent_id = p.rankings[0].team.parent_team_id ? p.rankings[0].team.parent_team_id : p.rankings[0].id
+        const ranking = all_rankings.find((r) => r.id === parent_id)
+        const parent_team = competition.teams.find((t) => t.id === p.rankings[0].team.parent_team_id)
+        const parent_ranking = p.rankings[0].team.parent_team_id
+            ? { ...p.rankings[0], id: p.rankings[0].team.parent_team_id, team: parent_team }
+            : { ...p.rankings[0] }
+        parent_ranking.predecessor_rankings = [{ ...p.rankings[0], year: p.year }]
         if (ranking) {
             addStandings(ranking, p.rankings[0], {})
+            ranking.predecessor_rankings.push({ ...p.rankings[0], year: p.year })
         } else {
-            all_rankings.push(p.rankings[0])
+            all_rankings.push(parent_ranking)
         }
     })
-    alltime_pools = []
-    all_rankings.forEach((r, index) => {
-        alltime_pools.push({ pool_rank: index + 1, rankings: [r] })
+    all_rankings.forEach((r) => {
+        const new_pr = []
+        r.predecessor_rankings.forEach((pr) => {
+            const ranking = new_pr.find((r2) => r2.id === pr.id)
+            if (ranking) {
+                addStandings(ranking, pr, {})
+                ranking.yearFrom = pr.year
+            } else {
+                new_pr.push({ ...pr, yearTo: pr.year })
+            }
+        })
+        r.predecessor_rankings = new_pr
     })
+
     competition.rankings = all_rankings
     const standings_config = { tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
     sortGroup(competition, standings_config)

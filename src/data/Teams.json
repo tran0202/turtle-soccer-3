@@ -335,7 +335,7 @@
     { "id": "SWE_U23MNT", "name": "Sweden", "team_type_id": "U23MNT", "nation_id": "SWE", "parent_team_id": "" },
     { "id": "FIJ_U23MNT", "name": "Fiji", "team_type_id": "U23MNT", "nation_id": "FIJ", "parent_team_id": "" },
     { "id": "HON_U23MNT", "name": "Honduras", "team_type_id": "U23MNT", "nation_id": "HON", "parent_team_id": "" },
-    { "id": "HON-1949-2022_U23MNT", "name": "Honduras", "team_type_id": "U23MNT", "nation_id": "HON-1949-2022", "parent_team_id": "HON" },
+    { "id": "HON-1949-2022_U23MNT", "name": "Honduras", "team_type_id": "U23MNT", "nation_id": "HON-1949-2022", "parent_team_id": "HON_U23MNT" },
     { "id": "MEX_U23MNT", "name": "Mexico", "team_type_id": "U23MNT", "nation_id": "MEX", "parent_team_id": "" },
     { "id": "ALG_U23MNT", "name": "Algeria", "team_type_id": "U23MNT", "nation_id": "ALG", "parent_team_id": "" },
     { "id": "NGA_U23MNT", "name": "Nigeria", "team_type_id": "U23MNT", "nation_id": "NGA", "parent_team_id": "" },

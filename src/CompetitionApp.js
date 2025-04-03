@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, TabContent, TabPane, Nav, NavLink } from 'reactstrap'
+import { Collapse, Container, Row, Col, TabContent, TabPane, Nav, NavLink, Button } from 'reactstrap'
 import classnames from 'classnames'
 import { getTournamentTitleFont } from './core/Helper'
 import { getTeams, getTeamFlagId, getTeamName } from './core/TeamHelper'
@@ -222,22 +222,85 @@ const StandingsHeader = () => {
 
 const StandingsRow = (props) => {
     const { ranking, config } = props
+    const initialStatus = 'Closed'
+    const [collapse, setCollapse] = useState(initialStatus === 'Opened' ? true : false)
+    const [status, setStatus] = useState(initialStatus === 'Opened' ? initialStatus : 'Closed')
+    const onEntering = () => setStatus('Opening...')
+    const onEntered = () => setStatus('Opened')
+    const onExiting = () => setStatus('Closing...')
+    const onExited = () => setStatus('Closed')
+    const toggle = () => setCollapse(!collapse)
+    const showPredecessor =
+        ranking.team.successor &&
+        (ranking.predecessor_rankings.length > 1 || (ranking.predecessor_rankings.length === 1 && ranking.predecessor_rankings[0].id !== ranking.id))
     return (
-        <Row className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
-            <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
-            <Col className="col-box-27">{ranking.team.name}</Col>
-            <Col className="col-box-7 text-center">{ranking.mp}</Col>
-            <Col className="col-box-7 text-center">{ranking.w}</Col>
-            <Col className="col-box-7 text-center">{ranking.d}</Col>
-            <Col className="col-box-7 text-center">{ranking.l}</Col>
-            <Col className="col-box-7 text-center">{ranking.gf}</Col>
-            <Col className="col-box-7 text-center">{ranking.ga}</Col>
-            <Col className="col-box-7 text-center">
-                {ranking.gd > 0 ? '+' : ''}
-                {ranking.gd}
-            </Col>
-            <Col className="col-box-13 text-center">{ranking.pts}</Col>
-        </Row>
+        <React.Fragment>
+            <Row className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
+                <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(ranking.id, config)}</Col>
+                <Col className="col-box-27">{ranking.team.name}</Col>
+                <Col className="col-box-7 text-center">{ranking.mp}</Col>
+                <Col className="col-box-7 text-center">{ranking.w}</Col>
+                <Col className="col-box-7 text-center">{ranking.d}</Col>
+                <Col className="col-box-7 text-center">{ranking.l}</Col>
+                <Col className="col-box-7 text-center">{ranking.gf}</Col>
+                <Col className="col-box-7 text-center">{ranking.ga}</Col>
+                <Col className="col-box-7 text-center">
+                    {ranking.gd > 0 ? '+' : ''}
+                    {ranking.gd}
+                </Col>
+                <Col className="col-box-13 text-center">{ranking.pts}</Col>
+            </Row>
+            {showPredecessor && (
+                <Row className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
+                    <Col>
+                        <Button outline color="primary" onClick={toggle} className="h6-ff3">
+                            {'Predecessors'}
+                            {status === 'Opening...' && <i className="bx bx-dots-vertical-rounded"></i>}
+                            {status === 'Opened' && <i className="bx bx-chevron-up-square"></i>}
+                            {status === 'Closing...' && <i className="bx bx-dots-vertical-rounded"></i>}
+                            {status === 'Closed' && <i className="bx bx-chevron-down-square"></i>}
+                        </Button>
+                    </Col>
+                </Row>
+            )}
+            {showPredecessor && (
+                <Collapse isOpen={collapse} onEntering={onEntering} onEntered={onEntered} onExiting={onExiting} onExited={onExited}>
+                    {ranking.predecessor_rankings.map((pr) => {
+                        return (
+                            <Row key={pr.id} className={`no-gutters ranking-tbl standing-row no-margin-bottom`}>
+                                <Col className="col-box-7 col-box-no-padding-lr text-end">{getTeamFlagId(pr.id, config)}</Col>
+                                <Col className="col-box-27">
+                                    {pr.team.name}{' '}
+                                    <span className="successor-subscript">
+                                        (
+                                        {pr.yearFrom ? (
+                                            <React.Fragment>
+                                                {pr.yearFrom}
+                                                {' - '}
+                                            </React.Fragment>
+                                        ) : (
+                                            ''
+                                        )}
+                                        {pr.yearTo})
+                                    </span>
+                                </Col>
+                                <Col className="col-box-7 text-center">{pr.mp}</Col>
+                                <Col className="col-box-7 text-center">{pr.w}</Col>
+                                <Col className="col-box-7 text-center">{pr.d}</Col>
+                                <Col className="col-box-7 text-center">{pr.l}</Col>
+                                <Col className="col-box-7 text-center">{pr.gf}</Col>
+                                <Col className="col-box-7 text-center">{pr.ga}</Col>
+                                <Col className="col-box-7 text-center">
+                                    {pr.gd > 0 ? '+' : ''}
+                                    {pr.gd}
+                                </Col>
+                                <Col className="col-box-13 text-center">{pr.pts}</Col>
+                            </Row>
+                        )
+                    })}
+                </Collapse>
+            )}
+        </React.Fragment>
     )
 }
 
@@ -247,7 +310,23 @@ const StandingsPools = (props) => {
         round.pools &&
         round.pools.map((p) => {
             const rankColPadding =
-                p.rankings && p.rankings.length === 1 ? 'rank-col-padding2-1' : p.rankings.length === 2 ? 'rank-col-padding2-2' : 'rank-col-padding2-3'
+                p.rankings && p.rankings.length === 1
+                    ? 'rank-col-padding2-1'
+                    : p.rankings.length === 2
+                    ? 'rank-col-padding2-2'
+                    : p.rankings.length === 3
+                    ? 'rank-col-padding2-3'
+                    : p.rankings.length === 4
+                    ? 'rank-col-padding2-4'
+                    : p.rankings.length === 5
+                    ? 'rank-col-padding2-5'
+                    : p.rankings.length === 6
+                    ? 'rank-col-padding2-6'
+                    : p.rankings.length === 7
+                    ? 'rank-col-padding2-7'
+                    : p.rankings.length === 8
+                    ? 'rank-col-padding2-8'
+                    : 'rank-col-padding2-9'
             return (
                 <React.Fragment key={p.pool_rank}>
                     <Row className={`mt-3 no-gutters ranking-tbl box-sm padding-tb-sm`}>
@@ -277,7 +356,7 @@ const StandingsTable = (props) => {
 const CompetitionTabs = (props) => {
     const { competition, config } = props
     const { tournaments } = competition
-    const [activeTab, setActiveTab] = useState('All-time Standings')
+    const [activeTab, setActiveTab] = useState('Tournament Results')
     const toggle = (tab) => {
         if (activeTab !== tab) setActiveTab(tab)
     }
