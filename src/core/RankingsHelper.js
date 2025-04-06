@@ -204,21 +204,36 @@ export const calculateGroupRankings = (stage, config) => {
     stage.groups.forEach((g) => {
         // Collect all matches from matchdays
         const matches = []
+        // Exclude the matches involve the excluded team
+        const final_standing_matches = []
+        const team_excluded = g.final_standings_excluded
         g.matchdays &&
             g.matchdays.forEach((md) => {
                 md.matches.forEach((m) => {
                     matches.push(m)
+                    if (team_excluded && m.home_team !== team_excluded && m.away_team !== team_excluded) {
+                        final_standing_matches.push(m)
+                    }
                 })
             })
 
         // Collect all rankings
         g.rankings = []
+        g.final_standings_rankings = []
         g.teams &&
             g.teams.forEach((t) => {
-                const ranking = getBlankRanking(t)
+                let ranking = getBlankRanking(t)
                 ranking.team = t
                 accumulateRanking(ranking, matches, config)
                 g.rankings.push(ranking)
+                if (team_excluded && t.id !== team_excluded) {
+                    ranking = getBlankRanking(t)
+                    ranking.team = t
+                    accumulateRanking(ranking, final_standing_matches, config)
+                    g.final_standings_rankings.push(ranking)
+                } else {
+                    g.final_standings_rankings.push(ranking)
+                }
             })
 
         sortGroup(g, config)

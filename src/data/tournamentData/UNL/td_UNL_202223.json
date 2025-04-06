@@ -741,6 +741,7 @@
                         {
                             "name": "Group B1",
                             "teams": [{ "id": "ARM" }, { "id": "IRL" }, { "id": "SCO" }, { "id": "UKR" }],
+                            "final_standings_excluded": "ARM",
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -1060,6 +1061,7 @@
                         {
                             "name": "Group B3",
                             "teams": [{ "id": "FIN" }, { "id": "BIH" }, { "id": "ROU" }, { "id": "MNE" }],
+                            "final_standings_excluded": "ROU",
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -1216,6 +1218,7 @@
                         {
                             "name": "Group B4",
                             "teams": [{ "id": "NOR" }, { "id": "SRB" }, { "id": "SVN" }, { "id": "SWE" }],
+                            "final_standings_excluded": "SWE",
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
@@ -2076,7 +2079,7 @@
                         {
                             "name": "Group D1",
                             "teams": [{ "id": "LIE" }, { "id": "AND" }, { "id": "MDA" }, { "id": "LVA" }],
-                            "final_standings_excluded": "AND",
+                            "final_standings_excluded": "LIE",
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",

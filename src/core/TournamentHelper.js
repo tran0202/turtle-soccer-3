@@ -190,11 +190,30 @@ export const processStages = (tournament, config) => {
 
 export const processStandings = (tournament, config) => {
     if (!tournament || !tournament.stages || !config) return
-    const rounds = []
+    let rounds = []
     const consolation_rounds = []
     tournament.stages.forEach((s) => {
         if (s.type === 'roundrobin_final') {
-            rounds.push(s)
+            if (config.competition_id === 'UNL') {
+                const position_pools = []
+                s.groups.forEach((g) => {
+                    g.rankings.forEach((r, index) => {
+                        const final_r = g.final_standings_excluded ? g.final_standings_rankings.find((r2) => r2.id === r.id) : r
+                        const ppool_name = s.name.includes('League') ? s.name + ' - Pos ' + (index + 1) : s.name
+                        const ppool = position_pools.find((pp) => pp.pos === index + 1)
+                        if (ppool) {
+                            ppool.rankings.push(final_r)
+                        } else {
+                            position_pools.push({ pos: index + 1, name: ppool_name, rankings: [final_r] })
+                        }
+                    })
+                })
+                position_pools.forEach((pp) => {
+                    rounds.push(pp)
+                })
+            } else {
+                rounds.push(s)
+            }
         } else if (s.type === 'knockout_') {
             s.paths &&
                 s.paths.forEach((p) => {
@@ -219,34 +238,52 @@ export const processStandings = (tournament, config) => {
         }
     })
 
-    for (var k = 0; k < rounds.length - 1; k++) {
-        const remainedRankings = []
-        if (rounds[k].next_round === rounds[k + 1].name) {
-            rounds[k].rankings.forEach((r1, index) => {
-                const rankingNextRound = rounds[k + 1].rankings.find((r2) => r2.id === r1.id)
-                if (rankingNextRound) {
-                    addStandings(rankingNextRound, rounds[k].rankings[index], config)
-                    if (rounds[k].rankings[index].team.point_deduction_notes) {
-                        rankingNextRound.team.point_deduction = rounds[k].rankings[index].team.point_deduction
-                        rankingNextRound.team.point_deduction_notes = rounds[k].rankings[index].team.point_deduction_notes
-                    }
-                } else {
-                    if (rounds[k].next_bye_round && rounds[k].next_bye_round === rounds[k + 2].name) {
-                        const rankingNextByeRound = rounds[k + 2].rankings.find((r2) => r2.id === r1.id)
-                        if (rankingNextByeRound) {
-                            addStandings(rankingNextByeRound, rounds[k].rankings[index], config)
+    if (config.competition_id !== 'UNL') {
+        for (var k = 0; k < rounds.length - 1; k++) {
+            const remainedRankings = []
+            if (rounds[k].next_round === rounds[k + 1].name) {
+                rounds[k].rankings.forEach((r1, index) => {
+                    const rankingNextRound = rounds[k + 1].rankings.find((r2) => r2.id === r1.id)
+                    if (rankingNextRound) {
+                        addStandings(rankingNextRound, rounds[k].rankings[index], config)
+                        if (rounds[k].rankings[index].team.point_deduction_notes) {
+                            rankingNextRound.team.point_deduction = rounds[k].rankings[index].team.point_deduction
+                            rankingNextRound.team.point_deduction_notes = rounds[k].rankings[index].team.point_deduction_notes
+                        }
+                    } else {
+                        if (rounds[k].next_bye_round && rounds[k].next_bye_round === rounds[k + 2].name) {
+                            const rankingNextByeRound = rounds[k + 2].rankings.find((r2) => r2.id === r1.id)
+                            if (rankingNextByeRound) {
+                                addStandings(rankingNextByeRound, rounds[k].rankings[index], config)
+                            } else {
+                                remainedRankings.push(rounds[k].rankings[index])
+                            }
                         } else {
                             remainedRankings.push(rounds[k].rankings[index])
                         }
-                    } else {
-                        remainedRankings.push(rounds[k].rankings[index])
                     }
-                }
-            })
+                })
+            }
+            rounds[k].rankings = remainedRankings
+            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+            sortGroup(rounds[k], standings_config)
         }
-        rounds[k].rankings = remainedRankings
-        const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
-        sortGroup(rounds[k], standings_config)
+    } else {
+        for (var kk = 0; kk < rounds.length; kk++) {
+            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+            sortGroup(rounds[kk], standings_config)
+        }
+        const new_rounds = []
+        rounds.forEach((r) => {
+            if (!r.final) {
+                new_rounds.push(r)
+            } else {
+                r.rankings = rounds[0].rankings
+                new_rounds.unshift(r)
+            }
+        })
+        new_rounds.splice(1, 1)
+        rounds = new_rounds
     }
 
     // Consolation path: MOFT1964
@@ -324,7 +361,7 @@ export const processStandings = (tournament, config) => {
     }
 
     // Final round
-    const finalRound = rounds[rounds.length - 1]
+    const finalRound = config.competition_id !== 'UNL' ? rounds[rounds.length - 1] : rounds[0]
     if (finalRound.championship) {
         const pools = []
         finalRound.rankings.forEach((r) => {
@@ -411,11 +448,24 @@ export const processStandings = (tournament, config) => {
 
     const excludedSemiFinal = []
     rounds.forEach((r, index) => {
-        if (r.name !== 'Semi-finals' || config.no_third_place || config.id === 'MOFT1908') {
+        if ((r.name !== 'Semi-finals' && r.name !== 'Relegation play-outs') || config.no_third_place || config.id === 'MOFT1908') {
             excludedSemiFinal.push(r)
+        } else if (r.name === 'Relegation play-outs') {
         } else {
             const final = rounds[index + 1]
             if (final.name === 'Final') {
+                if (config.competition_id === 'UNL') {
+                    let pools = []
+                    r.rankings.forEach((r) => {
+                        pools.push({ rankings: [r] })
+                    })
+                    r.pools = pools
+                    pools = []
+                    final.rankings.forEach((r) => {
+                        pools.push({ rankings: [r] })
+                    })
+                    final.pools = pools
+                }
                 r.pools.forEach((p, index) => {
                     if (index === 0) {
                         p.rankings[0].third_place = true
@@ -426,7 +476,7 @@ export const processStandings = (tournament, config) => {
         }
     })
 
-    tournament.standing_rounds = excludedSemiFinal.reverse()
+    tournament.standing_rounds = config.competition_id === 'UNL' ? excludedSemiFinal : excludedSemiFinal.reverse()
     if (config.id === 'MOFT1920') {
         customAdjustMOFT1920(tournament.standing_rounds)
     }

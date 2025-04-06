@@ -492,13 +492,13 @@
                     "groups": [
                         {
                             "name": "Group B1",
-                            "teams": [{ "id": "CZE" }, { "id": "UKR" }, { "id": "SVK" }],
+                            "teams": [{ "id": "CZE-1993-2022" }, { "id": "UKR" }, { "id": "SVK" }],
                             "matchdays": [
                                 {
                                     "name": "Matchday 1",
                                     "matches": [
                                         {
-                                            "home_team": "CZE",
+                                            "home_team": "CZE-1993-2022",
                                             "away_team": "UKR",
                                             "home_score": 1,
                                             "away_score": 2,
@@ -529,7 +529,7 @@
                                     "matches": [
                                         {
                                             "home_team": "SVK",
-                                            "away_team": "CZE",
+                                            "away_team": "CZE-1993-2022",
                                             "home_score": 1,
                                             "away_score": 2,
                                             "date": "2018-10-13",
@@ -544,7 +544,7 @@
                                     "matches": [
                                         {
                                             "home_team": "UKR",
-                                            "away_team": "CZE",
+                                            "away_team": "CZE-1993-2022",
                                             "home_score": 1,
                                             "away_score": 0,
                                             "date": "2018-10-16",
@@ -573,7 +573,7 @@
                                     "name": "Matchday 6",
                                     "matches": [
                                         {
-                                            "home_team": "CZE",
+                                            "home_team": "CZE-1993-2022",
                                             "away_team": "SVK",
                                             "home_score": 1,
                                             "away_score": 0,
