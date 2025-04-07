@@ -303,8 +303,8 @@
         "competition_id": "AFCON",
         "points_for_win": 3,
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
-        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
-        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
+        "knockout_standing_tiebreakers": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
+        "group_standing_tiebreakers": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
         "details": {
             "host": { "teams": ["RSA"], "qualification_date": "2011-09-28" },
             "logo_filename": "2013_Africa_Cup_of_Nations.png",
@@ -359,8 +359,6 @@
         "competition_id": "AFCON",
         "points_for_win": 3,
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
-        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
-        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
         "details": {
             "host": { "teams": ["GAB", "EQG"], "qualification_date": "2007-07-29" },
             "logo_filename": "2012_Africa_Cup_of_Nations_logo.png",
@@ -419,8 +417,6 @@
         "competition_id": "AFCON",
         "points_for_win": 3,
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "fairplaypoints", "lots"],
-        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
-        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
         "details": {
             "host": { "teams": ["ANG"], "qualification_date": "2006-09-04" },
             "logo_filename": "2010_Africa_Cup_of_Nations_logo.svg",
@@ -472,8 +468,6 @@
         "competition_id": "AFCON",
         "points_for_win": 3,
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
-        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
-        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
         "details": {
             "host": { "teams": ["GHA"], "qualification_date": "2004-07-08" },
             "logo_filename": "2008_Africa_Cup_of_Nations_logo.svg",
@@ -527,8 +521,6 @@
         "competition_id": "AFCON",
         "points_for_win": 3,
         "tiebreakers": ["points", "h2hpoints", "h2hgoaldifference", "h2hgoalsfor", "goaldifference", "goalsfor", "lots"],
-        "knockout_standing_criteria": ["roundgoaldifference", "roundgoalsfor", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
-        "group_standing_criteria": ["positions", "points", "goaldifference", "goalsfor", "disciplinarypoints"],
         "details": {
             "host": { "teams": ["EGY"], "qualification_date": "2002-10-24" },
             "logo_filename": "2006_Africa_Cup_of_Nations_logo.svg",

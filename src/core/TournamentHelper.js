@@ -8,6 +8,9 @@ import {
     calculateKnockoutRankings,
     calculatePairRankings,
     sortGroup,
+    sortGroup2,
+    sortPositions,
+    isPositionsTiebreaker,
     isAwayGoalsTiebreaker,
     isGoalRatioTiebreaker,
     accumulateRanking,
@@ -219,21 +222,21 @@ export const processStandings = (tournament, config) => {
                 s.paths.forEach((p) => {
                     if (p.name === 'Medal Path' || p.name === 'Gold Medal Path') {
                         p.rounds.forEach((r) => {
-                            rounds.push(r)
+                            rounds.push({ ...r, type: s.type })
                         })
                     } else if (p.name === 'Consolation Path' || p.name === 'Silver and Bronze Medal Path') {
                         p.rounds.forEach((r) => {
-                            consolation_rounds.push(r)
+                            consolation_rounds.push({ ...r, type: s.type })
                         })
                     }
                 })
             s.rounds &&
                 s.rounds.forEach((r) => {
-                    rounds.push(r)
+                    rounds.push({ ...r, type: s.type })
                 })
         } else if (s.type === 'pair_') {
             s.rounds.forEach((r) => {
-                rounds.push(r)
+                rounds.push({ ...r, type: s.type })
             })
         }
     })
@@ -242,6 +245,13 @@ export const processStandings = (tournament, config) => {
         for (var k = 0; k < rounds.length - 1; k++) {
             const remainedRankings = []
             if (rounds[k].next_round === rounds[k + 1].name) {
+                if (rounds[k + 1].type === 'knockout_' && config.knockout_standing_tiebreakers) {
+                    rounds[k + 1].rankings.forEach((r) => {
+                        r.round_gd = r.gd
+                        r.round_gf = r.gf
+                        r.round_pts = r.pts
+                    })
+                }
                 rounds[k].rankings.forEach((r1, index) => {
                     const rankingNextRound = rounds[k + 1].rankings.find((r2) => r2.id === r1.id)
                     if (rankingNextRound) {
@@ -265,12 +275,26 @@ export const processStandings = (tournament, config) => {
                 })
             }
             rounds[k].rankings = remainedRankings
-            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
-            sortGroup(rounds[k], standings_config)
+            let standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+            // AAC2023
+            if (rounds[k].type === 'roundrobin_final' && config.group_standing_tiebreakers) {
+                standings_config = { ...config, tiebreakers: config.group_standing_tiebreakers }
+                if (isPositionsTiebreaker(standings_config)) {
+                    sortPositions(rounds[k], standings_config)
+                } else {
+                    sortGroup(rounds[k], standings_config)
+                }
+                // AAC2023
+            } else if (rounds[k].type === 'knockout_' && config.knockout_standing_tiebreakers) {
+                standings_config = { ...config, tiebreakers: config.knockout_standing_tiebreakers }
+                sortGroup2(rounds[k], standings_config)
+            } else {
+                sortGroup(rounds[k], standings_config)
+            }
         }
     } else {
         for (var kk = 0; kk < rounds.length; kk++) {
-            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor'] }
             sortGroup(rounds[kk], standings_config)
         }
         const new_rounds = []

@@ -100,6 +100,15 @@ export const calculateKnockoutRankings = (stage, config) => {
                     r.rankings.push(ranking)
                 })
             }
+            let standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor'] }
+            sortGroup(r, standings_config)
+            const rankings = []
+            r.pools.forEach((p) => {
+                p.rankings.forEach((r) => {
+                    rankings.push(r)
+                })
+            })
+            r.rankings = rankings
         })
     }
 }
@@ -426,6 +435,165 @@ export const accumulateRanking = (ranking, matches, config) => {
     }
 }
 
+export const sortGroup2 = (group, config) => {
+    if (!group || !config || !config.tiebreakers) return
+    config.tiebreakers.forEach((tb) => {
+        switch (tb) {
+            case 'roundgoaldifference':
+                sortRoundGoalDifference(group, config)
+                break
+            case 'roundgoalsfor':
+                sortRoundGoalsFor(group, config)
+                break
+            case 'points':
+                sortOverallPoints2(group, config)
+                break
+            case 'goaldifference':
+                sortOverallGoalDifference(group, config)
+                break
+            // case 'goalsfor':
+            //     sortOverallGoalsFor(group, config)
+            //     break
+            // case 'fairplaypoints':
+            // case 'disciplinarypoints':
+            //     sortFairPlayPoints(group, config)
+            //     break
+            // case 'lots':
+            //     drawLots(group, config)
+            //     break
+            default:
+        }
+    })
+}
+
+export const sortRoundGoalDifference = (group, config) => {
+    if (!group || !config) return
+
+    createRoundGoalDifferencePools(group, config)
+    addSortPath(group, 'roundgoaldifference')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length - 1; i++) {
+        for (var j = i + 1; j < pools.length; j++) {
+            if (pools[i].round_gd < pools[j].round_gd) {
+                const temp = pools[i]
+                pools[i] = pools[j]
+                pools[j] = temp
+            }
+        }
+    }
+    group.pools.forEach((p) => {
+        if (p.rankings && p.rankings.length === 1) {
+            p.sorted = true
+        }
+    })
+}
+
+export const createRoundGoalDifferencePools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.pools = []
+    group.rankings.forEach((r) => {
+        const foundPool = group.pools.find((p) => p.round_gd === r.round_gd)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            group.pools.push({ round_gd: r.round_gd, rankings: [r] })
+        }
+    })
+}
+
+export const sortRoundGoalsFor = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    addSortPath(group, 'roundgoalsfor')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+
+        if (rankings.length >= 2) {
+            createRoundGoalsForSubpools(p, config)
+
+            const subpools = p.subpools
+            for (var k = 0; k < subpools.length - 1; k++) {
+                for (var l = k + 1; l < subpools.length; l++) {
+                    if (subpools[k].round_gf < subpools[l].round_gf) {
+                        const temp = subpools[k]
+                        subpools[k] = subpools[l]
+                        subpools[l] = temp
+                    }
+                }
+            }
+            p.subpools.forEach((sp) => {
+                if (sp.rankings && sp.rankings.length === 1) {
+                    sp.sorted = true
+                }
+            })
+        }
+    }
+    flattenSubpools(group, config)
+}
+
+export const createRoundGoalsForSubpools = (pool, config) => {
+    if (!pool || !pool.rankings || !config) return
+    pool.subpools = []
+    pool.rankings.forEach((r) => {
+        const foundPool = pool.subpools.find((p) => p.round_gf === r.round_gf)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            pool.subpools.push({ round_gd: r.round_gd, round_gf: r.round_gf, rankings: [r] })
+        }
+    })
+}
+
+export const sortOverallPoints2 = (group, config) => {
+    if (!group || !group.pools || !config) return
+    if (isDoneSorting(group, config)) return
+    addSortPath(group, 'points')
+
+    const pools = group.pools
+    for (var i = 0; i < pools.length; i++) {
+        const p = pools[i]
+        const rankings = p.rankings
+
+        if (rankings.length >= 2) {
+            createPointSubpools(p, config)
+
+            const subpools = p.subpools
+            for (var k = 0; k < subpools.length - 1; k++) {
+                for (var l = k + 1; l < subpools.length; l++) {
+                    if (subpools[k].pts < subpools[l].pts) {
+                        const temp = subpools[k]
+                        subpools[k] = subpools[l]
+                        subpools[l] = temp
+                    }
+                }
+            }
+            p.subpools.forEach((sp) => {
+                if (sp.rankings && sp.rankings.length === 1) {
+                    sp.sorted = true
+                }
+            })
+        }
+    }
+    flattenSubpools(group, config)
+}
+
+export const createPointSubpools = (pool, config) => {
+    if (!pool || !pool.rankings || !config) return
+    pool.subpools = []
+    pool.rankings.forEach((r) => {
+        const foundPool = pool.subpools.find((p) => p.pts === r.pts)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            pool.subpools.push({ round_gd: r.round_gd, round_gf: r.round_gf, pts: r.pts, rankings: [r] })
+        }
+    })
+}
+
 export const sortGroup = (group, config) => {
     if (!group || !config || !config.tiebreakers) return
     config.tiebreakers.forEach((tb) => {
@@ -480,6 +648,35 @@ export const sortGroup = (group, config) => {
                 sortTieLastMatch(group, config)
                 break
             default:
+        }
+    })
+}
+
+export const sortPositions = (group, config) => {
+    if (!group || !group.rankings || !config) return
+
+    createRankSubpools(group, config)
+    addSortPath(group, 'positions')
+
+    group.pools = []
+    group.subpools.forEach((sp) => {
+        sortGroup(sp, config)
+        sp.pools &&
+            sp.pools.forEach((p) => {
+                group.pools.push(p)
+            })
+    })
+}
+
+export const createRankSubpools = (group, config) => {
+    if (!group || !group.rankings || !config) return
+    group.subpools = []
+    group.rankings.forEach((r) => {
+        const foundPool = group.subpools.find((p) => p.rank === r.rank)
+        if (foundPool) {
+            foundPool.rankings.push(r)
+        } else {
+            group.subpools.push({ rank: r.rank, rankings: [r] })
         }
     })
 }
@@ -1985,6 +2182,12 @@ export const collectH2HMatches = (group) => {
 export const getPartialAdvancementRankings = (stage) => {
     if (!stage || !stage.advancements || !stage.advancements.positions) return
     return stage.advancements.positions.filter((a) => a.count)
+}
+
+export const isPositionsTiebreaker = (config) => {
+    const { tiebreakers } = config
+    if (!tiebreakers) return false
+    return tiebreakers.find((tb) => tb === 'positions') != null
 }
 
 export const isPointsTiebreaker = (config) => {
