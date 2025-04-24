@@ -17,6 +17,8 @@ import {
 } from './RankingsHelper'
 import { isHomeWinMatch } from './TeamHelper'
 
+const standings_tiebreakers = ['points', 'goaldifference', 'goalsfor', 'penalties']
+
 // ----------------------------- Competition ----------------------------------
 
 export const getCompetitions = () => {
@@ -86,7 +88,7 @@ export const collectAlltimeStandings = (competition) => {
     })
 
     competition.rankings = all_rankings
-    const standings_config = { tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+    const standings_config = { tiebreakers: standings_tiebreakers }
     sortGroup(competition, standings_config)
     let pool_rank = 0
     competition.pools.forEach((p) => {
@@ -193,11 +195,22 @@ export const processStages = (tournament, config) => {
 
 export const processStandings = (tournament, config) => {
     if (!tournament || !tournament.stages || !config) return
-    let rounds = []
+
+    collectStandingRounds(tournament, config)
+    processStandingRounds(tournament, config)
+    processConsolationRounds(tournament, config)
+    processFinalRounds(tournament, config)
+    finalizeStandingRounds(tournament, config)
+}
+
+export const collectStandingRounds = (tournament, config) => {
+    if (!tournament || !tournament.stages || !config) return
+    const rounds = []
     const consolation_rounds = []
     tournament.stages.forEach((s) => {
         if (s.type === 'roundrobin_final') {
-            if (config.competition_id === 'UNL') {
+            // UNL
+            if (config.position_league_rankings) {
                 const position_pools = []
                 s.groups.forEach((g) => {
                     g.rankings.forEach((r, index) => {
@@ -240,8 +253,34 @@ export const processStandings = (tournament, config) => {
             })
         }
     })
+    tournament.standing_rounds = rounds
+    if (consolation_rounds.length > 0) {
+        tournament.consolation_rounds = consolation_rounds
+    }
+}
 
-    if (config.competition_id !== 'UNL') {
+export const processStandingRounds = (tournament, config) => {
+    if (!tournament || !tournament.standing_rounds || !config) return
+
+    let rounds = tournament.standing_rounds
+    // UNL
+    if (config.position_league_rankings) {
+        for (var kk = 0; kk < rounds.length; kk++) {
+            const standings_config = { ...config, tiebreakers: standings_tiebreakers }
+            sortGroup(rounds[kk], standings_config)
+        }
+        const new_rounds = []
+        rounds.forEach((r) => {
+            if (!r.final) {
+                new_rounds.push(r)
+            } else {
+                r.rankings = rounds[0].rankings
+                new_rounds.unshift(r)
+            }
+        })
+        new_rounds.splice(1, 1)
+        rounds = new_rounds
+    } else {
         for (var k = 0; k < rounds.length - 1; k++) {
             const remainedRankings = []
             if (rounds[k].next_round === rounds[k + 1].name) {
@@ -275,8 +314,10 @@ export const processStandings = (tournament, config) => {
                 })
             }
             rounds[k].rankings = remainedRankings
-            let standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+
+            let standings_config = { ...config, tiebreakers: standings_tiebreakers }
             // AAC2023
+            // AFCON2013
             if (rounds[k].type === 'roundrobin_final' && config.group_standing_tiebreakers) {
                 standings_config = { ...config, tiebreakers: config.group_standing_tiebreakers }
                 if (isPositionsTiebreaker(standings_config)) {
@@ -285,6 +326,7 @@ export const processStandings = (tournament, config) => {
                     sortGroup(rounds[k], standings_config)
                 }
                 // AAC2023
+                // AFCON2013
             } else if (rounds[k].type === 'knockout_' && config.knockout_standing_tiebreakers) {
                 standings_config = { ...config, tiebreakers: config.knockout_standing_tiebreakers }
                 sortGroup2(rounds[k], standings_config)
@@ -292,24 +334,15 @@ export const processStandings = (tournament, config) => {
                 sortGroup(rounds[k], standings_config)
             }
         }
-    } else {
-        for (var kk = 0; kk < rounds.length; kk++) {
-            const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor'] }
-            sortGroup(rounds[kk], standings_config)
-        }
-        const new_rounds = []
-        rounds.forEach((r) => {
-            if (!r.final) {
-                new_rounds.push(r)
-            } else {
-                r.rankings = rounds[0].rankings
-                new_rounds.unshift(r)
-            }
-        })
-        new_rounds.splice(1, 1)
-        rounds = new_rounds
     }
+    tournament.standing_rounds = rounds
+}
 
+export const processConsolationRounds = (tournament, config) => {
+    if (!tournament || !tournament.standing_rounds || !tournament.consolation_rounds || !config) return
+
+    let rounds = tournament.standing_rounds
+    const consolation_rounds = tournament.consolation_rounds
     // Consolation path: MOFT1964
     if (config.id === 'MOFT1964' || config.id === 'MOFT1920') {
         const index = rounds.findIndex((r) => r.next_consolation_round)
@@ -329,7 +362,7 @@ export const processStandings = (tournament, config) => {
             }
         })
         rounds[index2].rankings = remainedRankings
-        const standings_config = { ...config, tiebreakers: ['points', 'goaldifference', 'goalsfor', 'penalties'] }
+        const standings_config = { ...config, tiebreakers: standings_tiebreakers }
         sortGroup(rounds[index2], standings_config)
 
         rounds[index2 + 1].rankings.forEach((r1, index) => {
@@ -383,9 +416,15 @@ export const processStandings = (tournament, config) => {
             addStandings(rounds[5].pools[0].rankings[0], rounds[4].pools[1].rankings[0], config)
         }
     }
+    tournament.standing_rounds = rounds
+}
 
+export const processFinalRounds = (tournament, config) => {
+    if (!tournament || !tournament.standing_rounds || !config) return
+
+    const rounds = tournament.standing_rounds
     // Final round
-    const finalRound = config.competition_id !== 'UNL' ? rounds[rounds.length - 1] : rounds[0]
+    const finalRound = config.position_league_rankings ? rounds[0] : rounds[rounds.length - 1]
     if (finalRound.championship) {
         const pools = []
         finalRound.rankings.forEach((r) => {
@@ -469,7 +508,12 @@ export const processStandings = (tournament, config) => {
         })
         finalRound.pools = pools
     }
+}
 
+export const finalizeStandingRounds = (tournament, config) => {
+    if (!tournament || !tournament.standing_rounds || !config) return
+
+    const rounds = tournament.standing_rounds
     const excludedSemiFinal = []
     rounds.forEach((r, index) => {
         if ((r.name !== 'Semi-finals' && r.name !== 'Relegation play-outs') || config.no_third_place || config.id === 'MOFT1908') {
@@ -478,7 +522,8 @@ export const processStandings = (tournament, config) => {
         } else {
             const final = rounds[index + 1]
             if (final.name === 'Final') {
-                if (config.competition_id === 'UNL') {
+                // UNL
+                if (config.position_league_rankings) {
                     let pools = []
                     r.rankings.forEach((r) => {
                         pools.push({ rankings: [r] })
@@ -500,7 +545,7 @@ export const processStandings = (tournament, config) => {
         }
     })
 
-    tournament.standing_rounds = config.competition_id === 'UNL' ? excludedSemiFinal : excludedSemiFinal.reverse()
+    tournament.standing_rounds = config.position_league_rankings ? excludedSemiFinal : excludedSemiFinal.reverse()
     if (config.id === 'MOFT1920') {
         customAdjustMOFT1920(tournament.standing_rounds)
     }

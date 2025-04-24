@@ -6,6 +6,7 @@
         "short_name": "Italy/Germany 2024/25",
         "competition_id": "UNL",
         "points_for_win": 3,
+        "position_league_rankings": true,
         "tiebreakers": [
             "points",
             "h2hpoints",
@@ -50,6 +51,7 @@
         "competition_id": "UNL",
         "points_for_win": 3,
         "show_match_year": true,
+        "position_league_rankings": true,
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
@@ -140,6 +142,7 @@
         "competition_id": "UNL",
         "points_for_win": 3,
         "show_match_year": true,
+        "position_league_rankings": true,
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
@@ -217,6 +220,7 @@
         "competition_id": "UNL",
         "points_for_win": 3,
         "show_match_year": true,
+        "position_league_rankings": true,
         "tiebreakers_collapsed": true,
         "tiebreakers": [
             "points",
